@@ -33,6 +33,9 @@
         <case name="Rocky reference" id="150" priority="Prompt" min="0" max="0">
             <description>If there's an American character, Chie will comment about a movie about a drunk boxer, clearly a Rocky reference.</description>
         </case>
+        <case name="Seeing student" id="182" priority="FYI" min="0" max="2">
+            <description>Chie recalls her time in school where she wasn't exactly the smartest.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -160,7 +163,7 @@
         <label id="161" label="" folder="Hand Reactions" sort="0" />
         <label id="162" label="" folder="Hand Reactions" sort="0" />
     </labels>
-    <nextId>179</nextId>
+    <nextId>182</nextId>
     <markers>
         <marker scope="Public" name="1v1" />
         <marker scope="Public" name="A_Yun" />
@@ -188,6 +191,7 @@
         <marker scope="Public" name="chie_haru_initial" />
         <marker scope="Public" name="chie_haru_start" />
         <marker scope="Public" name="chie_haru_strip" />
+        <marker scope="Public" name="chie_kyoko1" />
         <marker scope="Public" name="chie_leonie_abs" />
         <marker scope="Public" name="chie_leonie_idle" />
         <marker scope="Public" name="chie_leonie_idle1" />
@@ -249,6 +253,7 @@
         <marker scope="Public" name="ChieUSA" />
         <marker scope="Public" name="meat_bun" />
         <marker scope="Public" name="miku_rise" />
+        <marker scope="Public" name="miku_school" />
         <marker scope="Public" name="neo_feather_theme" />
         <marker scope="Public" name="one_man_only" />
         <marker scope="Public" name="SpotMiku" />
@@ -257,6 +262,9 @@
         <marker scope="Public" name="spotted_idol" />
         <marker scope="Public" name="spotted_musician" />
         <marker scope="Public" name="spotted_persona" />
+        <marker scope="Public" name="spotted_student" />
+        <marker scope="Public" name="spotted_student1" />
+        <marker scope="Public" name="spotted_student2" />
         <marker scope="Public" name="steak_question" />
         <marker scope="Public" name="street_fighter_prompt" />
     </markers>
