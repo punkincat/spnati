@@ -30,6 +30,9 @@
         <case name="Mardi Gras" id="103" priority="Prompt" min="0" max="10">
             <description>On a Tuesday February 3 to March 9, Kyoko may ask a female target with the "American" tag exposing her chest about toplessness at Mardi Gras. Of course, she could easily be asking the completely wrong woman.</description>
         </case>
+        <case name="Santa Hat Story" id="586" priority="Noteworthy" min="0" max="10">
+            <description>For the Christmas Event: Kyoko shares a highly specific and outlandish story about a Santa Claus hat if an opponent takes one off. In following lines, she asks the others if they believe her.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -42,6 +45,7 @@
         <response id="93" opponent="mikan" opponentId="18" />
         <response id="500" opponent="sannytess" opponentId="6" />
         <response id="502" opponent="sannytess" opponentId="5" />
+        <response id="590" opponent="ringo_ando" opponentId="475" />
     </responses>
     <notes>
         <note id="6">Make separate case for non-humans</note>
@@ -592,8 +596,14 @@
         <label id="582" label="fallback" folder="" sort="0" />
         <label id="583" label="fallback" folder="" sort="0" />
         <label id="585" label="fallback" folder="" sort="0" />
+        <label id="586" label="Claus hat" folder="" sort="0" />
+        <label id="587" label="Claus hat" folder="" sort="0" />
+        <label id="588" label="Claus hat" folder="" sort="0" />
+        <label id="589" label="Claus hat" folder="" sort="0" />
+        <label id="592" label="Stand" folder="" sort="0" />
+        <label id="593" label="Stand" folder="" sort="0" />
     </labels>
-    <nextId>585</nextId>
+    <nextId>593</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
@@ -640,6 +650,7 @@
         <marker scope="Public" name="costume">Marker indicating her costume using strings. 0 = default, FF = Future Foundation costume.</marker>
         <marker scope="Public" name="cute">"It really is quite cute." "What? I'm allowed to like cute things." (=3 if triggered by male opponent)</marker>
         <marker scope="Public" name="deepBreathStart" />
+        <marker scope="Public" name="detectiveReveal">Kyoko has stated outright or otherwise confirmed that she is a detective.</marker>
         <marker scope="Public" name="dirtyTalk" />
         <marker scope="Public" name="disappointment">"No human language can describe the disappointment I'm feeling right now."</marker>
         <marker scope="Public" name="doIt">Kyoko says a line indicating she knows the human's forfeit timer is 1 (sets to 0 if human doesn't finish next screen)</marker>
@@ -650,7 +661,7 @@
         <marker scope="Public" name="enxReaction">"It isn't against the rules to cover up with your hands."</marker>
         <marker scope="Public" name="evidenceFloor">"I see now I should've kept my shoes on longer. "</marker>
         <marker scope="Public" name="exhibitionExpectation" />
-        <marker scope="Public" name="explainedForfeit" />
+        <marker scope="Public" name="explainedForfeit">Kyoko's explained early in the game that masturbation is a penalty for losing.</marker>
         <marker scope="Public" name="FFcostume">Used while Kyoko is wearing the Future Foundation outfit.</marker>
         <marker scope="Public" name="finishLikeThatQuery" />
         <marker scope="Public" name="forfeitFlesh" />
@@ -660,7 +671,8 @@
         <marker scope="Public" name="gawking" />
         <marker scope="Public" name="giddyCount">The giddy pose has appeared X times this game. Counted with hidden lines.</marker>
         <marker scope="Public" name="glassesLastStrip" />
-        <marker scope="Public" name="glovesOn" />
+        <marker scope="Public" name="glovesOn">Kyoko's said she won't take her gloves off this game.</marker>
+        <marker scope="Public" name="glovesOnForfeit" />
         <marker scope="Public" name="goingThrough" />
         <marker scope="Public" name="hair">Activates if Kyoko has moved her hair out of the way of her chest at stage 8 (naked). Should activate automatically if she uses any pose other than the strips or aside2 during stage 8.</marker>
         <marker scope="Public" name="handBluffN0" />
@@ -674,6 +686,7 @@
         <marker scope="Public" name="hauntedVoyeurs" />
         <marker scope="Public" name="haveToUntie">"Just a second. I have to untie this."</marker>
         <marker scope="Public" name="hayato" />
+        <marker scope="Public" name="hopesPeak">Kyoko has mentioned Hope's Peak Academy, her High School, X times.</marker>
         <marker scope="Public" name="howLossFeels" />
         <marker scope="Public" name="hugePenis">Kyoko has seen and reacted to a penis with the huge_penis tag</marker>
         <marker scope="Public" name="humanExtraLayers">"Already completely exposed yourself, yet you still have layers to spare?" (to human)</marker>
@@ -706,6 +719,8 @@
         <marker scope="Public" name="mikan_confident2Re" />
         <marker scope="Public" name="mikan_listen" />
         <marker scope="Public" name="mikan_quietRe" />
+        <marker scope="Public" name="nagatoro_stalkingRe" />
+        <marker scope="Public" name="nanamuraSantaHat" />
         <marker scope="Public" name="neededThis" />
         <marker scope="Public" name="nickname" />
         <marker scope="Public" name="nippleStim" />
@@ -723,9 +738,14 @@
         <marker scope="Public" name="precumQuestion" />
         <marker scope="Public" name="quips">Kyoko has cracked X jokes during the game.</marker>
         <marker scope="Public" name="rappSnitchKnishes">Kyoko has advised an opponent not to tell all their business, sit in the court, and be their own star witness.</marker>
+        <marker scope="Public" name="ringo_glovesForfeit" />
+        <marker scope="Public" name="ringo_glovesRe" />
+        <marker scope="Public" name="ringo_hopesPeak" />
+        <marker scope="Public" name="ringo_ultimatesRe" />
         <marker scope="Public" name="safeAnotherRound" />
         <marker scope="Public" name="safeForNow" />
         <marker scope="Public" name="saidNameFinish">Kyoko said the human player's name while finishing.</marker>
+        <marker scope="Public" name="santaHatStory" />
         <marker scope="Public" name="sayMyName" />
         <marker scope="Public" name="selfTrimComment" />
         <marker scope="Public" name="smallPenisSpeech">Kyoko has said X lines in a multi-screen speech on her preference to small penises, which she begins once 3 or more small penises are exposed with no women other than herself and/or the player present.</marker>
@@ -759,6 +779,9 @@
         <marker scope="Public" name="thighRub">"Word of advice...try rubbing your thighs together."</marker>
         <marker scope="Public" name="tieCompletes">"A classmate in high school once told me this tie completes my outfit."</marker>
         <marker scope="Public" name="tooManyKyokos" />
+        <marker scope="Public" name="toshinou_glovesOn_selfRibbonOut" />
+        <marker scope="Public" name="toshinou_godivaHairRe" />
+        <marker scope="Public" name="toshinou_ribbonGone" />
         <marker scope="Public" name="toshinouBoobies">Response to Kyouko Toshinou simply asking, "Boobies?" =2 when fully responded, =1 when preparing to respond next case.</marker>
         <marker scope="Public" name="underdog">Kyoko has lost the first 8 hands in a row, but goes up to Best AI instantly.</marker>
         <marker scope="Public" name="underPressure" />
