@@ -32,6 +32,8 @@
         <response id="145" opponent="sly_cooper" opponentId="3" />
         <response id="152" opponent="wikipe-tan" opponentId="576" />
         <response id="153" opponent="amalia" opponentId="1" />
+        <response id="154" opponent="yuno_uno" opponentId="753" />
+        <response id="155" opponent="nagatoro" opponentId="1431" />
     </responses>
     <notes>
         <note id="3">In case you're wondering, Ramuko Nishikyogoku is Kyouko's pen name.</note>
@@ -40,12 +42,14 @@
 
 That said, do not use this specifically for an interaction. There's a reason I didn't make a situation for it.</note>
         <note id="31">I can put this Opponent condition into the other case, but doing it like this makes the to-do list happier.</note>
-        <note id="45">Switching back to her right hand here was intentional.&lt;br&gt;&lt;br&gt;Also, this is global because an opponent masturbating line somehow snuck in between this line and the one that was supposed to precede it.</note>
+        <note id="45">Switching back to her right hand here was intentional.
+
+Also, this is global because an opponent masturbating line somehow snuck in between this line and the one that was supposed to precede it.</note>
         <note id="49">I refuse to elaborate on why the scope is lying.</note>
         <note id="57">kinda wish 2D and 3D art had separate tags cuz this is kinda hard when I can't assume the target draws a lot</note>
         <note id="63">Kyouko will try to fix her hair literally the next case after "Finished (Self)" plays. This and the game ending should be the only things that interrupt that in order to prevent inconsistency.</note>
         <note id="83">Kyoko says she keeps her ribbon on (and sets the same marker) in a few other cases, but this one is the most reliable.</note>
-        <note id="114">I need to update this for whatever costumes.</note>
+        <note id="158">In case it doesn't come through, she's trying to mislead him</note>
     </notes>
     <labels>
         <label id="2" label="Imitating Yuno" folder="" sort="0" />
@@ -101,7 +105,7 @@ That said, do not use this specifically for an interaction. There's a reason I d
         <label id="35" label="Close second" folder="Placement" sort="0" />
         <label id="67" label="" folder="Put the jacket back on" sort="0" />
         <label id="66" label="" folder="Put the jacket back on" sort="0" />
-        <label id="65" label="" folder="Ribbon collectible" sort="0" />
+        <label id="65" label="Give ~player~ the ribbon *and* say the line, god dammit" folder="" sort="0" />
         <label id="70" label="Reset long sleeves" folder="" sort="0" />
         <label id="71" label="All players 1HP" folder="" sort="0" />
         <label id="76" label="Triple Kyou?ko - Kyoko majority" folder="" sort="0" />
@@ -171,8 +175,21 @@ That said, do not use this specifically for an interaction. There's a reason I d
         <label id="149" label="" folder="Player exposed" sort="0" />
         <label id="150" label="" folder="Player exposed" sort="0" />
         <label id="151" label="" folder="Player exposed" sort="0" />
+        <label id="156" label="Ribbon - Kirigiri low layers" folder="Default uniform" sort="0" />
+        <label id="157" label="Ribbon - Kirigiri response" folder="Default uniform" sort="0" />
+        <label id="114" label="Stripping extra last" folder="" sort="0" />
+        <label id="160" label="" folder="Bad hand fake-out" sort="0" />
+        <label id="161" label="" folder="Bad hand fake-out" sort="0" />
+        <label id="162" label="" folder="7 high" sort="0" />
+        <label id="163" label="" folder="7 high" sort="0" />
+        <label id="155" label="Draw me?" folder="" sort="0" />
+        <label id="154" label="Planning something?" folder="" sort="0" />
+        <label id="158" label="Playing dumb of course" folder="" sort="0" />
+        <label id="159" label="Tomato panties" folder="" sort="0" />
+        <label id="164" label="Give the ribbon" folder="Ribbon collectible" sort="0" />
+        <label id="165" label="Am I giving the ribbon?" folder="Ribbon collectible" sort="0" />
     </labels>
-    <nextId>153</nextId>
+    <nextId>165</nextId>
     <markers>
         <marker scope="Public" name="B_DarkTricks">Dark backgrounds</marker>
         <marker scope="Public" name="B_Inventory_Booth">Inventory background</marker>
@@ -184,8 +201,9 @@ That said, do not use this specifically for an interaction. There's a reason I d
         <marker scope="Public" name="D_DiscardedCards">How do the discarded cards feel?</marker>
         <marker scope="Public" name="D_FixHair">Return of the sidetails.</marker>
         <marker scope="Public" name="D_Items">Throwing items into a game of poker</marker>
+        <marker scope="Public" name="D_PostgameBoobs">...Boobs.</marker>
+        <marker scope="Public" name="D_PostgameHelp">Her "help" might be junk poker advice. Or something else.</marker>
         <marker scope="Public" name="D_SexyPose">Her idea of "sexy" is weird.</marker>
-        <marker scope="Public" name="D_SwitchHands" />
         <marker scope="Public" name="D_SwitchHandsA">She tries switching hands... for exactly one phase.</marker>
         <marker scope="Public" name="D_SwitchHandsB">Switches back to her right hand (or rather, both) immediately after trying to switch hands.</marker>
         <marker scope="Public" name="D_ToplessSquad">Triple Topless</marker>
@@ -211,14 +229,20 @@ That said, do not use this specifically for an interaction. There's a reason I d
         <marker scope="Public" name="T_Amalia_Cheating">Amalia First hand stage 5</marker>
         <marker scope="Public" name="T_Caitlin_Beans">Caitlin Must Strip 3 (Losing)</marker>
         <marker scope="Public" name="T_Kirigiri_GlovesOn">Kyoko Kirigiri Stripped 4</marker>
+        <marker scope="Public" name="T_Kirigiri_IfSheLoses">Self Stripped 7</marker>
         <marker scope="Public" name="T_Mari_NoPantiesA">Mari Stripping 2 (Informality)</marker>
         <marker scope="Public" name="T_Mari_NoPantiesB">Mari Stripped 3 (Informality)</marker>
+        <marker scope="Public" name="T_Nagatoro_SkillIssue">Rosalina says "hi"</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip1PoseIdeas">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip3Panties">Self Must Strip 3</marker>
         <marker scope="Public" name="T_NamiSZS_Goodbye">Nami Hito Stripped 1</marker>
         <marker scope="Public" name="T_Natsuki_PantyPattern">Natsuki Stripped 5</marker>
         <marker scope="Public" name="T_SannyTess_CockA">Sanny/Tess Stripping 2</marker>
         <marker scope="Public" name="T_SannyTess_CockB">Sanny/Tess Stripped 3</marker>
         <marker scope="Public" name="T_SannyTess_Gimmick">Sanny/Tess Must Strip 2</marker>
         <marker scope="Public" name="T_YunoUno_Imitate">Copies Yuno's "ghost" trick.</marker>
+        <marker scope="Public" name="T_YunoUno_Strip0Planning">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_YunoUno_Strip1PlayingDumb">Self Must Strip 1</marker>
         <marker scope="Private" name="Z_DontFixHair">Prevent Kyouko from fixing her hair on the Game Over case.</marker>
         <marker scope="Private" name="Z_Finished">Sets up the global case where Kyouko fixes her hair.</marker>
         <marker scope="Private" name="Z_GamesPlayed">Count the games Kyouko's played (to completion) with you</marker>
