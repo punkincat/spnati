@@ -240,9 +240,11 @@ function loadListingFile () {
     var loadProgress = [];
     var opponentGroupMap = {};
     var opponentMap = {};
-    var tagSet = {};
-    var sourceSet = {};
-    var creatorSet = {};
+    const tagSet = new Set();
+    const sourceSet = new Set();
+    const sourcePrefixCounts = new Map();
+    const creatorSet = new Set();
+    const wordRE = /(?:\p{Letter}|[-0-9'])+/dug;
 
     loadProgress = listingFiles.map(function () {
         return { current: 0, total: 0 };
@@ -253,18 +255,22 @@ function loadListingFile () {
 
         if (opp.id in opponentMap) {
             loadedOpponents[opp.listingIndex = opponentMap[opp.id]] = opp;
-            opp.searchTags.forEach(function(tag) {
-                tagSet[tag] = true;
-            });
-            sourceSet[opp.source] = true;
+            opp.searchTags.forEach(tagSet.add.bind(tagSet));
+
+            sourceSet.add(opp.source);
+
+            /* Count the number of instances of progressively longer prefixes of the (adding a word at a time).
+               These counts are processed after all opponents have been loaded */
+            var sourceMatch;
+            while (sourceMatch = wordRE.exec(opp.source)) {
+                if (/^(?:the|my|original)$/i.test(sourceMatch[0])) continue;
+                const prefix = opp.source.substring(0, sourceMatch.indices[0][1]);
+                sourcePrefixCounts.set(prefix, (sourcePrefixCounts.get(prefix) ?? 0) + 1);
+            }
             
-            splitCreatorField(opp.artist).forEach(function (creator) {
-                creatorSet[creator] = true;
-            });
+            splitCreatorField(opp.artist).forEach(creatorSet.add.bind(creatorSet));
             
-            splitCreatorField(opp.writer).forEach(function (creator) {
-                creatorSet[creator] = true;
-            });
+            splitCreatorField(opp.writer).forEach(creatorSet.add.bind(creatorSet));
             
             var disp = new OpponentSelectionCard(opp);
             opp.selectionCard = disp;
@@ -377,16 +383,44 @@ function loadListingFile () {
     }).then(function () {
         loadedOpponents = loadedOpponents.filter(Boolean); // Remove any empty slots should an opponent fail to load
             
-        $tagList.append(Object.keys(TAG_ALIASES).concat(Object.keys(tagSet)).sort().map(function(tag) {
+        $tagList.append(Object.keys(TAG_ALIASES).concat(Array.from(tagSet)).sort().map(function(tag) {
             return new Option(tag);
         }));
-        $sourceList.append(Object.keys(sourceSet).sort().map(function(source) {
+        $sourceList.append(Array.from(sourceSet).sort().map(function(source) {
             return new Option(source);
         }));
-        $creatorList.append(Object.keys(creatorSet).sort().map(function(source) {
+        $creatorList.append(Array.from(creatorSet).sort().map(function(source) {
             return new Option(source);
         }));
-        loadedOpponents.forEach(function(p) { p.selectionCard.updateEpilogueBadge() });
+
+        loadedOpponents.forEach(function(p) {
+            p.selectionCard.updateEpilogueBadge()
+
+            /* Now, for each character, build the progressively longer prefixes again and look
+               for the points where the number of characters sharing that prefix decreases. 
+               Store those indices on the character, to be used when showing their details display. */
+            p.sourcePrefixLengths = [];
+            var sourceMatch, prevPrefixLen, prevPrefixCount;
+            while (sourceMatch = wordRE.exec(p.source)) {
+                const prefix = p.source.substring(0, sourceMatch.indices[0][1]);
+                if (sourcePrefixCounts.has(prefix)) { // Skip prefixes that were skipped earlier
+                    const curPrefixCount = sourcePrefixCounts.get(prefix);
+                    if (prevPrefixCount !== undefined && curPrefixCount < prevPrefixCount) {
+                        /* If adding this word decreases the number of matches, we want to 
+                           push a split point at the end of the *previous* word. */
+                        p.sourcePrefixLengths.push(prevPrefixLen);
+                    }
+                    prevPrefixLen = sourceMatch.indices[0][1];
+                    prevPrefixCount = curPrefixCount;
+                }
+            }
+            if (prevPrefixCount > 1) {
+                /* Push the longest prefix length, which might not be the entire source field
+                   if it ends in non-word characters or excluded words, if there is more than 
+                   one match. */
+                p.sourcePrefixLengths.push(prevPrefixLen);
+            }
+        });
         /* Determine the time of the nth most recently updated character on testing, so we
            can show at least n characters. (.sort() sorts in place, but .filter() makes a copy. */
         TESTING_NTH_MOST_RECENT_UPDATE = (loadedOpponents.filter(p => p.status == "testing")
