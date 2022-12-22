@@ -235,9 +235,9 @@
         <label id="358" label="" folder="eichixplayer1" sort="0" />
         <label id="359" label="" color="6" folder="Player Lines" sort="16" />
         <label id="364" label="" color="1" folder="High Exc Lines" sort="0" />
-        <label id="365" label="" color="5" folder="Mid Exc Strips" sort="5" />
-        <label id="366" label="" color="5" folder="Mid Exc Lines" sort="0" />
-        <label id="367" label="" color="1" folder="High Exc Lines" sort="3" />
+        <label id="365" label="" color="5" folder="Mid+ Exc Lines" sort="5" />
+        <label id="366" label="" color="5" folder="Mid+ Exc Lines" sort="0" />
+        <label id="367" label="" color="1" folder="Mid+ Exc Lines" sort="3" />
         <label id="368" label="" color="4" folder="" sort="0" />
         <label id="371" label="" color="5" folder="Opponent Filters" sort="77" />
         <label id="19" label="" color="6" folder="" sort="0" />
@@ -338,7 +338,7 @@
         <label id="499" label="2 Left -&gt; Move On" color="4" folder="Specific Events" sort="10" />
         <label id="500" label="2 Left -&gt; Submit" color="1" folder="Specific Events" sort="0" />
         <label id="501" label="" color="6" folder="Player Lines" sort="8" />
-        <label id="502" label="" folder="High Exc Lines" sort="4" />
+        <label id="861" label="" folder="Mid+ Exc Lines" sort="0" />
         <label id="25" label="penis." folder="Prompts" sort="4" />
         <label id="503" label="" folder="Mid+ Exc Lines" sort="2" />
         <label id="505" label="" folder="Mid+ Exc Lines" sort="3" />
@@ -365,7 +365,7 @@
         <label id="540" label="" folder="Bluffing Minievent" sort="2" />
         <label id="541" label="" folder="Bluffing Minievent" sort="2" />
         <label id="542" label="" folder="Bluffing Minievent" sort="3" />
-        <label id="543" label="AI Drop Hint" color="0" folder="Exc Check" sort="8" />
+        <label id="543" label="AI Drop (Exposure)" color="0" folder="Exc Check" sort="8" />
         <label id="544" label="" color="5" folder="Exc Check" sort="10" />
         <label id="545" label="" folder="Exc Check" sort="14" />
         <label id="546" label="1 Forfeit Passive Exc" folder="Passive Exc" sort="0" />
@@ -390,7 +390,7 @@
         <label id="566" label="Public Passive Exc" folder="Passive Exc" sort="0" />
         <label id="567" label="Public Passive Exc" folder="Passive Exc" sort="0" />
         <label id="568" label="" color="5" folder="Exc Check" sort="18" />
-        <label id="799" label="3+ Exposed Check" color="0" folder="Exc Check" sort="12" />
+        <label id="799" label="3+ Exposed Check" color="0" folder="Exc Check" sort="0" />
         <label id="800" label="AI Drop " color="6" folder="Background Specific Lines" sort="6" />
         <label id="802" label="AI Drop" folder="" sort="0" />
         <label id="801" label="AI Drop" folder="" sort="0" />
@@ -421,11 +421,28 @@
         <label id="838" label="Tie Unlocking " folder="" sort="0" />
         <label id="611" label="Anzu Wins" folder="Memory and Counts" sort="3" />
         <label id="839" label="Memory and Counts" folder="" sort="0" />
+        <label id="841" label="AI Drop (Mari)" folder="Exc Check" sort="2" />
+        <label id="842" label="AI Drop 2 (Mari)" folder="Exc Check" sort="3" />
+        <label id="843" label="AI Drop (Natsuki)" folder="Exc Check" sort="4" />
+        <label id="844" label="AI Drop 2 (Natsuki)" folder="Exc Check" sort="5" />
+        <label id="853" label="AI Bump (Exposure)" color="0" folder="Exc Check" sort="6" />
+        <label id="854" label="AI Bump (Player)" color="0" folder="Exc Check" sort="7" />
+        <label id="855" label="" folder="Mid+ Exc Lines" sort="0" />
+        <label id="856" label="" folder="Mid+ Exc Lines" sort="0" />
+        <label id="858" label="" folder="Mid+ Exc Lines" sort="0" />
+        <label id="857" label="" folder="Mid+ Exc Lines" sort="0" />
+        <label id="859" label="" folder="Mid+ Exc Lines" sort="0" />
+        <label id="860" label="Bitchass Mode" folder="Mid+ Exc Lines" sort="0" />
+        <label id="862" label="" folder="Mid+ Exc Lines" sort="0" />
+        <label id="863" label="" folder="Mid+ Exc Lines" sort="0" />
+        <label id="864" label="" folder="Mid+ Exc Lines" sort="0" />
+        <label id="865" label="" folder="Mid Exc Strips" sort="0" />
     </labels>
-    <nextId>840</nextId>
+    <nextId>865</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="__human_nickname" />
+        <marker scope="Public" name="~" />
         <marker scope="Public" name="~marker.day~" />
         <marker scope="Public" name="~marker.month~" />
         <marker scope="Public" name="~marker.month~ " />
@@ -465,6 +482,9 @@
         <marker scope="Public" name="barthday" />
         <marker scope="Public" name="begin_brat_mode" />
         <marker scope="Public" name="begin_throwing" />
+        <marker scope="Public" name="binah_awooga1" />
+        <marker scope="Public" name="binah_awooga2" />
+        <marker scope="Public" name="binah_interest1" />
         <marker scope="Public" name="birthday" />
         <marker scope="Public" name="birthday_countdown" />
         <marker scope="Public" name="birthday_countdown_test" />
@@ -726,6 +746,8 @@
         <marker scope="Public" name="eichihornyjail" />
         <marker scope="Public" name="eichistriptease">eichi might ask if "anyone has any requests" if about to take off his sweater. he will still take off the sweater even if this is replied to</marker>
         <marker scope="Public" name="excitement" />
+        <marker scope="Public" name="exposure_check_higher" />
+        <marker scope="Public" name="exposure_check_lower" />
         <marker scope="Public" name="first_eichi_game" />
         <marker scope="Public" name="found_tie" />
         <marker scope="Public" name="futaba_jukeask1" />
@@ -793,6 +815,7 @@
         <marker scope="Public" name="mari_shirtstrip2a" />
         <marker scope="Public" name="mari_shirtstrip2b" />
         <marker scope="Public" name="mari_shirtstrip2c" />
+        <marker scope="Public" name="mari_specific_exc" />
         <marker scope="Public" name="mari_taboffer_response" />
         <marker scope="Public" name="mari_tease1" />
         <marker scope="Public" name="mari_tryingtolose_distracted" />
@@ -883,10 +906,12 @@
         <marker scope="Public" name="nanoko_hahavirgin2_2" />
         <marker scope="Public" name="nanoko_hahavirgin3_2" />
         <marker scope="Public" name="nanoko_interdimensional" />
+        <marker scope="Public" name="nat_specific_exc" />
         <marker scope="Public" name="natsuki_" />
         <marker scope="Public" name="natsuki_201" />
         <marker scope="Public" name="natsuki_201_2" />
         <marker scope="Public" name="natsuki_201_3" />
+        <marker scope="Public" name="natsuki_2exp" />
         <marker scope="Public" name="natsuki_33" />
         <marker scope="Public" name="natsuki_6mustrstrip" />
         <marker scope="Public" name="natsuki_6mustrstrip2" />
@@ -904,11 +929,18 @@
         <marker scope="Public" name="natsuki_completepackage2" />
         <marker scope="Public" name="natsuki_completepackage3" />
         <marker scope="Public" name="natsuki_disappoint" />
+        <marker scope="Public" name="natsuki_eexp1" />
         <marker scope="Public" name="natsuki_eichisick" />
         <marker scope="Public" name="natsuki_exhibit1" />
         <marker scope="Public" name="natsuki_exhibit1a" />
         <marker scope="Public" name="natsuki_exhibit1b" />
         <marker scope="Public" name="natsuki_fanservice1" />
+        <marker scope="Public" name="natsuki_forfeit" />
+        <marker scope="Public" name="natsuki_forfeit1a" />
+        <marker scope="Public" name="natsuki_forfeit1b" />
+        <marker scope="Public" name="natsuki_forfeiting1" />
+        <marker scope="Public" name="natsuki_forfeiting2" />
+        <marker scope="Public" name="natsuki_forfeiting3" />
         <marker scope="Public" name="natsuki_idolmusic1" />
         <marker scope="Public" name="natsuki_interest1" />
         <marker scope="Public" name="natsuki_interest2" />
@@ -925,6 +957,10 @@
         <marker scope="Public" name="natsuki_postshirtstrip_a" />
         <marker scope="Public" name="natsuki_postshirtstrip_b" />
         <marker scope="Public" name="natsuki_ribbon1" />
+        <marker scope="Public" name="natsuki_self1stforfeit" />
+        <marker scope="Public" name="natsuki_selfforfeit1" />
+        <marker scope="Public" name="natsuki_selfforfeit2" />
+        <marker scope="Public" name="natsuki_selfforfeit2a" />
         <marker scope="Public" name="natsuki_shirtstrip1" />
         <marker scope="Public" name="natsuki_shirtstrip2" />
         <marker scope="Public" name="natsuki_shirtstrip3" />
