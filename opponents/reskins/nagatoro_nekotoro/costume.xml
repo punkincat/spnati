@@ -331,57 +331,57 @@
         </pose>
         <pose id="top_pull">
             <sprite id="2-strip" src="reskins/nagatoro_nekotoro/3-strip.png" x="0" y="0" />
-            <sprite id="skaato2" delay="1" src="reskins/nagatoro_nekotoro/bra.png" x="-8" y="540" scalex="1.05" scaley="1.05" />
+            <sprite id="skaato2" delay="1.5" src="reskins/nagatoro_nekotoro/bra.png" x="-8" y="540" scalex="1.05" scaley="1.05" />
             <directive type="animation" id="2-strip" ease="linear" interpolation="none">
                 <keyframe time="0" src="reskins/nagatoro_nekotoro/3-strip.png" />
-                <keyframe time="1" src="reskins/nagatoro_nekotoro/4-toppull.png" />
+                <keyframe time="1.5" src="reskins/nagatoro_nekotoro/4-toppull.png" />
             </directive>
-            <directive type="animation" id="2-strip" delay="1" ease="linear" interpolation="linear">
+            <directive type="animation" id="2-strip" delay="1.5" ease="linear" interpolation="linear">
                 <keyframe time="0" scalex="1" />
                 <keyframe time="0.04999995" scalex="1.05" />
                 <keyframe time="0.1" scalex="1" />
             </directive>
-            <directive type="animation" id="skaato2" delay="1" ease="linear" interpolation="linear">
+            <directive type="animation" id="skaato2" delay="1.5" ease="linear" interpolation="linear">
                 <keyframe time="0" x="-8" />
                 <keyframe time="0.5599999" x="-8" />
             </directive>
-            <directive type="animation" id="skaato2" delay="1" ease="ease-in" interpolation="linear">
+            <directive type="animation" id="skaato2" delay="1.5" ease="ease-in" interpolation="linear">
                 <keyframe time="0" y="540" />
                 <keyframe time="0.5599999" y="1313" />
             </directive>
-            <directive type="animation" id="skaato2" delay="1" ease="smooth" interpolation="linear">
+            <directive type="animation" id="skaato2" delay="1.5" ease="smooth" interpolation="linear">
                 <keyframe time="0" scalex="1.05" scaley="1.05" />
                 <keyframe time="0.5599999" scaley="0.72" />
             </directive>
-            <directive type="animation" id="skaato2" delay="1.56" ease="smooth" interpolation="linear">
+            <directive type="animation" id="skaato2" delay="2.06" ease="smooth" interpolation="linear">
                 <keyframe time="0" rotation="8" />
             </directive>
         </pose>
         <pose id="top_pull-">
             <sprite id="2-strip" src="reskins/nagatoro_nekotoro/3-strip-.png" x="0" y="0" />
-            <sprite id="skaato2" delay="1" src="reskins/nagatoro_nekotoro/bra.png" x="-8" y="540" scalex="1.05" scaley="1.05" />
+            <sprite id="skaato2" delay="1.5" src="reskins/nagatoro_nekotoro/bra.png" x="-8" y="540" scalex="1.05" scaley="1.05" />
             <directive type="animation" id="2-strip" ease="linear" interpolation="none">
                 <keyframe time="0" src="reskins/nagatoro_nekotoro/3-strip-.png" />
-                <keyframe time="1" src="reskins/nagatoro_nekotoro/4-toppull-.png" />
+                <keyframe time="1.5" src="reskins/nagatoro_nekotoro/4-toppull-.png" />
             </directive>
-            <directive type="animation" id="2-strip" delay="1" ease="linear" interpolation="linear">
+            <directive type="animation" id="2-strip" delay="1.5" ease="linear" interpolation="linear">
                 <keyframe time="0" scalex="1" />
                 <keyframe time="0.04999995" scalex="1.05" />
                 <keyframe time="0.1" scalex="1" />
             </directive>
-            <directive type="animation" id="skaato2" delay="1" ease="linear" interpolation="linear">
+            <directive type="animation" id="skaato2" delay="1.5" ease="linear" interpolation="linear">
                 <keyframe time="0" x="-8" />
                 <keyframe time="0.5599999" x="-8" />
             </directive>
-            <directive type="animation" id="skaato2" delay="1" ease="ease-in" interpolation="linear">
+            <directive type="animation" id="skaato2" delay="1.5" ease="ease-in" interpolation="linear">
                 <keyframe time="0" y="540" />
                 <keyframe time="0.5599999" y="1313" />
             </directive>
-            <directive type="animation" id="skaato2" delay="1" ease="smooth" interpolation="linear">
+            <directive type="animation" id="skaato2" delay="1.5" ease="smooth" interpolation="linear">
                 <keyframe time="0" scalex="1.05" scaley="1.05" />
                 <keyframe time="0.5599999" scaley="0.72" />
             </directive>
-            <directive type="animation" id="skaato2" delay="1.56" ease="smooth" interpolation="linear">
+            <directive type="animation" id="skaato2" delay="2.06" ease="smooth" interpolation="linear">
                 <keyframe time="0" rotation="8" />
             </directive>
         </pose>
