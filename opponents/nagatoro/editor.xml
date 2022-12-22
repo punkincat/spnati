@@ -15,9 +15,6 @@
         <case name="ShoeKick" id="15" priority="FYI" min="0" max="0">
             <description>Nagatoro kicks her shoe offscreen.</description>
         </case>
-        <case name="YouAreAPervert" id="987" priority="FYI" min="0" max="7">
-            <description>Nagatoro calls out a character who saves extra or minor items for last.</description>
-        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -57,7 +54,7 @@
         <label id="30" label="" folder="Default" sort="11" />
         <label id="31" label="" folder="Default" sort="13" />
         <label id="33" label="" folder="Default" sort="12" />
-        <label id="34" label="" folder="Default" sort="14" />
+        <label id="34" label="" folder="Default" sort="0" />
         <label id="35" label="" folder="Default" sort="15" />
         <label id="36" label="swimsuit" folder="" sort="3" />
         <label id="39" label="" folder="Chains" sort="3" />
@@ -68,7 +65,7 @@
         <label id="4" label="" folder="Target_Stage2" sort="24" />
         <label id="9" label="" folder="Target_Stage4" sort="25" />
         <label id="44" label="" folder="Filters" sort="5" />
-        <label id="45" label="" folder="Filters" sort="4" />
+        <label id="45" label="" folder="Filters" sort="0" />
         <label id="46" label="" folder="Filters" sort="3" />
         <label id="47" label="" folder="Filters" sort="2" />
         <label id="48" label="" folder="Filters" sort="2" />
@@ -536,7 +533,6 @@
         <label id="523" label="Dere" color="6" folder="Reply_Stage4" sort="3" />
         <label id="524" label="" folder="Target_Stage3" sort="0" />
         <label id="525" label="Dere" color="6" folder="" sort="0" />
-        <label id="526" label="Dere" color="6" folder="" sort="0" />
         <label id="527" label="Dere" color="6" folder="" sort="0" />
         <label id="528" label="" folder="Target_Stage3" sort="0" />
         <label id="529" label="" folder="Target_Stage3" sort="0" />
@@ -587,8 +583,6 @@
         <label id="574" label="" folder="Target_Stage7" sort="7" />
         <label id="575" label="Dere" color="6" folder="" sort="0" />
         <label id="578" label="" folder="Player" sort="0" />
-        <label id="576" label="Dere" color="6" folder="" sort="0" />
-        <label id="577" label="Dere" color="6" folder="" sort="0" />
         <label id="581" label="" folder="Choker" sort="0" />
         <label id="582" label="" folder="Target_Stage0" sort="0" />
         <label id="583" label="" folder="Target_Stage0" sort="2" />
@@ -1120,7 +1114,7 @@
         <label id="1138" label="" folder="Target_Stage1" sort="0" />
         <label id="1139" label="" folder="Target_Stage1" sort="0" />
         <label id="1140" label="" folder="Reply_Stage0" sort="0" />
-        <label id="1141" label="" folder="Reply_Stage0" sort="54" />
+        <label id="1141" label="" color="1" folder="Reply_Stage0" sort="54" />
         <label id="1142" label="" folder="Target_Stage0" sort="89" />
         <label id="1143" label="" folder="Target_Stage1" sort="69" />
         <label id="1144" label="" folder="Target_Stage2" sort="48" />
@@ -1304,7 +1298,7 @@
         <label id="1327" label="" folder="Trixie_Bully" sort="0" />
         <label id="1328" label="" folder="Target_Stage3" sort="0" />
         <label id="1329" label="" folder="Reply_Stage1" sort="0" />
-        <label id="1330" label="" folder="Reply_Stage1" sort="23" />
+        <label id="1330" label="" color="1" folder="Reply_Stage1" sort="23" />
         <label id="1331" label="" folder="Target_Stage0" sort="70" />
         <label id="1332" label="" folder="Target_Stage0" sort="0" />
         <label id="1333" label="" folder="Target_Stage0" sort="0" />
@@ -1325,7 +1319,7 @@
         <label id="1348" label="" folder="Target_Stage3" sort="0" />
         <label id="1349" label="" folder="Target_Stage2" sort="0" />
         <label id="1350" label="" folder="Target_Stage3" sort="15" />
-        <label id="1351" label="" folder="Target_Stage3" sort="16" />
+        <label id="1351" label="" color="1" folder="Target_Stage3" sort="16" />
         <label id="1352" label="short girls" folder="Table_States" sort="0" />
         <label id="1353" label="" folder="Target_Stage0" sort="73" />
         <label id="1354" label="" folder="Target_Stage0" sort="0" />
@@ -1338,7 +1332,7 @@
         <label id="1361" label="" folder="Target_Stage0" sort="76" />
         <label id="1362" label="" folder="Target_Stage0" sort="77" />
         <label id="1363" label="" folder="Target_Stage0" sort="78" />
-        <label id="1364" label="" color="1" folder="Target_Stage1" sort="46" />
+        <label id="1364" label="" color="5" folder="Target_Stage1" sort="46" />
         <label id="1365" label="" color="0" folder="Reply_Stage3" sort="11" />
         <label id="1366" label="" color="0" folder="Target_Stage3" sort="25" />
         <label id="1367" label="" folder="Target_Stage0" sort="108" />
@@ -1400,7 +1394,7 @@
         <label id="1431" label="" color="0" folder="Target_Stage0" sort="130" />
         <label id="1432" label="" folder="Target_Stage0" sort="0" />
         <label id="1433" label="" folder="Target_Stage1" sort="0" />
-        <label id="1434" label="" color="1" folder="Target_Stage0" sort="0" />
+        <label id="1434" label="" color="0" folder="Target_Stage0" sort="0" />
         <label id="1435" label="" folder="Player" sort="0" />
         <label id="1436" label="" color="3" folder="Reply_Stage3" sort="0" />
         <label id="1437" label="" folder="BG_HotSpring" sort="0" />
@@ -1416,9 +1410,16 @@
         <label id="1447" label="" folder="Target_Stage0" sort="0" />
         <label id="1448" label="" color="1" folder="Target_Stage0" sort="0" />
         <label id="1449" label="" color="1" folder="Target_Stage0" sort="0" />
+        <label id="1450" label="" color="5" folder="Target_Stage0" sort="0" />
+        <label id="1451" label="" folder="BG_HotSpring" sort="0" />
+        <label id="1452" label="" folder="BG_Beach" sort="0" />
+        <label id="1453" label="" folder="Reply_Stage1" sort="0" />
+        <label id="1454" label="" folder="Target_Stage2" sort="0" />
+        <label id="1455" label="" folder="Nekotoro" sort="0" />
     </labels>
-    <nextId>1449</nextId>
+    <nextId>1455</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="aaravi01" />
         <marker scope="Public" name="adora01" />
         <marker scope="Public" name="adora11" />
@@ -1739,6 +1740,8 @@
         <marker scope="Public" name="hutao31" />
         <marker scope="Public" name="hutao41" />
         <marker scope="Public" name="hutao51" />
+        <marker scope="Public" name="inspiration" />
+        <marker scope="Public" name="inspiration2" />
         <marker scope="Public" name="jin_butt" />
         <marker scope="Public" name="Jura_Brat" />
         <marker scope="Public" name="Jura_Outfit" />
@@ -1811,6 +1814,7 @@
         <marker scope="Public" name="kumatora11" />
         <marker scope="Public" name="kyoko01" />
         <marker scope="Public" name="kyoko02" />
+        <marker scope="Public" name="kyoko03" />
         <marker scope="Public" name="kyoko11" />
         <marker scope="Public" name="kyoko11x" />
         <marker scope="Public" name="kyouko01" />
@@ -2370,6 +2374,7 @@
         <marker scope="Public" name="trixie_bully97b" />
         <marker scope="Public" name="trixie_reply01" />
         <marker scope="Public" name="trixie_reply02" />
+        <marker scope="Public" name="trixie_reply11" />
         <marker scope="Public" name="trixie_reply12" />
         <marker scope="Public" name="trixie01" />
         <marker scope="Public" name="trixie02" />
@@ -2381,6 +2386,7 @@
         <marker scope="Public" name="trixie12" />
         <marker scope="Public" name="trixie13" />
         <marker scope="Public" name="trixie21" />
+        <marker scope="Public" name="trixie22" />
         <marker scope="Public" name="trixie23" />
         <marker scope="Public" name="trixie31" />
         <marker scope="Public" name="trixie51" />
