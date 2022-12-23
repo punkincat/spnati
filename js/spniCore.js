@@ -112,6 +112,7 @@ $ioModal = $('#io-modal');
 $extrasModal = $('#extras-modal');
 $resortModal = $('#resort-modal');
 $eventAnnouncementModal = $('#event-announcement-modal');
+$characterDebugModal = $("#character-debug-modal");
 
 /* Screen State */
 $previousScreen = null;

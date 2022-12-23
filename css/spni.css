@@ -1405,6 +1405,106 @@ ul.dropdown-menu>li {
 }
 
 /************************************************************
+ * Classes for the character debug info modal.
+ ************************************************************/
+
+.character-debug-button {
+    position: absolute;
+    left: 0;
+}
+
+#character-debug-modal .modal-body-container {
+    overflow-y: auto;
+    max-height: 49rem;
+}
+
+.debug-info-container {
+    display: flex;
+}
+
+.debug-info-column {
+    flex: 1;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.debug-info-header:first-child {
+    margin-top: 0;
+}
+
+.debug-info-header>a {
+    color: black;
+    transform: translateX(-1.5rem);
+    display: inline-block;
+}
+
+.debug-info-header-status {
+    font-size: 2.5rem;
+    float: left;
+}
+
+.debug-case-info-row {
+    display: flex;
+    font-size: 1.2em;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.debug-case-info-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    flex: none;
+}
+
+.debug-case-type, .debug-case-priority, .debug-case-test, .debug-case-condition-value {
+    font-family: monospace;
+}
+
+.debug-case-condition-attribute:not(:nth-child(2))::before {
+    content: ",";
+}
+
+.debug-case-condition-value::before, .debug-case-condition-type::before {
+    content: " ";
+}
+
+.debug-marker-listing {
+    text-align: left;
+}
+
+.debug-marker-basename, .debug-marker-target-id, .debug-marker-value {
+    font-family: monospace;
+    display: inline-block;
+}
+
+.debug-marker-target-id::before {
+    content: "[";
+}
+
+.debug-marker-target-id::after {
+    content: "]";
+}
+
+.debug-marker-value {
+    padding-left: 0.6rem;
+}
+
+.debug-marker-value::before {
+    content: "= ";
+}
+
+.debug-marker-value.empty-value {
+    font-style: italic;
+}
+
+.debug-marker-value.empty-value::before {
+    font-style: normal;
+}
+
+
+/************************************************************
  * Classes for opponent images.
  ************************************************************/
 
@@ -4780,7 +4880,8 @@ ul.dropdown-menu>li {
  ************************************************************/
 
 .debug-button,
-.dev-select-button {
+.dev-select-button,
+.character-debug-button {
     position: absolute;
     width: 3em;
     height: 2em;
@@ -4788,7 +4889,8 @@ ul.dropdown-menu>li {
 }
 
 .opponent-area .debug-button,
-.opponent-area .dev-select-button {
+.opponent-area .dev-select-button,
+.opponent-area .character-debug-button {
     top: -2.25em;
 }
 

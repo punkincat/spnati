@@ -1464,3 +1464,253 @@ Player.prototype.preloadStageImages = function (stage) {
         }.bind(this));
     }, this));
 };
+
+Player.prototype.populateDebugMarkers = function () {
+    /** @type {{[baseName: string]: {[oppId: string]: string | number}}} */
+    var resolvedMarkers = {};
+    var rawPersistentMarkers = save.getAllPersistentMarkers(this);
+    var unresolvedNames = new Set();
+
+    for (let key of Object.keys(this.markers ?? {})) {
+        unresolvedNames.add(key);
+    }
+
+    for (let key of Object.keys(rawPersistentMarkers)) {
+        unresolvedNames.add(key);
+    }
+
+    /* Match longer IDs before shorter ones, to account for opponents with IDs that are prefixes of each other.
+     * Also make sure to check for markers targeted towards the human player.
+     */
+    let allPlayers = loadedOpponents.slice();
+    allPlayers.push(players[0]);
+
+    for (let opp of allPlayers.sort((a, b) => b.id.length - a.id.length)) {
+        let markerPrefix = "__" + opp.id + "_";
+        let matchingMarkers = Array.from(unresolvedNames.entries()).map((entry) => entry[0]).filter((name) => name.startsWith(markerPrefix));
+
+        for (let name of matchingMarkers) {
+            let baseName = name.substring(markerPrefix.length);
+            let value = this.persistentMarkers[baseName] ? rawPersistentMarkers[name] : this.markers[name];
+            value ??= this.markers[name];
+
+            if (!resolvedMarkers[baseName]) resolvedMarkers[baseName] = {};
+            resolvedMarkers[baseName][opp.id] = value;
+
+            unresolvedNames.delete(name);
+        }
+    }
+
+    /* All remaining unresolved names are probably non-targeted markers. */
+    for (let name of unresolvedNames) {
+        let value = this.persistentMarkers[name] ? rawPersistentMarkers[name] : this.markers[name];
+        value ??= this.markers[name];
+
+        if (!resolvedMarkers[name]) resolvedMarkers[name] = {};
+        resolvedMarkers[name][""] = value;
+    }
+
+
+    var foundPersistentMarkers = false;
+    var foundRegularMarkers = false;
+
+    $("#debug-marker-listing-persistent").empty();
+    $("#debug-marker-listing-regular").empty();
+
+    /* Sort entries by base name. */
+    for (let basePair of Object.entries(resolvedMarkers).sort(
+        (a, b) => a[0] > b[0]
+    )) {
+        let baseName = basePair[0];
+
+        for (let idPair of Object.entries(basePair[1])) {
+            let container = $('<div>', {"class": "debug-marker-entry"});
+            container.append($('<span>', {"class": "debug-marker-basename", "text": baseName}));
+            
+            if (idPair[0] !== "") {
+                container.append($('<span>', {
+                    "class": "debug-marker-target-id",
+                    "text": idPair[0]
+                }));
+            }
+
+            if (idPair[1] === "") {
+                container.append($('<span>', {
+                    "class": "debug-marker-value empty-value",
+                    "text": "<empty string>"
+                }));
+            } else if (!isNaN(parseInt(idPair[1], 10))) {
+                container.append($('<span>', {
+                    "class": "debug-marker-value",
+                    "text": idPair[1].toString()
+                }));
+            } else {
+                container.append($('<span>', {
+                    "class": "debug-marker-value",
+                    "text": '\"' + idPair[1].toString() + '\"'
+                }));
+            }
+
+            if (this.persistentMarkers[baseName]) {
+                $("#debug-marker-listing-persistent").append(container);
+                foundPersistentMarkers = true;
+            } else {
+                $("#debug-marker-listing-regular").append(container);
+                foundRegularMarkers = true;
+            }
+        }
+    }
+
+    if (foundPersistentMarkers) {
+        $("#debug-marker-column-persistent").show();
+    } else {
+        $("#debug-marker-column-persistent").hide();
+    }
+
+    if (foundRegularMarkers) {
+        $("#debug-marker-column-regular").show();
+    } else {
+        $("#debug-marker-column-regular").hide();
+    }
+
+    var statusIndicator = $("#debug-marker-header .debug-info-header-status");
+    var header = $("#debug-marker-header");
+    var container = $("#debug-marker-container");
+    
+    if (foundPersistentMarkers || foundRegularMarkers) {
+        container.show();
+        header.show();
+
+        let collapsed = false;
+        header.on("click", function () {
+            collapsed = !collapsed;
+            if (collapsed) {
+                statusIndicator.removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+                container.slideUp();
+            } else {
+                statusIndicator.removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+                container.slideDown();
+            }
+        })
+    } else {
+        container.hide();
+        header.hide();
+        header.off("click");
+    }
+}
+
+/**
+ * 
+ * @param {Condition} condition
+ * @returns {string} 
+ */
+function formatConditionInfo(condition) {
+    let attributes = {
+        id: "character",
+        tag: "tag",
+        stage: "stage",
+        layers: "layers",
+        startingLayers: "starting layers",
+        gender: "gender",
+        status: "status",
+        timeInStage: "time in stage",
+        hand: "has hand",
+        consecutiveLosses: "consecutive losses",
+        saidMarker: "said marker",
+        sayingMarker: "saying marker",
+        notSaidMarker: "not said marker",
+        saying: "saying text",
+        said: "said text",
+        pose: "pose",
+        count: "count"
+    };
+
+    let attributeElems = Object.entries(attributes).filter(
+        (pair) => condition[pair[0]] !== undefined && condition[pair[0]] !== null
+    ).map(
+        (pair) => $("<span>", {"class": "debug-case-condition-attribute"}).append(
+            $("<span>", {"class": "debug-case-condition-type", "text": pair[1]}),
+            $("<span>", {"class": "debug-case-condition-value", "text": condition[pair[0]].toString()})
+        )
+    );
+
+    var role = condition.role ?? "any";
+    attributeElems.splice(0, 0, $("<span>", {"class": "debug-case-condition-role", "text": role.initCap()}));
+
+    return attributeElems;
+}
+
+function createCaseInfoRow(header, value) {
+    return $(
+        "<div>", {"class": "debug-case-info-row"}
+    ).append(
+        $("<div>", {"class": "debug-case-info-header", "text": header}),
+        $("<div>", {"class": "debug-case-info-value"}).append(value)
+    );
+}
+
+Player.prototype.populateDebugCaseInfo = function () {
+    if (!this.chosenState || !this.chosenState.parentCase) {
+        $("#debug-case-info-container").hide();
+        return;
+    }
+
+    var chosenCase = this.chosenState.parentCase;
+    var caseTypeDisplay = [
+        $("<span>", {"class": "debug-case-type", "text": chosenCase.trigger}),
+        ", priority ",
+        $("<span>", {
+            "class": "debug-case-priority",
+            "text": ((chosenCase.customPriority !== undefined) ? "*" : "") + chosenCase.priority.toString()
+        })
+    ];
+
+    $("#debug-case-info-listing").empty().append(
+        createCaseInfoRow("Type", caseTypeDisplay),
+        chosenCase.counters.map(
+            (condition) => createCaseInfoRow("Condition", formatConditionInfo(condition))
+        )
+    );
+
+    for (let test of chosenCase.tests) {
+        let expr = test.attr('expr');
+        let cmp = test.attr('cmp') || "==";
+        let value = test.attr('value') || "";
+        
+        if (!isNaN(parseInt(value, 10))) {
+            value = parseInt(value, 10).toString();
+        } else {
+            value = '\"' + value + '\"';
+        }
+
+        $("#debug-case-info-listing").append(
+            createCaseInfoRow("Test", $("<span>", {"class": "debug-case-test", "text": expr + " " + cmp + " " + value}))
+        );
+    }
+
+    var header = $("#debug-case-info-header");
+    var container = $("#debug-case-info-container");
+    var statusIndicator = $("#debug-case-info-header .debug-info-header-status");
+    
+    let collapsed = false;
+    header.on("click", function () {
+        collapsed = !collapsed;
+        if (collapsed) {
+            statusIndicator.removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+            container.slideUp();
+        } else {
+            statusIndicator.removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+            container.slideDown();
+        }
+    }).show();
+    container.show();
+}
+
+Player.prototype.showDebugModal = function() {
+    $("#debug-info-current-character").text(this.id.replace(/_/g, ' ').initCap());
+
+    this.populateDebugCaseInfo();
+    this.populateDebugMarkers();
+
+    $characterDebugModal.modal("show");
+}
