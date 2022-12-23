@@ -24,6 +24,15 @@
         <case name="Beans!" id="68" priority="Prompt" min="3" max="3">
             <description>As per community request, this is now situation. Blurt out your character's favorite (or least favorite) food.</description>
         </case>
+        <case name="Grimsley Gossip" id="173" priority="FYI" min="3" max="8">
+            <description>Caitlin gossips about her least favorite colleague, Grimsley. Different lines will have different markers. </description>
+        </case>
+        <case name="Marshal Gossip" id="171" priority="FYI" min="3" max="8">
+            <description>Caitlin gossips about the colleague she understands least, Marshal. Different lines will have different markers. </description>
+        </case>
+        <case name="Shauntal Gossip" id="170" priority="FYI" min="3" max="8">
+            <description>Caitlin gossips about her favorite colleague, Shauntal. Different lines will have different markers. </description>
+        </case>
     </noteworthy>
     <responses>
         <response id="20" opponent="shantae" opponentId="10" />
@@ -67,6 +76,16 @@
         <response id="75" opponent="hu_tao" opponentId="1268" />
         <response id="76" opponent="hu_tao" opponentId="1269" />
         <response id="121" opponent="hu_tao" opponentId="1271" />
+        <response id="148" opponent="nami" opponentId="1191" />
+        <response id="149" opponent="nami" opponentId="1190" />
+        <response id="150" opponent="nami" opponentId="15" />
+        <response id="151" opponent="nami" opponentId="11" />
+        <response id="152" opponent="nami" opponentId="624" />
+        <response id="153" opponent="nami" opponentId="623" />
+        <response id="154" opponent="nami" opponentId="53" />
+        <response id="155" opponent="nami" opponentId="13" />
+        <response id="156" opponent="nami" opponentId="52" />
+        <response id="169" opponent="nico_robin" opponentId="572" />
     </responses>
     <notes>
         <note id="72">Please feel free to have a field day with this one. </note>
@@ -148,10 +167,29 @@
         <label id="145" label="" folder="Leon" sort="0" />
         <label id="146" label="" folder="Leon" sort="0" />
         <label id="147" label="" folder="Leon" sort="0" />
+        <label id="158" label="" folder="Nami's Pirates" sort="0" />
+        <label id="159" label="" folder="Nami's Pirates" sort="0" />
+        <label id="160" label="" folder="Nami's Pirates" sort="0" />
+        <label id="161" label="" folder="Nami's Pirates" sort="0" />
+        <label id="162" label="" folder="Nami's Pirates" sort="0" />
+        <label id="163" label="" folder="Nami's Pirates" sort="0" />
+        <label id="164" label="" folder="Nami's Pirates" sort="0" />
+        <label id="165" label="" folder="Nami's Pirates" sort="0" />
+        <label id="166" label="" folder="Nami's Pirates" sort="0" />
+        <label id="167" label="" folder="Nami's Pirates" sort="0" />
+        <label id="168" label="" folder="Nami's Pirates" sort="0" />
+        <label id="170" label="" folder="Gossip" sort="0" />
+        <label id="171" label="" folder="Gossip" sort="0" />
+        <label id="172" label="" folder="Gossip" sort="0" />
+        <label id="173" label="" folder="Gossip" sort="0" />
     </labels>
-    <nextId>147</nextId>
+    <nextId>173</nextId>
     <markers>
         <marker scope="Public" name="" />
+        <marker scope="Public" name="cait_childfriendsR" />
+        <marker scope="Public" name="cait_elitefourR" />
+        <marker scope="Public" name="cait_prestfightersR1" />
+        <marker scope="Public" name="cait_prestfightersR2" />
         <marker scope="Public" name="caitGreetR" />
         <marker scope="Public" name="Caitlin_Beans" />
         <marker scope="Public" name="Caitlin_CaitlinGossip" />
@@ -167,6 +205,12 @@
         <marker scope="Public" name="Caitlin_GossipCheck_Caitlin" />
         <marker scope="Public" name="Caitlin_GossipCheck_Grimsley" />
         <marker scope="Public" name="Caitlin_GossipCheck_Grimsly" />
+        <marker scope="Public" name="Caitlin_GossipCheck_Marshal" />
+        <marker scope="Public" name="Caitlin_GossipCheck_Shauntal" />
+        <marker scope="Public" name="Caitlin_GrimsleyGossipCheating" />
+        <marker scope="Public" name="Caitlin_GrimsleyGossipSocks" />
+        <marker scope="Public" name="Caitlin_GrimsleyGossipTip" />
+        <marker scope="Public" name="caitlin_hairR" />
         <marker scope="Public" name="Caitlin_HeavyStart" />
         <marker scope="Public" name="Caitlin_HotspringSteam" />
         <marker scope="Public" name="Caitlin_Kumatora_0A" />
@@ -175,6 +219,10 @@
         <marker scope="Public" name="Caitlin_Leon_1A" />
         <marker scope="Public" name="Caitlin_LewdTeaTime" />
         <marker scope="Public" name="Caitlin_MarshalGossip" />
+        <marker scope="Public" name="Caitlin_MarshalGossipCliff" />
+        <marker scope="Public" name="Caitlin_MarshalGossipSparring" />
+        <marker scope="Public" name="Caitlin_MarshalGossipWall" />
+        <marker scope="Public" name="Caitlin_Nami_0A" />
         <marker scope="Public" name="Caitlin_Natsuki_1A" />
         <marker scope="Public" name="Caitlin_Natsuki_1B" />
         <marker scope="Public" name="Caitlin_Natsuki_1C" />
@@ -192,6 +240,10 @@
         <marker scope="Public" name="Caitlin_Natsuki_5C" />
         <marker scope="Public" name="Caitlin_Natsuki_7C" />
         <marker scope="Public" name="Caitlin_Pressure" />
+        <marker scope="Public" name="Caitlin_Ringo_0A" />
+        <marker scope="Public" name="Caitlin_ShauntalGossipFear" />
+        <marker scope="Public" name="Caitlin_ShauntalGossipReading" />
+        <marker scope="Public" name="Caitlin_ShauntalGossipRomance" />
         <marker scope="Public" name="Caitlin_Spooky_Handholding" />
         <marker scope="Public" name="Caitlin_Tao_0A" />
         <marker scope="Public" name="Caitlin_Tao_0B" />
@@ -199,8 +251,21 @@
         <marker scope="Public" name="Caitlin_Tao_1A" />
         <marker scope="Public" name="Caitlin_Tao_1B" />
         <marker scope="Public" name="Caitlin_UnderstandTarget" />
+        <marker scope="Public" name="caitlin0R" />
+        <marker scope="Public" name="caitlin12_powerR" />
+        <marker scope="Public" name="caitlin2R1" />
+        <marker scope="Public" name="caitlin2R2" />
+        <marker scope="Public" name="caitlin2s_powerR" />
+        <marker scope="Public" name="CaitlinCastleFlashback" />
         <marker scope="Public" name="CaitlinComposure" />
+        <marker scope="Public" name="CaitlinLikesHair" />
+        <marker scope="Public" name="CaitlinLikesWeight" />
+        <marker scope="Public" name="CaitlinMewDream" />
+        <marker scope="Public" name="CaitlinOutbid" />
         <marker scope="Public" name="CaitlinSpook_Backfire" />
+        <marker scope="Public" name="CaitlinTeamPlasmaKing" />
+        <marker scope="Public" name="dangerous_places_sinnoh" />
+        <marker scope="Public" name="dangerous_places_unova" />
         <marker scope="Public" name="DarkMagicianHat" />
         <marker scope="Public" name="DarkMagicianHat2" />
         <marker scope="Public" name="dunban_cait_Mindread01R" />
