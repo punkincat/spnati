@@ -1419,7 +1419,8 @@ function expandDialogue (dialogue, self, target, bindings) {
                                               ? [UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE]
                                               : [clothing.position, FULL_ARTICLE]);
                     if (revealedClothing.length) {
-                        substitution = expandClothingVariable(revealedClothing[getRandomNumber(0, revealedClothing.length)],
+                        const revealedIndex = (self.slot + target.slot + currentRound) % revealedClothing.length; // Generates a pseudorandom number which will be consistent per-round
+                        substitution = expandClothingVariable(revealedClothing[revealedIndex],
                                                               fn, args, self, target, bindings, false);
                     }
                 }
