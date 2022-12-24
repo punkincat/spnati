@@ -1146,6 +1146,10 @@
     <Compile Include="ImagePipeline\Nodes\CellNode.cs" />
     <Compile Include="ImagePipeline\Nodes\CellReferenceNode.cs" />
     <Compile Include="ImagePipeline\Nodes\ChannelMixerNode.cs" />
+    <Compile Include="ImagePipeline\Nodes\ArithmeticNode.cs" />
+    <Compile Include="ImagePipeline\Nodes\SubstringNode.cs" />
+    <Compile Include="ImagePipeline\Nodes\CompareNode.cs" />
+    <Compile Include="ImagePipeline\Nodes\ConcatenateNode.cs" />
     <Compile Include="ImagePipeline\Nodes\ColorMaskNode.cs" />
     <Compile Include="ImagePipeline\Nodes\ColorNode.cs" />
     <Compile Include="ImagePipeline\Nodes\CommentNode.cs" />
