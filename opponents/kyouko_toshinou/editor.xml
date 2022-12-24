@@ -4,7 +4,7 @@
     <height>5'4"</height>
     <age>20</age>
     <pronunciation>KYOH-koh TOH-shi-noh</pronunciation>
-    <othernotes>Personality:&lt;br&gt;- Energetic. Excitable and has an active imagination.&lt;br&gt;- Pushy. Often assumes others think similiarly to herself, and overly aggressive when trying to make friends.&lt;br&gt;- Confident. Talks big about herself or her own skills to try to get a reaction.&lt;br&gt;- Selfish. Will think about others, but only after she's served herself.&lt;br&gt;- Strange. Enjoys anything unusual and takes great pleasure in subverting others' expectations.&lt;br&gt;- Lazy. Willing to give up at a moment's notice unless it's something she really cares about.&lt;br&gt;- Horny. She's here to see others naked, and getting naked herself is a means to that end.&lt;br&gt;- Observant. Usually won't tell you, but she notices more than she lets on.&lt;br&gt;- Reliable. Sometimes, when she isn't joking.&lt;br&gt;- Easygoing. Despite her energy, she isn't truly fazed by much. One of the few things that does bother her is realizing that someone truly dislikes her.&lt;br&gt;- Enjoys teasing and confusing others to get a rise out of them. Uses a lot of bait-and-switch humor.&lt;br&gt;&lt;br&gt;Useful info:&lt;br&gt;- Naturally assumes the boke/funny guy role of a manzai duo.&lt;br&gt;- Jokes often involve misleading the others or outright lying to them.&lt;br&gt;- Runs a doujin circle dedicated to "Witch Girl Mirakurun," her favorite anime/manga, at Comuket.&lt;br&gt;- Skilled at arts and crafts, both normal things like modelling clay and weird things like cutting designs into apple skins.&lt;br&gt;- Big eater. Easy to please with food and will eat almost anything.&lt;br&gt;- Her favorite food is rum raisin, a flavor of ice cream.&lt;br&gt;- The Amusement Club consists of herself and her friends Yui, Akari, and Chinatsu.&lt;br&gt;- Had a stolen clubroom in middle school, but not since then.&lt;br&gt;&lt;br&gt;I made a bunch of markers for lines I didn't feel were worth a situation but could be targeted anyway if you so choose. Most of these are prefixed with D, Q, or S.</othernotes>
+    <othernotes>FYI: If you want to target her outfit, be wary of future costumes. Especially her underwear—it won't always have a tomato pattern, nor can I guarantee it'll always be on the same layer. I'm using a bunch of markers so you can target them instead of her stage and/or costume.&lt;br&gt;&lt;br&gt;Personality:&lt;br&gt;- Energetic. Excitable and has an active imagination.&lt;br&gt;- Pushy. Often assumes others think similiarly to herself, and overly aggressive when trying to make friends.&lt;br&gt;- Confident. Talks big about herself or her own skills to try to get a reaction.&lt;br&gt;- Selfish. Will think about others, but only after she's served herself.&lt;br&gt;- Strange. Enjoys anything unusual and takes great pleasure in subverting others' expectations.&lt;br&gt;- Lazy. Willing to give up at a moment's notice unless it's something she really cares about.&lt;br&gt;- Horny. She's here to see others naked, and getting naked herself is a means to that end.&lt;br&gt;- Observant. Usually won't tell you, but she notices more than she lets on.&lt;br&gt;- Reliable. Sometimes, when she isn't joking.&lt;br&gt;- Easygoing. Despite her energy, she isn't truly fazed by much. One of the few things that does bother her is realizing that someone truly dislikes her.&lt;br&gt;- Enjoys teasing and confusing others to get a rise out of them. Uses a lot of bait-and-switch humor.&lt;br&gt;&lt;br&gt;Useful info:&lt;br&gt;- Naturally assumes the boke/funny guy role of a manzai duo.&lt;br&gt;- Jokes often involve misleading the others or outright lying to them.&lt;br&gt;- Runs a doujin circle dedicated to "Witch Girl Mirakurun," her favorite anime/manga, at Comuket.&lt;br&gt;- Skilled at arts and crafts, both normal things like modelling clay and weird things like cutting designs into apple skins.&lt;br&gt;- Big eater. Easy to please with food and will eat almost anything.&lt;br&gt;- Her favorite food is rum raisin, a flavor of ice cream.&lt;br&gt;- The Amusement Club consists of herself and her friends Yui, Akari, and Chinatsu.&lt;br&gt;- Had a stolen clubroom in middle school, but not since then.&lt;br&gt;&lt;br&gt;I made a bunch of markers for lines I didn't feel were worth a situation but could be targeted anyway if you so choose. Most of these are prefixed with D, Q, or S.</othernotes>
     <noteworthy>
         <case name="The ribbon stays" id="83" priority="FYI" min="3" max="3">
             <description>Kyouko says she isn't going to remove her ribbon. If she's in her default outfit, she's lying, but this is otherwise true.</description>
@@ -34,22 +34,25 @@
         <response id="153" opponent="amalia" opponentId="1" />
         <response id="154" opponent="yuno_uno" opponentId="753" />
         <response id="155" opponent="nagatoro" opponentId="1431" />
+        <response id="167" opponent="mari_setogaya" opponentId="1936" />
+        <response id="168" opponent="nagatoro" opponentId="1443" />
+        <response id="170" opponent="nagatoro" opponentId="1442" />
     </responses>
     <notes>
-        <note id="3">In case you're wondering, Ramuko Nishikyogoku is Kyouko's pen name.</note>
-        <note id="14">Save for the obvious straight flush counterpart, a baby straight is the only hand where the ace is low, huh?</note>
         <note id="5">The marker is available so other characters can see which uniform she's wearing just in case they absolutely need to know for whatever reason. FYI, it's always unset when she loses the red dress.
 
 That said, do not use this specifically for an interaction. There's a reason I didn't make a situation for it.</note>
-        <note id="31">I can put this Opponent condition into the other case, but doing it like this makes the to-do list happier.</note>
         <note id="45">Switching back to her right hand here was intentional.
 
 Also, this is global because an opponent masturbating line somehow snuck in between this line and the one that was supposed to precede it.</note>
         <note id="49">I refuse to elaborate on why the scope is lying.</note>
         <note id="57">kinda wish 2D and 3D art had separate tags cuz this is kinda hard when I can't assume the target draws a lot</note>
         <note id="63">Kyouko will try to fix her hair literally the next case after "Finished (Self)" plays. This and the game ending should be the only things that interrupt that in order to prevent inconsistency.</note>
-        <note id="83">Kyoko says she keeps her ribbon on (and sets the same marker) in a few other cases, but this one is the most reliable.</note>
+        <note id="83">Kyoko says she keeps her ribbon on (and sets the same marker) in a few other cases, but this one is the most reliable.
+Yes, there are two markers for this. Feel free to target whichever you like.</note>
         <note id="158">In case it doesn't come through, she's trying to mislead him</note>
+        <note id="169">I can reword this for you depending on what you have in mind for Nagatoro's response, e.g. if you wanted her to get jealous I can take the aside out, or Kyouko can say out loud that both the player and Nagatoro can admire them.</note>
+        <note id="95">You could target this if you wanted your character to immediately notice the pattern on her panties. As far as making that future-proof, though, here be dragons.</note>
     </notes>
     <labels>
         <label id="2" label="Imitating Yuno" folder="" sort="0" />
@@ -108,8 +111,8 @@ Also, this is global because an opponent masturbating line somehow snuck in betw
         <label id="65" label="Give ~player~ the ribbon *and* say the line, god dammit" folder="" sort="0" />
         <label id="70" label="Reset long sleeves" folder="" sort="0" />
         <label id="71" label="All players 1HP" folder="" sort="0" />
-        <label id="76" label="Triple Kyou?ko - Kyoko majority" folder="" sort="0" />
-        <label id="77" label="Triple Kyou?ko - Kyouko majority" folder="" sort="0" />
+        <label id="76" label="Triple Kyo(u)ko - Kyoko majority" folder="" sort="0" />
+        <label id="77" label="Triple Kyo(u)ko - Kyouko majority" folder="" sort="0" />
         <label id="78" label="Kirigiri calls her Ms. Toshinou" folder="" sort="0" />
         <label id="81" label="Socks and shoes" folder="Default uniform" sort="0" />
         <label id="82" label="Jacket" folder="Default uniform" sort="0" />
@@ -188,8 +191,13 @@ Also, this is global because an opponent masturbating line somehow snuck in betw
         <label id="159" label="Tomato panties" folder="" sort="0" />
         <label id="164" label="Give the ribbon" folder="Ribbon collectible" sort="0" />
         <label id="165" label="Am I giving the ribbon?" folder="Ribbon collectible" sort="0" />
+        <label id="166" label="Triple Kyou(u)ko Kyou" folder="" sort="0" />
+        <label id="167" label="What does she do?" folder="" sort="0" />
+        <label id="168" label="Not a pervert" folder="" sort="0" />
+        <label id="169" label="Pervy player (and Hayacchi)" folder="Default uniform" sort="0" />
+        <label id="170" label="What to do with a cute, cool, and sexy drawing?" folder="" sort="0" />
     </labels>
-    <nextId>165</nextId>
+    <nextId>170</nextId>
     <markers>
         <marker scope="Public" name="B_DarkTricks">Dark backgrounds</marker>
         <marker scope="Public" name="B_Inventory_Booth">Inventory background</marker>
@@ -220,26 +228,34 @@ Also, this is global because an opponent masturbating line somehow snuck in betw
         <marker scope="Public" name="Q_OtherStripGames">Extremely unusual but apparently not non-existent if xkcd is to be believed</marker>
         <marker scope="Public" name="Q_PlayCards">Never mind that everyone just got done playing a card game.</marker>
         <marker scope="Public" name="Q_SkinnyDipping">The water's right there. You might as well.</marker>
-        <marker scope="Public" name="S_GodivaHair">First hand on stage 5 - The barely visible nipples</marker>
-        <marker scope="Public" name="S_NoRibbonOrSidetails">First hand on stage 7 - Kyouko took away her ribbon and sidetails at the same time, making a pretty jarring change of appearance.</marker>
-        <marker scope="Public" name="S_RibbonOff">Self Stripping 6 (Default outfit)</marker>
-        <marker scope="Public" name="S_RibbonStays">Self Stripped 4 + Targeted cases</marker>
-        <marker scope="Public" name="S_Uniform">Self Stripping 2</marker>
+        <marker scope="Public" name="S_FullTomato">Self Stripped - Both her bra and panties—tomato themed—are visible.</marker>
+        <marker scope="Public" name="S_GodivaHair">Early in first topless stage - the barely visible nipples</marker>
+        <marker scope="Public" name="S_NoRibbonOrSidetails">First hand on stage 7 - Kyouko took away her ribbon and sidetails at the same time, making a pretty jarring change of appearance. (Default outfit)</marker>
+        <marker scope="Public" name="S_RibbonOff">Self Stripping 6 - Taking the ribbon off (Default outfit)</marker>
+        <marker scope="Public" name="S_RibbonStays">Self Stripping - Kyouko plans to keep her ribbon.</marker>
+        <marker scope="Public" name="S_TomatoesRevealed">Self Stripped - The tomato pattern on her underwear is visible.</marker>
+        <marker scope="Public" name="S_Uniform">Self Stripping 2 - Explain the uniform (Default outfit)</marker>
         <marker scope="Public" name="SlyCooper_PantsOffA">Sly Cooper Stripping 0</marker>
         <marker scope="Public" name="T_Amalia_Cheating">Amalia First hand stage 5</marker>
         <marker scope="Public" name="T_Caitlin_Beans">Caitlin Must Strip 3 (Losing)</marker>
         <marker scope="Public" name="T_Kirigiri_GlovesOn">Kyoko Kirigiri Stripped 4</marker>
         <marker scope="Public" name="T_Kirigiri_IfSheLoses">Self Stripped 7</marker>
+        <marker scope="Public" name="T_Kirigiri_TheKyouko">"The Kyouko has arrived!"</marker>
         <marker scope="Public" name="T_Mari_NoPantiesA">Mari Stripping 2 (Informality)</marker>
         <marker scope="Public" name="T_Mari_NoPantiesB">Mari Stripped 3 (Informality)</marker>
         <marker scope="Public" name="T_Nagatoro_SkillIssue">Rosalina says "hi"</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip0DrawingPlans">Self Stripping 0</marker>
         <marker scope="Public" name="T_Nagatoro_Strip1PoseIdeas">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip3Admire">Self Stripped 4</marker>
         <marker scope="Public" name="T_Nagatoro_Strip3Panties">Self Must Strip 3</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip3PlayerPerv">Self Stripping 3</marker>
         <marker scope="Public" name="T_NamiSZS_Goodbye">Nami Hito Stripped 1</marker>
         <marker scope="Public" name="T_Natsuki_PantyPattern">Natsuki Stripped 5</marker>
         <marker scope="Public" name="T_SannyTess_CockA">Sanny/Tess Stripping 2</marker>
         <marker scope="Public" name="T_SannyTess_CockB">Sanny/Tess Stripped 3</marker>
         <marker scope="Public" name="T_SannyTess_Gimmick">Sanny/Tess Must Strip 2</marker>
+        <marker scope="Public" name="T_Setogaya_Strip0Activities">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_TripleKyokoKyou_Confusing">Kyoko Kirigiri and Kyou Fujibayashi selected, player named Kyouko or Kyoko</marker>
         <marker scope="Public" name="T_YunoUno_Imitate">Copies Yuno's "ghost" trick.</marker>
         <marker scope="Public" name="T_YunoUno_Strip0Planning">Self Must Strip 0</marker>
         <marker scope="Public" name="T_YunoUno_Strip1PlayingDumb">Self Must Strip 1</marker>
