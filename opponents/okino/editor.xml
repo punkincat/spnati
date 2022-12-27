@@ -12,14 +12,20 @@
         <case name="Unlucky Bachelor(ette)s" id="128" priority="Prompt" min="0" max="7">
             <description>Okino wonders if any of the players have also been/are single, while most people they're close to are in relationships.</description>
         </case>
-        <case name="Stripping Break For Science" id="185" priority="Prompt" min="0" max="7">
+        <case name="i lied i dont like sex now tell me about your research field" id="185" priority="Prompt" min="0" max="7">
             <description>When they're stripping, Okino asks a scientist character about their specialization. </description>
         </case>
         <case name="Wig." id="84" priority="FYI" min="5" max="5">
             <description>Okino implies he's about to take off his underwear when losing in his 5th stage, but ends up taking off his wig instead.</description>
         </case>
         <case name="Girl Help" id="423" priority="Prompt" min="0" max="7">
-            <description>Description about what's interesting happening with the character (i.e. why should others target this?)</description>
+            <description>Okino asks an all-girls table for love advice.</description>
+        </case>
+        <case name="First time?" id="184" priority="Prompt" min="0" max="3">
+            <description>If hasn't lost/has only lost a few pieces when another opponent is exposed, Okino will ask this.</description>
+        </case>
+        <case name="(Not) First time?" id="183" priority="Prompt" min="4" max="7">
+            <description>If another character is decent while Okino is exposed, he will ask this.</description>
         </case>
     </noteworthy>
     <reviewed>true</reviewed>
@@ -381,10 +387,17 @@
         <label id="433" label="Tanning" folder="Background Specific" sort="15" />
         <label id="434" label="What to Say" folder="" sort="0" />
         <label id="435" label="No Takatoshi + Other Shy" folder="" sort="0" />
-        <label id="437" label="" folder="Seifuku" sort="0" />
-        <label id="438" label="" folder="Other Players' Fantasies" sort="0" />
+        <label id="437" label="" folder="Seifuku" sort="30" />
+        <label id="438" label="" folder="Other Players' Fantasies" sort="4" />
+        <label id="439" label="" folder="stop being horny" sort="2" />
+        <label id="440" label="" folder="stop being horny" sort="8" />
+        <label id="441" label="" folder="stop being horny" sort="6" />
+        <label id="442" label="" folder="stop being horny" sort="10" />
+        <label id="443" label="" folder="stop being horny" sort="4" />
+        <label id="444" label="" folder="stop being horny" sort="14" />
+        <label id="445" label="" folder="stop being horny" sort="12" />
     </labels>
-    <nextId>438</nextId>
+    <nextId>445</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="__human_nickname" />
@@ -415,6 +428,9 @@
         <marker scope="Public" name="bernadetta_blanket" />
         <marker scope="Public" name="binah_friends1" />
         <marker scope="Public" name="binah_friends2" />
+        <marker scope="Public" name="binah_okino_work1b" />
+        <marker scope="Public" name="binah_okino_work2a" />
+        <marker scope="Public" name="binah_okino_work2b" />
         <marker scope="Public" name="binah_strippoker1a" />
         <marker scope="Public" name="binah_strippoker2a" />
         <marker scope="Public" name="binah_work1a" />
@@ -429,6 +445,15 @@
         <marker scope="Public" name="cagliostro_flattered2" />
         <marker scope="Public" name="cagliostro_pining1" />
         <marker scope="Public" name="cagliostro_ribbon1" />
+        <marker scope="Public" name="caitlin_beansecho" />
+        <marker scope="Public" name="caitlin_clothing1" />
+        <marker scope="Public" name="caitlin_clothing2" />
+        <marker scope="Public" name="caitlin_clothing2a" />
+        <marker scope="Public" name="caitlin_hattrick1" />
+        <marker scope="Public" name="caitlin_hattrick2" />
+        <marker scope="Public" name="caitlin_thankdealer1a" />
+        <marker scope="Public" name="caitlin_thankdealer1b" />
+        <marker scope="Public" name="caitlin_thankdealer1c" />
         <marker scope="Public" name="cheryl_journaling" />
         <marker scope="Public" name="cheryl_journaling2" />
         <marker scope="Public" name="cheryl_names" />
@@ -442,6 +467,16 @@
         <marker scope="Public" name="darkness_study1" />
         <marker scope="Public" name="darkness_study2" />
         <marker scope="Public" name="dorothy_interest1" />
+        <marker scope="Public" name="doublekyoko_kirigiri" />
+        <marker scope="Public" name="doublekyoko_toshinou" />
+        <marker scope="Public" name="dunban_chilvary1" />
+        <marker scope="Public" name="dunban_chilvary2" />
+        <marker scope="Public" name="dunban_chilvary2af" />
+        <marker scope="Public" name="dunban_chilvary2am" />
+        <marker scope="Public" name="dunban_chilvary2b" />
+        <marker scope="Public" name="dunban_chilvary2f" />
+        <marker scope="Public" name="dunban_chilvary2m" />
+        <marker scope="Public" name="dunban_time1" />
         <marker scope="Public" name="dwight_hornyonmain1" />
         <marker scope="Public" name="dwight_hornyonmain2" />
         <marker scope="Public" name="dwight_int1" />
@@ -488,6 +523,8 @@
         <marker scope="Public" name="fate_cards1" />
         <marker scope="Public" name="fate_conman1" />
         <marker scope="Public" name="finished_games_count" />
+        <marker scope="Public" name="firsttime_a" />
+        <marker scope="Public" name="firsttime_b" />
         <marker scope="Public" name="florina_run" />
         <marker scope="Public" name="forfeit_nomen" />
         <marker scope="Public" name="forfeit_nomen_pervert" />
@@ -498,6 +535,13 @@
         <marker scope="Public" name="gloria_okinopining1" />
         <marker scope="Public" name="gloria_traveling1" />
         <marker scope="Public" name="gwen_mask" />
+        <marker scope="Public" name="heris_friendq" />
+        <marker scope="Public" name="heris_labcoat" />
+        <marker scope="Public" name="heris_loyaltyq" />
+        <marker scope="Public" name="heris_passionq" />
+        <marker scope="Public" name="heris_sleepq" />
+        <marker scope="Public" name="heris_surroundingsq" />
+        <marker scope="Public" name="heris_transportq" />
         <marker scope="Public" name="hijiokimeet" />
         <marker scope="Public" name="hotspring_strip7" />
         <marker scope="Public" name="hotspring_strip7_cheating" />
@@ -526,6 +570,19 @@
         <marker scope="Public" name="kazuma_devildeal1" />
         <marker scope="Public" name="kazuma_grower1" />
         <marker scope="Public" name="kazuma_steal1" />
+        <marker scope="Public" name="kyoko_gloveson1" />
+        <marker scope="Public" name="kyoko_gloveson2" />
+        <marker scope="Public" name="kyoko_int" />
+        <marker scope="Public" name="kyoko_int1" />
+        <marker scope="Public" name="kyoko_name1" />
+        <marker scope="Public" name="kyoko_name2" />
+        <marker scope="Public" name="kyoko_pantyshot1" />
+        <marker scope="Public" name="kyouko_int" />
+        <marker scope="Public" name="kyouko_manga1" />
+        <marker scope="Public" name="kyouko_manga2" />
+        <marker scope="Public" name="kyouko_ribbon1" />
+        <marker scope="Public" name="kyouko_ribbon1a" />
+        <marker scope="Public" name="kyouko_ribbon1b" />
         <marker scope="Public" name="leon_okinoscientist1" />
         <marker scope="Public" name="leon_okinoscientist2" />
         <marker scope="Public" name="lingerieq" />
@@ -573,8 +630,12 @@
         <marker scope="Public" name="nami_makeup2" />
         <marker scope="Public" name="nami_pirate" />
         <marker scope="Public" name="nami_showertempo" />
+        <marker scope="Public" name="natsuki_shopping1" />
+        <marker scope="Public" name="natsuki_shopping2" />
         <marker scope="Public" name="nicecock" />
         <marker scope="Public" name="nickname" />
+        <marker scope="Public" name="notfirsttime_a" />
+        <marker scope="Public" name="notfirsttime_b" />
         <marker scope="Public" name="okino" />
         <marker scope="Public" name="okino_1v1" />
         <marker scope="Public" name="okino_amiguchimention" />
@@ -620,6 +681,7 @@
         <marker scope="Public" name="penis" />
         <marker scope="Public" name="player_defeated_count" />
         <marker scope="Public" name="polly_fadeoutbet1a" />
+        <marker scope="Public" name="post_herisfriendq" />
         <marker scope="Public" name="post_okinofinish1" />
         <marker scope="Public" name="post_okinofinish2" />
         <marker scope="Public" name="post_okinofinish3" />
@@ -663,12 +725,16 @@
         <marker scope="Public" name="smari_changingroom1a" />
         <marker scope="Public" name="smari_changingroom2a" />
         <marker scope="Public" name="smari_changingroom2b" />
+        <marker scope="Public" name="smari_changingroom3a" />
+        <marker scope="Public" name="smari_changingroom3b" />
         <marker scope="Public" name="smari_funanswer_1" />
         <marker scope="Public" name="smari_funanswer_2" />
         <marker scope="Public" name="smari_hybrid1" />
         <marker scope="Public" name="smari_loveadvice" />
         <marker scope="Public" name="smari_postreveal" />
         <marker scope="Public" name="smari_powers2" />
+        <marker scope="Public" name="smari_powers3a" />
+        <marker scope="Public" name="smari_powers3b" />
         <marker scope="Public" name="smari_society" />
         <marker scope="Public" name="smari_wings" />
         <marker scope="Public" name="smari_wingsreaction" />
@@ -761,6 +827,7 @@
         <marker scope="Public" name="takatoshi_okinoforfeits2" />
         <marker scope="Public" name="takatoshi_okinoforfeits2b" />
         <marker scope="Public" name="takatoshi_pants_stripped" />
+        <marker scope="Public" name="takatoshi_present" />
         <marker scope="Public" name="takatoshi_s" />
         <marker scope="Public" name="takatoshi_seifuku" />
         <marker scope="Public" name="takatoshi_selected" />
@@ -774,6 +841,7 @@
         <marker scope="Public" name="takatoshi_winnerending" />
         <marker scope="Public" name="tomomegu_react" />
         <marker scope="Public" name="toporbottom" />
+        <marker scope="Public" name="tsukasathoughts" />
         <marker scope="Public" name="vday" />
         <marker scope="Public" name="vdaymisery_1" />
         <marker scope="Public" name="vdaymisery1" />
