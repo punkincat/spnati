@@ -357,6 +357,10 @@ var $gameLoadProgress = $(".game-load-progress");
     "n/4-Naturally.png",
     "n/2-fiddliNg.png",
     "n/6-iNform.png",
+    "nagatoro/0-peace.png",
+    "nagatoro/3-pose.png",
+    "nagatoro/1-strip.png",
+    "reskins/nagatoro_nekotoro/0-exh.png",
 ];
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
