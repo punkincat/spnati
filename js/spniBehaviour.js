@@ -1972,7 +1972,7 @@ function Case($xml, trigger) {
         return (ctr.role == "target") && (isNaN(ctr.count.max) || (ctr.count.max === null) || (ctr.count.max > 0)) && ctr.stage;
     });
 
-    if (targetID && hasTargetStage && (targetID != "human")) {
+    if (targetID && hasTargetStage && (targetID != "human")) { // Generalize to lost/stripping/stripped
         if (this.trigger == MALE_MUST_STRIP || this.trigger == FEMALE_MUST_STRIP) {
             this.trigger = OPPONENT_LOST;
         } else if (CONVERT_STRIP_CASES.indexOf(this.trigger) >= 0) {
@@ -1981,6 +1981,14 @@ function Case($xml, trigger) {
             this.trigger = OPPONENT_STRIPPED;
         }
     }
+	
+	if (targetID && (targetID != "human")) { // Generalize crotch/chest reveal lines
+		if (this.trigger == MALE_SMALL_CROTCH_IS_VISIBLE || this.trigger == MALE_MEDIUM_CROTCH_IS_VISIBLE || this.trigger == MALE_LARGE_CROTCH_IS_VISIBLE || this.trigger == FEMALE_CROTCH_IS_VISIBLE) {
+			this.trigger = OPPONENT_CROTCH_IS_VISIBLE;
+		} else if (this.trigger == FEMALE_SMALL_CHEST_IS_VISIBLE || this.trigger == FEMALE_MEDIUM_CHEST_IS_VISIBLE || this.trigger == FEMALE_LARGE_CHEST_IS_VISIBLE || this.trigger == MALE_CHEST_IS_VISIBLE) {
+			this.trigger = OPPONENT_CHEST_IS_VISIBLE;
+		}
+	}
     
     // Calculate case priority ahead of time.
     if (this.hidden) {
