@@ -46,6 +46,7 @@
         <response id="500" opponent="sannytess" opponentId="6" />
         <response id="502" opponent="sannytess" opponentId="5" />
         <response id="590" opponent="ringo_ando" opponentId="475" />
+        <response id="640" opponent="critical_darling" opponentId="19" />
     </responses>
     <notes>
         <note id="6">Make separate case for non-humans</note>
@@ -628,79 +629,99 @@
         <label id="620" label="Nagatoro R Pre0-1" folder="" sort="0" />
         <label id="621" label="Nagatoro R Pre0-2" folder="" sort="0" />
         <label id="622" label="Nagatoro L 0-3" folder="" sort="0" />
+        <label id="623" label="" folder="April Fool's" sort="0" />
+        <label id="624" label="DR1 Spoilers!" folder="Timeline" sort="0" />
+        <label id="625" label="DR1 Spoilers!" folder="Timeline" sort="0" />
+        <label id="626" label="DR1 Spoilers!" folder="Timeline" sort="0" />
+        <label id="627" label="Multi-belt" folder="" sort="0" />
+        <label id="628" label="Multi-belt" folder="" sort="0" />
+        <label id="629" label="Nagatoro L 1-1" folder="" sort="0" />
+        <label id="630" label="Nagatoro L 1-1" folder="" sort="0" />
+        <label id="631" label="Nagatoro L 1-2" folder="" sort="0" />
+        <label id="632" label="Nagatoro L 1-3" folder="" sort="0" />
+        <label id="633" label="Nagatoro R Pre1-1" folder="" sort="0" />
+        <label id="634" label="Nagatoro R Pre1-2" folder="" sort="0" />
+        <label id="635" label="Nagatoro R 1-1" folder="" sort="0" />
+        <label id="636" label="Nagatoro R 1-2" folder="" sort="0" />
+        <label id="637" label="Nagatoro R Pre1-3" folder="" sort="0" />
+        <label id="638" label="Nagatoro R 1-3" folder="" sort="0" />
+        <label id="639" label="Nagatoro R 1-3" folder="" sort="0" />
+        <label id="640" label="Long forfeit L" folder="" sort="0" />
+        <label id="641" label="Long forfeit R" folder="" sort="0" />
+        <label id="642" label="Long forfeit R" folder="" sort="0" />
+        <label id="643" label="Black is your color" folder="" sort="0" />
+        <label id="644" label="CD and Kyoko annihilate the 4th wall" folder="" sort="0" />
     </labels>
-    <nextId>622</nextId>
+    <nextId>644</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="." />
-        <marker scope="Public" name="alwaysReady">"Always ready, I see."</marker>
-        <marker scope="Public" name="aroused">Kyoko's vulva is or will be visibly secreting fluid prior to her forfeit while nude (and in the second tick of her forfeit).</marker>
+        <marker scope="Public" name="+careerMention" />
+        <marker scope="Public" name="alwaysReady">"Always ready, I see" and other versions of the line</marker>
+        <marker scope="Public" name="aroused">Her vulva is or will be visibly secreting fluid prior to her forfeit while nude (and in the second tick of her forfeit).</marker>
         <marker scope="Public" name="attractedAttention" />
-        <marker scope="Public" name="bi" />
-        <marker scope="Public" name="biAtFinish" />
-        <marker scope="Public" name="bigButt">"(Don't comment on their rear...)"</marker>
+        <marker scope="Public" name="biAtFinish">Finished forfeit while having the bisexual tag</marker>
+        <marker scope="Public" name="bigButt">"(Don't comment on their rear...)" and alternate versions of the line</marker>
         <marker scope="Public" name="birthday">The game is being played on Kyoko's birthday, October 6, and she has mentioned it X times.</marker>
-        <marker scope="Public" name="blackjack" />
+        <marker scope="Public" name="blackIsYourColor">Removed Major, Female - Target is also wearing black underwear</marker>
+        <marker scope="Public" name="blackjack">Hand, 14+ rounds: She favorably compares the game to blackjack and says it feels a bit boring without betting</marker>
         <marker scope="Public" name="blades">"I didn't take you for the type to put sharp blades near their most delicate parts."</marker>
-        <marker scope="Public" name="blimbsplobrother" />
-        <marker scope="Private" name="bluff_hi">Kyoko is bluffing like she has a better hand. Resets to 0 once hand is revealed.</marker>
-        <marker scope="Private" name="bluff_lo">Kyoko is bluffing like she has a worse hand. Rests to 0 once hand is revealed.</marker>
-        <marker scope="Private" name="bluff_no">Kyoko is actively playing a double bluff. Resets to 0 once hand is revealed.</marker>
-        <marker scope="Public" name="bluffing" />
-        <marker scope="Private" name="bluffsLost">X times, Kyoko has lost a hand while using the bluff_hi/lo/no tags.</marker>
-        <marker scope="Public" name="bluffsLost_hi" />
-        <marker scope="Public" name="bluffsLost_lo" />
-        <marker scope="Public" name="bluffsLost_no" />
-        <marker scope="Private" name="bluffsWon">X times, Kyoko has won a hand while using the bluff_hi/lo/no tags.</marker>
-        <marker scope="Public" name="bluffsWon_hi" />
-        <marker scope="Public" name="bluffsWon_lo" />
-        <marker scope="Public" name="bluffsWon_no" />
+        <marker scope="Public" name="blimbsplobrother">April Fool's, Male Removing Extra. Courtesy of Ms. Janine, first name Maria.</marker>
+        <marker scope="Public" name="bluffing">Set to "hi", "lo", or "no" during her bluffing phase (game rounds 8-11) depending on how she's bluffing in this current hand.</marker>
+        <marker scope="Public" name="bluffsLost_hi">Lost X hands while bluffing=hi</marker>
+        <marker scope="Public" name="bluffsLost_lo">Lost X hands while bluffing=lo</marker>
+        <marker scope="Public" name="bluffsLost_no">Lost X hands while bluffing=no</marker>
+        <marker scope="Public" name="bluffsWon_hi">Won X hands while bluffing=hi</marker>
+        <marker scope="Public" name="bluffsWon_lo">Won X hands while bluffing=lo</marker>
+        <marker scope="Public" name="bluffsWon_no">Won X hands while bluffing=no</marker>
         <marker scope="Public" name="bodyUsefulLesbians" />
-        <marker scope="Public" name="bossMode">Game has started with a player name triggering stronger AI for Kyoko</marker>
+        <marker scope="Public" name="bossMode">Game started with a player name triggering stronger AI for Kyoko</marker>
         <marker scope="Public" name="cameLikeThatQuery" />
         <marker scope="Public" name="cardsWillDo" />
         <marker scope="Public" name="careerMention">Kyoko has alluded to her career as a detective X times.</marker>
         <marker scope="Public" name="caseBriefsTrimComment" />
+        <marker scope="Public" name="cd_fourthWallClassicKyoko" />
+        <marker scope="Public" name="cd_maleStaminaRe" />
         <marker scope="Public" name="chihiro_mahiru_noselfieRe" />
         <marker scope="Public" name="chihiro_mahiru_selfieRe" />
         <marker scope="Public" name="chihiro_outGeneric" />
         <marker scope="Public" name="chihiroOutsGeneric" />
         <marker scope="Public" name="chivulva" />
-        <marker scope="Public" name="coffee">Kyoko has mentioned coffee X times. She's a fan.</marker>
+        <marker scope="Public" name="coffee">She has mentioned coffee X times. She's a fan.</marker>
         <marker scope="Public" name="coffeeHandLine" />
         <marker scope="Public" name="collectible_underwear">kirigiri_underwear collectible is unlocked</marker>
-        <marker scope="Public" name="consent">Kyoko has given verbal consent to a character looking at her while they masturbate.</marker>
+        <marker scope="Public" name="consent">She has given express verbal consent to a character looking at her while they masturbate.</marker>
         <marker scope="Public" name="consentB">"There's no reason to feel guilty about glancing at my body."</marker>
         <marker scope="Public" name="corner" />
         <marker scope="Public" name="cornered" />
-        <marker scope="Public" name="costume">Marker indicating her costume using strings. 0 = default, FF = Future Foundation costume.</marker>
+        <marker scope="Public" name="costume">Marker indicating her costume using strings. 0 = default; FF = Future Foundation costume; swimsuit = Danganronpa S swimsuit costume.</marker>
         <marker scope="Public" name="cute">"It really is quite cute." "What? I'm allowed to like cute things." (=3 if triggered by male opponent)</marker>
         <marker scope="Public" name="deepBreathStart" />
-        <marker scope="Public" name="detectiveReveal">Kyoko has stated outright or otherwise confirmed that she is a detective.</marker>
+        <marker scope="Public" name="detectiveReveal">She has stated outright or otherwise confirmed that she is a detective.</marker>
         <marker scope="Public" name="dirtyTalk" />
         <marker scope="Public" name="disappointment">"No human language can describe the disappointment I'm feeling right now."</marker>
-        <marker scope="Public" name="doIt">Kyoko says a line indicating she knows the human's forfeit timer is 1 (sets to 0 if human doesn't finish next screen)</marker>
+        <marker scope="Public" name="doIt">Line indicating she knows the human's forfeit timer is 1 (clears if human doesn't finish next screen)</marker>
         <marker scope="Public" name="dontExpletive" />
         <marker scope="Public" name="dressCode" />
         <marker scope="Private" name="ellipsisCount">Automatically counts lines that are just ellipsis, lacking any letters that a word could be made out of. Decrements by 1 each strip phase.</marker>
         <marker scope="Public" name="enxNotRunning" />
-        <marker scope="Public" name="enxReaction">"It isn't against the rules to cover up with your hands."</marker>
-        <marker scope="Public" name="evidenceFloor">"I see now I should've kept my shoes on longer. "</marker>
+        <marker scope="Public" name="enxReaction">Stripped important, tag=ENF/ENM, lines referencing ~target~ covering up with their hands.</marker>
+        <marker scope="Public" name="evidenceFloor">"I see now I should've kept my shoes on longer" and other versions of the line</marker>
         <marker scope="Public" name="exhibitionExpectation" />
-        <marker scope="Public" name="explainedForfeit">Kyoko's explained early in the game that masturbation is a penalty for losing.</marker>
+        <marker scope="Public" name="explainedForfeit">She's explained early in the game that masturbation is a penalty for losing.</marker>
         <marker scope="Public" name="FFcostume">Used while Kyoko is wearing the Future Foundation outfit.</marker>
         <marker scope="Public" name="finishLikeThatQuery" />
         <marker scope="Public" name="forfeitFlesh" />
         <marker scope="Public" name="forfeitMaleAttention" />
         <marker scope="Public" name="forfeitPile" />
         <marker scope="Public" name="forfeitSensation" />
+        <marker scope="Public" name="gamblingDislike" />
         <marker scope="Public" name="gawking" />
         <marker scope="Public" name="giddyCount">The giddy pose has appeared X times this game. Counted with hidden lines.</marker>
         <marker scope="Public" name="glassesLastStrip" />
-        <marker scope="Public" name="glovesOn">Kyoko's said she won't take her gloves off this game.</marker>
+        <marker scope="Public" name="glovesOn">She has said she won't take her gloves off this game.</marker>
         <marker scope="Public" name="glovesOnForfeit" />
         <marker scope="Public" name="goingThrough" />
-        <marker scope="Public" name="hair">Activates if Kyoko has moved her hair out of the way of her chest at stage 8 (naked). Should activate automatically if she uses any pose other than the strips or aside2 during stage 8.</marker>
+        <marker scope="Public" name="hair">Activates if she has moved her hair out of the way of her chest at stage 8 (naked). Should activate automatically if she uses any pose other than the strips or aside2 during stage 8.</marker>
         <marker scope="Public" name="handBluffN0" />
         <marker scope="Public" name="handBluffN1" />
         <marker scope="Public" name="handBluffN2" />
@@ -712,9 +733,9 @@
         <marker scope="Public" name="hauntedVoyeurs" />
         <marker scope="Public" name="haveToUntie">"Just a second. I have to untie this."</marker>
         <marker scope="Public" name="hayato" />
-        <marker scope="Public" name="hopesPeak">Kyoko has mentioned Hope's Peak Academy, her High School, X times.</marker>
+        <marker scope="Public" name="hopesPeak">She has mentioned Hope's Peak Academy, her High School, X times.</marker>
         <marker scope="Public" name="howLossFeels" />
-        <marker scope="Public" name="hugePenis">Kyoko has seen and reacted to a penis with the huge_penis tag</marker>
+        <marker scope="Public" name="hugePenis">She has seen and reacted to a penis with the huge_penis tag.</marker>
         <marker scope="Public" name="humanBra" />
         <marker scope="Public" name="humanExtraLayers">"Already completely exposed yourself, yet you still have layers to spare?" (to human)</marker>
         <marker scope="Public" name="humanMagician" />
@@ -746,6 +767,10 @@
         <marker scope="Public" name="mikan_confident2Re" />
         <marker scope="Public" name="mikan_listen" />
         <marker scope="Public" name="mikan_quietRe" />
+        <marker scope="Public" name="multiBelt" />
+        <marker scope="Public" name="nagatoro_fun" />
+        <marker scope="Public" name="nagatoro_funBest" />
+        <marker scope="Public" name="nagatoro_funWork" />
         <marker scope="Public" name="nagatoro_stalkingArrest" />
         <marker scope="Public" name="nagatoro_stalkingLawyer" />
         <marker scope="Public" name="nagatoro_stalkingRe" />
@@ -808,11 +833,12 @@
         <marker scope="Public" name="stripCount" />
         <marker scope="Public" name="stripNanamura" />
         <marker scope="Public" name="sunStrip" />
-        <marker scope="Public" name="swissFrancs">Despite being Japanese, Kyoko says her jacket cost 90 Swiss francs.</marker>
+        <marker scope="Public" name="swissFrancs">Despite being Japanese, she says her jacket cost 90 Swiss francs.</marker>
         <marker scope="Public" name="theirTurn" />
         <marker scope="Public" name="theyStripHere" />
         <marker scope="Public" name="thighRub">"Word of advice...try rubbing your thighs together."</marker>
         <marker scope="Public" name="tieCompletes">"A classmate in high school once told me this tie completes my outfit."</marker>
+        <marker scope="Public" name="timeline" />
         <marker scope="Public" name="tooManyKyokos" />
         <marker scope="Public" name="toshinou_glovesOn_selfRibbonOut" />
         <marker scope="Public" name="toshinou_godivaHairRe" />
@@ -822,7 +848,7 @@
         <marker scope="Public" name="toshinou_theKyoukoRe" />
         <marker scope="Public" name="toshinou_tomatoUndies" />
         <marker scope="Public" name="toshinouBoobies">Response to Kyouko Toshinou simply asking, "Boobies?" =2 when fully responded, =1 when preparing to respond next case.</marker>
-        <marker scope="Public" name="underdog">Kyoko has lost the first 8 hands in a row, but goes up to Best AI instantly.</marker>
+        <marker scope="Public" name="underdog">She has lost the first 8 hands in a row, but goes up to Best AI instantly.</marker>
         <marker scope="Public" name="underPressure" />
         <marker scope="Public" name="wellYouLost" />
     </markers>
