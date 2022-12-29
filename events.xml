@@ -460,12 +460,8 @@
     <event id="easter">
         <name>Easter</name>
 
-        <!-- The April Fool's event is always the first week of April, and we want to keep these event separate where possible because of how different they are. -->
+        <!-- The April Fool's event is the first three days of April, and we want to keep these event separate where possible because of how different they are. -->
         <dates>
-            <date>
-                <from year="2022" month="4" day="15" /> <!-- Good Friday in 2022 is April 15 -->
-                <to year="2022" month="4" day="28" />
-            </date>
             <date>
                 <from year="2023" month="4" day="7" /> <!-- Good Friday in 2023 is April 7 -->
                 <to year="2023" month="4" day="20" />
@@ -481,6 +477,30 @@
             <date>
                 <from year="2026" month="4" day="5" /> <!-- Good Friday in 2026 is April 3, so these dates are deferred by two days. -->
                 <to year="2026" month="4" day="18" />
+            </date>
+            <date>
+                <from year="2027" month="3" day="16" /> <!-- Good Friday in 2027 is March 26, so these dates are mostly early. -->
+                <to year="2027" month="3" day="29" />
+            </date>
+            <date>
+                <from year="2028" month="4" day="14" /> <!-- Good Friday in 2028 is April 14 -->
+                <to year="2028" month="4" day="27" />
+            </date>
+            <date>
+                <from year="2029" month="3" day="18" /> <!-- Good Friday in 2029 is March 30, so these dates are mostly early. -->
+                <to year="2029" month="3" day="31" />
+            </date>
+            <date>
+                <from year="2030" month="4" day="19" /> <!-- Good Friday in 2030 is April 19 -->
+                <to year="2030" month="5" day="2" />
+            </date>
+            <date>
+                <from year="2031" month="4" day="11" /> <!-- Good Friday in 2031 is April 11 -->
+                <to year="2031" month="4" day="24" />
+            </date>
+            <date>
+                <from year="2032" month="3" day="16" /> <!-- Good Friday in 2032 is March 26 again, so these dates are mostly early. -->
+                <to year="2032" month="3" day="29" />
             </date>
         </dates>
 
