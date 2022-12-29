@@ -3,3 +3,13 @@
   color: #FF8080;
   font-style: italic;
 }
+
+.dialogue .mari[data-character="marinette"] {
+  /*Marinette is talking in her dual forfeit*/
+  color: #FF0080;
+}
+
+.dialogue .adrien[data-character="marinette"] {
+  /*Adrien is talking in a dual forfeit*/
+  color: Teal;
+}
