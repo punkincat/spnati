@@ -147,6 +147,10 @@
         <response id="572" opponent="okino" opponentId="128" />
         <response id="573" opponent="steve" opponentId="3" />
         <response id="595" opponent="kyoko_kirigiri" opponentId="258" />
+        <response id="604" opponent="dunban" opponentId="2" />
+        <response id="605" opponent="dunban" opponentId="399" />
+        <response id="608" opponent="toph" opponentId="127" />
+        <response id="609" opponent="toph" opponentId="283" />
     </responses>
     <notes>
         <note id="10">expay shaer = exp share</note>
@@ -193,6 +197,7 @@ Rosa's costume index
         <note id="559">this line plays when rosa is eating out gloria</note>
         <note id="562">this line plays when rosa is eating out gloria</note>
         <note id="597">Shelving this line idea until there's a better way to check for this.</note>
+        <note id="610">P.E. = physical education</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Situations" sort="9" />
@@ -355,7 +360,7 @@ Rosa's costume index
         <label id="169" label="" folder="Responses" sort="18" />
         <label id="170" label="" folder="Responses" sort="19" />
         <label id="171" label="" folder="Responses" sort="40" />
-        <label id="172" label="Mari - Curry Chatter" folder="Responses" sort="0" />
+        <label id="172" label="Mari - Curry Chatter" folder="Responses" sort="2" />
         <label id="173" label="Mari - Curry Chatter" folder="Responses" sort="3" />
         <label id="174" label="Mari - Drink Chatter" folder="Responses" sort="2" />
         <label id="175" label="Mari - Drink Chatter" folder="Responses" sort="4" />
@@ -750,31 +755,43 @@ Rosa's costume index
         <label id="575" label="" folder="Targets" sort="0" />
         <label id="573" label="" folder="Targets" sort="71" />
         <label id="576" label="" folder="Responses" sort="0" />
-        <label id="572" label="" folder="Responses" sort="0" />
+        <label id="572" label="" folder="Responses" sort="9" />
         <label id="577" label="" folder="Christmas" sort="0" />
-        <label id="578" label="" folder="Christmas" sort="0" />
-        <label id="579" label="" folder="Christmas" sort="0" />
-        <label id="580" label="" folder="Christmas" sort="0" />
-        <label id="581" label="" folder="Christmas" sort="0" />
-        <label id="582" label="" folder="Christmas" sort="0" />
-        <label id="583" label="" folder="Christmas" sort="0" />
-        <label id="584" label="" folder="Christmas" sort="0" />
-        <label id="585" label="" folder="Christmas" sort="0" />
-        <label id="586" label="" folder="Christmas" sort="0" />
-        <label id="587" label="" folder="Christmas" sort="0" />
-        <label id="588" label="" folder="Christmas" sort="0" />
-        <label id="589" label="" folder="Christmas" sort="0" />
-        <label id="590" label="" folder="Christmas" sort="0" />
-        <label id="591" label="" folder="Tag Filters" sort="0" />
+        <label id="578" label="" folder="Christmas" sort="2" />
+        <label id="579" label="" folder="Christmas" sort="3" />
+        <label id="580" label="" folder="Christmas" sort="4" />
+        <label id="581" label="" folder="Christmas" sort="5" />
+        <label id="582" label="" folder="Christmas" sort="6" />
+        <label id="583" label="" folder="Christmas" sort="9" />
+        <label id="584" label="" folder="Christmas" sort="10" />
+        <label id="585" label="" folder="Christmas" sort="11" />
+        <label id="586" label="" folder="Christmas" sort="7" />
+        <label id="587" label="" folder="Christmas" sort="12" />
+        <label id="588" label="" folder="Christmas" sort="13" />
+        <label id="589" label="" folder="Christmas" sort="8" />
+        <label id="590" label="" folder="Christmas" sort="14" />
+        <label id="591" label="" folder="Tag Filters" sort="8" />
         <label id="592" label="" folder="Events" sort="0" />
-        <label id="593" label="" folder="Targets" sort="0" />
-        <label id="594" label="" folder="Targets" sort="0" />
-        <label id="596" label="" folder="Targets" sort="0" />
-        <label id="597" label="" folder="Situations" sort="0" />
-        <label id="598" label="" folder="Targets" sort="0" />
-        <label id="599" label="" folder="Targets" sort="0" />
+        <label id="593" label="" folder="Targets" sort="66" />
+        <label id="594" label="" folder="Targets" sort="24" />
+        <label id="596" label="" folder="Targets" sort="67" />
+        <label id="597" label="" folder="Situations" sort="36" />
+        <label id="598" label="" folder="Targets" sort="105" />
+        <label id="599" label="" folder="Targets" sort="106" />
+        <label id="600" label="" folder="Targets" sort="115" />
+        <label id="601" label="" folder="Targets" sort="116" />
+        <label id="602" label="" folder="Targets" sort="117" />
+        <label id="603" label="" folder="Targets" sort="118" />
+        <label id="595" label="" folder="Prompt Responses" sort="3" />
+        <label id="604" label="" folder="Situations" sort="90" />
+        <label id="605" label="" folder="Prompt Responses" sort="0" />
+        <label id="606" label="" folder="Responses" sort="0" />
+        <label id="607" label="" folder="Targets" sort="0" />
+        <label id="608" label="" folder="Responses" sort="0" />
+        <label id="609" label="" folder="Responses" sort="0" />
+        <label id="610" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>599</nextId>
+    <nextId>610</nextId>
     <markers>
         <marker scope="Public" name="__human_nickname" />
         <marker scope="Public" name="accent_murder" />
@@ -809,6 +826,8 @@ Rosa's costume index
         <marker scope="Public" name="gloria_basil_strip1a" />
         <marker scope="Public" name="gloria_bella_ishkneeoobatay" />
         <marker scope="Public" name="gloria_binah_thesaurus1" />
+        <marker scope="Public" name="gloria_binah_thesaurus2" />
+        <marker scope="Public" name="gloria_bionis_view_1_Resp" />
         <marker scope="Public" name="gloria_blake_remnantExpoResp" />
         <marker scope="Public" name="gloria_cag_alchemy1" />
         <marker scope="Public" name="gloria_cag_collar_firstReact" />
@@ -820,6 +839,7 @@ Rosa's costume index
         <marker scope="Public" name="gloria_CD_punk1" />
         <marker scope="Public" name="gloria_CD_punk2" />
         <marker scope="Public" name="gloria_CD_self0c" />
+        <marker scope="Public" name="gloria_chie_PE_1" />
         <marker scope="Public" name="gloria_chihiro_GReveal" />
         <marker scope="Public" name="gloria_colress_strip0a" />
         <marker scope="Public" name="gloria_cynthia_strip0a" />
@@ -827,6 +847,7 @@ Rosa's costume index
         <marker scope="Public" name="gloria_dawn_startFF" />
         <marker scope="Public" name="gloria_dawn_strip0a" />
         <marker scope="Public" name="gloria_dawnsBack" />
+        <marker scope="Public" name="gloria_dunban_scarexplain3" />
         <marker scope="Public" name="gloria_dust_strip0a" />
         <marker scope="Public" name="gloria_erufuda_deepFriedMarsBars" />
         <marker scope="Public" name="gloria_erufuda_dressResp" />
@@ -863,6 +884,7 @@ Rosa's costume index
         <marker scope="Public" name="gloria_idle_sly_excited" />
         <marker scope="Public" name="gloria_ignatz_lostGlasses" />
         <marker scope="Public" name="gloria_ignatz_strip0a" />
+        <marker scope="Public" name="gloria_jin_facesitting" />
         <marker scope="Public" name="gloria_joey_chestreveal" />
         <marker scope="Public" name="gloria_jura_babies" />
         <marker scope="Public" name="gloria_jura_seduction1" />
@@ -872,6 +894,10 @@ Rosa's costume index
         <marker scope="Public" name="gloria_jura_strip1b" />
         <marker scope="Public" name="gloria_kamina_strip0a" />
         <marker scope="Public" name="gloria_kirigiri_strip0a" />
+        <marker scope="Public" name="gloria_kirigiri_strip0aAB" />
+        <marker scope="Public" name="gloria_kirigiri_strip0b" />
+        <marker scope="Public" name="gloria_kirigiri_strip0bAA" />
+        <marker scope="Public" name="gloria_kirigiri_strip0bAC" />
         <marker scope="Public" name="gloria_kora_strip0a" />
         <marker scope="Public" name="gloria_kuma_parental_guidance" />
         <marker scope="Public" name="gloria_kumatora_food_curry" />
@@ -1001,6 +1027,8 @@ Rosa's costume index
         <marker scope="Public" name="gloria_susie_strip0a" />
         <marker scope="Public" name="gloria_susie_strip1a" />
         <marker scope="Public" name="gloria_takatoshi_strip0a" />
+        <marker scope="Public" name="gloria_toph_animals1Resp" />
+        <marker scope="Public" name="gloria_toph_food1Resp" />
         <marker scope="Public" name="gloria_trifle_gigantamix0" />
         <marker scope="Public" name="gloria_trixie_0Resp" />
         <marker scope="Public" name="gloria_trixie_biggeststolen" />
@@ -1033,6 +1061,7 @@ Rosa's costume index
         <marker scope="Public" name="humanstrip_igGlasses" />
         <marker scope="Public" name="idle_no_men" />
         <marker scope="Public" name="kanto_curry" />
+        <marker scope="Public" name="kyoko_pokeTrainers2Resp" />
         <marker scope="Public" name="kyoko_pokeTrainersResp" />
         <marker scope="Public" name="lad_fell_down" />
         <marker scope="Public" name="lucky_egg" />
