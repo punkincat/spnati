@@ -389,6 +389,9 @@
         <response id="1964" opponent="cheryl" opponentId="409" />
         <response id="1966" opponent="okino" opponentId="446" />
         <response id="1968" opponent="okino" opponentId="448" />
+        <response id="1973" opponent="nagatoro" opponentId="1519" />
+        <response id="1974" opponent="nagatoro" opponentId="1517" />
+        <response id="1981" opponent="cheryl" opponentId="430" />
     </responses>
     <notes>
         <note id="412">Yes, Mari is implying that Kazuma is lying just to see her pose naked for him. You are free to have Kazuma defend his case, so to speak.</note>
@@ -405,7 +408,7 @@
         <note id="1891">Just fyi, I'm keeping this reply hidden until we can actually put in the motorboat poses. Mostly so players don't get confused and stuff</note>
         <note id="1838">This line is a bit more intentionally mean than Mari usually is, this is because Mari is trying to get a rise out of Dwight. Her next lines will </note>
         <note id="1937">Note that Mari said "anything", which means that Noire wearing a band-aid will constitute as an anything, therefore making her win. Just to keep it in mind for how this route can go!</note>
-        <note id="1965">It might be worth noting that Mari herself doesn't actually masturbate very often, since she has an easy time finding people to have sex with if she wants it.</note>
+        <note id="1984">It's worth noting that if Cheryl says "no", then my intention is to have Mari ask her if she would be interested in using toys at some point.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Nform" sort="7" />
@@ -2328,21 +2331,34 @@
         <label id="1956" label="" color="3" folder="PromptResponses" sort="0" />
         <label id="1957" label="" color="1" folder="Targets" sort="0" />
         <label id="1958" label="" color="1" folder="Targets" sort="0" />
-        <label id="1959" label="" color="1" folder="Targets" sort="0" />
-        <label id="1960" label="" color="3" folder="Replies" sort="0" />
-        <label id="1961" label="" color="3" folder="Replies" sort="0" />
-        <label id="1962" label="" color="3" folder="Replies" sort="0" />
-        <label id="1963" label="" color="3" folder="Replies" sort="0" />
-        <label id="1964" label="" color="1" folder="Replies" sort="0" />
-        <label id="1965" label="" color="1" folder="Targets" sort="0" />
-        <label id="1966" label="" color="3" folder="Targets" sort="0" />
-        <label id="1967" label="" color="3" folder="Targets" sort="0" />
-        <label id="1968" label="" color="3" folder="Replies" sort="0" />
-        <label id="1969" label="" color="3" folder="Replies" sort="0" />
-        <label id="1970" label="" color="1" folder="Targets" sort="0" />
-        <label id="1971" label="" color="1" folder="Targets" sort="0" />
+        <label id="1959" label="" color="0" folder="Targets" sort="0" />
+        <label id="1960" label="" color="0" folder="Replies" sort="0" />
+        <label id="1961" label="" color="0" folder="Replies" sort="0" />
+        <label id="1962" label="" color="0" folder="Replies" sort="0" />
+        <label id="1963" label="" color="0" folder="Replies" sort="0" />
+        <label id="1964" label="" color="0" folder="Replies" sort="0" />
+        <label id="1965" label="" color="0" folder="Targets" sort="0" />
+        <label id="1966" label="" color="0" folder="Targets" sort="0" />
+        <label id="1967" label="" color="0" folder="Targets" sort="0" />
+        <label id="1968" label="" color="0" folder="Replies" sort="0" />
+        <label id="1969" label="" color="0" folder="Replies" sort="0" />
+        <label id="1970" label="" color="0" folder="Targets" sort="0" />
+        <label id="1971" label="" color="0" folder="Targets" sort="0" />
+        <label id="1972" label="" color="1" folder="Targets" sort="0" />
+        <label id="1973" label="" color="3" folder="Replies" sort="0" />
+        <label id="1974" label="" color="3" folder="" sort="0" />
+        <label id="1975" label="" color="3" folder="" sort="0" />
+        <label id="1976" label="" color="5" folder="Replies" sort="0" />
+        <label id="1977" label="" color="5" folder="Replies" sort="0" />
+        <label id="1978" label="" color="1" folder="Targets" sort="0" />
+        <label id="1979" label="" color="1" folder="Targets" sort="0" />
+        <label id="1980" label="" color="1" folder="Targets" sort="0" />
+        <label id="1981" label="" color="1" folder="Replies" sort="0" />
+        <label id="1982" label="" color="3" folder="Targets" sort="0" />
+        <label id="1983" label="" color="3" folder="Targets" sort="0" />
+        <label id="1984" label="" color="1" folder="Targets" sort="0" />
     </labels>
-    <nextId>1971</nextId>
+    <nextId>1984</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aaravi_relaxGirl" />
@@ -2549,13 +2565,17 @@
         <marker scope="Public" name="CCupil_reveal_react" />
         <marker scope="Public" name="Cform_dinner_tonight" />
         <marker scope="Public" name="Cheryl_creampie_reply" />
+        <marker scope="Public" name="Cheryl_creampie_reply2" />
         <marker scope="Public" name="Cheryl_intimacyFears_reply" />
         <marker scope="Public" name="Cheryl_intimacyFears_reply2" />
         <marker scope="Public" name="Cheryl_LeonType_reply" />
+        <marker scope="Public" name="Cheryl_masturbation_cont" />
+        <marker scope="Public" name="Cheryl_masturbation_end" />
         <marker scope="Public" name="Cheryl_masturbation_question" />
         <marker scope="Public" name="Cheryl_relationships_cont" />
         <marker scope="Public" name="Cheryl_relationships_end" />
         <marker scope="Public" name="Cheryl_relationships_question" />
+        <marker scope="Public" name="Cheryl_sexToys_question" />
         <marker scope="Public" name="Cheryl_shirt_reply1" />
         <marker scope="Public" name="Cheryl_shirt_reply2" />
         <marker scope="Public" name="Cheryl_shirt_reply3" />
@@ -2941,7 +2961,10 @@
         <marker scope="Public" name="Myriam_game_start_halloween" />
         <marker scope="Public" name="Nagatoro_bloodCup_reply" />
         <marker scope="Public" name="Nagatoro_cute" />
+        <marker scope="Public" name="Nagatoro_ff_justkidding_react" />
+        <marker scope="Public" name="Nagatoro_ff_wannafuck_react" />
         <marker scope="Public" name="Nagatoro_friendsWithPlayer" />
+        <marker scope="Public" name="Nagatoro_hopelessBoys_reply" />
         <marker scope="Public" name="Nagatoro_HowManyPeople_cont" />
         <marker scope="Public" name="Nagatoro_HowManyPeople_end" />
         <marker scope="Public" name="Nagatoro_HowManyPeople_reply" />
@@ -2954,6 +2977,7 @@
         <marker scope="Public" name="Nagatoro_playerKiss_cont2" />
         <marker scope="Public" name="Nagatoro_playerKiss_cont3" />
         <marker scope="Public" name="Nagatoro_playerKiss_question" />
+        <marker scope="Public" name="Nagatoro_playerNudeReact" />
         <marker scope="Public" name="Nagatoro_PlayerPet_end" />
         <marker scope="Public" name="Nagatoro_PlayerPet_endB" />
         <marker scope="Public" name="Nagatoro_PlayerPet_reply" />
@@ -3165,14 +3189,19 @@
         <marker scope="Public" name="Okino_changingRoom_endB" />
         <marker scope="Public" name="Okino_changingRoom_question" />
         <marker scope="Public" name="Okino_howManyTimes" />
+        <marker scope="Public" name="Okino_howManyTimes_contA" />
+        <marker scope="Public" name="Okino_howManyTimes_contB" />
         <marker scope="Public" name="Okino_hybrid_reply" />
         <marker scope="Public" name="Okino_loveadvice_reply" />
         <marker scope="Public" name="Okino_loveadvice_reply2" />
+        <marker scope="Public" name="Okino_loveadvice_reply3a" />
+        <marker scope="Public" name="Okino_loveadvice_reply3b" />
         <marker scope="Public" name="Okino_postReveal_reply" />
         <marker scope="Public" name="Okino_reveal" />
         <marker scope="Public" name="Okino_SelfPowers_reply" />
         <marker scope="Public" name="Okino_SelfPowers_reply2" />
         <marker scope="Public" name="Okino_SelfPowers_reply2B" />
+        <marker scope="Public" name="Okino_timeTravel_excitement" />
         <marker scope="Public" name="Okino_timeTravel_serious" />
         <marker scope="Public" name="OMari" />
         <marker scope="Public" name="OMari_capturedHeart_reply" />
