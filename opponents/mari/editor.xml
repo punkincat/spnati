@@ -243,6 +243,7 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <note id="2152">Mari's a classically-trained pianist. Or at least, she's studying to become one. (Now, I myself am decidedly not classically trained, or even a musician for that matter. Still, I'll do my best to keep up.)</note>
         <note id="2219">The actual calculation here takes advantage of the diff variable: ~human.diff~ equals the layer difference between Mari and the human player, and we know Mari's current layer count since she's at stage 0.</note>
         <note id="2238">The lines here and in the 2B case all have separate values for each line, so you can respond to them either together or separately as you see fit.</note>
+        <note id="2330">I'm targeting this towards Mitama's stage 2 because (based on Mitama's notes) this'll probably get into deeper character stuff that wouldn't quite fit for early interactions.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Generic" sort="0" />
@@ -2539,10 +2540,12 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <label id="2327" label="S0 - Starting Off..." folder="Kyouko Toshino" sort="0" />
         <label id="2328" label="S3 (Informality) - Insert Title Here" folder="Kyouko Toshino" sort="0" />
         <label id="2329" label="" folder="Informality" sort="0" />
+        <label id="2330" label="S2 - Drive 1" folder="Mitama" sort="0" />
+        <label id="2331" label="S3 (Default Costume) - Something Interesting 1" folder="Mitama" sort="0" />
+        <label id="2332" label="S3 - Purity 1" folder="Mitama" sort="0" />
     </labels>
-    <nextId>2329</nextId>
+    <nextId>2332</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="__human_nickname" />
         <marker scope="Public" name="Aaravi_SchoolgirlTrope1" />
         <marker scope="Public" name="about_to_lose">Mari has a good chance of losing the game, this round. (Only set during the very last round of the game - only two players are left, and both Mari and the other player are naked.)</marker>
@@ -3633,6 +3636,9 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Misaka_Sisters2" />
         <marker scope="Public" name="Misaka_Sisters2=1" />
         <marker scope="Public" name="Misty_Build3" />
+        <marker scope="Public" name="Mitama_DefaultInteresting1" />
+        <marker scope="Public" name="Mitama_Drive1" />
+        <marker scope="Public" name="Mitama_Purity1" />
         <marker scope="Public" name="Moe_Stripped" />
         <marker scope="Public" name="Monika_PianoPractice1" />
         <marker scope="Public" name="Monika_Player1" />
