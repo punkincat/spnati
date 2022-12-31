@@ -1443,22 +1443,22 @@ ul.dropdown-menu>li {
     float: left;
 }
 
-.debug-case-info-row {
+.debug-section-row {
     display: flex;
     font-size: 1.2em;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
 }
 
-.debug-case-info-header {
+.debug-section-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 10rem;
+    width: 14rem;
     flex: none;
 }
 
-.debug-case-type, .debug-case-priority, .debug-case-test, .debug-case-condition-value {
+.debug-case-type, .debug-case-priority, .debug-case-stage, .debug-case-test, .debug-case-condition-value, .debug-case-markers, .debug-case-pose {
     font-family: monospace;
 }
 
