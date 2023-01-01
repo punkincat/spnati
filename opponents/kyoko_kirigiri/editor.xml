@@ -66,6 +66,12 @@
         <note id="26">The line here mentioning how long it's been since she last wore her outfit was the 1,000th line written for Kyoko on December 8, 2022.</note>
         <note id="446">This will be expanded (hehe) into a sequence later on and be given its natural priority but for now I am leaving this as-is</note>
         <note id="521">This case is intended as a failsafe if something unusual (such as an opponent finishing) causes a moved-hair pose to be used when Kyoko hasn't moved her hair the normal way.</note>
+        <note id="680">Meaning "Better luck next time." Special thanks to someone who wished to be identified as "Some German Tattergreis" for translating these German lines!</note>
+        <note id="682">Meaning "Right, right, you're bloody well right." Special thanks to someone who wished to be identified as "Some German Tattergreis" for translating these German lines!</note>
+        <note id="683">Meaning "You got this." Special thanks to someone who wished to be identified as "Some German Tattergreis" for translating these German lines!</note>
+        <note id="681">Meaning the same thing as "Auf Wiedersehen" (see you later), only typically used over the phone and denoting "Until I hear your voice again."</note>
+        <note id="684">Included at the request of Some German Tattergreis; a line from Joseph Joestar in the German dub of JoJo's Bizarre Adventure: Stardust Crusaders. "I solve my problems with skill and grace, and now you're getting smacked in the face."</note>
+        <note id="692">Possible responses to this might include:&lt;br&gt;- Freaking out about how Kyoko just said "I specialize in homicide cases" so casually&lt;br&gt;- Asking how old Kyoko is (she's 19)&lt;br&gt;- ...And/or asking how someone of Kyoko's/Hope's Peak students' age manages to be a homicide detective&lt;br&gt;&lt;br&gt;If you'd like to write a response including the last of those things, I've already set up a line responding to the marker "kyoko_ultimatedetective".</note>
     </notes>
     <labels>
         <label id="499" label="Shelved" folder="" sort="0" />
@@ -612,11 +618,11 @@
         <label id="599" label="Raynor rear" folder="" sort="0" />
         <label id="600" label="Raynor rear" folder="" sort="0" />
         <label id="601" label="Raynor rear" folder="" sort="0" />
-        <label id="607" label="Nagatoro R 0-1" folder="Duplicate dialogue" sort="0" />
-        <label id="608" label="Nagatoro R 0-2" folder="Duplicate dialogue" sort="0" />
+        <label id="607" label="Nagatoro IR 0-1" folder="Duplicate dialogue" sort="0" />
+        <label id="608" label="Nagatoro IR 0-2" folder="Duplicate dialogue" sort="0" />
         <label id="609" label="Remember Toshinou" folder="" sort="0" />
-        <label id="605" label="Nagatoro L 0-1" folder="" sort="0" />
-        <label id="606" label="Nagatoro L 0-2" folder="" sort="0" />
+        <label id="605" label="Nagatoro IL 0-1" folder="Inbound stage 0" sort="0" />
+        <label id="606" label="Nagatoro IL 0-2" folder="Inbound stage 0" sort="0" />
         <label id="610" label="Toshinou L GodivaHair" folder="" sort="0" />
         <label id="611" label="Toshinou L boobies" folder="" sort="0" />
         <label id="612" label="Toshinou R boobies" folder="" sort="0" />
@@ -627,69 +633,89 @@
         <label id="617" label="Toshinou select" folder="" sort="0" />
         <label id="618" label="Toshinou R GodivaHair" folder="" sort="0" />
         <label id="619" label="Temporary until fixed" folder="" sort="0" />
-        <label id="620" label="Nagatoro R Pre0-1" folder="Duplicate dialogue" sort="0" />
-        <label id="621" label="Nagatoro R Pre0-2" folder="Duplicate dialogue" sort="0" />
-        <label id="622" label="Nagatoro L 0-3" folder="" sort="0" />
+        <label id="620" label="Nagatoro IR Pre0-1" folder="Duplicate dialogue" sort="0" />
+        <label id="621" label="Nagatoro IR Pre0-2" folder="Duplicate dialogue" sort="0" />
+        <label id="622" label="Nagatoro IL 0-3" folder="Inbound stage 0" sort="0" />
         <label id="623" label="" folder="April Fool's" sort="0" />
         <label id="624" label="DR1 Spoilers!" folder="Timeline" sort="0" />
         <label id="625" label="DR1 Spoilers!" folder="Timeline" sort="0" />
         <label id="626" label="DR1 Spoilers!" folder="Timeline" sort="0" />
         <label id="627" label="Multi-belt" folder="" sort="0" />
         <label id="628" label="Multi-belt" folder="" sort="0" />
-        <label id="629" label="Nagatoro L 1-1" folder="" sort="0" />
-        <label id="630" label="Nagatoro L 1-1" folder="" sort="0" />
-        <label id="631" label="Nagatoro L 1-2" folder="" sort="0" />
-        <label id="632" label="Nagatoro L 1-3" folder="" sort="0" />
-        <label id="633" label="Nagatoro R Pre1-1" folder="Duplicate dialogue" sort="0" />
-        <label id="634" label="Nagatoro R Pre1-2" folder="Duplicate dialogue" sort="0" />
-        <label id="635" label="Nagatoro R 1-1" folder="Duplicate dialogue" sort="0" />
-        <label id="636" label="Nagatoro R 1-2" folder="Duplicate dialogue" sort="0" />
-        <label id="637" label="Nagatoro R Pre1-3" folder="Duplicate dialogue" sort="0" />
-        <label id="638" label="Nagatoro R 1-3" folder="Duplicate dialogue" sort="0" />
-        <label id="639" label="Nagatoro R 1-3" folder="Duplicate dialogue" sort="0" />
+        <label id="629" label="Nagatoro IL 1-1" folder="Inbound stage 1" sort="0" />
+        <label id="630" label="Nagatoro IL 1-1" folder="Inbound stage 1" sort="0" />
+        <label id="631" label="Nagatoro IL 1-2" folder="Inbound stage 1" sort="0" />
+        <label id="632" label="Nagatoro IL 1-3" folder="Inbound stage 1" sort="0" />
+        <label id="633" label="Nagatoro IR Pre1-1" folder="Duplicate dialogue" sort="0" />
+        <label id="634" label="Nagatoro IR Pre1-2" folder="Duplicate dialogue" sort="0" />
+        <label id="635" label="Nagatoro IR 1-1" folder="Duplicate dialogue" sort="0" />
+        <label id="636" label="Nagatoro IR 1-2" folder="Duplicate dialogue" sort="0" />
+        <label id="637" label="Nagatoro IR Pre1-3" folder="Duplicate dialogue" sort="0" />
+        <label id="638" label="Nagatoro IR 1-3" folder="Duplicate dialogue" sort="0" />
+        <label id="639" label="Nagatoro IR 1-3" folder="Duplicate dialogue" sort="0" />
         <label id="640" label="Long forfeit L" folder="" sort="0" />
         <label id="641" label="Long forfeit R" folder="" sort="0" />
         <label id="642" label="Long forfeit R" folder="" sort="0" />
         <label id="643" label="Black is your color" folder="" sort="0" />
         <label id="644" label="CD and Kyoko annihilate the 4th wall" folder="" sort="0" />
-        <label id="645" label="Gloria L 0-1" folder="" sort="0" />
-        <label id="646" label="Gloria L 0-1B" folder="" sort="0" />
-        <label id="647" label="Gloria L 0-1C" folder="" sort="0" />
-        <label id="648" label="Gloria L 0-1A" folder="" sort="0" />
-        <label id="649" label="Poké Trainers" folder="" sort="0" />
+        <label id="645" label="Gloria IL 0-1" folder="Inbound stage 0" sort="0" />
+        <label id="646" label="Gloria IL 0-1B" color="3" folder="Inbound stage 0" sort="0" />
+        <label id="647" label="Gloria IL 0-1C" color="5" folder="Inbound stage 0" sort="0" />
+        <label id="648" label="Gloria IL 0-1A" color="2" folder="Inbound stage 0" sort="0" />
+        <label id="649" label="Poké Trainers" folder="Outbound stage X" sort="0" />
         <label id="650" label="Poké Trainers" folder="Duplicate dialogue" sort="0" />
-        <label id="651" label="Gloria R pre0-1A" folder="Duplicate dialogue" sort="0" />
-        <label id="652" label="Gloria R pre0-1B" folder="Duplicate dialogue" sort="0" />
-        <label id="653" label="Gloria R pre0-1C" folder="Duplicate dialogue" sort="0" />
-        <label id="654" label="Gloria R 0-1A" folder="Duplicate dialogue" sort="0" />
-        <label id="655" label="Gloria R 0-1B" folder="Duplicate dialogue" sort="0" />
-        <label id="656" label="Gloria R 0-1C" folder="Duplicate dialogue" sort="0" />
+        <label id="651" label="Gloria IR pre0-1A" folder="Duplicate dialogue" sort="0" />
+        <label id="652" label="Gloria IR pre0-1B" folder="Duplicate dialogue" sort="0" />
+        <label id="653" label="Gloria IR pre0-1C" folder="Duplicate dialogue" sort="0" />
+        <label id="654" label="Gloria IR 0-1A" color="2" folder="Duplicate dialogue" sort="0" />
+        <label id="655" label="Gloria IR 0-1B" color="3" folder="Duplicate dialogue" sort="0" />
+        <label id="656" label="Gloria IR 0-1C" color="5" folder="Duplicate dialogue" sort="0" />
         <label id="657" label="High card showdown" folder="Must masturbate" sort="0" />
         <label id="658" label="7 High Win" folder="" sort="0" />
         <label id="659" label="7 High Win" folder="" sort="0" />
         <label id="660" label="7 High Win" folder="" sort="0" />
-        <label id="604" label="Nagatoro L 0-1 variation" folder="Duplicate dialogue" sort="0" />
-        <label id="603" label="Nagatoro L 0-1 variation" folder="Duplicate dialogue" sort="0" />
-        <label id="602" label="Nagatoro L 0-1 variation" folder="Duplicate dialogue" sort="0" />
-        <label id="661" label="Nagatoro R 0-1 variation" folder="Duplicate dialogue" sort="0" />
-        <label id="662" label="Nagatoro R 0-1 variation" folder="Duplicate dialogue" sort="0" />
-        <label id="663" label="Nagatoro R 0-1 variation" folder="Duplicate dialogue" sort="0" />
-        <label id="664" label="Gloria L 0-2C" folder="" sort="0" />
-        <label id="665" label="Gloria L 0-2A" folder="" sort="0" />
-        <label id="666" label="Gloria L 0-2B" folder="" sort="0" />
-        <label id="667" label="Gloria R 0-2A" folder="Duplicate dialogue" sort="0" />
-        <label id="668" label="Gloria R 0-2B" folder="Duplicate dialogue" sort="0" />
-        <label id="669" label="Gloria R 0-2C" folder="Duplicate dialogue" sort="0" />
-        <label id="670" label="Gloria R pre0-2B" folder="Duplicate dialogue" sort="0" />
-        <label id="671" label="Gloria R pre0-2A" folder="Duplicate dialogue" sort="0" />
-        <label id="672" label="Gloria R pre0-2C" folder="Duplicate dialogue" sort="0" />
+        <label id="604" label="Nagatoro IL 0-1 variation" folder="Duplicate dialogue" sort="0" />
+        <label id="603" label="Nagatoro IL 0-1 variation" folder="Duplicate dialogue" sort="0" />
+        <label id="602" label="Nagatoro IL 0-1 variation" folder="Duplicate dialogue" sort="0" />
+        <label id="661" label="Nagatoro IR 0-1 variation" folder="Duplicate dialogue" sort="0" />
+        <label id="662" label="Nagatoro IR 0-1 variation" folder="Duplicate dialogue" sort="0" />
+        <label id="663" label="Nagatoro IR 0-1 variation" folder="Duplicate dialogue" sort="0" />
+        <label id="664" label="Gloria IL 0-2C" color="5" folder="Inbound stage 0" sort="0" />
+        <label id="665" label="Gloria IL 0-2A" color="2" folder="Inbound stage 0" sort="0" />
+        <label id="666" label="Gloria IL 0-2B" color="3" folder="Inbound stage 0" sort="0" />
+        <label id="667" label="Gloria IR 0-2A" color="2" folder="Duplicate dialogue" sort="0" />
+        <label id="668" label="Gloria IR 0-2B" color="3" folder="Duplicate dialogue" sort="0" />
+        <label id="669" label="Gloria IR 0-2C" color="5" folder="Duplicate dialogue" sort="0" />
+        <label id="670" label="Gloria IR pre0-2B" folder="Duplicate dialogue" sort="0" />
+        <label id="671" label="Gloria IR pre0-2A" folder="Duplicate dialogue" sort="0" />
+        <label id="672" label="Gloria IR pre0-2C" folder="Duplicate dialogue" sort="0" />
         <label id="677" label="Okino gender reveal" folder="Chihiro+Okino" sort="0" />
         <label id="676" label="Okino gender reveal" folder="Chihiro+Okino" sort="0" />
         <label id="673" label="Okino gender reveal" folder="" sort="0" />
         <label id="675" label="Okino gender reveal" folder="" sort="0" />
+        <label id="678" label="" folder="Major" sort="0" />
+        <label id="679" label="" folder="Must masturbate" sort="0" />
+        <label id="680" label="Deutsch" folder="" sort="0" />
+        <label id="681" label="Deutsch" folder="" sort="0" />
+        <label id="682" label="Deutsch" folder="" sort="0" />
+        <label id="683" label="Deutsch" folder="" sort="0" />
+        <label id="684" label="Deutsch" folder="Must masturbate" sort="0" />
+        <label id="685" label="Gloria Ou 0-1" folder="Outbound stage 0" sort="0" />
+        <label id="686" label="Gloria Ou 0-2" folder="Outbound stage 0" sort="0" />
+        <label id="687" label="Gloria O" folder="Outbound stage 0" sort="0" />
+        <label id="258" label="Poké Trainers" folder="" sort="0" />
+        <label id="591" label="Ringo In 4-1" folder="Inbound stage 4" sort="0" />
+        <label id="688" label="Ringo In 8-2" folder="Inbound stage 8" sort="0" />
+        <label id="689" label="Ringo In 8-3" folder="Inbound stage 8" sort="0" />
+        <label id="690" label="Ringo In 8-1" folder="Inbound stage 8" sort="0" />
+        <label id="590" label="Ringo In 4-2" folder="Inbound stage 4" sort="0" />
+        <label id="691" label="Ringo Ults-1" folder="Inbound stage X" sort="0" />
+        <label id="692" label="Ringo Ults-2" folder="Inbound stage X" sort="0" />
+        <label id="693" label="Ringo Ults-3" folder="Inbound stage X" sort="0" />
     </labels>
-    <nextId>677</nextId>
+    <nextId>693</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="." />
         <marker scope="Public" name="+careerMention" />
         <marker scope="Public" name="alwaysReady">"Always ready, I see" and other versions of the line</marker>
@@ -727,12 +753,17 @@
         <marker scope="Public" name="collectible_underwear">kirigiri_underwear collectible is unlocked</marker>
         <marker scope="Public" name="consent">She has given express verbal consent to a character looking at her while they masturbate.</marker>
         <marker scope="Public" name="consentB">"There's no reason to feel guilty about glancing at my body."</marker>
+        <marker scope="Public" name="constanze_byebitchBetterLuck" />
+        <marker scope="Public" name="constanze_byebitchNoU" />
+        <marker scope="Public" name="constanze_sugarRe" />
+        <marker scope="Public" name="constanze_youGotThis" />
         <marker scope="Public" name="corner" />
         <marker scope="Public" name="cornered" />
         <marker scope="Public" name="costume">Marker indicating her costume using strings. 0 = default; FF = Future Foundation costume; swimsuit = Danganronpa S swimsuit costume.</marker>
         <marker scope="Public" name="cute">"It really is quite cute." "What? I'm allowed to like cute things." (=3 if triggered by male opponent)</marker>
         <marker scope="Public" name="deepBreathStart" />
         <marker scope="Public" name="detectiveReveal">She has stated outright or otherwise confirmed that she is a detective.</marker>
+        <marker scope="Public" name="deutsch">X times, she has said something in the German language</marker>
         <marker scope="Public" name="dirtyTalk" />
         <marker scope="Public" name="disappointment">"No human language can describe the disappointment I'm feeling right now."</marker>
         <marker scope="Public" name="doIt">Line indicating she knows the human's forfeit timer is 1 (clears if human doesn't finish next screen)</marker>
@@ -754,6 +785,8 @@
         <marker scope="Public" name="gawking" />
         <marker scope="Public" name="giddyCount">The giddy pose has appeared X times this game. Counted with hidden lines.</marker>
         <marker scope="Public" name="glassesLastStrip" />
+        <marker scope="Public" name="gloria_01Travels" />
+        <marker scope="Public" name="gloria_02Travels" />
         <marker scope="Public" name="gloria_kirigiri_strip0bAA" />
         <marker scope="Public" name="gloria_pokeTrainers2" />
         <marker scope="Public" name="gloria_scoobyCount" />
@@ -797,6 +830,7 @@
         <marker scope="Public" name="kazumaTinder" />
         <marker scope="Public" name="keepInShape" />
         <marker scope="Public" name="knowsWhatTheyreDoing" />
+        <marker scope="Public" name="kriegstAufDuFresse" />
         <marker scope="Public" name="kyuSchoolPrompt">Kyoko will respond to one of Kyu's comments about her schoolgirl uniform.</marker>
         <marker scope="Public" name="kyuSchoolResponse">Kyoko has responded to one of Kyu's comments about her schoolgirl uniform.</marker>
         <marker scope="Public" name="lastDone" />
@@ -814,6 +848,7 @@
         <marker scope="Public" name="maleCaseBriefSurprise" />
         <marker scope="Public" name="mardiGras">Kyoko has said X lines related to asking an American female character about toplessness at Mardi Gras. These lines play on Tuesdays February 3-March 9.</marker>
         <marker scope="Public" name="meanHero">"They act cold, but I suspect they're nobler than they let on.""</marker>
+        <marker scope="Public" name="mentalPhysicalStrengthPrompt" />
         <marker scope="Public" name="mikan_confident1Re" />
         <marker scope="Public" name="mikan_confident2Re" />
         <marker scope="Public" name="mikan_listen" />
@@ -855,7 +890,9 @@
         <marker scope="Public" name="ringo_glovesForfeit" />
         <marker scope="Public" name="ringo_glovesRe" />
         <marker scope="Public" name="ringo_hopesPeak" />
+        <marker scope="Public" name="ringo_ultimateDetectiveRe" />
         <marker scope="Public" name="ringo_ultimatesRe" />
+        <marker scope="Public" name="ringo_ultimateTalentRe" />
         <marker scope="Public" name="rosa_hairstyles" />
         <marker scope="Public" name="safeAnotherRound" />
         <marker scope="Public" name="safeForNow" />
