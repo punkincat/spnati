@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collectibles>
+    <collectible id="aqua_wayfinder" img="opponents/aqua_kh/collectibles/collectible_1.png" thumbnail="opponents/aqua_kh/collectibles/aqua_wayfinder.png">
+        <title>Wayfinder Charm</title>
+        <subtitle>An unbreakable connection.</subtitle>
+        <text>A star-shaped lucky charm used to provide luck to travelers. It is designed to resemble the paopu fruit, which is said to tie friends together. Aqua made one for herself and her friends, Terra and Ventus, before she and Terra took the Mark of Mastery exam.</text>
+        <unlock>Win your first game against Aqua (Kingdom Hearts).</unlock>
+        <counter>1</counter>
+        <wearable>true</wearable>
+        <clothing name="charm" generic="jewelry" position="neck" type="extra" img="opponents/aqua_kh/collectibles/aqua_wayfinder.png" />
+    </collectible>
+    <collectible id="aqua_disneypass" img="opponents/aqua_kh/collectibles/disney_town_passport.png" thumbnail="opponents/aqua_kh/collectibles/disney_town_passport.png">
+        <title>Disney Town Pass</title>
+        <subtitle>A lifetime passport to Disney Town!</subtitle>
+        <text>This pass grants its holder access to Disney Town. Ventus got three passes after saving Scrooge McDuck from the Unversed in Radiant Garden, and gave one each to Terra and Aqua. Disney Town itself contains a handful of superfluous minigames such as Rumble Racing, Ice Cream Beat, and Fruitball.&lt;br&gt;&lt;br&gt;This pass offers no in-game benefit.</text>
+        <unlock>Finish a game with Aqua (Kingdom Hearts) after ???</unlock>
+        <hidden>true</hidden>
+        <hide-details>true</hide-details>
+        <counter>1</counter>
+    </collectible>
+</collectibles>
