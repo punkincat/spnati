@@ -91,6 +91,8 @@ https://sonic.fandom.com/wiki/Madonna_Garnet</note>
         <note id="601">If Toph accepts the bet, we could set up stakes for whoever loses. Of course, it needn't necessarily be something as extreme as, say, "loser eats the winner out" (I'd want to see what kind of chemistry they develop before committing to something so explicitly sexual)... It could be as simple as treasure for treasure, but if you have other ideas, I'm happy to brainstorm. (Then again, Toph might just as easily be too shrewd to take the bet.)</note>
         <note id="602">Because it has the potential to lead to a fun interaction, I set this line up to make sure that Rouge would say it relatively early in the game. Toph's response should still trigger with this case or the original one, so I don't think its conditions will need changing.</note>
         <note id="604">Since Rouge's first stripping sequence is the one where she takes her boobs out, I'm kind of obligated to reply to Toph's line in a way that logically transitions into that. (In this case, I'm thinking something along the lines of Rouge going, "here's a little sample of just how generous I can be" - only to realize after the fact that flashing the blind girl is hardly a winning strategy.) That said, if we want more time to explore the potential for earthbending jewel thieves (and I definitely do), I'll try to incorporate it into Rouge's targets toward Toph's stripping stages.</note>
+        <note id="355">NOTE: I noticed I'd originally set this line to play on the wrong stage of Critical Darling's. I've just fixed it, but CD's response will need to be adjusted, too.</note>
+        <note id="613">NOTE TO SELF: once the bug where the CE can't detect non-default costumes as valid targets is fixed, write an alternate line for Noire's Cool Girl skin as well.</note>
     </notes>
     <labels>
         <label id="74" label="" color="6" folder="" sort="0" />
@@ -142,7 +144,7 @@ https://sonic.fandom.com/wiki/Madonna_Garnet</note>
         <label id="344" label="" color="1" folder="" sort="0" />
         <label id="351" label="" color="1" folder="" sort="0" />
         <label id="350" label="" color="1" folder="" sort="0" />
-        <label id="356" label="" color="1" folder="" sort="0" />
+        <label id="612" label="" color="1" folder="" sort="0" />
         <label id="221" label="" color="1" folder="" sort="0" />
         <label id="357" label="" color="6" folder="" sort="0" />
         <label id="381" label="" color="6" folder="" sort="0" />
@@ -154,7 +156,7 @@ https://sonic.fandom.com/wiki/Madonna_Garnet</note>
         <label id="174" label="" color="1" folder="" sort="0" />
         <label id="298" label="" color="1" folder="" sort="0" />
         <label id="438" label="" color="1" folder="" sort="0" />
-        <label id="355" label="" color="1" folder="" sort="0" />
+        <label id="355" label="" color="2" folder="" sort="0" />
         <label id="238" label="" color="6" folder="" sort="0" />
         <label id="239" label="" color="1" folder="" sort="0" />
         <label id="240" label="" color="6" folder="" sort="0" />
@@ -277,8 +279,14 @@ https://sonic.fandom.com/wiki/Madonna_Garnet</note>
         <label id="605" label="" color="1" folder="" sort="0" />
         <label id="606" label="" color="1" folder="" sort="0" />
         <label id="607" label="" color="1" folder="" sort="0" />
+        <label id="608" label="" color="1" folder="" sort="0" />
+        <label id="609" label="" color="6" folder="Treasure Scope" sort="0" />
+        <label id="610" label="" color="1" folder="" sort="0" />
+        <label id="611" label="" color="1" folder="" sort="0" />
+        <label id="613" label="" color="1" folder="Treasure Scope" sort="0" />
+        <label id="614" label="" color="6" folder="Treasure Scope" sort="0" />
     </labels>
-    <nextId>607</nextId>
+    <nextId>614</nextId>
     <markers>
         <marker scope="Public" name="adrien_heroLewdStories" />
         <marker scope="Public" name="adrien_heroLewdStories_rumors" />
@@ -456,12 +464,14 @@ https://sonic.fandom.com/wiki/Madonna_Garnet</note>
         <marker scope="Public" name="critDarling_clubRougeDivisions" />
         <marker scope="Public" name="critDarling_clubRougeGig" />
         <marker scope="Public" name="critDarling_cuteLook" />
+        <marker scope="Public" name="critDarling_fightBruise" />
         <marker scope="Public" name="critDarling_fightExposure" />
         <marker scope="Public" name="critDarling_fightSkills" />
         <marker scope="Public" name="critDarling_flashPhotography" />
         <marker scope="Public" name="critDarling_holes" />
         <marker scope="Public" name="critDarling_ozzy" />
         <marker scope="Public" name="critDarling_performanceVenues" />
+        <marker scope="Public" name="critDarling_powerEthics" />
         <marker scope="Public" name="dawn_chao" />
         <marker scope="Public" name="dawn_chaoExplanation" />
         <marker scope="Public" name="dawn_chaoGarden" />
@@ -827,6 +837,8 @@ https://sonic.fandom.com/wiki/Madonna_Garnet</note>
         <marker scope="Public" name="no_kopi_luwak" />
         <marker scope="Public" name="no_pockets" />
         <marker scope="Public" name="noBondagePlz" />
+        <marker scope="Public" name="noire_goddessPerks" />
+        <marker scope="Public" name="noire_partyUp" />
         <marker scope="Public" name="pale-skinned_tease" />
         <marker scope="Public" name="paleSkinned_tease" />
         <marker scope="Public" name="panty_competition" />
@@ -953,6 +965,7 @@ https://sonic.fandom.com/wiki/Madonna_Garnet</note>
         <marker scope="Public" name="toph_jewelsResponse1" />
         <marker scope="Public" name="toph_metalbendingRobots" />
         <marker scope="Public" name="treasureScope_cagliostro" />
+        <marker scope="Public" name="treasureScope_critical_darling" />
         <marker scope="Public" name="treasureScope_introduction" />
         <marker scope="Public" name="treasureScope_kora" />
         <marker scope="Public" name="treasureScope_leonie" />
@@ -961,6 +974,7 @@ https://sonic.fandom.com/wiki/Madonna_Garnet</note>
         <marker scope="Public" name="treasureScope_mom_alola" />
         <marker scope="Public" name="treasureScope_nagatoro" />
         <marker scope="Public" name="treasureScope_nagisa" />
+        <marker scope="Public" name="treasureScope_Noire" />
         <marker scope="Public" name="treasureScope_panty" />
         <marker scope="Public" name="treasureScope_Rosa" />
         <marker scope="Public" name="treasureScope_rouge" />
