@@ -644,7 +644,7 @@ function updateGroupSelectScreen (ignore_bg) {
 /* A filter predicate encompassing the filter options on the individual select
  * screen.
  */
-function filterOpponent(opp, name, source, creator, tag) {
+function filterOpponent(opp, name, source, creator, tags) {
     name = name.simplifyDiacritics();
     source = source.simplifyDiacritics();
     creator = creator.simplifyDiacritics();
@@ -663,8 +663,18 @@ function filterOpponent(opp, name, source, creator, tag) {
     }
 
     // filter by tag
-    if (tag && !(opp.searchTags && opp.searchTags.indexOf(tag) >= 0)) {
-        return false;
+    if(tags) {
+        for(let i = 0; i < tags.length; i++) {
+            let tag = tags[i];
+            const exclude = tag.startsWith("-");
+            if(exclude) {
+                tag = tag.substring(1);
+            }
+            const oppHasTag = opp.searchTags && opp.searchTags.indexOf(tag) >= 0;
+            if (exclude === oppHasTag) {
+                return false;
+            }
+        }
     }
     
     // filter by creator
@@ -681,6 +691,21 @@ function filterOpponent(opp, name, source, creator, tag) {
     return true;
 }
 
+/**
+ * Takes a list of string and a tag list and returns a list of all possible matching tags from the list
+ */
+function matchTags(workingTags, tagList) {
+    const tags = [];
+    workingTags.forEach(workingTag => {
+        tagList.forEach(tag => {
+            if(workingTag === tag || workingTag === "-" + tag) {
+                tags.push(workingTag);
+            }
+        });
+    });
+    return tags;
+}
+
 /************************************************************
  * Filters the list of selectable opponents based on those
  * already selected and performs search logic.
@@ -689,11 +714,12 @@ function updateIndividualSelectFilters() {
     var name = $searchName.val().toLowerCase();
     var source = $searchSource.val().toLowerCase();
     var creator = $searchCreator.val().toLowerCase();
-    var tag = canonicalizeTag($searchTag.val());
+    var workingTags = $searchTag.val().split(",").map(x => canonicalizeTag(x));
+    var tags = matchTags(workingTags, $tagList.children().toArray().map(x => x.value));
 
     // Array.prototype.filter automatically skips empty slots
     loadedOpponents.forEach(function (opp) {
-        opp.selectionCard.setFiltered(!filterOpponent(opp, name, source, creator, tag));
+        opp.selectionCard.setFiltered(!filterOpponent(opp, name, source, creator, tags));
     });
     updateIndividualSelectVisibility(false);
 }
@@ -925,7 +951,8 @@ function updateSelectableGroups() {
     var groupname = $groupSearchGroupName.val().toLowerCase();
     var name = $groupSearchName.val().toLowerCase();
     var source = $groupSearchSource.val().toLowerCase();
-    var tag = canonicalizeTag($groupSearchTag.val());
+    var workingTags = $groupSearchTag.val().split(",").map(x => canonicalizeTag(x));
+    var tags = matchTags(workingTags, $tagList.children().toArray().map(x => x.value));
 
     // reset filters
     selectableGroups = loadedGroups.filter(function(group) {
@@ -943,9 +970,23 @@ function updateSelectableGroups() {
             return opp.source.toLowerCase().indexOf(source) >= 0;
         })) return false;
 
-        if (tag && !group.opponents.some(function(opp) {
-            return opp.searchTags && opp.searchTags.indexOf(canonicalizeTag(tag)) >= 0;
-        })) return false;
+        if (tags) {
+            for(let i = 0; i < tags.length; i++) {
+                let tag = tags[i];
+                const exclude = tag.startsWith("-");
+                if(exclude) {
+                    tag = tag.substring(1);
+                }
+                
+                const groupHasTag = group.opponents.some(function(opp) {
+                    return opp.searchTags && opp.searchTags.indexOf(tag) >= 0;
+                });
+
+                if(exclude === groupHasTag) {
+                    return false;
+                }
+            }
+        }
 
         if ((chosenGroupGender == 2 || chosenGroupGender == 3)
             && !group.opponents.every(function(opp) {
