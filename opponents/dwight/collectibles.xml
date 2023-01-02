@@ -1,2 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<collectibles />
+<collectibles>
+    <collectible id="pizzawhat" status="online" img="opponents/dwight/collectible.png" thumbnail="opponents/dwight/shirt.png">
+        <title>First Job T-Shirt</title>
+        <subtitle>Did someone order an extra sausage pizza?</subtitle>
+        <text>Standard issue PizzaWhat! employee shirt. Now you too can live out your days as a struggling pizza boy living paycheck to paycheck! Hooray work!&lt;br&gt;
+
+Pictured: the common occurance of Dwight being told he'd get no tip. Now get back to work, Dwitch!</text>
+        <unlock>Have Dwight lose a game.</unlock>
+        <hide-details>true</hide-details>
+        <wearable>true</wearable>
+        <clothing name="PizzaWhat shirt" generic="shirt" position="upper" type="major" img="opponents/dwight/shirt.png" />
+    </collectible>
+</collectibles>
