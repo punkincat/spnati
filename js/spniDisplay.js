@@ -1416,7 +1416,7 @@ OpponentDetailsDisplay = function () {
         this.mainView.toggleClass('show-more');
     }.bind(this));
     this.mainView.on('click', '.opponent-details-value>a', function(ev) {
-        $(ev.target).data('search-field').val(ev.target.innerText).trigger('input');
+        $(ev.target).data('search-field').val($(ev.target).data('search-text') || ev.target.innerText).trigger('input');
     });
 
     this.epiloguesView.hide();
@@ -1644,10 +1644,16 @@ OpponentDetailsDisplay.prototype.update = function (opponent) {
     
     this.displayContainer.show();
     this.nameLabel.text(opponent.first + " " + opponent.last);
-    if (loadedOpponents.countTrue(opp => filterOpponent(opp, '', opponent.source, '')) > 1) {
-        this.sourceLabel.empty().append($('<a>', { href: '#', text: opponent.source }).data('search-field', $searchSource));
-    } else {
-        this.sourceLabel.text(opponent.source);
+    this.sourceLabel.empty();
+    let lastPrefixLen = 0;
+    for (let x of opponent.sourcePrefixLengths) {
+        this.sourceLabel.append($('<a>', { href: '#', text: opponent.source.substring(lastPrefixLen, x) })
+                                .data({'search-field': $searchSource,
+                                       'search-text': opponent.source.substring(0, x)}));
+        lastPrefixLen = x;
+    }
+    if (lastPrefixLen < opponent.source.length) {
+        this.sourceLabel.append(new Text(opponent.source.substring(lastPrefixLen)));
     }
     [[this.writerLabel, opponent.writer], [this.artistLabel, opponent.artist]].forEach(function ([label, data]) {
         const interesting = splitCreatorField(data).filter(s => loadedOpponents.countTrue(opp => filterOpponent(opp, '', '', s)) > 1);
