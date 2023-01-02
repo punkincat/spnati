@@ -392,6 +392,11 @@
         <response id="1973" opponent="nagatoro" opponentId="1519" />
         <response id="1974" opponent="nagatoro" opponentId="1517" />
         <response id="1981" opponent="cheryl" opponentId="430" />
+        <response id="1989" opponent="cheryl" opponentId="465" />
+        <response id="1990" opponent="cheryl" opponentId="501" />
+        <response id="1991" opponent="cheryl" opponentId="467" />
+        <response id="1994" opponent="cheryl" opponentId="468" />
+        <response id="1995" opponent="cheryl" opponentId="469" />
     </responses>
     <notes>
         <note id="412">Yes, Mari is implying that Kazuma is lying just to see her pose naked for him. You are free to have Kazuma defend his case, so to speak.</note>
@@ -408,7 +413,6 @@
         <note id="1891">Just fyi, I'm keeping this reply hidden until we can actually put in the motorboat poses. Mostly so players don't get confused and stuff</note>
         <note id="1838">This line is a bit more intentionally mean than Mari usually is, this is because Mari is trying to get a rise out of Dwight. Her next lines will </note>
         <note id="1937">Note that Mari said "anything", which means that Noire wearing a band-aid will constitute as an anything, therefore making her win. Just to keep it in mind for how this route can go!</note>
-        <note id="1984">It's worth noting that if Cheryl says "no", then my intention is to have Mari ask her if she would be interested in using toys at some point.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Nform" sort="7" />
@@ -1462,8 +1466,8 @@
         <label id="1077" label="" color="0" folder="Replies" sort="141" />
         <label id="1078" label="" color="0" folder="Replies" sort="142" />
         <label id="1079" label="" color="0" folder="Targets" sort="50" />
-        <label id="1080" label="" color="0" folder="Targets" sort="126" />
-        <label id="1081" label="" color="0" folder="Targets" sort="51" />
+        <label id="1080" label="" color="1" folder="Targets" sort="0" />
+        <label id="1081" label="" color="1" folder="Targets" sort="0" />
         <label id="1082" label="" color="1" folder="Targets" sort="238" />
         <label id="1083" label="" color="5" folder="NTargets" sort="83" />
         <label id="1084" label="" color="3" folder="Replies" sort="198" />
@@ -2330,7 +2334,7 @@
         <label id="1955" label="" color="0" folder="Targets" sort="0" />
         <label id="1956" label="" color="3" folder="PromptResponses" sort="0" />
         <label id="1957" label="" color="1" folder="Targets" sort="0" />
-        <label id="1958" label="" color="1" folder="Targets" sort="0" />
+        <label id="1958" label="" color="0" folder="Targets" sort="0" />
         <label id="1959" label="" color="0" folder="Targets" sort="0" />
         <label id="1960" label="" color="0" folder="Replies" sort="0" />
         <label id="1961" label="" color="0" folder="Replies" sort="0" />
@@ -2353,12 +2357,24 @@
         <label id="1978" label="" color="1" folder="Targets" sort="0" />
         <label id="1979" label="" color="1" folder="Targets" sort="0" />
         <label id="1980" label="" color="1" folder="Targets" sort="0" />
-        <label id="1981" label="" color="1" folder="Replies" sort="0" />
-        <label id="1982" label="" color="3" folder="Targets" sort="0" />
-        <label id="1983" label="" color="3" folder="Targets" sort="0" />
-        <label id="1984" label="" color="1" folder="Targets" sort="0" />
+        <label id="1981" label="" color="0" folder="Replies" sort="0" />
+        <label id="1982" label="" color="0" folder="Targets" sort="0" />
+        <label id="1983" label="" color="0" folder="Targets" sort="0" />
+        <label id="1984" label="" color="0" folder="Targets" sort="0" />
+        <label id="1985" label="" color="3" folder="Targets" sort="0" />
+        <label id="1986" label="" color="1" folder="Targets" sort="0" />
+        <label id="1987" label="" folder="Targets" sort="0" />
+        <label id="1988" label="" color="1" folder="Targets" sort="0" />
+        <label id="1989" label="" color="3" folder="Replies" sort="0" />
+        <label id="1990" label="" color="3" folder="Replies" sort="0" />
+        <label id="1991" label="" color="3" folder="Targets" sort="0" />
+        <label id="1992" label="" color="0" folder="Targets" sort="0" />
+        <label id="1993" label="" color="0" folder="Targets" sort="0" />
+        <label id="1994" label="" color="3" folder="Targets" sort="0" />
+        <label id="1995" label="" color="3" folder="Replies" sort="0" />
+        <label id="1996" label="" color="1" folder="Replies" sort="0" />
     </labels>
-    <nextId>1984</nextId>
+    <nextId>1996</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aaravi_relaxGirl" />
@@ -2566,6 +2582,10 @@
         <marker scope="Public" name="Cform_dinner_tonight" />
         <marker scope="Public" name="Cheryl_creampie_reply" />
         <marker scope="Public" name="Cheryl_creampie_reply2" />
+        <marker scope="Public" name="Cheryl_creampie_reply3" />
+        <marker scope="Public" name="Cheryl_creampie_reply4" />
+        <marker scope="Public" name="Cheryl_hitOnMe" />
+        <marker scope="Public" name="Cheryl_hitOnMe2" />
         <marker scope="Public" name="Cheryl_intimacyFears_reply" />
         <marker scope="Public" name="Cheryl_intimacyFears_reply2" />
         <marker scope="Public" name="Cheryl_LeonType_reply" />
@@ -2575,6 +2595,8 @@
         <marker scope="Public" name="Cheryl_relationships_cont" />
         <marker scope="Public" name="Cheryl_relationships_end" />
         <marker scope="Public" name="Cheryl_relationships_question" />
+        <marker scope="Public" name="Cheryl_sexToys_cont" />
+        <marker scope="Public" name="Cheryl_sexToys_end" />
         <marker scope="Public" name="Cheryl_sexToys_question" />
         <marker scope="Public" name="Cheryl_shirt_reply1" />
         <marker scope="Public" name="Cheryl_shirt_reply2" />
@@ -2793,8 +2815,12 @@
         <marker scope="Public" name="Kumatora_WannaLearnHow2Segs" />
         <marker scope="Public" name="Kumatora_whatBetterWayLearnAboutWorld" />
         <marker scope="Public" name="Kumatora_world_is_big" />
+        <marker scope="Public" name="Kyouko_club_activities_question" />
         <marker scope="Public" name="Kyouko_club_cont" />
+        <marker scope="Public" name="Kyouko_club_end" />
+        <marker scope="Public" name="Kyouko_club_members_question" />
         <marker scope="Public" name="Kyouko_club_question" />
+        <marker scope="Public" name="Kyouko_lewdStuff_question" />
         <marker scope="Public" name="Kyouko_RibbonOff_react" />
         <marker scope="Public" name="Kyouko_RibbonOff_react2" />
         <marker scope="Public" name="Kyouko_RibbonStays_react" />
