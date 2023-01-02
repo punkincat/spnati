@@ -179,8 +179,10 @@
         <label id="160" label="" folder="Targets" sort="0" />
         <label id="161" label="" folder="Tag Filtered" sort="0" />
         <label id="162" label="" folder="Forfeit Logic" sort="0" />
+        <label id="163" label="" folder="Opponent Losses" sort="0" />
+        <label id="164" label="" folder="Opponent Losses" sort="0" />
     </labels>
-    <nextId>162</nextId>
+    <nextId>164</nextId>
     <markers>
         <marker scope="Public" name="aqua_and_darkness_oppstrip">Either Aqua or Darkness (both from Konosuba) must strip - makes a comment on it</marker>
         <marker scope="Public" name="aqua_MariS_Self_femaleChestNotFirstResp">A response to a Mari Setogaya generic line that has a marker on it, about Mari S being the first one to show her boobs</marker>
@@ -280,6 +282,11 @@
         <recipe key="40a78c86-ea36-42da-b84b-039a1e3c2a9c">
             <cases>
                 <id>130</id>
+            </cases>
+        </recipe>
+        <recipe key="dba5778a-dbed-4079-9052-d204275d6f93">
+            <cases>
+                <id>163</id>
             </cases>
         </recipe>
     </recipes>
