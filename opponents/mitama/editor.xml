@@ -18,6 +18,8 @@
         <note id="592">Voice Actor joke: Matthew Mercer voices both Yusuke and Shigure, a character from Fire Emblem Fates who is fond of singing.</note>
         <note id="650">I wrote two responses that respond to diferent parts of Blake's line. They have different markers, so keep that in mind.</note>
         <note id="661">This line is meant as a response to her ''removing bow'' situation, so I don't think it warrants a response. Of course, if you want to write one anyway, feel free to do so.</note>
+        <note id="779">This is the variant of the line that plays when Mitama's own underwear has been revealed.</note>
+        <note id="780">This is the variant of the line that plays when Mitama's own underwear has not been revealed.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Background" sort="3" />
@@ -644,7 +646,7 @@
         <label id="627" label="Haiku 227-Priestess" folder="Haiku Counter" sort="454" />
         <label id="628" label="Haiku 228-Priestess" folder="Haiku Counter" sort="455" />
         <label id="629" label="Haiku 228-Nohr Princess" folder="Haiku Counter" sort="456" />
-        <label id="630" label="One-shot generic haiku for replayability" folder="" sort="0" />
+        <label id="630" label="One-shot generic haiku for replayability- Master Seal" folder="" sort="0" />
         <label id="631" label="Haiku 229-Priestess" folder="Haiku Counter" sort="457" />
         <label id="632" label="Haiku 229-Nohr Princess" folder="Haiku Counter" sort="458" />
         <label id="633" label="Haiku 230-Priestess" folder="Haiku Counter" sort="459" />
@@ -659,7 +661,7 @@
         <label id="642" label="" folder="Hand=Any banter" sort="16" />
         <label id="643" label="Haiku 234-Priestess" folder="Haiku Counter" sort="467" />
         <label id="644" label="Haiku 234-Nohr Princess" folder="Haiku Counter" sort="468" />
-        <label id="645" label="" folder="Responses" sort="20" />
+        <label id="645" label="" folder="Responses" sort="0" />
         <label id="646" label="" folder="Opponent Lost Targets" sort="21" />
         <label id="647" label="Haiku 235-Priestess" folder="Haiku Counter" sort="469" />
         <label id="648" label="Haiku 235-Nohr Princess" folder="Haiku Counter" sort="470" />
@@ -723,8 +725,104 @@
         <label id="706" label="Haiku 254-Nohr Princess" folder="Haiku Counter" sort="0" />
         <label id="707" label="Haiku 255-Priestess" folder="Haiku Counter" sort="0" />
         <label id="708" label="Haiku 255-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="718" label="Haiku 260 Sleep Check" folder="Sleep Counter" sort="0" />
+        <label id="745" label="Haiku 268 Sleep Check" folder="Sleep Counter" sort="0" />
+        <label id="740" label="Haiku 267-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="741" label="Haiku 267-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="735" label="Haiku 265-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="736" label="Haiku 265-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="738" label="Haiku 266-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="739" label="Haiku 266-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="710" label="Haiku 256-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="746" label="Haiku 268-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="737" label="" folder="Hand=Any banter" sort="0" />
+        <label id="709" label="Haiku 256-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="714" label="Haiku 258-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="751" label="Haiku 269-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="715" label="Haiku 258-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="716" label="Haiku 259-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="717" label="Haiku 259-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="719" label="Haiku 260-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="720" label="Haiku 260-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="721" label="Haiku 261-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="722" label="Haiku 261-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="712" label="Haiku 257-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="713" label="Haiku 257-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="747" label="Haiku 268-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="750" label="Haiku 269-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="724" label="Haiku 262-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="725" label="Haiku 262-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="727" label="Haiku 263-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="728" label="Haiku 263-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="733" label="Haiku 264-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="734" label="Haiku 264-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="730" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="729" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="731" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="754" label="Haiku 270-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="755" label="Haiku 270-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="756" label="Haiku 271-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="757" label="Haiku 271-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="758" label="Haiku 272-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="759" label="Haiku 272-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="732" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="760" label="" folder="Background" sort="0" />
+        <label id="761" label="" folder="Hand=Any banter" sort="0" />
+        <label id="762" label="Haiku 273-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="763" label="Haiku 273-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="723" label="One-shot generic haiku for replayability- Master Seal" folder="" sort="0" />
+        <label id="726" label="One-shot generic haiku for replayability-Master Seal" folder="" sort="0" />
+        <label id="764" label="One-shot generic haiku for replayability- No Collectibles" folder="" sort="0" />
+        <label id="765" label="Haiku 274-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="766" label="Haiku 274-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="767" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="768" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="769" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="753" label="" folder="Responses" sort="0" />
+        <label id="742" label="" folder="Responses" sort="0" />
+        <label id="752" label="" folder="Responses" sort="0" />
+        <label id="711" label="" folder="Responses" sort="0" />
+        <label id="743" label="" folder="Responses" sort="0" />
+        <label id="744" label="" folder="Responses" sort="0" />
+        <label id="770" label="Haiku 275-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="771" label="Haiku 275-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="772" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="773" label="Haiku 276-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="774" label="Haiku 276-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="775" label="Haiku 277-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="776" label="Haiku 277-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="777" label="Haiku 278-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="778" label="Haiku 278-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="781" label="Haiku 279-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="782" label="Haiku 279-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="783" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="784" label="Haiku 280-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="785" label="Haiku 280-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="786" label="Haiku 281-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="787" label="Haiku 281-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="788" label="" folder="Responses" sort="0" />
+        <label id="789" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="790" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="791" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="792" label="Haiku 282-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="793" label="Haiku 282-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="794" label="Haiku 283-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="795" label="Haiku 283-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="796" label="Haiku 284-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="797" label="Haiku 284-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="798" label="Haiku 285-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="799" label="Haiku 285-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="800" label="" folder="Responses" sort="0" />
+        <label id="801" label="" folder="Responses" sort="0" />
+        <label id="802" label="" folder="Responses" sort="0" />
+        <label id="803" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="804" label="Haiku 286-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="805" label="Haiku 286-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="806" label="One-shot generic haiku for replayability- No Collectibles" folder="" sort="0" />
+        <label id="807" label="Haiku 287-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="808" label="Haiku 287-Nohr Princess" folder="Haiku Counter" sort="0" />
     </labels>
-    <nextId>708</nextId>
+    <nextId>808</nextId>
     <markers>
         <marker scope="Public" name="adrien_losingsuit" />
         <marker scope="Public" name="adrien_lostsuit" />
@@ -732,12 +830,21 @@
         <marker scope="Public" name="aoba_hajime_prompt" />
         <marker scope="Public" name="aoba_kou_prompt" />
         <marker scope="Public" name="aoba_umiko_prompt" />
+        <marker scope="Public" name="arash_throws" />
         <marker scope="Public" name="barbara_Hat_1" />
         <marker scope="Public" name="Barbara_holywoman_resp" />
         <marker scope="Public" name="Barbara_poetry_resp" />
+        <marker scope="Public" name="Binah_become_librarian" />
         <marker scope="Public" name="Binah_haikuflirt">Also haiku 235.</marker>
+        <marker scope="Public" name="binah_haikuflirt_cont" />
+        <marker scope="Public" name="binah_haikuflirt_subby" />
         <marker scope="Public" name="binah_haikustart_resp" />
         <marker scope="Public" name="Binah_librarian" />
+        <marker scope="Public" name="binah_philosophy" />
+        <marker scope="Public" name="binah_pillar" />
+        <marker scope="Public" name="binah_pillar_mast" />
+        <marker scope="Public" name="binah_star_meaning" />
+        <marker scope="Public" name="binah_victory" />
         <marker scope="Public" name="blake_adventures" />
         <marker scope="Public" name="blake_book" />
         <marker scope="Public" name="blake_catears" />
@@ -749,11 +856,18 @@
         <marker scope="Public" name="Blake_peace" />
         <marker scope="Public" name="butt_pose">Mitama shows her butt. Pretty self-explanatory, don't you think?</marker>
         <marker scope="Public" name="caitlin_sleep" />
+        <marker scope="Public" name="cheryl" />
+        <marker scope="Public" name="cheryl_apologies" />
+        <marker scope="Public" name="cheryl_armorC_resp" />
+        <marker scope="Public" name="cheryl_capeC_resp" />
         <marker scope="Public" name="cheryl_grudges" />
         <marker scope="Public" name="Cheryl_journaling">Also haiku 173.</marker>
+        <marker scope="Public" name="cheryl_mitama2_resp" />
         <marker scope="Public" name="cheryl_muststrip_0" />
+        <marker scope="Public" name="cheryl_muststrip_4" />
         <marker scope="Public" name="cheryl_rudechild" />
         <marker scope="Public" name="cheryl_scriptures" />
+        <marker scope="Public" name="cheryl_stripped_1" />
         <marker scope="Public" name="cheryl_stripping_0" />
         <marker scope="Public" name="cheryl_wafers" />
         <marker scope="Public" name="haiku_1" />
@@ -1260,15 +1374,97 @@
         <marker scope="Public" name="haiku_255_Counter" />
         <marker scope="Public" name="haiku_255_NCounter" />
         <marker scope="Public" name="haiku_256" />
+        <marker scope="Public" name="haiku_256_Counter" />
+        <marker scope="Public" name="haiku_256_NCounter" />
+        <marker scope="Public" name="haiku_257_Counter" />
+        <marker scope="Public" name="haiku_257_NCounter" />
+        <marker scope="Public" name="haiku_258" />
+        <marker scope="Public" name="haiku_258_Counter" />
+        <marker scope="Public" name="haiku_258_NCounter" />
+        <marker scope="Public" name="haiku_259" />
+        <marker scope="Public" name="haiku_259_Counter" />
+        <marker scope="Public" name="haiku_259_NCounter" />
         <marker scope="Public" name="haiku_26" />
         <marker scope="Public" name="haiku_26_Counter" />
         <marker scope="Public" name="haiku_26_NCounter" />
+        <marker scope="Public" name="haiku_260" />
+        <marker scope="Public" name="haiku_260_Counter" />
+        <marker scope="Public" name="haiku_260_NCounter" />
+        <marker scope="Public" name="haiku_261" />
+        <marker scope="Public" name="haiku_261_Counter" />
+        <marker scope="Public" name="haiku_261_NCounter" />
+        <marker scope="Public" name="haiku_262" />
+        <marker scope="Public" name="haiku_262_Counter" />
+        <marker scope="Public" name="haiku_262_NCounter" />
+        <marker scope="Public" name="haiku_263" />
+        <marker scope="Public" name="haiku_263_Counter" />
+        <marker scope="Public" name="haiku_263_NCounter" />
+        <marker scope="Public" name="haiku_264" />
+        <marker scope="Public" name="haiku_264_Counter" />
+        <marker scope="Public" name="haiku_264_NCounter" />
+        <marker scope="Public" name="haiku_265_Counter" />
+        <marker scope="Public" name="haiku_265_NCounter" />
+        <marker scope="Public" name="haiku_266_Counter" />
+        <marker scope="Public" name="haiku_266_NCounter" />
+        <marker scope="Public" name="haiku_267_Counter" />
+        <marker scope="Public" name="haiku_267_NCounter" />
+        <marker scope="Public" name="haiku_268" />
+        <marker scope="Public" name="haiku_268_Counter" />
+        <marker scope="Public" name="haiku_268_NCounter" />
+        <marker scope="Public" name="haiku_269" />
+        <marker scope="Public" name="haiku_269_Counter" />
+        <marker scope="Public" name="haiku_269_NCounter" />
         <marker scope="Public" name="haiku_27" />
         <marker scope="Public" name="haiku_27_Counter" />
         <marker scope="Public" name="haiku_27_NCounter" />
+        <marker scope="Public" name="haiku_270_Counter" />
+        <marker scope="Public" name="haiku_270_NCounter" />
+        <marker scope="Public" name="haiku_271_Counter" />
+        <marker scope="Public" name="haiku_271_NCounter" />
+        <marker scope="Public" name="haiku_272_Counter" />
+        <marker scope="Public" name="haiku_272_NCounter" />
+        <marker scope="Public" name="haiku_273_Counter" />
+        <marker scope="Public" name="haiku_273_NCounter" />
+        <marker scope="Public" name="haiku_274" />
+        <marker scope="Public" name="haiku_274_Counter" />
+        <marker scope="Public" name="haiku_274_NCounter" />
+        <marker scope="Public" name="haiku_275_Counter" />
+        <marker scope="Public" name="haiku_275_NCounter" />
+        <marker scope="Public" name="haiku_276" />
+        <marker scope="Public" name="haiku_276_Counter" />
+        <marker scope="Public" name="haiku_276_NCounter" />
+        <marker scope="Public" name="haiku_277" />
+        <marker scope="Public" name="haiku_277_Counter" />
+        <marker scope="Public" name="haiku_277_NCounter" />
+        <marker scope="Public" name="haiku_278" />
+        <marker scope="Public" name="haiku_278_Counter" />
+        <marker scope="Public" name="haiku_278_NCounter" />
+        <marker scope="Public" name="haiku_279" />
+        <marker scope="Public" name="haiku_279_Counter" />
+        <marker scope="Public" name="haiku_279_NCounter" />
         <marker scope="Public" name="haiku_28" />
         <marker scope="Public" name="haiku_28_Counter" />
         <marker scope="Public" name="haiku_28_NCounter" />
+        <marker scope="Public" name="haiku_280_Counter" />
+        <marker scope="Public" name="haiku_280_NCounter" />
+        <marker scope="Public" name="haiku_281_Counter" />
+        <marker scope="Public" name="haiku_281_NCounter" />
+        <marker scope="Public" name="haiku_282_Counter" />
+        <marker scope="Public" name="haiku_282_NCounter" />
+        <marker scope="Public" name="haiku_283" />
+        <marker scope="Public" name="haiku_283_Counter" />
+        <marker scope="Public" name="haiku_283_NCounter" />
+        <marker scope="Public" name="haiku_284" />
+        <marker scope="Public" name="haiku_284_Counter" />
+        <marker scope="Public" name="haiku_284_NCounter" />
+        <marker scope="Public" name="haiku_285_Counter" />
+        <marker scope="Public" name="haiku_285_NCounter" />
+        <marker scope="Public" name="haiku_286" />
+        <marker scope="Public" name="haiku_286_Counter" />
+        <marker scope="Public" name="haiku_286_NCounter" />
+        <marker scope="Public" name="haiku_287" />
+        <marker scope="Public" name="haiku_287_Counter" />
+        <marker scope="Public" name="haiku_287_NCounter" />
         <marker scope="Public" name="haiku_29" />
         <marker scope="Public" name="haiku_29_Counter" />
         <marker scope="Public" name="haiku_29_NCounter" />
@@ -1505,13 +1701,20 @@
         <marker scope="Public" name="haiku_99_NCounter" />
         <marker scope="Public" name="hairties_strip" />
         <marker scope="Public" name="jura_muststrip_0" />
+        <marker scope="Public" name="kora_healing" />
         <marker scope="Public" name="kora_muststrip_0" />
+        <marker scope="Public" name="kora_stripping_0" />
         <marker scope="Public" name="kumatora_favfood" />
         <marker scope="Public" name="l'arachel_muststrip" />
         <marker scope="Public" name="l'arachel_muststrip_0" />
         <marker scope="Public" name="lux_pun_overload" />
         <marker scope="Public" name="lux_pun_trigger" />
         <marker scope="Public" name="magmagrunt_muststrip_0" />
+        <marker scope="Public" name="Mari_Drive" />
+        <marker scope="Public" name="Mari_Drive1" />
+        <marker scope="Public" name="Mari_Interesting1" />
+        <marker scope="Public" name="Mari_Purity" />
+        <marker scope="Public" name="Mari_Purity1" />
         <marker scope="Public" name="meia_mitama0_resp">Also haiku 176</marker>
         <marker scope="Public" name="meia_mitama2_resp" />
         <marker scope="Public" name="meia_mitama2_response" />
@@ -1533,10 +1736,17 @@
         <marker scope="Public" name="nagatoro_mitama01_resp" />
         <marker scope="Public" name="nagatoro_mitama02_resp" />
         <marker scope="Public" name="nagatoro_mitama11_resp" />
+        <marker scope="Public" name="nagatoro_mitama12_resp" />
         <marker scope="Public" name="nap_time" />
+        <marker scope="Public" name="Reimu_Capelet1_resp" />
+        <marker scope="Public" name="Reimu_Capelet2_resp" />
+        <marker scope="Public" name="Reimu_Capelet3_resp" />
+        <marker scope="Public" name="reimu_sarashi_revealed" />
+        <marker scope="Public" name="reimu_sarashi_unrevealed" />
         <marker scope="Public" name="Reimu_spouse" />
+        <marker scope="Public" name="ReimuShoes1">Also haiku 280.</marker>
         <marker scope="Public" name="revy_killing">Answer to Revy's prompt about killing.</marker>
-        <marker scope="Public" name="revy_mitama0_resp" />
+        <marker scope="Public" name="revy_mitama0_resp">Also haiku 196.</marker>
         <marker scope="Public" name="seen_penis" />
         <marker scope="Public" name="seen_penis_large">The first penis Mitama sees is large.</marker>
         <marker scope="Public" name="seen_penis_medium">The first penis Mitama sees is of average size.</marker>
@@ -1548,6 +1758,11 @@
         <marker scope="Public" name="Sonny_Tess_Gimmick" />
         <marker scope="Public" name="Sonny_Tesss_Gimmick" />
         <marker scope="Public" name="Suinny_Tes_beeg_rebeal" />
+        <marker scope="Public" name="Takatoshi_cloning">Also haiku 273.</marker>
+        <marker scope="Public" name="tharja_01" />
+        <marker scope="Public" name="Tharja_02" />
+        <marker scope="Public" name="tharja_bodysuit_strip" />
+        <marker scope="Public" name="TharjaShrink_reaction" />
         <marker scope="Public" name="TOKI_WA_KITA" />
         <marker scope="Public" name="tsuki_ga_kirei">Mitama comments on the Moon when playing in the Paris Rooftop background.</marker>
         <marker scope="Public" name="tunny_ses_stripped" />
