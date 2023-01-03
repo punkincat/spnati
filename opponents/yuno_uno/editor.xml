@@ -210,6 +210,7 @@
         <response id="748" opponent="lyralei" opponentId="16339" />
         <response id="749" opponent="kyouko_toshinou" opponentId="108" />
         <response id="754" opponent="lyralei" opponentId="559" />
+        <response id="759" opponent="aqua_grunt" opponentId="220" />
     </responses>
     <notes>
         <note id="29">The Greek Visionary is a character like Ishizu or Shadi from Yu-gi-oh. Roll with it.</note>
@@ -243,6 +244,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <note id="744">Yuno is being very casual about this, if that wasn't obvious</note>
         <note id="746">Follow up from an observational line that may play earlier</note>
         <note id="752">Don't need to respond to this - this is just to help set up the case where Kyouko parodies Yuno easier</note>
+        <note id="759">this is a joke where he's speaking like an Anti-gambling PSA (public service announcement). In the next case he could then refer to the time he had to bet his own soul to save his friends and say "I'm one to talk, eh?"</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Friends" sort="2" />
@@ -748,9 +750,9 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="512" label="" folder="Situations" sort="8" />
         <label id="514" label="" folder="Targets" sort="31" />
         <label id="513" label="" folder="Targets" sort="61" />
-        <label id="515" label="" folder="Targets" sort="62" />
-        <label id="516" label="" folder="Targets" sort="63" />
-        <label id="517" label="" folder="Targets" sort="64" />
+        <label id="515" label="" color="3" folder="Targets" sort="62" />
+        <label id="516" label="" color="3" folder="Targets" sort="63" />
+        <label id="517" label="" color="3" folder="Targets" sort="64" />
         <label id="518" label="" folder="Situations" sort="11" />
         <label id="519" label="" folder="Saki Yoshida" sort="11" />
         <label id="520" label="" folder="Responses" sort="28" />
@@ -758,7 +760,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="522" label="" folder="Saki Yoshida" sort="2" />
         <label id="523" label="" folder="Targets" sort="120" />
         <label id="524" label="" folder="Responses" sort="29" />
-        <label id="525" label="" folder="Targets" sort="106" />
+        <label id="525" label="" color="3" folder="Targets" sort="106" />
         <label id="526" label="" folder="Targets" sort="4" />
         <label id="527" label="" folder="Targets" sort="121" />
         <label id="528" label="" folder="Responses" sort="12" />
@@ -981,19 +983,26 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="749" label="" folder="Situations" sort="0" />
         <label id="748" label="" folder="Situations" sort="0" />
         <label id="750" label="" folder="Situations" sort="0" />
-        <label id="751" label="" folder="Targets" sort="0" />
+        <label id="751" label="" color="3" folder="Targets" sort="0" />
         <label id="752" label="" color="3" folder="Interactions" sort="0" />
-        <label id="753" label="" folder="Targets" sort="0" />
+        <label id="753" label="" color="3" folder="Targets" sort="0" />
         <label id="754" label="" folder="Situations" sort="0" />
         <label id="755" label="" folder="Situations" sort="0" />
         <label id="756" label="" folder="Targets" sort="0" />
         <label id="757" label="" folder="Targets" sort="0" />
         <label id="758" label="" folder="Targets" sort="0" />
+        <label id="759" label="" folder="Responses" sort="0" />
+        <label id="547" label="" color="1" folder="Targets" sort="0" />
+        <label id="760" label="" color="3" folder="Targets" sort="0" />
+        <label id="761" label="" color="1" folder="Targets" sort="0" />
+        <label id="762" label="" color="1" folder="Targets" sort="0" />
+        <label id="763" label="" color="1" folder="Targets" sort="0" />
+        <label id="764" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>yuno_collectible</prefix>
     </prefixes>
-    <nextId>758</nextId>
+    <nextId>764</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="10rounds_gaku_skill_level" />
@@ -1256,6 +1265,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_ag_humansResp" />
         <marker scope="Public" name="yuno_ag_mg_strip2" />
         <marker scope="Public" name="yuno_ag_self0a" />
+        <marker scope="Public" name="yuno_ag_self0b" />
         <marker scope="Public" name="yuno_ag_speech1Resp" />
         <marker scope="Public" name="yuno_AG_strip0a" />
         <marker scope="Public" name="yuno_ag_waterspeech_0" />
@@ -1444,10 +1454,14 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_mari_strip0b" />
         <marker scope="Public" name="Yuno_MariForfeitBet" />
         <marker scope="Public" name="yuno_mariLostBet_mastTalk1" />
+        <marker scope="Public" name="yuno_mariS_drabUniformCont" />
+        <marker scope="Public" name="yuno_mariS_drabUniformFin" />
         <marker scope="Public" name="yuno_mariS_strip0a" />
         <marker scope="Public" name="yuno_mariS_strip1a" />
+        <marker scope="Public" name="yuno_mariS_strip1b" />
         <marker scope="Public" name="yuno_mariS_strip2a" />
         <marker scope="Public" name="yuno_mariS_strip2b" />
+        <marker scope="Public" name="yuno_mariS_strip2c" />
         <marker scope="Public" name="yuno_meia_self0a" />
         <marker scope="Public" name="yuno_meia_strip0a" />
         <marker scope="Public" name="yuno_meia_strip1a" />
