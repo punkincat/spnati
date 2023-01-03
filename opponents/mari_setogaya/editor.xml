@@ -397,6 +397,10 @@
         <response id="1991" opponent="cheryl" opponentId="467" />
         <response id="1994" opponent="cheryl" opponentId="468" />
         <response id="1995" opponent="cheryl" opponentId="469" />
+        <response id="1997" opponent="yuno_uno" opponentId="760" />
+        <response id="1998" opponent="yuno_uno" opponentId="761" />
+        <response id="1999" opponent="yuno_uno" opponentId="763" />
+        <response id="2000" opponent="yuno_uno" opponentId="762" />
     </responses>
     <notes>
         <note id="412">Yes, Mari is implying that Kazuma is lying just to see her pose naked for him. You are free to have Kazuma defend his case, so to speak.</note>
@@ -842,8 +846,8 @@
         <label id="434" label="" color="0" folder="Replies" sort="7" />
         <label id="435" label="" color="0" folder="Targets" sort="35" />
         <label id="436" label="" folder="Targets" sort="0" />
-        <label id="437" label="" color="1" folder="Replies" sort="8" />
-        <label id="438" label="" color="1" folder="Replies" sort="9" />
+        <label id="437" label="" color="0" folder="Replies" sort="8" />
+        <label id="438" label="" color="0" folder="Replies" sort="9" />
         <label id="439" label="" color="0" folder="Replies" sort="10" />
         <label id="440" label="" color="0" folder="Targets" sort="36" />
         <label id="441" label="" folder="PromptResponses" sort="4" />
@@ -996,7 +1000,7 @@
         <label id="601" label="" folder="CTargets" sort="10" />
         <label id="602" label="" folder="CTargets" sort="35" />
         <label id="603" label="" folder="CTargets" sort="50" />
-        <label id="604" label="" color="1" folder="Replies" sort="22" />
+        <label id="604" label="" color="0" folder="Replies" sort="22" />
         <label id="605" label="" color="0" folder="Targets" sort="112" />
         <label id="606" label="" folder="PromptResponses" sort="14" />
         <label id="607" label="" folder="PromptResponses" sort="15" />
@@ -2271,7 +2275,7 @@
         <label id="1892" label="" color="0" folder="Replies" sort="415" />
         <label id="1893" label="" color="0" folder="Targets" sort="599" />
         <label id="1894" label="" color="1" folder="Targets" sort="600" />
-        <label id="1895" label="" color="1" folder="Targets" sort="601" />
+        <label id="1895" label="" color="0" folder="Targets" sort="601" />
         <label id="1896" label="" color="0" folder="PromptResponses" sort="68" />
         <label id="1897" label="" color="3" folder="NPromptResponses" sort="0" />
         <label id="1898" label="" color="0" folder="PromptResponses" sort="0" />
@@ -2373,8 +2377,14 @@
         <label id="1994" label="" color="3" folder="Targets" sort="0" />
         <label id="1995" label="" color="3" folder="Replies" sort="0" />
         <label id="1996" label="" color="1" folder="Replies" sort="0" />
+        <label id="1997" label="" color="3" folder="Replies" sort="0" />
+        <label id="1998" label="" color="1" folder="Replies" sort="0" />
+        <label id="1999" label="" color="3" folder="Replies" sort="0" />
+        <label id="2000" label="" color="3" folder="Replies" sort="0" />
+        <label id="2001" label="" color="1" folder="Targets" sort="0" />
+        <label id="2002" label="" color="1" folder="Targets" sort="0" />
     </labels>
-    <nextId>1996</nextId>
+    <nextId>2002</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aaravi_relaxGirl" />
@@ -2670,6 +2680,7 @@
         <marker scope="Public" name="Dunban_unevenArms_question" />
         <marker scope="Public" name="Dwight_interests" />
         <marker scope="Public" name="Dwight_interests_cont" />
+        <marker scope="Public" name="Dwight_interests_end" />
         <marker scope="Public" name="Dwight_reply1" />
         <marker scope="Public" name="Dwight_reply1_cont" />
         <marker scope="Public" name="Dwight_whatBringsYouHere" />
@@ -3592,9 +3603,15 @@
         <marker scope="Public" name="Yshtola_weird_name_cont" />
         <marker scope="Public" name="Yshtola_weird_name_end" />
         <marker scope="Public" name="Yuno_cool_nice_and_cute" />
+        <marker scope="Public" name="Yuno_cool_nice_and_cute_cont" />
+        <marker scope="Public" name="Yuno_drabUniform_cont" />
+        <marker scope="Public" name="Yuno_drabUniform_end" />
         <marker scope="Public" name="Yuno_drabUniform_reply" />
+        <marker scope="Public" name="Yuno_hobbies_question" />
         <marker scope="Public" name="Yuno_Mari_never_lost_Uno" />
+        <marker scope="Public" name="Yuno_Mari_Uno_end" />
         <marker scope="Public" name="Yuno_Mari_UnoPro" />
+        <marker scope="Public" name="Yuno_MariUno_end" />
         <marker scope="Public" name="Zoe_eyes_question" />
         <marker scope="Public" name="Zoe_game_start" />
         <marker scope="Public" name="Zoe_game_start_halloween" />
