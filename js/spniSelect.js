@@ -282,7 +282,7 @@ function loadListingFile () {
     const sourceSet = new Set();
     const sourcePrefixCounts = new Map();
     const creatorSet = new Set();
-    const wordRE = /(?:\p{Letter}|[-0-9'])+/dug;
+    const wordRE = /(?:\p{Letter}|[-0-9'])+/ug;
 
     loadProgress = listingFiles.map(function () {
         return { current: 0, total: 0 };
@@ -302,7 +302,7 @@ function loadListingFile () {
             var sourceMatch;
             while (sourceMatch = wordRE.exec(opp.source)) {
                 if (/^(?:the|my|original)$/i.test(sourceMatch[0])) continue;
-                const prefix = opp.source.substring(0, sourceMatch.indices[0][1]);
+                const prefix = opp.source.substring(0, wordRE.lastIndex);
                 sourcePrefixCounts.set(prefix, (sourcePrefixCounts.get(prefix) ?? 0) + 1);
             }
             
@@ -444,7 +444,7 @@ function loadListingFile () {
             p.sourcePrefixLengths = [];
             var sourceMatch, prevPrefixLen, prevPrefixCount;
             while (sourceMatch = wordRE.exec(p.source)) {
-                const prefix = p.source.substring(0, sourceMatch.indices[0][1]);
+                const prefix = p.source.substring(0, wordRE.lastIndex);
                 if (sourcePrefixCounts.has(prefix)) { // Skip prefixes that were skipped earlier
                     const curPrefixCount = sourcePrefixCounts.get(prefix);
                     if (prevPrefixCount !== undefined && curPrefixCount < prevPrefixCount) {
@@ -452,7 +452,7 @@ function loadListingFile () {
                            push a split point at the end of the *previous* word. */
                         p.sourcePrefixLengths.push(prevPrefixLen);
                     }
-                    prevPrefixLen = sourceMatch.indices[0][1];
+                    prevPrefixLen = wordRE.lastIndex;
                     prevPrefixCount = curPrefixCount;
                 }
             }
