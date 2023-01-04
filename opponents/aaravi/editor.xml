@@ -18,6 +18,15 @@
         <case name="Level Up" id="111" priority="FYI" min="0" max="7">
             <description>After surviving thirty rounds without having to forfeit, Aaravi can level up, increasing her difficulty.</description>
         </case>
+        <case name="If You Can't Beat 'Em..." id="363" priority="FYI" min="6" max="7">
+            <description>Down to her last few layers, Aaravi states that she's going to deliberately get herself as horny as possible before the forfeit so she'll have the fastest possible masturbation time. She sees this as a way of still achieving a limited victory.</description>
+        </case>
+        <case name="Blueballed" id="367" priority="FYI" min="6" max="7">
+            <description>Having preemptively started getting horny for the forfeit, Aaravi has won the game, and will not be masturbating.</description>
+        </case>
+        <case name="Back Scars" id="119" priority="Noteworthy" min="7" max="7">
+            <description>Once naked, Aaravi shows off the scars on her back (and also her butt).</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -82,6 +91,12 @@
         <response id="0" opponent="mari_setogaya" opponentId="150" />
         <response id="0" opponent="mari_setogaya" opponentId="180" />
         <response id="0" opponent="mari_setogaya" opponentId="34" />
+        <response id="0" opponent="binah" opponentId="1" />
+        <response id="0" opponent="bobobo" opponentId="93" />
+        <response id="0" opponent="bobobo" opponentId="236" />
+        <response id="0" opponent="bobobo" opponentId="43" />
+        <response id="0" opponent="bobobo" opponentId="237" />
+        <response id="0" opponent="bobobo" opponentId="1" />
     </responses>
     <notes>
         <note id="17">This is based specifically on the fact that Aaravi has a lawyer outfit with the same design as Franzisca's.</note>
@@ -121,8 +136,7 @@
         <note id="248">Please note: Aaravi's dialogue does not reflect the views of her writer. Itadaki Seiki is *good* hentai</note>
         <note id="250">Aaravi does not have the self awareness to appreciate that this isn't a topic Arueshalae wants to discuss</note>
         <note id="252">She's lying. She still has fears, they're just conceptual now, and largely based around social situations</note>
-        <note id="297">Added A and B variants to the markers on the preceding case. Feel free to swap to them or continue using the text check</note>
-        <note id="298">Added A and B variants to the markers on the preceding case. Feel free to swap to them or continue using the text check</note>
+        <note id="379">Tone in writing can be hard, so to be completely clear - this is Aaravi trash-talking Nagatoro to try to rile her up and compete harder, not any sort of attempt to actually poke at her insecurities</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Final Duel" sort="5" />
@@ -337,13 +351,13 @@
         <label id="257" label="" color="1" folder="" sort="0" />
         <label id="258" label="" color="1" folder="" sort="0" />
         <label id="259" label="" color="1" folder="" sort="0" />
-        <label id="260" label="" color="1" folder="" sort="0" />
-        <label id="261" label="" color="1" folder="" sort="0" />
+        <label id="389" label="" color="1" folder="" sort="0" />
+        <label id="390" label="" color="1" folder="" sort="0" />
         <label id="262" label="" color="1" folder="" sort="0" />
-        <label id="263" label="" color="1" folder="" sort="0" />
-        <label id="289" label="" color="1" folder="" sort="0" />
-        <label id="291" label="" color="1" folder="" sort="0" />
-        <label id="294" label="" color="1" folder="" sort="0" />
+        <label id="384" label="" color="1" folder="" sort="0" />
+        <label id="387" label="" color="1" folder="" sort="0" />
+        <label id="386" label="" color="1" folder="" sort="0" />
+        <label id="388" label="" color="1" folder="" sort="0" />
         <label id="268" label="" color="1" folder="" sort="0" />
         <label id="269" label="" color="1" folder="" sort="0" />
         <label id="270" label="" color="1" folder="" sort="0" />
@@ -365,11 +379,8 @@
         <label id="286" label="Must Masturbate" folder="Target Villain" sort="0" />
         <label id="287" label="Must Masturbate" folder="Target Villain" sort="0" />
         <label id="288" label="" folder="Target Villain" sort="0" />
-        <label id="292" label="" color="1" folder="" sort="0" />
-        <label id="295" label="" color="1" folder="" sort="0" />
-        <label id="296" label="" color="1" folder="" sort="0" />
-        <label id="297" label="" color="1" folder="" sort="0" />
-        <label id="298" label="" color="1" folder="" sort="0" />
+        <label id="385" label="" color="1" folder="" sort="0" />
+        <label id="368" label="" color="1" folder="" sort="0" />
         <label id="299" label="" color="1" folder="" sort="0" />
         <label id="300" label="" color="1" folder="" sort="0" />
         <label id="301" label="" color="1" folder="" sort="0" />
@@ -380,8 +391,8 @@
         <label id="306" label="" color="1" folder="" sort="0" />
         <label id="307" label="" color="1" folder="" sort="0" />
         <label id="308" label="" color="1" folder="" sort="0" />
-        <label id="309" label="" color="1" folder="" sort="0" />
-        <label id="310" label="" color="1" folder="" sort="0" />
+        <label id="378" label="" color="1" folder="" sort="0" />
+        <label id="379" label="" color="1" folder="" sort="0" />
         <label id="311" label="Poker Level Up" folder="" sort="0" />
         <label id="312" label="Beach" folder="Backgrounds" sort="0" />
         <label id="313" label="Poolside" folder="Backgrounds" sort="0" />
@@ -427,8 +438,47 @@
         <label id="354" label="Haunted Forest (w/ Halloween skins)" folder="Backgrounds" sort="0" />
         <label id="355" label="Paris Rooftop (w/ Valentines skins)" folder="Backgrounds" sort="0" />
         <label id="356" label="Paris Rooftop (no Valentines skins)" folder="Backgrounds" sort="0" />
+        <label id="357" label="Dominants" folder="OPPONENT ROLES TO FILL OUT" sort="0" />
+        <label id="358" label="" color="1" folder="" sort="0" />
+        <label id="359" label="" folder="Target Dominant" sort="0" />
+        <label id="360" label="" folder="Target Dominant" sort="0" />
+        <label id="361" label="" folder="Target Dominant" sort="0" />
+        <label id="362" label="" folder="Target Dominant" sort="0" />
+        <label id="363" label="Might Lose" folder="Pre-Mast Horny" sort="0" />
+        <label id="364" label="With Fighter" folder="Pre-Mast Horny" sort="0" />
+        <label id="365" label="With Dominant" folder="Pre-Mast Horny" sort="0" />
+        <label id="366" label="Fantasies" folder="Pre-Mast Horny" sort="0" />
+        <label id="367" label="Blueballed" folder="Pre-Mast Horny" sort="0" />
+        <label id="369" label="Fantasies Start" folder="Pre-Mast Horny" sort="0" />
+        <label id="370" label="Prep Failed" folder="" sort="0" />
+        <label id="371" label="Prep Success" folder="" sort="0" />
+        <label id="373" label="" folder="Target Dominant" sort="0" />
+        <label id="374" label="" folder="Target Dominant" sort="0" />
+        <label id="375" label="" folder="Pre-Mast Horny" sort="0" />
+        <label id="376" label="Timer Manipulation" folder="Pre-Mast Horny" sort="0" />
+        <label id="377" label="Timer Manipulation" folder="Pre-Mast Horny" sort="0" />
+        <label id="380" label="" color="1" folder="" sort="0" />
+        <label id="381" label="" color="1" folder="" sort="0" />
+        <label id="382" label="" color="1" folder="" sort="0" />
+        <label id="391" label="" folder="Other Filters" sort="0" />
+        <label id="392" label="" folder="Other Filters" sort="0" />
+        <label id="393" label="" folder="Other Filters" sort="0" />
+        <label id="394" label="" folder="Other Filters" sort="0" />
+        <label id="395" label="" folder="Other Filters" sort="0" />
+        <label id="396" label="" folder="Other Filters" sort="0" />
+        <label id="397" label="" folder="Other Filters" sort="0" />
+        <label id="398" label="" folder="Other Filters" sort="0" />
+        <label id="399" label="" folder="Other Filters" sort="0" />
+        <label id="400" label="" folder="Other Filters" sort="0" />
+        <label id="401" label="" folder="Other Filters" sort="0" />
+        <label id="402" label="" folder="Other Filters" sort="0" />
+        <label id="403" label="" folder="Other Filters" sort="0" />
+        <label id="404" label="" folder="Other Filters" sort="0" />
+        <label id="405" label="" folder="Other Filters" sort="0" />
+        <label id="406" label="" folder="Other Filters" sort="0" />
+        <label id="407" label="" folder="Other Filters" sort="0" />
     </labels>
-    <nextId>356</nextId>
+    <nextId>407</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="AaraviBirthday" />
@@ -453,6 +503,7 @@
         <marker scope="Public" name="ArueCrest2" />
         <marker scope="Public" name="ArueCrest3" />
         <marker scope="Public" name="ArueParties" />
+        <marker scope="Public" name="ArueParties2" />
         <marker scope="Public" name="AruePathfinders" />
         <marker scope="Public" name="AruePathfinders2" />
         <marker scope="Public" name="AruePathfinders3" />
@@ -467,7 +518,14 @@
         <marker scope="Public" name="BarbaraSalil" />
         <marker scope="Public" name="BarbaraWhatClass" />
         <marker scope="Public" name="BeatrixSupportWhy" />
+        <marker scope="Public" name="BinahIntro" />
+        <marker scope="Public" name="BinahWeirdVibes" />
+        <marker scope="Public" name="Blueballed" />
+        <marker scope="Public" name="BoboboHairWh" />
+        <marker scope="Public" name="BoboboHairWhisperer" />
         <marker scope="Public" name="BoboboSecretTechnique" />
+        <marker scope="Public" name="BoboboSecretTechnique2" />
+        <marker scope="Public" name="BoboboSecretTechnique3" />
         <marker scope="Public" name="BottomFirst" />
         <marker scope="Public" name="BowserFangirl" />
         <marker scope="Public" name="ButtPose" />
@@ -486,21 +544,27 @@
         <marker scope="Public" name="CharlieHellRoyalty" />
         <marker scope="Public" name="CharlieStrangeDemon" />
         <marker scope="Public" name="CherylBadHabits" />
+        <marker scope="Public" name="CherylBadHabits2" />
         <marker scope="Public" name="CherylCurses" />
         <marker scope="Public" name="CherylCurses2" />
         <marker scope="Public" name="CherylCurses3" />
+        <marker scope="Public" name="CherylExploration" />
         <marker scope="Public" name="CherylFantasyReality" />
         <marker scope="Public" name="CherylFantasyReality2" />
         <marker scope="Public" name="CherylFantasyReality3" />
         <marker scope="Public" name="CherylFirstImpressions" />
         <marker scope="Public" name="CherylFirstImpressions2" />
+        <marker scope="Public" name="CherylFirstImpressions3" />
         <marker scope="Public" name="CherylGrindin" />
         <marker scope="Public" name="CherylGrinding" />
         <marker scope="Public" name="CherylGrinding2" />
+        <marker scope="Public" name="CherylGrinding3" />
         <marker scope="Public" name="CherylJournaling" />
         <marker scope="Public" name="CherylJournaling2" />
         <marker scope="Public" name="CherylMonsters" />
         <marker scope="Public" name="CherylMonsters2" />
+        <marker scope="Public" name="CherylMonsters3" />
+        <marker scope="Public" name="CherylProtective" />
         <marker scope="Public" name="CynthiaArchaeology" />
         <marker scope="Public" name="CynthiaNotARealBoss" />
         <marker scope="Public" name="CynthiaNotARealBoss2" />
@@ -569,6 +633,7 @@
         <marker scope="Public" name="FortuneScars" />
         <marker scope="Public" name="FortuneScars2" />
         <marker scope="Public" name="FranziskaCompete" />
+        <marker scope="Public" name="GetHorny" />
         <marker scope="Public" name="GloriaChampion" />
         <marker scope="Public" name="GloriaCurry" />
         <marker scope="Public" name="GruntDismissive1" />
@@ -602,6 +667,7 @@
         <marker scope="Public" name="HildaMetagaming" />
         <marker scope="Public" name="HildaMetagaming2" />
         <marker scope="Public" name="HildaMetagaming3" />
+        <marker scope="Public" name="HornyStart" />
         <marker scope="Public" name="HuTaoAdeptus" />
         <marker scope="Public" name="HuTaoAdeptus2" />
         <marker scope="Public" name="HuTaoAdeptus3" />
@@ -661,6 +727,7 @@
         <marker scope="Public" name="JuriAStreetFight" />
         <marker scope="Public" name="KonosubaDerogatory" />
         <marker scope="Public" name="KoraWeaponType" />
+        <marker scope="Public" name="KoraWeaponType2" />
         <marker scope="Public" name="KumatoraNoFun" />
         <marker scope="Public" name="KumatoraSkillset" />
         <marker scope="Public" name="KumatoraTragicBackstory" />
@@ -764,14 +831,17 @@
         <marker scope="Public" name="MariSDowntime" />
         <marker scope="Public" name="MariSDowntimeA" />
         <marker scope="Public" name="MariSDowntimeA2" />
+        <marker scope="Public" name="MariSDowntimeA3" />
         <marker scope="Public" name="MariSDowntimeB" />
         <marker scope="Public" name="MariSDowntimeB2" />
+        <marker scope="Public" name="MariSDowntimeB3" />
         <marker scope="Public" name="MariSelectReactionResponse" />
         <marker scope="Public" name="MariSEssence" />
         <marker scope="Public" name="MariSEssence2" />
         <marker scope="Public" name="MariSEssence3" />
         <marker scope="Public" name="MariSFemalePresentingNipples" />
         <marker scope="Public" name="MariSHavingFun" />
+        <marker scope="Public" name="MariSMonsters" />
         <marker scope="Public" name="MariSoulsucker" />
         <marker scope="Public" name="MariSoulsucker2" />
         <marker scope="Public" name="MariSoulsucker3" />
@@ -829,6 +899,9 @@
         <marker scope="Public" name="MonikaUniform2" />
         <marker scope="Public" name="MonikaWrongGame" />
         <marker scope="Public" name="MonikaWrongGame2" />
+        <marker scope="Public" name="NagatoroAboutPlayer" />
+        <marker scope="Public" name="NagatoroCompetition" />
+        <marker scope="Public" name="NagatoroUnderestimate" />
         <marker scope="Public" name="NamiAdventure" />
         <marker scope="Public" name="NamiAdventure2A" />
         <marker scope="Public" name="NamiAdventure2B" />
@@ -988,6 +1061,7 @@
         <marker scope="Public" name="SnTReveal" />
         <marker scope="Public" name="SnTWin" />
         <marker scope="Public" name="SpookyGhostMurder" />
+        <marker scope="Public" name="StartedEarly" />
         <marker scope="Public" name="StockingPurity" />
         <marker scope="Public" name="StockingPurity2" />
         <marker scope="Public" name="StockingStripes" />
@@ -998,13 +1072,17 @@
         <marker scope="Public" name="SucroseCatSupport2" />
         <marker scope="Public" name="SucroseCollab" />
         <marker scope="Public" name="SucroseCollab2" />
+        <marker scope="Public" name="SucroseCollab3" />
         <marker scope="Public" name="SucroseConfidence" />
         <marker scope="Public" name="SucroseConfidence2" />
         <marker scope="Public" name="SucroseConfidence3" />
         <marker scope="Public" name="SucroseElements" />
+        <marker scope="Public" name="SucroseElements2" />
         <marker scope="Public" name="SucroseFetchQuest" />
         <marker scope="Public" name="SucroseFetchQuest2" />
+        <marker scope="Public" name="SucroseFetchQuest3" />
         <marker scope="Public" name="SucroseLifeSupport" />
+        <marker scope="Public" name="SucroseLifeSupport2" />
         <marker scope="Public" name="SucrosePlants" />
         <marker scope="Public" name="SucrosePotions" />
         <marker scope="Public" name="SucroseTheories" />
