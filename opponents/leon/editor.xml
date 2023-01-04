@@ -9,6 +9,9 @@
         <case name="Leon Throw for Tao" id="428" priority="FYI" min="0" max="7">
             <description>Hu Tao is in her forfeit and Leon wants to be in her. And so he throws. </description>
         </case>
+        <case name="Leon/Rouge Dual Forfeit" id="1164" priority="Noteworthy" min="7" max="7">
+            <description>Description about what's interesting happening with the character (i.e. why should others target this?)</description>
+        </case>
     </noteworthy>
     <responses>
         <response id="134" opponent="hu_tao" opponentId="8" />
@@ -427,6 +430,11 @@
         <response id="1208" opponent="cheryl" opponentId="523" />
         <response id="1209" opponent="cheryl" opponentId="521" />
         <response id="1210" opponent="cheryl" opponentId="524" />
+        <response id="1211" opponent="caitlin" opponentId="180" />
+        <response id="1215" opponent="hu_tao" opponentId="1300" />
+        <response id="1220" opponent="hu_tao" opponentId="1303" />
+        <response id="1228" opponent="hu_tao" opponentId="1311" />
+        <response id="1229" opponent="hu_tao" opponentId="1312" />
     </responses>
     <notes>
         <note id="48">Grants the DbD tag. </note>
@@ -1264,8 +1272,27 @@
         <label id="1186" label="Go - Hu Tao pt 1" folder="Cheryl Intimacy" sort="0" />
         <label id="1187" label="Go pt 1" folder="Cheryl Intimacy" sort="0" />
         <label id="1188" label="No go to go" folder="Cheryl Intimacy" sort="0" />
+        <label id="1212" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1213" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1214" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1215" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1216" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1217" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1218" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1219" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1220" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1221" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1222" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1223" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1224" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1225" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1226" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1227" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1228" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1229" label="" folder="Tao/Caitlin" sort="0" />
+        <label id="1230" label="" folder="Tao/Caitlin" sort="0" />
     </labels>
-    <nextId>1210</nextId>
+    <nextId>1230</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="aaravi_finished" />
@@ -1462,7 +1489,11 @@
         <marker scope="Public" name="caitlin_close" />
         <marker scope="Public" name="caitlin01" />
         <marker scope="Public" name="caitlin02" />
+        <marker scope="Public" name="caitlin03" />
         <marker scope="Public" name="caitlin11" />
+        <marker scope="Public" name="caitlin12" />
+        <marker scope="Public" name="caitlin13" />
+        <marker scope="Public" name="caitlin21" />
         <marker scope="Public" name="cheryl_interested" />
         <marker scope="Public" name="cheryl_interestedA" />
         <marker scope="Public" name="cheryl_interestedB" />
