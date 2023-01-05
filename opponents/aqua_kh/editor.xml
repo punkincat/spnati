@@ -4,7 +4,7 @@
     <height>5'10"</height>
     <age>20 (Chronologically 30+)</age>
     <pronunciation>ak-wuh / ˈɑːkwə</pronunciation>
-    <othernotes>Summary / Background info&lt;br&gt;- Keyblade wielder/master. The Keyblade is a magical weapon that only a chosen few may wield. Its appearance varies as it can be changed during gameplay, but Aqua's specific keyblade design is called Rainfell, the one Sora is seen with is the Kingdom Key, etc. &lt;br&gt;- Kingdom Hearts is a convoluted series because every single game that would SEEM like a spin-off is actually part of the integral canon and core story. Aqua's game, Birth By Sleep, is actually a prequel game set before KH1, but released between Kh2 and KH3.&lt;br&gt;- Adept combatant whose gameplay style focuses on cartwheeling to avoid damage, and making the most out of offensive and defensive magic skills. She's very adaptable.&lt;br&gt;- She was raised in training for most of her known life so she is socially awkward/shy, but is overall more of a cool-headed and devoted individual.&lt;br&gt;- The reason for her coming to play SPNATI is that she wants to get experience with intimate encounters, because she's not completely unfamiliar with the concepts of physical intimacy and sex but she IS very inexperienced.&lt;br&gt;&lt;br&gt;Gameplay Notes&lt;br&gt;- She summons her keyblade when she enters stage 2, and unsummons it when she has to strip again. However, she does not treat this as her "item of clothing" to be stripped, and will take off a part of her outfit (her waist wraps in default)&lt;br&gt;- Her AI will get better when she has her keyblade out, but will be reduced when she has been in the same stage for 7+ rounds&lt;br&gt;</othernotes>
+    <othernotes>Summary / Background info&lt;br&gt;- Keyblade wielder/master. The Keyblade is a magical weapon that only a chosen few may wield. Its appearance varies as it can be changed during gameplay, but Aqua's specific keyblade design is called Rainfell, the one Sora is seen with is the Kingdom Key, etc. &lt;br&gt;- The Keyblade is used to 'maintain world order' and fight forces of darkness.&lt;br&gt;- Forces of darkness (like, literal darkness. light vs darkness) include Heartless (peoples' hearts taken into a shadowy form), Nobodies (the empty husks left behind when your heart becomes a Heartless), Unversed (creatures born of negative emotions because of a guy called Vanitas), and Dream Eaters (Heartless can't invade a 'Sleeping' world so the negative emotions become Dream Eaters instead)&lt;br&gt;- The one Aqua fought against originally were the Unversed, but she now has experience fighting Heartless. Plenty of experience.&lt;br&gt;- Kingdom Hearts is a convoluted series because every single game that would SEEM like a spin-off is actually part of the integral canon and core story. Aqua's game, Birth By Sleep, is actually a prequel game set before KH1, but released between Kh2 and KH3.&lt;br&gt;- Adept combatant whose gameplay style focuses on cartwheeling to avoid damage, and making the most out of offensive and defensive magic skills. She's very adaptable.&lt;br&gt;- She was raised in training for most of her known life so she is socially awkward/shy, but is overall more of a cool-headed and devoted individual.&lt;br&gt;- The reason for her coming to play SPNATI is that she wants to get experience with intimate encounters, because she's not completely unfamiliar with the concepts of physical intimacy and sex but she IS very inexperienced.&lt;br&gt;&lt;br&gt;Gameplay Notes&lt;br&gt;- She summons her keyblade when she enters stage 2, and unsummons it when she has to strip again. However, she does not treat this as her "item of clothing" to be stripped, and will take off a part of her outfit (her waist wraps in default)&lt;br&gt;- Her AI will get better when she has her keyblade out, but will be reduced when she has been in the same stage for 7+ rounds&lt;br&gt;</othernotes>
     <noteworthy>
         <case name="Aqua Leaves her Socks On" id="51" priority="Noteworthy" min="5" max="5">
             <description>Aqua decides to take her spats off before her thigh-high socks, saying that she wanted to try and be sexy. She's very shy about it, though.</description>
@@ -27,11 +27,19 @@
         <response id="175" opponent="kora" opponentId="38" />
         <response id="181" opponent="toph" opponentId="2" />
         <response id="187" opponent="binah" opponentId="1" />
+        <response id="197" opponent="revy" opponentId="128" />
+        <response id="199" opponent="meia" opponentId="553" />
+        <response id="202" opponent="jura" opponentId="237" />
+        <response id="211" opponent="mari" opponentId="2351" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
         <note id="167">castle of dreams = the world based on Cinderella, radiant garden = "the Final Fantasy world"</note>
         <note id="179">I dont *know* if anyone will ever write Terra but just to be safe I've future-proofed this line a little</note>
+        <note id="199">1. keyblade used to maintain order and fight the darkness
+2. the darkness are manifested entities based on hearts (heartless), empty husks (nobodies), negative emotions (unversed) etc. she could honestly ramble about it
+3. the 'order between worlds' (or 'world order') is vaguely defined but is basically 'the different worlds shouldnt mix and/or be overtaken by darkness'</note>
+        <note id="204">don't respond to this one, respond to the hand=any version of this case</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Player Names" sort="0" />
@@ -211,15 +219,46 @@
         <label id="184" label="" folder="Targets" sort="0" />
         <label id="185" label="" folder="Targets" sort="0" />
         <label id="188" label="" folder="Targets" sort="0" />
+        <label id="189" label="sit on a bed" folder="Backgrounds" sort="0" />
+        <label id="190" label="" folder="Logic" sort="0" />
+        <label id="191" label="" folder="Logic" sort="0" />
+        <label id="192" label="" folder="Logic" sort="0" />
+        <label id="193" label="" folder="Logic" sort="0" />
+        <label id="194" label="" folder="Logic" sort="0" />
+        <label id="195" label="" folder="Targets" sort="0" />
+        <label id="196" label="" folder="Targets" sort="0" />
+        <label id="197" label="self 0, revy, default" folder="Responses" sort="0" />
+        <label id="198" label="self 0, revy, blueberry" folder="Responses" sort="0" />
+        <label id="199" label="self 0, meia" folder="Responses" sort="0" />
+        <label id="200" label="self 0, jura" folder="Responses" sort="0" />
+        <label id="201" label="self 0, meia + jura" folder="Responses" sort="0" />
+        <label id="202" label="" folder="Responses" sort="0" />
+        <label id="203" label="" folder="Responses" sort="0" />
+        <label id="204" label="" color="3" folder="Responses" sort="0" />
+        <label id="205" label="" color="3" folder="Responses" sort="0" />
+        <label id="206" label="" folder="Other Targets" sort="0" />
+        <label id="207" label="" folder="Other Targets" sort="0" />
+        <label id="208" label="" folder="FF Targets" sort="0" />
+        <label id="209" label="" folder="FF Targets" sort="0" />
+        <label id="210" label="look at the lake" folder="Backgrounds" sort="0" />
+        <label id="211" label="" folder="Responses" sort="0" />
     </labels>
-    <nextId>188</nextId>
+    <nextId>211</nextId>
     <markers>
+        <marker scope="Public" name="aqua_adora_horde01" />
+        <marker scope="Public" name="aqua_adora_sword01" />
         <marker scope="Public" name="aqua_and_darkness_oppstrip">Either Aqua or Darkness (both from Konosuba) must strip - makes a comment on it</marker>
         <marker scope="Public" name="aqua_binah_startFF" />
+        <marker scope="Public" name="aqua_blake_keybladeCont1" />
+        <marker scope="Public" name="aqua_jura_self0a" />
         <marker scope="Public" name="aqua_kora_friendJokes" />
+        <marker scope="Public" name="aqua_mariOmori_OlderSister1" />
         <marker scope="Public" name="aqua_MariS_Self_femaleChestNotFirstResp">A response to a Mari Setogaya generic line that has a marker on it, about Mari S being the first one to show her boobs</marker>
+        <marker scope="Public" name="aqua_meia_self0a" />
         <marker scope="Public" name="aqua_nagatoro_extra_last_resp">Responds to a line Nagatoro might say about taking off an extra item last</marker>
         <marker scope="Public" name="aqua_pa15_jobResp">Dialogue to pa15</marker>
+        <marker scope="Public" name="aqua_revy_01" />
+        <marker scope="Public" name="aqua_revy_self01" />
         <marker scope="Public" name="aqua_sannytess_cock1" />
         <marker scope="Public" name="aqua_sannytess_cock2" />
         <marker scope="Public" name="aqua_tao01" />
@@ -234,6 +273,8 @@
         <marker scope="Public" name="aqua_toph_hairdown" />
         <marker scope="Public" name="aqua_yshtola_radiant_garden">Aqua asks Y'shtola if she's from Radiant Garden (a world in KH where Final Fantasy characters originate)</marker>
         <marker scope="Public" name="aqua_yshtola_radiant_garden2" />
+        <marker scope="Public" name="aqua_yshtola_radiant_garden3" />
+        <marker scope="Public" name="aqua_yshtola_self0a" />
         <marker scope="Public" name="aqua_yuno_friends1">Dialogue with Yuno</marker>
         <marker scope="Public" name="aqua_yuno_saveworld1">Dialogue with Yuno</marker>
         <marker scope="Public" name="aquaKH_ag_strip0a">Dialogue towards the Aqua Grunt</marker>
@@ -269,6 +310,8 @@
         <marker scope="Public" name="ignoring_pervert">Ignoring a perverted character (that is attracted to her) during her forfeit</marker>
         <marker scope="Public" name="keyblade_reveal">Summons her Keyblade and holds it for a time</marker>
         <marker scope="Public" name="keyblade_vs_creatures">Makes a comment about what the Keyblade is used for, exactly</marker>
+        <marker scope="Public" name="keybladeReveal_jura" />
+        <marker scope="Public" name="lake_view" />
         <marker scope="Public" name="manhunter">Targeting someone who is good at seducing men (or assumed to be)</marker>
         <marker scope="Public" name="mirage_arena">Mentions a bonus game area from KH:BBS</marker>
         <marker scope="Public" name="oppselected_aqua_konosuba">Aqua from Konosuba is an opponent when this Aqua has just been selected</marker>
@@ -281,6 +324,7 @@
         <marker scope="Public" name="self_out_03">Chooses a line based on being out of the game (having to masturbate)</marker>
         <marker scope="Public" name="self_out_04">Chooses a line based on being out of the game (having to masturbate)</marker>
         <marker scope="Public" name="self_out_05">Chooses a line based on being out of the game (having to masturbate)</marker>
+        <marker scope="Public" name="sit_on_bed" />
         <marker scope="Public" name="something_to_fill_the_empitiness">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Public" name="straight_flush_lie">Occasionally lies about having a straight flush if she's about to lose with a bad hand</marker>
         <marker scope="Public" name="sympathy_throw">Her AI gets a little bit lower if she is sympathetic to other characters</marker>
@@ -290,6 +334,7 @@
         <marker scope="Public" name="wants_to_recieve_oral">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Public" name="wants_to_switch">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Public" name="wearing_wayfinder">The player is wearing the Wayfinder collectible this game. Makes her think about the player during her forfeit.</marker>
+        <marker scope="Public" name="wide_opp_adjacent" />
         <marker scope="Public" name="womanizer">Targeting someone who is good at seducing women (or asssumed to be)</marker>
         <marker scope="Public" name="years_spent_alone">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Private" name="yuno_hard">Yuno has a hard pp.</marker>
