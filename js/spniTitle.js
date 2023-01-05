@@ -36,8 +36,8 @@ var $gameLoadProgress = $(".game-load-progress");
     "natsuki/1-laugh.png",
     "natsuki/2-happy.png",
     "natsuki/3-isthatapenis.png",
-    "komi-san/0-bashful.png",               // High Roster Position
-    "komi-san/0-determined.png",
+    "komi-san/0-bashfulA.png",               // High Roster Position
+    "komi-san/0-excitedA.png",
     "komi-san/0-portrait.png",
     "komi-san/1-strippingA.png",
     "pit/0-awkward.png",                    // High Roster Position
@@ -297,7 +297,7 @@ var $gameLoadProgress = $(".game-load-progress");
     "mikan/0-explain.png",
     "mikan/2-explain.png",
     "cagliostro/0-Cutesy.png",
-    "cagliostro/0-Excited.png",
+    "reskins/cagliostro_alchemist_reborn/0-Excited.png",
     "cagliostro/3-Smug.png",
     "cagliostro/3-Grin.png",
     "mari/0-tease.png",
@@ -357,10 +357,30 @@ var $gameLoadProgress = $(".game-load-progress");
     "n/4-Naturally.png",
     "n/2-fiddliNg.png",
     "n/6-iNform.png",
-    "nagatoro/0-peace.png",
+    "nagatoro/0-peace.png",		// new character
     "nagatoro/3-pose.png",
     "nagatoro/1-strip.png",
     "reskins/nagatoro_nekotoro/0-exh.png",
+	"binah/0-teatime.png",		// new character
+	"binah/1-haughty.png",
+	"binah/2-quoth.png",
+	"binah/5-sadistic.png",
+	"jin/0-Cracker.png",	// new character
+	"jin/0-Excited.png",
+	"jin/5-Stripped.png",
+	"jin/5-Happy.png",
+	"gloria/0-confident.png",
+	"gloria/0-neutral.png",
+	"gloria/1-smug.png",
+	"gloria/3-z_stripping.png",
+	"aqua_grunt/0-team_aqua.png",
+	"aqua_grunt/2-taunting.png",
+	"aqua_grunt/4-tease.png",
+	"aqua_grunt/5-leg_raised.png",
+	"spooky/0-innocent.png",
+	"spooky/1-distracted.png",
+	"spooky/2-annoyed.png",
+	"spooky/2-horny.png",
 ];
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
