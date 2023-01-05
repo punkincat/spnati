@@ -263,6 +263,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <note id="766">This line is conditional on its own response, as it was written after the response. It would be better to make Beatrix's line conditional on this line's marker.</note>
         <note id="789">This case does not require Barbara's NagisaSocks2A case, at it makes sense even if the chain was broken.</note>
         <note id="22">This marker name is outdated, but Fina and Twisted Fate rely on it to reply.</note>
+        <note id="982">This line has manual priority to allow it to play only when Nagisa doesn't have a different targeted line to play.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Maid Cafe" sort="30" />
@@ -1144,13 +1145,35 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="959" label="" folder="Meia to right" sort="0" />
         <label id="960" label="" folder="Meia to right" sort="0" />
         <label id="961" label="" folder="Meia to right" sort="0" />
+        <label id="962" label="" folder="Meia to right" sort="0" />
+        <label id="963" label="" folder="Meia to right" sort="0" />
+        <label id="964" label="" folder="Meia to right" sort="0" />
+        <label id="965" label="" folder="Meia to right" sort="0" />
+        <label id="966" label="" folder="Meia to right" sort="0" />
+        <label id="967" label="" folder="Meia to right" sort="0" />
+        <label id="968" label="" folder="Meia to right" sort="0" />
+        <label id="969" label="" folder="Meia to right" sort="0" />
+        <label id="970" label="" folder="Meia to right" sort="0" />
+        <label id="971" label="" folder="Meia to right" sort="0" />
+        <label id="972" label="" folder="Meia to right" sort="0" />
+        <label id="973" label="" folder="Meia to right" sort="0" />
+        <label id="974" label="" folder="Meia to right" sort="0" />
+        <label id="975" label="" folder="Meia to right" sort="0" />
+        <label id="976" label="" folder="Meia to right" sort="0" />
+        <label id="977" label="" folder="Meia to right" sort="0" />
+        <label id="978" label="" folder="Meia to right" sort="0" />
+        <label id="979" label="" folder="Meia to right" sort="0" />
+        <label id="980" label="" folder="Meia to right" sort="0" />
+        <label id="981" label="" folder="Meia to right" sort="0" />
+        <label id="982" label="" folder="Meia to right" sort="0" />
+        <label id="983" label="" folder="Meia to right" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>961</nextId>
+    <nextId>983</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -2076,6 +2099,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_heart" />
         <marker scope="Public" name="nagisa_meia_here_i_am" />
         <marker scope="Public" name="nagisa_meia_hills" />
+        <marker scope="Public" name="nagisa_meia_hug_circumstances" />
+        <marker scope="Public" name="nagisa_meia_hugging" />
         <marker scope="Public" name="nagisa_meia_inactive" />
         <marker scope="Public" name="nagisa_meia_keeping_warm" />
         <marker scope="Public" name="nagisa_meia_kyou_determined" />
@@ -2101,6 +2126,12 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_on_purpose" />
         <marker scope="Public" name="nagisa_meia_pilot" />
         <marker scope="Public" name="nagisa_meia_poker_in_space" />
+        <marker scope="Public" name="nagisa_meia_post-hug_first_loss" />
+        <marker scope="Public" name="nagisa_meia_post-hug_loss" />
+        <marker scope="Public" name="nagisa_meia_post-hug_other" />
+        <marker scope="Public" name="nagisa_meia_post-hug_protect" />
+        <marker scope="Public" name="nagisa_meia_post-hug_skinship" />
+        <marker scope="Public" name="nagisa_meia_post-hug_strip" />
         <marker scope="Public" name="nagisa_meia_pretty_undressed" />
         <marker scope="Public" name="nagisa_meia_rambling" />
         <marker scope="Public" name="nagisa_meia_read_book" />
