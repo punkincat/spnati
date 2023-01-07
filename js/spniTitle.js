@@ -365,22 +365,58 @@ var $gameLoadProgress = $(".game-load-progress");
 	"binah/1-haughty.png",
 	"binah/2-quoth.png",
 	"binah/5-sadistic.png",
-	"jin/0-Cracker.png",	// new character
+	"jin/0-Cracker.png",		// updated recently
 	"jin/0-Excited.png",
 	"jin/5-Stripped.png",
 	"jin/5-Happy.png",
-	"gloria/0-confident.png",
+	"gloria/0-confident.png",	// updated recently
 	"gloria/0-neutral.png",
 	"gloria/1-smug.png",
 	"gloria/3-z_stripping.png",
-	"aqua_grunt/0-team_aqua.png",
+	"aqua_grunt/0-team_aqua.png",	// new
 	"aqua_grunt/2-taunting.png",
 	"aqua_grunt/4-tease.png",
 	"aqua_grunt/5-leg_raised.png",
-	"spooky/0-innocent.png",
+	"spooky/0-innocent.png",	// updated recently
 	"spooky/1-distracted.png",
 	"spooky/2-annoyed.png",
 	"spooky/2-horny.png",
+	"bobobo/0-pumped.png",	// new
+	"bobobo/0-aside.png",
+	"bobobo/0-boredphone.png",
+	"bobobo/0-stance.png",
+	"yunyun/0-Happy.png,"	//	updated
+	"yunyun/3-Shy.png,"
+	"yunyun/4-Posing2.png,"
+	"yunyun/5-Facade.png,"
+	"eichi/0-excited.png",	// new and updated
+	"eichi/0-flirt_altc.png",
+	"eichi/2-flirt.png",
+	"eichi/3-tease.png",
+	"caulifla/0-Confident.png",	// updated
+	"caulifla/0-Happy.png",
+	"caulifla/1-Laughing.png",
+	"caulifla/1-Thinking.png",
+	"myriam/0-confident.png", // new and updated
+	"myriam/2-normal.png",
+	"myriam/3-think.png",
+	"myriam/4-flattered.png",
+	"anatoly/0-horny.png",	// new
+	"anatoly/1-embarrassed.png",
+	"anatoly/2-cute.png",
+	"anatoly/3-calm.png",
+	"marinette/0-derrier.png", // major update
+	"marinette/0-strippinghappy-b.png",
+	"marinette/2-relieved.png",
+	"marinette/4-excited.png",
+	"lyralei/0-happy.png", // new
+	"lyralei/1-embarrassed.png",
+	"lyralei/3-awkward.png",
+	"lyralei/5-stripped.png",
+	"aaravi/0-smug.png", // new
+	"aaravi/1-excited.png",
+	"aaravi/3-confident.png",
+	"aaravi/4-surprised-blush.png",
 ];
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
