@@ -385,10 +385,10 @@ var $gameLoadProgress = $(".game-load-progress");
 	"bobobo/0-aside.png",
 	"bobobo/0-boredphone.png",
 	"bobobo/0-stance.png",
-	"yunyun/0-Happy.png,"	//	updated
-	"yunyun/3-Shy.png,"
-	"yunyun/4-Posing2.png,"
-	"yunyun/5-Facade.png,"
+	"yunyun/0-Happy.png",	//	updated
+	"yunyun/3-Shy.png",
+	"yunyun/4-Posing2.png",
+	"yunyun/5-Facade.png",
 	"eichi/0-excited.png",	// new and updated
 	"eichi/0-flirt_altc.png",
 	"eichi/2-flirt.png",
@@ -417,6 +417,7 @@ var $gameLoadProgress = $(".game-load-progress");
 	"aaravi/1-excited.png",
 	"aaravi/3-confident.png",
 	"aaravi/4-surprised-blush.png",
+	
 ];
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
