@@ -666,6 +666,24 @@ Save.prototype.setPersistentMarker = function (player, name, value) {
 }
 
 /**
+ * Get the values of all persistent markers stored for a player.
+ * 
+ * @param {Player} player
+ * @returns {{[name: string]: string | number}}
+ */
+Save.prototype.getAllPersistentMarkers = function (player) {
+    var markers = {};
+    var keyPrefix = 'marker.' + player.id + '.';
+
+    for (let key of Object.keys(this.storageCache).filter((key) => key.startsWith(keyPrefix))) {
+        let name = key.substring(keyPrefix.length);
+        markers[name] = this.getItem(key, true);
+    }
+
+    return markers;
+}
+
+/**
  * Gets the set of played characters for resort modal tracking.
  * @returns {string[]}
  */

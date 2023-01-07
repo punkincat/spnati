@@ -1085,11 +1085,13 @@ function selectDebug(player)
 function updateDebugState(show)
 {
     if (!show) {
+        $('.character-debug-button').hide();
         for (var i = 0; i < $debugButtons.length; i++) {
             $debugButtons[i].hide();
         }
     }
     else {
+        $('.character-debug-button').show();
         for (var i = 0; i < $debugButtons.length; i++) {
             if (players[i] && !players[i].out) {
                 $debugButtons[i].show();
