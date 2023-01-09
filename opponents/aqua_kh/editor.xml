@@ -9,8 +9,11 @@
         <case name="Aqua Leaves her Socks On" id="51" priority="Noteworthy" min="5" max="5">
             <description>Aqua decides to take her spats off before her thigh-high socks, saying that she wanted to try and be sexy. She's very shy about it, though.</description>
         </case>
-        <case name="Aqua's Keyblade" id="67" priority="Noteworthy" min="2" max="2">
+        <case name="Aqua's Keyblade" id="67" priority="MustTarget" min="2" max="2">
             <description>Aqua summons her Keyblade (Rainfell) for After Stripping in stage 2. She keeps it until she next loses the round. keyblade_reveal is the marker of note here.</description>
+        </case>
+        <case name="Keyblade Magic" id="69" priority="Noteworthy" min="2" max="2">
+            <description>Aqua explains that the magic of the Keyblade is what makes it 'sharp' (or 'dangerous'). Perhaps other characters might not take this at face value.</description>
         </case>
     </noteworthy>
     <reviewed>true</reviewed>
@@ -48,6 +51,19 @@
         <response id="274" opponent="takatoshi" opponentId="162" />
         <response id="277" opponent="kyouko_toshinou" opponentId="91" />
         <response id="280" opponent="trixie" opponentId="1" />
+        <response id="285" opponent="kyouko_toshinou" opponentId="110" />
+        <response id="286" opponent="kyouko_toshinou" opponentId="111" />
+        <response id="287" opponent="kyouko_toshinou" opponentId="213" />
+        <response id="288" opponent="kyouko_toshinou" opponentId="216" />
+        <response id="0" opponent="kyouko_toshinou" opponentId="108" />
+        <response id="0" opponent="heris" opponentId="232" />
+        <response id="297" opponent="wikipe-tan" opponentId="175" />
+        <response id="300" opponent="petra" opponentId="709" />
+        <response id="301" opponent="petra" opponentId="710" />
+        <response id="302" opponent="petra" opponentId="711" />
+        <response id="303" opponent="petra" opponentId="169" />
+        <response id="304" opponent="petra" opponentId="142" />
+        <response id="305" opponent="petra" opponentId="12" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -62,6 +78,8 @@
         <note id="244">"..."World order"?  Maintaining that means different things to different people." "...Meia, you don't know what she's talking about, do you?  It's a little creepy."</note>
         <note id="245">"...I don't know what that means.  Is it maybe like---it's got a mind of its own, sort of?  It only lets &lt;i&gt;you&lt;/i&gt; control it?"</note>
         <note id="251">the keyblade is SYMBOLIC AS HELL!</note>
+        <note id="289">if you want to respond specifically to the "a lot of work" part you could use 'saying text'</note>
+        <note id="288">in her next stage she can then explain that her keyblade turns into a glider, and/or that she needs to wear armor to protect herself from the darkness lurking in the roads between worlds</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Player Names" sort="0" />
@@ -336,8 +354,30 @@
         <label id="281" label="" folder="Targets" sort="0" />
         <label id="282" label="" folder="Targets" sort="0" />
         <label id="283" label="" folder="Targets" sort="0" />
+        <label id="284" label="" folder="Targets" sort="0" />
+        <label id="285" label="" folder="Targets" sort="0" />
+        <label id="286" label="" folder="Targets" sort="0" />
+        <label id="287" label="" folder="Targets" sort="0" />
+        <label id="289" label="" folder="Targets" sort="0" />
+        <label id="288" label="" folder="Responses" sort="0" />
+        <label id="290" label="" folder="Targets" sort="0" />
+        <label id="291" label="" folder="Targets" sort="0" />
+        <label id="292" label="" folder="Prompts" sort="0" />
+        <label id="293" label="" folder="Prompts" sort="0" />
+        <label id="294" label="" folder="Prompts" sort="0" />
+        <label id="295" label="" folder="Prompts" sort="0" />
+        <label id="296" label="" folder="Prompts" sort="0" />
+        <label id="297" label="" folder="Prompts" sort="0" />
+        <label id="298" label="" folder="Prompts" sort="0" />
+        <label id="299" label="" folder="Prompts" sort="0" />
+        <label id="300" label="" folder="Petra" sort="0" />
+        <label id="301" label="" folder="Petra" sort="0" />
+        <label id="302" label="" folder="Petra" sort="0" />
+        <label id="303" label="" folder="Petra" sort="0" />
+        <label id="304" label="" folder="Petra" sort="0" />
+        <label id="305" label="" folder="Petra" sort="0" />
     </labels>
-    <nextId>283</nextId>
+    <nextId>305</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="aqua_adora_horde01" />
@@ -364,6 +404,11 @@
         <marker scope="Public" name="aqua_dunban_sword1" />
         <marker scope="Public" name="aqua_dunban_sword2" />
         <marker scope="Public" name="aqua_dunban_sword3" />
+        <marker scope="Public" name="aqua_heris_FriendPrompt" />
+        <marker scope="Public" name="aqua_heris_LoyaltyPrompt" />
+        <marker scope="Public" name="aqua_heris_SleepPrompt" />
+        <marker scope="Public" name="aqua_heris_SurroundingsPrompt" />
+        <marker scope="Public" name="aqua_heris_TransportPrompt" />
         <marker scope="Public" name="aqua_jura_self0a" />
         <marker scope="Public" name="aqua_jura_self0b" />
         <marker scope="Public" name="aqua_kora_friendJokes" />
@@ -379,6 +424,11 @@
         <marker scope="Public" name="aqua_miku_strip2a" />
         <marker scope="Public" name="aqua_nagatoro_extra_last_resp">Responds to a line Nagatoro might say about taking off an extra item last</marker>
         <marker scope="Public" name="aqua_pa15_jobResp">Dialogue to pa15</marker>
+        <marker scope="Public" name="aqua_petra_keyblade1" />
+        <marker scope="Public" name="aqua_petra_keyblade2" />
+        <marker scope="Public" name="aqua_petra_keyblade3" />
+        <marker scope="Public" name="aqua_petra_tattooExpl" />
+        <marker scope="Public" name="aqua_petrabirthday" />
         <marker scope="Public" name="aqua_revy_01" />
         <marker scope="Public" name="aqua_revy_self01" />
         <marker scope="Public" name="aqua_revy_self02" />
@@ -396,8 +446,12 @@
         <marker scope="Public" name="aqua_toph_bendingmagic2" />
         <marker scope="Public" name="aqua_toph_hairdown" />
         <marker scope="Public" name="aqua_toshinou_hobbies1" />
+        <marker scope="Public" name="aqua_toshinou_hobbies2" />
+        <marker scope="Public" name="aqua_toshinou_hobbies3" />
+        <marker scope="Public" name="aqua_toshinou_worldhopping1" />
         <marker scope="Public" name="aqua_trixie_chestKey1" />
         <marker scope="Public" name="aqua_trixie_dungeonResp" />
+        <marker scope="Public" name="aqua_wikipetan_bluehair" />
         <marker scope="Public" name="aqua_yshtola_radiant_garden">Aqua asks Y'shtola if she's from Radiant Garden (a world in KH where Final Fantasy characters originate)</marker>
         <marker scope="Public" name="aqua_yshtola_radiant_garden2" />
         <marker scope="Public" name="aqua_yshtola_radiant_garden3" />
@@ -441,8 +495,11 @@
         <marker scope="Public" name="inv_traverse_town" />
         <marker scope="Public" name="keyblade_reveal">Summons her Keyblade and holds it for a time</marker>
         <marker scope="Public" name="keyblade_reveal_dunban" />
+        <marker scope="Public" name="keyblade_sharpness" />
         <marker scope="Public" name="keyblade_vs_creatures">Makes a comment about what the Keyblade is used for, exactly</marker>
         <marker scope="Public" name="keybladeReveal_jura" />
+        <marker scope="Public" name="kyouko_sexypose_s6" />
+        <marker scope="Public" name="kyouko_sexypose_s7" />
         <marker scope="Public" name="lake_view" />
         <marker scope="Public" name="manhunter">Targeting someone who is good at seducing men (or assumed to be)</marker>
         <marker scope="Public" name="mirage_arena">Mentions a bonus game area from KH:BBS</marker>
@@ -461,6 +518,7 @@
         <marker scope="Public" name="something_to_fill_the_empitiness">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Public" name="straight_flush_lie">Occasionally lies about having a straight flush if she's about to lose with a bad hand</marker>
         <marker scope="Public" name="sympathy_throw">Her AI gets a little bit lower if she is sympathetic to other characters</marker>
+        <marker scope="Public" name="T_AquaKH_KeybladeSummon_Resp" />
         <marker scope="Public" name="tao02" />
         <marker scope="Public" name="tell_us_a_secret">"Maybe the next person to lose should tell us a secret about themselves!"</marker>
         <marker scope="Public" name="trixie_chest_joke">Joke about chest (boobs) and chest (treasure chest)</marker>
@@ -468,6 +526,7 @@
         <marker scope="Public" name="vocaloid_start_ff" />
         <marker scope="Public" name="wants_to_recieve_oral">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Public" name="wants_to_switch">Forfeit specific line with potential follow-ups</marker>
+        <marker scope="Public" name="weapon_removed">Tracks how many times a given character has removed 'weapon' category weapons</marker>
         <marker scope="Public" name="wearing_wayfinder">The player is wearing the Wayfinder collectible this game. Makes her think about the player during her forfeit.</marker>
         <marker scope="Public" name="wide_opp_adjacent" />
         <marker scope="Public" name="womanizer">Targeting someone who is good at seducing women (or asssumed to be)</marker>
