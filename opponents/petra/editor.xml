@@ -4,7 +4,7 @@
     <height>161 cm</height>
     <age>20</age>
     <pronunciation>peh-truh</pronunciation>
-    <othernotes />
+    <othernotes>Petra Macneary Summary&lt;br&gt;Personal History&lt;br&gt;- Petra is the heir and granddaughter of the king of Brigid, an archipelago to the west of Fódlan. Fódlan is the continent that most Fire Emblem Three Houses characters are from, making her one of the few people not originally from one of the three nations.&lt;br&gt;- Brigid is a vassal state of the Adrestian Empire. There was an uprising known as the Dagda and Brigid War in which both countries jointly invaded Imperial territories. The invasion was thrwarted, the king's son (Petra's father) was killed, and Brigid was forced into vassalage. Petra was subsequently sent to the Adrestian Empire as a token of Brigid's new allegiance. Thus, Petra is not attending the Officers Academy entirely of her own free will; regardless, she has taken the opportunity to learn the language of Fódlan (English equivalent) and make friends within.&lt;br&gt;- Brigidian culture puts an emphasis on maintaining a connection to nature. They practice shamanism, and put slight importance on the application of tattoos to represent key points in a person's life, as well as providing a spiritual form of protection. Petra has tattoos on her face, chest, arm, and back. She has had her face mark for over a decade now, while the others are more recent.&lt;br&gt;&lt;br&gt;Personality&lt;br&gt;- Petra's peculiar method of speaking comes from her lack of fluency in the language of Fódlan, and is something she is constantly trying to improve on. (For the sake of spnati, the language of  Fódlan is equivalent to English.)&lt;br&gt;- Her method of speaking obscures the fact that she is a highly intelligent, capable girl among her fellow students. She is clever and cunning, and not above attempting to make a joke, but may struggle to convey such things clearly.&lt;br&gt;- Petra puts an emphasis on trying to forge new connections, and believes in being kind to others whenever she can. However, she can have trouble overcoming grudges or misgivings if they aren't properly resolved.&lt;br&gt;- She often takes idioms and figures of speech by their literal meanings, leaving her with slight confusion unless she is told or can figure out the true meaning.&lt;br&gt;- Petra loves being outdoors in nature and enjoys hunting, tree climbing, and swimming. She is quite fond of her homeland's many beaches. &lt;br&gt;- Despite her studious nature, she is not fond of maths. She also has no tolerance of discrimination in any form.&lt;br&gt;- Petra's favorite tea types are gringer tea, and four-spice blend.&lt;br&gt;- She detestes some of the cooking of Fódlan, especially how they handle their fish.</othernotes>
     <noteworthy>
         <case name="Petra's Speech" id="11" priority="FYI" min="0" max="0">
             <description>Petra has an unusual method of speaking, and will often take idioms and figures of speech by their literal meanings throughout the game. She draws attention to this in a different situation, 'Petra's Speech Explained'.</description>
@@ -236,6 +236,9 @@
         <response id="702" opponent="hatsune_miku" opponentId="494" />
         <response id="704" opponent="mari" opponentId="1042" />
         <response id="706" opponent="noire" opponentId="1716" />
+        <response id="708" opponent="aqua_kh" opponentId="51" />
+        <response id="716" opponent="toph" opponentId="2" />
+        <response id="717" opponent="marinette" opponentId="1361" />
     </responses>
     <notes>
         <note id="13">https://www.youtube.com/watch?v=5EbnoElOJx0 please dont actually respond to this really dumb joke</note>
@@ -880,11 +883,22 @@ Why? Do people think we are?"</note>
         <label id="705" label="" folder="Responses" sort="19" />
         <label id="706" label="" folder="Responses" sort="42" />
         <label id="707" label="" folder="Backgrounds (cali sponsorship)" sort="14" />
+        <label id="708" label="" folder="Aqua (KH)" sort="0" />
+        <label id="709" label="" folder="Aqua (KH)" sort="0" />
+        <label id="710" label="" folder="Aqua (KH)" sort="0" />
+        <label id="711" label="" folder="Aqua (KH)" sort="0" />
+        <label id="712" label="" folder="Inbound Responses" sort="0" />
+        <label id="713" label="" folder="Inbound Responses" sort="0" />
+        <label id="714" label="" folder="Toph" sort="0" />
+        <label id="715" label="" folder="Toph" sort="0" />
+        <label id="717" label="" folder="Targets" sort="0" />
+        <label id="718" label="" folder="Targets" sort="0" />
+        <label id="223" label="" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>sunglasses</prefix>
     </prefixes>
-    <nextId>707</nextId>
+    <nextId>718</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="!" />
@@ -1040,6 +1054,9 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="petra_aoba_destroyed" />
         <marker scope="Public" name="petra_aoba_pissed" />
         <marker scope="Public" name="petra_aoba_YunQuestion" />
+        <marker scope="Public" name="petra_aquakh_keyblade1" />
+        <marker scope="Public" name="petra_aquakh_keyblade2" />
+        <marker scope="Public" name="petra_aquakh_keyblade3" />
         <marker scope="Public" name="petra_arash_sickness_q" />
         <marker scope="Public" name="petra_asuna_strip0a" />
         <marker scope="Public" name="petra_barbara_boots1" />
@@ -1417,6 +1434,7 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="petra_stocking_strip_fruitQuestion" />
         <marker scope="Public" name="petra_stocking_strip_ghostQuestion" />
         <marker scope="Public" name="petra_stocking_strip_nameQuestion" />
+        <marker scope="Public" name="petra_stocking_talkProperlyResponse" />
         <marker scope="Public" name="petra_stocking_weapons_revealed" />
         <marker scope="Public" name="petra_stocking_weaponsResponse" />
         <marker scope="Public" name="petra_stripping_5_ample_bosom" />
@@ -1447,6 +1465,9 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="petra_tomoko_introspection2Resp" />
         <marker scope="Public" name="petra_tomoko_self0a" />
         <marker scope="Public" name="petra_tomoko_strip0a" />
+        <marker scope="Public" name="petra_toph_braid" />
+        <marker scope="Public" name="petra_toph_earthbending1" />
+        <marker scope="Public" name="petra_toph_earthbending2" />
         <marker scope="Public" name="petra_trixie_islandResp" />
         <marker scope="Public" name="petra_trixie_strip0a" />
         <marker scope="Public" name="petra_wasp_self0a" />
