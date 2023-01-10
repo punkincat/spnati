@@ -11291,9 +11291,6 @@
                 <state img="#-thinking.png" marker="lyralei_chell_valve">Hey Wheatley, does the name Valve mean anything to you? No idea why, but that was to first word coming to my mind after I saw you.</state>
                 <state img="#-thinking.png" marker="lyralei_chell_valve">Hey Wheatley, have you heard the name Valve before? For some reason that was the first word coming to my mind after I saw you.</state>
             </case>
-            <case stage="5">
-                <state img="#-stripped.png">This line can cover any of the Good/Okay/Bad hand cases if it has a higher priority</state>
-            </case>
             <case stage="0-8" oneShotId="158" hidden="1" priority="1500">
                 <condition status="alive" role="self" />
                 <condition status="alive" character="human" />
