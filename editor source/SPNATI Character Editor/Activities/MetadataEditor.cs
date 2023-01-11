@@ -64,15 +64,18 @@ namespace SPNATI_Character_Editor.Activities
 			txtWriter.Text = _character.Metadata.Writer;
 			txtArtist.Text = _character.Metadata.Artist;
 			PopulatePortraitDropdown();
-			if (_character.Metadata.Portrait.Image != null)
-			{
-				string portrait = _character.Metadata.Portrait.Image;
-				PoseMapping pose = _character.PoseLibrary.GetPose(portrait);
-				cboDefaultPic.SelectedItem = pose;
+			if (_character.Metadata.Portrait != null)
+            {
+				if (_character.Metadata.Portrait.Image != null)
+				{
+					string portrait = _character.Metadata.Portrait.Image;
+					PoseMapping pose = _character.PoseLibrary.GetPose(portrait);
+					cboDefaultPic.SelectedItem = pose;
+				}
+				valPicX.Value = Math.Max(valPicX.Minimum, Math.Min((decimal)_character.Metadata.Portrait.X, valPicX.Maximum));
+				valPicY.Value = Math.Max(valPicY.Minimum, Math.Min((decimal)_character.Metadata.Portrait.Y, valPicY.Maximum));
+				valPicScale.Value = Math.Max(valPicScale.Minimum, Math.Min((decimal)_character.Metadata.Portrait.Scale, valPicScale.Maximum));
 			}
-			valPicX.Value = Math.Max(valPicX.Minimum, Math.Min((decimal)_character.Metadata.Portrait.X, valPicX.Maximum));
-			valPicY.Value = Math.Max(valPicY.Minimum, Math.Min((decimal)_character.Metadata.Portrait.Y, valPicY.Maximum));
-			valPicScale.Value = Math.Max(valPicScale.Minimum, Math.Min((decimal)_character.Metadata.Portrait.Scale, valPicScale.Maximum));
 			gridAI.Data = _character.Intelligence;
 
 			string othernotes = CharacterDatabase.GetEditorData(_character).OtherNotes;
@@ -114,6 +117,9 @@ namespace SPNATI_Character_Editor.Activities
 				ExpandLabel();
 			}
 
+			if (_character.Metadata.Portrait == null)
+				return;
+
 			PoseMapping image = _character.PoseLibrary.GetPose(_character.Metadata.Portrait.Image);
 			if (image == null)
 				return;
@@ -145,9 +151,13 @@ namespace SPNATI_Character_Editor.Activities
 			_character.Metadata.Artist = txtArtist.Text;
 			gridAI.Save(ColAIStage);
 			CharacterDatabase.GetEditorData(_character).OtherNotes = txtOtherNotes.Text.Replace(Environment.NewLine,"<br>");
-			_character.Metadata.Portrait.X = (int)valPicX.Value;
-			_character.Metadata.Portrait.Y = (int)valPicY.Value;
-			_character.Metadata.Portrait.Scale = (float)valPicScale.Value;
+			if (_character.Metadata.Portrait != null)
+			{
+				_character.Metadata.Portrait.X = (int)valPicX.Value;
+				_character.Metadata.Portrait.Y = (int)valPicY.Value;
+				_character.Metadata.Portrait.Scale = (float)valPicScale.Value;
+			}
+
 		}
 
 		private void cboDefaultPic_SelectedIndexChanged(object sender, EventArgs e)
