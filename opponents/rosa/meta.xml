@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1666182913295</lastupdate>
+    <lastupdate>1673456868701</lastupdate>
     <enabled>false</enabled>
     <first>Rosa</first>
     <last />
@@ -11,8 +11,9 @@
     <writer>Hue, MyMainAccIsANord</writer>
     <artist>Hue, MyMainAccIsANord, Remillia (Princess Rosalia Dress)</artist>
     <description>An experienced and dedicated Pokémon trainer from the Unova region. Adept at facing any kind of adversaries in a Pokémon battle, but not so much in strip poker. She also runs the Join Avenue, and has starred in Pokéstar Studios film productions.</description>
-    <epilogue gender="male" img="epilogue/rosa_epi1_thumbnail.png" hint="Finish a game against Rosa">Rosa's Other Game</epilogue>
+    <epilogue gender="male" img="epilogue/rosa_epi1_thumbnail.png" hint="Finish a game against Rosa (hardcore epilogue)">Rosa's Other Game</epilogue>
     <epilogue status="unlisted" gender="female" hint="Finish a game against Rosa">Rosa's Ferris Wheel Jaunt</epilogue>
+    <epilogue status="unlisted" gender="any" hint="Win a game against Rosa (softcore epilogue)">Rosa's Holiday Hijinks</epilogue>
     <layers>7</layers>
     <alternates>
         <costume folder="opponents/reskins/rosa_office/" img="0-portrait.png" status="online" label="Rosa">Office Star</costume>
@@ -22,6 +23,6 @@
         <costume folder="opponents/reskins/rosa_special_holiday_delivery/" img="0-portrait.png" set="xmas" label="Rosa">Special Holiday Delivery</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>2138</lines>
+    <lines>2168</lines>
     <poses>177</poses>
 </opponent>
