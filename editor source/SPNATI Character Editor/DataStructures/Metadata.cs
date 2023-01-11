@@ -182,6 +182,7 @@ namespace SPNATI_Character_Editor
 		{
 			Scale = 100.0f;
 			AlternateSkins = new List<AlternateSkin>();
+			Portrait = new SelectPortrait();
 		}
 
 		public Metadata(Character c) : this()
