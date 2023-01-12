@@ -18,6 +18,9 @@
         <case name="Yuno pops a stiffy" id="175" priority="Noteworthy" min="6" max="6">
             <description>After spending stage 5 with his dick out (but flaccid), Yuno gets a boner when he takes off his vest.</description>
         </case>
+        <case name="The Big Succ" id="775" priority="MustTarget" min="6" max="6">
+            <description>Yuno gets the tandem tag because Mari Setogaya has offered, and is about to, suck his dick. ( the_big_succ marker will play on every line related to this )</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -148,7 +151,6 @@
         <response id="513" opponent="joey" opponentId="30" />
         <response id="518" opponent="kyou" opponentId="114" />
         <response id="528" opponent="aqua_grunt" opponentId="199" />
-        <response id="547" opponent="mari_setogaya" opponentId="35" />
         <response id="554" opponent="frisk_and_friends" opponentId="76" />
         <response id="565" opponent="hilbert" opponentId="9" />
         <response id="575" opponent="susie" opponentId="111" />
@@ -214,6 +216,8 @@
         <response id="766" opponent="mari_setogaya" opponentId="2001" />
         <response id="768" opponent="mari_setogaya" opponentId="1" />
         <response id="769" opponent="mari_setogaya" opponentId="2" />
+        <response id="814" opponent="mari_setogaya" opponentId="2065" />
+        <response id="815" opponent="mari_setogaya" opponentId="2069" />
     </responses>
     <notes>
         <note id="29">The Greek Visionary is a character like Ishizu or Shadi from Yu-gi-oh. Roll with it.</note>
@@ -754,9 +758,9 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="512" label="" folder="Situations" sort="8" />
         <label id="514" label="" folder="Targets" sort="31" />
         <label id="513" label="" folder="Targets" sort="61" />
-        <label id="515" label="" color="3" folder="Targets" sort="62" />
-        <label id="516" label="" color="3" folder="Targets" sort="63" />
-        <label id="517" label="" color="3" folder="Targets" sort="64" />
+        <label id="515" label="" color="3" folder="Setogaya Mari" sort="62" />
+        <label id="516" label="stage 1: nice and cute" color="3" folder="Setogaya Mari" sort="63" />
+        <label id="517" label="stage 2: uno" color="3" folder="Setogaya Mari" sort="64" />
         <label id="518" label="" folder="Situations" sort="11" />
         <label id="519" label="" folder="Saki Yoshida" sort="11" />
         <label id="520" label="" folder="Responses" sort="28" />
@@ -764,7 +768,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="522" label="" folder="Saki Yoshida" sort="2" />
         <label id="523" label="" folder="Targets" sort="120" />
         <label id="524" label="" folder="Responses" sort="29" />
-        <label id="525" label="" color="3" folder="Targets" sort="106" />
+        <label id="525" label="" color="3" folder="Setogaya Mari" sort="106" />
         <label id="526" label="" folder="Targets" sort="4" />
         <label id="527" label="" folder="Targets" sort="121" />
         <label id="528" label="" folder="Responses" sort="12" />
@@ -803,7 +807,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="562" label="" folder="Trifle" sort="4" />
         <label id="563" label="" folder="Targets" sort="16" />
         <label id="564" label="" folder="Targets" sort="17" />
-        <label id="565" label="" folder="Situations" sort="0" />
+        <label id="565" label="" folder="Situations" sort="3" />
         <label id="566" label="" folder="Responses" sort="32" />
         <label id="567" label="" folder="Targets" sort="65" />
         <label id="568" label="" folder="Targets" sort="66" />
@@ -923,94 +927,157 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="685" label="" folder="Background" sort="34" />
         <label id="686" label="" folder="Background" sort="30" />
         <label id="687" label="" folder="Background" sort="32" />
-        <label id="688" label="" folder="Targets" sort="0" />
-        <label id="689" label="" folder="Targets" sort="0" />
-        <label id="690" label="" folder="Interactions" sort="0" />
-        <label id="691" label="" folder="Situations" sort="0" />
-        <label id="692" label="" folder="Targets" sort="0" />
-        <label id="693" label="" folder="Background" sort="0" />
+        <label id="688" label="" folder="Targets" sort="81" />
+        <label id="689" label="" folder="Targets" sort="82" />
+        <label id="690" label="" folder="Interactions" sort="2" />
+        <label id="691" label="" folder="Situations" sort="30" />
+        <label id="692" label="" folder="Targets" sort="124" />
+        <label id="693" label="" folder="Background" sort="17" />
         <label id="694" label="" folder="Targets" sort="0" />
-        <label id="695" label="" folder="Targets" sort="0" />
-        <label id="696" label="" folder="Targets" sort="0" />
-        <label id="697" label="" folder="Targets" sort="0" />
-        <label id="698" label="" folder="Targets" sort="0" />
-        <label id="699" label="" folder="Responses" sort="0" />
+        <label id="695" label="" folder="Targets" sort="134" />
+        <label id="696" label="" folder="Targets" sort="83" />
+        <label id="697" label="" folder="Targets" sort="162" />
+        <label id="698" label="" folder="Targets" sort="180" />
+        <label id="699" label="" folder="Responses" sort="2" />
         <label id="700" label="" folder="Situations" sort="0" />
         <label id="701" label="" folder="Situations" sort="0" />
-        <label id="702" label="" folder="Situations" sort="0" />
-        <label id="703" label="" folder="Situations" sort="0" />
-        <label id="704" label="" folder="Targets" sort="0" />
-        <label id="705" label="" folder="Targets" sort="0" />
-        <label id="706" label="" folder="Situations" sort="0" />
-        <label id="707" label="" folder="Situations" sort="0" />
-        <label id="708" label="" folder="Situations" sort="0" />
+        <label id="702" label="" folder="Situations" sort="2" />
+        <label id="703" label="" folder="Situations" sort="33" />
+        <label id="704" label="" folder="Targets" sort="29" />
+        <label id="705" label="" folder="Targets" sort="30" />
+        <label id="706" label="" folder="Situations" sort="5" />
+        <label id="707" label="" folder="Situations" sort="6" />
+        <label id="708" label="" folder="Situations" sort="7" />
         <label id="709" label="" folder="Situations" sort="0" />
-        <label id="710" label="" color="3" folder="Targets" sort="0" />
-        <label id="711" label="" color="3" folder="Situations" sort="0" />
-        <label id="712" label="" folder="Situations" sort="0" />
-        <label id="713" label="" folder="Targets" sort="0" />
-        <label id="714" label="" folder="Special" sort="0" />
-        <label id="715" label="" folder="Targets" sort="0" />
-        <label id="716" label="" folder="Targets" sort="0" />
-        <label id="717" label="" folder="Targets" sort="0" />
-        <label id="718" label="" folder="Targets" sort="0" />
-        <label id="719" label="" folder="Targets" sort="0" />
-        <label id="720" label="" folder="Targets" sort="0" />
-        <label id="593" label="" folder="Targets" sort="0" />
+        <label id="710" label="" color="3" folder="Targets" sort="42" />
+        <label id="711" label="" color="3" folder="Situations" sort="40" />
+        <label id="712" label="" folder="Situations" sort="19" />
+        <label id="713" label="" folder="Targets" sort="174" />
+        <label id="714" label="" folder="Special" sort="3" />
+        <label id="715" label="" folder="Targets" sort="169" />
+        <label id="716" label="" folder="Targets" sort="135" />
+        <label id="717" label="" folder="Targets" sort="15" />
+        <label id="718" label="" folder="Targets" sort="155" />
+        <label id="719" label="" folder="Targets" sort="175" />
+        <label id="720" label="" folder="Targets" sort="7" />
+        <label id="593" label="" folder="Targets" sort="5" />
         <label id="721" label="" folder="Player Name" sort="0" />
-        <label id="722" label="" folder="Responses" sort="0" />
-        <label id="723" label="" folder="Responses" sort="0" />
+        <label id="722" label="" folder="Responses" sort="11" />
+        <label id="723" label="" folder="Responses" sort="58" />
         <label id="724" label="" folder="Responses" sort="0" />
-        <label id="725" label="" folder="Targets" sort="0" />
-        <label id="726" label="" folder="Targets" sort="0" />
-        <label id="727" label="" folder="Targets" sort="0" />
-        <label id="728" label="" folder="Targets" sort="0" />
-        <label id="729" label="" folder="Targets" sort="0" />
-        <label id="730" label="" folder="Situations" sort="0" />
-        <label id="731" label="" folder="Halloween" sort="0" />
+        <label id="725" label="" folder="Targets" sort="203" />
+        <label id="726" label="" folder="Targets" sort="204" />
+        <label id="727" label="" folder="Targets" sort="205" />
+        <label id="728" label="" folder="Targets" sort="206" />
+        <label id="729" label="" folder="Targets" sort="163" />
+        <label id="730" label="" folder="Situations" sort="10" />
+        <label id="731" label="" folder="Halloween" sort="2" />
         <label id="732" label="" folder="Halloween" sort="0" />
-        <label id="733" label="" folder="Situations" sort="0" />
-        <label id="734" label="" folder="Situations" sort="0" />
-        <label id="735" label="" folder="Situations" sort="0" />
-        <label id="736" label="" folder="Halloween" sort="0" />
-        <label id="737" label="" folder="Targets" sort="0" />
-        <label id="738" label="" folder="Targets" sort="0" />
-        <label id="739" label="" folder="Targets" sort="0" />
-        <label id="740" label="" folder="Targets" sort="0" />
-        <label id="741" label="" folder="Prompt Responses" sort="0" />
-        <label id="742" label="" folder="Prompt Responses" sort="0" />
-        <label id="743" label="" color="3" folder="Targets" sort="0" />
-        <label id="744" label="" folder="Targets" sort="0" />
-        <label id="745" label="" color="3" folder="Targets" sort="0" />
-        <label id="746" label="" folder="Targets" sort="0" />
-        <label id="747" label="" color="3" folder="Targets" sort="0" />
-        <label id="749" label="" folder="Situations" sort="0" />
-        <label id="748" label="" folder="Situations" sort="0" />
-        <label id="750" label="" folder="Situations" sort="0" />
-        <label id="751" label="" color="3" folder="Targets" sort="0" />
-        <label id="752" label="" color="3" folder="Interactions" sort="0" />
-        <label id="753" label="" color="3" folder="Targets" sort="0" />
-        <label id="754" label="" folder="Situations" sort="0" />
-        <label id="755" label="" folder="Situations" sort="0" />
-        <label id="756" label="" folder="Targets" sort="0" />
-        <label id="757" label="" folder="Targets" sort="0" />
-        <label id="758" label="" folder="Targets" sort="0" />
-        <label id="759" label="" folder="Responses" sort="0" />
-        <label id="547" label="" color="1" folder="Targets" sort="0" />
-        <label id="760" label="" color="3" folder="Targets" sort="0" />
-        <label id="761" label="" color="3" folder="Targets" sort="0" />
-        <label id="762" label="" color="3" folder="Targets" sort="0" />
-        <label id="763" label="" color="3" folder="Targets" sort="0" />
-        <label id="764" label="" color="3" folder="Targets" sort="0" />
-        <label id="765" label="" folder="Targets" sort="0" />
-        <label id="766" label="" folder="Responses" sort="0" />
+        <label id="733" label="" folder="Situations" sort="44" />
+        <label id="734" label="" folder="Situations" sort="45" />
+        <label id="735" label="" folder="Situations" sort="47" />
+        <label id="736" label="" folder="Halloween" sort="3" />
+        <label id="737" label="" folder="Targets" sort="84" />
+        <label id="738" label="" folder="Targets" sort="85" />
+        <label id="739" label="" folder="Targets" sort="183" />
+        <label id="740" label="" folder="Targets" sort="184" />
+        <label id="741" label="" folder="Prompt Responses" sort="31" />
+        <label id="742" label="" folder="Prompt Responses" sort="25" />
+        <label id="743" label="" color="3" folder="Targets" sort="164" />
+        <label id="744" label="" folder="Targets" sort="118" />
+        <label id="745" label="" color="3" folder="Targets" sort="10" />
+        <label id="746" label="" folder="Targets" sort="119" />
+        <label id="747" label="" color="3" folder="Targets" sort="168" />
+        <label id="749" label="" folder="Situations" sort="24" />
+        <label id="748" label="" folder="Situations" sort="20" />
+        <label id="750" label="" folder="Situations" sort="42" />
+        <label id="751" label="" color="3" folder="Targets" sort="125" />
+        <label id="752" label="" color="3" folder="Interactions" sort="3" />
+        <label id="753" label="" color="3" folder="Targets" sort="126" />
+        <label id="754" label="" folder="Situations" sort="25" />
+        <label id="755" label="" folder="Situations" sort="26" />
+        <label id="756" label="" folder="Targets" sort="127" />
+        <label id="757" label="" folder="Targets" sort="137" />
+        <label id="758" label="" folder="Targets" sort="136" />
+        <label id="759" label="" folder="Responses" sort="50" />
+        <label id="547" label="" color="5" folder="Setogaya Mari" sort="0" />
+        <label id="760" label="" color="3" folder="Setogaya Mari" sort="24" />
+        <label id="761" label="" color="3" folder="Setogaya Mari" sort="25" />
+        <label id="762" label="" color="3" folder="Setogaya Mari" sort="31" />
+        <label id="763" label="" color="3" folder="Setogaya Mari" sort="34" />
+        <label id="764" label="" color="3" folder="Setogaya Mari" sort="32" />
+        <label id="765" label="" color="3" folder="Setogaya Mari" sort="33" />
+        <label id="766" label="" folder="Setogaya Mari" sort="0" />
         <label id="767" label="" folder="Targets" sort="0" />
-        <label id="768" label="" folder="Situations" sort="0" />
+        <label id="768" label="" folder="Situations" sort="34" />
+        <label id="769" label="" folder="Situations" sort="35" />
+        <label id="770" label="" folder="Setogaya Mari" sort="6" />
+        <label id="771" label="" folder="Targets" sort="138" />
+        <label id="772" label="stage 1 - light stuff" folder="The Big Succ" sort="13" />
+        <label id="773" label="" folder="The Big Succ" sort="7" />
+        <label id="774" label="" folder="The Big Succ" sort="8" />
+        <label id="775" label="" folder="The Big Succ" sort="6" />
+        <label id="776" label="" folder="The Big Succ" sort="5" />
+        <label id="777" label="stage 2 - heavy stuff" folder="The Big Succ" sort="12" />
+        <label id="778" label="" folder="Setogaya Mari" sort="11" />
+        <label id="779" label="" folder="Setogaya Mari" sort="2" />
+        <label id="780" label="" folder="Setogaya Mari" sort="3" />
+        <label id="781" label="" folder="Setogaya Mari" sort="7" />
+        <label id="782" label="" folder="Setogaya Mari" sort="8" />
+        <label id="783" label="" folder="Setogaya Mari" sort="15" />
+        <label id="784" label="" folder="Setogaya Mari" sort="16" />
+        <label id="785" label="" folder="Setogaya Mari" sort="4" />
+        <label id="786" label="" folder="Setogaya Mari" sort="5" />
+        <label id="787" label="" folder="Setogaya Mari" sort="9" />
+        <label id="788" label="" folder="Setogaya Mari" sort="10" />
+        <label id="789" label="" folder="Setogaya Mari" sort="12" />
+        <label id="790" label="" folder="Setogaya Mari" sort="13" />
+        <label id="791" label="" folder="Setogaya Mari" sort="14" />
+        <label id="792" label="stage 3: free dates" folder="Setogaya Mari" sort="20" />
+        <label id="793" label="stage 4: succubus secret" folder="Setogaya Mari" sort="21" />
+        <label id="794" label="stage 5: flirting cuteness" folder="Setogaya Mari" sort="22" />
+        <label id="795" label="" folder="Setogaya Mari" sort="0" />
+        <label id="796" label="" folder="The Big Succ" sort="0" />
+        <label id="797" label="" color="3" folder="Setogaya Mari" sort="26" />
+        <label id="798" label="" folder="Setogaya Mari" sort="30" />
+        <label id="799" label="" folder="Setogaya Mari" sort="36" />
+        <label id="800" label="" color="3" folder="Setogaya Mari" sort="29" />
+        <label id="801" label="" color="3" folder="Setogaya Mari" sort="27" />
+        <label id="802" label="" color="3" folder="Setogaya Mari" sort="37" />
+        <label id="803" label="" color="3" folder="Setogaya Mari" sort="28" />
+        <label id="804" label="" folder="Setogaya Mari" sort="35" />
+        <label id="805" label="" folder="The Big Succ" sort="0" />
+        <label id="806" label="" folder="The Big Succ" sort="15" />
+        <label id="807" label="" folder="The Big Succ" sort="9" />
+        <label id="808" label="" folder="Setogaya Mari" sort="0" />
+        <label id="809" label="stage 3 - about to cum" folder="The Big Succ" sort="11" />
+        <label id="810" label="stage 1 - light stuff moans" folder="The Big Succ" sort="14" />
+        <label id="811" label="" folder="The Big Succ" sort="0" />
+        <label id="812" label="" folder="The Big Succ" sort="10" />
+        <label id="813" label="" folder="The Big Succ" sort="0" />
+        <label id="814" label="" folder="The Big Succ" sort="3" />
+        <label id="815" label="" folder="The Big Succ" sort="4" />
+        <label id="816" label="" folder="The Big Succ" sort="0" />
+        <label id="817" label="" folder="The Big Succ" sort="0" />
+        <label id="818" label="" folder="The Big Succ" sort="0" />
+        <label id="819" label="" folder="The Big Succ" sort="0" />
+        <label id="820" label="" folder="The Big Succ" sort="0" />
+        <label id="821" label="" folder="The Big Succ" sort="0" />
+        <label id="822" label="" folder="The Big Succ" sort="0" />
+        <label id="823" label="" folder="The Big Succ" sort="0" />
+        <label id="824" label="" folder="The Big Succ" sort="0" />
+        <label id="825" label="" folder="The Big Succ" sort="0" />
+        <label id="826" label="" folder="The Big Succ" sort="0" />
+        <label id="827" label="" folder="The Big Succ" sort="0" />
+        <label id="828" label="" folder="The Big Succ" sort="0" />
+        <label id="829" label="" folder="The Big Succ" sort="0" />
+        <label id="830" label="" folder="The Big Succ" sort="0" />
+        <label id="831" label="" folder="The Big Succ" sort="0" />
     </labels>
     <prefixes>
         <prefix>yuno_collectible</prefix>
     </prefixes>
-    <nextId>769</nextId>
+    <nextId>831</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="10rounds_gaku_skill_level" />
@@ -1031,6 +1098,10 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="bad_straight_logic" />
         <marker scope="Public" name="bernie_butt_reaction" />
         <marker scope="Public" name="bernie_butt_reaction2" />
+        <marker scope="Public" name="big_succ_start" />
+        <marker scope="Public" name="bigsucc_after" />
+        <marker scope="Public" name="bigsucc_finished" />
+        <marker scope="Public" name="bigsucc_finishing" />
         <marker scope="Public" name="binah_yuno_books2" />
         <marker scope="Public" name="bisexual_realization" />
         <marker scope="Public" name="block_ayumi_ff">If this has been said, it blocks the Ayumi daydream forfeit from taking place. Used in games where he flirts, or something.</marker>
@@ -1120,12 +1191,30 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="leonie_merc_title" />
         <marker scope="Public" name="life_or_death_card_games" />
         <marker scope="Public" name="low_card" />
+        <marker scope="Public" name="mari_afterSucc_react1" />
+        <marker scope="Public" name="mari_afterSucc_react10" />
+        <marker scope="Public" name="mari_afterSucc_react11" />
+        <marker scope="Public" name="mari_afterSucc_react2" />
+        <marker scope="Public" name="mari_afterSucc_react3" />
+        <marker scope="Public" name="mari_afterSucc_react4" />
+        <marker scope="Public" name="mari_afterSucc_react5" />
+        <marker scope="Public" name="mari_afterSucc_react6" />
+        <marker scope="Public" name="mari_afterSucc_react7" />
+        <marker scope="Public" name="mari_afterSucc_react8" />
+        <marker scope="Public" name="mari_afterSucc_react9" />
+        <marker scope="Public" name="mari_afterSuccHeavy_react1" />
+        <marker scope="Public" name="mari_afterSuccHeavy_react2" />
+        <marker scope="Public" name="mari_afterSuccHeavy_react3" />
+        <marker scope="Public" name="mari_afterSuccHeavy_react4" />
+        <marker scope="Public" name="mari_afterSuccHeavy_react5" />
+        <marker scope="Public" name="mari_afterSuccHeavy_react6" />
         <marker scope="Public" name="mari_butt_react_betActive" />
         <marker scope="Public" name="mari_butt_react_handAny" />
         <marker scope="Public" name="Mari_Luck2A" />
         <marker scope="Public" name="Mari_Luck2B" />
         <marker scope="Public" name="mari_must_forfeit" />
         <marker scope="Public" name="mari_pokerResp" />
+        <marker scope="Public" name="Mari_postBigSucc_GameOver" />
         <marker scope="Public" name="mari_tournament_resp" />
         <marker scope="Public" name="mari_Yuno_Ayumi1" />
         <marker scope="Public" name="mariSG_wings_reveal" />
@@ -1237,6 +1326,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="target_throws" />
         <marker scope="Public" name="target_villain_whitehair" />
         <marker scope="Public" name="term_of_endearment_dude" />
+        <marker scope="Public" name="the_big_succ" />
         <marker scope="Public" name="tojiko_butt_reaction" />
         <marker scope="Public" name="trixie_finished" />
         <marker scope="Public" name="trixie_oops_resp" />
@@ -1327,6 +1417,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_blake_earMovement1" />
         <marker scope="Public" name="yuno_blake_earsReveal" />
         <marker scope="Public" name="yuno_blake_huntress1" />
+        <marker scope="Public" name="yuno_blake_huntress2" />
         <marker scope="Public" name="yuno_bobobo_don_patch_resp" />
         <marker scope="Public" name="yuno_bobobo_double_undies_resp" />
         <marker scope="Public" name="yuno_bobobo_everything_resp" />
@@ -1462,11 +1553,32 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_mari_strip0b" />
         <marker scope="Public" name="Yuno_MariForfeitBet" />
         <marker scope="Public" name="yuno_mariLostBet_mastTalk1" />
+        <marker scope="Public" name="yuno_mariS_boxersFirst_1" />
+        <marker scope="Public" name="yuno_mariS_boxersFirst_2" />
+        <marker scope="Public" name="yuno_mariS_boxersFirst_End" />
+        <marker scope="Public" name="yuno_mariS_boxersFirst_EndB" />
         <marker scope="Public" name="yuno_mariS_catform" />
         <marker scope="Public" name="yuno_mariS_chubbyform" />
         <marker scope="Public" name="yuno_mariS_drabUniformCont" />
         <marker scope="Public" name="yuno_mariS_drabUniformFin" />
+        <marker scope="Public" name="yuno_mariS_flirtingCuteness_1" />
+        <marker scope="Public" name="yuno_mariS_flirtingCuteness_2" />
+        <marker scope="Public" name="yuno_mariS_flirtingCuteness_Final" />
+        <marker scope="Public" name="yuno_mariS_freedates_1" />
+        <marker scope="Public" name="yuno_mariS_freedates_2" />
+        <marker scope="Public" name="yuno_mariS_freedates_End" />
+        <marker scope="Public" name="yuno_mariS_freedates_EndB" />
+        <marker scope="Public" name="yuno_mariS_hobbiesEnd" />
+        <marker scope="Public" name="yuno_mariS_hobbiesQuestion_Cont" />
         <marker scope="Public" name="yuno_mariS_hobbiesQuestion_Resp" />
+        <marker scope="Public" name="yuno_mariS_howManyGirls1" />
+        <marker scope="Public" name="yuno_mariS_howManyGirls2" />
+        <marker scope="Public" name="yuno_mariS_howManyGirlsEnd" />
+        <marker scope="Public" name="yuno_mariS_makeHard_1" />
+        <marker scope="Public" name="yuno_mariS_makeHard_2" />
+        <marker scope="Public" name="yuno_mariS_seriousGF_1" />
+        <marker scope="Public" name="yuno_mariS_seriousGF_2" />
+        <marker scope="Public" name="yuno_mariS_seriousGF_end" />
         <marker scope="Public" name="yuno_mariS_strip0a" />
         <marker scope="Public" name="yuno_mariS_strip1a" />
         <marker scope="Public" name="yuno_mariS_strip1b" />
@@ -1474,6 +1586,9 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_mariS_strip2a" />
         <marker scope="Public" name="yuno_mariS_strip2b" />
         <marker scope="Public" name="yuno_mariS_strip2c" />
+        <marker scope="Public" name="yuno_mariS_succubusSecret_1" />
+        <marker scope="Public" name="yuno_mariS_succubusSecret_2" />
+        <marker scope="Public" name="yuno_mariS_succubusSecret_End" />
         <marker scope="Public" name="yuno_meia_self0a" />
         <marker scope="Public" name="yuno_meia_strip0a" />
         <marker scope="Public" name="yuno_meia_strip1a" />
