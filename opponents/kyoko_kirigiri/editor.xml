@@ -33,6 +33,9 @@
         <case name="Santa Hat Story" id="586" priority="Noteworthy" min="0" max="10">
             <description>For the Christmas Event: Kyoko shares a highly specific and outlandish story about a Santa Claus hat if an opponent takes one off. In following lines, she asks the others if they believe her.</description>
         </case>
+        <case name="Drenched Detective" id="102" priority="FYI" min="8" max="8">
+            <description>The operative marker here is arousalVisible -- In her Naked stage (8), Kyoko can be visibly wet upon stripping, or become such at ANY point in the stage. (It’s really hard for players to see this right now, though.)</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -71,19 +74,13 @@
         <note id="683">Meaning "You got this." Special thanks to someone who wished to be identified as "Some German Tattergreis" for translating these German lines!</note>
         <note id="681">Meaning the same thing as "Auf Wiedersehen" (see you later), only typically used over the phone and denoting "Until I hear your voice again."</note>
         <note id="684">Included at the request of Some German Tattergreis; a line from Joseph Joestar in the German dub of JoJo's Bizarre Adventure: Stardust Crusaders. "I solve my problems with skill and grace, and now you're getting smacked in the face."</note>
-        <note id="692">Possible responses to this might include:
-- Freaking out about how Kyoko just said "I specialize in homicide cases" so casually
-- Asking how old Kyoko is (she's 19)
-- ...And/or asking how someone of Kyoko's/Hope's Peak students' age manages to be a homicide detective
-
-If you'd like to write a response including the last of those things, I've already set up a line responding to the marker "kyoko_ultimatedetective".</note>
     </notes>
     <labels>
         <label id="499" label="Shelved" folder="" sort="0" />
-        <label id="2" label="Disappointment" color="0" folder="" sort="0" />
+        <label id="2" label="Disappointment" folder="" sort="0" />
         <label id="3" label="DNA" folder="" sort="0" />
-        <label id="4" label="" color="0" folder="Circumcision comments" sort="2" />
-        <label id="5" label="" color="0" folder="Circumcision comments" sort="0" />
+        <label id="4" label="" folder="Circumcision comments" sort="2" />
+        <label id="5" label="" folder="Circumcision comments" sort="0" />
         <label id="6" label="ENF reasurrance" folder="" sort="0" />
         <label id="7" label="Human joins Kyoko" folder="" sort="0" />
         <label id="8" label="Mixed bath" folder="" sort="0" />
@@ -92,10 +89,10 @@ If you'd like to write a response including the last of those things, I've alrea
         <label id="11" label="Hot out" folder="" sort="0" />
         <label id="12" label="Baby got back" folder="" sort="0" />
         <label id="13" label="Baby got back" folder="" sort="0" />
-        <label id="17" label="Nude" color="0" folder="Player exposed" sort="6" />
-        <label id="15" label="Topless M" color="0" folder="Player exposed" sort="2" />
-        <label id="16" label="Topless F" color="0" folder="Player exposed" sort="4" />
-        <label id="18" label="Bottomless" color="0" folder="Player exposed" sort="8" />
+        <label id="17" label="Nude" folder="Player exposed" sort="6" />
+        <label id="15" label="Topless M" folder="Player exposed" sort="2" />
+        <label id="16" label="Topless F" folder="Player exposed" sort="4" />
+        <label id="18" label="Bottomless" folder="Player exposed" sort="8" />
         <label id="19" label="Evidence floor" folder="" sort="0" />
         <label id="20" label="Evidence ground" folder="" sort="0" />
         <label id="21" label="Jacket" folder="" sort="0" />
@@ -158,8 +155,8 @@ If you'd like to write a response including the last of those things, I've alrea
         <label id="83" label="Shock" folder="" sort="0" />
         <label id="84" label="Throw last hand" folder="AI advancement" sort="4" />
         <label id="85" label="" folder="Must masturbate" sort="5" />
-        <label id="87" label="Mia parent trouble" color="0" folder="" sort="0" />
-        <label id="88" label="Mia parent trouble" color="0" folder="" sort="0" />
+        <label id="87" label="Mia parent trouble" folder="" sort="0" />
+        <label id="88" label="Mia parent trouble" folder="" sort="0" />
         <label id="91" label="Mirror match" color="6" folder="" sort="0" />
         <label id="92" label="" color="1" folder="Aroused" sort="0" />
         <label id="95" label="" folder="Loss to villain" sort="0" />
@@ -631,7 +628,7 @@ If you'd like to write a response including the last of those things, I've alrea
         <label id="610" label="Toshinou L GodivaHair" folder="" sort="0" />
         <label id="611" label="Toshinou IL boobies" folder="Inbound stage 6" sort="0" />
         <label id="612" label="Toshinou IR boobies" folder="Duplicate dialogue" sort="29" />
-        <label id="613" label="Toshinou R boobies DD" folder="" sort="0" />
+        <label id="613" label="Toshinou IR boobies" folder="Duplicate dialogue" sort="0" />
         <label id="614" label="Toshinou Ou 3-1" folder="Outbound stage 3" sort="0" />
         <label id="615" label="Toshinou select, replay" folder="" sort="0" />
         <label id="616" label="Toshinou select, replay" folder="Duplicate dialogue" sort="2" />
@@ -714,25 +711,61 @@ If you'd like to write a response including the last of those things, I've alrea
         <label id="689" label="Ringo In 8-2B" color="3" folder="Inbound stage 8" sort="2" />
         <label id="690" label="Ringo In 8-1" folder="Inbound stage 8" sort="0" />
         <label id="590" label="Ringo In 4-1" folder="Inbound stage 4" sort="2" />
-        <label id="691" label="Ringo Ults-1" folder="Inbound stage X" sort="2" />
-        <label id="692" label="Ringo Ults-2" folder="Inbound stage X" sort="3" />
-        <label id="693" label="Ringo Ults-3" folder="Inbound stage X" sort="2" />
+        <label id="691" label="Ringo In Ults-1" folder="Inbound stage X" sort="2" />
+        <label id="692" label="Ringo In Ults-2" folder="Inbound stage X" sort="3" />
+        <label id="693" label="Ringo In Ults-3" folder="Inbound stage X" sort="2" />
         <label id="694" label="" folder="Duplicate dialogue" sort="0" />
         <label id="695" label="Toshinou Ou 6-1A" color="2" folder="Outbound stage 6" sort="0" />
         <label id="696" label="Toshinou Ou 6-1B" color="3" folder="Outbound stage 6" sort="2" />
         <label id="697" label="Toshinou Ou 6-2B" color="3" folder="Outbound stage 6" sort="3" />
-        <label id="698" label="Nude, 8 layers" color="0" folder="Player exposed" sort="10" />
+        <label id="698" label="Nude, 8 layers" folder="Player exposed" sort="10" />
         <label id="699" label="(~PLAYER~==KYOKO)" folder="Duplicate dialogue" sort="3" />
-        <label id="700" label="Differential nicknames" folder="" sort="0" />
+        <label id="700" label="" folder="Differential nicknames" sort="0" />
         <label id="701" label="Overtime shift" folder="" sort="0" />
-        <label id="702" label="Differential nicknames" folder="" sort="0" />
+        <label id="702" label="" folder="Differential nicknames" sort="0" />
+        <label id="703" label="" folder="Dorothy+Nami" sort="0" />
+        <label id="704" label="" folder="Outbound stage X" sort="0" />
+        <label id="705" label="Toshinou OL" folder="Outbound stage 4" sort="0" />
+        <label id="706" label="Toshinou Ou 4" folder="Duplicate dialogue" sort="0" />
+        <label id="707" label="Toshinou OR 4" folder="Duplicate dialogue" sort="0" />
+        <label id="708" label="Toshinou OR 4" folder="Duplicate dialogue" sort="0" />
+        <label id="709" label="Toshinou OR 4" folder="Duplicate dialogue" sort="0" />
+        <label id="710" label="Toshinou OR 4" folder="Duplicate dialogue" sort="0" />
+        <label id="711" label="Toshinou" folder="" sort="0" />
+        <label id="712" label="Toshinou" folder="Duplicate dialogue" sort="0" />
+        <label id="713" label="Maria Ou 2-1A variation" color="2" folder="Duplicate dialogue" sort="0" />
+        <label id="714" label="Maria Ou 2-1A (self 9)" color="2" folder="Outbound stage 2" sort="0" />
+        <label id="715" label="Maria Ou 2-1A" color="2" folder="Outbound stage 2" sort="0" />
+        <label id="716" label="Maria Ou 2-2A variation" color="2" folder="Duplicate dialogue" sort="0" />
+        <label id="717" label="Maria Ou 2-2A" color="2" folder="Outbound stage 2" sort="0" />
+        <label id="718" label="" folder="Differential nicknames" sort="0" />
+        <label id="719" label="Roll Ou 4-1" folder="Outbound stage 4" sort="0" />
+        <label id="720" label="Ringo IL Ults-4A" color="1" folder="Inbound stage X+1" sort="0" />
+        <label id="721" label="Ringo IL Ults-5A" color="1" folder="Inbound stage X+1" sort="0" />
+        <label id="722" label="Ringo IL Ults-5B" color="5" folder="Inbound stage X+1" sort="0" />
+        <label id="723" label="Ringo IL Ults-4B" color="5" folder="Inbound stage X+1" sort="0" />
+        <label id="724" label="Ringo IL Ults-6" folder="Inbound stage X+1" sort="0" />
+        <label id="725" label="Ringo IR Ults-4A" color="1" folder="Duplicate dialogue" sort="0" />
+        <label id="726" label="Ringo IR Ults-4B" color="5" folder="Duplicate dialogue" sort="0" />
+        <label id="727" label="Ringo IR Ults-5A" color="1" folder="Duplicate dialogue" sort="0" />
+        <label id="728" label="Ringo IR Ults-5B" color="5" folder="Duplicate dialogue" sort="0" />
+        <label id="729" label="Ringo IR Ults-6" folder="Duplicate dialogue" sort="0" />
+        <label id="730" label="Ringo IR preUlts-4A" folder="Duplicate dialogue" sort="0" />
+        <label id="731" label="Ringo IR preUlts-4B" folder="Duplicate dialogue" sort="0" />
+        <label id="732" label="Ringo IR preUlts-5A" folder="Duplicate dialogue" sort="0" />
+        <label id="733" label="Ringo IR preUlts-5B" folder="Duplicate dialogue" sort="0" />
+        <label id="734" label="Ringo IR preUlts-6" folder="Duplicate dialogue" sort="0" />
+        <label id="735" label="" color="1" folder="Aroused" sort="0" />
+        <label id="736" label="" folder="Duplicate dialogue" sort="0" />
+        <label id="737" label="" folder="Duplicate dialogue" sort="0" />
+        <label id="738" label="" folder="Aroused" sort="0" />
     </labels>
-    <nextId>702</nextId>
+    <nextId>738</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="." />
         <marker scope="Public" name="+careerMention" />
         <marker scope="Public" name="alwaysReady">"Always ready, I see" and other versions of the line</marker>
+        <marker scope="Public" name="arousalVisible" />
         <marker scope="Public" name="aroused">Her vulva is or will be visibly secreting fluid prior to her forfeit while nude (and in the second tick of her forfeit).</marker>
         <marker scope="Public" name="attractedAttention" />
         <marker scope="Public" name="biAtFinish">Finished forfeit while having the bisexual tag</marker>
@@ -861,6 +894,11 @@ If you'd like to write a response including the last of those things, I've alrea
         <marker scope="Public" name="makeOfThisFeeling" />
         <marker scope="Public" name="maleCaseBriefSurprise" />
         <marker scope="Public" name="mardiGras">Kyoko has said X lines related to asking an American female character about toplessness at Mardi Gras. These lines play on Tuesdays February 3-March 9.</marker>
+        <marker scope="Public" name="maria_smodeDressStrip1" />
+        <marker scope="Public" name="maria_smodeDressStrip1Forfeit" />
+        <marker scope="Public" name="maria_smodeDressStrip1Normal" />
+        <marker scope="Public" name="maria_smodeDressStrip2" />
+        <marker scope="Public" name="maria_smodeDressStrip2Normal" />
         <marker scope="Public" name="meanHero">"They act cold, but I suspect they're nobler than they let on.""</marker>
         <marker scope="Public" name="mentalPhysicalStrengthPrompt" />
         <marker scope="Public" name="mikan_confident1Re" />
@@ -902,12 +940,20 @@ If you'd like to write a response including the last of those things, I've alrea
         <marker scope="Public" name="raynor_buttForfeit" />
         <marker scope="Public" name="raynor_buttStandard" />
         <marker scope="Public" name="ringo_bornDetective" />
+        <marker scope="Public" name="ringo_deduction1" />
+        <marker scope="Public" name="ringo_deduction1Normal" />
+        <marker scope="Public" name="ringo_deduction1PoisonHat" />
+        <marker scope="Public" name="ringo_deduction2" />
+        <marker scope="Public" name="ringo_deduction2Normal" />
+        <marker scope="Public" name="ringo_deduction2Poison" />
+        <marker scope="Public" name="ringo_deduction3" />
         <marker scope="Public" name="ringo_glovesForfeit" />
         <marker scope="Public" name="ringo_glovesRe" />
         <marker scope="Public" name="ringo_hopesPeak" />
         <marker scope="Public" name="ringo_ultimateDetectiveRe" />
         <marker scope="Public" name="ringo_ultimatesRe" />
         <marker scope="Public" name="ringo_ultimateTalentRe" />
+        <marker scope="Public" name="roll_spa" />
         <marker scope="Public" name="rosa_hairstyles" />
         <marker scope="Public" name="safeAnotherRound" />
         <marker scope="Public" name="safeForNow" />
@@ -947,11 +993,16 @@ If you'd like to write a response including the last of those things, I've alrea
         <marker scope="Public" name="tieCompletes">"A classmate in high school once told me this tie completes my outfit."</marker>
         <marker scope="Public" name="timeline" />
         <marker scope="Public" name="tooManyKyokos" />
+        <marker scope="Public" name="toshinou_gameOverSkinnyDip" />
+        <marker scope="Public" name="toshinou_gameOverSkinnyDipNakeySwimmy" />
+        <marker scope="Public" name="toshinou_gameOverSkinnyDipWon" />
         <marker scope="Public" name="toshinou_glovesOn_selfRibbonOut" />
         <marker scope="Public" name="toshinou_godivaHairRe" />
         <marker scope="Public" name="toshinou_helloAgain" />
+        <marker scope="Public" name="toshinou_nakeySwimmy" />
         <marker scope="Public" name="toshinou_playedWith">Kirigiri has played X games with Kyouko Toshinou. Activates on Game Start.</marker>
         <marker scope="Public" name="toshinou_ribbonGone" />
+        <marker scope="Public" name="toshinou_skinnyDip" />
         <marker scope="Public" name="toshinou_theKyoukoRe" />
         <marker scope="Public" name="toshinou_tomatoUndies" />
         <marker scope="Public" name="toshinouBoobies">Response to Kyouko Toshinou simply asking, "Boobies?" =2 when fully responded, =1 when preparing to respond next case.</marker>
