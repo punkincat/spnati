@@ -302,7 +302,7 @@
         <label id="280" label="" folder="Background" sort="10" />
         <label id="281" label="" folder="Background" sort="11" />
         <label id="282" label="" folder="Hand=Any banter" sort="4" />
-        <label id="283" label="" folder="Responses" sort="0" />
+        <label id="283" label="" folder="Responses" sort="3" />
         <label id="284" label="" folder="Responses" sort="2" />
         <label id="285" label="" folder="Haiku Counter" sort="0" />
         <label id="286" label="Haiku 173-Priestess" folder="Haiku Counter" sort="173" />
@@ -718,111 +718,205 @@
         <label id="699" label="Haiku 253-Priestess" folder="Haiku Counter" sort="505" />
         <label id="700" label="Haiku 253-Nohr Princess" folder="Haiku Counter" sort="506" />
         <label id="701" label="" folder="Responses" sort="0" />
-        <label id="702" label="" folder="Responses" sort="0" />
-        <label id="703" label="" folder="Responses" sort="0" />
-        <label id="704" label="" folder="Opponent Lost Targets" sort="0" />
-        <label id="705" label="Haiku 254-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="706" label="Haiku 254-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="707" label="Haiku 255-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="708" label="Haiku 255-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="718" label="Haiku 260 Sleep Check" folder="Sleep Counter" sort="0" />
-        <label id="745" label="Haiku 268 Sleep Check" folder="Sleep Counter" sort="0" />
-        <label id="740" label="Haiku 267-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="741" label="Haiku 267-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="735" label="Haiku 265-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="736" label="Haiku 265-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="738" label="Haiku 266-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="739" label="Haiku 266-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="710" label="Haiku 256-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="746" label="Haiku 268-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="737" label="" folder="Hand=Any banter" sort="0" />
-        <label id="709" label="Haiku 256-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="714" label="Haiku 258-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="751" label="Haiku 269-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="715" label="Haiku 258-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="716" label="Haiku 259-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="717" label="Haiku 259-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="719" label="Haiku 260-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="720" label="Haiku 260-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="721" label="Haiku 261-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="722" label="Haiku 261-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="712" label="Haiku 257-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="713" label="Haiku 257-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="747" label="Haiku 268-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="750" label="Haiku 269-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="724" label="Haiku 262-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="725" label="Haiku 262-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="727" label="Haiku 263-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="728" label="Haiku 263-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="733" label="Haiku 264-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="734" label="Haiku 264-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="730" label="" folder="Opponent Stripping Targets" sort="0" />
-        <label id="729" label="" folder="Opponent Stripping Targets" sort="0" />
-        <label id="731" label="" folder="Opponent Stripping Targets" sort="0" />
-        <label id="754" label="Haiku 270-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="755" label="Haiku 270-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="756" label="Haiku 271-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="757" label="Haiku 271-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="758" label="Haiku 272-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="759" label="Haiku 272-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="732" label="" folder="Opponent Lost Targets" sort="0" />
-        <label id="760" label="" folder="Background" sort="0" />
-        <label id="761" label="" folder="Hand=Any banter" sort="0" />
-        <label id="762" label="Haiku 273-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="763" label="Haiku 273-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="702" label="" folder="Responses" sort="2" />
+        <label id="703" label="" folder="Responses" sort="16" />
+        <label id="704" label="" folder="Opponent Lost Targets" sort="22" />
+        <label id="705" label="Haiku 254-Priestess" folder="Haiku Counter" sort="507" />
+        <label id="706" label="Haiku 254-Nohr Princess" folder="Haiku Counter" sort="508" />
+        <label id="707" label="Haiku 255-Priestess" folder="Haiku Counter" sort="509" />
+        <label id="708" label="Haiku 255-Nohr Princess" folder="Haiku Counter" sort="510" />
+        <label id="718" label="Haiku 260 Sleep Check" folder="Sleep Counter" sort="7" />
+        <label id="745" label="Haiku 268 Sleep Check" folder="Sleep Counter" sort="8" />
+        <label id="740" label="Haiku 267-Priestess" folder="Haiku Counter" sort="533" />
+        <label id="741" label="Haiku 267-Nohr Princess" folder="Haiku Counter" sort="534" />
+        <label id="735" label="Haiku 265-Priestess" folder="Haiku Counter" sort="529" />
+        <label id="736" label="Haiku 265-Nohr Princess" folder="Haiku Counter" sort="530" />
+        <label id="738" label="Haiku 266-Priestess" folder="Haiku Counter" sort="531" />
+        <label id="739" label="Haiku 266-Nohr Princess" folder="Haiku Counter" sort="532" />
+        <label id="710" label="Haiku 256-Nohr Princess" folder="Haiku Counter" sort="512" />
+        <label id="746" label="Haiku 268-Priestess" folder="Haiku Counter" sort="535" />
+        <label id="737" label="" folder="Hand=Any banter" sort="18" />
+        <label id="709" label="Haiku 256-Priestess" folder="Haiku Counter" sort="511" />
+        <label id="714" label="Haiku 258-Priestess" folder="Haiku Counter" sort="515" />
+        <label id="751" label="Haiku 269-Nohr Princess" folder="Haiku Counter" sort="538" />
+        <label id="715" label="Haiku 258-Nohr Princess" folder="Haiku Counter" sort="516" />
+        <label id="716" label="Haiku 259-Priestess" folder="Haiku Counter" sort="517" />
+        <label id="717" label="Haiku 259-Nohr Princess" folder="Haiku Counter" sort="518" />
+        <label id="719" label="Haiku 260-Priestess" folder="Haiku Counter" sort="519" />
+        <label id="720" label="Haiku 260-Nohr Princess" folder="Haiku Counter" sort="520" />
+        <label id="721" label="Haiku 261-Priestess" folder="Haiku Counter" sort="521" />
+        <label id="722" label="Haiku 261-Nohr Princess" folder="Haiku Counter" sort="522" />
+        <label id="712" label="Haiku 257-Priestess" folder="Haiku Counter" sort="513" />
+        <label id="713" label="Haiku 257-Nohr Princess" folder="Haiku Counter" sort="514" />
+        <label id="747" label="Haiku 268-Nohr Princess" folder="Haiku Counter" sort="536" />
+        <label id="750" label="Haiku 269-Priestess" folder="Haiku Counter" sort="537" />
+        <label id="724" label="Haiku 262-Priestess" folder="Haiku Counter" sort="523" />
+        <label id="725" label="Haiku 262-Nohr Princess" folder="Haiku Counter" sort="524" />
+        <label id="727" label="Haiku 263-Priestess" folder="Haiku Counter" sort="525" />
+        <label id="728" label="Haiku 263-Nohr Princess" folder="Haiku Counter" sort="526" />
+        <label id="733" label="Haiku 264-Priestess" folder="Haiku Counter" sort="527" />
+        <label id="734" label="Haiku 264-Nohr Princess" folder="Haiku Counter" sort="528" />
+        <label id="730" label="" folder="Opponent Stripping Targets" sort="5" />
+        <label id="729" label="" folder="Opponent Stripping Targets" sort="3" />
+        <label id="731" label="" folder="Opponent Stripping Targets" sort="4" />
+        <label id="754" label="Haiku 270-Priestess" folder="Haiku Counter" sort="539" />
+        <label id="755" label="Haiku 270-Nohr Princess" folder="Haiku Counter" sort="540" />
+        <label id="756" label="Haiku 271-Priestess" folder="Haiku Counter" sort="541" />
+        <label id="757" label="Haiku 271-Nohr Princess" folder="Haiku Counter" sort="542" />
+        <label id="758" label="Haiku 272-Priestess" folder="Haiku Counter" sort="543" />
+        <label id="759" label="Haiku 272-Nohr Princess" folder="Haiku Counter" sort="544" />
+        <label id="732" label="" folder="Opponent Lost Targets" sort="23" />
+        <label id="760" label="" folder="Background" sort="17" />
+        <label id="761" label="" folder="Hand=Any banter" sort="19" />
+        <label id="762" label="Haiku 273-Priestess" folder="Haiku Counter" sort="545" />
+        <label id="763" label="Haiku 273-Nohr Princess" folder="Haiku Counter" sort="546" />
         <label id="723" label="One-shot generic haiku for replayability- Master Seal" folder="" sort="0" />
         <label id="726" label="One-shot generic haiku for replayability-Master Seal" folder="" sort="0" />
         <label id="764" label="One-shot generic haiku for replayability- No Collectibles" folder="" sort="0" />
-        <label id="765" label="Haiku 274-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="766" label="Haiku 274-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="767" label="" folder="Opponent Lost Targets" sort="0" />
-        <label id="768" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="765" label="Haiku 274-Priestess" folder="Haiku Counter" sort="547" />
+        <label id="766" label="Haiku 274-Nohr Princess" folder="Haiku Counter" sort="548" />
+        <label id="767" label="" folder="Opponent Lost Targets" sort="24" />
+        <label id="768" label="" folder="Opponent Lost Targets" sort="25" />
         <label id="769" label="" folder="Opponent Stripping Targets" sort="0" />
-        <label id="753" label="" folder="Responses" sort="0" />
-        <label id="742" label="" folder="Responses" sort="0" />
-        <label id="752" label="" folder="Responses" sort="0" />
-        <label id="711" label="" folder="Responses" sort="0" />
-        <label id="743" label="" folder="Responses" sort="0" />
-        <label id="744" label="" folder="Responses" sort="0" />
-        <label id="770" label="Haiku 275-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="771" label="Haiku 275-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="772" label="" folder="Opponent Stripping Targets" sort="0" />
-        <label id="773" label="Haiku 276-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="774" label="Haiku 276-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="775" label="Haiku 277-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="776" label="Haiku 277-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="777" label="Haiku 278-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="778" label="Haiku 278-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="781" label="Haiku 279-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="782" label="Haiku 279-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="753" label="" folder="Responses" sort="34" />
+        <label id="742" label="" folder="Responses" sort="32" />
+        <label id="752" label="" folder="Responses" sort="33" />
+        <label id="711" label="" folder="Responses" sort="28" />
+        <label id="743" label="" folder="Responses" sort="29" />
+        <label id="744" label="" folder="Responses" sort="17" />
+        <label id="770" label="Haiku 275-Priestess" folder="Haiku Counter" sort="549" />
+        <label id="771" label="Haiku 275-Nohr Princess" folder="Haiku Counter" sort="550" />
+        <label id="772" label="" folder="Opponent Stripping Targets" sort="6" />
+        <label id="773" label="Haiku 276-Priestess" folder="Haiku Counter" sort="551" />
+        <label id="774" label="Haiku 276-Nohr Princess" folder="Haiku Counter" sort="552" />
+        <label id="775" label="Haiku 277-Priestess" folder="Haiku Counter" sort="553" />
+        <label id="776" label="Haiku 277-Nohr Princess" folder="Haiku Counter" sort="554" />
+        <label id="777" label="Haiku 278-Priestess" folder="Haiku Counter" sort="555" />
+        <label id="778" label="Haiku 278-Nohr Princess" folder="Haiku Counter" sort="556" />
+        <label id="781" label="Haiku 279-Priestess" folder="Haiku Counter" sort="557" />
+        <label id="782" label="Haiku 279-Nohr Princess" folder="Haiku Counter" sort="558" />
         <label id="783" label="" folder="Opponent Lost Targets" sort="0" />
-        <label id="784" label="Haiku 280-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="785" label="Haiku 280-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="786" label="Haiku 281-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="787" label="Haiku 281-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="788" label="" folder="Responses" sort="0" />
-        <label id="789" label="" folder="Opponent Lost Targets" sort="0" />
-        <label id="790" label="" folder="Opponent Stripping Targets" sort="0" />
-        <label id="791" label="" folder="Opponent Stripping Targets" sort="0" />
-        <label id="792" label="Haiku 282-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="793" label="Haiku 282-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="794" label="Haiku 283-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="795" label="Haiku 283-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="796" label="Haiku 284-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="797" label="Haiku 284-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="798" label="Haiku 285-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="799" label="Haiku 285-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="800" label="" folder="Responses" sort="0" />
-        <label id="801" label="" folder="Responses" sort="0" />
-        <label id="802" label="" folder="Responses" sort="0" />
+        <label id="784" label="Haiku 280-Priestess" folder="Haiku Counter" sort="559" />
+        <label id="785" label="Haiku 280-Nohr Princess" folder="Haiku Counter" sort="560" />
+        <label id="786" label="Haiku 281-Priestess" folder="Haiku Counter" sort="561" />
+        <label id="787" label="Haiku 281-Nohr Princess" folder="Haiku Counter" sort="562" />
+        <label id="788" label="" folder="Responses" sort="18" />
+        <label id="789" label="" folder="Opponent Lost Targets" sort="26" />
+        <label id="790" label="" folder="Opponent Stripping Targets" sort="17" />
+        <label id="791" label="" folder="Opponent Stripping Targets" sort="18" />
+        <label id="792" label="Haiku 282-Priestess" folder="Haiku Counter" sort="563" />
+        <label id="793" label="Haiku 282-Nohr Princess" folder="Haiku Counter" sort="564" />
+        <label id="794" label="Haiku 283-Priestess" folder="Haiku Counter" sort="565" />
+        <label id="795" label="Haiku 283-Nohr Princess" folder="Haiku Counter" sort="566" />
+        <label id="796" label="Haiku 284-Priestess" folder="Haiku Counter" sort="567" />
+        <label id="797" label="Haiku 284-Nohr Princess" folder="Haiku Counter" sort="568" />
+        <label id="798" label="Haiku 285-Priestess" folder="Haiku Counter" sort="569" />
+        <label id="799" label="Haiku 285-Nohr Princess" folder="Haiku Counter" sort="570" />
+        <label id="800" label="" folder="Responses" sort="21" />
+        <label id="801" label="" folder="Responses" sort="20" />
+        <label id="802" label="" folder="Responses" sort="19" />
         <label id="803" label="" folder="Opponent Lost Targets" sort="0" />
-        <label id="804" label="Haiku 286-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="805" label="Haiku 286-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="804" label="Haiku 286-Priestess" folder="Haiku Counter" sort="571" />
+        <label id="805" label="Haiku 286-Nohr Princess" folder="Haiku Counter" sort="572" />
         <label id="806" label="One-shot generic haiku for replayability- No Collectibles" folder="" sort="0" />
-        <label id="807" label="Haiku 287-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="808" label="Haiku 287-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="807" label="Haiku 287-Priestess" folder="Haiku Counter" sort="573" />
+        <label id="808" label="Haiku 287-Nohr Princess" folder="Haiku Counter" sort="574" />
+        <label id="809" label="" folder="Responses" sort="30" />
+        <label id="810" label="Haiku 288-Priestess" folder="Haiku Counter" sort="575" />
+        <label id="811" label="Haiku 288-Nohr Princess" folder="Haiku Counter" sort="576" />
+        <label id="812" label="" folder="Background" sort="19" />
+        <label id="813" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="814" label="Haiku 289-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="815" label="Haiku 289-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="816" label="Haiku 290-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="817" label="Haiku 290-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="818" label="" folder="Responses" sort="0" />
+        <label id="819" label="" folder="Responses" sort="0" />
+        <label id="820" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="821" label="Haiku 291-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="822" label="Haiku 291-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="823" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="824" label="Haiku 292-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="825" label="Haiku 292-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="826" label="Haiku 293-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="827" label="Haiku 293-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="828" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="780" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="829" label="" folder="Background" sort="0" />
+        <label id="830" label="" folder="Background" sort="0" />
+        <label id="831" label="" folder="Background" sort="0" />
+        <label id="832" label="" folder="Background" sort="0" />
+        <label id="833" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="834" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="835" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="836" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="837" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="838" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="839" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="840" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="841" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="842" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="843" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="779" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="844" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="845" label="" folder="Responses" sort="0" />
+        <label id="846" label="" folder="Responses" sort="0" />
+        <label id="847" label="" folder="Responses" sort="0" />
+        <label id="848" label="" folder="Responses" sort="0" />
+        <label id="849" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="850" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="851" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="852" label="" folder="Background" sort="0" />
+        <label id="853" label="Haiku 294-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="854" label="Haiku 294-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="855" label="Haiku 295-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="856" label="Haiku 295-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="857" label="Haiku 295 Sleep Check" folder="Sleep Counter" sort="0" />
+        <label id="858" label="Haiku 296-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="859" label="Haiku 296-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="860" label="Haiku 297-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="861" label="Haiku 297-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="862" label="" folder="Sleep Counter" sort="0" />
+        <label id="863" label="Haiku 298 Sleep Check" folder="Sleep Counter" sort="0" />
+        <label id="864" label="Haiku 298-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="865" label="Haiku 298-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="866" label="Haiku 299-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="867" label="Haiku 299-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="876" label="Haiku 300-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="877" label="Haiku 300-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="870" label="Haiku 301-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="871" label="Haiku 301-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="872" label="Haiku 302-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="873" label="Haiku 302-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="874" label="Haiku 303-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="875" label="Haiku 303-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="881" label="Haiku 304-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="882" label="Haiku 304-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="885" label="Haiku 305-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="886" label="Haiku 305-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="887" label="Haiku 306-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="888" label="Haiku 306-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="878" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="868" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="883" label="" folder="Background" sort="0" />
+        <label id="884" label="" folder="Background" sort="0" />
+        <label id="869" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="889" label="Haiku 307-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="890" label="Haiku 307-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="891" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="892" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="893" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="895" label="Haiku 308-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="896" label="Haiku 308-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="897" label="" folder="Haiku Counter" sort="0" />
+        <label id="898" label="Haiku 309-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="899" label="Haiku 309-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="900" label="Haiku 310-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="901" label="Haiku 310-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="902" label="Haiku 311-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="903" label="Haiku 311-Nohr Princess" folder="Haiku Counter" sort="0" />
     </labels>
-    <nextId>808</nextId>
+    <nextId>903</nextId>
     <markers>
         <marker scope="Public" name="adrien_losingsuit" />
         <marker scope="Public" name="adrien_lostsuit" />
@@ -830,7 +924,7 @@
         <marker scope="Public" name="aoba_hajime_prompt" />
         <marker scope="Public" name="aoba_kou_prompt" />
         <marker scope="Public" name="aoba_umiko_prompt" />
-        <marker scope="Public" name="arash_throws" />
+        <marker scope="Public" name="arash_throws">Also haiku 285.</marker>
         <marker scope="Public" name="barbara_Hat_1" />
         <marker scope="Public" name="Barbara_holywoman_resp" />
         <marker scope="Public" name="Barbara_poetry_resp" />
@@ -841,28 +935,36 @@
         <marker scope="Public" name="binah_haikustart_resp" />
         <marker scope="Public" name="Binah_librarian" />
         <marker scope="Public" name="binah_philosophy" />
+        <marker scope="Public" name="binah_philosophy_cont" />
         <marker scope="Public" name="binah_pillar" />
         <marker scope="Public" name="binah_pillar_mast" />
+        <marker scope="Public" name="binah_questions" />
         <marker scope="Public" name="binah_star_meaning" />
         <marker scope="Public" name="binah_victory" />
         <marker scope="Public" name="blake_adventures" />
         <marker scope="Public" name="blake_book" />
         <marker scope="Public" name="blake_catears" />
         <marker scope="Public" name="Blake_charm_resp" />
+        <marker scope="Public" name="Blake_charm2_resp" />
         <marker scope="Public" name="Blake_deeptalk_resp" />
         <marker scope="Public" name="blake_distance" />
         <marker scope="Public" name="blake_haikupraise" />
         <marker scope="Public" name="blake_haikuresponse" />
         <marker scope="Public" name="Blake_peace" />
+        <marker scope="Public" name="bobobo_is_perfect">Also haiku 291.</marker>
         <marker scope="Public" name="butt_pose">Mitama shows her butt. Pretty self-explanatory, don't you think?</marker>
+        <marker scope="Public" name="Caitlin_mitama0A_resp" />
+        <marker scope="Public" name="Caitlin_mitama0B_resp" />
         <marker scope="Public" name="caitlin_sleep" />
-        <marker scope="Public" name="cheryl" />
-        <marker scope="Public" name="cheryl_apologies" />
+        <marker scope="Public" name="Caitlin_sleep_2" />
+        <marker scope="Public" name="cheryl_22_resp" />
+        <marker scope="Public" name="cheryl_apologies">Also haiku 281</marker>
         <marker scope="Public" name="cheryl_armorC_resp" />
         <marker scope="Public" name="cheryl_capeC_resp" />
         <marker scope="Public" name="cheryl_grudges" />
         <marker scope="Public" name="Cheryl_journaling">Also haiku 173.</marker>
         <marker scope="Public" name="cheryl_mitama2_resp" />
+        <marker scope="Public" name="cheryl_mitama31_resp" />
         <marker scope="Public" name="cheryl_muststrip_0" />
         <marker scope="Public" name="cheryl_muststrip_4" />
         <marker scope="Public" name="cheryl_rudechild" />
@@ -1465,18 +1567,83 @@
         <marker scope="Public" name="haiku_287" />
         <marker scope="Public" name="haiku_287_Counter" />
         <marker scope="Public" name="haiku_287_NCounter" />
+        <marker scope="Public" name="haiku_288_Counter" />
+        <marker scope="Public" name="haiku_288_NCounter" />
+        <marker scope="Public" name="haiku_289" />
+        <marker scope="Public" name="haiku_289_Counter" />
+        <marker scope="Public" name="haiku_289_NCounter" />
         <marker scope="Public" name="haiku_29" />
         <marker scope="Public" name="haiku_29_Counter" />
         <marker scope="Public" name="haiku_29_NCounter" />
+        <marker scope="Public" name="haiku_290" />
+        <marker scope="Public" name="haiku_290_Counter" />
+        <marker scope="Public" name="haiku_290_NCounter" />
+        <marker scope="Public" name="haiku_291_Counter" />
+        <marker scope="Public" name="haiku_291_NCounter" />
+        <marker scope="Public" name="haiku_292" />
+        <marker scope="Public" name="haiku_292_Counter" />
+        <marker scope="Public" name="haiku_292_NCounter" />
+        <marker scope="Public" name="haiku_293" />
+        <marker scope="Public" name="haiku_293_Counter" />
+        <marker scope="Public" name="haiku_293_NCounter" />
+        <marker scope="Public" name="haiku_294" />
+        <marker scope="Public" name="haiku_294_Counter" />
+        <marker scope="Public" name="haiku_294_NCounter" />
+        <marker scope="Public" name="haiku_295" />
+        <marker scope="Public" name="haiku_295_Counter" />
+        <marker scope="Public" name="haiku_295_NCounter" />
+        <marker scope="Public" name="haiku_296" />
+        <marker scope="Public" name="haiku_296_Counter" />
+        <marker scope="Public" name="haiku_296_NCounter" />
+        <marker scope="Public" name="haiku_297" />
+        <marker scope="Public" name="haiku_297_Counter" />
+        <marker scope="Public" name="haiku_297_NCounter" />
+        <marker scope="Public" name="haiku_298" />
+        <marker scope="Public" name="haiku_298_Counter" />
+        <marker scope="Public" name="haiku_298_NCounter" />
+        <marker scope="Public" name="haiku_299_Counter" />
+        <marker scope="Public" name="haiku_299_NCounter" />
         <marker scope="Public" name="haiku_3" />
         <marker scope="Public" name="haiku_3_Counter" />
         <marker scope="Public" name="haiku_3_NCounter" />
         <marker scope="Public" name="haiku_30" />
         <marker scope="Public" name="haiku_30_Counter" />
         <marker scope="Public" name="haiku_30_NCounter" />
+        <marker scope="Public" name="haiku_300_Counter" />
+        <marker scope="Public" name="haiku_300_NCounter" />
+        <marker scope="Public" name="haiku_301" />
+        <marker scope="Public" name="haiku_301_Counter" />
+        <marker scope="Public" name="haiku_301_NCounter" />
+        <marker scope="Public" name="haiku_302" />
+        <marker scope="Public" name="haiku_302_Counter" />
+        <marker scope="Public" name="haiku_302_NCounter" />
+        <marker scope="Public" name="haiku_303" />
+        <marker scope="Public" name="haiku_303_Counter" />
+        <marker scope="Public" name="haiku_303_NCounter" />
+        <marker scope="Public" name="haiku_304" />
+        <marker scope="Public" name="haiku_304_Counter" />
+        <marker scope="Public" name="haiku_304_NCounter" />
+        <marker scope="Public" name="haiku_305" />
+        <marker scope="Public" name="haiku_305_Counter" />
+        <marker scope="Public" name="haiku_305_NCounter" />
+        <marker scope="Public" name="haiku_306" />
+        <marker scope="Public" name="haiku_306_Counter" />
+        <marker scope="Public" name="haiku_306_NCounter" />
+        <marker scope="Public" name="haiku_307" />
+        <marker scope="Public" name="haiku_307_Counter" />
+        <marker scope="Public" name="haiku_307_NCounter" />
+        <marker scope="Public" name="haiku_308" />
+        <marker scope="Public" name="haiku_308_Counter" />
+        <marker scope="Public" name="haiku_308_NCounter" />
+        <marker scope="Public" name="haiku_309_Counter" />
+        <marker scope="Public" name="haiku_309_NCounter" />
         <marker scope="Public" name="haiku_31" />
         <marker scope="Public" name="haiku_31_Counter" />
         <marker scope="Public" name="haiku_31_NCounter" />
+        <marker scope="Public" name="haiku_310_Counter" />
+        <marker scope="Public" name="haiku_310_NCounter" />
+        <marker scope="Public" name="haiku_311_Counter" />
+        <marker scope="Public" name="haiku_311_NCounter" />
         <marker scope="Public" name="haiku_32" />
         <marker scope="Public" name="haiku_32_Counter" />
         <marker scope="Public" name="haiku_32_NCounter" />
@@ -1701,19 +1868,25 @@
         <marker scope="Public" name="haiku_99_NCounter" />
         <marker scope="Public" name="hairties_strip" />
         <marker scope="Public" name="jura_muststrip_0" />
+        <marker scope="Public" name="kora_future" />
+        <marker scope="Public" name="kora_gossip" />
         <marker scope="Public" name="kora_healing" />
         <marker scope="Public" name="kora_muststrip_0" />
+        <marker scope="Public" name="kora_no_past" />
+        <marker scope="Public" name="kora_potions" />
         <marker scope="Public" name="kora_stripping_0" />
         <marker scope="Public" name="kumatora_favfood" />
+        <marker scope="Public" name="kyoko_muststrip_0" />
         <marker scope="Public" name="l'arachel_muststrip" />
         <marker scope="Public" name="l'arachel_muststrip_0" />
         <marker scope="Public" name="lux_pun_overload" />
         <marker scope="Public" name="lux_pun_trigger" />
         <marker scope="Public" name="magmagrunt_muststrip_0" />
-        <marker scope="Public" name="Mari_Drive" />
+        <marker scope="Public" name="mari_bunnysuit" />
+        <marker scope="Public" name="Mari_burdens">Also haiku 299.</marker>
         <marker scope="Public" name="Mari_Drive1" />
+        <marker scope="Public" name="Mari_family" />
         <marker scope="Public" name="Mari_Interesting1" />
-        <marker scope="Public" name="Mari_Purity" />
         <marker scope="Public" name="Mari_Purity1" />
         <marker scope="Public" name="meia_mitama0_resp">Also haiku 176</marker>
         <marker scope="Public" name="meia_mitama2_resp" />
@@ -1737,6 +1910,8 @@
         <marker scope="Public" name="nagatoro_mitama02_resp" />
         <marker scope="Public" name="nagatoro_mitama11_resp" />
         <marker scope="Public" name="nagatoro_mitama12_resp" />
+        <marker scope="Public" name="nagatoro_mitama13_resp" />
+        <marker scope="Public" name="nagatoro_mitama21_r" />
         <marker scope="Public" name="nap_time" />
         <marker scope="Public" name="Reimu_Capelet1_resp" />
         <marker scope="Public" name="Reimu_Capelet2_resp" />
@@ -1747,6 +1922,7 @@
         <marker scope="Public" name="ReimuShoes1">Also haiku 280.</marker>
         <marker scope="Public" name="revy_killing">Answer to Revy's prompt about killing.</marker>
         <marker scope="Public" name="revy_mitama0_resp">Also haiku 196.</marker>
+        <marker scope="Public" name="school" />
         <marker scope="Public" name="seen_penis" />
         <marker scope="Public" name="seen_penis_large">The first penis Mitama sees is large.</marker>
         <marker scope="Public" name="seen_penis_medium">The first penis Mitama sees is of average size.</marker>
