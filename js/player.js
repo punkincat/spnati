@@ -534,6 +534,11 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
         }
     }).get();
     this.searchTags = this.expandTagsList(this.originalTags.map(obj => obj.tag));
+	
+    this.magnetismTag = undefined;
+    this.searchTags.forEach((tag) => {
+        if (MAGNET_TAGS.indexOf(tag) >= 0) this.magnetismTag = tag;
+    });
 
     this.cases = new Map();
 

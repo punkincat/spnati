@@ -179,6 +179,41 @@ var statusIndicators = {
     }
 }
 
+const MAGNET_TAGS = [
+    "one_piece",
+    "vandread",
+    "ddlc",
+    "kid_icarus",
+    "genshin_impact",
+    "league_of_legends",
+    "fire_emblem",
+    "pokemon",
+    "konosuba",
+    "zombieland_saga",
+    "monster_prom",
+    "persona",
+    "panty_and_stocking",
+    "katawa_shoujo",
+    "my_little_pony",
+    "sonic_franchise",
+    "little_witch_academia",
+    "clannad",
+    "touhou_project",
+    "tales_of",
+    "va-11_hall-a",
+    "danganronpa",
+    "dragon_ball",
+    "street_fighter",
+    "rwby_franchise",
+    "teen_titans_franchise",
+    "huniepop",
+    "ace_attorney",
+    "jjba",
+    "legend_of_dark_witch",
+    "battleborn",
+    "legend_of_zelda",
+];
+
 /**********************************************************************
  *****               Opponent & Group Specification               *****
  **********************************************************************/
