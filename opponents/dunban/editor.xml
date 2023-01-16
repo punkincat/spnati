@@ -12,6 +12,9 @@
         <case name="Bionis Musings" id="399" priority="Noteworthy" min="0" max="5">
             <description>Dunban makes idle comments about his world with the markers bionis_view_1, bionis_view_2, and bionis_view_3. (See the folder this case is in.)</description>
         </case>
+        <case name="Removing Dunban's Boxers" id="337" priority="Noteworthy" min="6" max="6">
+            <description>Mari Setogaya may remove Dunban's boxers for him. Mari must be in her Default or Casual Vampire costume.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -166,6 +169,10 @@
         <response id="514" opponent="nami" opponentId="1283" />
         <response id="516" opponent="nico_robin" opponentId="699" />
         <response id="517" opponent="nico_robin" opponentId="698" />
+        <response id="525" opponent="aqua_kh" opponentId="310" />
+        <response id="527" opponent="aqua_kh" opponentId="311" />
+        <response id="529" opponent="haru" opponentId="1" />
+        <response id="530" opponent="laevatein" opponentId="13" />
     </responses>
     <notes>
         <note id="10">Will be replaced if Sharla ever gets reworked lol</note>
@@ -713,8 +720,15 @@ c: say that he's been as high as the bionis' head?
         <label id="522" label="" folder="Targets" sort="0" />
         <label id="523" label="" folder="Targets" sort="0" />
         <label id="524" label="" folder="Targets" sort="0" />
+        <label id="525" label="" folder="Aqua (KH)" sort="0" />
+        <label id="526" label="" folder="Aqua (KH)" sort="0" />
+        <label id="527" label="" folder="Aqua (KH)" sort="0" />
+        <label id="528" label="" folder="Aqua (KH)" sort="0" />
+        <label id="529" label="" folder="Situations" sort="0" />
+        <label id="530" label="" folder="Targets" sort="0" />
+        <label id="531" label="" folder="Responses" sort="0" />
     </labels>
-    <nextId>524</nextId>
+    <nextId>531</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="20gOffer">Line that plays when Dunban offers a 20g bribe to whoever loses</marker>
@@ -766,6 +780,8 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_aqua_ffHeavy3" />
         <marker scope="Public" name="dunban_aqua_ffHeavy4" />
         <marker scope="Public" name="dunban_aqua_keybladereveal" />
+        <marker scope="Public" name="dunban_aqua_self1a" />
+        <marker scope="Public" name="dunban_aqua_self1b" />
         <marker scope="Public" name="dunban_aqua_selfshirtless1" />
         <marker scope="Public" name="dunban_aqua_selfshirtless2" />
         <marker scope="Public" name="dunban_aqua_selfshirtless3" />
@@ -887,6 +903,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_mari_OpenRelation" />
         <marker scope="Public" name="dunban_mari_WhatAmI1" />
         <marker scope="Public" name="dunban_mari_WhatAmI2" />
+        <marker scope="Public" name="dunban_maria_self0a" />
         <marker scope="Public" name="dunban_mariS_boxer_strip1" />
         <marker scope="Public" name="dunban_mariS_boxer_strip2" />
         <marker scope="Public" name="dunban_mariS_boxer_strip3" />
@@ -977,6 +994,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="finished_no_photos" />
         <marker scope="Public" name="forfeit_left_handed" />
         <marker scope="Public" name="gameEndTracker" />
+        <marker scope="Public" name="haru_s5_mommyharu" />
         <marker scope="Public" name="kirigiri_heavyforfeit01" />
         <marker scope="Public" name="korass_rep1" />
         <marker scope="Public" name="korass_rep1_jin" />
