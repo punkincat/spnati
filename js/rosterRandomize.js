@@ -188,6 +188,18 @@ ChaCha20RNG.prototype.shuffle = function (arr) {
 }
 
 
+/* Irwin-Hall distribution but without the fixed seed thing */
+function randomNormal(mean, std) {
+    var ret = 0;
+    for (let i = 0; i < 12; i++) {
+        ret += Math.random();
+    }
+    ret -= 6;
+
+    return (ret * std) + mean;
+}
+
+
 /* The roster epoch is midnight at Jan. 2, 2022.
  * (January 1, 2022 was a Saturday, but the week index calculation needs the epoch to lie on a Sunday.)
  */
@@ -284,7 +296,7 @@ function randomizeRosterOrder(weekIdx, startStd, endStd) {
 
     roster.forEach(function (opp, idx) {
         let curStd = ((idx / roster.length) * (endStd - startStd)) + startStd;
-        let multiplier = Math.exp(Math.random() * curStd);
+        let multiplier = Math.exp(randomNormal(0, curStd));
         opp.effectiveScore = opp.rosterScore * multiplier;
     });
 }
