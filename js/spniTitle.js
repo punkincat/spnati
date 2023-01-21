@@ -241,6 +241,10 @@ var CANDY_LIST = [
     "sayori/1-happy.png",
     "sayori/2-thinking.png",
     "sayori/3-embarassed.png",
+    "dawn/0-elate.png",                     // Has Recent Updates
+    "dawn/1-happy.png",
+    "dawn/2-shock.png",
+    "dawn/3-smug.png",
     "myriam/0-confident.png",              // Has Recent Updates
     "myriam/2-normal.png",
     "myriam/3-think.png",
