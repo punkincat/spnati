@@ -23,401 +23,317 @@ var $gameLoadProgress = $(".game-load-progress");
 /**********************************************************************
  *****                    Title Screen Variables                  *****
  **********************************************************************/
- var CANDY_LIST = [
-    "nami/0-calm.png",                      // High Roster Position
-    "nami/0-seductive.png",
-    "nami/0-smiling.png",
-    "nami/0-smug.png",
-    "meia/0-interested.png",              // High Roster Position
+var CANDY_LIST = [
+    "meia/0-interested.png",               // High Roster Position
     "meia/2-pleased.png",
     "meia/2-reminiscing.png",
     "meia/3-happy.png",
-    "natsuki/0-tsun.png",                   // High Roster Position
+    "natsuki/0-tsun.png",                  // High Roster Position
     "natsuki/1-laugh.png",
     "natsuki/2-happy.png",
     "natsuki/3-isthatapenis.png",
-    "komi-san/0-bashfulA.png",               // High Roster Position
-    "komi-san/0-excitedA.png",
-    "komi-san/0-portrait.png",
-    "komi-san/1-strippingA.png",
-    "pit/0-awkward.png",                    // High Roster Position
-    "pit/1-calm.png",
-    "pit/2-pumped.png",
-    "pit/2-victory.png",
-    "jim/0-Neutral.png",                    // High Roster Position
-    "jim/0-Confident.png",
-    "jim/0-Relaxed.png",
-    "jim/0-Selected.png",
-    "adrien/0-confident.png",               // High Roster Position
-    "adrien/0-sarcastic.png",
-    "adrien/2-wink.png",
-    "adrien/3-smug.png",
-    "kumatora/0-confident.png",             // High Roster Position
-    "kumatora/0-cheerful.png",
-    "kumatora/0-idle2.png",
-    "kumatora/0-stretching.png",
-    "hu_tao/0-cocky.png",                   // High Roster Position
+    "nami/0-calm.png",                     // High Roster Position
+    "nami/0-seductive.png",
+    "nami/0-smiling.png",
+    "nami/0-smug.png",
+    "mari/0-tease.png",                    // High Roster Position
+    "mari/4-coy.png",
+    "hu_tao/0-cocky.png",                  // High Roster Position
     "hu_tao/0-mischievous.png",
     "hu_tao/0-oh_my.png",
     "hu_tao/0-smug.png",
-    "twisted_fate/0-Portrait.png",          // High Roster Position
-    "twisted_fate/0-Charming.png",
-    "twisted_fate/1-Deceiving.png",
-    "twisted_fate/1-Happy.png",
-    "monika/0-writing-tip.png",             // High Roster Position
-    "monika/1-interested.png",
-    "monika/2-happy.png",
-    "monika/3-shy-happy.png",
-    "yuri/0-calm.png",                      // High Roster Position
-    "yuri/0-happy.png",
-    "yuri/3-chat.png",
-    "yuri/3-blush.png",
-    "amy/0-start.png",                      // High Roster Position
-    "amy/0-cheer.png",
-    "amy/1-singing.png",
-    "amy/1-chat.png",
-    "ignatz/0-friendly.png",                // High Roster Position
-    "ignatz/0-flustered.png",
-    "ignatz/3-fearthedeer.png",
-    "ignatz/3-inspired.png",
-    "cynthia/0-battleready.png",            // High Roster Position
-    "cynthia/0-pokeball.png",
-    "cynthia/2-embarrassed.png",
-    "cynthia/2-sarcastic.png",
-    "fina/0-calm.png",                      // High Roster Position
-    "fina/0-sheepish.png",
-    "fina/2-shy.png",
-    "fina/3-gazing.png",
-    "revy/0-awkward.png",                   // High Roster Position
-    "revy/1-heart.png",
-    "revy/2-smoking.png",
-    "revy/3-laughing.png",
-    "jura/0-seductive.png",                 // High Roster Position
-    "jura/1-teasing.png",
-    "jura/2-interested.png",
-    "jura/3-vain.png",
-    "megumin/0-smug.png",                   // High Roster Position
-    "megumin/0-flustered.png",
-    "megumin/2-ecstatic.png",
-    "megumin/3-embarrassed.png",
-    "perona/0-calm.png",                    // High Roster Position
-    "perona/0-smiling.png",
-    "perona/1-enticed.png",
-    "perona/2-positive.png",
-    "pyrrha/0-calm.png",                    // High Roster Position
-    "pyrrha/0-awkward.png",
-    "pyrrha/1-horny.png",
-    "pyrrha/2-encourage.png",
-    "jessie/0-calm.png",                    // High Roster Position
-    "jessie/0-friendly.png",
-    "jessie/0-playful.png",
-    "jessie/0-curious.png",
-    "wikipe-tan/0-donations.png",           // High Roster Position
-    "wikipe-tan/0-casual.png",
-    "wikipe-tan/2-flirt.png",
-    "wikipe-tan/3-hornyfact.png",
-    "polly/0-Neutral.png",                  // High Roster Position
-    "polly/0-Flirty.png",
-    "polly/0-Excited.png",
-    "polly/0-Partying.png",
-    "ayano/0-happy.png",                    // Highlighted New Character
-    "ayano/0-taunting.png",
-    "ayano/0-interested.png",
-    "ayano/0-study.png",
-    "wasp/0-start.png",                     // Highlighted New Character
-    "wasp/0-flirt.png",
-    "wasp/0-excited.png",
-    "wasp/0-tease.png",
-    "yuno_uno/0-aa_select.png",             // Highlighted New Character
-    "yuno_uno/0-casual.png",
-    "yuno_uno/0-embarrassed.png",
-    "yuno_uno/0-happy_to_be_here.png",
-    "heris/0-calm.png",                     // Highlighted New Character
-    "heris/0-happy.png",
-    "heris/1-blush.png",
-    "heris/1-interested.png",
-    "dark_magician_girl/0-calm.png",        // Highlighted New Character
-    "dark_magician_girl/0-flirty.png",
-    "dark_magician_girl/0-happy.png",
-    "dark_magician_girl/0-interested.png",
-    "leon/0-idle.png",                      // Highlighted New Character
-    "leon/0-fingerguns.png",
-    "leon/0-grinning.png",
-    "leon/0-snarky.png",
-    "hatsune_miku/0-Casual.png",            // Has Recent Updates
-    "hatsune_miku/0-Cheeky.png",
-    "hatsune_miku/0-Encouraging.png",
-    "hatsune_miku/0-Excited.png",
-    "barbara/0-cheering.png",               // Has Recent Updates
-    "barbara/0-surprised.png",
-    "barbara/0-sheepish.png",
-    "barbara/0-happy.png",
-    "weiss_schnee/0-start.png",             // Has Recent Updates
-    "weiss_schnee/0-interested.png",
-    "weiss_schnee/0-sarcastic.png",
-    "weiss_schnee/0-aroused.png",
-    "kyou/0-calm.png",                      // Has Recent Updates
-    "kyou/0-sarcastic.png",
-    "kyou/2-shy.png",
-    "kyou/2-smug.png",
-    "critical_darling/0-portrait.png",      // Has Recent Updates
-    "critical_darling/0-ice.png",
-    "critical_darling/3-sing.png",
-    "critical_darling/3-rockin.png",
-    "sakura/0-calm.png",                    // Has Recent Updates
-    "sakura/0-hi5.png",
-    "sakura/1-smile.png",
-    "sakura/2-sing.png",
-    "sayori/0-excited.png",                 // Has Recent Updates
-    "sayori/1-happy.png",
-    "sayori/2-thinking.png",
-    "sayori/3-embarassed.png",
-    "noire/0-niya.png",                     // Has Recent Updates
-    "noire/0-smug.png",
-    "noire/0-teasing.png",
-    "noire/0-embarrassed.png",
-    "rosa/0-portrait.png",                  // Has Recent Updates
-    "rosa/0-horny.png",
-    "rosa/2-embarrassed.png",
-    "rosa/1-thinking.png",
-    "petra/0-select.png",                   // Has Recent Updates
-    "petra/0-wink.png",
-    "reskins/petra_war_outfit/0-happy.png",
-    "reskins/petra_war_outfit/0-horny.png",
-    "estelle/0-calm.png",                   // Has Recent Updates
-    "estelle/1-determind.png",
-    "estelle/2-lecture.png",
-    "estelle/3-brush.png",
-    "sucrose/0-curious.png",                // Has Recent Updates
-    "sucrose/0-aroused.png",
-    "sucrose/0-shy.png",
-    "sucrose/0-interested.png",
-    "takatoshi/0-Select.png",               // Has Recent Updates
-    "takatoshi/0-Yakisoba.png",
-    "takatoshi/3-Embarrassed.png",
-    "takatoshi/3-Yakisoba2.png",
-    "streaming-chan/0-neutral.png",         // Has Recent Updates
-    "streaming-chan/0-flusteredKawaii.png",
-    "streaming-chan/4-lossdang.png",
-    "streaming-chan/4-interview.png",
-    "wiifitfemale/0-StretchBack.png",       // Has Recent Updates
-    "wiifitfemale/0-calm.png",
-    "wiifitfemale/0-happy.png",
-    "wiifitfemale/0-interested.png",
-    "leonie/0-calm.png",                    // Has Recent Updates
-    "leonie/0-smug.png",
-    "reskins/leonie_war_outfit/1-grin.png",
-    "reskins/leonie_war_outfit/2-stretch-alt.png",
-    "kazuma/0-happy.png",                   // Has Recent Updates
-    "kazuma/0-appreciative.png",
-    "kazuma/1-victory.png",
-    "kazuma/3-smirk.png",
-    "saki/0-calm.png",                      // Has Recent Updates
-    "saki/0-happy.png",
-    "saki/0-determined.png",
-    "saki/0-horny.png",
-    "aella/0-portrait.png",                 // Has Recent Updates
-    "aella/0-competitive.png",
-    "aella/1-enthused.png",
-    "aella/2-horny.png",
-    "chara_dreemurr/0-devious.png",         // Has Recent Updates
-    "chara_dreemurr/0-relaxed.png",
-    "chara_dreemurr/0-aroused.png",
-    "chara_dreemurr/0-amused.png",
-    "magma_grunt/0-team_magma.png",         // Has Recent Updates
-    "magma_grunt/0-scheming2.png",
-    "magma_grunt/4-scheming.png",
-    "magma_grunt/4-horny_thoughts.png",
-    "larachel/0-calm.png",                  // Has Recent Updates
-    "larachel/1-boisterous.png",
-    "larachel/2-confident.png",
-    "larachel/3-dismissive.png",
-    "senko/0-interested.png",               // Has Recent Updates
-    "senko/0-araara.png",
-    "senko/2-hug.png",
-    "senko/2-pampering.png",
-    "fluttershy/0-kind2.png",               // Has Recent Updates
-    "fluttershy/0-flirty.png",
-    "fluttershy/0-amused.png",
-    "fluttershy/0-flattered.png",
-    "laevatein/0-default.png",              // Has Recent Updates
-    "laevatein/0-smile.png",
-    "laevatein/2-sceptical.png",
-    "laevatein/2-surprised.png",
-    "asuna_yuuki/0-overjoyed.png",          // Has Recent Updates
-    "asuna_yuuki/0-stripAh.png",
-    "asuna_yuuki/4-embarrassed.png",
-    "asuna_yuuki/4-pleased.png",
-    "rouge/0-calm.png",                     // Has Recent Updates
-    "rouge/0-mischievous.png",
-    "rouge/0-comms.png",
-    "rouge/0-flirty.png",
-    "dust/0-calm.png",                      // Has Recent Updates
-    "dust/0-victory.png",
-    "dust/1-pensive.png",
-    "dust/2-laugh.png",
-    "yshtola/0-calm.png",                   // Has Recent Updates
-    "yshtola/0-content.png",
-    "yshtola/0-coy.png",
-    "yshtola/0-snicker.png",
-    "kamina/0-point.png",                   // Has Recent Updates
-    "kamina/0-cross.png",
-    "kamina/0-happy.png",
-    "kamina/0-excited.png",
-    "samus_aran/0-portrait.png",            // Has Recent Updates
-    "samus_aran/1-introspective.png",
-    "samus_aran/1-curious.png",
-    "samus_aran/1-relaxed.png",
-    "tomoko/0-idle1.png",                   // Has Recent Updates
-    "tomoko/0-excited.png",
-    "tomoko/0-serene.png",
-    "tomoko/0-shy.png",
-    "may/0-calm.png",                       // Has Recent Updates
-    "may/0-happy.png",
-    "may/0-oopsy.png",
-    "may/0-cute.png",
-    "beatrix/0-curtsy.png",                 // Has Recent Updates
-    "beatrix/0-happy.png",
-    "beatrix/0-interested.png",
-    "beatrix/0-oops.png",
-    "lux/0-calm.png",                       // Has Recent Updates
-    "lux/0-cocky.png",
-    "lux/3-quizzical.png",
-    "lux/4-joyous.png",
-    "nagisa/0-clapping.png",                // Has Recent Updates
-    "nagisa/1-calm.png",
-    "nagisa/2-z_stripping.png",
-    "nagisa/3-embarrassed.png",
-    "supernova/0-entering.png",             // Has Recent Updates
-    "supernova/0-imagine.png",
-    "supernova/4-giggle.png",
-    "supernova/4-horny.png",
-    "mikan/0-happy.png",
-    "mikan/2-happy.png",
-    "mikan/0-explain.png",
-    "mikan/2-explain.png",
-    "cagliostro/0-Cutesy.png",
-    "reskins/cagliostro_alchemist_reborn/0-Excited.png",
-    "cagliostro/3-Smug.png",
-    "cagliostro/3-Grin.png",
-    "mari/0-tease.png",
-    "reskins/mari_thanksgiving/0-wink-2.png",
-    "reskins/mari_office/3-relaxed.png",
-    "mari/4-coy.png",
-    "reimu/0-select.png",                   // Highlighted New Character
-    "reimu/0-smug.png",
-    "reimu/0-bluffing.png",
-    "reimu/0-pleasant.png",
-    "mari_setogaya/0-happy.png",                   // Highlighted New Character
+    "komi-san/0-bashfulA.png",             // High Roster Position
+    "komi-san/0-excitedA.png",
+    "komi-san/0-portrait.png",
+    "komi-san/1-strippingA.png",
+    "mari_setogaya/0-happy.png",           // High Roster Position
     "mari_setogaya/1-grin.png",
     "mari_setogaya/3-silly.png",
     "mari_setogaya/4-after.png",
-    "erufuda/0-pleased.png",                   // Has Recent Updates
-    "erufuda/1-smug.png",
-    "erufuda/1-sucking.png",
-    "erufuda/3-eating.png",
-    "ryuji/0-cocky.png",                   // Has Recent Updates
-    "ryuji/2-cheerful.png",
-    "ryuji/4-what.png",
-    "ryuji/5-fingerguns.png",
-    "futaba/0-nyoro.png",                   // Has Recent Updates
-    "futaba/1-happy.png",
-    "futaba/2-bored.png",
-    "futaba/3-gremlin.png",
-    "videl/0-confident.png",                   // Has Recent Updates
-    "videl/1-flying.png",
-    "videl/4-happy.png",
-    "videl/5-embarrassed.png",
-    "yusuke/0-Excited.png",   // Highlighted New Character
-    "yusuke/3-Expository.png",
-    "yusuke/4-Confused.png",
-    "yusuke/4-Frame.png",
-    "sly_cooper/0-Select.png",
+    "revy/0-awkward.png",                  // High Roster Position
+    "revy/1-heart.png",
+    "revy/2-smoking.png",
+    "revy/3-laughing.png",
+    "kumatora/0-confident.png",            // High Roster Position
+    "kumatora/0-cheerful.png",
+    "kumatora/0-idle2.png",
+    "kumatora/0-stretching.png",
+    "jura/0-seductive.png",                // High Roster Position
+    "jura/1-teasing.png",
+    "jura/2-interested.png",
+    "jura/3-vain.png",
+    "yuri/0-calm.png",                     // High Roster Position
+    "yuri/0-happy.png",
+    "yuri/3-chat.png",
+    "yuri/3-blush.png",
+    "monika/0-writing-tip.png",            // High Roster Position
+    "monika/1-interested.png",
+    "monika/2-happy.png",
+    "monika/3-shy-happy.png",
+    "leon/0-idle.png",                     // High Roster Position
+    "leon/0-fingerguns.png",
+    "leon/0-grinning.png",
+    "leon/0-snarky.png",
+    "fina/0-calm.png",                     // High Roster Position
+    "fina/0-sheepish.png",
+    "fina/2-shy.png",
+    "fina/3-gazing.png",
+    "jim/0-Neutral.png",                   // High Roster Position
+    "jim/0-Confident.png",
+    "jim/0-Relaxed.png",
+    "jim/0-Selected.png",
+    "adrien/0-confident.png",              // High Roster Position
+    "adrien/0-sarcastic.png",
+    "adrien/2-wink.png",
+    "adrien/3-smug.png",
+    "noire/0-niya.png",                    // High Roster Position
+    "noire/0-smug.png",
+    "noire/0-teasing.png",
+    "noire/0-embarrassed.png",
+    "polly/0-Neutral.png",                 // High Roster Position
+    "polly/0-Flirty.png",
+    "polly/0-Excited.png",
+    "polly/0-Partying.png",
+    "amy/0-start.png",                     // High Roster Position
+    "amy/0-cheer.png",
+    "amy/1-singing.png",
+    "amy/1-chat.png",
+    "wikipe-tan/0-donations.png",          // High Roster Position
+    "wikipe-tan/0-casual.png",
+    "wikipe-tan/2-flirt.png",
+    "wikipe-tan/3-hornyfact.png",
+    "megumin/0-smug.png",                  // High Roster Position
+    "megumin/0-flustered.png",
+    "megumin/2-ecstatic.png",
+    "megumin/3-embarrassed.png",
+    "magma_grunt/0-team_magma.png",        // High Roster Position
+    "magma_grunt/0-scheming2.png",
+    "magma_grunt/4-scheming.png",
+    "magma_grunt/4-horny_thoughts.png",
+    "emi/0-roster.png",                    // High Roster Position
+    "sucrose/0-curious.png",               // High Roster Position
+    "sucrose/0-aroused.png",
+    "sucrose/0-shy.png",
+    "sucrose/0-interested.png",
+    "rosa/0-portrait.png",                 // High Roster Position
+    "rosa/0-horny.png",
+    "rosa/2-embarrassed.png",
+    "rosa/1-thinking.png",
+    "aqua_grunt/0-team_aqua.png",          // Highlighted New Character
+    "aqua_grunt/2-taunting.png",
+    "aqua_grunt/4-tease.png",
+    "aqua_grunt/5-leg_raised.png",
+    "anatoly/0-horny.png",                 // Highlighted New Character
+    "anatoly/1-embarrassed.png",
+    "anatoly/2-cute.png",
+    "anatoly/3-calm.png",
+    "arueshalae/0-neutral.png",            // Highlighted New Character
+    "nagatoro/0-peace.png",                // Highlighted New Character
+    "nagatoro/3-pose.png",
+    "nagatoro/1-strip.png",
+    "eichi/0-excited.png",                 // Highlighted New Character
+    "eichi/0-flirt_altc.png",
+    "eichi/2-flirt.png",
+    "eichi/3-tease.png",
+    "noelle/0-calm.png",                   // Highlighted New Character
+    "marinette/0-derrier.png",             // Highlighted New Character
+    "marinette/0-strippinghappy-b.png",
+    "marinette/2-relieved.png",
+    "marinette/4-excited.png",
+    "trixie/poses/0-wink.png",               // Highlighted New Character
+	"trixie/poses/1-flirt.png",
+	"trixie/poses/4-disappointed.png",
+	"trixie/poses/5-grumpy.png",
+    "binah/0-teatime.png",                 // Highlighted New Character
+    "binah/1-haughty.png",
+    "binah/2-quoth.png",
+    "binah/5-sadistic.png",
+    "lyralei/0-happy.png",                 // Highlighted New Character
+    "lyralei/1-embarrassed.png",
+    "lyralei/3-awkward.png",
+    "lyralei/5-stripped.png",
+    "bobobo/0-pumped.png",                 // Highlighted New Character
+    "bobobo/0-aside.png",
+    "bobobo/0-boredphone.png",
+    "bobobo/0-stance.png",
+    "aaravi/0-smug.png",                   // Highlighted New Character
+    "aaravi/1-excited.png",
+    "aaravi/3-confident.png",
+    "aaravi/4-surprised-blush.png",
+    "kaz/0-smile.png",                     // Highlighted New Character
+    "dunban/0-coverse.png",                 // Highlighted New Character
+	"dunban/0-dramatic.png",
+	"dunban/2-scheming.png",
+	"dunban/5-coverse.png",
+    "sly_cooper/0-Select.png",             // Has Recent Updates
     "sly_cooper/0-Comms+.png",
     "sly_cooper/0-Select.png",
     "sly_cooper/0-Comms+.png",
-    /* TODO: add two more for Sly, instead of using the same two twice */
-    "ringo_ando/0-bounceapple.png",
-    "ringo_ando/1-glad.png",
-    "ringo_ando/2-balanceapple.png",
-    "ringo_ando/3-bounceapple.png",
-    "hilda/0-conversational.png",
+    "wasp/0-start.png",                    // Has Recent Updates
+    "wasp/0-flirt.png",
+    "wasp/0-excited.png",
+    "wasp/0-tease.png",
+    "samus_aran/0-portrait.png",           // Has Recent Updates
+    "samus_aran/1-introspective.png",
+    "samus_aran/1-curious.png",
+    "samus_aran/1-relaxed.png",
+    "rarity_eg/0-acreative.png",               // Has Recent Updates
+	"rarity_eg/0-brelaxed.png",
+	"rarity_eg/0-cinterested.png",
+	"rarity_eg/4-ahappy.png",
+    "hatsune_miku/0-Casual.png",           // Has Recent Updates
+    "hatsune_miku/0-Cheeky.png",
+    "hatsune_miku/0-Encouraging.png",
+    "hatsune_miku/0-Excited.png",
+    "hilda/0-conversational.png",          // Has Recent Updates
     "hilda/1-relaxed.png",
     "hilda/2-smug.png",
     "hilda/3-flirty.png",
-    "joey/0-cheer.png",
-    "joey/2-approve.png",
-    "joey/3-wink.png",
-    "joey/4-hot.png",
-    "stocking/0-sipp.png",
-    "stocking/2-hex.png",
-    "stocking/3-stripping+.png",
-    "stocking/4-aroused.png",
-    "n/0-coNfused.png",
-    "n/4-Naturally.png",
-    "n/2-fiddliNg.png",
-    "n/6-iNform.png",
-    "nagatoro/0-peace.png",		// new character
-    "nagatoro/3-pose.png",
-    "nagatoro/1-strip.png",
-    "reskins/nagatoro_nekotoro/0-exh.png",
-	"binah/0-teatime.png",		// new character
-	"binah/1-haughty.png",
-	"binah/2-quoth.png",
-	"binah/5-sadistic.png",
-	"jin/0-Cracker.png",		// updated recently
-	"jin/0-Excited.png",
-	"jin/5-Stripped.png",
-	"jin/5-Happy.png",
-	"gloria/0-confident.png",	// updated recently
-	"gloria/0-neutral.png",
-	"gloria/1-smug.png",
-	"gloria/3-z_stripping.png",
-	"aqua_grunt/0-team_aqua.png",	// new
-	"aqua_grunt/2-taunting.png",
-	"aqua_grunt/4-tease.png",
-	"aqua_grunt/5-leg_raised.png",
-	"spooky/0-innocent.png",	// updated recently
-	"spooky/1-distracted.png",
-	"spooky/2-annoyed.png",
-	"spooky/2-horny.png",
-	"bobobo/0-pumped.png",	// new
-	"bobobo/0-aside.png",
-	"bobobo/0-boredphone.png",
-	"bobobo/0-stance.png",
-	"yunyun/0-Happy.png",	//	updated
-	"yunyun/3-Shy.png",
-	"yunyun/4-Posing2.png",
-	"yunyun/5-Facade.png",
-	"eichi/0-excited.png",	// new and updated
-	"eichi/0-flirt_altc.png",
-	"eichi/2-flirt.png",
-	"eichi/3-tease.png",
-	"caulifla/0-Confident.png",	// updated
-	"caulifla/0-Happy.png",
-	"caulifla/1-Laughing.png",
-	"caulifla/1-Thinking.png",
-	"myriam/0-confident.png", // new and updated
-	"myriam/2-normal.png",
-	"myriam/3-think.png",
-	"myriam/4-flattered.png",
-	"anatoly/0-horny.png",	// new
-	"anatoly/1-embarrassed.png",
-	"anatoly/2-cute.png",
-	"anatoly/3-calm.png",
-	"marinette/0-derrier.png", // major update
-	"marinette/0-strippinghappy-b.png",
-	"marinette/2-relieved.png",
-	"marinette/4-excited.png",
-	"lyralei/0-happy.png", // new
-	"lyralei/1-embarrassed.png",
-	"lyralei/3-awkward.png",
-	"lyralei/5-stripped.png",
-	"aaravi/0-smug.png", // new
-	"aaravi/1-excited.png",
-	"aaravi/3-confident.png",
-	"aaravi/4-surprised-blush.png",
-	
+    "sakura/0-calm.png",                   // Has Recent Updates
+    "sakura/0-hi5.png",
+    "sakura/1-smile.png",
+    "sakura/2-sing.png",
+    "critical_darling/0-portrait.png",     // Has Recent Updates
+    "critical_darling/0-ice.png",
+    "critical_darling/3-sing.png",
+    "critical_darling/3-rockin.png",
+    "ryuko/0-senketsu-happy.png",                   // Has Recent Updates
+	"ryuko/2-mako-sad.png",
+	"ryuko/3-pissed.png",
+	"ryuko/5-awkward.png",
+    "jin/0-Cracker.png",                   // Has Recent Updates
+    "jin/0-Excited.png",
+    "jin/5-Stripped.png",
+    "jin/5-Happy.png",
+    "lux/0-calm.png",                      // Has Recent Updates
+    "lux/0-cocky.png",
+    "lux/3-quizzical.png",
+    "lux/4-joyous.png",
+    "mercy/0-portrait.png",                // Has Recent Updates
+    "kazuma/0-happy.png",                  // Has Recent Updates
+    "kazuma/0-appreciative.png",
+    "kazuma/1-victory.png",
+    "kazuma/3-smirk.png",
+    "takatoshi/0-Select.png",              // Has Recent Updates
+    "takatoshi/0-Yakisoba.png",
+    "takatoshi/3-Embarrassed.png",
+    "takatoshi/3-Yakisoba2.png",
+    "caulifla/0-Confident.png",            // Has Recent Updates
+    "caulifla/0-Happy.png",
+    "caulifla/1-Laughing.png",
+    "caulifla/1-Thinking.png",
+    "reimu/0-select.png",                  // Has Recent Updates
+    "reimu/0-smug.png",
+    "reimu/0-bluffing.png",
+    "reimu/0-pleasant.png",
+    "spooky/0-innocent.png",               // Has Recent Updates
+    "spooky/1-distracted.png",
+    "spooky/2-annoyed.png",
+    "spooky/2-horny.png",
+    "asuna_yuuki/0-overjoyed.png",         // Has Recent Updates
+    "asuna_yuuki/0-stripAh.png",
+    "asuna_yuuki/4-embarrassed.png",
+    "asuna_yuuki/4-pleased.png",
+    "pinkie_pie/0-excited.png",                 // Has Recent Updates
+	"pinkie_pie/1-stripped.png",
+	"pinkie_pie/2-whatever.png",
+	"pinkie_pie/3-calm.png",
+    "sayori/0-excited.png",                // Has Recent Updates
+    "sayori/1-happy.png",
+    "sayori/2-thinking.png",
+    "sayori/3-embarassed.png",
+    "dawn/0-Idle.png",                     // Has Recent Updates
+    "myriam/0-confident.png",              // Has Recent Updates
+    "myriam/2-normal.png",
+    "myriam/3-think.png",
+    "myriam/4-flattered.png",
+    "wiifitfemale/0-StretchBack.png",      // Has Recent Updates
+    "wiifitfemale/0-calm.png",
+    "wiifitfemale/0-happy.png",
+    "wiifitfemale/0-interested.png",
+    "pyrrha/0-calm.png",                   // Has Recent Updates
+    "pyrrha/0-awkward.png",
+    "pyrrha/1-horny.png",
+    "pyrrha/2-encourage.png",
+    "yshtola/0-calm.png",                  // Has Recent Updates
+    "yshtola/0-content.png",
+    "yshtola/0-coy.png",
+    "yshtola/0-snicker.png",
+    "yuno_uno/0-aa_select.png",            // Has Recent Updates
+    "yuno_uno/0-casual.png",
+    "yuno_uno/0-embarrassed.png",
+    "yuno_uno/0-happy_to_be_here.png",
+    "petra/0-select.png",                  // Has Recent Updates
+    "petra/0-wink.png",
+    "videl/0-confident.png",               // Has Recent Updates
+    "videl/1-flying.png",
+    "videl/4-happy.png",
+    "videl/5-embarrassed.png",
+    "cagliostro/0-Cutesy.png",             // Has Recent Updates
+    "cagliostro/3-Smug.png",
+    "cagliostro/3-Grin.png",
+    "dark_magician_girl/0-calm.png",       // Has Recent Updates
+    "dark_magician_girl/0-flirty.png",
+    "dark_magician_girl/0-happy.png",
+    "dark_magician_girl/0-interested.png",
+    "yunyun/0-Happy.png",                  // Has Recent Updates
+    "yunyun/3-Shy.png",
+    "yunyun/4-Posing2.png",
+    "yunyun/5-Facade.png",
+    "aella/0-portrait.png",                // Has Recent Updates
+    "aella/0-competitive.png",
+    "aella/1-enthused.png",
+    "aella/2-horny.png",
+    "barbara/0-cheering.png",              // Has Recent Updates
+    "barbara/0-surprised.png",
+    "barbara/0-sheepish.png",
+    "barbara/0-happy.png",
+    "senko/0-interested.png",              // Has Recent Updates
+    "senko/0-araara.png",
+    "senko/2-hug.png",
+    "senko/2-pampering.png",
+    "rainbow_dash/0-smug.png",             // Has Recent Updates
+    "perona/0-calm.png",                   // Has Recent Updates
+    "perona/0-smiling.png",
+    "perona/1-enticed.png",
+    "perona/2-positive.png",
+    "turandot/0-seductive.png",            // Has Recent Updates
+    "rouge/0-calm.png",                    // Has Recent Updates
+    "rouge/0-mischievous.png",
+    "rouge/0-comms.png",
+    "rouge/0-flirty.png",
+    "may/0-calm.png",                      // Has Recent Updates
+    "may/0-happy.png",
+    "may/0-oopsy.png",
+    "may/0-cute.png",
+    "gloria/0-confident.png",              // Has Recent Updates
+    "gloria/0-neutral.png",
+    "gloria/1-smug.png",
+    "gloria/3-z_stripping.png",
+    "nagisa/0-clapping.png",               // Has Recent Updates
+    "nagisa/1-calm.png",
+    "nagisa/2-z_stripping.png",
+    "nagisa/3-embarrassed.png",
+    "ringo_ando/0-bounceapple.png",        // Has Recent Updates
+    "ringo_ando/1-glad.png",
+    "ringo_ando/2-balanceapple.png",
+    "ringo_ando/3-bounceapple.png",
+    "twilight/0-confident.png",                 // Has Recent Updates
+	"twilight/2-smart.png",
+	"reskins/twilight_sci-twi/0-calm.png",
+	"reskins/twilight_sci-twi/0-happy.png",
+    "estelle/0-calm.png",                  // Has Recent Updates
+    "estelle/1-determind.png",
+    "estelle/2-lecture.png",
+    "estelle/3-brush.png",
+    "fluttershy/0-kind2.png",              // Has Recent Updates
+    "fluttershy/0-flirty.png",
+    "fluttershy/0-amused.png",
+    "fluttershy/0-flattered.png",
+	"zoe/0-happy.png",
+    "zoe/0-fangirling.png",
+    "zoe/0-smug.png",
+    "zoe/3-blush.png",
 ];
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
