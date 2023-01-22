@@ -1445,12 +1445,12 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="1369" label="decent" folder="~Female" sort="0" />
         <label id="1370" label="decent" folder="~Female" sort="0" />
         <label id="1371" label="red hair" folder="~Female" sort="0" />
-        <label id="1372" label="generic" folder="~Female" sort="0" />
+        <label id="1372" label="not naked" folder="~Female" sort="0" />
         <label id="1373" label="8Timer&lt;8" folder="~Female" sort="0" />
         <label id="1374" label="generic" folder="~Female" sort="0" />
         <label id="1375" label="8Timer&lt;8, not exposed" folder="~Female" sort="0" />
         <label id="1376" label="8Timer&gt;=8" folder="~Female" sort="0" />
-        <label id="1377" label="not decent" folder="~Female" sort="0" />
+        <label id="1377" label="not decent, not naked" folder="~Female" sort="0" />
         <label id="1378" label="8Timer&gt;=8, other exposed" folder="~Female" sort="0" />
         <label id="1379" label="generic" folder="~Female" sort="0" />
         <label id="1380" label="stage 0" folder="~Male1Acc" sort="0" />
@@ -1567,7 +1567,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="1488" label="generic" folder="~Female2Min" sort="0" />
         <label id="1489" label="thigh-highs" folder="~Female2Min" sort="0" />
         <label id="1490" label="thigh-highs" folder="~Female2Min" sort="0" />
-        <label id="1491" label="generic" folder="~Female2Min" sort="0" />
+        <label id="1491" label="not exposed" folder="~Female2Min" sort="0" />
         <label id="1492" label="not exhibitionist" folder="~Female2Min" sort="0" />
         <label id="1493" label="generic" folder="~Female2Min" sort="0" />
         <label id="1494" label="generic" folder="~Female2Min" sort="0" />
@@ -1576,13 +1576,13 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="1497" label="saves the name of the item" folder="~Female2Min" sort="0" />
         <label id="1498" label="generic" folder="~Female2Min" sort="0" />
         <label id="1499" label="decent, 6-7 layers left" folder="~Female2Min" sort="0" />
-        <label id="1500" label="8Timer&gt;=8" folder="~Female2Min" sort="0" />
+        <label id="1500" label="8T&gt;=8, not exp" folder="~Female2Min" sort="0" />
         <label id="1501" label="generic" folder="~Female2Min" sort="0" />
         <label id="1502" label="generic" folder="~Female2Min" sort="0" />
         <label id="1503" label="generic" folder="~Female2Min" sort="0" />
         <label id="1504" label="2+ female" folder="~Female2Min" sort="0" />
         <label id="1505" label="generic" folder="~Female2Min" sort="0" />
-        <label id="1506" label="8Timer&lt;8" folder="~Female2Min" sort="0" />
+        <label id="1506" label="exp" folder="~Female2Min" sort="0" />
         <label id="1507" label="stage 1-8, not deity" folder="~Male3Maj" sort="0" />
         <label id="1508" label="generic" folder="~Male3Maj" sort="0" />
         <label id="1509" label="stage 0, lower" folder="~Male3Maj" sort="0" />
@@ -2267,6 +2267,13 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2189" label="1 - here on a date? player losing [3]" color="3" folder="MariSetogaya" sort="0" />
         <label id="2190" label="1 - here on a date? [4]" color="3" folder="MariSetogaya" sort="0" />
         <label id="2191" label="1 - here on a date? [5]" color="3" folder="MariSetogaya" sort="0" />
+        <label id="2192" label="topless" folder="~Female2Min" sort="0" />
+        <label id="2193" label="crotch visible" folder="~Female2Min" sort="0" />
+        <label id="2194" label="8T&lt;8, not exp" folder="~Female2Min" sort="0" />
+        <label id="2195" label="8T&gt;=8, exp" folder="~Female2Min" sort="0" />
+        <label id="2196" label="naked" folder="~Female" sort="0" />
+        <label id="2197" label="" color="6" folder="" sort="0" />
+        <label id="2198" label="" color="3" folder="1Reactions" sort="0" />
     </labels>
     <prefixes>
         <prefix>no1</prefix>
@@ -2275,7 +2282,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <prefix>no-sleeves</prefix>
         <prefix>onlytail</prefix>
     </prefixes>
-    <nextId>2191</nextId>
+    <nextId>2198</nextId>
     <markers>
         <marker scope="Public" name="adrien_costume1" />
         <marker scope="Public" name="adrien_costume2" />
@@ -3085,6 +3092,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="yshtola3" />
         <marker scope="Public" name="yshtola31" />
         <marker scope="Public" name="yshtola32" />
+        <marker scope="Public" name="YunyunGameStart" />
         <marker scope="Public" name="yuri_book" />
         <marker scope="Public" name="yuri_religion1" />
         <marker scope="Public" name="yuri_religion2" />
