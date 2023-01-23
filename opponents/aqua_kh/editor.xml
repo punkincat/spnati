@@ -88,6 +88,7 @@
         <response id="382" opponent="cheryl" opponentId="678" />
         <response id="383" opponent="cheryl" opponentId="679" />
         <response id="388" opponent="kyouko_toshinou" opponentId="241" />
+        <response id="389" opponent="nagatoro" opponentId="1726" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -419,11 +420,11 @@
         <label id="322" label="" folder="Responses" sort="0" />
         <label id="323" label="" folder="Responses" sort="0" />
         <label id="324" label="" folder="Tag Filtered" sort="0" />
-        <label id="325" label="" folder="Responses" sort="0" />
+        <label id="325" label="" color="3" folder="Responses" sort="0" />
         <label id="326" label="" folder="Targets" sort="0" />
         <label id="327" label="" folder="Targets" sort="0" />
-        <label id="328" label="" folder="Targets" sort="0" />
-        <label id="329" label="" folder="Targets" sort="0" />
+        <label id="328" label="" color="3" folder="Targets" sort="0" />
+        <label id="329" label="" color="3" folder="Targets" sort="0" />
         <label id="330" label="older sister 2" folder="Responses" sort="0" />
         <label id="331" label="" folder="Responses" sort="0" />
         <label id="332" label="" folder="Lux" sort="0" />
@@ -482,8 +483,24 @@
         <label id="386" label="" folder="Targets" sort="0" />
         <label id="387" label="" folder="Backgrounds" sort="0" />
         <label id="388" label="" folder="Responses" sort="0" />
+        <label id="389" label="" folder="Responses" sort="0" />
+        <label id="390" label="" folder="Targets" sort="0" />
+        <label id="391" label="" folder="Other Targets" sort="0" />
+        <label id="392" label="" folder="Other Targets" sort="0" />
+        <label id="393" label="Revealing Chest First Strip (0-3 rounds)" folder="Situations" sort="0" />
+        <label id="394" label="Revealing Chest First Strip (4+ rounds, no visible fem chest)" folder="Situations" sort="0" />
+        <label id="395" label="" folder="Human" sort="0" />
+        <label id="396" label="skirt - no underwear" folder="" sort="0" />
+        <label id="397" label="skirt - no underwear" folder="" sort="0" />
+        <label id="398" label="" folder="Hand Follow-Ups" sort="0" />
+        <label id="399" label="" folder="Hand Follow-Ups" sort="0" />
+        <label id="400" label="" folder="Ai Changes" sort="0" />
+        <label id="401" label="target flies during forfeit" folder="Tag Filtered" sort="0" />
+        <label id="402" label="target flies during forfeit" folder="Tag Filtered" sort="0" />
+        <label id="403" label="" folder="Targets" sort="0" />
+        <label id="404" label="target flies during forfeit" folder="Tag Filtered" sort="0" />
     </labels>
-    <nextId>388</nextId>
+    <nextId>404</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="aqua_adora_horde01" />
@@ -558,11 +575,14 @@
         <marker scope="Public" name="aqua_meia_self0c" />
         <marker scope="Public" name="aqua_miku_strip1a" />
         <marker scope="Public" name="aqua_miku_strip1b" />
+        <marker scope="Public" name="aqua_miku_strip1c" />
         <marker scope="Public" name="aqua_miku_strip2a" />
         <marker scope="Public" name="aqua_nagatoro_extra_last_resp">Responds to a line Nagatoro might say about taking off an extra item last</marker>
         <marker scope="Public" name="aqua_nagatoro_s0a" />
         <marker scope="Public" name="aqua_nagatoro_s2a" />
+        <marker scope="Public" name="aqua_nagatoro_s2b" />
         <marker scope="Public" name="aqua_nagatoro_self0a" />
+        <marker scope="Public" name="aqua_nagatoro_self0b" />
         <marker scope="Public" name="aqua_pa15_jobResp">Dialogue to pa15</marker>
         <marker scope="Public" name="aqua_petra_keyblade1" />
         <marker scope="Public" name="aqua_petra_keyblade2" />
@@ -650,6 +670,7 @@
         <marker scope="Public" name="lux_light_puns_start" />
         <marker scope="Public" name="manhunter">Targeting someone who is good at seducing men (or assumed to be)</marker>
         <marker scope="Public" name="mirage_arena">Mentions a bonus game area from KH:BBS</marker>
+        <marker scope="Public" name="mirage_arena2" />
         <marker scope="Public" name="nagatoro_butt2_react" />
         <marker scope="Public" name="oppselected_aqua_konosuba">Aqua from Konosuba is an opponent when this Aqua has just been selected</marker>
         <marker scope="Private" name="player_pogchamp">Player named themself Pogchamp or variants</marker>
@@ -669,7 +690,9 @@
         <marker scope="Public" name="sympathy_throw">Her AI gets a little bit lower if she is sympathetic to other characters</marker>
         <marker scope="Public" name="T_AquaKH_KeybladeSummon_Resp" />
         <marker scope="Public" name="tao02" />
+        <marker scope="Public" name="target_flies_forfeit" />
         <marker scope="Public" name="tell_us_a_secret">"Maybe the next person to lose should tell us a secret about themselves!"</marker>
+        <marker scope="Public" name="tell_us_a_secret2" />
         <marker scope="Public" name="trixie_chest_joke">Joke about chest (boobs) and chest (treasure chest)</marker>
         <marker scope="Public" name="unique_world_feeling" />
         <marker scope="Public" name="vocaloid_start_ff" />
