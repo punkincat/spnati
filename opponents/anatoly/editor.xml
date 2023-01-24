@@ -92,6 +92,12 @@
         <response id="240" opponent="dunban" opponentId="314" />
         <response id="242" opponent="dwight" opponentId="1" />
         <response id="243" opponent="dwight" opponentId="3" />
+        <response id="256" opponent="dunban" opponentId="316" />
+        <response id="257" opponent="dunban" opponentId="317" />
+        <response id="258" opponent="eichi" opponentId="777" />
+        <response id="259" opponent="eichi" opponentId="778" />
+        <response id="260" opponent="nagatoro" opponentId="1175" />
+        <response id="261" opponent="nagatoro" opponentId="1176" />
     </responses>
     <notes>
         <note id="6">Translations: 
@@ -262,7 +268,7 @@
         <label id="202" label="" folder="Character Targets" sort="0" />
         <label id="203" label="" folder="Character Targets" sort="0" />
         <label id="204" label="" folder="Character Targets" sort="0" />
-        <label id="206" label="" folder="Character Targets" sort="0" />
+        <label id="206" label="Dunban" folder="Dunban" sort="0" />
         <label id="207" label="" folder="Tag Targets" sort="0" />
         <label id="209" label="" folder="Tag Targets" sort="0" />
         <label id="210" label="" folder="Tag Targets" sort="0" />
@@ -273,18 +279,20 @@
         <label id="215" label="" folder="Character Targets" sort="0" />
         <label id="216" label="" folder="Tag Targets" sort="0" />
         <label id="217" label="" folder="Tag Targets" sort="0" />
-        <label id="223" label="" folder="Character Targets" sort="0" />
-        <label id="228" label="" folder="Character Targets" sort="0" />
-        <label id="233" label="" folder="Character Targets" sort="0" />
-        <label id="234" label="" folder="Character Targets" sort="0" />
+        <label id="223" label="" folder="Dunban" sort="0" />
+        <label id="228" label="" folder="Dunban" sort="0" />
+        <label id="233" label="" folder="Dunban" sort="0" />
+        <label id="234" label="" folder="Dunban" sort="0" />
         <label id="238" label="" folder="Box of Chocolates" sort="0" />
         <label id="239" label="" folder="Character Targets" sort="0" />
         <label id="241" label="" folder="Character Targets" sort="0" />
         <label id="250" label="" folder="Character Targets" sort="0" />
         <label id="251" label="" folder="Character Targets" sort="0" />
         <label id="252" label="" folder="Character Targets" sort="0" />
+        <label id="240" label="" folder="Dunban" sort="0" />
+        <label id="257" label="" folder="Dunban" sort="0" />
     </labels>
-    <nextId>252</nextId>
+    <nextId>261</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="9" />
@@ -334,20 +342,30 @@
         <marker scope="Public" name="dunban_ms6a" />
         <marker scope="Public" name="dunban_ms6b" />
         <marker scope="Public" name="dunban_ms7" />
+        <marker scope="Public" name="dunban_s1a" />
+        <marker scope="Public" name="dunban_s3a" />
         <marker scope="Public" name="dunban_s4a" />
         <marker scope="Public" name="dunban_startmasta" />
         <marker scope="Public" name="dunban_startmastb" />
         <marker scope="Public" name="dunban_startmastc" />
         <marker scope="Public" name="dunbanreply_ms1a" />
+        <marker scope="Public" name="dwight_chest" />
+        <marker scope="Public" name="dwight_chest2" />
         <marker scope="Public" name="dwight_idle" />
         <marker scope="Public" name="dwight_ms1" />
         <marker scope="Public" name="dwight_ms1a" />
+        <marker scope="Public" name="dwight_s1" />
+        <marker scope="Public" name="dwightreply_ms0" />
+        <marker scope="Public" name="dwightreply_s0" />
+        <marker scope="Public" name="eichi_as1" />
+        <marker scope="Public" name="eichi_as2" />
         <marker scope="Public" name="eichi_ms1a" />
         <marker scope="Public" name="eichi_ms2a" />
         <marker scope="Public" name="eichi_replyms1a" />
         <marker scope="Public" name="eichi_s1a" />
         <marker scope="Public" name="eichi_s2a" />
         <marker scope="Public" name="eichireply_ms2a" />
+        <marker scope="Public" name="eichireply_ms3" />
         <marker scope="Public" name="eichireply_s1a" />
         <marker scope="Public" name="fantasyenable" />
         <marker scope="Public" name="fantasystart" />
@@ -392,6 +410,7 @@
         <marker scope="Public" name="kuma_ms1a" />
         <marker scope="Public" name="kumatorareply_as1a" />
         <marker scope="Public" name="kumatorareply_ms1a" />
+        <marker scope="Public" name="kumatorareply_ms2" />
         <marker scope="Public" name="kumatorareply_s1a" />
         <marker scope="Public" name="lonely" />
         <marker scope="Public" name="losttemper" />
@@ -425,6 +444,7 @@
         <marker scope="Public" name="meia_ms1a" />
         <marker scope="Public" name="meia_ms2a" />
         <marker scope="Public" name="meiareply_ms1a" />
+        <marker scope="Public" name="nagatoro_as1" />
         <marker scope="Public" name="nagatoro_competition" />
         <marker scope="Public" name="nagatoro_idle" />
         <marker scope="Public" name="nagatoro_ms1a" />
@@ -433,11 +453,14 @@
         <marker scope="Public" name="nagatoro_replys1" />
         <marker scope="Public" name="nagatoro_s2a" />
         <marker scope="Public" name="nagatororeply_ms1a" />
+        <marker scope="Public" name="nagatororeply_ms2" />
         <marker scope="Public" name="nanokotreply_ms1a" />
         <marker scope="Public" name="nanokotreply_s1a" />
         <marker scope="Public" name="natsuki_ms1a" />
         <marker scope="Public" name="okino_ms4a" />
         <marker scope="Public" name="okino_reply1a" />
+        <marker scope="Public" name="okino_s4" />
+        <marker scope="Public" name="okinoreply_as2" />
         <marker scope="Public" name="paskaleaves" />
         <marker scope="Public" name="peptalk" />
         <marker scope="Public" name="petrareply_ms1a" />
