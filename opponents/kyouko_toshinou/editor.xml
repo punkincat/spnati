@@ -153,11 +153,11 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="111" label="" folder="Sexy poses" sort="5" />
         <label id="112" label="Sexy pose" folder="" sort="0" />
         <label id="115" label="Shoes" folder="Specific items" sort="0" />
-        <label id="116" label="Shoes" folder="Specific items" sort="2" />
+        <label id="116" label="Shoes" folder="Specific items" sort="0" />
         <label id="117" label="Shoes" folder="Specific items" sort="0" />
-        <label id="118" label="Shoes" folder="Specific items" sort="3" />
-        <label id="119" label="Socks" folder="Specific items" sort="4" />
-        <label id="120" label="Socks" folder="Specific items" sort="5" />
+        <label id="118" label="Shoes" folder="Specific items" sort="0" />
+        <label id="119" label="Socks" folder="Specific items" sort="0" />
+        <label id="120" label="Socks (K will remove with shoes)" folder="Specific items" sort="5" />
         <label id="121" label="Glasses" folder="Specific items" sort="0" />
         <label id="122" label="Amusement Club" folder="Exposition" sort="0" />
         <label id="123" label="Removing minor, indecent" folder="Minor/Accessory late" sort="3" />
@@ -295,13 +295,36 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="256" label="Pretty happy (Mari mid stages)" folder="" sort="0" />
         <label id="257" label="Pretty happy (Mari late stages)" folder="" sort="0" />
         <label id="258" label="Handful?" folder="" sort="0" />
+        <label id="259" label="Worst strip ever" folder="" sort="0" />
+        <label id="260" label="Shoes" folder="Specific items" sort="0" />
+        <label id="261" label="Shoes (socks separate)" folder="Specific items" sort="0" />
+        <label id="262" label="Shoes" folder="Specific items" sort="0" />
+        <label id="263" label="Shoes (separate thigh-highs)" folder="Specific items" sort="0" />
+        <label id="264" label="Shoes" folder="Specific items" sort="0" />
+        <label id="265" label="Shoes (indecent)" folder="Specific items" sort="0" />
+        <label id="266" label="Shoes (socks separate)" folder="Specific items" sort="0" />
+        <label id="267" label="Shoes (socks separate)" folder="Specific items" sort="0" />
+        <label id="268" label="Shoes" folder="Specific items" sort="0" />
+        <label id="269" label="Shoes (still decent)" folder="Specific items" sort="0" />
+        <label id="270" label="Shoes" folder="Specific items" sort="0" />
+        <label id="271" label="Hair decoration" folder="Specific items" sort="0" />
+        <label id="272" label="Hair decoration (cursed hair)" folder="Specific items" sort="0" />
+        <label id="273" label="" folder="Specific items" sort="0" />
+        <label id="274" label="Thigh-highs (not exposed)" folder="Specific items" sort="0" />
+        <label id="275" label="Thigh-highs (exposed but not naked)" folder="Specific items" sort="0" />
+        <label id="276" label="Thigh-highs (naked)" folder="Specific items" sort="0" />
+        <label id="277" label="Exposed" folder="Minor/Accessory late" sort="0" />
+        <label id="278" label="Indecent" folder="Minor/Accessory late" sort="0" />
+        <label id="279" label="Naked" folder="Minor/Accessory late" sort="0" />
     </labels>
-    <nextId>258</nextId>
+    <nextId>279</nextId>
     <markers>
+        <marker scope="Private" name="B_">Background-related markers</marker>
         <marker scope="Public" name="B_DarkTricks">Dark backgrounds</marker>
         <marker scope="Public" name="B_Inventory_Booth">Inventory background</marker>
         <marker scope="Public" name="B_Inventory_PokerVibes">Inventory background</marker>
         <marker scope="Public" name="B_School_OldUniform">School related backgrounds</marker>
+        <marker scope="Private" name="D_">Random "sometimes" dialogue</marker>
         <marker scope="Public" name="D_BadHandTrick">Kyouko will bluff on a good hand once per game.</marker>
         <marker scope="Public" name="D_Boobies">Boobies? Boobies.</marker>
         <marker scope="Public" name="D_CardsOnBreak">Where are the good cards? How are they?</marker>
@@ -318,6 +341,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="D_ToplessSquad">Triple Topless</marker>
         <marker scope="Public" name="D_WhatIfJunk">Predicting a low-scoring hand.</marker>
         <marker scope="Public" name="E_AmusementClub">The club's been out a room for a while now.</marker>
+        <marker scope="Private" name="F_">Tag filters</marker>
         <marker scope="Public" name="F_Artist_CompareStyles">Assuming they draw like she does.</marker>
         <marker scope="Public" name="F_Artist_CreationDestination">What they do with their creations.</marker>
         <marker scope="Public" name="F_Camera_SexyPhoto">Kyouko pulls a "sexy" pose if someone brings a camera.</marker>
@@ -325,10 +349,12 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="F_Exhibitionist_TooExcited">Even she's not that excited.</marker>
         <marker scope="Public" name="F_SchoolUniform_Why">Lots of horny students at the Inventory</marker>
         <marker scope="Public" name="F_SmashBros">The Smash characters at the table make her want to play it herself.</marker>
+        <marker scope="Private" name="Q_">Question prompts</marker>
         <marker scope="Public" name="Q_HighTension">"High Tension" rules to... make the game more intense?</marker>
         <marker scope="Public" name="Q_OtherStripGames">Extremely unusual but apparently not non-existent if xkcd is to be believed</marker>
         <marker scope="Public" name="Q_PlayCards">Never mind that everyone just got done playing a card game.</marker>
         <marker scope="Public" name="Q_SkinnyDipping">The water's right there. You might as well.</marker>
+        <marker scope="Private" name="S_">Self strip related</marker>
         <marker scope="Public" name="S_FullTomato">Self Stripped - Both her bra and panties—tomato themed—are visible.</marker>
         <marker scope="Public" name="S_GodivaHair">Early in first topless stage - the barely visible nipples</marker>
         <marker scope="Public" name="S_NoRibbonOrSidetails">First hand on stage 7 - Kyouko took away her ribbon and sidetails at the same time, making a pretty jarring change of appearance. (Default outfit)</marker>
@@ -337,6 +363,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="S_TomatoesRevealed">Self Stripped - The tomato pattern on her underwear is visible.</marker>
         <marker scope="Public" name="S_Uniform">Self Stripping 2 - Explain the uniform (Default outfit)</marker>
         <marker scope="Public" name="SlyCooper_PantsOffA">Sly Cooper Stripping 0</marker>
+        <marker scope="Private" name="T_">Character targets</marker>
         <marker scope="Public" name="T_Amalia_Cheating">Amalia First hand stage 5</marker>
         <marker scope="Public" name="T_AquaKH_KeybladeSummon">Aqua Stage 2 Hand=Any</marker>
         <marker scope="Public" name="T_AquaKH_OStrip1LanesBetween">Aqua Stripping 1</marker>
@@ -398,9 +425,11 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Setogaya_Strip2LewdStuff">Self Must Strip 2</marker>
         <marker scope="Public" name="T_Setogaya_Strip2Stripping">Self Stripped 3</marker>
         <marker scope="Public" name="T_TripleKyokoKyou_Confusing">Kyoko Kirigiri and Kyou Fujibayashi selected, player named Kyouko or Kyoko</marker>
+        <marker scope="Public" name="T_YunoUno_Gif">GIF or GIF?</marker>
         <marker scope="Public" name="T_YunoUno_Imitate">Copies Yuno's "ghost" trick.</marker>
         <marker scope="Public" name="T_YunoUno_Strip0Planning">Self Must Strip 0</marker>
         <marker scope="Public" name="T_YunoUno_Strip1PlayingDumb">Self Must Strip 1</marker>
+        <marker scope="Private" name="Z_">Intenal state. Vast majority of this will only be relevant to Kyouko herself.</marker>
         <marker scope="Public" name="Z_ComuketSoon">Set when Comuket is less than two weeks away. (That is, the first couple weeks of August and last couple weeks of December; the real-life Comiket is held around the end of those time frames)</marker>
         <marker scope="Private" name="Z_DontFixHair">Prevent Kyouko from fixing her hair on the Game Over case.</marker>
         <marker scope="Private" name="Z_Finished">Sets up the global case where Kyouko fixes her hair.</marker>
@@ -408,7 +437,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Private" name="Z_JacketOnly">Game over: Kyouko puts her jacket back on.</marker>
         <marker scope="Public" name="Z_PlayerHasSeenRibbonTrick">Kyouko has taken her ribbon off in her default outfit at some point.</marker>
         <marker scope="Public" name="Z_PlayerWearingRibbon">The player wore the Kyouko's Ribbon collectible to the game</marker>
-        <marker scope="Public" name="Z_PlayerWornRibbon">The player has worn the Kyouko's Ribbon collectible in the past.</marker>
+        <marker scope="Private" name="Z_PlayerWornRibbon">The player has worn the Kyouko's Ribbon collectible in the past.</marker>
         <marker scope="Public" name="Z_RemovedCollectibleRibbon">The player brought Kyouko's ribbon but took it off.</marker>
         <marker scope="Private" name="Z_SmallStripLastHand">People keep taking off small stuff, meanwhile Kyouko's the only one who's down to her underwear.</marker>
         <marker scope="Private" name="Z_UnderwearCount">Count how many pairs of underwear someone's wearing.</marker>
@@ -442,6 +471,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         </recipe>
     </recipes>
     <pendingLines>
+        <line>Distant future art changes: Ping Storm and Rem</line>
         <line>Markerless outfit targets</line>
         <line>I need to notify the below characters' authors when Kyouko gets the tomato costume because it will break those interactions</line>
         <line>Characters that target ribbon removal early: Okino</line>
