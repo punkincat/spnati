@@ -263,7 +263,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <note id="766">This line is conditional on its own response, as it was written after the response. It would be better to make Beatrix's line conditional on this line's marker.</note>
         <note id="789">This case does not require Barbara's NagisaSocks2A case, at it makes sense even if the chain was broken.</note>
         <note id="22">This marker name is outdated, but Fina and Twisted Fate rely on it to reply.</note>
-        <note id="982">This line has manual priority to allow it to play only when Nagisa doesn't have a different targeted line to play.</note>
+        <note id="982">This line has manual priority to allow it to play only when Nagisa doesn't have a different targeted line to play. Note that this doesn't seem to work when the human player is the target, and I'm unsure why. But it does work when another non-Meia opponent is the target.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Maid Cafe" sort="30" />
