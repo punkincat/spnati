@@ -2599,7 +2599,7 @@ function addTriggers(triggers, newTriggers) {
 Opponent.prototype.findBehaviour = function(triggers, opp, volatileOnly) {
     /* get the AI stage */
     var stageNum = this.stage;
-    var bestMatchPriority = 0;
+    var bestMatchPriority = -10000;
     if (volatileOnly && this.chosenState && this.chosenState.parentCase) {
         bestMatchPriority = this.chosenState.parentCase.priority + 1;
     }
