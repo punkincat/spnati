@@ -212,6 +212,7 @@
         <response id="293" opponent="aqua_kh" opponentId="209" />
         <response id="294" opponent="may" opponentId="380" />
         <response id="295" opponent="may" opponentId="378" />
+        <response id="296" opponent="bobobo" opponentId="512" />
     </responses>
     <notes>
         <note id="273">It's well established in FFXIV that healing magic cannot mend grevious wounds or regrow limbs. Just want to make it clear that this is not a lead in to Y'shtola trying to fix Dunban's injury, but seeing as she doesn't know the extent/nature of the damage she would naturally offer to heal him since it's well within her ability to fix more mundane injuries.</note>
@@ -220,7 +221,7 @@
         <prefix>op</prefix>
         <prefix>op-</prefix>
     </prefixes>
-    <nextId>295</nextId>
+    <nextId>296</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="aaravi_resp0_1" />
@@ -647,6 +648,7 @@
         <marker scope="Public" name="Louisoix" />
         <marker scope="Public" name="Lyse" />
         <marker scope="Public" name="LyseCont" />
+        <marker scope="Public" name="MaBo_cheese" />
         <marker scope="Public" name="Magical" />
         <marker scope="Public" name="Magnai" />
         <marker scope="Public" name="Mari_react_N" />
@@ -672,6 +674,49 @@
         <marker scope="Public" name="Mari_s2_1" />
         <marker scope="Public" name="Mari_s2_2" />
         <marker scope="Public" name="Mari_s2_3" />
+        <marker scope="Public" name="maria_resp0_1" />
+        <marker scope="Public" name="maria_resp0_2" />
+        <marker scope="Public" name="maria_resp0_3" />
+        <marker scope="Public" name="maria_resp1_1" />
+        <marker scope="Public" name="maria_resp1_2" />
+        <marker scope="Public" name="maria_resp1_3" />
+        <marker scope="Public" name="maria_resp2_1" />
+        <marker scope="Public" name="maria_resp2_2" />
+        <marker scope="Public" name="maria_resp2_3" />
+        <marker scope="Public" name="maria_resp3_1" />
+        <marker scope="Public" name="maria_resp3_2" />
+        <marker scope="Public" name="maria_resp3_3" />
+        <marker scope="Public" name="maria_resp4_1" />
+        <marker scope="Public" name="maria_resp4_2" />
+        <marker scope="Public" name="maria_resp4_3" />
+        <marker scope="Public" name="maria_resp5_1a" />
+        <marker scope="Public" name="maria_resp5_1b" />
+        <marker scope="Public" name="maria_resp5_2a" />
+        <marker scope="Public" name="maria_resp5_2b" />
+        <marker scope="Public" name="maria_resp5_3a" />
+        <marker scope="Public" name="maria_resp5_3b" />
+        <marker scope="Public" name="maria_resp6_1" />
+        <marker scope="Public" name="maria_resp6_2" />
+        <marker scope="Public" name="maria_resp6_3" />
+        <marker scope="Public" name="maria_resp7_1" />
+        <marker scope="Public" name="maria_resp7_2" />
+        <marker scope="Public" name="maria_resp7_3" />
+        <marker scope="Public" name="Maria_s0_1" />
+        <marker scope="Public" name="Maria_s0_2" />
+        <marker scope="Public" name="Maria_s0_3" />
+        <marker scope="Public" name="Maria_s1_1" />
+        <marker scope="Public" name="Maria_s1_2" />
+        <marker scope="Public" name="Maria_s1_3" />
+        <marker scope="Public" name="Maria_s2_1" />
+        <marker scope="Public" name="Maria_s2_2" />
+        <marker scope="Public" name="Maria_s2_3" />
+        <marker scope="Public" name="maria_s3_1" />
+        <marker scope="Public" name="Maria_s3_1" />
+        <marker scope="Public" name="Maria_s3_2" />
+        <marker scope="Public" name="Maria_s3_3" />
+        <marker scope="Public" name="Maria_s4_1" />
+        <marker scope="Public" name="Maria_s4_2" />
+        <marker scope="Public" name="Maria_s4_3" />
         <marker scope="Public" name="MariS_" />
         <marker scope="Public" name="MasterMatoya" />
         <marker scope="Public" name="Matoya" />
@@ -782,6 +827,48 @@
         <marker scope="Public" name="Revy_s0_1" />
         <marker scope="Public" name="revy_summer_resp0_1" />
         <marker scope="Public" name="Revy_Summer_resp0_1" />
+        <marker scope="Public" name="roll_resp0_1" />
+        <marker scope="Public" name="roll_resp0_2" />
+        <marker scope="Public" name="roll_resp0_3" />
+        <marker scope="Public" name="roll_resp1_1" />
+        <marker scope="Public" name="roll_resp1_2" />
+        <marker scope="Public" name="roll_resp1_3" />
+        <marker scope="Public" name="roll_resp2_1" />
+        <marker scope="Public" name="roll_resp2_2" />
+        <marker scope="Public" name="roll_resp2_3" />
+        <marker scope="Public" name="roll_resp3_1" />
+        <marker scope="Public" name="roll_resp3_2" />
+        <marker scope="Public" name="roll_resp3_3" />
+        <marker scope="Public" name="roll_resp4_1" />
+        <marker scope="Public" name="roll_resp4_2" />
+        <marker scope="Public" name="roll_resp4_3" />
+        <marker scope="Public" name="roll_resp5_1" />
+        <marker scope="Public" name="roll_resp5_2" />
+        <marker scope="Public" name="roll_resp5_3" />
+        <marker scope="Public" name="roll_resp6_1" />
+        <marker scope="Public" name="roll_resp6_2" />
+        <marker scope="Public" name="roll_resp6_3" />
+        <marker scope="Public" name="roll_resp7_1" />
+        <marker scope="Public" name="roll_resp7_2" />
+        <marker scope="Public" name="roll_resp7_3" />
+        <marker scope="Public" name="Roll_s0_1" />
+        <marker scope="Public" name="Roll_s0_2" />
+        <marker scope="Public" name="Roll_s0_3" />
+        <marker scope="Public" name="Roll_s1_1" />
+        <marker scope="Public" name="Roll_s1_2" />
+        <marker scope="Public" name="Roll_s1_3" />
+        <marker scope="Public" name="Roll_s2_1" />
+        <marker scope="Public" name="Roll_s2_2" />
+        <marker scope="Public" name="Roll_s2_3" />
+        <marker scope="Public" name="Roll_s3_1" />
+        <marker scope="Public" name="Roll_s3_2" />
+        <marker scope="Public" name="Roll_s3_3" />
+        <marker scope="Public" name="Roll_s4_1" />
+        <marker scope="Public" name="Roll_s4_2" />
+        <marker scope="Public" name="Roll_s4_3" />
+        <marker scope="Public" name="Roll_s5_1" />
+        <marker scope="Public" name="Roll_s5_2" />
+        <marker scope="Public" name="Roll_s5_3" />
         <marker scope="Public" name="Rules">If Y'shtola thinks someone at the table doesn't know the full extent of the rules, they will ask to make sure. </marker>
         <marker scope="Public" name="Sakura_prompt_1" />
         <marker scope="Public" name="Sakura_prompt_2" />
