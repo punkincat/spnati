@@ -662,7 +662,22 @@ function stripAIPlayer (player) {
     console.log("Opponent "+player+" is being stripped.");
 
     /* grab the removed article of clothing and determine its dialogue trigger */
-    var removedClothing = players[player].clothing.pop();
+    var removedClothing = stripItem(player);
+    while (players[player].clothing.length != 0
+        && players[player].clothing[players[player].clothing.length - 1].name == "SKIP")
+    {
+        stripItem(player);
+    }
+    var dialogueTrigger = getClothingTrigger(players[player], removedClothing, true);
+
+    /* update behaviour */
+    dialogueTrigger.push(OPPONENT_STRIPPED);
+    updateAllBehaviours(player, PLAYER_STRIPPED, [dialogueTrigger]);
+}
+
+function stripItem (player) {
+	var removedClothing = players[player].clothing.pop();
+	
     players[player].removedClothing = removedClothing;
     players[player].numStripped[removedClothing.type]++;
     if ([IMPORTANT_ARTICLE, MAJOR_ARTICLE, MINOR_ARTICLE].indexOf(removedClothing.type) >= 0) {
@@ -677,17 +692,15 @@ function stripAIPlayer (player) {
         }
         players[player].decent = false;
     }
-    var dialogueTrigger = getClothingTrigger(players[player], removedClothing, true);
-
+	
     players[player].stage++;
     players[player].timeInStage = -1;
     players[player].ticksInStage = 0;
     players[player].stageChangeUpdate();
 
-    /* update behaviour */
-    dialogueTrigger.push(OPPONENT_STRIPPED);
-    updateAllBehaviours(player, PLAYER_STRIPPED, [dialogueTrigger]);
+	return removedClothing;
 }
+
 
 /************************************************************
  * Determines whether or not the provided player is winning
