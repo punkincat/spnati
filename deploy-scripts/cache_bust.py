@@ -13,7 +13,6 @@ PATHS = [
     "js/feedback.js",
     "js/event.js",
     "js/spni*.js",
-    "js/rosterRandomize.js",
     "opponents/monika/js/behaviour_callbacks.js",
     "opponents/monika/js/effects.js",
     "opponents/monika/js/extended_dialogue.js",

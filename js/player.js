@@ -444,11 +444,10 @@ Player.prototype.inboundLinesFromSelected = function (filterStatus, cap) {
  * @param {string} id
  * @param {jQuery} $metaXml
  * @param {string} status
- * @param {number} [rosterScore]
  * @param {number} [releaseNumber]
  * @param {string} [highlightStatus]
  */
-function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightStatus) {
+function Opponent (id, metaFiles, status, releaseNumber, highlightStatus) {
     Player.call(this, id);
 
     this.id = id;
@@ -489,9 +488,6 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
     this.fontSize = $metaXml.children('font-size').text();
     if (!['small', 'smaller'].includes(this.fontSize)) this.fontSize = undefined;
     this.lastUpdated = parseInt($metaXml.children('lastupdate').text(), 10) || 0;
-
-    this.rosterScore = rosterScore;
-    this.effectiveScore = -Infinity;
 
     this.endings = null;
     if (EPILOGUES_ENABLED) {
@@ -534,11 +530,6 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
         }
     }).get();
     this.searchTags = this.expandTagsList(this.originalTags.map(obj => obj.tag));
-	
-    this.magnetismTag = undefined;
-    this.searchTags.forEach((tag) => {
-        if (MAGNET_TAGS.indexOf(tag) >= 0) this.magnetismTag = tag;
-    });
 
     this.cases = new Map();
 
