@@ -173,6 +173,7 @@
         <response id="527" opponent="aqua_kh" opponentId="311" />
         <response id="529" opponent="haru" opponentId="1" />
         <response id="530" opponent="laevatein" opponentId="13" />
+        <response id="532" opponent="aloy" opponentId="40" />
     </responses>
     <notes>
         <note id="10">Will be replaced if Sharla ever gets reworked lol</note>
@@ -727,8 +728,13 @@ c: say that he's been as high as the bionis' head?
         <label id="529" label="" folder="Situations" sort="0" />
         <label id="530" label="" folder="Targets" sort="0" />
         <label id="531" label="" folder="Responses" sort="0" />
+        <label id="532" label="" folder="Responses" sort="0" />
+        <label id="533" label="" folder="Responses" sort="0" />
+        <label id="534" label="" folder="Responses" sort="0" />
+        <label id="535" label="" folder="Targets" sort="0" />
+        <label id="536" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>531</nextId>
+    <nextId>536</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="20gOffer">Line that plays when Dunban offers a 20g bribe to whoever loses</marker>
@@ -759,6 +765,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_aloy_mechon1" />
         <marker scope="Public" name="dunban_aloy_sabre1" />
         <marker scope="Public" name="dunban_aloy_sabre2" />
+        <marker scope="Public" name="dunban_aloy_selfBottoms1" />
         <marker scope="Public" name="dunban_anatoly_cooking1" />
         <marker scope="Public" name="dunban_anatoly_idlenakedResp" />
         <marker scope="Public" name="dunban_anatoly_illiterateResp" />
@@ -867,7 +874,10 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_hilbert_lookerstory" />
         <marker scope="Public" name="dunban_janet_shrank" />
         <marker scope="Public" name="dunban_jim_aliens1" />
+        <marker scope="Public" name="dunban_jim_aliens2" />
         <marker scope="Public" name="dunban_jim_revenge1" />
+        <marker scope="Public" name="dunban_jim_revenge2" />
+        <marker scope="Public" name="dunban_jim_self0a" />
         <marker scope="Public" name="dunban_jura_beauty1" />
         <marker scope="Public" name="dunban_jura_rapier01" />
         <marker scope="Public" name="dunban_jura_seduction" />
@@ -904,6 +914,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_mari_WhatAmI1" />
         <marker scope="Public" name="dunban_mari_WhatAmI2" />
         <marker scope="Public" name="dunban_maria_self0a" />
+        <marker scope="Public" name="dunban_maria_self0b" />
         <marker scope="Public" name="dunban_mariS_boxer_strip1" />
         <marker scope="Public" name="dunban_mariS_boxer_strip2" />
         <marker scope="Public" name="dunban_mariS_boxer_strip3" />
