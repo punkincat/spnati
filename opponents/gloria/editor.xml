@@ -12,6 +12,9 @@
         <case name="Targeting Gloria" id="183" priority="FYI" min="0" max="0">
             <description>Gloria has a very heavy scottish accent. She's an outdoorsy type, likes camping and curry, cares about her friends, and loves a good drink.</description>
         </case>
+        <case name="Panties before Dress" id="631" priority="Noteworthy" min="3" max="3">
+            <description>In Gloria's valentines day costume, she slips her panties off before she takes her dress off, and puts them on display in her apron's pocket.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -151,6 +154,10 @@
         <response id="605" opponent="dunban" opponentId="399" />
         <response id="608" opponent="toph" opponentId="127" />
         <response id="609" opponent="toph" opponentId="283" />
+        <response id="611" opponent="aqua_kh" opponentId="67" />
+        <response id="612" opponent="kyouko_toshinou" opponentId="91" />
+        <response id="613" opponent="kyouko_toshinou" opponentId="108" />
+        <response id="619" opponent="nagatoro" opponentId="1015" />
     </responses>
     <notes>
         <note id="10">expay shaer = exp share</note>
@@ -789,9 +796,41 @@ Rosa's costume index
         <label id="607" label="" folder="Targets" sort="0" />
         <label id="608" label="" folder="Responses" sort="0" />
         <label id="609" label="" folder="Responses" sort="0" />
-        <label id="610" label="" folder="Targets" sort="0" />
+        <label id="610" label="" color="3" folder="Targets" sort="0" />
+        <label id="612" label="" folder="Targets" sort="0" />
+        <label id="611" label="" folder="Targets" sort="0" />
+        <label id="613" label="" folder="Situations" sort="0" />
+        <label id="614" label="" folder="Situations" sort="0" />
+        <label id="615" label="" folder="Situations" sort="0" />
+        <label id="616" label="" folder="Situations" sort="0" />
+        <label id="617" label="" folder="Responses" sort="0" />
+        <label id="618" label="" folder="Responses" sort="0" />
+        <label id="619" label="" folder="Situations" sort="0" />
+        <label id="620" label="" folder="Targets" sort="0" />
+        <label id="621" label="" folder="Targets" sort="0" />
+        <label id="622" label="" folder="Valentine Costume" sort="0" />
+        <label id="623" label="" folder="Valentine Costume" sort="0" />
+        <label id="624" label="" folder="Valentine Costume" sort="0" />
+        <label id="625" label="" folder="Valentine Costume" sort="0" />
+        <label id="626" label="" folder="Valentine Costume" sort="0" />
+        <label id="627" label="" folder="Valentine Costume" sort="0" />
+        <label id="628" label="" folder="Valentine Costume" sort="0" />
+        <label id="629" label="" folder="Valentine Costume" sort="0" />
+        <label id="630" label="" folder="Valentine Costume" sort="0" />
+        <label id="631" label="" folder="Valentine Costume" sort="0" />
+        <label id="632" label="" folder="Valentine Costume" sort="0" />
+        <label id="633" label="" folder="Valentine Costume" sort="0" />
+        <label id="634" label="" folder="Valentine Costume" sort="0" />
+        <label id="635" label="" folder="Valentine Costume" sort="0" />
+        <label id="636" label="" folder="Valentine Costume" sort="0" />
+        <label id="637" label="" folder="Events" sort="0" />
+        <label id="638" label="" folder="Events" sort="0" />
+        <label id="639" label="" folder="Events" sort="0" />
+        <label id="640" label="human male flirt" folder="Valentine Costume" sort="0" />
+        <label id="641" label="human female flirt" folder="Valentine Costume" sort="0" />
+        <label id="642" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>610</nextId>
+    <nextId>642</nextId>
     <markers>
         <marker scope="Public" name="__human_nickname" />
         <marker scope="Public" name="accent_murder" />
@@ -822,11 +861,13 @@ Rosa's costume index
         <marker scope="Public" name="gloria_anatoly_paskaleaves" />
         <marker scope="Public" name="gloria_anatoly_strip0a" />
         <marker scope="Public" name="gloria_anatoly_strip0b" />
+        <marker scope="Public" name="gloria_aqua_keyblade_reveal" />
         <marker scope="Public" name="gloria_basil_strip0a" />
         <marker scope="Public" name="gloria_basil_strip1a" />
         <marker scope="Public" name="gloria_bella_ishkneeoobatay" />
         <marker scope="Public" name="gloria_binah_thesaurus1" />
         <marker scope="Public" name="gloria_binah_thesaurus2" />
+        <marker scope="Public" name="gloria_binah_thesaurus3" />
         <marker scope="Public" name="gloria_bionis_view_1_Resp" />
         <marker scope="Public" name="gloria_blake_remnantExpoResp" />
         <marker scope="Public" name="gloria_cag_alchemy1" />
@@ -961,6 +1002,11 @@ Rosa's costume index
         <marker scope="Public" name="gloria_monika_deleteblazer2" />
         <marker scope="Public" name="gloria_moon&amp;mom0" />
         <marker scope="Public" name="gloria_moon_strip0a" />
+        <marker scope="Public" name="gloria_nagatoro_curry1" />
+        <marker scope="Public" name="gloria_nagatoro_favMon1" />
+        <marker scope="Public" name="gloria_nagatoro_first_chest_rev1" />
+        <marker scope="Public" name="gloria_nagatoro_playerplan1" />
+        <marker scope="Public" name="gloria_nagatoro_playerplan2" />
         <marker scope="Public" name="gloria_nami_pirateInquire1" />
         <marker scope="Public" name="gloria_nami_pirateReact" />
         <marker scope="Public" name="gloria_nami_self0" />
@@ -995,6 +1041,7 @@ Rosa's costume index
         <marker scope="Public" name="gloria_rosa_cunning_offer" />
         <marker scope="Public" name="gloria_rosa_cunning_offer=true" />
         <marker scope="Public" name="gloria_rosa_ending" />
+        <marker scope="Public" name="gloria_rosa_epilogue_seen" />
         <marker scope="Public" name="gloria_rosa_erufuda_fries" />
         <marker scope="Public" name="gloria_rosa_famous1" />
         <marker scope="Public" name="gloria_rosa_famous2" />
@@ -1063,6 +1110,7 @@ Rosa's costume index
         <marker scope="Public" name="kanto_curry" />
         <marker scope="Public" name="kyoko_pokeTrainers2Resp" />
         <marker scope="Public" name="kyoko_pokeTrainersResp" />
+        <marker scope="Public" name="kyouko_sexypose" />
         <marker scope="Public" name="lad_fell_down" />
         <marker scope="Public" name="lucky_egg" />
         <marker scope="Public" name="make_a_curry" />
