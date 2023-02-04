@@ -92,9 +92,13 @@ function randomizeRosterOrder(startStd, endStd) {
         return b.rosterScore - a.rosterScore;
     });
 
+    var rosterLength = roster.slice().filter(function (opp) {
+        return opp && opp.rosterScore > 0;
+    }).length;
+
     roster.forEach(function (opp, idx) {
         if (opp.rosterScore > 0) {
-            let curStd = ((idx / roster.length) * (endStd - startStd)) + startStd;
+            let curStd = ((idx / rosterLength) * (endStd - startStd)) + startStd;
             let multiplier = Math.exp(randomNormal(0, curStd));
             opp.effectiveScore = opp.rosterScore * multiplier;
         } else {
