@@ -81,11 +81,7 @@ function applyFeaturedSortRules(opponents) {
     return ret;
 }
 
-function randomizeRosterOrder(weekIdx, startStd, endStd) {
-    if (weekIdx === undefined) {
-        weekIdx = Math.floor((Date.now() - ROSTER_EPOCH) / MS_PER_WEEK);
-    }
-    
+function randomizeRosterOrder(startStd, endStd) {
     startStd = (startStd !== undefined) ? startStd : 0.3;
     endStd = (endStd !== undefined) ? endStd : 0.15;
 
