@@ -19,7 +19,7 @@
             <description>When Playing with Bobobo, after his first strip stage, Miku will reference the fact that Moon also tried to do that, but that got her into trouble, so Miku asks why this guy is any different.</description>
         </case>
         <case name="Fellow Vocaloids" id="425" priority="Noteworthy" min="0" max="8">
-            <description>Miku talks about some of her Vocaloid friends. The tags denote which one of her friends she's referencinb.</description>
+            <description>Miku talks about some of her Vocaloid friends. The tags denote which one of her friends she's referencing.</description>
         </case>
         <case name="My Fellow Idols" id="492" priority="Prompt" min="0" max="8">
             <description>If Miku is playing with any other character with the "idol" tag, she'll ask how their recent performances have been?</description>
@@ -737,14 +737,17 @@
         <response id="737" opponent="caulifla" opponentId="4" />
         <response id="739" opponent="jin" opponentId="20" />
         <response id="740" opponent="aqua_kh" opponentId="67" />
+        <response id="741" opponent="yuno_uno" opponentId="775" />
+        <response id="742" opponent="binah" opponentId="1" />
+        <response id="743" opponent="marinette" opponentId="1363" />
+        <response id="744" opponent="marinette" opponentId="1361" />
     </responses>
     <prefixes>
         <prefix>Epilogue A</prefix>
         <prefix>Epilogue B</prefix>
     </prefixes>
-    <nextId>740</nextId>
+    <nextId>744</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="AAAFRICA">I bless the rains down in AAAFFFRICCAAA</marker>
         <marker scope="Public" name="AdventurerQuestion" />
         <marker scope="Public" name="AellaBookClub">Denotes Target for specific dialouge with another character. </marker>
@@ -765,6 +768,11 @@
         <marker scope="Public" name="Aoba_age_clarification">Denotes Target for specific dialouge with another character. </marker>
         <marker scope="Public" name="Aoba_Q&amp;A_Cats_Response">Denotes Target for specific dialouge with another character. </marker>
         <marker scope="Public" name="Aoba's-pissed">Denotes Target for specific dialouge with another character. </marker>
+        <marker scope="Public" name="Aqua_miku_strip1b_R" />
+        <marker scope="Public" name="Aqua_miku_strip2b_R" />
+        <marker scope="Public" name="AquaMiku_Strip1a_R" />
+        <marker scope="Public" name="AquaMiku_Strip2a_R" />
+        <marker scope="Public" name="AquaMiku_Strip2a_R2" />
         <marker scope="Public" name="ArmPowerTalk2">Denotes Target for specific dialouge with another character. </marker>
         <marker scope="Public" name="Ascend_to_Heaven" />
         <marker scope="Public" name="asked_armor">Denotes Target for specific dialouge with another character. </marker>
@@ -1095,6 +1103,7 @@
         <marker scope="Public" name="MikuInternationalTravel" />
         <marker scope="Public" name="MikuInventoryFood" />
         <marker scope="Public" name="MikuKAITOBirthday" />
+        <marker scope="Public" name="MikuKeybladeReveal" />
         <marker scope="Public" name="MikuLewdPhotographs" />
         <marker scope="Public" name="MikuLikesPussy" />
         <marker scope="Public" name="MikuMajor" />
@@ -1106,6 +1115,7 @@
         <marker scope="Public" name="MikuMikiHappyWithBody" />
         <marker scope="Public" name="MikuMonikaMusic" />
         <marker scope="Public" name="MikuMonikaResponse" />
+        <marker scope="Public" name="MikuNadeshikoA" />
         <marker scope="Public" name="MikuNextStep" />
         <marker scope="Public" name="MikuNextStep2" />
         <marker scope="Public" name="MikuNoire" />
