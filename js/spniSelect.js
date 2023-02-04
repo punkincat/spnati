@@ -376,6 +376,8 @@ function loadListingFile () {
             loadedGroups.push(newGroup);
         });
 
+        var unsortedScore = -1;
+
         return Promise.all($xml.find('>individuals>opponent').map(function () {
             var oppStatus = $(this).attr('status');
             var id = $(this).text();
@@ -389,6 +391,12 @@ function loadListingFile () {
             }
             var highlightStatus = $(this).attr('highlight');
             var rosterScore = $(this).attr('score');
+
+            // Keep the unsorted characters in order
+            if (rosterScore === undefined) {
+                rosterScore = unsortedScore;
+                unsortedScore -= 1;
+            }
 
 
             if (available[id] && !(id in opponentMap)) {

@@ -23,10 +23,11 @@ function computeMagnetismGroups(opponents) {
     while (opponents.length > 0) {
         let curOpp = opponents.shift();
         let group = [curOpp];
-        if (curOpp.magnetismTag) {
+        if (curOpp.effectiveScore > 0 && curOpp.magnetismTag) {
             let j = 0;
             for (let i = 0; i < 10; i++) {
                 if (j >= opponents.length) break;
+                if (opponents[j].effectiveScore < 0) break;
                 if (opponents[j].magnetismTag == curOpp.magnetismTag) {
                     group.push(opponents.splice(j, 1)[0]);
                 } else {
@@ -92,8 +93,12 @@ function randomizeRosterOrder(startStd, endStd) {
     });
 
     roster.forEach(function (opp, idx) {
-        let curStd = ((idx / roster.length) * (endStd - startStd)) + startStd;
-        let multiplier = Math.exp(randomNormal(0, curStd));
-        opp.effectiveScore = opp.rosterScore * multiplier;
+        if (opp.rosterScore > 0) {
+            let curStd = ((idx / roster.length) * (endStd - startStd)) + startStd;
+            let multiplier = Math.exp(randomNormal(0, curStd));
+            opp.effectiveScore = opp.rosterScore * multiplier;
+        } else {
+            opp.effectiveScore = opp.rosterScore;
+        }
     });
 }
