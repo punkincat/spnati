@@ -94,6 +94,12 @@
         <response id="426" opponent="ignatz" opponentId="164" />
         <response id="448" opponent="queenie" opponentId="28" />
         <response id="466" opponent="anatoly" opponentId="3" />
+        <response id="470" opponent="mitama" opponentId="3" />
+        <response id="476" opponent="cagliostro" opponentId="1" />
+        <response id="477" opponent="noire" opponentId="799" />
+        <response id="478" opponent="noire" opponentId="1071" />
+        <response id="479" opponent="noire" opponentId="1058" />
+        <response id="480" opponent="noire" opponentId="1057" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -112,6 +118,7 @@
         <note id="288">in her next stage she can then explain that her keyblade turns into a glider, and/or that she needs to wear armor to protect herself from the darkness lurking in the roads between worlds</note>
         <note id="458">hidden so it always fires</note>
         <note id="467">aqua_arueshalae_</note>
+        <note id="481">in theory you could respond to both versions of this line with a single response. up to you, I can work with either direction (same or different responses)</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Player Names" sort="0" />
@@ -571,8 +578,22 @@
         <label id="467" label="" folder="Targets" sort="0" />
         <label id="468" label="" folder="Targets" sort="0" />
         <label id="469" label="" folder="Opponents" sort="0" />
+        <label id="470" label="" folder="Prompts" sort="0" />
+        <label id="471" label="" folder="Prompts" sort="0" />
+        <label id="472" label="0 - cat speech, nyan" folder="Targets" sort="0" />
+        <label id="473" label="1 - light magic" folder="Targets" sort="0" />
+        <label id="474" label="" folder="Tag Filtered" sort="0" />
+        <label id="475" label="" folder="Tag Filtered" sort="0" />
+        <label id="476" label="" folder="Targets" sort="0" />
+        <label id="477" label="" folder="Situations" sort="0" />
+        <label id="478" label="" folder="Targets" sort="0" />
+        <label id="479" label="" folder="Targets" sort="0" />
+        <label id="480" label="" folder="Targets" sort="0" />
+        <label id="481" label="Noire 0 (Said NoireExplainingHerRole)" folder="Targets" sort="0" />
+        <label id="482" label="Noire 0 (Not said NoireExplainingHerRole)" folder="Targets" sort="0" />
+        <label id="483" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>469</nextId>
+    <nextId>483</nextId>
     <markers>
         <marker scope="Public" name="aqua_adora_horde01" />
         <marker scope="Public" name="aqua_adora_sword01" />
@@ -609,7 +630,9 @@
         <marker scope="Public" name="aqua_dunban_sword2" />
         <marker scope="Public" name="aqua_dunban_sword3" />
         <marker scope="Public" name="aqua_felix_accent1" />
+        <marker scope="Public" name="aqua_felix_accent2" />
         <marker scope="Public" name="aqua_felix_lightmagic1" />
+        <marker scope="Public" name="aqua_felix_lightmagic2" />
         <marker scope="Public" name="aqua_fischl_grandiose_proclamations" />
         <marker scope="Public" name="aqua_heris_FriendPrompt" />
         <marker scope="Public" name="aqua_heris_LoyaltyPrompt" />
@@ -661,12 +684,19 @@
         <marker scope="Public" name="aqua_miku_strip1c" />
         <marker scope="Public" name="aqua_miku_strip2a" />
         <marker scope="Public" name="aqua_miku_strip2b" />
+        <marker scope="Public" name="aqua_mitama_arrivalResp" />
         <marker scope="Public" name="aqua_nagatoro_extra_last_resp">Responds to a line Nagatoro might say about taking off an extra item last</marker>
         <marker scope="Public" name="aqua_nagatoro_s0a" />
         <marker scope="Public" name="aqua_nagatoro_s2a" />
         <marker scope="Public" name="aqua_nagatoro_s2b" />
         <marker scope="Public" name="aqua_nagatoro_self0a" />
         <marker scope="Public" name="aqua_nagatoro_self0b" />
+        <marker scope="Public" name="aqua_noire_explainedRole" />
+        <marker scope="Public" name="aqua_noire_Lastation1" />
+        <marker scope="Public" name="aqua_noire_Role0a" />
+        <marker scope="Public" name="aqua_NoireCGBandaidsLowerRemoval" />
+        <marker scope="Public" name="aqua_NoireCGBandaidsReveal" />
+        <marker scope="Public" name="aqua_NoireCGBandaidsUpperRemoval" />
         <marker scope="Public" name="aqua_pa15_jobResp">Dialogue to pa15</marker>
         <marker scope="Public" name="aqua_petra_keyblade1" />
         <marker scope="Public" name="aqua_petra_keyblade2" />
@@ -720,6 +750,7 @@
         <marker scope="Public" name="birthday">Wishes the player (or another character?) a happy birthday on the birthday background</marker>
         <marker scope="Public" name="burning_up">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Public" name="butt_pose">Showing off her butt pose</marker>
+        <marker scope="Public" name="cag_forfeitstart" />
         <marker scope="Public" name="cunt">Hearing someone else say the word "cunt" while she is masturbating puts her off</marker>
         <marker scope="Public" name="dunban_aqua_ffHeavy4_Resp" />
         <marker scope="Public" name="enemies_drop_money" />
@@ -765,6 +796,7 @@
         <marker scope="Public" name="nagatoro_butt2_react" />
         <marker scope="Public" name="one_v_one" />
         <marker scope="Public" name="oppselected_aqua_konosuba">Aqua from Konosuba is an opponent when this Aqua has just been selected</marker>
+        <marker scope="Public" name="other_exposed_thighhighs" />
         <marker scope="Private" name="player_pogchamp">Player named themself Pogchamp or variants</marker>
         <marker scope="Public" name="roxas_first_meeting">First time she encounters Roxas</marker>
         <marker scope="Public" name="rumble_racing">Mentions a bonus minigame from KH:BBS</marker>
