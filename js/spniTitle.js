@@ -140,7 +140,7 @@ var CANDY_LIST = [
     "marinette/0-strippinghappy-b.png",
     "marinette/2-relieved.png",
     "marinette/4-excited.png",
-    "trixie/poses/0-wink.png",               // Highlighted New Character
+    "trixie/poses/0-wink.png",             // Highlighted New Character
     "trixie/poses/1-flirt.png",
     "trixie/poses/4-disappointed.png",
     "trixie/poses/5-grumpy.png",
@@ -160,10 +160,14 @@ var CANDY_LIST = [
     "aaravi/1-excited.png",
     "aaravi/3-confident.png",
     "aaravi/4-surprised-blush.png",
-    "dunban/0-coverse.png",                 // Highlighted New Character
+    "dunban/0-coverse.png",                // Highlighted New Character
     "dunban/0-dramatic.png",
     "dunban/2-scheming.png",
     "dunban/5-coverse.png",
+    "nico_robin/0-giggling.png",           // Highlighted New Character
+    "nico_robin/0-winking.png",
+    "nico_robin/1-calm.png",
+    "nico_robin/1-dominant.png",
     "sly_cooper/0-Select.png",             // Has Recent Updates
     "sly_cooper/0-Comms+.png",
     "sly_cooper/0-Select.png",
@@ -173,14 +177,14 @@ var CANDY_LIST = [
     "wasp/0-flirt.png",
     "wasp/0-excited.png",
     "wasp/0-tease.png",
+    "erufuda/0-pleased.png",               // Has Recent Updates
+    "erufuda/1-smug.png",
+    "erufuda/1-sucking.png",
+    "erufuda/3-eating.png",
     "samus_aran/0-portrait.png",           // Has Recent Updates
     "samus_aran/1-introspective.png",
     "samus_aran/1-curious.png",
     "samus_aran/1-relaxed.png",
-    "rarity_eg/0-acreative.png",               // Has Recent Updates
-    "rarity_eg/0-brelaxed.png",
-    "rarity_eg/0-cinterested.png",
-    "rarity_eg/4-ahappy.png",
     "hatsune_miku/0-Casual.png",           // Has Recent Updates
     "hatsune_miku/0-Cheeky.png",
     "hatsune_miku/0-Encouraging.png",
@@ -197,7 +201,7 @@ var CANDY_LIST = [
     "critical_darling/0-ice.png",
     "critical_darling/3-sing.png",
     "critical_darling/3-rockin.png",
-    "ryuko/0-senketsu-happy.png",                   // Has Recent Updates
+    "ryuko/0-senketsu-happy.png",          // Has Recent Updates
     "ryuko/2-mako-sad.png",
     "ryuko/3-pissed.png",
     "ryuko/5-awkward.png",
@@ -209,10 +213,6 @@ var CANDY_LIST = [
     "lux/0-cocky.png",
     "lux/3-quizzical.png",
     "lux/4-joyous.png",
-    "kazuma/0-happy.png",                  // Has Recent Updates
-    "kazuma/0-appreciative.png",
-    "kazuma/1-victory.png",
-    "kazuma/3-smirk.png",
     "takatoshi/0-Select.png",              // Has Recent Updates
     "takatoshi/0-Yakisoba.png",
     "takatoshi/3-Embarrassed.png",
@@ -233,15 +233,11 @@ var CANDY_LIST = [
     "asuna_yuuki/0-stripAh.png",
     "asuna_yuuki/4-embarrassed.png",
     "asuna_yuuki/4-pleased.png",
-    "pinkie_pie/0-excited.png",                 // Has Recent Updates
-    "pinkie_pie/1-stripped.png",
-    "pinkie_pie/2-whatever.png",
-    "pinkie_pie/3-calm.png",
     "sayori/0-excited.png",                // Has Recent Updates
     "sayori/1-happy.png",
     "sayori/2-thinking.png",
     "sayori/3-embarassed.png",
-    "dawn/0-elate.png",                     // Has Recent Updates
+    "dawn/0-elate.png",                    // Has Recent Updates
     "dawn/1-happy.png",
     "dawn/2-shock.png",
     "dawn/3-smug.png",
@@ -321,7 +317,7 @@ var CANDY_LIST = [
     "ringo_ando/1-glad.png",
     "ringo_ando/2-balanceapple.png",
     "ringo_ando/3-bounceapple.png",
-    "twilight/0-confident.png",                 // Has Recent Updates
+    "twilight/0-confident.png",            // Has Recent Updates
     "twilight/2-smart.png",
     "reskins/twilight_sci-twi/0-calm.png",
     "reskins/twilight_sci-twi/0-happy.png",
@@ -425,10 +421,6 @@ var CANDY_LIST = [
     "mikan/2-happy.png",
     "mikan/0-explain.png",
     "mikan/2-explain.png",
-    "erufuda/0-pleased.png",
-    "erufuda/1-smug.png",
-    "erufuda/1-sucking.png",
-    "erufuda/3-eating.png",
     "ryuji/0-cocky.png",
     "ryuji/2-cheerful.png",
     "ryuji/4-what.png",
@@ -457,6 +449,18 @@ var CANDY_LIST = [
     "zoe/0-fangirling.png",
     "zoe/0-smug.png",
     "zoe/3-blush.png",
+    "kazuma/0-happy.png",
+    "kazuma/0-appreciative.png",
+    "kazuma/1-victory.png",
+    "kazuma/3-smirk.png",
+    "rarity_eg/0-acreative.png",
+    "rarity_eg/0-brelaxed.png",
+    "rarity_eg/0-cinterested.png",
+    "rarity_eg/4-ahappy.png",
+    "pinkie_pie/0-excited.png",
+    "pinkie_pie/1-stripped.png",
+    "pinkie_pie/2-whatever.png",
+    "pinkie_pie/3-calm.png",
 */
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
