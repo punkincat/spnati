@@ -1,2 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<collectibles />
+<collectibles>
+    <collectible id="Wanted Poster" status="online" img="opponents/nico_robin/collectible1.jpg" thumbnail="opponents/nico_robin/collectible1.jpg">
+        <title>Robin's Wanted Poster</title>
+        <subtitle>DEAD OR ALIVE</subtitle>
+        <text>Nico Robin's second wanted poster.</text>
+        <unlock>Play a game with Robin until she loses.</unlock>
+        <hide-details>true</hide-details>
+    </collectible>
+</collectibles>
