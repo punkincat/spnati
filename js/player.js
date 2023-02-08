@@ -490,6 +490,15 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
     if (!['small', 'smaller'].includes(this.fontSize)) this.fontSize = undefined;
     this.lastUpdated = parseInt($metaXml.children('lastupdate').text(), 10) || 0;
 
+    /* For sorting purposes. 
+     * Simplifies diacritics (to solve the Pokemon problem), removes punctuation,
+     * removes some basic stop words (and, the, a, an), and also removes
+     * parentheticals.
+     */
+    this.normalizedSource = (this.source || "")
+        .simplifyDiacritics()
+        .replace(/\([^\)]+\)|\[[^\]]+\]|and\s|the\s|an?\s|[^a-zA-Z0-9]/gm, '');
+
     this.rosterScore = rosterScore;
     this.effectiveScore = -Infinity;
 
