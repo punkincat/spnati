@@ -502,7 +502,8 @@ function collectBaseUsageInfo(type, includeGameState) {
                     'stage': players[i].stage,
                     'seenDialogue': 0,
                     'outOrder': players[i].outOrder,
-                    'costume': players[i].selected_costume
+                    'costume': players[i].selected_costume,
+                    'selectInfo': players[i].selectInfo
                 };
 
                 if (players[i].repeatLog) oppInfo.seenDialogue = Object.keys(players[i].repeatLog).length;
@@ -519,6 +520,7 @@ function collectBaseUsageInfo(type, includeGameState) {
             'theme': UI_THEME,
             'minimal': MINIMAL_UI,
             'background': activeBackground.id,
+            'sortingMode': sortingMode
         };
     }
 

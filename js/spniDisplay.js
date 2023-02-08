@@ -1008,6 +1008,8 @@ MainSelectScreenDisplay.prototype.updateTargetSuggestionDisplay = function (quad
 }
 
 MainSelectScreenDisplay.prototype.targetSuggestionSelected = function (quad) {
+    var curTable = players.filter((p, idx) => !!p && (idx > 0)).map((p) => p.id);
+
     players[this.slot] = this.targetSuggestions[quad];
 
     Sentry.addBreadcrumb({
@@ -1016,7 +1018,11 @@ MainSelectScreenDisplay.prototype.targetSuggestionSelected = function (quad) {
         level: 'info'
     });
 
-    players[this.slot].loadBehaviour(this.slot, true);
+    players[this.slot].loadBehaviour(this.slot, true, {
+        "source": "targeted-suggestions",
+        "table": curTable
+    });
+
     updateSelectionVisuals();
 }
 
@@ -1073,7 +1079,11 @@ MainSelectScreenDisplay.prototype.onSingleSuggestionSelected = function () {
         level: 'info'
     });
 
-    players[this.slot].loadBehaviour(this.slot, true);
+    var curTable = players.filter((p, idx) => !!p && (idx > 0)).map((p) => p.id);
+    players[this.slot].loadBehaviour(this.slot, true, {
+        "source": "prefill",
+        "table": curTable,
+    });
     updateSelectionVisuals();
 }
 
@@ -1443,8 +1453,36 @@ OpponentDetailsDisplay.prototype.handleSelected = function (ev) {
     });
     Sentry.setTag("screen", "select-main");
 
+    var searchName = $searchName.val().toLowerCase() || null;
+    var searchSource = $searchSource.val().toLowerCase() || null;
+    var searchCreator = $searchCreator.val().toLowerCase() || null;
+    var workingTags = $searchTag.val().split(",").map(x => canonicalizeTag(x));
+    var searchTags = matchTags(workingTags, $tagList.children().toArray().map(x => x.value));
+    var searchGender = null;
+    
+    if (chosenGender == 2) {
+        searchGender = "male";
+    } else if (chosenGender == 3) {
+        searchGender = "female";
+    }
+
+    var curTable = players.filter((p, idx) => !!p && (idx > 0)).map((p) => p.id);
+
     players[selectedSlot] = this.opponent;
-    players[selectedSlot].loadBehaviour(selectedSlot, true);
+    players[selectedSlot].loadBehaviour(selectedSlot, true, {
+        "source": "indiv-select",
+        "sort": sortingMode,
+        "testing": individualSelectTesting,
+        "table": curTable,
+        "favorite": this.opponent.favorite,
+        "filter": {
+            "name": searchName,
+            "source": searchSource,
+            "creator": searchCreator,
+            "tags": searchTags,
+            "gender": searchGender
+        }
+    });
     updateSelectionVisuals();
     screenTransition($individualSelectScreen, $selectScreen);
     
