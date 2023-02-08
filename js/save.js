@@ -783,6 +783,20 @@ Save.prototype.setSavedSortMode = function (testing, value) {
 
 /**
  * 
+ * @returns {number}
+ */
+Save.prototype.getRosterOrderingSeed = function () {
+    var seed = parseInt(this.getItem("rosterOrderSeed"), 10);
+    if (!seed) {
+        seed = getRandomNumber(1, 0xFFFFFFFF);
+        this.setItem("rosterOrderSeed", seed);
+    }
+
+    return seed;
+}
+
+/**
+ * 
  * @param {ResortEventInfo} resortInfo 
  * @returns {boolean}
  */
