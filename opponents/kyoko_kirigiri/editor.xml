@@ -385,7 +385,7 @@
         <label id="348" label="" folder="Set 1" sort="9" />
         <label id="349" label="" folder="Set 1" sort="10" />
         <label id="350" label="" folder="Set 1" sort="11" />
-        <label id="351" label="" folder="Set 5" sort="0" />
+        <label id="351" label="Set 5" folder="Ferris pseudo-generics" sort="0" />
         <label id="352" label="" folder="Set 5" sort="2" />
         <label id="353" label="" folder="Set 5" sort="6" />
         <label id="354" label="" folder="Set 5" sort="3" />
@@ -768,20 +768,82 @@
         <label id="747" label="Visual arousal marker" folder="Aroused" sort="10" />
         <label id="748" label="Visual arousal marker" folder="Aroused" sort="4" />
         <label id="749" label="Visual arousal marker" folder="Aroused" sort="12" />
-        <label id="750" label="" folder="Differential nicknames" sort="0" />
-        <label id="751" label="" folder="Differential nicknames" sort="0" />
+        <label id="750" label="" folder="Differential nicknames" sort="5" />
+        <label id="751" label="" folder="Differential nicknames" sort="6" />
+        <label id="752" label="Player accessory" folder="Extra/Minor" sort="7" />
+        <label id="753" label="Player accessory" folder="Extra/Minor" sort="8" />
+        <label id="754" label="Opponent fled" folder="" sort="0" />
+        <label id="755" label="Jewelry" folder="Specific items" sort="0" />
+        <label id="756" label="" folder="Ferris pseudo-generics" sort="4" />
+        <label id="757" label="" folder="Ferris pseudo-generics" sort="5" />
+        <label id="758" label="Set 1" folder="Ferris pseudo-generics" sort="0" />
+        <label id="759" label="Set 1" folder="Ferris pseudo-generics" sort="2" />
+        <label id="760" label="Set 5" folder="Ferris pseudo-generics" sort="3" />
+        <label id="761" label="" folder="Ferris pseudo-generics" sort="6" />
+        <label id="762" label="" folder="Ferris pseudo-generics" sort="8" />
+        <label id="763" label="" folder="Ferris pseudo-generics" sort="7" />
+        <label id="764" label="Ferris Ou 4-1B" color="3" folder="Outbound stage 4" sort="3" />
+        <label id="765" label="Ferris Ou 4-2B" color="3" folder="Outbound stage 4" sort="4" />
+        <label id="766" label="Ferris Ou 4-3B" color="3" folder="Outbound stage 4" sort="5" />
+        <label id="767" label="Ferris Ou 4-1B" color="3" folder="Duplicate dialogue" sort="55" />
+        <label id="768" label="Ferris Ou 4-4B" color="3" folder="Outbound stage 4" sort="6" />
+        <label id="769" label="Ferris Ou 4-5B" color="3" folder="Outbound stage 4" sort="7" />
+        <label id="770" label="Trigger" folder="Act 1" sort="5" />
+        <label id="771" label="Trigger" folder="Act 2" sort="8" />
+        <label id="772" label="Trigger" folder="Act 3" sort="12" />
+        <label id="773" label="" folder="Show me your back" sort="3" />
+        <label id="774" label="" folder="Show me your back" sort="0" />
+        <label id="775" label="" folder="Show me your back" sort="0" />
+        <label id="776" label="" folder="Show me your back" sort="0" />
+        <label id="777" label="" folder="Show me your back" sort="2" />
+        <label id="778" label="" folder="Show me your back" sort="4" />
+        <label id="779" label="" folder="Show me your back" sort="5" />
+        <label id="780" label="" folder="Show me your back" sort="6" />
+        <label id="781" label="" folder="Show me your back" sort="7" />
+        <label id="782" label="Ferris Ou 4-1A" color="2" folder="Outbound stage 4" sort="0" />
+        <label id="783" label="Arousal" folder="Outbound stage 4" sort="0" />
+        <label id="784" label="Ferris Ou 4-2A" color="2" folder="Outbound stage 4" sort="0" />
+        <label id="785" label="Arousal marker help" folder="Outbound stage 4" sort="0" />
+        <label id="786" label="Ferris Ou 4-2C" color="5" folder="Outbound stage 4" sort="0" />
+        <label id="787" label="" folder="Ferris pseudo-generics" sort="0" />
     </labels>
-    <nextId>751</nextId>
+    <prefixes>
+        <prefix>#-aside</prefix>
+        <prefix>#-awe</prefix>
+        <prefix>#-calm</prefix>
+        <prefix>#-giddy</prefix>
+        <prefix>#-idea</prefix>
+        <prefix>#-point</prefix>
+        <prefix>#-rear</prefix>
+        <prefix>#-shock</prefix>
+        <prefix>#-shout</prefix>
+        <prefix>#-shy</prefix>
+        <prefix>#-smug</prefix>
+        <prefix>#-stern</prefix>
+        <prefix>#-strip_</prefix>
+        <prefix>#-stripped_</prefix>
+        <prefix>#-think</prefix>
+        <prefix>#-upset</prefix>
+        <prefix>#-start</prefix>
+        <prefix>#-heavy</prefix>
+        <prefix>#-heaviest</prefix>
+        <prefix>#-mast_</prefix>
+        <prefix>#-stand</prefix>
+    </prefixes>
+    <nextId>787</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
+        <marker scope="Public" name="+quips" />
         <marker scope="Public" name="alwaysReady">"Always ready, I see" and other versions of the line</marker>
         <marker scope="Public" name="arousalVisible" />
         <marker scope="Public" name="aroused">Her vulva is or will be visibly secreting fluid prior to her forfeit while nude (and in the second tick of her forfeit).</marker>
         <marker scope="Public" name="attractedAttention" />
         <marker scope="Public" name="biAtFinish">Finished forfeit while having the bisexual tag</marker>
+        <marker scope="Public" name="biFromStart" />
         <marker scope="Public" name="bigButt">"(Don't comment on their rear...)" and alternate versions of the line</marker>
         <marker scope="Public" name="birthday">The game is being played on Kyoko's birthday, October 6, and she has mentioned it X times.</marker>
+        <marker scope="Public" name="bisexualGameFinish">Kyoko has ended the game after a fully bisexual awakening at least once.</marker>
         <marker scope="Public" name="blackIsYourColor">Removed Major, Female - Target is also wearing black underwear</marker>
         <marker scope="Public" name="blackjack">Hand, 14+ rounds: She favorably compares the game to blackjack and says it feels a bit boring without betting</marker>
         <marker scope="Public" name="blades">"I didn't take you for the type to put sharp blades near their most delicate parts."</marker>
@@ -795,6 +857,13 @@
         <marker scope="Public" name="bluffsWon_no">Won X hands while bluffing=no</marker>
         <marker scope="Public" name="bodyUsefulLesbians" />
         <marker scope="Public" name="bossMode">Game started with a player name triggering stronger AI for Kyoko</marker>
+        <marker scope="Public" name="buttPoseGranted" />
+        <marker scope="Public" name="buttPoseGrantedA" />
+        <marker scope="Public" name="buttPoseGrantedB" />
+        <marker scope="Public" name="buttPoseOffer" />
+        <marker scope="Public" name="buttPoseOfferA" />
+        <marker scope="Public" name="buttPoseOfferA=2" />
+        <marker scope="Public" name="buttPoseOfferB" />
         <marker scope="Public" name="cameLikeThatQuery" />
         <marker scope="Public" name="cardsWillDo" />
         <marker scope="Public" name="careerMention">Kyoko has alluded to her career as a detective X times.</marker>
@@ -835,8 +904,37 @@
         <marker scope="Public" name="evidenceFloor">"I see now I should've kept my shoes on longer" and other versions of the line</marker>
         <marker scope="Public" name="exhibitionExpectation" />
         <marker scope="Public" name="explainedForfeit">She's explained early in the game that masturbation is a penalty for losing.</marker>
+        <marker scope="Public" name="feris_V_pq" />
+        <marker scope="Public" name="feris_V_pq=his" />
+        <marker scope="Public" name="ferris_anyPronouns" />
+        <marker scope="Public" name="ferris_hardEvidence" />
+        <marker scope="Public" name="ferris_instacum" />
+        <marker scope="Public" name="ferris_instacum2" />
+        <marker scope="Public" name="ferris_instacum3" />
+        <marker scope="Public" name="ferris_instacum4" />
+        <marker scope="Public" name="ferris_instacum4a" />
+        <marker scope="Public" name="ferris_instacum4b" />
+        <marker scope="Public" name="ferris_instacum5" />
+        <marker scope="Public" name="ferris_tights" />
+        <marker scope="Public" name="ferris_tights2" />
+        <marker scope="Public" name="ferris_tights2a" />
+        <marker scope="Public" name="ferris_tights2c" />
+        <marker scope="Public" name="ferris_tightsBasedArousal" />
+        <marker scope="Public" name="ferris_V_po" />
+        <marker scope="Public" name="ferris_V_po=him" />
+        <marker scope="Public" name="ferris_V_pp" />
+        <marker scope="Public" name="ferris_V_pp=his" />
+        <marker scope="Public" name="ferris_V_pq" />
+        <marker scope="Public" name="ferris_V_ps" />
+        <marker scope="Public" name="ferris_V_ps=he" />
+        <marker scope="Public" name="ferris_V_ps=she" />
         <marker scope="Public" name="FFcostume">Used while Kyoko is wearing the Future Foundation outfit.</marker>
+        <marker scope="Public" name="finishedApology" />
         <marker scope="Public" name="finishLikeThatQuery" />
+        <marker scope="Public" name="forfeitAct" />
+        <marker scope="Public" name="forfeitAct==1" />
+        <marker scope="Public" name="forfeitAct==2" />
+        <marker scope="Public" name="forfeitAct==3" />
         <marker scope="Public" name="forfeitFlesh" />
         <marker scope="Public" name="forfeitMaleAttention" />
         <marker scope="Public" name="forfeitPile" />
@@ -865,7 +963,7 @@
         <marker scope="Public" name="glovesOn">She has said she won't take her gloves off this game.</marker>
         <marker scope="Public" name="glovesOnForfeit" />
         <marker scope="Public" name="goingThrough" />
-        <marker scope="Public" name="hair">Activates if she has moved her hair out of the way of her chest at stage 8 (naked). Should activate automatically if she uses any pose other than the strips or aside2 during stage 8.</marker>
+        <marker scope="Private" name="hair">Controls position of her hair (whether standing or sitting.)</marker>
         <marker scope="Public" name="handBluffN0" />
         <marker scope="Public" name="handBluffN1" />
         <marker scope="Public" name="handBluffN2" />
@@ -918,6 +1016,7 @@
         <marker scope="Public" name="mikan_confident2Re" />
         <marker scope="Public" name="mikan_listen" />
         <marker scope="Public" name="mikan_quietRe" />
+        <marker scope="Public" name="movedHair">Activates if she has moved her hair out of the way of her chest at stage 8 (naked). Should activate automatically if she uses any pose other than the strips or aside2 during stage 8.</marker>
         <marker scope="Public" name="multiBelt" />
         <marker scope="Public" name="nagatoro_fun" />
         <marker scope="Public" name="nagatoro_funBest" />
@@ -975,6 +1074,7 @@
         <marker scope="Public" name="saidNameFinish">Kyoko said the human player's name while finishing.</marker>
         <marker scope="Public" name="santaHatStory" />
         <marker scope="Public" name="sayMyName" />
+        <marker scope="Public" name="sayMyName*" />
         <marker scope="Public" name="selfTrimComment" />
         <marker scope="Public" name="sheSaidFuck" />
         <marker scope="Public" name="SHE-SAYS-FUCK" />
@@ -1008,11 +1108,11 @@
         <marker scope="Public" name="theiaCH_" />
         <marker scope="Public" name="theiaCH_relationship" />
         <marker scope="Public" name="theirTurn" />
+        <marker scope="Public" name="theyLeftTheGameHeadass" />
         <marker scope="Public" name="theyStripHere" />
         <marker scope="Public" name="thighRub">"Word of advice...try rubbing your thighs together."</marker>
         <marker scope="Public" name="tieCompletes">"A classmate in high school once told me this tie completes my outfit."</marker>
         <marker scope="Public" name="timeline" />
-        <marker scope="Public" name="timeline=thh" />
         <marker scope="Public" name="tooManyKyokos" />
         <marker scope="Public" name="toshinou_gameOverSkinnyDip" />
         <marker scope="Public" name="toshinou_gameOverSkinnyDipNakeySwimmy" />
