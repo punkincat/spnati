@@ -30,6 +30,9 @@
         <note id="567">Reply with regular Butt Pose</note>
         <note id="568">Reply with Cat form butt pose</note>
         <note id="569">Reply with Chubby form butt pose</note>
+        <note id="576">i'll be adding/adjusting later, don't respond yet</note>
+        <note id="585">more lines tba</note>
+        <note id="583">reminder to put more lines here</note>
     </notes>
     <labels>
         <label id="1" label="Human Gender: Female + Bisexual" folder="Human Sexuality Tracking" sort="0" />
@@ -599,9 +602,25 @@
         <label id="570" label="S5 - Show Off" folder="Targets" sort="0" />
         <label id="571" label="S5 - Naked Kitty A" folder="Targets" sort="0" />
         <label id="572" label="S5 - Naked Kitty B" folder="Targets" sort="0" />
+        <label id="573" label="S1 - Undying" folder="Targets" sort="0" />
+        <label id="574" label="S3 - Close to You" folder="Targets" sort="0" />
+        <label id="575" label="Felix in Early Stage - Fortune Masturbating" folder="Ms. Fortune" sort="0" />
+        <label id="576" label="Fortune Fighter Fantasies" folder="Ms. Fortune" sort="0" />
+        <label id="577" label="Exposed, Removing Minor/Extra" folder="Clothing Filters" sort="0" />
+        <label id="578" label="Ms. Fortune Autocunnilingus 1" folder="Ms. Fortune" sort="0" />
+        <label id="579" label="Ms. Fortune Autocunnilingus 3" folder="Ms. Fortune" sort="0" />
+        <label id="580" label="" folder="Ms. Fortune" sort="0" />
+        <label id="581" label="Ms. Fortune Autocunnilingus 2" folder="Ms. Fortune" sort="0" />
+        <label id="582" label="Mari Time in Stage 0 - Cat TF" folder="Targets" sort="0" />
+        <label id="583" label="Masturbation Filters - Casual Vampire" folder="Mari Setogaya" sort="0" />
+        <label id="584" label="Lovestruck Succubus - Lost Skirt" folder="Targets" sort="0" />
+        <label id="585" label="Felix Undressed - Fortune Masturbating" folder="Ms. Fortune" sort="0" />
+        <label id="586" label="S2 - Nyaughty" folder="Targets" sort="0" />
+        <label id="587" label="Felix in Early Stage - Fortune Finished" folder="Ms. Fortune" sort="0" />
     </labels>
-    <nextId>572</nextId>
+    <nextId>587</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="arms" />
         <marker scope="Public" name="BackBow">Pose maker shenanigans</marker>
         <marker scope="Public" name="BoboboFelix01" />
@@ -638,6 +657,7 @@
         <marker scope="Public" name="DwightFelix01" />
         <marker scope="Public" name="EligibleHumanWearingCollar">The marker that lets the system know that the human is not straight or lesbian, therefore giving the OK to flirt</marker>
         <marker scope="Public" name="Excited">Felix gets excited. Dick-related wizardry.</marker>
+        <marker scope="Public" name="FelixAnyPronouns" />
         <marker scope="Public" name="FelixAqua01" />
         <marker scope="Public" name="FelixAqua02" />
         <marker scope="Public" name="FelixAqua04" />
@@ -705,11 +725,39 @@
         <marker scope="Public" name="FelixYunoTheBigSucc06" />
         <marker scope="Public" name="FischlFelix01">First part of stripping conversation with Felix for Fischl's first layer. He comments on her chuunibyou personality being a facade for having a crush on the Player.</marker>
         <marker scope="Public" name="FischlFelix04">Second part of stripping conversation with Felix for Fischl's second layer.</marker>
+        <marker scope="Public" name="FortuneForfeitEnd01" />
         <marker scope="Public" name="HuTaoFelix01">First part of stripping conversation with Felix for Hu Tao's first layer.</marker>
         <marker scope="Public" name="MariaFelix01" />
         <marker scope="Public" name="MonikaFelix01">First part of stripping conversation with Felix for Monika's first layer.</marker>
         <marker scope="Public" name="MoonFelix01">First part of stripping conversation with Felix for Moon's first layer.</marker>
+        <marker scope="Public" name="MsFortuneFantasy01" />
+        <marker scope="Public" name="MsFortuneFantasy02" />
         <marker scope="Public" name="MsFortuneFelix01" />
+        <marker scope="Public" name="MsFortuneFelix04" />
+        <marker scope="Public" name="MsFortuneFelix07" />
+        <marker scope="Public" name="MsFortuneFelix10" />
+        <marker scope="Public" name="MsFortuneForfeit01" />
+        <marker scope="Public" name="MsFortuneForfeit02" />
+        <marker scope="Public" name="MsFortuneForfeit03" />
+        <marker scope="Public" name="MsFortuneForfeit04" />
+        <marker scope="Public" name="MsFortuneForfeit05" />
+        <marker scope="Public" name="MsFortuneForfeit06" />
+        <marker scope="Public" name="MsFortuneForfeit07" />
+        <marker scope="Public" name="MsFortuneForfeit08" />
+        <marker scope="Public" name="MsFortuneForfeit09" />
+        <marker scope="Public" name="MsFortuneForfeit10" />
+        <marker scope="Public" name="MsFortuneForfeit11" />
+        <marker scope="Public" name="MsFortuneForfeit12" />
+        <marker scope="Public" name="MsFortuneForfeit13" />
+        <marker scope="Public" name="MsFortuneForfeit14" />
+        <marker scope="Public" name="MsFortuneForfeit15" />
+        <marker scope="Public" name="MsFortuneForfeitHV01" />
+        <marker scope="Public" name="MsFortuneForfeitHV02" />
+        <marker scope="Public" name="MsFortuneForfeitHV03" />
+        <marker scope="Public" name="MsFortuneForfeitHV04" />
+        <marker scope="Public" name="MsFortuneForfeitHV05" />
+        <marker scope="Public" name="MsFortuneForfeitHV06" />
+        <marker scope="Public" name="MsFortuneForfeitHV07" />
         <marker scope="Public" name="OkinoFelix01" />
         <marker scope="Public" name="penis">Dick-related wizardry</marker>
         <marker scope="Public" name="Penis">Dick-related wizardry</marker>
@@ -717,6 +765,11 @@
         <marker scope="Public" name="SannyTessFelix02" />
         <marker scope="Public" name="SannyTessFelix08" />
         <marker scope="Public" name="SannyTessFelix09" />
+        <marker scope="Public" name="SetogayaCasualForfeit01" />
+        <marker scope="Public" name="SetogayaCasualForfeit02" />
+        <marker scope="Public" name="SetogayaCasualForfeit03" />
+        <marker scope="Public" name="SetogayaCasualForfeit04" />
+        <marker scope="Public" name="SetogayaCasualForfeit05" />
         <marker scope="Public" name="SetogayaCatFelix10" />
         <marker scope="Public" name="SetogayaCatFelix14" />
         <marker scope="Public" name="SetogayaCatFelix17" />
@@ -814,6 +867,9 @@
         <marker scope="Public" name="SetogayaFelixButt01" />
         <marker scope="Public" name="SetogayaFelixButt02" />
         <marker scope="Public" name="SetogayaFelixButt03" />
+        <marker scope="Public" name="SetogayaFelixHandAny01" />
+        <marker scope="Public" name="SetogayaFelixHandAny02" />
+        <marker scope="Public" name="SetogayaFelixLVHandAny01" />
         <marker scope="Public" name="SetogayaForfeit01" />
         <marker scope="Public" name="SetogayaForfeit02" />
         <marker scope="Public" name="SetogayaForfeit03" />
@@ -838,6 +894,7 @@
         <marker scope="Public" name="SetogayaValentinesForfeit01" />
         <marker scope="Public" name="SetogayaValentinesForfeit02" />
         <marker scope="Public" name="SetogayaValentinesForfeit03" />
+        <marker scope="Public" name="SetogayaValentinesForfeit04" />
         <marker scope="Public" name="Tail">Pose maker shenanigans</marker>
         <marker scope="Public" name="TakatoshiFelix01">First part of stripping conversation with Felix for Takatoshi's first layer.</marker>
         <marker scope="Public" name="TakatoshiFelix04">Second part of stripping conversation with Felix for Takatoshi's second layer.</marker>
