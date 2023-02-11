@@ -101,6 +101,11 @@
         <response id="479" opponent="noire" opponentId="1058" />
         <response id="480" opponent="noire" opponentId="1057" />
         <response id="497" opponent="takatoshi" opponentId="16" />
+        <response id="0" opponent="saki_zls" opponentId="3" />
+        <response id="0" opponent="ms.fortune" opponentId="24" />
+        <response id="514" opponent="ms.fortune" opponentId="65" />
+        <response id="0" opponent="sakura" opponentId="3" />
+        <response id="515" opponent="sakura" opponentId="2" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -275,8 +280,8 @@
         <label id="160" label="" folder="Targets" sort="13" />
         <label id="161" label="" folder="Tag Filtered" sort="23" />
         <label id="162" label="" folder="Forfeit Logic" sort="0" />
-        <label id="163" label="" folder="Opponent Losses" sort="0" />
-        <label id="164" label="" folder="Opponent Losses" sort="2" />
+        <label id="163" label="" folder="Conditional" sort="0" />
+        <label id="164" label="" folder="Conditional" sort="2" />
         <label id="165" label="" folder="Responses" sort="8" />
         <label id="166" label="" folder="Responses" sort="9" />
         <label id="167" label="" folder="Responses" sort="10" />
@@ -593,26 +598,57 @@
         <label id="481" label="Noire 0 (Said NoireExplainingHerRole)" folder="Targets" sort="14" />
         <label id="482" label="Noire 0 (Not said NoireExplainingHerRole)" folder="Targets" sort="15" />
         <label id="483" label="" folder="Targets" sort="21" />
-        <label id="484" label="0 - introductions" folder="Queenie" sort="0" />
-        <label id="485" label="" folder="Targets" sort="0" />
-        <label id="486" label="" folder="Targets" sort="0" />
-        <label id="487" label="" folder="Situations" sort="0" />
-        <label id="488" label="" folder="Targets" sort="0" />
-        <label id="489" label="" folder="Targets" sort="0" />
-        <label id="490" label="" folder="Targets" sort="0" />
-        <label id="491" label="" folder="Clothing" sort="0" />
+        <label id="484" label="0 - introductions" folder="Queenie" sort="5" />
+        <label id="485" label="" folder="Targets" sort="22" />
+        <label id="486" label="" folder="Targets" sort="25" />
+        <label id="487" label="" folder="Situations" sort="8" />
+        <label id="488" label="" folder="Targets" sort="26" />
+        <label id="489" label="" folder="Targets" sort="24" />
+        <label id="490" label="" folder="Targets" sort="23" />
+        <label id="491" label="" folder="Clothing" sort="4" />
         <label id="492" label="" folder="Clothing" sort="0" />
-        <label id="493" label="" folder="Conditional" sort="0" />
-        <label id="494" label="" folder="Conditional" sort="0" />
-        <label id="495" label="" folder="Conditional" sort="0" />
-        <label id="496" label="" folder="Conditional" sort="0" />
-        <label id="497" label="" folder="Prompts" sort="0" />
-        <label id="498" label="" folder="Targets" sort="0" />
-        <label id="499" label="" folder="Forfeit Logic" sort="0" />
+        <label id="493" label="" folder="Conditional" sort="3" />
+        <label id="494" label="" folder="Conditional" sort="4" />
+        <label id="495" label="" folder="Conditional" sort="5" />
+        <label id="496" label="" folder="Conditional" sort="6" />
+        <label id="497" label="" folder="Prompts" sort="6" />
+        <label id="498" label="" folder="Targets" sort="28" />
+        <label id="499" label="" folder="Forfeit Logic" sort="2" />
         <label id="500" label="" folder="Conditional" sort="0" />
-        <label id="501" label="" folder="Conditional" sort="0" />
+        <label id="501" label="" folder="Conditional" sort="2" />
+        <label id="502" label="7 - saki 1st head" folder="Head Fall Off" sort="0" />
+        <label id="503" label="4 - sakura 1st head" folder="Head Fall Off" sort="2" />
+        <label id="504" label="3 - nadia 2nd head (after sakura)" folder="Head Fall Off" sort="3" />
+        <label id="505" label="7 - saki 2nd head (after sakura)" folder="Head Fall Off" sort="4" />
+        <label id="506" label="7 - saki 3rd head (after sakura and nadia)" folder="Head Fall Off" sort="5" />
+        <label id="507" label="4 - sakura 2nd head (after nadia)" folder="Head Fall Off" sort="6" />
+        <label id="508" label="4 - sakura 3rd head (after nadia and saki)" folder="Head Fall Off" sort="7" />
+        <label id="509" label="3 - nadia 1st head" folder="Head Fall Off" sort="8" />
+        <label id="510" label="3 - nadia 3rd head (after saki and sakura)" folder="Head Fall Off" sort="9" />
+        <label id="511" label="3 - nadia 2nd head (after saki)" folder="Head Fall Off" sort="10" />
+        <label id="512" label="7 - saki 2nd head (after nadia)" folder="Head Fall Off" sort="11" />
+        <label id="513" label="4 - sakura 2nd head (after saki)" folder="Head Fall Off" sort="12" />
+        <label id="514" label="" folder="Targets" sort="77" />
+        <label id="515" label="" folder="Targets" sort="78" />
+        <label id="516" label="" folder="Targets" sort="79" />
+        <label id="517" label="" folder="Tag Filtered" sort="52" />
+        <label id="518" label="" folder="Tag Filtered" sort="53" />
+        <label id="519" label="" folder="Forfeit Logic" sort="5" />
+        <label id="520" label="" folder="Forfeit Logic" sort="6" />
+        <label id="521" label="" folder="Conditional" sort="7" />
+        <label id="522" label="" folder="Targets" sort="80" />
+        <label id="523" label="" folder="Targets" sort="47" />
+        <label id="524" label="Human is Only Male (4+ Players)" folder="Table Setups" sort="0" />
+        <label id="525" label="" folder="Table Setups" sort="2" />
+        <label id="526" label="" folder="Conditional" sort="0" />
+        <label id="527" label="1 - cat speech, nyan" folder="Targets" sort="0" />
+        <label id="528" label="2 - light magic" folder="Targets" sort="0" />
+        <label id="529" label="" folder="Backgrounds" sort="0" />
+        <label id="530" label="" folder="Backgrounds" sort="0" />
+        <label id="531" label="" folder="Backgrounds" sort="0" />
+        <label id="532" label="1 - powers" folder="Queenie" sort="0" />
     </labels>
-    <nextId>501</nextId>
+    <nextId>532</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="aqua_adora_horde01" />
@@ -651,8 +687,10 @@
         <marker scope="Public" name="aqua_dunban_sword3" />
         <marker scope="Public" name="aqua_felix_accent1" />
         <marker scope="Public" name="aqua_felix_accent2" />
+        <marker scope="Public" name="aqua_felix_accent3" />
         <marker scope="Public" name="aqua_felix_lightmagic1" />
         <marker scope="Public" name="aqua_felix_lightmagic2" />
+        <marker scope="Public" name="aqua_felix_lightmagic3" />
         <marker scope="Public" name="aqua_fischl_grandiose_proclamations" />
         <marker scope="Public" name="aqua_heris_FriendPrompt" />
         <marker scope="Public" name="aqua_heris_LoyaltyPrompt" />
@@ -705,6 +743,8 @@
         <marker scope="Public" name="aqua_miku_strip2a" />
         <marker scope="Public" name="aqua_miku_strip2b" />
         <marker scope="Public" name="aqua_mitama_arrivalResp" />
+        <marker scope="Public" name="aqua_mustFF" />
+        <marker scope="Public" name="aqua_nadia_finished" />
         <marker scope="Public" name="aqua_nagatoro_extra_last_resp">Responds to a line Nagatoro might say about taking off an extra item last</marker>
         <marker scope="Public" name="aqua_nagatoro_s0a" />
         <marker scope="Public" name="aqua_nagatoro_s2a" />
@@ -727,6 +767,7 @@
         <marker scope="Public" name="aqua_queenie_intro1" />
         <marker scope="Public" name="aqua_queenie_intro2" />
         <marker scope="Public" name="aqua_queenie_powers1" />
+        <marker scope="Public" name="aqua_queenie_powers2" />
         <marker scope="Public" name="aqua_queenie_unversedThought" />
         <marker scope="Public" name="aqua_revy_01" />
         <marker scope="Public" name="aqua_revy_self01" />
@@ -803,6 +844,7 @@
         <marker scope="Public" name="hand_place_to_stay2">Ramblings about finding somewhere to settle down out of all the worlds she can visit</marker>
         <marker scope="Public" name="handbad_fade_into_darkness">Tries to make a joke about her time in the realm of darkness. oof.</marker>
         <marker scope="Public" name="handbad_mark_of_mastery">Bad hand line about her mark of mastery exam vs her skill here.</marker>
+        <marker scope="Public" name="headfalloff_1" />
         <marker scope="Public" name="high_card_7">Has gotten the worst possible hand out of them all.</marker>
         <marker scope="Public" name="ignoring_pervert">Ignoring a perverted character (that is attracted to her) during her forfeit</marker>
         <marker scope="Public" name="inv_traverse_town" />
@@ -818,6 +860,7 @@
         <marker scope="Public" name="manhunter">Targeting someone who is good at seducing men (or assumed to be)</marker>
         <marker scope="Public" name="mirage_arena">Mentions a bonus game area from KH:BBS</marker>
         <marker scope="Public" name="mirage_arena2" />
+        <marker scope="Public" name="nadia_headfalloff" />
         <marker scope="Public" name="nagatoro_butt2_react" />
         <marker scope="Public" name="one_v_one" />
         <marker scope="Public" name="oppselected_aqua_konosuba">Aqua from Konosuba is an opponent when this Aqua has just been selected</marker>
@@ -825,8 +868,11 @@
         <marker scope="Private" name="player_pogchamp">Player named themself Pogchamp or variants</marker>
         <marker scope="Public" name="roxas_first_meeting">First time she encounters Roxas</marker>
         <marker scope="Public" name="rumble_racing">Mentions a bonus minigame from KH:BBS</marker>
+        <marker scope="Public" name="saki_headfalloff" />
+        <marker scope="Public" name="sakura_headfalloff" />
         <marker scope="Public" name="sand_in_shoes" />
         <marker scope="Public" name="selected_aqua_konosuba">Aqua from Konosuba just got selected as an opponent</marker>
+        <marker scope="Public" name="selected_hauntedforest" />
         <marker scope="Public" name="self_getting_into_it" />
         <marker scope="Public" name="self_out_01">Chooses a line based on being out of the game (having to masturbate)</marker>
         <marker scope="Public" name="self_out_02">Chooses a line based on being out of the game (having to masturbate)</marker>
