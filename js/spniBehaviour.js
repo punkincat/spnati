@@ -147,7 +147,7 @@ var TAG_ALIASES = {
     'mlp':   'my_little_pony',
     'tengen_toppa_gurren_lagann': 'ttgl',
     // Other aliases
-    'redhead': 'ginger',
+    'redhead': 'red_hair',
     'sword':   'blade',
 };
 
@@ -161,6 +161,10 @@ var TAG_IMPLICATIONS = {
     'green_hair': ['exotic_hair'],
     'pink_hair': ['exotic_hair'],
     'purple_hair': ['exotic_hair'],
+    'violet_eyes': ['exotic_eyes'],
+    'red_eyes': ['exotic_eyes'],
+    'amber_eyes': ['exotic_eyes'],
+    'heterochromia': ['exotic_eyes'],
     'hairy': ['pubic_hair'],
     'trimmed': ['pubic_hair'],
 };
