@@ -59,6 +59,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <note id="95">You could target this if you wanted your character to immediately notice the pattern on her panties. As far as making that future-proof, though, here be dragons.</note>
         <note id="179">These stripping/stripped lines are pretty much placeholders so the dialogue ties into what Kyouko just said. Feel free to ignore them with Nagatoro and continue the conversation instead.</note>
         <note id="180">Placeholder to give Nagatoro time to respond. I just wrote this so her sequence makes sense with context from the Must Strip case</note>
+        <note id="317">These *should* always get out-prioritized, but I'm not perfect so who knows?</note>
     </notes>
     <labels>
         <label id="2" label="Imitating Yuno" folder="" sort="0" />
@@ -199,7 +200,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="165" label="Am I giving the ribbon?" folder="Ribbon collectible" sort="0" />
         <label id="166" label="Triple Kyou(u)ko Kyou" folder="" sort="0" />
         <label id="167" label="What does she do?" folder="" sort="0" />
-        <label id="168" label="Not a pervert" folder="" sort="0" />
+        <label id="168" label="Not a pervert" folder="Default uniform" sort="0" />
         <label id="169" label="Tank top - Pervy player (and Hayacchi)" folder="Default uniform" sort="11" />
         <label id="170" label="What to do with a cute, cool, and sexy drawing?" folder="" sort="0" />
         <label id="171" label="Author's birthday" folder="" sort="0" />
@@ -316,8 +317,56 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="277" label="Exposed" folder="Minor/Accessory late" sort="0" />
         <label id="278" label="Indecent" folder="Minor/Accessory late" sort="0" />
         <label id="279" label="Naked" folder="Minor/Accessory late" sort="0" />
+        <label id="280" label="Default outfit" folder="Rares" sort="0" />
+        <label id="281" label="" folder="Rares" sort="0" />
+        <label id="282" label="Sexy tomato" folder="Rares" sort="0" />
+        <label id="283" label="Reset" folder="AI Level" sort="0" />
+        <label id="284" label="Default outfit: Bad" folder="AI Level" sort="0" />
+        <label id="285" label="Default outfit: Good" folder="AI Level" sort="0" />
+        <label id="286" label="Sexy tomato: Good" folder="AI Level" sort="0" />
+        <label id="287" label="Sexy tomato: Bad" folder="AI Level" sort="0" />
+        <label id="288" label="Slippers" folder="Sexy Tomato" sort="0" />
+        <label id="289" label="Panties" folder="Sexy Tomato" sort="0" />
+        <label id="290" label="Hood" folder="Sexy Tomato" sort="0" />
+        <label id="291" label="Hood" folder="Sexy Tomato" sort="0" />
+        <label id="292" label="If she didn't take her ribbon off" folder="" sort="0" />
+        <label id="293" label="Socks" folder="Sexy Tomato" sort="0" />
+        <label id="294" label="Top" folder="Sexy Tomato" sort="0" />
+        <label id="295" label="Bottom" folder="Sexy Tomato" sort="0" />
+        <label id="296" label="Tank top" folder="Sexy Tomato" sort="0" />
+        <label id="297" label="Slippers" folder="Sexy Tomato" sort="0" />
+        <label id="298" label="Socks" folder="Sexy Tomato" sort="0" />
+        <label id="299" label="Top" folder="Sexy Tomato" sort="0" />
+        <label id="300" label="Bottom" folder="Sexy Tomato" sort="0" />
+        <label id="301" label="Panties" folder="Sexy Tomato" sort="0" />
+        <label id="302" label="Tank top" folder="Sexy Tomato" sort="0" />
+        <label id="303" label="Hood (played ribbon trick)" folder="Sexy Tomato" sort="0" />
+        <label id="304" label="Reset &quot;ribbon trick this game&quot; marker" folder="" sort="0" />
+        <label id="305" label="Played ribbon trick this game" folder="" sort="0" />
+        <label id="306" label="Did not play ribbon trick this game" folder="" sort="0" />
+        <label id="307" label="Played ribbon trick this game" folder="" sort="0" />
+        <label id="308" label="Played ribbon trick this game" folder="" sort="0" />
+        <label id="309" label="Did not play ribbon trick this game" folder="" sort="0" />
+        <label id="310" label="Played ribbon trick this game" folder="" sort="0" />
+        <label id="311" label="Panties (someone else revealed crotch first)" folder="Sexy Tomato" sort="0" />
+        <label id="312" label="Panties (someone else bottomless)" folder="Sexy Tomato" sort="0" />
+        <label id="313" label="Tank top (no one naked)" folder="Sexy Tomato" sort="0" />
+        <label id="314" label="Tank top (first boobs)" folder="Sexy Tomato" sort="0" />
+        <label id="315" label="Sleepovers" folder="Sexy Tomato" sort="0" />
+        <label id="316" label="Socks" folder="Sexy Tomato" sort="0" />
+        <label id="317" label="Fallback" folder="" sort="0" />
+        <label id="318" label="Costume: Sexy Tomato" folder="" sort="0" />
+        <label id="319" label="Costume: Default" folder="" sort="0" />
+        <label id="320" label="Costume: Default" folder="" sort="0" />
+        <label id="321" label="Costume: Default" folder="" sort="0" />
+        <label id="322" label="Costume: Default" folder="" sort="0" />
+        <label id="323" label="Costume: Sexy Tomato" folder="" sort="0" />
+        <label id="324" label="Costume: Sexy Tomato" folder="" sort="0" />
+        <label id="325" label="Costume: Sexy Tomato" folder="" sort="0" />
+        <label id="326" label="Sexy Tomato" folder="" sort="0" />
+        <label id="327" label="Sexy Tomato" folder="" sort="0" />
     </labels>
-    <nextId>279</nextId>
+    <nextId>327</nextId>
     <markers>
         <marker scope="Private" name="B_">Background-related markers</marker>
         <marker scope="Public" name="B_DarkTricks">Dark backgrounds</marker>
@@ -355,12 +404,13 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="Q_PlayCards">Never mind that everyone just got done playing a card game.</marker>
         <marker scope="Public" name="Q_SkinnyDipping">The water's right there. You might as well.</marker>
         <marker scope="Private" name="S_">Self strip related</marker>
-        <marker scope="Public" name="S_FullTomato">Self Stripped - Both her bra and panties—tomato themed—are visible.</marker>
+        <marker scope="Public" name="S_AnimalPajamas">Self Stripping 1 (Sexy Tomato)</marker>
+        <marker scope="Public" name="S_FullTomato">Self Stripped - Both her bra and panties—tomato themed—are visible. (Default outfit)</marker>
         <marker scope="Public" name="S_GodivaHair">Early in first topless stage - the barely visible nipples</marker>
         <marker scope="Public" name="S_NoRibbonOrSidetails">First hand on stage 7 - Kyouko took away her ribbon and sidetails at the same time, making a pretty jarring change of appearance. (Default outfit)</marker>
         <marker scope="Public" name="S_RibbonOff">Self Stripping 6 - Taking the ribbon off (Default outfit)</marker>
         <marker scope="Public" name="S_RibbonStays">Self Stripping - Kyouko plans to keep her ribbon.</marker>
-        <marker scope="Public" name="S_TomatoesRevealed">Self Stripped - The tomato pattern on her underwear is visible.</marker>
+        <marker scope="Public" name="S_TomatoesRevealed">Self Stripped - The tomato pattern on her underwear is visible. (Default outfit)</marker>
         <marker scope="Public" name="S_Uniform">Self Stripping 2 - Explain the uniform (Default outfit)</marker>
         <marker scope="Public" name="SlyCooper_PantsOffA">Sly Cooper Stripping 0</marker>
         <marker scope="Private" name="T_">Character targets</marker>
@@ -420,6 +470,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Setogaya_Strip1Origin">Self Stripped 2</marker>
         <marker scope="Public" name="T_Setogaya_Strip1RealActivities">Self Stripped 1</marker>
         <marker scope="Public" name="T_Setogaya_Strip1Sleepovers">Self Stripped 2</marker>
+        <marker scope="Public" name="T_Setogaya_Strip1SleepoversTomato" />
         <marker scope="Public" name="T_Setogaya_Strip1Witch">Self Stripping 0</marker>
         <marker scope="Public" name="T_Setogaya_Strip2LewdIdea">Self Stripping 2</marker>
         <marker scope="Public" name="T_Setogaya_Strip2LewdStuff">Self Must Strip 2</marker>
@@ -439,6 +490,8 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="Z_PlayerWearingRibbon">The player wore the Kyouko's Ribbon collectible to the game</marker>
         <marker scope="Private" name="Z_PlayerWornRibbon">The player has worn the Kyouko's Ribbon collectible in the past.</marker>
         <marker scope="Public" name="Z_RemovedCollectibleRibbon">The player brought Kyouko's ribbon but took it off.</marker>
+        <marker scope="Private" name="Z_RibbonReassuranceSexyTomato">Kyouko assures the player she won't take off her ribbon last time (Sexy Tomato)</marker>
+        <marker scope="Private" name="Z_RibbonTrickLastGame">Kyouko tricked the others by taking her ribbon off last game.</marker>
         <marker scope="Private" name="Z_SmallStripLastHand">People keep taking off small stuff, meanwhile Kyouko's the only one who's down to her underwear.</marker>
         <marker scope="Private" name="Z_UnderwearCount">Count how many pairs of underwear someone's wearing.</marker>
         <marker scope="Public" name="Z_WinterUniform">If set, Kyouko is wearing her long-sleeved uniform. There's a reason I didn't make a situation for this.</marker>
