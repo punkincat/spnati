@@ -213,6 +213,7 @@ function computeMagnetismGroups(opponents) {
             for (let i = 0; i < 10; i++) {
                 if (j >= opponents.length) break;
                 if (opponents[j].effectiveScore < 0) break;
+                if (opponents[j].event_partition != curOpp.event_partition) break;
                 if (opponents[j].magnetismTag == curOpp.magnetismTag) {
                     group.push(opponents.splice(j, 1)[0]);
                 } else {
