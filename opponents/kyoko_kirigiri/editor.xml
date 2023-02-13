@@ -806,6 +806,25 @@
         <label id="785" label="Arousal marker help" folder="Outbound stage 4" sort="0" />
         <label id="786" label="Ferris Ou 4-2C" color="5" folder="Outbound stage 4" sort="0" />
         <label id="787" label="" folder="Ferris pseudo-generics" sort="0" />
+        <label id="788" label="Tomato+Okino IL 0-1" color="1" folder="Okino+Toshinou" sort="0" />
+        <label id="789" label="Tomato+Okino IR pre0-1" folder="Duplicate dialogue" sort="0" />
+        <label id="790" label="Tomato+Okino IR 0-1" color="1" folder="Duplicate dialogue" sort="0" />
+        <label id="791" label="Tomato+Okino OL 0-1" color="1" folder="Duplicate dialogue" sort="0" />
+        <label id="792" label="Tomato+Okino OR pre0-1" folder="Duplicate dialogue" sort="0" />
+        <label id="793" label="Tomato+Okino OR 0-1" color="1" folder="Duplicate dialogue" sort="0" />
+        <label id="794" label="Toshino select, tomato" color="1" folder="Duplicate dialogue" sort="0" />
+        <label id="795" label="Toshinou select, tomato" color="1" folder="" sort="0" />
+        <label id="796" label="Tomato Ou 0-1" color="1" folder="Duplicate dialogue" sort="0" />
+        <label id="797" label="Toshinou IL 1-1 " folder="Inbound stage 1" sort="0" />
+        <label id="798" label="Toshinou IL 1-2" folder="Inbound stage 1" sort="0" />
+        <label id="799" label="Toshinou IL 1-2" folder="Inbound stage 1" sort="0" />
+        <label id="800" label="Toshinou IL 1-3" folder="Inbound stage 1" sort="0" />
+        <label id="801" label="Toshinou IR pre1-1" folder="Duplicate dialogue" sort="0" />
+        <label id="802" label="Toshinou IR 1-1" folder="Duplicate dialogue" sort="0" />
+        <label id="803" label="Toshinou IR pre1-2" folder="Duplicate dialogue" sort="0" />
+        <label id="804" label="Toshinou IR 1-2" folder="Duplicate dialogue" sort="0" />
+        <label id="805" label="Toshinou IR pre1-3" folder="Duplicate dialogue" sort="0" />
+        <label id="806" label="Toshinou IR 1-3" folder="Duplicate dialogue" sort="0" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -830,11 +849,10 @@
         <prefix>#-mast_</prefix>
         <prefix>#-stand</prefix>
     </prefixes>
-    <nextId>787</nextId>
+    <nextId>806</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
-        <marker scope="Public" name="+quips" />
         <marker scope="Public" name="alwaysReady">"Always ready, I see" and other versions of the line</marker>
         <marker scope="Public" name="arousalVisible" />
         <marker scope="Public" name="aroused">Her vulva is or will be visibly secreting fluid prior to her forfeit while nude (and in the second tick of her forfeit).</marker>
@@ -1042,6 +1060,7 @@
         <marker scope="Public" name="okino_revealForfeit" />
         <marker scope="Public" name="okino_revealNormal" />
         <marker scope="Public" name="okino_revealRe" />
+        <marker scope="Public" name="okino_toshinou_tomatoNickname" />
         <marker scope="Public" name="pantsPreference" />
         <marker scope="Public" name="parentTrouble">Kyoko has reacted with X divided by 2 lines to Mia Fey asking about if anyone else had parents leave at a young age.</marker>
         <marker scope="Public" name="pokeTrainers" />
@@ -1114,15 +1133,21 @@
         <marker scope="Public" name="tieCompletes">"A classmate in high school once told me this tie completes my outfit."</marker>
         <marker scope="Public" name="timeline" />
         <marker scope="Public" name="tooManyKyokos" />
+        <marker scope="Public" name="toshinou_anythingElse" />
+        <marker scope="Public" name="toshinou_beneathNotice" />
         <marker scope="Public" name="toshinou_gameOverSkinnyDip" />
         <marker scope="Public" name="toshinou_gameOverSkinnyDipNakeySwimmy" />
         <marker scope="Public" name="toshinou_gameOverSkinnyDipWon" />
         <marker scope="Public" name="toshinou_glovesOn_selfRibbonOut" />
         <marker scope="Public" name="toshinou_godivaHairRe" />
         <marker scope="Public" name="toshinou_helloAgain" />
+        <marker scope="Public" name="toshinou_howManyTomatoes" />
+        <marker scope="Public" name="toshinou_howManyTomatoes_mustStrip" />
+        <marker scope="Public" name="toshinou_moreAlike" />
         <marker scope="Public" name="toshinou_nakeySwimmy" />
-        <marker scope="Public" name="toshinou_playedWith">Kirigiri has played X games with Kyouko Toshinou. Activates on Game Start.</marker>
+        <marker scope="Public" name="toshinou_playedWith">She has played X games with Kyouko Toshinou. Activates on Game Start.</marker>
         <marker scope="Public" name="toshinou_ribbonGone" />
+        <marker scope="Public" name="toshinou_seenTomatoUndies" />
         <marker scope="Public" name="toshinou_skinnyDip" />
         <marker scope="Public" name="toshinou_theKyoukoRe" />
         <marker scope="Public" name="toshinou_tomatoUndies" />
