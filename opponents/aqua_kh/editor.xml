@@ -106,6 +106,11 @@
         <response id="514" opponent="ms.fortune" opponentId="65" />
         <response id="0" opponent="sakura" opponentId="3" />
         <response id="515" opponent="sakura" opponentId="2" />
+        <response id="544" opponent="nagamimi" opponentId="76" />
+        <response id="545" opponent="nagatoro" opponentId="1735" />
+        <response id="546" opponent="nagatoro" opponentId="1733" />
+        <response id="548" opponent="cagliostro" opponentId="315" />
+        <response id="551" opponent="cagliostro" opponentId="317" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -440,7 +445,7 @@
         <label id="322" label="" folder="Responses" sort="40" />
         <label id="323" label="" folder="Responses" sort="43" />
         <label id="324" label="" folder="Tag Filtered" sort="43" />
-        <label id="325" label="" color="3" folder="Responses" sort="12" />
+        <label id="325" label="" color="0" folder="Responses" sort="12" />
         <label id="326" label="" folder="Targets" sort="0" />
         <label id="327" label="" folder="Targets" sort="2" />
         <label id="328" label="" color="3" folder="Targets" sort="33" />
@@ -504,7 +509,7 @@
         <label id="387" label="" folder="Backgrounds" sort="0" />
         <label id="388" label="" folder="Responses" sort="34" />
         <label id="389" label="" folder="Responses" sort="29" />
-        <label id="390" label="" folder="Targets" sort="39" />
+        <label id="390" label="" color="3" folder="Targets" sort="39" />
         <label id="391" label="" folder="Other Targets" sort="0" />
         <label id="392" label="" folder="Other Targets" sort="8" />
         <label id="393" label="Revealing Chest First Strip (0-3 rounds)" folder="Situations" sort="8" />
@@ -647,10 +652,34 @@
         <label id="530" label="" folder="Backgrounds" sort="0" />
         <label id="531" label="" folder="Backgrounds" sort="0" />
         <label id="532" label="1 - powers" folder="Queenie" sort="0" />
+        <label id="533" label="" folder="Logic" sort="0" />
+        <label id="534" label="" folder="Dunban S" sort="0" />
+        <label id="535" label="" folder="Forfeit Logic" sort="0" />
+        <label id="536" label="short + mean opps" folder="Tag Filtered" sort="0" />
+        <label id="537" label="" folder="Tag Filtered" sort="0" />
+        <label id="538" label="" folder="Tag Filtered" sort="0" />
+        <label id="539" label="" folder="Logic" sort="0" />
+        <label id="540" label="" folder="Tag Filtered" sort="0" />
+        <label id="541" label="" folder="Tag Filtered" sort="0" />
+        <label id="542" label="" folder="Targets" sort="0" />
+        <label id="543" label="" folder="Targets" sort="0" />
+        <label id="544" label="" folder="Prompts" sort="0" />
+        <label id="545" label="" folder="Responses" sort="0" />
+        <label id="546" label="" folder="Responses" sort="0" />
+        <label id="547" label="" folder="Targets" sort="0" />
+        <label id="548" label="" folder="Responses" sort="0" />
+        <label id="550" label="" folder="Responses" sort="0" />
+        <label id="549" label="" folder="Responses" sort="0" />
+        <label id="551" label="" folder="Responses" sort="0" />
+        <label id="552" label="" folder="Dunban S" sort="0" />
+        <label id="553" label="" folder="Dunban S" sort="0" />
+        <label id="554" label="" folder="Dunban S" sort="0" />
+        <label id="555" label="" folder="Dunban S" sort="0" />
+        <label id="556" label="" folder="Dunban S" sort="0" />
+        <label id="557" label="" folder="Dunban S" sort="0" />
     </labels>
-    <nextId>532</nextId>
+    <nextId>557</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="aqua_adora_horde01" />
         <marker scope="Public" name="aqua_adora_sword01" />
         <marker scope="Public" name="aqua_aloy_historyPromptResp" />
@@ -660,6 +689,9 @@
         <marker scope="Public" name="aqua_and_darkness_oppstrip">Either Aqua or Darkness (both from Konosuba) must strip - makes a comment on it</marker>
         <marker scope="Public" name="aqua_binah_startFF" />
         <marker scope="Public" name="aqua_blake_keybladeCont1" />
+        <marker scope="Public" name="aqua_cag_self2a" />
+        <marker scope="Public" name="aqua_cag_self3a" />
+        <marker scope="Public" name="aqua_cag_self4a" />
         <marker scope="Public" name="aqua_cheryl_self01" />
         <marker scope="Public" name="aqua_cheryl_self02" />
         <marker scope="Public" name="aqua_cheryl_self11" />
@@ -743,14 +775,20 @@
         <marker scope="Public" name="aqua_miku_strip2a" />
         <marker scope="Public" name="aqua_miku_strip2b" />
         <marker scope="Public" name="aqua_mitama_arrivalResp" />
+        <marker scope="Public" name="aqua_mitama_poetry1" />
+        <marker scope="Public" name="aqua_mitama_shrinemaiden1" />
         <marker scope="Public" name="aqua_mustFF" />
         <marker scope="Public" name="aqua_nadia_finished" />
+        <marker scope="Public" name="aqua_nagamimi_flawsPromptResp" />
         <marker scope="Public" name="aqua_nagatoro_extra_last_resp">Responds to a line Nagatoro might say about taking off an extra item last</marker>
         <marker scope="Public" name="aqua_nagatoro_s0a" />
         <marker scope="Public" name="aqua_nagatoro_s2a" />
         <marker scope="Public" name="aqua_nagatoro_s2b" />
+        <marker scope="Public" name="aqua_nagatoro_s2c" />
         <marker scope="Public" name="aqua_nagatoro_self0a" />
         <marker scope="Public" name="aqua_nagatoro_self0b" />
+        <marker scope="Public" name="aqua_nagatoro_self0c_a" />
+        <marker scope="Public" name="aqua_nagatoro_self0c_b" />
         <marker scope="Public" name="aqua_noire_explainedRole" />
         <marker scope="Public" name="aqua_noire_Lastation1" />
         <marker scope="Public" name="aqua_noire_Role0a" />
@@ -776,6 +814,11 @@
         <marker scope="Public" name="aqua_ryuko_scissorbladeAndFriend" />
         <marker scope="Public" name="aqua_sannytess_cock1" />
         <marker scope="Public" name="aqua_sannytess_cock2" />
+        <marker scope="Public" name="aqua_sf_fingersResp" />
+        <marker scope="Public" name="aqua_sf_foreplayResp" />
+        <marker scope="Public" name="aqua_sf_legsResp" />
+        <marker scope="Public" name="aqua_sf_nipplesResp" />
+        <marker scope="Public" name="aqua_sf_playerFocus1Resp" />
         <marker scope="Public" name="aqua_steve_chestReveal" />
         <marker scope="Public" name="aqua_steve_hawkins1" />
         <marker scope="Public" name="aqua_takatoshi_cloningBluesResp" />
@@ -818,6 +861,7 @@
         <marker scope="Public" name="cag_forfeitstart" />
         <marker scope="Public" name="cunt">Hearing someone else say the word "cunt" while she is masturbating puts her off</marker>
         <marker scope="Public" name="dunban_aqua_ffHeavy4_Resp" />
+        <marker scope="Public" name="dunban_specialflirting" />
         <marker scope="Public" name="enemies_drop_money" />
         <marker scope="Public" name="first_out_01">Chooses a line related to her being the first one to forfeit</marker>
         <marker scope="Public" name="first_out_02">Chooses a line related to her being the first one to forfeit</marker>
@@ -863,6 +907,11 @@
         <marker scope="Public" name="nadia_headfalloff" />
         <marker scope="Public" name="nagatoro_butt2_react" />
         <marker scope="Public" name="one_v_one" />
+        <marker scope="Public" name="opp_criminal_lostAll" />
+        <marker scope="Public" name="opp_maidUniform_naked" />
+        <marker scope="Public" name="opp_sleepwear" />
+        <marker scope="Public" name="opp_tag_ears_notfurry" />
+        <marker scope="Public" name="opp_tag_furry" />
         <marker scope="Public" name="oppselected_aqua_konosuba">Aqua from Konosuba is an opponent when this Aqua has just been selected</marker>
         <marker scope="Public" name="other_exposed_thighhighs" />
         <marker scope="Private" name="player_pogchamp">Player named themself Pogchamp or variants</marker>
@@ -879,6 +928,7 @@
         <marker scope="Public" name="self_out_03">Chooses a line based on being out of the game (having to masturbate)</marker>
         <marker scope="Public" name="self_out_04">Chooses a line based on being out of the game (having to masturbate)</marker>
         <marker scope="Public" name="self_out_05">Chooses a line based on being out of the game (having to masturbate)</marker>
+        <marker scope="Public" name="short_and_mean_girls" />
         <marker scope="Public" name="shy_alsoplaying_lostgame" />
         <marker scope="Public" name="shy_won_game" />
         <marker scope="Public" name="sit_on_bed" />
