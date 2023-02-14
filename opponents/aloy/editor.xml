@@ -3,7 +3,7 @@
     <owner>aloy</owner>
     <height>5'6''</height>
     <age>20</age>
-    <pronunciation />
+    <pronunciation>ayy-loy</pronunciation>
     <othernotes />
     <noteworthy>
         <case name="Focus" id="1" priority="FYI" min="2" max="2">
@@ -43,6 +43,24 @@
         <response id="58" opponent="nico_robin" opponentId="304" />
         <response id="61" opponent="kyoko_kirigiri" opponentId="25" />
         <response id="63" opponent="samus_aran" opponentId="1" />
+        <response id="89" opponent="queenie" opponentId="28" />
+        <response id="90" opponent="queenie" opponentId="34" />
+        <response id="95" opponent="cagliostro" opponentId="1" />
+        <response id="96" opponent="cagliostro" opponentId="2" />
+        <response id="97" opponent="cagliostro" opponentId="3" />
+        <response id="99" opponent="leonie" opponentId="746" />
+        <response id="100" opponent="leonie" opponentId="14" />
+        <response id="102" opponent="pyrrha" opponentId="52" />
+        <response id="103" opponent="pyrrha" opponentId="53" />
+        <response id="104" opponent="pyrrha" opponentId="55" />
+        <response id="106" opponent="kora" opponentId="38" />
+        <response id="109" opponent="kumatora" opponentId="208" />
+        <response id="110" opponent="kumatora" opponentId="170" />
+        <response id="112" opponent="mitama" opponentId="3" />
+        <response id="113" opponent="mitama" opponentId="920" />
+        <response id="117" opponent="steve" opponentId="1" />
+        <response id="118" opponent="steve" opponentId="3" />
+        <response id="119" opponent="steve" opponentId="4" />
     </responses>
     <labels>
         <label id="5" label="Carja Blazon" folder="" sort="0" />
@@ -78,8 +96,45 @@
         <label id="60" label="" folder="Targets" sort="0" />
         <label id="62" label="" folder="Targets" sort="0" />
         <label id="64" label="" folder="Targets" sort="0" />
+        <label id="65" label="" folder="Carja Blazon" sort="0" />
+        <label id="66" label="" folder="Carja Blazon" sort="0" />
+        <label id="67" label="" folder="Carja Blazon" sort="0" />
+        <label id="68" label="" folder="Carja Blazon" sort="0" />
+        <label id="69" label="" folder="Carja Blazon" sort="0" />
+        <label id="70" label="" folder="Carja Blazon" sort="0" />
+        <label id="71" label="" folder="Carja Blazon" sort="0" />
+        <label id="72" label="" folder="Carja Blazon" sort="0" />
+        <label id="73" label="" folder="Carja Blazon" sort="0" />
+        <label id="74" label="" folder="Carja Blazon" sort="0" />
+        <label id="75" label="" folder="Carja Blazon" sort="0" />
+        <label id="76" label="" folder="Carja Blazon" sort="0" />
+        <label id="77" label="" folder="Carja Blazon" sort="0" />
+        <label id="78" label="" folder="Carja Blazon" sort="0" />
+        <label id="79" label="" folder="Carja Blazon" sort="0" />
+        <label id="80" label="" folder="Carja Blazon" sort="0" />
+        <label id="81" label="" folder="Carja Blazon" sort="0" />
+        <label id="82" label="" folder="Carja Blazon" sort="0" />
+        <label id="83" label="" folder="Carja Blazon" sort="0" />
+        <label id="84" label="" folder="Targets" sort="0" />
+        <label id="85" label="" folder="Targets" sort="0" />
+        <label id="86" label="" folder="Targets" sort="0" />
+        <label id="87" label="" folder="Spnanon" sort="0" />
+        <label id="88" label="" folder="Spnanon" sort="0" />
+        <label id="91" label="" folder="Targets" sort="0" />
+        <label id="92" label="" folder="Targets" sort="0" />
+        <label id="93" label="" folder="Targets" sort="0" />
+        <label id="94" label="" folder="Targets" sort="0" />
+        <label id="98" label="" folder="Spnanon" sort="0" />
+        <label id="101" label="" folder="Targets" sort="0" />
+        <label id="105" label="" folder="Spnanon" sort="0" />
+        <label id="107" label="" folder="Targets" sort="0" />
+        <label id="108" label="" folder="Targets" sort="0" />
+        <label id="111" label="" folder="Targets" sort="0" />
+        <label id="114" label="" folder="Targets" sort="0" />
+        <label id="115" label="" folder="Spnanon" sort="0" />
+        <label id="116" label="" folder="Spnanon" sort="0" />
     </labels>
-    <nextId>64</nextId>
+    <nextId>119</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="AdoraBelts1" />
@@ -105,6 +160,9 @@
         <marker scope="Public" name="DwightBracelets3" />
         <marker scope="Public" name="Expo1" />
         <marker scope="Public" name="Expo2" />
+        <marker scope="Public" name="FelixArmbands1" />
+        <marker scope="Public" name="FelixShoes1" />
+        <marker scope="Public" name="FelixSocks1" />
         <marker scope="Public" name="Focus" />
         <marker scope="Public" name="HistoryPrompt" />
         <marker scope="Public" name="HuTaoGauntlets3Reply" />
@@ -117,8 +175,15 @@
         <marker scope="Public" name="JuraGauntlets1Reply" />
         <marker scope="Public" name="JuraNecklaces1Reply" />
         <marker scope="Public" name="JuraRapier1" />
+        <marker scope="Public" name="KoraBolts1" />
+        <marker scope="Public" name="KoraSkirt1" />
+        <marker scope="Public" name="KumatoraBoots1" />
         <marker scope="Public" name="KyokoJacket1" />
+        <marker scope="Public" name="LeonieJacket1" />
         <marker scope="Public" name="LyraleiBow1" />
+        <marker scope="Public" name="MagicalSempaiCape1" />
+        <marker scope="Public" name="MagicalSempaiShoes1" />
+        <marker scope="Public" name="MagicalSempaiSocks1" />
         <marker scope="Public" name="MeiaEyepiece1" />
         <marker scope="Public" name="MeiaNecklaces1Reply" />
         <marker scope="Public" name="MeiaNecklaces2Reply" />
@@ -129,6 +194,7 @@
         <marker scope="Public" name="MercyNecklace1Reply" />
         <marker scope="Public" name="MercyNecklace2Reply" />
         <marker scope="Public" name="MercyNecklace3Reply" />
+        <marker scope="Public" name="MitamaCapelet1" />
         <marker scope="Public" name="NamiBelt1" />
         <marker scope="Public" name="NamiBelt2A" />
         <marker scope="Public" name="NamiNecklaces1Reply" />
@@ -139,6 +205,7 @@
         <marker scope="Public" name="OkinoShoes1" />
         <marker scope="Public" name="PetraBoots1" />
         <marker scope="Public" name="PetraNecklaces1Reply" />
+        <marker scope="Public" name="QueenieStaff1" />
         <marker scope="Public" name="RevyGloves1" />
         <marker scope="Public" name="RevyNecklaces1Reply" />
         <marker scope="Public" name="RobinOrigin" />
