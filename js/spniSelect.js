@@ -145,7 +145,7 @@ var sortingOptionsMap = {
     target: sortOpponentsByMostTargeted(50, Infinity),
     oldest: sortOpponentsByMultipleFields(["release", "-listingIndex"]),
     newest: sortOpponentsByMultipleFields(["-release", "listingIndex"]),
-    featured: sortOpponentsByMultipleFields(["-event_partition", "-event_sort_order", "-effectiveScore"]),
+    featured: sortOpponentsByMultipleFields(["-effectiveScore"]),
 };
 var groupCreditsShown = false;
 
@@ -826,6 +826,7 @@ function updateIndividualSelectSort() {
     if (sortingMode === "featured") {
         /* Apply specific rules for featured sort order. */
         loadedOpponents = applyFeaturedSortRules(loadedOpponents);
+        if (eventSortingActive) loadedOpponents.sort(sortOpponentsByMultipleFields(["-event_partition", "-event_sort_order"]));
     }
     
     var testingFirst = individualSelectTesting && (sortingMode === "featured" || sortingMode === "-lastUpdated");
