@@ -1856,7 +1856,7 @@
             <case stage="1" priority="200">
                 <condition role="other" character="yuelia" sayingMarker="neptune_utterConfusion" />
                 <condition role="self" saidMarker="nep_yuelia_protag1" />
-                <state img="#-stripping.png" marker="nep_yuelia_awkward1">Um... n-nevermind that. Anyway, hoodie is next.</state>
+                <state img="#-stripping.png" marker="nep_yuelia_awkward1">Um... n-never mind that. Anyway, hoodie is next.</state>
             </case>
             <case stage="0" priority="200">
                 <condition role="other" character="megumin" sayingMarker="megumin_neptune_colorful2" />
@@ -4490,7 +4490,7 @@
             </case>
             <case stage="0-9" priority="200">
                 <condition role="target" character="ryuko" stage="3" />
-                <state img="#-bad surprised.png" marker="nep_ryuko_makoHit1">~name~! Your friend is righ--!... N-Nevermind...</state>
+                <state img="#-bad surprised.png" marker="nep_ryuko_makoHit1">~name~! Your friend is righ--!... N-Never mind...</state>
             </case>
             <case stage="0-9" oneShotId="21" priority="200">
                 <condition role="target" character="ryuko" stage="0" saidMarker="mako" />
@@ -5233,7 +5233,7 @@
             <case stage="9">
                 <state img="#-happy.png">It looked cuter on ya, but it looks sexier off ya.</state>
                 <state img="#-unsure.png">I know I already lost and all, but it's still a little disappointing when you take something like that off.</state>
-                <state img="#-calm.png">Well that's done, next round! I want to go home and and eat pudding!</state>
+                <state img="#-calm.png">Well that's done, next round! I want to go home and eat pudding!</state>
             </case>
         </trigger>
 
@@ -5708,7 +5708,7 @@
             <case stage="9">
                 <state img="#-happy.png">It looked cuter on ya, but it looks sexier off ya.</state>
                 <state img="#-unsure.png">But are you sure you don't want to show more off? Ok...</state>
-                <state img="#-calm.png">Well that's done, next round! I want to go home and and play games!</state>
+                <state img="#-calm.png">Well that's done, next round! I want to go home and play games!</state>
             </case>
         </trigger>
 
@@ -5922,7 +5922,7 @@
             <case stage="0-9" priority="200">
                 <condition role="target" character="saki_zls" stage="4" />
                 <condition role="self" saidMarker="nep_saki_zls_fit" />
-                <state img="#-happy.png" marker="nep_saki_zls_fit2">Hehehe, well, that was what I did at first. But after a while I started gaining a little weight, and I discovered a pretty neat way to burn calories by constantly constantly transforming into and out of my HDD mode.</state>
+                <state img="#-happy.png" marker="nep_saki_zls_fit2">Hehehe, well, that was what I did at first. But after a while I started gaining a little weight, and I discovered a pretty neat way to burn calories by constantly transforming into and out of my HDD mode.</state>
             </case>
             <case stage="0-9" priority="200">
                 <condition role="target" character="nami" stage="3" />
@@ -6617,7 +6617,7 @@
             <case stage="0-5">
                 <state img="#-good surprised.png">Wowie! You might even be approaching Vert's size there! And that is no small feat!</state>
                 <state img="#-aroused.png">They look so soft... I must admit I kinda wanna test that.</state>
-                <state img="#-good surprised.png">Holy raviolli! Are you by any chance the fanservice character of your series?</state>
+                <state img="#-good surprised.png">Holy ravioli! Are you by any chance the fanservice character of your series?</state>
                 <state img="#-cheeky.png">The saying in Leanbox is "Bigger is Better," and I can see your example supports that statement.</state>
                 <state img="#-cheeky.png">Well we needed at least &lt;i&gt;one&lt;/i&gt; girl with the big power buttons here!</state>
             </case>
