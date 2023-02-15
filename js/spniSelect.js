@@ -208,6 +208,7 @@ const MAGNET_TAGS = [
     "legend_of_zelda",
     "marvel",
     //"miraculous",
+    //"hyperdimension_neptunia",
     "panty_and_stocking",
     "sonic_franchise",
     "tales_of",
