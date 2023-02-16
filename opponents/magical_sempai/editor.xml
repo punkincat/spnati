@@ -5,6 +5,38 @@
     <age />
     <pronunciation />
     <othernotes>Main personality points:&lt;br&gt;&lt;br&gt;Very aggressive about wanting to do magic tricks. This means being very stubborn to do them, wanting others to see or participate in her magic.&lt;br&gt;Even though she sucks at magic, she pretends that everything is going alright, or puts others down in order to make herself look good.&lt;br&gt;Casually suggests or does things that are inappropriate or immoral.&lt;br&gt;Cute and excited personality. Can be very childish or annoying.&lt;br&gt;Overreacts to everything&lt;br&gt;Unintelligent and socially inept when it comes to anything that isn't magic</othernotes>
+    <noteworthy>
+        <case name="Hat drop good" id="2" priority="Noteworthy" min="3" max="3">
+            <description>Sempai gets a good hand, but suddenly her hat falls from the sky and hits her head.</description>
+        </case>
+        <case name="Hat drop okay" id="18" priority="Noteworthy" min="3" max="3">
+            <description>Sempai gets an okay hand, but suddenly her hat falls from the sky and hits her head.</description>
+        </case>
+        <case name="Hat drop bad" id="19" priority="Noteworthy" min="3" max="3">
+            <description>Sempai gets a bad hand, but suddenly her hat falls from the sky and hits her head.</description>
+        </case>
+        <case name="Socks-through-shoes trick" id="1" priority="Noteworthy" min="1" max="1">
+            <description>Sempai performs a magic trick that involves tearing her socks off without taking off her shoes.</description>
+        </case>
+        <case name="Flying-cape-and-hat trick" id="20" priority="Noteworthy" min="3" max="3">
+            <description>Sempai performs a magic trick that involves making her cape and hat fly into the air.</description>
+        </case>
+        <case name="Quick-change trick" id="3" priority="Noteworthy" min="3" max="3">
+            <description>Semapi performs a magic trick that involves quickly removing her blazer. However, she accidentally reveals her bra.</description>
+        </case>
+        <case name="Cards fall out of skirt" id="4" priority="Noteworthy" min="4" max="4">
+            <description>Sempai is revealed to be cheating by keeping extra cards hidden under her skirt.</description>
+        </case>
+        <case name="Hiding cards under shirt" id="21" priority="Noteworthy" min="5" max="5">
+            <description>Sempai takes off her shirt, while carefully stowing away other hidden cards she had underneath.</description>
+        </case>
+        <case name="Hidden tapes under bra trick" id="6" priority="Noteworthy" min="6" max="6">
+            <description>Sempai tears off her bra revealing that her nipples are covered in tapes... except they're not.</description>
+        </case>
+        <case name="Disappearing panties trick" id="14" priority="Noteworthy" min="7" max="7">
+            <description>Sempai implies shoving her panties inside herself. Instead, she performs a magic trick that involves putting her panties  in her hands and making them vanish.</description>
+        </case>
+    </noteworthy>
     <responses>
         <response id="9" opponent="mari_setogaya" opponentId="55" />
         <response id="10" opponent="mari_setogaya" opponentId="56" />
@@ -32,6 +64,8 @@ Rolling a ball in her hand to practice hand muscles</note>
         <note id="8">Sempai think the player is doing it for presentation like magic</note>
         <note id="14">Magical sempai says she will make her panties disappear by shoving it... into her hands</note>
     </notes>
-    <nextId>17</nextId>
-    <markers />
+    <nextId>21</nextId>
+    <markers>
+        <marker scope="Public" name="HatFall" />
+    </markers>
 </metadata>
