@@ -239,13 +239,17 @@
         <response id="553" opponent="turandot" opponentId="79" />
         <response id="554" opponent="turandot" opponentId="82" />
         <response id="555" opponent="turandot" opponentId="76" />
-        <response id="556" opponent="turandot" opponentId="50" />
         <response id="567" opponent="hu_tao" opponentId="567" />
         <response id="593" opponent="jura" opponentId="299" />
         <response id="595" opponent="jura" opponentId="296" />
         <response id="596" opponent="jura" opponentId="298" />
         <response id="598" opponent="jura" opponentId="295" />
         <response id="599" opponent="jura" opponentId="297" />
+        <response id="613" opponent="turandot" opponentId="51" />
+        <response id="614" opponent="turandot" opponentId="48" />
+        <response id="615" opponent="turandot" opponentId="49" />
+        <response id="616" opponent="turandot" opponentId="46" />
+        <response id="617" opponent="turandot" opponentId="47" />
     </responses>
     <labels>
         <label id="239" label="" color="4" folder="" sort="0" />
@@ -290,11 +294,11 @@
         <label id="401" label="" color="4" folder="" sort="0" />
         <label id="403" label="" color="4" folder="" sort="0" />
         <label id="408" label="" color="4" folder="" sort="0" />
-        <label id="582" label="" color="3" folder="" sort="0" />
-        <label id="435" label="" color="4" folder="" sort="0" />
-        <label id="437" label="" color="4" folder="" sort="0" />
-        <label id="438" label="" color="4" folder="" sort="0" />
-        <label id="441" label="" color="4" folder="" sort="0" />
+        <label id="582" label="" color="6" folder="" sort="0" />
+        <label id="601" label="" color="4" folder="" sort="0" />
+        <label id="619" label="" color="4" folder="" sort="0" />
+        <label id="604" label="" color="4" folder="" sort="0" />
+        <label id="620" label="" color="4" folder="" sort="0" />
         <label id="411" label="" color="4" folder="" sort="0" />
         <label id="443" label="" color="4" folder="" sort="0" />
         <label id="447" label="" color="4" folder="" sort="0" />
@@ -396,16 +400,11 @@
         <label id="542" label="" color="4" folder="" sort="0" />
         <label id="543" label="" color="4" folder="" sort="0" />
         <label id="544" label="" color="4" folder="" sort="0" />
-        <label id="545" label="" color="4" folder="" sort="0" />
-        <label id="546" label="" color="4" folder="" sort="0" />
-        <label id="547" label="" color="4" folder="" sort="0" />
-        <label id="549" label="" color="4" folder="" sort="0" />
-        <label id="550" label="" color="4" folder="" sort="0" />
-        <label id="552" label="" color="4" folder="" sort="0" />
-        <label id="551" label="" color="4" folder="" sort="0" />
-        <label id="553" label="" color="4" folder="" sort="0" />
-        <label id="554" label="" color="4" folder="" sort="0" />
-        <label id="555" label="" color="4" folder="" sort="0" />
+        <label id="602" label="" color="4" folder="" sort="0" />
+        <label id="607" label="" color="4" folder="" sort="0" />
+        <label id="605" label="" color="4" folder="" sort="0" />
+        <label id="606" label="" color="4" folder="" sort="0" />
+        <label id="603" label="" color="4" folder="" sort="0" />
         <label id="556" label="" color="4" folder="" sort="0" />
         <label id="561" label="" color="4" folder="" sort="0" />
         <label id="562" label="" color="4" folder="" sort="0" />
@@ -424,12 +423,21 @@
         <label id="577" label="" color="4" folder="" sort="0" />
         <label id="578" label="" color="4" folder="" sort="0" />
         <label id="580" label="" color="4" folder="" sort="0" />
-        <label id="585" label="" color="3" folder="" sort="0" />
-        <label id="586" label="" color="3" folder="" sort="0" />
-        <label id="587" label="" color="3" folder="" sort="0" />
-        <label id="588" label="" color="3" folder="" sort="0" />
+        <label id="585" label="" color="6" folder="" sort="0" />
+        <label id="586" label="" color="6" folder="" sort="0" />
+        <label id="587" label="" color="6" folder="" sort="0" />
+        <label id="588" label="" color="6" folder="" sort="0" />
+        <label id="608" label="" color="4" folder="" sort="0" />
+        <label id="609" label="" color="4" folder="" sort="0" />
+        <label id="610" label="" color="4" folder="" sort="0" />
+        <label id="611" label="" color="4" folder="" sort="0" />
+        <label id="612" label="" color="4" folder="" sort="0" />
+        <label id="618" label="" color="4" folder="" sort="0" />
+        <label id="621" label="" color="4" folder="" sort="0" />
+        <label id="622" label="" color="4" folder="" sort="0" />
+        <label id="623" label="" color="4" folder="" sort="0" />
     </labels>
-    <nextId>600</nextId>
+    <nextId>623</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="ab_envy">Erufuda is jealous of an athletic player's abs.</marker>
@@ -1972,9 +1980,11 @@
         <marker scope="Public" name="trainer_train_thyself">Erufuda thinks Trainer might not lose so much if she trained herself more.</marker>
         <marker scope="Public" name="trainer_workout_clothes_lazy">Erufuda comments on the fact that you can wear workout clothes without working out.</marker>
         <marker scope="Public" name="trainer_yoga_pants_beat_jeans">Erufuda tells Trainer that she likes yoga pants for their stretchiness.</marker>
+        <marker scope="Public" name="turandot_" />
         <marker scope="Public" name="turandot_age" />
         <marker scope="Public" name="turandot_age2" />
         <marker scope="Public" name="turandot_care" />
+        <marker scope="Public" name="turandot_care2" />
         <marker scope="Public" name="turandot_charm_grace" />
         <marker scope="Public" name="turandot_charm_grace2" />
         <marker scope="Public" name="turandot_cooking" />
@@ -1982,26 +1992,42 @@
         <marker scope="Public" name="turandot_cozy_bath" />
         <marker scope="Public" name="turandot_cozy_bath2" />
         <marker scope="Public" name="turandot_dark_past" />
+        <marker scope="Public" name="turandot_dark_past2" />
+        <marker scope="Public" name="turandot_death_fry" />
         <marker scope="Public" name="turandot_death_good" />
+        <marker scope="Public" name="turandot_death_good2" />
         <marker scope="Public" name="turandot_deserve_it" />
         <marker scope="Public" name="turandot_dungeon" />
         <marker scope="Public" name="turandot_elastic" />
         <marker scope="Public" name="turandot_elven_voice" />
+        <marker scope="Public" name="turandot_fantasize" />
         <marker scope="Public" name="turandot_feast_holidays" />
         <marker scope="Public" name="turandot_feast_princess" />
         <marker scope="Public" name="turandot_feelings" />
         <marker scope="Public" name="turandot_feelings_snacks" />
+        <marker scope="Public" name="turandot_feelings_snacks2" />
         <marker scope="Public" name="turandot_feelings_waist" />
         <marker scope="Public" name="turandot_feelings2_absurd" />
         <marker scope="Public" name="turandot_figured_out" />
+        <marker scope="Public" name="turandot_figured_out2" />
+        <marker scope="Public" name="turandot_fl" />
         <marker scope="Public" name="turandot_flirt" />
+        <marker scope="Public" name="turandot_flirt2" />
+        <marker scope="Public" name="turandot_fun_archery" />
+        <marker scope="Public" name="turandot_fun_dungeon" />
+        <marker scope="Public" name="turandot_fun_fungeon" />
+        <marker scope="Public" name="turandot_fun_potatofest" />
         <marker scope="Public" name="turandot_fun_stories" />
+        <marker scope="Public" name="turandot_fun_stories2" />
         <marker scope="Public" name="turandot_girls_night" />
         <marker scope="Public" name="turandot_hand_reveal" />
         <marker scope="Public" name="turandot_hangry" />
+        <marker scope="Public" name="turandot_hangry2" />
         <marker scope="Public" name="turandot_hinting" />
+        <marker scope="Public" name="turandot_hinting2" />
         <marker scope="Public" name="turandot_hips" />
         <marker scope="Public" name="turandot_hubris" />
+        <marker scope="Public" name="turandot_hubris2" />
         <marker scope="Public" name="turandot_indulge_herself" />
         <marker scope="Public" name="turandot_indulgence" />
         <marker scope="Public" name="turandot_indulgence2_job" />
@@ -2012,8 +2038,12 @@
         <marker scope="Public" name="turandot_keen_eye2_diet" />
         <marker scope="Public" name="turandot_keen_eye2_tell" />
         <marker scope="Public" name="turandot_know" />
+        <marker scope="Public" name="turandot_know2" />
+        <marker scope="Public" name="turandot_lampshade" />
         <marker scope="Public" name="turandot_let_out" />
         <marker scope="Public" name="turandot_loved_happy" />
+        <marker scope="Public" name="turandot_loved_happy2" />
+        <marker scope="Public" name="turandot_lust" />
         <marker scope="Public" name="turandot_mascot" />
         <marker scope="Public" name="turandot_orders" />
         <marker scope="Public" name="turandot_pajamas" />
@@ -2021,19 +2051,28 @@
         <marker scope="Public" name="turandot_pajamas2_dress" />
         <marker scope="Public" name="turandot_perfectly_fit" />
         <marker scope="Public" name="turandot_power" />
+        <marker scope="Public" name="turandot_punish" />
         <marker scope="Public" name="turandot_really" />
         <marker scope="Public" name="turandot_really_fat" />
         <marker scope="Public" name="turandot_reject" />
         <marker scope="Public" name="turandot_sauna" />
         <marker scope="Public" name="turandot_serious_bath" />
         <marker scope="Public" name="turandot_serious_bath2" />
+        <marker scope="Public" name="turandot_sex_workers" />
         <marker scope="Public" name="turandot_shrinks" />
         <marker scope="Public" name="turandot_size" />
         <marker scope="Public" name="turandot_size2_butt" />
         <marker scope="Public" name="turandot_size2_notice" />
         <marker scope="Public" name="turandot_something_fun" />
+        <marker scope="Public" name="turandot_something_fun2" />
         <marker scope="Public" name="turandot_somewhat_difficult" />
+        <marker scope="Public" name="turandot_somewhat_difficult2" />
         <marker scope="Public" name="turandot_sonnet" />
+        <marker scope="Public" name="turandot_sonnet2" />
+        <marker scope="Public" name="turandot_story_fail" />
+        <marker scope="Public" name="turandot_story_gossip" />
+        <marker scope="Public" name="turandot_story_princess" />
+        <marker scope="Public" name="turandot_storytime_fail" />
         <marker scope="Public" name="turandot_sweats" />
         <marker scope="Public" name="turandot_tailors" />
         <marker scope="Public" name="turandot_tailors_snap" />
@@ -2045,7 +2084,9 @@
         <marker scope="Public" name="turandot_treats_know" />
         <marker scope="Public" name="turandot_treats_souls" />
         <marker scope="Public" name="turandot_trip" />
+        <marker scope="Public" name="turandot_trip2" />
         <marker scope="Public" name="turandot_trouble" />
+        <marker scope="Public" name="turandot_trouble2" />
         <marker scope="Public" name="turandot_tub" />
         <marker scope="Public" name="turandot_two_for_one" />
         <marker scope="Public" name="turandot_two_for_one2" />
