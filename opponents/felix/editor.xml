@@ -514,14 +514,14 @@
         <label id="481" label="" folder="Filters" sort="0" />
         <label id="482" label="Moe" folder="Filters" sort="0" />
         <label id="483" label="S0 - Emo Fashion" folder="Targets" sort="0" />
-        <label id="484" label="S0 - Kitty" folder="Targets" sort="0" />
+        <label id="484" label="S0 - Friends" folder="Targets" sort="0" />
         <label id="485" label="S0 - Are You Good At Poker, Cutie?" folder="Targets" sort="0" />
         <label id="486" label="S0 - UwU" folder="Targets" sort="0" />
         <label id="487" label="S1 - Senses" folder="Targets" sort="0" />
         <label id="488" label="S2 - What Happens When..." folder="Targets" sort="0" />
         <label id="489" label="S3 - So Cute" folder="Targets" sort="0" />
         <label id="490" label="S3 - Cat Form" folder="Targets" sort="0" />
-        <label id="491" label="S4 - Look At Her Breasts" folder="Targets" sort="0" />
+        <label id="491" label="S3 - Look At Her Breasts" folder="Targets" sort="0" />
         <label id="492" label="S3 - Chubby Form" folder="Targets" sort="0" />
         <label id="493" label="Felix in Early Stage - Cat Form Start" folder="Mari Setogaya" sort="0" />
         <label id="494" label="Felix Undressed - Cat Form Start" folder="Mari Setogaya" sort="0" />
@@ -651,10 +651,16 @@
         <label id="618" label="Felix/Setogaya Pose - Festive Vampire" folder="Setogaya" sort="0" />
         <label id="619" label="Polaroid Unlock" folder="Setogaya" sort="0" />
         <label id="620" label="" folder="Targets" sort="0" />
+        <label id="621" label="R0 - Real Cat" folder="Targets" sort="0" />
+        <label id="622" label="R1 - Warrior" folder="Targets" sort="0" />
+        <label id="623" label="R2 - Herbs and Magic" folder="Targets" sort="0" />
+        <label id="624" label="S0 - Friends 2A" folder="Targets" sort="0" />
+        <label id="625" label="S0 - Friends 2B" folder="Targets" sort="0" />
+        <label id="626" label="Unlocked Felix + Mari S. Collectible" folder="Player" sort="0" />
+        <label id="627" label="Unlocked Felix + Mari S. Collectible" folder="Player" sort="0" />
     </labels>
-    <nextId>620</nextId>
+    <nextId>627</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="arms" />
         <marker scope="Public" name="BackBow">Pose maker shenanigans</marker>
         <marker scope="Public" name="BoboboFelix01" />
@@ -691,6 +697,9 @@
         <marker scope="Public" name="DwightFelix01" />
         <marker scope="Public" name="EligibleHumanWearingCollar">The marker that lets the system know that the human is not straight or lesbian, therefore giving the OK to flirt</marker>
         <marker scope="Public" name="Excited">Felix gets excited. Dick-related wizardry.</marker>
+        <marker scope="Public" name="FelixAloy01" />
+        <marker scope="Public" name="FelixAloy04" />
+        <marker scope="Public" name="FelixAloy08" />
         <marker scope="Public" name="FelixAnyPronouns" />
         <marker scope="Public" name="FelixAqua01" />
         <marker scope="Public" name="FelixAqua02" />
@@ -749,6 +758,8 @@
         <marker scope="Public" name="FelixJura02" />
         <marker scope="Public" name="FelixMeia01" />
         <marker scope="Public" name="FelixMeia02" />
+        <marker scope="Public" name="FelixPlayerMariSCollectible" />
+        <marker scope="Public" name="FelixPlayerMariSCollectibleB" />
         <marker scope="Public" name="FelixRevy01" />
         <marker scope="Public" name="FelixRevy02" />
         <marker scope="Public" name="FelixRingo13" />
@@ -823,7 +834,6 @@
         <marker scope="Public" name="NagatoroPlayerForfeit08" />
         <marker scope="Public" name="OkinoFelix01" />
         <marker scope="Public" name="penis">Dick-related wizardry</marker>
-        <marker scope="Public" name="Penis">Dick-related wizardry</marker>
         <marker scope="Public" name="pillow">Pillow-related wizardy</marker>
         <marker scope="Public" name="SannyTessFelix02" />
         <marker scope="Public" name="SannyTessFelix08" />
@@ -926,6 +936,7 @@
         <marker scope="Public" name="SetogayaFelix04" />
         <marker scope="Public" name="SetogayaFelix07" />
         <marker scope="Public" name="SetogayaFelix10" />
+        <marker scope="Public" name="SetogayaFelix10B" />
         <marker scope="Public" name="SetogayaFelix14" />
         <marker scope="Public" name="SetogayaFelix17" />
         <marker scope="Public" name="SetogayaFelixButt01" />
@@ -972,5 +983,7 @@
         <marker scope="Public" name="TakatoshiFelix10">Fourth part of stripping conversation with Felix for Takatoshi's third layer.</marker>
         <marker scope="Public" name="YunoFelix01" />
         <marker scope="Public" name="YunyunFelix01" />
+        <marker scope="Public" name="YunyunFelix01A" />
+        <marker scope="Public" name="YunyunFelix01B" />
     </markers>
 </metadata>
