@@ -168,6 +168,10 @@ var CANDY_LIST = [
     "nico_robin/0-winking.png",
     "nico_robin/1-calm.png",
     "nico_robin/1-dominant.png",
+    "dwight/0-startled.png",           // Highlighted New Character
+    "dwight/5-fidgeting.png",
+    "dwight/1-thinking.png",
+    "dwight/3-conversational.png",	
     "sly_cooper/0-Select.png",             // Has Recent Updates
     "sly_cooper/0-Comms+.png",
     "sly_cooper/0-Select.png",
