@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'KHBBS';
+    src: url('epilogue/DFPW5_EUR.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.dialogue .example[data-character="aqua_kh"] {
+  /*This is an example style.*/
+  color: blue;
+}
+
+.dialogue .khtitle[data-character="aqua_kh"] {
+    color: black;
+    font-family: "KHBBS", "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 100%;
+    line-height: 0;
+}

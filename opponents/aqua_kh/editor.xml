@@ -111,6 +111,17 @@
         <response id="546" opponent="nagatoro" opponentId="1733" />
         <response id="548" opponent="cagliostro" opponentId="315" />
         <response id="551" opponent="cagliostro" opponentId="317" />
+        <response id="558" opponent="aaravi" opponentId="455" />
+        <response id="559" opponent="aaravi" opponentId="457" />
+        <response id="560" opponent="aaravi" opponentId="456" />
+        <response id="564" opponent="chara_dreemurr" opponentId="664" />
+        <response id="567" opponent="aaravi" opponentId="119" />
+        <response id="575" opponent="lucina" opponentId="1" />
+        <response id="579" opponent="lucina" opponentId="668" />
+        <response id="581" opponent="lucina" opponentId="675" />
+        <response id="582" opponent="mitama" opponentId="940" />
+        <response id="585" opponent="larachel" opponentId="7" />
+        <response id="587" opponent="larachel" opponentId="5" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -130,6 +141,8 @@
         <note id="458">hidden so it always fires</note>
         <note id="467">aqua_arueshalae_</note>
         <note id="481">in theory you could respond to both versions of this line with a single response. up to you, I can work with either direction (same or different responses)</note>
+        <note id="575">Will only play the first time Aqua sees this</note>
+        <note id="576">Will only play the first time Aqua sees this</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Player Names" sort="0" />
@@ -677,9 +690,53 @@
         <label id="555" label="" folder="Dunban S" sort="0" />
         <label id="556" label="" folder="Dunban S" sort="0" />
         <label id="557" label="" folder="Dunban S" sort="0" />
+        <label id="558" label="" folder="Responses" sort="0" />
+        <label id="559" label="" folder="Responses" sort="0" />
+        <label id="560" label="" folder="Responses" sort="0" />
+        <label id="561" label="" folder="Targets" sort="0" />
+        <label id="562" label="" folder="Backgrounds" sort="0" />
+        <label id="563" label="" folder="Targets" sort="0" />
+        <label id="564" label="" folder="Targets" sort="0" />
+        <label id="565" label="" folder="Opponents" sort="0" />
+        <label id="566" label="" folder="Targets" sort="0" />
+        <label id="567" label="" folder="Situations" sort="0" />
+        <label id="568" label="" folder="Opponents" sort="0" />
+        <label id="569" label="" folder="Opponents" sort="0" />
+        <label id="570" label="" folder="Targets" sort="0" />
+        <label id="571" label="" folder="Targets" sort="0" />
+        <label id="572" label="" folder="Targets" sort="0" />
+        <label id="573" label="" folder="Targets" sort="0" />
+        <label id="574" label="" folder="Targets" sort="0" />
+        <label id="575" label="" folder="Lucina" sort="0" />
+        <label id="576" label="" folder="Lucina" sort="0" />
+        <label id="577" label="" folder="Logic" sort="0" />
+        <label id="578" label="" folder="Lucina" sort="0" />
+        <label id="579" label="" folder="Lucina" sort="0" />
+        <label id="580" label="" folder="Lucina" sort="0" />
+        <label id="581" label="" folder="Lucina" sort="0" />
+        <label id="582" label="" folder="Responses" sort="0" />
+        <label id="583" label="" folder="Responses" sort="0" />
+        <label id="584" label="" folder="Targets" sort="0" />
+        <label id="585" label="" folder="Targets" sort="0" />
+        <label id="586" label="" folder="Targets" sort="0" />
+        <label id="587" label="" folder="Targets" sort="0" />
+        <label id="588" label="" folder="Conditional" sort="0" />
+        <label id="589" label="" folder="Human" sort="0" />
+        <label id="590" label="GOOD BOY/GIRL" folder="Player Names" sort="0" />
+        <label id="591" label="" folder="Human" sort="0" />
+        <label id="129" label="Last Round (Tie)" folder="Conditional" sort="0" />
+        <label id="130" label="Last Round (Tie)" folder="Conditional" sort="0" />
+        <label id="592" label="Possible Last Round (Self Still in Game)" folder="Conditional" sort="0" />
+        <label id="593" label="Absolute Last Round (Self Still in Game)" folder="Conditional" sort="0" />
     </labels>
-    <nextId>557</nextId>
+    <nextId>593</nextId>
     <markers>
+        <marker scope="Public" name="" />
+        <marker scope="Public" name="__lucina_nickname" />
+        <marker scope="Public" name="aqua_aaravi_hydro1" />
+        <marker scope="Public" name="aqua_aaravi_lore1" />
+        <marker scope="Public" name="aqua_aaravi_scars_react" />
+        <marker scope="Public" name="aqua_aaravi_unqualified1" />
         <marker scope="Public" name="aqua_adora_horde01" />
         <marker scope="Public" name="aqua_adora_sword01" />
         <marker scope="Public" name="aqua_aloy_historyPromptResp" />
@@ -717,6 +774,7 @@
         <marker scope="Public" name="aqua_dunban_sword1" />
         <marker scope="Public" name="aqua_dunban_sword2" />
         <marker scope="Public" name="aqua_dunban_sword3" />
+        <marker scope="Public" name="aqua_epilogue_seen" />
         <marker scope="Public" name="aqua_felix_accent1" />
         <marker scope="Public" name="aqua_felix_accent2" />
         <marker scope="Public" name="aqua_felix_accent3" />
@@ -740,10 +798,16 @@
         <marker scope="Public" name="aqua_kaz_self1a" />
         <marker scope="Public" name="aqua_kaz_self1b" />
         <marker scope="Public" name="aqua_kaz_self2a" />
+        <marker scope="Public" name="aqua_kaz_self2b" />
         <marker scope="Public" name="aqua_kora_friendJokes" />
         <marker scope="Public" name="aqua_kyouko_ribbonOff1" />
         <marker scope="Public" name="aqua_kyouko_ribbonOff2" />
         <marker scope="Public" name="aqua_kyouko_ribbonOff3" />
+        <marker scope="Public" name="aqua_larachel_s2" />
+        <marker scope="Public" name="aqua_larachel_staff_broke" />
+        <marker scope="Public" name="aqua_lucina_disguise1" />
+        <marker scope="Public" name="aqua_lucina_youngerSelfRespA" />
+        <marker scope="Public" name="aqua_lucina_youngerSelfRespB" />
         <marker scope="Public" name="aqua_lux_demacia1" />
         <marker scope="Public" name="aqua_lux_demacia2" />
         <marker scope="Public" name="aqua_lux_demacia3" />
@@ -759,9 +823,12 @@
         <marker scope="Public" name="aqua_lux_MagicPromptResp" />
         <marker scope="Public" name="aqua_lux_teasing1Resp" />
         <marker scope="Public" name="aqua_lux_teasing2Resp" />
+        <marker scope="Public" name="aqua_magicsempai_hobby1" />
+        <marker scope="Public" name="aqua_magicsempai_magic1" />
         <marker scope="Public" name="aqua_maria_nakedApron" />
         <marker scope="Public" name="aqua_maria_strip0a" />
         <marker scope="Public" name="aqua_maria_strip0b" />
+        <marker scope="Public" name="aqua_maria_strip0c" />
         <marker scope="Public" name="aqua_mariOmori_OlderSister1" />
         <marker scope="Public" name="aqua_MariS_Self_femaleChestNotFirstResp">A response to a Mari Setogaya generic line that has a marker on it, about Mari S being the first one to show her boobs</marker>
         <marker scope="Public" name="aqua_meia_self0a" />
@@ -776,6 +843,7 @@
         <marker scope="Public" name="aqua_miku_strip2b" />
         <marker scope="Public" name="aqua_mitama_arrivalResp" />
         <marker scope="Public" name="aqua_mitama_poetry1" />
+        <marker scope="Public" name="aqua_mitama_self0a" />
         <marker scope="Public" name="aqua_mitama_shrinemaiden1" />
         <marker scope="Public" name="aqua_mustFF" />
         <marker scope="Public" name="aqua_nadia_finished" />
@@ -900,7 +968,10 @@
         <marker scope="Public" name="kyouko_sexypose_s6" />
         <marker scope="Public" name="kyouko_sexypose_s7" />
         <marker scope="Public" name="lake_view" />
+        <marker scope="Public" name="lucina_firstmaskreveal" />
+        <marker scope="Public" name="lucina_maskreveal" />
         <marker scope="Public" name="lux_light_puns_start" />
+        <marker scope="Public" name="magicsempai_startFF" />
         <marker scope="Public" name="manhunter">Targeting someone who is good at seducing men (or assumed to be)</marker>
         <marker scope="Public" name="mirage_arena">Mentions a bonus game area from KH:BBS</marker>
         <marker scope="Public" name="mirage_arena2" />
@@ -914,6 +985,7 @@
         <marker scope="Public" name="opp_tag_furry" />
         <marker scope="Public" name="oppselected_aqua_konosuba">Aqua from Konosuba is an opponent when this Aqua has just been selected</marker>
         <marker scope="Public" name="other_exposed_thighhighs" />
+        <marker scope="Public" name="player_goodmode" />
         <marker scope="Private" name="player_pogchamp">Player named themself Pogchamp or variants</marker>
         <marker scope="Public" name="roxas_first_meeting">First time she encounters Roxas</marker>
         <marker scope="Public" name="rumble_racing">Mentions a bonus minigame from KH:BBS</marker>
@@ -1008,6 +1080,11 @@
         <recipe key="5ba06533-d4a2-4fa5-b906-49e0b3c6946b">
             <cases>
                 <id>491</id>
+            </cases>
+        </recipe>
+        <recipe key="43e68bf4-4dc8-4938-a5d7-8f1e17e1202e">
+            <cases>
+                <id>592</id>
             </cases>
         </recipe>
     </recipes>
