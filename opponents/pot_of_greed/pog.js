@@ -59,15 +59,15 @@ if (!pog) var pog = (function (root) {
     var TWO_THREE_OF_A_KINDS = 8.5;
     var FULLER_HOUSE = 8.8;
     var SEVEN_FLUSH = 9.5;
-    var STRAIGHT_FLUSH_PLUS_PAIR = 10;
-    var SIX_STRAIGHT_FLUSH = 11;
-    var FULLEST_HOUSE = 12;
-    var STRAIGHT_AND_PAIR_FLUSH = 13;
-    var ROYAL_FLUSH_PLUS_PAIR = 14;
-    var SIX_ROYAL_FLUSH = 15;
-    var ROYAL_STRAIGHT_AND_PAIR_FLUSH = 16;
-    var SEVEN_STRAIGHT_FLUSH = 17;
-    var SEVEN_ROYAL_FLUSH = 18;
+    var STRAIGHT_FLUSH_PLUS_PAIR = 11;
+    var SIX_STRAIGHT_FLUSH = 12;
+    var FULLEST_HOUSE = 13;
+    var STRAIGHT_AND_PAIR_FLUSH = 14;
+    var ROYAL_FLUSH_PLUS_PAIR = 15;
+    var SIX_ROYAL_FLUSH = 16;
+    var ROYAL_STRAIGHT_AND_PAIR_FLUSH = 17;
+    var SEVEN_STRAIGHT_FLUSH = 18;
+    var SEVEN_ROYAL_FLUSH = 19;
 
     function loadScript(scriptName) {
         console.log("[Pot of Greed] Loading module: " + scriptName);
