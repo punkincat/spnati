@@ -1099,7 +1099,8 @@ if (!pog) var pog = (function (root) {
             }
 
             /*choose number of cards to trade in*/
-            var toTrade = Math.floor((Math.random()) * (numCards + 1));
+            /*being always 0-5 cards is not an error - Pot of Greed is intentionally only allowed to trade up to 5 to prevent exhausting the deck*/
+            var toTrade = Math.floor((Math.random()) * 6);
 
             /*choose cards at random to get rid of*/
             for (var i = 0; i < hand.length; i++) {
