@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>mei</owner>
+    <height>5'6"</height>
+    <age />
+    <pronunciation>May</pronunciation>
+    <othernotes />
     <noteworthy>
         <case name="Ice Blood" id="1" priority="Noteworthy" min="5" max="7">
             <description>When getting a bad hand in later stages, Mei sometimes shields herself in a block of ice.</description>
@@ -12,7 +16,16 @@
         <response id="4" opponent="nami" opponentId="10" />
         <response id="5" opponent="nami" opponentId="15" />
     </responses>
-    <nextId>5</nextId>
+    <labels>
+        <label id="6" label="" folder="Ochako to left" sort="0" />
+        <label id="7" label="" folder="Ochako to left" sort="0" />
+        <label id="8" label="" folder="Ochako to left" sort="0" />
+        <label id="9" label="" folder="Ochako to left" sort="0" />
+    </labels>
+    <prefixes>
+        <prefix>collectible_</prefix>
+    </prefixes>
+    <nextId>9</nextId>
     <markers>
         <marker scope="Public" name="mei_antarctica">Mei mentions a few times that she's worked in the Antarctic.</marker>
         <marker scope="Public" name="mei_climate_change">Mei, a Chinese climatologist, denies that climate change is a Chinese lie.</marker>
@@ -25,11 +38,17 @@
         <marker scope="Public" name="mei_leela_sadness">After asking Leela about Fry, Mei gets sad thinking about her own backstory.</marker>
         <marker scope="Public" name="mei_mae_beautiful_name" />
         <marker scope="Public" name="mei_mettaton_omnic">Mei correctly identifies Mettaton as an "omnic", which is a self-aware robot.</marker>
+        <marker scope="Public" name="mei_nagisa_keep_warm" />
         <marker scope="Public" name="mei_nami_climate">Mei wants to know more about Nami changing the climate.</marker>
         <marker scope="Public" name="mei_nami_endothermic">Mei meets a kindred spirit who can control the weather.</marker>
         <marker scope="Public" name="mei_nami_precipitation">Mei gets technical about Nami's Clima-Tact.</marker>
         <marker scope="Public" name="mei_nine_year_itch">Mei was in cryofreeze for nine years. Hence, she's technically not had any sexual activity in nearly a decade.</marker>
         <marker scope="Public" name="mei_no_boyfriend">Mei is single and available.</marker>
+        <marker scope="Public" name="mei_nugi_meid" />
+        <marker scope="Public" name="mei_ochako_boob_pride" />
+        <marker scope="Public" name="mei_ochako_boobs_mei" />
+        <marker scope="Public" name="mei_ochako_bounce" />
+        <marker scope="Public" name="mei_ochako_handy" />
         <marker scope="Public" name="mei_other_planets">Mei acknowledges that Samus can travel beyond Earth.</marker>
         <marker scope="Public" name="mei_overdressed">Mei thick coat is for cold weather. She occasionally remarks that she is overdressed.</marker>
         <marker scope="Public" name="mei_player_first_impression" />
@@ -39,6 +58,7 @@
         <marker scope="Public" name="mei_revy_toxic">Mei accuses Revy of being toxic.</marker>
         <marker scope="Public" name="mei_samus_bodysuit">Mei's thick coat hides her curves, unlike Samus's bodysuit.</marker>
         <marker scope="Public" name="mei_samus_mech">Samus reminds Mei of D.Va, so she asks if she too can call a mech suit on command.</marker>
+        <marker scope="Public" name="mei_seven_astronaut" />
         <marker scope="Public" name="mei_speaking_chinese">Mei frequently drops in random Mandarin into her speech, as per her Overwatch representation. Her penalty stage is entirely in Mandarin. Note that this marker is not set on her Chinese swap_cards line, as this will be seen within the first few rounds of the game.</marker>
         <marker scope="Public" name="mei_suspicious_of_raven">Because Raven has a hood and is brooding, Mei worries that there might be a connection to Reaper.</marker>
         <marker scope="Public" name="mei_will_freeze_you">Mei's signature move is to freeze opponents are short range, completely immobilizing them.</marker>
