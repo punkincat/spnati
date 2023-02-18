@@ -333,6 +333,10 @@ var CANDY_LIST = [
     "fluttershy/0-flirty.png",
     "fluttershy/0-amused.png",
     "fluttershy/0-flattered.png",
+    "moon/0-joy.png",                    // Has Recent Updates
+    "moon/0-stripping_bra2.png",
+    "reskins/full_moon/0-calm_b.png",
+    "reskins/full_moon/0-calm_c.png",
 ];
 
 /* Storage for old candy images in case the characters qualify again */

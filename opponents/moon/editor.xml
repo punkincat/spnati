@@ -163,6 +163,7 @@
         <response id="199" opponent="dawn" opponentId="133" />
         <response id="200" opponent="rosa" opponentId="40" />
         <response id="202" opponent="guzma" opponentId="13" />
+        <response id="206" opponent="aqua_grunt" opponentId="441" />
     </responses>
     <labels>
         <label id="18" label="epilogue enabler" folder="" sort="0" />
@@ -210,6 +211,9 @@
         <label id="201" label="classroom" folder="" sort="0" />
         <label id="202" label="" folder="Guzma to left" sort="0" />
         <label id="203" label="" folder="Reimu to right" sort="0" />
+        <label id="204" label="" folder="Zone-tan to left or right" sort="0" />
+        <label id="205" label="" folder="Mari to left" sort="0" />
+        <label id="206" label="" folder="Aqua Grunt to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
@@ -218,7 +222,7 @@
         <prefix>9_</prefix>
         <prefix>street</prefix>
     </prefixes>
-    <nextId>203</nextId>
+    <nextId>206</nextId>
     <markers>
         <marker scope="Public" name="full_moon" />
         <marker scope="Public" name="moon_9s_drain_batteries" />
@@ -276,6 +280,7 @@
         <marker scope="Public" name="moon_aoba_nurse_busybody" />
         <marker scope="Public" name="moon_aoba_power_trip" />
         <marker scope="Public" name="moon_april_camera_crew" />
+        <marker scope="Public" name="moon_aqua_grunt_tangled" />
         <marker scope="Public" name="moon_arash_a_rash" />
         <marker scope="Public" name="moon_arash_book_library" />
         <marker scope="Public" name="moon_arash_book_playing" />
@@ -497,6 +502,7 @@
         <marker scope="Public" name="moon_maki_huge_organ" />
         <marker scope="Public" name="moon_maki_pianists" />
         <marker scope="Public" name="moon_maki_tinkle" />
+        <marker scope="Public" name="moon_mari_oppselected" />
         <marker scope="Public" name="moon_marinette_more_holes" />
         <marker scope="Public" name="moon_mary_all_of_them" />
         <marker scope="Public" name="moon_mary_buttons" />
@@ -857,6 +863,7 @@
         <marker scope="Public" name="moon_zoey_panties" />
         <marker scope="Public" name="moon_zoey_rules" />
         <marker scope="Public" name="moon_zone-tan_fan_re-enactments">Moon claims to have fan re-enactments of Zone-tan's flashes.</marker>
+        <marker scope="Public" name="moon_zone-tan_want_it" />
         <marker scope="Public" name="nickname" />
     </markers>
     <recipes>
