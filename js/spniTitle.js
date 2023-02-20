@@ -168,15 +168,14 @@ var CANDY_LIST = [
     "nico_robin/0-winking.png",
     "nico_robin/1-calm.png",
     "nico_robin/1-dominant.png",
-    "dwight/0-startled.png",           // Highlighted New Character
+    "dwight/0-startled.png",               // Highlighted New Character
     "dwight/5-fidgeting.png",
     "dwight/1-thinking.png",
-    "dwight/3-conversational.png",	
-    "sly_cooper/0-Select.png",             // Has Recent Updates
-    "sly_cooper/0-Comms+.png",
-    "sly_cooper/0-Select.png",
-    "sly_cooper/0-Comms+.png",
-    /* TODO: eventually have Alias add two extra poses for Sly, instead of having to use the same two twice */
+    "dwight/3-conversational.png",
+    "cheryl/0-inquisitive.png",            // Highlighted New Character
+    "cheryl/2-happy.png",
+    "cheryl/3-inspired.png",
+    "cheryl/4-cheeky.png",
     "wasp/0-start.png",                    // Has Recent Updates
     "wasp/0-flirt.png",
     "wasp/0-excited.png",
@@ -217,10 +216,6 @@ var CANDY_LIST = [
     "lux/0-cocky.png",
     "lux/3-quizzical.png",
     "lux/4-joyous.png",
-    "takatoshi/0-Select.png",              // Has Recent Updates
-    "takatoshi/0-Yakisoba.png",
-    "takatoshi/3-Embarrassed.png",
-    "takatoshi/3-Yakisoba2.png",
     "caulifla/0-Confident.png",            // Has Recent Updates
     "caulifla/0-Happy.png",
     "caulifla/1-Laughing.png",
@@ -241,10 +236,6 @@ var CANDY_LIST = [
     "sayori/1-happy.png",
     "sayori/2-thinking.png",
     "sayori/3-embarassed.png",
-    "dawn/0-elate.png",                    // Has Recent Updates
-    "dawn/1-happy.png",
-    "dawn/2-shock.png",
-    "dawn/3-smug.png",
     "myriam/0-confident.png",              // Has Recent Updates
     "myriam/2-normal.png",
     "myriam/3-think.png",
@@ -321,10 +312,6 @@ var CANDY_LIST = [
     "ringo_ando/1-glad.png",
     "ringo_ando/2-balanceapple.png",
     "ringo_ando/3-bounceapple.png",
-    "twilight/0-confident.png",            // Has Recent Updates
-    "twilight/2-smart.png",
-    "reskins/twilight_sci-twi/0-calm.png",
-    "reskins/twilight_sci-twi/0-happy.png",
     "estelle/0-calm.png",                  // Has Recent Updates
     "estelle/1-determind.png",
     "estelle/2-lecture.png",
@@ -333,7 +320,7 @@ var CANDY_LIST = [
     "fluttershy/0-flirty.png",
     "fluttershy/0-amused.png",
     "fluttershy/0-flattered.png",
-    "moon/0-joy.png",                    // Has Recent Updates
+    "moon/0-joy.png",                      // Has Recent Updates
     "moon/0-stripping_bra2.png",
     "reskins/full_moon/0-calm_b.png",
     "reskins/full_moon/0-calm_c.png",
@@ -469,6 +456,22 @@ var CANDY_LIST = [
     "pinkie_pie/1-stripped.png",
     "pinkie_pie/2-whatever.png",
     "pinkie_pie/3-calm.png",
+    "takatoshi/0-Select.png",
+    "takatoshi/0-Yakisoba.png",
+    "takatoshi/3-Embarrassed.png",
+    "takatoshi/3-Yakisoba2.png",
+    "dawn/0-elate.png",
+    "dawn/1-happy.png",
+    "dawn/2-shock.png",
+    "dawn/3-smug.png",
+    "sly_cooper/0-Select.png",
+    "sly_cooper/0-Comms+.png",
+    "sly_cooper/0-Select.png",
+    "sly_cooper/0-Comms+.png",
+    "twilight/0-confident.png",
+    "twilight/2-smart.png",
+    "reskins/twilight_sci-twi/0-calm.png",
+    "reskins/twilight_sci-twi/0-happy.png",
 */
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
@@ -574,7 +577,7 @@ var DEFAULT_CLOTHING_OPTIONS = [
 
     new PlayerClothing('glasses', 'glasses', EXTRA_ARTICLE, 'head', "player/male/glasses.png", true, "glasses", "all", null),
     new PlayerClothing('belt', 'belt', EXTRA_ARTICLE, 'waist', "player/male/belt.png", false, "belt", "all", null),
-    
+
     /****/
 
     new PlayerClothing('pants', 'pants', MAJOR_ARTICLE, LOWER_ARTICLE, "player/male/pants.png", true, "pantsA", "male", null),
@@ -591,7 +594,7 @@ var DEFAULT_CLOTHING_OPTIONS = [
 
     new PlayerClothing('necklace', 'jewelry', EXTRA_ARTICLE, 'neck', "player/male/necklace.png", false, "necklace", "all", null),
     new PlayerClothing('gloves', 'gloves', EXTRA_ARTICLE, 'hands', "player/male/gloves.png", true, "gloves", "all", null),
-    
+
     /****/
 
     new PlayerClothing('tie', 'tie', EXTRA_ARTICLE, 'neck', "player/male/tie.png", false, "tie", "male", null),
@@ -677,7 +680,7 @@ TitleClothingSelectionIcon.prototype.visible = function () {
     if (this.clothing.isAvailable()) {
         return true;
     }
-    
+
     if (this.clothing.applicable_genders !== "all" && humanPlayer.gender !== this.clothing.applicable_genders) {
         return false;
     }
