@@ -1,6 +1,50 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>neptune</owner>
+    <height>146cm (152cm in SPNatI)</height>
+    <age>100</age>
+    <pronunciation>Neptune</pronunciation>
+    <othernotes />
+    <noteworthy>
+        <case name="Find Inventory" id="1" priority="Prompt" min="0" max="7">
+            <description>Neptune asks everyone how they found out about the inventory.</description>
+        </case>
+        <case name="Goddess" id="28" priority="FYI" min="0" max="7">
+            <description>Neptune explains that she is a goddess. She may have already stated this at an earlier point as part of an interaction with another character, but this should happen every game.</description>
+        </case>
+        <case name="Forget Shoes" id="2" priority="Noteworthy" min="2" max="2">
+            <description>Neptune forgets she still has her shoes on, so takes off her dress. This may seem very early to be removing something so large depending on the point in the game and other characters present.</description>
+        </case>
+        <case name="Games with Bernie" id="29" priority="FYI" min="9" max="9">
+            <description>Neptune produces a "Neptunia Swatch" and starts to play games with Bernadetta.</description>
+        </case>
+        <case name="Shower/Bath with Someone Else" id="38" priority="Prompt" min="5" max="7">
+            <description>Neptune asks everyone if they have ever had a shower or bath with someone else.</description>
+        </case>
+    </noteworthy>
+    <responses>
+        <response id="39" opponent="saki_zls" opponentId="2" />
+        <response id="40" opponent="saki_zls" opponentId="3" />
+        <response id="41" opponent="sayaka" opponentId="28" />
+        <response id="42" opponent="streaming-chan" opponentId="16" />
+        <response id="43" opponent="marinette" opponentId="438" />
+        <response id="44" opponent="aimee" opponentId="4" />
+        <response id="45" opponent="aimee" opponentId="1" />
+        <response id="46" opponent="aimee" opponentId="6" />
+        <response id="49" opponent="aimee" opponentId="5" />
+        <response id="50" opponent="nugi-chan" opponentId="169" />
+        <response id="51" opponent="fina" opponentId="721" />
+        <response id="52" opponent="nami_szs" opponentId="5" />
+        <response id="53" opponent="jessie" opponentId="22" />
+    </responses>
+    <notes>
+        <note id="30">optional second specific marker in case you want to respond to this one specifically.</note>
+        <note id="31">again, optional second specific marker in case you want to respond to this one specifically.</note>
+        <note id="34">let me know if you want to try having more interactions, it's been a while since Neptune has had targets to her from a new character that she could easily react to</note>
+        <note id="35">hadn't noticed it was meant to happen for one of multiple stages</note>
+        <note id="36">yeah, she's talking about Noire, so we will need to make another version when Noire is here, although it would probably be Noire bringing up that she's the subject here. Neptune openly teases her about it a lot.</note>
+        <note id="37">Neptune doesn't know sucrose (molecule) is sugar, it is coincidence.</note>
+    </notes>
     <nextId>54</nextId>
     <markers>
         <marker scope="Public" name="adventurer_work" />
