@@ -176,6 +176,10 @@ var CANDY_LIST = [
     "cheryl/2-happy.png",
     "cheryl/3-inspired.png",
     "cheryl/4-cheeky.png",
+    "neptune/0-victory.png",               // Highlighted New Character
+    "neptune/0-excited.png",
+    "neptune/2-happy.png",
+    "neptune/2-smug.png",
     "wasp/0-start.png",                    // Has Recent Updates
     "wasp/0-flirt.png",
     "wasp/0-excited.png",
@@ -324,6 +328,10 @@ var CANDY_LIST = [
     "moon/0-stripping_bra2.png",
     "reskins/full_moon/0-calm_b.png",
     "reskins/full_moon/0-calm_c.png",
+    "kamina/0-point.png",                  // Has Recent Updates
+    "kamina/0-cross.png",
+    "kamina/0-happy.png",
+    "kamina/0-excited.png",
 ];
 
 /* Storage for old candy images in case the characters qualify again */
@@ -396,10 +404,6 @@ var CANDY_LIST = [
     "dust/0-victory.png",
     "dust/1-pensive.png",
     "dust/2-laugh.png",
-    "kamina/0-point.png",
-    "kamina/0-cross.png",
-    "kamina/0-happy.png",
-    "kamina/0-excited.png",
     "tomoko/0-idle1.png",
     "tomoko/0-excited.png",
     "tomoko/0-serene.png",
