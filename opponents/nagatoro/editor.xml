@@ -58,7 +58,6 @@
         <note id="1377">It only works on males, right? Might need a seperate response based on if the player is male/female.</note>
         <note id="1676">She sucks.</note>
         <note id="1677">Not 100% sure if this gives you enough to say something else. Lmk if it's not enough.</note>
-        <note id="1682">Maybe kyouko can ask about naga's friends, or she can talk about her own a bit.</note>
         <note id="1848">She has no clue what aaravi is talking about.</note>
     </notes>
     <labels>
@@ -1526,13 +1525,13 @@
         <label id="1544" label="" folder="Target_Stage0" sort="87" />
         <label id="1545" label="" color="0" folder="Target_Stage0" sort="147" />
         <label id="1546" label="" color="4" folder="Reply_Stage4" sort="11" />
-        <label id="1547" label="" color="2" folder="Reply_Stage0" sort="66" />
-        <label id="1548" label="" color="2" folder="Reply_Stage1" sort="36" />
-        <label id="1549" label="" color="2" folder="Target_Stage0" sort="148" />
-        <label id="1550" label="" color="2" folder="Target_Stage1" sort="98" />
-        <label id="1551" label="" color="2" folder="Target_Stage2" sort="71" />
-        <label id="1552" label="" color="2" folder="Reply_Stage2" sort="40" />
-        <label id="1553" label="" color="2" folder="Target_Stage3" sort="42" />
+        <label id="1547" label="" color="0" folder="Reply_Stage0" sort="66" />
+        <label id="1548" label="" color="0" folder="Reply_Stage1" sort="36" />
+        <label id="1549" label="" color="0" folder="Target_Stage0" sort="148" />
+        <label id="1550" label="" color="0" folder="Target_Stage1" sort="98" />
+        <label id="1551" label="" color="0" folder="Target_Stage2" sort="71" />
+        <label id="1552" label="" color="0" folder="Reply_Stage2" sort="40" />
+        <label id="1553" label="" color="0" folder="Target_Stage3" sort="42" />
         <label id="1554" label="" folder="Reply_Hand" sort="25" />
         <label id="1555" label="" folder="Reply_Hand" sort="26" />
         <label id="1556" label="" folder="Reply_Hand" sort="27" />
@@ -1659,8 +1658,8 @@
         <label id="1679" label="" color="0" folder="Reply_Stage1" sort="29" />
         <label id="1680" label="" folder="Reply_Hand" sort="33" />
         <label id="1681" label="" color="0" folder="Target_Stage0" sort="94" />
-        <label id="1682" label="" color="1" folder="Target_Stage2" sort="62" />
-        <label id="1683" label="" color="1" folder="Target_Stage4" sort="5" />
+        <label id="1682" label="" color="0" folder="Target_Stage2" sort="62" />
+        <label id="1683" label="" color="0" folder="Target_Stage4" sort="5" />
         <label id="1684" label="" color="5" folder="Target_Stage0" sort="120" />
         <label id="1685" label="" color="5" folder="Target_Stage0" sort="170" />
         <label id="1686" label="" color="5" folder="Target_Stage4" sort="25" />
@@ -1701,7 +1700,7 @@
         <label id="1721" label="" color="2" folder="Target_Stage0" sort="0" />
         <label id="1722" label="" color="0" folder="Target_Stage1" sort="53" />
         <label id="1723" label="" color="0" folder="Reply_Stage4" sort="13" />
-        <label id="1724" label="" color="1" folder="Reply_Stage0" sort="30" />
+        <label id="1724" label="" color="0" folder="Reply_Stage0" sort="30" />
         <label id="1725" label="" color="6" folder="Target_Stage2" sort="66" />
         <label id="1726" label="" color="0" folder="Target_Stage0" sort="125" />
         <label id="1727" label="" color="3" folder="Reply_Stage0" sort="31" />
@@ -1761,7 +1760,7 @@
         <label id="1785" label="" color="6" folder="" sort="0" />
         <label id="1786" label="valentine's day" folder="Valentines" sort="18" />
         <label id="1787" label="valentine's day" folder="Valentines" sort="8" />
-        <label id="1788" label="" color="6" folder="Target_Stage0" sort="181" />
+        <label id="1788" label="" color="0" folder="Target_Stage0" sort="181" />
         <label id="1789" label="valentine's day" folder="Valentines" sort="2" />
         <label id="1790" label="valentine's day" folder="Valentines" sort="6" />
         <label id="1791" label="valentine's day" folder="Valentines" sort="12" />
@@ -1820,8 +1819,22 @@
         <label id="1847" label="" color="1" folder="Reply_Stage1" sort="0" />
         <label id="1848" label="" color="1" folder="Target_Stage2" sort="0" />
         <label id="1849" label="" color="0" folder="Reply_Stage4" sort="0" />
+        <label id="1850" label="" color="1" folder="Reply_Stage0" sort="0" />
+        <label id="1851" label="" color="1" folder="Target_Stage2" sort="0" />
+        <label id="1852" label="" color="1" folder="Target_Stage4" sort="0" />
+        <label id="1853" label="" color="0" folder="Target_Stage0" sort="0" />
+        <label id="1854" label="" color="6" folder="Target_Stage1" sort="0" />
+        <label id="1855" label="" color="6" folder="Target_Stage0" sort="0" />
+        <label id="1856" label="" color="6" folder="Target_Stage0" sort="0" />
+        <label id="1857" label="" color="5" folder="Reply_Stage0" sort="0" />
+        <label id="1858" label="" color="0" folder="Reply_Stage0" sort="0" />
+        <label id="1859" label="" color="0" folder="Reply_Stage1" sort="0" />
+        <label id="1860" label="" color="2" folder="Reply_Stage2" sort="0" />
+        <label id="1861" label="" color="2" folder="Reply_Stage3" sort="0" />
+        <label id="1862" label="" color="2" folder="Target_Stage2" sort="0" />
+        <label id="1863" label="" color="2" folder="Target_Stage3" sort="0" />
     </labels>
-    <nextId>1849</nextId>
+    <nextId>1863</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="aaravi_reply01" />
@@ -2404,6 +2417,7 @@
         <marker scope="Public" name="kyoko12" />
         <marker scope="Public" name="kyoko13" />
         <marker scope="Public" name="kyouko_reply01" />
+        <marker scope="Public" name="kyouko_reply02" />
         <marker scope="Public" name="kyouko01" />
         <marker scope="Public" name="kyouko02" />
         <marker scope="Public" name="kyouko03" />
@@ -2416,6 +2430,7 @@
         <marker scope="Public" name="kyouko32" />
         <marker scope="Public" name="kyouko33" />
         <marker scope="Public" name="kyouko41" />
+        <marker scope="Public" name="kyouko42" />
         <marker scope="Public" name="leon_dual" />
         <marker scope="Public" name="leon_react_dual" />
         <marker scope="Public" name="leon_react_dual2" />
@@ -2865,7 +2880,11 @@
         <marker scope="Public" name="polly01" />
         <marker scope="Public" name="polly02" />
         <marker scope="Public" name="polly11" />
+        <marker scope="Public" name="queenie_reply01" />
         <marker scope="Public" name="queenie01" />
+        <marker scope="Public" name="queenie02" />
+        <marker scope="Public" name="queenie03" />
+        <marker scope="Public" name="queenie11" />
         <marker scope="Public" name="rarity01" />
         <marker scope="Public" name="raven11" />
         <marker scope="Public" name="relationship" />
@@ -2968,9 +2987,13 @@
         <marker scope="Public" name="sempai01" />
         <marker scope="Public" name="senko_reply01" />
         <marker scope="Public" name="senko_reply02" />
+        <marker scope="Public" name="senko_reply03" />
         <marker scope="Public" name="senko_reply11" />
         <marker scope="Public" name="senko_reply12" />
+        <marker scope="Public" name="senko_reply13" />
         <marker scope="Public" name="senko_reply21" />
+        <marker scope="Public" name="senko_reply22" />
+        <marker scope="Public" name="senko_reply31" />
         <marker scope="Public" name="senko01" />
         <marker scope="Public" name="senko02" />
         <marker scope="Public" name="senko03" />
@@ -2978,7 +3001,9 @@
         <marker scope="Public" name="senko12" />
         <marker scope="Public" name="senko13" />
         <marker scope="Public" name="senko21" />
+        <marker scope="Public" name="senko22" />
         <marker scope="Public" name="senko31" />
+        <marker scope="Public" name="senko32" />
         <marker scope="Public" name="shantae" />
         <marker scope="Public" name="shantae01" />
         <marker scope="Public" name="spooky01" />
