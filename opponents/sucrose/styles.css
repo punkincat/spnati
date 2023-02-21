@@ -13,3 +13,13 @@
   color: Teal;
   font-size: 60%;
 }
+
+.dialogue .cagliostro[data-character="sucrose"] {
+  /*Cag is talking*/
+  color: #FF8040;
+}
+
+.dialogue .sucrose[data-character="sucrose"] {
+  /*Sucrose is talking*/
+  color: Teal;
+}
