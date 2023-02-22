@@ -196,10 +196,6 @@ var CANDY_LIST = [
     "hatsune_miku/0-Cheeky.png",
     "hatsune_miku/0-Encouraging.png",
     "hatsune_miku/0-Excited.png",
-    "hilda/0-conversational.png",          // Has Recent Updates
-    "hilda/1-relaxed.png",
-    "hilda/2-smug.png",
-    "hilda/3-flirty.png",
     "sakura/0-calm.png",                   // Has Recent Updates
     "sakura/0-hi5.png",
     "sakura/1-smile.png",
@@ -332,6 +328,22 @@ var CANDY_LIST = [
     "kamina/0-cross.png",
     "kamina/0-happy.png",
     "kamina/0-excited.png",
+    "stocking/0-sipp.png",                 // Has Recent Updates
+    "stocking/2-hex.png",
+    "stocking/3-stripping+.png",
+    "stocking/4-aroused.png",
+    "ignatz/0-friendly.png",               // Has Recent Updates
+    "ignatz/0-flustered.png",
+    "ignatz/3-fearthedeer.png",
+    "ignatz/3-inspired.png",
+    "leonie/0-calm.png",                   // Has Recent Updates
+    "leonie/0-smug.png",
+    "reskins/leonie_war_outfit/1-grin.png",
+    "reskins/leonie_war_outfit/2-stretch-alt.png",
+    "zoe/0-happy.png",                     // Has Recent Updates
+    "zoe/0-fangirling.png",
+    "zoe/0-smug.png",
+    "zoe/3-blush.png",
 ];
 
 /* Storage for old candy images in case the characters qualify again */
@@ -348,10 +360,6 @@ var CANDY_LIST = [
     "monika/1-interested.png",
     "monika/2-happy.png",
     "monika/3-shy-happy.png",
-    "ignatz/0-friendly.png",
-    "ignatz/0-flustered.png",
-    "ignatz/3-fearthedeer.png",
-    "ignatz/3-inspired.png",
     "cynthia/0-battleready.png",
     "cynthia/0-pokeball.png",
     "cynthia/2-embarrassed.png",
@@ -380,10 +388,6 @@ var CANDY_LIST = [
     "streaming-chan/0-flusteredKawaii.png",
     "streaming-chan/4-lossdang.png",
     "streaming-chan/4-interview.png",
-    "leonie/0-calm.png",
-    "leonie/0-smug.png",
-    "reskins/leonie_war_outfit/1-grin.png",
-    "reskins/leonie_war_outfit/2-stretch-alt.png",
     "chara_dreemurr/0-devious.png",
     "chara_dreemurr/0-relaxed.png",
     "chara_dreemurr/0-aroused.png",
@@ -436,18 +440,10 @@ var CANDY_LIST = [
     "joey/2-approve.png",
     "joey/3-wink.png",
     "joey/4-hot.png",
-    "stocking/0-sipp.png",
-    "stocking/2-hex.png",
-    "stocking/3-stripping+.png",
-    "stocking/4-aroused.png",
     "n/0-coNfused.png",
     "n/4-Naturally.png",
     "n/2-fiddliNg.png",
     "n/6-iNform.png",
-    "zoe/0-happy.png",
-    "zoe/0-fangirling.png",
-    "zoe/0-smug.png",
-    "zoe/3-blush.png",
     "kazuma/0-happy.png",
     "kazuma/0-appreciative.png",
     "kazuma/1-victory.png",
@@ -476,6 +472,10 @@ var CANDY_LIST = [
     "twilight/2-smart.png",
     "reskins/twilight_sci-twi/0-calm.png",
     "reskins/twilight_sci-twi/0-happy.png",
+    "hilda/0-conversational.png",
+    "hilda/1-relaxed.png",
+    "hilda/2-smug.png",
+    "hilda/3-flirty.png",
 */
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
