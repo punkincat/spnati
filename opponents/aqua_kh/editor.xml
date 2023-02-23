@@ -122,6 +122,7 @@
         <response id="582" opponent="mitama" opponentId="940" />
         <response id="585" opponent="larachel" opponentId="7" />
         <response id="587" opponent="larachel" opponentId="5" />
+        <response id="594" opponent="queenie" opponentId="77" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -728,8 +729,16 @@
         <label id="130" label="Last Round (Tie)" folder="Conditional" sort="0" />
         <label id="592" label="Possible Last Round (Self Still in Game)" folder="Conditional" sort="0" />
         <label id="593" label="Absolute Last Round (Self Still in Game)" folder="Conditional" sort="0" />
+        <label id="594" label="" folder="Responses" sort="0" />
+        <label id="595" label="" folder="Table Setups" sort="0" />
+        <label id="596" label="" folder="Responses" sort="0" />
+        <label id="597" label="" folder="FF Targets" sort="0" />
+        <label id="598" label="" folder="Opponents" sort="0" />
+        <label id="599" label="" folder="Targets" sort="0" />
+        <label id="600" label="" folder="Targets" sort="0" />
+        <label id="601" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>593</nextId>
+    <nextId>601</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="__lucina_nickname" />
@@ -799,6 +808,7 @@
         <marker scope="Public" name="aqua_kaz_self1b" />
         <marker scope="Public" name="aqua_kaz_self2a" />
         <marker scope="Public" name="aqua_kaz_self2b" />
+        <marker scope="Public" name="aqua_kaz_self2c" />
         <marker scope="Public" name="aqua_kora_friendJokes" />
         <marker scope="Public" name="aqua_kyouko_ribbonOff1" />
         <marker scope="Public" name="aqua_kyouko_ribbonOff2" />
@@ -874,6 +884,7 @@
         <marker scope="Public" name="aqua_queenie_intro2" />
         <marker scope="Public" name="aqua_queenie_powers1" />
         <marker scope="Public" name="aqua_queenie_powers2" />
+        <marker scope="Public" name="aqua_queenie_self0a" />
         <marker scope="Public" name="aqua_queenie_unversedThought" />
         <marker scope="Public" name="aqua_revy_01" />
         <marker scope="Public" name="aqua_revy_self01" />
@@ -917,6 +928,10 @@
         <marker scope="Public" name="aqua_yshtola_self0b" />
         <marker scope="Public" name="aqua_yshtola_self0c" />
         <marker scope="Public" name="aqua_yshtola_self1a" />
+        <marker scope="Public" name="aqua_yshtola_self1b" />
+        <marker scope="Public" name="aqua_yuna_intro1" />
+        <marker scope="Public" name="aqua_yuna_partners1" />
+        <marker scope="Public" name="aqua_yuna_spirits1" />
         <marker scope="Public" name="aqua_yuno_friends1">Dialogue with Yuno</marker>
         <marker scope="Public" name="aqua_yuno_saveworld1">Dialogue with Yuno</marker>
         <marker scope="Public" name="aquaKH_ag_strip0a">Dialogue towards the Aqua Grunt</marker>
@@ -947,6 +962,7 @@
         <marker scope="Public" name="gamestart_arueshalae" />
         <marker scope="Public" name="gamestart_queenie" />
         <marker scope="Public" name="gamestart_roxas">Game has started and Roxas is present</marker>
+        <marker scope="Public" name="gamestart_yuna_trio" />
         <marker scope="Public" name="going_to_keep_socks_on">In stage 4, mentions ahead of time that she'll keep her socks on in her next strip</marker>
         <marker scope="Public" name="greeting_roxas">Aqua mistakes Roxas for Ventus (the two of them look completely identical for... reasons.)</marker>
         <marker scope="Public" name="gspot_pondering">Forfeit specific line with potential follow-ups</marker>
@@ -960,6 +976,9 @@
         <marker scope="Public" name="high_card_7">Has gotten the worst possible hand out of them all.</marker>
         <marker scope="Public" name="ignoring_pervert">Ignoring a perverted character (that is attracted to her) during her forfeit</marker>
         <marker scope="Public" name="inv_traverse_town" />
+        <marker scope="Public" name="keyblade_7_rounds" />
+        <marker scope="Public" name="keyblade_doesnt_count_as_layer" />
+        <marker scope="Public" name="keyblade_intimidating" />
         <marker scope="Public" name="keyblade_reveal">Summons her Keyblade and holds it for a time</marker>
         <marker scope="Public" name="keyblade_reveal_dunban" />
         <marker scope="Public" name="keyblade_sharpness" />
