@@ -480,6 +480,7 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
     this.has_collectibles = $metaXml.children('has_collectibles').text() === "true";
     this.collectibles = null;
     this.layers = parseInt($metaXml.children('layers').text(), 10);
+    this.default_costume_name = $metaXml.children('default_costume_name').text();
     this.scale = Number($metaXml.children('scale').text()) || 100.0;
     this.release = releaseNumber;
     this.uniqueLineCount = parseInt($metaXml.children('lines').text(), 10) || undefined;

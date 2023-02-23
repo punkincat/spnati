@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Xml.Serialization;
@@ -81,6 +81,7 @@ namespace SPNATI_Character_Editor
 			Tags = character.Tags;
 			Gender = character.Gender;
 			Size = character.Size;
+			DefaultCostumeName = character.DefaultCostumeName;
 			Wardrobe = character.Wardrobe;
 			Writer = character.Metadata.Writer;
 			LastUpdate = character.Metadata.LastUpdate;

@@ -1,4 +1,4 @@
-﻿using Desktop.CommonControls;
+using Desktop.CommonControls;
 using SPNATI_Character_Editor.DataStructures;
 using SPNATI_Character_Editor.IO;
 using System;
@@ -29,6 +29,7 @@ namespace SPNATI_Character_Editor
 			}
 			lines.Add("gender=" + character.Gender);
 			lines.Add("size=" + character.Size);
+			lines.Add("default costume=" + character.DefaultCostumeName);
 			foreach (StageSpecificValue intelligence in character.Intelligence)
 			{
 				lines.Add("intelligence=" + intelligence.Value + (intelligence.Stage != 0 ? "," + intelligence.Stage : ""));
@@ -856,6 +857,9 @@ namespace SPNATI_Character_Editor
 						break;
 					case "size":
 						character.Size = value;
+						break;
+					case "default costume":
+						character.DefaultCostumeName = value;
 						break;
 					case "intelligence":
 						if (value.Contains(","))
