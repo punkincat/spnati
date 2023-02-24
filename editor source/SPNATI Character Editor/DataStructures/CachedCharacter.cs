@@ -46,7 +46,7 @@ namespace SPNATI_Character_Editor
 		[XmlElement("writer")]
 		public string Writer;
 
-        [XmlElement("dnfault-costume-name")]
+        [XmlElement("default-costume-name")]
         public string DefaultCostumeName;
 
         [XmlElement("lastupdate")]
