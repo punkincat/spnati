@@ -29,7 +29,7 @@ namespace SPNATI_Character_Editor
 			}
 			lines.Add("gender=" + character.Gender);
 			lines.Add("size=" + character.Size);
-			lines.Add("default costume=" + character.DefaultCostumeName);
+			lines.Add("default costume=" + character.Metadata.DefaultCostumeName);
 			foreach (StageSpecificValue intelligence in character.Intelligence)
 			{
 				lines.Add("intelligence=" + intelligence.Value + (intelligence.Stage != 0 ? "," + intelligence.Stage : ""));
@@ -858,9 +858,6 @@ namespace SPNATI_Character_Editor
 					case "size":
 						character.Size = value;
 						break;
-					case "default costume":
-						character.DefaultCostumeName = value;
-						break;
 					case "intelligence":
 						if (value.Contains(","))
 						{
@@ -910,7 +907,10 @@ namespace SPNATI_Character_Editor
 					case "pic":
 						character.Metadata.Portrait.Image = value;
 						break;
-					case "from":
+                    case "default costume":
+                        character.Metadata.DefaultCostumeName = value;
+                        break;
+                    case "from":
 						character.Metadata.Source = value;
 						break;
 					case "writer":

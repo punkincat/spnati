@@ -536,7 +536,7 @@ function getCostumeOption(alt_costume, selected_costume) {
 function fillCostumeSelector($selector, defaultname, costumes, selected_costume) {
     var defaultn = defaultname;
     if (defaultname == '') {
-    defaultn = 'Default Costume';
+        defaultn = 'Default Costume';
     }
 
     $selector.empty().append($('<option>', {

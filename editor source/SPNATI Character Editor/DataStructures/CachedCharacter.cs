@@ -46,7 +46,10 @@ namespace SPNATI_Character_Editor
 		[XmlElement("writer")]
 		public string Writer;
 
-		[XmlElement("lastupdate")]
+        [XmlElement("dnfault-costume-name")]
+        public string DefaultCostumeName;
+
+        [XmlElement("lastupdate")]
 		public long LastUpdate;
 
 		public override bool IsFullyLoaded { get { return false; } }
@@ -81,7 +84,7 @@ namespace SPNATI_Character_Editor
 			Tags = character.Tags;
 			Gender = character.Gender;
 			Size = character.Size;
-			DefaultCostumeName = character.DefaultCostumeName;
+			DefaultCostumeName = character.Metadata.DefaultCostumeName;
 			Wardrobe = character.Wardrobe;
 			Writer = character.Metadata.Writer;
 			LastUpdate = character.Metadata.LastUpdate;

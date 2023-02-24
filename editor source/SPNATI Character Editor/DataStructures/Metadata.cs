@@ -116,7 +116,7 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
-		[XmlElement("default_costume_name")]
+		[XmlElement("default-costume-name")]
 		public string DefaultCostumeName
 		{
 			get { return Get<string>(); }
@@ -214,7 +214,7 @@ namespace SPNATI_Character_Editor
 				Gender = c.Gender;
 			}
 			Layers = c.Layers;
-			DefaultCostumeName = c.DefaultCostumeName;
+			DefaultCostumeName = c.Metadata.DefaultCostumeName;
 			Endings = c.Endings.ConvertAll(e => new EpilogueMeta
 			{
 				Status = e.Status,

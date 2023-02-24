@@ -1159,7 +1159,7 @@ MainSelectScreenDisplay.prototype.update = function (player) {
 
         this.altCostumeSelector.hide();
         if (player.alternate_costumes.length > 0) {
-            fillCostumeSelector(this.altCostumeSelector, player.default_costume_name , player.alternate_costumes, player.selected_costume)
+            fillCostumeSelector(this.altCostumeSelector, player.default_costume_name, player.alternate_costumes, player.selected_costume)
                 .show();
         }
     }

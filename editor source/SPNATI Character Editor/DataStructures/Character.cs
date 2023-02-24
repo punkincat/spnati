@@ -135,14 +135,7 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
-		[XmlElement("default_costume_name")]
-		public string DefaultCostumeName
-		{
-			get { return Get<string>(); }
-			set { Set(value); }
-		}
-
-		[XmlElement("timer")]
+        [XmlElement("timer")]
 		public int Stamina
 		{
 			get { return Get<int>(); }
@@ -325,7 +318,6 @@ namespace SPNATI_Character_Editor
 			Labels = new ObservableCollection<StageSpecificValue>();
 			Gender = "female";
 			Size = "medium";
-			DefaultCostumeName = "Default Costume";
 			Intelligence = new ObservableCollection<StageSpecificValue>();
 			Stamina = 15;
 			Tags = new List<CharacterTag>();
@@ -352,7 +344,6 @@ namespace SPNATI_Character_Editor
 			Labels.Clear();
 			Gender = "";
 			Size = "";
-			DefaultCostumeName = "Default Costume";
 			Behavior = new Behaviour();
 			Intelligence = new ObservableCollection<StageSpecificValue>();
 			Stamina = 15;
