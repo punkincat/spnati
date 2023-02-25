@@ -688,11 +688,11 @@ function stripAIPlayer (player) {
     dialogueTrigger.push(OPPONENT_STRIPPED);
     updateAllBehaviours(player, PLAYER_STRIPPED, [dialogueTrigger]);
 
-  while (players[player].clothing.length != 0
+    while (players[player].clothing.length != 0
     && players[player].clothing[players[player].clothing.length - 1].name == "SKIP"){
-    players[player].clothing.pop();
-    players[player].stage++;
-    players[player].stageChangeUpdate();
+        players[player].clothing.pop();
+        players[player].stage++;
+        players[player].stageChangeUpdate();
     }
 
    

@@ -1,5 +1,4 @@
 using Desktop;
-using SPNATI_Character_Editor.Analyzers;
 using System;
 using System.Collections.Generic;
 

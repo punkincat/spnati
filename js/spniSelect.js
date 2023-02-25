@@ -561,7 +561,7 @@ function fillCostumeSelector($selector, costumes, selected_costume) {
         }
         
         return $('<option>', {
-            val: c.folder, text: emoji+c.name,  
+            val: c.folder, text: emoji+c.name,
             selected: c.folder == selected_costume
         }).data('costumeDescriptor', c);
     }));
