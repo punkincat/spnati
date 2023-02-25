@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using SPNATI_Character_Editor.IO;
 using System;
 using System.Collections.Generic;
@@ -113,9 +113,26 @@ namespace SPNATI_Character_Editor
 			get { return ""; }
 		}
 
-		public int Layers
+        public int Layers
 		{
 			get { return Wardrobe.Count; }
+		}
+
+        [XmlElement("layers")]
+		public int LayersNonSkip
+		{
+			get 
+			{
+				int countUnskipped = 0;
+				foreach(Clothing c in Wardrobe) {
+					if (c != null && c.Name != "SKIP")
+					{
+						countUnskipped++;
+					}		
+				}
+				
+				return countUnskipped; 
+			}
 		}
 
 		public override string ToString()
@@ -454,6 +471,9 @@ namespace SPNATI_Character_Editor
 
 		[XmlAttribute("label")]
 		public string Label;
+
+		[XmlAttribute("layers")]
+		public int LayersNonSkip;
 
 		[XmlIgnore]
 		public Costume Costume { get; set; }

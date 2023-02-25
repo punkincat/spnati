@@ -1,4 +1,5 @@
-﻿using Desktop;
+using Desktop;
+using SPNATI_Character_Editor.Analyzers;
 using System;
 using System.Collections.Generic;
 
@@ -140,8 +141,10 @@ namespace SPNATI_Character_Editor.Activities
 
 				string label = _costume.Labels.Count > 0 ? _costume.Labels[0].Value : null;
 
-				if (txtName.Text != _costume.Link.Name || status != _costume.Link.Status || set != _costume.Link.Set || _costume.Link.IsDirty
-					|| gender != _costume.Link.Gender || label != _costume.Link.Label)
+				int layers = _costume.LayersNonSkip;
+
+                if (txtName.Text != _costume.Link.Name || status != _costume.Link.Status || set != _costume.Link.Set || _costume.Link.IsDirty
+					|| gender != _costume.Link.Gender || label != _costume.Link.Label || layers != _costume.Link.LayersNonSkip)
 				{
 					_linkDataChanged = true;
 				}
@@ -153,6 +156,7 @@ namespace SPNATI_Character_Editor.Activities
 					_costume.Link.Status = status;
 					_costume.Link.Set = set;
 					_costume.Link.Label = label;
+					_costume.Link.LayersNonSkip = layers;
 
 					if (gender != _costume.Character.Gender)
 					{
