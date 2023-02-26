@@ -184,6 +184,10 @@ var CANDY_LIST = [
     "aloy/5-Smug.png",
     "aloy/0-Angry.png",
     "reskins/aloy_carja_blazon/0-Smug.png",	
+    "aqua_kh/0-giggling.png",              // Highlighted New Character
+    "aqua_kh/0-happy.png",
+    "aqua_kh/2-keyblade_stance.png",
+    "aqua_kh/2-turned_on.png",
     "wasp/0-start.png",                    // Has Recent Updates
     "wasp/0-flirt.png",
     "wasp/0-excited.png",
