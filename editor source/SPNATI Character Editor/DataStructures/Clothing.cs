@@ -128,13 +128,17 @@ namespace SPNATI_Character_Editor
 	public enum WardrobeRestrictions
 	{
 		None = 0,
-		/// <summary>
-		/// Cannot add, remove, or rearrange layers
-		/// </summary>
-		LayerCount = 1,
+        /// <summary>
+        /// Cannot add, remove, or rearrange layers
+        /// </summary>
+        LayerCount = 1,
 		/// <summary>
 		/// Cannot change layer types
 		/// </summary>
 		LayerTypes = 2,
-	}
+        /// <summary>
+        /// Cannot skip layers
+        /// </summary>
+        NoSkip = 4,
+    }
 }

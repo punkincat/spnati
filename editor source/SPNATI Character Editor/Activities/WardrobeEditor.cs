@@ -23,7 +23,8 @@ namespace SPNATI_Character_Editor.Controls
 			InitializeComponent();
 			ColGeneric.RecordType = typeof(ClothingCategory);
 			ColType.RecordType = typeof(ClothingTypeCategory);
-			ColPosition.RecordType = typeof(ClothingPositionCategory);
+            ColType.RecordFilter = TypeFilter;
+            ColPosition.RecordType = typeof(ClothingPositionCategory);
 			ColPosition.RecordFilter = FilterPosition;
 			ColPlural.TrueValue = true;
 			ColPosition.AllowsNew = true;
@@ -291,5 +292,16 @@ namespace SPNATI_Character_Editor.Controls
             }
 			return true;
 		}
-	}
+
+        private bool TypeFilter(IRecord record)
+        {
+            if (_restrictions.HasFlag(WardrobeRestrictions.NoSkip))
+            {
+
+                return record.Key == "extra" || record.Key == "minor" || record.Key == "major" || record.Key == "important";
+
+            }
+            return true;
+        }
+    }
 }

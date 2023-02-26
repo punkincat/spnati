@@ -1104,9 +1104,9 @@ namespace SPNATI_Character_Editor
 			string status = Listing.Instance.GetCharacterStatus(FolderName);
 			if (status != OpponentStatus.Testing && status != OpponentStatus.Unlisted && status != OpponentStatus.Incomplete)
 			{
-				return WardrobeRestrictions.LayerCount;
+				return WardrobeRestrictions.LayerCount | WardrobeRestrictions.NoSkip;
 			}
-			return WardrobeRestrictions.None;
+			return WardrobeRestrictions.NoSkip;
 		}
 
 		public Clothing GetClothing(int index)
