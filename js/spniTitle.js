@@ -169,7 +169,7 @@ var CANDY_LIST = [
     "nico_robin/1-calm.png",
     "nico_robin/1-dominant.png",
     "dwight/0-startled.png",               // Highlighted New Character
-    "dwight/5-fidgeting.png",
+    "dwight/4-fidgeting.png",
     "dwight/1-thinking.png",
     "dwight/3-conversational.png",
     "cheryl/0-inquisitive.png",            // Highlighted New Character
