@@ -1,4 +1,4 @@
-﻿using SPNATI_Character_Editor.DataStructures;
+using SPNATI_Character_Editor.DataStructures;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -637,6 +637,16 @@ namespace SPNATI_Character_Editor
 				if (c.Position == "other" && c.Type == "major")
 					otherMajor = c.Name;
 
+				if (c.Name == "SKIP")
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Wardrobe contains a SKIP layer, which is not allowed in default costumes. Remove the SKIP layer or replace it with a non-skipped clothing item."));
+				}
+
+				if (c.Name != "SKIP" && String.IsNullOrEmpty(c.Type))
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" has no type set. Choose a type for the layer."));
+				}
+
 				if (IsUncountable(c.Name))
 				{
 					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" uses an uncountable noun with no plural form, which makes incoming generic dialogue awkward (ex. \"I've seen many {c.Name} in my day\"). Consider renaming this layer (ex. \"armor\" to \"breastplate\")."));
@@ -749,6 +759,16 @@ namespace SPNATI_Character_Editor
 					importantLower = c.Name;
 				if (c.Position == "other" && c.Type == "major")
 					otherMajor = c.Name;
+
+				if (c.Name == "SKIP" && i == skin.Layers - 1)
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has SKIP as its first layer, which is not allowed because it would cause problems in Stage-0 cases such as Selected and Game Start. Make the first layer a non-skipped clothing item."));
+				}
+
+				if (c.Name == "SKIP" && (!String.IsNullOrEmpty(c.Position) || !String.IsNullOrEmpty(c.Type) || !String.IsNullOrEmpty(c.GenericName)))
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"A SKIP layer of alternate costume \"{skin.Name}\" has a non-empty metadata field, which may interfere with functions determining character status. Remove all metadata from SKIP layers."));
+				}
 
 				if (IsUncountable(c.Name))
 				{

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Xml.Serialization;
 using System.ComponentModel;
 using System.Globalization;
@@ -55,8 +55,8 @@ namespace SPNATI_Character_Editor
 
 		public Clothing()
 		{
-			Position = "upper";
-			Type = "major";
+			Position = "";
+			Type = "";
 			GenericName = "item";
 			Name = "new item";
 			CollectibleImage = null;
