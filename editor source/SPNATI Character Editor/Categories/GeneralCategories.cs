@@ -273,7 +273,7 @@ namespace SPNATI_Character_Editor.Categories
 		protected override ClothingTypeCategory[] GetCategoryValues()
 		{
 			return new ClothingTypeCategory[] {
-				new ClothingTypeCategory("",""),
+				new ClothingTypeCategory("", ""),
 				new ClothingTypeCategory("extra", "extra"),
 				new ClothingTypeCategory("minor", "minor"),
 				new ClothingTypeCategory("major", "major"),
