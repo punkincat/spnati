@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using SPNATI_Character_Editor.Categories;
 using SPNATI_Character_Editor.DataStructures;
 using System;
@@ -114,13 +114,13 @@ namespace SPNATI_Character_Editor.Controls
 		private void SaveLayer(int rowIndex)
 		{
 			DataGridViewRow row = gridWardrobe.Rows[rowIndex];
-			string lowercase = row.Cells[nameof(ColLower)].Value?.ToString();
-			if (string.IsNullOrEmpty(lowercase)) { return; }
+            string type = row.Cells[nameof(ColType)].Value?.ToString();
+            string lowercase = row.Cells[nameof(ColLower)].Value?.ToString();
+			if (string.IsNullOrEmpty(lowercase) && type != "skip") { return; }
 			string name = row.Cells[nameof(ColGeneric)].Value?.ToString();
 			bool plural = row.Cells[nameof(ColPlural)].Value != null ? (bool)row.Cells[nameof(ColPlural)].Value : false;
-			string type = row.Cells[nameof(ColType)].Value?.ToString();
-			string position = row.Cells[nameof(ColPosition)].Value?.ToString();
-			Clothing layer = row.Tag as Clothing;
+            string position = row.Cells[nameof(ColPosition)].Value?.ToString();
+            Clothing layer = row.Tag as Clothing;
 			if (layer != null)
 			{
 				layer.GenericName = name;
@@ -218,8 +218,12 @@ namespace SPNATI_Character_Editor.Controls
 			if (row.IsNewRow) { return; }
 			if (e.ColumnIndex == 0 && string.IsNullOrEmpty(e.FormattedValue?.ToString()))
 			{
-				MessageBox.Show("Clothing cannot have an empty name.");
-				e.Cancel = true;
+                string type = row.Cells["ColType"].Value?.ToString();
+				if (type != "skip")
+				{
+					MessageBox.Show("Layer of type other than skip cannot have an empty name.");
+					e.Cancel = true;
+				}
 			}
 			if (e.ColumnIndex == ColPosition.Index && _restrictions.HasFlag(WardrobeRestrictions.LayerTypes))
 			{
@@ -284,7 +288,7 @@ namespace SPNATI_Character_Editor.Controls
 				{
 					return record.Key == "upper" || record.Key == "lower" || record.Key == "both";
 				}
-			}
+            }
 			return true;
 		}
 	}

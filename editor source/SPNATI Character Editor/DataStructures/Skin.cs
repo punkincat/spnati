@@ -125,7 +125,7 @@ namespace SPNATI_Character_Editor
 			{
 				int countUnskipped = 0;
 				foreach(Clothing c in Wardrobe) {
-					if (c != null && c.Name != "SKIP")
+					if (c != null && c.Type != "skip")
 					{
 						countUnskipped++;
 					}		

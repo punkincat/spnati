@@ -220,7 +220,6 @@ namespace SPNATI_Character_Editor.Categories
 		protected override ClothingPositionCategory[] GetCategoryValues()
 		{
 			return new ClothingPositionCategory[] {
-				new ClothingPositionCategory("", ""),
 				new ClothingPositionCategory("upper", "upper"),
 				new ClothingPositionCategory("lower", "lower"),
 				new ClothingPositionCategory("both", "both"),
@@ -232,6 +231,7 @@ namespace SPNATI_Character_Editor.Categories
 				new ClothingPositionCategory("legs", "legs"),
 				new ClothingPositionCategory("waist", "waist"),
 				new ClothingPositionCategory("other", "other"),
+				new ClothingPositionCategory("", ""),
 				};
 		}
 
@@ -273,7 +273,7 @@ namespace SPNATI_Character_Editor.Categories
 		protected override ClothingTypeCategory[] GetCategoryValues()
 		{
 			return new ClothingTypeCategory[] {
-				new ClothingTypeCategory("", ""),
+				new ClothingTypeCategory("skip", "skip"),
 				new ClothingTypeCategory("extra", "extra"),
 				new ClothingTypeCategory("minor", "minor"),
 				new ClothingTypeCategory("major", "major"),

@@ -56,7 +56,7 @@ namespace SPNATI_Character_Editor
 		public Clothing()
 		{
 			Position = "";
-			Type = "";
+			Type = "major";
 			GenericName = "item";
 			Name = "new item";
 			CollectibleImage = null;
@@ -97,7 +97,14 @@ namespace SPNATI_Character_Editor
 
 		public override string ToString()
 		{
-			return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Name);
+			if (!string.IsNullOrEmpty(Name))
+			{
+				return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Name);
+			}
+			else
+			{
+				return "SKIP";
+			}
 		}
 	}
 

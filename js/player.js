@@ -281,7 +281,7 @@ Player.prototype.hasTag = function(tag) {
 };
 
 Player.prototype.countLayers = function() {
-    return this.clothing.countTrue(c => c.name != "SKIP");
+    return this.clothing.countTrue(c => c.type != "skip");
 };
 
 Player.prototype.checkStatus = function(status) {
