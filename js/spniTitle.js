@@ -180,6 +180,10 @@ var CANDY_LIST = [
     "neptune/0-excited.png",
     "neptune/2-happy.png",
     "neptune/2-smug.png",
+    "aloy/0-Horny.png",               // Highlighted New Character
+    "aloy/5-Smug.png",
+    "aloy/0-Angry.png",
+    "reskins/aloy_carja_blazon/0-Smug.png",	
     "wasp/0-start.png",                    // Has Recent Updates
     "wasp/0-flirt.png",
     "wasp/0-excited.png",
