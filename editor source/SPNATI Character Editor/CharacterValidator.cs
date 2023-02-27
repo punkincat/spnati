@@ -655,7 +655,12 @@ namespace SPNATI_Character_Editor
 						warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" has no position set. Choose a position for the layer."));
 					}
 
-					if (IsUncountable(c.Name))
+                    if (c.Name == "SKIP")
+                    {
+						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"One of the layers is named SKIP. It's a word used internally by the CE to process layers without a name. Rename the layer."));
+                    }
+
+                    if (IsUncountable(c.Name))
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" uses an uncountable noun with no plural form, which makes incoming generic dialogue awkward (ex. \"I've seen many {c.Name} in my day\"). Consider renaming this layer (ex. \"armor\" to \"breastplate\")."));
 					}
@@ -804,7 +809,17 @@ namespace SPNATI_Character_Editor
 					if (c.Position == "other" && c.Type == "major")
 						otherMajor = c.Name;
 
-					if (IsUncountable(c.Name))
+                    if (String.IsNullOrEmpty(c.Position))
+                    {
+                        warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" has no position set. Choose a position for the layer."));
+                    }
+
+                    if (c.Name == "SKIP")
+					{
+						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer named SKIP. It's a word used internally by the CE to process layers without a name. Rename the layer."));
+					}
+
+                    if (IsUncountable(c.Name))
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" uses an uncountable noun with no plural form, which makes incoming generic dialogue awkward (ex. \"I've seen many {c.Name} in my day\"). Consider renaming this layer (ex. \"armor\" to \"breastplate\")."));
 					}
