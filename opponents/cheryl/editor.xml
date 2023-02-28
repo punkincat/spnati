@@ -153,6 +153,9 @@
         <response id="721" opponent="jura" opponentId="278" />
         <response id="725" opponent="aaravi" opponentId="466" />
         <response id="727" opponent="solar_flare" opponentId="21" />
+        <response id="740" opponent="nami" opponentId="1344" />
+        <response id="741" opponent="nami" opponentId="1345" />
+        <response id="742" opponent="nami" opponentId="1346" />
     </responses>
     <notes>
         <note id="118">Cheryl has literally escaped from Michael Myers on several occasions (probably). </note>
@@ -825,8 +828,27 @@
         <label id="726" label="Butt Pose" folder="" sort="0" />
         <label id="728" label="" folder="Sponsorship Characters!" sort="0" />
         <label id="729" label="" folder="Sponsorship Characters!" sort="0" />
+        <label id="730" label="" folder="Dead by Daylight" sort="0" />
+        <label id="731" label="" folder="Dead by Daylight" sort="0" />
+        <label id="732" label="" folder="Dead by Daylight" sort="0" />
+        <label id="733" label="" folder="Dead by Daylight" sort="0" />
+        <label id="734" label="" folder="Dead by Daylight" sort="0" />
+        <label id="318" label="Cheryl Habits" folder="Dwightalogue" sort="0" />
+        <label id="735" label="Other Survivors Intro- Girls" folder="Dwightalogue" sort="0" />
+        <label id="736" label="Other Survivors Intro- Boys" folder="Dwightalogue" sort="0" />
+        <label id="737" label="Other Survivors- Girls" folder="Dwightalogue" sort="0" />
+        <label id="738" label="Other Survivors Boys" folder="Dwightalogue" sort="0" />
+        <label id="739" label="" color="0" folder="Of their own story" sort="0" />
+        <label id="673" label="" folder="Responses" sort="0" />
+        <label id="675" label="" folder="Responses" sort="0" />
+        <label id="674" label="" folder="Responses" sort="0" />
+        <label id="743" label="" folder="Las Chicas Preciosos" sort="0" />
+        <label id="744" label="" folder="Las Chicas Preciosos" sort="0" />
+        <label id="745" label="" folder="Las Chicas Preciosos" sort="0" />
+        <label id="746" label="" folder="Las Chicas Preciosos" sort="0" />
+        <label id="747" label="" folder="Las Chicas Preciosos" sort="0" />
     </labels>
-    <nextId>729</nextId>
+    <nextId>747</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="aaravi_bootsA" />
@@ -903,6 +925,7 @@
         <marker scope="Public" name="asuna53" />
         <marker scope="Public" name="asuna61" />
         <marker scope="Public" name="asuna62" />
+        <marker scope="Public" name="asuna63" />
         <marker scope="Public" name="asuna71" />
         <marker scope="Public" name="asuna72" />
         <marker scope="Public" name="asuna73" />
@@ -966,6 +989,7 @@
         <marker scope="Public" name="cheryl23" />
         <marker scope="Public" name="cheryl31" />
         <marker scope="Public" name="cheryl32" />
+        <marker scope="Public" name="cheryl32_noboys" />
         <marker scope="Public" name="cheryl33" />
         <marker scope="Public" name="cheryl33a" />
         <marker scope="Public" name="cheryl33b" />
@@ -995,6 +1019,52 @@
         <marker scope="Public" name="dwight_beltB" />
         <marker scope="Public" name="dwight_beltC" />
         <marker scope="Public" name="dwight_shoesA" />
+        <marker scope="Public" name="dwight_surv_" />
+        <marker scope="Public" name="dwight_surv_ace" />
+        <marker scope="Public" name="dwight_surv_ada" />
+        <marker scope="Public" name="dwight_surv_adam" />
+        <marker scope="Public" name="dwight_surv_alessa" />
+        <marker scope="Public" name="dwight_surv_ash" />
+        <marker scope="Public" name="dwight_surv_bill" />
+        <marker scope="Public" name="dwight_surv_boys" />
+        <marker scope="Public" name="dwight_surv_carlos" />
+        <marker scope="Public" name="dwight_surv_cheryl" />
+        <marker scope="Public" name="dwight_surv_chris" />
+        <marker scope="Public" name="dwight_surv_claire" />
+        <marker scope="Public" name="dwight_surv_claudette" />
+        <marker scope="Public" name="dwight_surv_cybil" />
+        <marker scope="Public" name="dwight_surv_david" />
+        <marker scope="Public" name="dwight_surv_dwight" />
+        <marker scope="Public" name="dwight_surv_elodie" />
+        <marker scope="Public" name="dwight_surv_felix" />
+        <marker scope="Public" name="dwight_surv_girls" />
+        <marker scope="Public" name="dwight_surv_haddie" />
+        <marker scope="Public" name="dwight_surv_jake" />
+        <marker scope="Public" name="dwight_surv_jane" />
+        <marker scope="Public" name="dwight_surv_jeff" />
+        <marker scope="Public" name="dwight_surv_jill" />
+        <marker scope="Public" name="dwight_surv_jonah" />
+        <marker scope="Public" name="dwight_surv_kate" />
+        <marker scope="Public" name="dwight_surv_laurie" />
+        <marker scope="Public" name="dwight_surv_leon" />
+        <marker scope="Public" name="dwight_surv_lisa" />
+        <marker scope="Public" name="dwight_surv_meg" />
+        <marker scope="Public" name="dwight_surv_mikaela" />
+        <marker scope="Public" name="dwight_surv_min" />
+        <marker scope="Public" name="dwight_surv_nancy" />
+        <marker scope="Public" name="dwight_surv_nea" />
+        <marker scope="Public" name="dwight_surv_quentin" />
+        <marker scope="Public" name="dwight_surv_rebecca" />
+        <marker scope="Public" name="dwight_surv_renato" />
+        <marker scope="Public" name="dwight_surv_sheva" />
+        <marker scope="Public" name="dwight_surv_steve" />
+        <marker scope="Public" name="dwight_surv_tapp" />
+        <marker scope="Public" name="dwight_surv_thalita" />
+        <marker scope="Public" name="dwight_surv_vittorio" />
+        <marker scope="Public" name="dwight_surv_yoichi" />
+        <marker scope="Public" name="dwight_surv_yui" />
+        <marker scope="Public" name="dwight_surv_yunjin" />
+        <marker scope="Public" name="dwight_surv_zarina" />
         <marker scope="Public" name="dwight_teamA" />
         <marker scope="Public" name="dwight_tieA" />
         <marker scope="Public" name="dwight_tieB" />
@@ -1010,6 +1080,7 @@
         <marker scope="Public" name="dwight31" />
         <marker scope="Public" name="dwight32" />
         <marker scope="Public" name="dwight41" />
+        <marker scope="Public" name="dwight51" />
         <marker scope="Public" name="eichi_shoesA" />
         <marker scope="Public" name="eichi_sweaterA" />
         <marker scope="Public" name="eichi_tieA" />
@@ -1077,6 +1148,9 @@
         <marker scope="Public" name="kaz23" />
         <marker scope="Public" name="kaz31" />
         <marker scope="Public" name="kaz32" />
+        <marker scope="Public" name="kaz33" />
+        <marker scope="Public" name="kaz41" />
+        <marker scope="Public" name="kaz51" />
         <marker scope="Public" name="kumatora" />
         <marker scope="Public" name="kumatora_bootsA" />
         <marker scope="Public" name="kumatora_bootsB" />
@@ -1278,9 +1352,13 @@
         <marker scope="Public" name="nami_respSocksA" />
         <marker scope="Public" name="nami_respWristsA" />
         <marker scope="Public" name="nami02" />
+        <marker scope="Public" name="nami03" />
         <marker scope="Public" name="nami12" />
+        <marker scope="Public" name="nami13" />
         <marker scope="Public" name="nami21" />
         <marker scope="Public" name="nami22" />
+        <marker scope="Public" name="nami23" />
+        <marker scope="Public" name="nami31" />
         <marker scope="Public" name="nanoko_tieA" />
         <marker scope="Public" name="nanoko_tieB" />
         <marker scope="Public" name="nanoko_tieC" />
