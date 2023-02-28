@@ -215,7 +215,6 @@ const MAGNET_TAGS = [
     "teen_titans_franchise",
     "va-11_hall-a",
     "vandread",
-    //"xenoblade_chronicles",
     "yugioh",
 ];
 
