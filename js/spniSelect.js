@@ -1540,9 +1540,15 @@ $groupSelectScreen.data('keyhandler', groupSelectScreen_keyUp);
  * select screen.
  ************************************************************/
 function backFromIndividualSelect () {
-    /* switch screens */
-    Sentry.setTag("screen", "select-main");
-    screenTransition($individualSelectScreen, $selectScreen);
+    if (players.some((p, idx) => p && idx !== HUMAN_PLAYER)) {
+        /* switch to main select screen */
+        Sentry.setTag("screen", "select-main");
+        screenTransition($individualSelectScreen, $selectScreen);
+    } else {
+        /* Go back to title screen */
+        Sentry.setTag("screen", "title");
+        screenTransition($individualSelectScreen, $titleScreen);
+    }
 }
 
 /************************************************************

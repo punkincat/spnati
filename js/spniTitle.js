@@ -923,11 +923,19 @@ function validateTitleScreen () {
     console.log(players[0]);
 
     setLocalDayOrNight();
-    updateAllBehaviours(null, null, SELECTED);
-    updateSelectionVisuals();
 
-    Sentry.setTag("screen", "select-main");
-    screenTransition($titleScreen, $selectScreen);
+    if (players.some((p, idx) => p && idx !== HUMAN_PLAYER)) {
+        /* Go to main select screen if opponents are already selected */
+        updateAllBehaviours(null, null, SELECTED);
+        updateSelectionVisuals();
+    
+        Sentry.setTag("screen", "select-main");
+        screenTransition($titleScreen, $selectScreen);
+    } else {
+        /* Go straight to indiv. select screen for the first opponent selection */
+        $titleScreen.hide();
+        selectOpponentSlot(2);
+    }
 
     updateAnnouncementDropdown();
     showAnnouncements();
