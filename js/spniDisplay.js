@@ -1271,8 +1271,8 @@ OpponentSelectionCard.prototype.update = function () {
     updateStatusIcon(this.statusIcon, this.opponent);
 
     this.layerIcon.attr({
-        src: "img/layers" + this.opponent.layers + ".png",
-        alt: this.opponent.layers + " layers",
+        src: "img/layers" + this.opponent.selectLayers + ".png",
+        alt: this.opponent.selectLayers + " layers",
     }).show() ;
     updateGenderIcon(this.genderIcon, this.opponent);
 

@@ -2429,7 +2429,7 @@ Case.prototype.checkConditions = function (self, opp, postDialogue) {
                 && (ctr.tag === undefined || p.hasTag(ctr.tag))
                 && (ctr.gender === undefined || p.gender == ctr.gender)
                 && (ctr.status === undefined || p.checkStatus(ctr.status))
-                && (ctr.layers === undefined || inInterval(p.clothing.length, ctr.layers))
+                && (ctr.layers === undefined || inInterval(p.countLayers(), ctr.layers))
                 && (ctr.startingLayers === undefined || inInterval(p.startingLayers, ctr.startingLayers))
                 && (ctr.timeInStage === undefined || inInterval(p.timeInStage, ctr.timeInStage))
                 && (ctr.hand === undefined || (p.hand && p.hand.strength === handStrengthFromString(ctr.hand)))

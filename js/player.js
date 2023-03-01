@@ -84,7 +84,7 @@ function Player (id) {
  * targetStartingLayers etc. adccording to wardrobe.
  *******************************************************************/
 Player.prototype.initClothingStatus = function () {
-    this.startingLayers = this.clothing.length;
+    this.startingLayers = this.countLayers();
     this.exposed = { upper: true, lower: true };
     for (var position in this.exposed) {
         if (this.clothing.some(function(c) {
@@ -310,7 +310,7 @@ Player.prototype.checkStatus = function(status) {
     case STATUS_ALIVE:
         return !this.out;
     case STATUS_LOST_ALL:
-        return this.clothing.length == 0;
+        return this.countLayers() == 0;
     case STATUS_MASTURBATING:
         return this.out && !this.finished;
     case STATUS_FINISHED:
@@ -628,7 +628,7 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
                 'label': $(elem).attr('label') || this.selectLabel,
                 'set': set,
                 'status': status,
-                'layers': $(elem).attr('layers') || this.selectLayers,
+                'layers': parseInt($(elem).attr('layers'), 10) || this.selectLayers,
             };
 
             if (set && DEFAULT_COSTUME_SETS.has(set)) {
@@ -907,7 +907,7 @@ Opponent.prototype.loadAlternateCostume = function () {
             wardrobe: $xml.children('wardrobe'),
             gender: $xml.children('gender').text() || this.selectGender,
             size: $xml.children('size').text() || this.default_costume.size,
-            layers: $xml.children('layers').text() || this.selectLayers,
+            layers: parseInt($xml.children('layers').text(), 10) || this.selectLayers,
         };
 
         var poses = $xml.children('poses');

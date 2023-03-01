@@ -481,7 +481,7 @@ namespace SPNATI_Character_Editor
 							}
 							else 
 							{  
-								label = "Just Lost " + lastClothes.ToString();
+								label = "Just Stripped " + lastClothes.ToString();
 							}
 						}
 						else
@@ -583,7 +583,7 @@ namespace SPNATI_Character_Editor
                             }
                             else
                             {
-                                label = "Just Lost " + lastClothes.ToString();
+                                label = "Just Stripped " + lastClothes.ToString();
                             }
                         }
                         else
