@@ -1467,6 +1467,7 @@ OpponentDetailsDisplay.prototype.handleSelected = function (ev) {
     }
 
     var curTable = players.filter((p, idx) => !!p && (idx > 0)).map((p) => p.id);
+    var sortedPos = loadedOpponents.findIndex((p) => p.id === this.opponent.id);
 
     players[selectedSlot] = this.opponent;
     players[selectedSlot].loadBehaviour(selectedSlot, true, {
@@ -1475,6 +1476,7 @@ OpponentDetailsDisplay.prototype.handleSelected = function (ev) {
         "testing": individualSelectTesting,
         "table": curTable,
         "favorite": this.opponent.favorite,
+        "position": sortedPos,
         "filter": {
             "name": searchName,
             "source": searchSource,
