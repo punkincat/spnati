@@ -978,15 +978,20 @@ function showIndividualSelectionScreen() {
     updateIndividualSelectVisibility(true);
 
     /* Make sure the user doesn't have target-count sorting set if
-     * the amount of loaded opponents drops to 0. */
+     * the amount of loaded opponents drops to 0.
+     * Also show the first-select navigation buttons if no characters are loaded.
+     */
     var $talkedToOption = $('.sort-dropdown-options>li:has(a[data-value=target])');
     if (players.countTrue() <= 1) {
         $talkedToOption.hide();
         if (sortingMode === "target") {
             setSortingMode("featured");
         }
+
+        $(".indiv-first-select-nav").show();
     } else {
         $talkedToOption.show();
+        $(".indiv-first-select-nav").hide();
     }
 
     updateIndividualEpilogueBadges();
@@ -1024,7 +1029,6 @@ function toggleIndividualSelectView() {
  * The player clicked on the Preset Tables button.
  ************************************************************/
 function showPresetTables () {
-    $groupSwitchTestingButton.html("Testing Tables");
     updateSelectableGroups();
     updateGroupSelectScreen();
 
@@ -1032,6 +1036,16 @@ function showPresetTables () {
 
     /* switch screens */
     screenTransition($selectScreen, $groupSelectScreen);
+}
+
+function indivSelectToPresetTables () {
+    updateSelectableGroups();
+    updateGroupSelectScreen();
+
+    Sentry.setTag("screen", "select-group");
+
+    /* switch screens */
+    screenTransition($individualSelectScreen, $groupSelectScreen);
 }
 
 /************************************************************
@@ -1540,7 +1554,7 @@ $groupSelectScreen.data('keyhandler', groupSelectScreen_keyUp);
  * select screen.
  ************************************************************/
 function backFromIndividualSelect () {
-    if (players.some((p, idx) => p && idx !== HUMAN_PLAYER)) {
+    if (players.countTrue() > 1) {
         /* switch to main select screen */
         Sentry.setTag("screen", "select-main");
         screenTransition($individualSelectScreen, $selectScreen);
@@ -1556,12 +1570,17 @@ function backFromIndividualSelect () {
  * select screen.
  ************************************************************/
 function backFromGroupSelect () {
-    /* switch screens */
-    Sentry.setTag("screen", "select-main");
-
     if (useGroupBackgrounds) optionsBackground.activateBackground();
 
-    screenTransition($groupSelectScreen, $selectScreen);
+    if (players.countTrue() > 1) {
+        /* switch to main select screen */
+        Sentry.setTag("screen", "select-main");
+        screenTransition($groupSelectScreen, $selectScreen);
+    } else {
+        /* Go back to individual selection */
+        Sentry.setTag("screen", "select-individual");
+        screenTransition($groupSelectScreen, $individualSelectScreen);
+    }
 }
 
 /************************************************************

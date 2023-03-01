@@ -2434,6 +2434,30 @@ ul.dropdown-menu>li {
     scroll-snap-type: y proximity;
 }
 
+.indiv-first-select-nav {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    scroll-snap-align: start;
+    scroll-margin-top: 0.4rem;
+
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+}
+
+.indiv-select-nav-btn {
+    margin: 0.4rem 0.4rem 0.2rem 0;
+    height: 4.25rem;
+
+    /* width: 17rem; */
+    /* margin: 0 0.5rem; */
+    font-size: 1.85rem;
+}
+
+#indiv-select-testing {
+    grid-column: 2;
+}
+
 .selection-card {
     vertical-align: top;
     display: inline-block;

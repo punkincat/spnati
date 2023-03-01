@@ -290,15 +290,12 @@ Background.prototype.update = function () {
 /**
  * Sets this background to be displayed.
  * 
- * @returns {Promise<Background>} A Promise that resolves once this background
+ * @returns {Promise<void>} A Promise that resolves once this background
  * loads.
  */
 Background.prototype.activateBackground = function () {
-    console.log("Activating background: " + this.id);
-    return this.update().then(() => {
-        activeBackground = this;
-        return this;
-    });
+    activeBackground = this;
+    return this.update();
 }
 
 /**
