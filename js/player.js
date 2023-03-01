@@ -528,6 +528,7 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
 
     this.loaded = false;
     this.loadProgress = undefined;
+    this.selectInfo = null;
 
     /* originalTags stores tags that will be later used in resetState to build the
      * opponent's true tags list. It does not store implied tags.
@@ -1144,6 +1145,7 @@ Opponent.prototype.unloadOpponent = function () {
     }
 
     this.slot = undefined;
+    this.selectInfo = null;
 }
 
 Opponent.prototype.fetchBehavior = function() {
@@ -1171,8 +1173,10 @@ Opponent.prototype.fetchBehavior = function() {
  * @returns {Promise<void>} A Promise that resolves after all loading is complete.
  * This includes calls to loadAlternateCostume() and onSelected().
  */
-Opponent.prototype.loadBehaviour = function (slot, individual) {
+Opponent.prototype.loadBehaviour = function (slot, individual, selectInfo) {
     this.slot = slot;
+    this.selectInfo = selectInfo;
+
     if (this.isLoaded()) {
         var p = null;
         

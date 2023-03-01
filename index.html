@@ -528,12 +528,12 @@
                     <div class="select-random-container">
                         <button id='select-random-female-button'
                                 class='bordered select-quadrant-button smooth-button blue'
-                                onclick="clickedRandomFillButton(function chooseFemale(player) {return player.gender.toLowerCase() === 'female';})">
+                                onclick="clickedRandomFillButton('female', function chooseFemale(player) {return player.gender.toLowerCase() === 'female';})">
                             Random Females
                         </button>
                         <button id='select-random-male-button'
                                 class='bordered select-quadrant-button smooth-button blue'
-                                onclick="clickedRandomFillButton(function chooseMale(player) {return player.gender.toLowerCase() === 'male';})">
+                                onclick="clickedRandomFillButton('male', function chooseMale(player) {return player.gender.toLowerCase() === 'male';})">
                             Random Males
                         </button>
                         <button id='select-random-group-button'
@@ -543,7 +543,7 @@
                         </button>
                         <button id='select-random-button'
                                 class='bordered select-quadrant-button  smooth-button blue'
-                                onclick="clickedRandomFillButton()">
+                                onclick="clickedRandomFillButton('any')">
                             Random Fill
                         </button>
                     </div>

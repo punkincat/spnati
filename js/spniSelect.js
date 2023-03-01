@@ -1097,7 +1097,7 @@ function updateSelectableGroups() {
  * Common function to selectGroup and clickedRandomGroupButton
  * to load the members of a group (preset table)
  ************************************************************/
-function loadGroup (chosenGroup) {
+function loadGroup (chosenGroup, isRandom) {
     if (!chosenGroup) return;
 
     clickedRemoveAllButton(false);
@@ -1139,7 +1139,11 @@ function loadGroup (chosenGroup) {
                 level: 'info'
             });
 
-            member.loadBehaviour(i);
+            member.loadBehaviour(i, false, {
+                "source": "group",
+                "group": chosenGroup.title,
+                "random": isRandom
+            });
             players[i] = member;
         }
     }
@@ -1173,19 +1177,21 @@ function clickedRandomGroupButton () {
         'class': 'bordered toast',
         'text': chosenGroup.title,
     }).on('animationend', function() { $(this).remove(); }));
-    loadGroup(chosenGroup);
+    loadGroup(chosenGroup, true);
 }
 
 /************************************************************
  * The player clicked on the all random button.
  ************************************************************/
-function clickedRandomFillButton (predicate) {
+function clickedRandomFillButton (randomMode, predicate) {
     /* compose a copy of the loaded opponents list */
     var loadedOpponentsCopy = loadedOpponents.filter(function(opp) {
         // Filter out characters that can't be selected via the regular view
         return (opp.selectionCard.isVisible(individualSelectTesting, true) && 
                 (!predicate || predicate(opp)));
     });
+
+    var curTable = players.filter((p, idx) => !!p && (idx > 0)).map((p) => p.id);
 
     /* select random opponents */
     for (var i = 1; i < players.length; i++) {
@@ -1202,7 +1208,11 @@ function clickedRandomFillButton (predicate) {
 
             /* load opponent */
             players[i] = loadedOpponentsCopy[randomOpponent];
-            players[i].loadBehaviour(i);
+            players[i].loadBehaviour(i, false, {
+                "source": "random",
+                "table": curTable,
+                "mode": randomMode
+            });
 
             /* remove random opponent from copy list */
             loadedOpponentsCopy.splice(randomOpponent, 1);
@@ -1455,7 +1465,7 @@ function selectGroup () {
         'level': 'info'
     });
 
-    loadGroup(selectableGroups[groupPage]);
+    loadGroup(selectableGroups[groupPage], false);
 
     Sentry.setTag("screen", "select-main");
 
