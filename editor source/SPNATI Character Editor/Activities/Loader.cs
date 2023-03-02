@@ -1,5 +1,4 @@
 using Desktop;
-using Desktop.Skinning;
 using SPNATI_Character_Editor.DataStructures;
 using SPNATI_Character_Editor.Forms;
 using System;
