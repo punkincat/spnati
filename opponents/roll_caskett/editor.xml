@@ -5,6 +5,12 @@
     <age />
     <pronunciation />
     <othernotes />
+    <noteworthy>
+        <case name="Data" id="37" priority="Prompt" min="0" max="8">
+            <description>Data, the small robot monkey, has a habit of showing up in places he cannot possibly be. Roll is worried he's in the Inventory somehow.</description>
+        </case>
+    </noteworthy>
+    <reviewed>true</reviewed>
     <responses>
         <response id="0" opponent="arash" opponentId="128" />
         <response id="0" opponent="lyralei" opponentId="1578" />
@@ -42,11 +48,14 @@
         <response id="29" opponent="sakura" opponentId="3" />
         <response id="31" opponent="saki_zls" opponentId="3" />
         <response id="33" opponent="ms.fortune" opponentId="24" />
+        <response id="34" opponent="kumatora" opponentId="191" />
+        <response id="35" opponent="bobobo" opponentId="526" />
+        <response id="36" opponent="kumatora" opponentId="170" />
     </responses>
     <prefixes>
         <prefix>ex</prefix>
     </prefixes>
-    <nextId>33</nextId>
+    <nextId>37</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="9S_s0_1" />
@@ -134,6 +143,7 @@
         <marker scope="Public" name="Kaz_s5_1" />
         <marker scope="Public" name="Kaz_s5_2" />
         <marker scope="Public" name="Kaz_s5_3" />
+        <marker scope="Public" name="Kumatora_s0_1" />
         <marker scope="Public" name="mari_resp0_1" />
         <marker scope="Public" name="maria_resp0_1" />
         <marker scope="Public" name="maria_resp0_2" />
@@ -186,6 +196,7 @@
         <marker scope="Public" name="ringo_resp2_s" />
         <marker scope="Public" name="Samus_s0_1" />
         <marker scope="Public" name="Samus_s0_2" />
+        <marker scope="Public" name="WheresData" />
         <marker scope="Public" name="yshtola_resp0_1" />
         <marker scope="Public" name="yshtola_resp0_2" />
         <marker scope="Public" name="yshtola_resp0_3" />
