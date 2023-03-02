@@ -1743,6 +1743,7 @@ function evalOperator (val, op, cmpVal) {
     case '<=': return val <= cmpVal;
     case '!=': return val != cmpVal;
     case '!!': return !!val;
+    case '@': return inInterval(val, cmpVal);
     default:
     case '=':
     case '==':
@@ -1760,7 +1761,7 @@ function evalOperator (val, op, cmpVal) {
  * the current state marker.
  ************************************************************/
 function checkMarker(predicate, self, target, currentOnly) {
-    var match = predicate.match(/^([\w\-]+)(\*?)(\s*((?:\>|\<|\=|\!)\=?)\s*(.+))?\s*$/);
+    var match = predicate.match(/^([\w\-]+)(\*?)(\s*(\<|\>|\<\=|\>\=|\=\=|!\=|\=|\@)?\s*(.+))?\s*$/);
     
     var name;
     var perTarget;
@@ -1780,7 +1781,11 @@ function checkMarker(predicate, self, target, currentOnly) {
         if (match[3]) {
             op = match[4];
             cmpVal = expandDialogue(match[5], self, target);
-            if (!isNaN(parseInt(cmpVal, 10))) {
+            if (op == '@')
+            {
+                cmpVal = parseInterval(cmpVal);
+            }
+            else if (!isNaN(parseInt(cmpVal, 10))) {
                 cmpVal = parseInt(cmpVal, 10);
             }
         } else {
