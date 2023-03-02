@@ -19,7 +19,7 @@
             <description>Robin has a series of sexual questions for characters while they're masturbating, both generic and filtered</description>
         </case>
         <case name="Multiple orgasms" id="671" priority="FYI" min="6" max="6">
-            <description>If she's sufficiently aroused, Robin will have an orgasm early in her Masturbation Stage, and then continue masturbating until she climaxes again</description>
+            <description>If she's sufficiently aroused, Robin will have an orgasm early in her Masturbation Stage, and then will continue masturbating until she climaxes again</description>
         </case>
     </noteworthy>
     <reviewed>true</reviewed>
@@ -57,6 +57,8 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <note id="627">I moved the conversation keeping the lines the same while changing only the markers</note>
         <note id="462">This conversation has been moved back one stage and the markers have been updated</note>
         <note id="796">This interaction could lead to the tickling event. Let me know if you'd like me to move it to another stage.</note>
+        <note id="816">This case will have negative priority until the interaction is complete</note>
+        <note id="828">Markers have different values in case you wanna target the lines separately</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Imagination" sort="0" />
@@ -446,12 +448,11 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <label id="388" label="" color="1" folder="" sort="0" />
         <label id="389" label="" color="1" folder="" sort="0" />
         <label id="456" label="" folder="Masturbation Prompts (Resp)" sort="0" />
-        <label id="793" label="" color="6" folder="" sort="0" />
+        <label id="815" label="" color="1" folder="" sort="0" />
         <label id="392" label="" folder="Masturbation Prompts" sort="0" />
         <label id="811" label="" color="1" folder="" sort="0" />
         <label id="557" label="" folder="Nami" sort="0" />
         <label id="397" label="" folder="Names" sort="0" />
-        <label id="783" label="" color="1" folder="" sort="0" />
         <label id="639" label="" color="5" folder="Backgrounds" sort="0" />
         <label id="638" label="" color="5" folder="Backgrounds" sort="0" />
         <label id="787" label="" color="6" folder="" sort="0" />
@@ -481,7 +482,7 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <label id="437" label="" folder="Masturbation Prompts (Resp)" sort="0" />
         <label id="438" label="" color="6" folder="Masturbation Prompts (Resp)" sort="0" />
         <label id="439" label="" color="6" folder="Masturbation Prompts (Resp)" sort="0" />
-        <label id="795" label="" color="1" folder="" sort="0" />
+        <label id="814" label="" color="1" folder="" sort="0" />
         <label id="442" label="" folder="Perona" sort="0" />
         <label id="443" label="" folder="Perona" sort="0" />
         <label id="444" label="" folder="Perona" sort="0" />
@@ -497,12 +498,11 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <label id="468" label="" color="0" folder="Masturbation Prompts (Resp)" sort="0" />
         <label id="469" label="" color="0" folder="Masturbation Prompts (Resp)" sort="0" />
         <label id="470" label="" color="0" folder="Masturbation Prompts (Resp)" sort="0" />
-        <label id="790" label="" color="6" folder="" sort="0" />
-        <label id="801" label="" color="1" folder="" sort="0" />
+        <label id="819" label="" color="1" folder="" sort="0" />
+        <label id="818" label="" color="1" folder="" sort="0" />
         <label id="481" label="" color="1" folder="" sort="0" />
         <label id="482" label="" color="2" folder="" sort="0" />
         <label id="483" label="" color="1" folder="" sort="0" />
-        <label id="782" label="" color="1" folder="" sort="0" />
         <label id="760" label="" color="6" folder="" sort="0" />
         <label id="759" label="" color="6" folder="" sort="0" />
         <label id="764" label="" color="1" folder="" sort="0" />
@@ -570,14 +570,13 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <label id="808" label="" color="6" folder="" sort="0" />
         <label id="804" label="" color="1" folder="" sort="0" />
         <label id="805" label="" color="1" folder="" sort="0" />
-        <label id="750" label="" color="1" folder="" sort="0" />
-        <label id="751" label="" color="1" folder="" sort="0" />
-        <label id="587" label="" color="1" folder="" sort="0" />
-        <label id="800" label="" color="1" folder="" sort="0" />
-        <label id="799" label="" color="1" folder="" sort="0" />
-        <label id="755" label="" color="1" folder="" sort="0" />
-        <label id="753" label="" color="1" folder="" sort="0" />
-        <label id="754" label="" color="1" folder="" sort="0" />
+        <label id="827" label="" color="1" folder="" sort="0" />
+        <label id="826" label="" color="1" folder="" sort="0" />
+        <label id="828" label="" color="1" folder="" sort="0" />
+        <label id="829" label="" color="1" folder="" sort="0" />
+        <label id="825" label="" color="6" folder="" sort="0" />
+        <label id="822" label="" color="1" folder="" sort="0" />
+        <label id="823" label="" color="1" folder="" sort="0" />
         <label id="607" label="" color="1" folder="" sort="0" />
         <label id="608" label="" color="1" folder="" sort="0" />
         <label id="609" label="" color="5" folder="Backgrounds" sort="0" />
@@ -585,8 +584,7 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <label id="611" label="" folder="Nami" sort="0" />
         <label id="612" label="" folder="Nami" sort="0" />
         <label id="812" label="" color="6" folder="" sort="0" />
-        <label id="792" label="" color="1" folder="" sort="0" />
-        <label id="786" label="" color="1" folder="" sort="0" />
+        <label id="816" label="" color="1" folder="" sort="0" />
         <label id="640" label="" folder="Backgrounds" sort="0" />
         <label id="643" label="" folder="Nami" sort="0" />
         <label id="644" label="" folder="Nami" sort="0" />
@@ -641,9 +639,9 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <label id="696" label="" folder="Masturbation Prompts (Resp)" sort="0" />
         <label id="697" label="" folder="Masturbation Prompts (Resp)" sort="0" />
         <label id="807" label="" color="6" folder="" sort="0" />
-        <label id="794" label="" color="1" folder="" sort="0" />
-        <label id="798" label="" color="1" folder="" sort="0" />
-        <label id="802" label="" color="1" folder="" sort="0" />
+        <label id="813" label="" color="6" folder="" sort="0" />
+        <label id="830" label="" color="1" folder="" sort="0" />
+        <label id="820" label="" color="1" folder="" sort="0" />
         <label id="718" label="" folder="Nami" sort="0" />
         <label id="719" label="" folder="Nami" sort="0" />
         <label id="720" label="" folder="Nami" sort="0" />
@@ -690,15 +688,13 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <label id="780" label="" folder="Nami" sort="0" />
         <label id="784" label="" folder="Masturbation Prompts (Resp)" sort="0" />
         <label id="785" label="" folder="Masturbation Prompts (Resp)" sort="0" />
-        <label id="788" label="" color="1" folder="" sort="0" />
-        <label id="789" label="" color="1" folder="" sort="0" />
-        <label id="791" label="" color="1" folder="" sort="0" />
-        <label id="796" label="" color="1" folder="" sort="0" />
-        <label id="797" label="" color="1" folder="" sort="0" />
-        <label id="803" label="" color="1" folder="" sort="0" />
+        <label id="817" label="" color="1" folder="" sort="0" />
+        <label id="824" label="" color="1" folder="" sort="0" />
+        <label id="831" label="" color="1" folder="" sort="0" />
+        <label id="821" label="" color="1" folder="" sort="0" />
         <label id="809" label="" color="1" folder="" sort="0" />
     </labels>
-    <nextId>812</nextId>
+    <nextId>831</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="aaravi0" />
@@ -758,7 +754,9 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <marker scope="Public" name="butt3" />
         <marker scope="Public" name="cagliostro_intro" />
         <marker scope="Public" name="cagliostro0" />
+        <marker scope="Public" name="cagliostro01" />
         <marker scope="Public" name="cagliostro3" />
+        <marker scope="Public" name="cagliostro34" />
         <marker scope="Public" name="caitlin_start" />
         <marker scope="Public" name="caitlin0" />
         <marker scope="Public" name="caitlin1" />
@@ -1012,6 +1010,8 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <marker scope="Public" name="miko1s" />
         <marker scope="Public" name="miko2" />
         <marker scope="Public" name="miko23" />
+        <marker scope="Public" name="miko2s" />
+        <marker scope="Public" name="miko3s" />
         <marker scope="Public" name="modern_library" />
         <marker scope="Public" name="monster" />
         <marker scope="Public" name="moon_age" />
@@ -1022,6 +1022,7 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <marker scope="Public" name="myriam7s" />
         <marker scope="Public" name="nagatoro0" />
         <marker scope="Public" name="nagatoro01" />
+        <marker scope="Public" name="nagatoro1s" />
         <marker scope="Public" name="nami" />
         <marker scope="Public" name="nami_advice_anus" />
         <marker scope="Public" name="nami_advice_ask" />
@@ -1350,6 +1351,8 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <marker scope="Public" name="resp_aaravi01" />
         <marker scope="Public" name="resp_aaravi1" />
         <marker scope="Public" name="resp_aaravi12" />
+        <marker scope="Public" name="resp_aaravi1s" />
+        <marker scope="Public" name="resp_aaravi2s" />
         <marker scope="Public" name="resp_adrien0" />
         <marker scope="Public" name="resp_aloy0" />
         <marker scope="Public" name="resp_ask_dominant" />
@@ -1369,6 +1372,7 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <marker scope="Public" name="resp_ask_type_girls" />
         <marker scope="Public" name="resp_cagliostro0" />
         <marker scope="Public" name="resp_cagliostro2" />
+        <marker scope="Public" name="resp_cagliostro23" />
         <marker scope="Public" name="resp_cynthia0" />
         <marker scope="Public" name="resp_dunban12a" />
         <marker scope="Public" name="resp_dunban12b" />
@@ -1421,6 +1425,9 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <marker scope="Public" name="resp_jura5" />
         <marker scope="Public" name="resp_jura5s" />
         <marker scope="Public" name="resp_leon0" />
+        <marker scope="Public" name="resp_leon01" />
+        <marker scope="Public" name="resp_leon1a" />
+        <marker scope="Public" name="resp_leon1b" />
         <marker scope="Public" name="resp_marise" />
         <marker scope="Public" name="resp_marise_feel" />
         <marker scope="Public" name="resp_marise_funny" />
@@ -1458,9 +1465,12 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <marker scope="Public" name="resp_mercy0" />
         <marker scope="Public" name="resp_miko0" />
         <marker scope="Public" name="resp_miko01" />
+        <marker scope="Public" name="resp_miko1" />
         <marker scope="Public" name="resp_miko1s" />
         <marker scope="Public" name="resp_nagatoro0" />
         <marker scope="Public" name="resp_nagatoro01" />
+        <marker scope="Public" name="resp_nagatoro1s" />
+        <marker scope="Public" name="resp_nagatoro2" />
         <marker scope="Public" name="resp_nami" />
         <marker scope="Public" name="resp_nami_finished" />
         <marker scope="Public" name="resp_nami_finishedA" />
@@ -1644,6 +1654,9 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <marker scope="Public" name="resp_revy34" />
         <marker scope="Public" name="resp_revy3s" />
         <marker scope="Public" name="resp_revy4" />
+        <marker scope="Public" name="resp_revy45" />
+        <marker scope="Public" name="resp_revy4s" />
+        <marker scope="Public" name="resp_revy5" />
         <marker scope="Public" name="resp_robin2" />
         <marker scope="Public" name="resp_robin23_ability" />
         <marker scope="Public" name="resp_robin23_robots" />
@@ -1674,6 +1687,7 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <marker scope="Public" name="resp_sucrose01" />
         <marker scope="Public" name="resp_sucrose1" />
         <marker scope="Public" name="resp_sucrose12" />
+        <marker scope="Public" name="resp_sucrose2s" />
         <marker scope="Public" name="resp_sucrose3" />
         <marker scope="Public" name="resp_sucrose34" />
         <marker scope="Public" name="resp_sucrose3s" />
@@ -1710,6 +1724,7 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <marker scope="Public" name="revy2s_a" />
         <marker scope="Public" name="revy2s_b" />
         <marker scope="Public" name="revy4" />
+        <marker scope="Public" name="revy45_tickling" />
         <marker scope="Public" name="revy5" />
         <marker scope="Public" name="revy56" />
         <marker scope="Public" name="revy6s_a" />
@@ -1790,8 +1805,10 @@ Respond to these lines during a Masturbation (Self) case, with a condition for R
         <marker scope="Public" name="sucrose1" />
         <marker scope="Public" name="sucrose12" />
         <marker scope="Public" name="sucrose1s" />
+        <marker scope="Public" name="sucrose2s" />
         <marker scope="Public" name="sucrose3" />
         <marker scope="Public" name="sucrose34" />
+        <marker scope="Public" name="sucrose4s" />
         <marker scope="Public" name="supernova0" />
         <marker scope="Public" name="swimming" />
         <marker scope="Public" name="syrenne0" />
