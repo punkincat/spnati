@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using SPNATI_Character_Editor.DataStructures;
 using SPNATI_Character_Editor.Forms;
 using System;
@@ -34,11 +34,8 @@ namespace SPNATI_Character_Editor.Activities
 			await LoadChunk("Recipes", 1, () => RecipeProvider.Load());
 			await LoadChunk("Decks", 1, () => DeckDatabase.Load());
 
-			string lastCharacter = Config.GetString(Settings.AutoOpenCharacter);
-			if (string.IsNullOrEmpty(lastCharacter))
-			{
-				lastCharacter = Config.GetString(Settings.LastCharacter);
-			}
+			string autoloadCharacter = Config.GetString(Settings.AutoOpenCharacter);
+			string lastCharacter = Config.GetString(Settings.LastCharacter);
 
 			List<string> failedCharacters = new List<string>();
 
@@ -204,7 +201,27 @@ namespace SPNATI_Character_Editor.Activities
 
 			Shell.Instance.CloseWorkspace(Workspace);
 			Shell.Instance.Maximize(false);
-			if (!string.IsNullOrEmpty(lastCharacter))
+
+
+			if (!string.IsNullOrEmpty(autoloadCharacter))
+			{
+				foreach (string charToLoad in autoloadCharacter.Split(','))
+				{
+                    if (failedCharacters.Contains(charToLoad))
+                    {
+                        ShellLogic.RecoverCharacter(charToLoad);
+                    }
+					else
+                    {
+                        if (CharacterDatabase.Get(charToLoad) != null)
+                        {
+                            Character autoload = CharacterDatabase.Load(charToLoad);
+                            Shell.Instance.LaunchWorkspace(autoload);
+                        }
+                    }
+				}
+			}
+			else if (!string.IsNullOrEmpty(lastCharacter))
 			{
 				if (failedCharacters.Contains(lastCharacter))
 				{
