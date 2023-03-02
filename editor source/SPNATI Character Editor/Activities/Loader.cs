@@ -1,4 +1,5 @@
 using Desktop;
+using Desktop.Skinning;
 using SPNATI_Character_Editor.DataStructures;
 using SPNATI_Character_Editor.Forms;
 using System;
@@ -218,6 +219,11 @@ namespace SPNATI_Character_Editor.Activities
                             Character autoload = CharacterDatabase.Load(charToLoad);
                             Shell.Instance.LaunchWorkspace(autoload);
                         }
+						else if (CharacterDatabase.GetSkin(charToLoad) != null)
+						{
+							Costume autoload = CharacterDatabase.GetSkin(charToLoad);
+							Shell.Instance.LaunchWorkspace<Costume>(autoload);
+						}
                     }
 				}
 			}
