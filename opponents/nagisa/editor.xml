@@ -252,6 +252,9 @@
         <response id="943" opponent="meia" opponentId="24" />
         <response id="944" opponent="meia" opponentId="300" />
         <response id="945" opponent="meia" opponentId="287" />
+        <response id="989" opponent="kumatora" opponentId="208" />
+        <response id="990" opponent="kumatora" opponentId="191" />
+        <response id="991" opponent="kumatora" opponentId="170" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1172,13 +1175,20 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="986" label="" folder="Meia to left" sort="0" />
         <label id="987" label="" folder="Meia to left or right" sort="0" />
         <label id="988" label="" folder="Meia to left" sort="0" />
+        <label id="989" label="" folder="Kumatora to left" sort="0" />
+        <label id="990" label="" folder="Kumatora to left" sort="0" />
+        <label id="991" label="" folder="Kumatora to left" sort="0" />
+        <label id="992" label="" folder="Kumatora to left" sort="0" />
+        <label id="993" label="" folder="Kumatora to left" sort="0" />
+        <label id="994" label="classroom" folder="Kumatora to left" sort="0" />
+        <label id="995" label="feminine bedroom" folder="Kyou to right" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>988</nextId>
+    <nextId>995</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1874,6 +1884,12 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_korra_so_big" />
         <marker scope="Public" name="nagisa_korra_what_is_the_avatar" />
         <marker scope="Public" name="nagisa_korra_wow" />
+        <marker scope="Public" name="nagisa_kumatora_classroom" />
+        <marker scope="Public" name="nagisa_kumatora_favorite_foods" />
+        <marker scope="Public" name="nagisa_kumatora_first_name" />
+        <marker scope="Public" name="nagisa_kumatora_friends" />
+        <marker scope="Public" name="nagisa_kumatora_not_a_regular" />
+        <marker scope="Public" name="nagisa_kumatora_waitresses" />
         <marker scope="Public" name="nagisa_kurumu_wings" />
         <marker scope="Public" name="nagisa_kyoko_hands" />
         <marker scope="Public" name="nagisa_kyou_all_i_have" />
