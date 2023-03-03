@@ -218,9 +218,9 @@ namespace SPNATI_Character_Editor.Activities
                             Character autoload = CharacterDatabase.Load(charToLoad);
                             Shell.Instance.LaunchWorkspace(autoload);
                         }
-						else if (CharacterDatabase.GetSkin(charToLoad) != null)
+						else if (CharacterDatabase.GetSkin($"opponents/reskins/{charToLoad}/") != null)
 						{
-							Costume autoload = CharacterDatabase.GetSkin(charToLoad);
+							Costume autoload = CharacterDatabase.GetSkin($"opponents/reskins/{charToLoad}/");
 							Shell.Instance.LaunchWorkspace<Costume>(autoload);
 						}
                     }

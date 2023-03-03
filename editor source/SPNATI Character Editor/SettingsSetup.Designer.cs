@@ -439,7 +439,7 @@ namespace SPNATI_Character_Editor
             this.skinnedLabel5.Size = new System.Drawing.Size(59, 13);
             this.skinnedLabel5.TabIndex = 11;
             this.skinnedLabel5.Text = "Auto-open:";
-            this.toolTip1.SetToolTip(this.skinnedLabel5, "List of character labels divided by commas. Put /opponents/reskins/<folder-name>/ as an item to auto-open an alt costume.");
+            this.toolTip1.SetToolTip(this.skinnedLabel5, "List of character labels divided by commas. Put a costume's folder name as an item to auto-open an alternate costume.");
             // 
             // chkIntellisense
             // 
