@@ -499,6 +499,10 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
         .simplifyDiacritics()
         .replace(/\([^\)]+\)|\[[^\]]+\]|and\s|the\s|an?\s|[^a-zA-Z0-9]/gm, '');
 
+    this.normalizedSelectLabel = (this.selectLabel || "")
+        .simplifyDiacritics()
+        .replace(/[^a-zA-Z0-9]/gm, '');
+
     this.rosterScore = rosterScore;
     this.effectiveScore = -Infinity;
 
@@ -863,6 +867,14 @@ Opponent.prototype.selectAlternateCostume = function (costumeDesc) {
         this.selectLabel = costumeDesc.label;
         this.selectGender = costumeDesc.gender;
     }
+
+    /* For sorting purposes. 
+     * Simplifies diacritics and removes punctuation.
+     */
+    this.normalizedSelectLabel = (this.selectLabel || "")
+        .simplifyDiacritics()
+        .replace(/[^a-zA-Z0-9]/gm, '');
+    
 
     if (this.selectionCard)
         this.selectionCard.update();
