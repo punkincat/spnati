@@ -11,6 +11,12 @@
         <case name="Friend Prompt" id="208" priority="Noteworthy" min="0" max="3">
             <description>Kumatora asks the table if they have any friends that they value more than others.</description>
         </case>
+        <case name="Superpower Prompt" id="298" priority="Prompt" min="0" max="7">
+            <description>Description about what's interesting happening with the character (i.e. why should others target this?)</description>
+        </case>
+        <case name="Hypotheticals " id="299" priority="Prompt" min="5" max="5">
+            <description>Description about what's interesting happening with the character (i.e. why should others target this?)</description>
+        </case>
     </noteworthy>
     <responses>
         <response id="3" opponent="sayaka" opponentId="30" />
@@ -280,7 +286,7 @@ The "winner" gets rewarded by people telling them they're hot, basically.</note>
         <label id="294" label="Leon DirtyTalk" folder="Leon Dirty Talk" sort="0" />
         <label id="295" label="Leon Inside" folder="Leon Dirty Talk" sort="0" />
     </labels>
-    <nextId>297</nextId>
+    <nextId>299</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="__cagliostro_nickname" />
@@ -472,6 +478,16 @@ The "winner" gets rewarded by people telling them they're hot, basically.</note>
         <marker scope="Public" name="charlie_greet" />
         <marker scope="Public" name="chazz_greeting" />
         <marker scope="Public" name="cheese_bad" />
+        <marker scope="Public" name="cheryl_boots_resp" />
+        <marker scope="Public" name="cheryl_bootsB_resp" />
+        <marker scope="Public" name="cheryl_bootsC_resp" />
+        <marker scope="Public" name="cheryl_greet" />
+        <marker scope="Public" name="cheryl_necklaceA_resp" />
+        <marker scope="Public" name="cheryl11" />
+        <marker scope="Public" name="cheryl11_resp" />
+        <marker scope="Public" name="cheryl31_resp" />
+        <marker scope="Public" name="cheryl51_resp" />
+        <marker scope="Public" name="cheryl63_resp" />
         <marker scope="Public" name="chie_greet" />
         <marker scope="Public" name="CloningBlues_resp" />
         <marker scope="Public" name="couragebadge" />
@@ -513,6 +529,10 @@ The "winner" gets rewarded by people telling them they're hot, basically.</note>
         <marker scope="Public" name="dunbanWinkWink" />
         <marker scope="Public" name="duster_introduction" />
         <marker scope="Public" name="duster_kicks" />
+        <marker scope="Public" name="erufuda_behind_cheeky" />
+        <marker scope="Public" name="erufuda_comfy_resp" />
+        <marker scope="Public" name="erufuda_magic_resp" />
+        <marker scope="Public" name="erufuda_under_huh" />
         <marker scope="Public" name="Estelle_greet" />
         <marker scope="Public" name="EstelleStart_resp" />
         <marker scope="Public" name="Fate_hat_cheat_resp" />
@@ -684,6 +704,10 @@ The "winner" gets rewarded by people telling them they're hot, basically.</note>
         <marker scope="Public" name="jura_birthday" />
         <marker scope="Public" name="jura_seduction_resp" />
         <marker scope="Public" name="jura_strip0" />
+        <marker scope="Public" name="kaz_greet" />
+        <marker scope="Public" name="kaz_nickname_resp" />
+        <marker scope="Public" name="kaz_superpowerA" />
+        <marker scope="Public" name="kaz_uwot" />
         <marker scope="Public" name="knowfreddy_resp" />
         <marker scope="Public" name="komi_courtesy_strip" />
         <marker scope="Public" name="komi_greet" />
@@ -698,6 +722,11 @@ The "winner" gets rewarded by people telling them they're hot, basically.</note>
         <marker scope="Public" name="kora13" />
         <marker scope="Public" name="kora21" />
         <marker scope="Public" name="KoraPenor" />
+        <marker scope="Public" name="kum_hypothetical_A" />
+        <marker scope="Public" name="kum_hypothetical_B" />
+        <marker scope="Public" name="kum_hypothetical_C" />
+        <marker scope="Public" name="kum_hypotheticalC" />
+        <marker scope="Public" name="kum_psi_connection" />
         <marker scope="Public" name="kum_superpower" />
         <marker scope="Public" name="kum_superpowerA" />
         <marker scope="Public" name="kum_superpowerB" />
@@ -1026,6 +1055,7 @@ The "winner" gets rewarded by people telling them they're hot, basically.</note>
         <marker scope="Public" name="lyralei_nature_resp" />
         <marker scope="Public" name="lyralei_picture" />
         <marker scope="Public" name="lyralei_picture_drop_resp" />
+        <marker scope="Public" name="magical_sempai_greet" />
         <marker scope="Public" name="magmagr" />
         <marker scope="Public" name="magmagrunt_" />
         <marker scope="Public" name="magmagrunt_greeting" />
@@ -1100,6 +1130,7 @@ The "winner" gets rewarded by people telling them they're hot, basically.</note>
         <marker scope="Public" name="meia12_resp" />
         <marker scope="Public" name="meia21" />
         <marker scope="Public" name="Meia31" />
+        <marker scope="Public" name="Meia32" />
         <marker scope="Public" name="meia41" />
         <marker scope="Public" name="mercenary_title_suggest1" />
         <marker scope="Public" name="mercenary_title_suggest2" />
@@ -1172,6 +1203,7 @@ The "winner" gets rewarded by people telling them they're hot, basically.</note>
         <marker scope="Public" name="nagamimi_nickname_prompt9" />
         <marker scope="Public" name="nagamimi11" />
         <marker scope="Public" name="nagatoro_greet" />
+        <marker scope="Public" name="nagatoro11_resp" />
         <marker scope="Public" name="nagisa_customers_resp" />
         <marker scope="Public" name="nakuma_underwear_resp" />
         <marker scope="Public" name="nami_0_resp" />
@@ -1321,6 +1353,8 @@ The "winner" gets rewarded by people telling them they're hot, basically.</note>
         <marker scope="Public" name="ringo_greet" />
         <marker scope="Public" name="Ristelle_Tension" />
         <marker scope="Public" name="Rita_greet" />
+        <marker scope="Public" name="roll_s0_1_resp" />
+        <marker scope="Public" name="rollc_greet" />
         <marker scope="Public" name="ropesnake" />
         <marker scope="Public" name="ropesnake_explain" />
         <marker scope="Public" name="rosa_attraction_resp" />
@@ -1377,6 +1411,9 @@ The "winner" gets rewarded by people telling them they're hot, basically.</note>
         <marker scope="Public" name="scrappy_introduction" />
         <marker scope="Public" name="sea_otter" />
         <marker scope="Public" name="self_magypsies" />
+        <marker scope="Public" name="sempai_braless" />
+        <marker scope="Public" name="sempai_hand_1_resp" />
+        <marker scope="Public" name="sempai_hand_2_resp" />
         <marker scope="Public" name="senko_modern_amenities" />
         <marker scope="Public" name="senko01_resp" />
         <marker scope="Public" name="senko02_resp" />
@@ -1496,6 +1533,8 @@ The "winner" gets rewarded by people telling them they're hot, basically.</note>
         <marker scope="Public" name="wiki_BDay_resp" />
         <marker scope="Public" name="wiki_SadDonate_resp" />
         <marker scope="Public" name="windranger_commando" />
+        <marker scope="Public" name="yshtola_greet" />
+        <marker scope="Public" name="yshtola_speakamerican" />
         <marker scope="Public" name="yui21" />
         <marker scope="Public" name="yuna_greet" />
         <marker scope="Public" name="yuno_greet" />
