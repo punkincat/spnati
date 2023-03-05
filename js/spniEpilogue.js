@@ -1999,6 +1999,7 @@ SceneView.prototype.applyTextDirective = function (directive, box) {
     var content = expandDialogue(directive.text, null, humanPlayer);
     var playerID = this.epiloguePlayer.epilogue.player.id;
 
+    var uniqueClasses = [];
     var displayElems = parseStyleSpecifiers(content).map(function (comp) {
         /* {'text': 'foo', 'classes': 'cls1 cls2 cls3'} --> <span class="cls1 cls2 cls3">foo</span> */
 
@@ -2006,6 +2007,12 @@ SceneView.prototype.applyTextDirective = function (directive, box) {
         wrapperSpan.innerHTML = fixupDialogue(comp.text);
         wrapperSpan.className = comp.classes;
         wrapperSpan.setAttribute('data-character', playerID);
+        
+        comp.classes.split(/\s+/).forEach(function (cls) {
+            if (cls.length > 0 && uniqueClasses.indexOf(cls) < 0) {
+                uniqueClasses.push(cls);
+            }
+        });
 
         return wrapperSpan;
     });
@@ -2013,6 +2020,29 @@ SceneView.prototype.applyTextDirective = function (directive, box) {
 
     box.removeClass('arrow-down arrow-left arrow-right arrow-up').addClass(directive.arrow);
     box.attr('style', directive.css);
+
+    box.attr({
+        "data-character": playerID,
+        "data-directive-id": directive.id,
+        "data-epilogue": this.epiloguePlayer.epilogue.title,
+        "data-epilogue-gender": this.epiloguePlayer.epilogue.gender
+    });
+
+    if (uniqueClasses.length > 0) {
+        box.attr("data-dialogue-styles", uniqueClasses.sort().join(" "));
+    } else {
+        box[0].removeAttribute("data-dialogue-styles");
+    }
+
+    var sceneIdx = this.epiloguePlayer.sceneIndex;
+    var curScene = this.epiloguePlayer.epilogue.scenes[sceneIdx];
+    
+    box.attr("data-scene-index", sceneIdx);
+    if (curScene && curScene.name) {
+        box.attr("data-scene", curScene.name);
+    } else {
+        box[0].removeAttribute("data-scene");
+    }
 
     //use css to position the box
     box.css('left', directive.x);
