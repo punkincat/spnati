@@ -180,7 +180,7 @@ var CANDY_LIST = [
     "neptune/0-excited.png",
     "neptune/2-happy.png",
     "neptune/2-smug.png",
-    "aloy/0-Horny.png",               // Highlighted New Character
+    "aloy/0-Horny.png",                    // Highlighted New Character
     "aloy/5-Smug.png",
     "aloy/0-Angry.png",
     "reskins/aloy_carja_blazon/0-Smug.png",	
@@ -188,6 +188,10 @@ var CANDY_LIST = [
     "aqua_kh/0-happy.png",
     "aqua_kh/2-keyblade_stance.png",
     "aqua_kh/2-turned_on.png",
+    "kora/0-cheer2.png",                   // Highlighted New Character
+    "kora/1-cheer.png",
+    "kora/2-smorny.png",
+    "kora/2-after_butt.png",
     "wasp/0-start.png",                    // Has Recent Updates
     "wasp/0-flirt.png",
     "wasp/0-excited.png",
@@ -352,6 +356,22 @@ var CANDY_LIST = [
     "zoe/0-fangirling.png",
     "zoe/0-smug.png",
     "zoe/3-blush.png",
+    "kazuma/0-happy.png",                  // Has Recent Updates
+    "kazuma/0-appreciative.png",
+    "kazuma/1-victory.png",
+    "kazuma/3-smirk.png",
+    "twilight/0-confident.png",            // Has Recent Updates
+    "twilight/2-smart.png",
+    "reskins/twilight_sci-twi/0-calm.png",
+    "reskins/twilight_sci-twi/0-happy.png",
+    "rarity_eg/0-acreative.png",           // Has Recent Updates
+    "rarity_eg/0-brelaxed.png",
+    "rarity_eg/0-cinterested.png",
+    "rarity_eg/4-ahappy.png",
+    "pinkie_pie/0-excited.png",            // Has Recent Updates
+    "pinkie_pie/1-stripped.png",
+    "pinkie_pie/2-whatever.png",
+    "pinkie_pie/3-calm.png",
 ];
 
 /* Storage for old candy images in case the characters qualify again */
@@ -452,18 +472,6 @@ var CANDY_LIST = [
     "n/4-Naturally.png",
     "n/2-fiddliNg.png",
     "n/6-iNform.png",
-    "kazuma/0-happy.png",
-    "kazuma/0-appreciative.png",
-    "kazuma/1-victory.png",
-    "kazuma/3-smirk.png",
-    "rarity_eg/0-acreative.png",
-    "rarity_eg/0-brelaxed.png",
-    "rarity_eg/0-cinterested.png",
-    "rarity_eg/4-ahappy.png",
-    "pinkie_pie/0-excited.png",
-    "pinkie_pie/1-stripped.png",
-    "pinkie_pie/2-whatever.png",
-    "pinkie_pie/3-calm.png",
     "takatoshi/0-Select.png",
     "takatoshi/0-Yakisoba.png",
     "takatoshi/3-Embarrassed.png",
@@ -476,10 +484,6 @@ var CANDY_LIST = [
     "sly_cooper/0-Comms+.png",
     "sly_cooper/0-Select.png",
     "sly_cooper/0-Comms+.png",
-    "twilight/0-confident.png",
-    "twilight/2-smart.png",
-    "reskins/twilight_sci-twi/0-calm.png",
-    "reskins/twilight_sci-twi/0-happy.png",
     "hilda/0-conversational.png",
     "hilda/1-relaxed.png",
     "hilda/2-smug.png",
