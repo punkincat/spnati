@@ -25,7 +25,6 @@
         <response id="3" opponent="caulifla" opponentId="2" />
         <response id="4" opponent="zone-tan" opponentId="8" />
         <response id="70" opponent="lotte" opponentId="1" />
-        <response id="71" opponent="misaka" opponentId="19" />
         <response id="121" opponent="komi-san" opponentId="22" />
         <response id="122" opponent="arash" opponentId="147" />
         <response id="123" opponent="ribbon_girl" opponentId="91" />
@@ -55,6 +54,7 @@
         <response id="208" opponent="barbara" opponentId="312" />
         <response id="210" opponent="mari" opponentId="1121" />
         <response id="212" opponent="barbara" opponentId="337" />
+        <response id="215" opponent="kumatora" opponentId="169" />
     </responses>
     <notes>
         <note id="69">Does this line work?</note>
@@ -230,6 +230,8 @@
         <label id="211" label="" folder="Mari to left" sort="0" />
         <label id="212" label="" folder="Barbara to left" sort="0" />
         <label id="213" label="" folder="Lucy to left" sort="0" />
+        <label id="215" label="" folder="Kumatora to left" sort="0" />
+        <label id="216" label="" folder="Kumatora to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>nugi-epilogue</prefix>
@@ -237,7 +239,7 @@
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>213</nextId>
+    <nextId>216</nextId>
     <markers>
         <marker scope="Private" name="nickname">Set per-target to allow Nugi-chan to dynamically change nicknames for a character.</marker>
         <marker scope="Public" name="nugi_chan_sheena_we_want_you_to" />
@@ -264,6 +266,12 @@
         <marker scope="Public" name="nugi-chan_arash_not_a_morning_person" />
         <marker scope="Public" name="nugi-chan_arash_printer_trouble" />
         <marker scope="Public" name="nugi-chan_arashi_facade" />
+        <marker scope="Public" name="nugi-chan_asuna_assuna" />
+        <marker scope="Public" name="nugi-chan_asuna_beaters" />
+        <marker scope="Public" name="nugi-chan_asuna_innocence" />
+        <marker scope="Public" name="nugi-chan_asuna_plain" />
+        <marker scope="Public" name="nugi-chan_asuna_point_five" />
+        <marker scope="Public" name="nugi-chan_asuna_real_life" />
         <marker scope="Public" name="nugi-chan_asuna_wao" />
         <marker scope="Public" name="nugi-chan_barbara_good_girl" />
         <marker scope="Public" name="nugi-chan_barbara_kind_burn" />
@@ -333,6 +341,8 @@
         <marker scope="Public" name="nugi-chan_komi-san_pantyshots" />
         <marker scope="Public" name="nugi-chan_komi-san_skirt_plot_twist" />
         <marker scope="Public" name="nugi-chan_komi-san_so_precious" />
+        <marker scope="Public" name="nugi-chan_kumatora_ditto" />
+        <marker scope="Public" name="nugi-chan_kumatora_flirt" />
         <marker scope="Public" name="nugi-chan_kyu_casual_friday">Kyu's outfit makes for good material. Not MUCH material, though.</marker>
         <marker scope="Public" name="nugi-chan_larachel_deshawl">A priestess wouldn't de-shawl? What about a fertility priestess?</marker>
         <marker scope="Public" name="nugi-chan_leggy_collar">Nugi-chan acts suspiciously about her interactions with her Webmaster and a collar.</marker>
