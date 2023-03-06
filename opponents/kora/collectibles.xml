@@ -7,4 +7,12 @@
         <unlock>What's the fastest way to get to a girl's heart? Just listen to some of her long stories!</unlock>
         <counter>10</counter>
     </collectible>
+    <collectible id="cute_and_fierce" status="online" img="opponents/kora/lightninboltzzzz.png" thumbnail="opponents/kora/lightninboltzzzz.png">
+        <title>Lightning Bolts</title>
+        <subtitle>Electrifying headwear!</subtitle>
+        <text>"You've always gotta wear clothes that show off just who you are! My cute bolts here are proof of that!"</text>
+        <unlock>Finish a game with Kora.</unlock>
+        <wearable>true</wearable>
+        <clothing name="lightning bolts" generic="hair decoration" position="head" type="extra" img="opponents/kora/lightninboltzzzz.png" plural="true" />
+    </collectible>
 </collectibles>
