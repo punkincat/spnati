@@ -429,7 +429,7 @@ function loadEpilogueData(player) {
     return epilogues;
 }
 
-var animatedProperties = ["x", "y", "rotation", "scalex", "scaley", "skewx", "skewy", "alpha", "src", "zoom", "color", "rate"];
+var animatedProperties = ["x", "y", "rotation", "scalex", "scaley", "skewx", "skewy", "alpha", "src", "zoom", "color", "rate", "clipleft", "clipright", "cliptop", "clipbottom", "clipradius"];
 
 function addDirectiveToScene(scene, directive) {
     switch (directive.type) {
@@ -779,6 +779,11 @@ function readProperties(sourceObj, scene) {
         targetObj.iterations = parseInt(targetObj.iterations) || 0;
         targetObj.rate = parseFloat(targetObj.rate, 10) || 0;
         targetObj.count = parseFloat(targetObj.count, 10) || 0;
+        if (targetObj.clipleft) targetObj.clipleft = parseFloat(targetObj.clipleft);
+        if (targetObj.cliptop) targetObj.cliptop = parseFloat(targetObj.cliptop);
+        if (targetObj.clipright) targetObj.clipright = parseFloat(targetObj.clipright);
+        if (targetObj.clipbottom) targetObj.clipbottom = parseFloat(targetObj.clipbottom);
+        if (targetObj.clipradius) targetObj.clipradius = parseFloat(targetObj.clipradius);
     }
     else {
         // textboxes
@@ -1743,6 +1748,25 @@ SceneView.prototype.drawObject = function (obj) {
     }
     var transform = properties.join(" ");
 
+    let clipPath = "none";
+    if (typeof obj.clipleft === "number" && !isNaN(obj.clipleft) && typeof obj.cliptop === "number" && !isNaN(obj.cliptop)) {
+        let clipright = obj.clipright;
+        if (typeof clipright !== "number" || isNaN(clipright)) {
+            clipright = obj.clipleft;
+        }
+
+        let clipbottom = obj.clipbottom;
+        if (typeof clipbottom !== "number" || isNaN(clipbottom)) {
+            clipbottom = obj.cliptop;
+        }
+
+        clipPath = "inset(" + obj.cliptop + "px " + obj.clipright + "px " + obj.clipbottom + "px " + obj.clipleft + "px";
+        if (typeof obj.clipradius === "number" && !isNaN(obj.clipradius)) {
+            clipPath += " round " + obj.clipradius + "px";
+        }
+        clipPath += ")";
+    }
+
     $(obj.element).css({
         "transform": transform,
         "transform-origin": "top left",
@@ -1750,6 +1774,7 @@ SceneView.prototype.drawObject = function (obj) {
     });
     $(obj.rotElement).css({
         "transform": "rotate(" + obj.rotation + "deg) scale(" + obj.scalex + ", " + obj.scaley + ") skew(" + obj.skewx + "deg, " + obj.skewy + "deg)",
+        "clip-path": clipPath
     });
 }
 
@@ -2155,6 +2180,11 @@ SceneView.prototype.moveSprite = function (directive, context) {
         context.skewy = sprite.skewy;
         context.alpha = sprite.alpha;
         context.src = sprite.src;
+        context.cliptop = sprite.cliptop;
+        context.clipleft = sprite.clipleft;
+        context.clipbottom = sprite.clipbottom;
+        context.clipright = sprite.clipright;
+        context.clipradius = sprite.clipradius;
     context.rate = sprite.rate;
         frames.unshift(context);
         context.anim = this.addAnimation(new Animation(directive.id, frames, this.updateObject.bind(this), directive.loop, directive.ease, directive.clamp, directive.iterations));
@@ -2190,6 +2220,21 @@ SceneView.prototype.returnSprite = function (directive, context) {
         }
         if (typeof context.src !== "undefined") {
             sprite.setImage(context.src);
+        }
+        if (typeof context.cliptop !== "undefined") {
+            sprite.cliptop = context.cliptop;
+        }
+        if (typeof context.clipleft !== "undefined") {
+            sprite.clipleft = context.clipleft;
+        }
+        if (typeof context.clipbottom !== "undefined") {
+            sprite.clipbottom = context.clipbottom;
+        }
+        if (typeof context.clipright !== "undefined") {
+            sprite.clipright = context.clipright;
+        }
+        if (typeof context.clipradius !== "undefined") {
+            sprite.clipradius = context.clipradius;
         }
         this.removeAnimation(context.anim);
         this.draw();
@@ -2426,7 +2471,7 @@ function SceneObject(id, element, view, args) {
         alpha = 100;
     }
 
-    this.tweenableProperties = ["x", "y", "rotation", "scalex", "scaley", "alpha", "skewx", "skewy"];
+    this.tweenableProperties = ["x", "y", "rotation", "scalex", "scaley", "alpha", "skewx", "skewy", "clipleft", "clipright", "cliptop", "clipbottom", "clipradius"];
     this.id = id;
     this.x = args.x || 0;
     this.y = args.y || 0;
@@ -2435,6 +2480,11 @@ function SceneObject(id, element, view, args) {
     this.skewx = args.skewx || 0;
     this.skewy = args.skewy || 0;
     this.rotation = args.rotation || 0;
+    this.clipleft = args.clipleft;
+    this.cliptop = args.cliptop;
+    this.clipright = args.clipright;
+    this.clipbottom = args.clipbottom;
+    this.clipradius = args.clipradius;
     this.alpha = alpha;
     this.view = view;
     this.layer = args.layer;
