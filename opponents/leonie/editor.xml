@@ -260,6 +260,9 @@
         <response id="826" opponent="miki_miura" opponentId="15" />
         <response id="847" opponent="yuno_uno" opponentId="175" />
         <response id="866" opponent="yuno_uno" opponentId="167" />
+        <response id="874" opponent="kumatora" opponentId="298" />
+        <response id="876" opponent="aqua_kh" opponentId="67" />
+        <response id="877" opponent="aqua_kh" opponentId="69" />
     </responses>
     <notes>
         <note id="28">throw cloth over chair? idk 4am brain</note>
@@ -999,12 +1002,14 @@
         <label id="871" label="Repeat Game (Maid)" folder="Repeat Games" sort="0" />
         <label id="872" label="Repeat Game II (Maid)" folder="Repeat Games" sort="0" />
         <label id="873" label="" folder="Background" sort="0" />
+        <label id="874" label="" folder="Prompt Responses" sort="0" />
+        <label id="875" label="" folder="Prompt Responses" sort="0" />
     </labels>
     <prefixes>
         <prefix>unlock</prefix>
         <prefix>epilogue_</prefix>
     </prefixes>
-    <nextId>873</nextId>
+    <nextId>877</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_strip_transformation" />
@@ -1314,6 +1319,8 @@
         <marker scope="Public" name="leonie_komi_MentorHero" />
         <marker scope="Public" name="leonie_kora_0a" />
         <marker scope="Public" name="leonie_kumatora_self0a" />
+        <marker scope="Public" name="leonie_kumatora_superpowerPrompt" />
+        <marker scope="Public" name="leonie_kumatora_superpowerPromptB" />
         <marker scope="Public" name="leonie_laev_selfstrip0a" />
         <marker scope="Public" name="leonie_laev_selfstrip0aLeft">Leonie is about to strip at stage 0, and she's to the left of Laevy. Changes the order that she continues the topic.</marker>
         <marker scope="Public" name="leonie_laev_selfstrip0aRight">Leonie is about to strip at stage 0, and she's to the right of Laevy. Changes the order that she continues the topic.</marker>
