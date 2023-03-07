@@ -738,10 +738,13 @@ Opponent.prototype.onSelected = function(individual) {
     updateSelectionVisuals();
 }
 
+/**
+ * Load this character's stylesheet normally (using a <link> element), if not already loaded.
+ */
 Opponent.prototype.loadStylesheet = function () {
-    // check for duplicate <link> elements:
+    /* check for duplicate <link> elements and hot-reloaded stylesheets: */
     if (this.stylesheet) {
-        if ($('link[href=\"'+this.stylesheet+'\"]').length === 0) {
+        if ($('link[href=\"'+this.stylesheet+'\"]').length === 0 && !this.liveStyleElem) {
             console.log("Loading stylesheet: "+this.stylesheet);
 
             var link_elem = $('<link />', {
@@ -752,6 +755,53 @@ Opponent.prototype.loadStylesheet = function () {
 
             $('head').append(link_elem);
         }
+    }
+}
+
+/**
+ * Reload a character's stylesheet from the origin.
+ * This is used when hot-reloading epilogues for debugging purposes.
+ * 
+ * Unlike the regular `loadStylesheet` method, this loads the contents of the character's
+ * stylesheet as an injected `<style>` element to circumvent caching and force a complete
+ * reload of all styling rules contained within the sheet.
+ * 
+ * Returns a promise that resolves when the new stylesheet has been fetched and injected into the page.
+ * 
+ * @returns {Promise<void>}
+ */
+Opponent.prototype.hotReloadStylesheet = function () {
+    this.unloadStylesheet();
+
+    if (!this.stylesheet) {
+        return immediatePromise();
+    }
+
+    return fetch(this.stylesheet, { method: "GET" }).then((resp) => {
+        if (resp.status < 200 || resp.status > 299) {
+            throw new Error("Fetching " + url + " failed with error " + resp.status + ": " + resp.statusText);
+        } else {
+            return resp.text();
+        }
+    }).then((styleContents) => {
+        this.liveStyleElem = document.createElement("style");
+        this.liveStyleElem.innerHTML = styleContents;
+        $("head").append(this.liveStyleElem);
+    });
+}
+
+/**
+ * Unloads this character's stylesheet from the page.
+ */
+Opponent.prototype.unloadStylesheet = function () {
+    if (this.stylesheet) {
+        /* Remove the <link> to this opponent's stylesheet. */
+        $('link[href=\"'+this.stylesheet+'\"]').remove();
+    }
+
+    if (this.liveStyleElem) {
+        $(this.liveStyleElem).remove();
+        this.liveStyleElem = null;
     }
 }
 
@@ -1151,10 +1201,7 @@ Opponent.prototype.unloadOpponent = function () {
         level: 'info'
     });
 
-    if (this.stylesheet) {
-        /* Remove the <link> to this opponent's stylesheet. */
-        $('link[href=\"'+this.stylesheet+'\"]').remove();
-    }
+    this.unloadStylesheet();
 
     this.slot = undefined;
     this.selectInfo = null;

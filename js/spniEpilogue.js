@@ -1112,10 +1112,11 @@ function hotReloadEpilogue () {
     var player = epiloguePlayer.epilogue.player;
     var fromGallery = epiloguePlayer.fromGallery;
 
+    /* Fetch new behaviour.xml contents *before* reloading the stylesheet. */
     player.fetchBehavior()
-    /* Success callback.
-     * 'this' is bound to the Opponent object.
-     */
+        .then(($xml) => {
+            return player.hotReloadStylesheet().then(() => $xml);
+        })
         .then(function($xml) {
             var endingElem = null;
 
