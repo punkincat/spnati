@@ -131,6 +131,8 @@
         <response id="627" opponent="jura" opponentId="406" />
         <response id="628" opponent="jura" opponentId="405" />
         <response id="629" opponent="jura" opponentId="404" />
+        <response id="630" opponent="nami" opponentId="1373" />
+        <response id="631" opponent="nami" opponentId="1372" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -773,8 +775,15 @@
         <label id="627" label="" folder="Responses" sort="0" />
         <label id="628" label="" folder="Responses" sort="0" />
         <label id="629" label="" folder="Responses" sort="0" />
+        <label id="630" label="" folder="Responses" sort="0" />
+        <label id="631" label="" folder="Responses" sort="0" />
+        <label id="632" label="" folder="Responses" sort="0" />
+        <label id="633" label="" folder="FF Targets" sort="0" />
+        <label id="634" label="" folder="FF Targets" sort="0" />
+        <label id="635" label="1 - powers" folder="Queenie" sort="0" />
+        <label id="636" label="2 - the heart" folder="Queenie" sort="0" />
     </labels>
-    <nextId>629</nextId>
+    <nextId>636</nextId>
     <markers>
         <marker scope="Public" name="__lucina_nickname" />
         <marker scope="Public" name="aqua_aaravi_hydro1" />
@@ -847,6 +856,7 @@
         <marker scope="Public" name="aqua_kaz_self2a" />
         <marker scope="Public" name="aqua_kaz_self2b" />
         <marker scope="Public" name="aqua_kaz_self2c" />
+        <marker scope="Public" name="aqua_kaz_self3a" />
         <marker scope="Public" name="aqua_kora_friendJokes" />
         <marker scope="Public" name="aqua_kum_hypotheticalA" />
         <marker scope="Public" name="aqua_kum_hypotheticalB" />
@@ -913,6 +923,8 @@
         <marker scope="Public" name="aqua_nagatoro_self0b" />
         <marker scope="Public" name="aqua_nagatoro_self0c_a" />
         <marker scope="Public" name="aqua_nagatoro_self0c_b" />
+        <marker scope="Public" name="aqua_nami_self0a" />
+        <marker scope="Public" name="aqua_nami_self2a" />
         <marker scope="Public" name="aqua_noire_explainedRole" />
         <marker scope="Public" name="aqua_noire_Lastation1" />
         <marker scope="Public" name="aqua_noire_Role0a" />
@@ -930,6 +942,7 @@
         <marker scope="Public" name="aqua_queenie_intro2" />
         <marker scope="Public" name="aqua_queenie_powers1" />
         <marker scope="Public" name="aqua_queenie_powers2" />
+        <marker scope="Public" name="aqua_queenie_powers3" />
         <marker scope="Public" name="aqua_queenie_self0a" />
         <marker scope="Public" name="aqua_queenie_unversedThought" />
         <marker scope="Public" name="aqua_revy_01" />
@@ -979,6 +992,8 @@
         <marker scope="Public" name="aqua_yshtola_self0c" />
         <marker scope="Public" name="aqua_yshtola_self1a" />
         <marker scope="Public" name="aqua_yshtola_self1b" />
+        <marker scope="Public" name="aqua_yshtola_self1c" />
+        <marker scope="Public" name="aqua_yshtola_self3a" />
         <marker scope="Public" name="aqua_yuna_intro1" />
         <marker scope="Public" name="aqua_yuna_partners1" />
         <marker scope="Public" name="aqua_yuna_spirits1" />
@@ -988,6 +1003,7 @@
         <marker scope="Public" name="aquaKH_mg_strip0a">Dialogue towards the Magma Grunt</marker>
         <marker scope="Public" name="aquaKH_mg_strip2a">Dialogue towards the Magma Grunt</marker>
         <marker scope="Public" name="aque_queenie_heart1" />
+        <marker scope="Public" name="aque_queenie_heart2" />
         <marker scope="Public" name="birthday">Wishes the player (or another character?) a happy birthday on the birthday background</marker>
         <marker scope="Public" name="burning_up">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Public" name="butt_pose">Showing off her butt pose</marker>
