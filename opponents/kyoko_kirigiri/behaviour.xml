@@ -7089,7 +7089,7 @@
             <case stage="6-8" id="850" priority="196">
                 <condition count="0" status="not_alive" />
                 <condition role="target" layers="0" />
-                <test expr="~player~" value="self.attracted(target)==true" />
+                <test expr="~self.attracted(target)~" cmp="=" value="true" />
                 <alternative>
                     <condition filter="confident" role="target" />
                 </alternative>
@@ -7686,13 +7686,13 @@
             <case stage="4-8 10" id="851" oneShotId="424" priority="0">
                 <condition status="not_alive" />
                 <condition role="target" layers="0" timeInStage="6-" />
-                <test expr="~player~" value="self.attracted(target)==false" />
+                <test expr="~self.attracted(target)~" cmp="=" value="false" />
                 <state img="custom:calm">Well, we’ve gotten to see it for quite some time now…care to show us how you touch it?</state>
             </case>
             <case stage="4-8 10" id="852" oneShotId="425" priority="0">
                 <condition status="not_alive" />
                 <condition role="target" layers="0" timeInStage="6-" />
-                <test expr="~player~" value="self.attracted(target)==true" />
+                <test expr="~self.attracted(target)~" cmp="=" value="true" />
                 <state img="custom:lust">Well, we’ve gotten to see it for quite some time now…care to show us how you touch it?</state>
             </case>
             <case stage="0-8 10" id="445" priority="-1">
