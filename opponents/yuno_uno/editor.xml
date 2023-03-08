@@ -235,6 +235,10 @@
         <response id="862" opponent="aqua_kh" opponentId="210" />
         <response id="863" opponent="steve" opponentId="3" />
         <response id="864" opponent="steve" opponentId="1" />
+        <response id="868" opponent="noire" opponentId="284" />
+        <response id="873" opponent="noire" opponentId="1349" />
+        <response id="874" opponent="noire" opponentId="1072" />
+        <response id="876" opponent="noire" opponentId="1071" />
     </responses>
     <notes>
         <note id="29">The Greek Visionary is a character like Ishizu or Shadi from Yu-gi-oh. Roll with it.</note>
@@ -270,6 +274,9 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <note id="752">Don't need to respond to this - this is just to help set up the case where Kyouko parodies Yuno easier</note>
         <note id="759">this is a joke where he's speaking like an Anti-gambling PSA (public service announcement). In the next case he could then refer to the time he had to bet his own soul to save his friends and say "I'm one to talk, eh?"</note>
         <note id="766">could make a play on "Risk" about this game being risky or something? if you need a better set-up, let me know</note>
+        <note id="877">this line sets the marker to A</note>
+        <note id="878">this line sets the marker to B</note>
+        <note id="880">this hidden version of the line is used so that the marker can still be set even if yuno is the winner of this line, but, I don't want it to take priority over his generic or other targeted dialogue since for noire, this is a generic line.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Friends" sort="2" />
@@ -1126,11 +1133,25 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="865" label="" folder="Targets" sort="0" />
         <label id="866" label="" folder="Targets" sort="0" />
         <label id="867" label="" folder="Targets" sort="0" />
+        <label id="868" label="NoireAndPlayer L 1" folder="Situations" sort="0" />
+        <label id="869" label="NoireAndPlayer R Generic" folder="Situations" sort="0" />
+        <label id="870" label="NoireAndPlayer L 2" folder="Situations" sort="0" />
+        <label id="871" label="NoireAndPlayer L 3" folder="Situations" sort="0" />
+        <label id="872" label="" folder="Tag Filtered" sort="0" />
+        <label id="873" label="" folder="Situations" sort="0" />
+        <label id="874" label="" folder="Targets" sort="0" />
+        <label id="875" label="" folder="Conditional" sort="0" />
+        <label id="876" label="" folder="Targets" sort="0" />
+        <label id="877" label="consecutive losses, comment on luck (was brought up before)" folder="Targets" sort="0" />
+        <label id="878" label="consecutive losses, comment on luck (not brought up before)" folder="Targets" sort="0" />
+        <label id="879" label="" folder="Situations" sort="0" />
+        <label id="880" label="" folder="Situations" sort="0" />
+        <label id="881" label="" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>yuno_collectible</prefix>
     </prefixes>
-    <nextId>867</nextId>
+    <nextId>881</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="10rounds_gaku_skill_level" />
@@ -1304,6 +1325,10 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="nicorobin_place_of_origin_resp" />
         <marker scope="Public" name="nicorobin_start_forfeit" />
         <marker scope="Public" name="no_swap_first_round" />
+        <marker scope="Public" name="NoireAndPlayer">Responding to a situation of Noire</marker>
+        <marker scope="Public" name="NoireAndPlayer1">Responding to a situation of Noire</marker>
+        <marker scope="Public" name="NoireAndPlayer2">Responding to a situation of Noire</marker>
+        <marker scope="Public" name="NoireAndPlayer3">Responding to a situation of Noire</marker>
         <marker scope="Public" name="opp_pokemon_1" />
         <marker scope="Public" name="opp_stripped_fair_trade" />
         <marker scope="Public" name="opponent_destroyed_clothes">Keeps track of if an opponent has destroyed their clothing this game.</marker>
@@ -1704,12 +1729,19 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_nanoko_strip0b" />
         <marker scope="Public" name="yuno_nicorobin_flowerability01" />
         <marker scope="Public" name="yuno_nicorobin_strip0a" />
+        <marker scope="Public" name="yuno_noire_badlucklosses" />
+        <marker scope="Public" name="yuno_noire_coolgirl_2c" />
+        <marker scope="Public" name="yuno_noire_coolgirl_3c" />
+        <marker scope="Public" name="yuno_noire_int_and_luk" />
+        <marker scope="Public" name="yuno_noire_videogames1" />
+        <marker scope="Public" name="yuno_NoireAndPlayer_playerLosing" />
         <marker scope="Public" name="yuno_petra_buttInteract" />
         <marker scope="Public" name="yuno_petra_buttInteract2" />
         <marker scope="Public" name="yuno_pit_strip0a" />
         <marker scope="Public" name="yuno_pit_strip0b" />
         <marker scope="Public" name="yuno_pit_strip1a" />
         <marker scope="Public" name="yuno_pit_strip1b" />
+        <marker scope="Public" name="yuno_playe" />
         <marker scope="Public" name="yuno_polly_araara" />
         <marker scope="Public" name="yuno_polly_bossmodeBusting" />
         <marker scope="Public" name="yuno_polly_bossmodeReact" />
