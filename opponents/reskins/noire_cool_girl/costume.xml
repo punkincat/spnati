@@ -2132,5 +2132,78 @@
                 <keyframe time="3" y="304" />
             </directive>
         </pose>
+        <pose id="st0sh-expl">
+            <sprite id="shocked" src="reskins/noire_cool_girl/0-shocked.png" x="0" y="0" alpha="100" />
+            <sprite id="explaining" delay="1.5" src="reskins/noire_cool_girl/0-explaining.png" x="0" y="0" alpha="100" />
+            <sprite id="s2" delay="4" src="reskins/noire_cool_girl/0-s2.png" x="0" y="0" />
+            <directive type="animation" id="shocked" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/noire_cool_girl/0-shocked.png" alpha="100" />
+                <keyframe time="1.5" alpha="0" />
+            </directive>
+            <directive type="animation" id="explaining" delay="1.5" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/noire_cool_girl/0-explaining.png" alpha="100" />
+                <keyframe time="2.5" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="dr-niya">
+            <sprite id="dreaming" src="reskins/noire_cool_girl/#-dreaming.png" x="0" y="0" scalex="-1" alpha="100" />
+            <sprite id="niya" delay="2" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" />
+            <directive type="animation" id="dreaming" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/noire_cool_girl/#-dreaming.png" />
+                <keyframe time="2" src="reskins/noire_cool_girl/#-dreaming.png" />
+            </directive>
+            <directive type="animation" id="dreaming" ease="smooth" interpolation="none">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="2" alpha="0" />
+            </directive>
+            <directive type="animation" id="niya" delay="2" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" />
+                <keyframe time="1" x="0" y="0" />
+            </directive>
+            <directive type="animation" id="niya" delay="2" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/noire_cool_girl/#-niya.png" />
+                <keyframe time="1" src="reskins/noire_cool_girl/#-niya.png" />
+            </directive>
+        </pose>
+        <pose id="em-ha">
+            <sprite id="embarrassed" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" alpha="100" />
+            <sprite id="happy" delay="2" src="reskins/noire_cool_girl/#-happy.png" x="0" y="0" />
+            <directive type="animation" id="embarrassed" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
+                <keyframe time="2" src="reskins/noire_cool_girl/#-embarrassed.png" />
+            </directive>
+            <directive type="animation" id="embarrassed" ease="smooth" interpolation="none">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="2" alpha="0" />
+            </directive>
+            <directive type="animation" id="happy" delay="2" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" />
+                <keyframe time="1" x="0" y="0" />
+            </directive>
+            <directive type="animation" id="happy" delay="2" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/noire_cool_girl/#-happy.png" />
+                <keyframe time="1" src="reskins/noire_cool_girl/#-happy.png" />
+            </directive>
+        </pose>
+        <pose id="em-niya">
+            <sprite id="embarrassed" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" alpha="100" />
+            <sprite id="niya" delay="2" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" />
+            <directive type="animation" id="embarrassed" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
+                <keyframe time="2" src="reskins/noire_cool_girl/#-embarrassed.png" />
+            </directive>
+            <directive type="animation" id="embarrassed" ease="smooth" interpolation="none">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="2" alpha="0" />
+            </directive>
+            <directive type="animation" id="niya" delay="2" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" />
+                <keyframe time="1" x="0" y="0" />
+            </directive>
+            <directive type="animation" id="niya" delay="2" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/noire_cool_girl/#-niya.png" />
+                <keyframe time="1" src="reskins/noire_cool_girl/#-niya.png" />
+            </directive>
+        </pose>
     </poses>
 </costume>
