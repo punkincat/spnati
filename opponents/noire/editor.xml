@@ -96,6 +96,9 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <note id="2086">I used a marker taking different values. You can make use of that if you want.</note>
         <note id="2118">She gets embarrassed as she says it, and her voice gets quieter. Then she asks a yes-or-no question to cover her embarrassment.</note>
         <note id="2125">I added this response to a generic line as a lower priority line. When we add more targets, I can just remove it.</note>
+        <note id="2370">Neptune's name being very hard to pronounce is a running joke in Neptunia. It's so hard mostly because the "tu" /tju/ sound isn't found in native Japanese words.</note>
+        <note id="2371">Neptune's name being very hard to pronounce is a running joke in Neptunia. It's so hard mostly because the "tu" /tju/ sound isn't found in native Japanese words.</note>
+        <note id="2372">She feels lonely but doesn't want to show it.</note>
     </notes>
     <labels>
         <label id="3" label="" folder="SpecialNames" sort="0" />
@@ -1564,7 +1567,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="1485" label="generic" folder="~Female2Min" sort="0" />
         <label id="1486" label="generic" folder="~Female2Min" sort="0" />
         <label id="1487" label="stage 0" folder="~Female2Min" sort="0" />
-        <label id="1488" label="generic" folder="~Female2Min" sort="0" />
+        <label id="1488" label="not exposed" folder="~Female2Min" sort="0" />
         <label id="1489" label="thigh-highs" folder="~Female2Min" sort="0" />
         <label id="1490" label="thigh-highs" folder="~Female2Min" sort="0" />
         <label id="1491" label="not exposed" folder="~Female2Min" sort="0" />
@@ -2441,6 +2444,16 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2363" label="" folder="Sub" sort="0" />
         <label id="2364" label="3rd+ time (alternative) (Rouge not present)" color="3" folder="RougeTreasureScope" sort="0" />
         <label id="2365" label="butt pose CD" folder="1SRarePoses" sort="0" />
+        <label id="2366" label="chest exposed" folder="~Female2Min" sort="0" />
+        <label id="2367" label="crotch exposed" folder="~Female2Min" sort="0" />
+        <label id="2368" label="CG, exp, legwear" folder="~Female2Min" sort="0" />
+        <label id="2369" label="" folder="SpecialNames" sort="0" />
+        <label id="2370" label="" color="4" folder="1ResponsesToPrompts" sort="0" />
+        <label id="2371" label="" color="4" folder="1ResponsesToPrompts" sort="0" />
+        <label id="2372" label="" color="4" folder="1ResponsesToPrompts" sort="0" />
+        <label id="2373" label="" color="4" folder="1ResponsesToPrompts" sort="0" />
+        <label id="2374" label="" color="4" folder="1ResponsesToPrompts" sort="0" />
+        <label id="2375" label="" color="4" folder="1ResponsesToPrompts" sort="0" />
     </labels>
     <prefixes>
         <prefix>no1</prefix>
@@ -2449,7 +2462,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <prefix>no-sleeves</prefix>
         <prefix>onlytail</prefix>
     </prefixes>
-    <nextId>2365</nextId>
+    <nextId>2375</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_costume1" />
@@ -2689,7 +2702,12 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="jura_resp_babies" />
         <marker scope="Public" name="jura_resp_seduction" />
         <marker scope="Public" name="jura0" />
+        <marker scope="Public" name="kumatora_friendprompt" />
         <marker scope="Public" name="kumatora_greet1" />
+        <marker scope="Public" name="kumatora_nickname" />
+        <marker scope="Public" name="kumatora_nickname1" />
+        <marker scope="Public" name="kumatora_superpowerA" />
+        <marker scope="Public" name="kumatora_superpowerB" />
         <marker scope="Public" name="kyou_after_sleeves" />
         <marker scope="Public" name="kyou_boots" />
         <marker scope="Public" name="kyou_crush" />
