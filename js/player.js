@@ -280,6 +280,75 @@ Player.prototype.hasTag = function(tag) {
     return tag && this.tags && this.tags.indexOf(canonicalizeTag(tag)) >= 0;
 };
 
+
+Player.prototype.hasTags = function(tagAdv) {
+    var match = tagAdv.match(/^([^∨\|]*)(∨?)([^∨\|]*)(\|?)([^∨\|]*)(∨?)([^∨\|]*)\s*/);
+
+    var firstPart;
+
+    if (!match)
+    {
+        return true;
+    }
+
+    if (match[1] && match[3])
+    {
+        firstPart = this.hasTag(match[1]) || this.hasTag(match[3]);
+    }
+    else if (match[1])
+    {
+        firstPart = this.hasTag(match[1]);
+    }
+    else if (match[3])
+    {
+        firstPart = this.hasTag(match[3]);
+    }
+    else
+    {
+        firstPart = true;
+    }
+
+    if (!firstPart){
+        return false;
+    }
+
+    if (match[5] && match[7])
+    {
+        return this.hasTag(match[5]) || this.hasTag(match[7]);
+    }
+    else if (match[5])
+    {
+        return this.hasTag(match[5]);
+    }
+    else if (match[7])
+    {
+        return this.hasTag(match[7]);
+    }
+    else
+    {
+        return true;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Player.prototype.countLayers = function() {
     return this.clothing.length;
 };
@@ -1626,6 +1695,7 @@ function formatConditionInfo(condition) {
     let attributes = {
         id: "character",
         tag: "tag",
+        tagAdv: "tagAdv",
         stage: "stage",
         layers: "layers",
         startingLayers: "starting layers",
