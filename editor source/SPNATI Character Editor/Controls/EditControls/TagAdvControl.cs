@@ -65,7 +65,7 @@ namespace SPNATI_Character_Editor
         private void ApplyValue(string value)
         {
             value = value ?? "";
-            string pattern = @"^([^∨\|]*)(∨?)([^∨\|]*)(\|?)([^∨\|]*)(∨?)([^∨\|]*)";
+            string pattern = @"^([^∧\|]*)(\|?)([^∧\|]*)(∧?)([^∧\|]*)(\|?)([^∧\|]*)";
             Regex reg = new Regex(pattern);
             Match regMatch = reg.Match(value);
             if (regMatch.Success)
@@ -173,7 +173,7 @@ namespace SPNATI_Character_Editor
 
                     if (!string.IsNullOrEmpty(value1B))
                     {
-                        value += "∨";
+                        value += "|";
                         if (inv1B)
                         {
                             value += "!";
@@ -196,7 +196,7 @@ namespace SPNATI_Character_Editor
                 {
                     if (!string.IsNullOrEmpty(value))
                     {
-                        value += "|";
+                        value += "∧";
                     }
 
                     if (!string.IsNullOrEmpty(value2A))
@@ -209,7 +209,7 @@ namespace SPNATI_Character_Editor
 
                         if (!string.IsNullOrEmpty(value2B))
                         {
-                            value += "∨";
+                            value += "|";
                             if (inv2B)
                             {
                                 value += "!";
