@@ -924,7 +924,7 @@ function validateTitleScreen () {
 
     setLocalDayOrNight();
 
-    if (players.countTrue() > 1) {
+    if (players.countTrue() > 1 || !firstSelectMode) {
         /* Go to main select screen if opponents are already selected */
         updateAllBehaviours(null, null, SELECTED);
         updateSelectionVisuals();

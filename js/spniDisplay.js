@@ -1469,6 +1469,8 @@ OpponentDetailsDisplay.prototype.handleSelected = function (ev) {
     var curTable = players.filter((p, idx) => !!p && (idx > 0)).map((p) => p.id);
     var sortedPos = loadedOpponents.findIndex((p) => p.id === this.opponent.id);
 
+    firstSelectMode = false;
+
     players[selectedSlot] = this.opponent;
     players[selectedSlot].loadBehaviour(selectedSlot, true, {
         "source": "indiv-select",

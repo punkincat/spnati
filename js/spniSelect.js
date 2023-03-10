@@ -135,6 +135,9 @@ var individualSelectSeparatorIndices = [];
 /** Are the default fill suggestions using Testing opponents? */
 var suggestedTestingOpponents = undefined;
 
+/* Are we in "first selection" mode? */
+var firstSelectMode = true;
+
 /* page variables */
 var individualPage = 0;
 var groupPage = 0;
@@ -979,7 +982,6 @@ function showIndividualSelectionScreen() {
 
     /* Make sure the user doesn't have target-count sorting set if
      * the amount of loaded opponents drops to 0.
-     * Also show the first-select navigation buttons if no characters are loaded.
      */
     var $talkedToOption = $('.sort-dropdown-options>li:has(a[data-value=target])');
     if (players.countTrue() <= 1) {
@@ -987,10 +989,13 @@ function showIndividualSelectionScreen() {
         if (sortingMode === "target") {
             setSortingMode("featured");
         }
-
-        $(".indiv-first-select-nav").show();
     } else {
         $talkedToOption.show();
+    }
+
+    if (firstSelectMode) {
+        $(".indiv-first-select-nav").show();
+    } else {
         $(".indiv-first-select-nav").hide();
     }
 
@@ -1483,6 +1488,8 @@ function selectGroup () {
 
     Sentry.setTag("screen", "select-main");
 
+    firstSelectMode = false;
+
     /* switch screens */
     screenTransition($groupSelectScreen, $selectScreen);
 }
@@ -1554,7 +1561,7 @@ $groupSelectScreen.data('keyhandler', groupSelectScreen_keyUp);
  * select screen.
  ************************************************************/
 function backFromIndividualSelect () {
-    if (players.countTrue() > 1) {
+    if (players.countTrue() > 1 || !firstSelectMode) {
         /* switch to main select screen */
         Sentry.setTag("screen", "select-main");
         screenTransition($individualSelectScreen, $selectScreen);
@@ -1572,7 +1579,7 @@ function backFromIndividualSelect () {
 function backFromGroupSelect () {
     if (useGroupBackgrounds) optionsBackground.activateBackground();
 
-    if (players.countTrue() > 1) {
+    if (players.countTrue() > 1 || !firstSelectMode) {
         /* switch to main select screen */
         Sentry.setTag("screen", "select-main");
         screenTransition($groupSelectScreen, $selectScreen);
