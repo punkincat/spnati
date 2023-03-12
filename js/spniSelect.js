@@ -887,6 +887,10 @@ function updateIndividualSelectSort() {
         }
         $(opp.selectionCard.mainElem).appendTo($indivSelectionCardContainer);
     });
+
+    /* Move first select nav down to the bottom. */
+    $(".indiv-first-select-nav").appendTo($indivSelectionCardContainer);
+
     if (individualSelectSeparatorIndices.length > 0) {
         updateIndividualSelectVisibility();
     }
@@ -989,13 +993,10 @@ function showIndividualSelectionScreen() {
         if (sortingMode === "target") {
             setSortingMode("featured");
         }
-    } else {
-        $talkedToOption.show();
-    }
 
-    if (firstSelectMode) {
         $(".indiv-first-select-nav").show();
     } else {
+        $talkedToOption.show();
         $(".indiv-first-select-nav").hide();
     }
 

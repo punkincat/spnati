@@ -2436,9 +2436,8 @@ ul.dropdown-menu>li {
 
 .indiv-first-select-nav {
     grid-column: 1 / -1;
-    grid-row: 1 / 2;
 
-    scroll-snap-align: start;
+    scroll-snap-align: end;
     scroll-margin-top: 0.4rem;
 
     display: grid;
