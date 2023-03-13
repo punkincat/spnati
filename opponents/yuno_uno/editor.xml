@@ -239,6 +239,18 @@
         <response id="873" opponent="noire" opponentId="1349" />
         <response id="874" opponent="noire" opponentId="1072" />
         <response id="876" opponent="noire" opponentId="1071" />
+        <response id="882" opponent="meia" opponentId="680" />
+        <response id="883" opponent="meia" opponentId="681" />
+        <response id="884" opponent="meia" opponentId="685" />
+        <response id="885" opponent="meia" opponentId="686" />
+        <response id="886" opponent="meia" opponentId="687" />
+        <response id="888" opponent="jura" opponentId="488" />
+        <response id="889" opponent="jura" opponentId="487" />
+        <response id="892" opponent="jura" opponentId="486" />
+        <response id="893" opponent="jura" opponentId="485" />
+        <response id="903" opponent="neptune" opponentId="1" />
+        <response id="904" opponent="neptune" opponentId="38" />
+        <response id="906" opponent="neptune" opponentId="28" />
     </responses>
     <notes>
         <note id="29">The Greek Visionary is a character like Ishizu or Shadi from Yu-gi-oh. Roll with it.</note>
@@ -277,6 +289,8 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <note id="877">this line sets the marker to A</note>
         <note id="878">this line sets the marker to B</note>
         <note id="880">this hidden version of the line is used so that the marker can still be set even if yuno is the winner of this line, but, I don't want it to take priority over his generic or other targeted dialogue since for noire, this is a generic line.</note>
+        <note id="891">writing this response pre-emptively so that the whole strip sequence flows better. I will assume Jura presses the issue about marriage in her response to her last line. if you want me to change this let me know</note>
+        <note id="900">commenting on something about her having 'protagonist energy'</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Friends" sort="2" />
@@ -1147,11 +1161,38 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="879" label="" folder="Situations" sort="0" />
         <label id="880" label="" folder="Situations" sort="0" />
         <label id="881" label="" folder="Targets" sort="0" />
+        <label id="882" label="" folder="Responses" sort="0" />
+        <label id="883" label="" folder="Responses" sort="0" />
+        <label id="884" label="" folder="Responses" sort="0" />
+        <label id="885" label="" folder="Responses" sort="0" />
+        <label id="886" label="" folder="Responses" sort="0" />
+        <label id="887" label="" folder="Butt Reactions" sort="0" />
+        <label id="888" label="" folder="Responses" sort="0" />
+        <label id="889" label="" folder="Responses" sort="0" />
+        <label id="890" label="" folder="Responses" sort="0" />
+        <label id="891" label="" folder="Responses" sort="0" />
+        <label id="893" label="" folder="Responses" sort="0" />
+        <label id="892" label="" folder="Responses" sort="0" />
+        <label id="894" label="" folder="Responses" sort="0" />
+        <label id="895" label="" folder="Responses" sort="0" />
+        <label id="896" label="" folder="Responses" sort="0" />
+        <label id="897" label="" folder="Responses" sort="0" />
+        <label id="898" label="" folder="Responses" sort="0" />
+        <label id="899" label="" folder="Targets" sort="0" />
+        <label id="900" label="" folder="Targets" sort="0" />
+        <label id="901" label="" folder="Targets" sort="0" />
+        <label id="902" label="" folder="Targets" sort="0" />
+        <label id="903" label="" folder="Prompt Responses" sort="0" />
+        <label id="904" label="" folder="Prompt Responses" sort="0" />
+        <label id="905" label="" folder="Prompt Responses" sort="0" />
+        <label id="906" label="" folder="Prompt Responses" sort="0" />
+        <label id="907" label="" folder="Conditional" sort="0" />
+        <label id="908" label="" folder="Conditional" sort="0" />
     </labels>
     <prefixes>
         <prefix>yuno_collectible</prefix>
     </prefixes>
-    <nextId>881</nextId>
+    <nextId>908</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="10rounds_gaku_skill_level" />
@@ -1471,7 +1512,9 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_aloy_historyResp" />
         <marker scope="Public" name="yuno_aloy_name1" />
         <marker scope="Public" name="yuno_aloy_name2" />
+        <marker scope="Public" name="yuno_amy_self2a" />
         <marker scope="Public" name="yuno_amyDDLC_planarResp" />
+        <marker scope="Public" name="yuno_amyDDLC_self1a" />
         <marker scope="Public" name="yuno_anatoly_fantasy2Resp" />
         <marker scope="Public" name="yuno_anatoly_self0a" />
         <marker scope="Public" name="yuno_anatoly_self1a" />
@@ -1588,9 +1631,14 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_joey_pie1" />
         <marker scope="Public" name="yuno_jolyne_standReveal" />
         <marker scope="Public" name="yuno_jura_self0a" />
+        <marker scope="Public" name="yuno_jura_self0b" />
         <marker scope="Public" name="yuno_jura_self1a" />
+        <marker scope="Public" name="yuno_jura_self1b" />
         <marker scope="Public" name="yuno_jura_self2a" />
+        <marker scope="Public" name="yuno_jura_self2b" />
+        <marker scope="Public" name="yuno_jura_self2c" />
         <marker scope="Public" name="yuno_jura_self3a" />
+        <marker scope="Public" name="yuno_jura_self3b" />
         <marker scope="Public" name="yuno_kamina_hype0" />
         <marker scope="Public" name="yuno_kaz_strip0a" />
         <marker scope="Public" name="yuno_kaz_strip1a" />
@@ -1684,12 +1732,18 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_mariS_succubusSecret_1" />
         <marker scope="Public" name="yuno_mariS_succubusSecret_2" />
         <marker scope="Public" name="yuno_mariS_succubusSecret_End" />
+        <marker scope="Public" name="yuno_meia_buttReact" />
         <marker scope="Public" name="yuno_meia_self0a" />
         <marker scope="Public" name="yuno_meia_self0b" />
+        <marker scope="Public" name="yuno_meia_self0c" />
         <marker scope="Public" name="yuno_meia_self1a" />
+        <marker scope="Public" name="yuno_meia_self1b" />
         <marker scope="Public" name="yuno_meia_self2a" />
+        <marker scope="Public" name="yuno_meia_self2b" />
         <marker scope="Public" name="yuno_meia_self3a" />
+        <marker scope="Public" name="yuno_meia_self3b" />
         <marker scope="Public" name="yuno_meia_selfHalloween0a" />
+        <marker scope="Public" name="yuno_meia_selfHalloween0b" />
         <marker scope="Public" name="yuno_meia_strip0a" />
         <marker scope="Public" name="yuno_meia_strip1a" />
         <marker scope="Public" name="yuno_meia_strip1b" />
@@ -1727,6 +1781,9 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_nanoko_self0b" />
         <marker scope="Public" name="yuno_nanoko_strip0a" />
         <marker scope="Public" name="yuno_nanoko_strip0b" />
+        <marker scope="Public" name="yuno_nepShowerBath" />
+        <marker scope="Public" name="yuno_neptune_strip0a" />
+        <marker scope="Public" name="yuno_neptune_strip1a" />
         <marker scope="Public" name="yuno_nicorobin_flowerability01" />
         <marker scope="Public" name="yuno_nicorobin_strip0a" />
         <marker scope="Public" name="yuno_noire_badlucklosses" />
