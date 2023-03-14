@@ -267,6 +267,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <note id="789">This case does not require Barbara's NagisaSocks2A case, at it makes sense even if the chain was broken.</note>
         <note id="22">This marker name is outdated, but Fina and Twisted Fate rely on it to reply.</note>
         <note id="982">This line has manual priority to allow it to play only when Nagisa doesn't have a different targeted line to play. Note that this doesn't seem to work when the human player is the target, and I'm unsure why. But it does work when another non-Meia opponent is the target.</note>
+        <note id="1002">See the note on the other case with the marker nagisa_meia_post-hug_other for more information.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Maid Cafe" sort="30" />
@@ -1146,8 +1147,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="957" label="" folder="Meia to right" sort="0" />
         <label id="958" label="" folder="Meia to right" sort="0" />
         <label id="959" label="" folder="Meia to right" sort="0" />
-        <label id="960" label="" folder="Meia to right" sort="0" />
-        <label id="961" label="" folder="Meia to right" sort="0" />
+        <label id="960" label="FOR REPLACEMENT" folder="Meia to right" sort="0" />
+        <label id="961" label="FOR REPLACEMENT" folder="Meia to right" sort="0" />
         <label id="962" label="" folder="Meia to right" sort="0" />
         <label id="963" label="" folder="Meia to right" sort="0" />
         <label id="964" label="" folder="Meia to right" sort="0" />
@@ -1168,7 +1169,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="979" label="" folder="Meia to right" sort="0" />
         <label id="980" label="" folder="Meia to right" sort="0" />
         <label id="981" label="" folder="Meia to right" sort="0" />
-        <label id="982" label="" folder="Meia to right" sort="0" />
+        <label id="982" label="nagisa_meia_post-hug_other (target not Meia)" folder="Meia to right" sort="0" />
         <label id="983" label="" folder="Meia to right" sort="0" />
         <label id="984" label="" folder="Meia to left" sort="0" />
         <label id="985" label="" folder="Meia to left" sort="0" />
@@ -1188,13 +1189,22 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="999" label="" folder="Miko to left" sort="0" />
         <label id="1000" label="" folder="Miko to left" sort="0" />
         <label id="1001" label="" folder="Miko to left" sort="0" />
+        <label id="1002" label="nagisa_meia_post-hug_other (target human)" folder="Meia to right" sort="0" />
+        <label id="1003" label="" folder="Meia to right" sort="0" />
+        <label id="1004" label="" folder="Miku to right" sort="0" />
+        <label id="1005" label="" folder="Miku to right" sort="0" />
+        <label id="1006" label="lake" folder="" sort="0" />
+        <label id="1007" label="" folder="Queenie to left" sort="0" />
+        <label id="1008" label="grass" folder="" sort="0" />
+        <label id="1009" label="" folder="Perona to left" sort="0" />
+        <label id="1010" label="" folder="Amy to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1001</nextId>
+    <nextId>1010</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1239,6 +1249,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_alice_no_boys" />
         <marker scope="Public" name="nagisa_alice_no_knife" />
         <marker scope="Public" name="nagisa_alice_stripes" />
+        <marker scope="Public" name="nagisa_alley_no_admittance" />
+        <marker scope="Public" name="nagisa_alley_no_cameras" />
         <marker scope="Public" name="nagisa_alley_stepped_in_something" />
         <marker scope="Public" name="nagisa_alpha_hologram" />
         <marker scope="Public" name="nagisa_amalia_almost_lost" />
@@ -1357,6 +1369,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_barbara_wwjd" />
         <marker scope="Public" name="nagisa_bathhouse_with_mom" />
         <marker scope="Public" name="nagisa_beach_hiding_place" />
+        <marker scope="Public" name="nagisa_beach_not_swimmer" />
+        <marker scope="Public" name="nagisa_beach_sand_in_shoes" />
+        <marker scope="Public" name="nagisa_beach_shells" />
         <marker scope="Public" name="nagisa_beach_starfish" />
         <marker scope="Public" name="nagisa_beatrix_scar" />
         <marker scope="Public" name="nagisa_beatrix_school_classes" />
@@ -1414,6 +1429,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_classroom_to_ourselves" />
         <marker scope="Public" name="nagisa_close_your_eyes" />
         <marker scope="Public" name="nagisa_club_dancing" />
+        <marker scope="Public" name="nagisa_club_familiar_dancers" />
         <marker scope="Public" name="nagisa_cold_outdoors" />
         <marker scope="Public" name="nagisa_collectible_skirt">Persistent marker to track Nagisa's skirt collectible progress.</marker>
         <marker scope="Public" name="nagisa_college_or_job" />
@@ -2133,6 +2149,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_here_i_am" />
         <marker scope="Public" name="nagisa_meia_hills" />
         <marker scope="Public" name="nagisa_meia_hug_circumstances" />
+        <marker scope="Public" name="nagisa_meia_hug_sure" />
         <marker scope="Public" name="nagisa_meia_hugging" />
         <marker scope="Public" name="nagisa_meia_inactive" />
         <marker scope="Public" name="nagisa_meia_jacks" />
@@ -2216,6 +2233,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_miko_mn_n04" />
         <marker scope="Public" name="nagisa_miko_mn_n05" />
         <marker scope="Public" name="nagisa_miko_mn_n06" />
+        <marker scope="Public" name="nagisa_miku_nm_m1" />
+        <marker scope="Public" name="nagisa_miku_nm_n1" />
         <marker scope="Public" name="nagisa_mileena_bandages" />
         <marker scope="Public" name="nagisa_mileena_basically_naked" />
         <marker scope="Public" name="nagisa_misato_shinji_comparison" />
@@ -2228,6 +2247,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_moon_stripping_on_purpose" />
         <marker scope="Public" name="nagisa_mysterious_scar">Nagisa's father claims that she has a mysterious scar on her butt.</marker>
         <marker scope="Public" name="nagisa_nami_dream_drama_club" />
+        <marker scope="Public" name="nagisa_nami_splash_panties" />
         <marker scope="Public" name="nagisa_natsuki_1st_nude2" />
         <marker scope="Public" name="nagisa_natsuki_2loss" />
         <marker scope="Public" name="nagisa_natsuki_bathroom" />
@@ -2365,6 +2385,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_polly_swears" />
         <marker scope="Public" name="nagisa_pool_closed" />
         <marker scope="Public" name="nagisa_pool_volunteer" />
+        <marker scope="Public" name="nagisa_poolside_not_swimmer" />
         <marker scope="Public" name="nagisa_poolside_swimming_lesson" />
         <marker scope="Public" name="nagisa_purpose_of_spnati" />
         <marker scope="Public" name="nagisa_pyrrha_friendship" />
@@ -2377,6 +2398,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_pyrrha_sunday_tomorrow" />
         <marker scope="Public" name="nagisa_pyrrha_unlimited_cake" />
         <marker scope="Public" name="nagisa_pyrrha_wanted_to_try" />
+        <marker scope="Public" name="nagisa_queenie_partake_in_love" />
         <marker scope="Public" name="nagisa_quiet_here" />
         <marker scope="Public" name="nagisa_rear" />
         <marker scope="Public" name="nagisa_repeating" />
