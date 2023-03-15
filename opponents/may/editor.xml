@@ -241,6 +241,7 @@
         <response id="385" opponent="kumatora" opponentId="170" />
         <response id="390" opponent="dawn" opponentId="92" />
         <response id="391" opponent="dawn" opponentId="93" />
+        <response id="401" opponent="nagatoro" opponentId="224" />
     </responses>
     <notes>
         <note id="192">Lower priority than costume lines</note>
@@ -503,12 +504,17 @@
         <label id="142" label="" folder="Critical Darling to left" sort="2" />
         <label id="395" label="" folder="Tea to right" sort="0" />
         <label id="396" label="" folder="Y'shtola to right" sort="0" />
+        <label id="397" label="grass" folder="" sort="0" />
+        <label id="398" label="" folder="Nagatoro to right" sort="0" />
+        <label id="399" label="" folder="Nagatoro to right" sort="0" />
+        <label id="400" label="" folder="Nagatoro to left or right" sort="0" />
+        <label id="401" label="" folder="Nagatoro to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>396</nextId>
+    <nextId>401</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrienSkitty" />
@@ -686,6 +692,10 @@
         <marker scope="Public" name="may_misty_unlucky_in_love" />
         <marker scope="Public" name="may_moonlight" />
         <marker scope="Public" name="may_n1" />
+        <marker scope="Public" name="may_nagatoro_mn_m1" />
+        <marker scope="Public" name="may_nagatoro_mn_n1" />
+        <marker scope="Public" name="may_nagatoro_tease00" />
+        <marker scope="Public" name="may_nagatory_deny_hearing" />
         <marker scope="Public" name="may_nami_dream" />
         <marker scope="Public" name="may_nami_stealing" />
         <marker scope="Public" name="may_needs_a_foot_massage" />
