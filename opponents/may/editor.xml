@@ -242,6 +242,7 @@
         <response id="390" opponent="dawn" opponentId="92" />
         <response id="391" opponent="dawn" opponentId="93" />
         <response id="401" opponent="nagatoro" opponentId="224" />
+        <response id="411" opponent="nagatoro" opponentId="1054" />
     </responses>
     <notes>
         <note id="192">Lower priority than costume lines</note>
@@ -509,14 +510,23 @@
         <label id="399" label="" folder="Nagatoro to right" sort="0" />
         <label id="400" label="" folder="Nagatoro to left or right" sort="0" />
         <label id="401" label="" folder="Nagatoro to left" sort="0" />
+        <label id="402" label="" folder="Tea to left" sort="0" />
+        <label id="403" label="" folder="Tea to left" sort="0" />
+        <label id="404" label="" folder="Tea to left" sort="0" />
+        <label id="405" label="" folder="Tea to left" sort="0" />
+        <label id="406" label="" folder="Tea to left" sort="0" />
+        <label id="407" label="" folder="Critical Darling to left" sort="0" />
+        <label id="408" label="" folder="Critical Darling to left" sort="0" />
+        <label id="409" label="" folder="Tea to right" sort="0" />
+        <label id="410" label="" folder="Mary to left" sort="0" />
+        <label id="411" label="" folder="Nagatoro to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>401</nextId>
+    <nextId>411</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="adrienSkitty" />
         <marker scope="Public" name="amy_may0_resp" />
         <marker scope="Public" name="amy_shopping" />
@@ -613,7 +623,6 @@
         <marker scope="Public" name="may_bunny_made_shoes" />
         <marker scope="Public" name="may_bunny_party_dress" />
         <marker scope="Public" name="may_bunny_pretty_brooch" />
-        <marker scope="Public" name="may_bunny_sheena_" />
         <marker scope="Public" name="may_bunny_sheena_smaller" />
         <marker scope="Public" name="may_bunny_special_reward" />
         <marker scope="Public" name="may_bunny_thinking_cleavage" />
@@ -645,7 +654,6 @@
         <marker scope="Public" name="may_florina_flowers" />
         <marker scope="Public" name="may_fly" />
         <marker scope="Public" name="may_futaba_revy_very_best" />
-        <marker scope="Public" name="may_j" />
         <marker scope="Public" name="may_joey_question4" />
         <marker scope="Public" name="may_joining_mg" />
         <marker scope="Public" name="may_jolyne_panties_reminder" />
@@ -683,6 +691,7 @@
         <marker scope="Public" name="may_lux_worst_timing" />
         <marker scope="Public" name="may_mari_beach_poker" />
         <marker scope="Public" name="may_mari_swimsuit" />
+        <marker scope="Public" name="may_mary_pokemon_go" />
         <marker scope="Public" name="may_may_dont_get_my_stuff_wet" />
         <marker scope="Public" name="may_misty_azumarill" />
         <marker scope="Public" name="may_misty_backside" />
@@ -692,6 +701,7 @@
         <marker scope="Public" name="may_misty_unlucky_in_love" />
         <marker scope="Public" name="may_moonlight" />
         <marker scope="Public" name="may_n1" />
+        <marker scope="Public" name="may_nagatoro_anything_player_says" />
         <marker scope="Public" name="may_nagatoro_mn_m1" />
         <marker scope="Public" name="may_nagatoro_mn_n1" />
         <marker scope="Public" name="may_nagatoro_tease00" />
@@ -734,9 +744,7 @@
         <marker scope="Public" name="may_romantic_guru" />
         <marker scope="Public" name="may_rouge_scope" />
         <marker scope="Public" name="may_routes" />
-        <marker scope="Public" name="may_saki_dri" />
         <marker scope="Public" name="may_saki_drowned" />
-        <marker scope="Public" name="may_sakura_" />
         <marker scope="Public" name="may_sakura_headless" />
         <marker scope="Public" name="may_sakura_scared_me" />
         <marker scope="Public" name="may_sakura_still_alive" />
@@ -777,8 +785,11 @@
         <marker scope="Public" name="may_summer_heating_up" />
         <marker scope="Public" name="may_summer_hot_enough" />
         <marker scope="Public" name="may_swimsuit" />
+        <marker scope="Public" name="may_tea_end_friend" />
         <marker scope="Public" name="may_tea_mt_m1" />
+        <marker scope="Public" name="may_tea_mt_m2" />
         <marker scope="Public" name="may_tea_mt_t1" />
+        <marker scope="Public" name="may_tea_rival_win" />
         <marker scope="Public" name="may_tharja_jura_bad_side" />
         <marker scope="Public" name="may_tharja_jura_mean_spell" />
         <marker scope="Public" name="may_tiki_alola" />
