@@ -55,6 +55,9 @@
         <response id="210" opponent="mari" opponentId="1121" />
         <response id="212" opponent="barbara" opponentId="337" />
         <response id="215" opponent="kumatora" opponentId="169" />
+        <response id="217" opponent="nagatoro" opponentId="1419" />
+        <response id="218" opponent="nagatoro" opponentId="191" />
+        <response id="219" opponent="nagatoro" opponentId="587" />
     </responses>
     <notes>
         <note id="69">Does this line work?</note>
@@ -232,6 +235,12 @@
         <label id="213" label="" folder="Lucy to left" sort="0" />
         <label id="215" label="" folder="Kumatora to left" sort="0" />
         <label id="216" label="" folder="Kumatora to left" sort="0" />
+        <label id="217" label="" folder="Nagatoro to right" sort="0" />
+        <label id="218" label="" folder="Nagatoro to left" sort="0" />
+        <label id="219" label="" folder="Nagatoro to left" sort="0" />
+        <label id="220" label="" folder="Nagatoro to left" sort="0" />
+        <label id="221" label="" folder="Nagatoro to left" sort="0" />
+        <label id="222" label="" folder="Nagatoro to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>nugi-epilogue</prefix>
@@ -239,8 +248,9 @@
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>216</nextId>
+    <nextId>222</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Private" name="nickname">Set per-target to allow Nugi-chan to dynamically change nicknames for a character.</marker>
         <marker scope="Public" name="nugi_chan_sheena_we_want_you_to" />
         <marker scope="Public" name="nugi_nagisa_boys_and_girls" />
@@ -379,6 +389,12 @@
         <marker scope="Public" name="nugi-chan_misato_photography">Nugi-chan tries to extend Mistato's staring permission to flash photography.</marker>
         <marker scope="Public" name="nugi-chan_monika_deleted_clothes">Nugi-chan frets over Monika's suggestion that removed clothing is deleted.</marker>
         <marker scope="Public" name="nugi-chan_monika_magica" />
+        <marker scope="Public" name="nugi-chan_nagatoro_big_words" />
+        <marker scope="Public" name="nugi-chan_nagatoro_choker_0a" />
+        <marker scope="Public" name="nugi-chan_nagatoro_m_nude_large" />
+        <marker scope="Public" name="nugi-chan_nagatoro_m_nude_medium" />
+        <marker scope="Public" name="nugi-chan_nagatoro_m_nude_small" />
+        <marker scope="Public" name="nugi-chan_nagatoro_npc" />
         <marker scope="Public" name="nugi-chan_nagisa_after_story" />
         <marker scope="Public" name="nugi-chan_nagisa_boys_and_girls" />
         <marker scope="Public" name="nugi-chan_nagisa_covering" />
