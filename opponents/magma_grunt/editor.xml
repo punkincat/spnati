@@ -157,6 +157,8 @@
         <response id="874" opponent="nagatoro" opponentId="229" />
         <response id="875" opponent="gloria" opponentId="119" />
         <response id="878" opponent="rosa" opponentId="677" />
+        <response id="885" opponent="dwight" opponentId="3" />
+        <response id="891" opponent="dwight" opponentId="1" />
     </responses>
     <notes>
         <note id="18">If the player isn't gay, magma grunt slowly starts flirting with them when they strip</note>
@@ -986,6 +988,16 @@
         <label id="878" label="" folder="Situations" sort="0" />
         <label id="879" label="" folder="Targets" sort="0" />
         <label id="880" label="" folder="Targets" sort="0" />
+        <label id="881" label="" folder="Three Aqua's" sort="0" />
+        <label id="882" label="" folder="Three Aqua's" sort="0" />
+        <label id="883" label="" folder="Three Aqua's" sort="0" />
+        <label id="884" label="" folder="Targets" sort="0" />
+        <label id="885" label="" folder="Responses" sort="0" />
+        <label id="886" label="" folder="Responses" sort="0" />
+        <label id="887" label="" folder="Targets" sort="0" />
+        <label id="888" label="" folder="Targets" sort="0" />
+        <label id="889" label="" folder="Targets" sort="0" />
+        <label id="890" label="" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>Epilogue_chat</prefix>
@@ -995,7 +1007,7 @@
         <prefix>Epilogue</prefix>
         <prefix>Burger</prefix>
     </prefixes>
-    <nextId>880</nextId>
+    <nextId>891</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="8_hand_good_prideful">Magma Grunt said something particularly prideful when she was in stage 8, and might be setting herself up for failure.</marker>
@@ -1043,6 +1055,7 @@
         <marker scope="Public" name="consecutive_losses_f_bomb" />
         <marker scope="Public" name="darkness_start_ff" />
         <marker scope="Public" name="dawn_gone_resp" />
+        <marker scope="Public" name="dwight_nervoushabits_resp" />
         <marker scope="Public" name="EpilogueCompleted">The player has completed the epilogue at least once, either from in-game or from the gallery.</marker>
         <marker scope="Public" name="erufuda_wcdonalds">Has mentioned WcDonalds, a fast food chain, in the context of Erufuda</marker>
         <marker scope="Public" name="finish_dramatic">Magma Grunt deliberately plays up her orgasm and announces it loudly</marker>
@@ -1371,6 +1384,12 @@
         <marker scope="Public" name="mg_dawn_strip2c" />
         <marker scope="Public" name="mg_dawn_strip6a_Returned" />
         <marker scope="Public" name="mg_dunban_armreveal" />
+        <marker scope="Public" name="mg_dwight_pizzatoppings_resp" />
+        <marker scope="Public" name="mg_dwight_pizzatoppings_resp2" />
+        <marker scope="Public" name="mg_dwight_strip0a" />
+        <marker scope="Public" name="mg_dwight_strip2a" />
+        <marker scope="Public" name="mg_dwight_strip4a" />
+        <marker scope="Public" name="mg_dwight_strip4a_elf" />
         <marker scope="Public" name="mg_eichi_strip0a" />
         <marker scope="Public" name="mg_eichi_strip1a" />
         <marker scope="Public" name="mg_eichi_strip1b" />
@@ -1402,6 +1421,7 @@
         <marker scope="Public" name="mg_forfeit_with_human_familiar_hvy" />
         <marker scope="Public" name="mg_gloria_butt" />
         <marker scope="Public" name="mg_gloria_strip0a" />
+        <marker scope="Public" name="mg_gloria_strip0x" />
         <marker scope="Public" name="mg_head_to_head" />
         <marker scope="Public" name="mg_heris_strip0a" />
         <marker scope="Public" name="mg_hilbert_ideals" />
@@ -1688,6 +1708,7 @@
         <marker scope="Public" name="opp_stripped_glasses" />
         <marker scope="Public" name="opp_stripped_glasses2" />
         <marker scope="Public" name="opp_stripped_wealthy" />
+        <marker scope="Public" name="oppselected_3_aquas" />
         <marker scope="Public" name="player_compatible">Player's preferences allow her to be flirty towards the player.</marker>
         <marker scope="Public" name="player_f_attraction1" />
         <marker scope="Public" name="player_f_attraction2" />
@@ -1720,6 +1741,8 @@
         <marker scope="Public" name="removing_accessory_f_shy" />
         <marker scope="Public" name="removing_accessory_f_student" />
         <marker scope="Public" name="rosa_vday" />
+        <marker scope="Public" name="selected_3_aquas" />
+        <marker scope="Public" name="selected_3_aquas2" />
         <marker scope="Public" name="selected_sharpedo" />
         <marker scope="Public" name="selected_sharpedo_not_october" />
         <marker scope="Public" name="self_vday_rosa_vday" />
