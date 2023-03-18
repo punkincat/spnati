@@ -255,6 +255,10 @@
         <response id="989" opponent="kumatora" opponentId="208" />
         <response id="990" opponent="kumatora" opponentId="191" />
         <response id="991" opponent="kumatora" opponentId="170" />
+        <response id="1011" opponent="nagatoro" opponentId="293" />
+        <response id="1029" opponent="nagatoro" opponentId="459" />
+        <response id="1030" opponent="nagatoro" opponentId="461" />
+        <response id="1031" opponent="nagatoro" opponentId="460" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -284,14 +288,14 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="22" label="inventory" folder="CONVERSATION STARTERS" sort="8" />
         <label id="23" label="" folder="Maid Cafe" sort="6" />
         <label id="24" label="" folder="Maid Cafe" sort="8" />
-        <label id="25" label="nagisa_sakura_11" folder="" sort="0" />
-        <label id="26" label="nagisa_sakura_01" folder="" sort="0" />
+        <label id="25" label="nagisa_sakura_11" folder="Sakura to left" sort="0" />
+        <label id="26" label="nagisa_sakura_01" folder="Sakura to left" sort="0" />
         <label id="27" label="nagisa_sakura_02" folder="" sort="0" />
         <label id="28" label="nagisa_sakura_12" folder="" sort="0" />
         <label id="29" label="nagisa_sakura_03" folder="" sort="0" />
         <label id="30" label="nagisa_sakura_13" folder="" sort="0" />
         <label id="31" label="nagisa_sakura_22" folder="" sort="0" />
-        <label id="32" label="nagisa_sakura_21" folder="" sort="0" />
+        <label id="32" label="nagisa_sakura_21" folder="Sakura to left" sort="0" />
         <label id="33" label="nagisa_sakura_23" folder="" sort="0" />
         <label id="34" label="stockings outdoors" folder="" sort="0" />
         <label id="35" label="" folder="Maid Cafe" sort="22" />
@@ -428,7 +432,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="237" label="Nagisa_School3" folder="" sort="0" />
         <label id="245" label="Nagisa_School1" folder="" sort="0" />
         <label id="229" label="Nagisa_School2" folder="" sort="0" />
-        <label id="205" label="NeedsGlasses" folder="" sort="0" />
+        <label id="205" label="NeedsGlasses" folder="Critical Darling to left" sort="0" />
         <label id="228" label="Nagisa_Skirt1" folder="" sort="0" />
         <label id="244" label="Nagisa_Skirt3" folder="" sort="0" />
         <label id="246" label="Nagisa_School4" folder="" sort="0" />
@@ -1198,13 +1202,40 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1008" label="grass" folder="" sort="0" />
         <label id="1009" label="" folder="Perona to left" sort="0" />
         <label id="1010" label="" folder="Amy to left" sort="0" />
+        <label id="1011" label="" folder="Nagatoro to left" sort="0" />
+        <label id="1012" label="" folder="Misato to left" sort="0" />
+        <label id="1013" label="" folder="Jura to left" sort="0" />
+        <label id="1014" label="" folder="Perona to left" sort="0" />
+        <label id="1015" label="" folder="Polly to left" sort="0" />
+        <label id="1016" label="" folder="Saki N to left" sort="0" />
+        <label id="1017" label="" folder="Streaming-chan to left" sort="0" />
+        <label id="1018" label="" folder="Streaming-chan to left" sort="0" />
+        <label id="1019" label="" folder="Streaming-chan to left" sort="0" />
+        <label id="1020" label="" folder="Streaming-chan to left" sort="0" />
+        <label id="1021" label="" folder="Neptune to left" sort="0" />
+        <label id="1022" label="" folder="Perona to left" sort="0" />
+        <label id="1023" label="" folder="Nagatoro to right" sort="0" />
+        <label id="247" label="" folder="Critical Darling to left" sort="0" />
+        <label id="1024" label="" folder="Perona to left" sort="0" />
+        <label id="1025" label="" folder="Polly to left" sort="0" />
+        <label id="169" label="" folder="Twisted Fate to right" sort="0" />
+        <label id="1026" label="" folder="Amy to left" sort="0" />
+        <label id="1027" label="" folder="Hermione to left" sort="0" />
+        <label id="1028" label="" folder="Nagatoro to right" sort="0" />
+        <label id="1029" label="" folder="Nagatoro to left" sort="0" />
+        <label id="1030" label="" folder="Nagatoro to left" sort="0" />
+        <label id="1031" label="" folder="Nagatoro to left" sort="0" />
+        <label id="1032" label="" folder="Perona to left" sort="0" />
+        <label id="1033" label="" folder="Perona to left" sort="0" />
+        <label id="1034" label="" folder="Perona to left" sort="0" />
+        <label id="1035" label="" folder="Perona to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1010</nextId>
+    <nextId>1035</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -2246,6 +2277,12 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_moon_savior" />
         <marker scope="Public" name="nagisa_moon_stripping_on_purpose" />
         <marker scope="Public" name="nagisa_mysterious_scar">Nagisa's father claims that she has a mysterious scar on her butt.</marker>
+        <marker scope="Public" name="nagisa_nagaotoro_chigau" />
+        <marker scope="Public" name="nagisa_nagatoro_be_nice" />
+        <marker scope="Public" name="nagisa_nagatoro_brought_a_friend" />
+        <marker scope="Public" name="nagisa_nagatoro_first_chest" />
+        <marker scope="Public" name="nagisa_nagatoro_hair_like_bug" />
+        <marker scope="Public" name="nagisa_nagatoro_other_activities" />
         <marker scope="Public" name="nagisa_nami_dream_drama_club" />
         <marker scope="Public" name="nagisa_nami_splash_panties" />
         <marker scope="Public" name="nagisa_natsuki_1st_nude2" />
