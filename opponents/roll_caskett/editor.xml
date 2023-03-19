@@ -53,11 +53,46 @@
         <response id="36" opponent="kumatora" opponentId="170" />
         <response id="38" opponent="jura" opponentId="410" />
         <response id="39" opponent="meia" opponentId="653" />
+        <response id="40" opponent="jura" opponentId="500" />
+        <response id="41" opponent="meia" opponentId="696" />
+        <response id="42" opponent="dwight" opponentId="196" />
+        <response id="43" opponent="dwight" opponentId="197" />
+        <response id="44" opponent="dwight" opponentId="252" />
+        <response id="45" opponent="nami" opponentId="12" />
+        <response id="46" opponent="binah" opponentId="1" />
+        <response id="47" opponent="shantae" opponentId="10" />
+        <response id="48" opponent="caulifla" opponentId="4" />
+        <response id="49" opponent="mari_setogaya" opponentId="55" />
+        <response id="50" opponent="mari_setogaya" opponentId="1" />
+        <response id="51" opponent="yuelia" opponentId="6" />
+        <response id="52" opponent="mari_setogaya" opponentId="2" />
+        <response id="0" opponent="bobobo" opponentId="1" />
+        <response id="53" opponent="chihiro" opponentId="1" />
+        <response id="54" opponent="aqua_kh" opponentId="67" />
+        <response id="55" opponent="sakura" opponentId="2" />
+        <response id="56" opponent="wasp" opponentId="108" />
+        <response id="57" opponent="chihiro" opponentId="2" />
+        <response id="58" opponent="twisted_fate" opponentId="569" />
+        <response id="59" opponent="brock" opponentId="1" />
+        <response id="0" opponent="sannytess" opponentId="5" />
+        <response id="60" opponent="brock" opponentId="2" />
+        <response id="61" opponent="nico_robin" opponentId="305" />
+        <response id="62" opponent="brock" opponentId="165" />
+        <response id="63" opponent="caulifla" opponentId="2" />
+        <response id="64" opponent="senko" opponentId="15" />
+        <response id="65" opponent="aoba" opponentId="170" />
+        <response id="66" opponent="reimu" opponentId="1" />
+        <response id="67" opponent="lucina" opponentId="668" />
+        <response id="68" opponent="caitlin" opponentId="68" />
+        <response id="69" opponent="cheryl" opponentId="222" />
+        <response id="70" opponent="nagisa" opponentId="65" />
+        <response id="71" opponent="nagatoro" opponentId="2" />
+        <response id="72" opponent="yuno_uno" opponentId="924" />
     </responses>
     <prefixes>
         <prefix>ex</prefix>
     </prefixes>
-    <nextId>39</nextId>
+    <nextId>72</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="9S_s0_1" />
@@ -103,12 +138,15 @@
         <marker scope="Public" name="Dorothy_s0_1" />
         <marker scope="Public" name="dwight_resp0_1" />
         <marker scope="Public" name="dwight_resp0_2" />
+        <marker scope="Public" name="dwight_resp0_3" />
         <marker scope="Public" name="dwight_resp1_1" />
         <marker scope="Public" name="dwight_resp2_1" />
+        <marker scope="Public" name="dwight_resp2_2" />
         <marker scope="Public" name="Fina_s0_1" />
         <marker scope="Public" name="jura_resp0_1" />
         <marker scope="Public" name="jura_resp0_2" />
         <marker scope="Public" name="jura_resp0_3" />
+        <marker scope="Public" name="jura_resp1_1" />
         <marker scope="Public" name="kaz_resp0_1" />
         <marker scope="Public" name="kaz_resp0_2" />
         <marker scope="Public" name="kaz_resp0_3" />
@@ -149,6 +187,13 @@
         <marker scope="Public" name="kumatora_resp0_1" />
         <marker scope="Public" name="Kumatora_s0_1" />
         <marker scope="Public" name="Kumatora_s0_2" />
+        <marker scope="Public" name="leon_resp0_1" />
+        <marker scope="Public" name="leon_resp1_1" />
+        <marker scope="Public" name="leon_resp2_1" />
+        <marker scope="Public" name="leon_resp2_2" />
+        <marker scope="Public" name="leon_resp3_1" />
+        <marker scope="Public" name="leon_resp3_2" />
+        <marker scope="Public" name="leon_resp3_3" />
         <marker scope="Public" name="mari_resp0_1" />
         <marker scope="Public" name="maria_resp0_1" />
         <marker scope="Public" name="maria_resp0_2" />
@@ -183,26 +228,34 @@
         <marker scope="Public" name="Maria_s4_1" />
         <marker scope="Public" name="Maria_s4_2" />
         <marker scope="Public" name="Maria_s4_3" />
+        <marker scope="Public" name="Mask" />
         <marker scope="Public" name="meia_resp0_1" />
         <marker scope="Public" name="meia_resp0_2" />
         <marker scope="Public" name="meia_resp0_3" />
+        <marker scope="Public" name="meia_resp1_1" />
         <marker scope="Public" name="Meia_s0_3" />
         <marker scope="Public" name="Meia_s0_s1" />
         <marker scope="Public" name="Meia_s0_s2" />
+        <marker scope="Public" name="Meia_s1_1" />
         <marker scope="Public" name="nagatoro_resp0_1" />
         <marker scope="Public" name="nagatoro_resp0_2" />
         <marker scope="Public" name="nagatoro_resp0_3" />
         <marker scope="Public" name="nagatoro_resp1_1" />
         <marker scope="Public" name="nagatoro_resp1_2" />
         <marker scope="Public" name="nagatoro_resp1_3" />
+        <marker scope="Public" name="nagatoro_resp3_1" />
         <marker scope="Public" name="nagatoro_resp3_2" />
         <marker scope="Public" name="nagatoro_resp3_3" />
         <marker scope="Public" name="Nagatoro_s0_1" />
         <marker scope="Public" name="revy_resp0_1" />
         <marker scope="Public" name="revy_resp0_2" />
         <marker scope="Public" name="ringo_resp2_s" />
+        <marker scope="Public" name="Roll_1" />
+        <marker scope="Public" name="Roll_2" />
+        <marker scope="Public" name="Roll_3" />
         <marker scope="Public" name="Samus_s0_1" />
         <marker scope="Public" name="Samus_s0_2" />
+        <marker scope="Public" name="WhereHat" />
         <marker scope="Public" name="WheresData" />
         <marker scope="Public" name="yshtola_resp0_1" />
         <marker scope="Public" name="yshtola_resp0_2" />
@@ -247,5 +300,6 @@
         <marker scope="Public" name="Yshtola_s7_1" />
         <marker scope="Public" name="Yshtola_s7_2" />
         <marker scope="Public" name="Yshtola_s7_3" />
+        <marker scope="Public" name="yuno_resp0_1" />
     </markers>
 </metadata>
