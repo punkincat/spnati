@@ -252,7 +252,7 @@
                 <state img="#-awkward.png">M-maybe if I take ~cards~? Will that help?</state>
                 <state img="#-contemplative.png">I can't lose the first two rounds... ~cards~, please.</state>
             </case>
-            <case stage="5" addCharacterTags="aggressive,mean,spirit,supernatural,villain" removeCharacterTags="kind">
+            <case stage="5" addCharacterTags="aggressive,flying_forfeit,mean,spirit,supernatural,villain" removeCharacterTags="kind">
                 <condition role="self" timeInStage="0" notSaidMarker="null_possess" />
                 <state img="#-p_firstdraw.png" marker="poss_draw">Hahaha! I've returned!</state>
                 <state img="#-p_firstdraw.png" marker="poss_draw">&lt;i&gt;Now&lt;/i&gt; is when things get interesting!</state>
@@ -5849,7 +5849,7 @@
                 <state img="#-awkward.png">After all this, I'm still the first one out? I...I see.</state>
                 <state img="#-grumpy.png">I'm sorry, everyone; I thought I could keep up.</state>
             </case>
-            <case stage="7" priority="5" addCharacterTags="kind" removeCharacterTags="aggressive,mean,spirit,supernatural,villain">
+            <case stage="7" priority="5" addCharacterTags="kind" removeCharacterTags="aggressive,flying_forfeit,mean,spirit,supernatural,villain">
                 <state img="#-p_mast_begin.png" marker="n_forfeit">That will be all, Veran. I can take care of this myself.</state>
                 <state img="#-p_mast_begin.png" marker="n_forfeit">Begone, Veran. Even you couldn't stave off the inevitable.</state>
             </case>

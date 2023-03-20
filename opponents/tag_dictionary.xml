@@ -153,7 +153,9 @@
     <tag display="Masked" description="Character's face is partially or completely covered by a mask">masked</tag>
     <tag display="No Bra" gender="female" description="Character did not wear a bra to the game">no_bra</tag>
     <tag display="No Lower Underwear" description="Character did not wear lower underwear (e.g. panties, boxers) to the game">no_underwear</tag>
+    <tag display="Onesie" paired="sleepwear" description="Wearing a hooded onesie">onesie</tag>
     <tag display="Pantyhose" description="Wearing pantyhose">pantyhose</tag>
+    <tag display="Santa Hat" paired="hat" description="Wearing a Santa hat">santa_hat</tag>
     <tag display="Spats" description="Wearing tight spandex/lycra bicycle shorts">spats</tag>
     <tag display="Sunglasses" description="Wearing sunglasses">sunglasses</tag>
     <tag display="Sweater" description="Wearing a sweater. Hoodies and cardigans do not count.">sweater</tag>
@@ -324,14 +326,18 @@
     <tag display="Clothing Vanished when Stripping" description="Character uses magic to disappear their clothes instead of stripping">vanishes_clothes</tag>
     <tag display="Shows Crotch Before Chest" description="Character reveals their crotch before their chest">bottomless_first</tag>
     <tag display="Pubic Hair Slip" description="Character's pubic hair is visible prior to the crotch reveal due to skimpy or sheer clothing">pubic_hair_peek</tag>
+    <tag display="Visible Penis Bulge" gender="male" description="Character has a visible penis bulge while clothed. Tag for all applicable stages.">visible_bulge</tag>
     <tag display="Covers Self With Object" description="Character uses objects to cover their chest or crotch with, after the last layer of actual clothing covering them has already been removed">covers_with_object</tag>
     <tag display="Multi-person Forfeit" description="Character masturbates with a partner">tandem</tag>
+    <tag display="Intercourse During Forfeit" paired="tandem" description="The character has vaginal or anal intercourse with another person during their forfeit">intercourse_forfeit</tag>
     <tag display="Restrained During Forfeit" description="Character masturbates using bondage equipment">bondage_forfeit</tag>
     <tag display="Tentacle / Vine Forfeit" description="Character masturbates with tentacles or vines">tentacle_forfeit</tag>
     <tag display="Uses Toy for Forfeit" description="Character uses a sex toy to masturbate">uses_toy</tag>
     <tag display="Sits in Chair During Forfeit" description="Character sits in a chair when masturbating">chair_forfeit</tag>
+    <tag display="Sits on Cushion During Forfeit" description="Character sits on a cushion when masturbating">cushion_forfeit</tag>
     <tag display="Stands During Forfeit" description="Character is standing in a majority of their forfeit images">standing_forfeit</tag>
     <tag display="Kneels During Forfeit" description="Character is kneeling in a majority of their forfeit images">kneeling_forfeit</tag>
+    <tag display="Flies/Floats During Forfeit" description="Character is flying or floating in the air in a majority of their forfeit images">flying_forfeit</tag>
     <tag display="Does Not Masturbate" description="Character does not masturbate or be masturbated during their forfeit. Should not be applicable to non-April Fool's characters.">joke_forfeit</tag>
     <tag display="No Genitals" description="The character does not possess genitalia. Should only be applicable to April Fool's characters.">no_genitals</tag>
   </group>
