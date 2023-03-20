@@ -691,8 +691,8 @@ function updateGroupSelectScreen (ignore_bg) {
             updateStatusIcon($groupStatuses[i], opponent);
 
             $groupLayers[i].attr({
-                src: "img/layers" + opponent.layers + ".png",
-                alt: opponent.layers + ' layers',
+                src: "img/layers" + opponent.selectLayers + ".png",
+                alt: opponent.selectLayers + ' layers',
             }).show();
             updateGenderIcon($groupGenders[i], opponent);
 
