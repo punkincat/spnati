@@ -237,6 +237,13 @@ namespace SPNATI_Character_Editor
 			c.GetUniqueLineAndPoseCount(out lines, out poses);
 			Lines = lines;
 			Poses = poses;
+			if (c.Metadata.AlternateSkins != null)
+			{
+				foreach (AlternateSkin skin in c.Metadata.AlternateSkins)
+					foreach (SkinLink link in skin.Skins)
+						if (link.LayersNonSkip == 0)
+							link.LayersNonSkip = link.Costume.LayersNonSkip;
+			}
 		}
 
 		public void OnBeforeSerialize()
