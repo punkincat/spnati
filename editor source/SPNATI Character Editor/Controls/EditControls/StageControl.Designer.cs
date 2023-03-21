@@ -28,12 +28,14 @@ namespace SPNATI_Character_Editor
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
             this.cboFrom = new Desktop.Skinning.SkinnedComboBox();
             this.label1 = new Desktop.Skinning.SkinnedLabel();
             this.label2 = new Desktop.Skinning.SkinnedLabel();
             this.cboTo = new Desktop.Skinning.SkinnedComboBox();
             this.recRefCostume = new Desktop.CommonControls.RecordField();
             this.label3 = new Desktop.Skinning.SkinnedLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // cboFrom
@@ -115,6 +117,7 @@ namespace SPNATI_Character_Editor
             this.recRefCostume.TabIndex = 4;
             this.recRefCostume.UseAutoComplete = false;
             this.recRefCostume.RecordChanged += new System.EventHandler<Desktop.CommonControls.RecordEventArgs>(this.recRefCostume_RecordChanged);
+            this.toolTip1.SetToolTip(this.recRefCostume, "Only for previewing the targeted character's layers. Does not add the costume as a condition for the line to play.");
             // 
             // label3
             // 
@@ -128,6 +131,8 @@ namespace SPNATI_Character_Editor
             this.label3.Size = new System.Drawing.Size(104, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Reference Costume:";
+            this.toolTip1.SetToolTip(this.label3, "Only for previewing the targeted character's layers. Does not add the costume as a condition for the line to play.");
+
             // 
             // StageControl
             // 
@@ -154,5 +159,6 @@ namespace SPNATI_Character_Editor
 		private Desktop.Skinning.SkinnedComboBox cboTo;
         private Desktop.CommonControls.RecordField recRefCostume;
         private Desktop.Skinning.SkinnedLabel label3;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
