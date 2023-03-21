@@ -1159,7 +1159,7 @@ MainSelectScreenDisplay.prototype.update = function (player) {
 
         this.altCostumeSelector.hide();
         if (player.alternate_costumes.length > 0) {
-            fillCostumeSelector(this.altCostumeSelector, player.alternate_costumes, player.selected_costume)
+            fillCostumeSelector(this.altCostumeSelector, player.default_costume_name, player.alternate_costumes, player.selected_costume)
                 .show();
         }
     }
@@ -1759,7 +1759,7 @@ OpponentDetailsDisplay.prototype.update = function (opponent) {
     }
 
     if (opponent.alternate_costumes.length > 0) {
-        fillCostumeSelector(this.costumeSelector, opponent.alternate_costumes, opponent.selected_costume)
+        fillCostumeSelector(this.costumeSelector, opponent.default_costume_name, opponent.alternate_costumes, opponent.selected_costume)
             .show().prop('disabled', false);
     } else {
         this.costumeSelector.hide();

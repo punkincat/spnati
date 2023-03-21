@@ -135,7 +135,7 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
-		[XmlElement("timer")]
+        [XmlElement("timer")]
 		public int Stamina
 		{
 			get { return Get<int>(); }
