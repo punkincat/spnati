@@ -1851,6 +1851,7 @@ function Condition($xml) {
     this.id     = $xml.attr('character');
     this.tag    = $xml.attr('filter');
     this.nottag = $xml.attr('filterOut');
+    this.tagAdv = $xml.attr('filterAdv');
     this.stage  = parseInterval($xml.attr('stage'));
     this.layers = parseInterval($xml.attr('layers'));
     this.startingLayers = parseInterval($xml.attr('startingLayers'));
@@ -1868,18 +1869,20 @@ function Condition($xml) {
     this.priority = 0;
 
     if (this.role == "self") {
-        this.priority = (this.tag ? 0 : 0) + (this.nottag ? 0 : 0) + (this.status ? 20 : 0)
-            + (this.consecutiveLosses ? 60 : 0) + (this.timeInStage ? 8 : 0)
+        this.priority = (this.tag ? 0 : 0) + (this.nottag ? 0 : 0) + (this.tagAdv ? 0 : 0)
+            + (this.status ? 20 : 0) + (this.consecutiveLosses ? 60 : 0) + (this.timeInStage ? 8 : 0)
             + (this.hand ? 20 : 0) + (this.gender ? 5 : 0)
     } else if (this.role == "target") {
-        this.priority = (this.id ? 300 : 0) + (this.tag ? 150 : 0) + (this.nottag ? 150 : 0)
+        this.priority = (this.id ? 300 : 0)
+            + (this.tag ? 150 : 0) + (this.nottag ? 150 : 0) + (this.tagAdv ? 150 : 0)
             + (this.stage ? 80 : 0) + (this.status ? 70 : 0)
             + (this.layers ? 40 : 0) + (this.startingLayers ? 40 : 0)
             + (this.consecutiveLosses ? 60 : 0) + (this.timeInStage ? 25 : 0)
             + (this.hand ? 30 : 0) + (this.gender ? 5 : 0)
     } else {
         this.priority = (this.role == "winner" ? 1.5 : 1) *
-            ((this.id ? 100 : 0) + (this.tag ? 10 : 0) + (this.nottag ? 10 : 0)
+            ((this.id ? 100 : 0)
+             + (this.tag ? 10 : 0) + (this.nottag ? 10 : 0) + (this.tagAdv ? 10 : 0)
              + (this.stage ? 40 : 0) + (this.status ? 5 : 0)
              + (this.layers ? 20 : 0) + (this.startingLayers ? 20 : 0)
              + (this.consecutiveLosses ? 30 : 0) + (this.timeInStage ? 15 : 0)
@@ -1905,6 +1908,7 @@ function Case($xml, trigger) {
     this.target =                   $xml.attr("target");
     this.filter =                   $xml.attr("filter");
     this.filterOut =                $xml.attr("filterOut");
+    this.filterAdv =                $xml.attr("filterAdv");
     this.targetStage =              parseInterval($xml.attr("targetStage"));
     this.targetLayers =             parseInterval($xml.attr("targetLayers"));
     this.targetStartingLayers =     parseInterval($xml.attr("targetStartingLayers"));
@@ -2012,6 +2016,7 @@ function Case($xml, trigger) {
         if (this.target)                   this.priority += 300;
         if (this.filter)                   this.priority += 150;
         if (this.filterOut)                this.priority += 150;
+        if (this.filterAdv)                this.priority += 150;
         if (this.targetStage)              this.priority += 80;
         if (this.targetLayers)             this.priority += 40;
         if (this.targetStartingLayers)     this.priority += 40;
@@ -2193,6 +2198,13 @@ Case.prototype.checkConditions = function (self, opp, postDialogue) {
     if (this.filterOut) {
         if (!opp || opp.hasTag(this.filterOut)) {
             return false; // failed "filter" requirement
+        }
+    }
+
+    // filterAdv
+    if (this.filterAdv) {
+        if (!opp || !opp.hasTags(this.filterAdv)) {
+            return false; //failed "filterAdv" requirement
         }
     }
 
@@ -2443,6 +2455,7 @@ Case.prototype.checkConditions = function (self, opp, postDialogue) {
                 && (ctr.stage === undefined || inInterval(p.stage, ctr.stage))
                 && (ctr.tag === undefined || p.hasTag(ctr.tag))
                 && (ctr.nottag === undefined || !p.hasTag(ctr.nottag))
+                && (ctr.tagAdv === undefined || p.hasTags(ctr.tagAdv))
                 && (ctr.gender === undefined || p.gender == ctr.gender)
                 && (ctr.status === undefined || p.checkStatus(ctr.status))
                 && (ctr.layers === undefined || inInterval(p.countLayers(), ctr.layers))

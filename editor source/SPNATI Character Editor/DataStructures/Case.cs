@@ -123,6 +123,17 @@ namespace SPNATI_Character_Editor
             set { if (_filterOut != value) { _filterOut = value; NotifyPropertyChanged(); } }
         }
 
+        private string _filterAdv;
+        [TagAdv(DisplayName = "Target Tags (Advanced)", GroupOrder = 1, Description = "Target has a certain combination of tags")]
+        [XmlOrder(32)]
+        [XmlAttribute("filterAdv")]
+        [JsonProperty("filterAdv")]
+        public string FilterAdv
+        {
+            get { return _filterAdv; }
+            set { if (_filterAdv != value) { _filterAdv = value; NotifyPropertyChanged(); } }
+        }
+
         private string _hidden;
 		[XmlOrder(40)]
 		[XmlAttribute("hidden")]
@@ -708,7 +719,11 @@ namespace SPNATI_Character_Editor
             {
                 result.Add(string.Format("(filter out={0})", FilterOut));
             }
-            if (!string.IsNullOrEmpty(AlsoPlaying) && (!excludeTarget || !string.IsNullOrEmpty(Target)))
+            if (!string.IsNullOrEmpty(FilterAdv))
+            {
+                result.Add(string.Format("(filterAdv={0})", FilterAdv));
+            }
+			if (!string.IsNullOrEmpty(AlsoPlaying) && (!excludeTarget || !string.IsNullOrEmpty(Target)))
 			{
 				result.Add(string.Format("(playing w/{0})", AlsoPlaying));
 			}
@@ -975,7 +990,10 @@ namespace SPNATI_Character_Editor
             if (!string.IsNullOrEmpty(FilterOut))
                 totalPriority += 150;
 
-            if (!string.IsNullOrEmpty(TargetStage))
+		    if (!string.IsNullOrEmpty(FilterAdv))
+	            totalPriority += 150;
+
+			if (!string.IsNullOrEmpty(TargetStage))
 				totalPriority += 80;
 
 			if (!string.IsNullOrEmpty(TargetStatus))
@@ -1146,6 +1164,7 @@ namespace SPNATI_Character_Editor
 			hash = (hash * 397) ^ (HasHand ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (Filter ?? string.Empty).GetHashCode();
             hash = (hash * 397) ^ (FilterOut ?? string.Empty).GetHashCode();
+            hash = (hash * 397) ^ (FilterAdv ?? string.Empty).GetHashCode();
             hash = (hash * 397) ^ (TimeInStage ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (TotalFemales ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (TotalMales ?? string.Empty).GetHashCode();
@@ -1264,7 +1283,8 @@ namespace SPNATI_Character_Editor
 				  !string.IsNullOrEmpty(TargetStartingLayers) ||
 				  !string.IsNullOrEmpty(Filter) ||
 				  !string.IsNullOrEmpty(FilterOut) ||
-				  !string.IsNullOrEmpty(AlsoPlayingStage) ||
+                  !string.IsNullOrEmpty(FilterAdv) ||
+                  !string.IsNullOrEmpty(AlsoPlayingStage) ||
 				  !string.IsNullOrEmpty(AlsoPlaying) ||
 				  !string.IsNullOrEmpty(AlsoPlayingHand) ||
 				  !string.IsNullOrEmpty(HasHand) ||
@@ -2878,7 +2898,8 @@ namespace SPNATI_Character_Editor
 			return !string.IsNullOrEmpty(Target) ||
 				!string.IsNullOrEmpty(Filter) ||
 				!string.IsNullOrEmpty(FilterOut) ||
-				!string.IsNullOrEmpty(TargetStage) ||
+                !string.IsNullOrEmpty(FilterAdv) ||
+                !string.IsNullOrEmpty(TargetStage) ||
 				!string.IsNullOrEmpty(TargetHand) ||
 				!string.IsNullOrEmpty(TargetLayers) ||
 				!string.IsNullOrEmpty(TargetStatus) ||

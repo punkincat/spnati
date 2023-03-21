@@ -48,6 +48,19 @@ namespace SPNATI_Character_Editor
         }
 
         [DefaultValue("")]
+        [TagAdv(DisplayName = "Tags (Advanced)", GroupName = "Metadata", GroupOrder = 10, Description = "Character has the given combination of tags")]
+        [XmlAttribute("filterAdv")]
+        [JsonProperty("filterAdv")]
+        /// <summary>
+        /// Tags combination to condition on
+        /// </summary>
+        public string FilterTagAdv
+        {
+            get { return Get<string>(); }
+            set { Set(value); }
+        }
+
+        [DefaultValue("")]
 		[ComboBox(DisplayName = "Gender", GroupName = "Metadata", GroupOrder = 5, Description = "Character's gender", Options = new string[] { "female", "male" })]
 		[JsonProperty("gender")]
 		[XmlAttribute("gender")]
@@ -260,16 +273,18 @@ namespace SPNATI_Character_Editor
             Status = status;
             Count = count;
         }
-        public TargetCondition(string tag, string nottag, string gender, string status, string count)
-		{
-			FilterTag = tag;
-			FilterNotTag = nottag;
-			Gender = gender;
-			Status = status;
-			Count = count;
-		}
 
-		public TargetCondition(string serializedData, string count)
+        public TargetCondition(string tag, string nottag, string tagAdv, string gender, string status, string count)
+        {
+            FilterTag = tag;
+			FilterNotTag = nottag;
+			FilterTagAdv = tagAdv;
+            Gender = gender;
+            Status = status;
+            Count = count;
+        }
+
+        public TargetCondition(string serializedData, string count)
 		{
 			Count = count;
 
@@ -333,6 +348,9 @@ namespace SPNATI_Character_Editor
 							case "nottag":
 								FilterNotTag = value;
 								break;
+							case "tagAdv":
+								FilterTagAdv = value;
+								break;
 						}
 					}
 				}
@@ -363,6 +381,7 @@ namespace SPNATI_Character_Editor
 			}
 			return FilterTag == other.FilterTag &&
 				FilterNotTag == other.FilterNotTag &&
+				FilterTagAdv == other.FilterTagAdv &&
 				(Count ?? "") == (other.Count ?? "") &&
 				Status == other.Status &&
 				Gender == other.Gender &&
@@ -387,7 +406,8 @@ namespace SPNATI_Character_Editor
 		{
 			int hash = (FilterTag ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (FilterNotTag ?? string.Empty).GetHashCode();
-			hash = (hash * 397) ^ (Gender ?? string.Empty).GetHashCode();
+            hash = (hash * 397) ^ (FilterTagAdv ?? string.Empty).GetHashCode();
+            hash = (hash * 397) ^ (Gender ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (Status ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (Count ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (Hand ?? string.Empty).GetHashCode();
@@ -445,6 +465,10 @@ namespace SPNATI_Character_Editor
             if (!string.IsNullOrEmpty(FilterNotTag))
             {
                 parts.Add("nottag;"+ FilterNotTag);
+            }
+            if (!string.IsNullOrEmpty(FilterTagAdv))
+            {
+                parts.Add("tagAdv;" + FilterTagAdv);
             }
             if (!string.IsNullOrEmpty(Role))
 			{
@@ -610,7 +634,11 @@ namespace SPNATI_Character_Editor
 				{
 					str += " " + Gender + ((FilterTag != null || FilterNotTag != null) ? "" : "s");
 				}
-				if (!string.IsNullOrEmpty(Stage))
+                if (!string.IsNullOrEmpty(FilterTagAdv))
+                {
+                    str += $" tagAdv: {FilterTagAdv}";
+                }
+                if (!string.IsNullOrEmpty(Stage))
 				{
 					str += $" stage: {Stage}";
 				}
@@ -691,6 +719,10 @@ namespace SPNATI_Character_Editor
                 {
                     priority += 0;
                 }
+                if (!string.IsNullOrEmpty(FilterTagAdv))
+                {
+                    priority += 0;
+                }
                 if (!string.IsNullOrEmpty(Status))
 				{
 					priority += 20;
@@ -723,6 +755,10 @@ namespace SPNATI_Character_Editor
 					priority += 150;
 				}
                 if (!string.IsNullOrEmpty(FilterNotTag))
+                {
+                    priority += 150;
+                }
+                if (!string.IsNullOrEmpty(FilterTagAdv))
                 {
                     priority += 150;
                 }
@@ -770,6 +806,10 @@ namespace SPNATI_Character_Editor
 					priority += 10;
 				}
                 if (!string.IsNullOrEmpty(FilterNotTag))
+                {
+                    priority += 10;
+                }
+                if (!string.IsNullOrEmpty(FilterTagAdv))
                 {
                     priority += 10;
                 }
@@ -868,7 +908,8 @@ namespace SPNATI_Character_Editor
 					!string.IsNullOrEmpty(Gender) ||
 					!string.IsNullOrEmpty(FilterTag) ||
 					!string.IsNullOrEmpty(FilterNotTag) ||
-					!string.IsNullOrEmpty(Pose);
+                    !string.IsNullOrEmpty(FilterTagAdv) ||
+                    !string.IsNullOrEmpty(Pose);
 			}
 		}
 
@@ -898,7 +939,8 @@ namespace SPNATI_Character_Editor
 			Gender = null;
 			FilterTag = null;
 			FilterNotTag = null;
-			Pose = null;
+            FilterTagAdv = null;
+            Pose = null;
 		}
 	}
 

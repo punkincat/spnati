@@ -104,8 +104,9 @@ namespace SPNATI_Character_Editor
 				string count = values[0];
 				string tag = values[1];
                 string nottag = values[2];
-                string gender = values[3];
-				string status = values[4];
+				string tagAdv = values[3];
+                string gender = values[4];
+				string status = values[5];
 				if (string.IsNullOrEmpty(gender))
 				{
 					_filter.Gender = null;
@@ -130,6 +131,14 @@ namespace SPNATI_Character_Editor
                 {
                     _filter.FilterNotTag = nottag;
                 }
+                if (string.IsNullOrEmpty(tagAdv))
+                {
+                    _filter.FilterTagAdv = null;
+                }
+                else
+                {
+                    _filter.FilterTagAdv = tagAdv;
+                }
                 SetCount(count);
 
 				_filter.Status = status;
@@ -141,7 +150,7 @@ namespace SPNATI_Character_Editor
 					_filter.Character = values[7];
 					_filter.Stage = values[8];
 				}
-				if (values.Count > 16)
+				if (values.Count > 9)
 				{
 					_filter.Hand = values[9];
 					_filter.Layers = values[10];
@@ -167,10 +176,12 @@ namespace SPNATI_Character_Editor
 			string count = GetCount() ?? "";
 			string tag = _filter.FilterTag ?? "";
             string nottag = _filter.FilterNotTag ?? "";
+            string tagAdv = _filter.FilterTagAdv ?? "";
             string gender = _filter.Gender ?? "";
 			values.Add(count);
 			values.Add(tag);
             values.Add(nottag);
+			values.Add(tagAdv);
             values.Add(gender);
 			values.Add(_filter.Status);
 			values.Add(_filter.Role);
