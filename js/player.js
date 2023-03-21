@@ -1631,6 +1631,7 @@ function formatConditionInfo(condition) {
     let attributes = {
         id: "character",
         tag: "tag",
+        nottag: "not tag",
         stage: "stage",
         layers: "layers",
         startingLayers: "starting layers",

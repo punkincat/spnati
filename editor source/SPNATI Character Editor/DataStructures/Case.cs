@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using Desktop.CommonControls.PropertyControls;
 using Desktop.Reporting;
@@ -112,7 +112,18 @@ namespace SPNATI_Character_Editor
 			set { if (_filter != value) { _filter = value; NotifyPropertyChanged(); } }
 		}
 
-		private string _hidden;
+        private string _filterOut;
+        [RecordSelect(DisplayName = "Target Not Tag", GroupOrder = 1, Description = "Target does not have a certain tag", RecordType = typeof(Tag), AllowCreate = true)]
+        [XmlOrder(31)]
+        [XmlAttribute("filterOut")]
+        [JsonProperty("filterOut")]
+        public string FilterOut
+        {
+            get { return _filterOut; }
+            set { if (_filterOut != value) { _filterOut = value; NotifyPropertyChanged(); } }
+        }
+
+        private string _hidden;
 		[XmlOrder(40)]
 		[XmlAttribute("hidden")]
 		[JsonProperty("hidden")]
@@ -693,7 +704,11 @@ namespace SPNATI_Character_Editor
 			{
 				result.Add(string.Format("(filter={0})", Filter));
 			}
-			if (!string.IsNullOrEmpty(AlsoPlaying) && (!excludeTarget || !string.IsNullOrEmpty(Target)))
+            if (!string.IsNullOrEmpty(FilterOut))
+            {
+                result.Add(string.Format("(filter out={0})", FilterOut));
+            }
+            if (!string.IsNullOrEmpty(AlsoPlaying) && (!excludeTarget || !string.IsNullOrEmpty(Target)))
 			{
 				result.Add(string.Format("(playing w/{0})", AlsoPlaying));
 			}
@@ -957,7 +972,10 @@ namespace SPNATI_Character_Editor
 			if (!string.IsNullOrEmpty(Filter))
 				totalPriority += 150;
 
-			if (!string.IsNullOrEmpty(TargetStage))
+            if (!string.IsNullOrEmpty(FilterOut))
+                totalPriority += 150;
+
+            if (!string.IsNullOrEmpty(TargetStage))
 				totalPriority += 80;
 
 			if (!string.IsNullOrEmpty(TargetStatus))
@@ -1127,7 +1145,8 @@ namespace SPNATI_Character_Editor
 			hash = (hash * 397) ^ (AlsoPlayingTimeInStage ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (HasHand ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (Filter ?? string.Empty).GetHashCode();
-			hash = (hash * 397) ^ (TimeInStage ?? string.Empty).GetHashCode();
+            hash = (hash * 397) ^ (FilterOut ?? string.Empty).GetHashCode();
+            hash = (hash * 397) ^ (TimeInStage ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (TotalFemales ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (TotalMales ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (TotalPlaying ?? string.Empty).GetHashCode();
@@ -1244,6 +1263,7 @@ namespace SPNATI_Character_Editor
 				  !string.IsNullOrEmpty(TargetLayers) ||
 				  !string.IsNullOrEmpty(TargetStartingLayers) ||
 				  !string.IsNullOrEmpty(Filter) ||
+				  !string.IsNullOrEmpty(FilterOut) ||
 				  !string.IsNullOrEmpty(AlsoPlayingStage) ||
 				  !string.IsNullOrEmpty(AlsoPlaying) ||
 				  !string.IsNullOrEmpty(AlsoPlayingHand) ||
@@ -2570,7 +2590,11 @@ namespace SPNATI_Character_Editor
 				{
 					continue;
 				}
-				if (!string.IsNullOrEmpty(c.Target) && c.Target != speaker.FolderName && c.Target != sourceCase.Target)
+                if (!string.IsNullOrEmpty(c.FilterOut) && speaker.Tags.Find(t => t.Tag == c.FilterOut) != null)
+                {
+                    continue;
+                }
+                if (!string.IsNullOrEmpty(c.Target) && c.Target != speaker.FolderName && c.Target != sourceCase.Target)
 				{
 					continue;
 				}
@@ -2853,6 +2877,7 @@ namespace SPNATI_Character_Editor
 		{
 			return !string.IsNullOrEmpty(Target) ||
 				!string.IsNullOrEmpty(Filter) ||
+				!string.IsNullOrEmpty(FilterOut) ||
 				!string.IsNullOrEmpty(TargetStage) ||
 				!string.IsNullOrEmpty(TargetHand) ||
 				!string.IsNullOrEmpty(TargetLayers) ||

@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using Desktop.Skinning;
 using SPNATI_Character_Editor.Providers;
@@ -103,8 +103,9 @@ namespace SPNATI_Character_Editor
 			{
 				string count = values[0];
 				string tag = values[1];
-				string gender = values[2];
-				string status = values[3];
+                string nottag = values[2];
+                string gender = values[3];
+				string status = values[4];
 				if (string.IsNullOrEmpty(gender))
 				{
 					_filter.Gender = null;
@@ -121,29 +122,37 @@ namespace SPNATI_Character_Editor
 				{
 					_filter.FilterTag = tag;
 				}
-				SetCount(count);
+                if (string.IsNullOrEmpty(nottag))
+                {
+                    _filter.FilterNotTag = null;
+                }
+                else
+                {
+                    _filter.FilterNotTag = nottag;
+                }
+                SetCount(count);
 
 				_filter.Status = status;
 
-				if (values.Count > 4)
+				if (values.Count > 5)
 				{
-					_filter.Role = values[4];
-					_filter.Variable = values[5];
-					_filter.Character = values[6];
-					_filter.Stage = values[7];
+					_filter.Role = values[5];
+					_filter.Variable = values[6];
+					_filter.Character = values[7];
+					_filter.Stage = values[8];
 				}
 				if (values.Count > 16)
 				{
-					_filter.Hand = values[8];
-					_filter.Layers = values[9];
-					_filter.StartingLayers = values[10];
-					_filter.SaidMarker = values[11];
-					_filter.NotSaidMarker = values[12];
-					_filter.SayingMarker = values[13];
-					_filter.Saying = values[14];
-					_filter.TimeInStage = values[15];
-					_filter.ConsecutiveLosses = values[16];
-					_filter.Said = values[17];
+					_filter.Hand = values[9];
+					_filter.Layers = values[10];
+					_filter.StartingLayers = values[11];
+					_filter.SaidMarker = values[12];
+					_filter.NotSaidMarker = values[13];
+					_filter.SayingMarker = values[14];
+					_filter.Saying = values[15];
+					_filter.TimeInStage = values[16];
+					_filter.ConsecutiveLosses = values[17];
+					_filter.Said = values[18];
 				}
 			}
 
@@ -157,10 +166,12 @@ namespace SPNATI_Character_Editor
 		{
 			string count = GetCount() ?? "";
 			string tag = _filter.FilterTag ?? "";
-			string gender = _filter.Gender ?? "";
+            string nottag = _filter.FilterNotTag ?? "";
+            string gender = _filter.Gender ?? "";
 			values.Add(count);
 			values.Add(tag);
-			values.Add(gender);
+            values.Add(nottag);
+            values.Add(gender);
 			values.Add(_filter.Status);
 			values.Add(_filter.Role);
 			values.Add(_filter.Variable);
