@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.Skinning;
 using TinifyAPI;
 using System;
@@ -51,10 +51,7 @@ namespace SPNATI_Character_Editor
 			chkSafeMode.Checked = Config.SafeMode;
 			chkLegacyPoses.Checked = Config.ShowLegacyPoseTabs;
 			chkFullResponse.Checked = Config.UseFullResponses;
-
-			recAutoOpen.RecordType = typeof(Character);
-			recAutoOpen.RecordFilter = CharacterDatabase.FilterHuman;
-			recAutoOpen.RecordKey = Config.GetString(Settings.AutoOpenCharacter);
+			txtAutoOpen.Text = Config.GetString(Settings.AutoOpenCharacter);
 
 			HashSet<string> pauses = Config.AutoPauseDirectives;
 			foreach (DirectiveDefinition def in Definitions.Instance.Get<DirectiveDefinition>())
@@ -159,7 +156,7 @@ namespace SPNATI_Character_Editor
 			Config.StartOnDashboard = chkStartDashboard.Checked;
 			Config.EnableDashboardSpellCheck = chkChecklistSpell.Checked;
 			Config.EnableDashboardValidation = chkChecklistValidation.Checked;
-			Config.Set(Settings.AutoOpenCharacter, recAutoOpen.RecordKey);
+			Config.Set(Settings.AutoOpenCharacter, txtAutoOpen.Text);
 			Config.MaxFranchisePartners = (int)valFranchise.Value;
 			Config.AutoPopulateStageImages = chkAutoFill.Checked;
 			Config.WarnAboutIncompleteStatus = chkWarnIncomplete.Checked;

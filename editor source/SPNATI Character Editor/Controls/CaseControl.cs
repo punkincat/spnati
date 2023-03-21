@@ -437,6 +437,7 @@ namespace SPNATI_Character_Editor.Controls
 			//Opponent
 			table.AddSpeedButton("Opponent", "Opponent", (data) => { return AddFilter("opp", data); });
 			table.AddSpeedButton("Opponent", "Opponent Tag", (data) => { return AddFilter("opp", data, "FilterTag"); });
+            table.AddSpeedButton("Opponent", "Opponent Not Tag", (data) => { return AddFilter("opp", data, "FilterNotTag"); });
 			table.AddSpeedButton("Opponent", "Opponent Tags (Advanced)", (data) => { return AddFilter("opp", data, "FilterTagAdv"); });
 			table.AddSpeedButton("Opponent", "Opponent Stage", (data) => { return AddFilter("opp", data, "Stage"); });
 			table.AddSpeedButton("Opponent", "Opponent Said Marker", (data) => { return AddFilter("opp", data, "SaidMarker"); });
@@ -505,8 +506,9 @@ namespace SPNATI_Character_Editor.Controls
 				//Target
 				table.AddSpeedButton("Target", "Target", (data) => { return AddFilter("target", data); });
 				table.AddSpeedButton("Target", "Target Tag", (data) => { return AddFilter("target", data, "FilterTag"); });
+                table.AddSpeedButton("Target", "Target Not Tag", (data) => { return AddFilter("target", data, "FilterNotTag"); });
 				table.AddSpeedButton("Target", "Target Tags (Advanced)", (data) => { return AddFilter("target", data, "FilterTagAdv"); });
-				table.AddSpeedButton("Target", "Target Stage", (data) => { return AddFilter("target", data, "Stage"); });
+                table.AddSpeedButton("Target", "Target Stage", (data) => { return AddFilter("target", data, "Stage"); });
 				table.AddSpeedButton("Target", "Target Said Marker", (data) => { return AddFilter("target", data, "SaidMarker"); });
 				table.AddSpeedButton("Target", "Target Not Said Marker", (data) => { return AddFilter("target", data, "NotSaidMarker"); });
 				table.AddSpeedButton("Target", "Target Saying Marker", (data) => { return AddFilter("target", data, "SayingMarker"); });
