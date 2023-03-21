@@ -48,7 +48,7 @@ namespace SPNATI_Character_Editor
         }
 
         [DefaultValue("")]
-        [TagAdv(DisplayName = "Tags (Advanced)", GroupName = "Metadata", GroupOrder = 10, Description = "Character has the given combination of tags")]
+        [TagAdv(DisplayName = "Tags (Advanced)", GroupName = "Metadata", GroupOrder = 12, Description = "Character has the given combination of tags")]
         [XmlAttribute("filterAdv")]
         [JsonProperty("filterAdv")]
         /// <summary>
