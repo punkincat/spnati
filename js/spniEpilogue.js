@@ -2557,6 +2557,10 @@ function SceneObject(id, element, view, args) {
             width: this.width,
             height: this.height,
         });
+        $(pivot).css({
+            width: this.width,
+            height: this.height,
+        });
         $(element).css({
             width: this.width,
             height: this.height,
