@@ -1,4 +1,4 @@
-﻿using Desktop.DataStructures;
+using Desktop.DataStructures;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Xml.Serialization;
@@ -116,6 +116,13 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
+		[XmlElement("default-costume-name")]
+		public string DefaultCostumeName
+		{
+			get { return Get<string>(); }
+			set { Set(value); }
+		}
+
 		[XmlArray("tags")]
 		[XmlArrayItem("tag")]
 		public List<CharacterTag> Tags { get; set; }
@@ -207,6 +214,7 @@ namespace SPNATI_Character_Editor
 				Gender = c.Gender;
 			}
 			Layers = c.Layers;
+			DefaultCostumeName = c.Metadata.DefaultCostumeName;
 			Endings = c.Endings.ConvertAll(e => new EpilogueMeta
 			{
 				Status = e.Status,
@@ -229,6 +237,13 @@ namespace SPNATI_Character_Editor
 			c.GetUniqueLineAndPoseCount(out lines, out poses);
 			Lines = lines;
 			Poses = poses;
+			if (c.Metadata.AlternateSkins != null)
+			{
+				foreach (AlternateSkin skin in c.Metadata.AlternateSkins)
+					foreach (SkinLink link in skin.Skins)
+						if (link.LayersNonSkip == 0)
+							link.LayersNonSkip = link.Costume.LayersNonSkip;
+			}
 		}
 
 		public void OnBeforeSerialize()
