@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>stocking</owner>
+    <height>4'9</height>
+    <age />
+    <pronunciation />
+    <othernotes />
     <noteworthy>
         <case name="Stripes" id="49" priority="FYI" min="8" max="8">
             <description>Stocking is turning her stockings into angelic swords to show them off.</description>
@@ -82,6 +86,10 @@
         <response id="135" opponent="sannytess" opponentId="5" />
         <response id="136" opponent="sannytess" opponentId="6" />
         <response id="139" opponent="emi" opponentId="129" />
+        <response id="141" opponent="nagatoro" opponentId="1356" />
+        <response id="142" opponent="nagatoro" opponentId="1355" />
+        <response id="143" opponent="nagatoro" opponentId="1357" />
+        <response id="144" opponent="nagatoro" opponentId="15" />
     </responses>
     <notes>
         <note id="1">Yes. I did refer to a baby as "it." It felt like something P&amp;S would do.</note>
@@ -163,7 +171,7 @@
         <prefix>stockingwings</prefix>
         <prefix>vexedface</prefix>
     </prefixes>
-    <nextId>140</nextId>
+    <nextId>144</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="AaraviPurity" />
@@ -172,13 +180,16 @@
         <marker scope="Public" name="AkkoMagic1" />
         <marker scope="Public" name="AkkoMagic2" />
         <marker scope="Public" name="AkkoNecronomicon" />
+        <marker scope="Public" name="AlleyWeird" />
         <marker scope="Public" name="AngelLuckAccussation" />
         <marker scope="Public" name="AobaExpensive" />
         <marker scope="Public" name="AobaHair" />
         <marker scope="Public" name="AobaSnacks" />
+        <marker scope="Public" name="ArmoryLikes" />
         <marker scope="Public" name="BeatrixConnoisseur" />
         <marker scope="Public" name="BeforeTakingOffHer" />
         <marker scope="Public" name="BeforeTakingOffHerBlades" />
+        <marker scope="Public" name="Birthday" />
         <marker scope="Public" name="BoboboFreak" />
         <marker scope="Public" name="Bruh1" />
         <marker scope="Public" name="Bruh2" />
@@ -289,8 +300,10 @@
         <marker scope="Public" name="KumatoraGreet2" />
         <marker scope="Public" name="KumatoraInstrument" />
         <marker scope="Public" name="KumatoraMindgames" />
+        <marker scope="Public" name="KumatoraPets" />
         <marker scope="Public" name="KumatoraPrincess" />
         <marker scope="Public" name="KumatoraPSI" />
+        <marker scope="Public" name="KumatoraSuperpower" />
         <marker scope="Public" name="KumatoraSweets" />
         <marker scope="Public" name="KumatoraWaitress" />
         <marker scope="Public" name="KyouHeaven" />
@@ -332,6 +345,10 @@
         <marker scope="Public" name="MikuIdol" />
         <marker scope="Public" name="MonikaBaking1" />
         <marker scope="Public" name="MonikaNatsukiBaking1" />
+        <marker scope="Public" name="NagatoroGothic" />
+        <marker scope="Public" name="NagatoroOneNoteJoke" />
+        <marker scope="Public" name="NagatoroShoes" />
+        <marker scope="Public" name="NagatoroSweets" />
         <marker scope="Public" name="Nami0" />
         <marker scope="Public" name="Nami1" />
         <marker scope="Public" name="NamiPerona0" />
@@ -446,6 +463,8 @@
         <marker scope="Public" name="PitPantyHeaven" />
         <marker scope="Public" name="PitPantyStingy" />
         <marker scope="Public" name="PlayerIsNamedStocking" />
+        <marker scope="Public" name="PlayerPantyName" />
+        <marker scope="Public" name="PolicewomanZombieInvasion" />
         <marker scope="Public" name="Polly1" />
         <marker scope="Public" name="Polly2" />
         <marker scope="Public" name="PollyPantyChill" />
@@ -621,6 +640,7 @@
         <marker scope="Public" name="YuriGothic" />
         <marker scope="Public" name="YuriTea" />
         <marker scope="Public" name="YusukeSnacks" />
+        <marker scope="Public" name="ZoeNewGhost" />
         <marker scope="Public" name="ZombieInvasion" />
     </markers>
 </metadata>
