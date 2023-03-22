@@ -14,6 +14,7 @@
         <response id="1" opponent="sakura" opponentId="1" />
         <response id="47" opponent="ahri" opponentId="476" />
         <response id="53" opponent="kumatora" opponentId="299" />
+        <response id="56" opponent="nagatoro" opponentId="223" />
     </responses>
     <labels>
         <label id="2" label="" folder="Black Cat" sort="5" />
@@ -68,13 +69,14 @@
         <label id="53" label="" folder="Kumatora to left" sort="0" />
         <label id="54" label="" folder="Kumatora to left" sort="0" />
         <label id="55" label="" folder="Kumatora to left" sort="0" />
+        <label id="56" label="" folder="Nagatoro to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>dvaending</prefix>
         <prefix>collectible_</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>55</nextId>
+    <nextId>56</nextId>
     <markers>
         <marker scope="Public" name="d,va_saki_invite">Hana invites big fan Saki for a playdate.</marker>
         <marker scope="Public" name="d,va_sakura_stand_out">Hana tells Sakura that standing out gets you run down.</marker>
@@ -88,13 +90,20 @@
         <marker scope="Public" name="d.va_bodysuit">Hana askes Marinette if she put her bodysuit on with a paint roller.</marker>
         <marker scope="Public" name="d.va_doritos">Hana has a body too perfect for snack foods.</marker>
         <marker scope="Public" name="d.va_french_suits">Hana brings up Widowmaker to Marinette.</marker>
+        <marker scope="Public" name="d.va_futaba_sus" />
+        <marker scope="Public" name="d.va_hermione_clubbing" />
+        <marker scope="Public" name="d.va_hermione_trolls" />
         <marker scope="Public" name="d.va_high_score">As a gamer, Hana likes getting a high score.</marker>
+        <marker scope="Public" name="d.va_jasmine_harem" />
         <marker scope="Public" name="d.va_kicks_butt_without_shoes">Hana doesn't need shoes to kick your butt.</marker>
+        <marker scope="Public" name="d.va_kim_doomfist" />
         <marker scope="Public" name="d.va_kumatora_hypothetical_a" />
         <marker scope="Public" name="d.va_kumatora_hypothetical_b" />
         <marker scope="Public" name="d.va_kumatora_hypothetical_c" />
         <marker scope="Public" name="d.va_lucio_playing">Hana heard that Lucio is playing at "Inner City Spectacle" tonight.</marker>
         <marker scope="Public" name="d.va_mari_art">Hana obsevers that Marinette is an art student.</marker>
+        <marker scope="Public" name="d.va_meia_league_teams" />
+        <marker scope="Public" name="d.va_nagatoro_paparazzi" />
         <marker scope="Public" name="d.va_needs_a_hug">Some characters react to Hana saying she needs a hug via Hana using an alsoPlaying. This marker will replace that method in the future.</marker>
         <marker scope="Public" name="d.va_noobs">Hana can sometimes call other players "noobs".</marker>
         <marker scope="Public" name="d.va_raven_beads" />
@@ -104,6 +113,9 @@
         <marker scope="Public" name="d.va_raven_red_team" />
         <marker scope="Public" name="d.va_ruby_peekaboo" />
         <marker scope="Public" name="d.va_saki_academy">Saki reminds Hana of her days at the Academy, a skin she has in Overwatch.</marker>
+        <marker scope="Public" name="d.va_saki_invite" />
+        <marker scope="Public" name="d.va_saki_thanks_for_support" />
+        <marker scope="Public" name="d.va_saki_whats_up" />
         <marker scope="Public" name="d.va_sakura_halloween_skin">Everyone has a Halloween skin to unlock, even zombie Sakura.</marker>
         <marker scope="Public" name="d.va_sakura_omnic">Hana asks if Sakura is an omnic (a robot).</marker>
         <marker scope="Public" name="d.va_sakura_stand_out">Hana tells Sakura that standing out gets you run down.</marker>
@@ -111,6 +123,9 @@
         <marker scope="Private" name="d.va_second_place">Hana must_masturbate when only two players are left, meaning she placed second.</marker>
         <marker scope="Public" name="d.va_sonya_butt_kicked">Hana: 1, Sonya: 0.</marker>
         <marker scope="Public" name="d.va_sonya_talks_big">Hana jousts with Sonya.</marker>
+        <marker scope="Public" name="d.va_streaming-chan_collab" />
+        <marker scope="Public" name="d.va_streaming-chan_mech_q" />
+        <marker scope="Public" name="d.va_streaming-chan_send_replay" />
         <marker scope="Public" name="d.va_stripping_party">Hana is getting into the "stripping party".</marker>
         <marker scope="Public" name="d.va_thinks_seven_is_moira">Hana mistakes Seven of Nine for Moira, her Overwatch adversary.</marker>
         <marker scope="Public" name="d.va_wager_loss">If Hana is first to lose, she will mention the side bet in her final defeat line.</marker>
@@ -118,6 +133,9 @@
         <marker scope="Public" name="d.va_wager_set">If Hana gets an okay or good hand and has lost no clothing in the sixth round, she'll propose a side bet that the first loser does anything the winner asks.</marker>
         <marker scope="Public" name="d.va_wager_with_meia">Hana brings up the side bed with Meia.</marker>
         <marker scope="Public" name="d.va_with_meia">Meia has lost first, so Hana brings up the side bet.</marker>
+        <marker scope="Public" name="d.va_xander_surface" />
+        <marker scope="Public" name="d.va_xander_too_normal" />
+        <marker scope="Public" name="d.va_xander_xan.da" />
         <marker scope="Private" name="female_human_first_piece">Used to track whether the female_human player has removed even a single item.</marker>
         <marker scope="Private" name="male_human_first_piece">Used to track whether the male human player has removed even a single item.</marker>
         <marker scope="Private" name="nickname">Set per-target to allow D.Va to dynamically change nicknames for a character.</marker>

@@ -16,22 +16,27 @@
         <response id="4" opponent="nami" opponentId="10" />
         <response id="5" opponent="nami" opponentId="15" />
         <response id="10" opponent="kumatora" opponentId="208" />
+        <response id="11" opponent="nagatoro" opponentId="1451" />
     </responses>
     <labels>
-        <label id="6" label="" folder="Ochako to left" sort="0" />
+        <label id="6" label="" folder="Ochako to left" sort="4" />
         <label id="7" label="" folder="Ochako to left" sort="0" />
-        <label id="8" label="" folder="Ochako to left" sort="0" />
-        <label id="9" label="" folder="Ochako to left" sort="0" />
+        <label id="8" label="" folder="Ochako to left" sort="2" />
+        <label id="9" label="" folder="Ochako to left" sort="3" />
         <label id="10" label="" folder="Kumatora to left" sort="0" />
+        <label id="11" label="hot spring" folder="Nagatoro to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
+        <prefix>x-</prefix>
     </prefixes>
-    <nextId>10</nextId>
+    <nextId>11</nextId>
     <markers>
         <marker scope="Public" name="mei_antarctica">Mei mentions a few times that she's worked in the Antarctic.</marker>
         <marker scope="Public" name="mei_climate_change">Mei, a Chinese climatologist, denies that climate change is a Chinese lie.</marker>
+        <marker scope="Public" name="mei_d.va_police_uniform" />
         <marker scope="Public" name="mei_dawn_light">Mei makes a pun on Dawn's name when Dawn removes something 'light'.</marker>
+        <marker scope="Public" name="mei_hermione_share_hands" />
         <marker scope="Public" name="mei_ice_block">When threatened, the female of the species must briefly hibernate.</marker>
         <marker scope="Public" name="mei_jasmine_elsa" />
         <marker scope="Public" name="mei_keeping_florina_company">Mei gets topless with Florina.</marker>
@@ -40,10 +45,12 @@
         <marker scope="Public" name="mei_kumatora_snowball" />
         <marker scope="Public" name="mei_leela_question">Mei asks Leela about Fry from Futurama being cryonically frozen, as Mei was also in cryofreeze.</marker>
         <marker scope="Public" name="mei_leela_sadness">After asking Leela about Fry, Mei gets sad thinking about her own backstory.</marker>
+        <marker scope="Public" name="mei_link_elf_boy" />
         <marker scope="Public" name="mei_lyn_healing" />
         <marker scope="Public" name="mei_mae_beautiful_name" />
         <marker scope="Public" name="mei_marceline_floating" />
         <marker scope="Public" name="mei_mettaton_omnic">Mei correctly identifies Mettaton as an "omnic", which is a self-aware robot.</marker>
+        <marker scope="Public" name="mei_nagatoro_glasses01" />
         <marker scope="Public" name="mei_nagisa_keep_warm" />
         <marker scope="Public" name="mei_nami_climate">Mei wants to know more about Nami changing the climate.</marker>
         <marker scope="Public" name="mei_nami_endothermic">Mei meets a kindred spirit who can control the weather.</marker>
