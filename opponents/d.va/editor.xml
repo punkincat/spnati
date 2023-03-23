@@ -70,13 +70,15 @@
         <label id="54" label="" folder="Kumatora to left" sort="0" />
         <label id="55" label="" folder="Kumatora to left" sort="0" />
         <label id="56" label="" folder="Nagatoro to left" sort="0" />
+        <label id="57" label="library" folder="" sort="0" />
+        <label id="59" label="maid" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>dvaending</prefix>
         <prefix>collectible_</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>56</nextId>
+    <nextId>59</nextId>
     <markers>
         <marker scope="Public" name="d,va_saki_invite">Hana invites big fan Saki for a playdate.</marker>
         <marker scope="Public" name="d,va_sakura_stand_out">Hana tells Sakura that standing out gets you run down.</marker>
@@ -86,11 +88,16 @@
         <marker scope="Public" name="d.va_akko_bunny_love">Hana acknowledges Akko's bunny-themed transformation.</marker>
         <marker scope="Public" name="d.va_akko_mech">D.Va gets her attention via a mech.</marker>
         <marker scope="Public" name="d.va_amelie">Hana tells Marinette about Widowmaker.</marker>
+        <marker scope="Public" name="d.va_athletic_pecs" />
         <marker scope="Public" name="d.va_black_cat_kitty_joke">Hana makes a pussy pun once while dressed as a black cat.</marker>
         <marker scope="Public" name="d.va_bodysuit">Hana askes Marinette if she put her bodysuit on with a paint roller.</marker>
+        <marker scope="Public" name="d.va_d.va_counter" />
         <marker scope="Public" name="d.va_doritos">Hana has a body too perfect for snack foods.</marker>
+        <marker scope="Public" name="d.va_falcon_underwear" />
         <marker scope="Public" name="d.va_french_suits">Hana brings up Widowmaker to Marinette.</marker>
         <marker scope="Public" name="d.va_futaba_sus" />
+        <marker scope="Public" name="d.va_gaming_chair" />
+        <marker scope="Public" name="d.va_headphones_bodysuit" />
         <marker scope="Public" name="d.va_hermione_clubbing" />
         <marker scope="Public" name="d.va_hermione_trolls" />
         <marker scope="Public" name="d.va_high_score">As a gamer, Hana likes getting a high score.</marker>
@@ -100,17 +107,37 @@
         <marker scope="Public" name="d.va_kumatora_hypothetical_a" />
         <marker scope="Public" name="d.va_kumatora_hypothetical_b" />
         <marker scope="Public" name="d.va_kumatora_hypothetical_c" />
+        <marker scope="Public" name="d.va_library_computer" />
+        <marker scope="Public" name="d.va_library_cover" />
+        <marker scope="Public" name="d.va_library_quiet" />
+        <marker scope="Public" name="d.va_long_hair_love" />
         <marker scope="Public" name="d.va_lucio_playing">Hana heard that Lucio is playing at "Inner City Spectacle" tonight.</marker>
+        <marker scope="Public" name="d.va_maid_costume" />
+        <marker scope="Public" name="d.va_maid_teabagging" />
         <marker scope="Public" name="d.va_mari_art">Hana obsevers that Marinette is an art student.</marker>
         <marker scope="Public" name="d.va_meia_league_teams" />
+        <marker scope="Public" name="d.va_moon_gg" />
+        <marker scope="Public" name="d.va_moon_throwing" />
         <marker scope="Public" name="d.va_nagatoro_paparazzi" />
+        <marker scope="Public" name="d.va_nagisa_cold_feet" />
+        <marker scope="Public" name="d.va_nagisa_knees" />
+        <marker scope="Public" name="d.va_nagisa_no_good" />
         <marker scope="Public" name="d.va_needs_a_hug">Some characters react to Hana saying she needs a hug via Hana using an alsoPlaying. This marker will replace that method in the future.</marker>
         <marker scope="Public" name="d.va_noobs">Hana can sometimes call other players "noobs".</marker>
+        <marker scope="Public" name="d.va_nugi_expert" />
+        <marker scope="Public" name="d.va_nugi_goal" />
+        <marker scope="Public" name="d.va_nugi_nice_try" />
+        <marker scope="Public" name="d.va_nugi_no_nipples" />
+        <marker scope="Public" name="d.va_nugi_owned" />
+        <marker scope="Public" name="d.va_nugi_real_expert" />
+        <marker scope="Public" name="d.va_nugi_role_reversal" />
+        <marker scope="Public" name="d.va_nugi_webmaster" />
         <marker scope="Public" name="d.va_raven_beads" />
         <marker scope="Public" name="d.va_raven_humanhottie" />
         <marker scope="Public" name="d.va_raven_humanhottie2" />
         <marker scope="Public" name="d.va_raven_now_entering">Hana asks if Raven heard loading narration.</marker>
         <marker scope="Public" name="d.va_raven_red_team" />
+        <marker scope="Public" name="d.va_rouge_treasure_scope" />
         <marker scope="Public" name="d.va_ruby_peekaboo" />
         <marker scope="Public" name="d.va_saki_academy">Saki reminds Hana of her days at the Academy, a skin she has in Overwatch.</marker>
         <marker scope="Public" name="d.va_saki_invite" />
@@ -144,6 +171,11 @@
         <recipe key="5ade406d-4de8-4d22-bdaa-174f188e59cc">
             <cases>
                 <id>46</id>
+            </cases>
+        </recipe>
+        <recipe key="0adf072a-3183-4a01-a5d8-1068634734fb">
+            <cases>
+                <id>58</id>
             </cases>
         </recipe>
     </recipes>
