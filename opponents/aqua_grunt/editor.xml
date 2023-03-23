@@ -155,6 +155,7 @@
         <note id="258">This shouldn't play when MG is on the table, as she would react to MG instead.</note>
         <note id="271">Needs a better pose for the situation, going to replace this one later.</note>
         <note id="272">Needs different poses</note>
+        <note id="646">Pffff! Hahaha! Oh, that's amazing. The nerd that thinks the world is a video game is trying to make me feel bad. </note>
     </notes>
     <labels>
         <label id="1" label="" folder="Generic" sort="0" />
@@ -730,16 +731,34 @@
         <label id="624" label="" folder="Ringo" sort="0" />
         <label id="625" label="" folder="Aaravi" sort="0" />
         <label id="626" label="" folder="Aaravi" sort="0" />
-        <label id="627" label="" color="1" folder="Aqua_KH" sort="0" />
+        <label id="627" label="" color="3" folder="Aqua_KH" sort="0" />
         <label id="628" label="" folder="Dunban" sort="0" />
-        <label id="629" label="" color="1" folder="Amy_DDLC" sort="0" />
-        <label id="630" label="" color="1" folder="Amy_DDLC" sort="0" />
+        <label id="629" label="" color="0" folder="Amy_DDLC" sort="0" />
+        <label id="630" label="" color="0" folder="Amy_DDLC" sort="0" />
+        <label id="631" label="" folder="Caulfila" sort="0" />
+        <label id="632" label="" folder="Caulfila" sort="0" />
+        <label id="633" label="" folder="Caulfila" sort="0" />
+        <label id="634" label="" folder="Caulfila" sort="0" />
+        <label id="635" label="" folder="Caulfila" sort="0" />
+        <label id="636" label="" folder="Caulfila" sort="0" />
+        <label id="637" label="" folder="Caulfila" sort="0" />
+        <label id="638" label="" folder="Caulfila" sort="0" />
+        <label id="639" label="" folder="Caulfila" sort="0" />
+        <label id="640" label="" folder="Caulfila" sort="0" />
+        <label id="641" label="" folder="Amy_DDLC" sort="0" />
+        <label id="642" label="" folder="Amy_DDLC" sort="0" />
+        <label id="643" label="" folder="Caulfila" sort="0" />
+        <label id="644" label="" folder="Caulfila" sort="0" />
+        <label id="645" label="" folder="Aqua_KH" sort="0" />
+        <label id="646" label="" color="1" folder="Aaravi" sort="0" />
+        <label id="647" label="" color="1" folder="Aaravi" sort="0" />
     </labels>
-    <nextId>630</nextId>
+    <nextId>647</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="AaraviPartyCrasherA" />
+        <marker scope="Public" name="AaraviPartyCrasherB" />
         <marker scope="Public" name="AaraviPlayerAttentionA" />
+        <marker scope="Public" name="AaraviPlayerAttentionB" />
         <marker scope="Public" name="ag_" />
         <marker scope="Public" name="AG_" />
         <marker scope="Public" name="AG_Ahri1" />
@@ -761,6 +780,18 @@
         <marker scope="Public" name="AG_Butt" />
         <marker scope="Public" name="AG_Butt_School" />
         <marker scope="Public" name="AG_Butt_Tease" />
+        <marker scope="Public" name="AG_Caulifla_Cute1" />
+        <marker scope="Public" name="AG_Caulifla_end" />
+        <marker scope="Public" name="AG_Caulifla_name1A" />
+        <marker scope="Public" name="AG_Caulifla_name1B" />
+        <marker scope="Public" name="AG_Caulifla_name1C" />
+        <marker scope="Public" name="AG_Caulifla_Poke" />
+        <marker scope="Public" name="AG_Caulifla_Poke1B" />
+        <marker scope="Public" name="AG_Caulifla_Poke1C" />
+        <marker scope="Public" name="AG_Caulifla_TheGang1A" />
+        <marker scope="Public" name="AG_Caulifla_TheGang1B" />
+        <marker scope="Public" name="AG_Caulifla_TheGang1C" />
+        <marker scope="Public" name="AG_Caulifla_TheGang1D" />
         <marker scope="Public" name="AG_Compliment_respond" />
         <marker scope="Public" name="ag_deal1" />
         <marker scope="Public" name="AG_Deez" />
@@ -804,6 +835,8 @@
         <marker scope="Public" name="AG_Mari_lust" />
         <marker scope="Public" name="AG_Mari_lust_keepup" />
         <marker scope="Public" name="AG_Mari_lust_plan" />
+        <marker scope="Public" name="AG_May_Familar1" />
+        <marker scope="Public" name="AG_May_Familar2" />
         <marker scope="Public" name="ag_meia_a1" />
         <marker scope="Public" name="ag_meia_b1" />
         <marker scope="Public" name="AG_MG_Candy" />
@@ -909,7 +942,11 @@
         <marker scope="Public" name="ag_yuno_strip0b" />
         <marker scope="Public" name="ag_zoe_a1" />
         <marker scope="Public" name="AG0_a" />
+        <marker scope="Public" name="AG01" />
+        <marker scope="Public" name="AG02" />
         <marker scope="Public" name="ag02_recruit" />
+        <marker scope="Public" name="AG03" />
+        <marker scope="Public" name="AG11" />
         <marker scope="Public" name="ag21" />
         <marker scope="Public" name="agcostume" />
         <marker scope="Public" name="AGDawnDiscover01" />
@@ -977,6 +1014,7 @@
         <marker scope="Public" name="aq_wrong_place" />
         <marker scope="Public" name="aqua_0a" />
         <marker scope="Public" name="Aqua_and_AquaA1" />
+        <marker scope="Public" name="Aqua_and_AquaA2" />
         <marker scope="Public" name="aqua_grunt_moon__tangled" />
         <marker scope="Public" name="aqua_grunt_moon__tangled_A1" />
         <marker scope="Public" name="aqua_grunt0_respond" />
@@ -1014,6 +1052,7 @@
         <marker scope="Public" name="cag_cute" />
         <marker scope="Public" name="cag_optimism" />
         <marker scope="Public" name="CantSwim_ag" />
+        <marker scope="Public" name="Caulifla_AG_AGOut1" />
         <marker scope="Public" name="CD_Minion1" />
         <marker scope="Public" name="CD_minnion" />
         <marker scope="Public" name="Chubby_transformation_ag" />
