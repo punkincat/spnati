@@ -173,7 +173,7 @@
         <label id="127" label="locker room" folder="" sort="0" />
         <label id="128" label="street" folder="" sort="0" />
         <label id="131" label="" folder="Default Outfit" sort="15" />
-        <label id="132" label="" folder="Default Outfit" sort="7" />
+        <label id="132" label="" folder="Elesa to left" sort="7" />
         <label id="133" label="" folder="Swimsuit Server" sort="10" />
         <label id="134" label="" folder="Default Outfit" sort="17" />
         <label id="135" label="" folder="Default Outfit" sort="13" />
@@ -241,6 +241,46 @@
         <label id="220" label="" folder="Nagatoro to left" sort="0" />
         <label id="221" label="" folder="Nagatoro to left" sort="0" />
         <label id="222" label="" folder="Nagatoro to left" sort="0" />
+        <label id="223" label="" folder="Jessie to left" sort="0" />
+        <label id="224" label="" folder="Sheena to left" sort="0" />
+        <label id="225" label="" folder="Rin to left" sort="0" />
+        <label id="226" label="" folder="Juri to left" sort="0" />
+        <label id="227" label="" folder="Juri to left" sort="0" />
+        <label id="228" label="" folder="Sayaka to left" sort="0" />
+        <label id="229" label="" folder="Sayaka to left" sort="0" />
+        <label id="230" label="" folder="Sayaka to left" sort="0" />
+        <label id="231" label="" folder="Sayaka to left" sort="0" />
+        <label id="232" label="" folder="Sayaka to left" sort="0" />
+        <label id="233" label="" folder="Juri to left" sort="0" />
+        <label id="186" label="" folder="Anna to left" sort="0" />
+        <label id="234" label="" folder="Juri to left" sort="0" />
+        <label id="235" label="" folder="Jessie to left" sort="0" />
+        <label id="236" label="" folder="Ako to left" sort="0" />
+        <label id="237" label="" folder="Juri to left" sort="0" />
+        <label id="238" label="" folder="Miko to left" sort="0" />
+        <label id="239" label="" folder="Kizuna to left" sort="0" />
+        <label id="240" label="" folder="Nagisa to left" sort="0" />
+        <label id="241" label="" folder="Leggy to left" sort="0" />
+        <label id="188" label="" folder="Aella to left" sort="0" />
+        <label id="125" label="" folder="PA-15 to left" sort="0" />
+        <label id="242" label="" folder="Shimakaze to left" sort="0" />
+        <label id="243" label="" folder="Sakura to left" sort="0" />
+        <label id="185" label="" folder="Anna to left" sort="0" />
+        <label id="189" label="" folder="Arash to left" sort="0" />
+        <label id="178" label="" folder="Neptune to left" sort="0" />
+        <label id="124" label="" folder="Arash to left" sort="0" />
+        <label id="193" label="" folder="Arash to left" sort="0" />
+        <label id="123" label="" folder="Ribbon Girl to left" sort="0" />
+        <label id="187" label="" folder="Rin to left" sort="0" />
+        <label id="244" label="" folder="Fina to left" sort="0" />
+        <label id="122" label="" folder="Arash to left" sort="0" />
+        <label id="191" label="" folder="Dust to left" sort="0" />
+        <label id="245" label="" folder="L'Arachel to left" sort="0" />
+        <label id="204" label="" folder="Fluttershy to left" sort="0" />
+        <label id="246" label="classroom" folder="" sort="0" />
+        <label id="247" label="feminine bedroom" folder="" sort="0" />
+        <label id="248" label="beach in panties" folder="" sort="0" />
+        <label id="249" label="beach winning" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>nugi-epilogue</prefix>
@@ -248,9 +288,8 @@
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>222</nextId>
+    <nextId>249</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Private" name="nickname">Set per-target to allow Nugi-chan to dynamically change nicknames for a character.</marker>
         <marker scope="Public" name="nugi_chan_sheena_we_want_you_to" />
         <marker scope="Public" name="nugi_nagisa_boys_and_girls" />
@@ -287,6 +326,8 @@
         <marker scope="Public" name="nugi-chan_barbara_kind_burn" />
         <marker scope="Public" name="nugi-chan_barbara_prayer_skirt" />
         <marker scope="Public" name="nugi-chan_barbara_rub_off" />
+        <marker scope="Public" name="nugi-chan_beach_sand_in_panties" />
+        <marker scope="Public" name="nugi-chan_beach_sunscreen" />
         <marker scope="Public" name="nugi-chan_bikini_bad_stats" />
         <marker scope="Public" name="nugi-chan_blames_ai">Because Nugi-chan is a web site mascot, she knows that she is digital and has AI.</marker>
         <marker scope="Public" name="nugi-chan_both_extremes" />
@@ -297,11 +338,13 @@
         <marker scope="Public" name="nugi-chan_chara_no_stabbing" />
         <marker scope="Public" name="nugi-chan_chara_no_under_tail" />
         <marker scope="Public" name="nugi-chan_chara_the_slit" />
+        <marker scope="Public" name="nugi-chan_classroom_schooled" />
         <marker scope="Public" name="nugi-chan_corrin_f_panties">Nugi-chan comments that she can see female Corrin's panties.</marker>
         <marker scope="Public" name="nugi-chan_customers">Nugi-chan doesn't normally remove her bikini for customers.</marker>
         <marker scope="Public" name="nugi-chan_cute_couple">Nugi-chan flirts with the player by suggesting that the two of them would make a cute couple.</marker>
         <marker scope="Public" name="nugi-chan_cutest_nude" />
         <marker scope="Public" name="nugi-chan_ddlc_deteled" />
+        <marker scope="Public" name="nugi-chan_default-chan_top" />
         <marker scope="Private" name="nugi-chan_defeated">Tracker to see if Nugi-chan's epilogue was earned in a game or accessed via the epilogue gallery.</marker>
         <marker scope="Public" name="nugi-chan_de-trayed" />
         <marker scope="Public" name="nugi-chan_drink_order" />
@@ -325,6 +368,7 @@
         <marker scope="Public" name="nugi-chan_estelle_tousled">Nugi-chan invites the listener to imagine waking up to messy-haired Estelle.</marker>
         <marker scope="Public" name="nugi-chan_estelle_translucent_shirt" />
         <marker scope="Public" name="nugi-chan_expensive_stockings" />
+        <marker scope="Public" name="nugi-chan_feminine_bedroom_games" />
         <marker scope="Public" name="nugi-chan_fina_bodily_functions" />
         <marker scope="Public" name="nugi-chan_fina_cant_remember" />
         <marker scope="Public" name="nugi-chan_fine_my_gloves" />
@@ -332,6 +376,8 @@
         <marker scope="Private" name="nugi-chan_finished">Nugi-chan has one real "finished" line and a few more that are just banter.</marker>
         <marker scope="Public" name="nugi-chan_fluttershy_boobies" />
         <marker scope="Public" name="nugi-chan_former_glory">Nugi-chan was once 12.5% of the game!</marker>
+        <marker scope="Public" name="nugi-chan_fred_fetish" />
+        <marker scope="Public" name="nugi-chan_fred_thanks" />
         <marker scope="Public" name="nugi-chan_futaba_not_a_fellatrix" />
         <marker scope="Public" name="nugi-chan_garter" />
         <marker scope="Public" name="nugi-chan_gloves_slap">Hypocritically, Nugi-chan says that glove removal is a slap in the face.</marker>
@@ -385,6 +431,7 @@
         <marker scope="Public" name="nugi-chan_miko_job_offer">Nugi-chan sarcasticly reacts to Miko's job offer.</marker>
         <marker scope="Public" name="nugi-chan_miko_search_history" />
         <marker scope="Public" name="nugi-chan_miku_player_cutest" />
+        <marker scope="Public" name="nugi-chan_mileena_epilogue" />
         <marker scope="Public" name="nugi-chan_mine_are_bigger" />
         <marker scope="Public" name="nugi-chan_misato_photography">Nugi-chan tries to extend Mistato's staring permission to flash photography.</marker>
         <marker scope="Public" name="nugi-chan_monika_deleted_clothes">Nugi-chan frets over Monika's suggestion that removed clothing is deleted.</marker>
@@ -418,6 +465,10 @@
         <marker scope="Public" name="nugi-chan_pa-15_praise_me" />
         <marker scope="Public" name="nugi-chan_pa-15_show_some_florence" />
         <marker scope="Public" name="nugi-chan_pa-15_too_technical" />
+        <marker scope="Public" name="nugi-chan_penny_clouds" />
+        <marker scope="Public" name="nugi-chan_penny_mc" />
+        <marker scope="Public" name="nugi-chan_penny_sd" />
+        <marker scope="Public" name="nugi-chan_penny_sd2" />
         <marker scope="Private" name="nugi-chan_privacy_policy">When an embarrassed girl removes her first major item, Nugi-chan says "we've updated your privacy policy".</marker>
         <marker scope="Public" name="nugi-chan_pyrrha_why_here" />
         <marker scope="Public" name="nugi-chan_raven_taste">Nugi-chan wants to taste Raven.</marker>
@@ -468,6 +519,7 @@
         <marker scope="Public" name="nugi-chan_shimakaze_mean_flames">Ideally, the flames would burn off a person's entire outfit.</marker>
         <marker scope="Public" name="nugi-chan_shimakaze_smell_of_burning" />
         <marker scope="Public" name="nugi-chan_shimkaze_nice_boat" />
+        <marker scope="Public" name="nugi-chan_sonya_texas" />
         <marker scope="Public" name="nugi-chan_sph">Nugi-chan makes "SPH" remarks when a male player reveals a small crotch. She has the same comments for male NPCs but does not set a marker to remember this.</marker>
         <marker scope="Public" name="nugi-chan_sph_lifetime">Nugi-chan's bad hand doesn't compare to a lifetime of disappointment.</marker>
         <marker scope="Public" name="nugi-chan_sph_lipstick">Nugi-chan compares the player's small size to her lipstick.</marker>
