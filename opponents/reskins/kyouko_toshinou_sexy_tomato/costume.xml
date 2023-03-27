@@ -13,7 +13,7 @@
     </tags>
     <folder>opponents/reskins/kyouko_toshinou_sexy_tomato/</folder>
     <wardrobe>
-        <clothing name="tank top" generic="shirt" position="upper" type="important" />
+        <clothing name="tank top" generic="shirt" position="upper" type="major" />
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
         <clothing name="onesie" generic="pants" position="lower" type="major" />
         <clothing name="top" position="upper" type="major" />
@@ -31,6 +31,14 @@
         </pose>
         <pose id="1-stripped-happy">
             <sprite id="stripped-b" src="reskins/kyouko_toshinou_sexy_tomato/1-stripped-b.png" x="0" y="0" />
+        </pose>
+        <pose id="1-stripping-calm">
+            <sprite id="stripping-c" src="reskins/kyouko_toshinou_sexy_tomato/1-stripping-c.png" x="0" y="0" />
+            <sprite id="stripping-d" delay="1" src="reskins/kyouko_toshinou_sexy_tomato/1-stripping-d.png" x="-33" y="795" />
+            <directive type="animation" id="stripping-c" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/kyouko_toshinou_sexy_tomato/1-stripping-c.png" />
+                <keyframe time="1" src="reskins/kyouko_toshinou_sexy_tomato/1-stripping-b.png" />
+            </directive>
         </pose>
         <pose id="2-stripped-grin">
             <sprite id="grin" src="reskins/kyouko_toshinou_sexy_tomato/2-grin.png" x="0" y="0" />
@@ -112,12 +120,13 @@
                 <keyframe time="0.75" alpha="0" />
             </directive>
         </pose>
-        <pose id="1-stripping-calm">
-            <sprite id="stripping-c" src="reskins/kyouko_toshinou_sexy_tomato/1-stripping-c.png" x="0" y="0" />
-            <sprite id="stripping-d" delay="1" src="reskins/kyouko_toshinou_sexy_tomato/1-stripping-d.png" x="-33" y="795" />
-            <directive type="animation" id="stripping-c" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/kyouko_toshinou_sexy_tomato/1-stripping-c.png" />
-                <keyframe time="1" src="reskins/kyouko_toshinou_sexy_tomato/1-stripping-b.png" />
+        <pose id="0-stripping_pride">
+            <sprite id="stripping-a" src="reskins/kyouko_toshinou_sexy_tomato/0-stripping-a.png" x="0" y="0" />
+            <sprite id="slippers" delay="2.5" src="reskins/kyouko_toshinou_sexy_tomato/slippers.png" x="225" y="1284" />
+            <directive type="animation" id="stripping-a" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/kyouko_toshinou_sexy_tomato/0-stripping-a.png" />
+                <keyframe time="1" src="reskins/kyouko_toshinou_sexy_tomato/0-stripping-b.png" />
+                <keyframe time="2.5" src="reskins/kyouko_toshinou_sexy_tomato/1-pride.png" />
             </directive>
         </pose>
     </poses>

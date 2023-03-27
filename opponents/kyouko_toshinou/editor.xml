@@ -18,6 +18,9 @@
         <case name="Sexy Poses" id="108" priority="FYI" min="3" max="3">
             <description>Kyouko sometimes pulls "sexy" poses throughout the game to distract the others. Well, sexy for her, maybe.</description>
         </case>
+        <case name="The tomato's birthday" id="142" priority="FYI" min="0" max="0">
+            <description>Kyouko's birthday is March 28</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -64,6 +67,8 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <note id="180">Placeholder to give Nagatoro time to respond. I just wrote this so her sequence makes sense with context from the Must Strip case</note>
         <note id="317">These *should* always get out-prioritized, but I'm not perfect so who knows?</note>
         <note id="341">I'll come back for the other line later. I decided I could at least respond to one since I know where I could go from here.</note>
+        <note id="403">Yes, these are mixed in with the usual opponent masturbating lines.</note>
+        <note id="404">Yes, these are mixed in with the usual opponent masturbating lines.</note>
     </notes>
     <labels>
         <label id="2" label="Imitating Yuno" folder="Target: Yuno Uno" sort="0" />
@@ -421,8 +426,28 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="380" label="" folder="Target: Hatsune Miku" sort="0" />
         <label id="381" label="Kyouko knows a couple" folder="Target: Magical Sempai" sort="0" />
         <label id="382" label="0: Give us a trick" folder="Target: Magical Sempai" sort="0" />
+        <label id="384" label="" folder="Default uniform" sort="0" />
+        <label id="385" label="The three keys to happiness" folder="" sort="0" />
+        <label id="386" label="" folder="Kyouko's birthday" sort="0" />
+        <label id="387" label="Kyouko's birthday (knows player)" folder="" sort="0" />
+        <label id="388" label="Kyouko's birthday (Sexy Tomato)" folder="" sort="0" />
+        <label id="389" label="Kyouko's birthday" folder="" sort="0" />
+        <label id="390" label="Kyouko's birthday (Birthday Backyard)" folder="" sort="0" />
+        <label id="391" label="Kyouko's birthday (player naked)" folder="" sort="0" />
+        <label id="392" label="Kyouko's birthday (player naked)" folder="" sort="0" />
+        <label id="393" label="Kyouko's birthday (only one in a costume)" folder="" sort="0" />
+        <label id="394" label="Ribbon (birthday)" folder="Default uniform" sort="0" />
+        <label id="395" label="Tank top (birthday)" folder="Sexy Tomato" sort="0" />
+        <label id="396" label="Tank top (birthday)" folder="Sexy Tomato" sort="0" />
+        <label id="397" label="Birthday" folder="Costume: Sexy Tomato" sort="0" />
+        <label id="398" label="Birthday (first naked)" folder="Costume: Sexy Tomato" sort="0" />
+        <label id="399" label="Birthday" folder="Costume: Default" sort="0" />
+        <label id="400" label="Birthday (first naked)" folder="Costume: Default" sort="0" />
+        <label id="401" label="Birthday (all naked)" folder="" sort="0" />
+        <label id="402" label="get it cuz she's a tomato and tomatoes go squish" folder="" sort="0" />
+        <label id="405" label="April Fools'" folder="" sort="0" />
     </labels>
-    <nextId>383</nextId>
+    <nextId>405</nextId>
     <markers>
         <marker scope="Private" name="B_">Background-related markers</marker>
         <marker scope="Public" name="B_DarkTricks">Dark backgrounds</marker>
@@ -432,6 +457,8 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Private" name="D_">Random "sometimes" dialogue</marker>
         <marker scope="Public" name="D_AmbiguousLoser" />
         <marker scope="Public" name="D_BadHandTrick">Kyouko will bluff on a good hand once per game.</marker>
+        <marker scope="Public" name="D_Birthday">Her birthday is March 28</marker>
+        <marker scope="Public" name="D_Birthday_NoCostumes">She's the only one wearing a costume to her party?</marker>
         <marker scope="Public" name="D_BlowingHands" />
         <marker scope="Public" name="D_Boobies">Boobies? Boobies.</marker>
         <marker scope="Public" name="D_CardHint" />
@@ -443,6 +470,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="D_GuessIllDie">Hide the pain</marker>
         <marker scope="Public" name="D_HandLessGood" />
         <marker scope="Public" name="D_HardToNotLose" />
+        <marker scope="Public" name="D_InventoryTime">On her birthday, Kyouko remembers that time just doesn't pass (like in her series; yes, that's canon)</marker>
         <marker scope="Public" name="D_Items">Throwing items into a game of poker</marker>
         <marker scope="Public" name="D_LightningRounds" />
         <marker scope="Public" name="D_LittleCardClub" />
@@ -474,6 +502,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="Q_SkinnyDipping">The water's right there. You might as well.</marker>
         <marker scope="Private" name="S_">Self strip related</marker>
         <marker scope="Public" name="S_AnimalPajamas">Self Stripping 1 (Sexy Tomato)</marker>
+        <marker scope="Public" name="S_BirthdayUniform">Self Must Strip - First to get "in uniform" on her birthday</marker>
         <marker scope="Public" name="S_FullTomato">Self Stripped - Both her bra and panties—tomato themed—are visible. (Default outfit)</marker>
         <marker scope="Public" name="S_GodivaHair">Early in first topless stage - the barely visible nipples</marker>
         <marker scope="Public" name="S_NoRibbonOrSidetails">First hand on stage 7 - Kyouko took away her ribbon and sidetails at the same time, making a pretty jarring change of appearance. (Default outfit)</marker>
@@ -515,6 +544,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Mari_Strip0WhoAmI">Self Stripping 0</marker>
         <marker scope="Public" name="T_Mari_TStrip3Brother">Mari Must Strip 3</marker>
         <marker scope="Public" name="T_Mari_TStrip3FriendsSisters">Mari Stripping 3</marker>
+        <marker scope="Public" name="T_Miko_Strip0Necessities">Self Stripping 0</marker>
         <marker scope="Public" name="T_Miko_Strip0Refined">Self Must Strip 0</marker>
         <marker scope="Public" name="T_Nagatoro_SkillIssue">Rosalina says "hi"</marker>
         <marker scope="Public" name="T_Nagatoro_Strip0DrawingPlans">Self Stripping 0</marker>
