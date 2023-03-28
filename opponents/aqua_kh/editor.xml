@@ -10,7 +10,7 @@
             <description>Aqua decides to take her spats off before her thigh-high socks, saying that she wanted to try and be sexy. She's very shy about it, though.</description>
         </case>
         <case name="Aqua's Keyblade" id="67" priority="MustTarget" min="2" max="2">
-            <description>Aqua summons her Keyblade (Rainfell) for After Stripping in stage 2. She keeps it until she next loses the round. keyblade_reveal is the marker of note here.</description>
+            <description>Aqua summons her Keyblade for After Stripping in stage 2. She keeps it until she next loses the round. keyblade_reveal is the marker of note here. In her default costume, it is called Rainfell.</description>
         </case>
         <case name="Keyblade Magic" id="69" priority="Noteworthy" min="2" max="2">
             <description>Aqua explains that the magic of the Keyblade is what makes it 'sharp' (or 'dangerous'). Perhaps other characters might not take this at face value.</description>
@@ -319,7 +319,7 @@
         <label id="160" label="" folder="Targets" sort="13" />
         <label id="161" label="" folder="Tag Filtered" sort="23" />
         <label id="162" label="" folder="Forfeit Logic" sort="0" />
-        <label id="163" label="" folder="Conditional" sort="0" />
+        <label id="163" label="" folder="Conditional" sort="12" />
         <label id="164" label="" folder="Conditional" sort="2" />
         <label id="165" label="" folder="Responses" sort="8" />
         <label id="166" label="" folder="Responses" sort="9" />
@@ -362,7 +362,7 @@
         <label id="205" label="" color="3" folder="Responses" sort="2" />
         <label id="206" label="" folder="Other Targets" sort="2" />
         <label id="207" label="" folder="Other Targets" sort="3" />
-        <label id="208" label="" folder="FF Targets" sort="0" />
+        <label id="208" label="" folder="FF Targets" sort="2" />
         <label id="209" label="" folder="FF Targets" sort="4" />
         <label id="210" label="look at the lake" folder="Backgrounds" sort="13" />
         <label id="211" label="older sister 1" folder="Responses" sort="11" />
@@ -530,7 +530,7 @@
         <label id="374" label="" folder="Targets" sort="50" />
         <label id="375" label="" folder="Targets" sort="19" />
         <label id="376" label="surface - sand (shoes)" folder="Backgrounds" sort="2" />
-        <label id="377" label="surface - sand (socks)" folder="Backgrounds" sort="0" />
+        <label id="377" label="surface - sand (socks)" folder="Backgrounds" sort="3" />
         <label id="378" label="" folder="Targets" sort="23" />
         <label id="379" label="" folder="Targets" sort="24" />
         <label id="380" label="" folder="Targets" sort="0" />
@@ -628,7 +628,7 @@
         <label id="472" label="0 - cat speech, nyan" folder="Targets" sort="45" />
         <label id="473" label="1 - light magic" folder="Targets" sort="46" />
         <label id="474" label="" folder="Tag Filtered" sort="2" />
-        <label id="475" label="" folder="Tag Filtered" sort="0" />
+        <label id="475" label="" folder="Tag Filtered" sort="2" />
         <label id="476" label="" folder="Targets" sort="63" />
         <label id="477" label="" folder="Situations" sort="2" />
         <label id="478" label="" folder="Targets" sort="49" />
@@ -655,7 +655,7 @@
         <label id="499" label="" folder="Forfeit Logic" sort="2" />
         <label id="500" label="" folder="Conditional" sort="0" />
         <label id="501" label="" folder="Conditional" sort="2" />
-        <label id="502" label="7 - saki 1st head" folder="Head Fall Off" sort="0" />
+        <label id="502" label="7 - saki 1st head" folder="Head Fall Off" sort="10" />
         <label id="503" label="4 - sakura 1st head" folder="Head Fall Off" sort="2" />
         <label id="504" label="3 - nadia 2nd head (after sakura)" folder="Head Fall Off" sort="3" />
         <label id="505" label="7 - saki 2nd head (after sakura)" folder="Head Fall Off" sort="4" />
@@ -679,151 +679,167 @@
         <label id="523" label="" folder="Targets" sort="47" />
         <label id="524" label="Human is Only Male (4+ Players)" folder="Table Setups" sort="0" />
         <label id="525" label="" folder="Table Setups" sort="2" />
-        <label id="526" label="" folder="Conditional" sort="0" />
-        <label id="527" label="1 - cat speech, nyan" folder="Targets" sort="0" />
-        <label id="528" label="2 - light magic" folder="Targets" sort="0" />
-        <label id="529" label="" folder="Backgrounds" sort="0" />
-        <label id="530" label="" folder="Backgrounds" sort="0" />
+        <label id="526" label="" folder="Conditional" sort="2" />
+        <label id="527" label="1 - cat speech, nyan" folder="Targets" sort="86" />
+        <label id="528" label="2 - light magic" folder="Targets" sort="87" />
+        <label id="529" label="" folder="Backgrounds" sort="15" />
+        <label id="530" label="" folder="Backgrounds" sort="2" />
         <label id="531" label="" folder="Backgrounds" sort="0" />
-        <label id="532" label="1 - powers" folder="Queenie" sort="0" />
-        <label id="533" label="" folder="Logic" sort="0" />
+        <label id="532" label="1 - powers" folder="Queenie" sort="6" />
+        <label id="533" label="" folder="Logic" sort="10" />
         <label id="534" label="" folder="Dunban S" sort="0" />
         <label id="535" label="" folder="Forfeit Logic" sort="0" />
         <label id="536" label="short + mean opps" folder="Tag Filtered" sort="0" />
-        <label id="537" label="" folder="Tag Filtered" sort="0" />
-        <label id="538" label="" folder="Tag Filtered" sort="0" />
-        <label id="539" label="" folder="Logic" sort="0" />
-        <label id="540" label="" folder="Tag Filtered" sort="0" />
-        <label id="541" label="" folder="Tag Filtered" sort="0" />
-        <label id="542" label="" folder="Targets" sort="0" />
-        <label id="543" label="" folder="Targets" sort="0" />
-        <label id="544" label="" folder="Prompts" sort="0" />
-        <label id="545" label="" folder="Responses" sort="0" />
-        <label id="546" label="" folder="Responses" sort="0" />
-        <label id="547" label="" color="0" folder="Targets" sort="0" />
-        <label id="548" label="" folder="Responses" sort="0" />
-        <label id="550" label="" folder="Responses" sort="0" />
+        <label id="537" label="" folder="Tag Filtered" sort="35" />
+        <label id="538" label="" folder="Tag Filtered" sort="36" />
+        <label id="539" label="" folder="Logic" sort="11" />
+        <label id="540" label="" folder="Tag Filtered" sort="44" />
+        <label id="541" label="" folder="Tag Filtered" sort="45" />
+        <label id="542" label="" folder="Targets" sort="52" />
+        <label id="543" label="" folder="Targets" sort="53" />
+        <label id="544" label="" folder="Prompts" sort="7" />
+        <label id="545" label="" folder="Responses" sort="71" />
+        <label id="546" label="" folder="Responses" sort="72" />
+        <label id="547" label="" color="0" folder="Targets" sort="82" />
+        <label id="548" label="" folder="Responses" sort="17" />
+        <label id="550" label="" folder="Responses" sort="18" />
         <label id="549" label="" folder="Responses" sort="0" />
-        <label id="551" label="" folder="Responses" sort="0" />
-        <label id="552" label="" folder="Dunban S" sort="0" />
-        <label id="553" label="" folder="Dunban S" sort="0" />
-        <label id="554" label="" folder="Dunban S" sort="0" />
-        <label id="555" label="" folder="Dunban S" sort="0" />
-        <label id="556" label="" folder="Dunban S" sort="0" />
-        <label id="557" label="" folder="Dunban S" sort="0" />
-        <label id="558" label="" folder="Responses" sort="0" />
-        <label id="559" label="" folder="Responses" sort="0" />
-        <label id="560" label="" folder="Responses" sort="0" />
-        <label id="561" label="" folder="Targets" sort="0" />
-        <label id="562" label="" folder="Backgrounds" sort="0" />
-        <label id="563" label="" folder="Targets" sort="0" />
-        <label id="564" label="" folder="Targets" sort="0" />
-        <label id="565" label="" folder="Opponents" sort="0" />
-        <label id="566" label="" folder="Targets" sort="0" />
-        <label id="567" label="" folder="Situations" sort="0" />
-        <label id="568" label="" folder="Opponents" sort="0" />
-        <label id="569" label="" folder="Opponents" sort="0" />
-        <label id="570" label="" folder="Targets" sort="0" />
-        <label id="571" label="" folder="Targets" sort="0" />
-        <label id="572" label="" folder="Targets" sort="0" />
-        <label id="573" label="" folder="Targets" sort="0" />
-        <label id="574" label="" folder="Targets" sort="0" />
-        <label id="575" label="" folder="Lucina" sort="0" />
-        <label id="576" label="" folder="Lucina" sort="0" />
-        <label id="577" label="" folder="Logic" sort="0" />
-        <label id="578" label="" folder="Lucina" sort="0" />
+        <label id="551" label="" folder="Responses" sort="19" />
+        <label id="552" label="" folder="Dunban S" sort="2" />
+        <label id="553" label="" folder="Dunban S" sort="3" />
+        <label id="554" label="" folder="Dunban S" sort="4" />
+        <label id="555" label="" folder="Dunban S" sort="5" />
+        <label id="556" label="" folder="Dunban S" sort="6" />
+        <label id="557" label="" folder="Dunban S" sort="7" />
+        <label id="558" label="" folder="Responses" sort="20" />
+        <label id="559" label="" folder="Responses" sort="21" />
+        <label id="560" label="" folder="Responses" sort="22" />
+        <label id="561" label="" folder="Targets" sort="83" />
+        <label id="562" label="" folder="Backgrounds" sort="17" />
+        <label id="563" label="" folder="Targets" sort="7" />
+        <label id="564" label="" folder="Targets" sort="93" />
+        <label id="565" label="" folder="Opponents" sort="16" />
+        <label id="566" label="" folder="Targets" sort="104" />
+        <label id="567" label="" folder="Situations" sort="3" />
+        <label id="568" label="" folder="Opponents" sort="5" />
+        <label id="569" label="" folder="Opponents" sort="9" />
+        <label id="570" label="" folder="Targets" sort="29" />
+        <label id="571" label="" folder="Targets" sort="15" />
+        <label id="572" label="" folder="Targets" sort="30" />
+        <label id="573" label="" folder="Targets" sort="94" />
+        <label id="574" label="" folder="Targets" sort="105" />
+        <label id="575" label="" folder="Lucina" sort="5" />
+        <label id="576" label="" folder="Lucina" sort="6" />
+        <label id="577" label="" folder="Logic" sort="12" />
+        <label id="578" label="" folder="Lucina" sort="3" />
         <label id="579" label="" folder="Lucina" sort="0" />
-        <label id="580" label="" folder="Lucina" sort="0" />
-        <label id="581" label="" folder="Lucina" sort="0" />
-        <label id="582" label="" folder="Responses" sort="0" />
-        <label id="583" label="" folder="Responses" sort="0" />
-        <label id="584" label="" folder="Targets" sort="0" />
-        <label id="585" label="" folder="Targets" sort="0" />
-        <label id="586" label="" folder="Targets" sort="0" />
-        <label id="587" label="" folder="Targets" sort="0" />
-        <label id="588" label="" folder="Conditional" sort="0" />
-        <label id="589" label="" folder="Human" sort="0" />
-        <label id="590" label="GOOD BOY/GIRL" folder="Player Names" sort="0" />
-        <label id="591" label="" folder="Human" sort="0" />
-        <label id="129" label="Last Round (Tie)" folder="Conditional" sort="0" />
-        <label id="130" label="Last Round (Tie)" folder="Conditional" sort="0" />
-        <label id="592" label="Possible Last Round (Self Still in Game)" folder="Conditional" sort="0" />
-        <label id="593" label="Absolute Last Round (Self Still in Game)" folder="Conditional" sort="0" />
-        <label id="594" label="" folder="Responses" sort="0" />
-        <label id="595" label="" folder="Table Setups" sort="0" />
-        <label id="596" label="" folder="Responses" sort="0" />
-        <label id="597" label="" folder="FF Targets" sort="0" />
-        <label id="598" label="" folder="Opponents" sort="0" />
-        <label id="599" label="" folder="Targets" sort="0" />
-        <label id="600" label="" folder="Targets" sort="0" />
-        <label id="601" label="" folder="Targets" sort="0" />
-        <label id="602" label="" folder="Human" sort="0" />
-        <label id="603" label="" folder="Human" sort="0" />
-        <label id="604" label="" folder="Human" sort="0" />
-        <label id="605" label="" folder="Human" sort="0" />
-        <label id="606" label="" folder="Human" sort="0" />
+        <label id="580" label="" folder="Lucina" sort="2" />
+        <label id="581" label="" folder="Lucina" sort="4" />
+        <label id="582" label="" folder="Responses" sort="35" />
+        <label id="583" label="" folder="Responses" sort="60" />
+        <label id="584" label="" folder="Targets" sort="98" />
+        <label id="585" label="" folder="Targets" sort="99" />
+        <label id="586" label="" folder="Targets" sort="16" />
+        <label id="587" label="" folder="Targets" sort="32" />
+        <label id="588" label="" folder="Conditional" sort="14" />
+        <label id="589" label="" folder="Human" sort="22" />
+        <label id="590" label="GOOD BOY/GIRL" folder="Player Names" sort="3" />
+        <label id="591" label="" folder="Human" sort="19" />
+        <label id="129" label="Last Round (Tie)" folder="Conditional" sort="6" />
+        <label id="130" label="Last Round (Tie)" folder="Conditional" sort="7" />
+        <label id="592" label="Possible Last Round (Self Still in Game)" folder="Conditional" sort="4" />
+        <label id="593" label="Absolute Last Round (Self Still in Game)" folder="Conditional" sort="5" />
+        <label id="594" label="" folder="Responses" sort="36" />
+        <label id="595" label="" folder="Table Setups" sort="3" />
+        <label id="596" label="" folder="Responses" sort="88" />
+        <label id="597" label="" folder="FF Targets" sort="5" />
+        <label id="598" label="" folder="Opponents" sort="17" />
+        <label id="599" label="" folder="Targets" sort="54" />
+        <label id="600" label="" folder="Targets" sort="55" />
+        <label id="601" label="" folder="Targets" sort="56" />
+        <label id="602" label="" folder="Human" sort="23" />
+        <label id="603" label="" folder="Human" sort="24" />
+        <label id="604" label="" folder="Human" sort="27" />
+        <label id="605" label="" folder="Human" sort="26" />
+        <label id="606" label="" folder="Human" sort="25" />
         <label id="607" label="" folder="Human" sort="0" />
-        <label id="608" label="" folder="Human" sort="0" />
-        <label id="609" label="" folder="Tag Filtered" sort="0" />
+        <label id="608" label="" folder="Human" sort="28" />
+        <label id="609" label="" folder="Tag Filtered" sort="50" />
         <label id="610" label="play once lines 2" folder="" sort="0" />
-        <label id="611" label="" folder="Conditional" sort="0" />
-        <label id="612" label="" folder="Conditional" sort="0" />
-        <label id="613" label="" folder="Forfeit Follow-ups" sort="0" />
-        <label id="614" label="" folder="Responses" sort="0" />
-        <label id="615" label="" folder="Targets" sort="0" />
-        <label id="616" label="" folder="Prompts" sort="0" />
-        <label id="617" label="" folder="Responses" sort="0" />
-        <label id="618" label="" folder="Prompts" sort="0" />
-        <label id="619" label="" folder="Prompts" sort="0" />
-        <label id="620" label="" folder="Prompts" sort="0" />
-        <label id="621" label="" folder="Targets" sort="0" />
-        <label id="622" label="" folder="Targets" sort="0" />
-        <label id="623" label="" folder="Responses" sort="0" />
-        <label id="624" label="" folder="Responses" sort="0" />
-        <label id="625" label="" folder="Responses" sort="0" />
-        <label id="626" label="self 1, meia + jura" folder="Responses" sort="0" />
-        <label id="627" label="" folder="Responses" sort="0" />
-        <label id="628" label="" folder="Responses" sort="0" />
-        <label id="629" label="" folder="Responses" sort="0" />
-        <label id="630" label="" folder="Responses" sort="0" />
-        <label id="631" label="" folder="Responses" sort="0" />
-        <label id="632" label="" folder="Responses" sort="0" />
-        <label id="633" label="" folder="FF Targets" sort="0" />
+        <label id="611" label="" folder="Conditional" sort="16" />
+        <label id="612" label="" folder="Conditional" sort="17" />
+        <label id="613" label="" folder="Forfeit Follow-ups" sort="5" />
+        <label id="614" label="" folder="Responses" sort="70" />
+        <label id="615" label="" folder="Targets" sort="31" />
+        <label id="616" label="" folder="Prompts" sort="14" />
+        <label id="617" label="" folder="Responses" sort="89" />
+        <label id="618" label="" folder="Prompts" sort="10" />
+        <label id="619" label="" folder="Prompts" sort="11" />
+        <label id="620" label="" folder="Prompts" sort="12" />
+        <label id="621" label="" folder="Targets" sort="63" />
+        <label id="622" label="" folder="Targets" sort="64" />
+        <label id="623" label="" folder="Responses" sort="23" />
+        <label id="624" label="" folder="Responses" sort="37" />
+        <label id="625" label="" folder="Responses" sort="38" />
+        <label id="626" label="self 1, meia + jura" folder="Responses" sort="5" />
+        <label id="627" label="" folder="Responses" sort="24" />
+        <label id="628" label="" folder="Responses" sort="39" />
+        <label id="629" label="" folder="Responses" sort="40" />
+        <label id="630" label="" folder="Responses" sort="41" />
+        <label id="631" label="" folder="Responses" sort="42" />
+        <label id="632" label="" folder="Responses" sort="25" />
+        <label id="633" label="" folder="FF Targets" sort="8" />
         <label id="634" label="" folder="FF Targets" sort="0" />
-        <label id="635" label="1 - powers" folder="Queenie" sort="0" />
-        <label id="636" label="2 - the heart" folder="Queenie" sort="0" />
+        <label id="635" label="1 - powers" folder="Queenie" sort="8" />
+        <label id="636" label="2 - the heart" folder="Queenie" sort="7" />
         <label id="637" label="" folder="Logic" sort="0" />
         <label id="638" label="" folder="Aqua Grunt" sort="0" />
-        <label id="639" label="" folder="Opponents" sort="0" />
-        <label id="640" label="" folder="Opponents" sort="0" />
-        <label id="641" label="" folder="FF Targets" sort="0" />
-        <label id="642" label="" folder="Responses" sort="0" />
-        <label id="643" label="" folder="Responses" sort="0" />
-        <label id="644" label="" folder="Responses" sort="0" />
-        <label id="645" label="" folder="Responses" sort="0" />
-        <label id="646" label="" folder="Responses" sort="0" />
-        <label id="647" label="" folder="Targets" sort="0" />
-        <label id="648" label="" folder="Targets" sort="0" />
-        <label id="649" label="" folder="Targets" sort="0" />
-        <label id="650" label="" folder="Responses" sort="0" />
-        <label id="651" label="" folder="Responses" sort="0" />
-        <label id="652" label="" folder="Responses" sort="0" />
-        <label id="653" label="" folder="Responses" sort="0" />
-        <label id="655" label="" folder="Responses" sort="0" />
-        <label id="656" label="" folder="Responses" sort="0" />
-        <label id="657" label="" color="3" folder="Targets" sort="0" />
+        <label id="639" label="" folder="Opponents" sort="18" />
+        <label id="640" label="" folder="Opponents" sort="19" />
+        <label id="641" label="" folder="FF Targets" sort="6" />
+        <label id="642" label="" folder="Responses" sort="61" />
+        <label id="643" label="" folder="Responses" sort="8" />
+        <label id="644" label="" folder="Responses" sort="43" />
+        <label id="645" label="" folder="Responses" sort="44" />
+        <label id="646" label="" folder="Responses" sort="4" />
+        <label id="647" label="" folder="Targets" sort="12" />
+        <label id="648" label="" folder="Targets" sort="13" />
+        <label id="649" label="" folder="Targets" sort="74" />
+        <label id="650" label="" folder="Responses" sort="62" />
+        <label id="651" label="" folder="Responses" sort="63" />
+        <label id="652" label="" folder="Responses" sort="46" />
+        <label id="653" label="" folder="Responses" sort="52" />
+        <label id="655" label="" folder="Responses" sort="53" />
+        <label id="656" label="" folder="Responses" sort="64" />
+        <label id="657" label="" color="3" folder="Targets" sort="65" />
         <label id="658" label="" color="3" folder="Targets" sort="0" />
-        <label id="659" label="" folder="Targets" sort="0" />
+        <label id="659" label="" folder="Targets" sort="57" />
+        <label id="660" label="" folder="Epilogue Logic" sort="0" />
+        <label id="661" label="" folder="Logic" sort="0" />
+        <label id="662" label="" folder="Tag Filtered" sort="0" />
+        <label id="663" label="" folder="Tag Filtered" sort="0" />
+        <label id="664" label="" folder="Tag Filtered" sort="0" />
+        <label id="665" label="" folder="Tag Filtered" sort="0" />
+        <label id="666" label="" folder="Tag Filtered" sort="0" />
+        <label id="667" label="" folder="Tag Filtered" sort="0" />
+        <label id="668" label="" folder="Tag Filtered" sort="0" />
+        <label id="669" label="" folder="Tag Filtered" sort="0" />
+        <label id="670" label="" folder="Responses" sort="0" />
+        <label id="671" label="" folder="Responses" sort="0" />
+        <label id="672" label="" folder="Aqua Grunt" sort="0" />
+        <label id="673" label="" folder="Generic" sort="0" />
     </labels>
-    <nextId>659</nextId>
+    <nextId>673</nextId>
     <markers>
         <marker scope="Public" name="__lucina_nickname" />
+        <marker scope="Public" name="ag_aquaKH_strip0b" />
         <marker scope="Public" name="aqua_aaravi_hydro1" />
         <marker scope="Public" name="aqua_aaravi_lore1" />
         <marker scope="Public" name="aqua_aaravi_scars_react" />
         <marker scope="Public" name="aqua_aaravi_unqualified1" />
         <marker scope="Public" name="aqua_adora_horde01" />
         <marker scope="Public" name="aqua_adora_sword01" />
+        <marker scope="Public" name="aqua_ag_self0b" />
         <marker scope="Public" name="aqua_aloy_historyPromptResp" />
         <marker scope="Public" name="aqua_aloy_self0a" />
         <marker scope="Public" name="aqua_anatoly_gregorFrenResp" />
@@ -1057,11 +1073,16 @@
         <marker scope="Public" name="burning_up">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Public" name="butt_pose">Showing off her butt pose</marker>
         <marker scope="Public" name="cag_forfeitstart" />
+        <marker scope="Public" name="chestfemale_cold_background" />
+        <marker scope="Public" name="chestmale_beach_topless_male" />
+        <marker scope="Public" name="chestmale_beach_topless_male_selfNOTtopless" />
+        <marker scope="Public" name="chestmale_beach_topless_male_selftopless" />
         <marker scope="Public" name="cunt">Hearing someone else say the word "cunt" while she is masturbating puts her off</marker>
         <marker scope="Public" name="doesnt_have_time" />
         <marker scope="Public" name="dunban_aqua_ffHeavy4_Resp" />
         <marker scope="Public" name="dunban_specialflirting" />
         <marker scope="Public" name="enemies_drop_money" />
+        <marker scope="Public" name="epilogue_bonus_unlock" />
         <marker scope="Public" name="first_out_01">Chooses a line related to her being the first one to forfeit</marker>
         <marker scope="Public" name="first_out_02">Chooses a line related to her being the first one to forfeit</marker>
         <marker scope="Public" name="first_out_03">Chooses a line related to her being the first one to forfeit</marker>
@@ -1087,8 +1108,19 @@
         <marker scope="Public" name="hand_keybladearmor2">A follow-up to her previous line about Keyblade Armor</marker>
         <marker scope="Public" name="hand_place_to_stay">Ramblings about finding somewhere to settle down out of all the worlds she can visit</marker>
         <marker scope="Public" name="hand_place_to_stay2">Ramblings about finding somewhere to settle down out of all the worlds she can visit</marker>
+        <marker scope="Public" name="handany_beach_destiny_islands" />
+        <marker scope="Public" name="handany_classroom" />
+        <marker scope="Public" name="handany_daytime_beach" />
+        <marker scope="Public" name="handany_haunted_forest_ROD" />
+        <marker scope="Public" name="handany_hot_outdoors" />
+        <marker scope="Public" name="handany_hot_spring" />
+        <marker scope="Public" name="handany_outdoor_cold" />
+        <marker scope="Public" name="handany_outdoors_barefeet" />
+        <marker scope="Public" name="handany_roof" />
+        <marker scope="Public" name="handany_tiki_bar" />
         <marker scope="Public" name="handbad_fade_into_darkness">Tries to make a joke about her time in the realm of darkness. oof.</marker>
         <marker scope="Public" name="handbad_mark_of_mastery">Bad hand line about her mark of mastery exam vs her skill here.</marker>
+        <marker scope="Public" name="hanyany_water_generic" />
         <marker scope="Public" name="headfalloff_1" />
         <marker scope="Public" name="high_card_7">Has gotten the worst possible hand out of them all.</marker>
         <marker scope="Public" name="ignoring_pervert">Ignoring a perverted character (that is attracted to her) during her forfeit</marker>
@@ -1118,6 +1150,12 @@
         <marker scope="Public" name="nagatoro_player_stalker" />
         <marker scope="Public" name="one_v_one" />
         <marker scope="Public" name="opp_criminal_lostAll" />
+        <marker scope="Public" name="opp_cushion_self_finished" />
+        <marker scope="Public" name="opp_has_tail_removing_lower_item" />
+        <marker scope="Public" name="opp_has_tail_removing_lower_itemB" />
+        <marker scope="Public" name="opp_intercourse_going_at_it" />
+        <marker scope="Public" name="opp_intercourse_no_advice" />
+        <marker scope="Public" name="opp_intercourse_no_harm" />
         <marker scope="Public" name="opp_maidUniform_naked" />
         <marker scope="Public" name="opp_sleepwear" />
         <marker scope="Public" name="opp_tag_ears_notfurry" />
@@ -1131,6 +1169,7 @@
         <marker scope="Public" name="saki_headfalloff" />
         <marker scope="Public" name="sakura_headfalloff" />
         <marker scope="Public" name="sand_in_shoes" />
+        <marker scope="Public" name="santa_hat_on_the_beach" />
         <marker scope="Public" name="selected_aqua_konosuba">Aqua from Konosuba just got selected as an opponent</marker>
         <marker scope="Public" name="selected_hauntedforest" />
         <marker scope="Public" name="self_getting_into_it" />
