@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,7 +8,7 @@ namespace SPNATI_Character_Editor
 {
 	public class PoseMap
 	{
-		private bool _initialized;
+		public bool initialized;
 		private Character _character;
 
 		private static readonly Regex _regex = new Regex(@"(\d+)-(.*)");
@@ -19,10 +19,10 @@ namespace SPNATI_Character_Editor
 		{
 			get
 			{
-				if (!_initialized)
+				if (!initialized)
 				{
 					Initialize();
-					_initialized = true;
+					initialized = true;
 				}
 				return _poses;
 			}
@@ -55,7 +55,7 @@ namespace SPNATI_Character_Editor
 			return list;
 		}
 
-		private bool Filter(PoseMapping pose)
+        private bool Filter(PoseMapping pose)
 		{
 			string prefix = Config.PrefixFilter;
 			string key = pose.Key;
@@ -233,10 +233,10 @@ namespace SPNATI_Character_Editor
 			{
 				return null;
 			}
-			if (!_initialized)
+			if (!initialized)
 			{
 				Initialize();
-				_initialized = true;
+				initialized = true;
 			}
 			int stage;
 			string id;
