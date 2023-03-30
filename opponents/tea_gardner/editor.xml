@@ -18,6 +18,9 @@
         <case name="Hang of it" id="26" priority="FYI" min="3" max="3">
             <description>Tea starts to get the hang of the game.</description>
         </case>
+        <case name="Mai Valentine" id="43" priority="Prompt" min="1" max="1">
+            <description>Tea askes if any of the other YGO characters know of Mai, who saw her naked one time.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -42,6 +45,11 @@
         <response id="34" opponent="aoba" opponentId="118" />
         <response id="35" opponent="moon" opponentId="50" />
         <response id="36" opponent="magma_grunt" opponentId="171" />
+        <response id="38" opponent="aoba" opponentId="210" />
+        <response id="39" opponent="shantae" opponentId="7" />
+        <response id="40" opponent="rin_kagamine" opponentId="2" />
+        <response id="41" opponent="sayaka" opponentId="29" />
+        <response id="42" opponent="kyouko_toshinou" opponentId="144" />
     </responses>
     <labels>
         <label id="1" label="" folder="Friends Marker" sort="0" />
@@ -52,11 +60,12 @@
         <label id="7" label="" folder="Backgrounds" sort="0" />
         <label id="8" label="" folder="Backgrounds" sort="0" />
     </labels>
-    <nextId>36</nextId>
+    <nextId>43</nextId>
     <markers>
         <marker scope="Public" name="blue_disk" />
         <marker scope="Public" name="tea_abroad" />
         <marker scope="Public" name="tea_finish_yugi" />
+        <marker scope="Public" name="tea_hands" />
         <marker scope="Public" name="tea_lose_1" />
         <marker scope="Public" name="tea_lose_2" />
         <marker scope="Public" name="tea_lose_3" />
@@ -65,12 +74,24 @@
         <marker scope="Public" name="tea_may_dance" />
         <marker scope="Public" name="tea_may_end" />
         <marker scope="Public" name="tea_may_finish" />
+        <marker scope="Public" name="tea_may_love" />
         <marker scope="Public" name="tea_may_rabbit" />
         <marker scope="Public" name="tea_may_rival" />
+        <marker scope="Public" name="tea_may_self_out" />
         <marker scope="Public" name="tea_may_sleepover" />
         <marker scope="Public" name="tea_may_strip" />
+        <marker scope="Public" name="tea_miku_strip" />
+        <marker scope="Public" name="tea_miku_strip1" />
+        <marker scope="Public" name="tea_sayaka_familiar1" />
+        <marker scope="Public" name="tea_sayaka_familiar2" />
+        <marker scope="Public" name="tea_self_" />
+        <marker scope="Public" name="tea_self_ready" />
+        <marker scope="Public" name="tea_self_shadow" />
         <marker scope="Public" name="tea_start_mast" />
+        <marker scope="Public" name="tea_strip_mai" />
         <marker scope="Public" name="tea_strip_vision" />
         <marker scope="Public" name="tea_yuno_strip1" />
+        <marker scope="Public" name="tea_yuno_strip1a" />
+        <marker scope="Public" name="tea_yuno_strip1b" />
     </markers>
 </metadata>
