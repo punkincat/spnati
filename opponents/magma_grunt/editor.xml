@@ -159,6 +159,7 @@
         <response id="878" opponent="rosa" opponentId="677" />
         <response id="885" opponent="dwight" opponentId="3" />
         <response id="891" opponent="dwight" opponentId="1" />
+        <response id="892" opponent="aqua_kh" opponentId="69" />
     </responses>
     <notes>
         <note id="18">If the player isn't gay, magma grunt slowly starts flirting with them when they strip</note>
@@ -998,6 +999,7 @@
         <label id="888" label="" folder="Targets" sort="0" />
         <label id="889" label="" folder="Targets" sort="0" />
         <label id="890" label="" folder="Targets" sort="0" />
+        <label id="891" label="" folder="Responses" sort="0" />
     </labels>
     <prefixes>
         <prefix>Epilogue_chat</prefix>
@@ -1007,7 +1009,7 @@
         <prefix>Epilogue</prefix>
         <prefix>Burger</prefix>
     </prefixes>
-    <nextId>891</nextId>
+    <nextId>892</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="8_hand_good_prideful">Magma Grunt said something particularly prideful when she was in stage 8, and might be setting herself up for failure.</marker>
@@ -1122,6 +1124,7 @@
         <marker scope="Public" name="idle_tag_opp_silent" />
         <marker scope="Public" name="idle_wifi_password" />
         <marker scope="Private" name="increment_marker">An incremental marker</marker>
+        <marker scope="Public" name="keyblade_gayblade" />
         <marker scope="Public" name="logic_game_finished">Uses Index counting logic (e.g. game 1 = marker 0) Counts how many times the player has finished a full game against the Magma Grunt (to the very end incl. last lines of dialogue)</marker>
         <marker scope="Public" name="logic_player_strip_counter" />
         <marker scope="Public" name="logic_reset_markers" />
