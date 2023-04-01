@@ -259,6 +259,8 @@
         <response id="1029" opponent="nagatoro" opponentId="459" />
         <response id="1030" opponent="nagatoro" opponentId="461" />
         <response id="1031" opponent="nagatoro" opponentId="460" />
+        <response id="1042" opponent="bobobo" opponentId="93" />
+        <response id="1044" opponent="bobobo" opponentId="43" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1234,13 +1236,18 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1038" label="princess" folder="" sort="0" />
         <label id="1039" label="default outfit" folder="" sort="0" />
         <label id="1040" label="default outfit" folder="" sort="0" />
+        <label id="1041" label="" folder="Bobobo to left" sort="0" />
+        <label id="1042" label="" folder="Bobobo to left" sort="0" />
+        <label id="1043" label="" folder="Bobobo to right" sort="0" />
+        <label id="1044" label="" folder="Bobobo to left" sort="0" />
+        <label id="1045" label="" folder="Bobobo to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1040</nextId>
+    <nextId>1045</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1431,6 +1438,11 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_blake_cute_ears" />
         <marker scope="Public" name="nagisa_blake_playing_with_mom" />
         <marker scope="Public" name="nagisa_blurts_59_question" />
+        <marker scope="Public" name="nagisa_bobobo_bn_b2" />
+        <marker scope="Public" name="nagisa_bobobo_bn_b8" />
+        <marker scope="Public" name="nagisa_bobobo_bn_b9" />
+        <marker scope="Public" name="nagisa_bobobo_nb_b2" />
+        <marker scope="Public" name="nagisa_bobobo_texting" />
         <marker scope="Public" name="nagisa_bowsette_dress_torn_off" />
         <marker scope="Public" name="nagisa_brock_careful_where_you_point_that" />
         <marker scope="Public" name="nagisa_brock_non-violent_solution" />
