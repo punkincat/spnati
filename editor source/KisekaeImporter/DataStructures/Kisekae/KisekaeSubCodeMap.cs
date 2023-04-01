@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace KisekaeImporter
 {
@@ -32,6 +32,9 @@ namespace KisekaeImporter
 				case "r":
 					return typeof(KisekaeHair);
 				case "ca":
+				case "cc":
+				case "cd":
+				case "ce":
 				case "da":
 				case "db":
 				case "dd":
