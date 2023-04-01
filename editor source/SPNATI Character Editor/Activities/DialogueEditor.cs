@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using SPNATI_Character_Editor.Controls;
 using SPNATI_Character_Editor.Forms;
 using System;
@@ -568,5 +568,10 @@ namespace SPNATI_Character_Editor.Activities
 				}
 			}
 		}
-	}
+
+        private void cmdRefreshImages_Click(object sender, EventArgs e)
+        {
+			_character.PoseLibrary.initialized = false;
+        }
+    }
 }
