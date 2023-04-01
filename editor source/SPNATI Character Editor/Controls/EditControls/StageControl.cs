@@ -1,4 +1,4 @@
-using Desktop;
+﻿using Desktop;
 using Desktop.CommonControls;
 using Desktop.Skinning;
 using System;
@@ -16,30 +16,13 @@ namespace SPNATI_Character_Editor
 		private string _alternateProperty;
 		private MemberInfo _alternateMember;
 		private string _skinVariable;
-		private Costume _costumeSelected;
 
 		public StageControl()
 		{
 			InitializeComponent();
 			cboFrom.KeyMember = "Id";
 			cboTo.KeyMember = "Id";
-            recRefCostume.RecordType = typeof(Costume);
-            recRefCostume.RecordFilter = FilterRefCostume;
 		}
-
-        private bool FilterRefCostume(IRecord record)
-		{  
-
-             string key = _sourceMember.GetValue(Data)?.ToString();
-             Character character = CharacterDatabase.Get(key);
-
-             if (character == null)
-             {
-                    return true;
-             }
-             Costume costume = record as Costume;
-             return costume.Character == character || costume.Key == "default";
-        }
 
 		protected override void OnSetParameters(EditControlAttribute parameters)
 		{
@@ -82,7 +65,7 @@ namespace SPNATI_Character_Editor
 			}
 
 			FillItems();
-			
+
 			string value = GetValue()?.ToString();
 			ApplyValue(value);
 
@@ -263,21 +246,6 @@ namespace SPNATI_Character_Editor
 				}
 			}
 
-            if (_costumeSelected != null)
-            {
-                key = _costumeSelected.Id;
-                if (key == "default")
-                {
-                    return character;
-                }
-
-                Costume costume = CharacterDatabase.GetSkin("opponents/reskins/" + key + "/");
-                if (costume != null)
-                {
-                    return costume;
-                }
-            }
-
 			Case theCase = Data as Case;
 			if (theCase == null)
 			{
@@ -386,12 +354,6 @@ namespace SPNATI_Character_Editor
 		{
 			Save();
 		}
-
-        private void recRefCostume_RecordChanged(object sender, RecordEventArgs e)
-        {
-			_costumeSelected = recRefCostume.Record as Costume;
-			FillItems();
-        }
 	}
 
 	public class StageSelectAttribute : EditControlAttribute
