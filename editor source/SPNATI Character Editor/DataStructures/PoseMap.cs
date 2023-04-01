@@ -55,6 +55,23 @@ namespace SPNATI_Character_Editor
 			return list;
 		}
 
+        public List<PoseMapping> GetPortraitPoses()
+        {
+            List<PoseMapping> list = new List<PoseMapping>();
+            foreach (PoseMapping pose in Poses)
+            {
+                if (pose.ContainsStage(0))
+                {
+                    list.Add(pose);
+                }
+            }
+            if (Config.UsePrefixlessImages)
+            {
+                list.AddRange(GetPoses(-1));
+            }
+            return list;
+        }
+
         private bool Filter(PoseMapping pose)
 		{
 			string prefix = Config.PrefixFilter;
@@ -67,6 +84,10 @@ namespace SPNATI_Character_Editor
 			CharacterEditorData editorData = CharacterDatabase.GetEditorData(_character);
 			if (editorData != null)
 			{
+				if (editorData.OnlyCustomPoses && !key.StartsWith("custom:"))
+				{
+					return true;
+				}
 				foreach (string p in editorData.IgnoredPrefixes)
 				{
 					if (key.StartsWith(p))

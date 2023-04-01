@@ -35,7 +35,8 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			txtFirstName.Text = _character.FirstName;
 			txtLastName.Text = _character.LastName;
-			cboSize.SelectedItem = _character.Size;
+            txtDefaultCostumeName.Text = _character.Metadata.DefaultCostumeName;
+            cboSize.SelectedItem = _character.Size;
 			cboGender.SelectedItem = _character.Gender;
 			if (_character.Metadata.Gender != _character.Gender && !string.IsNullOrEmpty(_character.Metadata.Gender))
 			{
@@ -91,7 +92,7 @@ namespace SPNATI_Character_Editor.Activities
 		private void PopulatePortraitDropdown()
 		{
 			_populatingImages = true;
-			List<PoseMapping> poses = _character.PoseLibrary.GetPoses(0);
+			List<PoseMapping> poses = _character.PoseLibrary.GetPortraitPoses();
 			List<PoseMapping> normalPoses = new List<PoseMapping>();
 
 			foreach (PoseMapping pose in poses)
@@ -134,6 +135,7 @@ namespace SPNATI_Character_Editor.Activities
 			_character.Metadata.Label = txtTitleLabel.Text;
 			_character.FirstName = txtFirstName.Text;
 			_character.LastName = txtLastName.Text;
+			_character.Metadata.DefaultCostumeName = txtDefaultCostumeName.Text;
 			_character.Stamina = (int)valRounds.Value;
 			_character.Gender = cboGender.SelectedItem.ToString();
 			string titleGender = cboTitleGender.SelectedItem?.ToString();
@@ -147,6 +149,7 @@ namespace SPNATI_Character_Editor.Activities
 			CharacterDatabase.GetEditorData(_character).Age = txtAge.Text;
 			CharacterDatabase.GetEditorData(_character).pronunciationGuide = txtpronunciationGuide.Text;
 			_character.Metadata.Source = txtSource.Text;
+			_character.Metadata.DefaultCostumeName = txtDefaultCostumeName.Text;
 			_character.Metadata.Writer = txtWriter.Text;
 			_character.Metadata.Artist = txtArtist.Text;
 			gridAI.Save(ColAIStage);
@@ -223,5 +226,5 @@ namespace SPNATI_Character_Editor.Activities
 			lblPicScale.Visible = true;
 			valPicScale.Visible = true;
 		}
-	}
+    }
 }

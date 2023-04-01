@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -69,6 +69,9 @@ namespace SPNATI_Character_Editor
 		[XmlArray("prefixes")]
 		[XmlArrayItem("prefix")]
 		public List<string> IgnoredPrefixes = new List<string>();
+
+		[XmlElement("onlyCustomPoses")]
+		public bool OnlyCustomPoses;
 
 		[XmlElement("nextId")]
 		/// <summary>
