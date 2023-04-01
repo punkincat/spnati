@@ -224,6 +224,10 @@
         <label id="212" label="" folder="hajime" sort="0" />
         <label id="213" label="" folder="hajime" sort="0" />
         <label id="214" label="" folder="hajime" sort="0" />
+        <label id="215" label="" folder="Oubtound stage 7" sort="0" />
+        <label id="216" label="" folder="Outbound stage 5" sort="0" />
+        <label id="217" label="" folder="Outbound stage 6" sort="0" />
+        <label id="218" label="Joke Forfeit" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>1-</prefix>
@@ -233,8 +237,9 @@
         <prefix>5-</prefix>
         <prefix>6-</prefix>
     </prefixes>
-    <nextId>214</nextId>
+    <nextId>218</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="D">Dialogue, in stage 0.</marker>
         <marker scope="Public" name="D_10thInning" />
         <marker scope="Public" name="D_animalPleasure" />
@@ -249,6 +254,7 @@
         <marker scope="Public" name="D_calmDownMe" />
         <marker scope="Public" name="D_courageStrengthWit" />
         <marker scope="Public" name="D_crib" />
+        <marker scope="Public" name="D_dalaam" />
         <marker scope="Public" name="D_dangerOfTheGame" />
         <marker scope="Public" name="D_deafToValor" />
         <marker scope="Public" name="D_decadesPreparing" />
@@ -269,6 +275,7 @@
         <marker scope="Public" name="D_magicant" />
         <marker scope="Public" name="D_mastForfeit" />
         <marker scope="Public" name="D_materialism" />
+        <marker scope="Public" name="D_moonball" />
         <marker scope="Public" name="D_noEqual" />
         <marker scope="Public" name="D_noLuck" />
         <marker scope="Public" name="D_noPSIprimates" />
@@ -575,8 +582,12 @@
         <marker scope="Public" name="T_cheryl_pS4" />
         <marker scope="Public" name="TI">Targets that are Inbound, responding to targeted lines from opponents.</marker>
         <marker scope="Public" name="TO">Targets that are Outbound, as part of the initiating side of an interaction.</marker>
+        <marker scope="Public" name="TO_" />
         <marker scope="Public" name="TO_azami_collapse" />
         <marker scope="Public" name="TO_azami_critical" />
+        <marker scope="Public" name="TO_azami_goDie" />
+        <marker scope="Public" name="TO_azami_rip" />
+        <marker scope="Public" name="TO_azami_wasntMe" />
         <marker scope="Public" name="TO_blunt4k" />
         <marker scope="Public" name="TO_car_genericStrip" />
         <marker scope="Public" name="TO_car_melodies" />
@@ -600,6 +611,8 @@
         <marker scope="Public" name="TO_pit_select" />
         <marker scope="Public" name="TO_PoG_attack" />
         <marker scope="Public" name="TO_PoG_intro" />
+        <marker scope="Public" name="TO_PoG_nextGuy" />
+        <marker scope="Public" name="TO_PoG_silence" />
         <marker scope="Public" name="TO_queenie_realTransformation" />
         <marker scope="Public" name="TO_queenie_transformation" />
         <marker scope="Public" name="TO_queenie_transformation1" />
