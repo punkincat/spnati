@@ -92,7 +92,7 @@ namespace SPNATI_Character_Editor.Activities
 		private void PopulatePortraitDropdown()
 		{
 			_populatingImages = true;
-			List<PoseMapping> poses = _character.PoseLibrary.GetPoses(0);
+			List<PoseMapping> poses = _character.PoseLibrary.GetPortraitPoses();
 			List<PoseMapping> normalPoses = new List<PoseMapping>();
 
 			foreach (PoseMapping pose in poses)
