@@ -27,6 +27,7 @@ var SPECIAL_CASE_NAMES = {
     "sannytess": "Sanny & Tess",
     "scm": "Suction Cup Man",
     "tea_gardner": "Téa",
+    "toru_hagakure": "Toru",
     "uravity": "Ochako", // nmasp, wtf?
     "wiifitfemale": "Wii Fit Trainer",
     "yshtola": "Y'shtola",
