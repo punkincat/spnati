@@ -210,7 +210,7 @@ function computeMagnetismGroups(opponents) {
         let group = [curOpp];
         if (curOpp.effectiveScore > 0 && curOpp.magnetismTag) {
             let j = 0;
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < 15; i++) {
                 if (j >= opponents.length) break;
                 if (opponents[j].effectiveScore < 0) break;
                 if (opponents[j].magnetismTag == curOpp.magnetismTag) {
@@ -238,27 +238,27 @@ function applyFeaturedSortRules(opponents) {
     var foundMale = false;
     opponents = opponents.slice();
 
-    while (tmp.length < 10 && i < opponents.length) {
+    while (tmp.length < 15 && i < opponents.length) {
         let curOpp = opponents[i];
         if (curOpp.magnetismTag && tmp.some((opp) => opp.magnetismTag == curOpp.magnetismTag)) {
             i++;
             continue;
         }
 
-        foundMale = foundMale || (curOpp.metaGender === "male");
+        foundMale = foundMale || (tmp.length < 5 && curOpp.metaGender === "male");
         tmp.push(opponents.splice(i, 1)[0]);
     }
 
     /* Apply magnetism to remaining opponents and recombine again. */
     var ret = Array.prototype.concat.apply(tmp, computeMagnetismGroups(opponents));
 
-    /* If there isn't already a male in the top 10, pull one up. */
+    /* If there isn't already a male in the top 5, pull one up. */
     if (!foundMale) {
-        for (let i = 10; i < ret.length; i++) {
+        for (let i = 5; i < ret.length; i++) {
             if (ret[i].metaGender === "male") {
-                /* Move opponents[i] to opponents[9]. */
+                /* Move opponents[i] to opponents[4]. */
                 let opp = ret.splice(i, 1)[0];
-                ret.splice(9, 0, opp);
+                ret.splice(4, 0, opp);
                 break;
             }
         }
