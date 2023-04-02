@@ -992,7 +992,7 @@
             <case stage="0">
                 <condition role="target" character="kekko_kamen" />
                 <condition filter="human_male" status="crotch_visible" role="other" character="human" />
-                <state img="custom:stern" marker="kekko_potMeetKettle">Normally, I’d understand the concern.&lt;i&gt;You&lt;/i&gt; don’t have room to say that.</state>
+                <state img="custom:stern" marker="kekko_potMeetKettle">Normally, I’d understand the concern. &lt;i&gt;You&lt;/i&gt; don’t have room to say that.</state>
                 <state img="custom:aside" marker="kekko_potMeetKettle">Haven’t you forfeited the right to say that?</state>
             </case>
             <case stage="0" id="820" priority="444">
@@ -2228,8 +2228,8 @@
         </trigger>
 
         <trigger id="hand">
-            <case stage="0-8 10" id="897">
-                <condition role="opp" character="scm" sayingMarker="scm_kyokokirigiri" priority="150" />
+            <case stage="0-8 10" id="897" priority="150">
+                <condition role="opp" character="scm" sayingMarker="scm_kyokokirigiri" />
                 <condition role="self" notSaidMarker="scm_deduction" />
                 <!-- <test expr="~scm.position~" value="left" /> -->
                 <state img="custom:aside" marker="scm_batDeduction_friends">
@@ -2254,8 +2254,8 @@
                     <text>Based on the posture of your hands, you’ve held a sex toy before…but not for its intended use.</text>
                 </state>
             </case>
-            <case stage="0-8 10" id="898">
-                <condition role="opp" character="scm" sayingMarker="scm_kyokokirigiri" priority="150" />
+            <case stage="0-8 10" id="898" priority="150">
+                <condition role="opp" character="scm" sayingMarker="scm_kyokokirigiri" stage="0-7" />
                 <condition role="self" notSaidMarker="scm_deduction" />
                 <!-- <test expr="~scm.position~" value="left" /> -->
                 <state img="custom:aside" marker="scm_payDeduction">
@@ -2267,8 +2267,8 @@
                     <text>Well, this &lt;is&gt; strip poker, so I can deduct your clothing.</text>
                 </state>
             </case>
-            <case stage="0-8 10" id="899">
-                <condition role="opp" character="scm" sayingMarker="scm_kyokokirigiri" priority="150" />
+            <case stage="0-8 10" id="899" priority="150">
+                <condition role="opp" character="scm" sayingMarker="scm_kyokokirigiri" stage="0" />
                 <condition role="self" notSaidMarker="scm_deduction" />
                 <!-- <test expr="~scm.position~" value="left" /> -->
                 <state img="custom:think" marker="scm_batDeduction_stripOrder">
@@ -8562,7 +8562,7 @@
                         <marker name="kekko_glovesOnly2"/>
                         <marker name="quips" op="+" value="1" />
                     </markers>
-                    <text>I don’t usually wear nothing but my gloves in front of other people myself…&lt;gt&gt;Unless I’m playing strip poker or taking a communal bath to cover up an espionage plot, that is.</text>
+                    <text>I don’t usually wear nothing but my gloves in front of other people myself…&lt;br&gt;Unless I’m playing strip poker or taking a communal bath to cover up an espionage plot, that is.</text>
                 </state>
             </case>
             <case stage="0-10" id="881">
@@ -8574,7 +8574,7 @@
                         <marker name="kekko_glovesOnly2"/>
                         <marker name="quips" op="+" value="1" />
                     </markers>
-                    <text>I don’t usually wear nothing but my gloves in front of other people myself…&lt;gt&gt;Unless I’m playing strip poker, of course.</text>
+                    <text>I don’t usually wear nothing but my gloves in front of other people myself…&lt;br&gt;Unless I’m playing strip poker, of course.</text>
             </state>
             </case>
             <case stage="0-10" id="892">
@@ -9514,7 +9514,7 @@
                 <text>…It’s funny, really. We could only tell how big they were when you actually had them covered.</text>
                 </state>
             </case>
-            <case stage="0-10" priority="0">
+            <case stage="9" priority="0">
                 <condition role="target" character="toru_hagakure" />
                 <condition role="self" filter="bisexual" />
                 <state img="custom:smug" marker="toru_chestB">
@@ -9884,7 +9884,7 @@
             <case stage="0-10" id="895">
                 <condition role="target" character="giygas" />
                 <condition role="self" notSaidMarker="giygas_nwp" />
-                <state marker="giygas_trip">…That’s the last time I accept food from Hiro.</state>
+                <state img="#-shy2.png" marker="giygas_trip">…That’s the last time I accept food from Hiro.</state>
             </case>
             <case stage="0-10" id="896" priority="350">
                 <condition role="target" character="giygas" />
