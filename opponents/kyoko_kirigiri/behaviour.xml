@@ -2228,8 +2228,8 @@
         </trigger>
 
         <trigger id="hand">
-            <case stage="0-8 10" id="897">
-                <condition role="opp" character="scm" sayingMarker="scm_kyokokirigiri" priority="150" />
+            <case stage="0-8 10" id="897" priority="150">
+                <condition role="opp" character="scm" sayingMarker="scm_kyokokirigiri" />
                 <condition role="self" notSaidMarker="scm_deduction" />
                 <!-- <test expr="~scm.position~" value="left" /> -->
                 <state img="custom:aside" marker="scm_batDeduction_friends">
@@ -2254,8 +2254,8 @@
                     <text>Based on the posture of your hands, you’ve held a sex toy before…but not for its intended use.</text>
                 </state>
             </case>
-            <case stage="0-8 10" id="898">
-                <condition role="opp" character="scm" sayingMarker="scm_kyokokirigiri" priority="150" />
+            <case stage="0-8 10" id="898" priority="150">
+                <condition role="opp" character="scm" sayingMarker="scm_kyokokirigiri" stage="0-7" />
                 <condition role="self" notSaidMarker="scm_deduction" />
                 <!-- <test expr="~scm.position~" value="left" /> -->
                 <state img="custom:aside" marker="scm_payDeduction">
@@ -2267,8 +2267,8 @@
                     <text>Well, this &lt;is&gt; strip poker, so I can deduct your clothing.</text>
                 </state>
             </case>
-            <case stage="0-8 10" id="899">
-                <condition role="opp" character="scm" sayingMarker="scm_kyokokirigiri" priority="150" />
+            <case stage="0-8 10" id="899" priority="150">
+                <condition role="opp" character="scm" sayingMarker="scm_kyokokirigiri" stage="0" />
                 <condition role="self" notSaidMarker="scm_deduction" />
                 <!-- <test expr="~scm.position~" value="left" /> -->
                 <state img="custom:think" marker="scm_batDeduction_stripOrder">
