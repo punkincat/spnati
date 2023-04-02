@@ -75,7 +75,9 @@
         <note id="854">The "is that so" implies quite a bit of subtext that I'm having Kyoko shelf for later. Kyoko considers herself a born detective-- it's the family business and she's been at it since she was like 5-7 years old-- but Miko's words would imply to Kyoko that Miko is calling her entire life and career decisions into question just because Kyoko eagerly took the path that was laid in front of her instead of inventing herself her own way. Kyoko has been surrounded with detectives who went far off the normal courses of their lives to be detectives (particularly her former partner, Yui Samidare), and has a very complicated relationship with her father, who chose NOT to be a detective like the rest of the family and ended up being very absent from her life as a result.
 
 TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying this and they might come up later.</note>
-        <note id="858">THE LOGIC FOR RESPONDING TO KYOKO IS THIS:&lt;br&gt;Ignore everything in the "Duplicate dialogue" folder and just respond to these cases (Dwight on left) like normal.&lt;br&gt;I promise, it just works.</note>
+        <note id="858">THE LOGIC FOR RESPONDING TO KYOKO IS THIS:
+Ignore everything in the "Duplicate dialogue" folder and just respond to these cases (Dwight on left) like normal.
+I promise, it just works.</note>
         <note id="861">In DR1's school mode, Kyoko also takes on this exact menacing-ass stance while discussing doing this with coffee. Seriously.</note>
         <note id="860">The Dwight-on-right version of this line (which plays in the Hand=Any case) uses a different sprite if Dwight is at stage 6-9, which makes the line come off a little bit more overtly desire-laden.  It uses the marker dwight_stare3_lustVariation on the Hand=Any case, but if you want to respond to it you can also just have Dwight do that version based on his own stage.</note>
     </notes>
@@ -900,6 +902,26 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <label id="874" label="Dwight IR 0-2" folder="Duplicate dialogue" sort="0" />
         <label id="875" label="Dwight IR 0-3" folder="Duplicate dialogue" sort="0" />
         <label id="876" label="Dwight IR 0-3 Variation" color="1" folder="Duplicate dialogue" sort="0" />
+        <label id="877" label="Kekko Ou 0-1" folder="Outbound stage 0" />
+        <label id="878" label="Kekko Ou 1-1" folder="Outbound stage 1" />
+        <label id="879" label="Kekko Ou 1-2" folder="Outbound stage 1" />
+        <label id="880" label="Kekko Ou 1-3A" color="2" folder="Outbound stage 1" />
+        <label id="881" label="Kekko Ou 1-3B" color="3" folder="Outbound stage 1" />
+        <label id="882" label="Kekko Ou 2-1" folder="Outbound stage 2" />
+        <label id="883" label="Toru Ou 4-1A" color="2" folder="Outbound stage 4" />
+        <label id="884" label="Toru Ou 4-1B" color="3" folder="Outbound stage 4" />
+            <!-- Retired in honor of Yui Samidare -->
+        <label id="889" label="Giygas Ou 0-1" folder="Outbound stage 0" />
+        <label id="890" label="Giygas Ou 0-2A" color="2" folder="Outbound stage 0" />
+        <label id="891" label="Giygas Ou 0-2B" color="3" folder="Outbound stage 0" />
+        <label id="892" label="Giygas Ou 0-3A" color="2" folder="Outbound stage 0" />
+        <label id="893" label="Giygas Ou 0-3B" color="3" folder="Outbound stage 0" />
+        <label id="894" label="Giygas Ou 5-1" folder="Outbound stage 5" />
+        <label id="895" label="Giygas Ou 6-1A" color="2" folder="Outbound stage 6" />
+        <label id="896" label="Giygas Ou 6-1B" color="3" folder="Outbound stage 6" />
+        <label id="897" label="SCM In X-1" folder="Inbound stage X" />
+        <label id="898" label="SCM In X-1 conditional" folder="Inbound stage X" />
+        <label id="899" label="SCM In X-1 conditional" folder="Inbound stage X" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -925,7 +947,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <prefix>#-mast_</prefix>
         <prefix>#-stand</prefix>
     </prefixes>
-    <nextId>876</nextId>
+    <nextId>899</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
