@@ -182,14 +182,14 @@
         <label id="164" label="Trolled" folder="" sort="0" />
         <label id="165" label="Trolled" folder="" sort="0" />
         <label id="168" label="/Oubtound stage X" folder="hajime" sort="2" />
-        <label id="169" label="Ally losing" folder="hajime" sort="0" />
+        <label id="169" label="Ally losing" folder="hajime" sort="5" />
         <label id="170" label="Generic" folder="" sort="0" />
         <label id="172" label="Allies only" folder="" sort="0" />
         <label id="173" label="Allies only" folder="" sort="0" />
         <label id="174" label="Allies only" folder="" sort="0" />
         <label id="175" label="Ally losing" folder="" sort="0" />
         <label id="176" label="Earthling villain" folder="" sort="0" />
-        <label id="177" label="fsdhfhfh" folder="hajime" sort="0" />
+        <label id="177" label="fsdhfhfh" folder="hajime" sort="4" />
         <label id="178" label="Generic" folder="" sort="0" />
         <label id="179" label="Earth has Changed" folder="" sort="0" />
         <label id="180" label="Generic" folder="" sort="0" />
@@ -205,8 +205,8 @@
         <label id="190" label="Wario Ou 5-1" folder="Outbound stage 5" sort="0" />
         <label id="191" label="Wario Ou 5-2" folder="Outbound stage 5" sort="3" />
         <label id="192" label="Wario Ou 5-2" folder="Outbound stage 5" sort="5" />
-        <label id="193" label="" folder="Ignored generic cases" sort="0" />
-        <label id="194" label="" folder="Ignored generic cases" sort="0" />
+        <label id="193" label="" folder="Ignored generic cases" sort="5" />
+        <label id="194" label="" folder="Ignored generic cases" sort="38" />
         <label id="195" label="Cars" folder="" sort="0" />
         <label id="197" label="Helmet" folder="" sort="0" />
         <label id="198" label="Armor" folder="" sort="0" />
@@ -222,15 +222,41 @@
         <label id="208" label="Earth has Changed" folder="" sort="0" />
         <label id="211" label="How Earth changed" folder="" sort="0" />
         <label id="212" label="" folder="hajime" sort="0" />
-        <label id="213" label="" folder="hajime" sort="0" />
-        <label id="214" label="" folder="hajime" sort="0" />
+        <label id="213" label="" folder="hajime" sort="2" />
+        <label id="214" label="" folder="hajime" sort="6" />
         <label id="215" label="" folder="Oubtound stage 7" sort="0" />
-        <label id="216" label="" folder="Outbound stage 5" sort="0" />
-        <label id="217" label="" folder="Outbound stage 6" sort="0" />
+        <label id="216" label="" folder="Outbound stage 5" sort="7" />
+        <label id="217" label="" folder="Outbound stage 6" sort="2" />
         <label id="218" label="Joke Forfeit" folder="" sort="0" />
-        <label id="219" label="" folder="Outbound stage 7" sort="0" />
+        <label id="219" label="/Outbound stage 7" folder="" sort="0" />
+        <label id="220" label="Trifle's treats" folder="" sort="0" />
+        <label id="221" label="Trifle's treats" folder="" sort="0" />
+        <label id="222" label="Trifle's treats" folder="" sort="0" />
+        <label id="223" label="Oh, baby!" folder="Level-Up" sort="4" />
+        <label id="224" label="Sweet!" folder="Level-Up" sort="4" />
+        <label id="225" label="That rocks!" folder="Level-Up" sort="4" />
+        <label id="226" label="Stat 1: Offense" folder="Level-Up" sort="5" />
+        <label id="227" label="Stat 1: Defense" folder="Level-Up" sort="5" />
+        <label id="228" label="Stat 1: Speed" folder="Level-Up" sort="5" />
+        <label id="229" label="Stat 1: Guts" folder="Level-Up" sort="5" />
+        <label id="230" label="Stat 1: Vitality" folder="Level-Up" sort="5" />
+        <label id="231" label="Stat 1: IQ" folder="Level-Up" sort="5" />
+        <label id="232" label="Stat 2: Defense" folder="Level-Up" sort="12" />
+        <label id="233" label="Stat 2: Speed" folder="Level-Up" sort="12" />
+        <label id="234" label="Stat 2: Guts" folder="Level-Up" sort="12" />
+        <label id="235" label="Stat 2: Vitality" folder="Level-Up" sort="12" />
+        <label id="236" label="Stat 2: IQ" folder="Level-Up" sort="12" />
+        <label id="237" label="Stat 2: Luck" folder="Level-Up" sort="12" />
+        <label id="238" label="Stat 3: Offense" folder="Level-Up" sort="12" />
+        <label id="239" label="Stat 3: Defense" folder="Level-Up" sort="12" />
+        <label id="240" label="Stat 3: Speed" folder="Level-Up" sort="12" />
+        <label id="241" label="Stat 3: Guts" folder="Level-Up" sort="12" />
+        <label id="242" label="Stat 3: Vitality" folder="Level-Up" sort="12" />
+        <label id="243" label="Stat 3: IQ" folder="Level-Up" sort="12" />
+        <label id="244" label="Stat 3: Luck" folder="Level-Up" sort="12" />
     </labels>
     <prefixes>
+        <prefix>0-giegue</prefix>
         <prefix>1-</prefix>
         <prefix>2-</prefix>
         <prefix>3-</prefix>
@@ -238,7 +264,7 @@
         <prefix>5-</prefix>
         <prefix>6-</prefix>
     </prefixes>
-    <nextId>219</nextId>
+    <nextId>300</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="D">Dialogue, in stage 0.</marker>
@@ -455,6 +481,11 @@
         <marker scope="Public" name="LV_stat2" />
         <marker scope="Public" name="LV_stat3" />
         <marker scope="Public" name="LV_sweet">Oh, baby! Sweet! That rocks!</marker>
+        <marker scope="Public" name="LVK">Level-up Variable Keys; randomly-generated numbers used to assign strings at random for certain LV markers.</marker>
+        <marker scope="Public" name="LVK_stat1" />
+        <marker scope="Public" name="LVK_stat2" />
+        <marker scope="Public" name="LVK_stat3" />
+        <marker scope="Public" name="LVK_sweet" />
         <marker scope="Public" name="P">Prayer scene targets.</marker>
         <marker scope="Public" name="P_" />
         <marker scope="Public" name="P_adrien" />
@@ -474,6 +505,7 @@
         <marker scope="Public" name="P_chiaki" />
         <marker scope="Public" name="P_chihiro" />
         <marker scope="Public" name="P_cynthia" />
+        <marker scope="Public" name="P_darkness">Prayer scene for Darkness from KonoSuba. Not to be confused with PG_darkness.</marker>
         <marker scope="Public" name="P_dashie" />
         <marker scope="Public" name="P_dawn" />
         <marker scope="Public" name="P_derpette" />
@@ -570,7 +602,7 @@
         <marker scope="Public" name="P_wikipe" />
         <marker scope="Public" name="PG">Prayer Generic markers; prayer markers that are not targeted scenes.</marker>
         <marker scope="Public" name="PG_cut" />
-        <marker scope="Public" name="PG_darkness" />
+        <marker scope="Public" name="PG_darkness">(Player)’s prayer was absorbed by the darkness. Not to be confused with P_darkness.</marker>
         <marker scope="Public" name="PG_final" />
         <marker scope="Public" name="PG_hits" />
         <marker scope="Public" name="PG_ready" />
@@ -603,7 +635,6 @@
         <marker scope="Public" name="TO_frisk_select" />
         <marker scope="Public" name="TO_ganyu_sleepForever" />
         <marker scope="Public" name="TO_kumatora_nickname" />
-        <marker scope="Public" name="TO_maria" />
         <marker scope="Public" name="TO_maria_MARIA" />
         <marker scope="Public" name="TO_megamix_collapse" />
         <marker scope="Public" name="TO_megamix_critical" />
@@ -640,6 +671,8 @@
         <marker scope="Public" name="TV_playername">Player name before nicknames.</marker>
         <marker scope="Public" name="TV_tess_futa" />
         <marker scope="Public" name="TV_trifle_treats" />
+        <marker scope="Public" name="TVK">Target Variable Keys; randomly-generated numbers used to assign strings at random for certain TV markers.</marker>
+        <marker scope="Public" name="TVK_trifle_treats" />
         <marker scope="Public" name="X">Xtra-special markers, performing all-game functions.</marker>
         <marker scope="Public" name="X_alienPresence" />
         <marker scope="Public" name="X_alliesOnly" />
