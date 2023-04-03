@@ -85,6 +85,7 @@
             </directive>
         </pose>
         <pose id="1-prayer">
+            <sprite id="bg" z="-1" src="7-black.png" x="0" y="-800" alpha="80" rotation="0" />
             <sprite id="back" src="1-back.png" x="200" y="-132" skewx="0" alpha="20" rotation="0" />
             <sprite id="front" src="1-front.png" x="200" y="-130" skewx="0" alpha="12" rotation="0" />
             <directive type="animation" id="back" loop="true" ease="linear" interpolation="linear">
@@ -121,6 +122,7 @@
             </directive>
         </pose>
         <pose id="2-prayer">
+            <sprite id="bg" z="-1" src="7-black.png" x="0" y="-800" alpha="90" rotation="0" />
             <sprite id="back" src="2-back.png" x="0" y="180" scalex="1.2" scaley="1.2" alpha="20" rotation="0" />
             <sprite id="front" src="2-front.png" x="0" y="180" scalex="1.2" scaley="1.2" alpha="12" rotation="0" />
             <directive type="animation" id="front" loop="true" ease="linear" interpolation="spline">
@@ -1482,7 +1484,12 @@
                 <alternative>
                     <condition role="self" stage="4" notSaidMarker="PG_s4" />
                 </alternative>
-                <state img="custom:#-giygas" marker="PG_ready" direction="none">{eb}•~marker.TV_playername~ prayed from the bottom of ~player.ifMale(his|her)~ heart!{!reset}</state>
+                <state img="custom:#-giygas" marker="PG_ready" direction="none">
+                    <text>{eb}•~marker.TV_playername~ prayed from the bottom of ~player.ifMale(his|her)~ heart!{!reset}</text>
+                    <markers>
+                        <marker name="PG_tries" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="0" id="128" priority="499">
                 <condition role="self" saidMarker="D_automobileInfancy==1" />
@@ -2837,13 +2844,6 @@
                 <state img="custom:#-closed" marker="L_exp" direction="none">{eb}•~player~ and ~player.ifMale(his|her)~ friends gained ~rng(1-200000)~ exp each.</state>
             </case>
             <case stage="4" priority="799">
-                <condition role="opp" character="cheryl" />
-                <condition role="self" saidMarker="T_cheryl_pReady" />
-                <condition role="self" notSaidMarker="T_cheryl_pDarkness" />
-                <condition role="self" notSaidMarker="T_cheryl_pS4" />
-                <state img="custom:#-dark" marker="T_cheryl_pDarkness" direction="none">{eb}•~cheryl~’s call&lt;br&gt;was absorbed&lt;br&gt;by the darkness.{!reset}</state>
-            </case>
-            <case stage="4" priority="799">
                 <condition role="self" saidMarker="PG_hits&gt;2" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_darkness" />
                 <alternative>
@@ -2858,7 +2858,21 @@
                     <condition role="self" saidMarker="PG_hits" />
                     <condition count="3" />
                 </alternative>
-                <state img="custom:#-dark" marker="PG_darkness" direction="none">{eb}•~marker.TV_playername~’s call&lt;br&gt;was absorbed&lt;br&gt;by the darkness.{!reset}</state>
+                <state img="custom:#-dark" marker="PG_darkness" direction="none">
+                    <text>{eb}•~marker.TV_playername~’s call&lt;br&gt;was absorbed&lt;br&gt;by the darkness.{!reset}</text>
+                    <markers>
+                        <marker name="PG_ready" op="=" value="0" />
+                        <marker name="PG_cut" op="=" value="0" />
+                    </markers>
+                </state>
+            </case>
+            <case stage="4" priority="799">
+                <condition role="opp" character="cheryl" />
+                <condition role="self" saidMarker="T_cheryl_pReady" />
+                <condition role="self" notSaidMarker="T_cheryl_pDarkness" />
+                <condition role="self" notSaidMarker="PG_darkness" />
+                <condition role="self" notSaidMarker="T_cheryl_pS4" />
+                <state img="custom:#-dark" marker="T_cheryl_pDarkness" direction="none">{eb}•~cheryl~’s call&lt;br&gt;was absorbed&lt;br&gt;by the darkness.{!reset}</state>
             </case>
             <case stage="4" priority="798">
                 <condition role="self" saidMarker="PG_darkness" notSaidMarker="PG_final" />
@@ -2874,7 +2888,68 @@
                 <alternative>
                     <test expr="~sam.tag.has_companion~" value="false" />
                 </alternative>
-                <state img="custom:#-prayer" marker="PG_final" direction="none" set-intelligence="no-swap">{eb}•~marker.TV_playername~’s call touched the hearts of Max, Strong Bad, the Heavy, and Tycho.&lt;br&gt;•They prayed for the players, having never even visited the strip poker table before.{!reset}</state>
+                <state img="custom:#-prayer" marker="PG_final" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•~marker.TV_playername~’s call touched the hearts of Max, Strong Bad, the Heavy, and Tycho.&lt;br&gt;•They prayed for the players, having never even visited the strip poker table before.{!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="PG_final_pnati1" op="+" value="1" />
+                    </markers>
+                </state>
+            </case>
+            <case stage="1" priority="797">
+                <condition role="self" saidMarker="PG_ready" />
+                <condition role="self" saidMarker="PG_cut" />
+                <state img="custom:#-giygas" marker="+PG_hits" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•Giygas’s PSI was weakened!{!reset}</text>
+                    <markers>
+                        <marker name="PG_ready" op="=" value="0" />
+                        <marker name="PG_cut" op="=" value="0" />
+                        <marker name="PG_s1" />
+                    </markers>
+                </state>
+            </case>
+            <case stage="2" priority="797">
+                <condition role="self" saidMarker="PG_ready" />
+                <condition role="self" saidMarker="PG_cut" />
+                <state img="custom:#-giygas" marker="+PG_hits" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•Giygas’s PSI was weakened!{!reset}</text>
+                    <markers>
+                        <marker name="PG_ready" op="=" value="0" />
+                        <marker name="PG_cut" op="=" value="0" />
+                        <marker name="PG_s2" />
+                    </markers>
+                </state>
+            </case>
+            <case stage="3" priority="797">
+                <condition role="self" saidMarker="PG_ready" />
+                <condition role="self" saidMarker="PG_cut" />
+                <state img="custom:#-giygas" marker="+PG_hits" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•Giygas’s PSI was weakened!{!reset}</text>
+                    <markers>
+                        <marker name="PG_ready" op="=" value="0" />
+                        <marker name="PG_cut" op="=" value="0" />
+                        <marker name="PG_s3" />
+                    </markers>
+                </state>
+            </case>
+            <case stage="4" priority="797">
+                <condition role="self" saidMarker="PG_ready" />
+                <condition role="self" saidMarker="PG_cut" />
+                <alternative>
+                    <condition role="self" notSaidMarker="PG_darkness" />
+                </alternative>
+                <alternative>
+                    <condition role="self" saidMarker="PG_final" />
+                </alternative>
+                <state img="custom:#-giygas" marker="+PG_hits" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•Giygas’s connection to his PSI powers was severed!{!reset}</text>
+                    <markers>
+                        <marker name="PG_ready" op="=" value="0" />
+                        <marker name="PG_cut" op="=" value="0" />
+                        <marker name="PG_s4" />
+                    </markers>
+                </state>
             </case>
             <case stage="1" priority="797">
                 <condition role="opp" character="cheryl" />
@@ -2897,35 +2972,14 @@
             <case stage="4" priority="797">
                 <condition role="opp" character="cheryl" />
                 <condition role="self" saidMarker="T_cheryl_pReady" />
-                <condition role="self" saidMarker="T_cheryl_pDarkness" />
                 <condition role="self" notSaidMarker="T_cheryl_pS4" />
+                <alternative>
+                    <condition role="self" saidMarker="T_cheryl_pDarkness" />
+                </alternative>
+                <alternative>
+                    <condition role="self" saidMarker="PG_darkness" />
+                </alternative>
                 <state img="custom:#-giygas" marker="T_cheryl_pReady=0" direction="none" set-intelligence="no-swap">{eb}•Giygas’s connection to his PSI powers was severed!{!reset}</state>
-            </case>
-            <case stage="1" priority="797">
-                <condition role="self" saidMarker="PG_ready" />
-                <condition role="self" saidMarker="PG_cut" />
-                <state img="custom:#-giygas" marker="+PG_hits" direction="none" set-intelligence="no-swap">{eb}•Giygas’s PSI was weakened!{!reset}</state>
-            </case>
-            <case stage="2" priority="797">
-                <condition role="self" saidMarker="PG_ready" />
-                <condition role="self" saidMarker="PG_cut" />
-                <state img="custom:#-giygas" marker="+PG_hits" direction="none" set-intelligence="no-swap">{eb}•Giygas’s PSI was weakened!{!reset}</state>
-            </case>
-            <case stage="3" priority="797">
-                <condition role="self" saidMarker="PG_ready" />
-                <condition role="self" saidMarker="PG_cut" />
-                <state img="custom:#-giygas" marker="+PG_hits" direction="none" set-intelligence="no-swap">{eb}•Giygas’s PSI was weakened!{!reset}</state>
-            </case>
-            <case stage="4" priority="797">
-                <condition role="self" saidMarker="PG_ready" />
-                <condition role="self" saidMarker="PG_cut" />
-                <alternative>
-                    <condition role="self" notSaidMarker="PG_darkness" />
-                </alternative>
-                <alternative>
-                    <condition role="self" saidMarker="PG_final" />
-                </alternative>
-                <state img="custom:#-giygas" marker="+PG_hits" direction="none" set-intelligence="no-swap">{eb}•Giygas’s connection to his PSI powers was severed!{!reset}</state>
             </case>
             <case stage="6" priority="783">
                 <condition role="aiopp" character="zoe" />
@@ -3085,7 +3139,7 @@
                 <condition role="self" notSaidMarker="L_endAll" />
                 <condition role="self" notSaidMarker="L1_end" />
                 <condition role="self" notSaidMarker="L1_stats2" />
-                <test expr="~freddie.slot~" value="1" />
+                <test expr="~scm.slot~" value="1" />
                 <state img="custom:#-closed" marker="L1_stats2" direction="none">{eb}Look at you go!&lt;br&gt;•Guts went up by ~rng(9-21)~!{!reset}</state>
             </case>
             <case stage="6" priority="762">
@@ -3254,6 +3308,20 @@
                 <test expr="~opp1.tag.sarcastic" value="true" />
                 <state img="custom:#-closed" marker="L1_stats2" direction="none">{eb}•~Marker.LV_sweet~!&lt;br&gt;•Sarcasm went up by ~rng(1-3)~!{!reset}</state>
             </case>
+            <case stage="1-4" priority="760">
+                <condition role="opp" character="kumatora" />
+                <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
+                <condition role="self" notSaidMarker="P_kumatora" />
+                <condition count="0" character="lucas" />
+                <condition count="0" character="duster" />
+                <state img="custom:#-prayer" marker="P_kumatora" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Lucas sensed Kumatora was in danger,&lt;br&gt;•and he, Boney, and Duster began to pray with their whole hearts for the safety of Kumatora and her new friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
+            </case>
             <case stage="6" priority="760">
                 <condition role="aiopp" var="opp1" />
                 <condition role="self" saidMarker="L1_genericSweetCheck&gt;=2" />
@@ -3287,13 +3355,18 @@
                 </alternative>
                 <state img="custom:#-closed" marker="L1_stats2" direction="none" weight="0.64">{eb}•~Marker.LV_sweet~!&lt;br&gt;•Cunt Severity went up by ~rng(1-3)~!{!reset}</state>
             </case>
-            <case stage="1-4" priority="760">
-                <condition role="opp" character="kumatora" />
+            <case stage="1-4" priority="752">
+                <condition role="opp" character="frisk_and_friends" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
-                <condition role="self" notSaidMarker="P_kumatora" />
-                <condition count="0" character="lucas" />
-                <condition count="0" character="duster" />
-                <state img="custom:#-prayer" marker="P_kumatora" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Lucas sensed Kumatora was in danger,&lt;br&gt;•and he, Boney, and Duster began to pray with their whole hearts for the safety of Kumatora and her new friends.){!reset}</state>
+                <condition role="self" notSaidMarker="P_frisk" />
+                <test expr="~background~" value="inventory" />
+                <state img="custom:#-prayer" marker="P_frisk" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Frisk heard some unnatural noises coming from the Inventory,&lt;br&gt;•and started praying for the safety of ~frisk_and_friends~ and ~frisk_and_friends.ifMale(his|her)~ friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="6" priority="752">
                 <condition role="aiopp" character="zoe" />
@@ -3322,12 +3395,43 @@
                 <state img="custom:#-closed" marker="L1_power" direction="none">{eb}•~kira~ realized the power of Breakthru!{!reset}</state>
                 <state img="custom:#-closed" marker="L1_power" direction="none">{eb}•~kira~ realized the power of Mother Love!{!reset}</state>
             </case>
-            <case stage="1-4" priority="752">
+            <case stage="1-4" priority="751">
                 <condition role="opp" character="frisk_and_friends" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_frisk" />
-                <test expr="~background~" value="inventory" />
-                <state img="custom:#-prayer" marker="P_frisk" direction="none" set-intelligence="no-swap">{eb}•(Frisk heard some unnatural noises coming from the Inventory,&lt;br&gt;•and started praying for the safety of ~frisk_and_friends~ and ~frisk_and_friends.ifMale(his|her)~ friends.){!reset}</state>
+                <test expr="~background.location~" value="indoors" />
+                <state img="custom:#-prayer" marker="P_frisk" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Frisk heard some unnatural noises coming from inside the building,&lt;br&gt;•and started praying for the safety of ~frisk_and_friends~ and ~frisk_and_friends.ifMale(his|her)~ friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
+            </case>
+            <case stage="1-4" priority="751">
+                <condition role="opp" character="frisk_and_friends" />
+                <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
+                <condition role="self" notSaidMarker="P_frisk" />
+                <test expr="~background.location~" value="outdoors" />
+                <state img="custom:#-prayer" marker="P_frisk" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Frisk heard some unnatural noises coming from the direction of the game,&lt;br&gt;•and started praying for the safety of ~frisk_and_friends~ and ~frisk_and_friends.ifMale(his|her)~ friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
+            </case>
+            <case stage="1-4" priority="751">
+                <condition role="opp" character="streaming-chan" />
+                <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
+                <condition role="self" notSaidMarker="P_nicole" />
+                <state img="custom:#-prayer" marker="P_nicole" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Nicole’s viewers heard ~marker.TV_playername~’s prayer amongst the chaos on the stream,&lt;br&gt;•and they all began praying for the safety of Nicole and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="6" priority="751">
                 <condition role="aiopp" var="opp1" />
@@ -3350,53 +3454,29 @@
                 <test expr="~opp1.tag.villain~" value="true" />
                 <state img="custom:#-closed" marker="L1_power" direction="none">{eb}•~opp1~ realized the power of Save the Breast For Last!{!reset}</state>
             </case>
-            <case stage="1-4" priority="751">
-                <condition role="opp" character="frisk_and_friends" />
-                <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
-                <condition role="self" notSaidMarker="P_frisk" />
-                <test expr="~background.location~" value="indoors" />
-                <state img="custom:#-prayer" marker="P_frisk" direction="none" set-intelligence="no-swap">{eb}•(Frisk heard some unnatural noises coming from inside the building,&lt;br&gt;•and started praying for the safety of ~frisk_and_friends~ and ~frisk_and_friends.ifMale(his|her)~ friends.){!reset}</state>
-            </case>
-            <case stage="1-4" priority="751">
-                <condition role="opp" character="frisk_and_friends" />
-                <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
-                <condition role="self" notSaidMarker="P_frisk" />
-                <test expr="~background.location~" value="outdoors" />
-                <state img="custom:#-prayer" marker="P_frisk" direction="none" set-intelligence="no-swap">{eb}•(Frisk heard some unnatural noises coming from the direction of the game,&lt;br&gt;•and started praying for the safety of ~frisk_and_friends~ and ~frisk_and_friends.ifMale(his|her)~ friends.){!reset}</state>
-            </case>
-            <case stage="1-4" priority="751">
-                <condition role="opp" character="streaming-chan" />
-                <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
-                <condition role="self" notSaidMarker="P_nicole" />
-                <state img="custom:#-prayer" marker="P_nicole" direction="none" set-intelligence="no-swap">{eb}•(Nicole’s viewers heard ~marker.TV_playername~’s prayer amongst the chaos on the stream,&lt;br&gt;•and they all began praying for the safety of Nicole and her friends.){!reset}</state>
-            </case>
-            <case stage="6" priority="750">
-                <condition role="aiopp" var="opp1" />
-                <condition role="self" notSaidMarker="L_endAll" />
-                <condition role="self" notSaidMarker="L1_end" />
-                <condition role="self" notSaidMarker="L1_power" />
-                <test expr="~opp1.slot~" value="1" />
-                <test expr="~opp1.tag.chuunibyou~" value="true" />
-                <state img="custom:#-closed" marker="L1_power" direction="none">{eb}•~opp1~ realized the power of PK Unlimited Flame Ω!{!reset}</state>
-            </case>
-            <case stage="1-4" priority="750">
-                <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
-                <condition role="self" notSaidMarker="P_" />
-                <condition count="0" />
-                <state img="custom:#-prayer" marker="P_" direction="none" set-intelligence="no-swap">{!reset}</state>
-            </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="spamton" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_spamton" />
-                <state img="custom:#-prayer" marker="P_spamton" direction="none" set-intelligence="no-swap">{eb}•(Kris was haunted by a memory of Spamton’s face,&lt;br&gt;•and they began to pray for the safety of Spamton and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_spamton" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Kris was haunted by a memory of Spamton’s face,&lt;br&gt;•and they began to pray for the safety of Spamton and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="gloria" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_gloria" />
                 <condition count="0" character="mum_galar" />
-                <state img="custom:#-prayer" marker="P_gloria" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Gloria’s mother back in Postwick felt terribly uneasy,&lt;br&gt;•and she began to pray for the safety of her daughter and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_gloria" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Gloria’s mother back in Postwick felt terribly uneasy,&lt;br&gt;•and she began to pray for the safety of her daughter and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
@@ -3408,42 +3488,78 @@
                 <alternative>
                     <condition role="opp" character="dawn_classic" />
                 </alternative>
-                <state img="custom:#-prayer" marker="P_dawn" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, something unexplained troubled Professor Rowan,&lt;br&gt;•and he began to pray solemnly for the safety of Dawn and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_dawn" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, something unexplained troubled Professor Rowan,&lt;br&gt;•and he began to pray solemnly for the safety of Dawn and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="aqua_grunt" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_ag" />
                 <condition count="0" character="archie" />
-                <state img="custom:#-prayer" marker="P_ag" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Archie had an uneasy feeling in his gut,&lt;br&gt;•and he started praying to the sea for the safety of his Grunts.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_ag" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Archie had an uneasy feeling in his gut,&lt;br&gt;•and he started praying to the sea for the safety of his Grunts.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="magma_grunt" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_mg" />
                 <condition count="0" character="maxie" />
-                <state img="custom:#-prayer" marker="P_mg" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Maxie was consumed by worry,&lt;br&gt;•and he began to pray under his breath for the success of Team Magma.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_mg" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Maxie was consumed by worry,&lt;br&gt;•and he began to pray under his breath for the success of Team Magma.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="rosa" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_rosa" />
                 <condition count="0" character="hugh" />
-                <state img="custom:#-prayer" marker="P_rosa" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Hugh started to worry about something,&lt;br&gt;•and he prayed strongly for the safety of Rosa and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_rosa" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Hugh started to worry about something,&lt;br&gt;•and he prayed strongly for the safety of Rosa and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="hilbert" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_hilbert" />
                 <condition count="0" character="looker" />
-                <state img="custom:#-prayer" marker="P_hilbert" direction="none" set-intelligence="no-swap">{eb}•(Looker recalled Hilbert’s shining young face,&lt;br&gt;•and he began praying assiduously for the safety of Hilbert and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_hilbert" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Looker recalled Hilbert’s shining young face,&lt;br&gt;•and he began praying assiduously for the safety of Hilbert and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="elesa" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_elesa" />
                 <condition count="0" character="skyla" />
-                <state img="custom:#-prayer" marker="P_elesa" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Skyla felt something strange in the wind,&lt;br&gt;•and she began praying skyward for the well-being of Elesa and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_elesa" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Skyla felt something strange in the wind,&lt;br&gt;•and she began praying skyward for the well-being of Elesa and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="n" />
@@ -3451,7 +3567,13 @@
                 <condition role="self" notSaidMarker="P_n" />
                 <condition count="0" character="anthea" />
                 <condition count="0" character="concordia" />
-                <state img="custom:#-prayer" marker="P_n" direction="none" set-intelligence="no-swap">{eb}•(Anthea and Concordia woke at the same time from a terrible dream about N,&lt;br&gt;•and they began praying lovingly for the safety of N and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_n" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Anthea and Concordia woke at the same time from a terrible dream about N,&lt;br&gt;•and they began praying lovingly for the safety of N and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
@@ -3462,26 +3584,50 @@
                 <alternative>
                     <condition role="opp" character="misty" />
                 </alternative>
-                <state img="custom:#-prayer" marker="P_misty" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, a veteran Pokémon trainer felt something stop them,&lt;br&gt;•and they began a silent prayer for the safety of Misty and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_misty" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, a veteran Pokémon trainer felt something stop them,&lt;br&gt;•and they began a silent prayer for the safety of Misty and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="may" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_may" />
-                <state img="custom:#-prayer" marker="P_may" direction="none" set-intelligence="no-swap">{eb}•(Everyone in Littleroot Town felt a startling feeling at the same time,&lt;br&gt;•and they all started praying for the safety of May and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_may" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Everyone in Littleroot Town felt a startling feeling at the same time,&lt;br&gt;•and they all started praying for the safety of May and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="mom_alola" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_theia" />
                 <condition count="0" character="kukui" />
-                <state img="custom:#-prayer" marker="P_theia" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Professor Kukui felt an uncharacteristic anxiety,&lt;br&gt;•and he began a prayer for the safety of his neighbors.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_theia" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Professor Kukui felt an uncharacteristic anxiety,&lt;br&gt;•and he began a prayer for the safety of his neighbors.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="guzma" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_guzma" />
-                <state img="custom:#-prayer" marker="P_guzma" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, the members of Team Skull all felt anxious at once,&lt;br&gt;•and they began praying for the safety of their boy Guzma.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_guzma" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, the members of Team Skull all felt anxious at once,&lt;br&gt;•and they began praying for the safety of their boy Guzma.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="caitlin" />
@@ -3489,77 +3635,144 @@
                 <condition role="self" notSaidMarker="P_caitlin" />
                 <condition count="0" character="iris" />
                 <condition count="0" character="iris_pokemon" />
-                <state img="custom:#-prayer" marker="P_caitlin" direction="none" set-intelligence="no-swap">{eb}•(A challenger’s Reuniclus reminded Iris of Caitlin,&lt;br&gt;•and she began mentally praying for the well-being of Caitlin and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_caitlin" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(A challenger’s Reuniclus reminded Iris of Caitlin,&lt;br&gt;•and she began mentally praying for the well-being of Caitlin and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="moon" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_moon" />
                 <condition character="mom_alola" saidMarker="moon_RouteStart_diamond" />
-                <state img="custom:#-prayer" marker="P_moon" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Selene was seized by worry,&lt;br&gt;•and she began to pray for the safety of Moon and its new friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_moon" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Selene was seized by worry,&lt;br&gt;•and she began to pray for the safety of Moon and its new friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_moon_diamond" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="bernadetta" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_bernadetta" />
                 <condition count="0" character="edelgard" />
-                <state img="custom:#-prayer" marker="P_bernadetta" direction="none" set-intelligence="no-swap">{eb}•(Edelgard recalled Bernadetta’s bright, innocent eyes,&lt;br&gt;•and she began to pray for the safety of Bernadetta and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_bernadetta" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Edelgard recalled Bernadetta’s bright, innocent eyes,&lt;br&gt;•and she began to pray for the safety of Bernadetta and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="petra" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_petra" />
                 <condition count="0" character="dorothea" />
-                <state img="custom:#-prayer" marker="P_petra" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Dorothea remembered Petra’s humble kindness,&lt;br&gt;•and she prayed warmly for the safety of Petra and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_petra" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Dorothea remembered Petra’s humble kindness,&lt;br&gt;•and she prayed warmly for the safety of Petra and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="leonie" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_leonie" />
                 <condition count="0" character="claude" />
-                <state img="custom:#-prayer" marker="P_leonie" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, something reminded Claude of Leonie’s diligent spirit,&lt;br&gt;•and he began praying for the well-being of Leonie and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_leonie" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, something reminded Claude of Leonie’s diligent spirit,&lt;br&gt;•and he began praying for the well-being of Leonie and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="lyn" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_lyn" />
                 <condition count="0" character="eliwood" />
-                <state img="custom:#-prayer" marker="P_lyn" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Eliwood was consumed by an uneasy feeling,&lt;br&gt;•and he began praying for the safety of Lyn and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_lyn" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Eliwood was consumed by an uneasy feeling,&lt;br&gt;•and he began praying for the safety of Lyn and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="florina" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_florina" />
                 <condition count="0" character="farina" />
-                <state img="custom:#-prayer" marker="P_florina" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Farina was stopped by a pit in her stomach,&lt;br&gt;•and she began to pray quietly for the safety of Florina and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_florina" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Farina was stopped by a pit in her stomach,&lt;br&gt;•and she began to pray quietly for the safety of Florina and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="larachel" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_larachel" />
                 <condition count="0" character="eirika" />
-                <state img="custom:#-prayer" marker="P_larachel" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, a horrible feeling washed over Eirika,&lt;br&gt;•and she prayed earnestly for the safety of L’Arachel and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_larachel" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, a horrible feeling washed over Eirika,&lt;br&gt;•and she prayed earnestly for the safety of L’Arachel and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="mitama" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_mitama" />
                 <condition count="0" character="azama" />
-                <state img="custom:#-prayer" marker="P_mitama" direction="none" set-intelligence="no-swap">{eb haiku}•(Azama’s psyche—&lt;br&gt;•A sudden anxious feeling.&lt;br&gt;•…Prays for his daughter.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_mitama" direction="none" set-intelligence="no-swap">
+                    <text>{eb haiku}•(Azama’s psyche—&lt;br&gt;•A sudden anxious feeling.&lt;br&gt;•…Prays for his daughter.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="catria" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_catria" />
                 <condition count="0" character="marth" />
-                <state img="custom:#-prayer" marker="P_catria" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, concern tugged at Marth’s psyche,&lt;br&gt;•and he started a prayer for the safety of Catria and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_catria" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, concern tugged at Marth’s psyche,&lt;br&gt;•and he started a prayer for the safety of Catria and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="laevatein" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_laevatein" />
                 <condition count="0" character="laegjarn" />
-                <state img="custom:#-prayer" marker="P_laevatein" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Princess Laegjarn felt sincerely worried about Laevatein,&lt;br&gt;•and she began praying to Múspell for the safety of her sister.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_laevatein" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Princess Laegjarn felt sincerely worried about Laevatein,&lt;br&gt;•and she began praying to Múspell for the safety of her sister.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="chihiro" />
@@ -3568,7 +3781,13 @@
                 <condition count="0" character="mondo" />
                 <condition count="0" character="mondo_owada" />
                 <condition count="0" character="mondo_oowada" />
-                <state img="custom:#-prayer" marker="P_chihiro" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Mondo recalled Chihiro’s passion-filled eyes,&lt;br&gt;•and began to pray diligently for the safety of Chihiro and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_chihiro" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Mondo recalled Chihiro’s passion-filled eyes,&lt;br&gt;•and began to pray diligently for the safety of Chihiro and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
@@ -3580,7 +3799,13 @@
                 <alternative>
                     <condition role="opp" character="kyoko" />
                 </alternative>
-                <state img="custom:#-prayer" marker="P_kirigiri" direction="none" set-intelligence="no-swap">{eb}•(Makoto woke from a nightmare in which Kyoko died,&lt;br&gt;•and he began to pray fervently for the safety of Kyoko and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_kirigiri" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Makoto woke from a nightmare in which Kyoko died,&lt;br&gt;•and he began to pray fervently for the safety of Kyoko and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="mahiru" />
@@ -3588,7 +3813,13 @@
                 <condition role="self" notSaidMarker="P_mahiru" />
                 <condition count="0" character="hiyoko" />
                 <condition count="0" character="hiyoko_saionji" />
-                <state img="custom:#-prayer" marker="P_mahiru" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Hiyoko feared the worst about Mahiru,&lt;br&gt;•and she began praying tearfully for Mahiru’s safety.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_mahiru" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Hiyoko feared the worst about Mahiru,&lt;br&gt;•and she began praying tearfully for Mahiru’s safety.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="mikan" />
@@ -3596,7 +3827,13 @@
                 <condition role="self" notSaidMarker="P_mikan" />
                 <condition count="0" character="ibuki" />
                 <condition count="0" character="ibuki_mioda" />
-                <state img="custom:#-prayer" marker="P_mikan" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Ibuki felt strangely nervous,&lt;br&gt;•and she started singing a heavy-metal prayer for the safety of Mikan and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_mikan" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Ibuki felt strangely nervous,&lt;br&gt;•and she started singing a heavy-metal prayer for the safety of Mikan and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="chiaki" />
@@ -3604,7 +3841,13 @@
                 <condition role="self" notSaidMarker="P_chiaki" />
                 <condition count="0" character="hajime" />
                 <condition count="0" character="hajime_hinata" />
-                <state img="custom:#-prayer" marker="P_chiaki" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Hajime felt incredibly anxious,&lt;br&gt;•and he began to pray for a safe future for Chiaki and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_chiaki" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Hajime felt incredibly anxious,&lt;br&gt;•and he began to pray for a safe future for Chiaki and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="twilight" />
@@ -3612,7 +3855,15 @@
                 <condition role="self" notSaidMarker="P_ts" />
                 <condition count="0" status="not_decent" role="opp" />
                 <test expr="~twilight.costume~" value="default" />
-                <state img="custom:#-prayer" marker="P_ts" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Spike felt anxious about Twilight,&lt;br&gt;•and he began to pray sincerely for the safety of Twilight and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_ts" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Spike felt anxious about Twilight,&lt;br&gt;•and he began to pray sincerely for the safety of Twilight and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_ts_pony" />
+                        <marker name="P_ts_pony_dragon" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="twilight" />
@@ -3622,7 +3873,14 @@
                 <condition count="0" character="princess_cadence" />
                 <condition count="1-" status="not_decent" role="opp" />
                 <test expr="~twilight.costume~" value="default" />
-                <state img="custom:#-prayer" marker="P_ts" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Princess Cadence felt anxious about Twilight,&lt;br&gt;•and she began to pray sincerely for the safety of Twilight and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_ts" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Princess Cadence felt anxious about Twilight,&lt;br&gt;•and she began to pray sincerely for the safety of Twilight and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_ts_pony_cadence" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="twilight" />
@@ -3630,7 +3888,14 @@
                 <condition role="self" notSaidMarker="P_ts" />
                 <condition count="0" character="sunset_shimmer" />
                 <test expr="~twilight.costume~" value="twilight_sci-twi" />
-                <state img="custom:#-prayer" marker="P_ts" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Sunset Shimmer felt anxious about Twilight Sparkle,&lt;br&gt;•and she prayed strongly for the safety of Twilight and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_ts" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Sunset Shimmer felt anxious about Twilight Sparkle,&lt;br&gt;•and she prayed strongly for the safety of Twilight and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_ts_sci-twi" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
@@ -3642,7 +3907,14 @@
                 <alternative>
                     <condition role="opp" character="rarity" />
                 </alternative>
-                <state img="custom:#-prayer" marker="P_rarity" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, something terrible tugged at Sweetie Belle’s mind,&lt;br&gt;•and she began praying for the safety of her sister Rarity and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_rarity" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, something terrible tugged at Sweetie Belle’s mind,&lt;br&gt;•and she began praying for the safety of her sister Rarity and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_rarity_sister" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
@@ -3660,14 +3932,27 @@
                 <alternative>
                     <condition role="opp" character="rarity" />
                 </alternative>
-                <state img="custom:#-prayer" marker="P_rarity" direction="none" set-intelligence="no-swap">{eb}•(A trio of fraternity brothers recalled the dazzling presence of their old classmate Rarity,&lt;br&gt;•and they began praying for the safety of Rarity and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_rarity" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(A trio of fraternity brothers recalled the dazzling presence of their old classmate Rarity,&lt;br&gt;•and they began praying for the safety of Rarity and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_rarity_dogBoys" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="rainbow_dash" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_dashie" />
                 <condition count="0" character="applejack" />
-                <state img="custom:#-prayer" marker="P_dashie" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Applejack felt a deep worry in her heart,&lt;br&gt;•and she lowered her hat and prayed earnestly for the safety of Rainbow Dash and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_dashie" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Applejack felt a deep worry in her heart,&lt;br&gt;•and she lowered her hat and prayed earnestly for the safety of Rainbow Dash and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="fluttershy" />
@@ -3675,7 +3960,13 @@
                 <condition role="self" notSaidMarker="P_fluttershy" />
                 <condition count="0" character="celestia" />
                 <condition count="0" character="principal_celestia" />
-                <state img="custom:#-prayer" marker="P_fluttershy" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Principal Celestia felt something stop her in her tracks,&lt;br&gt;•and she started to pray quietly for the safety of Fluttershy and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_fluttershy" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Principal Celestia felt something stop her in her tracks,&lt;br&gt;•and she started to pray quietly for the safety of Fluttershy and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="pinkie_pie" />
@@ -3684,14 +3975,26 @@
                 <condition count="0" character="carrot_cake" />
                 <condition count="0" character="mrs_cake" />
                 <condition count="0" character="cup_cake" />
-                <state img="custom:#-prayer" marker="P_pinkie" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Mr. and Mrs. Cake remembered Pinkie Pie’s effervescent spirit,&lt;br&gt;•and they prayed solemnly for the safety of Pinkie and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_pinkie" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Mr. and Mrs. Cake remembered Pinkie Pie’s effervescent spirit,&lt;br&gt;•and they prayed solemnly for the safety of Pinkie and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="muffins" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_muffins" />
                 <condition count="0" character="canter_zoom" />
-                <state img="custom:#-prayer" marker="P_muffins" direction="none" set-intelligence="no-swap">{eb}•(Canter Zoom suddenly recalled Muffins’s cheerful eyes,&lt;br&gt;•and he started praying for the safety of Muffins and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_muffins" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Canter Zoom suddenly recalled Muffins’s cheerful eyes,&lt;br&gt;•and he started praying for the safety of Muffins and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="starfire" />
@@ -3699,7 +4002,13 @@
                 <condition role="self" notSaidMarker="P_starfire" />
                 <condition count="0" character="nightwing" />
                 <condition count="0" character="dick_grayson" />
-                <state img="custom:#-prayer" marker="P_starfire" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Nightwing recalled Starfire’s beaming, innocent face,&lt;br&gt;•and he began praying silently for the safety of Starfire and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_starfire" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Nightwing recalled Starfire’s beaming, innocent face,&lt;br&gt;•and he began praying silently for the safety of Starfire and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="franziska" />
@@ -3707,7 +4016,13 @@
                 <condition role="self" notSaidMarker="P_vonKarma" />
                 <condition count="0" character="gumshoe" />
                 <condition count="0" character="dick_gumshoe" />
-                <state img="custom:#-prayer" marker="P_vonKarma" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Detective Gumshoe became awfully wistful about Franziska and her future,&lt;br&gt;•and began praying for the well-being of Ms. von Karma and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_vonKarma" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Detective Gumshoe became awfully wistful about Franziska and her future,&lt;br&gt;•and began praying for the well-being of Ms. von Karma and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="mia" />
@@ -3715,49 +4030,95 @@
                 <condition role="self" notSaidMarker="P_miaFey" />
                 <condition count="0" character="maya" />
                 <condition count="0" character="maya_miaFey" />
-                <state img="custom:#-prayer" marker="P_fey" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Maya Fey started feeling terribly anxious,&lt;br&gt;•and she began to pray for Mia and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_fey" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Maya Fey started feeling terribly anxious,&lt;br&gt;•and she began to pray for Mia and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="link_botw" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_link" />
                 <condition count="0" character="riju" />
-                <state img="custom:#-prayer" marker="P_link" direction="none" set-intelligence="no-swap" weight="0.25">{eb}•(Lady Riju recalled the initiative of the Hylian who saved Gerudo Town,&lt;br&gt;•and she began praying sincerely for the safety of Link and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_link" direction="none" set-intelligence="no-swap" weight="0.25">
+                    <text>{eb}•(Lady Riju recalled the initiative of the Hylian who saved Gerudo Town,&lt;br&gt;•and she began praying sincerely for the safety of Link and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_link_riju" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="link_botw" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_link" />
                 <condition count="0" character="sidon" />
-                <state img="custom:#-prayer" marker="P_link" direction="none" set-intelligence="no-swap" weight="0.25">{eb}•(Suddenly, Prince Sidon swore he could feel that Link was facing a great evil once again,&lt;br&gt;•and started to pray for the success of Link and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_link" direction="none" set-intelligence="no-swap" weight="0.25">
+                    <text>{eb}•(Suddenly, Prince Sidon swore he could feel that Link was facing a great evil once again,&lt;br&gt;•and started to pray for the success of Link and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_link_sidon" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="link_botw" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_link" />
                 <condition count="0" character="teba" />
-                <state img="custom:#-prayer" marker="P_link" direction="none" set-intelligence="no-swap" weight="0.25">{eb}•(Teba felt a sudden change in the air,&lt;br&gt;•and he prayed with a grateful heart for the well-being of Link and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_link" direction="none" set-intelligence="no-swap" weight="0.25">
+                    <text>{eb}•(Teba felt a sudden change in the air,&lt;br&gt;•and he prayed with a grateful heart for the well-being of Link and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_link_teba" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="link_botw" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_link" />
                 <condition count="0" character="yunobo" />
-                <state img="custom:#-prayer" marker="P_link" direction="none" set-intelligence="no-swap" weight="0.25">{eb}•(Suddenly, Yunobo felt the influence of Link’s dauntless spirit,&lt;br&gt;•and he began praying with all his heart for the safety of Link and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_link" direction="none" set-intelligence="no-swap" weight="0.25">
+                    <text>{eb}•(Suddenly, Yunobo felt the influence of Link’s dauntless spirit,&lt;br&gt;•and he began praying with all his heart for the safety of Link and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_link_yunobo" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="navi" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_navi" />
                 <condition count="0" />
-                <state img="custom:#-prayer" marker="P_navi" direction="none" set-intelligence="no-swap">{eb}•(The Great Deku tree began feeling some deep, unnatural concern for Navi,&lt;br&gt;•and he and the Kokiri began to pray for the safety of Navi and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_navi" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(The Great Deku tree began feeling some deep, unnatural concern for Navi,&lt;br&gt;•and he and the Kokiri began to pray for the safety of Navi and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="nayru" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_nayru" />
                 <condition count="0" />
-                <state img="custom:#-prayer" marker="P_nayru" direction="none" set-intelligence="no-swap">{eb}•(The Goddess Nayru heard ~marker.TV_playername~’s prayer,&lt;br&gt;•and she lent some of her divine strength to protect her oracle and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_nayru" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(The Goddess Nayru heard ~marker.TV_playername~’s prayer,&lt;br&gt;•and she lent some of her divine strength to protect her oracle and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="caulifla" />
@@ -3766,7 +4127,13 @@
                 <condition count="0" character="kale" />
                 <condition count="0" character="kefla" />
                 <condition count="0" character="fuwa" />
-                <state img="custom:#-prayer" marker="P_caulifla" direction="none" set-intelligence="no-swap">{eb}•(Kale suddenly felt terribly anxious about Caulifla,&lt;br&gt;•and she began praying to Fuwa for the safety of Caulifla and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_caulifla" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Kale suddenly felt terribly anxious about Caulifla,&lt;br&gt;•and she began praying to Fuwa for the safety of Caulifla and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="remilia" />
@@ -3774,7 +4141,13 @@
                 <condition role="self" notSaidMarker="P_remilia" />
                 <condition count="0" character="flandre" />
                 <condition count="0" character="flandre_scarlet" />
-                <state img="custom:#-prayer" marker="P_remilia" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Flandre felt anxious about Remilia,&lt;br&gt;•and she began praying for the undying safety of her sister.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_remilia" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Flandre felt anxious about Remilia,&lt;br&gt;•and she began praying for the undying safety of her sister.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="dwight" />
@@ -3782,7 +4155,13 @@
                 <condition role="self" notSaidMarker="P_dwight" />
                 <condition count="0" character="david" />
                 <condition count="0" character="david_king" />
-                <state img="custom:#-prayer" marker="P_dwight" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, David felt anxious about Dwight,&lt;br&gt;•and he prayed strongly for the safety of Dwight and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_dwight" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, David felt anxious about Dwight,&lt;br&gt;•and he prayed strongly for the safety of Dwight and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
@@ -3795,7 +4174,13 @@
                 <alternative>
                     <condition role="opp" character="jotaro" />
                 </alternative>
-                <state img="custom:#-prayer" marker="P_jotaro" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Holly felt an unmistakable feeling in her soul,&lt;br&gt;•and she began to pray for the safety of her son and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_jotaro" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Holly felt an unmistakable feeling in her soul,&lt;br&gt;•and she began to pray for the safety of her son and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
@@ -3807,7 +4192,13 @@
                 <alternative>
                     <condition role="opp" character="jolyne" />
                 </alternative>
-                <state img="custom:#-prayer" marker="P_jolyne" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, a terrible feeling crawled up Emporio’s spine,&lt;br&gt;•and he began to pray anxiously for the safety of Jolyne and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_jolyne" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, a terrible feeling crawled up Emporio’s spine,&lt;br&gt;•and he began to pray anxiously for the safety of Jolyne and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
@@ -3820,21 +4211,39 @@
                 <alternative>
                     <condition role="opp" character="kyu_sugardust" />
                 </alternative>
-                <state img="custom:#-prayer" marker="P_kyu" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, a strange thought entered Theiatena Venus’s mind,&lt;br&gt;•and she sought the safety of her love fairies.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_kyu" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, a strange thought entered Theiatena Venus’s mind,&lt;br&gt;•and she sought the safety of her love fairies.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="pit" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_pit" />
                 <test expr="pit.costume" cmp="!=" value="halloween_pit" />
-                <state img="custom:#-prayer" marker="P_pit" direction="none" set-intelligence="no-swap">{eb}•(All of the Centurions of Palutena’s Army felt a new, startling feeling they had never experienced before,&lt;br&gt;•and they all started praying for the safety of Captain Pit.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_pit" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(All of the Centurions of Palutena’s Army felt a new, startling feeling they had never experienced before,&lt;br&gt;•and they all started praying for the safety of Captain Pit.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="palutena" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_palutena" />
                 <condition count="0" character="viridi" />
-                <state img="custom:#-prayer" marker="P_palutena" direction="none" set-intelligence="no-swap">{eb}•(~marker.TV_playername~’s prayer caught the attention of Viridi,&lt;br&gt;who begrudgingly agreed to lend her strength to Palutena and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_palutena" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(~marker.TV_playername~’s prayer caught the attention of Viridi,&lt;br&gt;who begrudgingly agreed to lend her strength to Palutena and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="adrien" />
@@ -3844,7 +4253,13 @@
                 <condition count="0" character="gabriel_agreste" />
                 <condition count="0" character="hawkmoth" />
                 <condition count="0" character="monarch" />
-                <state img="custom:#-prayer" marker="P_adrien" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Gabriel Agreste felt terribly uneasy,&lt;br&gt;•and he began to pray for the safety of his son and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_adrien" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Gabriel Agreste felt terribly uneasy,&lt;br&gt;•and he began to pray for the safety of his son and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="marinette" />
@@ -3852,7 +4267,13 @@
                 <condition role="self" notSaidMarker="P_marinette" />
                 <condition count="0" character="alya" />
                 <condition count="0" character="alya_cesaire" />
-                <state img="custom:#-prayer" marker="P_marinette" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Alya felt super-anxious about Marinette&lt;br&gt;•and she started praying for the safety of Marinette, Tikki, and their friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_marinette" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Alya felt super-anxious about Marinette&lt;br&gt;•and she started praying for the safety of Marinette, Tikki, and their friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
@@ -3866,7 +4287,14 @@
                     <condition role="opp" character="raku-chan" var="neko" />
                     <condition count="0" character="koneko-chan" />
                 </alternative>
-                <state img="custom:#-prayer" marker="P_nnsg" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, something reminded Hitoshi of ~neko~’s sweet, kawaii face,&lt;br&gt;•and he prayed sincerely for the safety of ~neko~ and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_nnsg" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, something reminded Hitoshi of ~neko~’s sweet, kawaii face,&lt;br&gt;•and he prayed sincerely for the safety of ~neko~ and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_nnsg_solo" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="koneko-chan" />
@@ -3874,7 +4302,14 @@
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_nnsg" />
                 <condition count="0" character="hitoshi" />
-                <state img="custom:#-prayer" marker="P_nnsg" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, something reminded Hitoshi of Koneko and Raku’s sweet, kawaii faces,&lt;br&gt;•and he prayed sincerely for the safety of the neko girls and their friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_nnsg" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, something reminded Hitoshi of Koneko and Raku’s sweet, kawaii faces,&lt;br&gt;•and he prayed sincerely for the safety of the neko girls and their friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_nnsg_duo" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="panty" />
@@ -3884,22 +4319,39 @@
                 <condition count="0" character="brief_psg" />
                 <condition count="0" character="briefers" />
                 <condition count="0" character="briefers_rock" />
-                <state img="custom:#-prayer" marker="P_panty" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Brief felt anxious about Panty,&lt;br&gt;•and he started praying diligently for the safety of Panty and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_panty" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Brief felt anxious about Panty,&lt;br&gt;•and he started praying diligently for the safety of Panty and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="stocking" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_stocking" />
                 <condition count="0" character="garterbelt" />
-                <state img="custom:#-prayer" marker="P_stocking" direction="none" set-intelligence="no-swap">{eb}•(For some reason, Reverend Garterbelt sensed something terrible in his soul,&lt;br&gt;•and he began praying for the safety of Panty and Stocking.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_stocking" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(For some reason, Reverend Garterbelt sensed something terrible in his soul,&lt;br&gt;•and he began praying for the safety of Panty and Stocking.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="meia" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_meia" />
-                <condition count="0" character="dita" />
-                <condition count="0" character="dita_liebely" />
-                <state img="custom:#-prayer" marker="P_meia" direction="none" set-intelligence="no-swap">{eb}•(Dita felt a startling and strange feeling,&lt;br&gt;•and she began to pray for the safety of Meia and her friends.){!reset}</state>
+                <condition count="0" character="misty_cornwell" />
+                <state img="custom:#-prayer" marker="P_meia" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Misty felt a sinking, startling feeling about Meia’s trip to her home star system,&lt;br&gt;•and she began to pray for the safety of Meia and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="jura" />
@@ -3907,7 +4359,13 @@
                 <condition role="self" notSaidMarker="P_jura" />
                 <condition count="0" character="barnette" />
                 <condition count="0" character="barnette_orangello" />
-                <state img="custom:#-prayer" marker="P_jura" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Barnette started to worry about Jura,&lt;br&gt;•and she started praying quietly for the safety of Jura and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_jura" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Barnette started to worry about Jura,&lt;br&gt;•and she started praying quietly for the safety of Jura and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="saki_zls" />
@@ -3917,21 +4375,39 @@
                 <condition count="0" character="koutarou_tatsumi" />
                 <condition count="0" character="kotaro" />
                 <condition count="0" character="kotaro_tatsumi" />
-                <state img="custom:#-prayer" marker="P_nikaidou" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Koutarou felt something stop him,&lt;br&gt;•and he began praying diligenty for the safety of his girls.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_nikaidou" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Koutarou felt something stop him,&lt;br&gt;•and he began praying diligenty for the safety of his girls.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="critical_darling" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_cd" />
                 <condition count="0" character="hidden_gem" />
-                <state img="custom:#-prayer" marker="P_cd" direction="none" set-intelligence="no-swap">{eb}•(Charlotte suddenly felt concerned deeply for Ibuki,&lt;br&gt;•and she prayed calmly and diligently for the safety of Ibuki and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_cd" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Charlotte suddenly felt concerned deeply for Ibuki,&lt;br&gt;•and she prayed calmly and diligently for the safety of Ibuki and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="aqua_kh" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_aquaKH" />
-                <condition count="0" character="ventus" />
-                <state img="custom:#-prayer" marker="P_aquaKH" direction="none" set-intelligence="no-swap">{eb}•Ventus suddenly felt a sharp, familiar worry,&lt;br&gt;•and he prayed with his whole heart for the safety of Aqua and her friends.{!reset}</state>
+                <condition count="0" />
+                <state img="custom:#-prayer" marker="P_aquaKH" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•Ventus suddenly felt a sharp, familiar worry,&lt;br&gt;•and he prayed with his whole heart for the safety of Aqua and her friends.{!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="ringo_ando" />
@@ -3939,7 +4415,13 @@
                 <condition role="self" notSaidMarker="P_ringo" />
                 <condition count="0" character="arle" />
                 <condition count="0" character="arle_nadja" />
-                <state img="custom:#-prayer" marker="P_ringo" direction="none" set-intelligence="no-swap">{eb}(•Arle somehow felt Ringo faced with a dread she hadn’t faced since the ~rng(6-9)~-Chain she pulled off against her last Friday,&lt;br&gt;•And she started praying for the safety of Ringo and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_ringo" direction="none" set-intelligence="no-swap">
+                    <text>{eb}(•Arle somehow felt Ringo faced with a dread she hadn’t faced since the ~rng(6-9)~-Chain she pulled off against her last Friday,&lt;br&gt;•And she started praying for the safety of Ringo and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
@@ -3951,7 +4433,13 @@
                 <alternative>
                     <condition role="opp" character="samus" />
                 </alternative>
-                <state img="custom:#-prayer" marker="P_samus" direction="none" set-intelligence="no-swap">{eb}(•Suddenly, Noxus sensed a powerful and evil presence in another galaxy,&lt;br&gt;•And he prayed for the success of Samus and her friends against this evil.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_samus" direction="none" set-intelligence="no-swap">
+                    <text>{eb}(•Suddenly, Noxus sensed a powerful and evil presence in another galaxy,&lt;br&gt;•And he prayed for the success of Samus and her friends against this evil.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="supernova" />
@@ -3959,7 +4447,13 @@
                 <condition role="self" notSaidMarker="P_stella" />
                 <condition count="0" character="amber_inferno" />
                 <condition count="0" character="professor_sub-zero" />
-                <state img="custom:#-prayer" marker="P_stella" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Amber and Dr. Kelvin recalled Stella’s passion,&lt;br&gt;•and they began to pray for the safety of Stella and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_stella" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Amber and Dr. Kelvin recalled Stella’s passion,&lt;br&gt;•and they began to pray for the safety of Stella and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
@@ -3970,27 +4464,51 @@
                 <alternative>
                     <condition role="opp" character="wiifitmale" var="trainer" />
                 </alternative>
-                <state img="custom:#-prayer" marker="P_wiifit" direction="none" set-intelligence="no-swap">{eb}•(The Wii Balance Boards of the world experienced a startling, strange sensation,&lt;br&gt;•and they began praying for the safety of the trainer and ~trainer.ifMale(his|her)~ friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_wiifit" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(The Wii Balance Boards of the world experienced a startling, strange sensation,&lt;br&gt;•and they began praying for the safety of the trainer and ~trainer.ifMale(his|her)~ friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="dreamcatcher" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_dreamcatcher" />
                 <condition count="0" character="golden_queen" />
-                <state img="custom:#-prayer" marker="P_dreamcatcher" direction="none" set-intelligence="no-swap">{eb}•(The Golden Queen awoke from a worryingly dreamless sleep,&lt;br&gt;•and she began to pray for the well-being of Dreamcatcher and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_dreamcatcher" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(The Golden Queen awoke from a worryingly dreamless sleep,&lt;br&gt;•and she began to pray for the well-being of Dreamcatcher and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="derpina" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_derpina" />
                 <condition count="0" character="derp" />
-                <state img="custom:#-prayer" marker="P_derpina" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Derp had le sinking feeling about Derpina,&lt;br&gt;•and he began praying for the safety of Derpina and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_derpina" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Derp had le sinking feeling about Derpina,&lt;br&gt;•and he began praying for the safety of Derpina and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="freddie" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_freaker" />
-                <state img="custom:#-prayer" marker="P_freaker" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, a puppeteer wistfully recalled Freddie’s jammin’ young face,&lt;br&gt;•and they began praying for the safe partyin’ of Freddie and his freaker friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_freaker" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, a puppeteer wistfully recalled Freddie’s jammin’ young face,&lt;br&gt;•and they began praying for the safe partyin’ of Freddie and his freaker friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="megamix" />
@@ -3998,35 +4516,65 @@
                 <condition role="self" notSaidMarker="P_megamix" />
                 <condition count="0" character="nitrus_brio" />
                 <condition count="0" character="n_brio" />
-                <state img="custom:#-prayer" marker="P_megamix" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Nitrus Brio felt something stop him,&lt;br&gt;•and he started praying quietly for the safety of Dr. Cortex and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_megamix" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Nitrus Brio felt something stop him,&lt;br&gt;•and he started praying quietly for the safety of Dr. Cortex and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="mileena" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_mileena" />
                 <condition count="0" character="shao_kahn" />
-                <state img="custom:#-prayer" marker="P_mileena" direction="none" set-intelligence="no-swap">{eb}•(Shao Kahn sensed Mileena was in the presence of a threat unlike any he’d seen before,&lt;br&gt;•and he began to pray for the safety of his daughter.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_mileena" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Shao Kahn sensed Mileena was in the presence of a threat unlike any he’d seen before,&lt;br&gt;•and he began to pray for the safety of his daughter.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="natasha" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_natasha" />
                 <condition count="0" character="grizelda" />
-                <state img="custom:#-prayer" marker="P_natasha" direction="none" set-intelligence="no-swap">{eb}•(Grizelda had a startling feeling in her mechanical legs unlike anything she’d felt before,&lt;br&gt;•and she prayed for the safety of her sister and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_natasha" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Grizelda had a startling feeling in her mechanical legs unlike anything she’d felt before,&lt;br&gt;•and she prayed for the safety of her sister and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="sex_toilet" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_toilet" />
                 <condition count="0" character="roland_jaycox" />
-                <state img="custom:#-prayer" marker="P_toilet" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Mr. Jaycox recalled Tony’s shining young seat,&lt;br&gt;•and he prayed strongly for the safety of Tony and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_toilet" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Mr. Jaycox recalled Tony’s shining young seat,&lt;br&gt;•and he prayed strongly for the safety of Tony and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="wario" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_wario" />
                 <condition count="0" character="jimmy_t" />
-                <state img="custom:#-prayer" marker="P_wario" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, something interrupted Jimmy T.’s groove,&lt;br&gt;•and he prayed soulfully for the safety of Wario and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_wario" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, something interrupted Jimmy T.’s groove,&lt;br&gt;•and he prayed soulfully for the safety of Wario and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="girlfriend" />
@@ -4034,7 +4582,13 @@
                 <condition role="self" notSaidMarker="P_gf" />
                 <condition count="0" character="daddy_dearest" />
                 <condition count="0" character="mommy_mearest" />
-                <state img="custom:#-prayer" marker="P_gf" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Daddy Dearest and Mommy Mearest both woke up in a cold sweat,&lt;br&gt;•and they began a demonic prayer for the safety of their daughter.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_gf" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Daddy Dearest and Mommy Mearest both woke up in a cold sweat,&lt;br&gt;•and they began a demonic prayer for the safety of their daughter.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="sandy_cheeks" />
@@ -4042,28 +4596,52 @@
                 <condition role="self" notSaidMarker="P_sandy" />
                 <condition count="0" character="spongebob" />
                 <condition count="0" character="patrick_star" />
-                <state img="custom:#-prayer" marker="P_sandy" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Spongebob and Patrick started thinking unusually Texan thoughts,&lt;br&gt;•and they began praying for the safety of Sandy and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_sandy" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Spongebob and Patrick started thinking unusually Texan thoughts,&lt;br&gt;•and they began praying for the safety of Sandy and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="bella_goth" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_bella" />
                 <condition count="0" character="mortimer_goth" />
-                <state img="custom:#-prayer" marker="P_bella" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Mortimer Goth felt an unexplained anxiety,&lt;br&gt;•and he began to pray for the safety of his wife and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_bella" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Mortimer Goth felt an unexplained anxiety,&lt;br&gt;•and he began to pray for the safety of his wife and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="glass_joe" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_glassJoe" />
                 <condition count="0" character="little_mac" />
-                <state img="custom:#-prayer" marker="P_glassJoe" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Little Mac felt a deep concern for Glass Joe,&lt;br&gt;•and he began praying respectfully for the safety of Joe and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_glassJoe" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Little Mac felt a deep concern for Glass Joe,&lt;br&gt;•and he began praying respectfully for the safety of Joe and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="fernando" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_fernando" />
                 <condition count="0" character="gooseman" />
-                <state img="custom:#-prayer" marker="P_fernando" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Gooseman’s skin was covered in goosebumps,&lt;br&gt;•and he began to pray for the safety of Fernando and his…companions.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_fernando" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Gooseman’s skin was covered in goosebumps,&lt;br&gt;•and he began to pray for the safety of Fernando and his…companions.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="mister_clean" />
@@ -4071,7 +4649,13 @@
                 <condition role="self" notSaidMarker="P_mrClean" />
                 <condition count="0" character="mr_peanut" />
                 <condition count="0" character="mister_peanut" />
-                <state img="custom:#-prayer" marker="P_mrClean" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Mr. Peanut felt a strange feeling in his shell,&lt;br&gt;•and he began praying for the safety of Mister Clean and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_mrClean" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Mr. Peanut felt a strange feeling in his shell,&lt;br&gt;•and he began praying for the safety of Mister Clean and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="ae86" />
@@ -4079,42 +4663,78 @@
                 <condition role="self" notSaidMarker="P_ae86" />
                 <condition count="0" character="takumi" />
                 <condition count="0" character="takumi_fujiwara" />
-                <state img="custom:#-prayer" marker="P_ae86" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Takumi felt worried about something,&lt;br&gt;•and he started to pray for his father’s AE86 to return in one piece.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_ae86" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Takumi felt worried about something,&lt;br&gt;•and he started to pray for his father’s AE86 to return in one piece.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="750">
                 <condition role="opp" character="monique" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_monique" />
                 <condition count="0" character="wallace_jericho" />
-                <state img="custom:#-prayer" marker="P_monique" direction="none" set-intelligence="no-swap">{eb}•(As a silent space delivery driver in white makeup walked the surface of a strange planet,&lt;br&gt;•he suddenly felt a fellow mime on the world was in danger,&lt;br&lt;•and he made a silent prayer for the safety of Monique and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_monique" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(As a silent space delivery driver in white makeup walked the surface of a strange planet,&lt;br&gt;•he suddenly felt a fellow mime on the world was in danger,&lt;br&gt;•and he made a silent prayer for the safety of Monique and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="cynthia" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_cynthia" />
                 <condition count="0" character="volo" />
-                <state img="custom:#-prayer" marker="P_cynthia" direction="none" set-intelligence="no-swap">{eb}•(An unusual feeling touched the heart of Volo,&lt;br&gt;•and he began to pray quietly for the well-being of his descendants and their friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_cynthia" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(An unusual feeling touched the heart of Volo,&lt;br&gt;•and he began to pray quietly for the well-being of his descendants and their friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="tharja" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_tharja" />
                 <condition count="0" character="donnel" />
-                <state img="custom:#-prayer" marker="P_tharja" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Donnel felt terribly worried that Tharja might be in over her head,&lt;br&gt;•and he started praying for the safety of Tharja and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_tharja" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Donnel felt terribly worried that Tharja might be in over her head,&lt;br&gt;•and he started praying for the safety of Tharja and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="raven" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_raven" />
                 <condition count="0" character="trigon" />
-                <state img="custom:#-prayer" marker="P_raven" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Trigon felt something tug at his conscience,&lt;br&gt;•and he began a silent demonic prayer for the safety of his daughter.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_raven" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Trigon felt something tug at his conscience,&lt;br&gt;•and he began a silent demonic prayer for the safety of his daughter.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="ini" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_ini" />
                 <condition count="0" character="morgan_fey" />
-                <state img="custom:#-prayer" marker="P_ini" direction="none" set-intelligence="no-swap">{eb}•(A sudden anxious feeling kept Morgan Fey awake,&lt;br&gt;•and she found herself praying restlessly for the success of Ms. Miney.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_ini" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(A sudden anxious feeling kept Morgan Fey awake,&lt;br&gt;•and she found herself praying restlessly for the success of Ms. Miney.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="videl" />
@@ -4123,7 +4743,13 @@
                 <condition count="0" character="mr_satan" />
                 <condition count="0" character="mister_satan" />
                 <condition count="0" character="hercule" />
-                <state img="custom:#-prayer" marker="P_videl" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Mr. Satan somehow felt that Videl was in great peril,&lt;br&gt;•and he started praying dearly for the safety of his only daughter.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_videl" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Mr. Satan somehow felt that Videl was in great peril,&lt;br&gt;•and he started praying dearly for the safety of his only daughter.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="miko" />
@@ -4133,7 +4759,13 @@
                 <condition count="0" character="futo_mononobe" />
                 <condition count="0" character="futo_touhou" />
                 <condition count="0" character="mononobe_no_futo" />
-                <state img="custom:#-prayer" marker="P_miko" direction="none" set-intelligence="no-swap">{eb}•(Futo felt her mind become suddenly clouded with grave thoughts about Miko,&lt;br&gt;•and she started chanting with the safety of Miko and her consort in mind.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_miko" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Futo felt her mind become suddenly clouded with grave thoughts about Miko,&lt;br&gt;•and she started chanting with the safety of Miko and her consort in mind.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="reimu" />
@@ -4141,14 +4773,26 @@
                 <condition role="self" notSaidMarker="P_reimu" />
                 <condition count="0" character="marisa" />
                 <condition count="0" character="marisa_kirisame" />
-                <state img="custom:#-prayer" marker="P_reimu" direction="none" set-intelligence="no-swap">{eb}•(Marisa sensed that Reimu was having a somewhat unusual ~Weekday~,&lt;br&gt;•and she prayed for the success of Reimu and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_reimu" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Marisa sensed that Reimu was having a somewhat unusual ~Weekday~,&lt;br&gt;•and she prayed for the success of Reimu and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="susie" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_susie" />
                 <condition count="0" character="joey_dbd" />
-                <state img="custom:#-prayer" marker="P_susie" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Joey had a haunting feeling,&lt;br&gt;•and he prayed fervently for the safety of Susie.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_susie" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Joey had a haunting feeling,&lt;br&gt;•and he prayed fervently for the safety of Susie.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="kira" />
@@ -4156,7 +4800,13 @@
                 <condition role="self" notSaidMarker="P_kira" />
                 <condition count="0" character="shinobu" />
                 <condition count="0" character="shinobu_kawajiri" />
-                <state img="custom:#-prayer" marker="P_kira" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Shinobu Kawajiri felt cold with anxiety,&lt;br&gt;•and she began to pray devotedly for the safety of her husband and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_kira" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Shinobu Kawajiri felt cold with anxiety,&lt;br&gt;•and she began to pray devotedly for the safety of her husband and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="pot_of_greed" />
@@ -4164,7 +4814,13 @@
                 <condition role="self" notSaidMarker="P_PoG" />
                 <condition count="0" character="kaiba" />
                 <condition count="0" character="seto_kaiba" />
-                <state img="custom:#-prayer" marker="P_PoG" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Seto Kaiba started to worry about his deck,&lt;br&gt;•and he began to pray for the safety of his ability to draw 2 cards.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_PoG" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Seto Kaiba started to worry about his deck,&lt;br&gt;•and he began to pray for the safety of his ability to draw 2 cards.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="jessie" />
@@ -4172,7 +4828,25 @@
                 <condition role="self" notSaidMarker="P_jessie" />
                 <condition count="0" character="tiffany" />
                 <condition count="0" character="tiffany_maye" />
-                <state img="custom:#-prayer" marker="P_jessie" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Tiffany Maye shot awake in the middle of the night,&lt;br&gt;•and she began praying remorsefully for the safety of her mother and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_jessie" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Tiffany Maye shot awake in the middle of the night,&lt;br&gt;•and she began praying remorsefully for the safety of her mother and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
+            </case>
+            <case stage="1-4" priority="749">
+                <condition role="opp" character="sakura" />
+                <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
+                <condition role="self" notSaidMarker="P_sakura" />
+                <state img="custom:#-prayer" marker="P_sakura" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Sakura’s parents woke in a mournful mood,&lt;br&gt;•and they started praying fervently for their daughter’s soul.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="mulan" />
@@ -4180,101 +4854,179 @@
                 <condition role="self" notSaidMarker="P_mulan" />
                 <condition count="0" character="emperor_mulan" />
                 <condition count="0" character="mulan_emperor" />
-                <state img="custom:#-prayer" marker="P_mulan" direction="none" set-intelligence="no-swap">{eb}•(The Emperor of China had a troubling vision of a great evil,&lt;br&gt;•and he began praying for the well-being of the woman who saved his kingdom.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_mulan" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(The Emperor of China had a troubling vision of a great evil,&lt;br&gt;•and he began praying for the well-being of the woman who saved his kingdom.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="bowsette" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_bowsette" />
                 <condition count="0" />
-                <state img="custom:#-prayer" marker="P_bowsette" direction="none" set-intelligence="no-swap">{eb}•(As Bowser Jr. lay awake feeling incredibly anxious,&lt;br&gt;•he suddenly got up and led the Koopas in a prayer for the well-being of their queen.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_bowsette" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(As Bowser Jr. lay awake feeling incredibly anxious,&lt;br&gt;•he suddenly got up and led the Koopas in a prayer for the well-being of their queen.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="wikipe-tan" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_wikipe" />
-                <state img="custom:#-prayer" marker="P_wikipe" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, a lazy college student somewhere had the worst intrusive thought,&lt;br&gt;•and started praying for the safety of Wikipe-tan and her articles).{!reset}</state>
+                <state img="custom:#-prayer" marker="P_wikipe" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, a lazy college student somewhere had the worst intrusive thought,&lt;br&gt;•and started praying for the safety of Wikipe-tan and her articles).{!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="ayano" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_ayano" />
                 <condition count="0" character="info-chan" />
-                <state img="custom:#-prayer" marker="P_ayano" direction="none" set-intelligence="no-swap">{eb}•(Info-chan started to suddenly worry about her best customer in a way she had never worried before,&lt;br&gt;•and she prayed silently for the safety of Ayano.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_ayano" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Info-chan started to suddenly worry about her best customer in a way she had never worried before,&lt;br&gt;•and she prayed silently for the safety of Ayano.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="bobobo" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_bobobo" />
                 <condition count="0" character="jelly_jiggler" />
-                <state img="custom:#-prayer" marker="P_bobobo" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Jelly Jiggler saw Bobobo’s credit score,&lt;br&gt;•and he started praying diligently for the safety of Bobobo and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_bobobo" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Jelly Jiggler saw Bobobo’s credit score,&lt;br&gt;•and he started praying diligently for the safety of Bobobo and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="galatea" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_galatea" />
                 <condition count="0" character="pygmalion" />
-                <state img="custom:#-prayer" marker="P_galatea" direction="none" set-intelligence="no-swap">{eb}•(Back in a year gone past, Pygmalion suddenly felt something tug at his soul,&lt;br&gt;•and he began praying solemnly for the protection of his artwork and the friends she would have.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_galatea" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Back in a year gone past, Pygmalion suddenly felt something tug at his soul,&lt;br&gt;•and he began praying solemnly for the protection of his artwork and the friends she would have.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="kizuna" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_kizuna" />
-                <state img="custom:#-prayer" marker="P_kizuna" direction="none" set-intelligence="no-swap">{eb}•(~marker.TV_playername~’s call touched the heart of Ki⋅u⋅⋅.&lt;br&gt;•⋅⋅z⋅na prayed for ~marker.TV_playername~ and ~player.ifMale(his|her)~ friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_kizuna" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(~marker.TV_playername~’s call touched the heart of Ki⋅u⋅⋅.&lt;br&gt;•⋅⋅z⋅na prayed for ~marker.TV_playername~ and ~player.ifMale(his|her)~ friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="azami" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_azami" />
                 <condition count="0" character="kirie" />
-                <state img="custom:#-prayer" marker="P_azami" direction="none" set-intelligence="no-swap">{eb}•(Kirie suddenly felt even more troubled than usual,&lt;br&gt;•and she started praying dearly for the safety of Azami and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_azami" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Kirie suddenly felt even more troubled than usual,&lt;br&gt;•and she started praying dearly for the safety of Azami and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="derpette" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_derpette" />
                 <condition count="0" character="herp" />
-                <state img="custom:#-prayer" marker="P_derpette" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Herp had an awful intrusive thought about Derpette,&lt;br&gt;•and he started to pray anxiously for the safety of Derpette and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_derpette" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Herp had an awful intrusive thought about Derpette,&lt;br&gt;•and he started to pray anxiously for the safety of Derpette and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="gruntilda" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_grunty" />
                 <condition count="0" character="brentilda" />
-                <state img="custom:#-prayer" marker="P_grunty" direction="none" set-intelligence="no-swap">{eb}•(Brentilda sensed her sister might be struggling at wit’s end;&lt;br&gt;•she set aside her differences, praying for Grunty and her “friends.”){!reset}</state>
+                <state img="custom:#-prayer" marker="P_grunty" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Brentilda sensed her sister might be struggling at wit’s end;&lt;br&gt;•she set aside her differences, praying for Grunty and her “friends.”){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="el_shaggy_blanco" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_shaggyB" />
                 <condition count="0" character="tex" />
-                <state img="custom:#-prayer" marker="P_shaggyB" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Tex remembered the first time he met the crazy beatnik who beat up all of his guys,&lt;br&gt;•and he prayed for the safety of El Shaggy Blanco and his friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_shaggyB" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Tex remembered the first time he met the crazy beatnik who beat up all of his guys,&lt;br&gt;•and he prayed for the safety of El Shaggy Blanco and his friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="trifle" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_trifle" />
                 <condition role="self" saidMarker="TV_trifle_treats" />
-                <state img="custom:#-prayer" marker="P_trifle" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Trifle’s ~marker.TV_trifle_treats~ had an uneasy feeling,&lt;br&gt;•and they all began to pray for the safety of Trifle and her friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_trifle" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Trifle’s ~marker.TV_trifle_treats~ had an uneasy feeling,&lt;br&gt;•and they all began to pray for the safety of Trifle and her friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="sannytess" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_tess" />
-                <state img="custom:#-prayer" marker="P_tess" direction="none" set-intelligence="no-swap">{eb}•(A Wikipedia contributor suddenly felt worried while editing the Futanari article,&lt;br&gt;•and they prayed desperately for the safety of Sanny, Tess, and their friends.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_tess" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(A Wikipedia contributor suddenly felt worried while editing the Futanari article,&lt;br&gt;•and they prayed desperately for the safety of Sanny, Tess, and their friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="749">
                 <condition role="opp" character="gay_spaghetti_chef" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_gsc" />
                 <condition count="0" character="khonjin" />
-                <state img="custom:#-prayer" marker="P_gsc" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Khonjin started to worry that maybe Gino had killed Gay Spaghetti Chef or fired him again or something,&lt;br&gt;•and he started praying for the well-being of Gay Spaghetti Chef and his dumbass friends.){!reset}</state>
-            </case>
-            <case stage="1-4" priority="749">
-                <condition role="opp" character="sakura" />
-                <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
-                <condition role="self" notSaidMarker="P_sakura" />
-                <state img="custom:#-prayer" marker="P_sakura" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Sakura’s parents woke in a mournful mood,&lt;br&gt;•and they started praying fervently for their daughter’s soul.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_gsc" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Khonjin started to worry that maybe Gino had killed Gay Spaghetti Chef or fired him again or something,&lt;br&gt;•and he started praying for the well-being of Gay Spaghetti Chef and his dumbass friends.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="748">
                 <condition role="opp" character="moon" />
@@ -4287,7 +5039,14 @@
                 <alternative>
                     <condition character="mom_alola" notSaidMarker="moon_RouteStart_diamond" />
                 </alternative>
-                <state img="custom:#-prayer" marker="P_moon" direction="none" set-intelligence="no-swap">{eb}•(Officer Mitchell had a horrible feeling in his gut,&lt;br&gt;•and he began to pray for the well-being of everyone in Moon’s presence.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_moon" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Officer Mitchell had a horrible feeling in his gut,&lt;br&gt;•and he began to pray for the well-being of everyone in Moon’s presence.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                        <marker name="P_moon_basic" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="748">
                 <condition role="opp" character="kokichi" />
@@ -4295,7 +5054,13 @@
                 <condition role="self" notSaidMarker="P_kokichi" />
                 <condition count="0" character="shuichi" />
                 <condition count="0" character="shuichi_saihara" />
-                <state img="custom:#-prayer" marker="P_kokichi" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Shuichi felt deeply uneasy,&lt;br&gt;•and he started praying for everyone’s safety from Kokichi.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_kokichi" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Shuichi felt deeply uneasy,&lt;br&gt;•and he started praying for everyone’s safety from Kokichi.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="748">
                 <condition role="opp" character="scm" />
@@ -4303,13 +5068,79 @@
                 <condition role="self" notSaidMarker="P_scm" />
                 <condition count="0" character="gina" />
                 <condition count="0" character="gina_scm" />
-                <state img="custom:#-prayer" marker="P_scm" direction="none" set-intelligence="no-swap">{eb}•(Suddenly, Gina got the feeling that Suction Cup Man wasn’t good,&lt;br&gt;•and began to pray quietly for the safety of Suction Cup Man and the people next to him.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_scm" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(Suddenly, Gina got the feeling that Suction Cup Man wasn’t good,&lt;br&gt;•and began to pray quietly for the safety of Suction Cup Man and the people next to him.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
             </case>
             <case stage="1-4" priority="747">
                 <condition role="opp" character="sans" />
                 <condition role="self" saidMarker="PG_ready" notSaidMarker="PG_cut" />
                 <condition role="self" notSaidMarker="P_sans" />
-                <state img="custom:#-prayer" marker="P_sans" direction="none" set-intelligence="no-swap">{eb}•(A woman somewhere far away felt a horrible sense of déjà vu,&lt;br&gt;•and she prayed from the bottom of her heart for the safety of Sans and his allies.){!reset}</state>
+                <state img="custom:#-prayer" marker="P_sans" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•(A woman somewhere far away felt a horrible sense of déjà vu,&lt;br&gt;•and she prayed from the bottom of her heart for the safety of Sans and his allies.){!reset}</text>
+                    <markers>
+                        <marker name="PG_cut" op="=" value="1" />
+                        <marker name="PG_scenes" op="+" value="1" />
+                    </markers>
+                </state>
+            </case>
+            <case stage="1" priority="702">
+                <condition role="self" saidMarker="PG_ready" />
+                <condition role="self" notSaidMarker="PG_cut" />
+                <state img="custom:#-giygas" marker="+PG_hits" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•Giygas’s PSI was weakened!{!reset}</text>
+                    <markers>
+                        <marker name="PG_ready" op="=" value="0" />
+                        <marker name="PG_cut" op="=" value="0" />
+                        <marker name="PG_s1" />
+                    </markers>
+                </state>
+            </case>
+            <case stage="2" priority="702">
+                <condition role="self" saidMarker="PG_ready" />
+                <condition role="self" notSaidMarker="PG_cut" />
+                <state img="custom:#-giygas" marker="+PG_hits" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•Giygas’s PSI was weakened!{!reset}</text>
+                    <markers>
+                        <marker name="PG_ready" op="=" value="0" />
+                        <marker name="PG_cut" op="=" value="0" />
+                        <marker name="PG_s2" />
+                    </markers>
+                </state>
+            </case>
+            <case stage="3" priority="702">
+                <condition role="self" saidMarker="PG_ready" />
+                <condition role="self" notSaidMarker="PG_cut" />
+                <state img="custom:#-giygas" marker="+PG_hits" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•Giygas’s PSI was weakened!{!reset}</text>
+                    <markers>
+                        <marker name="PG_ready" op="=" value="0" />
+                        <marker name="PG_cut" op="=" value="0" />
+                        <marker name="PG_s3" />
+                    </markers>
+                </state>
+            </case>
+            <case stage="4" priority="702">
+                <condition role="self" saidMarker="PG_ready" />
+                <condition role="self" notSaidMarker="PG_cut" />
+                <alternative>
+                    <condition role="self" notSaidMarker="PG_darkness" />
+                </alternative>
+                <alternative>
+                    <condition role="self" saidMarker="PG_final" />
+                </alternative>
+                <state img="custom:#-giygas" marker="+PG_hits" direction="none" set-intelligence="no-swap">
+                    <text>{eb}•Giygas’s connection to his PSI powers was severed!{!reset}</text>
+                    <markers>
+                        <marker name="PG_ready" op="=" value="0" />
+                        <marker name="PG_cut" op="=" value="0" />
+                        <marker name="PG_s4" />
+                    </markers>
+                </state>
             </case>
             <case stage="6" priority="683">
                 <condition role="aiopp" character="zoe" />
@@ -4469,7 +5300,7 @@
                 <condition role="self" notSaidMarker="L_endAll" />
                 <condition role="self" notSaidMarker="L2_end" />
                 <condition role="self" notSaidMarker="L2_stats2" />
-                <test expr="~freddie.slot~" value="2" />
+                <test expr="~scm.slot~" value="2" />
                 <state img="custom:#-closed" marker="L2_stats2" direction="none">{eb}Look at you go!&lt;br&gt;•Guts went up by ~rng(9-21)~!{!reset}</state>
             </case>
             <case stage="6" priority="662">
@@ -4886,7 +5717,7 @@
                 <condition role="self" notSaidMarker="L_endAll" />
                 <condition role="self" notSaidMarker="L3_end" />
                 <condition role="self" notSaidMarker="L3_stats2" />
-                <test expr="~freddie.slot~" value="3" />
+                <test expr="~scm.slot~" value="3" />
                 <state img="custom:#-closed" marker="L3_stats2" direction="none">{eb}Look at you go!&lt;br&gt;•Guts went up by ~rng(9-21)~!{!reset}</state>
             </case>
             <case stage="6" priority="562">
@@ -5314,7 +6145,7 @@
                 <condition role="self" notSaidMarker="L_endAll" />
                 <condition role="self" notSaidMarker="L4_end" />
                 <condition role="self" notSaidMarker="L4_stats2" />
-                <test expr="~freddie.slot~" value="4" />
+                <test expr="~scm.slot~" value="4" />
                 <state img="custom:#-closed" marker="L4_stats2" direction="none">{eb}Look at you go!&lt;br&gt;•Guts went up by ~rng(9-21)~!{!reset}</state>
             </case>
             <case stage="6" priority="462">
@@ -5633,6 +6464,14 @@
                 <condition role="self" notSaidMarker="LP_power" />
                 <state img="custom:#-closed" marker="LP_power" direction="none">{eb}•~player~ realized the power of PK Strip Poker α!{!reset}</state>
             </case>
+            <case stage="1-4" oneShotId="94" priority="100">
+                <condition role="self" notSaidMarker="PG_ready" />
+                <condition role="self" notSaidMarker="PG_hits" />
+                <condition role="self" notSaidMarker="PG_tries" />
+                <condition role="self" timeInStage="5-" />
+                <condition status="alive" character="human" stage="3-8" timeInStage="0" />
+                <state img="custom:#-giygas" direction="none">{eb}•Swapping your cards doesn’t seem to be getting the best results.&lt;br&gt;•Maybe there’s some other strategy you can use?{!reset}</state>
+            </case>
             <case stage="1-4">
                 <condition role="self" saidMarker="G_itHurts==1" />
                 <state img="custom:#-giygas" marker="G_itHurts=2" direction="none">{gy}“Argh… Yaaagh!…”</state>
@@ -5740,11 +6579,6 @@
             </case>
             <case stage="6" priority="-1">
                 <state img="custom:#-open" marker="L_endAll" direction="none">~blank~</state>
-            </case>
-            <case stage="1-4" hidden="1" priority="797">
-                <condition role="self" saidMarker="PG_ready" />
-                <condition role="self" saidMarker="PG_cut" />
-                <state set-intelligence="no-swap">~blank~</state>
             </case>
             <case stage="0-6" id="69" hidden="1">
                 <condition role="opp" character="trifle" saying="blueberry tart" />
