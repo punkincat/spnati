@@ -27,6 +27,8 @@
         <note id="212">This can't be! - use hajime.png once asset is available.</note>
         <note id="143">All except "mind the mission" need hajime.png once the asset is available</note>
         <note id="169">"Security of the planet" line needs hajime.png once that is available</note>
+        <note id="305">The whole sequence will need hajime poses once they're in.</note>
+        <note id="306">Let it be known that I, Kiki Retzorg, actually started crying while writing this line.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Alien presence" sort="0" />
@@ -55,7 +57,7 @@
         <label id="29" label="3+ in a row" folder="Consecutive losses" sort="0" />
         <label id="30" label="3+ in a row" folder="Consecutive losses" sort="2" />
         <label id="31" label="3+ in a row" folder="Consecutive losses" sort="3" />
-        <label id="32" label="" folder="Outbound stage 7" sort="0" />
+        <label id="32" label="" folder="Outbound stage 7" sort="2" />
         <label id="34" label="" folder="Ignored generic cases" sort="2" />
         <label id="35" label="" folder="Ignored generic cases" sort="2" />
         <label id="36" label="" folder="Ignored generic cases" sort="3" />
@@ -228,7 +230,7 @@
         <label id="216" label="" folder="Outbound stage 5" sort="7" />
         <label id="217" label="" folder="Outbound stage 6" sort="2" />
         <label id="218" label="Joke Forfeit" folder="" sort="0" />
-        <label id="219" label="/Outbound stage 7" folder="" sort="0" />
+        <label id="219" label="" folder="Outbound stage 7" sort="0" />
         <label id="220" label="Trifle's treats" folder="" sort="0" />
         <label id="221" label="Trifle's treats" folder="" sort="0" />
         <label id="222" label="Trifle's treats" folder="" sort="0" />
@@ -254,6 +256,20 @@
         <label id="242" label="Stat 3: Vitality" folder="Level-Up" sort="12" />
         <label id="243" label="Stat 3: IQ" folder="Level-Up" sort="12" />
         <label id="244" label="Stat 3: Luck" folder="Level-Up" sort="12" />
+        <label id="301" label="" folder="Moon+Mom" sort="16" />
+        <label id="302" label="" folder="Moon+Mom" sort="6" />
+        <label id="303" label="" folder="Moon+Mom" sort="2" />
+        <label id="304" label="" folder="Moon+Mom" sort="20" />
+        <label id="305" label="" folder="Moon+Mom" sort="10" />
+        <label id="306" label="The Good Ending" folder="Moon+Mom" sort="28" />
+        <label id="307" label="" folder="Moon+Mom" sort="12" />
+        <label id="308" label="" folder="Moon+Mom" sort="4" />
+        <label id="309" label="" folder="Moon+Mom" sort="8" />
+        <label id="310" label="" folder="Moon+Mom" sort="14" />
+        <label id="311" label="" folder="Moon+Mom" sort="18" />
+        <label id="312" label="" folder="Moon+Mom" sort="22" />
+        <label id="313" label="" folder="Moon+Mom" sort="26" />
+        <label id="314" label="" folder="Moon+Mom" sort="24" />
     </labels>
     <prefixes>
         <prefix>0-giegue</prefix>
@@ -264,7 +280,7 @@
         <prefix>5-</prefix>
         <prefix>6-</prefix>
     </prefixes>
-    <nextId>300</nextId>
+    <nextId>314</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="D">Dialogue, in stage 0.</marker>
@@ -312,6 +328,7 @@
         <marker scope="Public" name="D_ohRightTheMission" />
         <marker scope="Public" name="D_openingSpeech" />
         <marker scope="Public" name="D_playerFirst" />
+        <marker scope="Public" name="D_prepareToBeAmazed" />
         <marker scope="Public" name="D_reflectAndStrip" />
         <marker scope="Public" name="D_showdown" />
         <marker scope="Public" name="D_speechCheckCritFail" />
@@ -342,6 +359,7 @@
         <marker scope="Public" name="E_mixed" />
         <marker scope="Public" name="E_salvation" />
         <marker scope="Public" name="E_scapegoat" />
+        <marker scope="Public" name="E_theGoodEnding" />
         <marker scope="Public" name="E_tldr" />
         <marker scope="Public" name="E_tryAgain" />
         <marker scope="Public" name="E_war" />
@@ -635,6 +653,10 @@
         <marker scope="Public" name="T_cheryl_pS3" />
         <marker scope="Public" name="T_cheryl_pS4" />
         <marker scope="Public" name="TI">Targets that are Inbound, responding to targeted lines from opponents.</marker>
+        <marker scope="Public" name="TI_revy_tits" />
+        <marker scope="Public" name="TI_revy_tits2" />
+        <marker scope="Public" name="TI_revy_whore" />
+        <marker scope="Public" name="TI_revy_whore2" />
         <marker scope="Public" name="TO">Targets that are Outbound, as part of the initiating side of an interaction.</marker>
         <marker scope="Public" name="TO_" />
         <marker scope="Public" name="TO_azami_collapse" />
@@ -659,6 +681,22 @@
         <marker scope="Public" name="TO_maria_MARIA" />
         <marker scope="Public" name="TO_megamix_collapse" />
         <marker scope="Public" name="TO_megamix_critical" />
+        <marker scope="Public" name="TO_mom_start" />
+        <marker scope="Public" name="TO_moonMom_cantDoThis" />
+        <marker scope="Public" name="TO_moonMom_end" />
+        <marker scope="Public" name="TO_moonMom_ending" />
+        <marker scope="Public" name="TO_moonMom_goBack" />
+        <marker scope="Public" name="TO_moonMom_notRight" />
+        <marker scope="Public" name="TO_moonMom_otherAfterStrip" />
+        <marker scope="Public" name="TO_moonMom_otherLost" />
+        <marker scope="Public" name="TO_moonMom_otherStrip" />
+        <marker scope="Public" name="TO_moonMom_salvation" />
+        <marker scope="Public" name="TO_moonMom_select" />
+        <marker scope="Public" name="TO_moonMom_start" />
+        <marker scope="Public" name="TO_moonMom_transformation0" />
+        <marker scope="Public" name="TO_moonMom_transformation1" />
+        <marker scope="Public" name="TO_moonMom_transformation2" />
+        <marker scope="Public" name="TO_moonMom_yagh" />
         <marker scope="Public" name="TO_nicoRobin_momJeans" />
         <marker scope="Public" name="TO_papyrus_starmor" />
         <marker scope="Public" name="TO_pit_finished" />
@@ -688,12 +726,15 @@
         <marker scope="Public" name="TO_wario_whyYouSuck1" />
         <marker scope="Public" name="TO_wario_whyYouSuck2" />
         <marker scope="Public" name="TO_wario_whyYouSuck3" />
+        <marker scope="Public" name="TO_yuno_madwoman" />
+        <marker scope="Public" name="TO_yuno_nicole" />
         <marker scope="Public" name="TV">Target Variables, for use in-dialogue.</marker>
         <marker scope="Public" name="TV_playername">Player name before nicknames.</marker>
         <marker scope="Public" name="TV_tess_futa" />
         <marker scope="Public" name="TV_trifle_treats" />
         <marker scope="Public" name="TVK">Target Variable Keys; randomly-generated numbers used to assign strings at random for certain TV markers.</marker>
         <marker scope="Public" name="TVK_trifle_treats" />
+        <marker scope="Public" name="TX_mom" />
         <marker scope="Public" name="X">Xtra-special markers, performing all-game functions.</marker>
         <marker scope="Public" name="X_alienPresence" />
         <marker scope="Public" name="X_alliesOnly" />
