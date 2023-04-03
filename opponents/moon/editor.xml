@@ -171,6 +171,9 @@
         <response id="235" opponent="nagatoro" opponentId="358" />
         <response id="236" opponent="nagatoro" opponentId="361" />
     </responses>
+    <notes>
+        <note id="243">This line's subject may be ambiguous if Moon is selected after Bobobo and another male is already present, but it will appear more targeted if Bobobo is selected after Moon.</note>
+    </notes>
     <labels>
         <label id="18" label="epilogue enabler" folder="" sort="0" />
         <label id="135" label="Full Moon 1" folder="" sort="0" />
@@ -258,6 +261,18 @@
         <label id="241" label="" folder="Diamond: Mom to left" sort="0" />
         <label id="242" label="" folder="Heart: Mom to left" sort="0" />
         <label id="161" label="" folder="Wikipe-tan to left" sort="0" />
+        <label id="33" label="" folder="Jura to left" sort="0" />
+        <label id="32" label="" folder="Meia to left" sort="0" />
+        <label id="108" label="" folder="Dust to left" sort="0" />
+        <label id="109" label="" folder="Dust to left" sort="0" />
+        <label id="139" label="" folder="Nugi-chan to left" sort="0" />
+        <label id="103" label="" folder="Revy to left" sort="0" />
+        <label id="152" label="" folder="Nagisa to left" sort="0" />
+        <label id="41" label="" folder="Panty to left" sort="0" />
+        <label id="61" label="" folder="Maki to left" sort="0" />
+        <label id="11" label="" folder="Misty to left" sort="0" />
+        <label id="15" label="" folder="Misty to left" sort="0" />
+        <label id="10" label="" folder="Misty to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
@@ -266,7 +281,7 @@
         <prefix>9_</prefix>
         <prefix>street</prefix>
     </prefixes>
-    <nextId>242</nextId>
+    <nextId>243</nextId>
     <markers>
         <marker scope="Public" name="full_moon" />
         <marker scope="Public" name="moon_9s_drain_batteries" />
@@ -340,6 +355,8 @@
         <marker scope="Public" name="moon_bi_not_picky" />
         <marker scope="Public" name="moon_blackrose_outfits" />
         <marker scope="Public" name="moon_blake_dominatrix" />
+        <marker scope="Public" name="moon_bobobo_hot_guy" />
+        <marker scope="Public" name="moon_bobobo_take_a_photo" />
         <marker scope="Public" name="moon_brock_dont_kill_everybody" />
         <marker scope="Public" name="moon_brock_handle_rocket" />
         <marker scope="Public" name="moon_brock_irresponsible_hazard" />
