@@ -32,12 +32,20 @@ namespace SPNATI_Character_Editor.Activities
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new Desktop.Skinning.SkinnedLabel();
             this.gridPrefixes = new Desktop.Skinning.SkinnedDataGridView();
             this.ColPrefix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMarker = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skinnedCheckBox1 = new Desktop.Skinning.SkinnedCheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.iconMarkers = new Desktop.Skinning.SkinnedIcon();
+            this.gridMarkers = new Desktop.Skinning.SkinnedDataGridView();
+            this.labelMarkers = new Desktop.Skinning.SkinnedLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gridPrefixes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMarkers)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -100,7 +108,7 @@ namespace SPNATI_Character_Editor.Activities
             this.gridPrefixes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridPrefixes.RowHeadersVisible = false;
             this.gridPrefixes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.gridPrefixes.Size = new System.Drawing.Size(313, 320);
+            this.gridPrefixes.Size = new System.Drawing.Size(313, 155);
             this.gridPrefixes.TabIndex = 1;
             // 
             // ColPrefix
@@ -108,6 +116,12 @@ namespace SPNATI_Character_Editor.Activities
             this.ColPrefix.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColPrefix.HeaderText = "Prefix";
             this.ColPrefix.Name = "ColPrefix";
+            // 
+            // ColMarker
+            // 
+            this.ColMarker.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColMarker.HeaderText = "Marker";
+            this.ColMarker.Name = "ColMarker";
             // 
             // skinnedCheckBox1
             // 
@@ -118,19 +132,101 @@ namespace SPNATI_Character_Editor.Activities
             this.skinnedCheckBox1.Size = new System.Drawing.Size(141, 17);
             this.skinnedCheckBox1.TabIndex = 2;
             this.skinnedCheckBox1.Text = "Allow only custom poses";
+            this.toolTip1.SetToolTip(this.skinnedCheckBox1, "Warning: This removes all non-custom poses from the character\'s dialogue.");
             this.skinnedCheckBox1.UseVisualStyleBackColor = true;
-            this.toolTip1.SetToolTip(this.skinnedCheckBox1, "Warning: This removes all non-custom poses from the character's dialogue.");
+            // 
+            // iconMarkers
+            // 
+            this.iconMarkers.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.iconMarkers.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.iconMarkers.Flat = false;
+            this.iconMarkers.Image = global::SPNATI_Character_Editor.Properties.Resources.Help;
+            this.iconMarkers.Location = new System.Drawing.Point(270, 184);
+            this.iconMarkers.Name = "iconMarkers";
+            this.iconMarkers.Size = new System.Drawing.Size(23, 18);
+            this.iconMarkers.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.iconMarkers, "Example: If your marker\'s name is mymarker, and you want to set its value to one," +
+        " type mymarker=1.\nThis has no effect on marker values in the game, only in the e" +
+        "ditor.");
+            this.iconMarkers.UseVisualStyleBackColor = true;
+            // 
+            // gridMarkers
+            // 
+            this.gridMarkers.AllowUserToDeleteRows = false;
+            this.gridMarkers.AllowUserToResizeColumns = false;
+            this.gridMarkers.AllowUserToResizeRows = false;
+            this.gridMarkers.BackgroundColor = System.Drawing.Color.White;
+            this.gridMarkers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridMarkers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridMarkers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridMarkers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridMarkers.ColumnHeadersVisible = false;
+            this.gridMarkers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColMarker});
+            this.gridMarkers.Data = null;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridMarkers.DefaultCellStyle = dataGridViewCellStyle5;
+            this.gridMarkers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.gridMarkers.EnableHeadersVisualStyles = false;
+            this.gridMarkers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.gridMarkers.GridColor = System.Drawing.Color.LightGray;
+            this.gridMarkers.Location = new System.Drawing.Point(6, 205);
+            this.gridMarkers.Name = "gridMarkers";
+            this.gridMarkers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridMarkers.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.gridMarkers.RowHeadersVisible = false;
+            this.gridMarkers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.gridMarkers.Size = new System.Drawing.Size(313, 190);
+            this.gridMarkers.TabIndex = 3;
+            // 
+            // labelMarkers
+            // 
+            this.labelMarkers.AutoSize = true;
+            this.labelMarkers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelMarkers.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelMarkers.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.labelMarkers.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.labelMarkers.Location = new System.Drawing.Point(3, 189);
+            this.labelMarkers.Name = "labelMarkers";
+            this.labelMarkers.Size = new System.Drawing.Size(263, 13);
+            this.labelMarkers.TabIndex = 4;
+            this.labelMarkers.Text = "Marker values for custom pose previewing in dialogue:";
             // 
             // CharacterConfiguration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.iconMarkers);
+            this.Controls.Add(this.labelMarkers);
+            this.Controls.Add(this.gridMarkers);
             this.Controls.Add(this.skinnedCheckBox1);
             this.Controls.Add(this.gridPrefixes);
             this.Controls.Add(this.label1);
             this.Name = "CharacterConfiguration";
             this.Size = new System.Drawing.Size(935, 644);
             ((System.ComponentModel.ISupportInitialize)(this.gridPrefixes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMarkers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,7 +237,11 @@ namespace SPNATI_Character_Editor.Activities
 		private Desktop.Skinning.SkinnedLabel label1;
 		private Desktop.Skinning.SkinnedDataGridView gridPrefixes;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ColPrefix;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMarker;
         private Desktop.Skinning.SkinnedCheckBox skinnedCheckBox1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private Desktop.Skinning.SkinnedDataGridView gridMarkers;
+        private Desktop.Skinning.SkinnedLabel labelMarkers;
+        private Desktop.Skinning.SkinnedIcon iconMarkers;
     }
 }
