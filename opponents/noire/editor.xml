@@ -99,6 +99,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <note id="2370">Neptune's name being very hard to pronounce is a running joke in Neptunia. It's so hard mostly because the "tu" /tju/ sound isn't found in native Japanese words.</note>
         <note id="2371">Neptune's name being very hard to pronounce is a running joke in Neptunia. It's so hard mostly because the "tu" /tju/ sound isn't found in native Japanese words.</note>
         <note id="2372">She feels lonely but doesn't want to show it.</note>
+        <note id="2455">The marker takes two values, so you can respond to both lines at once or to each one separately.</note>
     </notes>
     <labels>
         <label id="3" label="" folder="SpecialNames" sort="0" />
@@ -2525,13 +2526,23 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2447" label="" folder="standing" sort="0" />
         <label id="2448" label="generic" folder="~Male" sort="0" />
         <label id="2449" label="not crotch visible" folder="~Female" sort="0" />
+        <label id="2450" label="" color="6" folder="Bobobo" sort="0" />
+        <label id="2451" label="" color="6" folder="Bobobo" sort="0" />
+        <label id="2452" label="" color="6" folder="Bobobo" sort="0" />
+        <label id="2453" label="" color="6" folder="Bobobo" sort="0" />
+        <label id="2454" label="" color="4" folder="Bobobo" sort="0" />
+        <label id="2455" label="" color="4" folder="Bobobo" sort="0" />
+        <label id="2456" label="" color="4" folder="Bobobo" sort="0" />
+        <label id="2457" label="" color="4" folder="Bobobo" sort="0" />
+        <label id="2458" label="" folder="Bobobo" sort="0" />
+        <label id="2459" label="" color="4" folder="Bobobo" sort="0" />
+        <label id="2460" label="" color="4" folder="Bobobo" sort="0" />
     </labels>
     <prefixes>
         <prefix>onlytail</prefix>
     </prefixes>
-    <nextId>2449</nextId>
+    <nextId>2460</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_costume1" />
         <marker scope="Public" name="adrien_costume2" />
         <marker scope="Public" name="adrien_fightingevil1" />
@@ -2597,6 +2608,11 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="blake01" />
         <marker scope="Public" name="blake02" />
         <marker scope="Public" name="blake1" />
+        <marker scope="Public" name="bobobo0" />
+        <marker scope="Public" name="bobobo4" />
+        <marker scope="Public" name="bobobo5" />
+        <marker scope="Public" name="boboboDonPatch" />
+        <marker scope="Public" name="boboboDonPatchGirl" />
         <marker scope="Public" name="CollectibleBraceletsTakenOff" />
         <marker scope="Public" name="colress_resp_nano" />
         <marker scope="Public" name="colress_resp_nano2" />
