@@ -28,7 +28,8 @@ namespace SPNATI_Character_Editor.Activities
 
 		protected override void OnFirstActivate()
 		{
-			skinnedCheckBox1.Checked = _editorData.OnlyCustomPoses;
+			chkOnlyCustomPoses.Checked = _editorData.OnlyCustomPoses;
+			chkHidePrefixlessImages.Checked = _editorData.HidePrefixlessImages;
 			foreach (string prefix in _editorData.IgnoredPrefixes)
 			{
 				gridPrefixes.Rows.Add(new object[] { prefix });
@@ -37,7 +38,8 @@ namespace SPNATI_Character_Editor.Activities
 
 		public override void Save()
 		{
-			_editorData.OnlyCustomPoses = skinnedCheckBox1.Checked;
+			_editorData.OnlyCustomPoses = chkOnlyCustomPoses.Checked;
+			_editorData.HidePrefixlessImages = chkHidePrefixlessImages.Checked;
 			_editorData.IgnoredPrefixes.Clear();
 			foreach (DataGridViewRow row in gridPrefixes.Rows)
 			{

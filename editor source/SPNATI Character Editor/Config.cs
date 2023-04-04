@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.Providers;
 using System;
 using System.Collections.Generic;
@@ -432,24 +432,6 @@ namespace SPNATI_Character_Editor
 		}
 
 		/// <summary>
-		/// Whether prefixless images are available in dialogue
-		/// </summary>
-		public static bool UsePrefixlessImages
-		{
-			get { return !GetBoolean(Settings.HideNoPrefix); }
-			set { Set(Settings.HideNoPrefix, !value); }
-		}
-
-		/// <summary>
-		/// Filter of prefixes to hide from dialogue poses
-		/// </summary>
-		public static string PrefixFilter
-		{
-			get { return GetString(Settings.PrefixFilter); }
-			set { Set(Settings.PrefixFilter, value); }
-		}
-
-		/// <summary>
 		/// Load other character info up front in banter wizard
 		/// </summary>
 		public static bool AutoLoadBanterWizard
@@ -773,8 +755,6 @@ namespace SPNATI_Character_Editor
 		public static readonly string UserName = "username";
 		public static readonly string AutoSaveInterval = "autosave";
 		public static readonly string DisableIntellisense = "nointellisense";
-		public static readonly string HideNoPrefix = "hidenoprefix";
-		public static readonly string PrefixFilter = "prefixfilter";
 		public static readonly string HideImages = "safemode";
 		public static readonly string HidePreviewText = "hidepreviewtext";
 		public static readonly string DisablePreviewFormatting = "notextboxformatting";

@@ -35,8 +35,10 @@ namespace SPNATI_Character_Editor.Activities
             this.label1 = new Desktop.Skinning.SkinnedLabel();
             this.gridPrefixes = new Desktop.Skinning.SkinnedDataGridView();
             this.ColPrefix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.skinnedCheckBox1 = new Desktop.Skinning.SkinnedCheckBox();
+            this.chkOnlyCustomPoses = new Desktop.Skinning.SkinnedCheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.chkHidePrefixlessImages = new Desktop.Skinning.SkinnedCheckBox();
+            this.iconHidePrefixlessImages = new Desktop.Skinning.SkinnedIcon();
             ((System.ComponentModel.ISupportInitialize)(this.gridPrefixes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,23 +111,52 @@ namespace SPNATI_Character_Editor.Activities
             this.ColPrefix.HeaderText = "Prefix";
             this.ColPrefix.Name = "ColPrefix";
             // 
-            // skinnedCheckBox1
+            // chkOnlyCustomPoses
             // 
-            this.skinnedCheckBox1.AutoSize = true;
-            this.skinnedCheckBox1.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.skinnedCheckBox1.Location = new System.Drawing.Point(325, 19);
-            this.skinnedCheckBox1.Name = "skinnedCheckBox1";
-            this.skinnedCheckBox1.Size = new System.Drawing.Size(141, 17);
-            this.skinnedCheckBox1.TabIndex = 2;
-            this.skinnedCheckBox1.Text = "Allow only custom poses";
-            this.skinnedCheckBox1.UseVisualStyleBackColor = true;
-            this.toolTip1.SetToolTip(this.skinnedCheckBox1, "Warning: This removes all non-custom poses from the character's dialogue.");
+            this.chkOnlyCustomPoses.AutoSize = true;
+            this.chkOnlyCustomPoses.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.chkOnlyCustomPoses.Location = new System.Drawing.Point(325, 19);
+            this.chkOnlyCustomPoses.Name = "chkOnlyCustomPoses";
+            this.chkOnlyCustomPoses.Size = new System.Drawing.Size(141, 17);
+            this.chkOnlyCustomPoses.TabIndex = 2;
+            this.chkOnlyCustomPoses.Text = "Allow only custom poses";
+            this.toolTip1.SetToolTip(this.chkOnlyCustomPoses, "Warning: This removes all non-custom poses from the character\'s dialogue.");
+            this.chkOnlyCustomPoses.UseVisualStyleBackColor = true;
+            // 
+            // chkHidePrefixlessImages
+            // 
+            this.chkHidePrefixlessImages.AutoSize = true;
+            this.chkHidePrefixlessImages.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.chkHidePrefixlessImages.Location = new System.Drawing.Point(325, 42);
+            this.chkHidePrefixlessImages.Name = "chkHidePrefixlessImages";
+            this.chkHidePrefixlessImages.Size = new System.Drawing.Size(142, 17);
+            this.chkHidePrefixlessImages.TabIndex = 3;
+            this.chkHidePrefixlessImages.Text = "Disallow prefixless poses";
+            this.toolTip1.SetToolTip(this.chkHidePrefixlessImages, "If checked, only poses and images with a stage prefix (ex. 2-happy.png) will appe" +
+        "ar for use in dialogue lines.");
+            this.chkHidePrefixlessImages.UseVisualStyleBackColor = true;
+            // 
+            // iconHidePrefixlessImages
+            // 
+            this.iconHidePrefixlessImages.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.iconHidePrefixlessImages.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.iconHidePrefixlessImages.Flat = false;
+            this.iconHidePrefixlessImages.Image = global::SPNATI_Character_Editor.Properties.Resources.Help;
+            this.iconHidePrefixlessImages.Location = new System.Drawing.Point(459, 38);
+            this.iconHidePrefixlessImages.Name = "iconHidePrefixlessImages";
+            this.iconHidePrefixlessImages.Size = new System.Drawing.Size(26, 23);
+            this.iconHidePrefixlessImages.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.iconHidePrefixlessImages, "If unchecked, poses and images with no stage prefix (ex. happy.png) will be avail" +
+        "able for use in every stage.");
+            this.iconHidePrefixlessImages.UseVisualStyleBackColor = true;
             // 
             // CharacterConfiguration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.skinnedCheckBox1);
+            this.Controls.Add(this.iconHidePrefixlessImages);
+            this.Controls.Add(this.chkHidePrefixlessImages);
+            this.Controls.Add(this.chkOnlyCustomPoses);
             this.Controls.Add(this.gridPrefixes);
             this.Controls.Add(this.label1);
             this.Name = "CharacterConfiguration";
@@ -141,7 +172,9 @@ namespace SPNATI_Character_Editor.Activities
 		private Desktop.Skinning.SkinnedLabel label1;
 		private Desktop.Skinning.SkinnedDataGridView gridPrefixes;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ColPrefix;
-        private Desktop.Skinning.SkinnedCheckBox skinnedCheckBox1;
+        private Desktop.Skinning.SkinnedCheckBox chkOnlyCustomPoses;
         private System.Windows.Forms.ToolTip toolTip1;
+        private Desktop.Skinning.SkinnedCheckBox chkHidePrefixlessImages;
+        private Desktop.Skinning.SkinnedIcon iconHidePrefixlessImages;
     }
 }
