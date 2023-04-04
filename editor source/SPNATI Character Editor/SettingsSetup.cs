@@ -20,8 +20,6 @@ namespace SPNATI_Character_Editor
 			txtUserName.Text = Config.UserName;
 			valAutoSave.Value = Config.AutoSaveInterval;
 			chkIntellisense.Checked = Config.UseIntellisense;
-			chkHidePrefixlessImages.Checked = Config.UsePrefixlessImages;
-			txtFilter.Text = Config.PrefixFilter;
 			chkAutoBackup.Checked = Config.BackupEnabled;
 			chkInitialAdd.Checked = Config.AutoOpenConditions;
 			chkDefaults.Checked = !Config.SuppressDefaults;
@@ -136,8 +134,6 @@ namespace SPNATI_Character_Editor
 			Config.AutoSaveInterval = (int)valAutoSave.Value;
 			Config.UserName = txtUserName.Text;
 			Config.UseIntellisense = chkIntellisense.Checked;
-			Config.UsePrefixlessImages = chkHidePrefixlessImages.Checked;
-			Config.PrefixFilter = txtFilter.Text;
 			Config.BackupEnabled = chkAutoBackup.Checked;
 			Config.AutoOpenConditions = chkInitialAdd.Checked;
 			Config.KisekaeDirectory = txtKisekae.Text;
@@ -198,12 +194,8 @@ namespace SPNATI_Character_Editor
 			Close();
 		}
 
-		private void chkHideImages_CheckedChanged(object sender, EventArgs e)
-		{
-			txtFilter.Enabled = chkHidePrefixlessImages.Checked;
-		}
 
-		private void cmdBrowseKisekae_Click(object sender, EventArgs e)
+        private void cmdBrowseKisekae_Click(object sender, EventArgs e)
 		{
 			if (!string.IsNullOrEmpty(txtKisekae.Text))
 			{
