@@ -41,16 +41,35 @@ namespace SPNATI_Character_Editor
 		public List<PoseMapping> GetPoses(int stage)
 		{
 			List<PoseMapping> list = new List<PoseMapping>();
-			foreach (PoseMapping pose in Poses)
+            CharacterEditorData editorData = CharacterDatabase.GetEditorData(_character);
+
+			if (editorData != null)
 			{
-				if (!Filter(pose) && pose.ContainsStage(stage))
+				foreach (PoseMapping pose in Poses)
 				{
-					list.Add(pose);
+					if (!Filter(pose, editorData) && pose.ContainsStage(stage))
+					{
+						list.Add(pose);
+					}
+				}
+				if (!editorData.HidePrefixlessImages && stage >= 0)
+				{
+					list.AddRange(GetPoses(-1));
 				}
 			}
-			if (Config.UsePrefixlessImages && stage >= 0)
+			else
 			{
-				list.AddRange(GetPoses(-1));
+				foreach (PoseMapping pose in Poses)
+				{
+					if (pose.ContainsStage(stage))
+					{
+						list.Add(pose);
+					}
+				}
+				if (stage >= 0)
+				{
+					list.AddRange(GetPoses(-1));
+				}
 			}
 			return list;
 		}
@@ -58,48 +77,62 @@ namespace SPNATI_Character_Editor
         public List<PoseMapping> GetPortraitPoses()
         {
             List<PoseMapping> list = new List<PoseMapping>();
-            foreach (PoseMapping pose in Poses)
-            {
-                if (pose.ContainsStage(0))
+            CharacterEditorData editorData = CharacterDatabase.GetEditorData(_character);
+
+			if (editorData != null)
+			{
+				foreach (PoseMapping pose in Poses)
+				{
+					if (!FilterPortrait(pose, editorData) && pose.ContainsStage(0))
+					{
+						list.Add(pose);
+					}
+				}
+			}
+			else
+			{
+                foreach (PoseMapping pose in Poses)
                 {
-                    list.Add(pose);
+                    if (pose.ContainsStage(0))
+                    {
+                        list.Add(pose);
+                    }
                 }
-            }
-            if (Config.UsePrefixlessImages)
-            {
-                list.AddRange(GetPoses(-1));
             }
             return list;
         }
 
-        private bool Filter(PoseMapping pose)
+        private bool Filter(PoseMapping pose, CharacterEditorData editorData)
 		{
-			string prefix = Config.PrefixFilter;
 			string key = pose.Key;
-			if (!string.IsNullOrEmpty(prefix) && key.StartsWith(prefix))
+			if (editorData.OnlyCustomPoses && !key.StartsWith("custom:"))
 			{
 				return true;
 			}
-
-			CharacterEditorData editorData = CharacterDatabase.GetEditorData(_character);
-			if (editorData != null)
+			foreach (string p in editorData.IgnoredPrefixes)
 			{
-				if (editorData.OnlyCustomPoses && !key.StartsWith("custom:"))
+				if (key.StartsWith(p))
 				{
 					return true;
-				}
-				foreach (string p in editorData.IgnoredPrefixes)
-				{
-					if (key.StartsWith(p))
-					{
-						return true;
-					}
 				}
 			}
 			return false;
 		}
 
-		private void Initialize()
+        private bool FilterPortrait(PoseMapping pose, CharacterEditorData editorData)
+        {
+            string key = pose.Key;
+            foreach (string p in editorData.IgnoredPrefixes)
+            {
+                if (key.StartsWith(p))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void Initialize()
 		{
 			string dir = _character.GetDirectory();
 			if (string.IsNullOrEmpty(dir))

@@ -151,10 +151,11 @@ namespace SPNATI_Character_Editor.Activities
             // 
             // cmdRefreshImages
             // 
+            this.cmdRefreshImages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdRefreshImages.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.cmdRefreshImages.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
             this.cmdRefreshImages.Flat = false;
-            this.cmdRefreshImages.Location = new System.Drawing.Point(226, 2);
+            this.cmdRefreshImages.Location = new System.Drawing.Point(242, 2);
             this.cmdRefreshImages.Name = "cmdRefreshImages";
             this.cmdRefreshImages.Size = new System.Drawing.Size(120, 23);
             this.cmdRefreshImages.TabIndex = 48;

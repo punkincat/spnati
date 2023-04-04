@@ -77,6 +77,10 @@ namespace SPNATI_Character_Editor
         [XmlElement("onlyCustomPoses")]
 		public bool OnlyCustomPoses;
 
+		[XmlElement("hidePrefixlessImages")]
+		public bool HidePrefixlessImages;
+
+
 		[XmlElement("nextId")]
 		/// <summary>
 		/// Next unique ID to assign
