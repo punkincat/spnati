@@ -1,4 +1,4 @@
-﻿using Desktop.DataStructures;
+using Desktop.DataStructures;
 using SPNATI_Character_Editor.IO;
 using System;
 using System.Collections.Generic;
@@ -1048,7 +1048,10 @@ namespace SPNATI_Character_Editor
 				}
 			}
 
-			EnsureDefaults(character);
+			if (!Config.SuppressDefaults)
+			{
+				EnsureDefaults(character);
+			}
 		}
 
 		/// <summary>
