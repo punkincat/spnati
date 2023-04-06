@@ -1230,6 +1230,11 @@ namespace SPNATI_Character_Editor.Activities
 		/// <param name="list"></param>
 		private void ImportPosesAsync(List<PoseEntry> list)
 		{
+			// Sort by stage to try and minimize parts that change between successive requests.
+			list.Sort(delegate (PoseEntry a, PoseEntry b) {
+				return a.Stage.Stage - b.Stage.Stage;
+			});
+
 			//find all unrecognized props and assign them all up front
 			List<KisekaeCode> codes = new List<KisekaeCode>();
 			foreach (PoseEntry pose in list)
