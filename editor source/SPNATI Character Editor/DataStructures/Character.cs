@@ -475,14 +475,7 @@ namespace SPNATI_Character_Editor
 						Clothing clothes = list.GetClothing(Layers - 1 - layer);
 						if (lastClothes.ToString() != "SKIP")
 						{
-							if (clothes.ToString() != "SKIP") 
-							{
-								label = "No " + lastClothes.ToString();
-							}
-							else 
-							{  
-								label = "Just Stripped " + lastClothes.ToString();
-							}
+							label = "Lost " + lastClothes.ToString();
 						}
 						else
 						{
@@ -497,7 +490,7 @@ namespace SPNATI_Character_Editor
 									index--;
 									clothes = list.GetClothing(Layers - 1 - index);
 								} while (clothes.ToString() == "SKIP");
-								label = "No " + clothes.ToString();
+								label = "Lost " + clothes.ToString();
 							}
 						}
 					}
@@ -577,15 +570,8 @@ namespace SPNATI_Character_Editor
 						Clothing clothes = Wardrobe[Layers - 1 - layer];
                         if (lastClothes.ToString() != "SKIP")
                         {
-                            if (clothes.ToString() != "SKIP")
-                            {
-                                label = "No " + lastClothes.ToString();
-                            }
-                            else
-                            {
-                                label = "Just Stripped " + lastClothes.ToString();
-                            }
-                        }
+							label = "Lost " + lastClothes.ToString();
+						}
                         else
                         {
                             if (clothes.ToString() == "SKIP")
@@ -599,7 +585,7 @@ namespace SPNATI_Character_Editor
                                     index--;
                                     clothes = Wardrobe[Layers - 1 - index];
                                 } while (clothes.ToString() == "SKIP");
-                                label = "No " + clothes.ToString();
+                                label = "Lost " + clothes.ToString();
                             }
                         }
                     }

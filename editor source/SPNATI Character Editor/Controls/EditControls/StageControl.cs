@@ -171,7 +171,7 @@ namespace SPNATI_Character_Editor
             {
                 removing = tag.Contains("removing_");
                 removed = tag.Contains("removed_");
-                lookForward = removing;
+                lookForward = removing || tag == "opponent_stripping";
                 if (removing || removed)
                 {
                     int index = tag.LastIndexOf('_');
@@ -187,7 +187,7 @@ namespace SPNATI_Character_Editor
                 {
                     removing = tag.Contains("will_be_visible");
                     removed = tag.Contains("is_visible");
-                    lookForward = removing;
+                    lookForward = removing || tag == "opponent_stripping";
                     if (removing || removed)
                     {
                         filterType = "important";
