@@ -1,8 +1,9 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.Skinning;
 using SPNATI_Character_Editor.Controls.Reference;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SPNATI_Character_Editor.Activities
@@ -12,6 +13,8 @@ namespace SPNATI_Character_Editor.Activities
 	public partial class CharacterPreview : Activity
 	{
 		private Character _character;
+
+		private List<string> _posePreviewMarkers = new List<string>();
 
 		public CharacterPreview()
 		{
@@ -38,10 +41,13 @@ namespace SPNATI_Character_Editor.Activities
 				lblSkin.Visible = false;
 				cboSkin.Visible = false;
 			}
-			SubscribeWorkspace<DialogueLine>(WorkspaceMessages.PreviewLine, UpdatePreview);
+
+			_posePreviewMarkers = CharacterDatabase.GetEditorData(_character).PosePreviewMarkers;
+            SubscribeWorkspace<DialogueLine>(WorkspaceMessages.PreviewLine, UpdatePreview);
 			SubscribeWorkspace<UpdateImageArgs>(WorkspaceMessages.UpdatePreviewImage, UpdatePreviewImage);
 			SubscribeWorkspace<List<string>>(WorkspaceMessages.UpdateMarkers, UpdateMarkers);
-			UpdateLineCount();
+            Workspace.SendMessage(WorkspaceMessages.UpdateMarkers, Enumerable.Empty<string>());
+            UpdateLineCount();
 		}
 
 		protected override void OnActivate()
@@ -90,6 +96,14 @@ namespace SPNATI_Character_Editor.Activities
 
 		private void UpdateMarkers(List<string> markers)
 		{
+			if (markers == null || markers.Count == 0)
+			{
+				markers = _posePreviewMarkers;
+			}
+			else
+			{
+				markers.AddRange(_posePreviewMarkers);
+			}
 			picPortrait.SetMarkers(markers);
 		}
 

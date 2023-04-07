@@ -1,4 +1,4 @@
-﻿namespace SPNATI_Character_Editor
+namespace SPNATI_Character_Editor
 {
 	partial class SettingsSetup
 	{
@@ -39,9 +39,7 @@
             this.txtUserName = new Desktop.Skinning.SkinnedTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.chkHidePrefixlessImages = new Desktop.Skinning.SkinnedCheckBox();
             this.helpIntellisense = new Desktop.Skinning.SkinnedIcon();
-            this.button1 = new Desktop.Skinning.SkinnedIcon();
             this.chkDefaults = new Desktop.Skinning.SkinnedCheckBox();
             this.helpAutoSave = new Desktop.Skinning.SkinnedIcon();
             this.valAutoSave = new Desktop.Skinning.SkinnedNumericUpDown();
@@ -51,17 +49,16 @@
             this.valLifetime = new Desktop.Skinning.SkinnedNumericUpDown();
             this.txtTinify = new Desktop.Skinning.SkinnedTextBox();
             this.skinnedIcon1 = new Desktop.Skinning.SkinnedIcon();
+            this.chkWarnEmpty = new Desktop.Skinning.SkinnedCheckBox();
+            this.skinnedLabel5 = new Desktop.Skinning.SkinnedLabel();
             this.chkIntellisense = new Desktop.Skinning.SkinnedCheckBox();
-            this.label4 = new Desktop.Skinning.SkinnedLabel();
-            this.txtFilter = new Desktop.Skinning.SkinnedTextBox();
             this.tabsSections = new Desktop.Skinning.SkinnedTabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
+            this.txtAutoOpen = new Desktop.Skinning.SkinnedTextBox();
             this.chkSafeMode = new Desktop.Skinning.SkinnedCheckBox();
             this.chkWarnIncomplete = new Desktop.Skinning.SkinnedCheckBox();
             this.label7 = new Desktop.Skinning.SkinnedLabel();
             this.chkStatuses = new Desktop.Skinning.SkinnedCheckedListBox();
-            this.skinnedLabel5 = new Desktop.Skinning.SkinnedLabel();
-            this.recAutoOpen = new Desktop.CommonControls.RecordField();
             this.cmdBrowseKisekae = new Desktop.Skinning.SkinnedButton();
             this.txtKisekae = new Desktop.Skinning.SkinnedTextBox();
             this.label5 = new Desktop.Skinning.SkinnedLabel();
@@ -104,7 +101,6 @@
             this.chkWorkflowTracer = new Desktop.Skinning.SkinnedCheckBox();
             this.stripSections = new Desktop.Skinning.SkinnedTabStrip();
             this.skinnedPanel1 = new Desktop.Skinning.SkinnedPanel();
-            this.chkWarnEmpty = new Desktop.Skinning.SkinnedCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.valAutoSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.valFrequency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.valLifetime)).BeginInit();
@@ -227,20 +223,6 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "Exe files|*.exe";
             // 
-            // chkHidePrefixlessImages
-            // 
-            this.chkHidePrefixlessImages.AutoSize = true;
-            this.chkHidePrefixlessImages.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.chkHidePrefixlessImages.Location = new System.Drawing.Point(6, 29);
-            this.chkHidePrefixlessImages.Name = "chkHidePrefixlessImages";
-            this.chkHidePrefixlessImages.Size = new System.Drawing.Size(143, 17);
-            this.chkHidePrefixlessImages.TabIndex = 22;
-            this.chkHidePrefixlessImages.Text = "Include prefixless images";
-            this.toolTip1.SetToolTip(this.chkHidePrefixlessImages, "If unchecked, images with no prefix (ex. 0-*.png) will not appear for use in dial" +
-        "ogue lines.");
-            this.chkHidePrefixlessImages.UseVisualStyleBackColor = true;
-            this.chkHidePrefixlessImages.CheckedChanged += new System.EventHandler(this.chkHideImages_CheckedChanged);
-            // 
             // helpIntellisense
             // 
             this.helpIntellisense.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
@@ -257,27 +239,11 @@
         " their meanings, parameters, and so on.");
             this.helpIntellisense.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.button1.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.button1.Flat = false;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::SPNATI_Character_Editor.Properties.Resources.Help;
-            this.button1.Location = new System.Drawing.Point(145, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 23);
-            this.button1.TabIndex = 23;
-            this.toolTip1.SetToolTip(this.button1, "When checked, every image in the character\'s folder with no stage prefix (ex. 2-h" +
-        "appy.png) will be available for poses in every stage.");
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // chkDefaults
             // 
             this.chkDefaults.AutoSize = true;
             this.chkDefaults.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.chkDefaults.Location = new System.Drawing.Point(6, 97);
+            this.chkDefaults.Location = new System.Drawing.Point(6, 51);
             this.chkDefaults.Name = "chkDefaults";
             this.chkDefaults.Size = new System.Drawing.Size(179, 17);
             this.chkDefaults.TabIndex = 26;
@@ -405,7 +371,7 @@
             this.skinnedIcon1.FlatAppearance.BorderSize = 0;
             this.skinnedIcon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.skinnedIcon1.Image = global::SPNATI_Character_Editor.Properties.Resources.Help;
-            this.skinnedIcon1.Location = new System.Drawing.Point(242, 230);
+            this.skinnedIcon1.Location = new System.Drawing.Point(242, 234);
             this.skinnedIcon1.Name = "skinnedIcon1";
             this.skinnedIcon1.Size = new System.Drawing.Size(26, 23);
             this.skinnedIcon1.TabIndex = 32;
@@ -414,6 +380,33 @@
         "t marker will be used.");
             this.skinnedIcon1.UseVisualStyleBackColor = true;
             this.skinnedIcon1.Visible = false;
+            // 
+            // chkWarnEmpty
+            // 
+            this.chkWarnEmpty.AutoSize = true;
+            this.chkWarnEmpty.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.chkWarnEmpty.Location = new System.Drawing.Point(6, 75);
+            this.chkWarnEmpty.Name = "chkWarnEmpty";
+            this.chkWarnEmpty.Size = new System.Drawing.Size(205, 17);
+            this.chkWarnEmpty.TabIndex = 33;
+            this.chkWarnEmpty.Text = "Warn when lines are completely blank";
+            this.toolTip1.SetToolTip(this.chkWarnEmpty, "If checked, the Validator warns when a line is completely blank.");
+            this.chkWarnEmpty.UseVisualStyleBackColor = true;
+            // 
+            // skinnedLabel5
+            // 
+            this.skinnedLabel5.AutoSize = true;
+            this.skinnedLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.skinnedLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.skinnedLabel5.Highlight = Desktop.Skinning.SkinnedHighlight.Label;
+            this.skinnedLabel5.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.skinnedLabel5.Location = new System.Drawing.Point(7, 89);
+            this.skinnedLabel5.Name = "skinnedLabel5";
+            this.skinnedLabel5.Size = new System.Drawing.Size(59, 13);
+            this.skinnedLabel5.TabIndex = 11;
+            this.skinnedLabel5.Text = "Auto-open:";
+            this.toolTip1.SetToolTip(this.skinnedLabel5, "List of character labels divided by commas. Put a costume\'s folder name as an ite" +
+        "m to auto-open an alternate costume.");
             // 
             // chkIntellisense
             // 
@@ -425,29 +418,6 @@
             this.chkIntellisense.TabIndex = 20;
             this.chkIntellisense.Text = "Use variable intellisense";
             this.chkIntellisense.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Highlight = Desktop.Skinning.SkinnedHighlight.Label;
-            this.label4.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.label4.Location = new System.Drawing.Point(3, 53);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Exclude images starting with:";
-            // 
-            // txtFilter
-            // 
-            this.txtFilter.BackColor = System.Drawing.Color.White;
-            this.txtFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtFilter.ForeColor = System.Drawing.Color.Black;
-            this.txtFilter.Location = new System.Drawing.Point(145, 50);
-            this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(92, 20);
-            this.txtFilter.TabIndex = 24;
             // 
             // tabsSections
             // 
@@ -476,12 +446,12 @@
             // tabGeneral
             // 
             this.tabGeneral.BackColor = System.Drawing.Color.White;
+            this.tabGeneral.Controls.Add(this.txtAutoOpen);
             this.tabGeneral.Controls.Add(this.chkSafeMode);
             this.tabGeneral.Controls.Add(this.chkWarnIncomplete);
             this.tabGeneral.Controls.Add(this.label7);
             this.tabGeneral.Controls.Add(this.chkStatuses);
             this.tabGeneral.Controls.Add(this.skinnedLabel5);
-            this.tabGeneral.Controls.Add(this.recAutoOpen);
             this.tabGeneral.Controls.Add(this.cmdBrowseKisekae);
             this.tabGeneral.Controls.Add(this.txtKisekae);
             this.tabGeneral.Controls.Add(this.label5);
@@ -494,9 +464,20 @@
             this.tabGeneral.Location = new System.Drawing.Point(104, 4);
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGeneral.Size = new System.Drawing.Size(447, 263);
+            this.tabGeneral.Size = new System.Drawing.Size(447, 265);
             this.tabGeneral.TabIndex = 0;
             this.tabGeneral.Text = "General";
+            // 
+            // txtAutoOpen
+            // 
+            this.txtAutoOpen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAutoOpen.BackColor = System.Drawing.Color.White;
+            this.txtAutoOpen.ForeColor = System.Drawing.Color.Black;
+            this.txtAutoOpen.Location = new System.Drawing.Point(133, 86);
+            this.txtAutoOpen.Name = "txtAutoOpen";
+            this.txtAutoOpen.Size = new System.Drawing.Size(276, 20);
+            this.txtAutoOpen.TabIndex = 16;
             // 
             // chkSafeMode
             // 
@@ -545,36 +526,6 @@
             this.chkStatuses.Name = "chkStatuses";
             this.chkStatuses.Size = new System.Drawing.Size(276, 79);
             this.chkStatuses.TabIndex = 12;
-            // 
-            // skinnedLabel5
-            // 
-            this.skinnedLabel5.AutoSize = true;
-            this.skinnedLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.skinnedLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.skinnedLabel5.Highlight = Desktop.Skinning.SkinnedHighlight.Label;
-            this.skinnedLabel5.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.skinnedLabel5.Location = new System.Drawing.Point(7, 89);
-            this.skinnedLabel5.Name = "skinnedLabel5";
-            this.skinnedLabel5.Size = new System.Drawing.Size(59, 13);
-            this.skinnedLabel5.TabIndex = 11;
-            this.skinnedLabel5.Text = "Auto-open:";
-            // 
-            // recAutoOpen
-            // 
-            this.recAutoOpen.AllowCreate = false;
-            this.recAutoOpen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.recAutoOpen.Location = new System.Drawing.Point(133, 86);
-            this.recAutoOpen.Name = "recAutoOpen";
-            this.recAutoOpen.PlaceholderText = null;
-            this.recAutoOpen.Record = null;
-            this.recAutoOpen.RecordContext = null;
-            this.recAutoOpen.RecordFilter = null;
-            this.recAutoOpen.RecordKey = null;
-            this.recAutoOpen.RecordType = null;
-            this.recAutoOpen.Size = new System.Drawing.Size(276, 20);
-            this.recAutoOpen.TabIndex = 10;
-            this.recAutoOpen.UseAutoComplete = false;
             // 
             // cmdBrowseKisekae
             // 
@@ -626,7 +577,7 @@
             this.tabDashboard.Location = new System.Drawing.Point(104, 4);
             this.tabDashboard.Name = "tabDashboard";
             this.tabDashboard.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDashboard.Size = new System.Drawing.Size(447, 242);
+            this.tabDashboard.Size = new System.Drawing.Size(447, 265);
             this.tabDashboard.TabIndex = 7;
             this.tabDashboard.Text = "Dashboard";
             // 
@@ -761,7 +712,7 @@
             this.tabImages.ForeColor = System.Drawing.Color.Black;
             this.tabImages.Location = new System.Drawing.Point(104, 4);
             this.tabImages.Name = "tabImages";
-            this.tabImages.Size = new System.Drawing.Size(447, 242);
+            this.tabImages.Size = new System.Drawing.Size(447, 265);
             this.tabImages.TabIndex = 6;
             this.tabImages.Text = "Image Import";
             // 
@@ -846,12 +797,8 @@
             this.tabDialogue.Controls.Add(this.chkCaseTree);
             this.tabDialogue.Controls.Add(this.chkDefaults);
             this.tabDialogue.Controls.Add(this.chkInitialAdd);
-            this.tabDialogue.Controls.Add(this.button1);
             this.tabDialogue.Controls.Add(this.helpIntellisense);
             this.tabDialogue.Controls.Add(this.chkIntellisense);
-            this.tabDialogue.Controls.Add(this.txtFilter);
-            this.tabDialogue.Controls.Add(this.chkHidePrefixlessImages);
-            this.tabDialogue.Controls.Add(this.label4);
             this.tabDialogue.ForeColor = System.Drawing.Color.Black;
             this.tabDialogue.Location = new System.Drawing.Point(104, 4);
             this.tabDialogue.Name = "tabDialogue";
@@ -876,7 +823,7 @@
             // 
             this.chkAutoFill.AutoSize = true;
             this.chkAutoFill.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.chkAutoFill.Location = new System.Drawing.Point(6, 213);
+            this.chkAutoFill.Location = new System.Drawing.Point(6, 167);
             this.chkAutoFill.Name = "chkAutoFill";
             this.chkAutoFill.Size = new System.Drawing.Size(290, 17);
             this.chkAutoFill.TabIndex = 30;
@@ -887,7 +834,7 @@
             // 
             this.chkEmptyCases.AutoSize = true;
             this.chkEmptyCases.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.chkEmptyCases.Location = new System.Drawing.Point(6, 190);
+            this.chkEmptyCases.Location = new System.Drawing.Point(6, 144);
             this.chkEmptyCases.Name = "chkEmptyCases";
             this.chkEmptyCases.Size = new System.Drawing.Size(158, 17);
             this.chkEmptyCases.TabIndex = 29;
@@ -898,7 +845,7 @@
             // 
             this.chkColorTargets.AutoSize = true;
             this.chkColorTargets.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.chkColorTargets.Location = new System.Drawing.Point(6, 167);
+            this.chkColorTargets.Location = new System.Drawing.Point(6, 121);
             this.chkColorTargets.Name = "chkColorTargets";
             this.chkColorTargets.Size = new System.Drawing.Size(239, 17);
             this.chkColorTargets.TabIndex = 28;
@@ -909,7 +856,7 @@
             // 
             this.chkCaseTree.AutoSize = true;
             this.chkCaseTree.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.chkCaseTree.Location = new System.Drawing.Point(6, 144);
+            this.chkCaseTree.Location = new System.Drawing.Point(6, 98);
             this.chkCaseTree.Name = "chkCaseTree";
             this.chkCaseTree.Size = new System.Drawing.Size(230, 17);
             this.chkCaseTree.TabIndex = 27;
@@ -920,7 +867,7 @@
             // 
             this.chkInitialAdd.AutoSize = true;
             this.chkInitialAdd.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.chkInitialAdd.Location = new System.Drawing.Point(6, 74);
+            this.chkInitialAdd.Location = new System.Drawing.Point(6, 28);
             this.chkInitialAdd.Name = "chkInitialAdd";
             this.chkInitialAdd.Size = new System.Drawing.Size(258, 17);
             this.chkInitialAdd.TabIndex = 25;
@@ -936,7 +883,7 @@
             this.tabSidebar.ForeColor = System.Drawing.Color.Black;
             this.tabSidebar.Location = new System.Drawing.Point(104, 4);
             this.tabSidebar.Name = "tabSidebar";
-            this.tabSidebar.Size = new System.Drawing.Size(447, 263);
+            this.tabSidebar.Size = new System.Drawing.Size(447, 265);
             this.tabSidebar.TabIndex = 8;
             this.tabSidebar.Text = "Sidebar";
             // 
@@ -985,7 +932,7 @@
             this.tabEpilogues.Location = new System.Drawing.Point(104, 4);
             this.tabEpilogues.Name = "tabEpilogues";
             this.tabEpilogues.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEpilogues.Size = new System.Drawing.Size(447, 263);
+            this.tabEpilogues.Size = new System.Drawing.Size(447, 265);
             this.tabEpilogues.TabIndex = 3;
             this.tabEpilogues.Text = "Epilogues";
             // 
@@ -1028,7 +975,7 @@
             this.tabBackups.Location = new System.Drawing.Point(104, 4);
             this.tabBackups.Name = "tabBackups";
             this.tabBackups.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBackups.Size = new System.Drawing.Size(447, 263);
+            this.tabBackups.Size = new System.Drawing.Size(447, 265);
             this.tabBackups.TabIndex = 5;
             this.tabBackups.Text = "Backups";
             // 
@@ -1105,7 +1052,7 @@
             this.tabTroubleshoot.Location = new System.Drawing.Point(104, 4);
             this.tabTroubleshoot.Name = "tabTroubleshoot";
             this.tabTroubleshoot.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTroubleshoot.Size = new System.Drawing.Size(447, 242);
+            this.tabTroubleshoot.Size = new System.Drawing.Size(447, 265);
             this.tabTroubleshoot.TabIndex = 4;
             this.tabTroubleshoot.Text = "Diagnostics";
             // 
@@ -1154,18 +1101,6 @@
             this.skinnedPanel1.Size = new System.Drawing.Size(657, 30);
             this.skinnedPanel1.TabIndex = 14;
             this.skinnedPanel1.TabSide = Desktop.Skinning.TabSide.None;
-            // 
-            // chkWarnEmpty
-            // 
-            this.chkWarnEmpty.AutoSize = true;
-            this.chkWarnEmpty.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.chkWarnEmpty.Location = new System.Drawing.Point(6, 121);
-            this.chkWarnEmpty.Name = "chkWarnEmpty";
-            this.chkWarnEmpty.Size = new System.Drawing.Size(205, 17);
-            this.chkWarnEmpty.TabIndex = 33;
-            this.chkWarnEmpty.Text = "Warn when lines are completely blank";
-            this.toolTip1.SetToolTip(this.chkWarnEmpty, "If checked, the Validator warns when a line is completely blank.");
-            this.chkWarnEmpty.UseVisualStyleBackColor = true;
             // 
             // SettingsSetup
             // 
@@ -1230,13 +1165,9 @@
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.ToolTip toolTip1;
 		private Desktop.Skinning.SkinnedCheckBox chkIntellisense;
-		private Desktop.Skinning.SkinnedCheckBox chkHidePrefixlessImages;
-		private Desktop.Skinning.SkinnedLabel label4;
-		private Desktop.Skinning.SkinnedTextBox txtFilter;
 		private Desktop.Skinning.SkinnedTabControl tabsSections;
 		private System.Windows.Forms.TabPage tabGeneral;
 		private System.Windows.Forms.TabPage tabDialogue;
-		private Desktop.Skinning.SkinnedIcon button1;
 		private Desktop.Skinning.SkinnedIcon helpIntellisense;
 		private Desktop.Skinning.SkinnedCheckBox chkInitialAdd;
 		private Desktop.Skinning.SkinnedButton cmdBrowseKisekae;
@@ -1278,7 +1209,6 @@
 		private Desktop.Skinning.SkinnedCheckBox chkChecklistSpell;
 		private Desktop.Skinning.SkinnedCheckBox chkStartDashboard;
 		private Desktop.Skinning.SkinnedLabel skinnedLabel5;
-		private Desktop.CommonControls.RecordField recAutoOpen;
 		private System.Windows.Forms.TabPage tabSidebar;
 		private Desktop.Skinning.SkinnedCheckBox chkPreviewFormatting;
 		private Desktop.Skinning.SkinnedCheckBox chkPreviewBubble;
@@ -1295,5 +1225,6 @@
 		private Desktop.Skinning.SkinnedIcon skinnedIcon1;
 		private Desktop.Skinning.SkinnedCheckBox chkFullResponse;
         private Desktop.Skinning.SkinnedCheckBox chkWarnEmpty;
+        private Desktop.Skinning.SkinnedTextBox txtAutoOpen;
     }
 }

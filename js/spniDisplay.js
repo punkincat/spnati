@@ -1063,8 +1063,8 @@ MainSelectScreenDisplay.prototype.displaySingleSuggestion = function () {
     }
     //this.prefillSuggestionBadges.costume.toggle(player.alternate_costumes.length > 0);
     this.layerIcon.attr({
-        src: "img/layers" + player.layers + ".png",
-        alt: player.layers + " layers",
+        src: "img/layers" + player.selectLayers + ".png",
+        alt: player.selectLayers + " layers",
     }).show() ;
     updateGenderIcon(this.genderIcon, player);
     this.statusIcon.hide();
@@ -1141,8 +1141,8 @@ MainSelectScreenDisplay.prototype.update = function (player) {
     //this.badges.costume.toggle(player.alternate_costumes.length > 0);
     //updateStatusIcon(this.statusIcon, player);
     this.layerIcon.attr({
-        src: "img/layers" + player.layers + ".png",
-        alt: player.layers + " layers",
+        src: "img/layers" + player.selectLayers + ".png",
+        alt: player.selectLayers + " layers",
     }).show() ;
     updateGenderIcon(this.genderIcon, player);
     
@@ -1169,7 +1169,7 @@ MainSelectScreenDisplay.prototype.update = function (player) {
 
         this.altCostumeSelector.hide();
         if (player.alternate_costumes.length > 0) {
-            fillCostumeSelector(this.altCostumeSelector, player.alternate_costumes, player.selected_costume)
+            fillCostumeSelector(this.altCostumeSelector, player.default_costume_name, player.alternate_costumes, player.selected_costume)
                 .show();
         }
     }
@@ -1281,8 +1281,8 @@ OpponentSelectionCard.prototype.update = function () {
     updateStatusIcon(this.statusIcon, this.opponent);
 
     this.layerIcon.attr({
-        src: "img/layers" + this.opponent.layers + ".png",
-        alt: this.opponent.layers + " layers",
+        src: "img/layers" + this.opponent.selectLayers + ".png",
+        alt: this.opponent.selectLayers + " layers",
     }).show() ;
     updateGenderIcon(this.genderIcon, this.opponent);
 
@@ -1799,7 +1799,7 @@ OpponentDetailsDisplay.prototype.update = function (opponent) {
     }
 
     if (opponent.alternate_costumes.length > 0) {
-        fillCostumeSelector(this.costumeSelector, opponent.alternate_costumes, opponent.selected_costume)
+        fillCostumeSelector(this.costumeSelector, opponent.default_costume_name, opponent.alternate_costumes, opponent.selected_costume)
             .show().prop('disabled', false);
     } else {
         this.costumeSelector.hide();

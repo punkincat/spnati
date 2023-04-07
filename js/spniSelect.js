@@ -532,10 +532,15 @@ function getCostumeOption(alt_costume, selected_costume) {
                           selected: alt_costume.folder == selected_costume, data: alt_costume});
 }
 
-function fillCostumeSelector($selector, costumes, selected_costume) {
+function fillCostumeSelector($selector, defaultname, costumes, selected_costume) {
+    var defaultn = defaultname;
+    if (defaultname == '') {
+        defaultn = 'Default Costume';
+    }
+
     $selector.empty().append($('<option>', {
         val: '',
-        text: 'Default Costume'
+        text: defaultn,
     }), costumes.map(function(c) {
         var emoji = '\u{1f455} ';
         
@@ -681,7 +686,7 @@ function updateGroupSelectScreen (ignore_bg) {
             */
             $groupCostumeSelectors[i].hide();
             if (opponent.alternate_costumes.length > 0) {
-                fillCostumeSelector($groupCostumeSelectors[i], opponent.alternate_costumes,
+                fillCostumeSelector($groupCostumeSelectors[i], opponent.default_costume_name, opponent.alternate_costumes,
                                     opponent.selected_costume).show();
             } else {
                 $groupCostumeSelectors[i].empty();
@@ -690,8 +695,8 @@ function updateGroupSelectScreen (ignore_bg) {
             updateStatusIcon($groupStatuses[i], opponent);
 
             $groupLayers[i].attr({
-                src: "img/layers" + opponent.layers + ".png",
-                alt: opponent.layers + ' layers',
+                src: "img/layers" + opponent.selectLayers + ".png",
+                alt: opponent.selectLayers + ' layers',
             }).show();
             updateGenderIcon($groupGenders[i], opponent);
 
@@ -1167,7 +1172,7 @@ function clickedRandomGroupButton () {
         if (costume) {
             var costumeFolder = (costume.toLowerCase() == "default") ? '' : "opponents/reskins/" + costume + "/";
             
-            fillCostumeSelector($groupCostumeSelectors[i], chosenGroup.opponents[i].alternate_costumes, costumeFolder);
+            fillCostumeSelector($groupCostumeSelectors[i], chosenGroup.opponents[i].default_costume_name, chosenGroup.opponents[i].alternate_costumes, costumeFolder);
         } else {
             $groupCostumeSelectors[i].empty();
         }

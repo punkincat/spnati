@@ -84,7 +84,7 @@ function Player (id) {
  * targetStartingLayers etc. adccording to wardrobe.
  *******************************************************************/
 Player.prototype.initClothingStatus = function () {
-    this.startingLayers = this.clothing.length;
+    this.startingLayers = this.countLayers();
     this.exposed = { upper: true, lower: true };
     for (var position in this.exposed) {
         if (this.clothing.some(function(c) {
@@ -280,8 +280,59 @@ Player.prototype.hasTag = function(tag) {
     return tag && this.tags && this.tags.indexOf(canonicalizeTag(tag)) >= 0;
 };
 
+
+Player.prototype.hasTags = function(tagAdv) {
+    var match = tagAdv.match(/^([^\&\|]*)(\&?)([^\&\|]*)(\|?)([^\&\|]*)(\&?)([^\&\|]*)\s*/);
+
+    var firstPart;
+
+    if (!match)
+    {
+        return true;
+    }
+
+    if (match[1] && match[3])
+    {
+        firstPart = this.hasTag(match[1]) && this.hasTag(match[3]);
+    }
+    else if (match[1])
+    {
+        firstPart = this.hasTag(match[1]);
+    }
+    else if (match[3])
+    {
+        firstPart = this.hasTag(match[3]);
+    }
+    else
+    {
+        firstPart = true;
+    }
+
+    if (firstPart){
+        return true;
+    }
+
+    if (match[5] && match[7])
+    {
+        return this.hasTag(match[5]) && this.hasTag(match[7]);
+    }
+    else if (match[5])
+    {
+        return this.hasTag(match[5]);
+    }
+    else if (match[7])
+    {
+        return this.hasTag(match[7]);
+    }
+    else
+    {
+        return true;
+    }
+
+}
+
 Player.prototype.countLayers = function() {
-    return this.clothing.length;
+    return this.clothing.countTrue(c => c.type != "skip");
 };
 
 Player.prototype.checkStatus = function(status) {
@@ -310,7 +361,7 @@ Player.prototype.checkStatus = function(status) {
     case STATUS_ALIVE:
         return !this.out;
     case STATUS_LOST_ALL:
-        return this.clothing.length == 0;
+        return this.countLayers() == 0;
     case STATUS_MASTURBATING:
         return this.out && !this.finished;
     case STATUS_FINISHED:
@@ -479,7 +530,8 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
     this.description = fixupDialogue($metaXml.children('description').html());
     this.has_collectibles = $metaXml.children('has_collectibles').text() === "true";
     this.collectibles = null;
-    this.layers = parseInt($metaXml.children('layers').text(), 10);
+    this.layers = this.selectLayers = this.metaLayers = parseInt($metaXml.children('layers').text(), 10);
+    this.default_costume_name = $metaXml.children('default-costume-name').text();
     this.scale = Number($metaXml.children('scale').text()) || 100.0;
     this.release = releaseNumber;
     this.uniqueLineCount = parseInt($metaXml.children('lines').text(), 10) || undefined;
@@ -633,6 +685,7 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
                 'label': $(elem).attr('label') || this.selectLabel,
                 'set': set,
                 'status': status,
+                'layers': parseInt($(elem).attr('layers'), 10) || this.selectLayers,
             };
 
             if (set && DEFAULT_COSTUME_SETS.has(set)) {
@@ -911,11 +964,13 @@ Opponent.prototype.selectAlternateCostume = function (costumeDesc) {
         this.selection_image = this.base_folder + this.image;
         this.selectLabel = this.metaLabel;
         this.selectGender = this.metaGender;
+        this.selectLayers = this.metaLayers;
     } else {
         this.selected_costume = costumeDesc.folder;
         this.selection_image = costumeDesc.folder + costumeDesc.image;
         this.selectLabel = costumeDesc.label;
         this.selectGender = costumeDesc.gender;
+        this.selectLayers = costumeDesc.layers;
     }
 
     /* For sorting purposes. 
@@ -967,6 +1022,7 @@ Opponent.prototype.loadAlternateCostume = function () {
             wardrobe: $xml.children('wardrobe'),
             gender: $xml.children('gender').text() || this.selectGender,
             size: $xml.children('size').text() || this.default_costume.size,
+            layers: parseInt($xml.children('layers').text(), 10) || this.selectLayers,
         };
 
         var poses = $xml.children('poses');
@@ -1689,6 +1745,8 @@ function formatConditionInfo(condition) {
     let attributes = {
         id: "character",
         tag: "tag",
+        nottag: "not tag",
+        tagAdv: "tagAdv",
         stage: "stage",
         layers: "layers",
         startingLayers: "starting layers",

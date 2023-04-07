@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.DataStructures;
 using SPNATI_Character_Editor.DataStructures;
 using SPNATI_Character_Editor.IO;
@@ -135,7 +135,7 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
-		[XmlElement("timer")]
+        [XmlElement("timer")]
 		public int Stamina
 		{
 			get { return Get<int>(); }
@@ -454,7 +454,14 @@ namespace SPNATI_Character_Editor
 					if (layer < count)
 					{
 						Clothing clothes = list.GetClothing(Layers - 1 - layer);
-						label = "Losing " + clothes.ToString();
+						if (clothes.ToString() != "SKIP") 
+						{ 
+							label = "Losing " + clothes.ToString();
+						}
+						else 
+						{
+							label = "SKIPPED";
+						}
 					}
 				}
 				else
@@ -465,7 +472,27 @@ namespace SPNATI_Character_Editor
 					{
 						int index = layer - 1;
 						Clothing lastClothes = list.GetClothing(Layers - 1 - index);
-						label = "Lost " + lastClothes.ToString();
+						Clothing clothes = list.GetClothing(Layers - 1 - layer);
+						if (lastClothes.ToString() != "SKIP")
+						{
+							label = "Lost " + lastClothes.ToString();
+						}
+						else
+						{
+							if (clothes.ToString() == "SKIP") 
+							{ 
+								label = "EMPTY STAGE";
+							}
+							else 
+							{
+								do
+								{
+									index--;
+									clothes = list.GetClothing(Layers - 1 - index);
+								} while (clothes.ToString() == "SKIP");
+								label = "Lost " + clothes.ToString();
+							}
+						}
 					}
 				}
 				if (layer == count)
@@ -518,7 +545,14 @@ namespace SPNATI_Character_Editor
 					if (layer <= Wardrobe.Count)
 					{
 						Clothing clothes = Wardrobe[Layers - layer];
-						label = "losing " + clothes.ToString();
+						if (clothes.ToString() != "SKIP")
+						{
+							label = "losing " + clothes.ToString();
+						}
+						else
+						{
+							label = "SKIPPED";
+						}
 					}
 					else
 					{
@@ -533,8 +567,28 @@ namespace SPNATI_Character_Editor
 					{
 						int index = layer - 1;
 						Clothing lastClothes = Wardrobe[Layers - 1 - index];
-						label = "Lost " + lastClothes.ToString();
-					}
+						Clothing clothes = Wardrobe[Layers - 1 - layer];
+                        if (lastClothes.ToString() != "SKIP")
+                        {
+							label = "Lost " + lastClothes.ToString();
+						}
+                        else
+                        {
+                            if (clothes.ToString() == "SKIP")
+                            {
+                                label = "EMPTY STAGE";
+                            }
+                            else
+                            {
+                                do
+                                {
+                                    index--;
+                                    clothes = Wardrobe[Layers - 1 - index];
+                                } while (clothes.ToString() == "SKIP");
+                                label = "Lost " + clothes.ToString();
+                            }
+                        }
+                    }
 					else if (layer == Wardrobe.Count)
 					{
 						label = "Naked";
@@ -837,9 +891,16 @@ namespace SPNATI_Character_Editor
 						if (img.Image != null)
 						{
 							foreach (int stage in img.Stages)
-							{
-								usedStages.Add(stage);
-								images.Add(img.Image.Replace("#", stage.ToString()));
+                            {
+                                usedStages.Add(stage);
+								string imgToAdd = img.Image.Replace("#", stage.ToString());
+								if (imgToAdd.Contains("custom:") && !imgToAdd.Contains(stage.ToString()))
+								{
+									// it's a cross-stage custom pose
+									imgToAdd += " CROSS " + stage;
+								}
+
+								images.Add(imgToAdd);
 							}
 						}
 					}
@@ -853,6 +914,24 @@ namespace SPNATI_Character_Editor
 								if (!usedStages.Contains(stage))
 								{
 									images.Add(line.Image.Replace("#", stage.ToString()));
+								}
+							}
+						}
+						else if (line.Image.Contains("custom:"))
+						{
+							foreach (int stage in theCase.Stages)
+							{
+								if (!usedStages.Contains(stage))
+								{
+									string imgToAdd = line.Image;
+
+									if (!imgToAdd.Contains(stage.ToString()))
+									{
+										// it's a cross-stage custom pose
+										imgToAdd += " CROSS " + stage;
+									}
+
+									images.Add(imgToAdd);
 								}
 							}
 						}
@@ -1036,9 +1115,9 @@ namespace SPNATI_Character_Editor
 			string status = Listing.Instance.GetCharacterStatus(FolderName);
 			if (status != OpponentStatus.Testing && status != OpponentStatus.Unlisted && status != OpponentStatus.Incomplete)
 			{
-				return WardrobeRestrictions.LayerCount;
+				return WardrobeRestrictions.LayerCount | WardrobeRestrictions.NoSkip;
 			}
-			return WardrobeRestrictions.None;
+			return WardrobeRestrictions.NoSkip;
 		}
 
 		public Clothing GetClothing(int index)

@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.Skinning;
 using TinifyAPI;
 using System;
@@ -20,8 +20,6 @@ namespace SPNATI_Character_Editor
 			txtUserName.Text = Config.UserName;
 			valAutoSave.Value = Config.AutoSaveInterval;
 			chkIntellisense.Checked = Config.UseIntellisense;
-			chkHidePrefixlessImages.Checked = Config.UsePrefixlessImages;
-			txtFilter.Text = Config.PrefixFilter;
 			chkAutoBackup.Checked = Config.BackupEnabled;
 			chkInitialAdd.Checked = Config.AutoOpenConditions;
 			chkDefaults.Checked = !Config.SuppressDefaults;
@@ -51,10 +49,7 @@ namespace SPNATI_Character_Editor
 			chkSafeMode.Checked = Config.SafeMode;
 			chkLegacyPoses.Checked = Config.ShowLegacyPoseTabs;
 			chkFullResponse.Checked = Config.UseFullResponses;
-
-			recAutoOpen.RecordType = typeof(Character);
-			recAutoOpen.RecordFilter = CharacterDatabase.FilterHuman;
-			recAutoOpen.RecordKey = Config.GetString(Settings.AutoOpenCharacter);
+			txtAutoOpen.Text = Config.GetString(Settings.AutoOpenCharacter);
 
 			HashSet<string> pauses = Config.AutoPauseDirectives;
 			foreach (DirectiveDefinition def in Definitions.Instance.Get<DirectiveDefinition>())
@@ -139,8 +134,6 @@ namespace SPNATI_Character_Editor
 			Config.AutoSaveInterval = (int)valAutoSave.Value;
 			Config.UserName = txtUserName.Text;
 			Config.UseIntellisense = chkIntellisense.Checked;
-			Config.UsePrefixlessImages = chkHidePrefixlessImages.Checked;
-			Config.PrefixFilter = txtFilter.Text;
 			Config.BackupEnabled = chkAutoBackup.Checked;
 			Config.AutoOpenConditions = chkInitialAdd.Checked;
 			Config.KisekaeDirectory = txtKisekae.Text;
@@ -159,7 +152,7 @@ namespace SPNATI_Character_Editor
 			Config.StartOnDashboard = chkStartDashboard.Checked;
 			Config.EnableDashboardSpellCheck = chkChecklistSpell.Checked;
 			Config.EnableDashboardValidation = chkChecklistValidation.Checked;
-			Config.Set(Settings.AutoOpenCharacter, recAutoOpen.RecordKey);
+			Config.Set(Settings.AutoOpenCharacter, txtAutoOpen.Text);
 			Config.MaxFranchisePartners = (int)valFranchise.Value;
 			Config.AutoPopulateStageImages = chkAutoFill.Checked;
 			Config.WarnAboutIncompleteStatus = chkWarnIncomplete.Checked;
@@ -201,12 +194,8 @@ namespace SPNATI_Character_Editor
 			Close();
 		}
 
-		private void chkHideImages_CheckedChanged(object sender, EventArgs e)
-		{
-			txtFilter.Enabled = chkHidePrefixlessImages.Checked;
-		}
 
-		private void cmdBrowseKisekae_Click(object sender, EventArgs e)
+        private void cmdBrowseKisekae_Click(object sender, EventArgs e)
 		{
 			if (!string.IsNullOrEmpty(txtKisekae.Text))
 			{

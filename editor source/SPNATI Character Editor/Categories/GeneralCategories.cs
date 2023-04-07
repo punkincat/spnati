@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.Providers;
 using System;
 using System.Collections.Generic;
@@ -231,6 +231,7 @@ namespace SPNATI_Character_Editor.Categories
 				new ClothingPositionCategory("legs", "legs"),
 				new ClothingPositionCategory("waist", "waist"),
 				new ClothingPositionCategory("other", "other"),
+				new ClothingPositionCategory("", ""),
 				};
 		}
 
@@ -272,6 +273,7 @@ namespace SPNATI_Character_Editor.Categories
 		protected override ClothingTypeCategory[] GetCategoryValues()
 		{
 			return new ClothingTypeCategory[] {
+				new ClothingTypeCategory("skip", "skip"),
 				new ClothingTypeCategory("extra", "extra"),
 				new ClothingTypeCategory("minor", "minor"),
 				new ClothingTypeCategory("major", "major"),

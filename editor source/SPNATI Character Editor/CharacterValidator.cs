@@ -1,4 +1,4 @@
-﻿using SPNATI_Character_Editor.DataStructures;
+using SPNATI_Character_Editor.DataStructures;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -617,63 +617,87 @@ namespace SPNATI_Character_Editor
 			for (int i = 0; i < character.Layers; i++)
 			{
 				Clothing c = character.GetClothing(i);
-				foundPlural = c.Plural || foundPlural;
-				if (pluralGuess == null && !c.Plural && c.Name.EndsWith("s"))
+
+				if (c.Type == "skip")
 				{
-					pluralGuess = c.Name;
+					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Wardrobe contains a layer of type skip, which is not allowed in default costumes. Remove the layer or replace it with a non-skipped clothing item."));
 				}
-				foundGeneric = !String.IsNullOrEmpty(c.GenericName) || foundGeneric;
-
-				if (c.Position == "upper" && c.Type == "major")
-					upper = c.Name;
-				if (c.Position == "lower" && c.Type == "major")
-					lower = c.Name;
-				if (c.Position == "both" && c.Type == "major")
-					foundBoth = true;
-				if (c.Position == "upper" && c.Type == "important")
-					importantUpper = c.Name;
-				if (c.Position == "lower" && c.Type == "important")
-					importantLower = c.Name;
-				if (c.Position == "other" && c.Type == "major")
-					otherMajor = c.Name;
-
-				if (IsUncountable(c.Name))
+				else if (String.IsNullOrEmpty(c.Name))
 				{
-					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" uses an uncountable noun with no plural form, which makes incoming generic dialogue awkward (ex. \"I've seen many {c.Name} in my day\"). Consider renaming this layer (ex. \"armor\" to \"breastplate\")."));
+					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"A clothing layer has no name. Choose a name for the layer."));
 				}
-
-				if (!c.Plural && falsePlurals.Contains(c.Name))
-                {
-					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" should be set to plural. Even though it's only one item, it's still a grammatically plural noun (ex. \"Those are some nice {c.Name}\")."));
-				}
-
-				if (!String.IsNullOrEmpty(c.GenericName))
+				else
 				{
-					bool validCategory = false;
-					bool lowercaseCategory = false;
-					foreach (ClothingCategoryItem cc in ClothingDefinitions.Instance.Categories)
+					foundPlural = c.Plural || foundPlural;
+					if (pluralGuess == null && !c.Plural && c.Name.EndsWith("s"))
 					{
-						if (cc.Key == c.GenericName)
-						{
-							validCategory = true;
-							break;
-						}
-						else if (cc.Key == c.GenericName.ToLower())
-                        {
-							lowercaseCategory = true;
-							break;
-						}
+						pluralGuess = c.Name;
+					}
+					foundGeneric = !String.IsNullOrEmpty(c.GenericName) || foundGeneric;
+
+					if (c.Position == "upper" && c.Type == "major")
+						upper = c.Name;
+					if (c.Position == "lower" && c.Type == "major")
+						lower = c.Name;
+					if (c.Position == "both" && c.Type == "major")
+						foundBoth = true;
+					if (c.Position == "upper" && c.Type == "important")
+						importantUpper = c.Name;
+					if (c.Position == "lower" && c.Type == "important")
+						importantLower = c.Name;
+					if (c.Position == "other" && c.Type == "major")
+						otherMajor = c.Name;
+
+
+
+					if (String.IsNullOrEmpty(c.Position))
+					{
+						warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" has no position set. Choose a position for the layer."));
 					}
 
-					if (!validCategory)
+                    if (c.Name == "SKIP")
+                    {
+						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"One of the layers is named SKIP. It's a word used internally by the CE to process layers without a name. Rename the layer."));
+                    }
+
+                    if (IsUncountable(c.Name))
 					{
-						if (lowercaseCategory)
+						warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" uses an uncountable noun with no plural form, which makes incoming generic dialogue awkward (ex. \"I've seen many {c.Name} in my day\"). Consider renaming this layer (ex. \"armor\" to \"breastplate\")."));
+					}
+
+					if (!c.Plural && falsePlurals.Contains(c.Name))
+					{
+						warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" should be set to plural. Even though it's only one item, it's still a grammatically plural noun (ex. \"Those are some nice {c.Name}\")."));
+					}
+
+					if (!String.IsNullOrEmpty(c.GenericName))
+					{
+						bool validCategory = false;
+						bool lowercaseCategory = false;
+						foreach (ClothingCategoryItem cc in ClothingDefinitions.Instance.Categories)
 						{
-							warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" has classification \"{c.GenericName}\", which is inappropriately capitalized. Opening the Wardrobe tab will fix this."));
+							if (cc.Key == c.GenericName)
+							{
+								validCategory = true;
+								break;
+							}
+							else if (cc.Key == c.GenericName.ToLower())
+							{
+								lowercaseCategory = true;
+								break;
+							}
 						}
-						else
+
+						if (!validCategory)
 						{
-							warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" has an invalid classification: \"{c.GenericName}\". Opening the Wardrobe tab will delete this classification, at which point you can enter a valid one if possible."));
+							if (lowercaseCategory)
+							{
+								warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" has classification \"{c.GenericName}\", which is inappropriately capitalized. Opening the Wardrobe tab will fix this."));
+							}
+							else
+							{
+								warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" has an invalid classification: \"{c.GenericName}\". Opening the Wardrobe tab will delete this classification, at which point you can enter a valid one if possible."));
+							}
 						}
 					}
 				}
@@ -730,63 +754,109 @@ namespace SPNATI_Character_Editor
 			for (int i = 0; i < skin.Layers; i++)
 			{
 				Clothing c = skin.GetClothing(i);
-				foundPlural = c.Plural || foundPlural;
-				if (pluralGuess == null && !c.Plural && c.Name.EndsWith("s"))
-				{
-					pluralGuess = c.Name;
-				}
-				foundGeneric = !String.IsNullOrEmpty(c.GenericName) || foundGeneric;
 
-				if (c.Position == "upper" && c.Type == "major")
-					upper = c.Name;
-				if (c.Position == "lower" && c.Type == "major")
-					lower = c.Name;
-				if (c.Position == "both" && c.Type == "major")
-					foundBoth = true;
-				if (c.Position == "upper" && c.Type == "important")
-					importantUpper = c.Name;
-				if (c.Position == "lower" && c.Type == "important")
-					importantLower = c.Name;
-				if (c.Position == "other" && c.Type == "major")
-					otherMajor = c.Name;
-
-				if (IsUncountable(c.Name))
+				if (c.Type == "skip")
 				{
-					warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" uses an uncountable noun with no plural form, which makes incoming generic dialogue awkward (ex. \"I've seen many {c.Name} in my day\"). Consider renaming this layer (ex. \"armor\" to \"breastplate\")."));
-				}
+                    if (i == skin.Layers - 1)
+                    {
+                        warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip as its first layer, which is not allowed because it would cause problems in Stage-0 cases such as Selected. Make the first layer a non-skipped clothing item."));
+                    }
 
-				if (!c.Plural && falsePlurals.Contains(c.Name))
-				{
-					warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" should be set to plural. Even though it's only one item, it's still a grammatically plural noun (ex. \"Those are some nice {c.Name}\")."));
-				}
+                    if (!String.IsNullOrEmpty(c.Name))
+                    {
+                        warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip with a non-empty name, which may interfere with functions determining character status. Remove names from layers of type skip."));
+                    }
 
-				if (!String.IsNullOrEmpty(c.GenericName))
-				{
-					bool validCategory = false;
-					bool lowercaseCategory = false;
-					foreach (ClothingCategoryItem cc in ClothingDefinitions.Instance.Categories)
+                    if (!String.IsNullOrEmpty(c.Position))
+                    {
+                        warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip with a non-empty position field, which may interfere with functions determining character status. Remove all metadata from layers of type skip."));
+                    }
+
+					if (!String.IsNullOrEmpty(c.GenericName))
 					{
-						if (cc.Key == c.GenericName)
-						{
-							validCategory = true;
-							break;
-						}
-						else if (cc.Key == c.GenericName.ToLower())
-						{
-							lowercaseCategory = true;
-							break;
-						}
+						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip with a non-empty generic name field, which may interfere with functions determining character status. Remove all metadata from layers of type skip."));
 					}
 
-					if (!validCategory)
+                        if (c.Plural)
+                    {
+                        warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip with the name set to plural. Uncheck the box Plural."));
+                    }
+
+                }
+				else if (String.IsNullOrEmpty(c.Name))
+				{
+                    warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Alternate costume \"{skin.Name}\" has a non-skipped layer with no name. Choose a name for the layer."));
+                }
+				else
+				{ 
+					foundPlural = c.Plural || foundPlural;
+					if (pluralGuess == null && !c.Plural && c.Name.EndsWith("s"))
 					{
-						if (lowercaseCategory)
+						pluralGuess = c.Name;
+					}
+					foundGeneric = !String.IsNullOrEmpty(c.GenericName) || foundGeneric;
+
+					if (c.Position == "upper" && c.Type == "major")
+						upper = c.Name;
+					if (c.Position == "lower" && c.Type == "major")
+						lower = c.Name;
+					if (c.Position == "both" && c.Type == "major")
+						foundBoth = true;
+					if (c.Position == "upper" && c.Type == "important")
+						importantUpper = c.Name;
+					if (c.Position == "lower" && c.Type == "important")
+						importantLower = c.Name;
+					if (c.Position == "other" && c.Type == "major")
+						otherMajor = c.Name;
+
+                    if (String.IsNullOrEmpty(c.Position))
+                    {
+                        warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" has no position set. Choose a position for the layer."));
+                    }
+
+                    if (c.Name == "SKIP")
+					{
+						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer named SKIP. It's a word used internally by the CE to process layers without a name. Rename the layer."));
+					}
+
+                    if (IsUncountable(c.Name))
+					{
+						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" uses an uncountable noun with no plural form, which makes incoming generic dialogue awkward (ex. \"I've seen many {c.Name} in my day\"). Consider renaming this layer (ex. \"armor\" to \"breastplate\")."));
+					}
+
+					if (!c.Plural && falsePlurals.Contains(c.Name))
+					{
+						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" should be set to plural. Even though it's only one item, it's still a grammatically plural noun (ex. \"Those are some nice {c.Name}\")."));
+					}
+
+					if (!String.IsNullOrEmpty(c.GenericName))
+					{
+						bool validCategory = false;
+						bool lowercaseCategory = false;
+						foreach (ClothingCategoryItem cc in ClothingDefinitions.Instance.Categories)
 						{
-							warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" has classification \"{c.GenericName}\", which is inappropriately capitalized. Opening the alternate costume's Wardrobe tab will fix this."));
+							if (cc.Key == c.GenericName)
+							{
+								validCategory = true;
+								break;
+							}
+							else if (cc.Key == c.GenericName.ToLower())
+							{
+								lowercaseCategory = true;
+								break;
+							}
 						}
-						else
+
+						if (!validCategory)
 						{
-							warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" has an invalid classification: \"{c.GenericName}\". Opening the alternate costume's Wardrobe tab will delete this classification, at which point you can enter a valid one if possible."));
+							if (lowercaseCategory)
+							{
+								warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" has classification \"{c.GenericName}\", which is inappropriately capitalized. Opening the alternate costume's Wardrobe tab will fix this."));
+							}
+							else
+							{
+								warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" has an invalid classification: \"{c.GenericName}\". Opening the alternate costume's Wardrobe tab will delete this classification, at which point you can enter a valid one if possible."));
+							}
 						}
 					}
 				}
