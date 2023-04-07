@@ -282,7 +282,7 @@ Player.prototype.hasTag = function(tag) {
 
 
 Player.prototype.hasTags = function(tagAdv) {
-    var match = tagAdv.match(/^([^∧\|]*)(\|?)([^∧\|]*)(∧?)([^∧\|]*)(\|?)([^∧\|]*)\s*/);
+    var match = tagAdv.match(/^([^\&\|]*)(\&?)([^\&\|]*)(\|?)([^\&\|]*)(\&?)([^\&\|]*)\s*/);
 
     var firstPart;
 
@@ -293,7 +293,7 @@ Player.prototype.hasTags = function(tagAdv) {
 
     if (match[1] && match[3])
     {
-        firstPart = this.hasTag(match[1]) || this.hasTag(match[3]);
+        firstPart = this.hasTag(match[1]) && this.hasTag(match[3]);
     }
     else if (match[1])
     {
@@ -308,13 +308,13 @@ Player.prototype.hasTags = function(tagAdv) {
         firstPart = true;
     }
 
-    if (!firstPart){
-        return false;
+    if (firstPart){
+        return true;
     }
 
     if (match[5] && match[7])
     {
-        return this.hasTag(match[5]) || this.hasTag(match[7]);
+        return this.hasTag(match[5]) && this.hasTag(match[7]);
     }
     else if (match[5])
     {
