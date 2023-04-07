@@ -384,6 +384,9 @@
     <Compile Include="Controls\EditControls\TagAdvControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+	<Compile Include="Controls\EditControls\TagAdvControl.Designer.cs">
+      <DependentUpon>TagAdvControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\EditControls\VariableControls\BackgroundTagControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
