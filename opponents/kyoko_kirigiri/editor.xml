@@ -80,6 +80,7 @@ Ignore everything in the "Duplicate dialogue" folder and just respond to these c
 I promise, it just works.</note>
         <note id="861">In DR1's school mode, Kyoko also takes on this exact menacing-ass stance while discussing doing this with coffee. Seriously.</note>
         <note id="860">The Dwight-on-right version of this line (which plays in the Hand=Any case) uses a different sprite if Dwight is at stage 6-9, which makes the line come off a little bit more overtly desire-laden.  It uses the marker dwight_stare3_lustVariation on the Hand=Any case, but if you want to respond to it you can also just have Dwight do that version based on his own stage.</note>
+        <note id="902">It might happen.</note>
     </notes>
     <labels>
         <label id="499" label="Shelved" folder="" sort="0" />
@@ -612,10 +613,10 @@ I promise, it just works.</note>
         <label id="582" label="fallback" folder="" sort="0" />
         <label id="583" label="fallback" folder="" sort="0" />
         <label id="585" label="fallback" folder="" sort="0" />
-        <label id="586" label="Claus hat" folder="" sort="0" />
-        <label id="587" label="Claus hat, Dec 24" folder="Duplicate dialogue" sort="34" />
-        <label id="588" label="Claus hat, Dec 25" folder="Duplicate dialogue" sort="35" />
-        <label id="589" label="Claus hat" folder="" sort="0" />
+        <label id="586" label="Claus hat" folder="Seasonal" sort="4" />
+        <label id="587" label="Claus hat, Dec 24" folder="Seasonal" sort="34" />
+        <label id="588" label="Claus hat, Dec 25" folder="Seasonal" sort="35" />
+        <label id="589" label="Claus hat" folder="Seasonal" sort="5" />
         <label id="592" label="Stand" folder="" sort="0" />
         <label id="593" label="Stand" folder="" sort="0" />
         <label id="594" label="fallback" folder="" sort="0" />
@@ -708,7 +709,7 @@ I promise, it just works.</note>
         <label id="682" label="Deutsch" folder="" sort="0" />
         <label id="683" label="Deutsch" folder="" sort="0" />
         <label id="684" label="Deutsch" folder="Must masturbate" sort="18" />
-        <label id="685" label="Gloria Ou 0-1" folder="Outbound stage 0" sort="0" />
+        <label id="685" label="Gloria Ou 0-1" folder="Outbound stage 0" sort="3" />
         <label id="686" label="Gloria Ou 0-2" folder="Outbound stage 0" sort="2" />
         <label id="687" label="Gloria O" folder="Outbound stage 0" sort="0" />
         <label id="258" label="Poké Trainers" folder="" sort="0" />
@@ -721,7 +722,7 @@ I promise, it just works.</note>
         <label id="692" label="Ringo In Ults-2" folder="Inbound stage X" sort="3" />
         <label id="693" label="Ringo In Ults-3" folder="Inbound stage X" sort="2" />
         <label id="694" label="" folder="Duplicate dialogue" sort="2" />
-        <label id="695" label="Toshinou Ou 6-1A" color="2" folder="Outbound stage 6" sort="0" />
+        <label id="695" label="Toshinou Ou 6-1A" color="2" folder="Outbound stage 6" sort="2" />
         <label id="696" label="Toshinou Ou 6-1B" color="3" folder="Outbound stage 6" sort="2" />
         <label id="697" label="Toshinou Ou 6-2B" color="3" folder="Outbound stage 6" sort="3" />
         <label id="698" label="Nude, 8 layers" folder="Player exposed" sort="10" />
@@ -820,7 +821,7 @@ I promise, it just works.</note>
         <label id="791" label="Tomato+Okino OL 0-1" color="1" folder="Duplicate dialogue" sort="61" />
         <label id="792" label="Tomato+Okino OR pre0-1" folder="Duplicate dialogue" sort="64" />
         <label id="793" label="Tomato+Okino OR 0-1" color="1" folder="Duplicate dialogue" sort="65" />
-        <label id="794" label="Toshino select, tomato" color="1" folder="Duplicate dialogue" sort="0" />
+        <label id="794" label="Toshino select, tomato" color="1" folder="Duplicate dialogue" sort="2" />
         <label id="795" label="Toshinou select, tomato" color="1" folder="" sort="0" />
         <label id="796" label="Tomato Ou 0-1" color="1" folder="Duplicate dialogue" sort="62" />
         <label id="797" label="Toshinou IL 1-1 " folder="Inbound stage 1" sort="2" />
@@ -846,82 +847,84 @@ I promise, it just works.</note>
         <label id="817" label="" folder="Collectible" sort="2" />
         <label id="819" label="" folder="Must masturbate" sort="0" />
         <label id="820" label="" folder="Duplicate dialogue" sort="0" />
-        <label id="821" label="Bella IL X-1" folder="Inbound stage X" sort="0" />
-        <label id="822" label="Miko IL 0-1" folder="Inbound stage 0" sort="0" />
-        <label id="823" label="Reimu IL 0-1A" color="2" folder="Inbound stage 0" sort="0" />
-        <label id="824" label="Reimu IL 0-1B" color="3" folder="Inbound stage 0" sort="0" />
-        <label id="825" label="Miko IR 0-1" folder="Duplicate dialogue" sort="0" />
-        <label id="826" label="Miko IR pre0-1" folder="Duplicate dialogue" sort="0" />
-        <label id="827" label="Reimu IR pre0-1A" folder="Duplicate dialogue" sort="0" />
-        <label id="828" label="Reimu IR 0-1A" color="2" folder="Duplicate dialogue" sort="0" />
-        <label id="829" label="Reimu IR 0-1B" color="3" folder="Duplicate dialogue" sort="0" />
-        <label id="830" label="Reimu IR pre0-1B" folder="Duplicate dialogue" sort="0" />
-        <label id="831" label="Kennedy IL 0-1" folder="Inbound stage 0" sort="0" />
-        <label id="832" label="Kennedy IL 0-2" folder="Inbound stage 0" sort="0" />
-        <label id="833" label="Kennedy IL 1-1" folder="Inbound stage 1" sort="0" />
-        <label id="834" label="Kennedy IL 1-2" folder="Inbound stage 1" sort="0" />
+        <label id="821" label="Bella IL X-1" folder="Inbound stage X" sort="5" />
+        <label id="822" label="Miko IL 0-1" folder="Inbound stage 0" sort="4" />
+        <label id="823" label="Reimu IL 0-1A" color="2" folder="Inbound stage 0" sort="5" />
+        <label id="824" label="Reimu IL 0-1B" color="3" folder="Inbound stage 0" sort="3" />
+        <label id="825" label="Miko IR 0-1" folder="Duplicate dialogue" sort="52" />
+        <label id="826" label="Miko IR pre0-1" folder="Duplicate dialogue" sort="28" />
+        <label id="827" label="Reimu IR pre0-1A" folder="Duplicate dialogue" sort="29" />
+        <label id="828" label="Reimu IR 0-1A" color="2" folder="Duplicate dialogue" sort="53" />
+        <label id="829" label="Reimu IR 0-1B" color="3" folder="Duplicate dialogue" sort="50" />
+        <label id="830" label="Reimu IR pre0-1B" folder="Duplicate dialogue" sort="30" />
+        <label id="831" label="Kennedy IL 0-1" folder="Inbound stage 0" sort="2" />
+        <label id="832" label="Kennedy IL 0-2" folder="Inbound stage 0" sort="11" />
+        <label id="833" label="Kennedy IL 1-1" folder="Inbound stage 1" sort="2" />
+        <label id="834" label="Kennedy IL 1-2" folder="Inbound stage 1" sort="6" />
         <label id="835" label="Kennedy IL 2-1A" color="2" folder="Inbound stage 2" sort="0" />
-        <label id="836" label="Kennedy IL 2-1B" color="3" folder="Inbound stage 2" sort="0" />
-        <label id="837" label="Kennedy IL 2-2" folder="Inbound stage 2" sort="0" />
-        <label id="838" label="Kennedy IR pre0-1" folder="Duplicate dialogue" sort="0" />
-        <label id="839" label="Kennedy IR 0-1" folder="Duplicate dialogue" sort="0" />
-        <label id="840" label="Kennedy IR pre0-2" folder="Duplicate dialogue" sort="0" />
-        <label id="841" label="Kennedy IR pre1-1" folder="Duplicate dialogue" sort="0" />
-        <label id="842" label="Kennedy IR 1-1" folder="Duplicate dialogue" sort="0" />
-        <label id="843" label="Kennedy IR 0-2" folder="Duplicate dialogue" sort="0" />
-        <label id="844" label="Kennedy IR pre2-1A" folder="Duplicate dialogue" sort="0" />
-        <label id="845" label="Kennedy IR pre2-1B" folder="Duplicate dialogue" sort="0" />
-        <label id="846" label="Kennedy IR 2-1A" color="2" folder="Duplicate dialogue" sort="0" />
-        <label id="847" label="Kennedy IR 2-1B" color="3" folder="Duplicate dialogue" sort="0" />
-        <label id="848" label="Kennedy IR pre2-2" folder="Duplicate dialogue" sort="0" />
-        <label id="849" label="Kennedy IR 2-2" folder="Duplicate dialogue" sort="0" />
-        <label id="850" label="" folder="Must masturbate" sort="0" />
-        <label id="851" label="" folder="Must masturbate" sort="0" />
-        <label id="852" label="" folder="Must masturbate" sort="0" />
-        <label id="853" label="" folder="Differential nicknames" sort="0" />
-        <label id="854" label="Miko IL 0-2" folder="Inbound stage 0" sort="0" />
+        <label id="836" label="Kennedy IL 2-1B" color="3" folder="Inbound stage 2" sort="2" />
+        <label id="837" label="Kennedy IL 2-2" folder="Inbound stage 2" sort="3" />
+        <label id="838" label="Kennedy IR pre0-1" folder="Duplicate dialogue" sort="31" />
+        <label id="839" label="Kennedy IR 0-1" folder="Duplicate dialogue" sort="47" />
+        <label id="840" label="Kennedy IR pre0-2" folder="Duplicate dialogue" sort="69" />
+        <label id="841" label="Kennedy IR pre1-1" folder="Duplicate dialogue" sort="32" />
+        <label id="842" label="Kennedy IR 1-1" folder="Duplicate dialogue" sort="48" />
+        <label id="843" label="Kennedy IR 0-2" folder="Duplicate dialogue" sort="78" />
+        <label id="844" label="Kennedy IR pre2-1A" folder="Duplicate dialogue" sort="33" />
+        <label id="845" label="Kennedy IR pre2-1B" folder="Duplicate dialogue" sort="34" />
+        <label id="846" label="Kennedy IR 2-1A" color="2" folder="Duplicate dialogue" sort="45" />
+        <label id="847" label="Kennedy IR 2-1B" color="3" folder="Duplicate dialogue" sort="46" />
+        <label id="848" label="Kennedy IR pre2-2" folder="Duplicate dialogue" sort="70" />
+        <label id="849" label="Kennedy IR 2-2" folder="Duplicate dialogue" sort="49" />
+        <label id="850" label="" folder="Must masturbate" sort="6" />
+        <label id="851" label="" folder="Must masturbate" sort="21" />
+        <label id="852" label="" folder="Must masturbate" sort="22" />
+        <label id="853" label="" folder="Differential nicknames" sort="8" />
+        <label id="854" label="Miko IL 0-2" folder="Inbound stage 0" sort="16" />
         <label id="855" label="Miko IL 0-2" folder="Inbound stage 0" sort="0" />
-        <label id="856" label="Miko IR 0-2" folder="Duplicate dialogue" sort="0" />
-        <label id="857" label="Miko IR pre0-2" folder="Duplicate dialogue" sort="0" />
-        <label id="858" label="Dwight IL 0-1" folder="Inbound stage 0" sort="0" />
-        <label id="859" label="Dwight IL 0-2" folder="Inbound stage 0" sort="0" />
-        <label id="860" label="Dwight IL 0-3" folder="Inbound stage 0" sort="0" />
-        <label id="861" label="Dwight IL 1-1" folder="Inbound stage 1" sort="0" />
-        <label id="862" label="Dwight IL 1-2" folder="Inbound stage 1" sort="0" />
-        <label id="863" label="Dwight IL 1-3" folder="Inbound stage 1" sort="0" />
-        <label id="864" label="Dwight IR 1-1" folder="Duplicate dialogue" sort="0" />
-        <label id="865" label="Dwight IR 1-2" folder="Duplicate dialogue" sort="0" />
-        <label id="866" label="Dwight IR 1-3" folder="Duplicate dialogue" sort="0" />
-        <label id="867" label="Dwight IR pre1-1" folder="Duplicate dialogue" sort="0" />
-        <label id="868" label="Dwight IR pre1-2" folder="Duplicate dialogue" sort="0" />
-        <label id="869" label="Dwight IR pre1-3" folder="Duplicate dialogue" sort="0" />
-        <label id="870" label="Dwight IR pre0-1" folder="Duplicate dialogue" sort="0" />
-        <label id="871" label="Dwight IR pre0-2" folder="Duplicate dialogue" sort="0" />
-        <label id="872" label="Dwight IR pre0-3" folder="Duplicate dialogue" sort="0" />
-        <label id="873" label="Dwight IR 0-1" folder="Duplicate dialogue" sort="0" />
-        <label id="874" label="Dwight IR 0-2" folder="Duplicate dialogue" sort="0" />
-        <label id="875" label="Dwight IR 0-3" folder="Duplicate dialogue" sort="0" />
-        <label id="876" label="Dwight IR 0-3 Variation" color="1" folder="Duplicate dialogue" sort="0" />
-        <label id="877" label="Kekko Ou 0-1" folder="Outbound stage 0" />
-        <label id="878" label="Kekko Ou 1-1" folder="Outbound stage 1" />
-        <label id="879" label="Kekko Ou 1-2" folder="Outbound stage 1" />
-        <label id="880" label="Kekko Ou 1-3A" color="2" folder="Outbound stage 1" />
-        <label id="881" label="Kekko Ou 1-3B" color="3" folder="Outbound stage 1" />
-        <label id="882" label="Kekko Ou 2-1" folder="Outbound stage 2" />
-        <label id="883" label="Toru Ou 4-1A" color="2" folder="Outbound stage 4" />
-        <label id="884" label="Toru Ou 4-1B" color="3" folder="Outbound stage 4" />
-            <!-- Retired in honor of Yui Samidare -->
-        <label id="889" label="Giygas Ou 0-1" folder="Outbound stage 0" />
-        <label id="890" label="Giygas Ou 0-2A" color="2" folder="Outbound stage 0" />
-        <label id="891" label="Giygas Ou 0-2B" color="3" folder="Outbound stage 0" />
-        <label id="892" label="Giygas Ou 0-3A" color="2" folder="Outbound stage 0" />
-        <label id="893" label="Giygas Ou 0-3B" color="3" folder="Outbound stage 0" />
-        <label id="894" label="Giygas Ou 5-1" folder="Outbound stage 5" />
-        <label id="895" label="Giygas Ou 6-1A" color="2" folder="Outbound stage 6" />
-        <label id="896" label="Giygas Ou 6-1B" color="3" folder="Outbound stage 6" />
-        <label id="897" label="SCM In X-1" folder="Inbound stage X" />
-        <label id="898" label="SCM In X-1 conditional" folder="Inbound stage X" />
-        <label id="899" label="SCM In X-1 conditional" folder="Inbound stage X" />
+        <label id="856" label="Miko IR 0-2" folder="Duplicate dialogue" sort="85" />
+        <label id="857" label="Miko IR pre0-2" folder="Duplicate dialogue" sort="71" />
+        <label id="858" label="Dwight IL 0-1" folder="Inbound stage 0" sort="6" />
+        <label id="859" label="Dwight IL 0-2" folder="Inbound stage 0" sort="17" />
+        <label id="860" label="Dwight IL 0-3" folder="Inbound stage 0" sort="19" />
+        <label id="861" label="Dwight IL 1-1" folder="Inbound stage 1" sort="4" />
+        <label id="862" label="Dwight IL 1-2" folder="Inbound stage 1" sort="8" />
+        <label id="863" label="Dwight IL 1-3" folder="Inbound stage 1" sort="11" />
+        <label id="864" label="Dwight IR 1-1" folder="Duplicate dialogue" sort="54" />
+        <label id="865" label="Dwight IR 1-2" folder="Duplicate dialogue" sort="86" />
+        <label id="866" label="Dwight IR 1-3" folder="Duplicate dialogue" sort="11" />
+        <label id="867" label="Dwight IR pre1-1" folder="Duplicate dialogue" sort="35" />
+        <label id="868" label="Dwight IR pre1-2" folder="Duplicate dialogue" sort="72" />
+        <label id="869" label="Dwight IR pre1-3" folder="Duplicate dialogue" sort="91" />
+        <label id="870" label="Dwight IR pre0-1" folder="Duplicate dialogue" sort="36" />
+        <label id="871" label="Dwight IR pre0-2" folder="Duplicate dialogue" sort="73" />
+        <label id="872" label="Dwight IR pre0-3" folder="Duplicate dialogue" sort="92" />
+        <label id="873" label="Dwight IR 0-1" folder="Duplicate dialogue" sort="55" />
+        <label id="874" label="Dwight IR 0-2" folder="Duplicate dialogue" sort="87" />
+        <label id="875" label="Dwight IR 0-3" folder="Duplicate dialogue" sort="12" />
+        <label id="876" label="Dwight IR 0-3 Variation" color="1" folder="Duplicate dialogue" sort="9" />
+        <label id="877" label="Kekko Ou 0-1" folder="Outbound stage 0" sort="2" />
+        <label id="878" label="Kekko Ou 1-1" folder="Outbound stage 1" sort="0" />
+        <label id="879" label="Kekko Ou 1-2" folder="Outbound stage 1" sort="2" />
+        <label id="880" label="Kekko Ou 1-3A" color="2" folder="Outbound stage 1" sort="3" />
+        <label id="881" label="Kekko Ou 1-3B" color="3" folder="Outbound stage 1" sort="4" />
+        <label id="882" label="Kekko Ou 2-1" folder="Outbound stage 2" sort="4" />
+        <label id="883" label="Toru Ou 4-1A" color="2" folder="Outbound stage 4" sort="9" />
+        <label id="884" label="Toru Ou 4-1B" color="3" folder="Outbound stage 4" sort="10" />
+        <label id="889" label="Giygas Ou 0-1" folder="Outbound stage 0" sort="0" />
+        <label id="890" label="Giygas Ou 0-2A" color="2" folder="Outbound stage 0" sort="4" />
+        <label id="891" label="Giygas Ou 0-2B" color="3" folder="Outbound stage 0" sort="5" />
+        <label id="892" label="Giygas Ou 0-3A" color="2" folder="Outbound stage 0" sort="7" />
+        <label id="893" label="Giygas Ou 0-3B" color="3" folder="Outbound stage 0" sort="8" />
+        <label id="894" label="Giygas Ou 5-1" folder="Outbound stage 5" sort="0" />
+        <label id="895" label="Giygas Ou 6-1A" color="2" folder="Outbound stage 6" sort="8" />
+        <label id="896" label="Giygas Ou 6-1B" color="3" folder="Outbound stage 6" sort="7" />
+        <label id="897" label="SCM In X-1" folder="Inbound stage X" sort="0" />
+        <label id="898" label="SCM In X-1 conditional" folder="Inbound stage X" sort="2" />
+        <label id="899" label="SCM In X-1 conditional" folder="Inbound stage X" sort="3" />
+        <label id="900" label="Solar Flare Ou 6-1" folder="Outbound stage 6" sort="0" />
+        <label id="901" label="Solar Flare Ou 6-2" folder="Outbound stage 6" sort="6" />
+        <label id="902" label="Bunnies" folder="Seasonal" sort="0" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -947,10 +950,13 @@ I promise, it just works.</note>
         <prefix>#-mast_</prefix>
         <prefix>#-stand</prefix>
     </prefixes>
-    <nextId>899</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>902</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
+        <marker scope="Public" name="+quips" />
         <marker scope="Public" name="alwaysReady">"Always ready, I see" and other versions of the line</marker>
         <marker scope="Public" name="arousalVisible" />
         <marker scope="Public" name="aroused">Her vulva is or will be visibly secreting fluid prior to her forfeit while nude (and in the second tick of her forfeit).</marker>
@@ -1029,7 +1035,7 @@ I promise, it just works.</note>
         <marker scope="Public" name="dwight_stare3" />
         <marker scope="Public" name="dwight_stare3_lustVariation" />
         <marker scope="Public" name="eatShitYuuhain" />
-        <marker scope="Private" name="ellipsisCount">Automatically counts lines that are just ellipsis, lacking any letters that a word could be made out of. Decrements by 1 each strip phase.</marker>
+        <marker scope="Private" name="ellipsisCount">Automatically counts lines that are just ellipsis, lacking any letters that a word could be made out of. Decrements by 1 each strip phase. Swapping cards lines are not counted.</marker>
         <marker scope="Public" name="embarrassedYanks" />
         <marker scope="Public" name="enxNotRunning" />
         <marker scope="Public" name="enxReaction">Stripped important, tag=ENF/ENM, lines referencing ~target~ covering up with their hands.</marker>
@@ -1061,6 +1067,7 @@ I promise, it just works.</note>
         <marker scope="Public" name="ferris_V_ps" />
         <marker scope="Public" name="ferris_V_ps=he" />
         <marker scope="Public" name="ferris_V_ps=she" />
+        <marker scope="Public" name="ferris_VK_p" />
         <marker scope="Public" name="FFcostume">Used while Kyoko is wearing the Future Foundation outfit.</marker>
         <marker scope="Public" name="finishedApology" />
         <marker scope="Public" name="finishLikeThatQuery" />
@@ -1075,6 +1082,12 @@ I promise, it just works.</note>
         <marker scope="Public" name="gamblingDislike" />
         <marker scope="Public" name="gawking" />
         <marker scope="Public" name="giddyCount">The giddy pose has appeared X times this game. Counted with hidden lines.</marker>
+        <marker scope="Public" name="giygas_doThyWorst" />
+        <marker scope="Public" name="giygas_flashback" />
+        <marker scope="Public" name="giygas_newOne" />
+        <marker scope="Public" name="giygas_nwp" />
+        <marker scope="Public" name="giygas_prepare" />
+        <marker scope="Public" name="giygas_trip" />
         <marker scope="Public" name="glassesLastStrip" />
         <marker scope="Public" name="gloria_01Travels" />
         <marker scope="Public" name="gloria_02Travels" />
@@ -1105,6 +1118,8 @@ I promise, it just works.</note>
         <marker scope="Public" name="handBluffP1" />
         <marker scope="Public" name="handBluffP2" />
         <marker scope="Public" name="handBluffP3" />
+        <marker scope="Public" name="hattersGonnaHat" />
+        <marker scope="Public" name="hatterSuggestion" />
         <marker scope="Public" name="hauntedVoyeurs" />
         <marker scope="Public" name="haveToUntie">"Just a second. I have to untie this."</marker>
         <marker scope="Public" name="hayato" />
@@ -1120,6 +1135,13 @@ I promise, it just works.</note>
         <marker scope="Public" name="ibtcompany" />
         <marker scope="Public" name="kazumaTinder" />
         <marker scope="Public" name="keepInShape" />
+        <marker scope="Public" name="kekko_glovesOnly1" />
+        <marker scope="Public" name="kekko_glovesOnly2" />
+        <marker scope="Public" name="kekko_glovesOnly2A" />
+        <marker scope="Public" name="kekko_mysteries" />
+        <marker scope="Public" name="kekko_nudeStripPoker" />
+        <marker scope="Public" name="kekko_potMeetKettle" />
+        <marker scope="Public" name="kekko_scorekeeping" />
         <marker scope="Public" name="kennedy_agency" />
         <marker scope="Public" name="kennedy_agency_FF" />
         <marker scope="Public" name="kennedy_agency_noFF" />
@@ -1223,7 +1245,16 @@ I promise, it just works.</note>
         <marker scope="Public" name="santaHatStory" />
         <marker scope="Public" name="sayMyName" />
         <marker scope="Public" name="sayMyName*" />
+        <marker scope="Public" name="scm_batDeduction" />
+        <marker scope="Public" name="scm_batDeduction_" />
+        <marker scope="Public" name="scm_batDeduction_friends" />
+        <marker scope="Public" name="scm_batDeduction_penisMan" />
+        <marker scope="Public" name="scm_batDeduction_stripOrder" />
+        <marker scope="Public" name="scm_deduction" />
+        <marker scope="Public" name="scm_payDeduction" />
         <marker scope="Public" name="selfTrimComment" />
+        <marker scope="Public" name="sflare_elimination" />
+        <marker scope="Public" name="sflare_start" />
         <marker scope="Public" name="sheSaidFuck" />
         <marker scope="Public" name="SHE-SAYS-FUCK" />
         <marker scope="Public" name="smallPenisSpeech">Kyoko has said X lines in a multi-screen speech on her preference to small penises, which she begins once 3 or more small penises are exposed with no women other than herself and/or the player present.</marker>
@@ -1259,10 +1290,14 @@ I promise, it just works.</note>
         <marker scope="Public" name="theyLeftTheGameHeadass" />
         <marker scope="Public" name="theyStripHere" />
         <marker scope="Public" name="thighRub">"Word of advice...try rubbing your thighs together."</marker>
+        <marker scope="Public" name="thinkIllBeJoining" />
         <marker scope="Public" name="tieCompletes">"A classmate in high school once told me this tie completes my outfit."</marker>
         <marker scope="Public" name="timeline" />
         <marker scope="Public" name="timeline=thh" />
         <marker scope="Public" name="tooManyKyokos" />
+        <marker scope="Public" name="toru_chest" />
+        <marker scope="Public" name="toru_chestB" />
+        <marker scope="Public" name="toru_secretShlick" />
         <marker scope="Public" name="toshinou_anythingElse" />
         <marker scope="Public" name="toshinou_beneathNotice" />
         <marker scope="Public" name="toshinou_gameOverSkinnyDip" />
@@ -1285,6 +1320,7 @@ I promise, it just works.</note>
         <marker scope="Public" name="underdog">She has lost the first 8 hands in a row, but goes up to Best AI instantly.</marker>
         <marker scope="Public" name="underPressure" />
         <marker scope="Public" name="wellYouLost" />
+        <marker scope="Public" name="willBeStaring" />
         <marker scope="Public" name="won7High">She remarked X times on having High Card 7 as her hand and winning anyway.</marker>
         <marker scope="Public" name="yagami_pseudonym" />
     </markers>
@@ -1308,5 +1344,6 @@ I promise, it just works.</note>
     </recipes>
     <pendingLines>
         <line>There’s still one question that bugs me, though. If you really are a guy, why did you hide that in the first place?</line>
+        <line>You have such sightly hips, ~name~… Let’s see them in motion.</line>
     </pendingLines>
 </metadata>
