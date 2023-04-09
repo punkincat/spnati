@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <costume>
-    <id>arle_classic_</id>
+    <id>arle_classic_style</id>
     <label>Arle</label>
     <tags>
         <tag>alternative_skin</tag>
@@ -12,7 +12,7 @@
         <tag remove="true">ginger</tag>
         <tag>olive-skinned</tag>
     </tags>
-    <folder>opponents/reskins/arle_classic_/</folder>
+    <folder>opponents/reskins/arle_classic_style/</folder>
     <wardrobe>
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
         <clothing name="undershirt" generic="shirt" position="upper" type="major" />
@@ -24,307 +24,307 @@
 
     <poses>
         <pose id="0-calmglad">
-            <sprite id="calmbase" src="reskins/arle_classic_/0-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmgladface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/0-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
         </pose>
         <pose id="0-calmneutral">
-            <sprite id="calmbase" src="reskins/arle_classic_/0-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmneutralface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/0-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmneutralface.png" x="30" y="288" />
         </pose>
         <pose id="0-calmsurprised">
-            <sprite id="calmbase" src="reskins/arle_classic_/0-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmsurprisedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/0-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmsurprisedface.png" x="30" y="288" />
         </pose>
         <pose id="0-calmworried">
-            <sprite id="calmbase" src="reskins/arle_classic_/0-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmworriedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/0-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmworriedface.png" x="30" y="288" />
         </pose>
         <pose id="0-pointingangry">
-            <sprite id="pointingbase" src="reskins/arle_classic_/0-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfaceangry.png" x="0" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/0-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfaceangry.png" x="0" y="282" />
         </pose>
         <pose id="0-pointingaroused">
-            <sprite id="pointingbase" src="reskins/arle_classic_/0-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacearoused.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/0-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacearoused.png" x="-1" y="282" />
         </pose>
         <pose id="0-pointingclosedeyes">
-            <sprite id="pointingbase" src="reskins/arle_classic_/0-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacecloseyes.png" x="-1" y="281" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/0-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacecloseyes.png" x="-1" y="281" />
         </pose>
         <pose id="0-pointinghappy">
-            <sprite id="pointingbase" src="reskins/arle_classic_/0-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacehappy.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/0-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
         <pose id="1-calmglad">
-            <sprite id="calmbase" src="reskins/arle_classic_/1-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmgladface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/1-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
         </pose>
         <pose id="1-calmneutral">
-            <sprite id="calmbase" src="reskins/arle_classic_/1-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmneutralface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/1-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmneutralface.png" x="30" y="288" />
         </pose>
         <pose id="1-calmsurprised">
-            <sprite id="calmbase" src="reskins/arle_classic_/1-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmsurprisedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/1-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmsurprisedface.png" x="30" y="288" />
         </pose>
         <pose id="1-calmworried">
-            <sprite id="calmbase" src="reskins/arle_classic_/1-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmworriedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/1-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmworriedface.png" x="30" y="288" />
         </pose>
         <pose id="1-pointingangry">
-            <sprite id="pointingbase" src="reskins/arle_classic_/1-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfaceangry.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/1-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfaceangry.png" x="-1" y="282" />
         </pose>
         <pose id="1-pointingaroused">
-            <sprite id="pointingbase" src="reskins/arle_classic_/1-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacearoused.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/1-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacearoused.png" x="-1" y="282" />
         </pose>
         <pose id="1-pointingclosedeyes">
-            <sprite id="pointingbase" src="reskins/arle_classic_/1-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacecloseyes.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/1-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacecloseyes.png" x="-1" y="282" />
         </pose>
         <pose id="1-pointinghappy">
-            <sprite id="pointingbase" src="reskins/arle_classic_/1-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacehappy.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/1-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
         <pose id="2-calmglad">
-            <sprite id="calmbase" src="reskins/arle_classic_/2-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmgladface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/2-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
         </pose>
         <pose id="2-calmneutral">
-            <sprite id="calmbase" src="reskins/arle_classic_/2-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmneutralface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/2-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmneutralface.png" x="30" y="288" />
         </pose>
         <pose id="2-calmsurprised">
-            <sprite id="calmbase" src="reskins/arle_classic_/2-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmsurprisedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/2-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmsurprisedface.png" x="30" y="288" />
         </pose>
         <pose id="2-calmworried">
-            <sprite id="calmbase" src="reskins/arle_classic_/2-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmworriedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/2-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmworriedface.png" x="30" y="288" />
         </pose>
         <pose id="2-pointingangry">
-            <sprite id="pointingbase" src="reskins/arle_classic_/2-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfaceangry.png" x="0" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/2-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfaceangry.png" x="0" y="282" />
         </pose>
         <pose id="2-pointingaroused">
-            <sprite id="pointingbase" src="reskins/arle_classic_/2-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacearoused.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/2-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacearoused.png" x="-1" y="282" />
         </pose>
         <pose id="2-pointingclosedeyes">
-            <sprite id="pointingbase" src="reskins/arle_classic_/2-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacecloseyes.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/2-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacecloseyes.png" x="-1" y="282" />
         </pose>
         <pose id="2-pointinghappy">
-            <sprite id="pointingbase" src="reskins/arle_classic_/2-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacehappy.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/2-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
         <pose id="3-calmglad">
-            <sprite id="calmbase" src="reskins/arle_classic_/3-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmgladface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/3-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
         </pose>
         <pose id="3-calmneutral">
-            <sprite id="calmbase" src="reskins/arle_classic_/3-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmneutralface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/3-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmneutralface.png" x="30" y="288" />
         </pose>
         <pose id="3-calmsurprised">
-            <sprite id="calmbase" src="reskins/arle_classic_/3-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmsurprisedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/3-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmsurprisedface.png" x="30" y="288" />
         </pose>
         <pose id="3-calmworried">
-            <sprite id="calmbase" src="reskins/arle_classic_/3-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmworriedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/3-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmworriedface.png" x="30" y="288" />
         </pose>
         <pose id="3-pointingangry">
-            <sprite id="pointingbase" src="reskins/arle_classic_/3-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfaceangry.png" x="0" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/3-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfaceangry.png" x="0" y="282" />
         </pose>
         <pose id="3-pointingaroused">
-            <sprite id="pointingbase" src="reskins/arle_classic_/3-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacearoused.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/3-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacearoused.png" x="-1" y="282" />
         </pose>
         <pose id="3-pointingclosedeyes">
-            <sprite id="pointingbase" src="reskins/arle_classic_/3-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacecloseyes.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/3-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacecloseyes.png" x="-1" y="282" />
         </pose>
         <pose id="3-pointinghappy">
-            <sprite id="pointingbase" src="reskins/arle_classic_/3-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacehappy.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/3-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
         <pose id="4-calmglad">
-            <sprite id="calmbase" src="reskins/arle_classic_/4-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmgladface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/4-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
         </pose>
         <pose id="4-calmneutral">
-            <sprite id="calmbase" src="reskins/arle_classic_/4-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmneutralface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/4-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmneutralface.png" x="30" y="288" />
         </pose>
         <pose id="4-calmsurprised">
-            <sprite id="calmbase" src="reskins/arle_classic_/4-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmsurprisedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/4-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmsurprisedface.png" x="30" y="288" />
         </pose>
         <pose id="4-calmworried">
-            <sprite id="calmbase" src="reskins/arle_classic_/4-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmworriedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/4-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmworriedface.png" x="30" y="288" />
         </pose>
         <pose id="4-pointingangry">
-            <sprite id="pointingbase" src="reskins/arle_classic_/4-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfaceangry.png" x="0" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/4-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfaceangry.png" x="0" y="282" />
         </pose>
         <pose id="4-pointingaroused">
-            <sprite id="pointingbase" src="reskins/arle_classic_/4-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacearoused.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/4-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacearoused.png" x="-1" y="282" />
         </pose>
         <pose id="4-pointingclosedeyes">
-            <sprite id="pointingbase" src="reskins/arle_classic_/4-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacecloseyes.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/4-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacecloseyes.png" x="-1" y="282" />
         </pose>
         <pose id="4-pointinghappy">
-            <sprite id="pointingbase" src="reskins/arle_classic_/4-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacehappy.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/4-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
         <pose id="5-calmglad">
-            <sprite id="calmbase" src="reskins/arle_classic_/5-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmgladface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/5-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
         </pose>
         <pose id="5-calmneutral">
-            <sprite id="calmbase" src="reskins/arle_classic_/5-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmneutralface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/5-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmneutralface.png" x="30" y="288" />
         </pose>
         <pose id="5-calmsurprised">
-            <sprite id="calmbase" src="reskins/arle_classic_/5-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmsurprisedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/5-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmsurprisedface.png" x="30" y="288" />
         </pose>
         <pose id="5-calmworried">
-            <sprite id="calmbase" src="reskins/arle_classic_/5-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmworriedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/5-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmworriedface.png" x="30" y="288" />
         </pose>
         <pose id="5-pointingangry">
-            <sprite id="pointingbase" src="reskins/arle_classic_/5-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfaceangry.png" x="0" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/5-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfaceangry.png" x="0" y="282" />
         </pose>
         <pose id="5-pointingaroused">
-            <sprite id="pointingbase" src="reskins/arle_classic_/5-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacearoused.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/5-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacearoused.png" x="-1" y="282" />
         </pose>
         <pose id="5-pointingclosedeyes">
-            <sprite id="pointingbase" src="reskins/arle_classic_/5-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacecloseyes.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/5-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacecloseyes.png" x="-1" y="282" />
         </pose>
         <pose id="5-pointinghappy">
-            <sprite id="pointingbase" src="reskins/arle_classic_/5-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacehappy.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/5-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
         <pose id="6-calmglad">
-            <sprite id="calmbase" src="reskins/arle_classic_/6-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmgladface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/6-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
         </pose>
         <pose id="6-calmneutral">
-            <sprite id="calmbase" src="reskins/arle_classic_/6-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmneutralface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/6-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmneutralface.png" x="30" y="288" />
         </pose>
         <pose id="6-calmsurprised">
-            <sprite id="calmbase" src="reskins/arle_classic_/6-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmsurprisedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/6-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmsurprisedface.png" x="30" y="288" />
         </pose>
         <pose id="6-calmworried">
-            <sprite id="calmbase" src="reskins/arle_classic_/6-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmworriedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/6-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmworriedface.png" x="30" y="288" />
         </pose>
         <pose id="6-pointingangry">
-            <sprite id="pointingbase" src="reskins/arle_classic_/6-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfaceangry.png" x="0" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/6-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfaceangry.png" x="0" y="282" />
         </pose>
         <pose id="6-pointingaroused">
-            <sprite id="pointingbase" src="reskins/arle_classic_/6-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacearoused.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/6-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacearoused.png" x="-1" y="282" />
         </pose>
         <pose id="6-pointingclosedeyes">
-            <sprite id="pointingbase" src="reskins/arle_classic_/6-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacecloseyes.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/6-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacecloseyes.png" x="-1" y="282" />
         </pose>
         <pose id="6-pointinghappy">
-            <sprite id="pointingbase" src="reskins/arle_classic_/6-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacehappy.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/6-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
         <pose id="7-calmglad">
-            <sprite id="calmbase" src="reskins/arle_classic_/7-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmgladface.png" x="24" y="790" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/7-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="24" y="790" />
         </pose>
         <pose id="7-calmneutral">
-            <sprite id="calmbase" src="reskins/arle_classic_/7-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmneutralface.png" x="24" y="790" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/7-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmneutralface.png" x="24" y="790" />
         </pose>
         <pose id="7-calmsurprised">
-            <sprite id="calmbase" src="reskins/arle_classic_/7-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmsurprisedface.png" x="24" y="790" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/7-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmsurprisedface.png" x="24" y="790" />
         </pose>
         <pose id="7-calmworried">
-            <sprite id="calmbase" src="reskins/arle_classic_/7-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmworriedface.png" x="24" y="790" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/7-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmworriedface.png" x="24" y="790" />
         </pose>
         <pose id="7-pointingangry">
-            <sprite id="pointingbase" src="reskins/arle_classic_/7-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfaceangry.png" x="3" y="778" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/7-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfaceangry.png" x="3" y="778" />
         </pose>
         <pose id="7-pointingaroused">
-            <sprite id="pointingbase" src="reskins/arle_classic_/7-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacearoused.png" x="3" y="778" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/7-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacearoused.png" x="3" y="778" />
         </pose>
         <pose id="7-pointingclosedeyes">
-            <sprite id="pointingbase" src="reskins/arle_classic_/7-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacecloseyes.png" x="3" y="778" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/7-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacecloseyes.png" x="3" y="778" />
         </pose>
         <pose id="7-pointinghappy">
-            <sprite id="pointingbase" src="reskins/arle_classic_/7-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacehappy.png" x="3" y="778" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/7-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="3" y="778" />
         </pose>
         <pose id="8-calmglad">
-            <sprite id="calmbase" src="reskins/arle_classic_/8-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmgladface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/8-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
         </pose>
         <pose id="8-calmneutral">
-            <sprite id="calmbase" src="reskins/arle_classic_/8-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmneutralface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/8-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmneutralface.png" x="30" y="288" />
         </pose>
         <pose id="8-calmsurprised">
-            <sprite id="calmbase" src="reskins/arle_classic_/8-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmsurprisedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/8-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmsurprisedface.png" x="30" y="288" />
         </pose>
         <pose id="8-calmworried">
-            <sprite id="calmbase" src="reskins/arle_classic_/8-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_/0-calmworriedface.png" x="30" y="288" />
+            <sprite id="calmbase" src="reskins/arle_classic_style/8-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmworriedface.png" x="30" y="288" />
         </pose>
         <pose id="8-pointingangry">
-            <sprite id="pointingbase" src="reskins/arle_classic_/8-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfaceangry.png" x="0" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/8-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfaceangry.png" x="0" y="282" />
         </pose>
         <pose id="8-pointingaroused">
-            <sprite id="pointingbase" src="reskins/arle_classic_/8-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacearoused.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/8-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacearoused.png" x="-1" y="282" />
         </pose>
         <pose id="8-pointingclosedeyes">
-            <sprite id="pointingbase" src="reskins/arle_classic_/8-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacecloseyes.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/8-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacecloseyes.png" x="-1" y="282" />
         </pose>
         <pose id="8-pointinghappy">
-            <sprite id="pointingbase" src="reskins/arle_classic_/8-pointingbase.png" x="0" y="0" />
-            <sprite id="pointingfaceangry" src="reskins/arle_classic_/0-pointingfacehappy.png" x="-1" y="282" />
+            <sprite id="pointingbase" src="reskins/arle_classic_style/8-pointingbase.png" x="0" y="0" />
+            <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
         <pose id="4-oopsstripped">
-            <sprite id="oops" src="reskins/arle_classic_/4-oops.png" x="0" y="0" />
-            <sprite id="aastrippedskirt" src="reskins/arle_classic_/aastrippedskirt.png" x="-46" y="1238" />
+            <sprite id="oops" src="reskins/arle_classic_style/4-oops.png" x="0" y="0" />
+            <sprite id="aastrippedskirt" src="reskins/arle_classic_style/aastrippedskirt.png" x="-46" y="1238" />
         </pose>
         <pose id="7-finishing">
-            <sprite id="aafinishingmain" src="reskins/arle_classic_/aafinishingmain.png" x="-8" y="823" pivotx="49%" pivoty="80%" alpha="100" />
-            <sprite id="aafinishingpuss" z="1" src="reskins/arle_classic_/aafinishingpuss.png" x="-22" y="1182" />
-            <sprite id="aafinishingrthight" z="2" src="reskins/arle_classic_/aafinishingrthight.png" x="-98" y="969" pivotx="68%" pivoty="93%" rotation="0" />
-            <sprite id="aafinishingrhand" z="3" src="reskins/arle_classic_/aafinishingrhand.png" x="-92" y="1155" />
-            <sprite id="aafinishingrleg" z="4" src="reskins/arle_classic_/aafinishingrleg.png" x="-147" y="955" pivotx="46%" pivoty="51%" rotation="0" />
-            <sprite id="aafinishinglthight" z="2" src="reskins/arle_classic_/aafinishinglthight.png" x="130" y="1160" pivotx="5%" pivoty="55%" rotation="0" />
-            <sprite id="aafinishinglhand" z="1" src="reskins/arle_classic_/aafinishinglhand.png" x="30" y="1143" rotation="0" />
-            <sprite id="aafinishinglleg" z="3" src="reskins/arle_classic_/aafinishinglleg.png" x="47" y="1165" pivotx="91%" pivoty="14%" rotation="0" />
-            <sprite id="aafinishinghead" z="-1" src="reskins/arle_classic_/aafinishinghead.png" x="-21" y="825" />
+            <sprite id="aafinishingmain" src="reskins/arle_classic_style/aafinishingmain.png" x="-8" y="823" pivotx="49%" pivoty="80%" alpha="100" />
+            <sprite id="aafinishingpuss" z="1" src="reskins/arle_classic_style/aafinishingpuss.png" x="-22" y="1182" />
+            <sprite id="aafinishingrthight" z="2" src="reskins/arle_classic_style/aafinishingrthight.png" x="-98" y="969" pivotx="68%" pivoty="93%" rotation="0" />
+            <sprite id="aafinishingrhand" z="3" src="reskins/arle_classic_style/aafinishingrhand.png" x="-92" y="1155" />
+            <sprite id="aafinishingrleg" z="4" src="reskins/arle_classic_style/aafinishingrleg.png" x="-147" y="955" pivotx="46%" pivoty="51%" rotation="0" />
+            <sprite id="aafinishinglthight" z="2" src="reskins/arle_classic_style/aafinishinglthight.png" x="130" y="1160" pivotx="5%" pivoty="55%" rotation="0" />
+            <sprite id="aafinishinglhand" z="1" src="reskins/arle_classic_style/aafinishinglhand.png" x="30" y="1143" rotation="0" />
+            <sprite id="aafinishinglleg" z="3" src="reskins/arle_classic_style/aafinishinglleg.png" x="47" y="1165" pivotx="91%" pivoty="14%" rotation="0" />
+            <sprite id="aafinishinghead" z="-1" src="reskins/arle_classic_style/aafinishinghead.png" x="-21" y="825" />
             <sprite id="aafinishingdrops" z="6" src="arle/aafinishingdrops.png" x="-12" y="1211" alpha="0" />
             <sprite id="aafinishingdrops(copy)" delay="0.25" z="6" src="arle/aafinishingdrops.png" x="-12" y="1211" alpha="0" />
             <directive type="animation" id="aafinishingmain" ease="smooth" interpolation="linear">
