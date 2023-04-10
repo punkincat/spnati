@@ -2897,7 +2897,9 @@ Opponent.prototype.commitBehaviourUpdate = function () {
     this.applyState(this.chosenState, this.currentTarget);
     
     this.stateCommitted = true;
-    updateGameVisual(this.slot);
+    if (this.clothing.at(-1)?.type != "skip") {
+        updateGameVisual(this.slot);
+    }
 }
 
 /************************************************************
