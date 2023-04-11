@@ -143,6 +143,9 @@
         <response id="653" opponent="jura" opponentId="490" />
         <response id="655" opponent="meia" opponentId="689" />
         <response id="656" opponent="meia" opponentId="691" />
+        <response id="688" opponent="tea_gardner" opponentId="25" />
+        <response id="692" opponent="ribbon_girl" opponentId="146" />
+        <response id="694" opponent="ribbon_girl" opponentId="71" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -164,6 +167,7 @@
         <note id="481">in theory you could respond to both versions of this line with a single response. up to you, I can work with either direction (same or different responses)</note>
         <note id="575">Will only play the first time Aqua sees this</note>
         <note id="576">Will only play the first time Aqua sees this</note>
+        <note id="687">She also says aqua_nagatoro_s0c at the same time here</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Player Names" sort="0" />
@@ -700,7 +704,7 @@
         <label id="544" label="" folder="Prompts" sort="7" />
         <label id="545" label="" folder="Responses" sort="71" />
         <label id="546" label="" folder="Responses" sort="72" />
-        <label id="547" label="" color="0" folder="Targets" sort="82" />
+        <label id="547" label="" color="3" folder="Targets" sort="82" />
         <label id="548" label="" folder="Responses" sort="17" />
         <label id="550" label="" folder="Responses" sort="18" />
         <label id="549" label="" folder="Responses" sort="0" />
@@ -813,7 +817,7 @@
         <label id="656" label="" folder="Responses" sort="64" />
         <label id="657" label="" color="3" folder="Targets" sort="65" />
         <label id="658" label="" color="3" folder="Targets" sort="0" />
-        <label id="659" label="" folder="Targets" sort="57" />
+        <label id="659" label="" color="3" folder="Targets" sort="57" />
         <label id="660" label="" folder="Epilogue Logic" sort="0" />
         <label id="661" label="" folder="Logic" sort="0" />
         <label id="662" label="" folder="Tag Filtered" sort="0" />
@@ -833,9 +837,28 @@
         <label id="676" label="" folder="Targets" sort="0" />
         <label id="677" label="" folder="Targets" sort="0" />
         <label id="678" label="" folder="Responses" sort="0" />
+        <label id="679" label="" folder="Opponents" sort="0" />
+        <label id="680" label="" folder="Targets" sort="0" />
+        <label id="681" label="" folder="Targets" sort="0" />
+        <label id="682" label="" folder="Targets" sort="0" />
+        <label id="683" label="" folder="Targets" sort="0" />
+        <label id="684" label="" folder="Responses" sort="0" />
+        <label id="685" label="" folder="Targets" sort="0" />
+        <label id="686" label="" folder="Targets" sort="0" />
+        <label id="687" label="" folder="Targets" sort="0" />
+        <label id="688" label="" folder="Situations" sort="0" />
+        <label id="689" label="" folder="Targets" sort="0" />
+        <label id="690" label="" folder="Targets" sort="0" />
+        <label id="691" label="1 - arms (NOT said ArmPowerTalk)" folder="Targets" sort="0" />
+        <label id="692" label="" folder="Situations" sort="0" />
+        <label id="693" label="1 - arms (already said ArmPowerTalk)" folder="Targets" sort="0" />
+        <label id="694" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>678</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>694</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="__lucina_nickname" />
         <marker scope="Public" name="ag_aquaKH_strip0b" />
         <marker scope="Public" name="aqua_aaravi_hydro1" />
@@ -851,6 +874,7 @@
         <marker scope="Public" name="aqua_anatoly_penisRev" />
         <marker scope="Public" name="aqua_and_darkness_oppstrip">Either Aqua or Darkness (both from Konosuba) must strip - makes a comment on it</marker>
         <marker scope="Public" name="aqua_aquagrunt_self0a" />
+        <marker scope="Public" name="aqua_arle_strip0a" />
         <marker scope="Public" name="aqua_binah_startFF" />
         <marker scope="Public" name="aqua_blake_keybladeCont1" />
         <marker scope="Public" name="aqua_bobobo_necklace1" />
@@ -991,10 +1015,13 @@
         <marker scope="Public" name="aqua_nagatoro_extra_last_resp">Responds to a line Nagatoro might say about taking off an extra item last</marker>
         <marker scope="Public" name="aqua_nagatoro_s0a" />
         <marker scope="Public" name="aqua_nagatoro_s0b" />
+        <marker scope="Public" name="aqua_nagatoro_s0c" />
+        <marker scope="Public" name="aqua_nagatoro_s0c_playerOut" />
         <marker scope="Public" name="aqua_nagatoro_s2a" />
         <marker scope="Public" name="aqua_nagatoro_s2b" />
         <marker scope="Public" name="aqua_nagatoro_s2c" />
         <marker scope="Public" name="aqua_nagatoro_s3a" />
+        <marker scope="Public" name="aqua_nagatoro_s3b" />
         <marker scope="Public" name="aqua_nagatoro_self0a" />
         <marker scope="Public" name="aqua_nagatoro_self0b" />
         <marker scope="Public" name="aqua_nagatoro_self0c_a" />
@@ -1025,6 +1052,7 @@
         <marker scope="Public" name="aqua_revy_self01" />
         <marker scope="Public" name="aqua_revy_self02" />
         <marker scope="Public" name="aqua_revy_self03" />
+        <marker scope="Public" name="aqua_ribbongirl_arms1a" />
         <marker scope="Public" name="aqua_ryuko_scissorbladeAndFriend" />
         <marker scope="Public" name="aqua_sannytess_cock1" />
         <marker scope="Public" name="aqua_sannytess_cock2" />
@@ -1049,6 +1077,7 @@
         <marker scope="Public" name="aqua_tao21" />
         <marker scope="Public" name="aqua_tao21_ALT" />
         <marker scope="Public" name="aqua_tao53" />
+        <marker scope="Public" name="aqua_tea_strip0a" />
         <marker scope="Public" name="aqua_toph_bendingmagic1" />
         <marker scope="Public" name="aqua_toph_bendingmagic2" />
         <marker scope="Public" name="aqua_toph_hairdown" />
@@ -1176,12 +1205,15 @@
         <marker scope="Public" name="other_exposed_thighhighs" />
         <marker scope="Public" name="player_goodmode" />
         <marker scope="Private" name="player_pogchamp">Player named themself Pogchamp or variants</marker>
+        <marker scope="Public" name="ribbongirl_celebNudityResp" />
+        <marker scope="Public" name="ribbongirl_MaskPowers" />
         <marker scope="Public" name="roxas_first_meeting">First time she encounters Roxas</marker>
         <marker scope="Public" name="rumble_racing">Mentions a bonus minigame from KH:BBS</marker>
         <marker scope="Public" name="saki_headfalloff" />
         <marker scope="Public" name="sakura_headfalloff" />
         <marker scope="Public" name="sand_in_shoes" />
         <marker scope="Public" name="santa_hat_on_the_beach" />
+        <marker scope="Public" name="scm_aquakh_resp" />
         <marker scope="Public" name="selected_aqua_konosuba">Aqua from Konosuba just got selected as an opponent</marker>
         <marker scope="Public" name="selected_hauntedforest" />
         <marker scope="Public" name="self_getting_into_it" />
@@ -1203,6 +1235,7 @@
         <marker scope="Public" name="tao02" />
         <marker scope="Public" name="target_bad_ai_helpful" />
         <marker scope="Public" name="target_flies_forfeit" />
+        <marker scope="Public" name="tea_last_stand_reaction" />
         <marker scope="Public" name="tell_us_a_secret">"Maybe the next person to lose should tell us a secret about themselves!"</marker>
         <marker scope="Public" name="tell_us_a_secret2" />
         <marker scope="Public" name="too_much_water" />
