@@ -235,16 +235,10 @@ namespace SPNATI_Character_Editor.Activities
 				}
 			}
 
-            PoseStage s1 = new PoseStage();
+            PoseStage s1 = _sheet.Stages[0];
 			bool found;
             foreach (PoseStage stage in _sheet.Stages)
 			{
-
-				if (stage.Stage == 0)
-				{
-					s1 = stage;
-				}
-
 				//create new columns as necessary
 				foreach (PoseEntry pose in stage.Poses)
 				{
