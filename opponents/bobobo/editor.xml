@@ -404,6 +404,20 @@
         <response id="545" opponent="meia" opponentId="722" />
         <response id="546" opponent="revy" opponentId="196" />
         <response id="547" opponent="revy" opponentId="197" />
+        <response id="548" opponent="aqua_kh" opponentId="674" />
+        <response id="549" opponent="noire" opponentId="2455" />
+        <response id="551" opponent="noire" opponentId="2459" />
+        <response id="553" opponent="noire" opponentId="2452" />
+        <response id="554" opponent="meia" opponentId="732" />
+        <response id="555" opponent="revy" opponentId="211" />
+        <response id="556" opponent="revy" opponentId="202" />
+        <response id="557" opponent="revy" opponentId="203" />
+        <response id="558" opponent="revy" opponentId="204" />
+        <response id="560" opponent="jura" opponentId="537" />
+        <response id="561" opponent="jura" opponentId="539" />
+        <response id="562" opponent="jura" opponentId="541" />
+        <response id="563" opponent="jura" opponentId="543" />
+        <response id="564" opponent="jura" opponentId="545" />
     </responses>
     <labels>
         <label id="440" label="The Buddy System" folder="" sort="0" />
@@ -413,7 +427,9 @@
         <prefix>accent</prefix>
         <prefix>STREETS</prefix>
     </prefixes>
-    <nextId>547</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>564</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aaravi_DontBlink" />
@@ -421,6 +437,7 @@
         <marker scope="Public" name="Aaravi_DontBlink3" />
         <marker scope="Public" name="Ahri_STARWOLF1" />
         <marker scope="Public" name="Ahri_STARWOLF2" />
+        <marker scope="Public" name="Akwa_Hatenko1" />
         <marker scope="Public" name="Amy_ItsTheHair">Amy, like Beauty, has pink hair. Bobobo makes this connection (genius).</marker>
         <marker scope="Public" name="Amy_ItsTheHair2">Bobobo probes deeper for a possible Amy/Beauty connection.</marker>
         <marker scope="Public" name="Amy_KnockKnockItsKnuckles">Bobobo wants to steal the Master Emerald. No real reason why, just a way to kill a Friday night.</marker>
@@ -515,6 +532,7 @@
         <marker scope="Public" name="Estelle_WithAnE1" />
         <marker scope="Public" name="Estelle_WithAnE2" />
         <marker scope="Public" name="Estelle_WithAnE3" />
+        <marker scope="Public" name="family" />
         <marker scope="Public" name="Fate_" />
         <marker scope="Public" name="Fate_CoreyHart">Bobobo wears his sunglasses at night, so he can, so he can...</marker>
         <marker scope="Public" name="Fate_DonPatchAffect" />
@@ -636,19 +654,28 @@
         <marker scope="Public" name="Jessie_LetsDoTheTimeWarpAgain2" />
         <marker scope="Public" name="Jessie_LetsDoTheTimeWarpAgain3" />
         <marker scope="Public" name="Jura_80s1" />
+        <marker scope="Public" name="Jura_80s2" />
+        <marker scope="Public" name="Jura_CrimsonShirt1" />
+        <marker scope="Public" name="Jura_CrimsonShirt2" />
+        <marker scope="Public" name="Jura_CrimsonShirt3" />
         <marker scope="Public" name="Jura_DogDishAdvice" />
         <marker scope="Public" name="Jura_ET1">Bobobo hadn't considered the idea of hot aliens before. </marker>
         <marker scope="Public" name="Jura_ET2" />
         <marker scope="Public" name="Jura_ET3" />
         <marker scope="Public" name="Jura_FunnyWords1" />
+        <marker scope="Public" name="Jura_FunnyWords2" />
         <marker scope="Public" name="Jura_GettinHairy1" />
+        <marker scope="Public" name="Jura_GettinHairy2" />
         <marker scope="Public" name="Jura_GoochAdvice" />
         <marker scope="Public" name="Jura_HotForTeacher1" />
+        <marker scope="Public" name="Jura_HotForTeacher2" />
         <marker scope="Public" name="Jura_ItsCoarseRoughAndItGetsEverywhere1">Jura seems weirded out by body hair, so Bobobo tries to make her feel more comfortable.</marker>
         <marker scope="Public" name="Jura_ItsCoarseRoughAndItGetsEverywhere2">Bobobo shows Jura his extremely hairy chest to calm her down.</marker>
         <marker scope="Public" name="Jura_ItsCoarseRoughAndItGetsEverywhere3">Bobobo completes his presentation on his body hair.</marker>
         <marker scope="Public" name="Jura_NosehairAdvice" />
         <marker scope="Public" name="Jura_PatchingItUp1" />
+        <marker scope="Public" name="Jura_PatchingItUp2" />
+        <marker scope="Public" name="Jura_PatchingItUp3" />
         <marker scope="Public" name="Jura_SchlubSchlubSchlub" />
         <marker scope="Public" name="KApostropheUmatora" />
         <marker scope="Public" name="Kaz_" />
@@ -763,6 +790,7 @@
         <marker scope="Public" name="Meia_FIstfullOfFists2" />
         <marker scope="Public" name="Meia_FIstfullOfFists3" />
         <marker scope="Public" name="Meia_GoingInForAnUpgrade1" />
+        <marker scope="Public" name="Meia_GoingInForAnUpgrade2" />
         <marker scope="Public" name="Meia_HairTodayHairTomorrow1">Bobobo reveals that Hair Kingdom men never go bald and then offres himself up as some sort of space-sperm-donor.</marker>
         <marker scope="Public" name="Meia_HairTodayHairTomorrow2">Bobobo reveals that Hair Kingdom men never go bald and then offres himself up as some sort of space-sperm-donor.</marker>
         <marker scope="Public" name="Meia_HairTodayHairTomorrow3">Bobobo reveals that Hair Kingdom men never go bald and then offres himself up as some sort of space-sperm-donor.</marker>
@@ -772,8 +800,14 @@
         <marker scope="Public" name="Meia_IHaveFeelingsTwo" />
         <marker scope="Public" name="Meia_Lessons" />
         <marker scope="Public" name="Meia_MindGames1" />
+        <marker scope="Public" name="Meia_MindGames2" />
+        <marker scope="Public" name="Meia_MindGames3" />
+        <marker scope="Public" name="Meia_RedShirt1" />
+        <marker scope="Public" name="Meia_RedShirt2" />
+        <marker scope="Public" name="Meia_RedShirt3" />
         <marker scope="Public" name="Meia_Revy_Fisticuffs" />
         <marker scope="Public" name="Meia_Strutter1" />
+        <marker scope="Public" name="Meia_Strutter2" />
         <marker scope="Public" name="Meia_TonalWhiplash1" />
         <marker scope="Public" name="Meia_TonalWhiplash2" />
         <marker scope="Public" name="Meia_TonalWhiplash3a" />
@@ -884,13 +918,29 @@
         <marker scope="Public" name="NicoRobin_YO3" />
         <marker scope="Public" name="Noelle_GetABroomYouTwo" />
         <marker scope="Public" name="Noelle_ILikeAGirlWhoCanBenchpressMe1" />
+        <marker scope="Public" name="Noire_Denied1" />
+        <marker scope="Public" name="Noire_Denied2" />
+        <marker scope="Public" name="Noire_Denied3" />
+        <marker scope="Public" name="Noire_NowaithereisanAF1" />
+        <marker scope="Public" name="Noire_NowaithereisanAF2" />
+        <marker scope="Public" name="Noire_NowaithereisanAF3" />
+        <marker scope="Public" name="Noire_NowaithereisanR1" />
+        <marker scope="Public" name="Noire_NowaithereisanR2" />
+        <marker scope="Public" name="Noire_NowaithereisanR3" />
+        <marker scope="Public" name="Noire_TacticalGenius1" />
+        <marker scope="Public" name="Noire_TacticalGenius2" />
+        <marker scope="Public" name="Noire_TacticalGenius3" />
         <marker scope="Public" name="PinaColada" />
         <marker scope="Public" name="Pyrrha_CastingCall">Bobobo can get Pyrrha into the shampoo industry... buuuuut...</marker>
         <marker scope="Public" name="Pyrrha_CastingCall2" />
         <marker scope="Public" name="Pyrrha_DestinysCall">As the sole survivor of the Hair Kingdom, Bobobo carries a massive burden.</marker>
         <marker scope="Public" name="Pyrrha_DestinysCall2" />
+        <marker scope="Public" name="Rebecca_SmellTheCooking1" />
+        <marker scope="Public" name="Rebecca_THEBIGBULLOFTEXAS1" />
+        <marker scope="Public" name="Rebecca_TheRoastOf1" />
         <marker scope="Public" name="Revy_DICK1" />
         <marker scope="Public" name="Revy_OuchMyFeelings1" />
+        <marker scope="Public" name="Revy_OuchMyFeelings2" />
         <marker scope="Public" name="Revy_SteveDahl">Bobobo knows that punk rock died when the first kid said...</marker>
         <marker scope="Public" name="Revy_SteveDahl2">"Punk's not dead! Punk's. Not. Dead!"</marker>
         <marker scope="Public" name="Revy_SteveDahl3">Bobobo simultaniously acknowledges the rivalry between rock and disco in the 70s and implies Revy wants to bone Rock in one fell swoop.</marker>
@@ -976,6 +1026,7 @@
         <marker scope="Public" name="Softon" />
         <marker scope="Public" name="Steve_DarkAppointment" />
         <marker scope="Public" name="STREETS">STREETS</marker>
+        <marker scope="Public" name="STREETS_Dialogue" />
         <marker scope="Public" name="Sucrose_AquiringTargets" />
         <marker scope="Public" name="Sucrose_CATGIRLDETECTED" />
         <marker scope="Public" name="Sucrose_DidIBlowYourMind" />
