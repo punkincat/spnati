@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1680600642187</lastupdate>
+    <lastupdate>1681251159044</lastupdate>
     <enabled>false</enabled>
     <first>Aqua</first>
     <last />
@@ -13,11 +13,12 @@
     <description>A Keyblade Master who has traveled to many worlds to protect her friends, Aqua is an elegant, brave fighter. However, she is lacking when it comes to having intimate social experiences.</description>
     <epilogue status="unlisted" gender="male" img="epilogue/aqua_kh_epilogue_thumb.png" hint="Finish a game against Aqua, from Kingdom Hearts.&lt;hr&gt;&lt;font color=&quot;navy&quot;&gt;To unlock additional content, play with these conditions:&lt;/font&gt; Win against Aqua with 6 or fewer layers, with a full set of 4 opponents, and without Chara present.">Two Become One</epilogue>
     <layers>6</layers>
+    <default-costume-name />
     <alternates>
-        <costume folder="opponents/reskins/aqua_kh_monster/" img="0-aa_portrait.png" status="unlisted" label="Aqua">Monstropolis</costume>
-        <costume folder="opponents/reskins/aqua_kh_bunny/" img="0-aa_portrait.png" set="easter" status="unlisted" label="Aqua">Blade Bunny </costume>
+        <costume folder="opponents/reskins/aqua_kh_monster/" img="0-aa_portrait.png" status="unlisted" label="Aqua" layers="6">Monstropolis</costume>
+        <costume folder="opponents/reskins/aqua_kh_bunny/" img="0-aa_portrait.png" set="easter" status="unlisted" label="Aqua" layers="6">Blade Bunny </costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>1448</lines>
+    <lines>1472</lines>
     <poses>213</poses>
 </opponent>
