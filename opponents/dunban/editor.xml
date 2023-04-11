@@ -174,6 +174,7 @@
         <response id="529" opponent="haru" opponentId="1" />
         <response id="530" opponent="laevatein" opponentId="13" />
         <response id="532" opponent="aloy" opponentId="40" />
+        <response id="545" opponent="dwight" opponentId="271" />
     </responses>
     <notes>
         <note id="10">Will be replaced if Sharla ever gets reworked lol</note>
@@ -739,8 +740,18 @@ c: say that he's been as high as the bionis' head?
         <label id="540" label="" folder="Aqua (KH) S" sort="0" />
         <label id="541" label="" folder="Aqua (KH) S" sort="0" />
         <label id="542" label="" folder="Aqua (KH) S" sort="0" />
+        <label id="543" label="" folder="Responses" sort="0" />
+        <label id="544" label="" color="2" folder="Mari Setogaya" sort="0" />
+        <label id="545" label="" folder="Responses" sort="0" />
+        <label id="546" label="" folder="Situations" sort="0" />
+        <label id="547" label="" folder="Targets" sort="0" />
+        <label id="446" label="" folder="Targets" sort="0" />
+        <label id="548" label="" folder="Targets" sort="0" />
+        <label id="549" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>542</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>549</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="20gOffer">Line that plays when Dunban offers a 20g bribe to whoever loses</marker>
@@ -866,11 +877,14 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_dwight_FF2" />
         <marker scope="Public" name="dunban_dwight_intro01" />
         <marker scope="Public" name="dunban_dwight_intro02" />
+        <marker scope="Public" name="dunban_dwight_intro03" />
         <marker scope="Public" name="dunban_dwight_self0a" />
         <marker scope="Public" name="dunban_dwight_self1a" />
         <marker scope="Public" name="dunban_dwight_self1b" />
+        <marker scope="Public" name="dunban_dwight_self1c" />
         <marker scope="Public" name="dunban_dwight_swords01" />
         <marker scope="Public" name="dunban_dwight_swords02" />
+        <marker scope="Public" name="dunban_dwight_swords03" />
         <marker scope="Public" name="dunban_eichi_attention1" />
         <marker scope="Public" name="dunban_eichi_interest1" />
         <marker scope="Public" name="dunban_eichi_interest2" />
@@ -927,6 +941,8 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_mari_WhatAmI2" />
         <marker scope="Public" name="dunban_maria_self0a" />
         <marker scope="Public" name="dunban_maria_self0b" />
+        <marker scope="Public" name="dunban_maria_self0c" />
+        <marker scope="Public" name="dunban_mariS_boxer_strip_fail" />
         <marker scope="Public" name="dunban_mariS_boxer_strip1" />
         <marker scope="Public" name="dunban_mariS_boxer_strip2" />
         <marker scope="Public" name="dunban_mariS_boxer_strip3" />
@@ -1024,6 +1040,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="korass_rep1_yuno" />
         <marker scope="Public" name="les_n1" />
         <marker scope="Public" name="mari_HeroRelationIntro" />
+        <marker scope="Public" name="maria_smode_reactSelf1" />
         <marker scope="Public" name="MariS_Stage" />
         <marker scope="Public" name="marker" />
         <marker scope="Public" name="mean_royal_wealthy" />
