@@ -140,10 +140,17 @@ namespace SPNATI_Character_Editor.Activities
 
 				string label = _costume.Labels.Count > 0 ? _costume.Labels[0].Value : null;
 
-				int layers = _costume.LayersNonSkip;
+                int countUnskipped = 0;
+                foreach (Clothing c in _costume.Wardrobe)
+                {
+                    if (c != null && c.Type != "skip")
+                    {
+                        countUnskipped++;
+                    }
+                }
 
                 if (txtName.Text != _costume.Link.Name || status != _costume.Link.Status || set != _costume.Link.Set || _costume.Link.IsDirty
-					|| gender != _costume.Link.Gender || label != _costume.Link.Label || layers != _costume.Link.LayersNonSkip)
+					|| gender != _costume.Link.Gender || label != _costume.Link.Label || countUnskipped != _costume.Link.LayersNonSkip)
 				{
 					_linkDataChanged = true;
 				}
@@ -155,7 +162,7 @@ namespace SPNATI_Character_Editor.Activities
 					_costume.Link.Status = status;
 					_costume.Link.Set = set;
 					_costume.Link.Label = label;
-					_costume.Link.LayersNonSkip = layers;
+					_costume.Link.LayersNonSkip = countUnskipped;
 
 					if (gender != _costume.Character.Gender)
 					{
