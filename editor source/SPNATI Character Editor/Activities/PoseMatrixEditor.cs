@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls.PropertyControls;
 using Desktop.DataStructures;
 using Desktop.Skinning;
@@ -235,15 +235,37 @@ namespace SPNATI_Character_Editor.Activities
 				}
 			}
 
-			foreach (PoseStage stage in _sheet.Stages)
+            PoseStage s1 = _sheet.Stages[0];
+			bool found;
+            foreach (PoseStage stage in _sheet.Stages)
 			{
 				//create new columns as necessary
 				foreach (PoseEntry pose in stage.Poses)
 				{
-					if (!string.IsNullOrEmpty(pose.Key) && !_columns.ContainsKey(pose.Key))
+                    found = false;
+                    if (!string.IsNullOrEmpty(pose.Key) && !_columns.ContainsKey(pose.Key))
 					{
 						AddColumn(pose.Key);
 					}
+
+					if (!string.IsNullOrEmpty(pose.Key))
+					{
+						foreach (PoseEntry pose1 in s1.Poses)
+						{
+							if (pose1.Key == pose.Key)
+							{
+								found = true;
+							}
+						}
+						if (found == false)
+						{
+                            PoseEntry cell = new PoseEntry();
+                            cell.Key = pose.Key;
+							cell.Stage = s1;
+                            s1.Poses.Add(cell);
+                        }
+					}
+
 				}
 
 				// create dummy column to prevent crash
@@ -1423,6 +1445,7 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				return;
 			}
+			BuildGrid();
 			_sheet.SortColumns();
 			BuildGrid();
 		}
@@ -1782,11 +1805,30 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				return;
 			}
-			cell.Tag = null;
-			_cells.Remove(pose);
-			PoseStage stage = _sheet.Stages[cell.RowIndex];
-			stage.RemoveCell(pose.Key);
-			cell.Value = EmptyImage;
+			if (cell.RowIndex != 0)
+			{
+				cell.Tag = null;
+				_cells.Remove(pose);
+				PoseStage stage = _sheet.Stages[cell.RowIndex];
+				stage.RemoveCell(pose.Key);
+				cell.Value = EmptyImage;
+			}
+			else
+			{
+				PoseEntry p2;
+				foreach (PoseEntry p1 in _sheet.Stages[0].Poses)
+				{
+					if (p1.Key == pose.Key)
+					{
+						p2 = p1;
+						p2.Code = null;
+						p2.Crop = new Rect(0, 0, 600, 1400);
+						p2.ExtraMetadata.Clear();
+						p2.LastUpdate = 0;                    
+					}
+				}
+			}
+
 		}
 
 		private void tsAddMain_Click(object sender, EventArgs e)
