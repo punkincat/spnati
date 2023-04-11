@@ -287,6 +287,7 @@
         <label id="252" label="" folder="Juri to left" sort="0" />
         <label id="253" label="sunglasses at night" folder="" sort="0" />
         <label id="254" label="" folder="Nagatoro to left" sort="0" />
+        <label id="255" label="gloves" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>nugi-epilogue</prefix>
@@ -294,7 +295,7 @@
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>254</nextId>
+    <nextId>256</nextId>
     <markers>
         <marker scope="Private" name="nickname">Set per-target to allow Nugi-chan to dynamically change nicknames for a character.</marker>
         <marker scope="Public" name="nugi_chan_sheena_we_want_you_to" />
@@ -366,6 +367,7 @@
         <marker scope="Public" name="nugi-chan_erufuda_biggest_fears" />
         <marker scope="Public" name="nugi-chan_erufuda_more_to_love" />
         <marker scope="Public" name="nugi-chan_erufuda_oh_no" />
+        <marker scope="Public" name="nugi-chan_erufuda_selected" />
         <marker scope="Public" name="nugi-chan_estelle_polished" />
         <marker scope="Public" name="nugi-chan_estelle_princess_panties">Nugi-chan spots Estelle's panties when she's stripping.</marker>
         <marker scope="Public" name="nugi-chan_estelle_sandal_difficulty" />
@@ -387,6 +389,7 @@
         <marker scope="Public" name="nugi-chan_fred_thanks" />
         <marker scope="Public" name="nugi-chan_futaba_not_a_fellatrix" />
         <marker scope="Public" name="nugi-chan_garter" />
+        <marker scope="Public" name="nugi-chan_glove_types" />
         <marker scope="Public" name="nugi-chan_gloves_slap">Hypocritically, Nugi-chan says that glove removal is a slap in the face.</marker>
         <marker scope="Public" name="nugi-chan_good_games" />
         <marker scope="Public" name="nugi-chan_hope_youre_happy" />
@@ -413,6 +416,7 @@
         <marker scope="Public" name="nugi-chan_leggy_mentor">Leggy isn't sure how to play, but Nugi-chan can help.</marker>
         <marker scope="Public" name="nugi-chan_loosened_cuffs" />
         <marker scope="Public" name="nugi-chan_lucy_oopholes" />
+        <marker scope="Public" name="nugi-chan_magical_sempai_selected" />
         <marker scope="Public" name="nugi-chan_mari_adorable" />
         <marker scope="Public" name="nugi-chan_mari_sd_fish" />
         <marker scope="Public" name="nugi-chan_mari_sd_photo" />
@@ -438,6 +442,7 @@
         <marker scope="Public" name="nugi-chan_miko_job_offer">Nugi-chan sarcasticly reacts to Miko's job offer.</marker>
         <marker scope="Public" name="nugi-chan_miko_search_history" />
         <marker scope="Public" name="nugi-chan_miku_player_cutest" />
+        <marker scope="Public" name="nugi-chan_miku_selected" />
         <marker scope="Public" name="nugi-chan_mileena_epilogue" />
         <marker scope="Public" name="nugi-chan_mine_are_bigger" />
         <marker scope="Public" name="nugi-chan_misato_photography">Nugi-chan tries to extend Mistato's staring permission to flash photography.</marker>
@@ -466,6 +471,7 @@
         <marker scope="Public" name="nugi-chan_neptune_n-chan" />
         <marker scope="Public" name="nugi-chan_new_games" />
         <marker scope="Public" name="nugi-chan_nice_bra" />
+        <marker scope="Public" name="nugi-chan_noire_selected" />
         <marker scope="Public" name="nugi-chan_not_giving_up" />
         <marker scope="Public" name="nugi-chan_out_first">This marker is probably set when Nugi-chan is out first.</marker>
         <marker scope="Public" name="nugi-chan_pa-15_mop_cheek" />
