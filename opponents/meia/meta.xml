@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1680679768966</lastupdate>
+    <lastupdate>1681200072796</lastupdate>
     <enabled>true</enabled>
     <first>Meia</first>
     <last>Gisborn</last>
@@ -14,10 +14,11 @@
     <epilogue gender="male" img="Image136m.png">Staying Professional</epilogue>
     <epilogue gender="female" img="Image129.png">Moonlight Lullaby</epilogue>
     <layers>5</layers>
+    <default-costume-name>Pilot Suit</default-costume-name>
     <alternates>
-        <costume folder="opponents/reskins/meia_cupid/" img="0-start.png" set="valentines" label="Meia">Cupid Meia</costume>
+        <costume folder="opponents/reskins/meia_cupid/" img="0-start.png" set="valentines" label="Meia" layers="5">Cupid Meia</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>22000</lines>
+    <lines>22024</lines>
     <poses>312</poses>
 </opponent>
