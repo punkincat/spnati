@@ -295,12 +295,32 @@ namespace SPNATI_Character_Editor.Activities
 		/// <param name="image">Image to display</param>
 		private void DisplayImage(PoseMapping image, int stage)
 		{
+			int imageStage = stage;
 			if (_selectedCase != null)
 			{
 				List<string> markers = _selectedCase.GetMarkers();
 				Workspace.SendMessage(WorkspaceMessages.UpdateMarkers, markers);
+				if (_selectedCase.Tag == "stripped" && stage < _character.Layers)
+				{
+					if (_character.CurrentSkin != null)
+					{
+						while (_character.CurrentSkin.Wardrobe[_character.Layers - imageStage - 1].Type == "skip" && imageStage < _character.Layers)
+						{
+							imageStage++;
+							if (imageStage == _character.Layers) { break; }
+						}
+					}
+					else
+					{
+						while (_character.Wardrobe[_character.Layers - imageStage - 1].Type == "skip" && imageStage < _character.Layers)
+						{
+							imageStage++;
+							if (imageStage == _character.Layers) { break; }
+						}
+					}
+				}
 			}
-			Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_character, image, stage));
+			Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_character, image, imageStage));
 		}
 
 		private void cmdCallOut_Click(object sender, EventArgs e)

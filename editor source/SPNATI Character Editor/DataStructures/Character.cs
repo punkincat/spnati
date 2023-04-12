@@ -475,7 +475,14 @@ namespace SPNATI_Character_Editor
 						Clothing clothes = list.GetClothing(Layers - 1 - layer);
 						if (lastClothes.ToString() != "SKIP")
 						{
-							label = "Lost " + lastClothes.ToString();
+							if (clothes.ToString() != "SKIP")
+							{
+								label = "Lost " + lastClothes.ToString();
+							}
+							else
+							{
+								label = "Just Stripped " + lastClothes.ToString();
+							}
 						}
 						else
 						{
