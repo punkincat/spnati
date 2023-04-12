@@ -11,6 +11,14 @@
         <response id="14" opponent="kumatora" opponentId="208" />
         <response id="23" opponent="kumatora" opponentId="191" />
         <response id="26" opponent="yuna" opponentId="26" />
+        <response id="38" opponent="ringo_ando" opponentId="339" />
+        <response id="39" opponent="ringo_ando" opponentId="340" />
+        <response id="40" opponent="ringo_ando" opponentId="447" />
+        <response id="41" opponent="ringo_ando" opponentId="341" />
+        <response id="42" opponent="ringo_ando" opponentId="448" />
+        <response id="43" opponent="ringo_ando" opponentId="450" />
+        <response id="45" opponent="jura" opponentId="548" />
+        <response id="47" opponent="meia" opponentId="734" />
     </responses>
     <labels>
         <label id="2" label="" color="1" folder="Targets" sort="0" />
@@ -49,11 +57,29 @@
         <label id="35" label="" folder="Targets" sort="0" />
         <label id="36" label="" folder="Targets" sort="0" />
         <label id="37" label="" folder="Targets" sort="0" />
+        <label id="38" label="" color="1" folder="Double targets" sort="0" />
+        <label id="41" label="" color="1" folder="Double targets" sort="0" />
+        <label id="39" label="" color="1" folder="Double targets" sort="0" />
+        <label id="40" label="" color="1" folder="Double targets" sort="0" />
+        <label id="42" label="" color="1" folder="Double targets" sort="0" />
+        <label id="43" label="" color="1" folder="Double targets" sort="0" />
+        <label id="44" label="" folder="Targets" sort="0" />
+        <label id="46" label="" color="1" folder="Targets" sort="0" />
+        <label id="47" label="" color="1" folder="Targets" sort="0" />
+        <label id="48" label="" color="1" folder="Targets" sort="0" />
+        <label id="49" label="" folder="Targets" sort="0" />
+        <label id="50" label="" folder="Targets" sort="0" />
+        <label id="45" label="" color="1" folder="Targets" sort="0" />
+        <label id="51" label="" color="1" folder="Targets" sort="0" />
+        <label id="52" label="" folder="Targets" sort="0" />
+        <label id="53" label="" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>aa</prefix>
     </prefixes>
-    <nextId>37</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>53</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="1st_dong" />
@@ -62,6 +88,9 @@
         <marker scope="Public" name="feetrest" />
         <marker scope="Public" name="human_doubleunderwear" />
         <marker scope="Public" name="human_tripleunderwear" />
+        <marker scope="Public" name="jura_closecombat" />
+        <marker scope="Public" name="jura_nuisansepuyo" />
+        <marker scope="Public" name="jura_pet2" />
         <marker scope="Public" name="k" />
         <marker scope="Public" name="kuma" />
         <marker scope="Public" name="kuma_" />
@@ -73,6 +102,15 @@
         <marker scope="Public" name="kuma_sadmemories" />
         <marker scope="Public" name="kuma_whyhere" />
         <marker scope="Public" name="kuma_zoo" />
+        <marker scope="Public" name="meia_armordamage" />
+        <marker scope="Public" name="meia_madou2" />
+        <marker scope="Public" name="meia_puyoa" />
+        <marker scope="Public" name="meia_puyob" />
+        <marker scope="Public" name="naga_magic" />
+        <marker scope="Public" name="naga_magicbully" />
+        <marker scope="Public" name="naga_physical" />
+        <marker scope="Public" name="naga_puyo" />
+        <marker scope="Public" name="naga_puyo2" />
         <marker scope="Public" name="nat_strippoker" />
         <marker scope="Public" name="petquestion" />
         <marker scope="Public" name="presentation" />
@@ -84,6 +122,7 @@
         <marker scope="Public" name="ringo_1ststrip" />
         <marker scope="Public" name="ringo_howhere" />
         <marker scope="Public" name="ringo_howhere2" />
+        <marker scope="Public" name="ringo_naga_puyovpuyo" />
         <marker scope="Public" name="ringo_presentation" />
         <marker scope="Public" name="ringo_puyohairpin" />
         <marker scope="Public" name="ringo_thingwithtee" />
