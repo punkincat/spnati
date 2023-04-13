@@ -3,6 +3,112 @@
  as well as code related to displaying tables for selection and the main game.
  ********************************************************************************/
 
+ /**
+  * 
+  * @param {string} id 
+  * @param {PoseSetEntry[]} entries
+  */
+function PoseSet(id, entries) {
+    this.id = id;
+    this.entries = entries;
+}
+
+/**
+ * Select an entry from this set.
+ * 
+ * @param {Opponent} self 
+ * @param {Player} opp 
+ * @param {*} bindings 
+ * @returns {PoseSetEntry}
+ */
+PoseSet.prototype.selectEntry = function (self, opp, bindings) {
+    var options = this.entries.filter((entry) => entry.isSelectable(self, opp, bindings));
+    if (options.length > 0) {
+        return options[getRandomNumber(0, options.length)];
+    }
+}
+
+/**
+ * Get all possible images that could be selected from this set
+ * for a given stage, without considering variable tests.
+ * 
+ * @param {number} stage 
+ * @returns {string[]}
+ */
+PoseSet.prototype.getPossibleImages = function (stage) {
+    return this.entries.filter(
+        (entry) => entry.validForStage(stage)
+    ).map(
+        (entry) => entry.image
+    );
+}
+
+/**
+ * 
+ * @param {JQuery} $xml 
+ * @returns {PoseSet}
+ */
+PoseSet.parseXML = function ($xml) {
+    return new PoseSet(
+        $xml.attr("id"),
+        $xml.children("pose").map((idx, elem) => PoseSetEntry.parseXML(elem)).get(0)
+    );
+}
+
+/**
+ * 
+ * @param {string} image 
+ * @param {Object<string, string>} attrs 
+ * @param {VariableTest[]} tests 
+ */
+function PoseSetEntry(image, attrs, tests) {
+    this.image = image;
+    this.tests = tests;
+    this.stages = attrs["stage"];
+    this.location = attrs["location"];
+    this.direction = attrs["direction"];
+    this.dialogue_layering = attrs["dialogue-layer"];
+}
+
+/**
+ * 
+ * @param {Element} xml The XML element from which data should be loaded. Note that this should be a raw Element, *not* a jQuery object.
+ * @returns {PoseSetEntry}
+ */
+PoseSetEntry.parseXML = function (xml) {
+    var attrs = {};
+    for (var i = 0; i < xml.attributes.length; i++) {
+        attrs[xml.attributes[i].name] = xml.attributes[i].value;
+    }
+
+    var $xml = $(xml);
+    return new PoseSetEntry(
+        $xml.attr("img"),
+        attrs,
+        $xml.find("tests>test").map((idx, elem) => VariableTest.parseXML($(elem))).get(0)
+    );
+}
+
+/**
+ * 
+ * @param {string} stage 
+ * @returns {boolean}
+ */
+PoseSetEntry.prototype.validForStage = function (stage) {
+    return checkStage(stage, this.stages);
+}
+
+/**
+ * 
+ * @param {Opponent} self 
+ * @param {Player} opp 
+ * @param {*} bindings 
+ * @returns {boolean}
+ */
+PoseSetEntry.prototype.isSelectable = function (self, opp, bindings) {
+    return this.validForStage(self.stage) && this.tests.every((test) => test.evaluate(self, opp, bindings));
+}
+
 /* NOTE: These are basically the same as epilogue engine sprites.
  * There's a _lot_ of common code here that can probably be merged.
  */

@@ -577,6 +577,7 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
     this.alt_costume = null;
     this.default_costume = null;
     this.poses = {};
+    this.poseSets = {};
     this.imageCache = {};
     this.labelOverridden = this.intelligenceOverridden = false;
     this.pendingCollectiblePopups = [];
