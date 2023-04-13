@@ -1902,6 +1902,55 @@ function Condition($xml) {
     }
 }
 
+function VariableTest (expr, cmp, value) {
+    this.expr = expr;
+    this.cmp = cmp;
+    this.value = value || "";
+}
+
+VariableTest.parseXML = function ($xml) {
+    return new VariableTest($xml.attr("expr"), $xml.attr("cmp"), $xml.attr("value"));
+}
+
+VariableTest.prototype.evaluate = function (self, opp, bindings) {
+    var expr = expandDialogue(this.expr, self, opp, bindings);
+    var value = this.value;
+    if (value) {
+        value = expandDialogue(value, self, opp, bindings);
+    }
+
+    /* For backwards compatibility, if cmp is unspecified, try
+     * parsing value as an interval, and if it's not, fall
+     * back to equality. If cmp is @ or !@, fail if value is
+     * not an interval. */
+    if (!this.cmp || this.cmp == '@' || this.cmp == '!@') {
+        var interval = parseInterval(value);
+        if ((interval != undefined && interval.isValid()) || this.cmp) {
+            return this.cmp === '!@' ? !inInterval(Number(expr), interval) : inInterval(Number(expr), interval);
+        }
+    }
+
+    if (!isNaN(Number(expr))) expr = Number(expr);
+    if (!isNaN(Number(value))) value = Number(value);
+
+    switch (this.cmp) {
+    case '>':
+        return expr > value;
+    case '>=':
+        return expr >= value;
+    case '<':
+        return expr < value;
+    case '<=':
+        return expr <= value;
+    case '!=':
+        return expr != value;
+    default:
+        return expr == value;
+    }
+
+}
+
+
 /**********************************************************************
  *****                  Case Object Specification                 *****
  **********************************************************************/
@@ -1974,7 +2023,7 @@ function Case($xml, trigger) {
     
     var tests = [];
     $xml.children("test").each(function () {
-        tests.push($(this));
+        tests.push(VariableTest.parseXML($(this)));
     });
     this.tests = tests;
 
@@ -2547,44 +2596,7 @@ Case.prototype.checkConditions = function (self, opp, postDialogue) {
     for (var i = 0; i < bindingCombinations.length; i++) {
         addExtraNumberedBindings(bindingCombinations[i], Object.entries(counterMatches));
         if (this.tests.every(function(test) {
-            var expr = expandDialogue(test.attr('expr'), self, opp, bindingCombinations[i]);
-            var value = test.attr('value') || "";
-            if (value) {
-                value = expandDialogue(value, self, opp, bindingCombinations[i]);
-            }
-            
-            var cmp = test.attr('cmp');
-
-            /* For backwards compatibility, if cmp is unspecified, try
-             * parsing value as an interval, and if it's not, fall
-             * back to equality. If cmp is @ or !@, fail if value is
-             * not an interval. */
-            if (!cmp || cmp == '@' || cmp == '!@') {
-                var interval = parseInterval(value);
-                if ((interval != undefined && interval.isValid()) || cmp) {
-                    return cmp === '!@' ? !inInterval(Number(expr), interval) : inInterval(Number(expr), interval);
-                }
-            }
-
-            if (!isNaN(Number(expr))) expr = Number(expr);
-            if (!isNaN(Number(value))) value = Number(value);
-
-            switch (cmp) {
-            case '>':
-                return expr > value;
-            case '>=':
-                return expr >= value;
-            case '<':
-                return expr < value;
-            case '<=':
-                return expr <= value;
-            case '!=':
-                return expr != value;
-            default:
-                return expr == value;
-            }
-
-            return true;
+            return test.evaluate(self, opp, bindingCombinations[i]);
         })) {
             this.variableBindings = bindingCombinations[i];
             this.volatileDependencies = volatileDependencies;
