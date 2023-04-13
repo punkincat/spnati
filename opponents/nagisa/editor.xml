@@ -261,6 +261,8 @@
         <response id="1031" opponent="nagatoro" opponentId="460" />
         <response id="1042" opponent="bobobo" opponentId="93" />
         <response id="1044" opponent="bobobo" opponentId="43" />
+        <response id="1047" opponent="senko" opponentId="194" />
+        <response id="1050" opponent="senko" opponentId="31" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -438,9 +440,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="228" label="Nagisa_Skirt1" folder="" sort="0" />
         <label id="244" label="Nagisa_Skirt3" folder="" sort="0" />
         <label id="246" label="Nagisa_School4" folder="" sort="0" />
-        <label id="221" label="FinaNagisaGreet" folder="" sort="0" />
+        <label id="221" label="FinaNagisaGreet" folder="Fina to left" sort="0" />
         <label id="226" label="FinaMasturbateWarning" folder="" sort="0" />
-        <label id="251" label="FinaSenkoPamperFollowup" folder="" sort="0" />
+        <label id="251" label="FinaSenkoPamperFollowup" folder="Fina to left" sort="0" />
         <label id="227" label="FinaExpositionWorries" folder="" sort="0" />
         <label id="215" label="FinaHomeworldsPrompt" folder="" sort="0" />
         <label id="216" label="FinaDatingPrompt" folder="" sort="0" />
@@ -452,7 +454,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="255" label="FinaNagisaEnd1Stranger" folder="Fina to left" sort="30" />
         <label id="222" label="FinaNagisaChristmas" folder="" sort="0" />
         <label id="223" label="FinaNagisaNoFamily" folder="" sort="0" />
-        <label id="239" label="FinaSenkoPampering" folder="" sort="0" />
+        <label id="239" label="FinaSenkoPampering" folder="Fina to left" sort="0" />
         <label id="217" label="FinaExposurePrompt" folder="" sort="0" />
         <label id="256" label="FinaNagisaStart2" folder="Fina to left" sort="9" />
         <label id="259" label="hat" folder="" sort="0" />
@@ -1241,13 +1243,18 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1043" label="" folder="Bobobo to right" sort="0" />
         <label id="1044" label="" folder="Bobobo to left" sort="0" />
         <label id="1045" label="" folder="Bobobo to left" sort="0" />
+        <label id="1046" label="" folder="Senko to left" sort="0" />
+        <label id="1047" label="" folder="Senko to left" sort="0" />
+        <label id="1048" label="" folder="Senko to left" sort="0" />
+        <label id="1049" label="" folder="Senko to left" sort="0" />
+        <label id="1050" label="club" folder="Senko to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1045</nextId>
+    <nextId>1050</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -2537,10 +2544,14 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_sayla_play_fair" />
         <marker scope="Public" name="nagisa_sayla_strap" />
         <marker scope="Public" name="nagisa_sayla_too_fast" />
+        <marker scope="Public" name="nagisa_senko_club_music" />
         <marker scope="Public" name="nagisa_senko_fina_asking" />
         <marker scope="Public" name="nagisa_senko_fina_sexual_intamacy" />
         <marker scope="Public" name="nagisa_senko_never_played_before" />
         <marker scope="Public" name="nagisa_senko_not_beautiful" />
+        <marker scope="Public" name="nagisa_senko_punishment_1" />
+        <marker scope="Public" name="nagisa_senko_punishment_2" />
+        <marker scope="Public" name="nagisa_senko_punishment_3" />
         <marker scope="Public" name="nagisa_shaggy_frighten" />
         <marker scope="Public" name="nagisa_sheena_fujibayashi" />
         <marker scope="Public" name="nagisa_shego_evil" />
