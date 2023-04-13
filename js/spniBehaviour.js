@@ -1765,7 +1765,7 @@ function evalOperator (val, op, cmpVal) {
  * the current state marker.
  ************************************************************/
 function checkMarker(predicate, self, target, currentOnly) {
-    var match = predicate.match(/^([\w\-]+)(\*?)(\s*(\<|\>|\<\=|\>\=|\=\=|!\=|\=|\@)?\s*(.+))?\s*$/);
+    var match = predicate.match(/^([\w\-]+)(\*?)(\s*(\<\=|\>\=|\<|\>|\=\=|!\=|\=|\@)?\s*(.+))?\s*$/);
     
     var name;
     var perTarget;
