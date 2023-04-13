@@ -488,6 +488,38 @@ Player.prototype.inboundLinesFromSelected = function (filterStatus, cap) {
 }
 
 /**
+ * Given a pose name, resolve it to either a custom pose,
+ * a pose set, or an image file path.
+ * 
+ * If this function returns a string, it is a full image file path
+ * that is ready to be used as e.g. the `src` attribute for an `<img>` element.
+ * 
+ * @param {string} image 
+ * @param {number?} stage
+ * @returns {string | PoseDefinition | PoseSet}
+ */
+Player.prototype.resolvePoseName = function (image, stage) {
+    if (!image) {
+        return null;
+    }
+
+    if (stage === null || stage === undefined) {
+        stage = this.stage;
+    }
+
+    image = image.replace("#", stage);
+    if (image.startsWith("custom:") && this.poses) {
+        let key = image.substring(7);
+        return this.poses[key];
+    } else if (image.startsWith("set:") && this.poseSets) {
+        let key = image.substring(4);
+        return this.poseSets[key];
+    } else {
+        return getActualSpriteSrc(image, this, stage);
+    }
+}
+
+/**
  * Subclass of Player for AI-controlled players.
  *
  * @constructor
@@ -914,8 +946,10 @@ Opponent.prototype.updateFolder = function () {
 
     if (this.folder == this.base_folder) {
         this.poses = this.default_costume.poses;
+        this.poseSets = this.default_costume.poseSets;
     } else if (this.alt_costume) {
         this.poses = this.alt_costume.poses;
+        this.poseSets = this.alt_costume.poseSets;
     }
 }
 
@@ -1034,7 +1068,18 @@ Opponent.prototype.loadAlternateCostume = function () {
             poseDefs[def.id] = def;
         }.bind(this));
 
+        var setElems = $xml.children('pose-sets');
+        var poseSets = {};
+        Object.assign(poseSets, this.default_costume.poseSets);
+        $(setElems).children("set").each(
+            (i, elem) => {
+                let parsed = PoseSet.parseXML(this, $(elem));
+                poseSets[parsed.id] = parsed;
+            }
+        );
+
         this.alt_costume.poses = poseDefs;
+        this.alt_costume.poseSets = poseSets;
 
         var costumeTags = this.default_costume.tags.slice();
         var tagMods = $xml.children('tags');
@@ -1349,7 +1394,17 @@ Opponent.prototype.loadBehaviour = function (slot, individual, selectInfo) {
                 poseDefs[def.id] = def;
             }.bind(this));
 
+            var setElems = $xml.children('pose-sets');
+            var poseSets = {};
+            $(setElems).children("set").each(
+                (i, elem) => {
+                    let parsed = PoseSet.parseXML(this, $(elem));
+                    poseSets[parsed.id] = parsed;
+                }
+            );
+
             this.default_costume.poses = poseDefs;
+            this.default_costume.poseSets = poseSets;
 
             /* Load forward-declarations for persistent markers. */
             $xml.find('persistent-markers>marker').each(function (i, elem) {
@@ -1521,8 +1576,6 @@ Player.prototype.getImagesForStage = function (stage) {
 
     var poseSet = {};
     var imageSet = {};
-    var folder = this.folders ? this.getByStage(this.folders, stage === -1 ? 0 : stage) : this.folder;
-    var advPoses = this.poses;
     
     function processCase (c) {
         /* Skip cases requiring characters that aren't present. */
@@ -1566,16 +1619,17 @@ Player.prototype.getImagesForStage = function (stage) {
     /* Finally, transform the set of collected pose names into a
      * set of image file paths.
      */
-    Object.keys(poseSet).forEach(function (poseName) {
-        if (poseName.startsWith('custom:')) {
-            var actualStage = (stage > -1) ? stage : 0;
-            var key = poseName.split(':', 2)[1].replace('#', actualStage);
-            var pose = advPoses[key];
-            if (pose) pose.getUsedImages(actualStage).forEach(function (img) {
-                imageSet[img.replace('#', actualStage)] = true;
+    Object.keys(poseSet).forEach((poseName) => {
+        var actualStage = (stage > -1) ? stage : 0;
+        var resolved = this.resolvePoseName(poseName, actualStage);
+
+        if (!resolved) return;
+        if (resolved instanceof PoseSet || resolved instanceof PoseDefinition) {
+            resolved.getUsedImages(actualStage).forEach((img) => {
+                imageSet[img] = true;
             });
         } else {
-            imageSet[folder + poseName] = true;
+            imageSet[resolved] = true;
         }
     });
 

@@ -64,7 +64,7 @@ Opponent.prototype.initDevMode = function () {
             var text = $(this).text() || '';
             
             /* Extract a pose name: */
-            var match = pose.match(/^(?:custom:)?(?:\d+-)([^.]+)(?:\..*)?$/m);
+            var match = pose.match(/^(?:custom:|set:)?(?:\d+-)([^.]+)(?:\..*)?$/m);
             if (match) {
                 pose = match[1];
             }
@@ -181,8 +181,13 @@ DevModeDialogueBox.prototype.updateEditField = function () {
 DevModeDialogueBox.prototype.updatePoseField = function () {
     this.editData.image = this.poseField.val();
     this.player.chosenState.image = this.editData.image;
+
+    let resolved = this.player.resolvePoseName(this.editData.image);
+    if (resolved instanceof PoseSet) {
+        resolved = this.player.resolvePoseName(resolved.selectEntry(this.player).image);
+    }
     
-    gameDisplays[this.player.slot-1].updateImage(this.player);
+    gameDisplays[this.player.slot-1].updateImage(this.player, resolved);
 }
 
 DevModeDialogueBox.prototype.startEditMode = function (start_text, status_line) {
@@ -237,8 +242,13 @@ DevModeDialogueBox.prototype.exitEditMode = function () {
     this.player.chosenState.expandDialogue(this.player, this.player.currentTarget);
     this.player.chosenState.selectImage(this.player.stage);
 
+    let resolved = this.player.resolvePoseName(this.currentState.image);
+    if (resolved instanceof PoseSet) {
+        resolved = this.player.resolvePoseName(resolved.selectEntry(this.player).image);
+    }
+
     gameDisplays[this.player.slot-1].updateText(this.player);
-    gameDisplays[this.player.slot-1].updateImage(this.player);
+    gameDisplays[this.player.slot-1].updateImage(this.player, resolved);
     
     /* Show the 'edit' and 'response' buttons: */
     this.editButton.show();
@@ -374,8 +384,13 @@ DevModeDialogueBox.prototype.togglePreview = function () {
         this.player.chosenState.expandDialogue(this.player, this.player.currentTarget);
         this.player.chosenState.selectImage(this.player.stage);
         
+        let resolved = this.player.resolvePoseName(this.editData.image);
+        if (resolved instanceof PoseSet) {
+            resolved = this.player.resolvePoseName(resolved.selectEntry(this.player).image);
+        }
+
         gameDisplays[this.player.slot-1].updateText(this.player);
-        gameDisplays[this.player.slot-1].updateImage(this.player);
+        gameDisplays[this.player.slot-1].updateImage(this.player, resolved);
         
         this.poseFieldContainer.hide();
         this.container.attr('data-editing', 'preview');

@@ -5,53 +5,116 @@
 
  /**
   * 
+  * @param {Player} player
   * @param {string} id 
   * @param {PoseSetEntry[]} entries
   */
-function PoseSet(id, entries) {
+function PoseSet(player, id, entries) {
+    this.player = player;
     this.id = id;
     this.entries = entries;
+    this.curEntry = null;
+}
+
+/**
+ * Clear mutable state within this PoseSet.
+ */
+PoseSet.prototype.clearState = function () {
+    this.curEntry = null;
 }
 
 /**
  * Select an entry from this set.
  * 
- * @param {Opponent} self 
- * @param {Player} opp 
- * @param {*} bindings 
+ * Successive calls to this method will return the same entry
+ * unless clearState() is called.
+ * 
+ * @param {Player} self 
  * @returns {PoseSetEntry}
  */
-PoseSet.prototype.selectEntry = function (self, opp, bindings) {
-    var options = this.entries.filter((entry) => entry.isSelectable(self, opp, bindings));
+PoseSet.prototype.selectEntry = function (self) {
+    if (this.curEntry !== null) {
+        return this.curEntry;
+    }
+
+    var chosenState = self.chosenState;
+    var opp = self.currentTarget;
+    var bindings = {};
+    if (chosenState.parentCase && chosenState.parentCase.variableBindings) {
+        bindings = chosenState.parentCase.variableBindings;
+    }
+
+    /** 
+     * Filter to selectable entries and reduce to a list of only the highest-priority ones.
+     * @type {PoseSetEntry[]}
+     */
+    var options = this.entries.filter(
+        (entry) => entry.isSelectable(self, opp, bindings)
+    ).reduce((acc, entry) => {
+        if (acc.length == 0 || entry.priority > acc[0].priority) {
+            return [entry];
+        } else if (entry.priority == acc[0].priority) {
+            acc.push(entry);
+            return acc;
+        } else {
+            return acc;
+        }
+    }, []);
+
+    console.log(options);
+
     if (options.length > 0) {
-        return options[getRandomNumber(0, options.length)];
+        let weightSum = options.reduce((acc, entry) => acc + entry.weight, 0);
+        let rnd = Math.random() * weightSum;
+        let x = 0;
+        for (let i = 0; i < options.length; i++) {
+            x += options[i].weight;
+            if (x > rnd) {
+                this.curEntry = options[i];
+                return options[i];
+            }
+        }
+        /* shouldn't get here */
     }
 }
 
 /**
- * Get all possible images that could be selected from this set
- * for a given stage, without considering variable tests.
+ * Get all possible image file paths that could be used by the poses from this set
+ * for a given stage, including ones transitively used by custom poses referenced
+ * by this set.
  * 
  * @param {number} stage 
  * @returns {string[]}
  */
-PoseSet.prototype.getPossibleImages = function (stage) {
-    return this.entries.filter(
-        (entry) => entry.validForStage(stage)
-    ).map(
-        (entry) => entry.image
-    );
+PoseSet.prototype.getUsedImages = function (stage) {
+    return this.entries.flatMap((entry) => {
+        if (entry.validForStage(stage)) {
+            let resolved = this.player.resolvePoseName(entry.image);
+            if (resolved instanceof PoseSet) {
+                /* Shouldn't happen. */
+                return [];
+            } else if (resolved instanceof PoseDefinition) {
+                return resolved.getUsedImages(stage);
+            } else {
+                return [resolved];
+            }
+        } else {
+            return [];
+        }
+    })
 }
 
 /**
  * 
+ * @param {Player} player
  * @param {JQuery} $xml 
  * @returns {PoseSet}
  */
-PoseSet.parseXML = function ($xml) {
+PoseSet.parseXML = function (player, $xml) {
     return new PoseSet(
+        player,
         $xml.attr("id"),
-        $xml.children("pose").map((idx, elem) => PoseSetEntry.parseXML(elem)).get(0)
+        $xml.children("pose").map((idx, elem) => PoseSetEntry.parseXML(elem)).get()
     );
 }
 
@@ -68,6 +131,9 @@ function PoseSetEntry(image, attrs, tests) {
     this.location = attrs["location"];
     this.direction = attrs["direction"];
     this.dialogue_layering = attrs["dialogue-layer"];
+    this.priority = parseInt(attrs["priority"], 10) || 0;
+    this.weight = parseFloat(attrs["weight"]) || 1;
+    if (this.weight < 0) this.weight = 0;
 }
 
 /**
@@ -85,7 +151,7 @@ PoseSetEntry.parseXML = function (xml) {
     return new PoseSetEntry(
         $xml.attr("img"),
         attrs,
-        $xml.find("tests>test").map((idx, elem) => VariableTest.parseXML($(elem))).get(0)
+        $xml.find("tests>test").map((idx, elem) => VariableTest.parseXML($(elem))).get()
     );
 }
 
@@ -100,7 +166,7 @@ PoseSetEntry.prototype.validForStage = function (stage) {
 
 /**
  * 
- * @param {Opponent} self 
+ * @param {Player} self 
  * @param {Player} opp 
  * @param {*} bindings 
  * @returns {boolean}
@@ -736,7 +802,7 @@ function calculateDialogueStylingAttributes (player) {
         /* Remove custom: prefix and stage prefixes, if present
          * Then remove file extensions, if present
          */
-        attrs["data-pose"] = player.chosenState.image.replace(/^(?:custom\:\s*)?(?:\#\-)?/i, "").replace(/\.(?:jpe?g|png|gif)$/i, "");
+        attrs["data-pose"] = player.chosenState.image.replace(/^(?:(?:custom|set)\:\s*)?(?:\#\-)?/i, "").replace(/\.(?:jpe?g|png|gif)$/i, "");
     }
 
     return attrs;
@@ -898,22 +964,21 @@ OpponentDisplay.prototype.updateText = function (player) {
     this.dialogue.empty().append(displayElems);
 }
 
-OpponentDisplay.prototype.updateImage = function(player) {
-    var chosenState = player.chosenState;
-    
-    if (!chosenState.image) {
+OpponentDisplay.prototype.updateImage = function(player, image) {
+    if (!image || image instanceof PoseSet) {
+        /* The only way we can get a PoseSet here as input is if we selected a
+         * pose set entry in .update() that itself resolved to another pose set.
+         *
+         * Hypothetically, we could instead select an entry from this set and
+         * resolve it recursively, but it's probably better that we don't for
+         * the sake of simplicity.
+         */
         this.clearPose();
-    } else if (chosenState.image.startsWith('custom:')) {
-        var key = chosenState.image.split(':', 2)[1].replace('#', player.stage);
-        var poseDef = player.poses[key];
-        if (poseDef) {
-            const pose = new Pose(poseDef, this, () => { this.drawPose(pose) });
-            this.drawPose(pose);
-        } else {
-            this.clearPose();
-        }
+    } else if (image instanceof PoseDefinition) {
+        const pose = new Pose(image, this, () => { this.drawPose(pose) });
+        this.drawPose(pose);
     } else {
-        this.drawPose(player.folder + chosenState.image.replace('#', player.stage));
+        this.drawPose(image);
         this.simpleImage.one('load', this.rescaleSimplePose.bind(this, player.scale));
     }
 }
@@ -934,9 +999,31 @@ OpponentDisplay.prototype.update = function(player) {
     this.updateBubbleAttributes(player);
 
     var chosenState = player.chosenState;
-    
+    var arrowDirection = chosenState.direction;
+    var arrowLocation = chosenState.location;
+    var dialogue_layering = chosenState.dialogue_layering || player.dialogue_layering;
+    var resolvedImage = player.resolvePoseName(player.chosenState.image);
+
+    if (resolvedImage instanceof PoseSet) {
+        /* Only select a new image if this state is being displayed for the first time.
+         * This ensures that mere refreshes of the display without any changes in dialogue
+         * (e.g. on the select screen) don't cause pose changes.
+         */
+        if (!chosenState.displayed) {
+            resolvedImage.clearState();
+        }
+
+        let entry = resolvedImage.selectEntry(player);
+        if (entry) {
+            arrowDirection = chosenState.direction || entry.direction;
+            arrowLocation = chosenState.location || entry.location;
+            dialogue_layering =  chosenState.dialogue_layering || entry.dialogue_layering || player.dialogue_layering;
+            resolvedImage = player.resolvePoseName(entry.image);
+        }
+    }
+
     /* update image */
-    this.updateImage(player);
+    this.updateImage(player, resolvedImage);
 
     /* update dialogue */
     this.updateText(player);
@@ -950,15 +1037,17 @@ OpponentDisplay.prototype.update = function(player) {
     } else {
         this.bubble.show();
         this.bubble.removeClass('arrow-down arrow-left arrow-right arrow-up');
-        if (chosenState.direction != 'none') this.bubble.addClass('arrow-'+chosenState.direction);
-        bubbleArrowOffsetRules[this.slot-1][0].style.left = chosenState.location;
-        bubbleArrowOffsetRules[this.slot-1][1].style.top = chosenState.location;
+        if (arrowDirection != 'none') this.bubble.addClass('arrow-'+arrowDirection);
+        bubbleArrowOffsetRules[this.slot-1][0].style.left = arrowLocation;
+        bubbleArrowOffsetRules[this.slot-1][1].style.top = arrowLocation;
         /* Configure z-indices */
         this.imageArea.css('z-index', player.z_index);
-        this.bubble.removeClass('over under').addClass(chosenState.dialogue_layering || player.dialogue_layering);
+        this.bubble.removeClass('over under').addClass(dialogue_layering);
         this.dialogue.removeClass('small smaller');
         if (chosenState.fontSize != "normal") this.dialogue.addClass(chosenState.fontSize || player.fontSize);
     }
+
+    chosenState.displayed = true;
 }
 
 OpponentDisplay.prototype.loop = function (timestamp) {

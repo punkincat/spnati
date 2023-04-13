@@ -847,6 +847,7 @@ function RollbackPoint (logPlayers) {
         data.stage = p.stage;
         data.folder = p.folder;
         data.poses = p.poses;
+        data.poseSets = p.poseSets;
         data.timeInStage = p.timeInStage;
         data.ticksInStage = p.ticksInStage;
         data.markers = {};
@@ -910,6 +911,7 @@ RollbackPoint.prototype.load = function () {
         loadPlayer.stage = p.stage;
         loadPlayer.folder = p.folder;
         loadPlayer.poses = p.poses;
+        loadPlayer.poseSets = p.poseSets;
         loadPlayer.timeInStage = p.timeInStage;
         loadPlayer.ticksInStage = p.ticksInStage;
         loadPlayer.markers = p.markers;

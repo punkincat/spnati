@@ -833,6 +833,7 @@ function State($xml_or_state, parentCase) {
 
     var $xml = $xml_or_state;
 
+    this.displayed = false;
     this.parentCase = parentCase;
     this.id = $xml.attr('dev-id') || null;
     this.image = $xml.attr('img');
@@ -1666,6 +1667,7 @@ function normalizeConditionText (str) {
 
 function normalizeImageName(img) {
     if (img.startsWith('custom:')) img = img.substring(7);
+    if (img.startsWith('set:')) img = img.substring(4);
     return img.toLowerCase().replace(/\.(?:png|jpg|jpeg|gif)/gi, '').replace(/(?:\#|\d+)\-/gi, '');
 }
 
@@ -2918,6 +2920,7 @@ Opponent.prototype.commitBehaviourUpdate = function () {
  * Applies markers and other operations from a state
  ************************************************************/
 Opponent.prototype.applyState = function(state, opp) {
+    state.displayed = false;
     state.applyMarkers(this, opp);
     state.applyCollectible(this);
     state.applyOneShot(this);
