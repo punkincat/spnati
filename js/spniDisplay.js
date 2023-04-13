@@ -317,6 +317,10 @@ Pose.prototype.getHeightScaleFactor = function() {
     return this.display.imageAreaHeight / this.baseHeight;
 }
 
+Pose.prototype.cancel = function () {
+    this.onLoadComplete = null;
+}
+
 Pose.prototype.onSpriteLoaded = function(sprite) {
     if (this.loaded_sprites[sprite.id]) { return; }
     
@@ -681,12 +685,24 @@ OpponentDisplay.prototype.clearSimplePose = function () {
 }
 
 OpponentDisplay.prototype.clearPose = function () {
+    if (this.queuedPose) {
+        this.queuedPose.cancel();
+    }
+    this.queuedPose = null;
     this.clearCustomPose();
     this.clearSimplePose();
     this.pose = null;
 }
 
 OpponentDisplay.prototype.drawPose = function (pose) {
+    /* If a previous custom pose is currently loading but hasn't finished yet,
+     * cancel it to make sure it doesn't overwrite this newer pose.
+     */
+    if (this.queuedPose && this.queuedPose !== pose) {
+        this.queuedPose.cancel();
+    }
+    this.queuedPose = null;
+
     if (typeof(pose) === 'string') {
         // clear out previously shown custom poses if necessary
         if (this.pose instanceof Pose) {
@@ -697,6 +713,7 @@ OpponentDisplay.prototype.drawPose = function (pose) {
         if(pose.loaded) {
             pose.draw();
         } else {
+            this.queuedPose = pose;
             pose.onLoadComplete = () => this.drawPose(pose);
             return;
         }
