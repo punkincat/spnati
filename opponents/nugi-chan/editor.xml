@@ -59,6 +59,11 @@
         <response id="218" opponent="nagatoro" opponentId="191" />
         <response id="219" opponent="nagatoro" opponentId="587" />
         <response id="254" opponent="nagatoro" opponentId="588" />
+        <response id="258" opponent="senko" opponentId="140" />
+        <response id="259" opponent="senko" opponentId="32" />
+        <response id="261" opponent="senko" opponentId="28" />
+        <response id="262" opponent="senko" opponentId="168" />
+        <response id="263" opponent="senko" opponentId="398" />
     </responses>
     <notes>
         <note id="69">Does this line work?</note>
@@ -288,6 +293,13 @@
         <label id="253" label="sunglasses at night" folder="" sort="0" />
         <label id="254" label="" folder="Nagatoro to left" sort="0" />
         <label id="255" label="gloves" folder="" sort="0" />
+        <label id="257" label="" folder="Sakura to left" sort="0" />
+        <label id="258" label="1 tail" folder="Senko to left" sort="0" />
+        <label id="259" label="haunted forest" folder="Senko to left" sort="0" />
+        <label id="260" label="haunted forest" folder="Senko to left" sort="0" />
+        <label id="261" label="purple room" folder="Senko to left" sort="0" />
+        <label id="262" label="" folder="Senko to left" sort="0" />
+        <label id="263" label="" folder="Senko to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>nugi-epilogue</prefix>
@@ -295,7 +307,7 @@
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>256</nextId>
+    <nextId>263</nextId>
     <markers>
         <marker scope="Private" name="nickname">Set per-target to allow Nugi-chan to dynamically change nicknames for a character.</marker>
         <marker scope="Public" name="nugi_chan_sheena_we_want_you_to" />
@@ -517,6 +529,12 @@
         <marker scope="Public" name="nugi-chan_sakura_take_off_those_clothes">Nugi-chan invites Sakura to take off her clothes to assess her potential as a strip poker pro.</marker>
         <marker scope="Public" name="nugi-chan_sayaka_why_the_bikini" />
         <marker scope="Public" name="nugi-chan_sei_drinks">Nugi-chan in her Swimwear Server outfit has a tray of drinks to last Sei three rounds</marker>
+        <marker scope="Public" name="nugi-chan_senko_haunted_forest_1" />
+        <marker scope="Public" name="nugi-chan_senko_haunted_forest_2" />
+        <marker scope="Public" name="nugi-chan_senko_modeling_various_outfits" />
+        <marker scope="Public" name="nugi-chan_senko_modern_amenities" />
+        <marker scope="Public" name="nugi-chan_senko_purple_room" />
+        <marker scope="Public" name="nugi-chan_senko_tail" />
         <marker scope="Public" name="nugi-chan_sheena_assistant" />
         <marker scope="Public" name="nugi-chan_sheena_best_designers" />
         <marker scope="Public" name="nugi-chan_sheena_for_service" />
