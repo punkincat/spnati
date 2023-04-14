@@ -1476,22 +1476,53 @@ namespace SPNATI_Character_Editor
 			}
 
 			HashSet<string> missingImages = new HashSet<string>();
-			foreach (KeyValuePair<int, HashSet<string>> kvp in baseImages)
+            HashSet<string> skippedImages = new HashSet<string>();
+            foreach (KeyValuePair<int, HashSet<string>> kvp in baseImages)
 			{
 				if (stageUsingSkin.Get(kvp.Key))
 				{
-					foreach (string image in kvp.Value)
+					if (kvp.Key < skin.Layers)
 					{
-						if (existingImages.Contains(image))
+						if (skin.GetClothing(skin.Layers - kvp.Key - 1).Type == "skip")
 						{
-							unusedImages.Remove(image);
+							foreach (string existingImage in existingImages)
+							{
+								if (existingImage.StartsWith($"{kvp.Key}-"))
+								{
+									skippedImages.Add(existingImage);
+								}
+							}
 						}
 						else
 						{
-							missingImages.Add(image);
-						}
+                            foreach (string image in kvp.Value)
+                            {
+                                if (existingImages.Contains(image))
+                                {
+                                    unusedImages.Remove(image);
+                                }
+                                else
+                                {
+                                    missingImages.Add(image);
+                                }
+                            }
+                        }
 					}
-				}
+                    else
+                    {
+                        foreach (string image in kvp.Value)
+                        {
+                            if (existingImages.Contains(image))
+                            {
+                                unusedImages.Remove(image);
+                            }
+                            else
+                            {
+                                missingImages.Add(image);
+                            }
+                        }
+                    }
+                }
 			}
 
 			foreach (Pose pose in skin.Poses)
@@ -1515,6 +1546,10 @@ namespace SPNATI_Character_Editor
 			{
 				warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"{skin.Folder} contains images unused by any dialogue: {string.Join(",", unusedImages)}"));
 			}
+            if (skippedImages.Count > 0)
+            {
+                warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"{skin.Folder} contains images in a skipped layer: {string.Join(",", skippedImages)}"));
+            }
 		}
 	}
 
