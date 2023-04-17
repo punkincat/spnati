@@ -146,6 +146,12 @@
         <response id="688" opponent="tea_gardner" opponentId="25" />
         <response id="692" opponent="ribbon_girl" opponentId="146" />
         <response id="694" opponent="ribbon_girl" opponentId="71" />
+        <response id="699" opponent="senko" opponentId="194" />
+        <response id="700" opponent="senko" opponentId="168" />
+        <response id="701" opponent="senko" opponentId="15" />
+        <response id="703" opponent="senko" opponentId="137" />
+        <response id="704" opponent="suzuya" opponentId="169" />
+        <response id="706" opponent="jura" opponentId="491" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -853,12 +859,23 @@
         <label id="692" label="" folder="Situations" sort="0" />
         <label id="693" label="1 - arms (already said ArmPowerTalk)" folder="Targets" sort="0" />
         <label id="694" label="" folder="Targets" sort="0" />
+        <label id="695" label="" folder="Opponents" sort="0" />
+        <label id="696" label="" folder="Targets" sort="0" />
+        <label id="697" label="" folder="Targets" sort="0" />
+        <label id="698" label="" folder="Targets" sort="0" />
+        <label id="699" label="" folder="Senko" sort="0" />
+        <label id="700" label="" folder="Senko" sort="0" />
+        <label id="701" label="" folder="Senko" sort="0" />
+        <label id="702" label="" folder="Senko" sort="0" />
+        <label id="703" label="" folder="Senko" sort="0" />
+        <label id="704" label="" folder="Targets" sort="0" />
+        <label id="705" label="" folder="Targets" sort="0" />
+        <label id="706" label="" folder="Responses" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>694</nextId>
+    <nextId>706</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="__lucina_nickname" />
         <marker scope="Public" name="ag_aquaKH_strip0b" />
         <marker scope="Public" name="aqua_aaravi_hydro1" />
@@ -875,6 +892,8 @@
         <marker scope="Public" name="aqua_and_darkness_oppstrip">Either Aqua or Darkness (both from Konosuba) must strip - makes a comment on it</marker>
         <marker scope="Public" name="aqua_aquagrunt_self0a" />
         <marker scope="Public" name="aqua_arle_strip0a" />
+        <marker scope="Public" name="aqua_arle_strip0b" />
+        <marker scope="Public" name="aqua_arle_strip0c" />
         <marker scope="Public" name="aqua_binah_startFF" />
         <marker scope="Public" name="aqua_blake_keybladeCont1" />
         <marker scope="Public" name="aqua_bobobo_necklace1" />
@@ -938,6 +957,7 @@
         <marker scope="Public" name="aqua_jura_self1b" />
         <marker scope="Public" name="aqua_jura_self2a" />
         <marker scope="Public" name="aqua_jura_self2b" />
+        <marker scope="Public" name="aqua_jura_self2c" />
         <marker scope="Public" name="aqua_jura_self3a" />
         <marker scope="Public" name="aqua_jura_self3b" />
         <marker scope="Public" name="aqua_jura_self4a" />
@@ -1056,6 +1076,10 @@
         <marker scope="Public" name="aqua_ryuko_scissorbladeAndFriend" />
         <marker scope="Public" name="aqua_sannytess_cock1" />
         <marker scope="Public" name="aqua_sannytess_cock2" />
+        <marker scope="Public" name="aqua_senko_advice1" />
+        <marker scope="Public" name="aqua_senko_modern_amenities" />
+        <marker scope="Public" name="aqua_senko_pampering_resp" />
+        <marker scope="Public" name="aqua_senko_punishment_resp" />
         <marker scope="Public" name="aqua_sf_fingersResp" />
         <marker scope="Public" name="aqua_sf_foreplayResp" />
         <marker scope="Public" name="aqua_sf_legsResp" />
@@ -1230,6 +1254,7 @@
         <marker scope="Public" name="sleeping_worlds" />
         <marker scope="Public" name="something_to_fill_the_empitiness">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Public" name="straight_flush_lie">Occasionally lies about having a straight flush if she's about to lose with a bad hand</marker>
+        <marker scope="Public" name="suzuya_bra_removed" />
         <marker scope="Public" name="sympathy_throw">Her AI gets a little bit lower if she is sympathetic to other characters</marker>
         <marker scope="Public" name="T_AquaKH_KeybladeSummon_Resp" />
         <marker scope="Public" name="tao02" />
