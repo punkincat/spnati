@@ -84,6 +84,9 @@ I promise, it just works.</note>
         <note id="1232">Kyoko's blood type is B, as it happens.</note>
         <note id="1237">These last two cases in this sequence are hidden for now until Suzuya responds to them. For now, I've written them based on how I expect Suzuya to respond.</note>
         <note id="1238">These last two cases in this sequence are hidden for now until Suzuya responds to them. For now, I've written them based on how I expect Suzuya to respond.</note>
+        <note id="1241">First things first, the logic for responding to Kyoko is as follows: Just ignore everything in the "Duplicate dialogue" folder and respond to the "Revy-on-Kyoko's-left" cases in the "Inbound stage" folders. Trust me, it'll work itself out.&lt;br&gt;&lt;br&gt;I spent a long time thinking about this one, and ultimately decided it would be most interesting for Kyoko to just ignore Revy's close-but-not-quite inference and go straight for the trigger discipline issue. I honestly think that by far the most interesting dynamic for Kyoko and Revy to have is one where the former gets on Revy's bad side. Kyoko can come back to the undercover cop thing later.&lt;br&gt;&lt;br&gt;Feel free to have Revy get absolutely as pissed off about this as you think is appropriate. One of Kyoko's least obvious true character flaws is that, in all her stoicism, she does NOT know when to shut the hell up when someone has a gun, and it has gotten her shot before (in all timelines). Probably not enough for Revy to actually put a bullet between Kyoko's eyes, though...unless you want to pester Richar for a couple of new poses and be prepared to defend that choice from some upset and bewildered fellow devs and feedback reporters.&lt;br&gt;&lt;br&gt;With Revy, Meia, and Jura more than anyone else, I'm going to try to write targets in a way that'll differentiate Kyoko from Meia as much as I can manage. In this case, this means leaning into Kyoko's willingness to bring up something she deems relevant in a way that shows utter disregard for decorum or the natural flow of conversation-- and, of course, connecting her to Earth stuff. Thanks to the prequel light novels, I now know that Kyoko being alarmingly knowledgable about guns is totally canon.&lt;br&gt;&lt;br&gt;One last thing: Kyoko is slated to potentially have a costume or too where she isn't wearing a suit of some sort (her Danganronpa S swimwear outfit being most likely; but she may also get an actual non-school uniform suit from The Day Before The Future). We can cross this bridge when we get to it, but if you really want to get crazy about future-proofing now, the condition set I would recommend most is checking for Kyoko having either having school_uniform or formal_attire as a tag.</note>
+        <note id="1242">For the sake of the logic of actually responding, ignore what's in this folder. There's more going on for notes on the "Revy IL" lines.</note>
+        <note id="1243">For the sake of the logic of actually responding, ignore what's in this folder. There's more going on for notes on the "Revy IL" lines.</note>
     </notes>
     <labels>
         <label id="499" label="Shelved" folder="" sort="0" />
@@ -659,12 +662,12 @@ I promise, it just works.</note>
         <label id="631" label="Nagatoro IL 1-2" folder="Inbound stage 1" sort="2" />
         <label id="632" label="Nagatoro IL 1-3" folder="Inbound stage 1" sort="3" />
         <label id="633" label="Nagatoro IR Pre1-1" folder="Duplicate dialogue" sort="10" />
-        <label id="634" label="Nagatoro IR Pre1-2" folder="Duplicate dialogue" sort="23" />
+        <label id="634" label="Nagatoro IR Pre1-2" folder="Duplicate dialogue" sort="0" />
         <label id="635" label="Nagatoro IR 1-1" folder="Duplicate dialogue" sort="18" />
-        <label id="636" label="Nagatoro IR 1-2" folder="Duplicate dialogue" sort="28" />
-        <label id="637" label="Nagatoro IR Pre1-3" folder="Duplicate dialogue" sort="33" />
-        <label id="638" label="Nagatoro IR 1-3" folder="Duplicate dialogue" sort="4" />
-        <label id="639" label="Nagatoro IR 1-3" folder="Duplicate dialogue" sort="3" />
+        <label id="636" label="Nagatoro IR 1-2" folder="Duplicate dialogue" sort="0" />
+        <label id="637" label="Nagatoro IR Pre1-3" folder="Duplicate dialogue" sort="0" />
+        <label id="638" label="Nagatoro IR 1-3" folder="Duplicate dialogue" sort="0" />
+        <label id="639" label="Nagatoro IR 1-3" folder="Duplicate dialogue" sort="0" />
         <label id="640" label="Long forfeit L" folder="" sort="0" />
         <label id="641" label="Long forfeit R" folder="" sort="0" />
         <label id="642" label="Long forfeit R" folder="" sort="0" />
@@ -922,9 +925,9 @@ I promise, it just works.</note>
         <label id="894" label="Giygas Ou 5-1" folder="Outbound stage 5" sort="0" />
         <label id="895" label="Giygas Ou 6-1A" color="2" folder="Outbound stage 6" sort="8" />
         <label id="896" label="Giygas Ou 6-1B" color="3" folder="Outbound stage 6" sort="7" />
-        <label id="897" label="SCM In X-1" folder="Inbound stage X" sort="0" />
-        <label id="898" label="SCM In X-1 conditional" folder="Inbound stage X" sort="2" />
-        <label id="899" label="SCM In X-1 conditional" folder="Inbound stage X" sort="3" />
+        <label id="897" label="SCM In X-1" folder="Inbound hand" sort="0" />
+        <label id="898" label="SCM In X-1 conditional" folder="Inbound hand" sort="2" />
+        <label id="899" label="SCM In X-1 conditional" folder="Inbound hand" sort="3" />
         <label id="900" label="Solar Flare Ou 6-1" folder="Outbound stage 6" sort="0" />
         <label id="901" label="Solar Flare Ou 6-2" folder="Outbound stage 6" sort="6" />
         <label id="902" label="Bunnies" folder="Seasonal" sort="0" />
@@ -1246,11 +1249,19 @@ I promise, it just works.</note>
         <label id="1231" label="" folder="Clothing vocabulary" sort="0" />
         <label id="1232" label="Suzuya PL Blood 1" folder="Prompt" sort="0" />
         <label id="1233" label="Suzuya PL Zodiac 1" folder="Prompt" sort="0" />
-        <label id="1234" label="Suzuya PL Zodiac 2A" folder="Prompt" sort="0" color="2" />
-        <label id="1235" label="Suzuya PL Zodiac 2B" folder="Prompt" sort="0" color="3" />
+        <label id="1234" label="Suzuya PL Zodiac 2A" color="2" folder="Prompt" sort="0" />
+        <label id="1235" label="Suzuya PL Zodiac 2B" color="3" folder="Prompt" sort="0" />
         <label id="1236" label="Suzuya PL Zodiac 3" folder="Prompt" sort="0" />
         <label id="1237" label="Suzuya PL Zodiac 4" folder="Prompt" sort="0" />
         <label id="1238" label="Suzuya PL Zodiac 5" folder="Prompt" sort="0" />
+        <label id="1239" label="Ferris" folder="Inbound hand" sort="0" />
+        <label id="1240" label="Chihiro" folder="Inbound hand" sort="0" />
+        <label id="1241" label="Revy IL 0-1" folder="Inbound stage 0" sort="0" />
+        <label id="1242" label="Revy IR 0-1a" folder="Duplicate dialogue" sort="0" />
+        <label id="1243" label="Revy IR 0-1b" folder="Duplicate dialogue" sort="0" />
+        <label id="1244" label="Revy IR k0-1" color="5" folder="Duplicate dialogue" sort="0" />
+        <label id="1245" label="Revy IR pre0-1a" folder="Duplicate dialogue" sort="0" />
+        <label id="1246" label="Revy IR pre0-1b" folder="Duplicate dialogue" sort="0" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -1281,7 +1292,7 @@ I promise, it just works.</note>
     </posePreviewMarkers>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1231</nextId>
+    <nextId>1246</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
@@ -1325,6 +1336,8 @@ I promise, it just works.</note>
         <marker scope="Public" name="cd_fourthWallClassicKyoko" />
         <marker scope="Public" name="cd_maleStaminaRe" />
         <marker scope="Public" name="cheryl_homicide" />
+        <marker scope="Public" name="chihiro_build" />
+        <marker scope="Public" name="chihiro_hamsterballWtf" />
         <marker scope="Public" name="chihiro_mahiru_noselfieRe" />
         <marker scope="Public" name="chihiro_mahiru_selfieRe" />
         <marker scope="Public" name="chihiro_outGeneric" />
@@ -1383,6 +1396,7 @@ I promise, it just works.</note>
         <marker scope="Public" name="ferris_instacum4a" />
         <marker scope="Public" name="ferris_instacum4b" />
         <marker scope="Public" name="ferris_instacum5" />
+        <marker scope="Public" name="ferris_strategy" />
         <marker scope="Public" name="ferris_tights" />
         <marker scope="Public" name="ferris_tights2" />
         <marker scope="Public" name="ferris_tights2a" />
@@ -1488,6 +1502,7 @@ I promise, it just works.</note>
         <marker scope="Public" name="lastHand">Only the human player and Kyoko Kirigiri remain in the game, and both have lost all layers.</marker>
         <marker scope="Public" name="lastOut" />
         <marker scope="Public" name="legTouch" />
+        <marker scope="Public" name="lesbianLogicPuzzle" />
         <marker scope="Public" name="lingerieStrip" />
         <marker scope="Public" name="longFap">"I'm surprised it's taking you so long. After all, you're a man."</marker>
         <marker scope="Public" name="loseClothesNotHope" />
@@ -1552,6 +1567,9 @@ I promise, it just works.</note>
         <marker scope="Public" name="raynor_buttStandard" />
         <marker scope="Public" name="reimu_dontProvoke" />
         <marker scope="Public" name="reimu_noMurder" />
+        <marker scope="Public" name="revy_discipline" />
+        <marker scope="Public" name="revy_disciplineA" />
+        <marker scope="Public" name="revy_disciplineB" />
         <marker scope="Public" name="ringo_bornDetective" />
         <marker scope="Public" name="ringo_deduction1" />
         <marker scope="Public" name="ringo_deduction1Normal" />
@@ -1612,6 +1630,14 @@ I promise, it just works.</note>
         <marker scope="Public" name="stripCount" />
         <marker scope="Public" name="stripNanamura" />
         <marker scope="Public" name="sunStrip" />
+        <marker scope="Public" name="suzuya_bloodType" />
+        <marker scope="Public" name="suzuya_zodiac1" />
+        <marker scope="Public" name="suzuya_zodiac2" />
+        <marker scope="Public" name="suzuya_zodiac2A" />
+        <marker scope="Public" name="suzuya_zodiac2B" />
+        <marker scope="Public" name="suzuya_zodiac3" />
+        <marker scope="Public" name="suzuya_zodiac4" />
+        <marker scope="Public" name="suzuya_zodiac5" />
         <marker scope="Public" name="swissFrancs">Despite being Japanese, she says her jacket cost 90 Swiss francs.</marker>
         <marker scope="Public" name="theiaCH_" />
         <marker scope="Public" name="theiaCH_relationship" />
@@ -1650,6 +1676,7 @@ I promise, it just works.</note>
         <marker scope="Public" name="underPressure" />
         <marker scope="Public" name="V_clothing" />
         <marker scope="Public" name="V_clothing.uncountable" />
+        <marker scope="Public" name="V_lineKey" />
         <marker scope="Public" name="V_revealed" />
         <marker scope="Public" name="V_revealed.uncountable" />
         <marker scope="Public" name="wellYouLost" />
