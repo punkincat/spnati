@@ -45,6 +45,7 @@
         <note id="249">In case it helps any: in both this and the next stage's topic, Komi is trying to surreptitiously probe for insights that could help her resolve her own love triangle.</note>
         <note id="126">It looks like Adrien has already responded to the version of this line with the "adrien_ladybugJealousy" marker, but not this one ("adrien_marinetteJealousy"). Although Marinette's got a line that covers this case, it's probably best if I hold off on responding until I see what Adrien has to say...</note>
         <note id="280">Both "Expressions 2" and "Impressions 2" in Mari's cases have the "Komi_Impression2" marker attached, but I think I've got the conditions set up for these lines so that it doesn't matter.</note>
+        <note id="304">As always, Komi will be unable to respond during the Stripping/Stripped cases for 0-1 (and 1-2, for that matter).</note>
     </notes>
     <labels>
         <label id="286" label="" color="1" folder="" sort="0" />
@@ -130,7 +131,7 @@
         <label id="259" label="" color="1" folder="" sort="0" />
         <label id="285" label="" color="6" folder="" sort="0" />
         <label id="290" label="" color="1" folder="" sort="0" />
-        <label id="271" label="" color="1" folder="" sort="0" />
+        <label id="304" label="" color="6" folder="" sort="0" />
         <label id="273" label="" color="1" folder="" sort="0" />
         <label id="274" label="" color="1" folder="" sort="0" />
         <label id="275" label="" color="1" folder="" sort="0" />
@@ -155,8 +156,15 @@
         <label id="300" label="" color="1" folder="" sort="0" />
         <label id="301" label="" color="1" folder="" sort="0" />
         <label id="302" label="" color="1" folder="" sort="0" />
+        <label id="303" label="" color="1" folder="" sort="0" />
+        <label id="305" label="" color="6" folder="" sort="0" />
+        <label id="306" label="" color="6" folder="" sort="0" />
+        <label id="307" label="" color="1" folder="" sort="0" />
+        <label id="308" label="" color="1" folder="" sort="0" />
     </labels>
-    <nextId>302</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>308</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="80_denier_tights" />
@@ -276,6 +284,7 @@
         <marker scope="Public" name="bernadetta_hobbies_suspicion" />
         <marker scope="Public" name="bernadetta_room_hobbies" />
         <marker scope="Public" name="bi_realization" />
+        <marker scope="Public" name="binah_notMute" />
         <marker scope="Public" name="blade_sharp" />
         <marker scope="Public" name="buildup_bi_1" />
         <marker scope="Public" name="buildup_bi_2" />
@@ -716,6 +725,7 @@
         <marker scope="Public" name="nami_dreams_reply" />
         <marker scope="Public" name="nami_idealLover" />
         <marker scope="Public" name="nami_idealLover_candidates" />
+        <marker scope="Public" name="nami_idealLover_travel" />
         <marker scope="Public" name="nami_money_wants" />
         <marker scope="Public" name="nami_navigator_appreciation" />
         <marker scope="Public" name="nami_pirate_origins" />
@@ -752,6 +762,9 @@
         <marker scope="Public" name="neptune_sanik_harmless" />
         <marker scope="Public" name="neptune_videoGames" />
         <marker scope="Public" name="nickname" />
+        <marker scope="Public" name="nicoRobin_flower_partLimits" />
+        <marker scope="Public" name="nicoRobin_height_towering" />
+        <marker scope="Public" name="nicoRobin_intimidatingQuiet" />
         <marker scope="Public" name="not_human_1" />
         <marker scope="Public" name="not_human_2" />
         <marker scope="Public" name="not_human_3" />
@@ -960,6 +973,7 @@
         <marker scope="Public" name="tomoko_silentisolation" />
         <marker scope="Public" name="tomoko_talking" />
         <marker scope="Public" name="tomoko_yurisilence" />
+        <marker scope="Public" name="toph_cannotRead" />
         <marker scope="Public" name="undead_1" />
         <marker scope="Public" name="undead_2" />
         <marker scope="Public" name="undead_3" />
