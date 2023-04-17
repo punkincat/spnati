@@ -25,6 +25,13 @@
         <response id="60" opponent="9s" opponentId="8" />
         <response id="64" opponent="miko" opponentId="6" />
         <response id="81" opponent="steve" opponentId="3" />
+        <response id="97" opponent="aqua_kh" opponentId="696" />
+        <response id="99" opponent="aqua_kh" opponentId="69" />
+        <response id="101" opponent="aqua_kh" opponentId="411" />
+        <response id="103" opponent="aqua_kh" opponentId="418" />
+        <response id="105" opponent="aqua_kh" opponentId="419" />
+        <response id="106" opponent="aqua_kh" opponentId="420" />
+        <response id="108" opponent="aqua_kh" opponentId="421" />
     </responses>
     <labels>
         <label id="2" label="" color="1" folder="Targets" sort="0" />
@@ -79,7 +86,7 @@
         <label id="51" label="" color="1" folder="Targets" sort="0" />
         <label id="52" label="" folder="Targets" sort="0" />
         <label id="53" label="" folder="Targets" sort="0" />
-        <label id="54" label="" color="1" folder="Targets" sort="0" />
+        <label id="54" label="" color="0" folder="Targets" sort="0" />
         <label id="56" label="" color="1" folder="Targets" sort="0" />
         <label id="55" label="" color="1" folder="Targets" sort="0" />
         <label id="58" label="" color="1" folder="Targets" sort="0" />
@@ -116,19 +123,42 @@
         <label id="90" label="" color="1" folder="Targets" sort="0" />
         <label id="91" label="" color="1" folder="Targets" sort="0" />
         <label id="92" label="" color="1" folder="Targets" sort="0" />
+        <label id="93" label="" folder="Targets" sort="0" />
+        <label id="94" label="" folder="Targets" sort="0" />
+        <label id="95" label="" folder="Targets" sort="0" />
+        <label id="96" label="" folder="Targets" sort="0" />
+        <label id="97" label="" color="1" folder="Targets" sort="0" />
+        <label id="98" label="" color="1" folder="Targets" sort="0" />
+        <label id="99" label="" color="1" folder="Targets" sort="0" />
+        <label id="100" label="" color="1" folder="Targets" sort="0" />
+        <label id="101" label="" folder="Targets" sort="0" />
+        <label id="103" label="" folder="Targets" sort="0" />
+        <label id="104" label="" folder="Targets" sort="0" />
+        <label id="105" label="" folder="Targets" sort="0" />
+        <label id="108" label="" folder="Targets" sort="0" />
+        <label id="106" label="" folder="Targets" sort="0" />
+        <label id="107" label="" folder="Targets" sort="0" />
+        <label id="109" label="" folder="Targets" sort="0" />
+        <label id="102" label="" folder="Targets" sort="0" />
+        <label id="110" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>aa</prefix>
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>92</nextId>
+    <nextId>110</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="1st_dong" />
         <marker scope="Public" name="1stbra" />
         <marker scope="Public" name="9s_littleguy" />
+        <marker scope="Public" name="aqua_controlledtravel" />
+        <marker scope="Public" name="Aqua_keybladebooster" />
+        <marker scope="Public" name="aqua_miragearena" />
         <marker scope="Public" name="aqua_training" />
+        <marker scope="Public" name="aqua_training2" />
+        <marker scope="Public" name="aqua_travelworlds" />
         <marker scope="Public" name="doubleunderwear" />
         <marker scope="Public" name="feetrest" />
         <marker scope="Public" name="human_doubleunderwear" />
