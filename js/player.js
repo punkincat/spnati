@@ -284,12 +284,12 @@ Player.prototype.hasTag = function(tag) {
 Player.prototype.hasTags = function(tagAdv) {
     var match = tagAdv.match(/^([^\&\|]*)(\&?)([^\&\|]*)(\|?)([^\&\|]*)(\&?)([^\&\|]*)\s*/);
 
-    var firstPart;
-
     if (!match)
     {
-        return true;
+        return false;
     }
+
+    var firstPart;
 
     if (match[1] && match[3])
     {
@@ -305,7 +305,7 @@ Player.prototype.hasTags = function(tagAdv) {
     }
     else
     {
-        firstPart = true;
+        firstPart = false;
     }
 
     if (firstPart){
@@ -326,7 +326,7 @@ Player.prototype.hasTags = function(tagAdv) {
     }
     else
     {
-        return true;
+        return false;
     }
 
 }
