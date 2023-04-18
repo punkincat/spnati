@@ -28,6 +28,24 @@ namespace KisekaeImporter
 			get { return GetSubCode<KisekaeUpperArmSize>("ce"); }
 			set { SetSubCode("ce", value); }
 		}
+		[KisekaeSubCode("cf")]
+		public KisekaeThighSize ThighSize
+		{
+			get { return GetSubCode<KisekaeThighSize>("cf"); }
+			set { SetSubCode("cf", value); }
+		}
+		[KisekaeSubCode("cg")]
+		public KisekaeLegSize LegSize
+		{
+			get { return GetSubCode<KisekaeLegSize>("cg"); }
+			set { SetSubCode("cg", value); }
+		}
+		[KisekaeSubCode("ch")]
+		public KisekaeFootSize FootSize
+		{
+			get { return GetSubCode<KisekaeFootSize>("ch"); }
+			set { SetSubCode("ch", value); }
+		}
 		[KisekaeSubCode("da")]
 		public KisekaeSkin Skin
 		{
