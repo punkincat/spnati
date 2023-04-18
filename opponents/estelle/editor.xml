@@ -327,6 +327,7 @@ Also, yes, I'm going to keep making alternate versions of these cases every sing
 Also, yes, I'm going to keep making alternate versions of these cases every single time you add a MG alt skin. Sorry. It's okay if you don't reply to them!</note>
         <note id="722">I pulled this book and everything about it out of my ass, although Dahngrest is a real place in Tales of Vesperia. Alt version of this case for when it doesn't play in game start.</note>
         <note id="728">Not sure if there will be additional lines for the Team Wiki outfit but if not this should key off of the fallback case Magma Grunt currently resorts to in that outfit.</note>
+        <note id="733">This line is disabled pending the upload of 2-noelle0.png.</note>
     </notes>
     <labels>
         <label id="37" label="" color="6" folder="Targeted Trivia" sort="0" />
@@ -932,7 +933,9 @@ Also, yes, I'm going to keep making alternate versions of these cases every sing
         <label id="731" label="" color="1" folder="" sort="0" />
         <label id="732" label="" color="6" folder="" sort="0" />
     </labels>
-    <nextId>732</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>733</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="__magma_grunt_nickname" />
