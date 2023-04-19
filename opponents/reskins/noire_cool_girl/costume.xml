@@ -227,6 +227,9 @@
         <pose id="4-niya">
             <sprite id="niya" src="reskins/noire_cool_girl/4-niya.png" x="0" y="0" />
         </pose>
+		<pose id="4-rear">
+            <sprite id="rear" src="reskins/noire_cool_girl/4-rear.png" x="0" y="0" />
+        </pose>
         <pose id="4-shocked">
             <sprite id="shocked" src="reskins/noire_cool_girl/4-shocked.png" x="0" y="0" />
         </pose>
@@ -268,6 +271,9 @@
         </pose>
         <pose id="5-niya">
             <sprite id="niya" src="reskins/noire_cool_girl/5-niya.png" x="0" y="0" />
+        </pose>
+		<pose id="5-rear">
+            <sprite id="rear" src="reskins/noire_cool_girl/4-rear.png" x="0" y="0" />
         </pose>
         <pose id="5-shocked">
             <sprite id="shocked" src="reskins/noire_cool_girl/5-shocked.png" x="0" y="0" />
@@ -1933,6 +1939,9 @@
                 <keyframe time="0" src="reskins/noire_cool_girl/#-shocked.png" />
                 <keyframe time="1" src="reskins/noire_cool_girl/#-shocked.png" />
             </directive>
+        </pose>
+		<pose id="startm">
+            <sprite id="sbefore" src="reskins/noire_cool_girl/7-sbefore.png" x="0" y="0" />
         </pose>
         <pose id="stB0be">
             <sprite id="sbefore" src="reskins/noire_cool_girl/0-sbefore.png" x="0" y="0" alpha="100" />
