@@ -263,6 +263,9 @@
         <response id="1044" opponent="bobobo" opponentId="43" />
         <response id="1047" opponent="senko" opponentId="194" />
         <response id="1050" opponent="senko" opponentId="31" />
+        <response id="1054" opponent="nagatoro" opponentId="2009" />
+        <response id="1055" opponent="nagatoro" opponentId="2006" />
+        <response id="1056" opponent="nagatoro" opponentId="2007" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1248,17 +1251,24 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1048" label="" folder="Senko to left" sort="0" />
         <label id="1049" label="" folder="Senko to left" sort="0" />
         <label id="1050" label="club" folder="Senko to left" sort="0" />
+        <label id="1051" label="" folder="Senko to left or right" sort="0" />
+        <label id="1052" label="" folder="Senko to left" sort="0" />
+        <label id="1053" label="" folder="Senko to left" sort="0" />
+        <label id="1054" label="" folder="Nagatoro to right" sort="0" />
+        <label id="1055" label="" folder="Nagatoro to left" sort="0" />
+        <label id="1056" label="" folder="Nagatoro to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1050</nextId>
+    <nextId>1056</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
         <marker scope="Public" name="kyou_nagisa_staying_strong" />
+        <marker scope="Public" name="nagatoro01a" />
         <marker scope="Public" name="nagisa_9s_are_you_lost" />
         <marker scope="Public" name="nagisa_ae86_look_out" />
         <marker scope="Public" name="nagisa_aella_looks_strong" />
@@ -2307,8 +2317,11 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_nagaotoro_chigau" />
         <marker scope="Public" name="nagisa_nagatoro_be_nice" />
         <marker scope="Public" name="nagisa_nagatoro_brought_a_friend" />
+        <marker scope="Public" name="nagisa_nagatoro_bug_fan" />
+        <marker scope="Public" name="nagisa_nagatoro_dangerous" />
         <marker scope="Public" name="nagisa_nagatoro_first_chest" />
         <marker scope="Public" name="nagisa_nagatoro_hair_like_bug" />
+        <marker scope="Public" name="nagisa_nagatoro_learning" />
         <marker scope="Public" name="nagisa_nagatoro_other_activities" />
         <marker scope="Public" name="nagisa_nami_dream_drama_club" />
         <marker scope="Public" name="nagisa_nami_splash_panties" />
@@ -2552,6 +2565,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_senko_punishment_1" />
         <marker scope="Public" name="nagisa_senko_punishment_2" />
         <marker scope="Public" name="nagisa_senko_punishment_3" />
+        <marker scope="Public" name="nagisa_senko_sn_n1" />
+        <marker scope="Public" name="nagisa_senko_sn_n21" />
         <marker scope="Public" name="nagisa_shaggy_frighten" />
         <marker scope="Public" name="nagisa_sheena_fujibayashi" />
         <marker scope="Public" name="nagisa_shego_evil" />
