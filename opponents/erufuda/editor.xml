@@ -275,6 +275,9 @@
         <response id="735" opponent="cheryl" opponentId="222" />
         <response id="739" opponent="bobobo" opponentId="1" />
         <response id="740" opponent="bobobo" opponentId="43" />
+        <response id="742" opponent="senko" opponentId="168" />
+        <response id="743" opponent="senko" opponentId="137" />
+        <response id="745" opponent="senko" opponentId="159" />
     </responses>
     <labels>
         <label id="239" label="" color="4" folder="" sort="0" />
@@ -531,8 +534,12 @@
         <label id="737" label="" color="4" folder="" sort="0" />
         <label id="738" label="" color="4" folder="" sort="0" />
         <label id="741" label="" color="4" folder="" sort="0" />
+        <label id="744" label="" color="4" folder="" sort="0" />
+        <label id="746" label="" color="4" folder="" sort="0" />
     </labels>
-    <nextId>741</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>746</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aaravi_battle_outfit" />
@@ -2033,6 +2040,8 @@
         <marker scope="Public" name="sayaka_witch">Erufuda accuses Sayaka of being the real witch.</marker>
         <marker scope="Public" name="school_uniform_not_student" />
         <marker scope="Public" name="sei_soda">Erufuda asks Sei for a soda.</marker>
+        <marker scope="Public" name="senko_age" />
+        <marker scope="Public" name="senko_amenities" />
         <marker scope="Public" name="senko_binge_fries" />
         <marker scope="Public" name="senko_bites" />
         <marker scope="Public" name="senko_bites2" />
@@ -2045,12 +2054,15 @@
         <marker scope="Public" name="senko_convinced" />
         <marker scope="Public" name="senko_deserve" />
         <marker scope="Public" name="senko_diet_pampering" />
+        <marker scope="Public" name="senko_fine" />
+        <marker scope="Public" name="senko_fox_intro" />
         <marker scope="Public" name="senko_lightweight" />
         <marker scope="Public" name="senko_magic" />
         <marker scope="Public" name="senko_magic2" />
         <marker scope="Public" name="senko_magic3" />
         <marker scope="Public" name="senko_magic3_healthy" />
         <marker scope="Public" name="senko_magic3_witch" />
+        <marker scope="Public" name="senko_magical_beauty" />
         <marker scope="Public" name="senko_massage" />
         <marker scope="Public" name="senko_massage_belly" />
         <marker scope="Public" name="senko_massage_belly2" />
@@ -2059,6 +2071,7 @@
         <marker scope="Public" name="senko_oil_massage2" />
         <marker scope="Public" name="senko_oil_massage3" />
         <marker scope="Public" name="senko_order_fries" />
+        <marker scope="Public" name="senko_pamper_why" />
         <marker scope="Public" name="senko_pampering" />
         <marker scope="Public" name="senko_pants_fix_reject" />
         <marker scope="Public" name="senko_pants_workouts" />
@@ -2071,7 +2084,9 @@
         <marker scope="Public" name="senko_trash" />
         <marker scope="Public" name="senko_trash2" />
         <marker scope="Public" name="senko_trash3" />
+        <marker scope="Public" name="senko_victory" />
         <marker scope="Public" name="senko_waiting" />
+        <marker scope="Public" name="senko_world" />
         <marker scope="Public" name="shut_up" />
         <marker scope="Public" name="shy_encourage">Erufuda encourages a shy opponent.</marker>
         <marker scope="Public" name="skinny_stupid">Erufuda accuses an athletic opponent of being stuipd for losing.</marker>
