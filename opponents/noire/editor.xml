@@ -100,6 +100,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <note id="2371">Neptune's name being very hard to pronounce is a running joke in Neptunia. It's so hard mostly because the "tu" /tju/ sound isn't found in native Japanese words.</note>
         <note id="2372">She feels lonely but doesn't want to show it.</note>
         <note id="2455">The marker takes two values, so you can respond to both lines at once or to each one separately.</note>
+        <note id="2462">Noire starts in a tsun way, but actually would love to pamper someone and/or be pampered herself. She won't acknowledge it at first, but maybe we can explore this in lines for later stages.</note>
     </notes>
     <labels>
         <label id="3" label="" folder="SpecialNames" sort="0" />
@@ -2537,12 +2538,21 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2458" label="" folder="Bobobo" sort="0" />
         <label id="2459" label="" color="4" folder="Bobobo" sort="0" />
         <label id="2460" label="" color="4" folder="Bobobo" sort="0" />
+        <label id="2461" label="" color="6" folder="OpponentsPresent" sort="0" />
+        <label id="2462" label="" color="4" folder="Senko" sort="0" />
+        <label id="2463" label="" color="4" folder="Senko" sort="0" />
+        <label id="2464" label="" color="6" folder="Senko" sort="0" />
+        <label id="2465" label="" color="6" folder="Senko" sort="0" />
+        <label id="2466" label="" color="6" folder="Senko" sort="0" />
+        <label id="2467" label="" color="6" folder="Senko" sort="0" />
+        <label id="2468" label="" color="6" folder="Senko" sort="0" />
+        <label id="2469" label="" color="6" folder="Senko" sort="0" />
     </labels>
-    <prefixes>
-        <prefix>onlytail</prefix>
-    </prefixes>
-    <nextId>2460</nextId>
+    <onlyCustomPoses>true</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>2469</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_costume1" />
         <marker scope="Public" name="adrien_costume2" />
         <marker scope="Public" name="adrien_fightingevil1" />
@@ -3273,6 +3283,13 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="sannytessfinished" />
         <marker scope="Public" name="sayori0" />
         <marker scope="Public" name="scm_resp" />
+        <marker scope="Public" name="senko_amenities" />
+        <marker scope="Public" name="senko_pampering1" />
+        <marker scope="Public" name="senko_pampering2" />
+        <marker scope="Public" name="senko_punishment1" />
+        <marker scope="Public" name="senko_punishment2" />
+        <marker scope="Public" name="senko_punishment3" />
+        <marker scope="Public" name="senko0" />
         <marker scope="Public" name="setogaya_1sttimeplace" />
         <marker scope="Public" name="setogaya_1sttimeplace2" />
         <marker scope="Public" name="setogaya_1sttimeplace3" />
