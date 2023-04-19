@@ -36,6 +36,9 @@
         <response id="230" opponent="kyoko_kirigiri" opponentId="1236" />
         <response id="232" opponent="kyoko_kirigiri" opponentId="1238" />
         <response id="240" opponent="komi-san" opponentId="1" />
+        <response id="249" opponent="cagliostro" opponentId="142" />
+        <response id="256" opponent="adrien" opponentId="488" />
+        <response id="272" opponent="cagliostro" opponentId="2" />
     </responses>
     <labels>
         <label id="1" label="" folder="filtered_category" sort="0" />
@@ -277,10 +280,36 @@
         <label id="246" label="" folder="target_yuna" sort="0" />
         <label id="247" label="" folder="target_yuna" sort="0" />
         <label id="248" label="" folder="target_yuna" sort="0" />
+        <label id="232" label="" folder="target_kyoko_kirigiri" sort="0" />
+        <label id="130" label="" folder="target_mari" sort="0" />
+        <label id="249" label="" folder="target_cagliostro" sort="0" />
+        <label id="250" label="" folder="target_adrien" sort="0" />
+        <label id="251" label="" folder="target_adrien" sort="0" />
+        <label id="252" label="" folder="target_adrien" sort="0" />
+        <label id="253" label="" folder="target_adrien" sort="0" />
+        <label id="254" label="" folder="target_adrien" sort="0" />
+        <label id="255" label="" folder="target_adrien" sort="0" />
+        <label id="256" label="" folder="target_adrien" sort="0" />
+        <label id="257" label="" folder="target_cagliostro" sort="0" />
+        <label id="258" label="" folder="target_cagliostro" sort="0" />
+        <label id="259" label="" folder="target_cagliostro" sort="0" />
+        <label id="260" label="" folder="target_adrien" sort="0" />
+        <label id="261" label="" folder="target_adrien" sort="0" />
+        <label id="262" label="" folder="target_noire" sort="0" />
+        <label id="263" label="" folder="target_noire" sort="0" />
+        <label id="264" label="" folder="target_cagliostro" sort="0" />
+        <label id="265" label="" folder="target_cagliostro" sort="0" />
+        <label id="266" label="" folder="target_cagliostro" sort="0" />
+        <label id="267" label="" folder="target_cagliostro" sort="0" />
+        <label id="268" label="" folder="target_cagliostro" sort="0" />
+        <label id="269" label="" folder="target_cagliostro" sort="0" />
+        <label id="270" label="" folder="target_cagliostro" sort="0" />
+        <label id="271" label="" folder="target_cagliostro" sort="0" />
+        <label id="272" label="" folder="prompt_responses" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>248</nextId>
+    <nextId>272</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="__9s_nickname" />
@@ -294,9 +323,27 @@
         <marker scope="Public" name="acc_shoes" />
         <marker scope="Public" name="acc_small" />
         <marker scope="Public" name="acc_time" />
+        <marker scope="Public" name="adrien" />
+        <marker scope="Public" name="adrien00" />
+        <marker scope="Public" name="adrien01" />
+        <marker scope="Public" name="adrien02" />
+        <marker scope="Public" name="adrien10" />
+        <marker scope="Public" name="adrien11" />
+        <marker scope="Public" name="adrien12" />
+        <marker scope="Public" name="adrien32" />
+        <marker scope="Public" name="adrien41" />
+        <marker scope="Public" name="adrien42" />
         <marker scope="Public" name="all_or_nothing" />
         <marker scope="Public" name="aqua_suzuya_bra_removed" />
         <marker scope="Public" name="arash_smalltalk-cooking" />
+        <marker scope="Public" name="cagli00" />
+        <marker scope="Public" name="cagli01" />
+        <marker scope="Public" name="cagli02" />
+        <marker scope="Public" name="cagli10" />
+        <marker scope="Public" name="cagli11" />
+        <marker scope="Public" name="cagli12" />
+        <marker scope="Public" name="cagli21" />
+        <marker scope="Public" name="cagli22" />
         <marker scope="Public" name="dunban_suzuya_0a" />
         <marker scope="Public" name="dunban_suzuya_strip0a" />
         <marker scope="Public" name="dunban_suzuya_strip1a" />
@@ -320,6 +367,9 @@
         <marker scope="Public" name="minor_outfitswap" />
         <marker scope="Public" name="minor_socks" />
         <marker scope="Public" name="nami_pirate" />
+        <marker scope="Public" name="noire00" />
+        <marker scope="Public" name="noire01" />
+        <marker scope="Public" name="placeholder" />
         <marker scope="Public" name="queenie01" />
         <marker scope="Public" name="revy_suzuya0" />
         <marker scope="Public" name="selected_alley1" />
@@ -403,8 +453,12 @@
         <line>-----</line>
         <line>So, ~male~, would you rather have ~female~ lose as well or would you rather join me down here?</line>
         <line>-----</line>
-        <line>Target: Thigh-highs; Naked Accessories</line>
+        <line>Target: Thigh-highs; Naked Accessories, tandem-forfeits</line>
         <line>do your generics my dude</line>
-        <line>targets: Komi-san's</line>
+        <line>----targets----</line>
+        <line>Senko: Something about abura-age and offerings?</line>
+        <line>Nagatoro: mischevious onee-san, gotta target the swimsuit</line>
+        <line>Bobobo: literally everything I guess?</line>
+        <line>---- Adrien</line>
     </pendingLines>
 </metadata>
