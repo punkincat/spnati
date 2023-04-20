@@ -1,6 +1,3 @@
-var devExportModal = $('#dev-export-modal');
-var devExportField = $('#export-edit-log');
-
 var devSelectorButtons = [
     $('#dev-select-button-1'),
     $('#dev-select-button-2'),
@@ -10,16 +7,6 @@ var devSelectorButtons = [
 
 var devModeActive = false;
 var devModeTarget = 0;
-
-function showDevExportModal () {
-    if (!devModeActive || !devModeTarget) return;
-    
-    var editLog = players[devModeTarget].editLog || [];
-    var serialized = JSON.stringify(editLog);
-    
-    devExportField.val(serialized);
-    devExportModal.modal('show');
-}
 
 function setDevSelectorVisibility (visible) {
     if (visible) {
@@ -83,7 +70,6 @@ Opponent.prototype.initDevMode = function () {
     this.devModeInitialized = true;
     this.stateIndex = stateIndex;
     this.originalXml = $(this.xml).clone();
-    this.editLog = [];
 }
 
 
@@ -252,78 +238,7 @@ DevModeDialogueBox.prototype.cancelEdit = function () {
 }
 
 DevModeDialogueBox.prototype.saveEdits = function () {
-    if (this.editingState) {
-        /* Handle edited states: */
-                
-        if (this.currentStateModified) {
-            /* Update the last edit log entry to effect this change: */
-            var idx = this.player.editLog.length - 1;
-            if (idx < 0) return;
-            
-            this.player.editLog[idx].state = {'text': this.editData.text, 'image': this.editData.image};
-        } else {
-            /* Push a new edit log entry... */
-            this.player.editLog.push({
-                'type': 'edit',
-                'stage': this.player.stage,
-                'case': this.currentCase,
-                'oldState': {'text': this.currentState.text, 'image': this.currentState.image},
-                'state': {'text': this.editData.text, 'image': this.editData.image}
-            });
-            
-            var stateID = this.player.chosenState.id;
-            
-            /* Go directly to the XML to update all similar states: */
-            this.player.xml.find('state[dev-id="'+stateID+'"]').each(function (idx, elem) {
-                $(elem).html(this.editData.text);
-                $(elem).attr('img', this.editData.image);
-            }.bind(this));
-        }
-    } else {
-        var editEntry = {
-            'type': 'new',                                                          // either 'new' or 'edit'
-            'intent': 'generic',                                                    // either 'generic' or 'response'
-            'responseTarget': null,                                                 // info on the selected response target
-            'stage': this.player.stage,                                             // current character stage
-            'state': {'text': this.editData.text, 'image': this.editData.image},    // edited state data
-            'suggestedTag': this.player.lastUpdateTriggers[0],                      // a suggested trigger for generic lines
-        };
-        
-        /* Dumps relevant edit log data for a given player into a serializable object. */
-        function playerStateInfo (player) {
-            var curState = player.chosenState;
-            
-            var info = {
-                'id': player.id,
-                'stage': player.stage,
-                'case': null,
-                'state': null,
-            }
-            
-            if (curState) {
-                var curCase = curState.parentCase;
-                    
-                info.case = curCase;
-                info.state = {'text': curState.rawDialogue, 'image': curState.image, 'marker': null};
-                
-                if (curState.markers) {
-                    info.state.markers = curState.markers.map(function (marker) {
-                        return marker.serialize(player, player.currentTarget);
-                    });
-                }
-            }
-            
-            return info;
-        }
-        
-        if (this.respondingToPlayer) {
-            editEntry.intent = 'response';
-            editEntry.responseTarget = playerStateInfo(this.respondingToPlayer);
-        }
-        
-        this.player.editLog.push(editEntry);
-    }
-    
+
     /* Save editData to currentState, which will then get flushed to
      * player.chosenState.
      */
