@@ -35,6 +35,9 @@ namespace KisekaeImporter
 				case "cc":
 				case "cd":
 				case "ce":
+				case "cf":
+				case "cg":
+				case "ch":
 				case "da":
 				case "db":
 				case "dd":
