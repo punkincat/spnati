@@ -122,6 +122,10 @@ namespace SPNATI_Character_Editor
         private bool FilterPortrait(PoseMapping pose, CharacterEditorData editorData)
         {
             string key = pose.Key;
+			if (key.StartsWith("custom:"))
+			{
+				return true;
+			}			
             foreach (string p in editorData.IgnoredPrefixes)
             {
                 if (key.StartsWith(p))

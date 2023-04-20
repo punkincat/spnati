@@ -112,7 +112,7 @@ namespace SPNATI_Character_Editor.Activities
 		private void PopulatePortraitDropdown()
 		{
 			_populatingImages = true;
-			List<PoseMapping> poses = _costume.Character.PoseLibrary.GetPoses(0);
+			List<PoseMapping> poses = _costume.Character.PoseLibrary.GetPortraitPoses();
 			cboDefaultPic.DisplayMember = "DisplayName";
 			cboDefaultPic.DataSource = poses;
 			_populatingImages = false;
