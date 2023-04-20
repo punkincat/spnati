@@ -59,6 +59,23 @@
         <pose id="0-smug">
             <sprite id="smug" src="reskins/noire_cool_girl/0-smug.png" x="0" y="0" />
         </pose>
+		<pose id="0-startg">
+            <sprite id="calm0" marker="startPose==0" src="reskins/noire_cool_girl/0-calm.png" x="0" y="0" />
+			<sprite id="angry" marker="startPose==an" src="reskins/noire_cool_girl/0-angry.png" x="0" y="0" />
+			<sprite id="betsuni" marker="startPose==be" src="reskins/noire_cool_girl/0-betsuni.png" x="0" y="0" />
+			<sprite id="calm" marker="startPose==ca" src="reskins/noire_cool_girl/0-calm.png" x="0" y="0" />
+			<sprite id="disgusted" marker="startPose==di" src="reskins/noire_cool_girl/0-disgusted.png" x="0" y="0" />
+			<sprite id="embarrassed" marker="startPose==em" src="reskins/noire_cool_girl/0-embarrassed.png" x="0" y="0" />
+			<sprite id="explaining" marker="startPose==ex" src="reskins/noire_cool_girl/0-explaining.png" x="0" y="0" />
+			<sprite id="happy" marker="startPose==ha" src="reskins/noire_cool_girl/0-happy.png" x="0" y="0" />
+			<sprite id="niya" marker="startPose==ni" src="reskins/noire_cool_girl/0-niya.png" x="0" y="0" />
+			<sprite id="shocked" marker="startPose==sh" src="reskins/noire_cool_girl/0-shocked.png" x="0" y="0" />
+			<sprite id="smug" marker="startPose==sm" src="reskins/noire_cool_girl/0-smug.png" x="0" y="0" />
+			<sprite id="teasing" marker="startPose==te" src="reskins/noire_cool_girl/0-teasing.png" x="0" y="0" />
+			<sprite id="thinking" marker="startPose==th" src="reskins/noire_cool_girl/0-thinking.png" x="0" y="0" />
+			<sprite id="victory" marker="startPose==vi" src="reskins/noire_cool_girl/0-victory.png" x="0" y="0" />
+			<sprite id="yareyare" marker="startPose==yr" src="reskins/noire_cool_girl/0-yareyare.png" x="0" y="0" />			
+        </pose>
         <pose id="0-teasing">
             <sprite id="teasing" src="reskins/noire_cool_girl/0-teasing.png" x="0" y="0" />
         </pose>
@@ -1343,9 +1360,6 @@
                 <keyframe time="0" src="reskins/noire_cool_girl/#-yareyare.png" />
                 <keyframe time="1" src="reskins/noire_cool_girl/#-yareyare.png" />
             </directive>
-        </pose>
-        <pose id="rear1CG">
-            <sprite id="rear" src="reskins/noire_cool_girl/4-rear.png" x="0" y="0" />
         </pose>
         <pose id="sh-an">
             <sprite id="shocked" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" alpha="100" />
