@@ -16,10 +16,11 @@
         <tag>scantily-clad</tag>
         <tag remove="true">school_uniform</tag>
     </tags>
+    <layers>6</layers>
     <folder>opponents/reskins/mari_setogaya_succu-bunny/</folder>
     <wardrobe>
-        <clothing name="pastie" position="lower" type="major" />
-        <clothing name="pasties" position="upper" type="major" plural="true" />
+        <clothing name="pastie" position="lower" type="important" />
+        <clothing name="pasties" position="upper" type="important" plural="true" />
         <clothing name="sleeves" generic="sleeves" position="arms" type="minor" plural="true" />
         <clothing name="stockings" generic="leggings" position="legs" type="minor" plural="true" />
         <clothing name="heels" generic="shoes" position="feet" type="minor" plural="true" />
