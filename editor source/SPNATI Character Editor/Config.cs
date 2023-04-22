@@ -731,12 +731,6 @@ namespace SPNATI_Character_Editor
 
 			return false;
 		}
-
-		public static bool UseFullResponses
-		{
-			get { return GetBoolean("fullresponse"); }
-			set { Set("fullresponse", value); }
-		}
 	}
 
 	public static class Settings

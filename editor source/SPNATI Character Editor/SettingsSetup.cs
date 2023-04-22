@@ -48,7 +48,6 @@ namespace SPNATI_Character_Editor
 			chkWarnIncomplete.Checked = Config.WarnAboutIncompleteStatus;
 			chkSafeMode.Checked = Config.SafeMode;
 			chkLegacyPoses.Checked = Config.ShowLegacyPoseTabs;
-			chkFullResponse.Checked = Config.UseFullResponses;
 			txtAutoOpen.Text = Config.GetString(Settings.AutoOpenCharacter);
 
 			HashSet<string> pauses = Config.AutoPauseDirectives;
@@ -160,7 +159,6 @@ namespace SPNATI_Character_Editor
 			bool oldSafeMode = Config.SafeMode;
 			Config.SafeMode = chkSafeMode.Checked;
 			Config.ShowLegacyPoseTabs = chkLegacyPoses.Checked;
-			Config.UseFullResponses = chkFullResponse.Checked;
 
 			HashSet<string> pauses = new HashSet<string>();
 			foreach (string item in lstPauses.CheckedItems)
