@@ -36,6 +36,7 @@
         <response id="112" opponent="moon" opponentId="149" />
         <response id="147" opponent="perona" opponentId="57" />
         <response id="148" opponent="perona" opponentId="15" />
+        <response id="161" opponent="cagliostro" opponentId="12" />
     </responses>
     <labels>
         <label id="2" label="" color="1" folder="Targets" sort="0" />
@@ -185,13 +186,26 @@
         <label id="149" label="" folder="Filtered" sort="0" />
         <label id="150" label="" folder="Filtered" sort="0" />
         <label id="151" label="" color="1" folder="Targets" sort="0" />
+        <label id="152" label="" color="1" folder="Targets" sort="0" />
+        <label id="153" label="" color="1" folder="Targets" sort="0" />
+        <label id="154" label="" folder="Targets" sort="0" />
+        <label id="155" label="" color="1" folder="Targets" sort="0" />
+        <label id="156" label="" folder="Filtered" sort="0" />
+        <label id="157" label="" folder="Filtered" sort="0" />
+        <label id="158" label="" folder="Filtered" sort="0" />
+        <label id="159" label="" folder="Filtered" sort="0" />
+        <label id="160" label="" folder="Filtered" sort="0" />
+        <label id="161" label="" folder="Targets" sort="0" />
+        <label id="162" label="" color="1" folder="Targets" sort="0" />
+        <label id="163" label="" color="1" folder="Targets" sort="0" />
+        <label id="164" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>aa</prefix>
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>151</nextId>
+    <nextId>164</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="1st_dong" />
@@ -204,12 +218,17 @@
         <marker scope="Public" name="aqua_training" />
         <marker scope="Public" name="aqua_training2" />
         <marker scope="Public" name="aqua_travelworlds" />
+        <marker scope="Public" name="cagli_alchemy" />
+        <marker scope="Public" name="cagli_alchemy2" />
+        <marker scope="Public" name="cagli_howlong" />
         <marker scope="Public" name="caulifla_komdragon" />
         <marker scope="Public" name="cheryl_journal" />
         <marker scope="Public" name="diffworldquestion" />
         <marker scope="Public" name="DMG_darkmagician" />
         <marker scope="Public" name="doubleunderwear" />
         <marker scope="Public" name="dwight_talkinabout" />
+        <marker scope="Public" name="elphaba_broom" />
+        <marker scope="Public" name="elphaba_witchclan" />
         <marker scope="Public" name="feetrest" />
         <marker scope="Public" name="human_doubleunderwear" />
         <marker scope="Public" name="human_tripleunderwear" />
@@ -272,6 +291,7 @@
         <marker scope="Public" name="roll_strippedhat" />
         <marker scope="Public" name="roll_strippedshorts" />
         <marker scope="Public" name="steve_gfcash" />
+        <marker scope="Public" name="suz_doublestrip" />
         <marker scope="Public" name="suzuya_conspiring" />
         <marker scope="Public" name="tripleunderwear" />
         <marker scope="Public" name="yuna_favfood" />
