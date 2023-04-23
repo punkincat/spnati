@@ -48,6 +48,8 @@
         <response id="590" opponent="ringo_ando" opponentId="475" />
         <response id="640" opponent="critical_darling" opponentId="19" />
         <response id="673" opponent="okino" opponentId="42" />
+        <response id="1248" opponent="magma_grunt" opponentId="878" />
+        <response id="1249" opponent="queenie" opponentId="138" />
     </responses>
     <notes>
         <note id="6">Make separate case for non-humans</note>
@@ -95,6 +97,11 @@ With Revy, Meia, and Jura more than anyone else, I'm going to try to write targe
 One last thing: Kyoko is slated to potentially have a costume or too where she isn't wearing a suit of some sort (her Danganronpa S swimwear outfit being most likely; but she may also get an actual non-school uniform suit from The Day Before The Future). We can cross this bridge when we get to it, but if you really want to get crazy about future-proofing now, the condition set I would recommend most is checking for Kyoko having either having school_uniform or formal_attire as a tag.</note>
         <note id="1242">For the sake of the logic of actually responding, ignore what's in this folder. There's more going on for notes on the "Revy IL" lines.</note>
         <note id="1243">For the sake of the logic of actually responding, ignore what's in this folder. There's more going on for notes on the "Revy IL" lines.</note>
+        <note id="1248">Planned follow-ups from Kyoko are to include lines to the effect of “Well, it’s good to want things” normally; and “You should have thought about that before you played to win” specifically if MG is the only player left in the game and still has her crotch covered; if Magma Grunt says yes.</note>
+        <note id="1249">The logic for targeting Kyoko is this: ignore everything in the "Duplicate dialogue" folder and just respond to this dialogue. The system in place will work itself out.</note>
+        <note id="1264">I'll probably replace this line if Fence writes a response for Maria. I'll move its actual contents to a generic, though, because that quip is too golden to waste.</note>
+        <note id="1265">The logic for targeting Kyoko is this: ignore everything in the "Duplicate dialogue" folder and just respond to this dialogue. The system in place will work itself out.</note>
+        <note id="1266">A future line in this conversation will likely have Kyoko talk about the Ultimates and mention that while she doesn't know an Ultimate Poet, she does know a certain cute guy who has some poetic sensabilities about him.</note>
     </notes>
     <labels>
         <label id="499" label="Shelved" folder="" sort="0" />
@@ -1270,6 +1277,29 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <label id="1244" label="Revy IR k0-1" color="5" folder="Duplicate dialogue" sort="0" />
         <label id="1245" label="Revy IR pre0-1a" folder="Duplicate dialogue" sort="0" />
         <label id="1246" label="Revy IR pre0-1b" folder="Duplicate dialogue" sort="0" />
+        <label id="1248" label="" folder="Gloria+MG+Rosa" sort="0" />
+        <label id="1249" label="Queenie IL 0-1/Inbound stage 0" folder="Inbound stage 0" sort="0" />
+        <label id="1250" label="Queenie IR 0-1" folder="Duplicate dialogue" sort="0" />
+        <label id="1251" label="Queenie IR pre0-1" folder="Duplicate dialogue" sort="0" />
+        <label id="1252" label="Butt Pose Count" folder="" sort="0" />
+        <label id="1253" label="" folder="Clothing vocabulary" sort="0" />
+        <label id="1254" label="" folder="Clothing vocabulary" sort="0" />
+        <label id="1255" label="" folder="Clothing vocabulary" sort="0" />
+        <label id="1256" label="" folder="Clothing vocabulary" sort="0" />
+        <label id="1257" label="" folder="Clothing vocabulary" sort="0" />
+        <label id="1258" label="" folder="Clothing vocabulary" sort="0" />
+        <label id="1259" label="" folder="Clothing vocabulary" sort="0" />
+        <label id="1260" label="" folder="Clothing vocabulary" sort="0" />
+        <label id="1261" label="Elphaba Ou 0-1" folder="Outbound stage 0" />
+        <label id="1262" label="Maria IR 8-1" folder="Inbound stage 8" />
+        <label id="1263" label="Maria IL 8-1" folder="Inbound stage 8" />
+        <label id="1264" label="Maria IL 8-2" folder="Inbound stage 8" />
+        <label id="1265" label="Mitama IL 0-1" folder="Inbound stage 0" />
+        <label id="1266" label="Mitama IL 0-2" folder="Inbound stage 0" />
+        <label id="1267" label="Mitama IR pre0-1" folder="Duplicate dialogue" />
+        <label id="1268" label="Mitama IR pre0-2" folder="Duplicate dialogue" />
+        <label id="1269" label="Mitama IR 0-1" folder="Duplicate dialogue" />
+        <label id="1270" label="Mitama IR 0-2" folder="Duplicate dialogue" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -1291,6 +1321,7 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <prefix>#-upset</prefix>
         <prefix>#-start</prefix>
         <prefix>#-heavy</prefix>
+        <prefix>#-heavier</prefix>
         <prefix>#-heaviest</prefix>
         <prefix>#-mast_</prefix>
         <prefix>#-stand</prefix>
@@ -1300,7 +1331,7 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
     </posePreviewMarkers>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1247</nextId>
+    <nextId>1270</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
@@ -1337,6 +1368,7 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="buttPoseOfferA" />
         <marker scope="Public" name="buttPoseOfferA=2" />
         <marker scope="Public" name="buttPoseOfferB" />
+        <marker scope="Public" name="buttPoses" />
         <marker scope="Public" name="cameLikeThatQuery" />
         <marker scope="Public" name="cardsWillDo" />
         <marker scope="Public" name="careerMention">Kyoko has alluded to her career as a detective X times.</marker>
@@ -1372,7 +1404,7 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="doIt">Line indicating she knows the human's forfeit timer is 1 (clears if human doesn't finish next screen)</marker>
         <marker scope="Public" name="dontExpletive" />
         <marker scope="Public" name="dorothy_nami_superAwkward" />
-        <marker scope="Public" name="draws" />
+        <marker scope="Public" name="draws">Absolute ties</marker>
         <marker scope="Public" name="dressCode" />
         <marker scope="Public" name="dwight_blackCoffee1" />
         <marker scope="Public" name="dwight_blackCoffee2" />
@@ -1481,6 +1513,7 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="humanExtraLayers">"Already completely exposed yourself, yet you still have layers to spare?" (to human)</marker>
         <marker scope="Public" name="humanMagician" />
         <marker scope="Public" name="humanNoBra">Female human player has been detected to not be wearing a bra this game</marker>
+        <marker scope="Public" name="humanPenis" />
         <marker scope="Public" name="humanVulvaWonder" />
         <marker scope="Public" name="humanWearingCaseBriefs" />
         <marker scope="Public" name="ibtcompany" />
@@ -1564,8 +1597,10 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="okino_toshinou_tomatoNickname" />
         <marker scope="Public" name="pantsPreference" />
         <marker scope="Public" name="parentTrouble">Kyoko has reacted with X divided by 2 lines to Mia Fey asking about if anyone else had parents leave at a young age.</marker>
+        <marker scope="Public" name="penisTiming" />
         <marker scope="Public" name="pokeTrainers" />
         <marker scope="Public" name="precumQuestion" />
+        <marker scope="Public" name="queen_stare" />
         <marker scope="Public" name="quips">Kyoko has cracked X jokes during the game.</marker>
         <marker scope="Public" name="quiteTheTime" />
         <marker scope="Public" name="rappSnitchKnishes">Kyoko has advised an opponent not to tell all their business, sit in the court, and be their own star witness.</marker>
@@ -1657,6 +1692,7 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="tieCompletes">"A classmate in high school once told me this tie completes my outfit."</marker>
         <marker scope="Public" name="timeline" />
         <marker scope="Public" name="timeline=thh" />
+        <marker scope="Public" name="TO_mg_quieres" />
         <marker scope="Public" name="tooManyKyokos" />
         <marker scope="Public" name="toru_chest" />
         <marker scope="Public" name="toru_chestB" />
