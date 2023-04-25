@@ -24,6 +24,12 @@
         <case name="Pokemon cards" id="47" priority="Prompt" min="8" max="8">
             <description>Prompt for Pokemon characters about a card game.</description>
         </case>
+        <case name="Poolside End" id="87" priority="Prompt" min="3" max="6">
+            <description>The game ends and Tea invites the others into the pool.</description>
+        </case>
+        <case name="Rule 1" id="85" priority="FYI" min="2" max="2">
+            <description>If there's a vouyer background, Tea will announce to the onlookers that she's ready to give them a show.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -65,7 +71,6 @@
         <response id="61" opponent="marinette" opponentId="114" />
         <response id="62" opponent="marinette" opponentId="438" />
         <response id="63" opponent="nagatoro" opponentId="10" />
-        <response id="64" opponent="kyoko" opponentId="3" />
         <response id="65" opponent="kyouko_toshinou" opponentId="91" />
         <response id="66" opponent="marinette" opponentId="1363" />
         <response id="67" opponent="lucy" opponentId="670" />
@@ -79,6 +84,15 @@
         <response id="75" opponent="lucy" opponentId="620" />
         <response id="76" opponent="lucy" opponentId="29" />
         <response id="77" opponent="brock" opponentId="1" />
+        <response id="79" opponent="sakura" opponentId="4" />
+        <response id="80" opponent="sakura" opponentId="5" />
+        <response id="81" opponent="sakura" opponentId="2" />
+        <response id="88" opponent="gwen" opponentId="3" />
+        <response id="89" opponent="gwen" opponentId="1" />
+        <response id="90" opponent="gwen" opponentId="118" />
+        <response id="91" opponent="rainbow_dash" opponentId="53" />
+        <response id="92" opponent="steve" opponentId="3" />
+        <response id="93" opponent="steve" opponentId="4" />
     </responses>
     <labels>
         <label id="1" label="" folder="Friends Marker" sort="0" />
@@ -92,11 +106,17 @@
         <label id="51" label="" folder="Backgrounds" sort="4" />
         <label id="52" label="" folder="Backgrounds" sort="5" />
         <label id="53" label="" folder="Backgrounds" sort="6" />
+        <label id="82" label="" folder="Backgrounds" sort="0" />
+        <label id="83" label="" folder="Backgrounds" sort="0" />
+        <label id="84" label="" folder="Backgrounds" sort="0" />
+        <label id="85" label="" folder="Backgrounds" sort="0" />
+        <label id="86" label="" folder="Backgrounds" sort="0" />
+        <label id="87" label="" folder="Backgrounds" sort="0" />
     </labels>
     <prefixes>
         <prefix>card</prefix>
     </prefixes>
-    <nextId>77</nextId>
+    <nextId>93</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="blue_disk" />
@@ -110,6 +130,7 @@
         <marker scope="Public" name="tea_aqua_freetime1b" />
         <marker scope="Public" name="tea_aqua_freetime2" />
         <marker scope="Public" name="tea_catastrophe" />
+        <marker scope="Public" name="tea_chazz_cheat" />
         <marker scope="Public" name="tea_chazz_dmg1" />
         <marker scope="Public" name="tea_chazz_strip1" />
         <marker scope="Public" name="tea_chazz_strip2" />
@@ -121,6 +142,7 @@
         <marker scope="Public" name="tea_cynthia_millenium" />
         <marker scope="Public" name="tea_cynthia_puzzle" />
         <marker scope="Public" name="tea_cynthia_rod" />
+        <marker scope="Public" name="tea_dash_respond" />
         <marker scope="Public" name="tea_deckmaster" />
         <marker scope="Public" name="tea_dmg_end" />
         <marker scope="Public" name="tea_dmg_smash" />
@@ -131,11 +153,22 @@
         <marker scope="Public" name="tea_finish_yugi" />
         <marker scope="Public" name="tea_futab_chazz" />
         <marker scope="Public" name="tea_futab_start" />
+        <marker scope="Public" name="tea_gwen_kaiba" />
+        <marker scope="Public" name="tea_gwen_mai" />
+        <marker scope="Public" name="tea_gwen_marik" />
+        <marker scope="Public" name="tea_gwen_pegasus" />
+        <marker scope="Public" name="tea_gwen_rex" />
+        <marker scope="Public" name="tea_gwen_think" />
+        <marker scope="Public" name="tea_gwen_weevil" />
+        <marker scope="Public" name="tea_gwen_weevill" />
         <marker scope="Public" name="tea_hands" />
         <marker scope="Public" name="tea_kirigiri_strip1" />
+        <marker scope="Public" name="tea_kirigiri_strip2" />
+        <marker scope="Public" name="tea_kirigiri_strip3" />
         <marker scope="Public" name="tea_kyouko_ribbon" />
         <marker scope="Public" name="tea_kyouko_start" />
         <marker scope="Public" name="tea_kyouko_strip1" />
+        <marker scope="Public" name="tea_kyouko_strip1a" />
         <marker scope="Public" name="tea_ladybug_dual" />
         <marker scope="Public" name="tea_lose_1" />
         <marker scope="Public" name="tea_lose_2" />
@@ -174,7 +207,9 @@
         <marker scope="Public" name="tea_ojamas" />
         <marker scope="Public" name="tea_oneliner_detective" />
         <marker scope="Public" name="tea_pokemon" />
+        <marker scope="Public" name="tea_pool_end" />
         <marker scope="Public" name="tea_probability" />
+        <marker scope="Public" name="tea_rule1" />
         <marker scope="Public" name="tea_saved" />
         <marker scope="Public" name="tea_sayaka_familiar1" />
         <marker scope="Public" name="tea_sayaka_familiar2" />
@@ -188,7 +223,10 @@
         <marker scope="Public" name="tea_strip_mai" />
         <marker scope="Public" name="tea_strip_vision" />
         <marker scope="Public" name="tea_v_chazz" />
+        <marker scope="Public" name="tea_v_chihiro" />
         <marker scope="Public" name="tea_v_dmg" />
+        <marker scope="Public" name="tea_v_lucy" />
+        <marker scope="Public" name="tea_v_zombie" />
         <marker scope="Public" name="tea_waterproof" />
         <marker scope="Public" name="tea_yuno_ayumi" />
         <marker scope="Public" name="tea_yuno_strip1" />
