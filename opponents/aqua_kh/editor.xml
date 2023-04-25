@@ -152,6 +152,9 @@
         <response id="703" opponent="senko" opponentId="137" />
         <response id="704" opponent="suzuya" opponentId="169" />
         <response id="706" opponent="jura" opponentId="491" />
+        <response id="720" opponent="arle" opponentId="98" />
+        <response id="721" opponent="arle" opponentId="110" />
+        <response id="722" opponent="nagatoro" opponentId="2026" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -693,7 +696,7 @@
         <label id="527" label="1 - cat speech, nyan" folder="Targets" sort="86" />
         <label id="528" label="2 - light magic" folder="Targets" sort="87" />
         <label id="529" label="" folder="Backgrounds" sort="15" />
-        <label id="530" label="" folder="Backgrounds" sort="2" />
+        <label id="530" label="haunted forest (first game)" folder="Backgrounds" sort="2" />
         <label id="531" label="" folder="Backgrounds" sort="0" />
         <label id="532" label="1 - powers" folder="Queenie" sort="6" />
         <label id="533" label="" folder="Logic" sort="10" />
@@ -849,9 +852,9 @@
         <label id="682" label="" folder="Targets" sort="0" />
         <label id="683" label="" folder="Targets" sort="0" />
         <label id="684" label="" folder="Responses" sort="0" />
-        <label id="685" label="" folder="Targets" sort="0" />
-        <label id="686" label="" folder="Targets" sort="0" />
-        <label id="687" label="" folder="Targets" sort="0" />
+        <label id="685" label="" color="3" folder="Targets" sort="0" />
+        <label id="686" label="" color="3" folder="Targets" sort="0" />
+        <label id="687" label="" color="3" folder="Targets" sort="0" />
         <label id="688" label="" folder="Situations" sort="0" />
         <label id="689" label="" folder="Targets" sort="0" />
         <label id="690" label="" folder="Targets" sort="0" />
@@ -871,11 +874,29 @@
         <label id="704" label="" folder="Targets" sort="0" />
         <label id="705" label="" folder="Targets" sort="0" />
         <label id="706" label="" folder="Responses" sort="0" />
+        <label id="707" label="" folder="Targets" sort="0" />
+        <label id="708" label="" folder="Opponents" sort="0" />
+        <label id="709" label="2f, 3m, target f" folder="Opponents" sort="0" />
+        <label id="710" label="3f, 2m, target m" folder="Opponents" sort="0" />
+        <label id="711" label="" folder="Opponents" sort="0" />
+        <label id="712" label="" folder="Opponents" sort="0" />
+        <label id="713" label="haunted forest (ng+)" folder="Backgrounds" sort="0" />
+        <label id="714" label="" folder="Opponents" sort="0" />
+        <label id="715" label="" folder="Opponents" sort="0" />
+        <label id="716" label="" folder="Opponents" sort="0" />
+        <label id="717" label="" folder="Targets" sort="0" />
+        <label id="718" label="" folder="Targets" sort="0" />
+        <label id="719" label="" folder="Targets" sort="0" />
+        <label id="720" label="" folder="Responses" sort="0" />
+        <label id="721" label="" folder="Responses" sort="0" />
+        <label id="722" label="" folder="Responses" sort="0" />
+        <label id="723" label="" color="3" folder="Targets" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>706</nextId>
+    <nextId>723</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="__lucina_nickname" />
         <marker scope="Public" name="ag_aquaKH_strip0b" />
         <marker scope="Public" name="aqua_aaravi_hydro1" />
@@ -891,9 +912,11 @@
         <marker scope="Public" name="aqua_anatoly_penisRev" />
         <marker scope="Public" name="aqua_and_darkness_oppstrip">Either Aqua or Darkness (both from Konosuba) must strip - makes a comment on it</marker>
         <marker scope="Public" name="aqua_aquagrunt_self0a" />
+        <marker scope="Public" name="aqua_arle_controlledtravelResp" />
         <marker scope="Public" name="aqua_arle_strip0a" />
         <marker scope="Public" name="aqua_arle_strip0b" />
         <marker scope="Public" name="aqua_arle_strip0c" />
+        <marker scope="Public" name="aqua_arle_travelworldsResp" />
         <marker scope="Public" name="aqua_binah_startFF" />
         <marker scope="Public" name="aqua_blake_keybladeCont1" />
         <marker scope="Public" name="aqua_bobobo_necklace1" />
@@ -937,6 +960,8 @@
         <marker scope="Public" name="aqua_dwight_self0a" />
         <marker scope="Public" name="aqua_dwight_self1a" />
         <marker scope="Public" name="aqua_dwight_self2a" />
+        <marker scope="Public" name="aqua_elphaba_strip0a" />
+        <marker scope="Public" name="aqua_elphaba_strip1a" />
         <marker scope="Public" name="aqua_epilogue_seen" />
         <marker scope="Public" name="aqua_felix_accent1" />
         <marker scope="Public" name="aqua_felix_accent2" />
@@ -1042,10 +1067,12 @@
         <marker scope="Public" name="aqua_nagatoro_s2c" />
         <marker scope="Public" name="aqua_nagatoro_s3a" />
         <marker scope="Public" name="aqua_nagatoro_s3b" />
+        <marker scope="Public" name="aqua_nagatoro_s3c" />
         <marker scope="Public" name="aqua_nagatoro_self0a" />
         <marker scope="Public" name="aqua_nagatoro_self0b" />
         <marker scope="Public" name="aqua_nagatoro_self0c_a" />
         <marker scope="Public" name="aqua_nagatoro_self0c_b" />
+        <marker scope="Public" name="aqua_nagatoro_self2a" />
         <marker scope="Public" name="aqua_nami_self0a" />
         <marker scope="Public" name="aqua_nami_self2a" />
         <marker scope="Public" name="aqua_noire_explainedRole" />
@@ -1225,6 +1252,9 @@
         <marker scope="Public" name="opp_sleepwear" />
         <marker scope="Public" name="opp_tag_ears_notfurry" />
         <marker scope="Public" name="opp_tag_furry" />
+        <marker scope="Public" name="oppselect_3ddlc" />
+        <marker scope="Public" name="oppselect_3disney" />
+        <marker scope="Public" name="oppselect_playerbirthday_friends" />
         <marker scope="Public" name="oppselected_aqua_konosuba">Aqua from Konosuba is an opponent when this Aqua has just been selected</marker>
         <marker scope="Public" name="other_exposed_thighhighs" />
         <marker scope="Public" name="player_goodmode" />
