@@ -1350,7 +1350,7 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
     case 'wearing':
         {
             var types = [], positions = [], names = [];
-            args.split('|').forEach(function(keyword) {
+            (args ? args.split('|') : []).forEach(function(keyword) {
                 if ([IMPORTANT_ARTICLE, MAJOR_ARTICLE, MINOR_ARTICLE, EXTRA_ARTICLE].indexOf(keyword) >= 0) {
                     types.push(keyword);
                 } else if ([UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE, OTHER_ARTICLE,
@@ -1773,7 +1773,7 @@ function evalOperator (val, op, cmpVal) {
  * the current state marker.
  ************************************************************/
 function checkMarker(predicate, self, target, currentOnly) {
-    var match = predicate.match(/^([\w\-]+)(\*?)(\s*(\<\=|\>\=|\<|\>|\=\=|!\=|\=|\@)?\s*(.+))?\s*$/);
+    var match = predicate.match(/^([\w\-\+]+)(\*?)(\s*(\<\=|\>\=|\<|\>|\=\=|!\=|\=|\@)?\s*(.+))?\s*$/);
     
     var name;
     var perTarget;
