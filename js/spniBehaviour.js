@@ -1294,6 +1294,14 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
 		return ret;
     case 'ifmale':
         return args.split('|')[(player.gender == 'male' ? 0 : 1)];
+    case 'subj':
+        return player.gender == 'male' ? 'he' : 'she';
+    case 'obj':
+        return player.gender == 'male' ? 'him' : 'her';
+    case 'poss':
+        return player.gender == 'male' ? 'his' : 'her';
+    case 'poss2':
+        return player.gender == 'male' ? 'his' : 'hers';
     case 'place':
         if (player.out) return players.countTrue() + 1 - player.outOrder;
         return 1 + players.countTrue(function(p) { return p.countLayers() > player.countLayers(); });
@@ -1342,7 +1350,7 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
     case 'wearing':
         {
             var types = [], positions = [], names = [];
-            (args ? args.split('|') : []).forEach(function(keyword) {
+            args.split('|').forEach(function(keyword) {
                 if ([IMPORTANT_ARTICLE, MAJOR_ARTICLE, MINOR_ARTICLE, EXTRA_ARTICLE].indexOf(keyword) >= 0) {
                     types.push(keyword);
                 } else if ([UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE, OTHER_ARTICLE,
@@ -1765,7 +1773,7 @@ function evalOperator (val, op, cmpVal) {
  * the current state marker.
  ************************************************************/
 function checkMarker(predicate, self, target, currentOnly) {
-    var match = predicate.match(/^([\w\-\+]+)(\*?)(\s*(\<\=|\>\=|\<|\>|\=\=|!\=|\=|\@)?\s*(.+))?\s*$/);
+    var match = predicate.match(/^([\w\-]+)(\*?)(\s*(\<\=|\>\=|\<|\>|\=\=|!\=|\=|\@)?\s*(.+))?\s*$/);
     
     var name;
     var perTarget;

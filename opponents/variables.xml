@@ -5,6 +5,10 @@
       <param name="true" label="When male:" description="Text when male (ex. his)." example="Hector"/>
       <param name="false" label="When female:" description="Text when not male (ex. her)." example="Florina"/>
     </function>
+    <function name="subj" description="Expands to 'he' or 'she' depending on the character's gender." example="she"/>
+    <function name="obj" description="Expands to 'him' or 'her' depending on the character's gender." example="him"/>
+    <function name="poss" description="Expands to 'his' or 'her' depending on the character's gender." example="her"/>
+    <function name="poss2" description="Expands to 'his' or 'hers' depending on the character's gender." example="his"/>
     <function name="toStutter" description="Returns the character's name, prefixed with the first letter and a dash to indicate a stutter." example="F-Florina">
       <param name="count" label="Stutter count:" description="How many times to stutter the letter. Min 1, Max 10." example="2" />
     </function>
@@ -17,6 +21,10 @@
       <param name="true" label="When male:" description="Text when male (ex. his)." example="Hector"/>
       <param name="false" label="When female:" description="Text when not male (ex. her)." example="Florina"/>
     </function>
+    <function name="subj" description="Expands to 'he' or 'she' depending on the character's gender." example="he"/>
+    <function name="obj" description="Expands to 'him' or 'her' depending on the character's gender." example="her"/>
+    <function name="poss" description="Expands to 'his' or 'her' depending on the character's gender." example="his"/>
+    <function name="poss2" description="Expands to 'his' or 'her' depending on the character's gender." example="hers"/>
     <function name="toStutter" description="Returns the character's name, prefixed with the first letter and a dash to indicate a stutter." example="F-Florina">
       <param name="count" label="Stutter count:" description="How many times to stutter the letter. Min 1, Max 10." example="2" />
     </function>
@@ -75,6 +83,10 @@
       <param name="true" label="When male:" description="Text when male (ex. his)." example="Hector" />
       <param name="false" label="When female:" description="Text when not male (ex. her)." example="Florina" />
     </function>
+    <function name="subj" description="Expands to 'he' or 'she' depending on the character's gender." example="she"/>
+    <function name="obj" description="Expands to 'him' or 'her' depending on the character's gender." example="him"/>
+    <function name="poss" description="Expands to 'his' or 'her' depending on the character's gender." example="her"/>
+    <function name="poss2" description="Expands to 'his' or 'hers' depending on the character's gender." example="his"/>
     <function name="position" description="Expands to 'left', 'right', or 'self' based on the target's position on the screen relative to this character." example="right" />
     <function name="size" description="Expands to small, medium, or large based on the character's chest or penis size." example="small" />
     <function name="slot" description="Expands to 1, 2, 3, or 4 based on the target's position on screen, where 1 is leftmost and 4 is rightmost." example="2" />
