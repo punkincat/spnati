@@ -9,7 +9,7 @@
         <case name="Manner of arrival" id="3" priority="Prompt" min="3" max="3">
             <description>Mitama asks how did your character reach the Inventory.</description>
         </case>
-        <case name="Mitama's nap" id="920" priority="FYI" min="9" max="9">
+        <case name="Mitama's nap" id="920" priority="Noteworthy" min="9" max="9">
             <description>If she is finished and the game is still going, Mitama will fall asleep. She will wake up after some time (this is marked with the mitama_woke marker).</description>
         </case>
     </noteworthy>
@@ -1832,11 +1832,34 @@ Karsa also added in the interview:
         <label id="1783" label="Haiku 386-Priestess" folder="Haiku Counter" sort="0" />
         <label id="1784" label="Haiku 386-Diviner" folder="Haiku Counter" sort="0" />
         <label id="1785" label="Haiku 386-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="1786" label="Haiku 387-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="1787" label="Haiku 387-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="1788" label="Haiku 387-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="1789" label="Karbol Sponsorship" color="3" folder="" sort="0" />
+        <label id="1790" label="Haiku 388-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="1791" label="Haiku 388-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="1792" label="Haiku 388-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="1793" label="" folder="Hand=Any banter" sort="0" />
+        <label id="1794" label="" folder="Background" sort="0" />
+        <label id="1795" label="Haiku 389-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="1796" label="Haiku 389-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="1797" label="Haiku 389-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="1798" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="1799" label="Haiku 390-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="1800" label="Haiku 390-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="1801" label="Haiku 390-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="1802" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="1803" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="1804" label="" folder="Background" sort="0" />
+        <label id="1805" label="Haiku 391-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="1806" label="Haiku 391-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="1807" label="Haiku 391-Nohr Princess" folder="Haiku Counter" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1785</nextId>
+    <nextId>1807</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="9s_muststrip_0" />
         <marker scope="Public" name="9s_muststrip_1" />
         <marker scope="Public" name="adrien_losingsuit" />
@@ -1861,6 +1884,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="arash_important_things" />
         <marker scope="Public" name="arash_insomnia" />
         <marker scope="Public" name="arash_throws">Also haiku 285.</marker>
+        <marker scope="Public" name="arle_petquestion" />
         <marker scope="Public" name="barbara_Hat_1" />
         <marker scope="Public" name="Barbara_holywoman_resp" />
         <marker scope="Public" name="Barbara_poetry_resp" />
@@ -3148,10 +3172,29 @@ Karsa also added in the interview:
         <marker scope="Public" name="haiku_386_Counter" />
         <marker scope="Public" name="haiku_386_DCounter" />
         <marker scope="Public" name="haiku_386_NCounter" />
+        <marker scope="Public" name="haiku_387" />
+        <marker scope="Public" name="haiku_387_Counter" />
+        <marker scope="Public" name="haiku_387_DCounter" />
+        <marker scope="Public" name="haiku_387_NCounter" />
+        <marker scope="Public" name="haiku_388" />
+        <marker scope="Public" name="haiku_388_Counter" />
+        <marker scope="Public" name="haiku_388_DCounter" />
+        <marker scope="Public" name="haiku_388_NCounter" />
+        <marker scope="Public" name="haiku_389" />
+        <marker scope="Public" name="haiku_389_Counter" />
+        <marker scope="Public" name="haiku_389_DCounter" />
+        <marker scope="Public" name="haiku_389_NCounter" />
         <marker scope="Public" name="haiku_39" />
         <marker scope="Public" name="haiku_39_Counter" />
         <marker scope="Public" name="haiku_39_DCounter" />
         <marker scope="Public" name="haiku_39_NCounter" />
+        <marker scope="Public" name="haiku_390" />
+        <marker scope="Public" name="haiku_390_Counter" />
+        <marker scope="Public" name="haiku_390_DCounter" />
+        <marker scope="Public" name="haiku_390_NCounter" />
+        <marker scope="Public" name="haiku_391_Counter" />
+        <marker scope="Public" name="haiku_391_DCounter" />
+        <marker scope="Public" name="haiku_391_NCounter" />
         <marker scope="Public" name="haiku_4" />
         <marker scope="Public" name="haiku_4_Counter" />
         <marker scope="Public" name="haiku_4_DCounter" />
@@ -3460,6 +3503,8 @@ Karsa also added in the interview:
         <marker scope="Public" name="kumatora_favfood" />
         <marker scope="Public" name="kumatora_nickname" />
         <marker scope="Public" name="kyoko_muststrip_0" />
+        <marker scope="Public" name="kyoko_shesaDetective" />
+        <marker scope="Public" name="kyoko_whatdo" />
         <marker scope="Public" name="l'arachel_muststrip" />
         <marker scope="Public" name="l'arachel_muststrip_0" />
         <marker scope="Public" name="lux_pun_overload" />
@@ -3511,7 +3556,6 @@ Karsa also added in the interview:
         <marker scope="Public" name="Miko_proposal" />
         <marker scope="Public" name="MikoCapelet2_resp" />
         <marker scope="Public" name="misty_noguys" />
-        <marker scope="Public" name="mitama" />
         <marker scope="Public" name="mitama_adrien01_resp" />
         <marker scope="Public" name="mitama_adrien02_resp" />
         <marker scope="Public" name="mitama_adrien11_resp" />
@@ -3522,6 +3566,8 @@ Karsa also added in the interview:
         <marker scope="Public" name="mitama_fakeout" />
         <marker scope="Public" name="mitama_first_place" />
         <marker scope="Public" name="mitama_introduction">Mitama introduces herself, during the first round of the game.</marker>
+        <marker scope="Public" name="mitama_tasks">This is mostly setup for tasks2, the more meaningful line.</marker>
+        <marker scope="Public" name="mitama_tasks2" />
         <marker scope="Public" name="mitama_unbirthday" />
         <marker scope="Public" name="mitama_woke" />
         <marker scope="Public" name="mitama01_resp" />
@@ -3564,6 +3610,8 @@ Karsa also added in the interview:
         <marker scope="Public" name="ReimuShoes2" />
         <marker scope="Public" name="revy_killing">Answer to Revy's prompt about killing.</marker>
         <marker scope="Public" name="revy_mitama0_resp">Also haiku 196.</marker>
+        <marker scope="Public" name="rinkah_muststrip_0" />
+        <marker scope="Public" name="rinkah_selected" />
         <marker scope="Public" name="school" />
         <marker scope="Public" name="scm_resp" />
         <marker scope="Public" name="seen_penis" />
@@ -3640,6 +3688,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="turandot_muststrip_0" />
         <marker scope="Public" name="wakeup_counter" />
         <marker scope="Public" name="weapon_triangle" />
+        <marker scope="Public" name="weapon_triangle_2" />
         <marker scope="Public" name="writing_tools" />
         <marker scope="Public" name="yuelia_start_indoors" />
         <marker scope="Public" name="yuelia_start_outdoors" />
