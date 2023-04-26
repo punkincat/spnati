@@ -102,6 +102,9 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <note id="1264">I'll probably replace this line if Fence writes a response for Maria. I'll move its actual contents to a generic, though, because that quip is too golden to waste.</note>
         <note id="1265">The logic for targeting Kyoko is this: ignore everything in the "Duplicate dialogue" folder and just respond to this dialogue. The system in place will work itself out.</note>
         <note id="1266">A future line in this conversation will likely have Kyoko talk about the Ultimates and mention that while she doesn't know an Ultimate Poet, she does know a certain cute guy who has some poetic sensabilities about him.</note>
+        <note id="1271">The logic for responding to Kyoko is this: ignore everything in the "Duplicate dialogue" folder and just respond to this dialogue. The system in place will work itself out.
+
+In this case, "Are you suggesting a side wager, then?" is Kyoko's way of suggesting a side bet herself. In near-future lines, my idea for this line are for the stakes of this bet to end up being that whoever loses first between Tea and Kyoko has to do an embarrassing dare or reveal a deep secret (in Kyoko's case, almost definitely about her gloves).</note>
     </notes>
     <labels>
         <label id="499" label="Shelved" folder="" sort="0" />
@@ -1290,16 +1293,24 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <label id="1258" label="" folder="Clothing vocabulary" sort="0" />
         <label id="1259" label="" folder="Clothing vocabulary" sort="0" />
         <label id="1260" label="" folder="Clothing vocabulary" sort="0" />
-        <label id="1261" label="Elphaba Ou 0-1" folder="Outbound stage 0" />
-        <label id="1262" label="Maria IR 8-1" folder="Inbound stage 8" />
-        <label id="1263" label="Maria IL 8-1" folder="Inbound stage 8" />
-        <label id="1264" label="Maria IL 8-2" folder="Inbound stage 8" />
-        <label id="1265" label="Mitama IL 0-1" folder="Inbound stage 0" />
-        <label id="1266" label="Mitama IL 0-2" folder="Inbound stage 0" />
-        <label id="1267" label="Mitama IR pre0-1" folder="Duplicate dialogue" />
-        <label id="1268" label="Mitama IR pre0-2" folder="Duplicate dialogue" />
-        <label id="1269" label="Mitama IR 0-1" folder="Duplicate dialogue" />
-        <label id="1270" label="Mitama IR 0-2" folder="Duplicate dialogue" />
+        <label id="1261" label="Elphaba Ou 0-1" folder="Outbound stage 0" sort="0" />
+        <label id="1262" label="Maria IR 8-1" folder="Inbound stage 8" sort="0" />
+        <label id="1263" label="Maria IL 8-1" folder="Inbound stage 8" sort="0" />
+        <label id="1264" label="Maria IL 8-2" folder="Inbound stage 8" sort="0" />
+        <label id="1265" label="Mitama IL 0-1" folder="Inbound stage 0" sort="0" />
+        <label id="1266" label="Mitama IL 0-2" folder="Inbound stage 0" sort="0" />
+        <label id="1267" label="Mitama IR pre0-1" folder="Duplicate dialogue" sort="0" />
+        <label id="1268" label="Mitama IR pre0-2" folder="Duplicate dialogue" sort="0" />
+        <label id="1269" label="Mitama IR 0-1" folder="Duplicate dialogue" sort="0" />
+        <label id="1270" label="Mitama IR 0-2" folder="Duplicate dialogue" sort="0" />
+        <label id="1271" label="Téa IL 0-1" folder="Inbound stage 0" sort="0" />
+        <label id="1272" label="Téa IR pre0-1" folder="Duplicate dialogue" sort="0" />
+        <label id="1273" label="Téa IR 0-1" folder="Duplicate dialogue" sort="0" />
+        <label id="1274" label="Arle IL 0-1" folder="Inbound stage 0" sort="0" />
+        <label id="1275" label="Arle IR pre0-1" folder="Duplicate dialogue" sort="0" />
+        <label id="1276" label="Arle IR 0-1" folder="Duplicate dialogue" sort="0" />
+        <label id="1277" label="Elphaba Ou 0-2A" color="2" folder="Outbound stage 0" sort="0" />
+        <label id="1278" label="Elphaba Ou 0-2B" color="3" folder="Outbound stage 0" sort="0" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -1331,12 +1342,13 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
     </posePreviewMarkers>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1270</nextId>
+    <nextId>1278</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
         <marker scope="Public" name="+quips" />
         <marker scope="Public" name="alwaysReady">"Always ready, I see" and other versions of the line</marker>
+        <marker scope="Public" name="arle_pale" />
         <marker scope="Public" name="arousalVisible" />
         <marker scope="Public" name="aroused">Her vulva is or will be visibly secreting fluid prior to her forfeit while nude (and in the second tick of her forfeit).</marker>
         <marker scope="Public" name="attractedAttention" />
@@ -1418,6 +1430,9 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="dwight_stare3_lustVariation" />
         <marker scope="Public" name="eatShitYuuhain" />
         <marker scope="Private" name="ellipsisCount">Automatically counts lines that are just ellipsis, lacking any letters that a word could be made out of. Decrements by 1 each strip phase. Swapping cards lines are not counted.</marker>
+        <marker scope="Public" name="elphaba_notWitchcraft" />
+        <marker scope="Public" name="elphaba_sorceryVsWitchcraft" />
+        <marker scope="Public" name="elphaba_witchcraft" />
         <marker scope="Public" name="embarrassedYanks" />
         <marker scope="Public" name="enxNotRunning" />
         <marker scope="Public" name="enxReaction">Stripped important, tag=ENF/ENM, lines referencing ~target~ covering up with their hands.</marker>
@@ -1501,6 +1516,7 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="handBluffP1" />
         <marker scope="Public" name="handBluffP2" />
         <marker scope="Public" name="handBluffP3" />
+        <marker scope="Public" name="hardEvidence" />
         <marker scope="Public" name="hattersGonnaHat" />
         <marker scope="Public" name="hatterSuggestion" />
         <marker scope="Public" name="hauntedVoyeurs" />
@@ -1517,6 +1533,7 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="humanVulvaWonder" />
         <marker scope="Public" name="humanWearingCaseBriefs" />
         <marker scope="Public" name="ibtcompany" />
+        <marker scope="Public" name="immaculateFrame" />
         <marker scope="Public" name="kazumaTinder" />
         <marker scope="Public" name="keepInShape" />
         <marker scope="Public" name="kekko_glovesOnly1" />
@@ -1554,6 +1571,10 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="makeOfThisFeeling" />
         <marker scope="Public" name="maleCaseBriefSurprise" />
         <marker scope="Public" name="mardiGras">Kyoko has said X lines related to asking an American female character about toplessness at Mardi Gras. These lines play on Tuesdays February 3-March 9.</marker>
+        <marker scope="Public" name="maria_buttSpin" />
+        <marker scope="Public" name="maria_buttSpinBefore" />
+        <marker scope="Public" name="maria_buttSpinL" />
+        <marker scope="Public" name="maria_buttSpinR" />
         <marker scope="Public" name="maria_smodeDressStrip1" />
         <marker scope="Public" name="maria_smodeDressStrip1Forfeit" />
         <marker scope="Public" name="maria_smodeDressStrip1Normal" />
@@ -1568,6 +1589,8 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="miko_" />
         <marker scope="Public" name="miko_capybara" />
         <marker scope="Public" name="miko_whatIDo" />
+        <marker scope="Public" name="mitama_goodGuessButActuallyNo" />
+        <marker scope="Public" name="mitama_immaDetective" />
         <marker scope="Public" name="movedHair">Activates if she has moved her hair out of the way of her chest at stage 8 (naked). Should activate automatically if she uses any pose other than the strips or aside2 during stage 8.</marker>
         <marker scope="Public" name="multiBelt" />
         <marker scope="Public" name="nagatoro_fun" />
@@ -1600,7 +1623,13 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="penisTiming" />
         <marker scope="Public" name="pokeTrainers" />
         <marker scope="Public" name="precumQuestion" />
+        <marker scope="Public" name="quadRoyalFlush" />
+        <marker scope="Public" name="quadRoyalLoss" />
+        <marker scope="Public" name="quadRoyalWin" />
         <marker scope="Public" name="queen_stare" />
+        <marker scope="Public" name="quieresVungen" />
+        <marker scope="Public" name="quieresVungenNonsmall" />
+        <marker scope="Public" name="quieresVungenSmall" />
         <marker scope="Public" name="quips">Kyoko has cracked X jokes during the game.</marker>
         <marker scope="Public" name="quiteTheTime" />
         <marker scope="Public" name="rappSnitchKnishes">Kyoko has advised an opponent not to tell all their business, sit in the court, and be their own star witness.</marker>
@@ -1613,6 +1642,7 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="revy_discipline" />
         <marker scope="Public" name="revy_disciplineA" />
         <marker scope="Public" name="revy_disciplineB" />
+        <marker scope="Public" name="revy_wtfbbqlol" />
         <marker scope="Public" name="ringo_bornDetective" />
         <marker scope="Public" name="ringo_deduction1" />
         <marker scope="Public" name="ringo_deduction1Normal" />
@@ -1649,6 +1679,8 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="SHE-SAYS-FUCK" />
         <marker scope="Public" name="smallPenisSpeech">Kyoko has said X lines in a multi-screen speech on her preference to small penises, which she begins once 3 or more small penises are exposed with no women other than herself and/or the player present.</marker>
         <marker scope="Public" name="sockPromise" />
+        <marker scope="Public" name="spankDare" />
+        <marker scope="Public" name="spankDareDetour" />
         <marker scope="Public" name="splashZone">"Stand back unless you feel like being in the splash zone.</marker>
         <marker scope="Public" name="stage5Reasons" />
         <marker scope="Public" name="stage8Arousal" />
@@ -1682,6 +1714,7 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="suzuya_zodiac4" />
         <marker scope="Public" name="suzuya_zodiac5" />
         <marker scope="Public" name="swissFrancs">Despite being Japanese, she says her jacket cost 90 Swiss francs.</marker>
+        <marker scope="Public" name="tea_sideBet" />
         <marker scope="Public" name="theiaCH_" />
         <marker scope="Public" name="theiaCH_relationship" />
         <marker scope="Public" name="theirTurn" />
@@ -1692,6 +1725,7 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="tieCompletes">"A classmate in high school once told me this tie completes my outfit."</marker>
         <marker scope="Public" name="timeline" />
         <marker scope="Public" name="timeline=thh" />
+        <marker scope="Public" name="timeline2" />
         <marker scope="Public" name="TO_mg_quieres" />
         <marker scope="Public" name="tooManyKyokos" />
         <marker scope="Public" name="toru_chest" />
@@ -1723,6 +1757,7 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
         <marker scope="Public" name="V_lineKey" />
         <marker scope="Public" name="V_revealed" />
         <marker scope="Public" name="V_revealed.uncountable" />
+        <marker scope="Public" name="V_seed" />
         <marker scope="Public" name="wellYouLost" />
         <marker scope="Public" name="willBeStaring" />
         <marker scope="Public" name="won7High">She remarked X times on having High Card 7 as her hand and winning anyway.</marker>
@@ -1749,5 +1784,6 @@ One last thing: Kyoko is slated to potentially have a costume or too where she i
     <pendingLines>
         <line>There’s still one question that bugs me, though. If you really are a guy, why did you hide that in the first place?</line>
         <line>You have such sightly hips, ~name~… Let’s see them in motion.</line>
+        <line>REVY: Man, I can’t relate to some fuckin’ weekend warriors out for a little titty-thrill. Who here is the walking dead? Y’know…a killer.</line>
     </pendingLines>
 </metadata>
