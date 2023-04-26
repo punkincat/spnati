@@ -151,6 +151,8 @@ namespace KisekaeImporter
 				case "ud":
 				case "uc":
 					return typeof(KisekaeScene);
+				case "fv":
+					return typeof(KisekaeModInfo);
 				default:
 					return null;
 			}
