@@ -717,6 +717,8 @@
             </date>
         </dates>
 
+        <background>da invuntry</background>
+
         <!-- Put AF costumes and AF characters into the same group, but place AF-only characters before costumes -->
         <!-- Also, put this year's new characters/costumes first -->
         <character highlight="april_fools" partition="1" sort="4">giygas</character>
@@ -729,6 +731,7 @@
 
         <!-- This works exactly like <include-status> in (prod-)config.xml. -->
         <include-status>event</include-status>
+        <include-status>event-background</include-status>
     </event>
 
     <!--
