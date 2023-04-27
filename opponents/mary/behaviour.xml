@@ -468,8 +468,9 @@
                 <test expr="~background~" value="alley" />
                 <state img="#-wah.png" marker="fluttershy_bugs">While I appreciate you standing up for the lesser bugs, Flutters, that's just cruel to people who &lt;i&gt;like&lt;/i&gt; living in dumpsters! You're doing the modern Diogenes dirty, dude.</state>
             </case>
-            <case stage="0-7 9" id="163" notSaidMarker="fluttershy_spiderbros">
+            <case stage="0-7 9" id="163">
                 <condition role="other" character="fluttershy" stage="0-5" sayingMarker="spider_trivia" />
+                <condition role="self" notSaidMarker="fluttershy_spiderbros" />
                 <test expr="~background.location~" value="indoors" />
                 <state img="#-isthishappy.png" marker="fluttershy_spiderbros">Sure do! Life would be that much worse without our spider bros. People give them a bad rap for no good reason.</state>
             </case>
@@ -478,16 +479,18 @@
                 <test expr="~nagisa.slot~" value="1" />
                 <state img="#-isthishappy.png" marker="nagisa_motivation">Not with dinner, no. I used t motivate myself by promising myself a joint or a wank, though.</state>
             </case>
-            <case stage="0-9" id="158" totalRounds="0-3" notSaidMarker="fluttershy_reason">
+            <case stage="0-9" id="158" totalRounds="0-3">
                 <condition count="1-2" filter="my_little_pony" />
                 <condition count="4-" />
                 <condition role="other" character="fluttershy" stage="0-5" sayingMarker="reason_for_coming_question" />
+                <condition role="self" notSaidMarker="fluttershy_reason" />
                 <state img="#-yeahigottime.png" marker="fluttershy_reason">Good question, Flutters. I... can't say I remember what made me even leave my house, if I'm being honest. I guess I'm pretty glad I did, though. </state>
             </case>
-            <case stage="0-7 9" id="160" totalRounds="0-3" notSaidMarker="fluttershy_poker">
+            <case stage="0-7 9" id="160" totalRounds="0-3">
                 <condition count="1-2" filter="my_little_pony" />
                 <condition count="4-" />
                 <condition role="other" character="fluttershy" stage="0-5" sayingMarker="poker_question" />
+                <condition role="self" notSaidMarker="fluttershy_poker" />
                 <state img="#-mendokuse.png" marker="fluttershy_poker">I used to, at one point. Online casinos. I was pretty good, but the people I played against were even sadder cases than I was.</state>
             </case>
             <case stage="0-7 9" totalRounds="5-">
@@ -548,10 +551,11 @@
                 <condition role="self" notSaidMarker="Cagliostrobody" />
                 <state img="#-mendokuse.png" marker="Cagliostrobody">Maybe this'll be a surprise, but I like my body as it is. It's mostly my health I'd like to fix up, if I can.</state>
             </case>
-            <case stage="0-7 9" id="161" notSaidMarker="fluttershy_pets">
+            <case stage="0-7 9" id="161">
                 <condition count="1-2" filter="my_little_pony" />
                 <condition count="4-" />
                 <condition role="other" character="fluttershy" stage="0-5" sayingMarker="pets_question" />
+                <condition role="self" notSaidMarker="fluttershy_pets" />
                 <state img="#-yeahigottime.png" marker="fluttershy_pets">I never really had any &lt;i&gt;real&lt;/i&gt; pets, but there's like... a whole lineage of spiders that have been living in my room for years. I want to get a &lt;i&gt;sicarius&lt;/i&gt; spider one day, properly.</state>
             </case>
             <case stage="0-9" id="176" oneShotId="172">
@@ -717,8 +721,9 @@
                 <condition role="other" character="asuna_yuuki" stage="0" saidMarker="yui2" sayingMarker="yui2" />
                 <state img="#-buthow.png" marker="asuna_milf">Hold the phone, you're a &lt;i&gt;MILF&lt;/i&gt;? You look way younger than &lt;i&gt;I&lt;/i&gt; am! </state>
             </case>
-            <case stage="0-7 9" id="159" notSaidMarker="fluttershy_birds">
+            <case stage="0-7 9" id="159">
                 <condition role="other" character="fluttershy" stage="0-5" sayingMarker="bird_talk" />
+                <condition role="self" notSaidMarker="fluttershy_birds" />
                 <state img="#-yeahigottime.png" marker="fluttershy_birds">Not since I've been taking my meds? What kind of question is that?</state>
             </case>
             <case stage="0-9" id="202">
