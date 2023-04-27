@@ -38,6 +38,9 @@
         <response id="148" opponent="perona" opponentId="15" />
         <response id="161" opponent="cagliostro" opponentId="12" />
         <response id="177" opponent="yuelia" opponentId="1" />
+        <response id="192" opponent="elphaba" opponentId="60" />
+        <response id="193" opponent="kyoko_kirigiri" opponentId="1276" />
+        <response id="196" opponent="gwen" opponentId="118" />
     </responses>
     <labels>
         <label id="2" label="" color="1" folder="Targets" sort="0" />
@@ -133,8 +136,8 @@
         <label id="94" label="" folder="Targets" sort="0" />
         <label id="95" label="" folder="Targets" sort="0" />
         <label id="96" label="" folder="Targets" sort="0" />
-        <label id="97" label="" color="1" folder="Targets" sort="0" />
-        <label id="98" label="" color="1" folder="Targets" sort="0" />
+        <label id="97" label="" color="0" folder="Targets" sort="0" />
+        <label id="98" label="" color="0" folder="Targets" sort="0" />
         <label id="99" label="" color="1" folder="Targets" sort="0" />
         <label id="100" label="" color="1" folder="Targets" sort="0" />
         <label id="101" label="" folder="Targets" sort="0" />
@@ -146,7 +149,7 @@
         <label id="107" label="" folder="Targets" sort="0" />
         <label id="109" label="" folder="Targets" sort="0" />
         <label id="102" label="" folder="Targets" sort="0" />
-        <label id="110" label="" color="1" folder="Targets" sort="0" />
+        <label id="110" label="" color="0" folder="Targets" sort="0" />
         <label id="113" label="" color="1" folder="Targets" sort="0" />
         <label id="114" label="" folder="Filtered" sort="0" />
         <label id="115" label="" folder="Filtered" sort="0" />
@@ -197,8 +200,8 @@
         <label id="159" label="" folder="Filtered" sort="0" />
         <label id="160" label="" folder="Filtered" sort="0" />
         <label id="161" label="" folder="Targets" sort="0" />
-        <label id="162" label="" color="1" folder="Targets" sort="0" />
-        <label id="163" label="" color="1" folder="Targets" sort="0" />
+        <label id="162" label="" color="0" folder="Targets" sort="0" />
+        <label id="163" label="" color="0" folder="Targets" sort="0" />
         <label id="164" label="" color="1" folder="Targets" sort="0" />
         <label id="165" label="" color="0" folder="Targets" sort="0" />
         <label id="166" label="" folder="Targets" sort="0" />
@@ -214,19 +217,28 @@
         <label id="176" label="" color="1" folder="Targets" sort="0" />
         <label id="177" label="" folder="Targets" sort="0" />
         <label id="178" label="" color="1" folder="Targets" sort="0" />
-        <label id="179" label="" color="1" folder="Targets" sort="0" />
+        <label id="179" label="" color="0" folder="Targets" sort="0" />
         <label id="180" label="" folder="Filtered" sort="0" />
         <label id="181" label="" folder="Filtered" sort="0" />
         <label id="182" label="" folder="Filtered" sort="0" />
         <label id="183" label="" folder="Filtered" sort="0" />
         <label id="184" label="" folder="Filtered" sort="0" />
+        <label id="186" label="" color="1" folder="Targets" sort="0" />
+        <label id="187" label="" color="1" folder="Targets" sort="0" />
+        <label id="188" label="" color="1" folder="Targets" sort="0" />
+        <label id="189" label="" color="1" folder="Targets" sort="0" />
+        <label id="190" label="" color="1" folder="Targets" sort="0" />
+        <label id="191" label="" color="1" folder="Targets" sort="0" />
+        <label id="193" label="" folder="Targets" sort="0" />
+        <label id="194" label="" color="1" folder="Targets" sort="0" />
+        <label id="195" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>aa</prefix>
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>184</nextId>
+    <nextId>196</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="1st_dong" />
@@ -239,6 +251,7 @@
         <marker scope="Public" name="aqua_training" />
         <marker scope="Public" name="aqua_training2" />
         <marker scope="Public" name="aqua_travelworlds" />
+        <marker scope="Public" name="aqua_traverselanes" />
         <marker scope="Public" name="cagli_alchemy" />
         <marker scope="Public" name="cagli_alchemy2" />
         <marker scope="Public" name="cagli_howlong" />
@@ -249,7 +262,10 @@
         <marker scope="Public" name="doubleunderwear" />
         <marker scope="Public" name="dwight_talkinabout" />
         <marker scope="Public" name="elphaba_broom" />
+        <marker scope="Public" name="elphaba_broom2" />
         <marker scope="Public" name="elphaba_witchclan" />
+        <marker scope="Public" name="elphaba_wtichclana" />
+        <marker scope="Public" name="elphaba_wtichclanb" />
         <marker scope="Public" name="feetrest" />
         <marker scope="Public" name="hatsu_1ststrip" />
         <marker scope="Public" name="human_doubleunderwear" />
@@ -269,15 +285,18 @@
         <marker scope="Public" name="kuma_whyhere" />
         <marker scope="Public" name="kuma_zoo" />
         <marker scope="Public" name="kyoko_pale" />
+        <marker scope="Public" name="kyoko_paleskin2" />
         <marker scope="Public" name="meia_armordamage" />
         <marker scope="Public" name="meia_madou2" />
         <marker scope="Public" name="meia_puyoa" />
         <marker scope="Public" name="meia_puyob" />
+        <marker scope="Public" name="mitama_whatwrite" />
         <marker scope="Public" name="naga_magic" />
         <marker scope="Public" name="naga_magicbully" />
         <marker scope="Public" name="naga_physical" />
         <marker scope="Public" name="naga_puyo" />
         <marker scope="Public" name="naga_puyo2" />
+        <marker scope="Public" name="nagamimi_dragon" />
         <marker scope="Public" name="nat_steve_respectcreep" />
         <marker scope="Public" name="nat_strippoker" />
         <marker scope="Public" name="natsuki_alreadynaked" />
@@ -313,6 +332,10 @@
         <marker scope="Public" name="roll_naked" />
         <marker scope="Public" name="roll_strippedhat" />
         <marker scope="Public" name="roll_strippedshorts" />
+        <marker scope="Public" name="sakura_headless" />
+        <marker scope="Public" name="sakura_headless2" />
+        <marker scope="Public" name="sakura_zombie" />
+        <marker scope="Public" name="spidergwen_enemies" />
         <marker scope="Public" name="steve_gfcash" />
         <marker scope="Public" name="suz_doublestrip" />
         <marker scope="Public" name="suzuya_conspiring" />
