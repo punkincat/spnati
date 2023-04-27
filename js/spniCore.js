@@ -1193,6 +1193,12 @@ if (!Array.prototype.flatMap) {
     }
 }
 
+if (!Array.prototype.at) {
+    Array.prototype.at = function (idx) {
+        return (idx >= 0) ? this[idx] : this[this.length + idx];
+    }
+}
+
 /************************************************************
  * Counts the number of elements that evaluate as true, or,
  * if a function is provided, passes the test implemented by it.
