@@ -48,7 +48,6 @@ namespace SPNATI_Character_Editor
             this.helpLifetime = new Desktop.Skinning.SkinnedIcon();
             this.valLifetime = new Desktop.Skinning.SkinnedNumericUpDown();
             this.txtTinify = new Desktop.Skinning.SkinnedTextBox();
-            this.skinnedIcon1 = new Desktop.Skinning.SkinnedIcon();
             this.chkWarnEmpty = new Desktop.Skinning.SkinnedCheckBox();
             this.skinnedLabel5 = new Desktop.Skinning.SkinnedLabel();
             this.chkIntellisense = new Desktop.Skinning.SkinnedCheckBox();
@@ -78,7 +77,6 @@ namespace SPNATI_Character_Editor
             this.cboImportMethod = new Desktop.Skinning.SkinnedComboBox();
             this.skinnedLabel3 = new Desktop.Skinning.SkinnedLabel();
             this.tabDialogue = new System.Windows.Forms.TabPage();
-            this.chkFullResponse = new Desktop.Skinning.SkinnedCheckBox();
             this.chkAutoFill = new Desktop.Skinning.SkinnedCheckBox();
             this.chkEmptyCases = new Desktop.Skinning.SkinnedCheckBox();
             this.chkColorTargets = new Desktop.Skinning.SkinnedCheckBox();
@@ -362,24 +360,6 @@ namespace SPNATI_Character_Editor
             this.txtTinify.TabIndex = 14;
             this.toolTip1.SetToolTip(this.txtTinify, "This is used for auto-saving. Only characters written by this user will be auto-s" +
         "aved.");
-            // 
-            // skinnedIcon1
-            // 
-            this.skinnedIcon1.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.skinnedIcon1.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.skinnedIcon1.Flat = false;
-            this.skinnedIcon1.FlatAppearance.BorderSize = 0;
-            this.skinnedIcon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.skinnedIcon1.Image = global::SPNATI_Character_Editor.Properties.Resources.Help;
-            this.skinnedIcon1.Location = new System.Drawing.Point(242, 234);
-            this.skinnedIcon1.Name = "skinnedIcon1";
-            this.skinnedIcon1.Size = new System.Drawing.Size(26, 23);
-            this.skinnedIcon1.TabIndex = 32;
-            this.toolTip1.SetToolTip(this.skinnedIcon1, "When checked, responding to a case will create conditions that correspond to all " +
-        "conditions in the source case. When unchecked, if a case sets a marker, only tha" +
-        "t marker will be used.");
-            this.skinnedIcon1.UseVisualStyleBackColor = true;
-            this.skinnedIcon1.Visible = false;
             // 
             // chkWarnEmpty
             // 
@@ -789,8 +769,6 @@ namespace SPNATI_Character_Editor
             // 
             this.tabDialogue.BackColor = System.Drawing.Color.White;
             this.tabDialogue.Controls.Add(this.chkWarnEmpty);
-            this.tabDialogue.Controls.Add(this.skinnedIcon1);
-            this.tabDialogue.Controls.Add(this.chkFullResponse);
             this.tabDialogue.Controls.Add(this.chkAutoFill);
             this.tabDialogue.Controls.Add(this.chkEmptyCases);
             this.tabDialogue.Controls.Add(this.chkColorTargets);
@@ -806,18 +784,6 @@ namespace SPNATI_Character_Editor
             this.tabDialogue.Size = new System.Drawing.Size(447, 265);
             this.tabDialogue.TabIndex = 1;
             this.tabDialogue.Text = "Dialogue";
-            // 
-            // chkFullResponse
-            // 
-            this.chkFullResponse.AutoSize = true;
-            this.chkFullResponse.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.chkFullResponse.Location = new System.Drawing.Point(6, 236);
-            this.chkFullResponse.Name = "chkFullResponse";
-            this.chkFullResponse.Size = new System.Drawing.Size(242, 17);
-            this.chkFullResponse.TabIndex = 31;
-            this.chkFullResponse.Text = "Use all conditions when generating responses";
-            this.chkFullResponse.UseVisualStyleBackColor = true;
-            this.chkFullResponse.Visible = false;
             // 
             // chkAutoFill
             // 
@@ -1222,8 +1188,6 @@ namespace SPNATI_Character_Editor
 		private Desktop.Skinning.SkinnedCheckBox chkWarnIncomplete;
 		private Desktop.Skinning.SkinnedCheckBox chkSafeMode;
 		private Desktop.Skinning.SkinnedCheckBox chkLegacyPoses;
-		private Desktop.Skinning.SkinnedIcon skinnedIcon1;
-		private Desktop.Skinning.SkinnedCheckBox chkFullResponse;
         private Desktop.Skinning.SkinnedCheckBox chkWarnEmpty;
         private Desktop.Skinning.SkinnedTextBox txtAutoOpen;
     }

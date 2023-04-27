@@ -35,6 +35,9 @@ namespace KisekaeImporter
 				case "cc":
 				case "cd":
 				case "ce":
+				case "cf":
+				case "cg":
+				case "ch":
 				case "da":
 				case "db":
 				case "dd":
@@ -148,6 +151,8 @@ namespace KisekaeImporter
 				case "ud":
 				case "uc":
 					return typeof(KisekaeScene);
+				case "fv":
+					return typeof(KisekaeModInfo);
 				default:
 					return null;
 			}

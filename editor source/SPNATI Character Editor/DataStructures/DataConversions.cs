@@ -57,6 +57,11 @@ namespace SPNATI_Character_Editor
 			{
 				Convert6_7(character);
 			}
+			if (Config.VersionPredates(version, "v6.8.2"))
+			{
+				Convert5_8(character);
+				Convert6_7(character);
+			}
 		}
 
 		private static void Convert3_2(Character character)

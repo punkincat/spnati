@@ -525,12 +525,6 @@
     <Compile Include="Controls\IntervalSlider.Designer.cs">
       <DependentUpon>IntervalSlider.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\LineImportControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\LineImportControl.Designer.cs">
-      <DependentUpon>LineImportControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\LiveEpilogueEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1768,9 +1762,6 @@
     <EmbeddedResource Include="Controls\KeyboardDataGridView.resx">
       <DependentUpon>KeyboardDataGridView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\LineImportControl.resx">
-      <DependentUpon>LineImportControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Controls\LiveEpilogueEditor.resx">
       <DependentUpon>LiveEpilogueEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -2208,6 +2199,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\StageCode.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VersionHistory\v6.8.2.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="VersionHistory\v6.8.1.html">
