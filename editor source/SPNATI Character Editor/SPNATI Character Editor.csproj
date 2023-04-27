@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -524,12 +524,6 @@
     </Compile>
     <Compile Include="Controls\IntervalSlider.Designer.cs">
       <DependentUpon>IntervalSlider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\LineImportControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\LineImportControl.Designer.cs">
-      <DependentUpon>LineImportControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\LiveEpilogueEditor.cs">
       <SubType>UserControl</SubType>
@@ -1767,9 +1761,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\KeyboardDataGridView.resx">
       <DependentUpon>KeyboardDataGridView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\LineImportControl.resx">
-      <DependentUpon>LineImportControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\LiveEpilogueEditor.resx">
       <DependentUpon>LiveEpilogueEditor.cs</DependentUpon>
