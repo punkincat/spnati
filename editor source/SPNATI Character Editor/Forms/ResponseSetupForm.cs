@@ -96,7 +96,9 @@ namespace SPNATI_Character_Editor.Forms
 
 			if (!string.IsNullOrEmpty(txtMarker.Text))
 			{
-				_response.NotSaidMarker = txtMarker.Text;
+				TargetCondition condition = new TargetCondition();
+				condition.NotSaidMarker = txtMarker.Text;
+				_response.Conditions.Add(condition);
 				//make a dialogue line that sets the marker
 				DialogueLine line = new DialogueLine("", "Wow, that's pretty nifty.");
 				line.Marker = txtMarker.Text;
