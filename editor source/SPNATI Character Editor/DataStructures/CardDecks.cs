@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using SPNATI_Character_Editor.IO;
 using System.Collections.Generic;
 using System.IO;
@@ -93,7 +93,7 @@ namespace SPNATI_Character_Editor.DataStructures
 			{
 				if (record.Key.ToLower().Contains(text) ||
 					record.Name.ToLower().Contains(text) ||
-					record.SubTitle.ToLower().Contains(text) ||
+					(record.SubTitle ?? "").ToLower().Contains(text) ||
 					(record.Description ?? "").ToLower().Contains(text))
 				{
 					//partial match
