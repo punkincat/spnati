@@ -993,6 +993,57 @@ function wearClothing () {
     displayHumanPlayerClothing();
 }
 
+function candyLongestSubstring(ch, sk)
+{
+    if (sk.indexOf(ch) == -1)
+    {
+        return '';
+    }
+    for (let i = 0; i < CANDY_LIST.length; i++)
+    {
+        let candyId = CANDY_LIST[i].slice(0, CANDY_LIST[i].indexOf('\/'));
+        if (candyId.indexOf(ch) != -1)
+        {
+            if (candyId.length > ch.length && sk.indexOf(candyId) != -1)
+                return candyId;
+        }
+    }
+    return ch;
+}
+
+function candyDuplicates(c1, c2) {
+
+    var match1 = c1.match(/^([^\/]*)\/(([^_]*)?_?([^_\/]*)?).*$/);
+    var match2 = c2.match(/^([^\/]*)\/(([^_]*)?_?([^_\/]*)?).*$/);
+
+    if (!match1 || !match2)
+    {
+        console.log("RegExp error");
+        return false;
+    }
+    
+    if (match1[1] != 'reskins' && match2[1] != 'reskins')
+    {
+        return match1[1] == match2[1];
+    }
+
+    if (match1[1] != 'reskins' && match2[1] == 'reskins')
+    {
+        return candyLongestSubstring(match1[1], match2[2]).length == match1[1].length;
+    }
+
+    if (match1[1] == 'reskins' && match2[1] != 'reskins')
+    {
+        return candyLongestSubstring(match2[1], match1[2]).length == match2[1].length;
+    }
+
+    if (match1[3] != match2[3])
+    {
+        return false;
+    }
+
+    return candyLongestSubstring(match1[3], match2[2]) == candyLongestSubstring(match2[3], match1[2]);
+}
 
 /************************************************************
  * Randomly selects two characters for the title images.
@@ -1002,9 +1053,7 @@ function selectTitleCandy() {
     var candy1 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
     var candy2 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
 
-
-
-    while (candy1.slice(0, candy1.lastIndexOf("/")) == candy2.slice(0, candy2.lastIndexOf("/"))) {
+    while (candyDuplicates(candy1, candy2)) {
         candy2 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
     }
 
