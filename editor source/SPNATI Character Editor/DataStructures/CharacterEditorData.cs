@@ -666,19 +666,6 @@ namespace SPNATI_Character_Editor
 
 		public void OnAfterDeserialize()
 		{
-			if (LegacyCase != null)
-			{
-				LegacyCase.Stages.Clear();
-				for (int i = MinStage; i <= MaxStage; i++)
-				{
-					LegacyCase.Stages.Add(i);
-				}
-
-				if (LegacyCase.AlsoPlayingStage == "")
-				{
-					LegacyCase.AlsoPlayingStage = null;
-				}
-			}
 		}
 	}
 

@@ -24,18 +24,15 @@ namespace SPNATI_Character_Editor.Charts.Builders
 			{
 				foreach (Case stageCase in c.Behavior.EnumerateSourceCases())
 				{
-					if (!string.IsNullOrEmpty(stageCase.Target) && CharacterDatabase.Exists(stageCase.Target))
-					{
-						TrackMarker(markers, stageCase.Target, stageCase.TargetSaidMarker);
-						TrackMarker(markers, stageCase.Target, stageCase.TargetNotSaidMarker);
-						TrackMarker(markers, stageCase.Target, stageCase.TargetSayingMarker);
-					}
-					if (!string.IsNullOrEmpty(stageCase.AlsoPlaying) && CharacterDatabase.Exists(stageCase.AlsoPlaying))
-					{
-						TrackMarker(markers, stageCase.AlsoPlaying, stageCase.AlsoPlayingNotSaidMarker);
-						TrackMarker(markers, stageCase.AlsoPlaying, stageCase.AlsoPlayingSaidMarker);
-						TrackMarker(markers, stageCase.AlsoPlaying, stageCase.AlsoPlayingSayingMarker);
-					}
+					foreach (TargetCondition cond in stageCase.Conditions)
+                    {
+						if (!string.IsNullOrEmpty(cond.Character) && CharacterDatabase.Exists(cond.Character))
+                        {
+							TrackMarker(markers, cond.Character, cond.SaidMarker);
+							TrackMarker(markers, cond.Character, cond.NotSaidMarker);
+							TrackMarker(markers, cond.Character, cond.SayingMarker);
+						}
+                    }
 				}
 			}
 			foreach (var kvp in markers)

@@ -329,7 +329,7 @@ namespace SPNATI_Character_Editor.Controls
 							return true;
 						}
 					}
-					return workingCase.Filter == key;
+					return false;
 				});
 			}
 			lstDialogue.ExpandAll();

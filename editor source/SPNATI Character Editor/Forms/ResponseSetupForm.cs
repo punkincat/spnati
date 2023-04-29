@@ -58,12 +58,6 @@ namespace SPNATI_Character_Editor.Forms
 			{
 				chkOneTime.Visible = false; //if the line can only happen once, there's no point in marking the response as one time
 			}
-
-			if (!string.IsNullOrEmpty(_response.NotSaidMarker))
-			{
-				//if we're already looking at a marker not being said, we can't make this one time
-				chkOneTime.Visible = false;
-			}
 		}
 
 		private void chkOneTime_CheckedChanged(object sender, System.EventArgs e)

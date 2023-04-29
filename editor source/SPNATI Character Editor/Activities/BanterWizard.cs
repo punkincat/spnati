@@ -176,16 +176,23 @@ namespace SPNATI_Character_Editor.Activities
 		private string GetCaseLabel(Case targetedCase, TriggerDefinition trigger)
 		{
 			Character target = _character;
-			if (targetedCase.Target != null)
+			TargetCondition theCondition = null;
+
+			foreach (TargetCondition condition in targetedCase.Conditions)
 			{
-				target = CharacterDatabase.Get(targetedCase.Target);
-				if (target == null) { return "???"; }
+				if (condition.Role == "target" && condition.Character != null)
+                {
+					target = CharacterDatabase.Get(condition.Character);
+					if (target == null) { return "???"; }
+					theCondition = condition;
+					break;
+				}
 			}
 
 			if (trigger.Tag.Contains("_removing_"))
 			{
 				int stage;
-				if (int.TryParse(targetedCase.TargetStage, out stage))
+				if (int.TryParse(theCondition.Stage, out stage))
 				{
 					//when targeting a specific stage, give a more useful label
 					int index = target.Layers - stage - 1;
@@ -198,7 +205,7 @@ namespace SPNATI_Character_Editor.Activities
 			else if (trigger.Tag.Contains("_removed_"))
 			{
 				int stage;
-				if (int.TryParse(targetedCase.TargetStage, out stage))
+				if (int.TryParse(theCondition.Stage, out stage))
 				{
 					//when targeting a specific stage, give a more useful label
 					int index = target.Layers - stage;
@@ -285,23 +292,53 @@ namespace SPNATI_Character_Editor.Activities
 
 			List<Case> possibleCases = Case.GetMatchingCases(speakerCase, _selectedData.Character, _character);
 			if (possibleCases.Count == 0) { return; }
-			int topPriority = possibleCases[0].GetPriority();
-			lblBasicText.Text = possibleCases[0].ToString();
-			foreach (var line in possibleCases[0].Lines)
-			{
-				lstBasicLines.Items.Add(line);
-			}
-			for (int i = 1; i < possibleCases.Count; i++)
-			{
-				Case c = possibleCases[i];
-				if (c.GetPriority() == topPriority)
+
+			int index = -1;
+
+			for (int i = 0; i < possibleCases.Count; i++)
+            {
+				if (Character.IsCaseTargetedAtCharacter(possibleCases[i], _selectedData.Character, TargetType.DirectTarget))
 				{
-					foreach (var line in c.Lines)
+					index = i;
+					break;
+				}
+
+				foreach (DialogueLine ln in possibleCases[i].Lines)
+				{
+					if (!String.IsNullOrEmpty(ln.Marker) && speakerCase.Conditions.Find((c => c.Character == _character.FolderName && c.SayingMarker == ln.Marker)) != null)
 					{
-						lstBasicLines.Items.Add(line);
+						index = i;
+						break;
+					}
+
+					foreach (MarkerOperation marker in ln.Markers)
+					{
+						if (speakerCase.Conditions.Find((c => c.Character == _character.FolderName && c.SayingMarker == marker.Name)) != null)
+						{
+							index = i;
+							break;
+						}
+					}
+
+					if (index != -1) { break; }
+
+					if (speakerCase.Conditions.Find((c => c.Character == _character.FolderName && c.Saying == ln.Text)) != null)
+					{
+						index = i;
+						break;
 					}
 				}
-				else break;
+
+				if (index != -1) { break; }
+			}
+
+			if (index != -1)
+			{
+				lblBasicText.Text = possibleCases[index].ToString();
+				foreach (var line in possibleCases[index].Lines)
+				{
+					lstBasicLines.Items.Add(line);
+				}
 			}
 			return;
 		}
@@ -342,11 +379,23 @@ namespace SPNATI_Character_Editor.Activities
 
 			Case caseToRespondTo = _selectedData.Case;
 
-			if (!string.IsNullOrEmpty(_selectedData.Case.Filter) && string.IsNullOrEmpty(_selectedData.Case.Target))
+			bool hasTarget = false;
+			bool hasFilter = false;
+
+			foreach (TargetCondition condition in _selectedData.Case.Conditions)
+			{
+				if (condition.Role == "target" && condition.Character == _character.FolderName) { hasTarget = true; }
+				if (condition.Role == "target" && condition.FilterTag == _character.FolderName) { hasFilter = true; }
+			}
+
+			if (hasFilter && !hasTarget)
 			{
 				//If making a response to a line that has a filter but no target, assume they're targeting you directly
 				caseToRespondTo = _selectedData.Case.CopyConditions();
-				caseToRespondTo.Target = _character.FolderName;
+				TargetCondition theCondition = new TargetCondition();
+				theCondition.Role = "target";
+				theCondition.Character = _character.FolderName;
+				caseToRespondTo.Conditions.Add(theCondition);
 				caseToRespondTo.StageRange = _selectedData.Case.StageRange;
 			}
 

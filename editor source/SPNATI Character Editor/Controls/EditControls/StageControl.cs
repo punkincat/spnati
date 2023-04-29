@@ -305,7 +305,16 @@ namespace SPNATI_Character_Editor
             }
             else if (_skinVariable == "~_.costume~")
             {
-                string other = theCase.AlsoPlaying;
+                string other = "";
+                
+                foreach (TargetCondition cond in theCase.Conditions)
+                {
+                    if (cond.Role != "self" && cond.Role != "target" && cond.Character != null)
+                    {
+                        other = cond.Character;
+                    }
+                }
+
                 if (!string.IsNullOrEmpty(other))
                 {
                     key = CharacterDatabase.GetId(other);

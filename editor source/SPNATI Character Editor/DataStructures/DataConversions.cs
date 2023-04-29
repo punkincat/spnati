@@ -296,11 +296,11 @@ namespace SPNATI_Character_Editor
 			int count = 0;
 			foreach (Case wc in character.Behavior.GetWorkingCases())
 			{
-				if (wc.HasLegacyConditions())
+				/*if (wc.HasLegacyConditions())
 				{
 					ConvertCase5_2(wc);
 					count++;
-				}
+				}*/
 				foreach (TargetCondition condition in wc.Conditions)
 				{
 					if (condition.Hand == "Nothing")
@@ -318,11 +318,11 @@ namespace SPNATI_Character_Editor
 
 		public static void ConvertCase(Case theCase, Character character)
 		{
-			ConvertCase5_2(theCase);
+			//ConvertCase5_2(theCase);
 			ConvertCase5_8(theCase, character);
 		}
 
-		/// <summary>
+		/*/// <summary>
 		/// Converts a case to use TargetConditions where it previously used direct properties
 		/// </summary>
 		/// <param name="workingCase"></param>
@@ -567,7 +567,7 @@ namespace SPNATI_Character_Editor
 				workingCase.Conditions.Add(filter);
 				workingCase.TotalPlaying = null;
 			}
-		}
+		}*/
 
 		private static TargetCondition GetCondition(Case workingCase, string role, string character)
 		{
@@ -652,11 +652,11 @@ namespace SPNATI_Character_Editor
 			{
 				foreach (Case wsc in wc.AlternativeConditions)
 				{
-					if (wsc.HasLegacyConditions())
+					/*if (wsc.HasLegacyConditions())
 					{
 						ConvertCase5_2(wsc);
 						count++;
-					}
+					}*/
 					foreach (TargetCondition condition in wsc.Conditions)
 					{
 						if (condition.Hand == "Nothing")

@@ -1021,10 +1021,6 @@ namespace SPNATI_Character_Editor
 				if (size != null && character.Size != size)
 					return false;
 
-				if (stageCase.Filter != null && character.Tags.Find(t => t.Tag == stageCase.Filter) != null)
-				{
-					targetedByTag = true;
-				}
 				foreach (TargetCondition cond in stageCase.Conditions)
 				{
 					if (!string.IsNullOrEmpty(cond.FilterTag))
@@ -1060,9 +1056,23 @@ namespace SPNATI_Character_Editor
 				{
 					if (lines.Contains(line.Text))
 						continue;
-					if (stageCase.Target != character.FolderName && stageCase.AlsoPlaying != character.FolderName)
+
+					bool directlyTargeted = false;
+
+					foreach (TargetCondition cond in stageCase.Conditions)
+                    {
+						if (cond.Character == character.FolderName)
+                        {
+							directlyTargeted = true;
+							break;
+                        }
+                    }
+
+					if (directlyTargeted)
+						count++;
+					else
 						tagCount++;
-					else count++;
+
 					lines.Add(line.Text);
 				}
 			}
@@ -1082,11 +1092,8 @@ namespace SPNATI_Character_Editor
 			{
 				if (targetGender != "" && !stageCase.Tag.StartsWith(targetGender))
 					continue;
-				bool usesTag = (stageCase.Filter == tag);
-				if (!usesTag)
-				{
-					usesTag = stageCase.Conditions.Find(c => c.FilterTag == tag && c.Count != "0" && c.Count != "0-0") != null;
-				}
+				
+				bool usesTag = stageCase.Conditions.Find(c => c.FilterTag == tag && c.Count != "0" && c.Count != "0-0") != null;
 				if (usesTag)
 				{
 					foreach (var line in stageCase.Lines)
