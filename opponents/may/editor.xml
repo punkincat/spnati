@@ -246,6 +246,7 @@
         <response id="420" opponent="senko" opponentId="140" />
         <response id="422" opponent="senko" opponentId="15" />
         <response id="425" opponent="senko" opponentId="406" />
+        <response id="435" opponent="monika" opponentId="1141" />
     </responses>
     <notes>
         <note id="192">Lower priority than costume lines</note>
@@ -556,12 +557,14 @@
         <label id="199" label="" folder="Leonie to left" sort="0" />
         <label id="433" label="shorts" folder="" sort="0" />
         <label id="434" label="shorts" folder="" sort="0" />
+        <label id="437" label="" folder="Tea to right" sort="0" />
+        <label id="438" label="" folder="Tea to right" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>434</nextId>
+    <nextId>438</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrienSkitty" />
@@ -746,6 +749,8 @@
         <marker scope="Public" name="may_misty_double_dating" />
         <marker scope="Public" name="may_misty_no_romance" />
         <marker scope="Public" name="may_misty_unlucky_in_love" />
+        <marker scope="Public" name="may_monika_blazer_vanished" />
+        <marker scope="Public" name="may_monika_blazer_vanishing" />
         <marker scope="Public" name="may_moonlight" />
         <marker scope="Public" name="may_n1" />
         <marker scope="Public" name="may_nagatoro_anything_player_says" />
@@ -844,7 +849,9 @@
         <marker scope="Public" name="may_tea_end_friend" />
         <marker scope="Public" name="may_tea_mt_m1" />
         <marker scope="Public" name="may_tea_mt_m2" />
+        <marker scope="Public" name="may_tea_mt_m3" />
         <marker scope="Public" name="may_tea_mt_t1" />
+        <marker scope="Public" name="may_tea_mt_t2" />
         <marker scope="Public" name="may_tea_rival_win" />
         <marker scope="Public" name="may_tharja_jura_bad_side" />
         <marker scope="Public" name="may_tharja_jura_mean_spell" />
