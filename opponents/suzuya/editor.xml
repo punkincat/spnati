@@ -39,7 +39,13 @@
         <response id="249" opponent="cagliostro" opponentId="142" />
         <response id="256" opponent="adrien" opponentId="488" />
         <response id="272" opponent="cagliostro" opponentId="2" />
+        <response id="286" opponent="miko" opponentId="12" />
+        <response id="287" opponent="ringo_ando" opponentId="308" />
+        <response id="288" opponent="sucrose" opponentId="133" />
     </responses>
+    <notes>
+        <note id="281">whether you react to the question or the nickname is fine here</note>
+    </notes>
     <labels>
         <label id="1" label="" folder="filtered_category" sort="0" />
         <label id="2" label="" folder="filtered_category" sort="0" />
@@ -306,13 +312,27 @@
         <label id="270" label="" folder="target_cagliostro" sort="0" />
         <label id="271" label="" folder="target_cagliostro" sort="0" />
         <label id="272" label="" folder="prompt_responses" sort="0" />
+        <label id="273" label="" folder="target_elesa" sort="0" />
+        <label id="274" label="" folder="target_elesa" sort="0" />
+        <label id="275" label="" folder="target_elesa" sort="0" />
+        <label id="276" label="" folder="target_elesa" sort="0" />
+        <label id="277" label="" folder="target_senko" sort="0" />
+        <label id="278" label="" folder="target_senko" sort="0" />
+        <label id="279" label="" folder="target_senko" sort="0" />
+        <label id="281" label="" folder="target_elphaba" sort="0" />
+        <label id="282" label="" folder="target_roll" sort="0" />
+        <label id="283" label="" folder="target_nagamimi" sort="0" />
+        <label id="284" label="" folder="target_nagamimi" sort="0" />
+        <label id="285" label="" folder="target_nagamimi" sort="0" />
+        <label id="288" label="" folder="prompt_responses" sort="0" />
+        <label id="286" label="" folder="prompt_responses" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>272</nextId>
+    <nextId>288</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="__9s_nickname" />
+        <marker scope="Public" name="__elphaba_nickname" />
         <marker scope="Public" name="0muststrip_overdressed" />
         <marker scope="Public" name="9s00" />
         <marker scope="Public" name="9s01" />
@@ -347,6 +367,12 @@
         <marker scope="Public" name="dunban_suzuya_0a" />
         <marker scope="Public" name="dunban_suzuya_strip0a" />
         <marker scope="Public" name="dunban_suzuya_strip1a" />
+        <marker scope="Public" name="elesa00" />
+        <marker scope="Public" name="elesa01" />
+        <marker scope="Public" name="elesa02" />
+        <marker scope="Public" name="elphaba_00" />
+        <marker scope="Public" name="elphaba_suzuya_curious" />
+        <marker scope="Public" name="ephaba_00" />
         <marker scope="Public" name="eru_ask_favourite_food" />
         <marker scope="Public" name="first_forfeit" />
         <marker scope="Public" name="jura_suzuya0" />
@@ -366,12 +392,15 @@
         <marker scope="Public" name="minor_first" />
         <marker scope="Public" name="minor_outfitswap" />
         <marker scope="Public" name="minor_socks" />
+        <marker scope="Public" name="nagamimi_00" />
         <marker scope="Public" name="nami_pirate" />
         <marker scope="Public" name="noire00" />
         <marker scope="Public" name="noire01" />
         <marker scope="Public" name="placeholder" />
+        <marker scope="Public" name="q_miko_desires" />
         <marker scope="Public" name="queenie01" />
         <marker scope="Public" name="revy_suzuya0" />
+        <marker scope="Public" name="roll_00" />
         <marker scope="Public" name="selected_alley1" />
         <marker scope="Public" name="selected_bath1" />
         <marker scope="Public" name="selected_beach1" />
@@ -383,6 +412,9 @@
         <marker scope="Public" name="selected_tiki1" />
         <marker scope="Public" name="selected_water1" />
         <marker scope="Public" name="selection_3m" />
+        <marker scope="Public" name="senko00" />
+        <marker scope="Public" name="senko01" />
+        <marker scope="Public" name="senko02" />
         <marker scope="Public" name="stripping_atudent" />
         <marker scope="Public" name="stripping_dark" />
         <marker scope="Public" name="stripping_fancy" />
@@ -418,6 +450,7 @@
         <marker scope="Public" name="stripping_wealthy" />
         <marker scope="Public" name="stripping_weapon" />
         <marker scope="Public" name="stripping_winged" />
+        <marker scope="Public" name="sucrose_flowers" />
         <marker scope="Public" name="suzuya_jacket_off" />
         <marker scope="Public" name="suzuya_prompt_bloodtypes" />
         <marker scope="Public" name="suzuya_prompt_datespots" />
@@ -459,6 +492,7 @@
         <line>Senko: Something about abura-age and offerings?</line>
         <line>Nagatoro: mischevious onee-san, gotta target the swimsuit</line>
         <line>Bobobo: literally everything I guess?</line>
-        <line>---- Adrien</line>
+        <line>---- </line>
+        <line>Oh, it's a cute little kitsune! Senko, you're adorbs!</line>
     </pendingLines>
 </metadata>
