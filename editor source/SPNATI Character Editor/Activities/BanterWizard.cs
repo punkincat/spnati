@@ -189,7 +189,7 @@ namespace SPNATI_Character_Editor.Activities
 				}
 			}
 
-			if (trigger.Tag.Contains("_removing_"))
+			if (trigger.Tag.Contains("_removing_") || trigger.Tag == "opponent_stripping")
 			{
 				int stage;
 				if (int.TryParse(theCondition.Stage, out stage))
@@ -202,7 +202,7 @@ namespace SPNATI_Character_Editor.Activities
 					return "Removing " + layer;
 				}
 			}
-			else if (trigger.Tag.Contains("_removed_"))
+			else if (trigger.Tag.Contains("_removed_") || trigger.Tag == "opponent_stripped")
 			{
 				int stage;
 				if (int.TryParse(theCondition.Stage, out stage))
