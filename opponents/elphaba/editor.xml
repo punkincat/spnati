@@ -5,6 +5,19 @@
     <age />
     <pronunciation>El-fuh-baa</pronunciation>
     <othernotes />
+    <noteworthy>
+        <case name="Golden Rule (Hand Any - Kind)" id="119" priority="Noteworthy" min="2" max="7">
+            <description>Elphaba talks about the golden rule.</description>
+        </case>
+        <case name="Unusual Skin (Hand Any)" id="120" priority="Noteworthy" min="0" max="0">
+            <description>Elphaba talks about her origins and her green skin.</description>
+        </case>
+    </noteworthy>
+    <reviewed>true</reviewed>
+    <responses>
+        <response id="108" opponent="rouge" opponentId="6" />
+        <response id="133" opponent="starfire" opponentId="157" />
+    </responses>
     <labels>
         <label id="51" label="" folder="Targets" sort="0" />
         <label id="52" label="" folder="Targets" sort="0" />
@@ -37,30 +50,113 @@
         <label id="79" label="" folder="Targets" sort="0" />
         <label id="80" label="" folder="Targets" sort="0" />
         <label id="81" label="" folder="Targets" sort="0" />
+        <label id="82" label="" folder="Targets" sort="0" />
+        <label id="83" label="" folder="Flying" sort="0" />
+        <label id="84" label="" folder="Flying" sort="0" />
+        <label id="85" label="" folder="Flying" sort="0" />
+        <label id="86" label="" folder="Flying" sort="0" />
+        <label id="87" label="" folder="Flying" sort="0" />
+        <label id="88" label="" folder="Flying" sort="0" />
+        <label id="89" label="" folder="Flying" sort="0" />
+        <label id="90" label="" folder="Flying" sort="0" />
+        <label id="91" label="" folder="Flying" sort="0" />
+        <label id="92" label="" folder="Flying" sort="0" />
+        <label id="93" label="" folder="Flying" sort="0" />
+        <label id="94" label="" folder="Flying" sort="0" />
+        <label id="95" label="" folder="Flying" sort="0" />
+        <label id="96" label="" folder="Flying" sort="0" />
+        <label id="49" label="" folder="Flying" sort="0" />
+        <label id="97" label="" folder="Flying" sort="0" />
+        <label id="98" label="" folder="Flying" sort="0" />
+        <label id="99" label="" folder="Flying" sort="0" />
+        <label id="100" label="" folder="Flying" sort="0" />
+        <label id="101" label="" folder="Flying" sort="0" />
+        <label id="102" label="" folder="Flying" sort="0" />
+        <label id="103" label="" folder="Flying" sort="0" />
+        <label id="104" label="" folder="Flying" sort="0" />
+        <label id="105" label="" folder="Targets" sort="0" />
+        <label id="106" label="" folder="Targets" sort="0" />
+        <label id="107" label="" folder="Targets" sort="0" />
+        <label id="108" label="" folder="Targets" sort="0" />
+        <label id="109" label="" folder="Targets" sort="0" />
+        <label id="110" label="" folder="Targets" sort="0" />
+        <label id="111" label="" folder="Targets" sort="0" />
+        <label id="112" label="" folder="Targets" sort="0" />
+        <label id="113" label="" folder="Targets" sort="0" />
+        <label id="114" label="" folder="Targets" sort="0" />
+        <label id="115" label="" folder="Targets" sort="0" />
+        <label id="116" label="" folder="Targets" sort="0" />
+        <label id="117" label="" folder="Targets" sort="0" />
+        <label id="118" label="" folder="Targets" sort="0" />
+        <label id="121" label="" folder="Targets" sort="0" />
+        <label id="122" label="" folder="Targets" sort="0" />
+        <label id="123" label="" folder="Targets" sort="0" />
+        <label id="124" label="" folder="Targets" sort="0" />
+        <label id="125" label="" folder="Targets" sort="0" />
+        <label id="126" label="" folder="Targets" sort="0" />
+        <label id="127" label="" folder="Targets" sort="0" />
+        <label id="128" label="" folder="targets" sort="0" />
+        <label id="129" label="" folder="targets" sort="0" />
+        <label id="130" label="" folder="Targets" sort="0" />
+        <label id="131" label="" folder="Targets" sort="0" />
+        <label id="132" label="" folder="Targets" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>81</nextId>
+    <nextId>133</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="9S_android" />
         <marker scope="Public" name="akko_start" />
         <marker scope="Public" name="akkoLotte_start" />
+        <marker scope="Public" name="anatoly_paska" />
         <marker scope="Public" name="aqua_muststrip2a" />
         <marker scope="Public" name="aqua_muststrip2b" />
+        <marker scope="Public" name="aqua_oz" />
         <marker scope="Public" name="arle_broomResponse" />
+        <marker scope="Public" name="arle_witchclana" />
+        <marker scope="Public" name="arle_witchclanb" />
         <marker scope="Public" name="arle_witchclanResponse" />
         <marker scope="Public" name="blonde" />
         <marker scope="Public" name="blondes" />
         <marker scope="Public" name="cagliostro_alchemy" />
         <marker scope="Public" name="chara_start" />
+        <marker scope="Public" name="dunban_armHurt" />
+        <marker scope="Public" name="dwight_" />
+        <marker scope="Public" name="dwight_bothered" />
+        <marker scope="Public" name="eichi_fame" />
         <marker scope="Public" name="elphaba_Animal" />
         <marker scope="Public" name="elphaba_badgame" />
         <marker scope="Public" name="elphaba_complaint" />
+        <marker scope="Public" name="elphaba_firstImpressions" />
         <marker scope="Public" name="elphaba_flying" />
+        <marker scope="Public" name="elphaba_flying_gameStart" />
+        <marker scope="Public" name="elphaba_flying_handAny" />
+        <marker scope="Public" name="elphaba_flying_handBad" />
+        <marker scope="Public" name="elphaba_flying_handGood" />
+        <marker scope="Public" name="elphaba_flying_handOkay" />
+        <marker scope="Public" name="elphaba_flying_start" />
+        <marker scope="Public" name="elphaba_flying_swap" />
+        <marker scope="Public" name="elphaba_flying0" />
+        <marker scope="Public" name="elphaba_flying1" />
+        <marker scope="Public" name="elphaba_flyingStripped0" />
+        <marker scope="Public" name="elphaba_flyingStripped1" />
+        <marker scope="Public" name="elphaba_flyingStripped2" />
+        <marker scope="Public" name="elphaba_flyingStripping0" />
+        <marker scope="Public" name="elphaba_flyingStripping1" />
         <marker scope="Public" name="elphaba_Glad" />
+        <marker scope="Public" name="elphaba_greenskin" />
         <marker scope="Public" name="elphaba_grimmerie" />
         <marker scope="Public" name="elphaba_insecurity" />
         <marker scope="Public" name="elphaba_karma" />
+        <marker scope="Public" name="elphaba_lastName" />
+        <marker scope="Public" name="elphaba_maleMustStrip" />
+        <marker scope="Public" name="elphaba_movie" />
+        <marker scope="Public" name="elphaba_nonHerm" />
+        <marker scope="Public" name="elphaba_oldFriends" />
+        <marker scope="Public" name="elphaba_philosophy1" />
+        <marker scope="Public" name="elphaba_pokerDefinition" />
+        <marker scope="Public" name="elphaba_reassurance" />
         <marker scope="Public" name="elphaba_strip0" />
         <marker scope="Public" name="elphaba_strip1" />
         <marker scope="Public" name="elphaba_strip2" />
@@ -76,32 +172,50 @@
         <marker scope="Public" name="elphaba_stripped6" />
         <marker scope="Public" name="elphaba_stripped7" />
         <marker scope="Public" name="elphaba_unusualskin" />
+        <marker scope="Public" name="elphaba_unusualSkin" />
         <marker scope="Public" name="elphaba_villain" />
         <marker scope="Public" name="elphaba_witch" />
         <marker scope="Public" name="felix_hybrids" />
         <marker scope="Public" name="felix_strip0" />
+        <marker scope="Public" name="fluttershy_yellowSkin" />
+        <marker scope="Public" name="flying_maleMustStrip" />
+        <marker scope="Public" name="gruntilda_greenSkin" />
+        <marker scope="Public" name="jura_aura" />
         <marker scope="Public" name="jura_babyBook" />
         <marker scope="Public" name="jura_green_skin" />
+        <marker scope="Public" name="komi_mute" />
         <marker scope="Public" name="kyoko_kirigiri_detective" />
         <marker scope="Public" name="kyoko_kirigiri_witchcraft" />
+        <marker scope="Public" name="kyoko_notWitchcraft" />
+        <marker scope="Public" name="kyoko_sorceryVsWitchcraft" />
         <marker scope="Public" name="kyoko_witchcraft" />
         <marker scope="Public" name="kyouko_infectious" />
+        <marker scope="Public" name="leon_similarity" />
         <marker scope="Public" name="lucy_celestialKeys" />
         <marker scope="Public" name="mari_relationship" />
         <marker scope="Public" name="maria_SMODE" />
         <marker scope="Public" name="meia_elphaba0Response" />
         <marker scope="Public" name="mitama_haiku" />
+        <marker scope="Public" name="nagamimi_dragons" />
+        <marker scope="Public" name="nagatoro_meanGirl" />
+        <marker scope="Public" name="nami_climaTact" />
         <marker scope="Public" name="petra_strip0a_Response" />
         <marker scope="Public" name="petra_strip1a_Response" />
         <marker scope="Public" name="queenie_hero" />
         <marker scope="Public" name="revy_elphaba0Response" />
         <marker scope="Public" name="ribbon_girl_ribbons" />
         <marker scope="Public" name="roll_mechanic" />
+        <marker scope="Public" name="rouge_jewel" />
         <marker scope="Public" name="sempai_magic" />
         <marker scope="Public" name="solar_flower" />
         <marker scope="Public" name="steve_getup" />
+        <marker scope="Public" name="suzuya_00" />
         <marker scope="Public" name="suzuya_curious" />
+        <marker scope="Public" name="suzuya_elphaba_curious" />
         <marker scope="Public" name="tea_cardGame" />
+        <marker scope="Public" name="trixie_munchkin" />
+        <marker scope="Public" name="yuelia_butterfly" />
         <marker scope="Public" name="yuna_spirits" />
+        <marker scope="Public" name="YunaVest1Reply" />
     </markers>
 </metadata>
