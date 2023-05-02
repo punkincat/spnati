@@ -155,6 +155,9 @@
         <response id="720" opponent="arle" opponentId="98" />
         <response id="721" opponent="arle" opponentId="110" />
         <response id="722" opponent="nagatoro" opponentId="2026" />
+        <response id="724" opponent="petra" opponentId="734" />
+        <response id="729" opponent="arle" opponentId="186" />
+        <response id="730" opponent="elphaba" opponentId="62" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -177,6 +180,7 @@
         <note id="575">Will only play the first time Aqua sees this</note>
         <note id="576">Will only play the first time Aqua sees this</note>
         <note id="687">She also says aqua_nagatoro_s0c at the same time here</note>
+        <note id="727">she's going to say something like "I think your hearts were connected/resonated with each other", you know KH stuff</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Player Names" sort="0" />
@@ -891,12 +895,29 @@
         <label id="721" label="" folder="Responses" sort="0" />
         <label id="722" label="" folder="Responses" sort="0" />
         <label id="723" label="" color="3" folder="Targets" sort="0" />
+        <label id="724" label="" folder="Targets" sort="0" />
+        <label id="725" label="" folder="Tag Filtered" sort="0" />
+        <label id="726" label="" folder="Targets" sort="0" />
+        <label id="727" label="" folder="Targets" sort="0" />
+        <label id="728" label="" folder="Targets" sort="0" />
+        <label id="729" label="" folder="Responses" sort="0" />
+        <label id="730" label="" folder="Responses" sort="0" />
+        <label id="731" label="" folder="Targets" sort="0" />
+        <label id="732" label="" folder="Monika" sort="0" />
+        <label id="733" label="" folder="Monika" sort="0" />
+        <label id="734" label="" folder="Monika" sort="0" />
+        <label id="735" label="" folder="Dunban" sort="0" />
+        <label id="736" label="" folder="Monika" sort="0" />
+        <label id="737" label="" folder="Monika" sort="0" />
+        <label id="738" label="" folder="Targets" sort="0" />
+        <label id="739" label="" folder="Targets" sort="0" />
+        <label id="740" label="" folder="Targets" sort="0" />
+        <label id="741" label="" folder="Monika" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>723</nextId>
+    <nextId>741</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="__lucina_nickname" />
         <marker scope="Public" name="ag_aquaKH_strip0b" />
         <marker scope="Public" name="aqua_aaravi_hydro1" />
@@ -947,6 +968,7 @@
         <marker scope="Public" name="aqua_dunban_piercer2" />
         <marker scope="Public" name="aqua_dunban_s1_a" />
         <marker scope="Public" name="aqua_dunban_s1_b" />
+        <marker scope="Public" name="aqua_dunban_s1_c" />
         <marker scope="Public" name="aqua_dunban_shirtless1" />
         <marker scope="Public" name="aqua_dunban_shirtless2" />
         <marker scope="Public" name="aqua_dunban_shirtless3" />
@@ -960,6 +982,7 @@
         <marker scope="Public" name="aqua_dwight_self0a" />
         <marker scope="Public" name="aqua_dwight_self1a" />
         <marker scope="Public" name="aqua_dwight_self2a" />
+        <marker scope="Public" name="aqua_elphaba_self2a" />
         <marker scope="Public" name="aqua_elphaba_strip0a" />
         <marker scope="Public" name="aqua_elphaba_strip1a" />
         <marker scope="Public" name="aqua_epilogue_seen" />
@@ -1054,6 +1077,12 @@
         <marker scope="Public" name="aqua_mitama_self0a" />
         <marker scope="Public" name="aqua_mitama_shrinemaiden1" />
         <marker scope="Public" name="aqua_mitama_shrinemaiden2" />
+        <marker scope="Public" name="aqua_moni_blazer_deleted" />
+        <marker scope="Public" name="aqua_moni_blazer_removed" />
+        <marker scope="Public" name="aqua_monika_hairdown" />
+        <marker scope="Public" name="aqua_monika_hairfilterResp" />
+        <marker scope="Public" name="aqua_monika_muststrip_CE" />
+        <marker scope="Public" name="aqua_monika_muststrip_CODE" />
         <marker scope="Public" name="aqua_mustFF" />
         <marker scope="Public" name="aqua_nadia_finished" />
         <marker scope="Public" name="aqua_nagamimi_flawsPromptResp" />
@@ -1129,6 +1158,7 @@
         <marker scope="Public" name="aqua_tao21_ALT" />
         <marker scope="Public" name="aqua_tao53" />
         <marker scope="Public" name="aqua_tea_strip0a" />
+        <marker scope="Public" name="aqua_tea_strip0b" />
         <marker scope="Public" name="aqua_toph_bendingmagic1" />
         <marker scope="Public" name="aqua_toph_bendingmagic2" />
         <marker scope="Public" name="aqua_toph_hairdown" />
@@ -1137,6 +1167,7 @@
         <marker scope="Public" name="aqua_toshinou_hobbies3" />
         <marker scope="Public" name="aqua_toshinou_lanesbetween1" />
         <marker scope="Public" name="aqua_toshinou_worldhopping1" />
+        <marker scope="Public" name="aqua_traverselanesResp" />
         <marker scope="Public" name="aqua_trixie_chestKey1" />
         <marker scope="Public" name="aqua_trixie_dungeonResp" />
         <marker scope="Public" name="aqua_wikipetan_bluehair" />
@@ -1152,8 +1183,11 @@
         <marker scope="Public" name="aqua_yshtola_self3a" />
         <marker scope="Public" name="aqua_yshtola_self3b" />
         <marker scope="Public" name="aqua_yuna_intro1" />
+        <marker scope="Public" name="aqua_yuna_intro2" />
         <marker scope="Public" name="aqua_yuna_partners1" />
+        <marker scope="Public" name="aqua_yuna_partners2" />
         <marker scope="Public" name="aqua_yuna_spirits1" />
+        <marker scope="Public" name="aqua_yuna_spirits2" />
         <marker scope="Public" name="aqua_yuno_friends1">Dialogue with Yuno</marker>
         <marker scope="Public" name="aqua_yuno_saveworld1">Dialogue with Yuno</marker>
         <marker scope="Public" name="aquaKH_ag_strip0a">Dialogue towards the Aqua Grunt</marker>
@@ -1257,6 +1291,7 @@
         <marker scope="Public" name="oppselect_playerbirthday_friends" />
         <marker scope="Public" name="oppselected_aqua_konosuba">Aqua from Konosuba is an opponent when this Aqua has just been selected</marker>
         <marker scope="Public" name="other_exposed_thighhighs" />
+        <marker scope="Public" name="petra_queenie_Country2_KHComment" />
         <marker scope="Public" name="player_goodmode" />
         <marker scope="Private" name="player_pogchamp">Player named themself Pogchamp or variants</marker>
         <marker scope="Public" name="ribbongirl_celebNudityResp" />
