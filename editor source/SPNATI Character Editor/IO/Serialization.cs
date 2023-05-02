@@ -1,4 +1,4 @@
-﻿using SPNATI_Character_Editor.DataStructures;
+using SPNATI_Character_Editor.DataStructures;
 using SPNATI_Character_Editor.IO;
 using System;
 using System.Collections.Generic;
@@ -64,14 +64,38 @@ namespace SPNATI_Character_Editor
 			}
 
 			string timestamp = GetTimeStamp();
-			bool success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
+
+            string banterPath = Path.Combine(dir,"banter.xml");
+			bool success;
+			if (!File.Exists(banterPath))
+			{
+                success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
 				BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
 				BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
 				BackupAndExportXml(character, CharacterDatabase.GetEditorData(character), "editor", timestamp) &&
 				BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
 				CharacterHistory.Save(character);
+            }
+			else if (character.BanterData.Timestamp == 0)
+			{
+                success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
+				BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
+				BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
+				BackupAndExportXml(character, CharacterDatabase.GetEditorData(character), "editor", timestamp) &&
+				BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
+				CharacterHistory.Save(character);
+			}
+            else {
+                success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
+                BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
+                BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
+                BackupAndExportXml(character, CharacterDatabase.GetEditorData(character), "editor", timestamp) &&
+                BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
+                BackupAndExportXml(character, character.BanterData, "banter", timestamp) &&
+                CharacterHistory.Save(character);
+            }
 
-			if (success && !string.IsNullOrEmpty(character.StyleSheetName))
+            if (success && !string.IsNullOrEmpty(character.StyleSheetName))
 			{
 				CharacterStyleSheetSerializer.Save(character, character.Styles);
 			}
@@ -271,7 +295,41 @@ namespace SPNATI_Character_Editor
 			}
 		}
 
-		public static Character ImportCharacter(string folderName)
+		public static Banter ImportBanter(string folderName)
+		{
+            string folder = Config.GetRootDirectory(folderName);
+            if (!Directory.Exists(folder))
+                return null;
+
+            string filename = Path.Combine(folder, "banter.xml");
+            if (!File.Exists(filename))
+                return null;
+
+            return ImportXml<Banter>(filename);
+        }
+
+        public static bool BackupBanter(Character character, string timestamp)
+        {
+            string dir = Config.GetRootDirectory(character);
+            string filename = Path.Combine(dir, "banter.xml");
+
+            bool deleteTags = false;
+            bool deleteHeight = false;
+
+            if (ExportXml(character.BanterData, filename, deleteTags, deleteHeight))
+            {
+                bool backupEnabled = Config.BackupEnabled;
+                if (backupEnabled)
+                {
+                    BackupFile(character, "banter", timestamp);
+                }
+                return true;
+            }
+            return false;
+        }
+
+
+        public static Character ImportCharacter(string folderName)
 		{
 			string folder = Config.GetRootDirectory(folderName);
 			if (!Directory.Exists(folder))

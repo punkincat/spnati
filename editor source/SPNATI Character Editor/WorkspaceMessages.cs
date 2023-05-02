@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+using System.Drawing;
 
 namespace SPNATI_Character_Editor
 {
@@ -43,9 +43,15 @@ namespace SPNATI_Character_Editor
 		/// Sent to inform the preview sidebar to update its image [List&lt;string&gt;: markers that are set]
 		/// </summary>
 		public const int UpdateMarkers = 8;
-	}
 
-	public class UpdateImageArgs
+		/// <summary>
+		/// Sent when the previewed character has changed
+		/// </summary>
+		public const int PreviewCharacterChanged = 9;
+
+    }
+
+    public class UpdateImageArgs
 	{
 		public PoseMapping Pose;
 		public int Stage;

@@ -1,4 +1,4 @@
-﻿namespace SPNATI_Character_Editor.Activities
+namespace SPNATI_Character_Editor.Activities
 {
 	partial class BanterWizard
 	{
@@ -33,15 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.cmdFilter = new Desktop.Skinning.SkinnedButton();
+            this.cmdLoadBanter = new Desktop.Skinning.SkinnedButton();
+            this.cmdUpdateBanter = new Desktop.Skinning.SkinnedButton();
+            this.cmdSaveBanter = new Desktop.Skinning.SkinnedButton();
             this.lstCharacters = new Desktop.Skinning.SkinnedListBox();
             this.lblCharacters = new Desktop.Skinning.SkinnedLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.grpLines = new Desktop.Skinning.SkinnedGroupBox();
+            this.cmdColorCode = new System.Windows.Forms.Button();
             this.gridLines = new Desktop.Skinning.SkinnedDataGridView();
-            this.ColText = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColStage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCase = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNoMatches = new Desktop.Skinning.SkinnedLabel();
             this.cmdCreateResponse = new Desktop.Skinning.SkinnedButton();
             this.lblCaseInfo = new Desktop.Skinning.SkinnedLabel();
@@ -61,6 +61,12 @@
             this.lblProgress = new Desktop.Skinning.SkinnedLabel();
             this.progress = new Desktop.Skinning.SkinnedProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ColColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNewness = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColText = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColStage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColJump = new Desktop.Skinning.SkinnedDataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -88,7 +94,9 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.cmdFilter);
+            this.splitContainer1.Panel1.Controls.Add(this.cmdLoadBanter);
+            this.splitContainer1.Panel1.Controls.Add(this.cmdUpdateBanter);
+            this.splitContainer1.Panel1.Controls.Add(this.cmdSaveBanter);
             this.splitContainer1.Panel1.Controls.Add(this.lstCharacters);
             this.splitContainer1.Panel1.Controls.Add(this.lblCharacters);
             // 
@@ -100,21 +108,50 @@
             this.splitContainer1.SplitterDistance = 206;
             this.splitContainer1.TabIndex = 1;
             // 
-            // cmdFilter
+            // cmdLoadBanter
             // 
-            this.cmdFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdFilter.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.cmdFilter.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.cmdFilter.Flat = false;
-            this.cmdFilter.Location = new System.Drawing.Point(12, 25);
-            this.cmdFilter.Name = "cmdFilter";
-            this.cmdFilter.Size = new System.Drawing.Size(184, 23);
-            this.cmdFilter.TabIndex = 5;
-            this.cmdFilter.Text = "Filter Targets";
-            this.toolTip1.SetToolTip(this.cmdFilter, "Only display characters who actually target yours. Very slow!");
-            this.cmdFilter.UseVisualStyleBackColor = true;
-            this.cmdFilter.Click += new System.EventHandler(this.cmdFilter_Click);
+            this.cmdLoadBanter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdLoadBanter.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdLoadBanter.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
+            this.cmdLoadBanter.Flat = false;
+            this.cmdLoadBanter.Location = new System.Drawing.Point(12, 585);
+            this.cmdLoadBanter.Name = "cmdLoadBanter";
+            this.cmdLoadBanter.Size = new System.Drawing.Size(141, 23);
+            this.cmdLoadBanter.TabIndex = 8;
+            this.cmdLoadBanter.Text = "Load";
+            this.toolTip1.SetToolTip(this.cmdLoadBanter, "Load banter data from a file.");
+            this.cmdLoadBanter.UseVisualStyleBackColor = true;
+            this.cmdLoadBanter.Click += new System.EventHandler(this.cmdLoadBanter_Click);
+            // 
+            // cmdUpdateBanter
+            // 
+            this.cmdUpdateBanter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdUpdateBanter.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdUpdateBanter.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
+            this.cmdUpdateBanter.Flat = false;
+            this.cmdUpdateBanter.Location = new System.Drawing.Point(12, 615);
+            this.cmdUpdateBanter.Name = "cmdUpdateBanter";
+            this.cmdUpdateBanter.Size = new System.Drawing.Size(141, 23);
+            this.cmdUpdateBanter.TabIndex = 7;
+            this.cmdUpdateBanter.Text = "Generate";
+            this.toolTip1.SetToolTip(this.cmdUpdateBanter, "Generate banter data. This may take a long time.");
+            this.cmdUpdateBanter.UseVisualStyleBackColor = true;
+            this.cmdUpdateBanter.Click += new System.EventHandler(this.cmdUpdateBanter_Click);
+            // 
+            // cmdSaveBanter
+            // 
+            this.cmdSaveBanter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdSaveBanter.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdSaveBanter.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.cmdSaveBanter.Flat = false;
+            this.cmdSaveBanter.Location = new System.Drawing.Point(12, 645);
+            this.cmdSaveBanter.Name = "cmdSaveBanter";
+            this.cmdSaveBanter.Size = new System.Drawing.Size(141, 23);
+            this.cmdSaveBanter.TabIndex = 6;
+            this.cmdSaveBanter.Text = "Save all";
+            this.toolTip1.SetToolTip(this.cmdSaveBanter, "Save banter data to a file. They are also saved when you save the character.");
+            this.cmdSaveBanter.UseVisualStyleBackColor = true;
+            this.cmdSaveBanter.Click += new System.EventHandler(this.cmdSaveBanter_Click);
             // 
             // lstCharacters
             // 
@@ -124,7 +161,7 @@
             this.lstCharacters.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lstCharacters.ForeColor = System.Drawing.Color.Black;
             this.lstCharacters.FormattingEnabled = true;
-            this.lstCharacters.Location = new System.Drawing.Point(12, 51);
+            this.lstCharacters.Location = new System.Drawing.Point(12, 30);
             this.lstCharacters.Name = "lstCharacters";
             this.lstCharacters.Size = new System.Drawing.Size(184, 303);
             this.lstCharacters.TabIndex = 1;
@@ -165,6 +202,7 @@
             // grpLines
             // 
             this.grpLines.BackColor = System.Drawing.Color.White;
+            this.grpLines.Controls.Add(this.cmdColorCode);
             this.grpLines.Controls.Add(this.gridLines);
             this.grpLines.Controls.Add(this.lblNoMatches);
             this.grpLines.Controls.Add(this.cmdCreateResponse);
@@ -179,6 +217,17 @@
             this.grpLines.TabIndex = 5;
             this.grpLines.TabStop = false;
             this.grpLines.Text = "Lines";
+            // 
+            // cmdColorCode
+            // 
+            this.cmdColorCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdColorCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdColorCode.Location = new System.Drawing.Point(10, 243);
+            this.cmdColorCode.Name = "cmdColorCode";
+            this.cmdColorCode.Size = new System.Drawing.Size(75, 23);
+            this.cmdColorCode.TabIndex = 5;
+            this.cmdColorCode.UseVisualStyleBackColor = true;
+            this.cmdColorCode.Click += new System.EventHandler(this.cmdColorCode_Click);
             // 
             // gridLines
             // 
@@ -199,9 +248,12 @@
             this.gridLines.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridLines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridLines.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColColor,
+            this.ColNewness,
             this.ColText,
             this.ColStage,
-            this.ColCase});
+            this.ColCase,
+            this.ColJump});
             this.gridLines.Data = null;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -229,28 +281,9 @@
             this.gridLines.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridLines.Size = new System.Drawing.Size(939, 212);
             this.gridLines.TabIndex = 0;
+            this.gridLines.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLines_CellContentClick);
             this.gridLines.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLines_CellEnter);
-            // 
-            // ColText
-            // 
-            this.ColText.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColText.HeaderText = "Text";
-            this.ColText.Name = "ColText";
-            this.ColText.ReadOnly = true;
-            // 
-            // ColStage
-            // 
-            this.ColStage.HeaderText = "Stages";
-            this.ColStage.Name = "ColStage";
-            this.ColStage.ReadOnly = true;
-            this.ColStage.Width = 50;
-            // 
-            // ColCase
-            // 
-            this.ColCase.HeaderText = "Case";
-            this.ColCase.Name = "ColCase";
-            this.ColCase.ReadOnly = true;
-            this.ColCase.Width = 150;
+            this.gridLines.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.gridLines_CellPainting);
             // 
             // lblNoMatches
             // 
@@ -272,11 +305,13 @@
             this.cmdCreateResponse.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.cmdCreateResponse.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
             this.cmdCreateResponse.Flat = false;
-            this.cmdCreateResponse.Location = new System.Drawing.Point(804, 243);
+            this.cmdCreateResponse.Location = new System.Drawing.Point(803, 243);
             this.cmdCreateResponse.Name = "cmdCreateResponse";
             this.cmdCreateResponse.Size = new System.Drawing.Size(141, 23);
             this.cmdCreateResponse.TabIndex = 0;
             this.cmdCreateResponse.Text = "Create Response";
+            this.toolTip1.SetToolTip(this.cmdCreateResponse, "Responding via this button is possible but not recommended.\nUsually, it is better" +
+        " to use the arrow buttons above and respond from the Dialogue tab.");
             this.cmdCreateResponse.UseVisualStyleBackColor = true;
             this.cmdCreateResponse.Click += new System.EventHandler(this.cmdCreateResponse_Click);
             // 
@@ -507,6 +542,55 @@
             this.progress.Size = new System.Drawing.Size(784, 23);
             this.progress.TabIndex = 0;
             // 
+            // ColColor
+            // 
+            this.ColColor.HeaderText = "";
+            this.ColColor.Name = "ColColor";
+            this.ColColor.ReadOnly = true;
+            this.ColColor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColColor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColColor.ToolTipText = "Color selector";
+            this.ColColor.Width = 20;
+            // 
+            // ColNewness
+            // 
+            this.ColNewness.HeaderText = "";
+            this.ColNewness.Name = "ColNewness";
+            this.ColNewness.ReadOnly = true;
+            this.ColNewness.ToolTipText = "New lines";
+            this.ColNewness.Width = 20;
+            // 
+            // ColText
+            // 
+            this.ColText.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColText.HeaderText = "Text";
+            this.ColText.Name = "ColText";
+            this.ColText.ReadOnly = true;
+            // 
+            // ColStage
+            // 
+            this.ColStage.HeaderText = "Stages";
+            this.ColStage.Name = "ColStage";
+            this.ColStage.ReadOnly = true;
+            this.ColStage.Width = 50;
+            // 
+            // ColCase
+            // 
+            this.ColCase.HeaderText = "Case";
+            this.ColCase.Name = "ColCase";
+            this.ColCase.ReadOnly = true;
+            this.ColCase.Width = 150;
+            // 
+            // ColJump
+            // 
+            this.ColJump.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.ColJump.Flat = false;
+            this.ColJump.HeaderText = "";
+            this.ColJump.Name = "ColJump";
+            this.ColJump.ReadOnly = true;
+            this.ColJump.ToolTipText = "Jump to the Dialogue tab";
+            this.ColJump.Width = 21;
+            // 
             // BanterWizard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,34 +625,40 @@
 
 		#endregion
 
-		private System.Windows.Forms.SplitContainer splitContainer1;
-		private Desktop.Skinning.SkinnedListBox lstCharacters;
-		private Desktop.Skinning.SkinnedLabel lblCharacters;
-		private System.Windows.Forms.SplitContainer splitContainer2;
-		private Desktop.Skinning.SkinnedLabel lblCaseInfo;
-		private Desktop.Skinning.SkinnedButton cmdCreateResponse;
-		private Desktop.Skinning.SkinnedDataGridView gridLines;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ColText;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ColStage;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ColCase;
-		private System.Windows.Forms.SplitContainer splitContainer3;
-		private Desktop.Skinning.SkinnedLabel lblBasicText;
-		private Desktop.Skinning.SkinnedListBox lstBasicLines;
-		private Desktop.Skinning.SkinnedLabel lblNoMatches;
-		private Desktop.Skinning.SkinnedButton cmdFilter;
-		private System.Windows.Forms.ToolTip toolTip1;
-		private Desktop.Skinning.SkinnedGroupBox grpLines;
-		private Desktop.Skinning.SkinnedGroupBox grpBaseLine;
-		private Desktop.Skinning.SkinnedLabel skinnedLabel1;
-		private Desktop.Skinning.SkinnedGroupBox grpResponse;
-		private Desktop.Skinning.SkinnedLabel skinnedLabel2;
-		private Controls.CaseControl ctlResponse;
-		private Desktop.Skinning.SkinnedButton cmdDiscard;
-		private Desktop.Skinning.SkinnedButton cmdAccept;
-		private Desktop.Skinning.SkinnedButton cmdJump;
-		private Controls.DialogueGrid gridResponse;
-		private Desktop.Skinning.SkinnedPanel panelLoad;
-		private Desktop.Skinning.SkinnedProgressBar progress;
-		private Desktop.Skinning.SkinnedLabel lblProgress;
-	}
+	private System.Windows.Forms.SplitContainer splitContainer1;
+	private Desktop.Skinning.SkinnedListBox lstCharacters;
+	private Desktop.Skinning.SkinnedLabel lblCharacters;
+	private System.Windows.Forms.SplitContainer splitContainer2;
+	private Desktop.Skinning.SkinnedLabel lblCaseInfo;
+	private Desktop.Skinning.SkinnedButton cmdCreateResponse;
+	private Desktop.Skinning.SkinnedDataGridView gridLines;
+	private System.Windows.Forms.SplitContainer splitContainer3;
+	private Desktop.Skinning.SkinnedLabel lblBasicText;
+	private Desktop.Skinning.SkinnedListBox lstBasicLines;
+	private Desktop.Skinning.SkinnedLabel lblNoMatches;
+	private System.Windows.Forms.ToolTip toolTip1;
+	private Desktop.Skinning.SkinnedGroupBox grpLines;
+	private Desktop.Skinning.SkinnedGroupBox grpBaseLine;
+	private Desktop.Skinning.SkinnedLabel skinnedLabel1;
+	private Desktop.Skinning.SkinnedGroupBox grpResponse;
+	private Desktop.Skinning.SkinnedLabel skinnedLabel2;
+	private Controls.CaseControl ctlResponse;
+	private Desktop.Skinning.SkinnedButton cmdDiscard;
+	private Desktop.Skinning.SkinnedButton cmdAccept;
+	private Desktop.Skinning.SkinnedButton cmdJump;
+	private Controls.DialogueGrid gridResponse;
+	private Desktop.Skinning.SkinnedPanel panelLoad;
+	private Desktop.Skinning.SkinnedProgressBar progress;
+	private Desktop.Skinning.SkinnedLabel lblProgress;
+        private Desktop.Skinning.SkinnedButton cmdUpdateBanter;
+        private Desktop.Skinning.SkinnedButton cmdSaveBanter;
+        private System.Windows.Forms.Button cmdColorCode;
+        private Desktop.Skinning.SkinnedButton cmdLoadBanter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColColor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNewness;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColText;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColStage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCase;
+        private Desktop.Skinning.SkinnedDataGridViewButtonColumn ColJump;
+    }
 }
