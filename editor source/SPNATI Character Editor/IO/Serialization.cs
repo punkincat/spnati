@@ -67,16 +67,7 @@ namespace SPNATI_Character_Editor
 
             string banterPath = Path.Combine(dir,"banter.xml");
 			bool success;
-			if (!File.Exists(banterPath))
-			{
-                success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
-				BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
-				BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
-				BackupAndExportXml(character, CharacterDatabase.GetEditorData(character), "editor", timestamp) &&
-				BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
-				CharacterHistory.Save(character);
-            }
-			else if (character.BanterData.Timestamp == 0)
+			if (character.BanterData.Timestamp == 0)
 			{
                 success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
 				BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&

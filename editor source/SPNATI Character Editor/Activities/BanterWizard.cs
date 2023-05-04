@@ -62,6 +62,9 @@ namespace SPNATI_Character_Editor.Activities
 				cmdLoadBanter.Enabled = true;
 			}
 			cmdCreateResponse.Visible = false;
+            panelLoad.BringToFront();
+			progressBar.Visible = false;
+
         }
 
 		protected override void OnFirstActivate()
@@ -583,8 +586,34 @@ namespace SPNATI_Character_Editor.Activities
 			cmdSaveBanter.Enabled = true;
 		}
 
+		private void BeginLoading()
+		{
+            _loading = true;
+            Cursor.Current = Cursors.WaitCursor;
+            splitContainer1.Panel1.Enabled = false;
+            splitContainer2.Visible = false;
+            panelLoad.Visible = true;
+            progressBar.Visible = true;
+            lblProgress.Visible = true;
+            lstCharacters.Items.Clear();
+        }
+
+		private void EndLoading()
+		{
+            panelLoad.Visible = false;
+            progressBar.Visible = false;
+            lblProgress.Visible = false;
+            splitContainer2.Visible = true;
+            splitContainer1.Panel1.Enabled = true;
+            Cursor.Current = Cursors.Default;
+            _loading = false;
+        }
+
+
         private void ListCharacters()
         {
+			BeginLoading();
+
             List<string> folderNames = new List<string>();
             foreach (Character character in CharacterDatabase.Characters)
             {
@@ -595,19 +624,15 @@ namespace SPNATI_Character_Editor.Activities
                 folderNames.Add(character.FolderName);
             }
 
-            _loading = true;
-            splitContainer1.Panel1.Enabled = false;
-            panelLoad.Visible = true;
-            panelLoad.BringToFront();
-            Cursor.Current = Cursors.WaitCursor;
-            lstCharacters.Items.Clear();
-            progress.Maximum = folderNames.Count;
+
+            progressBar.Maximum = folderNames.Count;
 			int count = 0;
             foreach (string folderName in folderNames)
             {
-                progress.Value = count++;
+                progressBar.Value = count++;
                 lblProgress.Text = "Scanning "+folderName+"...";
-				Character loaded = CharacterDatabase.Load(folderName);
+                lblProgress.Refresh();
+                Character loaded = CharacterDatabase.Load(folderName);
                 TargetingCharacter ch = new TargetingCharacter(loaded, _character);
                 _character.BanterData.TargetingCharacters.Add(ch);
 				if (_character.BanterData.TargetingCharacters.Last().InboundCount > 0)
@@ -615,54 +640,44 @@ namespace SPNATI_Character_Editor.Activities
 					lstCharacters.Items.Add(loaded);
 				}
             }
-            panelLoad.Visible = false;
-            splitContainer1.Panel1.Enabled = true;
-            Cursor.Current = Cursors.Default;
-            _loading = false;
+
+			EndLoading();
         }
 
         private void ListCharactersFromFile()
         {
-			_character.BanterData = Serialization.ImportBanter(_character.FolderName);
+			BeginLoading();
+
+            _character.BanterData = Serialization.ImportBanter(_character.FolderName);
             _character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 
-            _loading = true;
-            splitContainer1.Panel1.Enabled = false;
-            panelLoad.Visible = true;
-            panelLoad.BringToFront();
-            Cursor.Current = Cursors.WaitCursor;
-            lstCharacters.Items.Clear();
-			progress.Maximum = _character.BanterData.TargetingCharacters.Count;
+			progressBar.Maximum = _character.BanterData.TargetingCharacters.Count;
             int count = 0;
             foreach (TargetingCharacter ch in _character.BanterData.TargetingCharacters)
             {
-                progress.Value = count++;
+                progressBar.Value = count++;
+                lblProgress.Text = "Loading " + ch.Id + "...";
+				lblProgress.Refresh();
                 Character loaded = CharacterDatabase.Load(ch.Id);
                 if (ch.InboundCount > 0)
                 {
                     lstCharacters.Items.Add(loaded);
                 }
             }
-            panelLoad.Visible = false;
-            splitContainer1.Panel1.Enabled = true;
-            Cursor.Current = Cursors.Default;
-            _loading = false;
+
+			EndLoading();
         }
 
 		private void UpdateBanter()
 		{
+			BeginLoading();
+
 			if (_character.BanterData.Timestamp == 0)
 			{
                 _character.BanterData = Serialization.ImportBanter(_character.FolderName);
             }
 
-            _loading = true;
-			splitContainer1.Panel1.Enabled = false;
-			panelLoad.Visible = true;
-			panelLoad.BringToFront();
-			Cursor.Current = Cursors.WaitCursor;
-			lstCharacters.Items.Clear();
-			progress.Maximum = CharacterDatabase.Characters.Count() - 1;
+			progressBar.Maximum = CharacterDatabase.Characters.Count() - 1;
 			int count = 0;
 
 			List<string> folderNames = new List<string>();
@@ -676,9 +691,11 @@ namespace SPNATI_Character_Editor.Activities
 			}
 			foreach (string folderName in folderNames)
 			{ 
-				progress.Value = count++;
-				
-				int index = _character.BanterData.TargetingCharacters.FindIndex(x => x.Id == folderName);
+				progressBar.Value = count++;
+                lblProgress.Text = "Scanning " + folderName + "...";
+                lblProgress.Refresh();
+
+                int index = _character.BanterData.TargetingCharacters.FindIndex(x => x.Id == folderName);
                 Character loaded = CharacterDatabase.Load(folderName);
 				if (index == -1)
 				{
@@ -748,10 +765,8 @@ namespace SPNATI_Character_Editor.Activities
 
             _character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
             _character.BanterData.WriteCEVersion();
-            panelLoad.Visible = false;
-			splitContainer1.Panel1.Enabled = true;
-			Cursor.Current = Cursors.Default;
-			_loading = false;
+
+			EndLoading();
 		}
 
 		private void cmdUpdateBanter_Click(object sender, EventArgs e)
@@ -772,5 +787,6 @@ namespace SPNATI_Character_Editor.Activities
         {
             ListCharactersFromFile();
         }
+
     }
 }
