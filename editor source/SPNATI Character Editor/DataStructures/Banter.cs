@@ -104,9 +104,6 @@ namespace SPNATI_Character_Editor
         [XmlAttribute("newness")]
         public string Newness;
 
-        [XmlAttribute("id")]
-        public string Id;
-
         [XmlAttribute("color")]
         public string ColorCode;
 
@@ -117,10 +114,6 @@ namespace SPNATI_Character_Editor
 
         public InboundLine(Case c, DialogueLine line)
         {
-            if (c.StageId != null)
-            {
-                Id = c.StageId;
-            }
             CaseTag = c.Tag;
             StageRange = c.StageRange;
             Text = line.Text;
