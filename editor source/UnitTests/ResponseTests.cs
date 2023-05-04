@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SPNATI_Character_Editor;
 
 namespace UnitTests
@@ -438,7 +438,7 @@ namespace UnitTests
 		public void OpponentLost_Is_Target()
 		{
 			Case c = new Case("opponent_lost");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("must_strip", c.GetResponseTag(_female, _male));
 		}
 
@@ -453,7 +453,7 @@ namespace UnitTests
 		public void Stripping_Opponent_Is_Target()
 		{
 			Case c = new Case("opponent_stripping");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("stripping", c.GetResponseTag(_female, _male));
 		}
 
@@ -468,7 +468,7 @@ namespace UnitTests
 		public void Stripped_Opponent_Is_Target()
 		{
 			Case c = new Case("opponent_stripped");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("stripped", c.GetResponseTag(_female, _male));
 		}
 
@@ -740,7 +740,7 @@ namespace UnitTests
 		public void GameOver_Defeat_TargetingWinner()
 		{
 			Case c = new Case("game_over_defeat");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("game_over_victory", c.GetResponseTag(_male, _female));
 		}
 
@@ -783,7 +783,7 @@ namespace UnitTests
 		public void Male_MustStrip_Target()
 		{
 			Case c = new Case("male_must_strip");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("must_strip", c.GetResponseTag(_female, _male));
 		}
 
@@ -798,7 +798,7 @@ namespace UnitTests
 		public void Male_RemovingAccessory_Target()
 		{
 			Case c = new Case("male_removing_accessory");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("stripping", c.GetResponseTag(_female, _male));
 		}
 
@@ -813,7 +813,7 @@ namespace UnitTests
 		public void Male_RemovingMinor_Target()
 		{
 			Case c = new Case("male_removing_minor");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("stripping", c.GetResponseTag(_female, _male));
 		}
 
@@ -828,7 +828,7 @@ namespace UnitTests
 		public void Male_RemovingMajor_Target()
 		{
 			Case c = new Case("male_removing_major");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("stripping", c.GetResponseTag(_female, _male));
 		}
 
@@ -843,7 +843,7 @@ namespace UnitTests
 		public void Female_MustStrip_Target()
 		{
 			Case c = new Case("female_must_strip");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("must_strip", c.GetResponseTag(_male, _female));
 		}
 
@@ -858,7 +858,7 @@ namespace UnitTests
 		public void Female_RemovingAccessory_Target()
 		{
 			Case c = new Case("female_removing_accessory");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("stripping", c.GetResponseTag(_male, _female));
 		}
 
@@ -873,7 +873,7 @@ namespace UnitTests
 		public void Female_RemovingMinor_Target()
 		{
 			Case c = new Case("female_removing_minor");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("stripping", c.GetResponseTag(_male, _female));
 		}
 
@@ -888,7 +888,7 @@ namespace UnitTests
 		public void Female_RemovingMajor_Target()
 		{
 			Case c = new Case("female_removing_major");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("stripping", c.GetResponseTag(_male, _female));
 		}
 
@@ -903,7 +903,7 @@ namespace UnitTests
 		public void Male_ChestWillBeVisible_Target()
 		{
 			Case c = new Case("male_chest_will_be_visible");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("stripping", c.GetResponseTag(_female, _male));
 		}
 
@@ -918,7 +918,7 @@ namespace UnitTests
 		public void Female_ChestWillBeVisible_Target()
 		{
 			Case c = new Case("female_chest_will_be_visible");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("stripping", c.GetResponseTag(_male, _female));
 		}
 
@@ -933,7 +933,7 @@ namespace UnitTests
 		public void Male_ChestIsVisible_Target()
 		{
 			Case c = new Case("male_chest_is_visible");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("stripped", c.GetResponseTag(_female, _male));
 		}
 
@@ -948,7 +948,7 @@ namespace UnitTests
 		public void Female_SmallChestIsVisible_Target()
 		{
 			Case c = new Case("female_small_chest_is_visible");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			_female.Size = "small";
 			Assert.AreEqual("stripped", c.GetResponseTag(_male, _female));
 		}
@@ -964,7 +964,7 @@ namespace UnitTests
 		public void Female_MediumChestIsVisible_Target()
 		{
 			Case c = new Case("female_medium_chest_is_visible");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			_female.Size = "medium";
 			Assert.AreEqual("stripped", c.GetResponseTag(_male, _female));
 		}
@@ -980,7 +980,7 @@ namespace UnitTests
 		public void Female_LargeChestIsVisible_Target()
 		{
 			Case c = new Case("female_large_chest_is_visible");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			_female.Size = "large";
 			Assert.AreEqual("stripped", c.GetResponseTag(_male, _female));
 		}
@@ -996,7 +996,7 @@ namespace UnitTests
 		public void Female_ChestIsVisible_Target()
 		{
 			Case c = new Case("female_chest_is_visible");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("stripped", c.GetResponseTag(_male, _female));
 		}
 
@@ -1011,7 +1011,7 @@ namespace UnitTests
 		public void Opponent_ChestIsVisible_Target()
 		{
 			Case c = new Case("opponent_chest_is_visible");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("stripped", c.GetResponseTag(_female, _male));
 		}
 
@@ -1026,7 +1026,7 @@ namespace UnitTests
 		public void Male_CrotchWillBeVisible_Target()
 		{
 			Case c = new Case("male_crotch_will_be_visible");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("stripping", c.GetResponseTag(_female, _male));
 		}
 
@@ -1041,7 +1041,7 @@ namespace UnitTests
 		public void Female_CrotchWillBeVisible_Target()
 		{
 			Case c = new Case("female_crotch_will_be_visible");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("stripping", c.GetResponseTag(_male, _female));
 		}
 
@@ -1056,7 +1056,7 @@ namespace UnitTests
 		public void Opponent_CrotchWillBeVisible_Target()
 		{
 			Case c = new Case("opponent_crotch_will_be_visible");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("stripping", c.GetResponseTag(_male, _female));
 		}
 
@@ -1071,7 +1071,7 @@ namespace UnitTests
 		public void Female_CrotchIsVisible_Target()
 		{
 			Case c = new Case("female_crotch_is_visible");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("stripped", c.GetResponseTag(_male, _female));
 		}
 
@@ -1086,7 +1086,7 @@ namespace UnitTests
 		public void Male_SmallCrotchIsVisible_Target()
 		{
 			Case c = new Case("male_small_crotch_is_visible");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			_male.Size = "small";
 			Assert.AreEqual("stripped", c.GetResponseTag(_female, _male));
 		}
@@ -1102,7 +1102,7 @@ namespace UnitTests
 		public void Male_MediumCrotchIsVisible_Target()
 		{
 			Case c = new Case("male_medium_crotch_is_visible");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			_male.Size = "medium";
 			Assert.AreEqual("stripped", c.GetResponseTag(_female, _male));
 		}
@@ -1118,7 +1118,7 @@ namespace UnitTests
 		public void Male_LargeCrotchIsVisible_Target()
 		{
 			Case c = new Case("male_large_crotch_is_visible");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			_male.Size = "large";
 			Assert.AreEqual("stripped", c.GetResponseTag(_female, _male));
 		}
@@ -1134,7 +1134,7 @@ namespace UnitTests
 		public void Male_CrotchIsVisible_Target()
 		{
 			Case c = new Case("male_crotch_is_visible");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("stripped", c.GetResponseTag(_female, _male));
 		}
 
@@ -1149,7 +1149,7 @@ namespace UnitTests
 		public void Opponent_CrotchIsVisible_Target()
 		{
 			Case c = new Case("opponent_crotch_is_visible");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("stripped", c.GetResponseTag(_female, _male));
 		}
 
@@ -1164,7 +1164,7 @@ namespace UnitTests
 		public void Male_MustMasturbate_Target()
 		{
 			Case c = new Case("male_must_masturbate");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("must_masturbate", c.GetResponseTag(_female, _male));
 		}
 
@@ -1179,7 +1179,7 @@ namespace UnitTests
 		public void Female_MustMasturbate_Target()
 		{
 			Case c = new Case("female_must_masturbate");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("must_masturbate", c.GetResponseTag(_male, _female));
 		}
 
@@ -1194,7 +1194,7 @@ namespace UnitTests
 		public void Male_StartMasturbating_Target()
 		{
 			Case c = new Case("male_start_masturbating");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("start_masturbating", c.GetResponseTag(_female, _male));
 		}
 
@@ -1209,7 +1209,7 @@ namespace UnitTests
 		public void Female_StartMasturbating_Target()
 		{
 			Case c = new Case("female_start_masturbating");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("start_masturbating", c.GetResponseTag(_male, _female));
 		}
 
@@ -1224,7 +1224,7 @@ namespace UnitTests
 		public void Opponent_StartMasturbating_Target()
 		{
 			Case c = new Case("opponent_start_masturbating");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("start_masturbating", c.GetResponseTag(_female, _male));
 		}
 
@@ -1239,7 +1239,7 @@ namespace UnitTests
 		public void Male_Masturbating_Target()
 		{
 			Case c = new Case("male_masturbating");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("masturbating", c.GetResponseTag(_female, _male));
 		}
 
@@ -1254,7 +1254,7 @@ namespace UnitTests
 		public void Female_Masturbating_Target()
 		{
 			Case c = new Case("female_masturbating");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("masturbating", c.GetResponseTag(_male, _female));
 		}
 
@@ -1269,7 +1269,7 @@ namespace UnitTests
 		public void Opponent_Masturbating_Target()
 		{
 			Case c = new Case("opponent_masturbating");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("masturbating", c.GetResponseTag(_male, _female));
 		}
 
@@ -1284,7 +1284,7 @@ namespace UnitTests
 		public void Male_Heavy_Masturbating_Target()
 		{
 			Case c = new Case("male_heavy_masturbating");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("heavy_masturbating", c.GetResponseTag(_female, _male));
 		}
 
@@ -1299,7 +1299,7 @@ namespace UnitTests
 		public void Female_Heavy_Masturbating_Target()
 		{
 			Case c = new Case("female_heavy_masturbating");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("heavy_masturbating", c.GetResponseTag(_male, _female));
 		}
 
@@ -1314,7 +1314,7 @@ namespace UnitTests
 		public void Opponent_Heavy_Masturbating_Target()
 		{
 			Case c = new Case("opponent_heavy_masturbating");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("heavy_masturbating", c.GetResponseTag(_male, _female));
 		}
 
@@ -1329,7 +1329,7 @@ namespace UnitTests
 		public void Male_Finished_Masturbating_Target()
 		{
 			Case c = new Case("male_finished_masturbating");
-			c.Target = _male.FolderName;
+			c.LegacyTarget = _male.FolderName;
 			Assert.AreEqual("finished_masturbating", c.GetResponseTag(_female, _male));
 		}
 
@@ -1344,7 +1344,7 @@ namespace UnitTests
 		public void Female_Finished_Masturbating_Target()
 		{
 			Case c = new Case("female_finished_masturbating");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("finished_masturbating", c.GetResponseTag(_male, _female));
 		}
 
@@ -1359,7 +1359,7 @@ namespace UnitTests
 		public void Opponent_Finished_Masturbating_Target()
 		{
 			Case c = new Case("opponent_finished_masturbating");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Assert.AreEqual("finished_masturbating", c.GetResponseTag(_male, _female));
 		}
 
@@ -1686,7 +1686,7 @@ namespace UnitTests
 		public void StageLimit_RemovingExtra()
 		{
 			Case c = new Case("female_removing_accessory");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Case response = c.CreateResponse(_male, _female);
 			Assert.AreEqual(1, response.Stages.Count);
 			Assert.AreEqual(0, response.Stages[0]);
@@ -1696,7 +1696,7 @@ namespace UnitTests
 		public void StageLimit_RemovedExtra()
 		{
 			Case c = new Case("female_removed_accessory");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Case response = c.CreateResponse(_male, _female);
 			Assert.AreEqual(1, response.Stages.Count);
 			Assert.AreEqual(1, response.Stages[0]);
@@ -1706,7 +1706,7 @@ namespace UnitTests
 		public void StageLimit_RemovingMinor()
 		{
 			Case c = new Case("female_removing_minor");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Case response = c.CreateResponse(_male, _female);
 			Assert.AreEqual(1, response.Stages.Count);
 			Assert.AreEqual(1, response.Stages[0]);
@@ -1716,7 +1716,7 @@ namespace UnitTests
 		public void StageLimit_RemovedMinor()
 		{
 			Case c = new Case("female_removed_minor");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Case response = c.CreateResponse(_male, _female);
 			Assert.AreEqual(1, response.Stages.Count);
 			Assert.AreEqual(2, response.Stages[0]);
@@ -1726,7 +1726,7 @@ namespace UnitTests
 		public void StageLimit_RemovingMajor()
 		{
 			Case c = new Case("female_removing_major");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Case response = c.CreateResponse(_male, _female);
 			Assert.AreEqual(1, response.Stages.Count);
 			Assert.AreEqual(2, response.Stages[0]);
@@ -1736,7 +1736,7 @@ namespace UnitTests
 		public void StageLimit_RemovedMajor()
 		{
 			Case c = new Case("female_removed_major");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Case response = c.CreateResponse(_male, _female);
 			Assert.AreEqual(1, response.Stages.Count);
 			Assert.AreEqual(3, response.Stages[0]);
@@ -1746,7 +1746,7 @@ namespace UnitTests
 		public void StageLimit_ChestWillBeVisible()
 		{
 			Case c = new Case("female_chest_will_be_visible");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Case response = c.CreateResponse(_male, _female);
 			Assert.AreEqual(1, response.Stages.Count);
 			Assert.AreEqual(3, response.Stages[0]);
@@ -1756,7 +1756,7 @@ namespace UnitTests
 		public void StageLimit_ChestIsVisible()
 		{
 			Case c = new Case("female_large_chest_is_visible");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Case response = c.CreateResponse(_male, _female);
 			Assert.AreEqual(1, response.Stages.Count);
 			Assert.AreEqual(4, response.Stages[0]);
@@ -1766,7 +1766,7 @@ namespace UnitTests
 		public void StageLimit_CrotchWillBeVisible()
 		{
 			Case c = new Case("female_crotch_will_be_visible");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Case response = c.CreateResponse(_male, _female);
 			Assert.AreEqual(1, response.Stages.Count);
 			Assert.AreEqual(4, response.Stages[0]);
@@ -1776,7 +1776,7 @@ namespace UnitTests
 		public void StageLimit_CrotchIsVisible()
 		{
 			Case c = new Case("female_crotch_is_visible");
-			c.Target = _female.FolderName;
+			c.LegacyTarget = _female.FolderName;
 			Case response = c.CreateResponse(_male, _female);
 			Assert.AreEqual(1, response.Stages.Count);
 			Assert.AreEqual(5, response.Stages[0]);
@@ -1787,7 +1787,7 @@ namespace UnitTests
 		public void NotTargetable_NoTarget_WithAlsoPlaying()
 		{
 			Case c = new Case("good_hand");
-			c.AlsoPlaying = "other";
+			c.LegacyAlsoPlaying = "other";
 			Case response = c.CreateResponse(_male, _female);
 			Assert.IsTrue(response.Conditions.Count == 1);
 			Assert.AreEqual("other", response.Conditions[0].FilterTag);
@@ -1797,7 +1797,7 @@ namespace UnitTests
 		public void Targetable_NoTarget_WithAlsoPlaying()
 		{
 			Case c = new Case("female_removing_accessory");
-			c.AlsoPlaying = "other";
+			c.LegacyAlsoPlaying = "other";
 			Case response = c.CreateResponse(_male, _female);
 			Assert.IsTrue(response.Conditions.Count == 1);
 			Assert.AreEqual("other", response.Conditions[0].FilterTag);
@@ -1807,8 +1807,8 @@ namespace UnitTests
 		public void Targetable_TargetResponder_WithAlsoPlaying()
 		{
 			Case c = new Case("female_removing_accessory");
-			c.Target = _female.FolderName;
-			c.AlsoPlaying = "other";
+			c.LegacyTarget = _female.FolderName;
+			c.LegacyAlsoPlaying = "other";
 			Case response = c.CreateResponse(_male, _female);
 			Assert.IsTrue(response.Conditions.Count == 1);
 			Assert.AreEqual("other", response.Conditions[0].FilterTag);
@@ -1818,8 +1818,8 @@ namespace UnitTests
 		public void Targetable_Target_WithAlsoPlaying()
 		{
 			Case c = new Case("female_removing_accessory");
-			c.Target = "other1";
-			c.AlsoPlaying = "other2";
+			c.LegacyTarget = "other1";
+			c.LegacyAlsoPlaying = "other2";
 			Case response = c.CreateResponse(_male, _female);
 			Assert.IsTrue(response.Conditions.Count == 1);
 			Assert.AreEqual("other2", response.Conditions[0].FilterTag);
@@ -1829,236 +1829,236 @@ namespace UnitTests
 		public void Targetable_NoTarget_NoAlsoPlaying()
 		{
 			Case c = new Case("female_removing_accessory");
-			c.TotalExposed = "5";
-			c.TotalFemales = "4";
-			c.TotalMales = "3-5";
-			c.TotalFinished = "2";
+			c.LegacyTotalExposed = "5";
+			c.LegacyTotalFemales = "4";
+			c.LegacyTotalMales = "3-5";
+			c.LegacyTotalFinished = "2";
 			Case response = c.CreateResponse(_male, _female);
 
 			Assert.AreEqual(_female.Layers + Clothing.ExtraStages, response.Stages.Count);
-			Assert.AreEqual(_male.FolderName, response.AlsoPlaying);
-			Assert.AreEqual(c.TotalFinished, response.TotalFinished);
-			Assert.AreEqual(c.TotalFemales, response.TotalFemales);
-			Assert.AreEqual(c.TotalMales, response.TotalMales);
-			Assert.AreEqual(c.TotalExposed, response.TotalExposed);
+			Assert.AreEqual(_male.FolderName, response.LegacyAlsoPlaying);
+			Assert.AreEqual(c.LegacyTotalFinished, response.LegacyTotalFinished);
+			Assert.AreEqual(c.LegacyTotalFemales, response.LegacyTotalFemales);
+			Assert.AreEqual(c.LegacyTotalMales, response.LegacyTotalMales);
+			Assert.AreEqual(c.LegacyTotalExposed, response.LegacyTotalExposed);
 		}
 
 		[TestMethod]
 		public void NotTargetable_NoTarget_NoAlsoPlaying()
 		{
 			Case c = new Case("good_hand");
-			c.TotalExposed = "5";
-			c.TotalFemales = "4";
-			c.TotalMales = "3-5";
-			c.TotalFinished = "2";
+			c.LegacyTotalExposed = "5";
+			c.LegacyTotalFemales = "4";
+			c.LegacyTotalMales = "3-5";
+			c.LegacyTotalFinished = "2";
 			Case response = c.CreateResponse(_male, _female);
 
 			Assert.AreEqual(_female.Layers + 1, response.Stages.Count);
-			Assert.AreEqual(_male.FolderName, response.AlsoPlaying);
-			Assert.AreEqual(c.TotalFinished, response.TotalFinished);
-			Assert.AreEqual(c.TotalFemales, response.TotalFemales);
-			Assert.AreEqual(c.TotalMales, response.TotalMales);
-			Assert.AreEqual(c.TotalExposed, response.TotalExposed);
+			Assert.AreEqual(_male.FolderName, response.LegacyAlsoPlaying);
+			Assert.AreEqual(c.LegacyTotalFinished, response.LegacyTotalFinished);
+			Assert.AreEqual(c.LegacyTotalFemales, response.LegacyTotalFemales);
+			Assert.AreEqual(c.LegacyTotalMales, response.LegacyTotalMales);
+			Assert.AreEqual(c.LegacyTotalExposed, response.LegacyTotalExposed);
 		}
 
 		[TestMethod]
 		public void Targetable_NoTarget_AlsoPlayingResponder()
 		{
 			Case c = new Case("female_removing_accessory");
-			c.TimeInStage = "5";
+			c.LegacyTimeInStage = "5";
 			c.Stages.Add(2);
 			c.Stages.Add(3);
-			c.SaidMarker = "foo";
-			c.NotSaidMarker = "bar";
-			c.HasHand = "hand";
+			c.LegacySaidMarker = "foo";
+			c.LegacyNotSaidMarker = "bar";
+			c.LegacyHasHand = "hand";
 
-			c.AlsoPlaying = _female.FolderName;
-			c.AlsoPlayingHand = "good";
-			c.AlsoPlayingStage = "2-4";
-			c.AlsoPlayingSaidMarker = "foo2";
-			c.AlsoPlayingNotSaidMarker = "bar2";
-			c.AlsoPlayingTimeInStage = "5";
+			c.LegacyAlsoPlaying = _female.FolderName;
+			c.LegacyAlsoPlayingHand = "good";
+			c.LegacyAlsoPlayingStage = "2-4";
+			c.LegacyAlsoPlayingSaidMarker = "foo2";
+			c.LegacyAlsoPlayingNotSaidMarker = "bar2";
+			c.LegacyAlsoPlayingTimeInStage = "5";
 
 			Case response = c.CreateResponse(_male, _female);
 
-			Assert.AreEqual(_male.FolderName, response.AlsoPlaying);
-			Assert.AreEqual(c.TimeInStage, response.AlsoPlayingTimeInStage);
-			Assert.AreEqual("2-3", response.AlsoPlayingStage);
-			Assert.AreEqual(c.SaidMarker, response.AlsoPlayingSaidMarker);
-			Assert.AreEqual(c.NotSaidMarker, response.AlsoPlayingNotSaidMarker);
-			Assert.AreEqual(c.HasHand, response.AlsoPlayingHand);
+			Assert.AreEqual(_male.FolderName, response.LegacyAlsoPlaying);
+			Assert.AreEqual(c.LegacyTimeInStage, response.LegacyAlsoPlayingTimeInStage);
+			Assert.AreEqual("2-3", response.LegacyAlsoPlayingStage);
+			Assert.AreEqual(c.LegacySaidMarker, response.LegacyAlsoPlayingSaidMarker);
+			Assert.AreEqual(c.LegacyNotSaidMarker, response.LegacyAlsoPlayingNotSaidMarker);
+			Assert.AreEqual(c.LegacyHasHand, response.LegacyAlsoPlayingHand);
 
 			Assert.AreEqual(3, response.Stages.Count);
 			Assert.IsTrue(response.Stages.Contains(2));
 			Assert.IsTrue(response.Stages.Contains(3));
 			Assert.IsTrue(response.Stages.Contains(4));
-			Assert.AreEqual(c.AlsoPlayingHand, response.HasHand);
-			Assert.AreEqual(c.AlsoPlayingSaidMarker, response.SaidMarker);
-			Assert.AreEqual(c.AlsoPlayingNotSaidMarker, response.NotSaidMarker);
-			Assert.AreEqual(c.AlsoPlayingTimeInStage, response.TimeInStage);
+			Assert.AreEqual(c.LegacyAlsoPlayingHand, response.LegacyHasHand);
+			Assert.AreEqual(c.LegacyAlsoPlayingSaidMarker, response.LegacySaidMarker);
+			Assert.AreEqual(c.LegacyAlsoPlayingNotSaidMarker, response.LegacyNotSaidMarker);
+			Assert.AreEqual(c.LegacyAlsoPlayingTimeInStage, response.LegacyTimeInStage);
 		}
 
 		[TestMethod]
 		public void NotTargetable_NoTarget_AlsoPlayingResponder()
 		{
 			Case c = new Case("good_hand");
-			c.TimeInStage = "5";
+			c.LegacyTimeInStage = "5";
 			c.Stages.Add(2);
 			c.Stages.Add(3);
-			c.SaidMarker = "foo";
-			c.NotSaidMarker = "bar";
-			c.HasHand = "hand";
+			c.LegacySaidMarker = "foo";
+			c.LegacyNotSaidMarker = "bar";
+			c.LegacyHasHand = "hand";
 
-			c.AlsoPlaying = _female.FolderName;
-			c.AlsoPlayingHand = "good";
-			c.AlsoPlayingStage = "2-4";
-			c.AlsoPlayingSaidMarker = "foo2";
-			c.AlsoPlayingNotSaidMarker = "bar2";
-			c.AlsoPlayingTimeInStage = "5";
+			c.LegacyAlsoPlaying = _female.FolderName;
+			c.LegacyAlsoPlayingHand = "good";
+			c.LegacyAlsoPlayingStage = "2-4";
+			c.LegacyAlsoPlayingSaidMarker = "foo2";
+			c.LegacyAlsoPlayingNotSaidMarker = "bar2";
+			c.LegacyAlsoPlayingTimeInStage = "5";
 
 			Case response = c.CreateResponse(_male, _female);
 
-			Assert.AreEqual(_male.FolderName, response.AlsoPlaying);
-			Assert.AreEqual(c.TimeInStage, response.AlsoPlayingTimeInStage);
-			Assert.AreEqual("2-3", response.AlsoPlayingStage);
-			Assert.AreEqual(c.SaidMarker, response.AlsoPlayingSaidMarker);
-			Assert.AreEqual(c.NotSaidMarker, response.AlsoPlayingNotSaidMarker);
-			Assert.AreEqual(c.HasHand, response.AlsoPlayingHand);
+			Assert.AreEqual(_male.FolderName, response.LegacyAlsoPlaying);
+			Assert.AreEqual(c.LegacyTimeInStage, response.LegacyAlsoPlayingTimeInStage);
+			Assert.AreEqual("2-3", response.LegacyAlsoPlayingStage);
+			Assert.AreEqual(c.LegacySaidMarker, response.LegacyAlsoPlayingSaidMarker);
+			Assert.AreEqual(c.LegacyNotSaidMarker, response.LegacyAlsoPlayingNotSaidMarker);
+			Assert.AreEqual(c.LegacyHasHand, response.LegacyAlsoPlayingHand);
 
 			Assert.AreEqual(3, response.Stages.Count);
 			Assert.IsTrue(response.Stages.Contains(2));
 			Assert.IsTrue(response.Stages.Contains(3));
 			Assert.IsTrue(response.Stages.Contains(4));
-			Assert.AreEqual(c.AlsoPlayingHand, response.HasHand);
-			Assert.AreEqual(c.AlsoPlayingSaidMarker, response.SaidMarker);
-			Assert.AreEqual(c.AlsoPlayingNotSaidMarker, response.NotSaidMarker);
-			Assert.AreEqual(c.AlsoPlayingTimeInStage, response.TimeInStage);
+			Assert.AreEqual(c.LegacyAlsoPlayingHand, response.LegacyHasHand);
+			Assert.AreEqual(c.LegacyAlsoPlayingSaidMarker, response.LegacySaidMarker);
+			Assert.AreEqual(c.LegacyAlsoPlayingNotSaidMarker, response.LegacyNotSaidMarker);
+			Assert.AreEqual(c.LegacyAlsoPlayingTimeInStage, response.LegacyTimeInStage);
 		}
 
 		[TestMethod]
 		public void NotTargetable_TargetableResponse_NoAlsoPlaying()
 		{
 			Case c = new Case("must_strip_normal");
-			c.TimeInStage = "5";
+			c.LegacyTimeInStage = "5";
 			c.Stages.Add(2);
 			c.Stages.Add(3);
-			c.SaidMarker = "foo";
-			c.NotSaidMarker = "bar";
-			c.HasHand = "hand";
+			c.LegacySaidMarker = "foo";
+			c.LegacyNotSaidMarker = "bar";
+			c.LegacyHasHand = "hand";
 
 			Case response = c.CreateResponse(_male, _female);
 
-			Assert.AreEqual(_male.FolderName, response.Target);
+			Assert.AreEqual(_male.FolderName, response.LegacyTarget);
 			Assert.AreEqual(_female.Layers + Clothing.ExtraStages, response.Stages.Count);
-			Assert.AreEqual(c.TimeInStage, response.TargetTimeInStage);
-			Assert.AreEqual("2-3", response.TargetStage);
-			Assert.AreEqual(c.SaidMarker, response.TargetSaidMarker);
-			Assert.AreEqual(c.NotSaidMarker, response.TargetNotSaidMarker);
-			Assert.AreEqual(c.HasHand, response.TargetHand);
+			Assert.AreEqual(c.LegacyTimeInStage, response.LegacyTargetTimeInStage);
+			Assert.AreEqual("2-3", response.LegacyTargetStage);
+			Assert.AreEqual(c.LegacySaidMarker, response.LegacyTargetSaidMarker);
+			Assert.AreEqual(c.LegacyNotSaidMarker, response.LegacyTargetNotSaidMarker);
+			Assert.AreEqual(c.LegacyHasHand, response.LegacyTargetHand);
 
 			Assert.AreEqual(_female.Layers + Clothing.ExtraStages, response.Stages.Count);
-			Assert.IsNull(response.AlsoPlaying);
+			Assert.IsNull(response.LegacyAlsoPlaying);
 		}
 
 		[TestMethod]
 		public void NotTargetable_TargetableResponse_WithAlsoPlaying()
 		{
 			Case c = new Case("must_strip_normal");
-			c.TimeInStage = "5";
+			c.LegacyTimeInStage = "5";
 			c.Stages.Add(2);
 			c.Stages.Add(3);
-			c.SaidMarker = "foo";
-			c.NotSaidMarker = "bar";
-			c.HasHand = "hand";
+			c.LegacySaidMarker = "foo";
+			c.LegacyNotSaidMarker = "bar";
+			c.LegacyHasHand = "hand";
 
-			c.AlsoPlaying = "other";
-			c.AlsoPlayingHand = "good";
-			c.AlsoPlayingStage = "2-4";
-			c.AlsoPlayingSaidMarker = "foo2";
-			c.AlsoPlayingNotSaidMarker = "bar2";
-			c.AlsoPlayingTimeInStage = "5";
+			c.LegacyAlsoPlaying = "other";
+			c.LegacyAlsoPlayingHand = "good";
+			c.LegacyAlsoPlayingStage = "2-4";
+			c.LegacyAlsoPlayingSaidMarker = "foo2";
+			c.LegacyAlsoPlayingNotSaidMarker = "bar2";
+			c.LegacyAlsoPlayingTimeInStage = "5";
 
 			Case response = c.CreateResponse(_male, _female);
 
-			Assert.AreEqual(_male.FolderName, response.Target);
+			Assert.AreEqual(_male.FolderName, response.LegacyTarget);
 			Assert.AreEqual(_female.Layers + Clothing.ExtraStages, response.Stages.Count);
-			Assert.AreEqual(c.TimeInStage, response.TargetTimeInStage);
-			Assert.AreEqual("2-3", response.TargetStage);
-			Assert.AreEqual(c.SaidMarker, response.TargetSaidMarker);
-			Assert.AreEqual(c.NotSaidMarker, response.TargetNotSaidMarker);
-			Assert.AreEqual(c.HasHand, response.TargetHand);
+			Assert.AreEqual(c.LegacyTimeInStage, response.LegacyTargetTimeInStage);
+			Assert.AreEqual("2-3", response.LegacyTargetStage);
+			Assert.AreEqual(c.LegacySaidMarker, response.LegacyTargetSaidMarker);
+			Assert.AreEqual(c.LegacyNotSaidMarker, response.LegacyTargetNotSaidMarker);
+			Assert.AreEqual(c.LegacyHasHand, response.LegacyTargetHand);
 
-			Assert.AreEqual(c.AlsoPlaying, response.AlsoPlaying);
-			Assert.AreEqual(c.AlsoPlayingStage, response.AlsoPlayingStage);
-			Assert.AreEqual(c.AlsoPlayingHand, response.AlsoPlayingHand);
-			Assert.AreEqual(c.AlsoPlayingSaidMarker, response.AlsoPlayingSaidMarker);
-			Assert.AreEqual(c.AlsoPlayingNotSaidMarker, response.AlsoPlayingNotSaidMarker);
-			Assert.AreEqual(c.AlsoPlayingTimeInStage, response.AlsoPlayingTimeInStage);
+			Assert.AreEqual(c.LegacyAlsoPlaying, response.LegacyAlsoPlaying);
+			Assert.AreEqual(c.LegacyAlsoPlayingStage, response.LegacyAlsoPlayingStage);
+			Assert.AreEqual(c.LegacyAlsoPlayingHand, response.LegacyAlsoPlayingHand);
+			Assert.AreEqual(c.LegacyAlsoPlayingSaidMarker, response.LegacyAlsoPlayingSaidMarker);
+			Assert.AreEqual(c.LegacyAlsoPlayingNotSaidMarker, response.LegacyAlsoPlayingNotSaidMarker);
+			Assert.AreEqual(c.LegacyAlsoPlayingTimeInStage, response.LegacyAlsoPlayingTimeInStage);
 		}
 
 		[TestMethod]
 		public void Targetable_Target_NoAlsoPlaying()
 		{
 			Case c = new Case("female_removing_accessory");
-			c.TimeInStage = "5";
+			c.LegacyTimeInStage = "5";
 			c.Stages.Add(2);
 			c.Stages.Add(3);
-			c.SaidMarker = "foo";
-			c.NotSaidMarker = "bar";
-			c.HasHand = "hand";
+			c.LegacySaidMarker = "foo";
+			c.LegacyNotSaidMarker = "bar";
+			c.LegacyHasHand = "hand";
 
-			c.Target = "other";
-			c.TargetHand = "good";
-			c.TargetStage = "2-4";
-			c.TargetSaidMarker = "foo2";
-			c.TargetNotSaidMarker = "bar2";
-			c.TargetTimeInStage = "5";
-			c.TargetStatus = "blah";
-			c.TargetLayers = "2-4";
-			c.TargetStartingLayers = "1-3";
+			c.LegacyTarget = "other";
+			c.LegacyTargetHand = "good";
+			c.LegacyTargetStage = "2-4";
+			c.LegacyTargetSaidMarker = "foo2";
+			c.LegacyTargetNotSaidMarker = "bar2";
+			c.LegacyTargetTimeInStage = "5";
+			c.LegacyTargetStatus = "blah";
+			c.LegacyTargetLayers = "2-4";
+			c.LegacyTargetStartingLayers = "1-3";
 
 			Case response = c.CreateResponse(_male, _female);
 
 			Assert.AreEqual(_female.Layers + Clothing.ExtraStages, response.Stages.Count);
 
-			Assert.AreEqual(_male.FolderName, response.AlsoPlaying);
-			Assert.AreEqual(c.TimeInStage, response.AlsoPlayingTimeInStage);
-			Assert.AreEqual("2-3", response.AlsoPlayingStage);
-			Assert.AreEqual(c.SaidMarker, response.AlsoPlayingSaidMarker);
-			Assert.AreEqual(c.NotSaidMarker, response.AlsoPlayingNotSaidMarker);
-			Assert.AreEqual(c.HasHand, response.AlsoPlayingHand);
+			Assert.AreEqual(_male.FolderName, response.LegacyAlsoPlaying);
+			Assert.AreEqual(c.LegacyTimeInStage, response.LegacyAlsoPlayingTimeInStage);
+			Assert.AreEqual("2-3", response.LegacyAlsoPlayingStage);
+			Assert.AreEqual(c.LegacySaidMarker, response.LegacyAlsoPlayingSaidMarker);
+			Assert.AreEqual(c.LegacyNotSaidMarker, response.LegacyAlsoPlayingNotSaidMarker);
+			Assert.AreEqual(c.LegacyHasHand, response.LegacyAlsoPlayingHand);
 
-			Assert.AreEqual(c.Target, response.Target);
-			Assert.AreEqual(c.TargetStage, response.TargetStage);
-			Assert.AreEqual(c.TargetHand, response.TargetHand);
-			Assert.AreEqual(c.TargetSaidMarker, response.TargetSaidMarker);
-			Assert.AreEqual(c.TargetNotSaidMarker, response.TargetNotSaidMarker);
-			Assert.AreEqual(c.TargetTimeInStage, response.TargetTimeInStage);
-			Assert.AreEqual(c.TargetStatus, response.TargetStatus);
-			Assert.AreEqual(c.TargetLayers, response.TargetLayers);
-			Assert.AreEqual(c.TargetStartingLayers, response.TargetStartingLayers);
+			Assert.AreEqual(c.LegacyTarget, response.LegacyTarget);
+			Assert.AreEqual(c.LegacyTargetStage, response.LegacyTargetStage);
+			Assert.AreEqual(c.LegacyTargetHand, response.LegacyTargetHand);
+			Assert.AreEqual(c.LegacyTargetSaidMarker, response.LegacyTargetSaidMarker);
+			Assert.AreEqual(c.LegacyTargetNotSaidMarker, response.LegacyTargetNotSaidMarker);
+			Assert.AreEqual(c.LegacyTargetTimeInStage, response.LegacyTargetTimeInStage);
+			Assert.AreEqual(c.LegacyTargetStatus, response.LegacyTargetStatus);
+			Assert.AreEqual(c.LegacyTargetLayers, response.LegacyTargetLayers);
+			Assert.AreEqual(c.LegacyTargetStartingLayers, response.LegacyTargetStartingLayers);
 		}
 
 		[TestMethod]
 		public void Targetable_TargetResponder_NoAlsoPlaying()
 		{
 			Case c = new Case("female_removing_accessory");
-			c.TimeInStage = "5";
+			c.LegacyTimeInStage = "5";
 			c.Stages.Add(2);
 			c.Stages.Add(3);
-			c.SaidMarker = "foo";
-			c.NotSaidMarker = "bar";
-			c.HasHand = "hand";
+			c.LegacySaidMarker = "foo";
+			c.LegacyNotSaidMarker = "bar";
+			c.LegacyHasHand = "hand";
 
-			c.Target = _female.FolderName;
-			c.TargetHand = "good";
-			c.TargetStage = "2-4";
-			c.TargetSaidMarker = "foo2";
-			c.TargetNotSaidMarker = "bar2";
-			c.TargetTimeInStage = "5";
-			c.TargetStatus = "blah";
-			c.TargetLayers = "2-4";
-			c.TargetStartingLayers = "1-3";
+			c.LegacyTarget = _female.FolderName;
+			c.LegacyTargetHand = "good";
+			c.LegacyTargetStage = "2-4";
+			c.LegacyTargetSaidMarker = "foo2";
+			c.LegacyTargetNotSaidMarker = "bar2";
+			c.LegacyTargetTimeInStage = "5";
+			c.LegacyTargetStatus = "blah";
+			c.LegacyTargetLayers = "2-4";
+			c.LegacyTargetStartingLayers = "1-3";
 
 			Case response = c.CreateResponse(_male, _female);
 			
@@ -2066,74 +2066,74 @@ namespace UnitTests
 			Assert.IsTrue(response.Stages.Contains(2));
 			Assert.IsTrue(response.Stages.Contains(3));
 			Assert.IsTrue(response.Stages.Contains(4));
-			Assert.AreEqual(c.TargetHand, response.HasHand);
-			Assert.AreEqual(c.TargetSaidMarker, response.SaidMarker);
-			Assert.AreEqual(c.TargetNotSaidMarker, response.NotSaidMarker);
-			Assert.AreEqual(c.TimeInStage, response.TimeInStage);
+			Assert.AreEqual(c.LegacyTargetHand, response.LegacyHasHand);
+			Assert.AreEqual(c.LegacyTargetSaidMarker, response.LegacySaidMarker);
+			Assert.AreEqual(c.LegacyTargetNotSaidMarker, response.LegacyNotSaidMarker);
+			Assert.AreEqual(c.LegacyTimeInStage, response.LegacyTimeInStage);
 
-			Assert.AreEqual(_male.FolderName, response.AlsoPlaying);
-			Assert.AreEqual(c.TimeInStage, response.AlsoPlayingTimeInStage);
-			Assert.AreEqual("2-3", response.AlsoPlayingStage);
-			Assert.AreEqual(c.SaidMarker, response.AlsoPlayingSaidMarker);
-			Assert.AreEqual(c.NotSaidMarker, response.AlsoPlayingNotSaidMarker);
-			Assert.AreEqual(c.HasHand, response.AlsoPlayingHand);
+			Assert.AreEqual(_male.FolderName, response.LegacyAlsoPlaying);
+			Assert.AreEqual(c.LegacyTimeInStage, response.LegacyAlsoPlayingTimeInStage);
+			Assert.AreEqual("2-3", response.LegacyAlsoPlayingStage);
+			Assert.AreEqual(c.LegacySaidMarker, response.LegacyAlsoPlayingSaidMarker);
+			Assert.AreEqual(c.LegacyNotSaidMarker, response.LegacyAlsoPlayingNotSaidMarker);
+			Assert.AreEqual(c.LegacyHasHand, response.LegacyAlsoPlayingHand);
 		}
 
 		[TestMethod]
 		public void Targetable_Target_AlsoPlayingResponder()
 		{
 			Case c = new Case("female_removing_accessory");
-			c.TimeInStage = "5";
+			c.LegacyTimeInStage = "5";
 			c.Stages.Add(2);
 			c.Stages.Add(3);
-			c.SaidMarker = "foo";
-			c.NotSaidMarker = "bar";
-			c.HasHand = "hand";
+			c.LegacySaidMarker = "foo";
+			c.LegacyNotSaidMarker = "bar";
+			c.LegacyHasHand = "hand";
 
-			c.Target = "other";
-			c.TargetHand = "good";
-			c.TargetStage = "2-4";
-			c.TargetSaidMarker = "foo2";
-			c.TargetNotSaidMarker = "bar2";
-			c.TargetTimeInStage = "5";
-			c.TargetStatus = "blah";
-			c.TargetLayers = "2-4";
-			c.TargetStartingLayers = "1-3";
+			c.LegacyTarget = "other";
+			c.LegacyTargetHand = "good";
+			c.LegacyTargetStage = "2-4";
+			c.LegacyTargetSaidMarker = "foo2";
+			c.LegacyTargetNotSaidMarker = "bar2";
+			c.LegacyTargetTimeInStage = "5";
+			c.LegacyTargetStatus = "blah";
+			c.LegacyTargetLayers = "2-4";
+			c.LegacyTargetStartingLayers = "1-3";
 
-			c.AlsoPlaying = _female.FolderName;
-			c.AlsoPlayingHand = "good";
-			c.AlsoPlayingStage = "2-4";
-			c.AlsoPlayingSaidMarker = "foo2";
-			c.AlsoPlayingNotSaidMarker = "bar2";
-			c.AlsoPlayingTimeInStage = "5";
+			c.LegacyAlsoPlaying = _female.FolderName;
+			c.LegacyAlsoPlayingHand = "good";
+			c.LegacyAlsoPlayingStage = "2-4";
+			c.LegacyAlsoPlayingSaidMarker = "foo2";
+			c.LegacyAlsoPlayingNotSaidMarker = "bar2";
+			c.LegacyAlsoPlayingTimeInStage = "5";
 
 			Case response = c.CreateResponse(_male, _female);
 			
-			Assert.AreEqual(_male.FolderName, response.AlsoPlaying);
-			Assert.AreEqual(c.TimeInStage, response.AlsoPlayingTimeInStage);
-			Assert.AreEqual("2-3", response.AlsoPlayingStage);
-			Assert.AreEqual(c.SaidMarker, response.AlsoPlayingSaidMarker);
-			Assert.AreEqual(c.NotSaidMarker, response.AlsoPlayingNotSaidMarker);
-			Assert.AreEqual(c.HasHand, response.AlsoPlayingHand);
+			Assert.AreEqual(_male.FolderName, response.LegacyAlsoPlaying);
+			Assert.AreEqual(c.LegacyTimeInStage, response.LegacyAlsoPlayingTimeInStage);
+			Assert.AreEqual("2-3", response.LegacyAlsoPlayingStage);
+			Assert.AreEqual(c.LegacySaidMarker, response.LegacyAlsoPlayingSaidMarker);
+			Assert.AreEqual(c.LegacyNotSaidMarker, response.LegacyAlsoPlayingNotSaidMarker);
+			Assert.AreEqual(c.LegacyHasHand, response.LegacyAlsoPlayingHand);
 
-			Assert.AreEqual(c.Target, response.Target);
-			Assert.AreEqual(c.TargetStage, response.TargetStage);
-			Assert.AreEqual(c.TargetHand, response.TargetHand);
-			Assert.AreEqual(c.TargetSaidMarker, response.TargetSaidMarker);
-			Assert.AreEqual(c.TargetNotSaidMarker, response.TargetNotSaidMarker);
-			Assert.AreEqual(c.TargetTimeInStage, response.TargetTimeInStage);
-			Assert.AreEqual(c.TargetStatus, response.TargetStatus);
-			Assert.AreEqual(c.TargetLayers, response.TargetLayers);
-			Assert.AreEqual(c.TargetStartingLayers, response.TargetStartingLayers);
+			Assert.AreEqual(c.LegacyTarget, response.LegacyTarget);
+			Assert.AreEqual(c.LegacyTargetStage, response.LegacyTargetStage);
+			Assert.AreEqual(c.LegacyTargetHand, response.LegacyTargetHand);
+			Assert.AreEqual(c.LegacyTargetSaidMarker, response.LegacyTargetSaidMarker);
+			Assert.AreEqual(c.LegacyTargetNotSaidMarker, response.LegacyTargetNotSaidMarker);
+			Assert.AreEqual(c.LegacyTargetTimeInStage, response.LegacyTargetTimeInStage);
+			Assert.AreEqual(c.LegacyTargetStatus, response.LegacyTargetStatus);
+			Assert.AreEqual(c.LegacyTargetLayers, response.LegacyTargetLayers);
+			Assert.AreEqual(c.LegacyTargetStartingLayers, response.LegacyTargetStartingLayers);
 
 			Assert.AreEqual(3, response.Stages.Count);
 			Assert.IsTrue(response.Stages.Contains(2));
 			Assert.IsTrue(response.Stages.Contains(3));
 			Assert.IsTrue(response.Stages.Contains(4));
-			Assert.AreEqual(c.AlsoPlayingHand, response.HasHand);
-			Assert.AreEqual(c.AlsoPlayingSaidMarker, response.SaidMarker);
-			Assert.AreEqual(c.AlsoPlayingNotSaidMarker, response.NotSaidMarker);
-			Assert.AreEqual(c.AlsoPlayingTimeInStage, response.TimeInStage);
+			Assert.AreEqual(c.LegacyAlsoPlayingHand, response.LegacyHasHand);
+			Assert.AreEqual(c.LegacyAlsoPlayingSaidMarker, response.LegacySaidMarker);
+			Assert.AreEqual(c.LegacyAlsoPlayingNotSaidMarker, response.LegacyNotSaidMarker);
+			Assert.AreEqual(c.LegacyAlsoPlayingTimeInStage, response.LegacyTimeInStage);
 		}
 		#endregion
 
@@ -2202,7 +2202,7 @@ namespace UnitTests
 		{
 			Case response = new Case("opponent_lost")
 			{
-				Target = _female.FolderName,
+				LegacyTarget = _female.FolderName,
 				Expressions =
 				{
 					new ExpressionTest("target.costume", "blah")
@@ -2218,7 +2218,7 @@ namespace UnitTests
 		{
 			Case response = new Case("opponent_lost")
 			{
-				Target = _bifemale.FolderName,
+				LegacyTarget = _bifemale.FolderName,
 				Expressions =
 				{
 					new ExpressionTest("target.costume", "blah")
