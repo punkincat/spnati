@@ -1,4 +1,4 @@
-﻿namespace SPNATI_Character_Editor.Activities
+namespace SPNATI_Character_Editor.Activities
 {
 	partial class BanterWizard
 	{
@@ -42,6 +42,7 @@
             this.ColText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColStage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColJump = new Desktop.Skinning.SkinnedDataGridViewButtonColumn();
             this.lblNoMatches = new Desktop.Skinning.SkinnedLabel();
             this.cmdCreateResponse = new Desktop.Skinning.SkinnedButton();
             this.lblCaseInfo = new Desktop.Skinning.SkinnedLabel();
@@ -201,7 +202,8 @@
             this.gridLines.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColText,
             this.ColStage,
-            this.ColCase});
+            this.ColCase,
+            this.ColJump});
             this.gridLines.Data = null;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -229,6 +231,8 @@
             this.gridLines.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridLines.Size = new System.Drawing.Size(939, 212);
             this.gridLines.TabIndex = 0;
+            this.gridLines.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLines_CellContentClick);
+            this.gridLines.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.gridLines_CellPainting);
             this.gridLines.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLines_CellEnter);
             // 
             // ColText
@@ -252,6 +256,15 @@
             this.ColCase.ReadOnly = true;
             this.ColCase.Width = 150;
             // 
+            // ColJump
+            // 
+            this.ColJump.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.ColJump.Flat = false;
+            this.ColJump.HeaderText = "";
+            this.ColJump.Name = "ColJump";
+            this.ColJump.ReadOnly = true;
+            this.ColJump.Width = 21;
+            // 
             // lblNoMatches
             // 
             this.lblNoMatches.AutoSize = true;
@@ -272,7 +285,7 @@
             this.cmdCreateResponse.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.cmdCreateResponse.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
             this.cmdCreateResponse.Flat = false;
-            this.cmdCreateResponse.Location = new System.Drawing.Point(804, 243);
+            this.cmdCreateResponse.Location = new System.Drawing.Point(766, 243);
             this.cmdCreateResponse.Name = "cmdCreateResponse";
             this.cmdCreateResponse.Size = new System.Drawing.Size(141, 23);
             this.cmdCreateResponse.TabIndex = 0;
@@ -551,6 +564,7 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn ColText;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ColStage;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ColCase;
+		private Desktop.Skinning.SkinnedDataGridViewButtonColumn ColJump;
 		private System.Windows.Forms.SplitContainer splitContainer3;
 		private Desktop.Skinning.SkinnedLabel lblBasicText;
 		private Desktop.Skinning.SkinnedListBox lstBasicLines;

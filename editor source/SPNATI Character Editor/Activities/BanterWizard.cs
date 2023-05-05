@@ -1,6 +1,8 @@
-﻿using Desktop;
+using Desktop;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -43,7 +45,8 @@ namespace SPNATI_Character_Editor.Activities
 		protected override void OnInitialize()
 		{
 			_character = Record as Character;
-		}
+            ColJump.Flat = true;
+        }
 
 		protected override void OnFirstActivate()
 		{
@@ -626,5 +629,55 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			HideResponses();
 		}
-	}
+
+        private void gridLines_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == ColJump.Index)
+            {
+                TargetData data = gridLines.Rows[e.RowIndex]?.Tag as TargetData;
+                DialogueLine line = gridLines.Rows[e.RowIndex]?.Cells["ColText"].Tag as DialogueLine;
+                if (data == null || line == null)
+                {
+                    return;
+                }
+                Image img = Properties.Resources.GoToLine;
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var w = img.Width;
+                var h = img.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+        }
+
+        private void gridLines_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == ColJump.Index)
+            {
+                TargetData data = gridLines.Rows[e.RowIndex]?.Tag as TargetData;
+                DialogueLine line = gridLines.Rows[e.RowIndex]?.Cells["ColText"].Tag as DialogueLine;
+				if (data == null || line == null)
+                {
+                    return;
+                }
+
+                Character character = CharacterDatabase.Load(data.Character.FolderName);
+				character.PrepareForEdit();
+
+                foreach (Case workingCase in character.Behavior.GetWorkingCases())
+				{
+					foreach(DialogueLine dialogueLine in workingCase.Lines)
+					{
+						if (dialogueLine.Text == line.Text)
+						{
+							Shell.Instance.Launch<Character, DialogueEditor>(character, new ValidationContext(new Stage(workingCase.Stages[0]), workingCase, dialogueLine));
+							return;
+						}
+                    }
+				}
+            }
+        }
+    }
 }
