@@ -1,6 +1,7 @@
 using Desktop;
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace SPNATI_Character_Editor.Activities
 {
@@ -11,8 +12,9 @@ namespace SPNATI_Character_Editor.Activities
 		private bool _linkDataChanged = false;
 		private Costume _costume;
 		private bool _populatingImages;
+        private bool _exportOnQuit;
 
-		public SkinEditor()
+        public SkinEditor()
 		{
 			InitializeComponent();
 
@@ -118,7 +120,37 @@ namespace SPNATI_Character_Editor.Activities
 			_populatingImages = false;
 		}
 
-		public override void Save()
+        private bool PromptToSave()
+        {
+            if (_costume == null || !_costume.IsDirty)
+                return true;
+            DialogResult result = MessageBox.Show(string.Format("Do you wish to save {0} first?", _costume.Link.Name), "Save changes", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                _exportOnQuit = true;
+                return true;
+            }
+            else if (result == DialogResult.No)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public override bool CanQuit(CloseArgs args)
+        {
+            return PromptToSave();
+        }
+
+        public override void Quit()
+        {
+            if (_exportOnQuit)
+            {
+                OnSaveWorkspace(false);
+            }
+        }
+
+        public override void Save()
 		{
 			_costume.Labels = gridLabels.Values;
 
