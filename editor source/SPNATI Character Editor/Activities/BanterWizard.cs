@@ -1,10 +1,12 @@
 using Desktop;
 using Desktop.Skinning;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Authentication.ExtendedProtection;
 using System.Windows.Forms;
 
 namespace SPNATI_Character_Editor.Activities
@@ -24,6 +26,13 @@ namespace SPNATI_Character_Editor.Activities
 		private bool _loading;
 		private string _path;
 		private InboundLine _currentInbound;
+
+		private bool _filterToColor;
+		private string _colorFilter;
+		private bool _filterNew;
+		private bool _filterModText;
+		private bool _filterModCond;
+		private bool _filterOld;
 
 		public BanterWizard()
 		{
@@ -65,6 +74,7 @@ namespace SPNATI_Character_Editor.Activities
             panelLoad.BringToFront();
 			progressBar.Visible = false;
 
+
         }
 
 		protected override void OnFirstActivate()
@@ -77,6 +87,17 @@ namespace SPNATI_Character_Editor.Activities
 			{ 
                 toolTip1.SetToolTip(this.cmdUpdateBanter, "Update banter data. Use this after pulling other characters' updates from Git.");
             }
+            _filterToColor = false;
+			chkColorFilter.Checked = false;
+			_filterNew = true;
+			_filterModText = true;
+			_filterModCond = true;
+			_filterOld = true;
+			chkLineFiltering.SetItemChecked(0, true);
+            chkLineFiltering.SetItemChecked(1, true);
+            chkLineFiltering.SetItemChecked(2, true);
+            chkLineFiltering.SetItemChecked(3, true);
+            cmdApplyFilters.Enabled = false;
         }
 
 		protected override void OnActivate()
@@ -87,8 +108,7 @@ namespace SPNATI_Character_Editor.Activities
 		{
 		}
 
-
-		public override bool CanQuit(CloseArgs args)
+        public override bool CanQuit(CloseArgs args)
 		{
 			if (_loading)
 			{
@@ -115,12 +135,35 @@ namespace SPNATI_Character_Editor.Activities
 			}
 			else 
 			{
-				BanterTargetedLines(lstCharacters.SelectedItem as Character);
-				Workspace.SendMessage(WorkspaceMessages.PreviewCharacterChanged, lstCharacters.SelectedItem as Character);
-				SelectLine(0);
+				_selectedCharacter = lstCharacters.SelectedItem as Character;
+				BanterTargetedLines(_selectedCharacter);
+                Workspace.SendMessage(WorkspaceMessages.PreviewCharacterChanged, _selectedCharacter);
+                SelectLine(0);
 				cmdCreateResponse.Visible = true;
 			}
         }
+
+		private bool LineFiltering(InboundLine line)
+		{
+			if (_colorFilter != null && _filterToColor)
+			{
+				if (line.ColorCode != _colorFilter)
+				{
+					return false;
+				}
+			}
+			if (string.IsNullOrEmpty(line.Newness))
+				return _filterOld;
+			if (line.Newness == "N")
+				return _filterNew;
+			if (line.Newness == "T")
+				return _filterModText;
+			if (line.Newness == "C")
+				return _filterModCond;
+			if (line.Newness == "B")
+				return _filterModText || _filterModCond;
+			return true;
+		}
 
 		private void BanterTargetedLines(Character loaded)
 		{
@@ -130,18 +173,23 @@ namespace SPNATI_Character_Editor.Activities
 			HideResponses();
 			gridLines.Rows.Clear();
 			TargetingCharacter targeter = _character.BanterData.TargetingCharacters.Find(x => x.Id == loaded.FolderName);
+			int count = 0;
 			foreach (InboundLine line in targeter.Inbounds)
 			{
-				DataGridViewRow row = gridLines.Rows[gridLines.Rows.Add()];
-				row.Tag = loaded;
-                row.Cells["ColNewness"].Value = line.Newness;
-                row.Cells["ColText"].Value = line.Text;
-				row.Cells["ColText"].Tag = line;
-				row.Cells["ColStage"].Value = line.StageRange;
-				row.Cells["ColCase"].Value = line.CaseTag;
+				if (LineFiltering(line))
+				{
+					DataGridViewRow row = gridLines.Rows[gridLines.Rows.Add()];
+					row.Tag = loaded;
+					row.Cells["ColNewness"].Value = line.Newness;
+					row.Cells["ColText"].Value = line.Text;
+					row.Cells["ColText"].Tag = line;
+					row.Cells["ColStage"].Value = line.StageRange;
+					row.Cells["ColCase"].Value = line.CaseTag;
+					count++;
+				}
 			}
-            gridLines.Visible = (targeter.InboundCount > 0);
-            lblNoMatches.Visible = (targeter.InboundCount == 0);
+            gridLines.Visible = (count > 0);
+            lblNoMatches.Visible = (count == 0);
         }
 
 
@@ -244,7 +292,7 @@ namespace SPNATI_Character_Editor.Activities
                             }
 
                             _selectedCase = workingCase;
-							_selectedCharacter = character;
+						//	_selectedCharacter = character;
                         }
 
                         return;
@@ -265,31 +313,27 @@ namespace SPNATI_Character_Editor.Activities
 				_currentInbound = inbound;
 				SetColorButton(inbound.ColorCode);
 				grpBaseLine.Text = string.Format("{0} may be reacting to these lines from {1}:", c, _character);
+                CheckForResponses(c, inbound.Text);
 
-				if (inbound != null)
+                int stage;
+				if (inbound.StageRange == "10")
 				{
-					int stage;
-					if (inbound.StageRange == "10")
-					{
-						stage = 10;
-					}
-					else
-					{
-						stage = int.Parse(inbound.StageRange[0].ToString());
-					}
-
-
-					PoseMapping pose = c.PoseLibrary.GetPose(inbound.Img);
-					if (pose != null)
-					{
-						Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(c, pose, stage));
-					}
-					DialogueLine dialogueLine = new DialogueLine();
-					dialogueLine.Text = inbound.Text;
-					Workspace.SendMessage(WorkspaceMessages.PreviewLine, dialogueLine);
+					stage = 10;
+				}
+				else
+				{
+					stage = int.Parse(inbound.StageRange[0].ToString());
 				}
 
-				CheckForResponses(c, inbound.Text);
+				PoseMapping pose = c.PoseLibrary.GetPose(inbound.Img);
+				if (pose != null)
+				{
+					Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(c, pose, stage));
+				}
+				DialogueLine dialogueLine = new DialogueLine();
+				dialogueLine.Text = inbound.Text;
+				Workspace.SendMessage(WorkspaceMessages.PreviewLine, dialogueLine);
+
             }
 			else
 			{
@@ -383,7 +427,7 @@ namespace SPNATI_Character_Editor.Activities
 				}
 				_workingResponse = null;
 				_selectedCase = null;
-                _selectedCharacter = null;
+            //    _selectedCharacter = null;
             }
 		}
 		
@@ -428,8 +472,6 @@ namespace SPNATI_Character_Editor.Activities
 				gridLines.Enabled = false;
 			}
 		}
-
-
 
 		public override void Save()
 		{
@@ -535,35 +577,6 @@ namespace SPNATI_Character_Editor.Activities
             }
         }
 
-        private void cmdColorCode_Click(object sender, EventArgs e)
-        {
-            ColorCode color = RecordLookup.DoLookup(typeof(ColorCode), "", false, null) as ColorCode;
-            if (color != null)
-            {
-                SetColorButton(color.Key);
-            }
-        }
-
-        private void SetColorButton(string colorCode)
-        {
-            ColorCode code = Definitions.Instance.Get<ColorCode>(colorCode);
-            if (code == null)
-            {
-                cmdColorCode.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
-                cmdColorCode.Tag = null;
-            }
-            else
-            {
-                cmdColorCode.BackColor = code.GetColor();
-                cmdColorCode.Tag = colorCode;
-				if (_currentInbound != null)
-				{
-					_currentInbound.ColorCode = cmdColorCode.Tag?.ToString();
-				//	_currentInbound.NotifyPropertyChanged;
-				}
-            }
-        }
-
         private void cmdSaveBanter_Click(object sender, EventArgs e)
         {
 			if (_character.BanterData.Timestamp == 0)
@@ -596,6 +609,7 @@ namespace SPNATI_Character_Editor.Activities
             progressBar.Visible = true;
             lblProgress.Visible = true;
             lstCharacters.Items.Clear();
+            gridLines.Rows.Clear();
         }
 
 		private void EndLoading()
@@ -658,14 +672,46 @@ namespace SPNATI_Character_Editor.Activities
                 progressBar.Value = count++;
                 lblProgress.Text = "Loading " + ch.Id + "...";
 				lblProgress.Refresh();
-                Character loaded = CharacterDatabase.Load(ch.Id);
                 if (ch.InboundCount > 0)
                 {
+                    Character loaded = CharacterDatabase.Load(ch.Id);
                     lstCharacters.Items.Add(loaded);
                 }
             }
 
 			EndLoading();
+        }
+
+		private void ReListCharacters()
+		{
+			BeginLoading();
+
+            progressBar.Maximum = _character.BanterData.TargetingCharacters.Count;
+            int count = 0;
+            foreach (TargetingCharacter ch in _character.BanterData.TargetingCharacters)
+            {
+                progressBar.Value = count++;
+                lblProgress.Text = "Loading " + ch.Id + "...";
+                lblProgress.Refresh();
+				int matchingLineCount = 0;
+
+				foreach (InboundLine inbound in ch.Inbounds)
+				{
+					if (LineFiltering(inbound))
+					{
+						matchingLineCount++;
+					}
+				}
+
+                if (matchingLineCount > 0)
+                {
+                    Character loaded = CharacterDatabase.Load(ch.Id);
+                    lstCharacters.Items.Add(loaded);
+                }
+            }
+
+            EndLoading();
+
         }
 
 		private void UpdateBanter()
@@ -725,6 +771,10 @@ namespace SPNATI_Character_Editor.Activities
 					{
 						line.Newness = "X";
 					}
+
+					Dictionary<DialogueLine, Case> behaviourLines = new Dictionary<DialogueLine, Case>();
+
+
                     foreach (Case stageCase in loaded.GetWorkingCasesTargetedAtCharacter(_character, TargetType.DirectTarget))
                     {
 						foreach (DialogueLine dialogueLine in stageCase.Lines)
@@ -732,23 +782,107 @@ namespace SPNATI_Character_Editor.Activities
 							InboundLine inbound = _character.BanterData.TargetingCharacters[index].Inbounds.Find(x => x.Text == dialogueLine.Text);
 							if (inbound == null)
 							{
-								InboundLine inboundLine = new InboundLine(stageCase, dialogueLine);
-                                _character.BanterData.TargetingCharacters[index].Inbounds.Add(inboundLine);
+								behaviourLines.Add(dialogueLine, stageCase);
 							}
 							else
 							{
-								inbound.Newness = "";
+                                int stageCaseHash = 1;
+                                foreach (TargetCondition condition in stageCase.Conditions)
+                                {
+                                    stageCaseHash *= condition.GetHashCode();
+                                }
+
+                                if (stageCaseHash != inbound.Condition)
+								{
+									inbound.Newness = "C";
+									inbound.Condition = stageCaseHash;
+								}
+								else
+								{
+									inbound.Newness = "";
+								}
 							}
+
                         }
                     }
 
-					List<InboundLine> linesToRemove = new List<InboundLine>();
+                    List<InboundLine> banterLines = new List<InboundLine>();
+                    List<InboundLine> linesToRemove = new List<InboundLine>();
+
+                    if (behaviourLines.Count > 0) 
+					{ 
+						foreach (InboundLine line in _character.BanterData.TargetingCharacters[index].Inbounds)
+						{
+							if (line.Newness == "X")
+							{
+								banterLines.Add(line);
+							}
+						}
+
+						if (banterLines.Count > 0)
+						{ 
+							foreach (KeyValuePair<DialogueLine, Case> kvp in behaviourLines)
+							{
+								float minRatio = 1.0F;
+								int minLineIndex = -1;
+								Levenshtein levenshtein = new Levenshtein(kvp.Key.Text);
+								foreach (InboundLine item in banterLines)
+								{
+									float ratio = Convert.ToSingle(levenshtein.DistanceFrom(item.Text)) / Convert.ToSingle(Math.Max(item.Text.Length, kvp.Key.Text.Length));
+									if (ratio < minRatio && ratio < 0.35F)
+									{
+										minRatio = ratio;
+										minLineIndex = banterLines.IndexOf(item);
+									}
+								}
+								if (minRatio < 0.35F)
+								{
+								//	linesModified.Add(banterLines[minLineIndex]);
+                                    InboundLine inbound = _character.BanterData.TargetingCharacters[index].Inbounds.Find(x => x.Text == banterLines[minLineIndex].Text);
+                                    int stageCaseHash = 1;
+                                    foreach (TargetCondition condition in kvp.Value.Conditions)
+                                    {
+                                        stageCaseHash *= condition.GetHashCode();
+                                    }
+
+                                    if (stageCaseHash != inbound.Condition)
+                                    {
+                                        inbound.Newness = "B";
+                                        inbound.Condition = stageCaseHash;
+										inbound.Text = kvp.Key.Text;
+                                    }
+                                    else
+                                    {
+                                        inbound.Newness = "T";
+										inbound.Text = kvp.Key.Text;
+                                    }
+                                    banterLines.RemoveAt(minLineIndex);
+								}
+								else
+								{
+                                    InboundLine inboundLine = new InboundLine(kvp.Value, kvp.Key);
+                                    _character.BanterData.TargetingCharacters[index].Inbounds.Add(inboundLine);
+                                }
+							}
+						}
+						else
+						{
+							foreach (KeyValuePair< DialogueLine, Case> kvp in behaviourLines)
+							{
+                                InboundLine inboundLine = new InboundLine(kvp.Value, kvp.Key);
+                                _character.BanterData.TargetingCharacters[index].Inbounds.Add(inboundLine);
+                            }
+                        }
+                    }
+
                     foreach (InboundLine line in _character.BanterData.TargetingCharacters[index].Inbounds)
                     {
                         if (line.Newness == "X")
-						{
-							linesToRemove.Add(line);					}
+                        {
+                                linesToRemove.Add(line);
+                        }
                     }
+                    
 					foreach (InboundLine line in linesToRemove)
 					{
 						_character.BanterData.TargetingCharacters[index].Inbounds.Remove(line);
@@ -776,17 +910,183 @@ namespace SPNATI_Character_Editor.Activities
             {
 				GenerateBanterXML();
                 cmdUpdateBanter.Text = "Update";
+				cmdApplyFilters.Enabled = true;
             }
             else
             {
 				UpdateBanter();
+				cmdApplyFilters.Enabled = true;
             }
 		}
 
         private void cmdLoadBanter_Click(object sender, EventArgs e)
         {
             ListCharactersFromFile();
+			cmdApplyFilters.Enabled = true;
         }
 
+
+        private void cmdColorCode_Click(object sender, EventArgs e)
+        {
+            ColorCode color = RecordLookup.DoLookup(typeof(ColorCode), "", false, null) as ColorCode;
+            if (color != null)
+            {
+                SetColorButton(color.Key);
+            }
+        }
+
+        private void SetColorButton(string colorCode)
+        {
+            ColorCode code = Definitions.Instance.Get<ColorCode>(colorCode);
+            if (code == null)
+            {
+                cmdColorCode.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
+                cmdColorCode.Tag = null;
+            }
+            else
+            {
+                cmdColorCode.BackColor = code.GetColor();
+                cmdColorCode.Tag = colorCode;
+                if (_currentInbound != null)
+                {
+                    _currentInbound.ColorCode = cmdColorCode.Tag?.ToString();
+                    //	_currentInbound.NotifyPropertyChanged;
+                }
+            }
+        }
+
+        private void cmdColorFilter_Click(object sender, EventArgs e)
+        {
+            ColorCode color = RecordLookup.DoLookup(typeof(ColorCode), "", false, null) as ColorCode;
+            if (color != null)
+            {
+                SetColorFilterButton(color.Key);
+            }
+        }
+
+        private void SetColorFilterButton(string colorCode)
+        {
+            ColorCode code = Definitions.Instance.Get<ColorCode>(colorCode);
+            if (code == null)
+            {
+                cmdColorFilter.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
+                cmdColorFilter.Tag = null;
+            }
+            else
+            {
+                cmdColorFilter.BackColor = code.GetColor();
+                cmdColorFilter.Tag = colorCode;
+
+				_colorFilter = colorCode;
+			}
+        }
+
+        private void chkColorFilter_CheckedChanged(object sender, EventArgs e)
+        {
+			_filterToColor = chkColorFilter.Checked;
+        }
+
+        private void chkLineFiltering_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			
+            _filterNew = chkLineFiltering.GetItemChecked(0);
+            _filterModText = chkLineFiltering.GetItemChecked(1);
+            _filterModCond = chkLineFiltering.GetItemChecked(2);
+            _filterOld = chkLineFiltering.GetItemChecked(3);		
+        }
+
+        private void cmdApplyFilters_Click(object sender, EventArgs e)
+        {
+			ReListCharacters();
+        }
     }
+
+
+    public partial class Levenshtein 
+    {
+        /*
+         * WARRING this class is performance critical (Speed).
+         */
+
+        private readonly string storedValue;
+        private readonly int[] costs;
+
+        /// <summary>
+        /// Creates a new instance with a value to test other values against
+        /// </summary>
+        /// <param Name="value">Value to compare other values to.</param>
+        public Levenshtein(string value)
+        {
+            this.storedValue = value;
+            // Create matrix row
+            this.costs = new int[this.storedValue.Length];
+        }
+
+        /// <summary>
+        /// gets the length of the stored value that is tested against
+        /// </summary>
+        public int StoredLength => this.storedValue.Length;
+
+        /// <summary>
+        /// Compares a value to the stored value. 
+        /// Not thread safe.
+        /// </summary>
+        /// <returns>Difference. 0 complete match.</returns>
+        public int DistanceFrom(string value)
+        {
+            if (costs.Length == 0)
+            {
+                return value.Length;
+            }
+
+            // Add indexing for insertion to first row
+            for (int i = 0; i < this.costs.Length;)
+            {
+                this.costs[i] = ++i;
+            }
+
+            for (int i = 0; i < value.Length; i++)
+            {
+                // cost of the first index
+                int cost = i;
+                int previousCost = i;
+
+                // cache value for inner loop to avoid index lookup and bonds checking, profiled this is quicker
+                char value1Char = value[i];
+
+                for (int j = 0; j < this.storedValue.Length; j++)
+                {
+                    int currentCost = cost;
+
+                    // assigning this here reduces the array reads we do, improvement of the old version
+                    cost = costs[j];
+
+                    if (value1Char != this.storedValue[j])
+                    {
+                        if (previousCost < currentCost)
+                        {
+                            currentCost = previousCost;
+                        }
+
+                        if (cost < currentCost)
+                        {
+                            currentCost = cost;
+                        }
+
+                        ++currentCost;
+                    }
+
+                    /* 
+                     * Improvement on the older versions.
+                     * Swapping the variables here results in a performance improvement for modern intel CPU’s, but I have no idea why?
+                     */
+                    costs[j] = currentCost;
+                    previousCost = currentCost;
+                }
+            }
+
+            return this.costs[this.costs.Length - 1];
+        }
+    }
+
 }

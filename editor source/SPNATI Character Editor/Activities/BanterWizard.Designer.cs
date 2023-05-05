@@ -29,61 +29,66 @@ namespace SPNATI_Character_Editor.Activities
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panelLoad = new Desktop.Skinning.SkinnedPanel();
-            this.lblProgress = new Desktop.Skinning.SkinnedLabel();
-            this.progressBar = new Desktop.Skinning.SkinnedProgressBar();
+            this.lblShowTargetedLines = new Desktop.Skinning.SkinnedLabel();
+            this.chkColorFilter = new Desktop.Skinning.SkinnedCheckBox();
+            this.cmdColorFilter = new System.Windows.Forms.Button();
+            this.chkLineFiltering = new Desktop.Skinning.SkinnedCheckedListBox();
             this.cmdLoadBanter = new Desktop.Skinning.SkinnedButton();
             this.cmdUpdateBanter = new Desktop.Skinning.SkinnedButton();
             this.cmdSaveBanter = new Desktop.Skinning.SkinnedButton();
             this.lstCharacters = new Desktop.Skinning.SkinnedListBox();
             this.lblCharacters = new Desktop.Skinning.SkinnedLabel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.grpResponse = new Desktop.Skinning.SkinnedGroupBox();
-            this.skinnedLabel2 = new Desktop.Skinning.SkinnedLabel();
-            this.ctlResponse = new SPNATI_Character_Editor.Controls.CaseControl();
-            this.gridResponse = new SPNATI_Character_Editor.Controls.DialogueGrid();
-            this.cmdJump = new Desktop.Skinning.SkinnedButton();
-            this.cmdAccept = new Desktop.Skinning.SkinnedButton();
-            this.cmdDiscard = new Desktop.Skinning.SkinnedButton();
-            this.lblBasicText = new Desktop.Skinning.SkinnedLabel();
-            this.grpBaseLine = new Desktop.Skinning.SkinnedGroupBox();
-            this.skinnedLabel1 = new Desktop.Skinning.SkinnedLabel();
-            this.lstBasicLines = new Desktop.Skinning.SkinnedListBox();
-            this.lblCaseInfo = new Desktop.Skinning.SkinnedLabel();
-            this.grpLines = new Desktop.Skinning.SkinnedGroupBox();
-            this.cmdCreateResponse = new Desktop.Skinning.SkinnedButton();
-            this.lblNoMatches = new Desktop.Skinning.SkinnedLabel();
-            this.gridLines = new Desktop.Skinning.SkinnedDataGridView();
-            this.ColJump = new Desktop.Skinning.SkinnedDataGridViewButtonColumn();
-            this.ColCase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColStage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColText = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNewness = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmdColorCode = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.grpLines = new Desktop.Skinning.SkinnedGroupBox();
+            this.cmdColorCode = new System.Windows.Forms.Button();
+            this.gridLines = new Desktop.Skinning.SkinnedDataGridView();
+            this.ColColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNewness = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColText = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColStage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColJump = new Desktop.Skinning.SkinnedDataGridViewButtonColumn();
+            this.lblNoMatches = new Desktop.Skinning.SkinnedLabel();
+            this.cmdCreateResponse = new Desktop.Skinning.SkinnedButton();
+            this.lblCaseInfo = new Desktop.Skinning.SkinnedLabel();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.grpBaseLine = new Desktop.Skinning.SkinnedGroupBox();
+            this.lstBasicLines = new Desktop.Skinning.SkinnedListBox();
+            this.skinnedLabel1 = new Desktop.Skinning.SkinnedLabel();
+            this.lblBasicText = new Desktop.Skinning.SkinnedLabel();
+            this.grpResponse = new Desktop.Skinning.SkinnedGroupBox();
+            this.cmdDiscard = new Desktop.Skinning.SkinnedButton();
+            this.cmdAccept = new Desktop.Skinning.SkinnedButton();
+            this.cmdJump = new Desktop.Skinning.SkinnedButton();
+            this.gridResponse = new SPNATI_Character_Editor.Controls.DialogueGrid();
+            this.ctlResponse = new SPNATI_Character_Editor.Controls.CaseControl();
+            this.skinnedLabel2 = new Desktop.Skinning.SkinnedLabel();
+            this.panelLoad = new Desktop.Skinning.SkinnedPanel();
+            this.lblProgress = new Desktop.Skinning.SkinnedLabel();
+            this.progressBar = new Desktop.Skinning.SkinnedProgressBar();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.cmdApplyFilters = new Desktop.Skinning.SkinnedButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panelLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            this.grpResponse.SuspendLayout();
-            this.grpBaseLine.SuspendLayout();
-            this.grpLines.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLines)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.grpLines.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLines)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            this.grpBaseLine.SuspendLayout();
+            this.grpResponse.SuspendLayout();
+            this.panelLoad.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -94,6 +99,11 @@ namespace SPNATI_Character_Editor.Activities
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.cmdApplyFilters);
+            this.splitContainer1.Panel1.Controls.Add(this.lblShowTargetedLines);
+            this.splitContainer1.Panel1.Controls.Add(this.chkColorFilter);
+            this.splitContainer1.Panel1.Controls.Add(this.cmdColorFilter);
+            this.splitContainer1.Panel1.Controls.Add(this.chkLineFiltering);
             this.splitContainer1.Panel1.Controls.Add(this.cmdLoadBanter);
             this.splitContainer1.Panel1.Controls.Add(this.cmdUpdateBanter);
             this.splitContainer1.Panel1.Controls.Add(this.cmdSaveBanter);
@@ -108,38 +118,58 @@ namespace SPNATI_Character_Editor.Activities
             this.splitContainer1.SplitterDistance = 206;
             this.splitContainer1.TabIndex = 1;
             // 
-            // panelLoad
+            // lblShowTargetedLines
             // 
-            this.panelLoad.Controls.Add(this.lblProgress);
-            this.panelLoad.Controls.Add(this.progressBar);
-            this.panelLoad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLoad.Location = new System.Drawing.Point(0, 0);
-            this.panelLoad.Name = "panelLoad";
-            this.panelLoad.PanelType = Desktop.Skinning.SkinnedBackgroundType.Background;
-            this.panelLoad.Size = new System.Drawing.Size(951, 674);
-            this.panelLoad.TabIndex = 5;
-            this.panelLoad.TabSide = Desktop.Skinning.TabSide.None;
+            this.lblShowTargetedLines.AutoSize = true;
+            this.lblShowTargetedLines.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblShowTargetedLines.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblShowTargetedLines.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblShowTargetedLines.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.lblShowTargetedLines.Location = new System.Drawing.Point(9, 345);
+            this.lblShowTargetedLines.Name = "lblShowTargetedLines";
+            this.lblShowTargetedLines.Size = new System.Drawing.Size(103, 13);
+            this.lblShowTargetedLines.TabIndex = 12;
+            this.lblShowTargetedLines.Text = "Show targeted lines:";
             // 
-            // lblProgress
+            // chkColorFilter
             // 
-            this.lblProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblProgress.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblProgress.ForeColor = System.Drawing.Color.Blue;
-            this.lblProgress.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.lblProgress.Level = Desktop.Skinning.SkinnedLabelLevel.Heading;
-            this.lblProgress.Location = new System.Drawing.Point(80, 292);
-            this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(784, 23);
-            this.lblProgress.TabIndex = 1;
-            this.lblProgress.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.chkColorFilter.AutoSize = true;
+            this.chkColorFilter.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.chkColorFilter.Location = new System.Drawing.Point(12, 431);
+            this.chkColorFilter.Name = "chkColorFilter";
+            this.chkColorFilter.Size = new System.Drawing.Size(108, 17);
+            this.chkColorFilter.TabIndex = 11;
+            this.chkColorFilter.Text = "Filter to this color:";
+            this.chkColorFilter.UseVisualStyleBackColor = true;
+            this.chkColorFilter.CheckedChanged += new System.EventHandler(this.chkColorFilter_CheckedChanged);
             // 
-            // progress
+            // cmdColorFilter
             // 
-            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(80, 322);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(784, 23);
-            this.progressBar.TabIndex = 0;
+            this.cmdColorFilter.Location = new System.Drawing.Point(12, 454);
+            this.cmdColorFilter.Name = "cmdColorFilter";
+            this.cmdColorFilter.Size = new System.Drawing.Size(75, 23);
+            this.cmdColorFilter.TabIndex = 10;
+            this.cmdColorFilter.UseVisualStyleBackColor = true;
+            this.cmdColorFilter.Click += new System.EventHandler(this.cmdColorFilter_Click);
+            // 
+            // chkLineFiltering
+            // 
+            this.chkLineFiltering.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkLineFiltering.BackColor = System.Drawing.Color.White;
+            this.chkLineFiltering.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.chkLineFiltering.ForeColor = System.Drawing.Color.Black;
+            this.chkLineFiltering.FormattingEnabled = true;
+            this.chkLineFiltering.Items.AddRange(new object[] {
+            "New",
+            "modified Text",
+            "modified Conditions",
+            "Old"});
+            this.chkLineFiltering.Location = new System.Drawing.Point(12, 361);
+            this.chkLineFiltering.Name = "chkLineFiltering";
+            this.chkLineFiltering.Size = new System.Drawing.Size(184, 64);
+            this.chkLineFiltering.TabIndex = 9;
+            this.chkLineFiltering.SelectedIndexChanged += new System.EventHandler(this.chkLineFiltering_SelectedIndexChanged);
             // 
             // cmdLoadBanter
             // 
@@ -213,6 +243,203 @@ namespace SPNATI_Character_Editor.Activities
             this.lblCharacters.TabIndex = 0;
             this.lblCharacters.Text = "Characters that target {0}";
             // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.grpLines);
+            this.splitContainer2.Panel1.Controls.Add(this.lblCaseInfo);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
+            this.splitContainer2.Size = new System.Drawing.Size(951, 674);
+            this.splitContainer2.SplitterDistance = 272;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // grpLines
+            // 
+            this.grpLines.BackColor = System.Drawing.Color.White;
+            this.grpLines.Controls.Add(this.cmdColorCode);
+            this.grpLines.Controls.Add(this.gridLines);
+            this.grpLines.Controls.Add(this.lblNoMatches);
+            this.grpLines.Controls.Add(this.cmdCreateResponse);
+            this.grpLines.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpLines.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
+            this.grpLines.Image = null;
+            this.grpLines.Location = new System.Drawing.Point(0, 0);
+            this.grpLines.Name = "grpLines";
+            this.grpLines.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.grpLines.ShowIndicatorBar = false;
+            this.grpLines.Size = new System.Drawing.Size(951, 272);
+            this.grpLines.TabIndex = 5;
+            this.grpLines.TabStop = false;
+            this.grpLines.Text = "Lines";
+            // 
+            // cmdColorCode
+            // 
+            this.cmdColorCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdColorCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdColorCode.Location = new System.Drawing.Point(10, 243);
+            this.cmdColorCode.Name = "cmdColorCode";
+            this.cmdColorCode.Size = new System.Drawing.Size(75, 23);
+            this.cmdColorCode.TabIndex = 5;
+            this.cmdColorCode.UseVisualStyleBackColor = true;
+            this.cmdColorCode.Click += new System.EventHandler(this.cmdColorCode_Click);
+            // 
+            // gridLines
+            // 
+            this.gridLines.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridLines.BackgroundColor = System.Drawing.Color.White;
+            this.gridLines.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridLines.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridLines.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridLines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridLines.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColColor,
+            this.ColNewness,
+            this.ColText,
+            this.ColStage,
+            this.ColCase,
+            this.ColJump});
+            this.gridLines.Data = null;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridLines.DefaultCellStyle = dataGridViewCellStyle5;
+            this.gridLines.EnableHeadersVisualStyles = false;
+            this.gridLines.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.gridLines.GridColor = System.Drawing.Color.LightGray;
+            this.gridLines.Location = new System.Drawing.Point(6, 25);
+            this.gridLines.MultiSelect = false;
+            this.gridLines.Name = "gridLines";
+            this.gridLines.ReadOnly = true;
+            this.gridLines.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridLines.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.gridLines.Size = new System.Drawing.Size(939, 212);
+            this.gridLines.TabIndex = 0;
+            this.gridLines.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLines_CellContentClick);
+            this.gridLines.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLines_CellEnter);
+            this.gridLines.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.gridLines_CellPainting);
+            // 
+            // ColColor
+            // 
+            this.ColColor.HeaderText = "";
+            this.ColColor.Name = "ColColor";
+            this.ColColor.ReadOnly = true;
+            this.ColColor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColColor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColColor.ToolTipText = "Color selector";
+            this.ColColor.Width = 20;
+            // 
+            // ColNewness
+            // 
+            this.ColNewness.HeaderText = "";
+            this.ColNewness.Name = "ColNewness";
+            this.ColNewness.ReadOnly = true;
+            this.ColNewness.ToolTipText = "(N)ew, modified (T)ext, modified (C)onditions, modified (B)oth";
+            this.ColNewness.Width = 20;
+            // 
+            // ColText
+            // 
+            this.ColText.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColText.HeaderText = "Text";
+            this.ColText.Name = "ColText";
+            this.ColText.ReadOnly = true;
+            // 
+            // ColStage
+            // 
+            this.ColStage.HeaderText = "Stages";
+            this.ColStage.Name = "ColStage";
+            this.ColStage.ReadOnly = true;
+            this.ColStage.Width = 50;
+            // 
+            // ColCase
+            // 
+            this.ColCase.HeaderText = "Case";
+            this.ColCase.Name = "ColCase";
+            this.ColCase.ReadOnly = true;
+            this.ColCase.Width = 150;
+            // 
+            // ColJump
+            // 
+            this.ColJump.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.ColJump.Flat = false;
+            this.ColJump.HeaderText = "";
+            this.ColJump.Name = "ColJump";
+            this.ColJump.ReadOnly = true;
+            this.ColJump.ToolTipText = "Jump to the Dialogue tab";
+            this.ColJump.Width = 21;
+            // 
+            // lblNoMatches
+            // 
+            this.lblNoMatches.AutoSize = true;
+            this.lblNoMatches.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblNoMatches.ForeColor = System.Drawing.Color.Red;
+            this.lblNoMatches.Highlight = Desktop.Skinning.SkinnedHighlight.Bad;
+            this.lblNoMatches.Level = Desktop.Skinning.SkinnedLabelLevel.Heading;
+            this.lblNoMatches.Location = new System.Drawing.Point(6, 28);
+            this.lblNoMatches.Name = "lblNoMatches";
+            this.lblNoMatches.Size = new System.Drawing.Size(93, 21);
+            this.lblNoMatches.TabIndex = 4;
+            this.lblNoMatches.Text = "None found";
+            this.lblNoMatches.Visible = false;
+            // 
+            // cmdCreateResponse
+            // 
+            this.cmdCreateResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdCreateResponse.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdCreateResponse.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
+            this.cmdCreateResponse.Flat = false;
+            this.cmdCreateResponse.Location = new System.Drawing.Point(803, 243);
+            this.cmdCreateResponse.Name = "cmdCreateResponse";
+            this.cmdCreateResponse.Size = new System.Drawing.Size(141, 23);
+            this.cmdCreateResponse.TabIndex = 0;
+            this.cmdCreateResponse.Text = "Create Response";
+            this.toolTip1.SetToolTip(this.cmdCreateResponse, "Responding via this button is possible but not recommended.\nUsually, it is better" +
+        " to use the arrow buttons above and respond from the Dialogue tab.");
+            this.cmdCreateResponse.UseVisualStyleBackColor = true;
+            this.cmdCreateResponse.Click += new System.EventHandler(this.cmdCreateResponse_Click);
+            // 
+            // lblCaseInfo
+            // 
+            this.lblCaseInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblCaseInfo.AutoSize = true;
+            this.lblCaseInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblCaseInfo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCaseInfo.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblCaseInfo.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.lblCaseInfo.Location = new System.Drawing.Point(3, 251);
+            this.lblCaseInfo.Name = "lblCaseInfo";
+            this.lblCaseInfo.Size = new System.Drawing.Size(0, 13);
+            this.lblCaseInfo.TabIndex = 3;
+            // 
             // splitContainer3
             // 
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -230,6 +457,66 @@ namespace SPNATI_Character_Editor.Activities
             this.splitContainer3.Size = new System.Drawing.Size(951, 398);
             this.splitContainer3.SplitterDistance = 438;
             this.splitContainer3.TabIndex = 6;
+            // 
+            // grpBaseLine
+            // 
+            this.grpBaseLine.BackColor = System.Drawing.Color.White;
+            this.grpBaseLine.Controls.Add(this.lstBasicLines);
+            this.grpBaseLine.Controls.Add(this.skinnedLabel1);
+            this.grpBaseLine.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpBaseLine.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
+            this.grpBaseLine.Image = null;
+            this.grpBaseLine.Location = new System.Drawing.Point(0, 0);
+            this.grpBaseLine.Name = "grpBaseLine";
+            this.grpBaseLine.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.grpBaseLine.ShowIndicatorBar = false;
+            this.grpBaseLine.Size = new System.Drawing.Size(438, 398);
+            this.grpBaseLine.TabIndex = 8;
+            this.grpBaseLine.TabStop = false;
+            this.grpBaseLine.Text = "Response";
+            // 
+            // lstBasicLines
+            // 
+            this.lstBasicLines.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstBasicLines.BackColor = System.Drawing.Color.White;
+            this.lstBasicLines.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lstBasicLines.ForeColor = System.Drawing.Color.Black;
+            this.lstBasicLines.FormattingEnabled = true;
+            this.lstBasicLines.IntegralHeight = false;
+            this.lstBasicLines.Location = new System.Drawing.Point(6, 52);
+            this.lstBasicLines.Name = "lstBasicLines";
+            this.lstBasicLines.Size = new System.Drawing.Size(425, 342);
+            this.lstBasicLines.TabIndex = 7;
+            // 
+            // skinnedLabel1
+            // 
+            this.skinnedLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinnedLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.skinnedLabel1.ForeColor = System.Drawing.Color.Red;
+            this.skinnedLabel1.Highlight = Desktop.Skinning.SkinnedHighlight.Bad;
+            this.skinnedLabel1.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.skinnedLabel1.Location = new System.Drawing.Point(7, 23);
+            this.skinnedLabel1.Name = "skinnedLabel1";
+            this.skinnedLabel1.Size = new System.Drawing.Size(424, 35);
+            this.skinnedLabel1.TabIndex = 8;
+            this.skinnedLabel1.Text = "Disclaimer: These are estimates. Actual results in game may vary depending on the" +
+    " game state.";
+            // 
+            // lblBasicText
+            // 
+            this.lblBasicText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBasicText.AutoSize = true;
+            this.lblBasicText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblBasicText.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblBasicText.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblBasicText.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.lblBasicText.Location = new System.Drawing.Point(172, 0);
+            this.lblBasicText.Name = "lblBasicText";
+            this.lblBasicText.Size = new System.Drawing.Size(0, 13);
+            this.lblBasicText.TabIndex = 6;
             // 
             // grpResponse
             // 
@@ -252,72 +539,6 @@ namespace SPNATI_Character_Editor.Activities
             this.grpResponse.TabStop = false;
             this.grpResponse.Text = "Write Response";
             // 
-            // skinnedLabel2
-            // 
-            this.skinnedLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinnedLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.skinnedLabel2.ForeColor = System.Drawing.Color.Red;
-            this.skinnedLabel2.Highlight = Desktop.Skinning.SkinnedHighlight.Bad;
-            this.skinnedLabel2.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.skinnedLabel2.Location = new System.Drawing.Point(6, 23);
-            this.skinnedLabel2.Name = "skinnedLabel2";
-            this.skinnedLabel2.Size = new System.Drawing.Size(497, 26);
-            this.skinnedLabel2.TabIndex = 9;
-            this.skinnedLabel2.Text = "These play at the same time as the selected line above, so be careful not to over" +
-    "write the line that is giving context to what the opponent is saying!";
-            // 
-            // ctlResponse
-            // 
-            this.ctlResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctlResponse.Location = new System.Drawing.Point(9, 52);
-            this.ctlResponse.Name = "ctlResponse";
-            this.ctlResponse.Size = new System.Drawing.Size(494, 311);
-            this.ctlResponse.TabIndex = 10;
-            this.ctlResponse.HighlightRow += new System.EventHandler<int>(this.gridResponse_HighlightRow);
-            // 
-            // gridResponse
-            // 
-            this.gridResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridResponse.Location = new System.Drawing.Point(9, 52);
-            this.gridResponse.Name = "gridResponse";
-            this.gridResponse.ReadOnly = false;
-            this.gridResponse.Size = new System.Drawing.Size(494, 311);
-            this.gridResponse.TabIndex = 0;
-            this.gridResponse.HighlightRow += new System.EventHandler<int>(this.gridResponse_HighlightRow);
-            // 
-            // cmdJump
-            // 
-            this.cmdJump.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdJump.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.cmdJump.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.cmdJump.Flat = false;
-            this.cmdJump.Location = new System.Drawing.Point(67, 369);
-            this.cmdJump.Name = "cmdJump";
-            this.cmdJump.Size = new System.Drawing.Size(141, 23);
-            this.cmdJump.TabIndex = 11;
-            this.cmdJump.Text = "Edit Full Screen";
-            this.cmdJump.UseVisualStyleBackColor = true;
-            this.cmdJump.Click += new System.EventHandler(this.cmdJump_Click);
-            // 
-            // cmdAccept
-            // 
-            this.cmdAccept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdAccept.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.cmdAccept.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
-            this.cmdAccept.Flat = false;
-            this.cmdAccept.Location = new System.Drawing.Point(214, 369);
-            this.cmdAccept.Name = "cmdAccept";
-            this.cmdAccept.Size = new System.Drawing.Size(141, 23);
-            this.cmdAccept.TabIndex = 12;
-            this.cmdAccept.Text = "Accept";
-            this.cmdAccept.UseVisualStyleBackColor = true;
-            this.cmdAccept.Click += new System.EventHandler(this.cmdAccept_Click);
-            // 
             // cmdDiscard
             // 
             this.cmdDiscard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -333,262 +554,117 @@ namespace SPNATI_Character_Editor.Activities
             this.cmdDiscard.UseVisualStyleBackColor = true;
             this.cmdDiscard.Click += new System.EventHandler(this.cmdDiscard_Click);
             // 
-            // lblBasicText
+            // cmdAccept
             // 
-            this.lblBasicText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBasicText.AutoSize = true;
-            this.lblBasicText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.lblBasicText.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblBasicText.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.lblBasicText.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.lblBasicText.Location = new System.Drawing.Point(172, 0);
-            this.lblBasicText.Name = "lblBasicText";
-            this.lblBasicText.Size = new System.Drawing.Size(0, 13);
-            this.lblBasicText.TabIndex = 6;
+            this.cmdAccept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdAccept.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdAccept.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
+            this.cmdAccept.Flat = false;
+            this.cmdAccept.Location = new System.Drawing.Point(214, 369);
+            this.cmdAccept.Name = "cmdAccept";
+            this.cmdAccept.Size = new System.Drawing.Size(141, 23);
+            this.cmdAccept.TabIndex = 12;
+            this.cmdAccept.Text = "Accept";
+            this.cmdAccept.UseVisualStyleBackColor = true;
+            this.cmdAccept.Click += new System.EventHandler(this.cmdAccept_Click);
             // 
-            // grpBaseLine
+            // cmdJump
             // 
-            this.grpBaseLine.BackColor = System.Drawing.Color.White;
-            this.grpBaseLine.Controls.Add(this.lstBasicLines);
-            this.grpBaseLine.Controls.Add(this.skinnedLabel1);
-            this.grpBaseLine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpBaseLine.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
-            this.grpBaseLine.Image = null;
-            this.grpBaseLine.Location = new System.Drawing.Point(0, 0);
-            this.grpBaseLine.Name = "grpBaseLine";
-            this.grpBaseLine.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.grpBaseLine.ShowIndicatorBar = false;
-            this.grpBaseLine.Size = new System.Drawing.Size(438, 398);
-            this.grpBaseLine.TabIndex = 8;
-            this.grpBaseLine.TabStop = false;
-            this.grpBaseLine.Text = "Response";
+            this.cmdJump.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdJump.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdJump.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.cmdJump.Flat = false;
+            this.cmdJump.Location = new System.Drawing.Point(67, 369);
+            this.cmdJump.Name = "cmdJump";
+            this.cmdJump.Size = new System.Drawing.Size(141, 23);
+            this.cmdJump.TabIndex = 11;
+            this.cmdJump.Text = "Edit Full Screen";
+            this.cmdJump.UseVisualStyleBackColor = true;
+            this.cmdJump.Click += new System.EventHandler(this.cmdJump_Click);
             // 
-            // skinnedLabel1
+            // gridResponse
             // 
-            this.skinnedLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinnedLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.skinnedLabel1.ForeColor = System.Drawing.Color.Red;
-            this.skinnedLabel1.Highlight = Desktop.Skinning.SkinnedHighlight.Bad;
-            this.skinnedLabel1.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.skinnedLabel1.Location = new System.Drawing.Point(7, 23);
-            this.skinnedLabel1.Name = "skinnedLabel1";
-            this.skinnedLabel1.Size = new System.Drawing.Size(424, 35);
-            this.skinnedLabel1.TabIndex = 8;
-            this.skinnedLabel1.Text = "Disclaimer: These are estimates. Actual results in game may vary depending on the" +
-    " game state.";
-            // 
-            // lstBasicLines
-            // 
-            this.lstBasicLines.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstBasicLines.BackColor = System.Drawing.Color.White;
-            this.lstBasicLines.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.lstBasicLines.ForeColor = System.Drawing.Color.Black;
-            this.lstBasicLines.FormattingEnabled = true;
-            this.lstBasicLines.IntegralHeight = false;
-            this.lstBasicLines.Location = new System.Drawing.Point(6, 52);
-            this.lstBasicLines.Name = "lstBasicLines";
-            this.lstBasicLines.Size = new System.Drawing.Size(425, 342);
-            this.lstBasicLines.TabIndex = 7;
+            this.gridResponse.Location = new System.Drawing.Point(9, 52);
+            this.gridResponse.Name = "gridResponse";
+            this.gridResponse.ReadOnly = false;
+            this.gridResponse.Size = new System.Drawing.Size(494, 311);
+            this.gridResponse.TabIndex = 0;
+            this.gridResponse.HighlightRow += new System.EventHandler<int>(this.gridResponse_HighlightRow);
             // 
-            // lblCaseInfo
+            // ctlResponse
             // 
-            this.lblCaseInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblCaseInfo.AutoSize = true;
-            this.lblCaseInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.lblCaseInfo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblCaseInfo.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.lblCaseInfo.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.lblCaseInfo.Location = new System.Drawing.Point(3, 251);
-            this.lblCaseInfo.Name = "lblCaseInfo";
-            this.lblCaseInfo.Size = new System.Drawing.Size(0, 13);
-            this.lblCaseInfo.TabIndex = 3;
-            // 
-            // grpLines
-            // 
-            this.grpLines.BackColor = System.Drawing.Color.White;
-            this.grpLines.Controls.Add(this.cmdColorCode);
-            this.grpLines.Controls.Add(this.gridLines);
-            this.grpLines.Controls.Add(this.lblNoMatches);
-            this.grpLines.Controls.Add(this.cmdCreateResponse);
-            this.grpLines.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpLines.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
-            this.grpLines.Image = null;
-            this.grpLines.Location = new System.Drawing.Point(0, 0);
-            this.grpLines.Name = "grpLines";
-            this.grpLines.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.grpLines.ShowIndicatorBar = false;
-            this.grpLines.Size = new System.Drawing.Size(951, 272);
-            this.grpLines.TabIndex = 5;
-            this.grpLines.TabStop = false;
-            this.grpLines.Text = "Lines";
-            // 
-            // cmdCreateResponse
-            // 
-            this.cmdCreateResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdCreateResponse.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.cmdCreateResponse.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
-            this.cmdCreateResponse.Flat = false;
-            this.cmdCreateResponse.Location = new System.Drawing.Point(803, 243);
-            this.cmdCreateResponse.Name = "cmdCreateResponse";
-            this.cmdCreateResponse.Size = new System.Drawing.Size(141, 23);
-            this.cmdCreateResponse.TabIndex = 0;
-            this.cmdCreateResponse.Text = "Create Response";
-            this.toolTip1.SetToolTip(this.cmdCreateResponse, "Responding via this button is possible but not recommended.\nUsually, it is better" +
-        " to use the arrow buttons above and respond from the Dialogue tab.");
-            this.cmdCreateResponse.UseVisualStyleBackColor = true;
-            this.cmdCreateResponse.Click += new System.EventHandler(this.cmdCreateResponse_Click);
-            // 
-            // lblNoMatches
-            // 
-            this.lblNoMatches.AutoSize = true;
-            this.lblNoMatches.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblNoMatches.ForeColor = System.Drawing.Color.Red;
-            this.lblNoMatches.Highlight = Desktop.Skinning.SkinnedHighlight.Bad;
-            this.lblNoMatches.Level = Desktop.Skinning.SkinnedLabelLevel.Heading;
-            this.lblNoMatches.Location = new System.Drawing.Point(6, 28);
-            this.lblNoMatches.Name = "lblNoMatches";
-            this.lblNoMatches.Size = new System.Drawing.Size(93, 21);
-            this.lblNoMatches.TabIndex = 4;
-            this.lblNoMatches.Text = "None found";
-            this.lblNoMatches.Visible = false;
-            // 
-            // gridLines
-            // 
-            this.gridLines.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ctlResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridLines.BackgroundColor = System.Drawing.Color.White;
-            this.gridLines.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridLines.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridLines.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridLines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridLines.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColColor,
-            this.ColNewness,
-            this.ColText,
-            this.ColStage,
-            this.ColCase,
-            this.ColJump});
-            this.gridLines.Data = null;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridLines.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gridLines.EnableHeadersVisualStyles = false;
-            this.gridLines.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.gridLines.GridColor = System.Drawing.Color.LightGray;
-            this.gridLines.Location = new System.Drawing.Point(6, 25);
-            this.gridLines.MultiSelect = false;
-            this.gridLines.Name = "gridLines";
-            this.gridLines.ReadOnly = true;
-            this.gridLines.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridLines.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.gridLines.Size = new System.Drawing.Size(939, 212);
-            this.gridLines.TabIndex = 0;
-            this.gridLines.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLines_CellContentClick);
-            this.gridLines.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLines_CellEnter);
-            this.gridLines.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.gridLines_CellPainting);
+            this.ctlResponse.Location = new System.Drawing.Point(9, 52);
+            this.ctlResponse.Name = "ctlResponse";
+            this.ctlResponse.Size = new System.Drawing.Size(494, 311);
+            this.ctlResponse.TabIndex = 10;
+            this.ctlResponse.HighlightRow += new System.EventHandler<int>(this.gridResponse_HighlightRow);
             // 
-            // ColJump
+            // skinnedLabel2
             // 
-            this.ColJump.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.ColJump.Flat = false;
-            this.ColJump.HeaderText = "";
-            this.ColJump.Name = "ColJump";
-            this.ColJump.ReadOnly = true;
-            this.ColJump.ToolTipText = "Jump to the Dialogue tab";
-            this.ColJump.Width = 21;
+            this.skinnedLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinnedLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.skinnedLabel2.ForeColor = System.Drawing.Color.Red;
+            this.skinnedLabel2.Highlight = Desktop.Skinning.SkinnedHighlight.Bad;
+            this.skinnedLabel2.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.skinnedLabel2.Location = new System.Drawing.Point(6, 23);
+            this.skinnedLabel2.Name = "skinnedLabel2";
+            this.skinnedLabel2.Size = new System.Drawing.Size(497, 26);
+            this.skinnedLabel2.TabIndex = 9;
+            this.skinnedLabel2.Text = "These play at the same time as the selected line above, so be careful not to over" +
+    "write the line that is giving context to what the opponent is saying!";
             // 
-            // ColCase
+            // panelLoad
             // 
-            this.ColCase.HeaderText = "Case";
-            this.ColCase.Name = "ColCase";
-            this.ColCase.ReadOnly = true;
-            this.ColCase.Width = 150;
+            this.panelLoad.Controls.Add(this.lblProgress);
+            this.panelLoad.Controls.Add(this.progressBar);
+            this.panelLoad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLoad.Location = new System.Drawing.Point(0, 0);
+            this.panelLoad.Name = "panelLoad";
+            this.panelLoad.PanelType = Desktop.Skinning.SkinnedBackgroundType.Background;
+            this.panelLoad.Size = new System.Drawing.Size(951, 674);
+            this.panelLoad.TabIndex = 5;
+            this.panelLoad.TabSide = Desktop.Skinning.TabSide.None;
             // 
-            // ColStage
+            // lblProgress
             // 
-            this.ColStage.HeaderText = "Stages";
-            this.ColStage.Name = "ColStage";
-            this.ColStage.ReadOnly = true;
-            this.ColStage.Width = 50;
+            this.lblProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblProgress.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblProgress.ForeColor = System.Drawing.Color.Blue;
+            this.lblProgress.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblProgress.Level = Desktop.Skinning.SkinnedLabelLevel.Heading;
+            this.lblProgress.Location = new System.Drawing.Point(80, 292);
+            this.lblProgress.Name = "lblProgress";
+            this.lblProgress.Size = new System.Drawing.Size(784, 23);
+            this.lblProgress.TabIndex = 1;
+            this.lblProgress.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ColText
+            // progressBar
             // 
-            this.ColText.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColText.HeaderText = "Text";
-            this.ColText.Name = "ColText";
-            this.ColText.ReadOnly = true;
+            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar.Location = new System.Drawing.Point(80, 322);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(784, 23);
+            this.progressBar.TabIndex = 0;
             // 
-            // ColNewness
+            // cmdApplyFilters
             // 
-            this.ColNewness.HeaderText = "";
-            this.ColNewness.Name = "ColNewness";
-            this.ColNewness.ReadOnly = true;
-            this.ColNewness.ToolTipText = "New lines";
-            this.ColNewness.Width = 20;
-            // 
-            // ColColor
-            // 
-            this.ColColor.HeaderText = "";
-            this.ColColor.Name = "ColColor";
-            this.ColColor.ReadOnly = true;
-            this.ColColor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColColor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColColor.ToolTipText = "Color selector";
-            this.ColColor.Width = 20;
-            // 
-            // cmdColorCode
-            // 
-            this.cmdColorCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cmdColorCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdColorCode.Location = new System.Drawing.Point(10, 243);
-            this.cmdColorCode.Name = "cmdColorCode";
-            this.cmdColorCode.Size = new System.Drawing.Size(75, 23);
-            this.cmdColorCode.TabIndex = 5;
-            this.cmdColorCode.UseVisualStyleBackColor = true;
-            this.cmdColorCode.Click += new System.EventHandler(this.cmdColorCode_Click);
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.grpLines);
-            this.splitContainer2.Panel1.Controls.Add(this.lblCaseInfo);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(951, 674);
-            this.splitContainer2.SplitterDistance = 272;
-            this.splitContainer2.TabIndex = 0;
+            this.cmdApplyFilters.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdApplyFilters.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.cmdApplyFilters.Flat = false;
+            this.cmdApplyFilters.Location = new System.Drawing.Point(12, 492);
+            this.cmdApplyFilters.Name = "cmdApplyFilters";
+            this.cmdApplyFilters.Size = new System.Drawing.Size(141, 23);
+            this.cmdApplyFilters.TabIndex = 13;
+            this.cmdApplyFilters.Text = "Apply filters";
+            this.cmdApplyFilters.UseVisualStyleBackColor = true;
+            this.cmdApplyFilters.Click += new System.EventHandler(this.cmdApplyFilters_Click);
             // 
             // BanterWizard
             // 
@@ -602,35 +678,35 @@ namespace SPNATI_Character_Editor.Activities
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panelLoad.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel1.PerformLayout();
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            this.grpResponse.ResumeLayout(false);
-            this.grpBaseLine.ResumeLayout(false);
-            this.grpLines.ResumeLayout(false);
-            this.grpLines.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLines)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.grpLines.ResumeLayout(false);
+            this.grpLines.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLines)).EndInit();
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
+            this.grpBaseLine.ResumeLayout(false);
+            this.grpResponse.ResumeLayout(false);
+            this.panelLoad.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-	private System.Windows.Forms.SplitContainer splitContainer1;
-	private Desktop.Skinning.SkinnedListBox lstCharacters;
-	private Desktop.Skinning.SkinnedLabel lblCharacters;
-	private System.Windows.Forms.ToolTip toolTip1;
-	private Desktop.Skinning.SkinnedPanel panelLoad;
-	private Desktop.Skinning.SkinnedProgressBar progressBar;
-	private Desktop.Skinning.SkinnedLabel lblProgress;
+		private System.Windows.Forms.SplitContainer splitContainer1;
+		private Desktop.Skinning.SkinnedListBox lstCharacters;
+		private Desktop.Skinning.SkinnedLabel lblCharacters;
+		private System.Windows.Forms.ToolTip toolTip1;
+		private Desktop.Skinning.SkinnedPanel panelLoad;
+		private Desktop.Skinning.SkinnedProgressBar progressBar;
+		private Desktop.Skinning.SkinnedLabel lblProgress;
         private Desktop.Skinning.SkinnedButton cmdUpdateBanter;
         private Desktop.Skinning.SkinnedButton cmdSaveBanter;
         private Desktop.Skinning.SkinnedButton cmdLoadBanter;
@@ -659,5 +735,10 @@ namespace SPNATI_Character_Editor.Activities
         private Controls.DialogueGrid gridResponse;
         private Controls.CaseControl ctlResponse;
         private Desktop.Skinning.SkinnedLabel skinnedLabel2;
+        private Desktop.Skinning.SkinnedLabel lblShowTargetedLines;
+        private Desktop.Skinning.SkinnedCheckBox chkColorFilter;
+        private System.Windows.Forms.Button cmdColorFilter;
+        private Desktop.Skinning.SkinnedCheckedListBox chkLineFiltering;
+        private Desktop.Skinning.SkinnedButton cmdApplyFilters;
     }
 }
