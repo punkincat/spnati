@@ -352,6 +352,10 @@ var CANDY_LIST = [
     "hilda/1-relaxed.png",
     "hilda/2-smug.png",
     "hilda/3-flirty.png",
+    "kaz/0-showoff.png",                   // Has Recent Updates
+    "kaz/0-aback.png",
+    "kaz/1-toblerone.png",
+    "kaz/2-glad.png",
 ];
 
 /* Storage for old candy images in case the characters qualify again */
