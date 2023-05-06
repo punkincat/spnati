@@ -124,30 +124,14 @@ var CANDY_LIST = [
     "stocking/2-hex.png",
     "stocking/3-stripping+.png",
     "stocking/4-aroused.png",
-    "dwight/0-startled.png",               // Highlighted New Character
-    "dwight/4-fidgeting.png",
-    "dwight/1-thinking.png",
-    "dwight/3-conversational.png",
-    "cheryl/0-inquisitive.png",            // Highlighted New Character
-    "cheryl/2-happy.png",
-    "cheryl/3-inspired.png",
-    "cheryl/4-cheeky.png",
-    "neptune/0-victory.png",               // Highlighted New Character
-    "neptune/0-excited.png",
-    "neptune/2-happy.png",
-    "neptune/2-smug.png",
-    "aloy/0-Horny.png",                    // Highlighted New Character
-    "aloy/5-Smug.png",
-    "aloy/0-Angry.png",
-    "reskins/aloy_carja_blazon/0-Smug.png",	
-    "aqua_kh/0-giggling.png",              // Highlighted New Character
-    "aqua_kh/0-happy.png",
-    "aqua_kh/2-keyblade_stance.png",
-    "aqua_kh/2-turned_on.png",
     "kora/0-cheer2.png",                   // Highlighted New Character
     "kora/1-cheer.png",
     "kora/2-smorny.png",
     "kora/2-after_butt.png",
+    "felix/0-default.png",                 // Highlighted New Character
+    "felix/3-coquettish.png",
+    "felix/4-grabby.png",
+    "felix/5-butt-2.png",
     "wasp/0-start.png",                    // Has Recent Updates
     "wasp/0-flirt.png",
     "wasp/0-excited.png",
@@ -274,8 +258,8 @@ var CANDY_LIST = [
     "kamina/0-excited.png",
     "ignatz/0-friendly.png",               // Has Recent Updates
     "ignatz/0-flustered.png",
-    "ignatz/3-fearthedeer.png",
-    "ignatz/3-inspired.png",
+    "ignatz/3-happy.png",
+    "ignatz/3-sheepish.png",
     "leonie/0-calm.png",                   // Has Recent Updates
     "leonie/0-smug.png",
     "reskins/leonie_war_outfit/1-grin.png",
@@ -340,6 +324,26 @@ var CANDY_LIST = [
     "dunban/0-dramatic.png",
     "dunban/2-scheming.png",
     "dunban/5-coverse.png",
+    "dwight/0-startled.png",               // Has Recent Updates
+    "dwight/4-fidgeting.png",
+    "dwight/1-thinking.png",
+    "dwight/3-conversational.png",
+    "cheryl/0-inquisitive.png",            // Has Recent Updates
+    "cheryl/2-happy.png",
+    "cheryl/3-inspired.png",
+    "cheryl/4-cheeky.png",
+    "neptune/0-victory.png",               // Has Recent Updates
+    "neptune/0-excited.png",
+    "neptune/2-happy.png",
+    "neptune/2-smug.png",
+    "aloy/0-Horny.png",                    // Has Recent Updates
+    "aloy/5-Smug.png",
+    "aloy/0-Angry.png",
+    "reskins/aloy_carja_blazon/0-Smug.png",	
+    "aqua_kh/0-giggling.png",              // Has Recent Updates
+    "aqua_kh/0-happy.png",
+    "aqua_kh/2-keyblade_stance.png",
+    "aqua_kh/2-turned_on.png",
     "beatrix/0-curtsy.png",                // Has Recent Updates
     "beatrix/0-happy.png",
     "beatrix/0-interested.png",
