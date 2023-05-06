@@ -41,6 +41,8 @@
         <response id="192" opponent="elphaba" opponentId="60" />
         <response id="193" opponent="kyoko_kirigiri" opponentId="1276" />
         <response id="196" opponent="gwen" opponentId="118" />
+        <response id="201" opponent="magical_sempai" opponentId="1" />
+        <response id="204" opponent="magical_sempai" opponentId="6" />
     </responses>
     <labels>
         <label id="2" label="" color="1" folder="Targets" sort="0" />
@@ -223,22 +225,31 @@
         <label id="182" label="" folder="Filtered" sort="0" />
         <label id="183" label="" folder="Filtered" sort="0" />
         <label id="184" label="" folder="Filtered" sort="0" />
-        <label id="186" label="" color="1" folder="Targets" sort="0" />
+        <label id="186" label="" color="0" folder="Targets" sort="0" />
         <label id="187" label="" color="1" folder="Targets" sort="0" />
         <label id="188" label="" color="1" folder="Targets" sort="0" />
         <label id="189" label="" color="1" folder="Targets" sort="0" />
-        <label id="190" label="" color="1" folder="Targets" sort="0" />
-        <label id="191" label="" color="1" folder="Targets" sort="0" />
+        <label id="190" label="" color="0" folder="Targets" sort="0" />
+        <label id="191" label="" color="0" folder="Targets" sort="0" />
         <label id="193" label="" folder="Targets" sort="0" />
         <label id="194" label="" color="1" folder="Targets" sort="0" />
         <label id="195" label="" color="1" folder="Targets" sort="0" />
+        <label id="197" label="" color="1" folder="Targets" sort="0" />
+        <label id="192" label="" folder="Targets" sort="0" />
+        <label id="198" label="" color="1" folder="Targets" sort="0" />
+        <label id="199" label="" color="1" folder="Targets" sort="0" />
+        <label id="200" label="" color="1" folder="Targets" sort="0" />
+        <label id="202" label="" color="1" folder="Targets" sort="0" />
+        <label id="201" label="" color="1" folder="Targets" sort="0" />
+        <label id="203" label="" color="1" folder="Targets" sort="0" />
+        <label id="204" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>aa</prefix>
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>196</nextId>
+    <nextId>204</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="1st_dong" />
@@ -246,6 +257,7 @@
         <marker scope="Public" name="9s_littleguy" />
         <marker scope="Public" name="adaptquestion" />
         <marker scope="Public" name="aqua_controlledtravel" />
+        <marker scope="Public" name="aqua_glider" />
         <marker scope="Public" name="Aqua_keybladebooster" />
         <marker scope="Public" name="aqua_miragearena" />
         <marker scope="Public" name="aqua_training" />
@@ -263,6 +275,8 @@
         <marker scope="Public" name="dwight_talkinabout" />
         <marker scope="Public" name="elphaba_broom" />
         <marker scope="Public" name="elphaba_broom2" />
+        <marker scope="Public" name="elphaba_greenwitch" />
+        <marker scope="Public" name="elphaba_towermagician" />
         <marker scope="Public" name="elphaba_witchclan" />
         <marker scope="Public" name="elphaba_wtichclana" />
         <marker scope="Public" name="elphaba_wtichclanb" />
@@ -286,6 +300,10 @@
         <marker scope="Public" name="kuma_zoo" />
         <marker scope="Public" name="kyoko_pale" />
         <marker scope="Public" name="kyoko_paleskin2" />
+        <marker scope="Public" name="magicsempai_boobs" />
+        <marker scope="Public" name="magicsempai_postskirt" />
+        <marker scope="Public" name="magicsempai_skirtcards" />
+        <marker scope="Public" name="magicsempai_socks" />
         <marker scope="Public" name="meia_armordamage" />
         <marker scope="Public" name="meia_madou2" />
         <marker scope="Public" name="meia_puyoa" />
@@ -335,6 +353,7 @@
         <marker scope="Public" name="sakura_headless" />
         <marker scope="Public" name="sakura_headless2" />
         <marker scope="Public" name="sakura_zombie" />
+        <marker scope="Public" name="shimakaze_glovestrip" />
         <marker scope="Public" name="spidergwen_enemies" />
         <marker scope="Public" name="steve_gfcash" />
         <marker scope="Public" name="suz_doublestrip" />
