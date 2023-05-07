@@ -1,12 +1,10 @@
 using Desktop;
 using Desktop.Skinning;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Security.Authentication.ExtendedProtection;
 using System.Windows.Forms;
 
 namespace SPNATI_Character_Editor.Activities
@@ -26,6 +24,7 @@ namespace SPNATI_Character_Editor.Activities
 		private bool _loading;
 		private string _path;
 		private InboundLine _currentInbound;
+		private CharacterEditorData _editorData;
 
 		private bool _filterToColor;
 		private string _colorFilter;
@@ -56,9 +55,11 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			_character = Record as Character;
 			_character.IsDirty = true;
+            _editorData = CharacterDatabase.GetEditorData(_character);
             ColJump.Flat = true;
             _path = Path.Combine(Config.GetString(Settings.GameDirectory), "opponents/"+_character.FolderName+"/banter.xml");
-            if (!File.Exists(_path))
+           // if (!File.Exists(_path))
+			if(!_editorData.HasBanter)
             {
                 cmdUpdateBanter.Text = "Generate";
 				cmdSaveBanter.Enabled = false;
@@ -102,7 +103,19 @@ namespace SPNATI_Character_Editor.Activities
 
 		protected override void OnActivate()
 		{
-		}
+            if (!_editorData.HasBanter)
+            {
+                cmdUpdateBanter.Text = "Generate";
+                cmdSaveBanter.Enabled = false;
+                cmdLoadBanter.Enabled = false;
+            }
+            else
+            {
+                cmdUpdateBanter.Text = "Update";
+                cmdSaveBanter.Enabled = true;
+                cmdLoadBanter.Enabled = true;
+            }
+        }
 
 		protected override void OnParametersUpdated(params object[] parameters)
 		{
@@ -586,8 +599,10 @@ namespace SPNATI_Character_Editor.Activities
 			else
 			{
 				_character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-				Serialization.BackupBanter(_character, Convert.ToString(_character.BanterData.Timestamp));
-			}
+                _editorData.HasBanter = true;
+                Serialization.BackupBanter(_character, Convert.ToString(_character.BanterData.Timestamp));
+                cmdLoadBanter.Enabled = true;
+            }
         }
 
 		private void GenerateBanterXML()
@@ -905,12 +920,16 @@ namespace SPNATI_Character_Editor.Activities
 
 		private void cmdUpdateBanter_Click(object sender, EventArgs e)
 		{
-            string path = Path.Combine(Config.GetString(Settings.GameDirectory), "opponents/" + _character.FolderName + "/banter.xml");
-            if (!File.Exists(path))
+
+            if (!_editorData.HasBanter)
             {
 				GenerateBanterXML();
                 cmdUpdateBanter.Text = "Update";
 				cmdApplyFilters.Enabled = true;
+                _character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+                _editorData.HasBanter = true;
+                Serialization.BackupBanter(_character, Convert.ToString(_character.BanterData.Timestamp));
+                cmdLoadBanter.Enabled = true;
             }
             else
             {

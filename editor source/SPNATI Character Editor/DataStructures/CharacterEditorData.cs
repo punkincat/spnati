@@ -80,8 +80,7 @@ namespace SPNATI_Character_Editor
 		[XmlElement("hidePrefixlessImages")]
 		public bool HidePrefixlessImages;
 
-
-		[XmlElement("nextId")]
+        [XmlElement("nextId")]
 		/// <summary>
 		/// Next unique ID to assign
 		/// </summary>
@@ -105,7 +104,10 @@ namespace SPNATI_Character_Editor
 		[XmlArrayItem("line")]
 		public List<string> FreeLines = new List<string>();
 
-		private HashSet<string> _usedFolders = new HashSet<string>();
+        [XmlElement("hasBanter")]
+        public bool HasBanter;
+
+        private HashSet<string> _usedFolders = new HashSet<string>();
 		[XmlIgnore]
 		public AutoCompleteStringCollection Folders
 		{

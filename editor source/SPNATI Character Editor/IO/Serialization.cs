@@ -3,7 +3,9 @@ using SPNATI_Character_Editor.IO;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
@@ -65,7 +67,6 @@ namespace SPNATI_Character_Editor
 
 			string timestamp = GetTimeStamp();
 
-            string banterPath = Path.Combine(dir,"banter.xml");
 			bool success;
 			if (character.BanterData.Timestamp == 0)
 			{
@@ -77,12 +78,13 @@ namespace SPNATI_Character_Editor
 				CharacterHistory.Save(character);
 			}
             else {
-                success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
-                BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
-                BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
-                BackupAndExportXml(character, CharacterDatabase.GetEditorData(character), "editor", timestamp) &&
-                BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
-                BackupAndExportXml(character, character.BanterData, "banter", timestamp) &&
+				success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
+				BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
+				BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
+				BackupAndExportXml(character, CharacterDatabase.GetEditorData(character), "editor", timestamp) &&
+				BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
+				BackupAndExportXml(character, character.BanterData, "editor", timestamp, true) &&
+			//	AppendBanterToEditor(character) &&
                 CharacterHistory.Save(character);
             }
 
@@ -111,8 +113,8 @@ namespace SPNATI_Character_Editor
 			DeleteFile(character, "markers.edit.bak");
 			DeleteFile(character, "editor.edit.bak");
 
-			// I really wish I didn't have to put this here
-			foreach (Pose pose in character.Poses)
+            // I really wish I didn't have to put this here
+            foreach (Pose pose in character.Poses)
 			{
 				foreach (Sprite sp in pose.Sprites)
 				{
@@ -208,7 +210,7 @@ namespace SPNATI_Character_Editor
 			return DateTime.Now.ToString("yyyyMMddHHmmss");
 		}
 
-		private static bool BackupAndExportXml(Character character, object data, string name, string timestamp)
+		private static bool BackupAndExportXml(Character character, object data, string name, string timestamp, bool isBanter = false)
 		{
 			if (data == null) { return false; }
 			string dir = Config.GetRootDirectory(character);
@@ -225,7 +227,7 @@ namespace SPNATI_Character_Editor
 				deleteHeight = true;
             }
 
-			if (ExportXml(data, filename, deleteTags, deleteHeight))
+			if (ExportXml(data, filename, deleteTags, deleteHeight, isBanter))
 			{
 				bool backupEnabled = Config.BackupEnabled;
 				if (backupEnabled)
@@ -292,7 +294,7 @@ namespace SPNATI_Character_Editor
             if (!Directory.Exists(folder))
                 return null;
 
-            string filename = Path.Combine(folder, "banter.xml");
+            string filename = Path.Combine(folder, "editor.xml");
             if (!File.Exists(filename))
                 return null;
 
@@ -302,23 +304,55 @@ namespace SPNATI_Character_Editor
         public static bool BackupBanter(Character character, string timestamp)
         {
             string dir = Config.GetRootDirectory(character);
-            string filename = Path.Combine(dir, "banter.xml");
+            string editor = Path.Combine(dir, "editor.xml");
 
             bool deleteTags = false;
             bool deleteHeight = false;
 
-            if (ExportXml(character.BanterData, filename, deleteTags, deleteHeight))
+            if (ExportXml(CharacterDatabase.GetEditorData(character), editor, deleteTags, deleteHeight) && ExportXml(character.BanterData, editor, deleteTags, deleteHeight, true))
             {
                 bool backupEnabled = Config.BackupEnabled;
                 if (backupEnabled)
                 {
-                    BackupFile(character, "banter", timestamp);
+                    BackupFile(character, "editor", timestamp);
                 }
                 return true;
             }
             return false;
         }
 
+		/*
+		public static bool AppendBanterToEditor(Character character)
+		{
+            string dir = Config.GetRootDirectory(character);
+            string banter = Path.Combine(dir, "banter.xml");
+			string editor = Path.Combine(dir, "editor.xml");
+
+            using (FileStream file = new FileStream(editor, FileMode.Append))
+            {
+                StreamWriter streamWriter = new StreamWriter(file);
+                streamWriter.WriteLine("BEGINBANTERDATA");
+                streamWriter.Dispose();
+            }
+
+            using (FileStream file = new FileStream(editor, FileMode.Append))
+            {
+                GZipStream compressor = new GZipStream(file, CompressionMode.Compress);
+                FileStream fileToWriteFrom = new FileStream(banter, FileMode.Open);
+                fileToWriteFrom.CopyTo(compressor);
+                compressor.Dispose();
+            }
+
+            using (FileStream file = new FileStream(editor, FileMode.Append))
+            {
+                StreamWriter streamWriter = new StreamWriter(file);
+                streamWriter.WriteLine("");
+                streamWriter.WriteLine("ENDBANTERDATA");
+                streamWriter.Dispose();
+            }
+            return true;
+        }
+		*/
 
         public static Character ImportCharacter(string folderName)
 		{
@@ -426,7 +460,10 @@ namespace SPNATI_Character_Editor
 			Metadata meta = ImportXml<Metadata>(Path.Combine(folder, $"meta-{timestamp}.bak"));
 			recoveredCharacter.Metadata = meta ?? character.Metadata;
 
-			string markerFile = Path.Combine(folder, $"markers-{timestamp}.bak");
+            Banter banterData = ImportXml<Banter>(Path.Combine(folder, $"editor-{timestamp}.bak"));
+            recoveredCharacter.BanterData = banterData ?? character.BanterData;
+
+            string markerFile = Path.Combine(folder, $"markers-{timestamp}.bak");
 			if (File.Exists(markerFile))
 			{
 				MarkerData markers = ImportXml<MarkerData>(markerFile);
@@ -460,23 +497,93 @@ namespace SPNATI_Character_Editor
 			return recoveredCharacter;
 		}
 
-		/// <summary>
-		/// Imports an XML file
-		/// </summary>
-		/// <typeparam name="T">Type of data to ipmort</typeparam>
-		/// <param name="filename">Filename to import</param>
-		/// <returns>An object of type T or null if it failed</returns>
-		public static T ImportXml<T>(string filename)
+        private static int SearchForBytes(byte[] src, byte[] pattern)
+        {
+            int maxFirstCharSlot = src.Length - pattern.Length + 1;
+            for (int i = 0; i < maxFirstCharSlot; i++)
+            {
+                if (src[i] != pattern[0]) 
+                    continue;
+
+                for (int j = pattern.Length - 1; j >= 1; j--)
+                {
+                    if (src[i + j] != pattern[j]) break;
+                    if (j == 1) return i;
+                }
+            }
+            return -1;
+        }
+
+        /// <summary>
+        /// Imports an XML file
+        /// </summary>
+        /// <typeparam name="T">Type of data to ipmort</typeparam>
+        /// <param name="filename">Filename to import</param>
+        /// <returns>An object of type T or null if it failed</returns>
+        public static T ImportXml<T>(string filename)
 		{
 			TextReader reader = null;
+			//	string name = filename;
+			string text = "";
 			try
 			{
 				//XML files can contain HTML-encoding characters which aren't recognized in real XML, so the file is preprocessed to decode these
 				//before passing through the actual serializer
-				string text = File.ReadAllText(filename);
 
-				//Also, italics are a funky case since they use invalid XML. Encode these to make the serializer happy, and then they will be switched back to the "bad" format in the character's OnAfterDeserialize
-				text = XMLHelper.EncodeEntityReferences(text);
+
+
+				if (typeof(T) == typeof(Banter))
+				{
+					byte[] fileBytes = File.ReadAllBytes(filename);
+
+
+					byte[] byte1 = Encoding.UTF8.GetBytes("BEGINBANTERDATA" + Environment.NewLine);
+
+					byte[] byte2 = Encoding.UTF8.GetBytes("ENDBANTERDATA");
+
+
+					int index1 = SearchForBytes(fileBytes, byte1);
+					int index2 = SearchForBytes(fileBytes, byte2);
+					byte[] newArray = new byte[index2 - index1 - byte1.Length];
+
+					Buffer.BlockCopy(fileBytes, index1 + byte1.Length, newArray, 0, index2 - index1 - byte1.Length);
+
+					string banter2 = filename.Replace("editor.xml", "banter.xml");
+
+					using (Stream memStream = new MemoryStream())
+					{
+						Stream stream = new MemoryStream(newArray);
+
+						GZipStream decompressor = new GZipStream(stream, CompressionMode.Decompress);
+						decompressor.CopyTo(memStream);
+						decompressor.Dispose();
+						memStream.Position = 0;
+						using (var memStrReader = new StreamReader(memStream))
+						{
+							text = memStrReader.ReadToEnd();
+						}
+
+					}
+
+				}
+
+				if (typeof(T) != typeof(Banter))
+				{ 
+                    text = File.ReadAllText(filename);
+                }
+
+				if (typeof(T) == typeof(CharacterEditorData))
+				{
+					int index1 = text.IndexOf("BEGINBANTERDATA");
+					if (index1 != -1)
+					{
+						text = text.Remove(index1);
+					}
+				}
+
+
+                //Also, italics are a funky case since they use invalid XML. Encode these to make the serializer happy, and then they will be switched back to the "bad" format in the character's OnAfterDeserialize
+                text = XMLHelper.EncodeEntityReferences(text);
 
 				//Now do the actual deserialization
 				reader = new StringReader(text);
@@ -489,7 +596,7 @@ namespace SPNATI_Character_Editor
 					hook.OnAfterDeserialize(filename);
 				}
 
-				return result;
+                return result;
 			}
 			catch (Exception e)
 			{
@@ -510,13 +617,13 @@ namespace SPNATI_Character_Editor
 		/// <param name="data">Data to serialize</param>
 		/// <param name="filename">File name</param>
 		/// <returns>True if successful</returns>
-		public static bool ExportXml<T>(T data, string filename, bool deleteTags = false, bool deleteHeight = false)
+		public static bool ExportXml<T>(T data, string filename, bool deleteTags = false, bool deleteHeight = false, bool isBanter = false)
 		{
 			TextWriter writer = null;
 			try
 			{
 				SpnatiXmlSerializer test = new SpnatiXmlSerializer();
-				test.Serialize(filename, data, deleteTags, deleteHeight);
+				test.Serialize(filename, data, deleteTags, deleteHeight, isBanter);
 				return true;
 			}
 			catch (IOException e)

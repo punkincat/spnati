@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using System;
 using System.Collections;
@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -25,7 +26,7 @@ namespace SPNATI_Character_Editor.IO
 
 		private const string IndentString = "    ";
 
-		public void Serialize<T>(string filename, T data, bool deleteTags = false, bool deleteHeight = false)
+		public void Serialize<T>(string filename, T data, bool deleteTags = false, bool deleteHeight = false, bool isBanter = false)
 		{
 			IHookSerialization hook = data as IHookSerialization;
 			if (hook != null)
@@ -57,11 +58,53 @@ namespace SPNATI_Character_Editor.IO
 			text = text.Replace("\r\n>", ">\r\n");
 			text = XMLHelper.DecodeEntityReferences(text);
 
-			File.WriteAllText(filename, text);
+			if (!isBanter)
+			{
+				File.WriteAllText(filename, text);
+			}
+			else
+			{
+              //  string dir = Config.GetRootDirectory(character);
+              //  string banter = Path.Combine(dir, "banter.xml");
+               // string editor = Path.Combine(dir, "editor.xml"); filename
+
+                using (FileStream file = new FileStream(filename, FileMode.Append))
+                {
+                    StreamWriter streamWriter = new StreamWriter(file);
+                    streamWriter.WriteLine("BEGINBANTERDATA");
+                    streamWriter.Dispose();
+                }
+
+                using (FileStream file = new FileStream(filename, FileMode.Append))
+                {
+                    GZipStream compressor = new GZipStream(file, CompressionMode.Compress);
+					Stream textStream = GenerateStreamFromString(text);
+                    textStream.CopyTo(compressor);
+                    compressor.Dispose();
+                }
+
+                using (FileStream file = new FileStream(filename, FileMode.Append))
+                {
+                    StreamWriter streamWriter = new StreamWriter(file);
+                    streamWriter.WriteLine("");
+                    streamWriter.WriteLine("ENDBANTERDATA");
+                    streamWriter.Dispose();
+                }
+            }
 			writer.Dispose();
 		}
 
-		public static ElementInformation GetSerializationInformation(Type type)
+        public static Stream GenerateStreamFromString(string s)
+        {
+            var stream = new MemoryStream();
+            var writer = new StreamWriter(stream);
+            writer.Write(s);
+            writer.Flush();
+            stream.Position = 0;
+            return stream;
+        }
+
+        public static ElementInformation GetSerializationInformation(Type type)
 		{
 			ElementInformation elementInfo = _serializationInfo.Get(type);
 			if (elementInfo == null)
