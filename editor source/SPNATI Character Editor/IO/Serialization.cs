@@ -84,7 +84,6 @@ namespace SPNATI_Character_Editor
 				BackupAndExportXml(character, CharacterDatabase.GetEditorData(character), "editor", timestamp) &&
 				BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
 				BackupAndExportXml(character, character.BanterData, "editor", timestamp, true) &&
-			//	AppendBanterToEditor(character) &&
                 CharacterHistory.Save(character);
             }
 
@@ -321,39 +320,6 @@ namespace SPNATI_Character_Editor
             return false;
         }
 
-		/*
-		public static bool AppendBanterToEditor(Character character)
-		{
-            string dir = Config.GetRootDirectory(character);
-            string banter = Path.Combine(dir, "banter.xml");
-			string editor = Path.Combine(dir, "editor.xml");
-
-            using (FileStream file = new FileStream(editor, FileMode.Append))
-            {
-                StreamWriter streamWriter = new StreamWriter(file);
-                streamWriter.WriteLine("BEGINBANTERDATA");
-                streamWriter.Dispose();
-            }
-
-            using (FileStream file = new FileStream(editor, FileMode.Append))
-            {
-                GZipStream compressor = new GZipStream(file, CompressionMode.Compress);
-                FileStream fileToWriteFrom = new FileStream(banter, FileMode.Open);
-                fileToWriteFrom.CopyTo(compressor);
-                compressor.Dispose();
-            }
-
-            using (FileStream file = new FileStream(editor, FileMode.Append))
-            {
-                StreamWriter streamWriter = new StreamWriter(file);
-                streamWriter.WriteLine("");
-                streamWriter.WriteLine("ENDBANTERDATA");
-                streamWriter.Dispose();
-            }
-            return true;
-        }
-		*/
-
         public static Character ImportCharacter(string folderName)
 		{
 			string folder = Config.GetRootDirectory(folderName);
@@ -523,7 +489,6 @@ namespace SPNATI_Character_Editor
         public static T ImportXml<T>(string filename)
 		{
 			TextReader reader = null;
-			//	string name = filename;
 			string text = "";
 			try
 			{

@@ -29,10 +29,13 @@ namespace SPNATI_Character_Editor.Activities
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lblCharacterFiltering = new Desktop.Skinning.SkinnedLabel();
+            this.chkCharacterFiltering = new Desktop.Skinning.SkinnedCheckedListBox();
+            this.cmdApplyFilters = new Desktop.Skinning.SkinnedButton();
             this.lblShowTargetedLines = new Desktop.Skinning.SkinnedLabel();
             this.chkColorFilter = new Desktop.Skinning.SkinnedCheckBox();
             this.cmdColorFilter = new System.Windows.Forms.Button();
@@ -71,7 +74,6 @@ namespace SPNATI_Character_Editor.Activities
             this.lblProgress = new Desktop.Skinning.SkinnedLabel();
             this.progressBar = new Desktop.Skinning.SkinnedProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.cmdApplyFilters = new Desktop.Skinning.SkinnedButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -99,6 +101,8 @@ namespace SPNATI_Character_Editor.Activities
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.lblCharacterFiltering);
+            this.splitContainer1.Panel1.Controls.Add(this.chkCharacterFiltering);
             this.splitContainer1.Panel1.Controls.Add(this.cmdApplyFilters);
             this.splitContainer1.Panel1.Controls.Add(this.lblShowTargetedLines);
             this.splitContainer1.Panel1.Controls.Add(this.chkColorFilter);
@@ -118,6 +122,53 @@ namespace SPNATI_Character_Editor.Activities
             this.splitContainer1.SplitterDistance = 206;
             this.splitContainer1.TabIndex = 1;
             // 
+            // lblCharacterFiltering
+            // 
+            this.lblCharacterFiltering.AutoSize = true;
+            this.lblCharacterFiltering.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblCharacterFiltering.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCharacterFiltering.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblCharacterFiltering.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.lblCharacterFiltering.Location = new System.Drawing.Point(12, 413);
+            this.lblCharacterFiltering.Name = "lblCharacterFiltering";
+            this.lblCharacterFiltering.Size = new System.Drawing.Size(92, 13);
+            this.lblCharacterFiltering.TabIndex = 15;
+            this.lblCharacterFiltering.Text = "Character filtering:";
+            // 
+            // chkCharacterFiltering
+            // 
+            this.chkCharacterFiltering.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkCharacterFiltering.BackColor = System.Drawing.Color.White;
+            this.chkCharacterFiltering.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.chkCharacterFiltering.ForeColor = System.Drawing.Color.Black;
+            this.chkCharacterFiltering.FormattingEnabled = true;
+            this.chkCharacterFiltering.Items.AddRange(new object[] {
+            "Testing",
+            "Offline",
+            "Incomplete",
+            "Event",
+            "Duplicate",
+            "Unlisted"});
+            this.chkCharacterFiltering.Location = new System.Drawing.Point(12, 430);
+            this.chkCharacterFiltering.Name = "chkCharacterFiltering";
+            this.chkCharacterFiltering.Size = new System.Drawing.Size(184, 94);
+            this.chkCharacterFiltering.TabIndex = 14;
+            this.chkCharacterFiltering.SelectedIndexChanged += new System.EventHandler(this.chkCharacterFiltering_SelectedIndexChanged);
+            // 
+            // cmdApplyFilters
+            // 
+            this.cmdApplyFilters.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdApplyFilters.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.cmdApplyFilters.Flat = false;
+            this.cmdApplyFilters.Location = new System.Drawing.Point(12, 541);
+            this.cmdApplyFilters.Name = "cmdApplyFilters";
+            this.cmdApplyFilters.Size = new System.Drawing.Size(141, 23);
+            this.cmdApplyFilters.TabIndex = 13;
+            this.cmdApplyFilters.Text = "Apply filters";
+            this.cmdApplyFilters.UseVisualStyleBackColor = true;
+            this.cmdApplyFilters.Click += new System.EventHandler(this.cmdApplyFilters_Click);
+            // 
             // lblShowTargetedLines
             // 
             this.lblShowTargetedLines.AutoSize = true;
@@ -125,7 +176,7 @@ namespace SPNATI_Character_Editor.Activities
             this.lblShowTargetedLines.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblShowTargetedLines.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
             this.lblShowTargetedLines.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.lblShowTargetedLines.Location = new System.Drawing.Point(9, 345);
+            this.lblShowTargetedLines.Location = new System.Drawing.Point(9, 300);
             this.lblShowTargetedLines.Name = "lblShowTargetedLines";
             this.lblShowTargetedLines.Size = new System.Drawing.Size(103, 13);
             this.lblShowTargetedLines.TabIndex = 12;
@@ -135,19 +186,21 @@ namespace SPNATI_Character_Editor.Activities
             // 
             this.chkColorFilter.AutoSize = true;
             this.chkColorFilter.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.chkColorFilter.Location = new System.Drawing.Point(12, 431);
+            this.chkColorFilter.Location = new System.Drawing.Point(12, 389);
             this.chkColorFilter.Name = "chkColorFilter";
-            this.chkColorFilter.Size = new System.Drawing.Size(108, 17);
+            this.chkColorFilter.Size = new System.Drawing.Size(90, 17);
             this.chkColorFilter.TabIndex = 11;
-            this.chkColorFilter.Text = "Filter to this color:";
+            this.chkColorFilter.Text = "Filter to Color:";
             this.chkColorFilter.UseVisualStyleBackColor = true;
             this.chkColorFilter.CheckedChanged += new System.EventHandler(this.chkColorFilter_CheckedChanged);
             // 
             // cmdColorFilter
             // 
-            this.cmdColorFilter.Location = new System.Drawing.Point(12, 454);
+            this.cmdColorFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdColorFilter.Location = new System.Drawing.Point(108, 385);
             this.cmdColorFilter.Name = "cmdColorFilter";
-            this.cmdColorFilter.Size = new System.Drawing.Size(75, 23);
+            this.cmdColorFilter.Size = new System.Drawing.Size(88, 23);
             this.cmdColorFilter.TabIndex = 10;
             this.cmdColorFilter.UseVisualStyleBackColor = true;
             this.cmdColorFilter.Click += new System.EventHandler(this.cmdColorFilter_Click);
@@ -165,7 +218,7 @@ namespace SPNATI_Character_Editor.Activities
             "modified Text",
             "modified Conditions",
             "Old"});
-            this.chkLineFiltering.Location = new System.Drawing.Point(12, 361);
+            this.chkLineFiltering.Location = new System.Drawing.Point(12, 316);
             this.chkLineFiltering.Name = "chkLineFiltering";
             this.chkLineFiltering.Size = new System.Drawing.Size(184, 64);
             this.chkLineFiltering.TabIndex = 9;
@@ -226,7 +279,7 @@ namespace SPNATI_Character_Editor.Activities
             this.lstCharacters.FormattingEnabled = true;
             this.lstCharacters.Location = new System.Drawing.Point(12, 30);
             this.lstCharacters.Name = "lstCharacters";
-            this.lstCharacters.Size = new System.Drawing.Size(184, 303);
+            this.lstCharacters.Size = new System.Drawing.Size(184, 264);
             this.lstCharacters.TabIndex = 1;
             this.lstCharacters.SelectedIndexChanged += new System.EventHandler(this.lstCharacters_SelectedIndexChanged);
             // 
@@ -300,15 +353,15 @@ namespace SPNATI_Character_Editor.Activities
             this.gridLines.BackgroundColor = System.Drawing.Color.White;
             this.gridLines.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridLines.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridLines.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridLines.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridLines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridLines.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColColor,
@@ -318,14 +371,14 @@ namespace SPNATI_Character_Editor.Activities
             this.ColCase,
             this.ColJump});
             this.gridLines.Data = null;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridLines.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridLines.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridLines.EnableHeadersVisualStyles = false;
             this.gridLines.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.gridLines.GridColor = System.Drawing.Color.LightGray;
@@ -334,14 +387,14 @@ namespace SPNATI_Character_Editor.Activities
             this.gridLines.Name = "gridLines";
             this.gridLines.ReadOnly = true;
             this.gridLines.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridLines.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridLines.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridLines.Size = new System.Drawing.Size(939, 212);
             this.gridLines.TabIndex = 0;
             this.gridLines.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLines_CellContentClick);
@@ -653,19 +706,6 @@ namespace SPNATI_Character_Editor.Activities
             this.progressBar.Size = new System.Drawing.Size(784, 23);
             this.progressBar.TabIndex = 0;
             // 
-            // cmdApplyFilters
-            // 
-            this.cmdApplyFilters.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.cmdApplyFilters.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.cmdApplyFilters.Flat = false;
-            this.cmdApplyFilters.Location = new System.Drawing.Point(12, 492);
-            this.cmdApplyFilters.Name = "cmdApplyFilters";
-            this.cmdApplyFilters.Size = new System.Drawing.Size(141, 23);
-            this.cmdApplyFilters.TabIndex = 13;
-            this.cmdApplyFilters.Text = "Apply filters";
-            this.cmdApplyFilters.UseVisualStyleBackColor = true;
-            this.cmdApplyFilters.Click += new System.EventHandler(this.cmdApplyFilters_Click);
-            // 
             // BanterWizard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -740,5 +780,7 @@ namespace SPNATI_Character_Editor.Activities
         private System.Windows.Forms.Button cmdColorFilter;
         private Desktop.Skinning.SkinnedCheckedListBox chkLineFiltering;
         private Desktop.Skinning.SkinnedButton cmdApplyFilters;
+        private Desktop.Skinning.SkinnedLabel lblCharacterFiltering;
+        private Desktop.Skinning.SkinnedCheckedListBox chkCharacterFiltering;
     }
 }

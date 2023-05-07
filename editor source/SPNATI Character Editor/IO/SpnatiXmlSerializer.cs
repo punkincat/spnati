@@ -64,10 +64,6 @@ namespace SPNATI_Character_Editor.IO
 			}
 			else
 			{
-              //  string dir = Config.GetRootDirectory(character);
-              //  string banter = Path.Combine(dir, "banter.xml");
-               // string editor = Path.Combine(dir, "editor.xml"); filename
-
                 using (FileStream file = new FileStream(filename, FileMode.Append))
                 {
                     StreamWriter streamWriter = new StreamWriter(file);
