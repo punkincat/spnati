@@ -68,7 +68,9 @@ namespace SPNATI_Character_Editor
 			string timestamp = GetTimeStamp();
 
 			bool success;
-			if (character.BanterData.Timestamp == 0)
+			CharacterEditorData editorData = CharacterDatabase.GetEditorData(character);
+
+			if (character.BanterData.Timestamp == 0 && !editorData.HasBanter)
 			{
                 success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
 				BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
@@ -77,13 +79,26 @@ namespace SPNATI_Character_Editor
 				BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
 				CharacterHistory.Save(character);
 			}
-            else {
+            else if (character.BanterData.Timestamp == 0)
+			{
+				Banter banter = ImportBanter(character.FolderName);
 				success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
 				BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
 				BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
 				BackupAndExportXml(character, CharacterDatabase.GetEditorData(character), "editor", timestamp) &&
 				BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
-				BackupAndExportXml(character, character.BanterData, "editor", timestamp, true) &&
+				BackupAndExportXml(character, banter, "editor", timestamp, true) &&
+                CharacterHistory.Save(character);
+            }
+			else
+			{
+                Banter banter = ImportBanterWithoutOverwriting(character);
+                success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
+                BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
+                BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
+                BackupAndExportXml(character, CharacterDatabase.GetEditorData(character), "editor", timestamp) &&
+                BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
+                BackupAndExportXml(character, banter, "editor", timestamp, true) &&
                 CharacterHistory.Save(character);
             }
 
@@ -300,6 +315,37 @@ namespace SPNATI_Character_Editor
             return ImportXml<Banter>(filename);
         }
 
+        public static Banter ImportBanterWithoutOverwriting(Character character)
+        {
+            string folder = Config.GetRootDirectory(character.FolderName);
+            if (!Directory.Exists(folder))
+                return null;
+
+            string filename = Path.Combine(folder, "editor.xml");
+            if (!File.Exists(filename))
+                return null;
+
+            Banter imported = ImportXml<Banter>(filename);
+
+			foreach (TargetingCharacter ch in character.BanterData.TargetingCharacters)
+			{
+				TargetingCharacter chImported = imported.TargetingCharacters.Find(x => x.Id == ch.Id);
+				if (chImported != null)
+				{
+					chImported = ch;
+				}
+				else
+				{
+					imported.TargetingCharacters.Add(ch);
+				}
+			}
+
+            imported.TargetingCharacters = imported.TargetingCharacters.OrderBy(x => x?.Id).ToList();
+
+			return imported;
+        }
+
+
         public static bool BackupBanter(Character character, string timestamp)
         {
             string dir = Config.GetRootDirectory(character);
@@ -308,7 +354,9 @@ namespace SPNATI_Character_Editor
             bool deleteTags = false;
             bool deleteHeight = false;
 
-            if (ExportXml(CharacterDatabase.GetEditorData(character), editor, deleteTags, deleteHeight) && ExportXml(character.BanterData, editor, deleteTags, deleteHeight, true))
+            Banter banter = ImportBanterWithoutOverwriting(character);
+
+            if (ExportXml(CharacterDatabase.GetEditorData(character), editor, deleteTags, deleteHeight) && ExportXml(banter, editor, deleteTags, deleteHeight, true))
             {
                 bool backupEnabled = Config.BackupEnabled;
                 if (backupEnabled)
@@ -513,7 +561,7 @@ namespace SPNATI_Character_Editor
 
 					Buffer.BlockCopy(fileBytes, index1 + byte1.Length, newArray, 0, index2 - index1 - byte1.Length);
 
-					string banter2 = filename.Replace("editor.xml", "banter.xml");
+				//	string banter2 = filename.Replace("editor.xml", "banter.xml");
 
 					using (Stream memStream = new MemoryStream())
 					{

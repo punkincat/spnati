@@ -33,6 +33,7 @@ namespace SPNATI_Character_Editor.Activities
 		private bool _filterModCond;
 		private bool _filterOld;
 
+		private bool _filterMain;
         private bool _filterTesting;
         private bool _filterOffline;
         private bool _filterIncomplete;
@@ -65,7 +66,6 @@ namespace SPNATI_Character_Editor.Activities
             _editorData = CharacterDatabase.GetEditorData(_character);
             ColJump.Flat = true;
             _path = Path.Combine(Config.GetString(Settings.GameDirectory), "opponents/"+_character.FolderName+"/banter.xml");
-           // if (!File.Exists(_path))
 			if(!_editorData.HasBanter)
             {
                 cmdUpdateBanter.Text = "Generate";
@@ -74,7 +74,7 @@ namespace SPNATI_Character_Editor.Activities
             }
 			else
 			{
-				cmdUpdateBanter.Text = "Update";
+				cmdUpdateBanter.Text = "Generate/Update";
                 cmdSaveBanter.Enabled = true;
 				cmdLoadBanter.Enabled = true;
 			}
@@ -93,7 +93,7 @@ namespace SPNATI_Character_Editor.Activities
 			lstCharacters.Sorted = true;
 			if (File.Exists(_path))
 			{ 
-                toolTip1.SetToolTip(this.cmdUpdateBanter, "Update banter data. Use this after pulling other characters' updates from Git.");
+                toolTip1.SetToolTip(this.cmdUpdateBanter, "Update banter data. Use this after pulling other characters' updates from Git.\nYour unsaved changes will be discarded.");
             }
             _filterToColor = false;
 			chkColorFilter.Checked = false;
@@ -105,20 +105,21 @@ namespace SPNATI_Character_Editor.Activities
             chkLineFiltering.SetItemChecked(1, true);
             chkLineFiltering.SetItemChecked(2, true);
             chkLineFiltering.SetItemChecked(3, true);
-       //     cmdApplyFilters.Enabled = false;
 
+			_filterMain = true;
 			_filterTesting = true;
-			_filterOffline = true;
-			_filterIncomplete = true;
-            _filterEvent = true;
+			_filterOffline = false;
+			_filterIncomplete = false;
+            _filterEvent = false;
             _filterDuplicate = false;
 			_filterUnlisted = false;
 			chkCharacterFiltering.SetItemChecked(0, true);
             chkCharacterFiltering.SetItemChecked(1, true);
-            chkCharacterFiltering.SetItemChecked(2, true);
-            chkCharacterFiltering.SetItemChecked(3, true);
+            chkCharacterFiltering.SetItemChecked(2, false);
+            chkCharacterFiltering.SetItemChecked(3, false);
             chkCharacterFiltering.SetItemChecked(4, false);
             chkCharacterFiltering.SetItemChecked(5, false);
+            chkCharacterFiltering.SetItemChecked(6, false);
         }
 
 		protected override void OnActivate()
@@ -131,7 +132,7 @@ namespace SPNATI_Character_Editor.Activities
             }
             else
             {
-                cmdUpdateBanter.Text = "Update";
+                cmdUpdateBanter.Text = "Generate/Update";
                 cmdSaveBanter.Enabled = true;
                 cmdLoadBanter.Enabled = true;
             }
@@ -180,7 +181,7 @@ namespace SPNATI_Character_Editor.Activities
 			string status = Listing.Instance.GetCharacterStatus(folderName);
 
             if (status == OpponentStatus.Main)
-                return true;
+                return _filterMain;
             if (status == OpponentStatus.Testing)
                 return _filterTesting;
             if (status == OpponentStatus.Offline)
@@ -653,7 +654,7 @@ namespace SPNATI_Character_Editor.Activities
 			_character.BanterData.LinkOwner(_character);
 			_character.BanterData.WriteCEVersion();
             _character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-            ListCharacters();
+			ListCharacters();
 			cmdSaveBanter.Enabled = true;
 		}
 
@@ -665,6 +666,7 @@ namespace SPNATI_Character_Editor.Activities
             splitContainer2.Visible = false;
             panelLoad.Visible = true;
             progressBar.Visible = true;
+			progressBar.Value = 0;
             lblProgress.Visible = true;
             lstCharacters.Items.Clear();
             gridLines.Rows.Clear();
@@ -690,7 +692,7 @@ namespace SPNATI_Character_Editor.Activities
 
 			foreach (Opponent opponent in Listing.Instance.Characters)
 			{
-				if (opponent.Name == "human")
+				if (opponent.Name == "human" || !CharacterFiltering(opponent.Name))
 				{
 					continue;
 				}
@@ -698,26 +700,17 @@ namespace SPNATI_Character_Editor.Activities
             }
 			folderNames = folderNames.Distinct().ToList();
 
-			/*
-            foreach (Character character in CharacterDatabase.Characters)
-            {
-                if (character.FolderName == "human")
-                {
-                    continue;
-                }
-                folderNames.Add(character.FolderName);
-            }
-			*/
-
             progressBar.Maximum = folderNames.Count;
 			int count = 0;
             foreach (string folderName in folderNames)
             {
+				/*
 				if (!CharacterFiltering(folderName))
 				{
                     progressBar.Value = count++;
                     continue;
 				}
+				*/
                 progressBar.Value = count++;
                 lblProgress.Text = "Scanning "+folderName+"...";
                 lblProgress.Refresh();
@@ -803,12 +796,11 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			BeginLoading();
 
-		//	if (_character.BanterData.Timestamp == 0)
-		//	{
+			if (_character.BanterData.Timestamp == 0)
+			{
                 _character.BanterData = Serialization.ImportBanter(_character.FolderName);
-         //   }
+            }
 
-			progressBar.Maximum = CharacterDatabase.Characters.Count() - 1;
 			int count = 0;
 
 			List<string> folderNames = new List<string>();
@@ -822,16 +814,7 @@ namespace SPNATI_Character_Editor.Activities
                 folderNames.Add(opponent.Name);
             }
             folderNames = folderNames.Distinct().ToList();
-
-            /*
-			foreach (Character character in CharacterDatabase.Characters)
-			{
-				if (character.FolderName == "human")
-				{
-					continue;
-				}
-				folderNames.Add(character.FolderName);
-			}*/
+			progressBar.Maximum = folderNames.Count();
 
             foreach (string folderName in folderNames)
 			{
@@ -1010,12 +993,24 @@ namespace SPNATI_Character_Editor.Activities
 
 		private void cmdUpdateBanter_Click(object sender, EventArgs e)
 		{
-
             if (!_editorData.HasBanter)
             {
-				GenerateBanterXML();
-                cmdUpdateBanter.Text = "Update";
-			//	cmdApplyFilters.Enabled = true;
+				List<string> folderNames = new List<string>();
+                foreach (Opponent opponent in Listing.Instance.Characters)
+                {
+                    if (opponent.Name == "human" || !CharacterFiltering(opponent.Name))
+                    {
+                        continue;
+                    }
+                    folderNames.Add(opponent.Name);
+                }
+				if (folderNames.Count == 0)
+				{
+					MessageBox.Show("No characters matching the filters.");
+					return;
+				}
+                GenerateBanterXML();
+                cmdUpdateBanter.Text = "Generate/Update";
                 _character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
                 _editorData.HasBanter = true;
                 Serialization.BackupBanter(_character, Convert.ToString(_character.BanterData.Timestamp));
@@ -1024,14 +1019,12 @@ namespace SPNATI_Character_Editor.Activities
             else
             {
 				UpdateBanter();
-			//	cmdApplyFilters.Enabled = true;
             }
 		}
 
         private void cmdLoadBanter_Click(object sender, EventArgs e)
         {
             ListCharactersFromFile();
-		//	cmdApplyFilters.Enabled = true;
         }
 
 
@@ -1112,22 +1105,19 @@ namespace SPNATI_Character_Editor.Activities
 
         private void chkCharacterFiltering_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _filterTesting = chkCharacterFiltering.GetItemChecked(0);
-            _filterOffline = chkCharacterFiltering.GetItemChecked(1);
-            _filterIncomplete = chkCharacterFiltering.GetItemChecked(2);
-            _filterEvent = chkCharacterFiltering.GetItemChecked(3);
-            _filterDuplicate = chkCharacterFiltering.GetItemChecked(4);
-            _filterUnlisted = chkCharacterFiltering.GetItemChecked(5);
+            _filterMain = chkCharacterFiltering.GetItemChecked(0);
+            _filterTesting = chkCharacterFiltering.GetItemChecked(1);
+            _filterOffline = chkCharacterFiltering.GetItemChecked(2);
+            _filterIncomplete = chkCharacterFiltering.GetItemChecked(3);
+            _filterEvent = chkCharacterFiltering.GetItemChecked(4);
+            _filterDuplicate = chkCharacterFiltering.GetItemChecked(5);
+            _filterUnlisted = chkCharacterFiltering.GetItemChecked(6);
         }
     }
 
 
-    public partial class Levenshtein 
+    public partial class Levenshtein
     {
-        /*
-         * WARRING this class is performance critical (Speed).
-         */
-
         private readonly string storedValue;
         private readonly int[] costs;
 

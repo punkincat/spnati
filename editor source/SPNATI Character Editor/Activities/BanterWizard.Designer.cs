@@ -144,6 +144,7 @@ namespace SPNATI_Character_Editor.Activities
             this.chkCharacterFiltering.ForeColor = System.Drawing.Color.Black;
             this.chkCharacterFiltering.FormattingEnabled = true;
             this.chkCharacterFiltering.Items.AddRange(new object[] {
+            "Main Roster",
             "Testing",
             "Offline",
             "Incomplete",
@@ -152,7 +153,7 @@ namespace SPNATI_Character_Editor.Activities
             "Unlisted"});
             this.chkCharacterFiltering.Location = new System.Drawing.Point(12, 430);
             this.chkCharacterFiltering.Name = "chkCharacterFiltering";
-            this.chkCharacterFiltering.Size = new System.Drawing.Size(184, 94);
+            this.chkCharacterFiltering.Size = new System.Drawing.Size(184, 109);
             this.chkCharacterFiltering.TabIndex = 14;
             this.chkCharacterFiltering.SelectedIndexChanged += new System.EventHandler(this.chkCharacterFiltering_SelectedIndexChanged);
             // 
@@ -161,7 +162,7 @@ namespace SPNATI_Character_Editor.Activities
             this.cmdApplyFilters.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.cmdApplyFilters.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
             this.cmdApplyFilters.Flat = false;
-            this.cmdApplyFilters.Location = new System.Drawing.Point(12, 541);
+            this.cmdApplyFilters.Location = new System.Drawing.Point(12, 546);
             this.cmdApplyFilters.Name = "cmdApplyFilters";
             this.cmdApplyFilters.Size = new System.Drawing.Size(141, 23);
             this.cmdApplyFilters.TabIndex = 13;
