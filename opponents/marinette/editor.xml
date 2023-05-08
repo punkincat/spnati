@@ -407,6 +407,8 @@
         <response id="1376" opponent="erufuda" opponentId="579" />
         <response id="1377" opponent="erufuda" opponentId="580" />
         <response id="1378" opponent="meia" opponentId="483" />
+        <response id="1383" opponent="hilda" opponentId="435" />
+        <response id="1384" opponent="hilda" opponentId="436" />
     </responses>
     <notes>
         <note id="32">Placeholder lines for emoting </note>
@@ -1309,11 +1311,17 @@
         <label id="1371" label="Finished" folder="Dual Forfeit" sort="24" />
         <label id="1372" label="Finished" folder="Dual Forfeit" sort="0" />
         <label id="1373" label="Finish - Adrien" folder="Dual Forfeit" sort="0" />
+        <label id="1379" label="Marinette Forfeit - Hilda" folder="Dual Forfeit" sort="0" />
+        <label id="1380" label="Marinette Forfeit - Nadia" folder="Dual Forfeit" sort="0" />
+        <label id="1381" label="Marinette Forfeit - Hilda" folder="Dual Forfeit" sort="0" />
+        <label id="1382" label="Adrien Forfeit - Hilda" folder="Dual Forfeit" sort="0" />
     </labels>
     <prefixes>
         <prefix>t-</prefix>
     </prefixes>
-    <nextId>1378</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>1384</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="+" />
@@ -1324,6 +1332,19 @@
         <marker scope="Public" name="AdrienLeonieMarinetteMoves" />
         <marker scope="Public" name="adrienS" />
         <marker scope="Public" name="adrimari_dualforfeit" />
+        <marker scope="Public" name="adrimari_dualforfeit_hildaA" />
+        <marker scope="Public" name="adrimari_dualforfeit_hildaB" />
+        <marker scope="Public" name="adrimari_dualforfeit_hildaC" />
+        <marker scope="Public" name="adrimari_dualforfeit_hildaD" />
+        <marker scope="Public" name="adrimari_dualforfeit_hildaE" />
+        <marker scope="Public" name="adrimari_dualforfeit_hildaF" />
+        <marker scope="Public" name="adrimari_dualforfeit_hildaG" />
+        <marker scope="Public" name="adrimari_dualforfeit_hildaH" />
+        <marker scope="Public" name="adrimari_dualforfeit_hildaI" />
+        <marker scope="Public" name="adrimari_dualforfeit_hildaJ" />
+        <marker scope="Public" name="adrimari_dualforfeit_hildaK" />
+        <marker scope="Public" name="adrimari_dualforfeit_hildaL" />
+        <marker scope="Public" name="adrmari_dualforfeit" />
         <marker scope="Public" name="ahri01" />
         <marker scope="Public" name="ahri02" />
         <marker scope="Public" name="ahri03" />
@@ -1421,7 +1442,9 @@
         <marker scope="Public" name="hilda22" />
         <marker scope="Public" name="hilda23" />
         <marker scope="Public" name="hilda31" />
+        <marker scope="Public" name="hilda32" />
         <marker scope="Public" name="hilda41" />
+        <marker scope="Public" name="hilda42" />
         <marker scope="Public" name="hildaAdrien01" />
         <marker scope="Public" name="hildaAdrien02" />
         <marker scope="Public" name="hildaAdrien12" />
