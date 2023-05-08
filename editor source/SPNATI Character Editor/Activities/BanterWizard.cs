@@ -22,7 +22,6 @@ namespace SPNATI_Character_Editor.Activities
 		private int _oldSplitter;
 		private bool _editing;
 		private bool _loading;
-		private string _path;
 		private InboundLine _currentInbound;
 		private CharacterEditorData _editorData;
 
@@ -65,7 +64,6 @@ namespace SPNATI_Character_Editor.Activities
 			_character.IsDirty = true;
             _editorData = CharacterDatabase.GetEditorData(_character);
             ColJump.Flat = true;
-            _path = Path.Combine(Config.GetString(Settings.GameDirectory), "opponents/"+_character.FolderName+"/banter.xml");
 			if(!_editorData.HasBanter)
             {
                 cmdUpdateBanter.Text = "Generate";
@@ -75,6 +73,7 @@ namespace SPNATI_Character_Editor.Activities
 			else
 			{
 				cmdUpdateBanter.Text = "Generate/Update";
+                toolTip1.SetToolTip(this.cmdUpdateBanter, "Update banter data. Use this after pulling other characters' updates from Git.\nYour unsaved changes will be discarded.");
                 cmdSaveBanter.Enabled = true;
 				cmdLoadBanter.Enabled = true;
 			}
@@ -91,10 +90,6 @@ namespace SPNATI_Character_Editor.Activities
 			HideResponses();
 			lblCharacters.Text = string.Format(lblCharacters.Text, _character);
 			lstCharacters.Sorted = true;
-			if (File.Exists(_path))
-			{ 
-                toolTip1.SetToolTip(this.cmdUpdateBanter, "Update banter data. Use this after pulling other characters' updates from Git.\nYour unsaved changes will be discarded.");
-            }
             _filterToColor = false;
 			chkColorFilter.Checked = false;
 			_filterNew = true;
@@ -346,7 +341,6 @@ namespace SPNATI_Character_Editor.Activities
                             }
 
                             _selectedCase = workingCase;
-						//	_selectedCharacter = character;
                         }
 
                         return;
@@ -481,7 +475,6 @@ namespace SPNATI_Character_Editor.Activities
 				}
 				_workingResponse = null;
 				_selectedCase = null;
-            //    _selectedCharacter = null;
             }
 		}
 		
@@ -553,9 +546,7 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			ctlResponse.Save();
 			_character.Behavior.AddWorkingCase(_workingResponse);
-		//	HideResponses();
             BanterTargetedLines(_selectedCharacter);
-        //    Workspace.SendMessage(WorkspaceMessages.PreviewCharacterChanged, _selectedCharacter);
             SelectLine(0);
         }
 
@@ -1012,8 +1003,8 @@ namespace SPNATI_Character_Editor.Activities
                 GenerateBanterXML();
                 cmdUpdateBanter.Text = "Generate/Update";
                 _character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-                _editorData.HasBanter = true;
                 Serialization.BackupBanter(_character, Convert.ToString(_character.BanterData.Timestamp));
+                _editorData.HasBanter = true;
                 cmdLoadBanter.Enabled = true;
             }
             else

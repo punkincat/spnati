@@ -75,30 +75,40 @@ namespace SPNATI_Character_Editor
                 success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
 				BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
 				BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
-				BackupAndExportXml(character, CharacterDatabase.GetEditorData(character), "editor", timestamp) &&
+				BackupAndExportXml(character, editorData, "editor", timestamp) &&
 				BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
 				CharacterHistory.Save(character);
 			}
-            else if (character.BanterData.Timestamp == 0)
+            else if (character.BanterData.Timestamp == 0 && editorData.HasBanter)
 			{
 				Banter banter = ImportBanter(character.FolderName);
 				success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
 				BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
 				BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
-				BackupAndExportXml(character, CharacterDatabase.GetEditorData(character), "editor", timestamp) &&
+				BackupAndExportXml(character, editorData, "editor", timestamp) &&
 				BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
 				BackupAndExportXml(character, banter, "editor", timestamp, true) &&
                 CharacterHistory.Save(character);
             }
-			else
+			else if (character.BanterData.Timestamp != 0 && editorData.HasBanter)
 			{
                 Banter banter = ImportBanterWithoutOverwriting(character);
                 success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
                 BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
                 BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
-                BackupAndExportXml(character, CharacterDatabase.GetEditorData(character), "editor", timestamp) &&
+                BackupAndExportXml(character, editorData, "editor", timestamp) &&
                 BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
                 BackupAndExportXml(character, banter, "editor", timestamp, true) &&
+                CharacterHistory.Save(character);
+            }
+			else
+			{
+                success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
+                BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
+                BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
+                BackupAndExportXml(character, editorData, "editor", timestamp) &&
+                BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
+                BackupAndExportXml(character, character.BanterData, "editor", timestamp, true) &&
                 CharacterHistory.Save(character);
             }
 
@@ -354,17 +364,33 @@ namespace SPNATI_Character_Editor
             bool deleteTags = false;
             bool deleteHeight = false;
 
-            Banter banter = ImportBanterWithoutOverwriting(character);
-
-            if (ExportXml(CharacterDatabase.GetEditorData(character), editor, deleteTags, deleteHeight) && ExportXml(banter, editor, deleteTags, deleteHeight, true))
-            {
-                bool backupEnabled = Config.BackupEnabled;
-                if (backupEnabled)
-                {
-                    BackupFile(character, "editor", timestamp);
+			CharacterEditorData editorData = CharacterDatabase.GetEditorData(character);
+			if (editorData.HasBanter)
+			{
+				Banter banter = ImportBanterWithoutOverwriting(character);
+				if (ExportXml(editorData, editor, deleteTags, deleteHeight) && ExportXml(banter, editor, deleteTags, deleteHeight, true))
+				{
+					bool backupEnabled = Config.BackupEnabled;
+					if (backupEnabled)
+					{
+						BackupFile(character, "editor", timestamp);
+					}
+					return true;
                 }
-                return true;
             }
+            else
+			{
+                if (ExportXml(editorData, editor, deleteTags, deleteHeight) && ExportXml(character.BanterData, editor, deleteTags, deleteHeight, true))
+                {
+                    bool backupEnabled = Config.BackupEnabled;
+                    if (backupEnabled)
+                    {
+                        BackupFile(character, "editor", timestamp);
+                    }
+                    return true;
+                }
+            }
+
             return false;
         }
 
