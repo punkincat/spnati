@@ -107,6 +107,13 @@ namespace SPNATI_Character_Editor.Activities
 
             cboSkin.SelectedIndex = 0;
 
+			if (character.Behavior.UniqueLines == 0)
+			{
+                character.PrepareForEdit();
+            }
+			
+			lblLinesOfDialogue.Text = $"Unique lines: {character.Behavior.UniqueLines.ToString()}";
+
         }
 
 

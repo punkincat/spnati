@@ -155,6 +155,14 @@ namespace SPNATI_Character_Editor.Activities
 			return base.CanDeactivate(args);
 		}
 
+		protected override void OnDeactivate()
+		{
+			if (_character != null)
+			{
+                Workspace.SendMessage(WorkspaceMessages.PreviewCharacterChanged, _character);
+            }
+		}
+
 		private void lstCharacters_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			Character character = lstCharacters.SelectedItem as Character;
@@ -609,8 +617,6 @@ namespace SPNATI_Character_Editor.Activities
                     return;
                 }
 
-				c.PrepareForEdit();
-
                 foreach (Case workingCase in c.Behavior.GetWorkingCases())
 				{
 					foreach(DialogueLine dialogueLine in workingCase.Lines)
@@ -691,18 +697,15 @@ namespace SPNATI_Character_Editor.Activities
             }
 			folderNames = folderNames.Distinct().ToList();
 
-            progressBar.Maximum = folderNames.Count;
+            progressBar.Maximum = Math.Max(1,folderNames.Count);
 			int count = 0;
             foreach (string folderName in folderNames)
             {
-				/*
-				if (!CharacterFiltering(folderName))
-				{
-                    progressBar.Value = count++;
-                    continue;
-				}
-				*/
                 progressBar.Value = count++;
+                if (!CharacterDatabase.Exists(folderName))
+                {
+                    continue;
+                }
                 lblProgress.Text = "Scanning "+folderName+"...";
                 lblProgress.Refresh();
                 Character loaded = CharacterDatabase.Load(folderName);
@@ -798,28 +801,27 @@ namespace SPNATI_Character_Editor.Activities
 
             foreach (Opponent opponent in Listing.Instance.Characters)
             {
-                if (opponent.Name == "human")
+                if (opponent.Name == "human" || !CharacterFiltering(opponent.Name))
                 {
                     continue;
                 }
                 folderNames.Add(opponent.Name);
             }
             folderNames = folderNames.Distinct().ToList();
-			progressBar.Maximum = folderNames.Count();
+			progressBar.Maximum = Math.Max(1,folderNames.Count());
 
             foreach (string folderName in folderNames)
 			{
-                if (!CharacterFiltering(folderName))
+                progressBar.Value = count++;
+                if (!CharacterDatabase.Exists(folderName))
                 {
-                    progressBar.Value = count++;
                     continue;
                 }
-                progressBar.Value = count++;
                 lblProgress.Text = "Scanning " + folderName + "...";
                 lblProgress.Refresh();
 
-                int index = _character.BanterData.TargetingCharacters.FindIndex(x => x.Id == folderName);
                 Character loaded = CharacterDatabase.Load(folderName);
+                int index = _character.BanterData.TargetingCharacters.FindIndex(x => x.Id == folderName);
 				if (index == -1)
 				{
 					TargetingCharacter ch = new TargetingCharacter(loaded, _character);

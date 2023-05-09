@@ -336,13 +336,14 @@ namespace SPNATI_Character_Editor
                 return null;
 
             Banter imported = ImportXml<Banter>(filename);
+			List<string> chToUpdate = new List<string>();
 
 			foreach (TargetingCharacter ch in character.BanterData.TargetingCharacters)
 			{
 				TargetingCharacter chImported = imported.TargetingCharacters.Find(x => x.Id == ch.Id);
 				if (chImported != null)
 				{
-					chImported = ch;
+					chToUpdate.Add(ch.Id);
 				}
 				else
 				{
@@ -350,6 +351,19 @@ namespace SPNATI_Character_Editor
 				}
 			}
 
+			foreach (string toUpdate in chToUpdate)
+			{
+                TargetingCharacter chImported = imported.TargetingCharacters.Find(x => x.Id == toUpdate);
+				TargetingCharacter ch = character.BanterData.TargetingCharacters.Find(x => x.Id == toUpdate);
+				chImported.Timestamp = ch.Timestamp;
+				chImported.InboundCount = ch.InboundCount;
+				chImported.Inbounds.Clear();
+				foreach (InboundLine inbound in ch.Inbounds)
+				{
+					chImported.Inbounds.Add(inbound);
+				}
+            }
+			
             imported.TargetingCharacters = imported.TargetingCharacters.OrderBy(x => x?.Id).ToList();
 
 			return imported;
