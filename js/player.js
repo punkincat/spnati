@@ -1258,6 +1258,7 @@ Opponent.prototype.unloadOpponent = function () {
     });
 
     this.unloadStylesheet();
+    updateAllBehaviours(this.slot, null, [[OPPONENT_DESELECTED]]);
 
     this.slot = undefined;
     this.selectInfo = null;

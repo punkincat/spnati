@@ -10,6 +10,7 @@
 
 var SELECTED = "selected";
 var OPPONENT_SELECTED = "opponent_selected";
+var OPPONENT_DESELECTED = "opponent_deselected";
 var GAME_START = "game_start";
 
 var DEALING_CARDS = "dealing_cards";
