@@ -1224,6 +1224,7 @@ namespace SPNATI_Character_Editor
 			else if (!caseIsTargetable && responseIsTargetable && !hasTarget && hasAlsoPlaying && !alsoPlayingIsResponder)
 			{
 				CopySelfIntoTarget(response, speaker);
+				CopyAlsoPlaying(response);
 			}
 			else if ((caseIsTargetable || !responseIsTargetable) && !hasTarget && !alsoPlayingIsResponder)
 			{
@@ -1236,6 +1237,7 @@ namespace SPNATI_Character_Editor
 			}
 			else if (caseIsTargetable && hasTarget && !targetingResponder && !hasAlsoPlaying)
 			{
+				CopyTarget(response);
 				CopySelfIntoAlsoPlaying(response, speaker);
 			}
 			else if (caseIsTargetable && hasTarget && !hasAlsoPlaying && targetingResponder)
@@ -1246,6 +1248,7 @@ namespace SPNATI_Character_Editor
 			else if (caseIsTargetable && hasTarget && !targetingResponder && alsoPlayingIsResponder)
 			{
 				CopyAlsoPlayingIntoSelf(response, responder);
+				CopyTarget(response);
 				CopySelfIntoAlsoPlaying(response, speaker);
 			}
 			else
@@ -1399,6 +1402,21 @@ namespace SPNATI_Character_Editor
 		}
 
 		/// <summary>
+		/// Copies target properties into another case's target
+		/// </summary>
+		/// <param name="other"></param>
+		private void CopyTarget(Case other)
+		{
+			foreach (TargetCondition cond in Conditions)
+			{
+				if (cond.Role == "target")
+				{
+					other.Conditions.Add(cond);
+				}
+			}
+		}
+
+		/// <summary>
 		/// Copies Target properties into another case's self properties
 		/// </summary>
 		/// <param name="other"></param>
@@ -1519,6 +1537,21 @@ namespace SPNATI_Character_Editor
 					ExpressionTest copy = test.Copy();
 					copy.ChangeTarget("self");
 					other.Expressions.Add(copy);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Copies AlsoPlaying properties into another case's AlsoPlaying
+		/// </summary>
+		/// <param name="other"></param>
+		private void CopyAlsoPlaying(Case other)
+        {
+			foreach (TargetCondition cond in Conditions)
+			{
+				if (cond.Role == "other")
+				{
+					other.Conditions.Add(cond);
 				}
 			}
 		}
@@ -2734,8 +2767,10 @@ namespace SPNATI_Character_Editor
 		/// Removes extraneous conditions to leave only the bare minimum
 		/// </summary>
 		public void SimplifyConditions()
-		{
-			for (int i = Conditions.Count - 1; i>= 0; i--)
+        {
+            return; //disable for now until fixed
+
+            for (int i = Conditions.Count - 1; i>= 0; i--)
 			{
 				TargetCondition condition = Conditions[i];
 				if (string.IsNullOrEmpty(condition.SayingMarker))

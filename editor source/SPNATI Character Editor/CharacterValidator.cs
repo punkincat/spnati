@@ -240,18 +240,18 @@ namespace SPNATI_Character_Editor
 						//check for pointless ifMales
 						if (!string.IsNullOrEmpty(trigger.Gender))
                         {
-							if (line.Text.ToLower().Contains("target.ifMale"))
+							if (line.Text.ToLower().Contains("target.ifmale"))
                             {
 								warnings.Add(new ValidationError(ValidationFilterLevel.Minor, string.Format("\"target.ifMale\" is redundant in a gendered case. {0}", caseLabel), context));
 							}
                         }
 						else if (trigger.Name.Contains("human_must_strip"))
                         {
-							if (line.Text.ToLower().Contains("player.ifMale"))
+							if (line.Text.ToLower().Contains("player.ifmale"))
 							{
 								warnings.Add(new ValidationError(ValidationFilterLevel.Minor, string.Format("\"player.ifMale\" is redundant in a case that already defines the human player's gender. {0}", caseLabel), context));
 							}
-							else if (line.Text.ToLower().Contains("human.ifMale"))
+							else if (line.Text.ToLower().Contains("human.ifmale"))
 							{
 								warnings.Add(new ValidationError(ValidationFilterLevel.Minor, string.Format("\"human.ifMale\" is redundant in a case that already defines the human player's gender. {0}", caseLabel), context));
 							}
@@ -454,6 +454,10 @@ namespace SPNATI_Character_Editor
 					{
 						if (condition.Role == "target" && target.FolderName != "human")
 						{
+							if (trigger.Tag.Contains("human"))
+                            {
+								warnings.Add(new ValidationError(ValidationFilterLevel.TargetedDialogue, string.Format("Target \"{1}\" is not the human player, so this case will never trigger. {0}", caseLabel, condition.Character), context));
+							}
 							if (!string.IsNullOrEmpty(trigger.Gender) && target.Gender != trigger.Gender)
 							{
 								if (!target.Metadata.CrossGender)
@@ -971,6 +975,12 @@ namespace SPNATI_Character_Editor
 				if (string.IsNullOrEmpty(test.Value))
 				{
 					warnings.Add(new ValidationError(ValidationFilterLevel.Case, $"Variable test has no value: {test} {caseLabel}", context));
+				}
+
+				if ((test.Expression == "~clothing.type~" || test.Expression == "~revealed.type~") 
+					&& !string.IsNullOrEmpty(test.Operator) && (test.Operator.Contains("<") || test.Operator.Contains(">")))
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Case, $"Clothing type doesn't support less-than or greater-than operators. {caseLabel}", context));
 				}
 			}
 		}
