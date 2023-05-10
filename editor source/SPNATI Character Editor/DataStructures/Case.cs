@@ -2127,6 +2127,12 @@ namespace SPNATI_Character_Editor
 		/// <returns></returns>
 		public string GetResponseTag(Character speaker, Character responder)
 		{
+			
+			if (Tag == "opponent_deselected")
+			{
+				return null;
+			}
+
 			string gender = speaker.Gender;
 
 			//First handle tags where the speaker is actively doing something, since these are the easiest to handle
