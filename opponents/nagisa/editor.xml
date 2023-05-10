@@ -266,6 +266,10 @@
         <response id="1054" opponent="nagatoro" opponentId="2009" />
         <response id="1055" opponent="nagatoro" opponentId="2006" />
         <response id="1056" opponent="nagatoro" opponentId="2007" />
+        <response id="1068" opponent="tea_gardner" opponentId="87" />
+        <response id="1069" opponent="tea_gardner" opponentId="43" />
+        <response id="1070" opponent="elphaba" opponentId="119" />
+        <response id="1071" opponent="elphaba" opponentId="120" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1270,13 +1274,19 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1065" label="" folder="Monika to left" sort="0" />
         <label id="1066" label="" folder="Monika to left" sort="0" />
         <label id="1067" label="" folder="Monika to left" sort="0" />
+        <label id="1068" label="" folder="Tea to left" sort="0" />
+        <label id="1069" label="" folder="Tea to left" sort="0" />
+        <label id="1070" label="" folder="Elphaba to left" sort="0" />
+        <label id="1071" label="" folder="Elphaba to left" sort="0" />
+        <label id="1072" label="" folder="Perona to left" sort="0" />
+        <label id="1073" label="" folder="Arle to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1067</nextId>
+    <nextId>1073</nextId>
     <markers>
         <marker scope="Public" name="hall_club_meetings" />
         <marker scope="Public" name="kyou_nagisa_staying_strong" />
@@ -1349,6 +1359,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_anna_no_siblings" />
         <marker scope="Public" name="nagisa_april_fools" />
         <marker scope="Public" name="nagisa_april_straight_from_school" />
+        <marker scope="Public" name="nagisa_arle_principal" />
         <marker scope="Public" name="nagisa_arwen_beautiful_lady" />
         <marker scope="Public" name="nagisa_asks_buffy_about_school">Nagisa and Buffy feel differently about high school.</marker>
         <marker scope="Public" name="nagisa_asks_zt_for_help">Nagisa asks Zone-tan if her hand is good. It isn't.</marker>
@@ -1534,6 +1545,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_elena_tan" />
         <marker scope="Public" name="nagisa_elena_underwear_cant_compare" />
         <marker scope="Public" name="nagisa_elizabeth_lets_be_friends" />
+        <marker scope="Public" name="nagisa_elphaba_golden_rule" />
+        <marker scope="Public" name="nagisa_elphaba_unusual_skin" />
         <marker scope="Public" name="nagisa_emi_dont_have_to" />
         <marker scope="Public" name="nagisa_erufuda_buns" />
         <marker scope="Public" name="nagisa_f_word_1" />
@@ -2629,6 +2642,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_streaming-chan_stop" />
         <marker scope="Public" name="nagisa_student_council_president">In an episode of Clannad, Nagisa's friends win school sporting games to advertise their friend for Student Council President.</marker>
         <marker scope="Public" name="nagisa_swimsuit">Nagisa modestly claims not to look good in a swimsuit.</marker>
+        <marker scope="Public" name="nagisa_tea_duelist_kingdom" />
+        <marker scope="Public" name="nagisa_tea_poolside_raincheck" />
         <marker scope="Public" name="nagisa_tentacle">Nagisa can make a tentacle comparison when playing with Zone-tan.</marker>
         <marker scope="Public" name="nagisa_terrible_pirate">Nagisa would make a terrible pirate.</marker>
         <marker scope="Public" name="nagisa_tharja_something_scary" />
@@ -2644,6 +2659,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_tomoko_sniff" />
         <marker scope="Public" name="nagisa_tomoko_story_yes" />
         <marker scope="Public" name="nagisa_tomoko_unique" />
+        <marker scope="Public" name="nagisa_toru_2p" />
         <marker scope="Public" name="nagisa_toru_selected" />
         <marker scope="Public" name="nagisa_tracer_disappear" />
         <marker scope="Public" name="nagisa_tracer_rewind_time" />
