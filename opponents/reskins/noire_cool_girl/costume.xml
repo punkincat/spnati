@@ -17,6 +17,7 @@
         <tag from="0" to="6">thigh_highs</tag>
         <tag remove="true">thong</tag>
     </tags>
+    <layers>7</layers>
     <folder>opponents/reskins/noire_cool_girl/</folder>
     <wardrobe>
         <clothing name="thigh-highs" generic="socks" position="legs" type="minor" plural="true" />
@@ -59,22 +60,22 @@
         <pose id="0-smug">
             <sprite id="smug" src="reskins/noire_cool_girl/0-smug.png" x="0" y="0" />
         </pose>
-		<pose id="0-startg">
+        <pose id="0-startg">
             <sprite id="calm0" marker="startPose==0" src="reskins/noire_cool_girl/0-calm.png" x="0" y="0" />
-			<sprite id="angry" marker="startPose==an" src="reskins/noire_cool_girl/0-angry.png" x="0" y="0" />
-			<sprite id="betsuni" marker="startPose==be" src="reskins/noire_cool_girl/0-betsuni.png" x="0" y="0" />
-			<sprite id="calm" marker="startPose==ca" src="reskins/noire_cool_girl/0-calm.png" x="0" y="0" />
-			<sprite id="disgusted" marker="startPose==di" src="reskins/noire_cool_girl/0-disgusted.png" x="0" y="0" />
-			<sprite id="embarrassed" marker="startPose==em" src="reskins/noire_cool_girl/0-embarrassed.png" x="0" y="0" />
-			<sprite id="explaining" marker="startPose==ex" src="reskins/noire_cool_girl/0-explaining.png" x="0" y="0" />
-			<sprite id="happy" marker="startPose==ha" src="reskins/noire_cool_girl/0-happy.png" x="0" y="0" />
-			<sprite id="niya" marker="startPose==ni" src="reskins/noire_cool_girl/0-niya.png" x="0" y="0" />
-			<sprite id="shocked" marker="startPose==sh" src="reskins/noire_cool_girl/0-shocked.png" x="0" y="0" />
-			<sprite id="smug" marker="startPose==sm" src="reskins/noire_cool_girl/0-smug.png" x="0" y="0" />
-			<sprite id="teasing" marker="startPose==te" src="reskins/noire_cool_girl/0-teasing.png" x="0" y="0" />
-			<sprite id="thinking" marker="startPose==th" src="reskins/noire_cool_girl/0-thinking.png" x="0" y="0" />
-			<sprite id="victory" marker="startPose==vi" src="reskins/noire_cool_girl/0-victory.png" x="0" y="0" />
-			<sprite id="yareyare" marker="startPose==yr" src="reskins/noire_cool_girl/0-yareyare.png" x="0" y="0" />			
+            <sprite id="angry" marker="startPose==an" src="reskins/noire_cool_girl/0-angry.png" x="0" y="0" />
+            <sprite id="betsuni" marker="startPose==be" src="reskins/noire_cool_girl/0-betsuni.png" x="0" y="0" />
+            <sprite id="calm" marker="startPose==ca" src="reskins/noire_cool_girl/0-calm.png" x="0" y="0" />
+            <sprite id="disgusted" marker="startPose==di" src="reskins/noire_cool_girl/0-disgusted.png" x="0" y="0" />
+            <sprite id="embarrassed" marker="startPose==em" src="reskins/noire_cool_girl/0-embarrassed.png" x="0" y="0" />
+            <sprite id="explaining" marker="startPose==ex" src="reskins/noire_cool_girl/0-explaining.png" x="0" y="0" />
+            <sprite id="happy" marker="startPose==ha" src="reskins/noire_cool_girl/0-happy.png" x="0" y="0" />
+            <sprite id="niya" marker="startPose==ni" src="reskins/noire_cool_girl/0-niya.png" x="0" y="0" />
+            <sprite id="shocked" marker="startPose==sh" src="reskins/noire_cool_girl/0-shocked.png" x="0" y="0" />
+            <sprite id="smug" marker="startPose==sm" src="reskins/noire_cool_girl/0-smug.png" x="0" y="0" />
+            <sprite id="teasing" marker="startPose==te" src="reskins/noire_cool_girl/0-teasing.png" x="0" y="0" />
+            <sprite id="thinking" marker="startPose==th" src="reskins/noire_cool_girl/0-thinking.png" x="0" y="0" />
+            <sprite id="victory" marker="startPose==vi" src="reskins/noire_cool_girl/0-victory.png" x="0" y="0" />
+            <sprite id="yareyare" marker="startPose==yr" src="reskins/noire_cool_girl/0-yareyare.png" x="0" y="0" />
         </pose>
         <pose id="0-teasing">
             <sprite id="teasing" src="reskins/noire_cool_girl/0-teasing.png" x="0" y="0" />
@@ -244,7 +245,7 @@
         <pose id="4-niya">
             <sprite id="niya" src="reskins/noire_cool_girl/4-niya.png" x="0" y="0" />
         </pose>
-		<pose id="4-rear">
+        <pose id="4-rear">
             <sprite id="rear" src="reskins/noire_cool_girl/4-rear.png" x="0" y="0" />
         </pose>
         <pose id="4-shocked">
@@ -289,7 +290,7 @@
         <pose id="5-niya">
             <sprite id="niya" src="reskins/noire_cool_girl/5-niya.png" x="0" y="0" />
         </pose>
-		<pose id="5-rear">
+        <pose id="5-rear">
             <sprite id="rear" src="reskins/noire_cool_girl/4-rear.png" x="0" y="0" />
         </pose>
         <pose id="5-shocked">
@@ -475,310 +476,113 @@
         <pose id="9-victory">
             <sprite id="victory" src="reskins/noire_cool_girl/9-victory.png" x="0" y="0" />
         </pose>
-        <pose id="an-calm">
+        <pose id="an-ca">
             <sprite id="angry" src="reskins/noire_cool_girl/#-angry.png" x="0" y="0" alpha="100" />
             <sprite id="calm" delay="2" src="reskins/noire_cool_girl/#-calm.png" x="0" y="0" />
-            <directive type="animation" id="angry" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
             <directive type="animation" id="angry" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="calm" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="calm" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-calm.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-calm.png" />
-            </directive>
         </pose>
-        <pose id="an-emb">
+        <pose id="an-em">
             <sprite id="angry" src="reskins/noire_cool_girl/#-angry.png" x="0" y="0" alpha="100" />
             <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" />
-            <directive type="animation" id="angry" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
             <directive type="animation" id="angry" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
         </pose>
-        <pose id="an-expl">
+        <pose id="an-ex">
             <sprite id="angry" src="reskins/noire_cool_girl/#-angry.png" x="0" y="0" alpha="100" />
             <sprite id="explaining" delay="2" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" />
-            <directive type="animation" id="angry" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
             <directive type="animation" id="angry" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="explaining" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="explaining" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-explaining.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-explaining.png" />
-            </directive>
         </pose>
-        <pose id="an-moshi">
+        <pose id="an-mo">
             <sprite id="angry" src="reskins/noire_cool_girl/#-angry.png" x="0" y="0" alpha="100" />
             <sprite id="moshimo" delay="2" src="reskins/noire_cool_girl/#-moshimo.png" x="0" y="0" />
-            <directive type="animation" id="angry" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
             <directive type="animation" id="angry" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="moshimo" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="moshimo" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-moshimo.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-moshimo.png" />
-            </directive>
         </pose>
-        <pose id="an-niya">
+        <pose id="an-ni">
             <sprite id="angry" src="reskins/noire_cool_girl/#-angry.png" x="0" y="0" alpha="100" />
             <sprite id="niya" delay="2" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" />
-            <directive type="animation" id="angry" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
             <directive type="animation" id="angry" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="niya" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="niya" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-niya.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-niya.png" />
-            </directive>
         </pose>
-        <pose id="an-shoc">
+        <pose id="an-sh">
             <sprite id="angry" src="reskins/noire_cool_girl/#-angry.png" x="0" y="0" alpha="100" />
             <sprite id="shocked" delay="2" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" />
-            <directive type="animation" id="angry" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
             <directive type="animation" id="angry" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="shocked" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-shocked.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-shocked.png" />
-            </directive>
         </pose>
-        <pose id="an-yryr">
+        <pose id="an-yr">
             <sprite id="angry" src="reskins/noire_cool_girl/#-angry.png" x="0" y="0" alpha="100" />
             <sprite id="yareyare" delay="2" src="reskins/noire_cool_girl/#-yareyare.png" x="0" y="0" />
-            <directive type="animation" id="angry" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
             <directive type="animation" id="angry" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="yareyare" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="yareyare" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-yareyare.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-yareyare.png" />
-            </directive>
         </pose>
-        <pose id="be-emb">
+        <pose id="be-em">
             <sprite id="betsuni" src="reskins/noire_cool_girl/#-betsuni.png" x="0" y="0" alpha="100" />
             <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" />
             <directive type="animation" id="betsuni" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
         </pose>
-        <pose id="beforeforfeit">
-            <sprite id="explaining" src="reskins/noire_cool_girl/7-explaining.png" x="0" y="0" alpha="100" />
-            <sprite id="sbefore" delay="2" src="reskins/noire_cool_girl/7-sbefore.png" x="0" y="0" />
-            <directive type="animation" id="explaining" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/7-explaining.png" alpha="100" />
-                <keyframe time="2" alpha="0" />
-            </directive>
-        </pose>
-        <pose id="be-moshi">
+        <pose id="be-mo">
             <sprite id="betsuni" src="reskins/noire_cool_girl/#-betsuni.png" x="0" y="0" alpha="100" />
             <sprite id="moshimo" delay="2" src="reskins/noire_cool_girl/#-moshimo.png" x="0" y="0" />
             <directive type="animation" id="betsuni" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="moshimo" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="moshimo" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-moshimo.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-moshimo.png" />
-            </directive>
         </pose>
-        <pose id="be-str00">
-            <sprite id="betsuni" src="reskins/noire_cool_girl/0-betsuni.png" x="0" y="0" alpha="100" />
-            <sprite id="sbefore" delay="2" src="reskins/noire_cool_girl/0-sbefore.png" x="0" y="0" />
-            <directive type="animation" id="betsuni" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/0-betsuni.png" alpha="100" />
-                <keyframe time="2" alpha="0" />
-            </directive>
-        </pose>
-        <pose id="ca-be">
-            <sprite id="calm" src="reskins/noire_cool_girl/#-calm.png" x="0" y="0" alpha="100" />
-            <sprite id="betsuni" delay="2" src="reskins/noire_cool_girl/#-betsuni.png" x="0" y="0" />
-            <directive type="animation" id="calm" ease="smooth" interpolation="none">
-                <keyframe time="0" alpha="100" />
-                <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="betsuni" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="betsuni" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-betsuni.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-betsuni.png" />
-            </directive>
-        </pose>
-        <pose id="ca-emb">
+        <pose id="ca-em">
             <sprite id="calm" src="reskins/noire_cool_girl/#-calm.png" x="0" y="0" alpha="100" />
             <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" />
-            <directive type="animation" id="calm" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-calm.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-calm.png" />
-            </directive>
             <directive type="animation" id="calm" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
         </pose>
-        <pose id="ca-expl">
-            <sprite id="calm" src="reskins/noire_cool_girl/#-calm.png" x="0" y="0" alpha="100" />
-            <sprite id="explaining" delay="2" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" />
-            <directive type="animation" id="calm" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-calm.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-calm.png" />
-            </directive>
-            <directive type="animation" id="calm" ease="smooth" interpolation="none">
-                <keyframe time="0" alpha="100" />
-                <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="explaining" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="explaining" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-explaining.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-explaining.png" />
-            </directive>
-        </pose>
-        <pose id="ca-sh-emb">
-            <sprite id="calm" src="reskins/noire_cool_girl/#-calm.png" x="0" y="0" alpha="100" />
-            <sprite id="shocked" delay="1.5" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" alpha="100" />
-            <sprite id="explaining" delay="4" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" />
-            <directive type="animation" id="calm" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-calm.png" alpha="100" />
-                <keyframe time="1.5" alpha="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="1.5" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-shocked.png" alpha="100" />
-                <keyframe time="2.5" alpha="0" />
-            </directive>
-        </pose>
-        <pose id="ca-sh-expl">
+        <pose id="ca-sh-ex">
             <sprite id="calm" src="reskins/noire_cool_girl/#-calm.png" x="0" y="0" alpha="100" />
             <sprite id="shocked" delay="1.5" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" alpha="100" />
             <sprite id="explaining" delay="4" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" />
             <directive type="animation" id="calm" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-calm.png" alpha="100" />
+                <keyframe time="0"  alpha="100" />
                 <keyframe time="1.5" alpha="0" />
             </directive>
             <directive type="animation" id="shocked" delay="1.5" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-shocked.png" alpha="100" />
+                <keyframe time="0" alpha="100" />
                 <keyframe time="2.5" alpha="0" />
             </directive>
         </pose>
-        <pose id="ca-shoc">
+        <pose id="ca-sh">
             <sprite id="calm" src="reskins/noire_cool_girl/#-calm.png" x="0" y="0" alpha="100" />
             <sprite id="shocked" delay="2" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" />
-            <directive type="animation" id="calm" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-calm.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-calm.png" />
-            </directive>
             <directive type="animation" id="calm" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="shocked" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-shocked.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-shocked.png" />
-            </directive>
         </pose>
-        <pose id="ca-yryr">
+        <pose id="ca-yr">
             <sprite id="calm" src="reskins/noire_cool_girl/#-calm.png" x="0" y="0" alpha="100" />
             <sprite id="yareyare" delay="2" src="reskins/noire_cool_girl/#-yareyare.png" x="0" y="0" />
             <directive type="animation" id="calm" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="yareyare" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="yareyare" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-yareyare.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-yareyare.png" />
             </directive>
         </pose>
         <pose id="di-be">
@@ -788,161 +592,53 @@
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="betsuni" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="betsuni" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-betsuni.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-betsuni.png" />
-            </directive>
         </pose>
-        <pose id="dr-an">
-            <sprite id="dreaming" src="reskins/noire_cool_girl/#-dreaming.png" x="0" y="0" alpha="100" />
-            <sprite id="angry" delay="2" src="reskins/noire_cool_girl/#-angry.png" x="0" y="0" />
-            <directive type="animation" id="dreaming" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-dreaming.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-dreaming.png" />
-            </directive>
-            <directive type="animation" id="dreaming" ease="smooth" interpolation="none">
-                <keyframe time="0" alpha="100" />
-                <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="angry" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="angry" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
-        </pose>
-        <pose id="dr-emb">
+        <pose id="dr-ni">
             <sprite id="dreaming" src="reskins/noire_cool_girl/#-dreaming.png" x="0" y="0" scalex="-1" alpha="100" />
-            <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" scalex="-1" />
-            <directive type="animation" id="dreaming" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-dreaming.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-dreaming.png" />
-            </directive>
+            <sprite id="niya" delay="2" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" />
             <directive type="animation" id="dreaming" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" scalex="-1" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
         </pose>
-        <pose id="dr-shoc">
+        <pose id="dr-sh">
             <sprite id="dreaming" src="reskins/noire_cool_girl/#-dreaming.png" x="0" y="0" scalex="-1" alpha="100" />
             <sprite id="shocked" delay="2" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" scalex="-1" />
-            <directive type="animation" id="dreaming" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-dreaming.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-dreaming.png" />
-            </directive>
             <directive type="animation" id="dreaming" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" scalex="-1" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-shocked.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-shocked.png" />
             </directive>
         </pose>
         <pose id="em-an">
             <sprite id="embarrassed" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" alpha="100" />
             <sprite id="angry" delay="2" src="reskins/noire_cool_girl/#-angry.png" x="0" y="0" />
-            <directive type="animation" id="embarrassed" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
             <directive type="animation" id="embarrassed" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="angry" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="angry" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-angry.png" />
             </directive>
         </pose>
         <pose id="em-be">
             <sprite id="embarrassed" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" alpha="100" />
             <sprite id="betsuni" delay="2" src="reskins/noire_cool_girl/#-betsuni.png" x="0" y="0" />
-            <directive type="animation" id="embarrassed" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
             <directive type="animation" id="embarrassed" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="betsuni" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="betsuni" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-betsuni.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-betsuni.png" />
-            </directive>
         </pose>
-        <pose id="em-expl">
+        <pose id="em-ex">
             <sprite id="embarrassed" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" alpha="100" />
             <sprite id="explaining" delay="2" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" />
-            <directive type="animation" id="embarrassed" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
             <directive type="animation" id="embarrassed" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="explaining" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="explaining" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-explaining.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-explaining.png" />
-            </directive>
         </pose>
-        <pose id="em-str00">
-            <sprite id="embarrassed" src="reskins/noire_cool_girl/0-embarrassed.png" x="0" y="0" alpha="100" />
-            <sprite id="sbefore" delay="2" src="reskins/noire_cool_girl/0-sbefore.png" x="0" y="0" />
-            <directive type="animation" id="embarrassed" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/0-embarrassed.png" alpha="100" />
-                <keyframe time="2" alpha="0" />
-            </directive>
-        </pose>
-        <pose id="em-yryr">
+        <pose id="em-ha">
             <sprite id="embarrassed" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" alpha="100" />
-            <sprite id="yareyare" delay="2" src="reskins/noire_cool_girl/#-yareyare.png" x="0" y="0" />
-            <directive type="animation" id="embarrassed" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
+            <sprite id="happy" delay="2" src="reskins/noire_cool_girl/#-happy.png" x="0" y="0" />
             <directive type="animation" id="embarrassed" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="yareyare" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="yareyare" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-yareyare.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-yareyare.png" />
             </directive>
         </pose>
         <pose id="ex-ca">
@@ -952,77 +648,29 @@
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="calm" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="calm" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-calm.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-calm.png" />
-            </directive>
         </pose>
-        <pose id="ex-disg">
+        <pose id="ex-di">
             <sprite id="explaining" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" alpha="100" />
             <sprite id="disgusted" delay="2" src="reskins/noire_cool_girl/#-disgusted.png" x="0" y="0" />
             <directive type="animation" id="explaining" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="disgusted" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="disgusted" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-disgusted.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-disgusted.png" />
-            </directive>
         </pose>
-        <pose id="ex-emb">
+        <pose id="ex-em">
             <sprite id="explaining" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" alpha="100" />
             <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" />
             <directive type="animation" id="explaining" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
         </pose>
-        <pose id="ex-think">
-            <sprite id="explaining" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" alpha="100" />
-            <sprite id="thinking" delay="2" src="reskins/noire_cool_girl/#-thinking.png" x="0" y="0" />
-            <directive type="animation" id="explaining" ease="smooth" interpolation="none">
-                <keyframe time="0" alpha="100" />
-                <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="thinking" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="thinking" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-thinking.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-thinking.png" />
-            </directive>
-        </pose>
-        <pose id="ex-yryr">
+        <pose id="ex-yr">
             <sprite id="explaining" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" alpha="100" />
             <sprite id="yareyare" delay="2" src="reskins/noire_cool_girl/#-yareyare.png" x="0" y="0" />
             <directive type="animation" id="explaining" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="yareyare" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="yareyare" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-yareyare.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-yareyare.png" />
             </directive>
         </pose>
         <pose id="ha-an">
@@ -1032,14 +680,6 @@
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="angry" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="angry" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
         </pose>
         <pose id="ha-be">
             <sprite id="happy" src="reskins/noire_cool_girl/#-happy.png" x="0" y="0" alpha="100" />
@@ -1048,125 +688,53 @@
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="betsuni" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="betsuni" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-betsuni.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-betsuni.png" />
-            </directive>
         </pose>
-        <pose id="ha-calm">
+        <pose id="ha-ca">
             <sprite id="happy" src="reskins/noire_cool_girl/#-happy.png" x="0" y="0" alpha="100" />
             <sprite id="calm" delay="2" src="reskins/noire_cool_girl/#-calm.png" x="0" y="0" />
             <directive type="animation" id="happy" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="calm" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="calm" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-calm.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-calm.png" />
-            </directive>
         </pose>
-        <pose id="ha-disg">
+        <pose id="ha-di">
             <sprite id="happy" src="reskins/noire_cool_girl/#-happy.png" x="0" y="0" alpha="100" />
             <sprite id="disgusted" delay="2" src="reskins/noire_cool_girl/#-disgusted.png" x="0" y="0" />
-            <directive type="animation" id="happy" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-happy.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-happy.png" />
-            </directive>
             <directive type="animation" id="happy" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="disgusted" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="disgusted" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-disgusted.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-disgusted.png" />
-            </directive>
         </pose>
-        <pose id="ha-emb">
+        <pose id="ha-em">
             <sprite id="happy" src="reskins/noire_cool_girl/#-happy.png" x="0" y="0" alpha="100" />
             <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" />
-            <directive type="animation" id="happy" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-happy.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-happy.png" />
-            </directive>
             <directive type="animation" id="happy" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
         </pose>
-        <pose id="ha-expl">
+        <pose id="ha-ex">
             <sprite id="happy" src="reskins/noire_cool_girl/#-happy.png" x="0" y="0" alpha="100" />
             <sprite id="explaining" delay="2" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" />
-            <directive type="animation" id="happy" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-happy.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-happy.png" />
-            </directive>
             <directive type="animation" id="happy" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="explaining" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="explaining" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-explaining.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-explaining.png" />
-            </directive>
         </pose>
-        <pose id="ha-moshi">
+        <pose id="ha-mo">
             <sprite id="happy" src="reskins/noire_cool_girl/#-happy.png" x="0" y="0" alpha="100" />
             <sprite id="moshimo" delay="2" src="reskins/noire_cool_girl/#-moshimo.png" x="0" y="0" />
-            <directive type="animation" id="happy" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-happy.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-happy.png" />
-            </directive>
             <directive type="animation" id="happy" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="moshimo" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="moshimo" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-moshimo.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-moshimo.png" />
-            </directive>
         </pose>
-        <pose id="ha-shoc">
+        <pose id="ha-sh">
             <sprite id="happy" src="reskins/noire_cool_girl/#-happy.png" x="0" y="0" alpha="100" />
             <sprite id="shocked" delay="2" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" />
             <directive type="animation" id="happy" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-shocked.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-shocked.png" />
             </directive>
         </pose>
         <pose id="mo-be">
@@ -1176,61 +744,29 @@
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="betsuni" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="betsuni" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-betsuni.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-betsuni.png" />
-            </directive>
         </pose>
-        <pose id="mo-disg">
+        <pose id="mo-di">
             <sprite id="moshimo" src="reskins/noire_cool_girl/#-moshimo.png" x="0" y="0" alpha="100" />
             <sprite id="disgusted" delay="2" src="reskins/noire_cool_girl/#-disgusted.png" x="0" y="0" />
             <directive type="animation" id="moshimo" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="disgusted" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="disgusted" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-disgusted.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-disgusted.png" />
-            </directive>
         </pose>
-        <pose id="mo-emb">
+        <pose id="mo-em">
             <sprite id="moshimo" src="reskins/noire_cool_girl/#-moshimo.png" x="0" y="0" alpha="100" />
             <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" />
             <directive type="animation" id="moshimo" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
         </pose>
-        <pose id="mo-shoc">
+        <pose id="mo-sh">
             <sprite id="moshimo" src="reskins/noire_cool_girl/#-moshimo.png" x="0" y="0" alpha="100" />
             <sprite id="shocked" delay="2" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" />
             <directive type="animation" id="moshimo" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-shocked.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-shocked.png" />
             </directive>
         </pose>
         <pose id="ni-an">
@@ -1240,125 +776,61 @@
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="angry" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="angry" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
         </pose>
-        <pose id="ni-calm">
+        <pose id="ni-ca">
             <sprite id="niya" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" alpha="100" />
             <sprite id="calm" delay="2" src="reskins/noire_cool_girl/#-calm.png" x="0" y="0" />
             <directive type="animation" id="niya" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="calm" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="calm" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-calm.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-calm.png" />
-            </directive>
         </pose>
-        <pose id="ni-emb">
+        <pose id="ni-em">
             <sprite id="niya" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" alpha="100" />
             <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" />
             <directive type="animation" id="niya" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
         </pose>
-        <pose id="ni-expl">
+        <pose id="ni-ex">
             <sprite id="niya" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" alpha="100" />
             <sprite id="explaining" delay="2" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" />
             <directive type="animation" id="niya" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="explaining" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="explaining" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-explaining.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-explaining.png" />
-            </directive>
         </pose>
-        <pose id="niMIRR-expl">
+        <pose id="niMIRR-ex">
             <sprite id="niya" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" scalex="-1" alpha="100" />
             <sprite id="explaining" delay="2" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" />
             <directive type="animation" id="niya" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="explaining" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="explaining" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-explaining.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-explaining.png" />
-            </directive>
         </pose>
-        <pose id="niMIRR-shoc">
+        <pose id="niMIRR-sh">
             <sprite id="niya" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" scalex="-1" alpha="100" />
             <sprite id="shocked" delay="2" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" />
             <directive type="animation" id="niya" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="shocked" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-shocked.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-shocked.png" />
-            </directive>
         </pose>
-        <pose id="ni-shoc">
+        <pose id="ni-sh">
             <sprite id="niya" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" alpha="100" />
             <sprite id="shocked" delay="2" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" />
             <directive type="animation" id="niya" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="shocked" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-shocked.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-shocked.png" />
-            </directive>
         </pose>
-        <pose id="ni-yryr">
+        <pose id="ni-yr">
             <sprite id="niya" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" alpha="100" />
             <sprite id="yareyare" delay="2" src="reskins/noire_cool_girl/#-yareyare.png" x="0" y="0" />
             <directive type="animation" id="niya" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="yareyare" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="yareyare" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-yareyare.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-yareyare.png" />
             </directive>
         </pose>
         <pose id="sh-an">
@@ -1368,125 +840,61 @@
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="angry" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="angry" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
         </pose>
-		<pose id="sh-disg">
+        <pose id="sh-di">
             <sprite id="shocked" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" alpha="100" />
             <sprite id="disgusted" delay="2" src="reskins/noire_cool_girl/#-disgusted.png" x="0" y="0" />
             <directive type="animation" id="shocked" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="disgusted" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="disgusted" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-disgusted.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-disgusted.png" />
-            </directive>
         </pose>
-        <pose id="sh-emb">
+        <pose id="sh-em">
             <sprite id="shocked" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" alpha="100" />
             <sprite id="explaining" delay="2" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" />
             <directive type="animation" id="shocked" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="explaining" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="explaining" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
         </pose>
-        <pose id="sh-expl">
+        <pose id="sh-ex">
             <sprite id="shocked" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" alpha="100" />
             <sprite id="explaining" delay="2" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" />
             <directive type="animation" id="shocked" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="explaining" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="explaining" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-explaining.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-explaining.png" />
-            </directive>
         </pose>
-        <pose id="sh-niya">
+        <pose id="sh-ni">
             <sprite id="shocked" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" alpha="100" />
             <sprite id="niya" delay="2" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" />
             <directive type="animation" id="shocked" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="niya" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="niya" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-niya.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-niya.png" />
-            </directive>
         </pose>
-        <pose id="sh-teas">
+        <pose id="sh-te">
             <sprite id="shocked" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" alpha="100" />
             <sprite id="teasing" delay="2" src="reskins/noire_cool_girl/#-teasing.png" x="0" y="0" />
             <directive type="animation" id="shocked" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="teasing" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="teasing" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-teasing.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-teasing.png" />
-            </directive>
         </pose>
-        <pose id="sh-vic">
+        <pose id="sh-vi">
             <sprite id="shocked" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" alpha="100" />
             <sprite id="victory" delay="2" src="reskins/noire_cool_girl/#-victory.png" x="0" y="0" />
             <directive type="animation" id="shocked" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="victory" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="victory" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-victory.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-victory.png" />
-            </directive>
         </pose>
-        <pose id="sh-yryr">
+        <pose id="sh-yr">
             <sprite id="shocked" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" alpha="100" />
             <sprite id="yareyare" delay="2" src="reskins/noire_cool_girl/#-yareyare.png" x="0" y="0" />
             <directive type="animation" id="shocked" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="yareyare" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="yareyare" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-yareyare.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-yareyare.png" />
             </directive>
         </pose>
         <pose id="sm-be">
@@ -1496,45 +904,21 @@
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="betsuni" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="betsuni" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-betsuni.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-betsuni.png" />
-            </directive>
         </pose>
-        <pose id="sm-emb">
+        <pose id="sm-em">
             <sprite id="smug" src="reskins/noire_cool_girl/#-smug.png" x="0" y="0" alpha="100" />
             <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" />
             <directive type="animation" id="smug" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
         </pose>
-        <pose id="sm-shoc">
+        <pose id="sm-sh">
             <sprite id="smug" src="reskins/noire_cool_girl/#-smug.png" x="0" y="0" alpha="100" />
             <sprite id="shocked" delay="2" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" />
             <directive type="animation" id="smug" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-shocked.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-shocked.png" />
             </directive>
         </pose>
         <pose id="0-st0">
@@ -1551,6 +935,19 @@
         </pose>
         <pose id="0-st0b">
             <sprite id="s2" src="reskins/noire_cool_girl/0-s2.png" x="0" y="0" />
+        </pose>
+        <pose id="0-st0sh-ex">
+            <sprite id="shocked" src="reskins/noire_cool_girl/0-shocked.png" x="0" y="0" alpha="100" />
+            <sprite id="explaining" delay="1.5" src="reskins/noire_cool_girl/0-explaining.png" x="0" y="0" alpha="100" />
+            <sprite id="s2" delay="4" src="reskins/noire_cool_girl/0-s2.png" x="0" y="0" />
+            <directive type="animation" id="shocked" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/noire_cool_girl/0-shocked.png" alpha="100" />
+                <keyframe time="1.5" alpha="0" />
+            </directive>
+            <directive type="animation" id="explaining" delay="1.5" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/noire_cool_girl/0-explaining.png" alpha="100" />
+                <keyframe time="2.5" alpha="0" />
+            </directive>
         </pose>
         <pose id="1-st1a">
             <sprite id="sbefore" src="reskins/noire_cool_girl/1-sbefore.png" x="0" y="0" />
@@ -1829,7 +1226,7 @@
                 <keyframe time="1" src="reskins/noire_cool_girl/3-betsuni.png" />
             </directive>
         </pose>
-        <pose id="3-stA3jha-emb">
+        <pose id="3-stA3jha-em">
             <sprite id="happy" src="reskins/noire_cool_girl/3-happy.png" x="0" y="0" alpha="100" />
             <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/3-embarrassed.png" x="0" y="0" />
             <directive type="animation" id="happy" ease="linear" interpolation="none">
@@ -1852,7 +1249,7 @@
         <pose id="3-stA3jniya">
             <sprite id="niya" src="reskins/noire_cool_girl/3-niya.png" x="0" y="0" />
         </pose>
-        <pose id="3-stA3jsh-emb">
+        <pose id="3-stA3jsh-em">
             <sprite id="shocked" src="reskins/noire_cool_girl/3-shocked.png" x="0" y="0" alpha="100" />
             <sprite id="explaining" delay="2" src="reskins/noire_cool_girl/3-embarrassed.png" x="0" y="0" />
             <directive type="animation" id="shocked" ease="smooth" interpolation="none">
@@ -1871,7 +1268,7 @@
         <pose id="3-stA3jshoc">
             <sprite id="shocked" src="reskins/noire_cool_girl/3-shocked.png" x="0" y="0" />
         </pose>
-        <pose id="3-stA3jsh-yryr">
+        <pose id="3-stA3jsh-yr">
             <sprite id="shocked" src="reskins/noire_cool_girl/3-shocked.png" x="0" y="0" alpha="100" />
             <sprite id="yareyare" delay="2" src="reskins/noire_cool_girl/3-yareyare.png" x="0" y="0" />
             <directive type="animation" id="shocked" ease="smooth" interpolation="none">
@@ -1921,7 +1318,7 @@
         <pose id="5-stA5jmoshi">
             <sprite id="moshimo" src="reskins/noire_cool_girl/5-moshimo.png" x="0" y="0" />
         </pose>
-        <pose id="5-stA5jni-emb">
+        <pose id="5-stA5jni-em">
             <sprite id="niya" src="reskins/noire_cool_girl/5-niya.png" x="0" y="0" alpha="100" />
             <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/5-embarrassed.png" x="0" y="0" />
             <directive type="animation" id="niya" ease="smooth" interpolation="none">
@@ -1938,7 +1335,7 @@
         <pose id="7-stA7jmoshi">
             <sprite id="moshimo" src="reskins/noire_cool_girl/7-moshimo.png" x="0" y="0" />
         </pose>
-		<pose id="7-startm">
+        <pose id="7-startm">
             <sprite id="sbefore" src="reskins/noire_cool_girl/7-sbefore.png" x="0" y="0" />
         </pose>
         <pose id="0-stB0be">
@@ -1965,64 +1362,28 @@
                 <keyframe time="1" alpha="100" />
             </directive>
         </pose>
-        <pose id="th-disg">
+        <pose id="th-di">
             <sprite id="thinking" src="reskins/noire_cool_girl/#-thinking.png" x="0" y="0" alpha="100" />
             <sprite id="disgusted" delay="2" src="reskins/noire_cool_girl/#-disgusted.png" x="0" y="0" />
-            <directive type="animation" id="thinking" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-thinking.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-thinking.png" />
-            </directive>
             <directive type="animation" id="thinking" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="disgusted" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="disgusted" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-disgusted.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-disgusted.png" />
-            </directive>
         </pose>
-        <pose id="th-shoc">
+        <pose id="th-sh">
             <sprite id="thinking" src="reskins/noire_cool_girl/#-thinking.png" x="0" y="0" alpha="100" />
             <sprite id="shocked" delay="2" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" />
-            <directive type="animation" id="thinking" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-thinking.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-thinking.png" />
-            </directive>
             <directive type="animation" id="thinking" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="shocked" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="shocked" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-shocked.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-shocked.png" />
-            </directive>
         </pose>
-        <pose id="vi-emb">
+        <pose id="vi-em">
             <sprite id="victory" src="reskins/noire_cool_girl/#-victory.png" x="0" y="0" alpha="100" />
             <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" />
-            <directive type="animation" id="victory" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-victory.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
             <directive type="animation" id="victory" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-embarrassed.png" />
             </directive>
         </pose>
         <pose id="yr-an">
@@ -2032,29 +1393,13 @@
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
-            <directive type="animation" id="angry" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="angry" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-angry.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-angry.png" />
-            </directive>
         </pose>
-        <pose id="yr-emb">
+        <pose id="yr-em">
             <sprite id="yareyare" src="reskins/noire_cool_girl/#-yareyare.png" x="0" y="0" alpha="100" />
             <sprite id="embarrassed" delay="2" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" />
             <directive type="animation" id="yareyare" ease="smooth" interpolation="none">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="embarrassed" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-embarrassed.png" />
             </directive>
         </pose>
         <pose id="zsco-be">
@@ -2137,79 +1482,6 @@
                 <keyframe time="1" y="304" />
                 <keyframe time="2" y="304" />
                 <keyframe time="3" y="304" />
-            </directive>
-        </pose>
-        <pose id="0-st0sh-expl">
-            <sprite id="shocked" src="reskins/noire_cool_girl/0-shocked.png" x="0" y="0" alpha="100" />
-            <sprite id="explaining" delay="1.5" src="reskins/noire_cool_girl/0-explaining.png" x="0" y="0" alpha="100" />
-            <sprite id="s2" delay="4" src="reskins/noire_cool_girl/0-s2.png" x="0" y="0" />
-            <directive type="animation" id="shocked" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/0-shocked.png" alpha="100" />
-                <keyframe time="1.5" alpha="0" />
-            </directive>
-            <directive type="animation" id="explaining" delay="1.5" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/0-explaining.png" alpha="100" />
-                <keyframe time="2.5" alpha="0" />
-            </directive>
-        </pose>
-        <pose id="dr-niya">
-            <sprite id="dreaming" src="reskins/noire_cool_girl/#-dreaming.png" x="0" y="0" scalex="-1" alpha="100" />
-            <sprite id="niya" delay="2" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" />
-            <directive type="animation" id="dreaming" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-dreaming.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-dreaming.png" />
-            </directive>
-            <directive type="animation" id="dreaming" ease="smooth" interpolation="none">
-                <keyframe time="0" alpha="100" />
-                <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="niya" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="niya" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-niya.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-niya.png" />
-            </directive>
-        </pose>
-        <pose id="em-ha">
-            <sprite id="embarrassed" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" alpha="100" />
-            <sprite id="happy" delay="2" src="reskins/noire_cool_girl/#-happy.png" x="0" y="0" />
-            <directive type="animation" id="embarrassed" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
-            <directive type="animation" id="embarrassed" ease="smooth" interpolation="none">
-                <keyframe time="0" alpha="100" />
-                <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="happy" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="happy" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-happy.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-happy.png" />
-            </directive>
-        </pose>
-        <pose id="em-niya">
-            <sprite id="embarrassed" src="reskins/noire_cool_girl/#-embarrassed.png" x="0" y="0" alpha="100" />
-            <sprite id="niya" delay="2" src="reskins/noire_cool_girl/#-niya.png" x="0" y="0" />
-            <directive type="animation" id="embarrassed" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-embarrassed.png" />
-                <keyframe time="2" src="reskins/noire_cool_girl/#-embarrassed.png" />
-            </directive>
-            <directive type="animation" id="embarrassed" ease="smooth" interpolation="none">
-                <keyframe time="0" alpha="100" />
-                <keyframe time="2" alpha="0" />
-            </directive>
-            <directive type="animation" id="niya" delay="2" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="1" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="niya" delay="2" ease="linear" interpolation="none">
-                <keyframe time="0" src="reskins/noire_cool_girl/#-niya.png" />
-                <keyframe time="1" src="reskins/noire_cool_girl/#-niya.png" />
             </directive>
         </pose>
     </poses>
