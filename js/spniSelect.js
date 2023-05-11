@@ -391,6 +391,7 @@ function loadListingFile () {
             }
             var highlightStatus = $(this).attr('highlight');
             var rosterScore = $(this).attr('score');
+            var addedDate = $(this).attr('addedDate');
 
             // Keep the unsorted characters in order
             if (rosterScore === undefined) {
@@ -403,7 +404,7 @@ function loadListingFile () {
                 loadProgress[fileIdx].total++;
                 opponentMap[id] = oppDefaultIndex++;
 
-                return loadOpponentMeta(id, oppStatus, rosterScore, releaseNumber, highlightStatus)
+                return loadOpponentMeta(id, oppStatus, rosterScore, addedDate, releaseNumber, highlightStatus)
                     .then(onComplete).then(function () {
                         loadProgress[fileIdx].current++;
                         var progress = loadProgress.reduce(function (acc, val) {
@@ -485,14 +486,14 @@ function loadListingFile () {
 /***************************************************************
  * Loads and parses the meta and tags XML files of an opponent.
  ***************************************************************/
-function loadOpponentMeta (id, status, rosterScore, releaseNumber, highlightStatus) {
+function loadOpponentMeta (id, status, rosterScore, addedDate, releaseNumber, highlightStatus) {
     /* grab and parse the opponent meta file */
     console.log("Loading metadata for \""+id+"\"");
 
     return Promise.all(metaFiles.map(function (filename) {
         return metadataIndex.getFile("opponents/" + id + "/" + filename);
     })).then(function(files) {
-        return new Opponent(id, files, status, rosterScore, releaseNumber, highlightStatus);
+        return new Opponent(id, files, status, rosterScore, addedDate, releaseNumber, highlightStatus);
     }).catch(function(err) {
         console.error("Failed reading \""+id+"\":");
         captureError(err);

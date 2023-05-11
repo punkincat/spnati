@@ -496,10 +496,11 @@ Player.prototype.inboundLinesFromSelected = function (filterStatus, cap) {
  * @param {jQuery} $metaXml
  * @param {string} status
  * @param {number} [rosterScore]
+ * @param {string} [addedDate]
  * @param {number} [releaseNumber]
  * @param {string} [highlightStatus]
  */
-function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightStatus) {
+function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber, highlightStatus) {
     Player.call(this, id);
 
     this.id = id;
@@ -557,6 +558,8 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
 
     this.rosterScore = rosterScore;
     this.effectiveScore = -Infinity;
+
+    this.addedDate = addedDate;
 
     this.endings = null;
     if (EPILOGUES_ENABLED) {

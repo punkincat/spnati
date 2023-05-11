@@ -3128,6 +3128,14 @@ ul.dropdown-menu>li {
     display: none;
 }
 
+.opponent-added-field:not(.has-added-date) {
+    display: none;
+}
+
+.opponent-added-field .has-added-date {
+    display: flex;
+}
+
 /* Modifications on non-widescreen devices
    Note: The threshold here must match autoResizeFont(). */
 @media (max-aspect-ratio: 3/2) {
