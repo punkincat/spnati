@@ -1758,9 +1758,13 @@ OpponentDetailsDisplay.prototype.update = function (opponent) {
     if (this.opponent.releaseDate && this.opponent.releaseDate != "z") {
         this.releaseLabelField.addClass('has-release-date');
         var timeStyle = undefined;
+
+        // I hate this, but we have to manually parse the date to force it to use the local timezone
+        var dateParts = opponent.releaseDate.split("-");
+        theDate = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
+
         this.releaseLabel.text(new Intl.DateTimeFormat([], { dateStyle: 'short', timeStyle: timeStyle })
-                                  .format(new Date(opponent.releaseDate))
-                                  + " (" + fuzzyTimeAgo(new Date(opponent.releaseDate)) + ")");
+                                  .format(theDate) + " (" + fuzzyTimeAgo(theDate) + ")");
     } else {
         this.releaseLabelField.removeClass('has-release-date');
     }
