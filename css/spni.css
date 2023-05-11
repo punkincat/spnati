@@ -3136,6 +3136,14 @@ ul.dropdown-menu>li {
     display: flex;
 }
 
+.opponent-release-field:not(.has-release-date) {
+    display: none;
+}
+
+.opponent-release-field .has-release-date {
+    display: flex;
+}
+
 /* Modifications on non-widescreen devices
    Note: The threshold here must match autoResizeFont(). */
 @media (max-aspect-ratio: 3/2) {

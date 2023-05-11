@@ -143,8 +143,8 @@ var chosenGroupGender = -1;
 var sortingMode = "featured";
 var sortingOptionsMap = {
     target: sortOpponentsByMostTargeted(50, Infinity),
-    oldest: sortOpponentsByMultipleFields(["release", "-listingIndex"]),
-    newest: sortOpponentsByMultipleFields(["-release", "listingIndex"]),
+    oldest: sortOpponentsByMultipleFields(["releaseDate", "-listingIndex"]),
+    newest: sortOpponentsByMultipleFields(["-releaseDate", "listingIndex"]),
     featured: sortOpponentsByMultipleFields(["-effectiveScore"]),
 };
 var groupCreditsShown = false;
@@ -381,14 +381,13 @@ function loadListingFile () {
         return Promise.all($xml.find('>individuals>opponent').map(function () {
             var oppStatus = $(this).attr('status');
             var id = $(this).text();
-            var releaseNumber = $(this).attr('release');
-            if (releaseNumber === undefined) {
+            var releaseDate = $(this).attr('releaseDate');
+            if (releaseDate === undefined) {
                 if (oppStatus == "testing") {
-                    releaseNumber = Infinity;
+                    releaseDate = "z"; // sorts after all dates
                 }
-            } else {
-                releaseNumber = Number(releaseNumber);
             }
+			
             var highlightStatus = $(this).attr('highlight');
             var rosterScore = $(this).attr('score');
             var addedDate = $(this).attr('addedDate');
@@ -404,7 +403,7 @@ function loadListingFile () {
                 loadProgress[fileIdx].total++;
                 opponentMap[id] = oppDefaultIndex++;
 
-                return loadOpponentMeta(id, oppStatus, rosterScore, addedDate, releaseNumber, highlightStatus)
+                return loadOpponentMeta(id, oppStatus, rosterScore, addedDate, releaseDate, highlightStatus)
                     .then(onComplete).then(function () {
                         loadProgress[fileIdx].current++;
                         var progress = loadProgress.reduce(function (acc, val) {
@@ -486,14 +485,14 @@ function loadListingFile () {
 /***************************************************************
  * Loads and parses the meta and tags XML files of an opponent.
  ***************************************************************/
-function loadOpponentMeta (id, status, rosterScore, addedDate, releaseNumber, highlightStatus) {
+function loadOpponentMeta (id, status, rosterScore, addedDate, releaseDate, highlightStatus) {
     /* grab and parse the opponent meta file */
     console.log("Loading metadata for \""+id+"\"");
 
     return Promise.all(metaFiles.map(function (filename) {
         return metadataIndex.getFile("opponents/" + id + "/" + filename);
     })).then(function(files) {
-        return new Opponent(id, files, status, rosterScore, addedDate, releaseNumber, highlightStatus);
+        return new Opponent(id, files, status, rosterScore, addedDate, releaseDate, highlightStatus);
     }).catch(function(err) {
         console.error("Failed reading \""+id+"\":");
         captureError(err);
@@ -856,8 +855,8 @@ function updateIndividualSelectSort() {
         : sortingMode == "-lastUpdated" ? function(opp) { return opp.lastUpdated === 0; }
     /* Separate out characters with no targets if using Targeted sort */
         : sortingMode == "target"       ? function(opp) { return opp.inboundLinesFromSelected(individualSelectTesting ? "testing" : undefined) === 0; }
-    /* Separate characters with a release number from characters without one */
-        : sortingMode == "newest" || sortingMode == "oldest" ? function(opp) { return opp.release === undefined ? -1 : opp.release == Infinity ? 1 : 0; }
+    /* Separate characters with a release date from characters without one */
+        : sortingMode == "newest" || sortingMode == "oldest" ? function(opp) { return opp.releaseDate === undefined ? -1 : opp.releaseDate == "z" ? 1 : 0; }
     /* Separate characters according to event settings (if any are active) */
         : sortingMode == "featured"        ? function (opp) { return opp.event_partition; }
         : null;

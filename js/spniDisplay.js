@@ -1427,6 +1427,8 @@ OpponentDetailsDisplay = function () {
     this.lastUpdateLabel = $("#individual-select-screen .opponent-lastupdate");
     this.addedLabelField = $("#individual-select-screen .opponent-added-field");
     this.addedLabel = $("#individual-select-screen .opponent-added");
+    this.releaseLabelField = $("#individual-select-screen .opponent-release-field");
+    this.releaseLabel = $("#individual-select-screen .opponent-release");
     this.costumeSelector = $("#individual-select-screen .alt-costume-dropdown");
     this.simpleImage = $("#individual-select-screen .opponent-details-simple-image");
     this.imageArea = $("#individual-select-screen .opponent-details-image-area");
@@ -1542,12 +1544,14 @@ OpponentDetailsDisplay.prototype.clear = function () {
     this.descriptionLabel.empty();
     this.lastUpdateLabel.empty();
     this.addedLabel.empty();
+    this.releaseLabel.empty();
     
     this.simpleImage.attr('src', null);
     this.selectButton.prop('disabled', true);
     this.epiloguesField.removeClass('has-epilogues');
     this.collectiblesField.removeClass('has-collectibles');
     this.addedLabelField.removeClass('has-added-date');
+    this.releaseLabelField.removeClass('has-release-date');
     this.costumeSelector.hide();
 
     
@@ -1749,6 +1753,16 @@ OpponentDetailsDisplay.prototype.update = function (opponent) {
                                   .format(theDate) + " (" + fuzzyTimeAgo(theDate) + ")");
     } else {
         this.addedLabelField.removeClass('has-added-date');
+    }
+
+    if (this.opponent.releaseDate && this.opponent.releaseDate != "z") {
+        this.releaseLabelField.addClass('has-release-date');
+        var timeStyle = undefined;
+        this.releaseLabel.text(new Intl.DateTimeFormat([], { dateStyle: 'short', timeStyle: timeStyle })
+                                  .format(new Date(opponent.releaseDate))
+                                  + " (" + fuzzyTimeAgo(new Date(opponent.releaseDate)) + ")");
+    } else {
+        this.releaseLabelField.removeClass('has-release-date');
     }
 
     this.descriptionLabel.html(opponent.description);

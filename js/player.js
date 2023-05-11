@@ -497,10 +497,10 @@ Player.prototype.inboundLinesFromSelected = function (filterStatus, cap) {
  * @param {string} status
  * @param {number} [rosterScore]
  * @param {string} [addedDate]
- * @param {number} [releaseNumber]
+ * @param {string} [releaseDate]
  * @param {string} [highlightStatus]
  */
-function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber, highlightStatus) {
+function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseDate, highlightStatus) {
     Player.call(this, id);
 
     this.id = id;
@@ -534,7 +534,8 @@ function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber,
     this.layers = this.selectLayers = this.metaLayers = parseInt($metaXml.children('layers').text(), 10);
     this.default_costume_name = $metaXml.children('default-costume-name').text();
     this.scale = Number($metaXml.children('scale').text()) || 100.0;
-    this.release = releaseNumber;
+    this.addedDate = addedDate;
+    this.releaseDate = releaseDate;
     this.uniqueLineCount = parseInt($metaXml.children('lines').text(), 10) || undefined;
     this.posesImageCount = parseInt($metaXml.children('poses').text(), 10) || undefined;
     this.z_index = parseInt($metaXml.children('z-index').text(), 10) || 0;
@@ -558,8 +559,6 @@ function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber,
 
     this.rosterScore = rosterScore;
     this.effectiveScore = -Infinity;
-
-    this.addedDate = addedDate;
 
     this.endings = null;
     if (EPILOGUES_ENABLED) {
@@ -603,7 +602,7 @@ function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber,
         }
     }).get();
     this.searchTags = this.expandTagsList(this.originalTags.map(obj => obj.tag));
-	
+
     this.magnetismTag = undefined;
     this.searchTags.forEach((tag) => {
         if (MAGNET_TAGS.indexOf(tag) >= 0) this.magnetismTag = tag;
