@@ -1740,9 +1740,13 @@ OpponentDetailsDisplay.prototype.update = function (opponent) {
     if (this.opponent.addedDate) {
         this.addedLabelField.addClass('has-added-date');
         var timeStyle = undefined;
+
+        // I hate this, but we have to manually parse the date to force it to use the local timezone
+        var dateParts = opponent.addedDate.split("-");
+        theDate = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
+
         this.addedLabel.text(new Intl.DateTimeFormat([], { dateStyle: 'short', timeStyle: timeStyle })
-                                  .format(new Date(opponent.addedDate))
-                                  + " (" + fuzzyTimeAgo(new Date(opponent.addedDate)) + ")");
+                                  .format(theDate) + " (" + fuzzyTimeAgo(theDate) + ")");
     } else {
         this.addedLabelField.removeClass('has-added-date');
     }
