@@ -360,6 +360,10 @@ var CANDY_LIST = [
     "kaz/0-aback.png",
     "kaz/1-toblerone.png",
     "kaz/2-glad.png",
+    "arueshalae/0-happy.png",              // Has Recent Updates
+    "arueshalae/0-laughing.png",
+    "arueshalae/4-singing_happy.png",
+    "arueshalae/4-horny.png",
 ];
 
 /* Storage for old candy images in case the characters qualify again */
