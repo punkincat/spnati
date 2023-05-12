@@ -30,6 +30,9 @@
         <case name="Rule 1" id="85" priority="FYI" min="2" max="2">
             <description>If there's a vouyer background, Tea will announce to the onlookers that she's ready to give them a show.</description>
         </case>
+        <case name="See Persona" id="162" priority="Noteworthy" min="2" max="2">
+            <description>Tea asks a Persona character if they understand the shadow world.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -127,6 +130,8 @@
         <response id="128" opponent="aella" opponentId="269" />
         <response id="129" opponent="aella" opponentId="2" />
         <response id="130" opponent="aella" opponentId="264" />
+        <response id="158" opponent="moon" opponentId="186" />
+        <response id="159" opponent="moon" opponentId="51" />
     </responses>
     <labels>
         <label id="1" label="" folder="Friends Marker" sort="0" />
@@ -141,20 +146,49 @@
         <label id="52" label="" folder="Backgrounds" sort="5" />
         <label id="53" label="" folder="Backgrounds" sort="6" />
         <label id="82" label="" folder="Backgrounds" sort="0" />
-        <label id="83" label="" folder="Backgrounds" sort="0" />
-        <label id="84" label="" folder="Backgrounds" sort="0" />
-        <label id="85" label="" folder="Backgrounds" sort="0" />
-        <label id="86" label="" folder="Backgrounds" sort="0" />
-        <label id="87" label="" folder="Backgrounds" sort="0" />
+        <label id="83" label="" folder="Backgrounds" sort="12" />
+        <label id="84" label="" folder="Backgrounds" sort="13" />
+        <label id="85" label="" folder="Backgrounds" sort="11" />
+        <label id="86" label="" folder="Backgrounds" sort="14" />
+        <label id="87" label="" folder="Backgrounds" sort="15" />
+        <label id="42" label="" folder="Target: Kyouko" sort="0" />
+        <label id="133" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="134" label="" folder="Target: Kyouko" sort="0" />
+        <label id="135" label="" folder="Target: May" sort="0" />
+        <label id="151" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="137" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="138" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="139" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="140" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="141" label="" folder="Target: May" sort="0" />
+        <label id="142" label="" folder="Target: May" sort="0" />
+        <label id="143" label="" folder="Target: May" sort="0" />
+        <label id="144" label="" folder="Target: May" sort="0" />
+        <label id="13" label="" folder="Target: May" sort="0" />
+        <label id="145" label="" folder="Target: Kyouko" sort="0" />
+        <label id="146" label="" folder="Target: Kyouko" sort="0" />
+        <label id="147" label="" folder="Target: Kyouko" sort="0" />
+        <label id="148" label="" folder="Target: Kyouko" sort="0" />
+        <label id="149" label="" folder="Target: Kyouko" sort="0" />
+        <label id="150" label="" folder="Target: Kyouko" sort="0" />
+        <label id="152" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="153" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="154" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="155" label="" folder="Backgrounds" sort="0" />
+        <label id="156" label="" folder="Backgrounds" sort="0" />
+        <label id="157" label="" folder="Backgrounds" sort="0" />
+        <label id="161" label="" folder="Backgrounds" sort="0" />
     </labels>
     <prefixes>
         <prefix>card</prefix>
     </prefixes>
-    <nextId>130</nextId>
+    <nextId>162</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="blue_disk" />
         <marker scope="Public" name="chiakiVideoGames" />
+        <marker scope="Public" name="kyouko_tea_cardgame" />
+        <marker scope="Public" name="kyouko_tea_cardgame0" />
         <marker scope="Public" name="may_tea_losebra" />
         <marker scope="Public" name="may_tea_strip0" />
         <marker scope="Public" name="tea_4cards_reply1" />
@@ -166,9 +200,11 @@
         <marker scope="Public" name="tea_airhockey1" />
         <marker scope="Public" name="tea_airhockey2" />
         <marker scope="Public" name="tea_airhockey3" />
+        <marker scope="Public" name="tea_ancientruins" />
         <marker scope="Public" name="tea_aqua_freetime1a" />
         <marker scope="Public" name="tea_aqua_freetime1b" />
         <marker scope="Public" name="tea_aqua_freetime2" />
+        <marker scope="Public" name="tea_aqua_freetime3" />
         <marker scope="Public" name="tea_aqua_miku" />
         <marker scope="Public" name="tea_attack_points" />
         <marker scope="Public" name="tea_bernie_breasts" />
@@ -185,12 +221,16 @@
         <marker scope="Public" name="tea_cynthia_millenium" />
         <marker scope="Public" name="tea_cynthia_puzzle" />
         <marker scope="Public" name="tea_cynthia_rod" />
+        <marker scope="Public" name="tea_cynthia_strip0" />
         <marker scope="Public" name="tea_dash_respond" />
         <marker scope="Public" name="tea_deckmaster" />
         <marker scope="Public" name="tea_dmg_attraction" />
+        <marker scope="Public" name="tea_dmg_attraction2a" />
+        <marker scope="Public" name="tea_dmg_attraction2b" />
         <marker scope="Public" name="tea_dmg_end" />
         <marker scope="Public" name="tea_dmg_finish" />
         <marker scope="Public" name="tea_dmg_horny" />
+        <marker scope="Public" name="tea_dmg_horny2" />
         <marker scope="Public" name="tea_dmg_jinzo" />
         <marker scope="Public" name="tea_dmg_nickname" />
         <marker scope="Public" name="tea_dmg_penguin" />
@@ -201,7 +241,13 @@
         <marker scope="Public" name="tea_dungeon" />
         <marker scope="Public" name="tea_easy" />
         <marker scope="Public" name="tea_elph_dmg" />
+        <marker scope="Public" name="tea_elph_dmg2" />
         <marker scope="Public" name="tea_elph_reply1" />
+        <marker scope="Public" name="tea_elph_reply2" />
+        <marker scope="Public" name="tea_elph_reply2a" />
+        <marker scope="Public" name="tea_elph_reply2b" />
+        <marker scope="Public" name="tea_elph_reply2c" />
+        <marker scope="Public" name="tea_elph_strip0a" />
         <marker scope="Public" name="tea_fairy" />
         <marker scope="Public" name="tea_fashionA" />
         <marker scope="Public" name="tea_fashionB" />
@@ -227,8 +273,10 @@
         <marker scope="Public" name="tea_kyoko_wager" />
         <marker scope="Public" name="tea_kyouko_ribbon" />
         <marker scope="Public" name="tea_kyouko_start" />
+        <marker scope="Public" name="tea_kyouko_strip0" />
         <marker scope="Public" name="tea_kyouko_strip1" />
         <marker scope="Public" name="tea_kyouko_strip1a" />
+        <marker scope="Public" name="tea_kyouko_strip1b" />
         <marker scope="Public" name="tea_kyu_strip0" />
         <marker scope="Public" name="tea_ladybug_dual" />
         <marker scope="Public" name="tea_lose_1" />
@@ -272,8 +320,13 @@
         <marker scope="Public" name="tea_naga_strip1a" />
         <marker scope="Public" name="tea_naga_strip3" />
         <marker scope="Public" name="tea_naga_stripped1" />
+        <marker scope="Public" name="tea_nagatoro_reply1" />
+        <marker scope="Public" name="tea_nagatoro_taunt" />
+        <marker scope="Public" name="tea_nagisa_replt1" />
+        <marker scope="Public" name="tea_nagisa_reply1" />
         <marker scope="Public" name="tea_ojamas" />
         <marker scope="Public" name="tea_oneliner_detective" />
+        <marker scope="Public" name="tea_persona_shadow" />
         <marker scope="Public" name="tea_petra_birthday" />
         <marker scope="Public" name="tea_pokemon" />
         <marker scope="Public" name="tea_pool_end" />
