@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1679790122994</lastupdate>
+    <lastupdate>1683934012811</lastupdate>
     <enabled>false</enabled>
     <first>Janet</first>
     <last>van Dyne</last>
@@ -14,9 +14,10 @@
     <epilogue gender="male" img="epilogue02.png">Ambushed in the Shower</epilogue>
     <layers>7</layers>
     <alternates>
-        <costume folder="opponents/reskins/wasp_casual/" img="0-start.png" status="online" label="Janet">Casual Outfit</costume>
+        <costume folder="opponents/reskins/wasp_casual/" img="0-start.png" status="online" label="Janet" layers="7">Casual Outfit</costume>
+        <costume folder="opponents/reskins/wasp_summer/" img="0-start.png" set="summer" status="unlisted" label="Janet" layers="4">Summer Outfit</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
     <lines>2318</lines>
-    <poses>334</poses>
+    <poses>448</poses>
 </opponent>
