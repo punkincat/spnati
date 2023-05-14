@@ -541,6 +541,14 @@
                 <keyframe time="2" alpha="0" />
             </directive>
         </pose>
+        <pose id="be-sh">
+            <sprite id="betsuni" src="reskins/noire_cool_girl/#-betsuni.png" x="0" y="0" alpha="100" />
+            <sprite id="shocked" delay="2" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" />
+            <directive type="animation" id="betsuni" ease="smooth" interpolation="none">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="2" alpha="0" />
+            </directive>
+        </pose>
         <pose id="be-mo">
             <sprite id="betsuni" src="reskins/noire_cool_girl/#-betsuni.png" x="0" y="0" alpha="100" />
             <sprite id="moshimo" delay="2" src="reskins/noire_cool_girl/#-moshimo.png" x="0" y="0" />
@@ -562,7 +570,7 @@
             <sprite id="shocked" delay="1.5" src="reskins/noire_cool_girl/#-shocked.png" x="0" y="0" alpha="100" />
             <sprite id="explaining" delay="4" src="reskins/noire_cool_girl/#-explaining.png" x="0" y="0" />
             <directive type="animation" id="calm" ease="linear" interpolation="none">
-                <keyframe time="0"  alpha="100" />
+                <keyframe time="0" alpha="100" />
                 <keyframe time="1.5" alpha="0" />
             </directive>
             <directive type="animation" id="shocked" delay="1.5" ease="linear" interpolation="none">
