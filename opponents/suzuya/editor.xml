@@ -52,7 +52,8 @@
         <note id="310">cute route</note>
         <note id="312">flashy route</note>
         <note id="314">cool route</note>
-        <note id="262">cute -&gt; nonorin || cool -&gt; nowatsun || flashy -&gt; nowanowa&lt;br&gt;It's selected at random, but all the follow-up lines are based on whatever marker is set initially (they're all currently dummied out)</note>
+        <note id="262">cute -&gt; nonorin || cool -&gt; nowatsun || flashy -&gt; nowanowa
+It's selected at random, but all the follow-up lines are based on whatever marker is set initially (they're all currently dummied out)</note>
         <note id="315">cool route for the cool skin</note>
         <note id="263">cute route</note>
         <note id="311">cool route, default skin</note>
@@ -365,12 +366,36 @@
         <label id="313" label="" folder="target_noire" sort="0" />
         <label id="314" label="" folder="target_noire" sort="0" />
         <label id="315" label="" folder="target_noire" sort="0" />
+        <label id="280" label="" folder="target_elphaba" sort="0" />
+        <label id="316" label="" folder="target_hutao" sort="0" />
+        <label id="317" label="" folder="target_hutao" sort="0" />
+        <label id="318" label="" folder="target_hutao" sort="0" />
+        <label id="319" label="" folder="target_hutao" sort="0" />
+        <label id="320" label="" folder="target_hutao" sort="0" />
+        <label id="321" label="" folder="target_hutao" sort="0" />
+        <label id="322" label="" folder="target_cheryl" sort="0" />
+        <label id="323" label="" folder="target_cheryl" sort="0" />
+        <label id="324" label="" folder="target_elphaba" sort="0" />
+        <label id="325" label="" folder="target_cheryl" sort="0" />
+        <label id="326" label="" folder="target_cheryl" sort="0" />
+        <label id="327" label="" folder="target_cheryl" sort="0" />
+        <label id="328" label="" folder="target_cheryl" sort="0" />
+        <label id="329" label="" folder="target_cheryl" sort="0" />
+        <label id="330" label="" folder="target_jura" sort="0" />
+        <label id="331" label="" folder="target_jura" sort="0" />
+        <label id="332" label="" folder="target_hutao" sort="0" />
+        <label id="333" label="" folder="target_kaz" sort="0" />
+        <label id="334" label="" folder="target_kaz" sort="0" />
+        <label id="335" label="" folder="target_meia" sort="0" />
+        <label id="336" label="" folder="target_meia" sort="0" />
+        <label id="337" label="" folder="target_panty" sort="0" />
+        <label id="338" label="" folder="target_panty" sort="0" />
+        <label id="339" label="" folder="target_revy" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>315</nextId>
+    <nextId>339</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="__9s_nickname" />
         <marker scope="Public" name="__elphaba_nickname" />
         <marker scope="Public" name="__noire_nickname" />
@@ -405,7 +430,14 @@
         <marker scope="Public" name="cagli12" />
         <marker scope="Public" name="cagli21" />
         <marker scope="Public" name="cagli22" />
+        <marker scope="Public" name="cheryl_cheryl01" />
+        <marker scope="Public" name="cheryl_cheryl02" />
+        <marker scope="Public" name="cheryl_cheryl11" />
+        <marker scope="Public" name="cheryl_cheryl21" />
+        <marker scope="Public" name="cheryl_cheryl23" />
         <marker scope="Public" name="cheryl00" />
+        <marker scope="Public" name="cheryl01" />
+        <marker scope="Public" name="cheryl02" />
         <marker scope="Public" name="dunban_suzuya_0a" />
         <marker scope="Public" name="dunban_suzuya_strip0a" />
         <marker scope="Public" name="dunban_suzuya_strip1a" />
@@ -431,8 +463,16 @@
         <marker scope="Public" name="hutao_12" />
         <marker scope="Public" name="hutao_20" />
         <marker scope="Public" name="hutao_21" />
+        <marker scope="Public" name="hutao_tao01" />
+        <marker scope="Public" name="hutao_tao11" />
+        <marker scope="Public" name="hutao_tao12" />
+        <marker scope="Public" name="hutao_tao21" />
+        <marker scope="Public" name="hutao_tao22" />
+        <marker scope="Public" name="hutao_tao23" />
         <marker scope="Public" name="jura_suzuya0" />
+        <marker scope="Public" name="jura_suzuya01" />
         <marker scope="Public" name="jura00" />
+        <marker scope="Public" name="jura01" />
         <marker scope="Public" name="kirigiri_suzuya_zodiac2AB" />
         <marker scope="Public" name="kkirigiri00" />
         <marker scope="Public" name="kkirigiri01" />
@@ -442,12 +482,15 @@
         <marker scope="Public" name="kkirigiri02" />
         <marker scope="Public" name="komi_jacket_off" />
         <marker scope="Public" name="meia_suzuya0" />
+        <marker scope="Public" name="meia_suzuya01" />
         <marker scope="Public" name="meia00" />
         <marker scope="Public" name="meia01" />
+        <marker scope="Public" name="meia02" />
         <marker scope="Public" name="minor_fire" />
         <marker scope="Public" name="minor_first" />
         <marker scope="Public" name="minor_outfitswap" />
         <marker scope="Public" name="minor_socks" />
+        <marker scope="Public" name="monika_suzuya_hairContrast" />
         <marker scope="Public" name="nagamimi_00" />
         <marker scope="Public" name="nagamimi_question_fashion" />
         <marker scope="Public" name="nami_pirate" />
@@ -457,10 +500,12 @@
         <marker scope="Public" name="noire00flashy" />
         <marker scope="Public" name="noire01" />
         <marker scope="Public" name="noire02" />
+        <marker scope="Public" name="panty_suzuya_ps_10" />
         <marker scope="Public" name="placeholder" />
         <marker scope="Public" name="q_miko_desires" />
         <marker scope="Public" name="queenie01" />
         <marker scope="Public" name="revy_suzuya0" />
+        <marker scope="Public" name="revy_suzuya01" />
         <marker scope="Public" name="roll_00" />
         <marker scope="Public" name="selected_alley1" />
         <marker scope="Public" name="selected_bath1" />
@@ -558,11 +603,11 @@
         <line>----targets----</line>
         <line>Nagatoro: mischevious onee-san, gotta target the swimsuit</line>
         <line>Bobobo: literally everything I guess?</line>
-        <line>Noire: Set up (and decide on) Nicknames</line>
         <line>Rouge: bat tats</line>
         <line>Hilda: Got that same energy going on.</line>
         <line>Leon+Hilda piggybacking: Can't you two just FUCK already?</line>
-        <line>Hu Tao: Spirit removalist? I happen to be an expert on this subject too.</line>
+        <line>PA-15: What the heck are you wearing WeirdChamp</line>
+        <line>PA-15 -&gt; Suzuya: So you're the adventurous type too, huh?</line>
         <line>---- </line>
     </pendingLines>
 </metadata>
