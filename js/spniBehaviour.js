@@ -162,6 +162,7 @@ var TAG_IMPLICATIONS = {
     'pink_hair': ['exotic_hair'],
     'purple_hair': ['exotic_hair'],
     'violet_eyes': ['exotic_eyes'],
+    'pink_eyes': ['exotic_eyes'],
     'red_eyes': ['exotic_eyes'],
     'amber_eyes': ['exotic_eyes'],
     'heterochromia': ['exotic_eyes'],

@@ -339,7 +339,7 @@ var CANDY_LIST = [
     "aloy/0-Horny.png",                    // Has Recent Updates
     "aloy/5-Smug.png",
     "aloy/0-Angry.png",
-    "reskins/aloy_carja_blazon/0-Smug.png",	
+    "reskins/aloy_carja_blazon/0-Smug.png",
     "aqua_kh/0-giggling.png",              // Has Recent Updates
     "aqua_kh/0-happy.png",
     "aqua_kh/2-keyblade_stance.png",
@@ -512,10 +512,11 @@ var playerTagOptions = {
     },
     'eye_color': {
         values: [
-            { value: 'dark_eyes' }, { value: 'pale_eyes' },
-            { value: 'red_eyes' }, { value: 'amber_eyes' },
-            { value: 'green_eyes' }, { value: 'blue_eyes' },
-            { value: 'violet_eyes' },
+            { value: 'brown_eyes' }, { value: 'dark_eyes' },
+            { value: 'pale_eyes' }, { value: 'red_eyes' },
+            { value: 'amber_eyes' }, { value: 'green_eyes' },
+            { value: 'blue_eyes' }, { value: 'violet_eyes' },
+            { value: 'pink_eyes' },
         ],
     },
     'skin_color': {
