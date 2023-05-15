@@ -728,7 +728,7 @@ namespace SPNATI_Character_Editor.Controls
 			SaveNotes();
 		}
 
-		private void SaveNotes()
+		public void SaveNotes()
 		{
 			if (_selectedCase == null)
 			{

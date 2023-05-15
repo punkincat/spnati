@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+using System.Drawing;
 
 namespace SPNATI_Character_Editor
 {
@@ -43,7 +43,13 @@ namespace SPNATI_Character_Editor
 		/// Sent to inform the preview sidebar to update its image [List&lt;string&gt;: markers that are set]
 		/// </summary>
 		public const int UpdateMarkers = 8;
-	}
+
+        /// <summary>
+        /// Sent to inform the case control to save the case notes (the case folder name etc.)
+        /// </summary>
+        public const int SaveCaseNotes = 9;
+
+    }
 
 	public class UpdateImageArgs
 	{
