@@ -72,6 +72,11 @@
         <response id="235" opponent="revy" opponentId="247" />
         <response id="237" opponent="jura" opponentId="599" />
         <response id="239" opponent="jura" opponentId="1" />
+        <response id="244" opponent="elphaba" opponentId="233" />
+        <response id="245" opponent="elphaba" opponentId="234" />
+        <response id="250" opponent="dawn" opponentId="19" />
+        <response id="257" opponent="moon" opponentId="51" />
+        <response id="258" opponent="moon" opponentId="186" />
     </responses>
     <labels>
         <label id="2" label="" color="1" folder="Targets" sort="0" />
@@ -312,13 +317,32 @@
         <label id="241" label="pet" folder="Prompts" sort="0" />
         <label id="242" label="worlds" folder="Prompts" sort="0" />
         <label id="243" label="adapt" folder="Prompts" sort="0" />
+        <label id="244" label="" color="1" folder="Targets" sort="0" />
+        <label id="245" label="" color="1" folder="Targets" sort="0" />
+        <label id="246" label="" folder="Targets" sort="0" />
+        <label id="247" label="" folder="Targets" sort="0" />
+        <label id="248" label="" folder="Filtered" sort="0" />
+        <label id="249" label="" folder="Filtered" sort="0" />
+        <label id="239" label="" folder="Targets" sort="0" />
+        <label id="250" label="" folder="Targets" sort="0" />
+        <label id="251" label="" folder="Filtered" sort="0" />
+        <label id="252" label="" folder="Filtered" sort="0" />
+        <label id="253" label="" folder="Filtered" sort="0" />
+        <label id="254" label="" folder="Filtered" sort="0" />
+        <label id="255" label="" folder="Filtered" sort="0" />
+        <label id="256" label="" folder="Targets" sort="0" />
+        <label id="257" label="" folder="Targets" sort="0" />
+        <label id="259" label="" folder="Targets" sort="0" />
+        <label id="260" label="" folder="Targets" sort="0" />
+        <label id="261" label="" folder="Filtered" sort="0" />
+        <label id="262" label="" folder="Filtered" sort="0" />
     </labels>
     <prefixes>
         <prefix>aa</prefix>
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>243</nextId>
+    <nextId>262</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="1st_dong" />
@@ -341,15 +365,24 @@
         <marker scope="Public" name="cagli_howlong" />
         <marker scope="Public" name="caulifla_komdragon" />
         <marker scope="Public" name="cheryl_journal" />
+        <marker scope="Public" name="dawn_study" />
+        <marker scope="Public" name="deity_start" />
+        <marker scope="Public" name="deity2" />
+        <marker scope="Public" name="deity3" />
         <marker scope="Public" name="diffworldquestion" />
         <marker scope="Public" name="DMG_darkmagician" />
         <marker scope="Public" name="dmg_darkmagician2" />
         <marker scope="Public" name="dmg_schezo" />
         <marker scope="Public" name="doubleunderwear" />
         <marker scope="Public" name="dwight_talkinabout" />
+        <marker scope="Public" name="elphaba_animalspeak" />
         <marker scope="Public" name="elphaba_broom" />
         <marker scope="Public" name="elphaba_broom2" />
+        <marker scope="Public" name="elphaba_broomfly" />
         <marker scope="Public" name="elphaba_greenwitch" />
+        <marker scope="Public" name="elphaba_noringo" />
+        <marker scope="Public" name="elphaba_ozanimal" />
+        <marker scope="Public" name="elphaba_ringoplays" />
         <marker scope="Public" name="elphaba_towermagician" />
         <marker scope="Public" name="elphaba_witchclan" />
         <marker scope="Public" name="elphaba_wtichclana" />
