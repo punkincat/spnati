@@ -151,6 +151,7 @@ namespace SPNATI_Character_Editor.Activities
 			SubscribeWorkspace(WorkspaceMessages.Find, OnFind);
 			SubscribeWorkspace(WorkspaceMessages.Replace, OnReplace);
 			SubscribeWorkspace(WorkspaceMessages.WardrobeUpdated, OnWardrobeChanged);
+			SubscribeWorkspace(WorkspaceMessages.SkinChanged, OnSkinChanged);			
 			SubscribeWorkspace(WorkspaceMessages.SaveCaseNotes, OnSaveCaseNotes);
 			SubscribeDesktop(DesktopMessages.SettingsUpdated, OnSettingsUpdated);
 			SubscribeDesktop(DesktopMessages.MacrosUpdated, OnMacrosUpdated);
