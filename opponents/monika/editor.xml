@@ -128,6 +128,8 @@ And miles to go before I sleep.
         <note id="1284">There's a fan-made sprite of Monika in a yellow bikini with two braids that inspired this line.</note>
         <note id="1285">If Stirring Mermaid is updated to have braids like the common fan-made sprite, this line will need to be changed.</note>
         <note id="1286">Not sure how to handle this without being too rude/evasive to Fina or bluriting out too much in front of other DDLC girls. I'll try, though</note>
+        <note id="1324">I completely made this up
+and I'll do it again</note>
     </notes>
     <labels>
         <label id="1147" label="FarawayVision" folder="Player Name" sort="0" />
@@ -212,11 +214,11 @@ And miles to go before I sleep.
         <label id="1273" label="Resetbutton" color="0" folder="Marker Tricks" sort="0" />
         <label id="1293" label="" color="1" folder="" sort="0" />
         <label id="1294" label="" color="1" folder="" sort="0" />
-        <label id="1296" label="" color="1" folder="" sort="0" />
-        <label id="1297" label="" color="1" folder="" sort="0" />
-        <label id="1298" label="" color="1" folder="" sort="0" />
-        <label id="1299" label="" color="1" folder="" sort="0" />
-        <label id="1300" label="" color="1" folder="" sort="0" />
+        <label id="1296" label="" color="4" folder="" sort="0" />
+        <label id="1297" label="" color="4" folder="" sort="0" />
+        <label id="1298" label="" color="4" folder="" sort="0" />
+        <label id="1299" label="" color="4" folder="" sort="0" />
+        <label id="1300" label="" color="4" folder="" sort="0" />
         <label id="1301" label="" color="1" folder="" sort="0" />
         <label id="1302" label="" color="1" folder="" sort="0" />
         <label id="1306" label="" color="4" folder="" sort="0" />
@@ -230,12 +232,22 @@ And miles to go before I sleep.
         <label id="1314" label="Pampering prompt" color="4" folder="" sort="0" />
         <label id="1315" label="Amenities prompt" color="4" folder="" sort="0" />
         <label id="1316" label="" color="4" folder="" sort="0" />
+        <label id="1317" label="" color="4" folder="" sort="0" />
+        <label id="1318" label="" color="4" folder="" sort="0" />
+        <label id="1324" label="" color="4" folder="" sort="0" />
+        <label id="1325" label="" color="4" folder="" sort="0" />
+        <label id="1326" label="" color="4" folder="" sort="0" />
+        <label id="1288" label="" color="4" folder="" sort="0" />
+        <label id="1331" label="" color="4" folder="" sort="0" />
     </labels>
+    <prefixes>
+        <prefix>blazer</prefix>
+        <prefix>poem-1</prefix>
+    </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1316</nextId>
+    <nextId>1331</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="3_musician_table_reaction" />
         <marker scope="Public" name="4_musician_table_reaction" />
         <marker scope="Public" name="9s_hack1" />
@@ -358,6 +370,7 @@ And miles to go before I sleep.
         <marker scope="Public" name="did_i_break_anything">Monika has said at least one of her "Oops" lines in response to a round glitch.</marker>
         <marker scope="Public" name="disappearing_clothes" />
         <marker scope="Public" name="elphaba_otherWorld" />
+        <marker scope="Public" name="elphaba_otherWorld2" />
         <marker scope="Public" name="emistriplegs" />
         <marker scope="Public" name="erufuda_playerInterest" />
         <marker scope="Public" name="erufuda_travelWorlds" />
@@ -447,11 +460,14 @@ And miles to go before I sleep.
         <marker scope="Public" name="hu_tao_resp_favoritePoem2" />
         <marker scope="Public" name="hu_tao_resp_favoritePoem3" />
         <marker scope="Public" name="hu_tao_resp_lovePlayer" />
+        <marker scope="Public" name="hu_tao_resp_lovePlayer2" />
+        <marker scope="Public" name="hu_tao_resp_lovePlayer3" />
         <marker scope="Public" name="hu_tao_resp_poemInspiration" />
         <marker scope="Public" name="hu_tao_resp_poemInspiration2" />
         <marker scope="Public" name="hu_tao_resp_poemInspiration3" />
         <marker scope="Public" name="hu_tao_resp_writeOrRead" />
         <marker scope="Public" name="hu_tao_resp_writeOrRead2" />
+        <marker scope="Public" name="hu_tao_resp_writeOrRead3" />
         <marker scope="Public" name="hu_tao_takingLife" />
         <marker scope="Public" name="hu_tao_takingLife2" />
         <marker scope="Public" name="hu_tao_theLastQuestion" />
@@ -607,7 +623,9 @@ And miles to go before I sleep.
         <marker scope="Public" name="meia_resp_3playerF" />
         <marker scope="Public" name="meia_resp_3playerM" />
         <marker scope="Public" name="meia_resp_4splayer" />
+        <marker scope="Public" name="meia_resp_abusePower" />
         <marker scope="Public" name="meia_resp_existentialQuestions" />
+        <marker scope="Public" name="meia_resp_headPressure" />
         <marker scope="Public" name="meia_resp_lb0" />
         <marker scope="Public" name="meia_resp_lb01" />
         <marker scope="Public" name="meia_resp_lb1" />
@@ -655,6 +673,10 @@ And miles to go before I sleep.
         <marker scope="Public" name="miku_resp_music" />
         <marker scope="Public" name="mistynoguys_resp" />
         <marker scope="Public" name="mistyskinnydip_resp" />
+        <marker scope="Public" name="mitama_resp_litclub" />
+        <marker scope="Public" name="mitama_resp_litschool" />
+        <marker scope="Public" name="mitama_resp_morethanpoems" />
+        <marker scope="Public" name="mitama_resp_weirdpoems" />
         <marker scope="Public" name="monika_chubbyTable" />
         <marker scope="Public" name="monika_fantasy_forfeit" />
         <marker scope="Public" name="monika_MasturbatingTime" />
@@ -689,6 +711,7 @@ And miles to go before I sleep.
         <marker scope="Public" name="nami_resp_3s_vice2sayori" />
         <marker scope="Public" name="nami_savings" />
         <marker scope="Public" name="nami_savings2" />
+        <marker scope="Public" name="nami_savings3" />
         <marker scope="Public" name="natsuki_doessheusetoy" />
         <marker scope="Public" name="natsuki_doyoumasturbate" />
         <marker scope="Public" name="natsukicharacter" />
@@ -699,6 +722,10 @@ And miles to go before I sleep.
         <marker scope="Public" name="noelle_moreHelpful" />
         <marker scope="Public" name="noire_metPlayer" />
         <marker scope="Public" name="noire_metPlayer2" />
+        <marker scope="Public" name="noire_metPlayer3" />
+        <marker scope="Public" name="noire_resp_flashing" />
+        <marker scope="Public" name="noire_resp_flashing2" />
+        <marker scope="Public" name="noire_resp_iinchou" />
         <marker scope="Public" name="petra_adrestrianEmpire" />
         <marker scope="Public" name="petra_killing" />
         <marker scope="Public" name="petra_resp_japanese" />
@@ -1002,6 +1029,7 @@ And miles to go before I sleep.
         <marker scope="Public" name="supernova_killtosavetheworld_resp" />
         <marker scope="Public" name="supernova_SheWhoFightsMonsters" />
         <marker scope="Public" name="suzuya_hairContrast" />
+        <marker scope="Public" name="suzuya_hairContrast2" />
         <marker scope="Public" name="tgt-mahiru-jealousy" />
         <marker scope="Public" name="tgt-mahiru-must-strip-4" />
         <marker scope="Public" name="tgt-mahiru-must-strip-5" />
