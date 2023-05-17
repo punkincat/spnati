@@ -2,9 +2,9 @@
 <metadata>
     <owner>may</owner>
     <height>5'5"</height>
-    <age />
+    <age>18-19</age>
     <pronunciation>May</pronunciation>
-    <othernotes />
+    <othernotes>May's interests include Pokémon Contests (non-battle pageants), fashion, and food.</othernotes>
     <noteworthy>
         <case name="Live around here?" id="5" priority="Prompt" min="1" max="4">
             <description>Do you live around here? (Your answer might depend on the background.)</description>
@@ -559,12 +559,19 @@
         <label id="434" label="shorts" folder="" sort="0" />
         <label id="437" label="" folder="Tea to right" sort="0" />
         <label id="438" label="" folder="Tea to right" sort="0" />
+        <label id="439" label="" folder="Meia to left" sort="0" />
+        <label id="440" label="" folder="Meia to left" sort="0" />
+        <label id="441" label="" folder="Meia to left" sort="0" />
+        <label id="442" label="" folder="Meia to left Sunset Secret" sort="0" />
+        <label id="443" label="valentine's costume" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>438</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>443</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrienSkitty" />
@@ -743,6 +750,8 @@
         <marker scope="Public" name="may_mari_swimsuit" />
         <marker scope="Public" name="may_mary_pokemon_go" />
         <marker scope="Public" name="may_may_dont_get_my_stuff_wet" />
+        <marker scope="Public" name="may_meia_selected_cupid" />
+        <marker scope="Public" name="may_meia_ss_tropical" />
         <marker scope="Public" name="may_misty_azumarill" />
         <marker scope="Public" name="may_misty_backside" />
         <marker scope="Public" name="may_misty_does_this_often" />
@@ -1265,4 +1274,5 @@
         <line>I think that's really cool.</line>
         <line>What a mess.</line>
     </pendingLines>
+    <hasBanter>false</hasBanter>
 </metadata>

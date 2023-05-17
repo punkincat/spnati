@@ -270,6 +270,7 @@
         <response id="1069" opponent="tea_gardner" opponentId="43" />
         <response id="1070" opponent="elphaba" opponentId="119" />
         <response id="1071" opponent="elphaba" opponentId="120" />
+        <response id="1074" opponent="meia" opponentId="2" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1162,8 +1163,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="957" label="" folder="Meia to right" sort="48" />
         <label id="958" label="" folder="Meia to right" sort="49" />
         <label id="959" label="" folder="Meia to right" sort="52" />
-        <label id="960" label="FOR REPLACEMENT" folder="Meia to right" sort="53" />
-        <label id="961" label="FOR REPLACEMENT" folder="Meia to right" sort="3" />
+        <label id="960" label="" color="0" folder="Meia to right" sort="53" />
+        <label id="961" label="" color="0" folder="Meia to right" sort="3" />
         <label id="962" label="" folder="Meia to right" sort="8" />
         <label id="963" label="" folder="Meia to right" sort="9" />
         <label id="964" label="" folder="Meia to right" sort="10" />
@@ -1280,14 +1281,18 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1071" label="" folder="Elphaba to left" sort="0" />
         <label id="1072" label="" folder="Perona to left" sort="0" />
         <label id="1073" label="" folder="Arle to left" sort="0" />
+        <label id="1075" label="" folder="Penny to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1073</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>1075</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
         <marker scope="Public" name="kyou_nagisa_staying_strong" />
         <marker scope="Public" name="nagatoro01a" />
@@ -2263,6 +2268,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_naked_walk" />
         <marker scope="Public" name="nagisa_meia_naked_walk_2" />
         <marker scope="Public" name="nagisa_meia_negative_feelings" />
+        <marker scope="Public" name="nagisa_meia_nice_butt" />
         <marker scope="Public" name="nagisa_meia_no_to_space" />
         <marker scope="Public" name="nagisa_meia_not_a_kid" />
         <marker scope="Public" name="nagisa_meia_not_all_girls" />
@@ -2298,6 +2304,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_telling_tomoya" />
         <marker scope="Public" name="nagisa_meia_the_limit" />
         <marker scope="Public" name="nagisa_meia_the_nest" />
+        <marker scope="Public" name="nagisa_meia_too_proud" />
         <marker scope="Public" name="nagisa_meia_tough" />
         <marker scope="Public" name="nagisa_meia_trust" />
         <marker scope="Public" name="nagisa_meia_underthinking" />
@@ -2522,6 +2529,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_revy_dont_skip_ahead" />
         <marker scope="Public" name="nagisa_revy_let_us_live" />
         <marker scope="Public" name="nagisa_revy_mean_gun_lady">Nagisa dares to call Revy the "mean gun lady" while the latter is masturbating.</marker>
+        <marker scope="Public" name="nagisa_revy_meia_right" />
         <marker scope="Public" name="nagisa_revy_put_down_our_weapons" />
         <marker scope="Public" name="nagisa_revy_put_out_cigarette_before_binning_it" />
         <marker scope="Public" name="nagisa_revy_put_out_that_cigarette" />
@@ -2792,4 +2800,5 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
             </cases>
         </recipe>
     </recipes>
+    <hasBanter>false</hasBanter>
 </metadata>
