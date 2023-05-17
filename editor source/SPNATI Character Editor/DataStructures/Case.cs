@@ -2327,6 +2327,10 @@ namespace SPNATI_Character_Editor
 				return "hand";
 			}
 
+			if (tag == "opponent_deselected")
+			{
+				return null;
+			}
 			if (tag == "finishing_masturbating")
 			{
 				return null;
