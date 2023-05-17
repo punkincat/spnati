@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using System;
 using System.Text.RegularExpressions;
@@ -249,7 +249,7 @@ namespace SPNATI_Character_Editor
 					_subcontrol = Activator.CreateInstance(bestMatch) as SubVariableControl;
 				}
 
-				if (_expression.Operator == "@")
+				if (_expression.Operator == "@" || _expression.Operator == "!@")
 				{
 					_subcontrol = null; //just kidding; leave intervals as a raw variable test
 				}
