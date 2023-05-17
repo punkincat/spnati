@@ -10,7 +10,6 @@
 
 var SELECTED = "selected";
 var OPPONENT_SELECTED = "opponent_selected";
-var OPPONENT_DESELECTED = "opponent_deselected";
 var GAME_START = "game_start";
 
 var DEALING_CARDS = "dealing_cards";
@@ -1729,6 +1728,10 @@ function inInterval (value, interval) {
     return !interval || interval.contains(value);
 }
 
+function notInInterval (value, interval) {
+	return !interval || !interval.contains(value);
+}
+
 /************************************************************
  * Special function to check stage conditions, which can contain a
  * space-separated list of intervals.
@@ -1748,8 +1751,8 @@ function evalOperator (val, op, cmpVal) {
     case '<=': return val <= cmpVal;
     case '!=': return val != cmpVal;
     case '!!': return !!val;
-    case '!@': return !inInterval(val, cmpVal);
-    case '@': return inInterval(val, cmpVal);
+    case '!@': return notInInterval(val, cmpVal);
+    case '@': return inInterval(val, cmpVal); 
     default:
     case '=':
     case '==':
