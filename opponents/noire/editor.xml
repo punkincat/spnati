@@ -111,6 +111,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <note id="2372">She feels lonely but doesn't want to show it.</note>
         <note id="2455">The marker takes two values, so you can respond to both lines at once or to each one separately.</note>
         <note id="2462">Noire starts in a tsun way, but actually would love to pamper someone and/or be pampered herself. She won't acknowledge it at first, but maybe we can explore this in lines for later stages.</note>
+        <note id="2585">two values of the marker</note>
     </notes>
     <labels>
         <label id="3" label="" folder="SpecialNames" sort="0" />
@@ -2242,11 +2243,11 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2149" label="2nd+ time (Rouge not present)" color="4" folder="RougeTreasureScope" sort="0" />
         <label id="2150" label="2nd+ time (Rouge not present)" color="4" folder="RougeTreasureScope" sort="0" />
         <label id="2151" label="" folder="1TsunderingThePlayer" sort="0" />
-        <label id="2152" label="" color="4" folder="Meia" sort="0" />
-        <label id="2153" label="" color="4" folder="Meia" sort="0" />
-        <label id="2154" label="" color="4" folder="Meia" sort="0" />
+        <label id="2152" label="" color="3" folder="Meia" sort="0" />
+        <label id="2153" label="" color="3" folder="Meia" sort="0" />
+        <label id="2154" label="" color="3" folder="Meia" sort="0" />
         <label id="2155" label="" color="3" folder="Meia" sort="0" />
-        <label id="2156" label="" color="4" folder="Meia" sort="0" />
+        <label id="2156" label="" color="3" folder="Meia" sort="0" />
         <label id="2157" label="" folder="~Cool Girl costume" sort="0" />
         <label id="2158" label="" color="6" folder="1ResponsesToPrompts" sort="0" />
         <label id="2159" label="" color="4" folder="Y'shtola" sort="0" />
@@ -2657,10 +2658,20 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2573" label="" color="2" folder="~Clear Dress costume" sort="0" />
         <label id="2574" label="" color="2" folder="~Clear Dress costume" sort="0" />
         <label id="2575" label="" color="2" folder="~Clear Dress costume" sort="0" />
+        <label id="2576" label="" color="4" folder="Meia" sort="0" />
+        <label id="2577" label="" color="4" folder="Meia" sort="0" />
+        <label id="2578" label="" color="4" folder="Meia" sort="0" />
+        <label id="2579" label="" color="4" folder="Meia" sort="0" />
+        <label id="2580" label="" color="6" folder="1ResponsesToPrompts" sort="0" />
+        <label id="2581" label="" color="6" folder="" sort="0" />
+        <label id="2582" label="" color="3" folder="Meia" sort="0" />
+        <label id="2583" label="" color="3" folder="Meia" sort="0" />
+        <label id="2584" label="" color="4" folder="Meia" sort="0" />
+        <label id="2585" label="" color="4" folder="Meia" sort="0" />
     </labels>
     <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2575</nextId>
+    <nextId>2585</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_costume1" />
@@ -3004,8 +3015,10 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="marinette_magicalgirl1" />
         <marker scope="Public" name="marinette_magicalgirl2" />
         <marker scope="Public" name="marinette_transformation1" />
+        <marker scope="Public" name="meia_combat" />
         <marker scope="Public" name="meia_idol" />
         <marker scope="Public" name="meia_idol1" />
+        <marker scope="Public" name="meia_idol2" />
         <marker scope="Public" name="meia_planet" />
         <marker scope="Public" name="meia_planet1" />
         <marker scope="Public" name="meia_planet2" />
@@ -3013,11 +3026,17 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="meia_resp_recruitment2" />
         <marker scope="Public" name="meia_resp_sightseeing" />
         <marker scope="Public" name="meia_resp_sightseeing2" />
+        <marker scope="Public" name="meia_spotlight" />
         <marker scope="Public" name="meia_workers" />
         <marker scope="Public" name="meia_workers1" />
+        <marker scope="Public" name="meia_workers2" />
         <marker scope="Public" name="meia0" />
         <marker scope="Public" name="meia01" />
         <marker scope="Public" name="meia02" />
+        <marker scope="Public" name="meia0cupid" />
+        <marker scope="Public" name="meia1cupid" />
+        <marker scope="Public" name="meiabirthday" />
+        <marker scope="Public" name="meiarevyfight" />
         <marker scope="Public" name="miku_goddess1" />
         <marker scope="Public" name="miku_goddess2" />
         <marker scope="Public" name="miku_goddess3" />
@@ -3566,8 +3585,4 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="yuri0" />
         <marker scope="Public" name="yuri1" />
     </markers>
-    <pendingLines>
-        <line>Neptune won't play, after all?! ...But if she doesn't see the game through, she may imagine me losing and getting naked...</line>
-        <line>Neptune left us alone? ...She won't imagine anything strange, &lt;i&gt;right?&lt;/i&gt;</line>
-    </pendingLines>
 </metadata>
