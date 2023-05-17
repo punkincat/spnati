@@ -3,7 +3,7 @@
     <owner>tea_gardner</owner>
     <height>5' 5"</height>
     <age />
-    <pronunciation />
+    <pronunciation>Tay-AH</pronunciation>
     <othernotes />
     <noteworthy>
         <case name="Vision of Friend" id="20" priority="Noteworthy" min="5" max="5">
@@ -132,6 +132,18 @@
         <response id="130" opponent="aella" opponentId="264" />
         <response id="158" opponent="moon" opponentId="186" />
         <response id="159" opponent="moon" opponentId="51" />
+        <response id="163" opponent="elizabeth" opponentId="1" />
+        <response id="164" opponent="streaming-chan" opponentId="5" />
+        <response id="165" opponent="magical_sempai" opponentId="20" />
+        <response id="166" opponent="magical_sempai" opponentId="6" />
+        <response id="167" opponent="magical_sempai" opponentId="19" />
+        <response id="168" opponent="magical_sempai" opponentId="14" />
+        <response id="169" opponent="magical_sempai" opponentId="21" />
+        <response id="173" opponent="kyoko_kirigiri" opponentId="496" />
+        <response id="174" opponent="hilda" opponentId="149" />
+        <response id="176" opponent="queenie" opponentId="43" />
+        <response id="177" opponent="may" opponentId="228" />
+        <response id="178" opponent="hatsune_miku" opponentId="613" />
     </responses>
     <labels>
         <label id="1" label="" folder="Friends Marker" sort="0" />
@@ -178,11 +190,17 @@
         <label id="156" label="" folder="Backgrounds" sort="0" />
         <label id="157" label="" folder="Backgrounds" sort="0" />
         <label id="161" label="" folder="Backgrounds" sort="0" />
+        <label id="170" label="" folder="Target: Sempai" sort="0" />
+        <label id="171" label="" folder="Target: Sempai" sort="0" />
+        <label id="169" label="" folder="Target: Sempai" sort="0" />
+        <label id="172" label="" folder="Target: Sempai" sort="0" />
+        <label id="166" label="" folder="Target: Sempai" sort="0" />
+        <label id="168" label="" folder="Target: Sempai" sort="0" />
     </labels>
     <prefixes>
         <prefix>card</prefix>
     </prefixes>
-    <nextId>162</nextId>
+    <nextId>178</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="blue_disk" />
@@ -289,10 +307,12 @@
         <marker scope="Public" name="tea_lucy_virgo2" />
         <marker scope="Public" name="tea_lucy_virgo3" />
         <marker scope="Public" name="tea_mari_guys" />
+        <marker scope="Public" name="tea_may_" />
         <marker scope="Public" name="tea_may_avenge" />
         <marker scope="Public" name="tea_may_boobs" />
         <marker scope="Public" name="tea_may_cheer" />
         <marker scope="Public" name="tea_may_contest" />
+        <marker scope="Public" name="tea_may_cover" />
         <marker scope="Public" name="tea_may_dance" />
         <marker scope="Public" name="tea_may_end" />
         <marker scope="Public" name="tea_may_finish" />
@@ -300,7 +320,10 @@
         <marker scope="Public" name="tea_may_finish1b" />
         <marker scope="Public" name="tea_may_finish1c" />
         <marker scope="Public" name="tea_may_firststrike" />
+        <marker scope="Public" name="tea_may_here1a" />
+        <marker scope="Public" name="tea_may_here1b" />
         <marker scope="Public" name="tea_may_love" />
+        <marker scope="Public" name="tea_may_openup" />
         <marker scope="Public" name="tea_may_rabbit" />
         <marker scope="Public" name="tea_may_rival" />
         <marker scope="Public" name="tea_may_s0a" />
@@ -330,7 +353,9 @@
         <marker scope="Public" name="tea_petra_birthday" />
         <marker scope="Public" name="tea_pokemon" />
         <marker scope="Public" name="tea_pool_end" />
+        <marker scope="Public" name="tea_popipo" />
         <marker scope="Public" name="tea_probability" />
+        <marker scope="Public" name="tea_queenie_start" />
         <marker scope="Public" name="tea_reply_aelia1" />
         <marker scope="Public" name="tea_rosa_huddle" />
         <marker scope="Public" name="tea_rule1" />
@@ -343,16 +368,26 @@
         <marker scope="Public" name="tea_self_" />
         <marker scope="Public" name="tea_self_ready" />
         <marker scope="Public" name="tea_self_shadow" />
+        <marker scope="Public" name="tea_sempai_hatfall" />
+        <marker scope="Public" name="tea_sempai_hats" />
+        <marker scope="Public" name="tea_sempai_magic" />
+        <marker scope="Public" name="tea_sempai_panties1a" />
+        <marker scope="Public" name="tea_sempai_panties1b" />
         <marker scope="Public" name="tea_shantae_end" />
         <marker scope="Public" name="tea_shantae_round3" />
         <marker scope="Public" name="tea_shantae_start" />
+        <marker scope="Public" name="tea_sleight" />
+        <marker scope="Public" name="tea_sleight_lead" />
+        <marker scope="Public" name="tea_sleight2" />
         <marker scope="Public" name="tea_start_mast" />
+        <marker scope="Public" name="tea_stream_reply1" />
         <marker scope="Public" name="tea_strip_mai" />
         <marker scope="Public" name="tea_strip_vision" />
         <marker scope="Public" name="tea_v_chazz" />
         <marker scope="Public" name="tea_v_chihiro" />
         <marker scope="Public" name="tea_v_dmg" />
         <marker scope="Public" name="tea_v_lucy" />
+        <marker scope="Public" name="tea_v_miku_arcade" />
         <marker scope="Public" name="tea_v_steve" />
         <marker scope="Public" name="tea_v_zombie" />
         <marker scope="Public" name="tea_vocaloid_table" />
