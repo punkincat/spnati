@@ -341,12 +341,17 @@
         <label id="153" label="" folder="Meia to left" sort="0" />
         <label id="162" label="" folder="Nami to left" sort="0" />
         <label id="331" label="" folder="Panty to left" sort="0" />
+        <label id="334" label="" folder="Meia to left" sort="0" />
+        <label id="335" label="" folder="Meia to left" sort="0" />
+        <label id="336" label="" folder="Miki to right" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>333</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>336</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="AkkoGauntlet" />
@@ -573,6 +578,10 @@
         <marker scope="Public" name="panty_megumin_yesterday" />
         <marker scope="Public" name="panty_megumun_lets_go" />
         <marker scope="Public" name="panty_meia_pineapple" />
+        <marker scope="Public" name="panty_meia_pm_p1" />
+        <marker scope="Public" name="panty_meia_that_butt" />
+        <marker scope="Public" name="panty_miki_pm_m1" />
+        <marker scope="Public" name="panty_miki_pm_p1" />
         <marker scope="Public" name="panty_miku_bad_career_advice" />
         <marker scope="Public" name="panty_misty_two_piece" />
         <marker scope="Public" name="panty_misty_whole" />
@@ -827,4 +836,5 @@
             </cases>
         </recipe>
     </recipes>
+    <hasBanter>false</hasBanter>
 </metadata>
