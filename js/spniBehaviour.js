@@ -10,6 +10,7 @@
 
 var SELECTED = "selected";
 var OPPONENT_SELECTED = "opponent_selected";
+var OPPONENT_DESELECTED = "opponent_deselected";
 var GAME_START = "game_start";
 
 var DEALING_CARDS = "dealing_cards";
@@ -1747,6 +1748,7 @@ function evalOperator (val, op, cmpVal) {
     case '<=': return val <= cmpVal;
     case '!=': return val != cmpVal;
     case '!!': return !!val;
+    case '!@': return !inInterval(val, cmpVal);
     case '@': return inInterval(val, cmpVal);
     default:
     case '=':
@@ -1765,7 +1767,7 @@ function evalOperator (val, op, cmpVal) {
  * the current state marker.
  ************************************************************/
 function checkMarker(predicate, self, target, currentOnly) {
-    var match = predicate.match(/^([\w\-\+]+)(\*?)(\s*(\<\=|\>\=|\<|\>|\=\=|!\=|\=|\@)?\s*(.+))?\s*$/);
+    var match = predicate.match(/^([\w\-\+]+)(\*?)(\s*(\<\=|\>\=|\<|\>|\=\=|!\=|\=|!\@|\@)?\s*(.+))?\s*$/);
     
     var name;
     var perTarget;
@@ -1785,7 +1787,7 @@ function checkMarker(predicate, self, target, currentOnly) {
         if (match[3]) {
             op = match[4];
             cmpVal = expandDialogue(match[5], self, target);
-            if (op == '@')
+            if (op == '@' || op == '!@')
             {
                 cmpVal = parseInterval(cmpVal);
             }
