@@ -15,6 +15,12 @@
         <case name="Exhibitionism" id="134" priority="Noteworthy" min="0" max="0">
             <description>Talks about exhibitionist characters.</description>
         </case>
+        <case name="Identifying name (ex. Hand=Any)" id="155" priority="Prompt" min="0" max="9">
+            <description>Description about what's interesting happening with the character (i.e. why should others target this?)</description>
+        </case>
+        <case name="Identifying name (ex. Hand=Any)" id="244" priority="Prompt" min="0" max="9">
+            <description>Description about what's interesting happening with the character (i.e. why should others target this?)</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -38,6 +44,62 @@
         <response id="150" opponent="chihiro" opponentId="2" />
         <response id="151" opponent="chihiro" opponentId="1" />
         <response id="227" opponent="ganyu" opponentId="58" />
+        <response id="0" opponent="nugi-chan" opponentId="7" />
+        <response id="257" opponent="streaming-chan" opponentId="12" />
+        <response id="259" opponent="yuelia" opponentId="1" />
+        <response id="260" opponent="brock" opponentId="165" />
+        <response id="261" opponent="mari_setogaya" opponentId="21" />
+        <response id="262" opponent="aimee" opponentId="9" />
+        <response id="263" opponent="sakura" opponentId="2" />
+        <response id="0" opponent="aimee" opponentId="4" />
+        <response id="264" opponent="binah" opponentId="1" />
+        <response id="265" opponent="lyralei" opponentId="1576" />
+        <response id="266" opponent="aimee" opponentId="3" />
+        <response id="267" opponent="gwen" opponentId="1" />
+        <response id="268" opponent="fina" opponentId="107" />
+        <response id="269" opponent="bobobo" opponentId="1" />
+        <response id="270" opponent="brock" opponentId="1" />
+        <response id="271" opponent="bernadetta" opponentId="4" />
+        <response id="272" opponent="sayaka" opponentId="29" />
+        <response id="273" opponent="lyralei" opponentId="1578" />
+        <response id="274" opponent="caulifla" opponentId="4" />
+        <response id="275" opponent="mari_setogaya" opponentId="55" />
+        <response id="276" opponent="caulifla" opponentId="2" />
+        <response id="277" opponent="sakura" opponentId="3" />
+        <response id="278" opponent="moon" opponentId="186" />
+        <response id="279" opponent="steve" opponentId="1" />
+        <response id="280" opponent="takatoshi" opponentId="16" />
+        <response id="281" opponent="takatoshi" opponentId="17" />
+        <response id="282" opponent="ayano" opponentId="117" />
+        <response id="283" opponent="arash" opponentId="163" />
+        <response id="284" opponent="rin" opponentId="168" />
+        <response id="285" opponent="jim" opponentId="10" />
+        <response id="286" opponent="dust" opponentId="41" />
+        <response id="287" opponent="aimee" opponentId="6" />
+        <response id="0" opponent="aqua_kh" opponentId="67" />
+        <response id="288" opponent="mari_setogaya" opponentId="35" />
+        <response id="289" opponent="shantae" opponentId="10" />
+        <response id="290" opponent="twisted_fate" opponentId="254" />
+        <response id="291" opponent="wikipe-tan" opponentId="576" />
+        <response id="292" opponent="lucy" opponentId="27" />
+        <response id="293" opponent="lyralei" opponentId="1574" />
+        <response id="0" opponent="lyralei" opponentId="1575" />
+        <response id="294" opponent="caulifla" opponentId="3" />
+        <response id="295" opponent="dawn" opponentId="120" />
+        <response id="296" opponent="jin" opponentId="20" />
+        <response id="297" opponent="ignatz" opponentId="164" />
+        <response id="0" opponent="lyralei" opponentId="1577" />
+        <response id="0" opponent="yuelia" opponentId="6" />
+        <response id="298" opponent="fluttershy" opponentId="20" />
+        <response id="0" opponent="jura" opponentId="33" />
+        <response id="299" opponent="mary" opponentId="19" />
+        <response id="300" opponent="critical_darling" opponentId="3" />
+        <response id="301" opponent="miko" opponentId="12" />
+        <response id="302" opponent="supernova" opponentId="281" />
+        <response id="303" opponent="mercy" opponentId="170" />
+        <response id="304" opponent="cagliostro" opponentId="2" />
+        <response id="305" opponent="arueshalae" opponentId="2" />
+        <response id="306" opponent="lux" opponentId="55" />
     </responses>
     <labels>
         <label id="51" label="" folder="Targets" sort="0" />
@@ -232,15 +294,79 @@
         <label id="242" label="" folder="Targets" sort="0" />
         <label id="243" label="" folder="Targets" sort="0" />
         <label id="244" label="Questions B" folder="" sort="0" />
+        <label id="245" label="" folder="Targets" sort="0" />
+        <label id="246" label="" folder="Targets" sort="0" />
+        <label id="247" label="" folder="Targets" sort="0" />
+        <label id="248" label="" folder="Targets" sort="0" />
+        <label id="249" label="" folder="Targets" sort="0" />
+        <label id="250" label="" folder="Targets" sort="0" />
+        <label id="251" label="" folder="Targets" sort="0" />
+        <label id="252" label="" folder="Targets" sort="0" />
+        <label id="253" label="" folder="Targets" sort="0" />
+        <label id="254" label="" folder="Targets" sort="0" />
+        <label id="255" label="" folder="Targets" sort="0" />
+        <label id="256" label="" folder="Targets" sort="0" />
+        <label id="257" label="" folder="Targets" sort="0" />
+        <label id="258" label="" folder="Targets" sort="0" />
+        <label id="259" label="" folder="Targets" sort="0" />
+        <label id="262" label="" folder="Targets" sort="0" />
+        <label id="263" label="" folder="targets" sort="0" />
+        <label id="264" label="" folder="Targets" sort="0" />
+        <label id="265" label="" folder="Targets" sort="0" />
+        <label id="266" label="" folder="Targets" sort="0" />
+        <label id="267" label="" folder="Targets" sort="0" />
+        <label id="260" label="" folder="Targets" sort="0" />
+        <label id="268" label="" folder="Targets" sort="0" />
+        <label id="270" label="" folder="Targets" sort="0" />
+        <label id="269" label="" folder="Targets" sort="0" />
+        <label id="271" label="" folder="Targets" sort="0" />
+        <label id="272" label="" folder="Targets" sort="0" />
+        <label id="273" label="" folder="Targets" sort="0" />
+        <label id="274" label="" folder="Targets" sort="0" />
+        <label id="275" label="" folder="Targets" sort="0" />
+        <label id="276" label="" folder="Targets" sort="0" />
+        <label id="277" label="" folder="targets" sort="0" />
+        <label id="278" label="" folder="Targets" sort="0" />
+        <label id="279" label="" folder="Targets" sort="0" />
+        <label id="281" label="" folder="Targets" sort="0" />
+        <label id="280" label="" folder="Targets" sort="0" />
+        <label id="282" label="" folder="Targets" sort="0" />
+        <label id="283" label="" folder="Targets" sort="0" />
+        <label id="284" label="" folder="Targets" sort="0" />
+        <label id="285" label="" folder="Targets" sort="0" />
+        <label id="286" label="" folder="Targets" sort="0" />
+        <label id="287" label="" folder="Targets" sort="0" />
+        <label id="288" label="" folder="Targets" sort="0" />
+        <label id="289" label="" folder="targets" sort="0" />
+        <label id="290" label="" folder="Targets" sort="0" />
+        <label id="291" label="" folder="Targets" sort="0" />
+        <label id="292" label="" folder="Targets" sort="0" />
+        <label id="293" label="" folder="Targets" sort="0" />
+        <label id="295" label="" folder="Targets" sort="0" />
+        <label id="296" label="" folder="Targets" sort="0" />
+        <label id="297" label="" folder="Targets" sort="0" />
+        <label id="298" label="" folder="Targets" sort="0" />
+        <label id="299" label="" folder="Targets" sort="0" />
+        <label id="300" label="" folder="Targets" sort="0" />
+        <label id="301" label="" folder="Targets" sort="0" />
+        <label id="302" label="" folder="Targets" sort="0" />
+        <label id="303" label="" folder="Targets" sort="0" />
+        <label id="304" label="" folder="Targets" sort="0" />
+        <label id="305" label="" folder="Targets" sort="0" />
+        <label id="306" label="" folder="Targets" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>244</nextId>
+    <nextId>306</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="9S_akkoTransform" />
         <marker scope="Public" name="9S_android" />
         <marker scope="Public" name="9S_nipples" />
+        <marker scope="Public" name="aimee_strip" />
+        <marker scope="Public" name="aimee_strip0" />
+        <marker scope="Public" name="aimee_stripA" />
+        <marker scope="Public" name="aimee_stripB" />
         <marker scope="Public" name="akko_start" />
         <marker scope="Public" name="akko_transformation" />
         <marker scope="Public" name="akko_transformationGreen" />
@@ -256,15 +382,24 @@
         <marker scope="Public" name="arle_witchclanb" />
         <marker scope="Public" name="arle_witchclanResponse" />
         <marker scope="Public" name="arle_witchgreen" />
+        <marker scope="Public" name="arueshalae_nightmares" />
         <marker scope="Public" name="athlete0" />
         <marker scope="Public" name="athletic1" />
         <marker scope="Public" name="athletic2" />
+        <marker scope="Public" name="ayano_Fiyero" />
+        <marker scope="Public" name="ayano_Glinda" />
+        <marker scope="Public" name="ayano_twoPeople" />
+        <marker scope="Public" name="bernie_masturbatiing" />
+        <marker scope="Public" name="binah_markings" />
         <marker scope="Public" name="blonde" />
         <marker scope="Public" name="blonde0" />
         <marker scope="Public" name="blonde1" />
         <marker scope="Public" name="blondes" />
         <marker scope="Public" name="blue_eyes0" />
+        <marker scope="Public" name="brock_alright" />
+        <marker scope="Public" name="brock_wtf" />
         <marker scope="Public" name="cagliostro_alchemy" />
+        <marker scope="Public" name="caulifla_finished" />
         <marker scope="Public" name="chara_start" />
         <marker scope="Public" name="cheerful0" />
         <marker scope="Public" name="chihiro_penis" />
@@ -276,6 +411,9 @@
         <marker scope="Public" name="dwight_bothered" />
         <marker scope="Public" name="eichi_fame" />
         <marker scope="Public" name="elp" />
+        <marker scope="Public" name="elph_tea_reply2a" />
+        <marker scope="Public" name="elph_tea_reply2b" />
+        <marker scope="Public" name="elph_tea_reply2c" />
         <marker scope="Public" name="elphaba_allergic" />
         <marker scope="Public" name="elphaba_Animal" />
         <marker scope="Public" name="elphaba_athletic" />
@@ -370,6 +508,7 @@
         <marker scope="Public" name="erufuda_weightTypeB" />
         <marker scope="Public" name="erufuda_world" />
         <marker scope="Public" name="erufuda_worldsBS" />
+        <marker scope="Public" name="fate_cheat" />
         <marker scope="Public" name="felix_hybrids" />
         <marker scope="Public" name="felix_strip0" />
         <marker scope="Public" name="fiyero_horny" />
@@ -383,12 +522,14 @@
         <marker scope="Public" name="gloomy0" />
         <marker scope="Public" name="grimmerie_selected" />
         <marker scope="Public" name="gruntilda_greenSkin" />
+        <marker scope="Public" name="gwen_mask" />
         <marker scope="Public" name="hairy0" />
         <marker scope="Public" name="heartpubes0" />
         <marker scope="Public" name="huge_penis" />
         <marker scope="Public" name="huge_penis0" />
         <marker scope="Public" name="human_naked" />
         <marker scope="Public" name="human_wtf" />
+        <marker scope="Public" name="ibuki_slimeGreen" />
         <marker scope="Public" name="jessie_backdoorAnswer" />
         <marker scope="Public" name="jessie_darkAnswer" />
         <marker scope="Public" name="jessie_darkAnswerB" />
@@ -405,13 +546,20 @@
         <marker scope="Public" name="jessie_QA_answer" />
         <marker scope="Public" name="jessie_smokerAnswerB" />
         <marker scope="Public" name="jessie_smokersAnswer" />
+        <marker scope="Public" name="jin_glow" />
         <marker scope="Public" name="joke" />
         <marker scope="Public" name="jura_aura" />
+        <marker scope="Public" name="jura_babiesAnswer" />
         <marker scope="Public" name="jura_babyBook" />
+        <marker scope="Public" name="jura_birthday" />
         <marker scope="Public" name="jura_crush" />
         <marker scope="Public" name="jura_familiarity" />
         <marker scope="Public" name="jura_green_skin" />
         <marker scope="Public" name="jura_ignore" />
+        <marker scope="Public" name="jura_seductionAnswer" />
+        <marker scope="Public" name="jura_tharja1" />
+        <marker scope="Public" name="jura_tharja2" />
+        <marker scope="Public" name="jura_tharja3" />
         <marker scope="Public" name="jura01" />
         <marker scope="Public" name="jura12" />
         <marker scope="Public" name="kind0" />
@@ -430,16 +578,27 @@
         <marker scope="Public" name="loverboy" />
         <marker scope="Public" name="lovergirl" />
         <marker scope="Public" name="lucy_celestialKeys" />
+        <marker scope="Public" name="lucy_virgo" />
+        <marker scope="Public" name="lux_magicName" />
+        <marker scope="Public" name="lyralei_picture" />
         <marker scope="Public" name="magic0" />
         <marker scope="Public" name="mari_relationship" />
+        <marker scope="Public" name="mari_wings" />
         <marker scope="Public" name="maria_refusal" />
         <marker scope="Public" name="maria_SMODE" />
+        <marker scope="Public" name="mary_fuck" />
         <marker scope="Public" name="masFem" />
         <marker scope="Public" name="meia_elphaba0Response" />
         <marker scope="Public" name="meia_vandread" />
         <marker scope="Public" name="meia01" />
+        <marker scope="Public" name="mercy_benefits" />
+        <marker scope="Public" name="miko_desireA" />
+        <marker scope="Public" name="miko_desireB" />
+        <marker scope="Public" name="miko_desireC" />
+        <marker scope="Public" name="miko_desireD" />
         <marker scope="Public" name="mitama_elphabaUpset" />
         <marker scope="Public" name="mitama_haiku" />
+        <marker scope="Public" name="mitama_upset" />
         <marker scope="Public" name="monika_otherWorld" />
         <marker scope="Public" name="moon_confused" />
         <marker scope="Public" name="moon_exhibitionism" />
@@ -460,6 +619,8 @@
         <marker scope="Public" name="neptune_stripOrder" />
         <marker scope="Public" name="no_genitals0" />
         <marker scope="Public" name="no_underwear0" />
+        <marker scope="Public" name="nugi_detr" />
+        <marker scope="Public" name="nugi_detray" />
         <marker scope="Public" name="opponent_exhibitionism" />
         <marker scope="Public" name="oz_broom" />
         <marker scope="Public" name="oz_broom1" />
@@ -492,10 +653,18 @@
         <marker scope="Public" name="roll_ozHead" />
         <marker scope="Public" name="rouge_jewel" />
         <marker scope="Public" name="saintaelphaba" />
+        <marker scope="Public" name="sakura_headless" />
+        <marker scope="Public" name="sakura_skinReveal" />
         <marker scope="Public" name="sannyAndTess" />
         <marker scope="Public" name="seductive2" />
         <marker scope="Public" name="sempai_magic" />
         <marker scope="Public" name="serious0" />
+        <marker scope="Public" name="setogaya" />
+        <marker scope="Public" name="setogaya_intention" />
+        <marker scope="Public" name="setogaya_magic" />
+        <marker scope="Public" name="setogaya_magicType" />
+        <marker scope="Public" name="setogaya_surprised" />
+        <marker scope="Public" name="shantae_monkey" />
         <marker scope="Public" name="shaved0" />
         <marker scope="Public" name="skinny0" />
         <marker scope="Public" name="slutty" />
@@ -504,11 +673,17 @@
         <marker scope="Public" name="standing0" />
         <marker scope="Public" name="steve_getup" />
         <marker scope="Public" name="streaming" />
+        <marker scope="Public" name="streaming-chan_dicksize" />
+        <marker scope="Public" name="streaming-chan_discrimina" />
+        <marker scope="Public" name="streaming-chan_discriminatory" />
+        <marker scope="Public" name="supernova_Animals" />
         <marker scope="Public" name="suzuya_00" />
         <marker scope="Public" name="suzuya_01" />
         <marker scope="Public" name="suzuya_curious" />
         <marker scope="Public" name="suzuya_elphaba_curious" />
         <marker scope="Public" name="suzuya_lostBlazer" />
+        <marker scope="Public" name="takatoshi_betrayal" />
+        <marker scope="Public" name="takatoshi_cloningBlues" />
         <marker scope="Public" name="tea_cardGame" />
         <marker scope="Public" name="tea_cardMoral" />
         <marker scope="Public" name="tea_dmg" />
@@ -525,6 +700,7 @@
         <marker scope="Public" name="witch0" />
         <marker scope="Public" name="witty0" />
         <marker scope="Public" name="yuelia_butterfly" />
+        <marker scope="Public" name="yuelia_transformation" />
         <marker scope="Public" name="yuna_spirits" />
         <marker scope="Public" name="YunaVest1Reply" />
         <marker scope="Public" name="zoe_hybrid" />
