@@ -16,10 +16,10 @@
             <description>Talks about exhibitionist characters.</description>
         </case>
         <case name="Identifying name (ex. Hand=Any)" id="155" priority="Prompt" min="0" max="9">
-            <description>Description about what's interesting happening with the character (i.e. why should others target this?)</description>
+            <description>First set of questions that will play out of curiosity.</description>
         </case>
         <case name="Identifying name (ex. Hand=Any)" id="244" priority="Prompt" min="0" max="9">
-            <description>Description about what's interesting happening with the character (i.e. why should others target this?)</description>
+            <description>Second set of questions with slightly varied answer that will play if any in the first set haven't.</description>
         </case>
     </noteworthy>
     <reviewed>true</reviewed>
@@ -100,6 +100,15 @@
         <response id="304" opponent="cagliostro" opponentId="2" />
         <response id="305" opponent="arueshalae" opponentId="2" />
         <response id="306" opponent="lux" opponentId="55" />
+        <response id="307" opponent="amy" opponentId="259" />
+        <response id="0" opponent="lyralei" opponentId="690" />
+        <response id="308" opponent="sayaka" opponentId="28" />
+        <response id="309" opponent="emi" opponentId="2" />
+        <response id="0" opponent="nami" opponentId="13" />
+        <response id="0" opponent="aimee" opponentId="1" />
+        <response id="310" opponent="polly" opponentId="38" />
+        <response id="0" opponent="nami" opponentId="12" />
+        <response id="311" opponent="jessie" opponentId="22" />
     </responses>
     <labels>
         <label id="51" label="" folder="Targets" sort="0" />
@@ -354,10 +363,20 @@
         <label id="304" label="" folder="Targets" sort="0" />
         <label id="305" label="" folder="Targets" sort="0" />
         <label id="306" label="" folder="Targets" sort="0" />
+        <label id="307" label="" folder="Targets" sort="0" />
+        <label id="309" label="" folder="Targets" sort="0" />
+        <label id="310" label="" folder="Targets" sort="0" />
+        <label id="312" label="" folder="Suzuya" sort="0" />
+        <label id="313" label="" folder="Suzuya" sort="0" />
+        <label id="314" label="" folder="Suzuya" sort="0" />
+        <label id="315" label="" folder="Suzuya" sort="0" />
+        <label id="316" label="" folder="Suzuya" sort="0" />
+        <label id="317" label="" folder="Suzuya" sort="0" />
+        <label id="318" label="" folder="Suzuya" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>306</nextId>
+    <nextId>318</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="9S_akkoTransform" />
@@ -371,6 +390,7 @@
         <marker scope="Public" name="akko_transformation" />
         <marker scope="Public" name="akko_transformationGreen" />
         <marker scope="Public" name="akkoLotte_start" />
+        <marker scope="Public" name="amy_awakening" />
         <marker scope="Public" name="anatoly_paska" />
         <marker scope="Public" name="aqua_muststrip2a" />
         <marker scope="Public" name="aqua_muststrip2b" />
@@ -494,6 +514,8 @@
         <marker scope="Public" name="elphaba_win" />
         <marker scope="Public" name="elphaba_witch" />
         <marker scope="Public" name="emerald_emeraldCity" />
+        <marker scope="Public" name="emi_legs" />
+        <marker scope="Public" name="emi_legs0" />
         <marker scope="Public" name="erufuda_fit" />
         <marker scope="Public" name="erufuda_fries" />
         <marker scope="Public" name="erufuda_heartbreaker" />
@@ -636,6 +658,7 @@
         <marker scope="Public" name="petra_curiousFirstImpressions" />
         <marker scope="Public" name="petra_strip0a_Response" />
         <marker scope="Public" name="petra_strip1a_Response" />
+        <marker scope="Public" name="polly_fadeOut" />
         <marker scope="Public" name="quadlings_exhibitionism" />
         <marker scope="Public" name="queenie_" />
         <marker scope="Public" name="queenie_hero" />
@@ -656,6 +679,8 @@
         <marker scope="Public" name="sakura_headless" />
         <marker scope="Public" name="sakura_skinReveal" />
         <marker scope="Public" name="sannyAndTess" />
+        <marker scope="Public" name="sayaka_aware" />
+        <marker scope="Public" name="sayaka_unaware" />
         <marker scope="Public" name="seductive2" />
         <marker scope="Public" name="sempai_magic" />
         <marker scope="Public" name="serious0" />
@@ -679,14 +704,25 @@
         <marker scope="Public" name="supernova_Animals" />
         <marker scope="Public" name="suzuya_00" />
         <marker scope="Public" name="suzuya_01" />
+        <marker scope="Public" name="suzuya_bloodType" />
         <marker scope="Public" name="suzuya_curious" />
+        <marker scope="Public" name="suzuya_dateSpot" />
+        <marker scope="Public" name="suzuya_dateSpotA" />
+        <marker scope="Public" name="suzuya_dateSpotB" />
         <marker scope="Public" name="suzuya_elphaba_curious" />
+        <marker scope="Public" name="suzuya_horoscope" />
+        <marker scope="Public" name="suzuya_image" />
         <marker scope="Public" name="suzuya_lostBlazer" />
+        <marker scope="Public" name="suzuya_praise" />
+        <marker scope="Public" name="suzuya_underwear" />
+        <marker scope="Public" name="suzuya_underwear0" />
+        <marker scope="Public" name="suzuya_wannaBuy" />
         <marker scope="Public" name="takatoshi_betrayal" />
         <marker scope="Public" name="takatoshi_cloningBlues" />
         <marker scope="Public" name="tea_cardGame" />
         <marker scope="Public" name="tea_cardMoral" />
         <marker scope="Public" name="tea_dmg" />
+        <marker scope="Public" name="tharja_shrinkJessie" />
         <marker scope="Public" name="timedragon" />
         <marker scope="Public" name="toru_air" />
         <marker scope="Public" name="toru_discrimination" />
