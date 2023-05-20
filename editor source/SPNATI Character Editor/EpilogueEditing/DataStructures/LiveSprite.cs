@@ -270,17 +270,13 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 		private void UpdateImage()
 		{
-			string src = GetImagePath(Src);
-			Image = LiveImageCache.Get(src, Character);
-		}
-
-		public string GetImagePath(string src)
-		{
-			if (Data != null && Data.AllowsCrossStageImages && !string.IsNullOrEmpty(src) && src.Contains("#-"))
-			{
-				src = src.Replace("#-", $"{_stage}-");
+			int? stage = null;
+			if (Data != null && Data.AllowsCrossStageImages)
+            {
+				stage = _stage;
 			}
-			return src;
+
+			Image = LiveImageCache.Get(Src, Character, stage);
 		}
 
 		public override ITimelineWidget CreateWidget(Timeline timeline)
@@ -435,8 +431,13 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 				if (!string.IsNullOrEmpty(src))
 				{
-					string path = GetImagePath(src);
-					Bitmap img = LiveImageCache.Get(path, Character);
+					int? stage = null;
+					if (Data != null && Data.AllowsCrossStageImages)
+					{
+						stage = _stage;
+					}
+
+					Bitmap img = LiveImageCache.Get(src, Character, stage);
 					if (img != null)
 					{
 						WidthOverride = img.Width;

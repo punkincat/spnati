@@ -146,46 +146,41 @@ namespace SPNATI_Character_Editor.DataStructures
             StringBuilder sb = new StringBuilder();
             if (this._baseName == null)
             {
-                if (skin is Costume)
+                string folder = skin.FolderName;
+
+                if (skin is Costume && stage != null)
                 {
-                    if (stage != null)
+                    Costume costume = (Costume)skin;
+                    int bestFitStage = -1;
+                    int targetStage = stage ?? 0;
+
+                    foreach (StageSpecificValue val in costume.Folders)
                     {
-                        Costume costume = (Costume)skin;
-                        string folder = "opponents/reskins/" + skin.FolderName;
-                        int bestFitStage = -1;
-                        int targetStage = stage ?? 0;
-
-                        foreach (StageSpecificValue val in costume.Folders)
+                        if (val.Stage > bestFitStage && val.Stage <= targetStage)
                         {
-                            if (val.Stage > bestFitStage && val.Stage <= targetStage)
-                            {
-                                bestFitStage = val.Stage;
-                                folder = val.Value;
-                            }
+                            bestFitStage = val.Stage;
+                            folder = val.Value;
                         }
+                    }
+                }
 
-                        foreach (string part in SplitParts(folder))
-                        {
-                            if (sb.Length > 0)
-                            {
-                                sb.Append(Path.DirectorySeparatorChar);
-                            }
-                            sb.Append(part);
-                        }
+                Queue<string> parts = SplitParts(folder);
+                if (parts.Count > 0)
+                {
+                    if (parts.Peek() == "opponents")
+                    {
+                        sb.Append(parts.Dequeue());
                     }
                     else
                     {
                         sb.Append("opponents");
-                        sb.Append(Path.DirectorySeparatorChar);
-                        sb.Append("reskins");
-                        sb.Append(skin.FolderName);
                     }
                 }
-                else
+
+                foreach (string part in parts)
                 {
-                    sb.Append("opponents");
                     sb.Append(Path.DirectorySeparatorChar);
-                    sb.Append(skin.FolderName);
+                    sb.Append(part);
                 }
 
                 sb.Append(Path.DirectorySeparatorChar);
