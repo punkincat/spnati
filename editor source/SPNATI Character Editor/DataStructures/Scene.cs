@@ -958,11 +958,6 @@ namespace SPNATI_Character_Editor
 				else
 				{
 					stringValue = Convert.ToString(rawValue, CultureInfo.InvariantCulture);
-
-					if (property == "Src")
-					{
-						stringValue = FixPath(stringValue, character);
-					}
 				}
 
 				value = stringValue;

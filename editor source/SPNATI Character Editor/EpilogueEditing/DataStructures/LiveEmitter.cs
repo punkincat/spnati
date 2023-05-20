@@ -256,8 +256,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 			if (!string.IsNullOrEmpty(directive.Src))
 			{
-				string path = LiveSceneSegment.FixPath(directive.Src, character);
-				Image = LiveImageCache.Get(path, Character);
+				Image = LiveImageCache.Get(directive.Src, Character);
 				if (Image != null)
 				{
 					ParticleWidth = Image.Width;
@@ -658,7 +657,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				LiveEmitterKeyframe initialFrame = Keyframes[0] as LiveEmitterKeyframe;
 				if (!string.IsNullOrEmpty(initialFrame.Src))
 				{
-					emitter.Src = Scene.FixPath(initialFrame.Src, (Data as LiveSceneSegment).Character);
+					emitter.Src = initialFrame.Src;
 				}
 				if (initialFrame.X.HasValue)
 				{
