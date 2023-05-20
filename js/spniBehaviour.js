@@ -1920,20 +1920,11 @@ function Case($xml, trigger) {
     this.trigger =                  trigger;
     this.stage =                    $xml.attr('stage');
     this.target =                   $xml.attr("target");
-    this.filter =                   $xml.attr("filter");
-    this.filterOut =                $xml.attr("filterOut");
-    this.filterAdv =                $xml.attr("filterAdv");
     this.targetStage =              parseInterval($xml.attr("targetStage"));
-    this.targetLayers =             parseInterval($xml.attr("targetLayers"));
-    this.targetStartingLayers =     parseInterval($xml.attr("targetStartingLayers"));
-    this.targetStatus =             $xml.attr("targetStatus");
-    this.targetTimeInStage =        parseInterval($xml.attr("targetTimeInStage"));
     this.targetSaidMarker =         $xml.attr("targetSaidMarker");
     this.targetNotSaidMarker =      $xml.attr("targetNotSaidMarker");
     this.targetSayingMarker =       $xml.attr("targetSayingMarker");
     this.targetSaying =             $xml.attr("targetSaying");
-    this.oppHand =                  $xml.attr("oppHand");
-    this.hasHand =                  $xml.attr("hasHand");
     this.alsoPlaying =              $xml.attr("alsoPlaying");
     this.alsoPlayingStage =         parseInterval($xml.attr("alsoPlayingStage"));
     this.alsoPlayingHand =          $xml.attr("alsoPlayingHand");
@@ -1945,12 +1936,6 @@ function Case($xml, trigger) {
     this.totalMales =               parseInterval($xml.attr("totalMales"));
     this.totalFemales =             parseInterval($xml.attr("totalFemales"));
     this.timeInStage =              parseInterval($xml.attr("timeInStage"));
-    this.consecutiveLosses =        parseInterval($xml.attr("consecutiveLosses"));
-    this.totalAlive =               parseInterval($xml.attr("totalAlive"));
-    this.totalExposed =             parseInterval($xml.attr("totalExposed"));
-    this.totalNaked =               parseInterval($xml.attr("totalNaked"));
-    this.totalMasturbating =        parseInterval($xml.attr("totalMasturbating"));
-    this.totalFinished =            parseInterval($xml.attr("totalFinished"));
     this.totalRounds =              parseInterval($xml.attr("totalRounds"));
     this.saidMarker =               $xml.attr("saidMarker");
     this.notSaidMarker =            $xml.attr("notSaidMarker");
@@ -2028,21 +2013,11 @@ function Case($xml, trigger) {
     } else {
         this.priority = 0;
         if (this.target)                   this.priority += 300;
-        if (this.filter)                   this.priority += 150;
-        if (this.filterOut)                this.priority += 150;
-        if (this.filterAdv)                this.priority += 150;
         if (this.targetStage)              this.priority += 80;
-        if (this.targetLayers)             this.priority += 40;
-        if (this.targetStartingLayers)     this.priority += 40;
-        if (this.targetStatus)             this.priority += 70;
         if (this.targetSaidMarker)         this.priority += 1;
         if (this.targetSayingMarker)       this.priority += 1;
         if (this.targetSaying)             this.priority += 1;
         if (this.targetNotSaidMarker)      this.priority += 1;
-        if (this.consecutiveLosses)        this.priority += 60;
-        if (this.oppHand)                  this.priority += 30;
-        if (this.targetTimeInStage)        this.priority += 25;
-        if (this.hasHand)                  this.priority += 20;
 
         if (this.alsoPlaying)              this.priority += 100;
         if (this.alsoPlayingStage)         this.priority += 40;
@@ -2059,12 +2034,6 @@ function Case($xml, trigger) {
         if (this.totalFemales)             this.priority += 5;
         if (this.saidMarker)               this.priority += 1;
         if (this.notSaidMarker)            this.priority += 1;
-
-        if (this.totalAlive)               this.priority += 2 + this.totalAlive.max;
-        if (this.totalExposed)             this.priority += 4 + this.totalExposed.max;
-        if (this.totalNaked)               this.priority += 5 + this.totalNaked.max;
-        if (this.totalMasturbating)        this.priority += 5 + this.totalMasturbating.max;
-        if (this.totalFinished)            this.priority += 5 + this.totalFinished.max;
 
         this.counters.forEach(function (c) { this.priority += c.priority; }, this);
 
@@ -2201,27 +2170,6 @@ Case.prototype.checkConditions = function (self, opp, postDialogue) {
         }
     }
     
-    // filter
-    if (this.filter) {
-        if (!opp || !opp.hasTag(this.filter)) {
-            return false; // failed "filter" requirement
-        }
-    }
-
-    // filterOut
-    if (this.filterOut) {
-        if (!opp || opp.hasTag(this.filterOut)) {
-            return false; // failed "filter" requirement
-        }
-    }
-
-    // filterAdv
-    if (this.filterAdv) {
-        if (!opp || !opp.hasTags(this.filterAdv)) {
-            return false; //failed "filterAdv" requirement
-        }
-    }
-
     // targetStage
     if (this.targetStage) {
         if (!opp || !inInterval(opp.stage, this.targetStage)) {
@@ -2229,27 +2177,6 @@ Case.prototype.checkConditions = function (self, opp, postDialogue) {
         }
     }
     
-    // targetLayers
-    if (this.targetLayers) {
-        if (!opp || !inInterval(opp.countLayers(), this.targetLayers)) {
-            return false; 
-        }
-    }
-    
-    // targetStatus
-    if (this.targetStatus) {
-        if (!opp || !opp.checkStatus(this.targetStatus)) {
-            return false;
-        }
-    }
-
-    // targetStartingLayers
-    if (this.targetStartingLayers) {
-        if (!opp || !inInterval(opp.startingLayers, this.targetStartingLayers)) {
-            return false;
-        }
-    }
-
     // targetSaidMarker
     if (this.targetSaidMarker) {
         if (!opp || !checkMarker(this.targetSaidMarker, opp, null)) {
@@ -2274,43 +2201,6 @@ Case.prototype.checkConditions = function (self, opp, postDialogue) {
         if (!opp || !opp.chosenState || opp.updatePending) return false;
         if (normalizeConditionText(opp.chosenState.rawDialogue).indexOf(normalizeConditionText(this.targetSaying)) < 0) return false;
         volatileDependencies.add(opp);
-    }
-    
-
-    // consecutiveLosses
-    if (this.consecutiveLosses) {
-        if (opp) { // if there's a target, look at their losses
-            if (!inInterval(opp.consecutiveLosses, this.consecutiveLosses)) {
-                return false; // failed "consecutiveLosses" requirement
-            }
-        }
-        else { // else look at your own losses
-            if (!inInterval(self.consecutiveLosses, this.consecutiveLosses)) {
-                return false;
-            }
-        }
-    }
-
-    // oppHand
-    if (this.oppHand) {
-        if (!opp || !opp.hand || opp.hand.strength !== handStrengthFromString(this.oppHand)) {
-            return false;
-        }
-    }
-
-    // targetTimeInStage
-    if (this.targetTimeInStage) {
-        if (!opp || !inInterval(opp.timeInStage == -1 ? 0 //allow post-strip time to count as 0
-                                : opp.timeInStage, this.targetTimeInStage)) {
-            return false; // failed "targetTimeInStage" requirement
-        }
-    }
-
-    // hasHand
-    if (this.hasHand) {
-        if (!self.hand || self.hand.strength !== handStrengthFromString(this.hasHand)) {
-            return false;
-        }
     }
 
     // alsoPlaying, alsoPlayingStage, alsoPlayingTimeInStage, alsoPlayingHand (priority = 100, 40, 15, 5)
@@ -2402,41 +2292,6 @@ Case.prototype.checkConditions = function (self, opp, postDialogue) {
         
         if (!inInterval(count, this.totalFemales)) {
             return false; // failed "totalFemales" requirement
-        }
-    }
-
-    // totalAlive
-    if (this.totalAlive) {
-        if (!inInterval(getNumPlayersInStage(STATUS_ALIVE), this.totalAlive)) {
-            return false; // failed "totalAlive" requirement
-        }
-    }
-
-    // totalExposed
-    if (this.totalExposed) {
-        if (!inInterval(getNumPlayersInStage(STATUS_EXPOSED), this.totalExposed)) {
-            return false; // failed "totalExposed" requirement
-        }
-    }
-
-    // totalNaked
-    if (this.totalNaked) {
-        if (!inInterval(getNumPlayersInStage(STATUS_NAKED), this.totalNaked)) {
-            return false; // failed "totalNaked" requirement
-        }
-    }
-
-    // totalMasturbating
-    if (this.totalMasturbating) {
-        if (!inInterval(getNumPlayersInStage(STATUS_MASTURBATING), this.totalMasturbating)) {
-            return false; // failed "totalMasturbating" requirement
-        }
-    }
-
-    // totalFinished
-    if (this.totalFinished) {
-        if (!inInterval(getNumPlayersInStage(STATUS_FINISHED), this.totalFinished)) {
-            return false; // failed "totalFinished" requirement
         }
     }
 
