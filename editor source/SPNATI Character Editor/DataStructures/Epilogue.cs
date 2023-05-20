@@ -133,6 +133,19 @@ namespace SPNATI_Character_Editor
 			}
 		}
 
+		public void AttachCharacter(Character c)
+        {
+			foreach (LegacyBackground bg in Backgrounds)
+            {
+				bg.AttachCharacter(c);
+            }
+
+			foreach (Scene scene in Scenes)
+            {
+				scene.AttachCharacter(c);
+            }
+        }
+
 		private static string ConvertPivot(string pivot)
 		{
 			switch (pivot)

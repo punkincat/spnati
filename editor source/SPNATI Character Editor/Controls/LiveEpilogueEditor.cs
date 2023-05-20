@@ -685,7 +685,7 @@ namespace SPNATI_Character_Editor.Controls
 					LiveSprite sprite = obj as LiveSprite;
 					if (!string.IsNullOrEmpty(sprite.Src) && !sprite.WidthOverride.HasValue && !sprite.HeightOverride.HasValue)
 					{
-						sprite.Image = LiveImageCache.Get(sprite.Src);
+						sprite.Image = LiveImageCache.Get(sprite.Src, sprite.Character);
 						if (sprite.Image != null)
 						{
 							sprite.Width = sprite.Image.Width;
@@ -795,7 +795,7 @@ namespace SPNATI_Character_Editor.Controls
 		{
 			Scene scene = _sourceScene;
 
-			Scene newScene = new Scene(500, 500);
+			Scene newScene = new Scene(_character, 500, 500);
 			if (scene != null)
 			{
 				int index = _epilogue.Scenes.IndexOf(scene);
@@ -820,7 +820,7 @@ namespace SPNATI_Character_Editor.Controls
 		{
 			Scene scene = _sourceScene;
 
-			Scene transition = new Scene(true)
+			Scene transition = new Scene(_character, true)
 			{
 				Transition = true
 			};

@@ -65,6 +65,18 @@ namespace SPNATI_Character_Editor
 				sprite.ScaleY = sprite.ScaleY ?? sprite.Scale;
 			}
 		}
+		public void AttachSkin(ISkin skin)
+		{
+			foreach (Sprite sprite in Sprites)
+			{
+				sprite.AttachSkin(skin);
+			}
+
+			foreach (PoseDirective directive in Directives)
+            {
+				directive.AttachSkin(skin);
+            }
+		}
 
 		/// <summary>
 		/// Converts a LivePose into a Pose definition
@@ -81,7 +93,7 @@ namespace SPNATI_Character_Editor
 			//1. Create Sprites for each LiveSprite's first frame
 			foreach (LiveSprite item in pose.Sprites)
 			{
-				Sprite sprite = new Sprite();
+				Sprite sprite = new Sprite(pose.Character);
 				sprite.Id = item.Id;
 				sprite.PivotX = Math.Round(item.PivotX * 100, 0).ToString(CultureInfo.InvariantCulture) + "%";
 				sprite.PivotY = Math.Round(item.PivotY * 100, 0).ToString(CultureInfo.InvariantCulture) + "%";
@@ -208,7 +220,7 @@ namespace SPNATI_Character_Editor
 			PoseDirective directive = directives.Get(delay, metaKey);
 			if (directive == null)
 			{
-				directive = new PoseDirective()
+				directive = new PoseDirective(item.Character)
 				{
 					Id = item.Id,
 					DirectiveType = "animation",
@@ -231,7 +243,7 @@ namespace SPNATI_Character_Editor
 			Keyframe frame = directive.Keyframes.Find(k => k.Time == time);
 			if (frame == null)
 			{
-				frame = new Keyframe();
+				frame = new Keyframe(item.Character);
 				frame.Time = time;
 				bool added = false;
 				for (int i = 0; i < directive.Keyframes.Count; i++)

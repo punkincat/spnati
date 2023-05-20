@@ -703,49 +703,6 @@ namespace SPNATI_Character_Editor
 				ending.OnBeforeSerialize();
 			}
 
-			// dumb and also bad
-			foreach (Pose pose in Poses)
-            {
-				foreach (Sprite sp in pose.Sprites)
-                {
-					if (sp.Src.Contains(FolderName + "/"))
-                    {
-						sp.Src = sp.Src.Substring(FolderName.Length + 1);
-
-						// dumber and also worse (I mean REALLY bad, I hate it)
-						foreach (Character c in CharacterDatabase.Characters)
-                        {
-							if (sp.Src.StartsWith(c.FolderName + "/"))
-                            {
-								sp.Src = "../" + sp.Src;
-								break;
-                            }
-                        }
-                    }
-				}
-
-				foreach (Directive dir in pose.Directives)
-                {
-					foreach (Keyframe keyf in dir.Keyframes)
-                    {
-						if (!String.IsNullOrEmpty(keyf.Src) && keyf.Src.Contains(FolderName + "/"))
-						{
-							keyf.Src = keyf.Src.Substring(FolderName.Length + 1);
-
-							// dumber and also worse (I mean REALLY bad, I hate it)
-							foreach (Character c in CharacterDatabase.Characters)
-							{
-								if (keyf.Src.StartsWith(c.FolderName + "/"))
-								{
-									keyf.Src = "../" + keyf.Src;
-									break;
-								}
-							}
-						}
-					}
-                }
-            }
-
 			Behavior.Serializing = false;
 		}
 
@@ -763,31 +720,13 @@ namespace SPNATI_Character_Editor
 			foreach (Epilogue ending in Endings)
 			{
 				ending.OnAfterDeserialize();
+				ending.AttachCharacter(this);
 			}
 			Poses.Sort();
 			foreach (Pose pose in Poses)
 			{
 				pose.OnAfterDeserialize();
-
-				// dumb and also bad
-				foreach (Sprite sp in pose.Sprites)
-                {
-					if (!sp.Src.Contains(FolderName + "/"))
-					{
-						sp.Src = FolderName + "/" + sp.Src;
-					}
-                }
-
-				foreach (Directive dir in pose.Directives)
-				{
-					foreach (Keyframe keyf in dir.Keyframes)
-					{
-						if (!String.IsNullOrEmpty(keyf.Src) && !keyf.Src.Contains(FolderName + "/"))
-						{
-							keyf.Src = FolderName + "/" + keyf.Src;
-						}
-					}
-				}
+				pose.AttachSkin(this);
 			}
 
 			PoseLibrary = new PoseMap(this);

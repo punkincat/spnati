@@ -112,7 +112,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 					src = ((LiveSprite)Data).GetImagePath(src);
 					try
 					{
-						Image bmp = LiveImageCache.Get(src);
+						Image bmp = LiveImageCache.Get(src, Sprite.Character);
 
 						//create a 32px tall image matching the source's aspect ratio
 						int width = (int)((float)bmp.Width / bmp.Height * ThumbnailHeight);

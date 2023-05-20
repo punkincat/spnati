@@ -12,6 +12,9 @@ namespace SPNATI_Character_Editor
 		[XmlElement("animFrame")]
 		public List<PoseAnimFrame> AnimFrames = new List<PoseAnimFrame>();
 
+		public PoseDirective() { }
+		public PoseDirective(ISkin skin) : base(skin) { }
+
 		public override string ToString()
 		{
 			switch (DirectiveType)

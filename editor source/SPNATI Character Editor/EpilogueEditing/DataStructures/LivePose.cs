@@ -150,7 +150,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				if (string.IsNullOrEmpty(directive.Id) || !sprites.TryGetValue(directive.Id, out preview))
 				{
 					//create a sprite preview if the ID doesn't match anything
-					preview = new LiveSprite(this, new Sprite(), _time);
+					preview = new LiveSprite(this, new Sprite(directive.Skin), _time);
 					preview.Id = directive.Id;
 					preview.PropertyChanged += Sprite_PropertyChanged;
 					Sprites.Add(preview);
@@ -198,7 +198,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		/// </summary>
 		public LiveSprite AddSprite(float time)
 		{
-			LiveSprite sprite = new LiveSprite(this, time);
+			LiveSprite sprite = new LiveSprite(this, time, Character);
 			sprite.PropertyChanged += Sprite_PropertyChanged;
 			Sprites.Add(sprite);
 			return sprite;

@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using SPNATI_Character_Editor.DataStructures;
 
 namespace SPNATI_Character_Editor
 {
@@ -24,19 +26,43 @@ namespace SPNATI_Character_Editor
 			foreach (string key in keys)
 			{
 				_images.Remove(key);
-				Get(key);
+				Bitmap img = null;
+
+				string path = Path.Combine(Config.SpnatiDirectory, key);
+				if (File.Exists(path))
+				{
+					try
+					{
+						using (Bitmap temp = new Bitmap(path))
+						{
+							img = new Bitmap(temp);
+							_images[key] = img;
+						}
+					}
+					catch { }
+				}
 			}
 		}
 
-		public static Bitmap Get(string src)
+		public static Bitmap Get(string src, ISkin skin, int? stage = null)
+        {
+			return Get(ImagePath.ParseAnyPath(src, skin), skin, stage);
+        }
+
+		public static Bitmap Get(ImagePath src, ISkin skin, int? stage = null)
 		{
-			if (string.IsNullOrEmpty(src)) { return null; }
+			if (ImagePath.IsNullOrEmpty(src)) { return null; }
+			Debug.Assert(skin != null);
+
+			string relPath = src.AsRelativeFilesystemPath(skin, stage);
+
 			Bitmap img = null;
-			if (_images.TryGetValue(src, out img))
+			if (_images.TryGetValue(relPath, out img))
 			{
 				return img;
 			}
-			string path = GetImagePath(src);
+
+			string path = Path.Combine(Config.SpnatiDirectory, relPath);
 			if (!File.Exists(path))
 			{
 				return null;
@@ -46,16 +72,11 @@ namespace SPNATI_Character_Editor
 				using (Bitmap temp = new Bitmap(path))
 				{
 					img = new Bitmap(temp);
-					_images[src] = img;
+					_images[relPath] = img;
 				}
 			}
 			catch { }
 			return img;
-		}
-
-		private static string GetImagePath(string path)
-		{
-			return Path.Combine(Config.SpnatiDirectory, "opponents", path);
 		}
 	}
 }

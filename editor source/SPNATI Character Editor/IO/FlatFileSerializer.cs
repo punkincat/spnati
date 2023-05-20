@@ -902,7 +902,7 @@ namespace SPNATI_Character_Editor
 					case "scene":
 						if (currentEnding != null)
 						{
-							currentScene = new Scene();
+							currentScene = new Scene(character);
 							currentDirective = null;
 							currentChoice = null;
 							ParseAttributes(currentScene, value);
@@ -912,14 +912,14 @@ namespace SPNATI_Character_Editor
 					case "directive":
 						if (currentScene != null)
 						{
-							currentDirective = new Directive();
+							currentDirective = new Directive(character);
 							currentChoice = null;
 							ParseAttributes(currentDirective, value);
 							currentScene.Directives.Add(currentDirective);
 						}
 						else if (currentPose != null)
 						{
-							currentPoseDirective = new PoseDirective();
+							currentPoseDirective = new PoseDirective(character);
 							ParseAttributes(currentPoseDirective, value);
 							currentPose.Directives.Add(currentPoseDirective);
 						}
@@ -927,13 +927,13 @@ namespace SPNATI_Character_Editor
 					case "keyframe":
 						if (currentDirective != null)
 						{
-							Keyframe keyframe = new Keyframe();
+							Keyframe keyframe = new Keyframe(character);
 							ParseAttributes(keyframe, value);
 							currentDirective.Keyframes.Add(keyframe);
 						}
 						else if (currentPoseDirective != null)
 						{
-							Keyframe keyframe = new Keyframe();
+							Keyframe keyframe = new Keyframe(character);
 							ParseAttributes(keyframe, value);
 							currentPoseDirective.Keyframes.Add(keyframe);
 						}
@@ -966,7 +966,7 @@ namespace SPNATI_Character_Editor
 					case "sprite":
 						if (currentPose != null)
 						{
-							Sprite sprite = new Sprite();
+							Sprite sprite = new Sprite(character);
 							ParseAttributes(sprite, value);
 							currentPose.Sprites.Add(sprite);
 						}

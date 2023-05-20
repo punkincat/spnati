@@ -47,7 +47,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			get { return Get<string>(); }
 			set
 			{
-				_background = LiveImageCache.Get(value);
+				_background = LiveImageCache.Get(value, Character);
 				if (_background != null)
 				{
 					Width = _background.Width;

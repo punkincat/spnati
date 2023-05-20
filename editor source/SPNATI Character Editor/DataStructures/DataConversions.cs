@@ -108,7 +108,7 @@ namespace SPNATI_Character_Editor
 					catch { }
 				}
 
-				Scene scene = new Scene()
+				Scene scene = new Scene(character)
 				{
 					Background = image,
 					Width = sceneWidth,
@@ -118,7 +118,7 @@ namespace SPNATI_Character_Editor
 
 				foreach (EndingText text in screen.Text)
 				{
-					Directive dir = new Directive("text");
+					Directive dir = new Directive(character, "text");
 					dir.Width = text.Width;
 					dir.X = text.X;
 					dir.Y = text.Y;
@@ -126,11 +126,11 @@ namespace SPNATI_Character_Editor
 					dir.Text = text.Content;
 					scene.Directives.Add(dir);
 
-					scene.Directives.Add(new Directive("pause"));
+					scene.Directives.Add(new Directive(character, "pause"));
 				}
 				if (scene.Directives.Count == 0)
 				{
-					scene.Directives.Add(new Directive("pause"));
+					scene.Directives.Add(new Directive(character, "pause"));
 				}
 			}
 
@@ -164,7 +164,7 @@ namespace SPNATI_Character_Editor
 
 				foreach (Scene oldScene in bg.Scenes)
 				{
-					Scene scene = new Scene()
+					Scene scene = new Scene(character)
 					{
 						Background = image,
 						Width = sceneWidth,
@@ -183,7 +183,7 @@ namespace SPNATI_Character_Editor
 
 					foreach (EndingSprite sprite in oldScene.LegacySprites)
 					{
-						Directive dir = new Directive("sprite");
+						Directive dir = new Directive(character, "sprite");
 						dir.Width = sprite.Width;
 						dir.X = sprite.X;
 						dir.Y = sprite.Y;
@@ -195,7 +195,7 @@ namespace SPNATI_Character_Editor
 
 					foreach (EndingText text in oldScene.LegacyText)
 					{
-						Directive dir = new Directive("text");
+						Directive dir = new Directive(character, "text");
 						dir.Width = text.Width;
 						dir.X = text.X;
 						dir.Y = text.Y;
@@ -204,11 +204,11 @@ namespace SPNATI_Character_Editor
 						dir.Css = text.Css;
 						scene.Directives.Add(dir);
 
-						scene.Directives.Add(new Directive("pause"));
+						scene.Directives.Add(new Directive(character, "pause"));
 					}
 					if (scene.Directives.Count == 0)
 					{
-						scene.Directives.Add(new Directive("pause"));
+						scene.Directives.Add(new Directive(character, "pause"));
 					}
 				}
 			}

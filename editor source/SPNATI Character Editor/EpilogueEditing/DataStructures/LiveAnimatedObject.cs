@@ -15,7 +15,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 	/// </summary>
 	public abstract class LiveAnimatedObject : LiveObject, IFixedLength
 	{
-		public Character Character;
+		public ISkin Character;
 		public bool DisplayPastEnd = true;
 
 		private float _lastPlaybackTime;
@@ -93,6 +93,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			LiveAnimatedObject animatedCopy = copy as LiveAnimatedObject;
 			if (animatedCopy != null)
 			{
+				animatedCopy.Character = Character;
 				foreach (LiveKeyframe kf in animatedCopy.Keyframes)
 				{
 					kf.Data = animatedCopy;

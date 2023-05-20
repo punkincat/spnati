@@ -198,7 +198,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			_sourcePose = pose;
 			if (pose != null)
 			{
-				_pose = new LivePose(_character, pose, _stage);
+				_pose = new LivePose(_character.Skin, pose, _stage);
 				_pose.CurrentStage = _stage;
 			}
 			else
@@ -472,6 +472,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			Pose sourcePose = Clipboards.Get<Pose, Pose>();
 			if (sourcePose == null) { return; }
 			Pose copy = sourcePose.Clone() as Pose;
+			copy.AttachSkin(_character);
 			lstPoses.Items.Add(copy);
 			lstPoses.SelectedItem = copy;
 			_character.CustomPoses.Add(copy);
@@ -561,7 +562,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			{
 				if (!string.IsNullOrEmpty(sprite.Src))
 				{
-					sprite.Image = LiveImageCache.Get(sprite.Src);
+					sprite.Image = LiveImageCache.Get(sprite.Src, _character, _stage);
 					if (sprite.Image != null)
 					{
 						sprite.Width = sprite.Image.Width;

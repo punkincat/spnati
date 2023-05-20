@@ -105,6 +105,9 @@ namespace SPNATI_Character_Editor
 		[XmlIgnore]
 		public bool Locked;
 
+        [XmlIgnore]
+		public Character Character;
+
 		public string SceneName
 		{
 			get { return !string.IsNullOrEmpty(Name) ? Name : ToString(); }
@@ -125,20 +128,36 @@ namespace SPNATI_Character_Editor
 		}
 
 		public Scene() { }
-		public Scene(int width, int height)
+
+		public Scene(Character c) {
+			Character = c;
+		}
+
+		public Scene(Character c, int width, int height)
 		{
+			Character = c;
 			Width = width.ToString();
 			Height = height.ToString();
 		}
 
-		public Scene(bool transition)
+		public Scene(Character c, bool transition)
 		{
+			Character = c;
 			if (transition)
 			{
 				Time = "1";
 				Effect = "dissolve";
 			}
 		}
+
+		public void AttachCharacter(Character c)
+        {
+			Character = c;
+			foreach (Directive d in Directives)
+            {
+				d.AttachSkin(c);
+            }
+        }
 
 		/// <summary>
 		/// Gets the directive that creates an object with the given ID
@@ -239,7 +258,7 @@ namespace SPNATI_Character_Editor
 				else
 				{
 					//need to copy the directive and only include the fade properties
-					Directive fade = new Directive("fade");
+					Directive fade = new Directive(d.Skin, "fade");
 					fade.Time = d.Time;
 					fade.Delay = d.Delay;
 					fade.InterpolationMethod = d.InterpolationMethod;
@@ -257,7 +276,7 @@ namespace SPNATI_Character_Editor
 						Keyframe kf = d.Keyframes[i];
 						if (!string.IsNullOrEmpty(kf.Alpha) || !string.IsNullOrEmpty(kf.Color))
 						{
-							Keyframe fadeFrame = new Keyframe();
+							Keyframe fadeFrame = new Keyframe(Character);
 							fadeFrame.Time = kf.Time;
 							fadeFrame.Alpha = kf.Alpha;
 							fadeFrame.Color = kf.Color;
@@ -341,7 +360,7 @@ namespace SPNATI_Character_Editor
 		private WorkingDirective CreateClearDirective(IFixedLength l, int trackIndex, float delay)
 		{
 			LiveObject obj = l as LiveObject;
-			Directive end = new Directive();
+			Directive end = new Directive(Character);
 			end.DirectiveType = l is LiveBubble ? "clear" : "remove";
 			end.Id = obj.Id;
 			if (end.Id == null && end.DirectiveType == "clear")
@@ -427,14 +446,14 @@ namespace SPNATI_Character_Editor
 
 			if (!string.IsNullOrEmpty(segment.Name) || !string.IsNullOrEmpty(segment.Marker))
 			{
-				finalDirectives.Add(new Directive("metadata")
+				finalDirectives.Add(new Directive(segment.Character, "metadata")
 				{
 					Name = segment.Name
 				});
 			}
 			finalDirectives.AddRange(directives.Select(wd => wd.Directive));
 
-			Directive wait = new Directive("pause");
+			Directive wait = new Directive(segment.Character, "pause");
 			finalDirectives.Add(wait);
 
 			//if there are any objects still open, clear them
@@ -444,7 +463,7 @@ namespace SPNATI_Character_Editor
 				if (pendingBubbles > 0 && persistentBubbles == 0)
 				{
 					//can just use a clear-all for the text boxes
-					Directive clear = new Directive("clear-all");
+					Directive clear = new Directive(segment.Character, "clear-all");
 					finalDirectives.Add(clear);
 					removedText = true;
 				}
@@ -509,7 +528,7 @@ namespace SPNATI_Character_Editor
 
 	private WorkingDirective CreateStopDirective(string id, float delay, int trackIndex, LiveObject source)
 	{
-		Directive stopDirective = new Directive("stop");
+		Directive stopDirective = new Directive(Character, "stop");
 		stopDirective.Id = id;
 		if (id == "Camera")
 		{
@@ -538,7 +557,7 @@ namespace SPNATI_Character_Editor
 	private WorkingDirective CreateAnimationDirective(string id, float startTime, LiveAnimatedObject source, LiveKeyframeMetadata metadata, int trackIndex)
 	{
 		string type = id == "camera" ? "camera" : id == "fade" ? "fade" : "move";
-		Directive currentDirective = new Directive(type);
+		Directive currentDirective = new Directive(Character, type);
 		currentDirective.Id = id;
 		currentDirective.Marker = source.Marker;
 		float delay = startTime;
@@ -909,7 +928,7 @@ namespace SPNATI_Character_Editor
 			Keyframe kf = Directive.Keyframes.Find(k => k.Time == time);
 			if (kf == null)
 			{
-				kf = new Keyframe();
+				kf = new Keyframe(liveFrame.Data.Character);
 				kf.Time = time;
 				Directive.Keyframes.Add(kf);
 			}

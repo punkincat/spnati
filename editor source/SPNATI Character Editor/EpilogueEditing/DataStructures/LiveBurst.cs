@@ -30,7 +30,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 		public override Directive CreateDirectiveDefinition()
 		{
-			Directive directive = new Directive();
+			Directive directive = new Directive(Data.Character);
 			directive.DirectiveType = "emit";
 			directive.Count = Count;
 			directive.Delay = (Data.Start + Time).ToString(CultureInfo.InvariantCulture);

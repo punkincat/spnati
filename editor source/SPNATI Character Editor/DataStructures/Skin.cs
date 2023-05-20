@@ -159,6 +159,11 @@ namespace SPNATI_Character_Editor
 				}
 				f.Value = folder;
 			});
+
+			foreach (Pose pose in Poses)
+            {
+				pose.AttachSkin(this);
+            }
 		}
 
 		public string ToLookupString()

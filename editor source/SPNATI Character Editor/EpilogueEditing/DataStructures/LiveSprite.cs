@@ -14,9 +14,10 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		private int _stage;
 
 		#region Pose
-		public LiveSprite(LiveData data, float time) : this()
+		public LiveSprite(LiveData data, float time, ISkin skin)
 		{
 			Data = data;
+			Character = skin;
 			Length = 1;
 			Start = time;
 			Id = "New Sprite";
@@ -29,9 +30,10 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			Update(time, 0, false);
 		}
 
-		public LiveSprite(LivePose pose, Sprite sprite, float time) : this()
+		public LiveSprite(LivePose pose, Sprite sprite, float time)
 		{
 			Data = pose;
+			Character = pose.Character;
 			ParentId = sprite.ParentId;
 			Marker = sprite.Marker;
 			Length = 1;
@@ -83,7 +85,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		#endregion
 
 		#region Epilogue
-		public LiveSprite(LiveSceneSegment scene, Directive directive, Character character, float time) : this()
+		public LiveSprite(LiveSceneSegment scene, Directive directive, Character character, float time)
 		{
 			CenterX = false;
 			PreserveOriginalDimensions = true;
@@ -156,7 +158,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		}
 		#endregion
 
-		public LiveSprite() : base()
+		public LiveSprite()
 		{
 			
 		}
@@ -211,8 +213,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 			if (!string.IsNullOrEmpty(kf.Src))
 			{
-				string src = LiveSceneSegment.FixPath(kf.Src, Character);
-				AddValue<string>(time, "Src", src, addBreak);
+				AddValue<string>(time, "Src", kf.Src, addBreak);
 				properties.Add("Src");
 			}
 			if (!string.IsNullOrEmpty(kf.Scale))
@@ -270,7 +271,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		private void UpdateImage()
 		{
 			string src = GetImagePath(Src);
-			Image = LiveImageCache.Get(src);
+			Image = LiveImageCache.Get(src, Character);
 		}
 
 		public string GetImagePath(string src)
@@ -339,7 +340,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 		public override Directive CreateCreationDirective(Scene scene)
 		{
-			Directive sprite = new Directive()
+			Directive sprite = new Directive(Character)
 			{
 				Id = Id,
 				DirectiveType = "sprite",
@@ -368,7 +369,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				{
 					if (!string.IsNullOrEmpty(initialFrame.Src))
 					{
-						sprite.Src = Scene.FixPath(initialFrame.Src, (Data as LiveSceneSegment).Character);
+						sprite.Src = initialFrame.Src;
 					}
 					if (initialFrame.X.HasValue)
 					{
@@ -435,7 +436,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				if (!string.IsNullOrEmpty(src))
 				{
 					string path = GetImagePath(src);
-					Bitmap img = LiveImageCache.Get(path);
+					Bitmap img = LiveImageCache.Get(path, Character);
 					if (img != null)
 					{
 						WidthOverride = img.Width;

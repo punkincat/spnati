@@ -57,8 +57,9 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			AddValue<float>(0, "Zoom", "1");
 		}
 
-		public LiveCamera(Scene scene) : this()
+		public LiveCamera(Scene scene)
 		{
+			Character = scene.Character;
 			if (!string.IsNullOrEmpty(scene.Width))
 			{
 				int width;

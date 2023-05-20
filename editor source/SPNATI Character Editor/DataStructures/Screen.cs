@@ -69,6 +69,14 @@ namespace SPNATI_Character_Editor
 
 		[XmlElement("scene")]
 		public List<Scene> Scenes = new List<Scene>();
+
+		public void AttachCharacter(Character c)
+        {
+			foreach (Scene scene in Scenes)
+            {
+				scene.AttachCharacter(c);
+            }
+        }
 	}
 
 	/// <summary>

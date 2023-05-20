@@ -111,7 +111,7 @@ namespace SPNATI_Character_Editor.Forms
 			Frame frame = lstFrames.SelectedItem as Frame;
 			if (frame != null)
 			{
-				picPreview.Image = LiveImageCache.Get(frame.Src);
+				picPreview.Image = LiveImageCache.Get(frame.Src, Sprite.Character);
 			}
 			else
 			{

@@ -82,6 +82,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		{
 			Camera = new LiveCamera();
 			Tracks = new ObservableCollection<LiveObject>();
+			Camera.Character = Character;
 		}
 
 		/// <summary>
@@ -263,7 +264,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			if (bubble != null)
 			{
 				//reusing a bubble; make a new ID suffix and remove the old one at this point
-				AddClearDirective(new Directive("clear")
+				AddClearDirective(new Directive(directive.Skin, "clear")
 				{
 					Id = directiveId,
 					Delay = directive.Delay
@@ -746,7 +747,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 		public LiveSprite AddSprite(float time)
 		{
-			LiveSprite sprite = new LiveSprite(this, time);
+			LiveSprite sprite = new LiveSprite(this, time, Character);
 			sprite.LinkedToEnd = true;
 			sprite.CenterX = false;
 			sprite.PreserveOriginalDimensions = true;
@@ -759,7 +760,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 		public LiveBubble AddBubble(float time)
 		{
-			LiveBubble bubble = new LiveBubble(this, time);
+			LiveBubble bubble = new LiveBubble(this, time, Character);
 			bubble.Id = GetUniqueId("text");
 			Tracks.Add(bubble);
 			return bubble;
@@ -767,7 +768,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 		public LiveEmitter AddEmitter(float time)
 		{
-			LiveEmitter emitter = new LiveEmitter(this, time);
+			LiveEmitter emitter = new LiveEmitter(this, time, Character);
 			emitter.Id = GetUniqueId("emitter");
 			emitter.LinkedToEnd = true;
 			Tracks.Add(emitter);

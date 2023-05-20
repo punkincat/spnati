@@ -641,7 +641,7 @@ namespace SPNATI_Character_Editor.Controls
 		{
 			Scene scene = GetSelectedScene();
 
-			Scene newScene = new Scene(100, 100);
+			Scene newScene = new Scene(_character, 100, 100);
 			TreeNode node = new TreeNode(newScene.ToString());
 			_nodes[newScene] = node;
 			node.Tag = newScene;
@@ -664,7 +664,7 @@ namespace SPNATI_Character_Editor.Controls
 		{
 			Scene scene = GetSelectedScene();
 
-			Scene transition = new Scene(true)
+			Scene transition = new Scene(_character, true)
 			{
 				Transition = true
 			};
@@ -700,7 +700,7 @@ namespace SPNATI_Character_Editor.Controls
 				}
 			}
 
-			Directive dir = new Directive(type);
+			Directive dir = new Directive(_character, type);
 			ApplyDefaults(dir);
 			if (src != null)
 			{
@@ -784,7 +784,7 @@ namespace SPNATI_Character_Editor.Controls
 			TreeNode selectedNode = treeScenes.SelectedNode;
 			if (selectedNode == null || selectedNode.Tag is Scene) { return; }
 
-			Keyframe frame = new Keyframe();
+			Keyframe frame = new Keyframe(_character);
 			frame.Time = "1";
 			TreeNode node = new TreeNode(frame.ToString());
 			node.Tag = frame;
@@ -804,7 +804,7 @@ namespace SPNATI_Character_Editor.Controls
 						treeScenes.SelectedNode = null;
 						AfterSelect?.Invoke(this, new SceneTreeEventArgs(null));
 
-						Keyframe kf = new Keyframe();
+						Keyframe kf = new Keyframe(_character);
 						kf.TransferPropertiesFrom(directive);
 						kf.Directive = directive;
 						TreeNode transferNode = new TreeNode(kf.ToString());

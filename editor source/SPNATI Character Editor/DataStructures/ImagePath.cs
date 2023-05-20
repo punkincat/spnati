@@ -5,12 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace SPNATI_Character_Editor.DataStructures
 {
 
     public class ImagePath
     {
+        private static readonly Regex _stagePrefixRegex = new Regex(@"^\d+-");
+
         string _baseName;
 
         /// <summary>
@@ -51,6 +54,19 @@ namespace SPNATI_Character_Editor.DataStructures
             Debug.Assert(String.IsNullOrEmpty(this._baseName) || (!this._baseName.Contains('\\') && !this._baseName.StartsWith("/") && !this._baseName.EndsWith("/")));
             Debug.Assert(String.IsNullOrEmpty(this._subFolder) || (!this._subFolder.Contains('\\') && !this._subFolder.StartsWith("/") && !this._subFolder.EndsWith("/")));
             Debug.Assert(!String.IsNullOrEmpty(this._fileName) && !this._fileName.Contains('\\') && !this._fileName.StartsWith("/") && !this._fileName.EndsWith("/"));
+        }
+
+        public bool IsEmpty()
+        {
+            return String.IsNullOrEmpty(this._fileName);
+        }
+
+        public void MakeCrossStage()
+        {
+            if (!String.IsNullOrEmpty(this._fileName))
+            {
+                this._fileName = _stagePrefixRegex.Replace(this._fileName, "#-");
+            }
         }
 
         /// <summary>
@@ -186,7 +202,14 @@ namespace SPNATI_Character_Editor.DataStructures
                 sb.Append(Path.DirectorySeparatorChar);
             }
 
-            sb.Append(this._fileName);
+            if (stage != null)
+            {
+                sb.Append(this._fileName.Replace("#", stage.ToString()));
+            }
+            else
+            {
+                sb.Append(this._fileName);
+            }
             return sb.ToString();
         }
 
@@ -198,7 +221,25 @@ namespace SPNATI_Character_Editor.DataStructures
         /// <returns></returns>
         public string AsAbsoluteFilesystemPath(ISkin skin, int? stage = null)
         {
-            return Path.Combine(Config.SpnatiDirectory, this.AsRelativeFilesystemPath(skin, stage))
+            return Path.Combine(Config.SpnatiDirectory, this.AsRelativeFilesystemPath(skin, stage));
+        }
+
+        public static ImagePath ParseAnyPath(string path, ISkin skin)
+        {
+            ImagePath p = null;
+
+            if (Path.IsPathRooted(path))
+            {
+                p = ParseFileSystemPath(path);
+                Debug.Assert(!IsNullOrEmpty(p));
+            }
+            else
+            {
+                p = ParsePoseSpriteSrc(path, skin);
+                Debug.Assert(!IsNullOrEmpty(p));
+            }
+
+            return p;
         }
 
         /// <summary>
@@ -307,7 +348,7 @@ namespace SPNATI_Character_Editor.DataStructures
                         baseName = (String.IsNullOrEmpty(baseName) ? "" : baseName + "/") + parts.Dequeue();
                     }
                 }
-                else if (parts.Peek() == skin.Character.FolderName)
+                else if (skin != null && parts.Peek() == skin.Character.FolderName)
                 {
                     baseName = "opponents/" + parts.Dequeue();
                 }
@@ -429,6 +470,11 @@ namespace SPNATI_Character_Editor.DataStructures
             return new ImagePath(baseName, subFolder, fileName);
         }
 
+        public static bool IsNullOrEmpty(ImagePath path)
+        {
+            return (path == null) || path.IsEmpty();
+        }
+
         /// <summary>
         /// Split a path into a list of whitespace-trimmed segments. <br/>
         /// This method filters out most empty segments in the path, unless an empty segment comes at the start of the path, which indicates that it is an absolute path.
@@ -443,7 +489,7 @@ namespace SPNATI_Character_Editor.DataStructures
                 string trimmed = part.Trim();
                 if (!String.IsNullOrEmpty(trimmed) || ret.Count == 0)
                 {
-                    ret.Append(trimmed);
+                    ret.Enqueue(trimmed);
                 }
             }
             return ret;

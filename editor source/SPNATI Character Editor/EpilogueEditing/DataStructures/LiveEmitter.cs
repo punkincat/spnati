@@ -211,12 +211,13 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			EndAlpha = new RandomParameter(0, 0);
 		}
 
-		public LiveEmitter(LiveData data, float time) : this()
+		public LiveEmitter(LiveData data, float time, ISkin skin) : this()
 		{
 			Data = data;
 			DisplayPastEnd = false;
 			Length = 1;
 			Start = time;
+			Character = skin;
 
 			LiveEmitterKeyframe startFrame = CreateKeyframe(0) as LiveEmitterKeyframe;
 			startFrame.Rate = 1;
@@ -256,7 +257,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			if (!string.IsNullOrEmpty(directive.Src))
 			{
 				string path = LiveSceneSegment.FixPath(directive.Src, character);
-				Image = LiveImageCache.Get(path);
+				Image = LiveImageCache.Get(path, Character);
 				if (Image != null)
 				{
 					ParticleWidth = Image.Width;
@@ -404,8 +405,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 			if (!string.IsNullOrEmpty(kf.Src))
 			{
-				string path = LiveSceneSegment.FixPath(kf.Src, Character);
-				AddValue<string>(time, "Src", path, addBreak);
+				AddValue<string>(time, "Src", kf.Src, addBreak);
 				properties.Add("Src");
 			}
 			if (!string.IsNullOrEmpty(kf.Rotation))
@@ -465,7 +465,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			Rate = GetPropertyValue("Rate", time, offset, 1.0f, easeOverride, interpolationOverride, looped);
 			string src = GetPropertyValue<string>("Src", time, offset, null, easeOverride, interpolationOverride, looped);
 			Src = src;
-			Image = LiveImageCache.Get(src);
+			Image = LiveImageCache.Get(src, Character);
 			if (Image != null)
 			{
 				ParticleWidth = Image.Width;
@@ -557,7 +557,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 		public override Directive CreateCreationDirective(Scene scene)
 		{
-			Directive emitter = new Directive()
+			Directive emitter = new Directive(Character)
 			{
 				Id = Id,
 				DirectiveType = "emitter",

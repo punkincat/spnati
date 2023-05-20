@@ -23,6 +23,8 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		private static Graphics _graphics;
 		private static Pen _alignmentPen;
 
+		private ISkin Skin; 
+
 		static LiveBubble()
 		{
 			_font = new Font(Shell.Instance.Fonts.Families[0], 11.3f);
@@ -31,11 +33,12 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			_alignmentPen = new Pen(Color.FromArgb(127, 255, 255, 255), 2);
 		}
 
-		public LiveBubble()
-		{
-			CenterX = false;
-		}
-		public LiveBubble(LiveData data, float time) : this()
+		public LiveBubble(ISkin skin)
+        {
+            CenterX = false;
+            Skin = skin;
+        }
+        public LiveBubble(LiveData data, float time, ISkin Skin) : this(Skin)
 		{
 			Data = data;
 			Length = 1;
@@ -47,7 +50,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			InvalidateTransform();
 		}
 
-		public LiveBubble(LiveData data, Directive directive, float time) : this()
+		public LiveBubble(LiveData data, Directive directive, float time) : this(directive.Skin)
 		{
 			Data = data;
 			Start = time;
@@ -506,7 +509,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 		public Directive CreateCreationDirective()
 		{
-			Directive text = new Directive()
+			Directive text = new Directive(Skin)
 			{
 				Id = Id,
 				DirectiveType = "text",

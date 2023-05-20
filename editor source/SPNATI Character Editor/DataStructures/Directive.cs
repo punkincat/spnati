@@ -4,12 +4,14 @@ using SPNATI_Character_Editor.Controls;
 using SPNATI_Character_Editor.Controls.EditControls;
 using SPNATI_Character_Editor.EditControls;
 using SPNATI_Character_Editor.EpilogueEditor;
+using SPNATI_Character_Editor.DataStructures;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 using System.Text;
 using System.Xml.Serialization;
+
 
 namespace SPNATI_Character_Editor
 {
@@ -230,7 +232,9 @@ namespace SPNATI_Character_Editor
 
 		public Directive() { }
 
-		public Directive(string type)
+		public Directive(ISkin skin) : base(skin)  { }
+
+		public Directive(ISkin skin, string type) : base(skin)
 		{
 			DirectiveType = type;
 		}
@@ -317,6 +321,16 @@ namespace SPNATI_Character_Editor
 					return Keyframes[Keyframes.Count - 1].Time;
 				}
 				return Time;
+			}
+		}
+
+		public void AttachSkin(ISkin skin)
+		{
+			Skin = skin;
+
+			foreach (Keyframe kf in Keyframes)
+			{
+				kf.Skin = skin;
 			}
 		}
 
@@ -460,6 +474,12 @@ namespace SPNATI_Character_Editor
 		[XmlIgnore]
 		public Directive Directive { get; set; }
 
+		[XmlIgnore]
+		public ISkin Skin;
+
+		[XmlIgnore]
+		public ImagePath SrcPath;
+
 		[Float(DisplayName = "Time (s)", Key = "time", GroupOrder = 1, Description = "Time in seconds since the start of the animation", Minimum = 0, Maximum = 100, Increment = 0.5f)]
 		[XmlAttribute("time")]
 		public string Time;
@@ -470,7 +490,11 @@ namespace SPNATI_Character_Editor
 
 		[FileSelect(DisplayName = "Source", GroupOrder = 5, Key = "src", Description = "Sprite source image")]
 		[XmlAttribute("src")]
-		public string Src;
+		public string Src
+        {
+			get { return ImagePath.IsNullOrEmpty(SrcPath) ? null : SrcPath.AsPoseSpriteSrc(Skin); }
+			set { SrcPath = String.IsNullOrEmpty(value) ? null : ImagePath.ParseAnyPath(value, Skin); }
+        }
 
 		[Measurement(DisplayName = "X", Key = "x", GroupOrder = 10, Description = "Scene X position")]
 		[XmlAttribute("x")]
@@ -542,6 +566,10 @@ namespace SPNATI_Character_Editor
 
 		public Keyframe() { }
 
+		public Keyframe(ISkin skin) {
+			this.Skin = skin;
+		}
+
 		/// <summary>
 		/// Moves animatable properties from another keyframe (or directive) into this keyframe
 		/// </summary>
@@ -562,7 +590,8 @@ namespace SPNATI_Character_Editor
 			Alpha = src.Alpha;
 			Rotation = src.Rotation;
 			Zoom = src.Zoom;
-			Src = src.Src;
+			SrcPath = src.SrcPath;
+			Skin = src.Skin;
 
 			src.Time = null;
 			src.X = null;
@@ -576,7 +605,8 @@ namespace SPNATI_Character_Editor
 			src.ScaleY = null;
 			src.SkewX = null;
 			src.SkewY = null;
-			src.Src = null;
+			src.SrcPath = null;
+			src.Skin = null;
 
 			Properties = src.Properties;
 			src.Properties = new Dictionary<string, object>();
