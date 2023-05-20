@@ -18,9 +18,6 @@
         <case name="Hilda's Deception Revealed (Alt)" id="149" priority="FYI" min="6" max="6">
             <description>Hilda just revealed that her cluelessness at playing poker at the beginning of the game was all an act to try to make the others freely give her an advantage! May also occur elsewhere, see "Hilda's Deception Revealed" both "(Main)" and "Winner"</description>
         </case>
-        <case name="Hilda's Scarf Woes" id="150" priority="FYI" min="2" max="2">
-            <description>Hilda resents the idea of having to re-tie the scarf she just took off.</description>
-        </case>
         <case name="Fishing For Compliments" id="151" priority="Prompt" min="10" max="10">
             <description>Hilda actively seeks compliments on her masturbation.</description>
         </case>
@@ -29,6 +26,9 @@
         </case>
         <case name="Hilda's Deception Revealed (Winner)" id="280" priority="Noteworthy" min="0" max="5">
             <description>Having already won, Hilda just revealed that her cluelessness at playing poker at the beginning of the game was all an act to try to make the others freely give her an advantage! May also be triggered by losing layers, see "Hilda's Deception Revealed", both "(Main)" and "(Alt)".</description>
+        </case>
+        <case name="Hilda's Scarf Woes" id="150" priority="FYI" min="2" max="2">
+            <description>Hilda resents the idea of having to re-tie the scarf she just took off. - NOTE - Base outfit only!</description>
         </case>
     </noteworthy>
     <reviewed>true</reviewed>
@@ -179,7 +179,6 @@
     <notes>
         <note id="119">Yes, Hilda's second line here is very deliberately ironic.</note>
         <note id="176">Hilda is notably perceptive - she definitely knows there's something up with Marth by this point, but she's not going to steal Lucina's thunder by revealing her secret</note>
-        <note id="275">This line was written before the existence of Summer Hilda</note>
         <note id="305">Regarding the first line - Hilda doesn't especially care about the cultural preservation of Brigid, she's just anti-Empire.</note>
         <note id="330">Hilda is very biased, and is not willing to take constructive criticism on that fact</note>
         <note id="335">I really hope this fires the way I think it should, but if it activates when an expected loser loses, please notify me.</note>
@@ -197,6 +196,7 @@ Hilda is dessert?</note>
         <note id="402">I, the writer, know about absolute territory, and Hilda understands it as a concept, she just doesn't have a name for it</note>
         <note id="403">The land Three Houses is based in uses "x Moon" as the names for their months. Pegasus Moon is February</note>
         <note id="431">These are references to real supports - Dorothea and Byleth's B support, and Hubert and Bernie's C support</note>
+        <note id="499">Hilda's trying to figure out if Cheryl's into girls at all, and casually dropping that she isn't in a relationship herself. Feel free to have Cheryl realise this or not</note>
     </notes>
     <labels>
         <label id="23" label="High Card" folder="RoundOneReveal" sort="0" />
@@ -459,22 +459,71 @@ Hilda is dessert?</note>
         <label id="427" label="" folder="Noire Apology" sort="0" />
         <label id="428" label="" folder="Noire Apology" sort="0" />
         <label id="429" label="" folder="Noire Apology" sort="0" />
-        <label id="432" label="" color="1" folder="" sort="0" />
-        <label id="433" label="" color="1" folder="" sort="0" />
-        <label id="434" label="" color="1" folder="" sort="0" />
-        <label id="435" label="" color="1" folder="" sort="0" />
-        <label id="436" label="" color="1" folder="" sort="0" />
-        <label id="439" label="" color="1" folder="" sort="0" />
-        <label id="440" label="" color="1" folder="" sort="0" />
+        <label id="496" label="" color="1" folder="" sort="0" />
+        <label id="499" label="" color="1" folder="" sort="0" />
+        <label id="495" label="" folder="Miraculous Dual Forfeit" sort="0" />
         <label id="441" label="" color="1" folder="" sort="0" />
         <label id="442" label="" color="1" folder="" sort="0" />
         <label id="443" label="" color="1" folder="" sort="0" />
         <label id="444" label="" color="1" folder="" sort="0" />
+        <label id="445" label="" folder="Namedrops" sort="0" />
+        <label id="446" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="447" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="448" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="449" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="450" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="451" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="452" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="453" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="454" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="455" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="456" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="457" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="458" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="459" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="460" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="461" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="462" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="463" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="464" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="465" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="466" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="467" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="468" label="" folder="Sun-Drenched Nobility" sort="0" />
+        <label id="469" label="" color="1" folder="" sort="0" />
+        <label id="470" label="" color="1" folder="" sort="0" />
+        <label id="471" label="" color="1" folder="" sort="0" />
+        <label id="472" label="" color="1" folder="" sort="0" />
+        <label id="473" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="474" label="" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="475" label="" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="476" label="" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="477" label="" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="478" label="" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="479" label="" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="480" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="481" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="482" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="483" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="484" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="485" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="486" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="487" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="488" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="489" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="490" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="491" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="492" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="493" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="494" label="" color="1" folder="Miraculous Dual Forfeit" sort="0" />
+        <label id="497" label="" color="1" folder="" sort="0" />
+        <label id="498" label="" color="1" folder="" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>444</nextId>
+    <nextId>499</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="AaraviBloodBonds" />
         <marker scope="Public" name="AaraviBloodBonds2" />
         <marker scope="Public" name="AaraviBloodBonds3" />
@@ -619,9 +668,15 @@ Hilda is dessert?</note>
         <marker scope="Public" name="CaitlinHair" />
         <marker scope="Public" name="CharlieHappyDemon" />
         <marker scope="Public" name="CherylFriendlyFace" />
+        <marker scope="Public" name="CherylFriendlyFace2" />
+        <marker scope="Public" name="CherylFriendlyFace3" />
         <marker scope="Public" name="CherylJournaling" />
+        <marker scope="Public" name="CherylMilitaryAcademy" />
+        <marker scope="Public" name="CherylMilitaryAcademy2" />
         <marker scope="Public" name="CherylOutfit" />
+        <marker scope="Public" name="CherylOutfit2" />
         <marker scope="Public" name="CherylRelationships" />
+        <marker scope="Public" name="CherylRelationships2" />
         <marker scope="Public" name="ClericOpponent" />
         <marker scope="Public" name="ClothesVanishSeen" />
         <marker scope="Public" name="comingback">Hilda says she'll be returning to play strip poker - used to avoid repetition in lines.</marker>
@@ -897,6 +952,8 @@ Hilda is dessert?</note>
         <marker scope="Public" name="LeonBackgroundCheck" />
         <marker scope="Public" name="LeonBackgroundCheck2" />
         <marker scope="Public" name="LeonBackgroundCheck3" />
+        <marker scope="Public" name="LeonBackgroundCheck3-s" />
+        <marker scope="Public" name="LeonBackgroundCheck3swim" />
         <marker scope="Public" name="LeonBackgroundCheck4" />
         <marker scope="Public" name="LeonBanquetFlirt" />
         <marker scope="Public" name="LeonBoundHands" />
@@ -1085,6 +1142,7 @@ Hilda is dessert?</note>
         <marker scope="Public" name="MarinetteDistraction3" />
         <marker scope="Public" name="MarinetteDowntime" />
         <marker scope="Public" name="MarinetteDowntime2" />
+        <marker scope="Public" name="MarinetteDowntime3" />
         <marker scope="Public" name="MarinetteLuckyHelp" />
         <marker scope="Public" name="MarinetteLuckyHelp2" />
         <marker scope="Public" name="MarinetteLuckyHelp3" />
@@ -1093,6 +1151,7 @@ Hilda is dessert?</note>
         <marker scope="Public" name="MarinetteProfession3" />
         <marker scope="Public" name="MarinetteSelfEsteem" />
         <marker scope="Public" name="MarinetteSelfEsteem2" />
+        <marker scope="Public" name="MarinetteSelfEsteem3" />
         <marker scope="Public" name="MarinetteSuitOff" />
         <marker scope="Public" name="MarinetteSuitOff2" />
         <marker scope="Public" name="MarinetteSuitOff3" />
@@ -1177,7 +1236,16 @@ Hilda is dessert?</note>
         <marker scope="Public" name="MikiSchoolPressure2" />
         <marker scope="Public" name="MikuIdolLife" />
         <marker scope="Public" name="MikuTwintails" />
+        <marker scope="Public" name="MiraculousDualForfeitAResp" />
         <marker scope="Public" name="MiraculousDualForfeitBegin" />
+        <marker scope="Public" name="MiraculousDualForfeitBResp" />
+        <marker scope="Public" name="MiraculousDualForfeitCResp" />
+        <marker scope="Public" name="MiraculousDualForfeitDResp" />
+        <marker scope="Public" name="MiraculousDualForfeitEResp" />
+        <marker scope="Public" name="MiraculousDualForfeitFResp" />
+        <marker scope="Public" name="MiraculousDualForfeitHResp" />
+        <marker scope="Public" name="MiraculousDualForfeitJResp" />
+        <marker scope="Public" name="MiraculousDualForfeitKResp" />
         <marker scope="Public" name="MiraculousDuoAnimals" />
         <marker scope="Public" name="MiraculousDuoAnimals2" />
         <marker scope="Public" name="MiraculousDuoAnimals3" />
@@ -1492,6 +1560,24 @@ Hilda is dessert?</note>
         <marker scope="Public" name="SucroseToys" />
         <marker scope="Public" name="SucroseToys2" />
         <marker scope="Public" name="SucroseToys3" />
+        <marker scope="Public" name="SuzuyaBraBeforeShirt" />
+        <marker scope="Public" name="SuzuyaBraBeforeShirt2" />
+        <marker scope="Public" name="SuzuyaBraBeforeShirt2b" />
+        <marker scope="Public" name="SuzuyaButtons" />
+        <marker scope="Public" name="SuzuyaCompressionTops" />
+        <marker scope="Public" name="SuzuyaFashionistas" />
+        <marker scope="Public" name="SuzuyaFunStripOrder" />
+        <marker scope="Public" name="SuzuyaPromptBloodtypes" />
+        <marker scope="Public" name="SuzuyaPromptBuyersChoice" />
+        <marker scope="Public" name="SuzuyaPromptDateSpots" />
+        <marker scope="Public" name="SuzuyaPromptHoroscopes" />
+        <marker scope="Public" name="SuzuyaPromptImageChange" />
+        <marker scope="Public" name="SuzuyaPromptPraise" />
+        <marker scope="Public" name="SuzuyaUnderUniform" />
+        <marker scope="Public" name="SuzuyaUnderUniform2a" />
+        <marker scope="Public" name="SuzuyaUnderUniform2b" />
+        <marker scope="Public" name="SuzuyaUniformPanties" />
+        <marker scope="Public" name="SuzuyaUniformPolicy" />
         <marker scope="Public" name="SwimsuitNoWater" />
         <marker scope="Public" name="SwimsuitSkinnyDip" />
         <marker scope="Public" name="TakaDangerousDeer" />
