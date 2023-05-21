@@ -1009,6 +1009,8 @@
         <prefix>unlock</prefix>
         <prefix>epilogue_</prefix>
     </prefixes>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
     <nextId>877</nextId>
     <markers>
         <marker scope="Public" name="" />
@@ -1659,6 +1661,7 @@
         <marker scope="Public" name="spotted_palutena">Seen Palutena at game start</marker>
         <marker scope="Public" name="spotted_petra">Seen Petra at game start</marker>
         <marker scope="Public" name="spotted_petra_selfWar">Seen Petra at game start and Leonie is in her war outfit</marker>
+        <marker scope="Public" name="starting_FF_with_petra" />
         <marker scope="Public" name="stiff_dress_in_class" />
         <marker scope="Public" name="strip_0_lost_before_bernadetta">Dialogue with Bernie where Leonie lost first</marker>
         <marker scope="Public" name="strip_all_boots_and_socks">Leonie strips in a slightly different order based on her outfit. This marker helps narrow down what she is removing.</marker>
