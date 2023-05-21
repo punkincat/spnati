@@ -34,6 +34,7 @@
         <id>1211</id>
         <id>1210</id>
         <id>1212</id>
+        <id>1537</id>
     </hidden>
     <responses>
         <response id="1" opponent="lotte" opponentId="1" />
@@ -44,6 +45,13 @@
         <response id="6" opponent="sayaka" opponentId="3" />
         <response id="7" opponent="sayaka" opponentId="4" />
     </responses>
+    <notes>
+        <note id="1537">Refers to the game as a "simulation," an outdated scenario which is being removed.</note>
+        <note id="1209">Line references 9S' original dry orgasm climax, which has since been repaired. Disabled, as it no longer makes sense.</note>
+        <note id="1211">Line references 9S' original dry orgasm climax, which has since been repaired. Disabled, as it no longer makes sense.</note>
+        <note id="1210">Line references 9S' original dry orgasm climax, which has since been repaired. Disabled, as it no longer makes sense.</note>
+        <note id="1212">Line references 9S' original dry orgasm climax, which has since been repaired. Disabled, as it no longer makes sense.</note>
+    </notes>
     <labels>
         <label id="74" label="" color="2" folder="Ladybug" sort="219" />
         <label id="75" label="+ Streaming-chan" color="2" folder="Streaming-chan Also Playing" sort="158" />
@@ -131,7 +139,7 @@
         <label id="99" label="" color="2" folder="Ann" sort="180" />
         <label id="100" label="" color="2" folder="Alice" sort="179" />
         <label id="101" label="" color="2" folder="Chiaki" sort="182" />
-        <label id="102" label="" color="2" folder="Cammy" sort="181" />
+        <label id="102" label="" color="2" folder="Cammy_Classic" sort="181" />
         <label id="103" label="" color="2" folder="Chihiro" sort="184" />
         <label id="104" label="" color="2" folder="Chihiro" sort="183" />
         <label id="105" label="" color="2" folder="Chihiro" sort="186" />
@@ -335,12 +343,12 @@
         <label id="303" label="" color="2" folder="Alice" sort="352" />
         <label id="304" label="" color="2" folder="Remilia" sort="351" />
         <label id="305" label="" color="2" folder="Alice" sort="354" />
-        <label id="306" label="" color="2" folder="Cammy" sort="356" />
+        <label id="306" label="" color="2" folder="Cammy_Classic" sort="356" />
         <label id="307" label="" color="2" folder="Chihiro" sort="358" />
         <label id="308" label="" color="2" folder="Alice" sort="353" />
         <label id="309" label="" color="2" folder="Chihiro" sort="357" />
         <label id="310" label="" color="2" folder="D.Va" sort="360" />
-        <label id="311" label="" color="2" folder="Cammy" sort="355" />
+        <label id="311" label="" color="2" folder="Cammy_Classic" sort="355" />
         <label id="312" label="" color="2" folder="Futaba" sort="361" />
         <label id="313" label="" color="2" folder="Chihiro" sort="359" />
         <label id="314" label="" color="2" folder="Kyu" sort="363" />
@@ -413,9 +421,9 @@
         <label id="381" label="" color="2" folder="Alice" sort="417" />
         <label id="382" label="" color="2" folder="Corrin F" sort="414" />
         <label id="383" label="" color="2" folder="Chihiro" sort="421" />
-        <label id="384" label="" color="2" folder="Cammy" sort="419" />
+        <label id="384" label="" color="2" folder="Cammy_Classic" sort="419" />
         <label id="385" label="" color="2" folder="Chihiro" sort="422" />
-        <label id="386" label="" color="2" folder="Cammy" sort="420" />
+        <label id="386" label="" color="2" folder="Cammy_Classic" sort="420" />
         <label id="387" label="" color="2" folder="D.Va" sort="424" />
         <label id="388" label="" color="2" folder="Futaba" sort="426" />
         <label id="389" label="" color="2" folder="Daisy" sort="425" />
@@ -566,7 +574,7 @@
         <label id="533" label="" color="2" folder="Aimee" sort="534" />
         <label id="534" label="" color="2" folder="Futaba" sort="538" />
         <label id="535" label="" color="2" folder="Corrin F" sort="537" />
-        <label id="536" label="" color="2" folder="Kyoko" sort="540" />
+        <label id="536" label="" color="2" folder="Kyoko_Classic" sort="540" />
         <label id="537" label="" color="2" folder="Mavis" sort="544" />
         <label id="538" label="" color="2" folder="Futaba" sort="539" />
         <label id="539" label="" color="2" folder="Lotte" sort="542" />
@@ -1215,10 +1223,10 @@
         <label id="1206" label="" color="2" folder="Targets" sort="780" />
         <label id="1207" label="" color="2" folder="Targets" sort="779" />
         <label id="1208" label="" color="2" folder="Targets" sort="781" />
-        <label id="1209" label="" folder="Outdated Targets" sort="782" />
-        <label id="1210" label="" folder="Outdated Targets" sort="784" />
-        <label id="1211" label="" folder="Outdated Targets" sort="783" />
-        <label id="1212" label="" folder="Outdated Targets" sort="786" />
+        <label id="1209" label="" folder="Legacy" sort="782" />
+        <label id="1210" label="" folder="Legacy" sort="784" />
+        <label id="1211" label="" folder="Legacy" sort="783" />
+        <label id="1212" label="" folder="Legacy" sort="786" />
         <label id="1213" label="" color="2" folder="Targets" sort="785" />
         <label id="1214" label="+ Pit" color="2" folder="Futaba" sort="48" />
         <label id="1215" label="" color="2" folder="Futaba" sort="68" />
@@ -1416,7 +1424,7 @@
         <label id="1406" label="" color="2" folder="Targets" sort="3" />
         <label id="1407" label="" color="2" folder="Targets" sort="0" />
         <label id="1408" label="" color="2" folder="Targets" sort="2" />
-        <label id="1409" label="" folder="Conditionals" sort="2" />
+        <label id="1409" label="" folder="Background" sort="2" />
         <label id="1410" label="" folder="Player Sexuality" sort="2" />
         <label id="1411" label="" folder="Player Sexuality" sort="0" />
         <label id="1412" label="" folder="H Player Check" sort="0" />
@@ -1567,48 +1575,519 @@
         <label id="4" label="" color="2" folder="" sort="0" />
         <label id="1534" label="" color="2" folder="" sort="0" />
         <label id="1535" label="" color="5" folder="" sort="0" />
+        <label id="1536" label="" folder="Background" sort="0" />
+        <label id="1537" label="" folder="Legacy" sort="0" />
     </labels>
-    <onlyCustomPoses>false</onlyCustomPoses>
+    <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1535</nextId>
+    <nextId>1537</nextId>
     <markers>
         <marker scope="Public" name="2corrins">There are two Corrins present. </marker>
-        <marker scope="Public" name="9s_d.va_wager_accept">9S Accepts D.Va's sidebet. </marker>
         <marker scope="Public" name="9s_drinks">9S isn't quite sure what to drink, but he's down to get fucked up. </marker>
-        <marker scope="Public" name="9s_dva_wager_accept" />
-        <marker scope="Public" name="9s_favfoods" />
-        <marker scope="Public" name="9s_goron">9S isn't sure what a goron is. </marker>
-        <marker scope="Public" name="9s_others">2B+9S OTP</marker>
-        <marker scope="Public" name="9s_pit_hotsprings">9S wants to talk about hotsprings</marker>
-        <marker scope="Public" name="9s_pit_robot">9S refutes Pit's claim that he's a robot.</marker>
         <marker scope="Public" name="9s_seinal">9S responds to Sei's prompt marker. </marker>
-        <marker scope="Public" name="bracing_sayaka" />
+        <marker scope="Public" name="AdrienStrip0a_Stream_smell" />
+        <marker scope="Public" name="AdrienStrip27a_Stream_hookup" />
+        <marker scope="Public" name="AimeeStrip0a" />
+        <marker scope="Public" name="AimeeStrip0b" />
+        <marker scope="Public" name="AimeeStrip0c" />
+        <marker scope="Public" name="AimeeStrip1a" />
+        <marker scope="Public" name="AimeeStrip1b" />
+        <marker scope="Public" name="AimeeStrip1c" />
+        <marker scope="Public" name="AimeeStrip2a" />
+        <marker scope="Public" name="AimeeStrip2b" />
+        <marker scope="Public" name="AimeeStrip2c" />
+        <marker scope="Public" name="AimeeStrip3a" />
+        <marker scope="Public" name="AimeeStrip3b" />
+        <marker scope="Public" name="AimeeStrip3c" />
+        <marker scope="Public" name="AimeeStrip4a" />
+        <marker scope="Public" name="AimeeStrip4b" />
+        <marker scope="Public" name="AimeeStrip4c" />
+        <marker scope="Public" name="AliceStrip0a" />
+        <marker scope="Public" name="AliceStrip0b" />
+        <marker scope="Public" name="AliceStrip0c" />
+        <marker scope="Public" name="AliceStrip1a" />
+        <marker scope="Public" name="AliceStrip1b" />
+        <marker scope="Public" name="AliceStrip1c" />
+        <marker scope="Public" name="AliceStrip3a" />
+        <marker scope="Public" name="AliceStrip3b" />
+        <marker scope="Public" name="AliceStrip3c" />
+        <marker scope="Public" name="Amalia_NinesStrip0c" />
+        <marker scope="Public" name="AnnStrip0a" />
+        <marker scope="Public" name="AnnStrip0b" />
+        <marker scope="Public" name="AnnStrip0c" />
+        <marker scope="Public" name="Cammyclassic_NinesStrip5b" />
+        <marker scope="Public" name="Cammyclassic_NinesStrip5c" />
+        <marker scope="Public" name="CammyclassicStrip1b" />
+        <marker scope="Public" name="CammyclassicStrip1c" />
+        <marker scope="Public" name="CammyclassicStrip2b" />
+        <marker scope="Public" name="CammyclassicStrip2c" />
+        <marker scope="Public" name="CammyclassicStrip3b" />
+        <marker scope="Public" name="CammyclassicStrip3c" />
+        <marker scope="Public" name="CammyclassicStrip4a" />
+        <marker scope="Public" name="CammyclassicStrip4b" />
+        <marker scope="Public" name="CammyclassicStrip4c" />
         <marker scope="Public" name="chan_designate">9S is interested in Streaming-chan.</marker>
-        <marker scope="Public" name="chips_sayaka" />
+        <marker scope="Public" name="ChiakiStrip2a" />
+        <marker scope="Public" name="ChiakiStrip2b" />
+        <marker scope="Public" name="ChiakiStrip3b" />
+        <marker scope="Public" name="ChihiroStrip0a" />
+        <marker scope="Public" name="ChihiroStrip0b" />
+        <marker scope="Public" name="ChihiroStrip0c" />
+        <marker scope="Public" name="ChihiroStrip1a" />
+        <marker scope="Public" name="ChihiroStrip1b" />
+        <marker scope="Public" name="ChihiroStrip1c" />
+        <marker scope="Public" name="ChihiroStrip2a" />
+        <marker scope="Public" name="ChihiroStrip2b" />
+        <marker scope="Public" name="ChihiroStrip2c" />
+        <marker scope="Public" name="ChihiroStrip3a" />
+        <marker scope="Public" name="ChihiroStrip3b" />
+        <marker scope="Public" name="ChihiroStrip3c" />
+        <marker scope="Public" name="ChihiroStrip4a" />
+        <marker scope="Public" name="ChihiroStrip5a" />
+        <marker scope="Public" name="Chunli_NinesStrip5b" />
+        <marker scope="Public" name="Chunli_NinesStrip5c" />
+        <marker scope="Public" name="CorrinfStrip0a" />
+        <marker scope="Public" name="CorrinfStrip0b" />
+        <marker scope="Public" name="CorrinfStrip0c" />
+        <marker scope="Public" name="CorrinfStrip0c_Corrinm" />
+        <marker scope="Public" name="CorrinfStrip1a" />
+        <marker scope="Public" name="CorrinfStrip2b" />
+        <marker scope="Public" name="CorrinfStrip2c" />
+        <marker scope="Public" name="CorrinfStrip3b" />
+        <marker scope="Public" name="CorrinfStrip3c" />
+        <marker scope="Public" name="CorrinfStrip4a" />
+        <marker scope="Public" name="CorrinfStrip4b" />
+        <marker scope="Public" name="CorrinfStrip4c" />
+        <marker scope="Public" name="CorrinfStrip5" />
+        <marker scope="Public" name="CorrinfStrip5a" />
+        <marker scope="Public" name="CorrinfStrip5b" />
+        <marker scope="Public" name="CorrinfStrip5c" />
+        <marker scope="Public" name="CorrinfStrip6a" />
+        <marker scope="Public" name="CorrinfStrip6b" />
+        <marker scope="Public" name="CorrinfStrip6c" />
+        <marker scope="Public" name="CorrinmStrip0b" />
+        <marker scope="Public" name="CorrinmStrip0c" />
+        <marker scope="Public" name="CorrinmStrip1b" />
+        <marker scope="Public" name="CorrinmStrip1c" />
+        <marker scope="Public" name="CorrinmStrip2b" />
+        <marker scope="Public" name="CorrinmStrip2c" />
+        <marker scope="Public" name="CorrinmStrip3b" />
+        <marker scope="Public" name="CorrinmStrip3c" />
+        <marker scope="Public" name="CorrinmStrip4b" />
+        <marker scope="Public" name="CorrinmStrip4c" />
+        <marker scope="Public" name="CorrinmStrip5b" />
+        <marker scope="Public" name="CorrinmStrip5c" />
         <marker scope="Public" name="d.va_lost_bet" />
-        <marker scope="Public" name="D-Series.">9S converses with D.Va</marker>
+        <marker scope="Public" name="DaisyStrip1c" />
+        <marker scope="Private" name="D-Series.">Legacy marker on disabled lines.</marker>
         <marker scope="Public" name="duel_lost" />
+        <marker scope="Public" name="DvaHand_wager_accept">9S Accepts D.Va's sidebet. </marker>
+        <marker scope="Public" name="DvaStrip0a">9S Asks D.Va about her designation. </marker>
+        <marker scope="Public" name="DvaStrip0b" />
+        <marker scope="Public" name="DvaStrip0c" />
+        <marker scope="Public" name="Elizabeth_NinesStrip2c" />
+        <marker scope="Public" name="Elizabeth_NinesStrip4c" />
+        <marker scope="Public" name="ElizabethHand_Nines01_pulse">9S greets Elizabeth. </marker>
+        <marker scope="Public" name="Faye08_NinesStrip2c" />
+        <marker scope="Public" name="Filter_Acc_bald13c" />
+        <marker scope="Public" name="Filter_Acc_blackhair13b">9S comments on the target's black hair during an accessory removal.</marker>
+        <marker scope="Public" name="Filter_Acc_blonde13b">9S comments on the target's blonde hair during an accessory removal.</marker>
+        <marker scope="Public" name="Filter_Acc_bluehair13b">9S comments on the target's blue hair during an accessory removal.</marker>
+        <marker scope="Public" name="Filter_Acc_brunette13b">9S comments on the target's brunette hair during an accessory removal.</marker>
+        <marker scope="Public" name="Filter_Acc_exotichair13b">9S comments on the target's exotic hair color during an accessory removal.</marker>
+        <marker scope="Public" name="Filter_Acc_ginger13b">9S comments on the target's ginger hair during an accessory removal.</marker>
+        <marker scope="Public" name="Filter_Acc_greenhair13b">9S comments on the target's green hair during an accessory removal.</marker>
+        <marker scope="Public" name="Filter_Acc_longhair13c" />
+        <marker scope="Public" name="Filter_Acc_mediumhair13c" />
+        <marker scope="Public" name="Filter_Acc_pinkhair13b">9S comments on the target's pink hair during an accessory removal.</marker>
+        <marker scope="Public" name="Filter_Acc_purplehair13b">9S comments on the target's purple hair during an accessory removal.</marker>
+        <marker scope="Public" name="Filter_Acc_redhair13b">9S comments on the target's red hair during an accessory removal.</marker>
+        <marker scope="Public" name="Filter_Acc_shorthair13c" />
+        <marker scope="Public" name="Filter_Acc_superhero0a" />
+        <marker scope="Public" name="Filter_Acc_superhero0b" />
+        <marker scope="Public" name="Filter_Acc_superhero0c" />
+        <marker scope="Public" name="Filter_Acc_verylonghair13c" />
+        <marker scope="Public" name="Filter_FCrotch_hairy" />
+        <marker scope="Public" name="Filter_FCrotch_hairy_c" />
+        <marker scope="Public" name="Filter_FCrotch_shaved_c" />
+        <marker scope="Public" name="Filter_FCrotch_trimmed_c" />
+        <marker scope="Public" name="Filter_MCrotch_circumcised17c" />
+        <marker scope="Public" name="Filter_MCrotch_circumcised8c" />
+        <marker scope="Public" name="Filter_MCrotch_uncircumcised14c" />
+        <marker scope="Public" name="Filter_MCrotch_uncircumcised58c" />
         <marker scope="Public" name="futaba_juke_ask">9S responds to Futaba's prompt marker</marker>
+        <marker scope="Public" name="Futaba_NinesStrip0a" />
+        <marker scope="Public" name="Futaba_NinesStrip0b" />
+        <marker scope="Public" name="Futaba_NinesStrip0c" />
+        <marker scope="Public" name="Futaba_NinesStrip0c_Pit" />
+        <marker scope="Public" name="Futaba_NinesStrip1a" />
+        <marker scope="Public" name="Futaba_NinesStrip1b" />
+        <marker scope="Public" name="Futaba_NinesStrip1c" />
+        <marker scope="Public" name="Futaba_NinesStrip1c_Pit" />
+        <marker scope="Public" name="Futaba_NinesStrip2b" />
+        <marker scope="Public" name="Futaba_NinesStrip2c" />
+        <marker scope="Public" name="Futaba_NinesStrip3b" />
+        <marker scope="Public" name="Futaba_NinesStrip3c" />
+        <marker scope="Public" name="Futaba_NinesStrip3c_Pit" />
+        <marker scope="Public" name="Futaba_NinesStrip3c_Rinkah" />
+        <marker scope="Public" name="Futaba_NinesStrip4b" />
+        <marker scope="Public" name="Futaba_NinesStrip4c" />
+        <marker scope="Public" name="Futaba_NinesStrip4c_Pit" />
+        <marker scope="Public" name="Futaba_NinesStrip5b" />
+        <marker scope="Public" name="Futaba_NinesStrip5c" />
+        <marker scope="Public" name="FutabaStrip0a" />
+        <marker scope="Public" name="FutabaStrip0b" />
+        <marker scope="Public" name="FutabaStrip0c" />
+        <marker scope="Public" name="FutabaStrip1a" />
+        <marker scope="Public" name="FutabaStrip1b" />
+        <marker scope="Public" name="FutabaStrip1c" />
+        <marker scope="Public" name="FutabaStrip2a" />
+        <marker scope="Public" name="FutabaStrip2b" />
+        <marker scope="Public" name="FutabaStrip2c" />
+        <marker scope="Public" name="FutabaStrip3a" />
+        <marker scope="Public" name="FutabaStrip3b" />
+        <marker scope="Public" name="FutabaStrip4a" />
+        <marker scope="Public" name="FutabaStrip4b" />
+        <marker scope="Public" name="FutabaStrip4c" />
+        <marker scope="Public" name="FutabaStrip5a" />
+        <marker scope="Public" name="FutabaStrip5b" />
+        <marker scope="Public" name="FutabaStrip5c" />
         <marker scope="Public" name="great_hands" />
-        <marker scope="Public" name="hi_liz">9S greets Elizabeth. </marker>
-        <marker scope="Public" name="hinayru">9S greets Nayru. </marker>
-        <marker scope="Public" name="jura_intro" />
-        <marker scope="Public" name="jura_nips" />
-        <marker scope="Public" name="jura_tech" />
-        <marker scope="Public" name="machine_rude">9S finds it rude to be compared to a machine. </marker>
-        <marker scope="Public" name="monika_challenge">9S engages Monika in a coding duel. </marker>
-        <marker scope="Private" name="player_female_bicurious">The female human player is straight, but bi-curious.</marker>
-        <marker scope="Private" name="player_female_bisexual">The female human player is bisexual.</marker>
-        <marker scope="Private" name="player_female_lesbian">The female human player is a lesbian.</marker>
-        <marker scope="Private" name="player_female_rev_bicurious">The female human player is a lesbian, but bi-curious.</marker>
-        <marker scope="Private" name="player_female_straight">The female human player is straight.</marker>
-        <marker scope="Private" name="player_female_untagged">The female human player has no sexuality tag selected.</marker>
-        <marker scope="Private" name="player_male_bicurious">The male human player is straight, but bi-curious.</marker>
-        <marker scope="Private" name="player_male_bisexual">The male human player is bisexual.</marker>
-        <marker scope="Private" name="player_male_gay">The male human player is gay.</marker>
-        <marker scope="Private" name="player_male_rev_bicurious">The male human player is gay, but bi-curious.</marker>
-        <marker scope="Private" name="player_male_straight">The male human player is straight.</marker>
-        <marker scope="Private" name="player_male_untagged">The male human player has no sexuality tag selected.</marker>
+        <marker scope="Public" name="HaruStrip2a" />
+        <marker scope="Public" name="HaruStrip3b" />
+        <marker scope="Public" name="HaruStrip3c" />
+        <marker scope="Public" name="HaruStrip4a" />
+        <marker scope="Public" name="HaruStrip4b" />
+        <marker scope="Public" name="HaruStrip4c" />
+        <marker scope="Public" name="HaruStrip5a" />
+        <marker scope="Public" name="HaruStrip5b" />
+        <marker scope="Public" name="HaruStrip6a" />
+        <marker scope="Public" name="HaruStrip6b" />
+        <marker scope="Public" name="HaruStrip6c" />
+        <marker scope="Private" name="hidden_playerF_bicurious">The female human player is straight, but bi-curious.</marker>
+        <marker scope="Private" name="hidden_playerF_bisexual">The female human player is bisexual.</marker>
+        <marker scope="Private" name="hidden_playerF_lesbian">The female human player is a lesbian.</marker>
+        <marker scope="Private" name="hidden_playerF_rev_bicurious">The female human player is a lesbian, but bi-curious.</marker>
+        <marker scope="Private" name="hidden_playerF_straight">The female human player is straight.</marker>
+        <marker scope="Private" name="hidden_playerF_untagged">The female human player has no sexuality tag selected.</marker>
+        <marker scope="Private" name="hidden_playerM_bicurious">The male human player is straight, but bi-curious.</marker>
+        <marker scope="Private" name="hidden_playerM_bisexual">The male human player is bisexual.</marker>
+        <marker scope="Private" name="hidden_playerM_gay">The male human player is gay.</marker>
+        <marker scope="Private" name="hidden_playerM_rev_bicurious">The male human player is gay, but bi-curious.</marker>
+        <marker scope="Private" name="hidden_playerM_straight">The male human player is straight.</marker>
+        <marker scope="Private" name="hidden_playerM_untagged">The male human player has no sexuality tag selected.</marker>
+        <marker scope="Private" name="hidden_table_count_five">The table has the full number of players.</marker>
+        <marker scope="Private" name="hidden_table_count_four">There are only four players at the table.</marker>
+        <marker scope="Private" name="hidden_table_count_three">There are only three players at the table.</marker>
+        <marker scope="Private" name="hidden_T-C3-F0">The player is male, and has chosen 9S and one other male character. There are no women.</marker>
+        <marker scope="Private" name="hidden_T-C3-F1-PF">The player is female, and has chosen 9S and one other male character.</marker>
+        <marker scope="Private" name="hidden_T-C3-F1-PM">The player is male, and has chosen 9S and one female character.</marker>
+        <marker scope="Private" name="hidden_T-C3-M1">The player is female, and has chosen 9S and one female character. There are no other men.</marker>
+        <marker scope="Private" name="hidden_T-C45-F0">The player is male, and has chosen 9S and two to three other male characters. There are no women.</marker>
+        <marker scope="Private" name="hidden_T-C45-F1-PF">The player is female, and has chosen four to five male characters.</marker>
+        <marker scope="Private" name="hidden_T-C45-F1-PM">The player is male, and has chosen one female character out of the four to five present.</marker>
+        <marker scope="Private" name="hidden_T-C45-M1">The player is female, and has chosen 9S and two to three female characters. There are no other men.</marker>
+        <marker scope="Public" name="HK41607_NinesStrip0b" />
+        <marker scope="Public" name="JinStrip0c" />
+        <marker scope="Public" name="JinStrip1a" />
+        <marker scope="Public" name="JinStrip1b" />
+        <marker scope="Public" name="JinStrip1c" />
+        <marker scope="Public" name="JinStrip2a" />
+        <marker scope="Public" name="JinStrip2b" />
+        <marker scope="Public" name="JinStrip2c" />
+        <marker scope="Public" name="JinStrip3a" />
+        <marker scope="Public" name="JinStrip3b" />
+        <marker scope="Public" name="JinStrip3c" />
+        <marker scope="Public" name="JinStrip4a" />
+        <marker scope="Public" name="JinStrip4b" />
+        <marker scope="Public" name="JinStrip4c" />
+        <marker scope="Public" name="JinStrip5a" />
+        <marker scope="Public" name="JinStrip5b" />
+        <marker scope="Public" name="JinStrip5c" />
+        <marker scope="Public" name="JinStrip6a" />
+        <marker scope="Public" name="JinStrip6b" />
+        <marker scope="Public" name="JinStrip6c" />
+        <marker scope="Public" name="JotaroStrip0a" />
+        <marker scope="Public" name="JotaroStrip0c" />
+        <marker scope="Public" name="JotaroStrip0c_Remilia05" />
+        <marker scope="Public" name="JotaroStrip1b" />
+        <marker scope="Public" name="JotaroStrip1c" />
+        <marker scope="Public" name="JotaroStrip2a" />
+        <marker scope="Public" name="JotaroStrip2b" />
+        <marker scope="Public" name="JotaroStrip2c" />
+        <marker scope="Public" name="JotaroStrip3a" />
+        <marker scope="Public" name="JotaroStrip3b" />
+        <marker scope="Public" name="JotaroStrip3c" />
+        <marker scope="Public" name="JotaroStrip4a" />
+        <marker scope="Public" name="JotaroStrip4b" />
+        <marker scope="Public" name="JotaroStrip4c" />
+        <marker scope="Public" name="JotaroStrip5a" />
+        <marker scope="Public" name="JotaroStrip5b" />
+        <marker scope="Public" name="JotaroStrip5b_Futaba" />
+        <marker scope="Public" name="JotaroStrip5c" />
+        <marker scope="Public" name="JotaroStrip6b" />
+        <marker scope="Public" name="JotaroStrip6c" />
+        <marker scope="Public" name="Jura_NinesMast_1" />
+        <marker scope="Public" name="Jura_NinesStrip0a" />
+        <marker scope="Public" name="Jura_NinesStrip2b" />
+        <marker scope="Public" name="Jura_NinesStrip2c_nips" />
+        <marker scope="Public" name="Jura_NinesStrip2c_tech" />
+        <marker scope="Public" name="Jura_NinesStrip4c" />
+        <marker scope="Public" name="Jura_NinesStrip5a" />
+        <marker scope="Public" name="Jura_NinesStrip5b" />
+        <marker scope="Public" name="Juri_NinesStrip0a" />
+        <marker scope="Public" name="Juri_NinesStrip5b" />
+        <marker scope="Public" name="Juri_NinesStrip5c" />
+        <marker scope="Public" name="KaminaStrip0a" />
+        <marker scope="Public" name="KaminaStrip0b" />
+        <marker scope="Public" name="KaminaStrip0c" />
+        <marker scope="Public" name="KaminaStrip1a" />
+        <marker scope="Public" name="KaminaStrip1b" />
+        <marker scope="Public" name="KaminaStrip1c" />
+        <marker scope="Public" name="KaminaStrip2a" />
+        <marker scope="Public" name="KaminaStrip2b" />
+        <marker scope="Public" name="KaminaStrip2c" />
+        <marker scope="Public" name="KaminaStrip3a" />
+        <marker scope="Public" name="KaminaStrip3b" />
+        <marker scope="Public" name="KaminaStrip3c" />
+        <marker scope="Public" name="KaminaStrip4a" />
+        <marker scope="Public" name="KaminaStrip4b" />
+        <marker scope="Public" name="KaminaStrip5a" />
+        <marker scope="Public" name="KaminaStrip5b" />
+        <marker scope="Public" name="KaminaStrip5c" />
+        <marker scope="Public" name="KaminaStrip6a" />
+        <marker scope="Public" name="KaminaStrip6b" />
+        <marker scope="Public" name="KaminaStrip6c" />
+        <marker scope="Public" name="KiraStrip0a" />
+        <marker scope="Public" name="KiraStrip0b" />
+        <marker scope="Public" name="KiraStrip0c" />
+        <marker scope="Public" name="KiraStrip1a" />
+        <marker scope="Public" name="KiraStrip1b" />
+        <marker scope="Public" name="KiraStrip1c" />
+        <marker scope="Public" name="KiraStrip4b" />
+        <marker scope="Public" name="KiraStrip4c" />
+        <marker scope="Public" name="KiraStrip6b" />
+        <marker scope="Public" name="KiraStrip6c" />
+        <marker scope="Public" name="KiraStrip7a" />
+        <marker scope="Public" name="KyokoclassicStrip5c" />
+        <marker scope="Public" name="KyuStrip0a" />
+        <marker scope="Public" name="KyuStrip0b" />
+        <marker scope="Public" name="KyuStrip0c" />
+        <marker scope="Public" name="KyuStrip1a" />
+        <marker scope="Public" name="KyuStrip1b" />
+        <marker scope="Public" name="KyuStrip1c" />
+        <marker scope="Public" name="KyuStrip2a" />
+        <marker scope="Public" name="KyuStrip2b" />
+        <marker scope="Public" name="KyuStrip2c" />
+        <marker scope="Public" name="KyuStrip3a" />
+        <marker scope="Public" name="KyuStrip4a" />
+        <marker scope="Public" name="KyuStrip4b" />
+        <marker scope="Public" name="KyuStrip4c" />
+        <marker scope="Public" name="KyuStrip5a" />
+        <marker scope="Public" name="KyuStrip5b" />
+        <marker scope="Public" name="KyuStrip5c" />
+        <marker scope="Public" name="LotteStrip0b" />
+        <marker scope="Public" name="LotteStrip0c" />
+        <marker scope="Public" name="LotteStrip0c_Futaba" />
+        <marker scope="Public" name="LotteStrip1a" />
+        <marker scope="Public" name="LotteStrip1c" />
+        <marker scope="Public" name="LotteStrip2a" />
+        <marker scope="Public" name="LotteStrip2b" />
+        <marker scope="Public" name="LotteStrip2b_Futaba" />
+        <marker scope="Public" name="LotteStrip2c" />
+        <marker scope="Public" name="LotteStrip2c_Futaba" />
+        <marker scope="Public" name="LotteStrip3a" />
+        <marker scope="Public" name="LotteStrip3b" />
+        <marker scope="Public" name="LotteStrip3b_Futaba" />
+        <marker scope="Public" name="LotteStrip3c" />
+        <marker scope="Public" name="LotteStrip3c_Futaba" />
+        <marker scope="Public" name="LotteStrip4a" />
+        <marker scope="Public" name="LotteStrip4b" />
+        <marker scope="Public" name="LotteStrip4c" />
+        <marker scope="Public" name="LotteStrip5a" />
+        <marker scope="Public" name="LotteStrip5b" />
+        <marker scope="Public" name="LotteStrip5c" />
+        <marker scope="Public" name="LotteStrip6a" />
+        <marker scope="Public" name="LotteStrip6b" />
+        <marker scope="Public" name="LotteStrip6c" />
+        <marker scope="Public" name="Mahiru_NinesStrip2c" />
+        <marker scope="Public" name="Mahiru_NinesStrip5c" />
+        <marker scope="Public" name="Mahiru07_NinesStrip0b" />
+        <marker scope="Public" name="Mahiru07_NinesStrip2b" />
+        <marker scope="Public" name="Mahiru07_NinesStrip3b" />
+        <marker scope="Public" name="Mahiru07_NinesStrip3c" />
+        <marker scope="Public" name="Mahiru07_NinesStrip4c" />
+        <marker scope="Public" name="MahiruStrip0a" />
+        <marker scope="Public" name="MahiruStrip0b" />
+        <marker scope="Public" name="MahiruStrip0c" />
+        <marker scope="Public" name="MahiruStrip1a" />
+        <marker scope="Public" name="MahiruStrip1b" />
+        <marker scope="Public" name="MahiruStrip1c" />
+        <marker scope="Public" name="MahiruStrip4c" />
+        <marker scope="Public" name="MahiruStrip5a" />
+        <marker scope="Public" name="MahiruStrip5b" />
+        <marker scope="Public" name="MahiruStrip6b" />
+        <marker scope="Public" name="MahiruStrip6c" />
+        <marker scope="Public" name="MarinetteStrip0a" />
+        <marker scope="Public" name="MarinetteStrip0b" />
+        <marker scope="Public" name="MarinetteStrip0c" />
+        <marker scope="Public" name="MarinetteStrip1a" />
+        <marker scope="Public" name="MarinetteStrip1b" />
+        <marker scope="Public" name="MarinetteStrip1c" />
+        <marker scope="Public" name="MarinetteStrip2a" />
+        <marker scope="Public" name="MarinetteStrip2b" />
+        <marker scope="Public" name="MarinetteStrip2c" />
+        <marker scope="Public" name="MarinetteStrip3a" />
+        <marker scope="Public" name="MarinetteStrip3b" />
+        <marker scope="Public" name="MarinetteStrip3c" />
+        <marker scope="Public" name="MarinetteStrip4a" />
+        <marker scope="Public" name="MarinetteStrip4b" />
+        <marker scope="Public" name="MarinetteStrip4c" />
+        <marker scope="Public" name="MarinetteStrip5a" />
+        <marker scope="Public" name="MarinetteStrip5b" />
+        <marker scope="Public" name="MarinetteStrip5c" />
+        <marker scope="Public" name="MarinetteStrip6a" />
+        <marker scope="Public" name="MarinetteStrip6b" />
+        <marker scope="Public" name="Mavis_NinesStrip2c" />
+        <marker scope="Public" name="Mavis_NinesStrip5b" />
+        <marker scope="Public" name="Mavis_NinesStrip5c" />
+        <marker scope="Public" name="MavisStrip0a" />
+        <marker scope="Public" name="MavisStrip0b" />
+        <marker scope="Public" name="MavisStrip0c" />
+        <marker scope="Public" name="MavisStrip1a" />
+        <marker scope="Public" name="MavisStrip1b" />
+        <marker scope="Public" name="MavisStrip1c" />
+        <marker scope="Public" name="MavisStrip2a" />
+        <marker scope="Public" name="MavisStrip2b" />
+        <marker scope="Public" name="MavisStrip2c" />
+        <marker scope="Public" name="MavisStrip3a" />
+        <marker scope="Public" name="MavisStrip3b" />
+        <marker scope="Public" name="MavisStrip3c" />
+        <marker scope="Public" name="MavisStrip4a" />
+        <marker scope="Public" name="MavisStrip4b" />
+        <marker scope="Public" name="MavisStrip4c" />
+        <marker scope="Public" name="MavisStrip5a" />
+        <marker scope="Public" name="MavisStrip5b" />
+        <marker scope="Public" name="MavisStrip5c" />
+        <marker scope="Public" name="MegStrip0a" />
+        <marker scope="Public" name="MegStrip0b" />
+        <marker scope="Public" name="MegStrip0c" />
+        <marker scope="Public" name="MegStrip4b" />
+        <marker scope="Public" name="MegStrip4c" />
+        <marker scope="Public" name="Meia_NinesStrip0b" />
+        <marker scope="Public" name="Meia_NinesStrip0c" />
+        <marker scope="Public" name="Meia_NinesStrip1b" />
+        <marker scope="Public" name="Meia_NinesStrip1c" />
+        <marker scope="Public" name="Meia_NinesStrip2b">9S finds it rude to be compared to a machine. </marker>
+        <marker scope="Public" name="Meia_NinesStrip2b_rude" />
+        <marker scope="Public" name="Meia_NinesStrip2c" />
+        <marker scope="Public" name="Meia_NinesStrip4b" />
+        <marker scope="Public" name="Meia_NinesStrip4c" />
+        <marker scope="Public" name="Meia_NinesStrip5b" />
+        <marker scope="Public" name="Meia_NinesStrip5c" />
+        <marker scope="Public" name="MeiaStrip0a" />
+        <marker scope="Public" name="MeiaStrip0b" />
+        <marker scope="Public" name="MeiaStrip0c" />
+        <marker scope="Public" name="MeiaStrip1a" />
+        <marker scope="Public" name="MeiaStrip1b" />
+        <marker scope="Public" name="MeiaStrip1c" />
+        <marker scope="Public" name="MeiaStrip2a" />
+        <marker scope="Public" name="MeiaStrip2b" />
+        <marker scope="Public" name="MeiaStrip2c" />
+        <marker scope="Public" name="MeiaStrip3b" />
+        <marker scope="Public" name="MeiaStrip3c" />
+        <marker scope="Public" name="MeiaStrip4a" />
+        <marker scope="Public" name="MeiaStrip4b" />
+        <marker scope="Public" name="MeiaStrip4c" />
+        <marker scope="Public" name="Mention_2B">9S mentions 2B, the female YoRHa combat unit assigned as his partner.</marker>
+        <marker scope="Public" name="Mention_machinelifeforms">9S mentions machine lifeforms, YoRHa's sworn enemy. They are the robotic soldiers who have conquered Earth for an invading alien race.</marker>
+        <marker scope="Public" name="Mention_oldworld">9S mentions the Old World, what androids call the time period when humans still inhabited Earth.</marker>
+        <marker scope="Public" name="Mention_resistance">9S mentions the Resistance, the non-YoRHa android forces who live on Earth and fight to rid it of machine lifeforms.</marker>
+        <marker scope="Public" name="MercyStrip0a" />
+        <marker scope="Public" name="MercyStrip0b" />
+        <marker scope="Public" name="MercyStrip0c" />
+        <marker scope="Public" name="MercyStrip1a" />
+        <marker scope="Public" name="MercyStrip1b" />
+        <marker scope="Public" name="MercyStrip1c" />
+        <marker scope="Public" name="MettatonclassicStrip0a" />
+        <marker scope="Public" name="MettatonclassicStrip0b" />
+        <marker scope="Public" name="MettatonclassicStrip0c" />
+        <marker scope="Public" name="Misato_NinesStrip0b" />
+        <marker scope="Public" name="Misato_NinesStrip0c" />
+        <marker scope="Public" name="Misato_NinesStrip5b" />
+        <marker scope="Public" name="Misato_NinesStrip5c" />
+        <marker scope="Public" name="MonikaHand_challenge">9S engages Monika in a coding duel. </marker>
+        <marker scope="Public" name="MonikaStrip0b" />
+        <marker scope="Public" name="MonikaStrip0c" />
+        <marker scope="Public" name="MonikaStrip1a" />
+        <marker scope="Public" name="MonikaStrip1b" />
+        <marker scope="Public" name="MonikaStrip1c" />
+        <marker scope="Public" name="MonikaStrip2a" />
+        <marker scope="Public" name="MonikaStrip2b" />
+        <marker scope="Public" name="MonikaStrip2c" />
+        <marker scope="Public" name="MulanHand_matchmaking">2B+9S OTP</marker>
+        <marker scope="Public" name="MulanStrip0a" />
+        <marker scope="Public" name="Nayru04_NinesStrip0b" />
+        <marker scope="Public" name="NayruHand_goron">9S isn't sure what a goron is. </marker>
+        <marker scope="Public" name="NayruHand_Nines01_name">9S greets Nayru. </marker>
+        <marker scope="Public" name="NeoStrip0a" />
+        <marker scope="Public" name="NeoStrip0b" />
+        <marker scope="Public" name="NeoStrip0c" />
+        <marker scope="Public" name="Ochako_NinesStrip0b" />
+        <marker scope="Public" name="Ochako_NinesStrip0c" />
+        <marker scope="Public" name="Ochako_NinesStrip1b" />
+        <marker scope="Public" name="Ochako_NinesStrip2b" />
+        <marker scope="Public" name="Ochako_NinesStrip2c" />
+        <marker scope="Public" name="OchakoStrip0a" />
+        <marker scope="Public" name="OchakoStrip0b" />
+        <marker scope="Public" name="OchakoStrip0c" />
+        <marker scope="Public" name="OchakoStrip1a" />
+        <marker scope="Public" name="OchakoStrip1b" />
+        <marker scope="Public" name="OchakoStrip1c" />
+        <marker scope="Public" name="OchakoStrip2a" />
+        <marker scope="Public" name="OchakoStrip2b" />
+        <marker scope="Public" name="OchakoStrip2c" />
+        <marker scope="Public" name="OchakoStrip3a" />
+        <marker scope="Public" name="OchakoStrip3b" />
+        <marker scope="Public" name="OchakoStrip3c" />
+        <marker scope="Public" name="Palutena_NinesStrip0b" />
+        <marker scope="Public" name="Palutena07_NinesStrip0c" />
+        <marker scope="Public" name="Palutena07_NinesStrip1c" />
+        <marker scope="Public" name="Palutena07_NinesStrip2b" />
+        <marker scope="Public" name="Palutena07_NinesStrip2c" />
+        <marker scope="Public" name="Palutena07_NinesStrip3b" />
+        <marker scope="Public" name="Palutena07_NinesStrip4c" />
+        <marker scope="Public" name="PalutenaStrip0a" />
+        <marker scope="Public" name="Pit_NinesAfter_hotsprings">9S wants to talk about hotsprings</marker>
+        <marker scope="Public" name="Pit_NinesStrip0b" />
+        <marker scope="Public" name="Pit_NinesStrip0c" />
+        <marker scope="Public" name="Pit_NinesStrip1c" />
+        <marker scope="Public" name="Pit_NinesStrip2b" />
+        <marker scope="Public" name="Pit_NinesStrip3c" />
+        <marker scope="Public" name="Pit_NinesStrip4c" />
+        <marker scope="Public" name="Pit_NinesStrip5c" />
+        <marker scope="Public" name="Pit03_NinesStrip2c">9S refutes Pit's claim that he's a robot.</marker>
+        <marker scope="Public" name="Pit03_NinesStrip2c_robot" />
+        <marker scope="Public" name="Pit47_NinesStrip2c" />
+        <marker scope="Public" name="PitHand_favfoods" />
+        <marker scope="Public" name="PitStrip0a" />
+        <marker scope="Public" name="PitStrip0a_Annie" />
+        <marker scope="Public" name="PitStrip0a_Marinette" />
+        <marker scope="Public" name="PitStrip0a_Meia" />
+        <marker scope="Public" name="PitStrip0a_Palutena" />
+        <marker scope="Public" name="PitStrip0b" />
+        <marker scope="Public" name="PitStrip0c" />
+        <marker scope="Public" name="PitStrip1a" />
+        <marker scope="Public" name="PitStrip1b" />
+        <marker scope="Public" name="PitStrip1b_Marinette" />
+        <marker scope="Public" name="PitStrip1b_Meia" />
+        <marker scope="Public" name="PitStrip1b_Palutena" />
+        <marker scope="Public" name="PitStrip1c" />
+        <marker scope="Public" name="PitStrip3b" />
+        <marker scope="Public" name="PitStrip3b_Palutena" />
+        <marker scope="Public" name="PitStrip3c" />
+        <marker scope="Public" name="PitStrip4b" />
+        <marker scope="Public" name="PitStrip4c" />
         <marker scope="Private" name="player1" />
         <marker scope="Private" name="player2" />
         <marker scope="Private" name="player3" />
@@ -1617,26 +2096,231 @@
         <marker scope="Private" name="player6" />
         <marker scope="Public" name="pod_135">9S announces the presence of his support Pod. </marker>
         <marker scope="Public" name="pod_153" />
-        <marker scope="Public" name="rensouhou">Shimakaze and 9S discuss their buddies. </marker>
-        <marker scope="Public" name="shima_recon">Shimakaze and 9S discuss their buddies. </marker>
+        <marker scope="Public" name="RavenStrip0a" />
+        <marker scope="Public" name="RavenStrip0b" />
+        <marker scope="Public" name="RavenStrip0c" />
+        <marker scope="Public" name="RavenStrip1a" />
+        <marker scope="Public" name="RavenStrip1b" />
+        <marker scope="Public" name="RavenStrip1c" />
+        <marker scope="Public" name="RavenStrip2a" />
+        <marker scope="Public" name="RavenStrip2b" />
+        <marker scope="Public" name="RavenStrip2c" />
+        <marker scope="Public" name="RavenStrip3a_Nines03" />
+        <marker scope="Public" name="RavenStrip3a_Nines48" />
+        <marker scope="Public" name="RavenStrip3b" />
+        <marker scope="Public" name="RavenStrip3c" />
+        <marker scope="Public" name="RavenStrip4a" />
+        <marker scope="Public" name="RavenStrip4b" />
+        <marker scope="Public" name="RavenStrip4c" />
+        <marker scope="Public" name="RemiliaStrip0a" />
+        <marker scope="Public" name="RemiliaStrip0c" />
+        <marker scope="Public" name="RemiliaStrip1a" />
+        <marker scope="Public" name="RemiliaStrip1b" />
+        <marker scope="Public" name="RemiliaStrip1b_Nines06" />
+        <marker scope="Public" name="RemiliaStrip1b_Nines78" />
+        <marker scope="Public" name="RemiliaStrip1c" />
+        <marker scope="Public" name="RemiliaStrip3a" />
+        <marker scope="Public" name="RemiliaStrip3b" />
+        <marker scope="Public" name="RemiliaStrip3c" />
+        <marker scope="Public" name="RemiliaStrip4a" />
+        <marker scope="Public" name="RemiliaStrip4b" />
+        <marker scope="Public" name="RemiliaStrip4c" />
+        <marker scope="Public" name="RemiliaStrip5a" />
+        <marker scope="Public" name="RemiliaStrip5b" />
+        <marker scope="Public" name="RemiliaStrip5c" />
+        <marker scope="Public" name="RevyStrip0a" />
+        <marker scope="Public" name="RevyStrip0b" />
+        <marker scope="Public" name="RevyStrip0c" />
+        <marker scope="Public" name="RevyStrip1a" />
+        <marker scope="Public" name="RevyStrip1b" />
+        <marker scope="Public" name="RevyStrip1c" />
+        <marker scope="Public" name="Rinkah_NinesStrip0b" />
+        <marker scope="Public" name="Rinkah_NinesStrip0c" />
+        <marker scope="Public" name="Rinkah_NinesStrip5b" />
+        <marker scope="Public" name="Rinkah_NinesStrip5c" />
+        <marker scope="Public" name="RinkahStrip0a" />
+        <marker scope="Public" name="RinkahStrip0b" />
+        <marker scope="Public" name="RinkahStrip0c" />
+        <marker scope="Public" name="RyujiStrip" />
+        <marker scope="Public" name="RyujiStrip0a" />
+        <marker scope="Public" name="RyujiStrip0b" />
+        <marker scope="Public" name="RyujiStrip0c" />
+        <marker scope="Public" name="RyujiStrip1a" />
+        <marker scope="Public" name="RyujiStrip1b" />
+        <marker scope="Public" name="RyujiStrip2a" />
+        <marker scope="Public" name="RyujiStrip2b" />
+        <marker scope="Public" name="RyujiStrip2c" />
+        <marker scope="Public" name="RyujiStrip3a" />
+        <marker scope="Public" name="RyujiStrip3b" />
+        <marker scope="Public" name="RyujiStrip3c_Nines03" />
+        <marker scope="Public" name="RyujiStrip3c_Nines46" />
+        <marker scope="Public" name="RyujiStrip3c_Nines78" />
+        <marker scope="Public" name="RyujiStrip4a" />
+        <marker scope="Public" name="RyujiStrip4b" />
+        <marker scope="Public" name="RyujiStrip4c" />
+        <marker scope="Public" name="RyujiStrip5a" />
+        <marker scope="Public" name="RyujiStrip5b" />
+        <marker scope="Public" name="RyujiStrip5c" />
+        <marker scope="Public" name="RyujiStrip6b" />
+        <marker scope="Public" name="RyujiStrip6c" />
+        <marker scope="Public" name="RyukoStrip0a" />
+        <marker scope="Public" name="RyukoStrip0b" />
+        <marker scope="Public" name="RyukoStrip0c" />
+        <marker scope="Public" name="RyukoStrip1a" />
+        <marker scope="Public" name="RyukoStrip1b" />
+        <marker scope="Public" name="RyukoStrip1c" />
+        <marker scope="Public" name="RyukoStrip2a" />
+        <marker scope="Public" name="RyukoStrip2b" />
+        <marker scope="Public" name="RyukoStrip2c" />
+        <marker scope="Public" name="RyukoStrip3a" />
+        <marker scope="Public" name="RyukoStrip3b" />
+        <marker scope="Public" name="RyukoStrip4a" />
+        <marker scope="Public" name="RyukoStrip4b" />
+        <marker scope="Public" name="RyukoStrip4c" />
+        <marker scope="Public" name="Saki_NinesStrip0b" />
+        <marker scope="Public" name="SakiStrip0a" />
+        <marker scope="Public" name="SakiStrip0b" />
+        <marker scope="Public" name="SakiStrip0c" />
+        <marker scope="Public" name="SakiStrip1a" />
+        <marker scope="Public" name="SakiStrip1b" />
+        <marker scope="Public" name="SakiStrip1b_kind" />
+        <marker scope="Public" name="SakiStrip1b_mean" />
+        <marker scope="Public" name="SakiStrip1c" />
+        <marker scope="Public" name="SakiStrip2a" />
+        <marker scope="Public" name="SakiStrip2b" />
+        <marker scope="Public" name="SakiStrip2c" />
+        <marker scope="Public" name="Sayaka_NinesStrip0b" />
+        <marker scope="Public" name="Sayaka_NinesStrip0c" />
+        <marker scope="Public" name="SayakaStrip0a" />
+        <marker scope="Public" name="SayakaStrip0b" />
+        <marker scope="Public" name="SayakaStrip0c" />
+        <marker scope="Public" name="SayakaStrip0c_Futaba" />
+        <marker scope="Public" name="SayakaStrip0c_Mulan" />
+        <marker scope="Public" name="SayakaStrip0c_Ochako" />
+        <marker scope="Public" name="SayakaStrip1a" />
+        <marker scope="Public" name="SayakaStrip1b" />
+        <marker scope="Public" name="SayakaStrip1c" />
+        <marker scope="Public" name="SayakaStrip2a" />
+        <marker scope="Public" name="SayakaStrip2b" />
+        <marker scope="Public" name="SayakaStrip2c" />
+        <marker scope="Public" name="SayakaStrip3a" />
+        <marker scope="Public" name="SayakaStrip3b" />
+        <marker scope="Public" name="SayakaStrip3c" />
+        <marker scope="Public" name="SayakaStrip4a" />
+        <marker scope="Public" name="SayakaStrip4b" />
+        <marker scope="Public" name="SayakaStrip4c_bracing" />
+        <marker scope="Public" name="SayakaStrip4c_chips" />
+        <marker scope="Public" name="SayakaStrip5a" />
+        <marker scope="Public" name="SayakaStrip5c" />
+        <marker scope="Public" name="SayakaStrip6a" />
+        <marker scope="Public" name="SayakaStrip6b" />
+        <marker scope="Public" name="SayakaStrip6c" />
+        <marker scope="Public" name="SeiStrip0a" />
+        <marker scope="Public" name="SeiStrip0b" />
+        <marker scope="Public" name="SeiStrip0c" />
+        <marker scope="Public" name="SeiStrip2a" />
+        <marker scope="Public" name="SeiStrip2b" />
+        <marker scope="Public" name="SeiStrip2c" />
+        <marker scope="Public" name="SheenaStrip0a" />
+        <marker scope="Public" name="SheenaStrip0b" />
+        <marker scope="Public" name="SheenaStrip0c" />
+        <marker scope="Public" name="SheenaStrip1a" />
+        <marker scope="Public" name="SheenaStrip1c" />
+        <marker scope="Public" name="SheenaStrip2a" />
+        <marker scope="Public" name="SheenaStrip2b" />
+        <marker scope="Public" name="SheenaStrip2c" />
+        <marker scope="Public" name="SheenaStrip4a" />
+        <marker scope="Public" name="SheenaStrip5a" />
+        <marker scope="Public" name="SheenaStrip5b" />
+        <marker scope="Public" name="SheenaStrip5c" />
+        <marker scope="Public" name="Shimakaze_NinesStrip2b" />
+        <marker scope="Public" name="Shimakaze_NinesStrip3c" />
+        <marker scope="Public" name="Shimakaze_NinesStrip4c" />
+        <marker scope="Public" name="Shimakaze_NinesStrip5a" />
+        <marker scope="Public" name="Shimakaze_NinesStrip5b">Shimakaze and 9S discuss their buddies. </marker>
+        <marker scope="Public" name="Shimakaze_NinesStrip5b_recon" />
+        <marker scope="Public" name="Shimakaze_NinesStrip5c" />
+        <marker scope="Public" name="Shimakaze06_NinesStrip2c" />
+        <marker scope="Public" name="Shimakaze710_NinesStrip2c" />
+        <marker scope="Public" name="ShimakazeHand_Nines01_rensouhou">Shimakaze and 9S discuss their buddies. </marker>
+        <marker scope="Public" name="ShimakazeStrip0b" />
+        <marker scope="Public" name="ShimakazeStrip0c" />
+        <marker scope="Public" name="ShimakazeStrip1b" />
+        <marker scope="Public" name="ShimakazeStrip1c" />
+        <marker scope="Public" name="ShimakazeStrip2b" />
+        <marker scope="Public" name="ShimakazeStrip2c" />
+        <marker scope="Public" name="ShimakazeStrip3a" />
+        <marker scope="Public" name="ShimakazeStrip3b" />
+        <marker scope="Public" name="ShimakazeStrip3c" />
+        <marker scope="Public" name="ShimakazeStrip4b" />
+        <marker scope="Public" name="ShimakazeStrip4c" />
+        <marker scope="Public" name="ShimakazeStrip5b" />
+        <marker scope="Public" name="ShimakazeStrip5c" />
+        <marker scope="Public" name="ShimakazeStrip6b" />
+        <marker scope="Public" name="ShimakazeStrip6c" />
+        <marker scope="Public" name="ShimakazeStrip7b" />
+        <marker scope="Public" name="ShimakazeStrip7c" />
         <marker scope="Public" name="silhouette">For several characters, 9S remarks on how flowing hair/cloaks/sashes look cool. </marker>
-        <marker scope="Private" name="table_count_five">The table has the full number of players.</marker>
-        <marker scope="Private" name="table_count_four">There are only four players at the table.</marker>
-        <marker scope="Private" name="table_count_three">There are only three players at the table.</marker>
-        <marker scope="Private" name="T-C3-F0">The player is male, and has chosen 9S and one other male character. There are no women.</marker>
-        <marker scope="Private" name="T-C3-F1-PF">The player is female, and has chosen 9S and one other male character.</marker>
-        <marker scope="Private" name="T-C3-F1-PM">The player is male, and has chosen 9S and one female character.</marker>
-        <marker scope="Private" name="T-C3-M1">The player is female, and has chosen 9S and one female character. There are no other men.</marker>
-        <marker scope="Private" name="T-C45-F0">The player is male, and has chosen 9S and two to three other male characters. There are no women.</marker>
-        <marker scope="Private" name="T-C45-F1-PF">The player is female, and has chosen four to five male characters.</marker>
-        <marker scope="Private" name="T-C45-F1-PM">The player is male, and has chosen one female character out of the four to five present.</marker>
-        <marker scope="Private" name="T-C45-M1">The player is female, and has chosen 9S and two to three female characters. There are no other men.</marker>
-        <marker scope="Public" name="temporal_anamoly" />
-        <marker scope="Public" name="temporal_anamoly1" />
-        <marker scope="Public" name="temporal_anamoly2" />
-        <marker scope="Public" name="temporal_anamoly3" />
+        <marker scope="Public" name="SolaStrip0a" />
+        <marker scope="Public" name="SolaStrip0b" />
+        <marker scope="Public" name="SolaStrip0c" />
+        <marker scope="Public" name="SolaStrip1a" />
+        <marker scope="Public" name="SolaStrip1b" />
+        <marker scope="Public" name="SolaStrip1c" />
+        <marker scope="Public" name="SolaStrip2a" />
+        <marker scope="Public" name="SolaStrip2b" />
+        <marker scope="Public" name="SolaStrip2c" />
+        <marker scope="Public" name="SolaStrip3a" />
+        <marker scope="Public" name="SolaStrip3b" />
+        <marker scope="Public" name="SolaStrip3c" />
+        <marker scope="Public" name="SolaStrip4a" />
+        <marker scope="Public" name="SolaStrip4b_Nines05" />
+        <marker scope="Public" name="SolaStrip4b_Nines68" />
+        <marker scope="Public" name="SolaStrip4c" />
+        <marker scope="Public" name="SolaStrip5a" />
+        <marker scope="Public" name="SolaStrip5b" />
+        <marker scope="Public" name="SolaStrip5c" />
+        <marker scope="Public" name="SpiderGwen28_Stream_common" />
+        <marker scope="Public" name="StreamStrip0a" />
+        <marker scope="Public" name="StreamStrip0b" />
+        <marker scope="Public" name="StreamStrip1a" />
+        <marker scope="Public" name="StreamStrip1b" />
+        <marker scope="Public" name="StreamStrip1b_Nugichan" />
+        <marker scope="Public" name="StreamStrip1c" />
+        <marker scope="Public" name="temporal_anomaly" />
+        <marker scope="Public" name="temporal_anomaly1" />
+        <marker scope="Public" name="temporal_anomaly2" />
+        <marker scope="Public" name="temporal_anomaly3" />
         <marker scope="Public" name="twiceloss">9S lost twice.</marker>
-        <marker scope="Public" name="va_designate">9S Asks D.Va about her designation. </marker>
+        <marker scope="Public" name="Twilight_NinesStrip0c" />
+        <marker scope="Public" name="Twilight_NinesStrip2c" />
+        <marker scope="Public" name="Twilight_NinesStrip4c" />
+        <marker scope="Public" name="TwilightStrip0a" />
+        <marker scope="Public" name="TwilightStrip1a" />
+        <marker scope="Public" name="TwilightStrip1b" />
+        <marker scope="Public" name="TwilightStrip1c" />
+        <marker scope="Public" name="TwilightStrip2a" />
+        <marker scope="Public" name="TwilightStrip4a" />
+        <marker scope="Public" name="TwilightStrip4b" />
+        <marker scope="Public" name="TwilightStrip4c" />
         <marker scope="Public" name="vampires" />
+        <marker scope="Public" name="VidelStrip0a" />
+        <marker scope="Public" name="VidelStrip0b" />
+        <marker scope="Public" name="VidelStrip0c" />
+        <marker scope="Public" name="VidelStrip1a" />
+        <marker scope="Public" name="VidelStrip1b" />
+        <marker scope="Public" name="VidelStrip1c" />
+        <marker scope="Public" name="VidelStrip2a" />
+        <marker scope="Public" name="VidelStrip2b" />
+        <marker scope="Public" name="VidelStrip2c" />
+        <marker scope="Public" name="ZizouStrip0a" />
+        <marker scope="Public" name="ZizouStrip0b" />
+        <marker scope="Public" name="ZizouStrip0c" />
+        <marker scope="Public" name="ZizouStrip1a" />
+        <marker scope="Public" name="ZizouStrip1b" />
+        <marker scope="Public" name="ZizouStrip1c" />
+        <marker scope="Public" name="ZizouStrip2a" />
+        <marker scope="Public" name="ZizouStrip2b" />
+        <marker scope="Public" name="ZizouStrip2c" />
     </markers>
 </metadata>
