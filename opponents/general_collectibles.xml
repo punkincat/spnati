@@ -1,4 +1,16 @@
 <collectibles>
     <!-- Add generic collectibles here. Same format as per-opponent Collectibles. -->
     <!-- Also add cases to unlock the collectibles, but with trigger attribues instead of elements -->
+    <collectible id="c1">
+	<title>Full House</title>
+	<unlock>Start the game with a full table</unlock>
+    </collectible>
+
+    <case trigger="opponent_selected">
+	<state marker="+selections"/>
+    </case>
+    <case trigger="game_start">
+	<condition count="5"/>
+	<state collectible="c1"/>
+    </case>
 </collectibles>
