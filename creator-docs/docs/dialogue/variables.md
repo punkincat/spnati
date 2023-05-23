@@ -78,7 +78,7 @@ more detail on how those work.
 
 These variables can be used to check if an event is active. Note that events can hypothetically overlap, though the current event schedule does not contain any such events.
 
-In general, these variables take the form `~event.event_id~`, where `event_id` is the internal ID for each event; thee variables expand to `true` if the event is active, and `false` otherwise.
+In general, these variables take the form `~event.event_id~`, where `event_id` is the internal ID for each event; these variables expand to `true` if the event is active, and `false` otherwise.
 
 Event variables for all major events as of writing should be listed below. The full definition and ID for each event can also be found in `events.xml`.
 
