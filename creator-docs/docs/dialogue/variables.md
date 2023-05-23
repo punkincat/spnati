@@ -20,9 +20,14 @@ Additionally, if a variable is written in all caps (e.g. `~PLAYER~`), then the e
 | `~name~`     | The name (label) of the current target. The same as `~target~`. The target depends on the situation and not all situations have a target. | 
 | `~background~` | The name of the current background. |
 | `~rng(lo-hi)~` | Generates a random number between `lo` and `hi`, inclusive. |
+| `~blank~`      | Expands to a blank (i.e. empty) string. This is mostly useful for creating lines where a character says nothing at all, such as during joint interactions. |
 
 Note that backgrounds have lots of information that can be accessed using variables;
 see the page on backgrounds for more details.
+
+## Backgrounds ##
+
+[A full list of background-related variables can be found here.](/docs/dialogue/backgrounds.html)
 
 ## Cards ##
 
@@ -68,6 +73,23 @@ more detail on how those work.
 | `~day.number~` | The current day of the month (between 1 and 31) |
 | `~month~` | The current month, from January to December |
 | `~month.number~` | The current month as a number (1-12) |
+
+## Events ##
+
+These variables can be used to check if an event is active. Note that events can hypothetically overlap, though the current event schedule does not contain any such events.
+
+In general, these variables take the form `~event.event_id~`, where `event_id` is the internal ID for each event; thee variables expand to `true` if the event is active, and `false` otherwise.
+
+Event variables for all major events as of writing should be listed below. The full definition and ID for each event can also be found in `events.xml`.
+
+| Variable              | Event              |
+|-----------------------|--------------------|
+| `~event.summer~`      | Summer             |
+| `~event.valentines~`  | Valentine's Day    |
+| `~event.easter~`      | Easter             |
+| `~event.halloween~`   | Halloween          |
+| `~event.xmas~`        | Christmas          |
+| `~event.april_fools~` | April Fool's Day   |
 
 ## Markers ##
 
