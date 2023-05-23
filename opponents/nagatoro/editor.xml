@@ -2109,18 +2109,18 @@
         <label id="2143" label="" color="1" folder="Target_Stage0_Demon" sort="4" />
         <label id="2144" label="" color="1" folder="Target_Stage0_Neko" sort="0" />
         <label id="2145" label="" folder="Target_Stage0" sort="0" />
-        <label id="2146" label="" color="3" folder="Target_Stage0" sort="0" />
+        <label id="2146" label="" color="0" folder="Target_Stage0" sort="0" />
         <label id="2147" label="" folder="Target_Stage0" sort="0" />
         <label id="2148" label="" color="3" folder="Target_Stage0" sort="0" />
         <label id="2149" label="" color="3" folder="Target_Stage0" sort="0" />
-        <label id="2150" label="" color="3" folder="Reply_Stage0" sort="0" />
-        <label id="2151" label="" color="3" folder="Reply_Stage0" sort="0" />
-        <label id="2152" label="" color="3" folder="Target_Stage0" sort="0" />
+        <label id="2150" label="" color="0" folder="Reply_Stage0" sort="0" />
+        <label id="2151" label="" color="0" folder="Reply_Stage0" sort="0" />
+        <label id="2152" label="" color="0" folder="Target_Stage0" sort="0" />
         <label id="2153" label="" color="6" folder="Reply_Stage1" sort="0" />
         <label id="2154" label="" color="6" folder="Target_Stage1" sort="0" />
         <label id="2156" label="" color="5" folder="Reply_Stage0" sort="0" />
-        <label id="2157" label="" color="6" folder="Reply_Stage2" sort="0" />
-        <label id="2158" label="" color="6" folder="Reply_Stage1" sort="0" />
+        <label id="2157" label="" color="0" folder="Reply_Stage2" sort="0" />
+        <label id="2158" label="" color="0" folder="Reply_Stage1" sort="0" />
         <label id="2159" label="" color="2" folder="Reply_Stage0" sort="0" />
         <label id="2160" label="" color="2" folder="Target_Stage0" sort="0" />
         <label id="2161" label="" color="2" folder="Target_Stage1" sort="0" />
@@ -2130,10 +2130,19 @@
         <label id="2165" label="" folder="Target_Stage0" sort="0" />
         <label id="2166" label="" folder="Target_Stage2" sort="0" />
         <label id="2167" label="" color="1" folder="Reply_Stage1" sort="0" />
+        <label id="2168" label="" color="3" folder="Target_Stage0" sort="0" />
+        <label id="2169" label="" color="3" folder="Target_Stage0" sort="0" />
+        <label id="2170" label="" color="3" folder="Reply_Stage0" sort="0" />
+        <label id="2171" label="" color="3" folder="Reply_Stage0" sort="0" />
+        <label id="2172" label="" color="3" folder="Reply_Stage0" sort="0" />
+        <label id="2173" label="" color="3" folder="Reply_Stage0" sort="0" />
+        <label id="2174" label="" color="3" folder="Target_Stage0" sort="0" />
+        <label id="2175" label="" color="6" folder="Reply_Stage2" sort="0" />
+        <label id="2176" label="" color="6" folder="Reply_Stage1" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2167</nextId>
+    <nextId>2176</nextId>
     <markers>
         <marker scope="Public" name="aaravi_reply01" />
         <marker scope="Public" name="aaravi_reply02" />
@@ -2559,7 +2568,12 @@
         <marker scope="Public" name="elphaba_reply01" />
         <marker scope="Public" name="elphaba_reply01a" />
         <marker scope="Public" name="elphaba_reply01b" />
+        <marker scope="Public" name="elphaba_reply02a" />
+        <marker scope="Public" name="elphaba_reply02b" />
         <marker scope="Public" name="elphaba01" />
+        <marker scope="Public" name="elphaba02" />
+        <marker scope="Public" name="elphaba02a" />
+        <marker scope="Public" name="elphaba02b" />
         <marker scope="Public" name="emi01" />
         <marker scope="Public" name="emi11" />
         <marker scope="Public" name="emi41" />
@@ -3109,8 +3123,10 @@
         <marker scope="Public" name="misty01" />
         <marker scope="Public" name="mitama_reply11" />
         <marker scope="Public" name="mitama_reply12" />
+        <marker scope="Public" name="mitama_reply13" />
         <marker scope="Public" name="mitama_reply21" />
         <marker scope="Public" name="mitama_reply22" />
+        <marker scope="Public" name="mitama_reply23" />
         <marker scope="Public" name="mitama01" />
         <marker scope="Public" name="mitama02" />
         <marker scope="Public" name="mitama03" />
@@ -3648,6 +3664,7 @@
         <marker scope="Public" name="target01" />
         <marker scope="Public" name="tea" />
         <marker scope="Public" name="tea01" />
+        <marker scope="Public" name="tea02" />
         <marker scope="Public" name="tejina_reply_hand01" />
         <marker scope="Public" name="tejina_reply_hand02" />
         <marker scope="Public" name="tejina_reply_hand03" />
