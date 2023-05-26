@@ -152,14 +152,6 @@ var CANDY_LIST = [
     "critical_darling/0-ice.png",
     "critical_darling/3-sing.png",
     "critical_darling/3-rockin.png",
-    "ryuko/0-senketsu-happy.png",          // Has Recent Updates
-    "ryuko/2-mako-sad.png",
-    "ryuko/3-pissed.png",
-    "ryuko/5-awkward.png",
-    "lux/0-calm.png",                      // Has Recent Updates
-    "lux/0-cocky.png",
-    "lux/3-quizzical.png",
-    "lux/4-joyous.png",
     "caulifla/0-Confident.png",            // Has Recent Updates
     "caulifla/0-Happy.png",
     "caulifla/1-Laughing.png",
@@ -196,10 +188,6 @@ var CANDY_LIST = [
     "petra/0-wink.png",
     "reskins/petra_war_outfit/0-happy.png",
     "reskins/petra_war_outfit/0-horny.png",
-    "videl/0-confident.png",               // Has Recent Updates
-    "videl/1-flying.png",
-    "videl/4-happy.png",
-    "videl/5-embarrassed.png",
     "cagliostro/0-Cutesy.png",             // Has Recent Updates
     "reskins/cagliostro_alchemist_reborn/0-Excited.png",
     "cagliostro/3-Smug.png",
@@ -364,6 +352,14 @@ var CANDY_LIST = [
     "arueshalae/0-laughing.png",
     "arueshalae/4-singing_happy.png",
     "arueshalae/4-horny.png",
+    "eichi/0-excited.png",                 // Has Recent Updates
+    "eichi/0-flirt_altc.png",
+    "eichi/2-flirt.png",
+    "eichi/3-tease.png",
+    "tomoko/0-idle1.png",                  // Has Recent Updates
+    "tomoko/0-excited.png",
+    "tomoko/0-serene.png",
+    "tomoko/0-shy.png",
 ];
 
 /* Storage for old candy images in case the characters qualify again */
@@ -424,10 +420,6 @@ var CANDY_LIST = [
     "dust/0-victory.png",
     "dust/1-pensive.png",
     "dust/2-laugh.png",
-    "tomoko/0-idle1.png",
-    "tomoko/0-excited.png",
-    "tomoko/0-serene.png",
-    "tomoko/0-shy.png",
     "supernova/0-entering.png",
     "supernova/0-imagine.png",
     "supernova/4-giggle.png",
@@ -468,10 +460,6 @@ var CANDY_LIST = [
     "megumin/0-flustered.png",
     "megumin/2-ecstatic.png",
     "megumin/3-embarrassed.png",
-    "eichi/0-excited.png",
-    "eichi/0-flirt_altc.png",
-    "eichi/2-flirt.png",
-    "eichi/3-tease.png",
     "jin/0-Cracker.png",
     "jin/0-Excited.png",
     "jin/5-Stripped.png",
@@ -496,6 +484,18 @@ var CANDY_LIST = [
     "sayori/1-happy.png",
     "sayori/2-thinking.png",
     "sayori/3-embarassed.png",
+    "ryuko/0-senketsu-happy.png",
+    "ryuko/2-mako-sad.png",
+    "ryuko/3-pissed.png",
+    "ryuko/5-awkward.png",
+    "lux/0-calm.png",
+    "lux/0-cocky.png",
+    "lux/3-quizzical.png",
+    "lux/4-joyous.png",
+    "videl/0-confident.png",
+    "videl/1-flying.png",
+    "videl/4-happy.png",
+    "videl/5-embarrassed.png",
 */
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
