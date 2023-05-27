@@ -271,6 +271,9 @@
         <response id="1070" opponent="elphaba" opponentId="119" />
         <response id="1071" opponent="elphaba" opponentId="120" />
         <response id="1074" opponent="meia" opponentId="2" />
+        <response id="1076" opponent="aqua_kh" opponentId="69" />
+        <response id="1077" opponent="aqua_kh" opponentId="67" />
+        <response id="1078" opponent="aqua_kh" opponentId="51" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1282,6 +1285,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1072" label="" folder="Perona to left" sort="0" />
         <label id="1073" label="" folder="Arle to left" sort="0" />
         <label id="1075" label="" folder="Penny to left" sort="0" />
+        <label id="1076" label="" folder="Aqua to left" sort="0" />
+        <label id="1079" label="" folder="Mia to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
@@ -1290,7 +1295,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1075</nextId>
+    <nextId>1079</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1364,6 +1369,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_anna_no_siblings" />
         <marker scope="Public" name="nagisa_april_fools" />
         <marker scope="Public" name="nagisa_april_straight_from_school" />
+        <marker scope="Public" name="nagisa_aqua_keyblade_reveal" />
+        <marker scope="Public" name="nagisa_aqua_keyblade_sharpness" />
+        <marker scope="Public" name="nagisa_aqua_shorts_down" />
         <marker scope="Public" name="nagisa_arle_principal" />
         <marker scope="Public" name="nagisa_arwen_beautiful_lady" />
         <marker scope="Public" name="nagisa_asks_buffy_about_school">Nagisa and Buffy feel differently about high school.</marker>
@@ -2034,6 +2042,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_kyou_confident" />
         <marker scope="Public" name="nagisa_kyou_cooking" />
         <marker scope="Public" name="nagisa_kyou_curtain_up" />
+        <marker scope="Public" name="nagisa_kyou_deserved_to_win" />
         <marker scope="Public" name="nagisa_kyou_disavow" />
         <marker scope="Public" name="nagisa_kyou_doing_my_best" />
         <marker scope="Public" name="nagisa_kyou_dont_stare" />
