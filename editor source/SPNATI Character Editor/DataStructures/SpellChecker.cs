@@ -1,4 +1,4 @@
-﻿using NHunspell;
+using NHunspell;
 using System.Collections.Generic;
 using System.IO;
 
@@ -50,6 +50,7 @@ namespace SPNATI_Character_Editor
 					if (isUserDictionary)
 					{
 						_userWords.Add(word);
+						_ignoredWords.Add(word);
 					}
 				}
 			}

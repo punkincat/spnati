@@ -1,4 +1,4 @@
-﻿using Desktop.DataStructures;
+using Desktop.DataStructures;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +35,7 @@ namespace SPNATI_Character_Editor
 		}
 
 		public static readonly string[] Operators = new string[] { "==", "<=", "<", ">", ">=", "!=" };
-		public static readonly string[] OperatorsWithRange = new string[] { "==", "<=", "<", ">", ">=", "!=", "@" };
+		public static readonly string[] OperatorsWithRange = new string[] { "==", "<=", "<", ">", ">=", "!=", "@", "!@" };
 
 		public ExpressionTest() { }
 
