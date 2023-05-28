@@ -23,7 +23,6 @@ namespace SPNATI_Character_Editor.Activities
 		private bool _editing;
 		private bool _loading;
 		private InboundLine _currentInbound;
-		private CharacterEditorData _editorData;
 		private string _path;
 
 		private bool _filterToColor;
@@ -63,7 +62,6 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			_character = Record as Character;
 			_character.IsDirty = true;
-            _editorData = CharacterDatabase.GetEditorData(_character);
             _path = Path.Combine(Config.GetString(Settings.GameDirectory), "opponents/" + _character.FolderName + "/banter.xml");
             ColJump.Flat = true;
 			if(!File.Exists(_path))
@@ -82,8 +80,6 @@ namespace SPNATI_Character_Editor.Activities
 			cmdCreateResponse.Visible = false;
             panelLoad.BringToFront();
 			progressBar.Visible = false;
-
-
         }
 
 		protected override void OnFirstActivate()
@@ -132,6 +128,28 @@ namespace SPNATI_Character_Editor.Activities
                 cmdUpdateBanter.Text = "Generate/Update";
                 cmdSaveBanter.Enabled = true;
                 cmdLoadBanter.Enabled = true;
+            }
+			if (_selectedCharacter != null && _currentInbound != null)
+			{
+                int stage;
+                if (_currentInbound.StageRange == "10")
+                {
+                    stage = 10;
+                }
+                else
+                {
+                    stage = int.Parse(_currentInbound.StageRange[0].ToString());
+                }
+
+                PoseMapping pose = _selectedCharacter.PoseLibrary.GetPose(_currentInbound.Img);
+                if (pose != null)
+                {
+                    Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_selectedCharacter, pose, stage));
+                }
+
+                DialogueLine dialogueLine = new DialogueLine();
+                dialogueLine.Text = _currentInbound.Text;
+                Workspace.SendMessage(WorkspaceMessages.PreviewLine, dialogueLine);
             }
         }
 
@@ -1192,5 +1210,4 @@ namespace SPNATI_Character_Editor.Activities
             return this.costs[this.costs.Length - 1];
         }
     }
-
 }
