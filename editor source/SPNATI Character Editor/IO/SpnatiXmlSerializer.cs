@@ -58,11 +58,10 @@ namespace SPNATI_Character_Editor.IO
 			text = XMLHelper.DecodeEntityReferences(text);
 
 			File.WriteAllText(filename, text);
-
 			writer.Dispose();
 		}
 
-        public static ElementInformation GetSerializationInformation(Type type)
+		public static ElementInformation GetSerializationInformation(Type type)
 		{
 			ElementInformation elementInfo = _serializationInfo.Get(type);
 			if (elementInfo == null)

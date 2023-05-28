@@ -43,19 +43,15 @@ namespace SPNATI_Character_Editor
         {
             Version = Config.Version;
         }
-
-        
+     
         public void OnBeforeSerialize()
         {
         }
 
         public void OnAfterDeserialize(string source)
         {
-        }
-        
+        }      
     }
-
-
 
     public class TargetingCharacter
     {
@@ -85,7 +81,6 @@ namespace SPNATI_Character_Editor
                     InboundLine inboundLine = new InboundLine(stageCase, dialogueLine);
                     Inbounds.Add(inboundLine);
                 }
-
             }
 
             InboundCount = Inbounds.Count;
