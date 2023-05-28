@@ -104,9 +104,6 @@ namespace SPNATI_Character_Editor
 		[XmlArrayItem("line")]
 		public List<string> FreeLines = new List<string>();
 
-        [XmlElement("hasBanter")]
-        public bool HasBanter;
-
         private HashSet<string> _usedFolders = new HashSet<string>();
 		[XmlIgnore]
 		public AutoCompleteStringCollection Folders

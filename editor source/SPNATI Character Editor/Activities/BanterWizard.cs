@@ -24,6 +24,7 @@ namespace SPNATI_Character_Editor.Activities
 		private bool _loading;
 		private InboundLine _currentInbound;
 		private CharacterEditorData _editorData;
+		private string _path;
 
 		private bool _filterToColor;
 		private string _colorFilter;
@@ -63,8 +64,9 @@ namespace SPNATI_Character_Editor.Activities
 			_character = Record as Character;
 			_character.IsDirty = true;
             _editorData = CharacterDatabase.GetEditorData(_character);
+            _path = Path.Combine(Config.GetString(Settings.GameDirectory), "opponents/" + _character.FolderName + "/banter.xml");
             ColJump.Flat = true;
-			if(!_editorData.HasBanter)
+			if(!File.Exists(_path))
             {
                 cmdUpdateBanter.Text = "Generate";
 				cmdSaveBanter.Enabled = false;
@@ -119,7 +121,7 @@ namespace SPNATI_Character_Editor.Activities
 
 		protected override void OnActivate()
 		{
-            if (!_editorData.HasBanter)
+            if (!File.Exists(_path))
             {
                 cmdUpdateBanter.Text = "Generate";
                 cmdSaveBanter.Enabled = false;
@@ -640,7 +642,6 @@ namespace SPNATI_Character_Editor.Activities
 			else
 			{
 				_character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-                _editorData.HasBanter = true;
                 Serialization.BackupBanter(_character, Convert.ToString(_character.BanterData.Timestamp));
                 cmdLoadBanter.Enabled = true;
             }
@@ -822,6 +823,7 @@ namespace SPNATI_Character_Editor.Activities
 
                 Character loaded = CharacterDatabase.Load(folderName);
                 int index = _character.BanterData.TargetingCharacters.FindIndex(x => x.Id == folderName);
+
 				if (index == -1)
 				{
 					TargetingCharacter ch = new TargetingCharacter(loaded, _character);
@@ -986,7 +988,7 @@ namespace SPNATI_Character_Editor.Activities
 
 		private void cmdUpdateBanter_Click(object sender, EventArgs e)
 		{
-            if (!_editorData.HasBanter)
+            if (!File.Exists(_path))
             {
 				List<string> folderNames = new List<string>();
                 foreach (Opponent opponent in Listing.Instance.Characters)
@@ -1006,7 +1008,6 @@ namespace SPNATI_Character_Editor.Activities
                 cmdUpdateBanter.Text = "Generate/Update";
                 _character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
                 Serialization.BackupBanter(_character, Convert.ToString(_character.BanterData.Timestamp));
-                _editorData.HasBanter = true;
                 cmdLoadBanter.Enabled = true;
             }
             else
