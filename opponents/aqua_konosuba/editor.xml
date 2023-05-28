@@ -27,6 +27,7 @@
         <response id="222" opponent="saki_zls" opponentId="2" />
         <response id="226" opponent="saki_zls" opponentId="3" />
         <response id="420" opponent="aqua_kh" opponentId="67" />
+        <response id="429" opponent="aqua_kh" opponentId="77" />
     </responses>
     <labels>
         <label id="17" label="" folder="Axis Sheet Collectible" sort="0" />
@@ -423,14 +424,21 @@
         <label id="426" label="" folder="Dark Creatures" sort="0" />
         <label id="427" label="" folder="Dark Creatures" sort="0" />
         <label id="428" label="" folder="Dark Creatures" sort="0" />
+        <label id="429" label="" color="5" folder="Replies" sort="0" />
+        <label id="430" label="" color="1" folder="Replies" sort="0" />
+        <label id="431" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>428</nextId>
+    <nextId>431</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion" />
+        <marker scope="Public" name="AG_AquasFollowerSuggestion_cont" />
         <marker scope="Public" name="Aqua_Blessing" />
+        <marker scope="Public" name="AquaKh_AquaDarknessStrip" />
+        <marker scope="Public" name="AquaKh_AquaDarknessStrip1" />
+        <marker scope="Public" name="AquaKh_AquaDarknessStrip2" />
         <marker scope="Public" name="AquaKH_GameStart" />
         <marker scope="Public" name="AquaKH_GameStart1" />
         <marker scope="Public" name="AquaKH_GameStart2" />
