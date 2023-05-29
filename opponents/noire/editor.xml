@@ -65,6 +65,8 @@
         <response id="846" opponent="nami" opponentId="53" />
         <response id="848" opponent="nami" opponentId="623" />
         <response id="849" opponent="nami" opponentId="624" />
+        <response id="2588" opponent="aqua_konosuba" opponentId="203" />
+        <response id="2589" opponent="aqua_konosuba" opponentId="204" />
     </responses>
     <notes>
         <note id="882">Please split your marker into two or assign it a different value for each line, so that I can remove the "Saying Text" condition. By the way, there is a typo, if you haven't fixed it yet: "my fans also *calls*" -&gt; *call*</note>
@@ -2668,12 +2670,15 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2583" label="" color="3" folder="Meia" sort="0" />
         <label id="2584" label="" color="4" folder="Meia" sort="0" />
         <label id="2585" label="" color="4" folder="Meia" sort="0" />
+        <label id="2586" label="" color="3" folder="Meia" sort="0" />
+        <label id="2587" label="" color="3" folder="Meia" sort="0" />
+        <label id="2588" label="" color="4" folder="AquaKS" sort="0" />
+        <label id="2589" label="" color="4" folder="AquaKS" sort="0" />
     </labels>
     <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2585</nextId>
+    <nextId>2589</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_costume1" />
         <marker scope="Public" name="adrien_costume2" />
         <marker scope="Public" name="adrien_fightingevil1" />
@@ -2698,6 +2703,8 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="af_label" />
         <marker scope="Public" name="AFBelt" />
         <marker scope="Public" name="aimee0" />
+        <marker scope="Public" name="aquaKS_idol0" />
+        <marker scope="Public" name="aquaKS_what0" />
         <marker scope="Public" name="arc" />
         <marker scope="Public" name="arcChoice" />
         <marker scope="Public" name="arcDom" />
@@ -3205,12 +3212,12 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="noelle1" />
         <marker scope="Public" name="noire11v" />
         <marker scope="Public" name="noire12v" />
-        <marker scope="Public" name="Noire4Timer" />
-        <marker scope="Public" name="Noire5Timer" />
-        <marker scope="Public" name="Noire6Timer" />
-        <marker scope="Public" name="Noire7Timer" />
-        <marker scope="Public" name="Noire8Timer" />
-        <marker scope="Public" name="Noire9Timer" />
+        <marker scope="Private" name="Noire4Timer" />
+        <marker scope="Private" name="Noire5Timer" />
+        <marker scope="Private" name="Noire6Timer" />
+        <marker scope="Private" name="Noire7Timer" />
+        <marker scope="Private" name="Noire8Timer" />
+        <marker scope="Private" name="Noire9Timer" />
         <marker scope="Public" name="NoireAndPlayer" />
         <marker scope="Public" name="NoireAndPlayer_hereOnDate3" />
         <marker scope="Public" name="NoireAndPlayer1" />
@@ -3513,8 +3520,8 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="shamir01" />
         <marker scope="Public" name="shamir01b" />
         <marker scope="Public" name="startingIntelligence" />
-        <marker scope="Public" name="startLine" />
-        <marker scope="Public" name="startPose" />
+        <marker scope="Private" name="startLine" />
+        <marker scope="Private" name="startPose" />
         <marker scope="Public" name="StartStrangers" />
         <marker scope="Public" name="streaming_bar" />
         <marker scope="Public" name="streaming_bed" />
