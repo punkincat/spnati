@@ -17,10 +17,6 @@
     <defaultImage>happy</defaultImage>
     <defaultText>This is what the character says when the game starts</defaultText>
   </trigger>
-  <trigger tag="game_start" start="0" end="0" label="Game start" oncePerStage="true" description="When the game starts" group="0" order="2" color="1">
-    <defaultImage>happy</defaultImage>
-    <defaultText>This is what the character says when the game starts</defaultText>
-  </trigger>
   <trigger tag="stripped" start="1" end="8" label="After Stripping" oncePerStage="true" description="Immediately after removing the previous stage's clothing" group="2" order="5" previousStage="true" color="3" safeLabel="After Losing">
     <vars>
       <string>clothing</string>
