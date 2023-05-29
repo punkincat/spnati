@@ -33,6 +33,9 @@
         <case name="See Persona" id="162" priority="Noteworthy" min="2" max="2">
             <description>Tea asks a Persona character if they understand the shadow world.</description>
         </case>
+        <case name="Other Games" id="206" priority="Prompt" min="0" max="0">
+            <description>Duel Monsters isn't the only game Tea played.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -144,6 +147,8 @@
         <response id="177" opponent="may" opponentId="228" />
         <response id="178" opponent="hatsune_miku" opponentId="613" />
         <response id="179" opponent="lux" opponentId="59" />
+        <response id="181" opponent="misty_hgss" opponentId="3" />
+        <response id="199" opponent="fluttershy" opponentId="18" />
     </responses>
     <labels>
         <label id="1" label="" folder="Friends Marker" sort="0" />
@@ -165,45 +170,73 @@
         <label id="87" label="" folder="Backgrounds" sort="15" />
         <label id="42" label="" folder="Target: Kyouko" sort="0" />
         <label id="133" label="" folder="Target: Dark Magician Girl" sort="0" />
-        <label id="134" label="" folder="Target: Kyouko" sort="0" />
-        <label id="135" label="" folder="Target: May" sort="0" />
-        <label id="151" label="" folder="Target: Dark Magician Girl" sort="0" />
-        <label id="137" label="" folder="Target: Dark Magician Girl" sort="0" />
-        <label id="138" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="134" label="" folder="Target: Kyouko" sort="5" />
+        <label id="135" label="" folder="May to Left" sort="0" />
+        <label id="151" label="" folder="Target: Dark Magician Girl" sort="7" />
+        <label id="137" label="" folder="Target: Dark Magician Girl" sort="3" />
+        <label id="138" label="" folder="Target: Dark Magician Girl" sort="2" />
         <label id="139" label="" folder="Target: Dark Magician Girl" sort="0" />
-        <label id="140" label="" folder="Target: Dark Magician Girl" sort="0" />
-        <label id="141" label="" folder="Target: May" sort="0" />
-        <label id="142" label="" folder="Target: May" sort="0" />
-        <label id="143" label="" folder="Target: May" sort="0" />
-        <label id="144" label="" folder="Target: May" sort="0" />
+        <label id="140" label="" folder="Target: Dark Magician Girl" sort="4" />
+        <label id="141" label="" folder="May to Left" sort="2" />
+        <label id="142" label="" folder="Target: May" sort="4" />
+        <label id="143" label="" folder="Target: May" sort="2" />
+        <label id="144" label="" folder="May to Left" sort="0" />
         <label id="13" label="" folder="Target: May" sort="0" />
-        <label id="145" label="" folder="Target: Kyouko" sort="0" />
-        <label id="146" label="" folder="Target: Kyouko" sort="0" />
-        <label id="147" label="" folder="Target: Kyouko" sort="0" />
-        <label id="148" label="" folder="Target: Kyouko" sort="0" />
-        <label id="149" label="" folder="Target: Kyouko" sort="0" />
-        <label id="150" label="" folder="Target: Kyouko" sort="0" />
-        <label id="152" label="" folder="Target: Dark Magician Girl" sort="0" />
-        <label id="153" label="" folder="Target: Dark Magician Girl" sort="0" />
-        <label id="154" label="" folder="Target: Dark Magician Girl" sort="0" />
-        <label id="155" label="" folder="Backgrounds" sort="0" />
-        <label id="156" label="" folder="Backgrounds" sort="0" />
-        <label id="157" label="" folder="Backgrounds" sort="0" />
-        <label id="161" label="" folder="Backgrounds" sort="0" />
+        <label id="145" label="" folder="Target: Kyouko" sort="8" />
+        <label id="146" label="" folder="Target: Kyouko" sort="7" />
+        <label id="147" label="" folder="Target: Kyouko" sort="9" />
+        <label id="148" label="" folder="Target: Kyouko" sort="2" />
+        <label id="149" label="" folder="Target: Kyouko" sort="3" />
+        <label id="150" label="" folder="Target: Kyouko" sort="4" />
+        <label id="152" label="" folder="Target: Dark Magician Girl" sort="5" />
+        <label id="153" label="" folder="Target: Dark Magician Girl" sort="6" />
+        <label id="154" label="" folder="Target: Dark Magician Girl" sort="8" />
+        <label id="155" label="" folder="Backgrounds" sort="2" />
+        <label id="156" label="" folder="Backgrounds" sort="3" />
+        <label id="157" label="" folder="Backgrounds" sort="4" />
+        <label id="161" label="" folder="Backgrounds" sort="15" />
         <label id="170" label="" folder="Target: Sempai" sort="0" />
-        <label id="171" label="" folder="Target: Sempai" sort="0" />
-        <label id="169" label="" folder="Target: Sempai" sort="0" />
-        <label id="172" label="" folder="Target: Sempai" sort="0" />
-        <label id="166" label="" folder="Target: Sempai" sort="0" />
-        <label id="168" label="" folder="Target: Sempai" sort="0" />
-        <label id="180" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="171" label="" folder="Target: Sempai" sort="2" />
+        <label id="169" label="" folder="Target: Sempai" sort="3" />
+        <label id="172" label="" folder="Target: Sempai" sort="4" />
+        <label id="166" label="" folder="Target: Sempai" sort="5" />
+        <label id="168" label="" folder="Target: Sempai" sort="6" />
+        <label id="180" label="" folder="Target: Dark Magician Girl" sort="9" />
+        <label id="182" label="" folder="Tags" sort="0" />
+        <label id="183" label="" folder="Tags" sort="6" />
+        <label id="184" label="" folder="Target: Kyoko" sort="0" />
+        <label id="185" label="" folder="Target: Kyouko" sort="6" />
+        <label id="100" label="" folder="Target: Nagatoro" sort="0" />
+        <label id="186" label="" folder="Target: Chazz" sort="0" />
+        <label id="187" label="" folder="Target: Chazz" sort="2" />
+        <label id="188" label="" folder="Target: Stage0" sort="7" />
+        <label id="189" label="" folder="Target: Stage0" sort="2" />
+        <label id="190" label="" folder="Target: Stage0" sort="8" />
+        <label id="191" label="" folder="Target: Stage0" sort="4" />
+        <label id="192" label="" folder="Target: Stage0" sort="0" />
+        <label id="193" label="" folder="Target: Stage0" sort="3" />
+        <label id="194" label="" folder="Target: Stage0" sort="5" />
+        <label id="195" label="" folder="Tags" sort="2" />
+        <label id="196" label="" folder="Tags" sort="4" />
+        <label id="197" label="" folder="Tags" sort="5" />
+        <label id="198" label="" folder="Tags" sort="7" />
+        <label id="200" label="" folder="Target: Stage0" sort="6" />
+        <label id="201" label="" folder="Tags" sort="3" />
+        <label id="202" label="" folder="May to Right" sort="0" />
+        <label id="203" label="" folder="May to Right" sort="2" />
+        <label id="204" label="" folder="Target: May" sort="3" />
+        <label id="33" label="" folder="Responses" sort="3" />
+        <label id="107" label="" folder="Responses" sort="4" />
+        <label id="61" label="" folder="Responses" sort="5" />
+        <label id="11" label="" folder="Responses" sort="0" />
+        <label id="29" label="" folder="Situations" sort="0" />
+        <label id="10" label="" folder="Responses" sort="2" />
     </labels>
     <prefixes>
         <prefix>card</prefix>
     </prefixes>
-    <nextId>180</nextId>
+    <nextId>206</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="blue_disk" />
         <marker scope="Public" name="chiakiVideoGames" />
         <marker scope="Public" name="kyouko_tea_cardgame" />
@@ -273,6 +306,7 @@
         <marker scope="Public" name="tea_fashionB" />
         <marker scope="Public" name="tea_fashionC" />
         <marker scope="Public" name="tea_finish_yugi" />
+        <marker scope="Public" name="tea_fluttershy_poker" />
         <marker scope="Public" name="tea_futab_chazz" />
         <marker scope="Public" name="tea_futab_start" />
         <marker scope="Public" name="tea_fwb" />
@@ -331,6 +365,7 @@
         <marker scope="Public" name="tea_may_rival" />
         <marker scope="Public" name="tea_may_romance1" />
         <marker scope="Public" name="tea_may_s0a" />
+        <marker scope="Public" name="tea_may_s0b" />
         <marker scope="Public" name="tea_may_self_out" />
         <marker scope="Public" name="tea_may_sleepover" />
         <marker scope="Public" name="tea_may_startmast" />
@@ -341,18 +376,23 @@
         <marker scope="Public" name="tea_miku_strip" />
         <marker scope="Public" name="tea_miku_strip1" />
         <marker scope="Public" name="tea_mirrorforce" />
+        <marker scope="Public" name="tea_misty_noguys" />
         <marker scope="Public" name="tea_naga_acc0" />
         <marker scope="Public" name="tea_naga_butt" />
         <marker scope="Public" name="tea_naga_strip1" />
         <marker scope="Public" name="tea_naga_strip1a" />
         <marker scope="Public" name="tea_naga_strip3" />
         <marker scope="Public" name="tea_naga_stripped1" />
+        <marker scope="Public" name="tea_nagatoro_finish" />
         <marker scope="Public" name="tea_nagatoro_reply1" />
+        <marker scope="Public" name="tea_nagatoro_reply1a" />
+        <marker scope="Public" name="tea_nagatoro_reply1b" />
         <marker scope="Public" name="tea_nagatoro_taunt" />
         <marker scope="Public" name="tea_nagisa_replt1" />
         <marker scope="Public" name="tea_nagisa_reply1" />
         <marker scope="Public" name="tea_ojamas" />
         <marker scope="Public" name="tea_oneliner_detective" />
+        <marker scope="Public" name="tea_othergames" />
         <marker scope="Public" name="tea_persona_shadow" />
         <marker scope="Public" name="tea_petra_birthday" />
         <marker scope="Public" name="tea_pokemon" />
