@@ -172,6 +172,24 @@
         <response id="787" opponent="mitama" opponentId="1892" />
         <response id="788" opponent="mitama" opponentId="1891" />
         <response id="789" opponent="nagisa" opponentId="1078" />
+        <response id="790" opponent="jura" opponentId="615" />
+        <response id="791" opponent="jura" opponentId="614" />
+        <response id="793" opponent="jura" opponentId="620" />
+        <response id="795" opponent="jura" opponentId="621" />
+        <response id="797" opponent="meia" opponentId="797" />
+        <response id="798" opponent="meia" opponentId="792" />
+        <response id="799" opponent="meia" opponentId="793" />
+        <response id="800" opponent="meia" opponentId="794" />
+        <response id="801" opponent="meia" opponentId="690" />
+        <response id="802" opponent="meia" opponentId="798" />
+        <response id="806" opponent="revy" opponentId="261" />
+        <response id="807" opponent="revy" opponentId="262" />
+        <response id="808" opponent="revy" opponentId="263" />
+        <response id="809" opponent="revy" opponentId="266" />
+        <response id="810" opponent="revy" opponentId="267" />
+        <response id="811" opponent="revy" opponentId="268" />
+        <response id="812" opponent="kyoko_kirigiri" opponentId="1336" />
+        <response id="813" opponent="mari" opponentId="790" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -195,6 +213,10 @@
         <note id="576">Will only play the first time Aqua sees this</note>
         <note id="687">She also says aqua_nagatoro_s0c at the same time here</note>
         <note id="727">she's going to say something like "I think your hearts were connected/resonated with each other", you know KH stuff</note>
+        <note id="794">the filter here is broadly for Terra but it could end up applying to other KH males e.g. Sora. would</note>
+        <note id="801">this "hmm" is her sort of trailing off with an idle thought</note>
+        <note id="808">This one feels a bit weak to me so if you have a better idea or want me to change it for a different direction, let me know</note>
+        <note id="809">I love responding to revy because she is *really* pushing Aqua's attempts to be nice and I'm enjoying this</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Player Names" sort="0" />
@@ -975,12 +997,34 @@
         <label id="787" label="" folder="Responses" sort="0" />
         <label id="788" label="" folder="Responses" sort="0" />
         <label id="789" label="" folder="Responses" sort="0" />
+        <label id="791" label="" folder="Responses" sort="0" />
+        <label id="790" label="" folder="Responses" sort="0" />
+        <label id="793" label="" folder="Responses" sort="0" />
+        <label id="794" label="" folder="Responses" sort="0" />
+        <label id="795" label="" folder="Responses" sort="0" />
+        <label id="796" label="" folder="Responses" sort="0" />
+        <label id="797" label="" folder="Responses" sort="0" />
+        <label id="798" label="" folder="Responses" sort="0" />
+        <label id="799" label="" folder="Responses" sort="0" />
+        <label id="800" label="" folder="Responses" sort="0" />
+        <label id="801" label="" folder="Responses" sort="0" />
+        <label id="802" label="" folder="Responses" sort="0" />
+        <label id="803" label="" folder="Responses" sort="0" />
+        <label id="804" label="" folder="Responses" sort="0" />
+        <label id="805" label="" folder="Responses" sort="0" />
+        <label id="806" label="" folder="Responses" sort="0" />
+        <label id="807" label="" folder="Responses" sort="0" />
+        <label id="808" label="" folder="Responses" sort="0" />
+        <label id="809" label="" folder="Responses" sort="0" />
+        <label id="810" label="" folder="Responses" sort="0" />
+        <label id="811" label="" folder="Responses" sort="0" />
+        <label id="812" label="" folder="Responses" sort="0" />
+        <label id="813" label="" folder="Situations" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>789</nextId>
+    <nextId>813</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="__lucina_nickname" />
         <marker scope="Public" name="ag_aquaKH_strip0b" />
         <marker scope="Public" name="aqua_aaravi_hydro1" />
@@ -1083,6 +1127,10 @@
         <marker scope="Public" name="aqua_jura_self3b" />
         <marker scope="Public" name="aqua_jura_self4a" />
         <marker scope="Public" name="aqua_jura_self4b" />
+        <marker scope="Public" name="aqua_jura_self4c" />
+        <marker scope="Public" name="aqua_jura_self5a" />
+        <marker scope="Public" name="aqua_jura_self5c" />
+        <marker scope="Public" name="aqua_jura_self6MustMast" />
         <marker scope="Public" name="aqua_kaz_self0a" />
         <marker scope="Public" name="aqua_kaz_self0b" />
         <marker scope="Public" name="aqua_kaz_self0c" />
@@ -1125,6 +1173,7 @@
         <marker scope="Public" name="aqua_lux_teasing2Resp" />
         <marker scope="Public" name="aqua_magicsempai_hobby1" />
         <marker scope="Public" name="aqua_magicsempai_magic1" />
+        <marker scope="Public" name="aqua_mari_HeroIntro" />
         <marker scope="Public" name="aqua_maria_nakedApron" />
         <marker scope="Public" name="aqua_maria_strip0a" />
         <marker scope="Public" name="aqua_maria_strip0b" />
@@ -1137,8 +1186,13 @@
         <marker scope="Public" name="aqua_meia_self1a" />
         <marker scope="Public" name="aqua_meia_self1b" />
         <marker scope="Public" name="aqua_meia_self2a" />
+        <marker scope="Public" name="aqua_meia_self2b" />
         <marker scope="Public" name="aqua_meia_self3a" />
         <marker scope="Public" name="aqua_meia_self3b" />
+        <marker scope="Public" name="aqua_meia_self3c" />
+        <marker scope="Public" name="aqua_meia_self4a" />
+        <marker scope="Public" name="aqua_meia_self5a" />
+        <marker scope="Public" name="aqua_meia_selfMustMast" />
         <marker scope="Public" name="aqua_miku_lovesongResp" />
         <marker scope="Public" name="aqua_miku_strip0b" />
         <marker scope="Public" name="aqua_miku_strip1a" />
@@ -1212,6 +1266,13 @@
         <marker scope="Public" name="aqua_revy_self01" />
         <marker scope="Public" name="aqua_revy_self02" />
         <marker scope="Public" name="aqua_revy_self03" />
+        <marker scope="Public" name="aqua_revy_self1a" />
+        <marker scope="Public" name="aqua_revy_self2a" />
+        <marker scope="Public" name="aqua_revy_self3a" />
+        <marker scope="Public" name="aqua_revy_self4a" />
+        <marker scope="Public" name="aqua_revy_self5a" />
+        <marker scope="Public" name="aqua_revy_selfmustMast" />
+        <marker scope="Public" name="aqua_revy_WTH" />
         <marker scope="Public" name="aqua_ribbongirl_arms1a" />
         <marker scope="Public" name="aqua_ryuko_scissorbladeAndFriend" />
         <marker scope="Public" name="aqua_sannytess_cock1" />
@@ -1345,6 +1406,7 @@
         <marker scope="Public" name="keyblade_intimidating" />
         <marker scope="Public" name="keyblade_reveal">Summons her Keyblade and holds it for a time</marker>
         <marker scope="Public" name="keyblade_reveal_dunban" />
+        <marker scope="Public" name="keyblade_reveal_Meia" />
         <marker scope="Public" name="keyblade_sharpness" />
         <marker scope="Public" name="keyblade_vs_creatures">Makes a comment about what the Keyblade is used for, exactly</marker>
         <marker scope="Public" name="keybladeReveal_jura" />
