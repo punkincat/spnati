@@ -16718,6 +16718,17 @@
                     </operations>
                 </state>
             </case>
+            <case stage="0-10" id="1353" oneShotId="1265" hidden="1">
+                <condition role="self" saidMarker="aquas_tellApart" />
+                <condition character="aqua_konosuba" saidMarker="Kyoko_AquasTellApart_reply" />
+                <condition character="aqua_kh" />
+                <state marker="aquaKS_ladyNickname">
+                    <text>Multi-Aqua: Lady Aqua</text>
+                    <operations>
+                        <nickname character="aqua_konosuba" op="=" name="Lady Aqua" />
+                    </operations>
+                </state>
+            </case>
             <case stage="9" oneShotId="227" hidden="1" priority="-1">
                 <test expr="~self.timer~" cmp="&lt;" value="6" />
                 <state>
