@@ -28,7 +28,12 @@
         <response id="226" opponent="saki_zls" opponentId="3" />
         <response id="420" opponent="aqua_kh" opponentId="67" />
         <response id="429" opponent="aqua_kh" opponentId="77" />
+        <response id="436" opponent="aqua_kh" opponentId="778" />
+        <response id="437" opponent="kyoko_kirigiri" opponentId="1337" />
     </responses>
+    <notes>
+        <note id="438">I believe Aqua is actually too lazy to go through with this, so that could potentially come up if Noire mentions the work it takes to be an idol.</note>
+    </notes>
     <labels>
         <label id="17" label="" folder="Axis Sheet Collectible" sort="0" />
         <label id="18" label="" color="0" folder="Accessories and Minor" sort="2" />
@@ -198,8 +203,8 @@
         <label id="200" label="" color="3" folder="Targets" sort="0" />
         <label id="201" label="" color="3" folder="Targets" sort="0" />
         <label id="202" label="" color="3" folder="Targets" sort="0" />
-        <label id="203" label="" color="1" folder="Targets" sort="0" />
-        <label id="204" label="" color="1" folder="Targets" sort="0" />
+        <label id="203" label="" color="0" folder="Targets" sort="0" />
+        <label id="204" label="" color="0" folder="Targets" sort="0" />
         <label id="205" label="" color="5" folder="Targets" sort="0" />
         <label id="206" label="" color="3" folder="Targets" sort="0" />
         <label id="207" label="" color="3" folder="Targets" sort="0" />
@@ -250,7 +255,7 @@
         <label id="252" label="" color="1" folder="Targets" sort="0" />
         <label id="253" label="" folder="Targets" sort="0" />
         <label id="254" label="" color="1" folder="Targets" sort="0" />
-        <label id="255" label="" color="1" folder="Targets" sort="0" />
+        <label id="255" label="" color="5" folder="Targets" sort="0" />
         <label id="256" label="" color="1" folder="Targets" sort="0" />
         <label id="257" label="" color="1" folder="Targets" sort="0" />
         <label id="258" label="" color="1" folder="Targets" sort="0" />
@@ -413,28 +418,41 @@
         <label id="415" label="" folder="Targets" sort="0" />
         <label id="416" label="" folder="Targets" sort="0" />
         <label id="417" label="" folder="Targets" sort="0" />
-        <label id="418" label="" color="1" folder="Targets" sort="0" />
-        <label id="419" label="" color="1" folder="Targets" sort="0" />
-        <label id="420" label="" color="3" folder="Targets" sort="0" />
-        <label id="421" label="" color="3" folder="Targets" sort="0" />
-        <label id="422" label="" color="1" folder="Targets" sort="0" />
-        <label id="423" label="" color="1" folder="Targets" sort="0" />
+        <label id="418" label="" color="0" folder="Targets" sort="0" />
+        <label id="419" label="" color="0" folder="Targets" sort="0" />
+        <label id="420" label="" color="0" folder="Targets" sort="0" />
+        <label id="421" label="" color="0" folder="Targets" sort="0" />
+        <label id="422" label="" color="0" folder="Targets" sort="0" />
+        <label id="423" label="" color="0" folder="Targets" sort="0" />
         <label id="424" label="" folder="Dark Creatures" sort="0" />
         <label id="425" label="" folder="Dark Creatures" sort="0" />
         <label id="426" label="" folder="Dark Creatures" sort="0" />
         <label id="427" label="" folder="Dark Creatures" sort="0" />
         <label id="428" label="" folder="Dark Creatures" sort="0" />
-        <label id="429" label="" color="5" folder="Replies" sort="0" />
-        <label id="430" label="" color="1" folder="Replies" sort="0" />
-        <label id="431" label="" color="1" folder="Targets" sort="0" />
+        <label id="429" label="" color="0" folder="Replies" sort="0" />
+        <label id="430" label="" color="5" folder="Replies" sort="0" />
+        <label id="431" label="" color="0" folder="Targets" sort="0" />
+        <label id="432" label="" color="1" folder="Targets" sort="0" />
+        <label id="433" label="" color="1" folder="Targets" sort="0" />
+        <label id="434" label="" color="1" folder="Targets" sort="0" />
+        <label id="435" label="" color="1" folder="Targets" sort="0" />
+        <label id="436" label="" color="5" folder="Replies" sort="0" />
+        <label id="437" label="" color="5" folder="Replies" sort="0" />
+        <label id="438" label="" color="1" folder="Targets" sort="0" />
+        <label id="439" label="" color="1" folder="Targets" sort="0" />
+        <label id="440" label="" color="1" folder="Targets" sort="0" />
+        <label id="441" label="" color="1" folder="Targets" sort="0" />
+        <label id="442" label="" color="5" folder="Replies" sort="0" />
+        <label id="443" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>431</nextId>
+    <nextId>443</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion_cont" />
+        <marker scope="Public" name="AG_AquasFollowerSuggestion_end" />
         <marker scope="Public" name="Aqua_Blessing" />
         <marker scope="Public" name="AquaKh_AquaDarknessStrip" />
         <marker scope="Public" name="AquaKh_AquaDarknessStrip1" />
@@ -442,9 +460,16 @@
         <marker scope="Public" name="AquaKH_GameStart" />
         <marker scope="Public" name="AquaKH_GameStart1" />
         <marker scope="Public" name="AquaKH_GameStart2" />
+        <marker scope="Public" name="AquaKh_GoddessOfLust_reply" />
+        <marker scope="Public" name="AquaKh_Keyblade_cont" />
+        <marker scope="Public" name="AquaKh_Keyblade_cont2" />
         <marker scope="Public" name="AquaKh_KeybladeQuestion" />
         <marker scope="Public" name="AquaKh_KeybladeReact" />
+        <marker scope="Public" name="AquaKH_NicknamesReply" />
+        <marker scope="Public" name="AquaKH_NoCopyReply" />
         <marker scope="Public" name="AquaKh_YourDeal" />
+        <marker scope="Public" name="AquaKh_YourDeal_cont" />
+        <marker scope="Public" name="AquaKh_YourDeal_cont2" />
         <marker scope="Public" name="Aquass_SelfExcuse" />
         <marker scope="Public" name="Aquass_SelfExcuse2" />
         <marker scope="Public" name="Aquass_SelfExcuse3" />
@@ -491,6 +516,7 @@
         <marker scope="Public" name="Deity_frustration_cont" />
         <marker scope="Public" name="Deity_frustration_end" />
         <marker scope="Public" name="Deity_pre_blessing" />
+        <marker scope="Public" name="DMG_2Nickels_reply" />
         <marker scope="Public" name="Fate_Hat_Cheat_react" />
         <marker scope="Public" name="First_round_demon_threat" />
         <marker scope="Public" name="First_round_demons_frustration" />
@@ -577,6 +603,7 @@
         <marker scope="Public" name="KazumaDarkness_select_screen" />
         <marker scope="Public" name="KazumaMegumin_gameStart" />
         <marker scope="Public" name="KazumaMegumin_select_screen" />
+        <marker scope="Public" name="Kyoko_AquasTellApart_reply" />
         <marker scope="Public" name="LastTwoPlayers" />
         <marker scope="Public" name="Megumin_Cape1" />
         <marker scope="Public" name="Megumin_Cape2" />
@@ -640,7 +667,9 @@
         <marker scope="Public" name="No_underwear_reactM2" />
         <marker scope="Public" name="No_underwear_reactM3" />
         <marker scope="Public" name="Noire_goddessOfWhat" />
+        <marker scope="Public" name="Noire_goddessOfWhat_cont" />
         <marker scope="Public" name="Noire_idolOutfit" />
+        <marker scope="Public" name="Noire_idolOutfit_cont" />
         <marker scope="Public" name="Player_Aqua" />
         <marker scope="Public" name="Player_Aqua_AquaKH" />
         <marker scope="Public" name="Realize_SelfForfeit" />
