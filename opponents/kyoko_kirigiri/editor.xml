@@ -245,7 +245,7 @@ In this case, "Are you suggesting a side wager, then?" is Kyoko's way of suggest
         <label id="155" label="Chest" folder="" sort="0" />
         <label id="130" label="Jacket off" folder="" sort="0" />
         <label id="156" label="Boots" folder="" sort="0" />
-        <label id="162" label="Normal" folder="Extra: Normal" sort="0" />
+        <label id="162" label="Normal" folder="Extra: Normal" sort="2" />
         <label id="163" label="Junko" folder="" sort="0" />
         <label id="164" label="Tie" folder="" sort="0" />
         <label id="165" label="Tie off" folder="" sort="0" />
@@ -698,7 +698,7 @@ In this case, "Are you suggesting a side wager, then?" is Kyoko's way of suggest
         <label id="647" label="Gloria IL 0-1C" color="5" folder="Inbound stage 0" sort="4" />
         <label id="648" label="Gloria IL 0-1A" color="2" folder="Inbound stage 0" sort="3" />
         <label id="649" label="Poké Trainers" folder="Duplicate dialogue" sort="8" />
-        <label id="650" label="Poké Trainers" folder="Outbound stage X" sort="0" />
+        <label id="650" label="Poké Trainers" folder="Outbound stage X" sort="2" />
         <label id="651" label="Gloria IR pre0-1A" folder="Duplicate dialogue" sort="11" />
         <label id="652" label="Gloria IR pre0-1B" folder="Duplicate dialogue" sort="12" />
         <label id="653" label="Gloria IR pre0-1C" folder="Duplicate dialogue" sort="13" />
@@ -943,7 +943,7 @@ In this case, "Are you suggesting a side wager, then?" is Kyoko's way of suggest
         <label id="891" label="Giygas Ou 0-2B" color="3" folder="Outbound stage 0" sort="5" />
         <label id="892" label="Giygas Ou 0-3A" color="2" folder="Outbound stage 0" sort="7" />
         <label id="893" label="Giygas Ou 0-3B" color="3" folder="Outbound stage 0" sort="8" />
-        <label id="894" label="Giygas Ou 5-1" folder="Outbound stage 5" sort="0" />
+        <label id="894" label="Giygas Ou 5-1" folder="Outbound stage 5" sort="2" />
         <label id="895" label="Giygas Ou 6-1A" color="2" folder="Outbound stage 6" sort="8" />
         <label id="896" label="Giygas Ou 6-1B" color="3" folder="Outbound stage 6" sort="7" />
         <label id="897" label="SCM In X-1" folder="Inbound hand" sort="0" />
@@ -1360,19 +1360,35 @@ In this case, "Are you suggesting a side wager, then?" is Kyoko's way of suggest
         <label id="1322" label="AE86 Ou B-4" color="3" folder="April Fool's" sort="70" />
         <label id="1323" label="AE86 Ou 8-1" folder="April Fool's" sort="19" />
         <label id="1324" label="AE86 Ou 10-1" folder="April Fool's" sort="35" />
-        <label id="1325" label="Miki Ou 3-1" folder="Outbound stage 3" sort="0" />
+        <label id="1325" label="Miki Ou 3-1" folder="Outbound stage 3" sort="2" />
         <label id="1326" label="Chihiro Ou 5" folder="Outbound stage 5" sort="0" />
         <label id="1327" label="" folder="Extra: Normal" sort="0" />
         <label id="1328" label="" folder="Extra: Normal" sort="0" />
         <label id="1329" label="" folder="Extra: Normal" sort="0" />
-        <label id="1330" label="" folder="Major/Important" sort="0" />
+        <label id="1330" label="" folder="Major/Important" sort="2" />
         <label id="1331" label="MARKED FOR DELETION" color="1" folder="Extra" sort="0" />
-        <label id="1332" label="MARKED FOR DELETION" color="1" folder="Extra" sort="0" />
-        <label id="1333" label="Jewelry" folder="Specific items" sort="0" />
+        <label id="1332" label="MARKED FOR DELETION" color="1" folder="Extra" sort="2" />
+        <label id="1333" label="Jewelry" folder="Specific items" sort="2" />
         <label id="1334" label="Generic" folder="" sort="0" />
         <label id="1335" label="Magic" folder="Outbound hand" sort="0" />
-        <label id="1336" label="Double Aqua 1" folder="Aqua+Aqua" sort="0" />
-        <label id="1337" label="Double Aqua 1B" color="2" folder="Aqua+Aqua" sort="0" />
+        <label id="1336" label="Double Aqua 1" folder="Aqua+Aqua" sort="2" />
+        <label id="1337" label="Double Aqua 1B" color="2" folder="Aqua+Aqua" sort="4" />
+        <label id="1338" label="Dumbqua Ou A-1" folder="Outbound stage X" sort="0" />
+        <label id="1339" label="Nopan: KH Aqua stripping" color="5" folder="Aqua+Aqua" sort="6" />
+        <label id="1340" label="Dumbqua Ou 5-1" folder="Outbound forfeit" sort="0" />
+        <label id="1341" label="Dumbqua Ou 5-1" folder="Outbound forfeit" sort="2" />
+        <label id="1342" label="Nopan: KS Aqua stripped" color="3" folder="Aqua+Aqua" sort="8" />
+        <label id="1343" label="Smartqua IL 0-1" folder="Inbound stage 0" sort="12" />
+        <label id="1344" label="Smartqua IL 0-2" folder="Inbound stage 0" sort="18" />
+        <label id="1345" label="Smartqua IL 0-3" folder="Inbound stage 0" sort="27" />
+        <label id="1346" label="Smartqua IR pre0-1" folder="Duplicate dialogue" sort="18" />
+        <label id="1347" label="Smartqua IR pre0-2" folder="Duplicate dialogue" sort="73" />
+        <label id="1348" label="Smartqua IR pre0-3" folder="Duplicate dialogue" sort="93" />
+        <label id="1349" label="Smartqua IR 0-1" folder="Duplicate dialogue" sort="58" />
+        <label id="1350" label="Smartqua IR 0-2" folder="Duplicate dialogue" sort="94" />
+        <label id="1351" label="Smartqua IR 0-3" folder="Duplicate dialogue" sort="7" />
+        <label id="1352" label="" folder="Differential nicknames" sort="0" />
+        <label id="1353" label="" folder="Differential nicknames" sort="0" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -1404,7 +1420,7 @@ In this case, "Are you suggesting a side wager, then?" is Kyoko's way of suggest
     </posePreviewMarkers>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1337</nextId>
+    <nextId>1353</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
@@ -1412,6 +1428,17 @@ In this case, "Are you suggesting a side wager, then?" is Kyoko's way of suggest
         <marker scope="Public" name="ae86_strip" />
         <marker scope="Public" name="ae86_strip01" />
         <marker scope="Public" name="alwaysReady">"Always ready, I see" and other versions of the line</marker>
+        <marker scope="Public" name="aquaKH_aceDetective" />
+        <marker scope="Public" name="aquaKH_masterNickname" />
+        <marker scope="Public" name="aquaKH_shadow" />
+        <marker scope="Public" name="aquaKH_sixYears" />
+        <marker scope="Public" name="aquaKS_" />
+        <marker scope="Public" name="aquaKS_deads" />
+        <marker scope="Public" name="aquaKS_deads_idea" />
+        <marker scope="Public" name="aquaKS_deads_stern" />
+        <marker scope="Public" name="aquaKS_overconfidence" />
+        <marker scope="Public" name="aquaKS_showoff" />
+        <marker scope="Public" name="aquas_nopan" />
         <marker scope="Public" name="aquas_tellApart" />
         <marker scope="Public" name="aquas_tellApart_normal" />
         <marker scope="Public" name="aquas_tellApart_toshinou" />
