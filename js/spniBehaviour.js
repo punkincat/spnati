@@ -2799,6 +2799,15 @@ Opponent.prototype.applyHiddenStates = function (chosenCase, opp) {
         this.applyState(c, opp);
         /* Yes, this may apply the case-level oneShot multiple times,
          * but that's no real problem. */
+
+        const s1 = c.rawDialogue.indexOf('<script>');
+        const s2 = c.rawDialogue.indexOf('<\/script>');        
+        if (s1 != -1 && s2 != -1) 
+        {
+            var wrapperSpan = document.createElement('span');
+            wrapperSpan.innerHTML = c.rawDialogue.substring(s1, s2 + 9);
+            gameDisplays[this.slot - 1].dialogue.append(wrapperSpan);
+        }
     }, this);
 }
 
