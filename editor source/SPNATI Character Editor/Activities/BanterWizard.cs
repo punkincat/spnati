@@ -222,7 +222,7 @@ namespace SPNATI_Character_Editor.Activities
 
         private bool LineFiltering(InboundLine line)
 		{
-			if (_colorFilter != null && _filterToColor)
+			if (_filterToColor)
 			{
 				if (line.ColorCode != _colorFilter)
 				{
@@ -1052,19 +1052,22 @@ namespace SPNATI_Character_Editor.Activities
         private void SetColorButton(string colorCode)
         {
             ColorCode code = Definitions.Instance.Get<ColorCode>(colorCode);
-            if (code == null)
+            if (code == null || colorCode == "0")
             {
                 cmdColorCode.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
                 cmdColorCode.Tag = null;
+                if (_currentInbound != null)
+                {
+                    _currentInbound.ColorCode = null;
+                }
             }
-            else
+			else
             {
                 cmdColorCode.BackColor = code.GetColor();
                 cmdColorCode.Tag = colorCode;
                 if (_currentInbound != null)
                 {
                     _currentInbound.ColorCode = cmdColorCode.Tag?.ToString();
-                    //	_currentInbound.NotifyPropertyChanged;
                 }
             }
         }
@@ -1081,16 +1084,16 @@ namespace SPNATI_Character_Editor.Activities
         private void SetColorFilterButton(string colorCode)
         {
             ColorCode code = Definitions.Instance.Get<ColorCode>(colorCode);
-            if (code == null)
+            if (code == null || colorCode == "0")
             {
                 cmdColorFilter.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
                 cmdColorFilter.Tag = null;
+				_colorFilter = null;
             }
             else
             {
                 cmdColorFilter.BackColor = code.GetColor();
                 cmdColorFilter.Tag = colorCode;
-
 				_colorFilter = colorCode;
 			}
         }
@@ -1210,4 +1213,5 @@ namespace SPNATI_Character_Editor.Activities
             return this.costs[this.costs.Length - 1];
         }
     }
+
 }
