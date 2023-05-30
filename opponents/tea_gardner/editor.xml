@@ -171,17 +171,17 @@
         <label id="42" label="" folder="Target: Kyouko" sort="0" />
         <label id="133" label="" folder="Target: Dark Magician Girl" sort="0" />
         <label id="134" label="" folder="Target: Kyouko" sort="5" />
-        <label id="135" label="" folder="May to Left" sort="0" />
+        <label id="135" label="" folder="May to Left" sort="2" />
         <label id="151" label="" folder="Target: Dark Magician Girl" sort="7" />
         <label id="137" label="" folder="Target: Dark Magician Girl" sort="3" />
         <label id="138" label="" folder="Target: Dark Magician Girl" sort="2" />
-        <label id="139" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="139" label="" folder="Target: Dark Magician Girl" sort="4" />
         <label id="140" label="" folder="Target: Dark Magician Girl" sort="4" />
         <label id="141" label="" folder="May to Left" sort="2" />
         <label id="142" label="" folder="Target: May" sort="4" />
         <label id="143" label="" folder="Target: May" sort="2" />
         <label id="144" label="" folder="May to Left" sort="0" />
-        <label id="13" label="" folder="Target: May" sort="0" />
+        <label id="13" label="" folder="Target: May" sort="2" />
         <label id="145" label="" folder="Target: Kyouko" sort="8" />
         <label id="146" label="" folder="Target: Kyouko" sort="7" />
         <label id="147" label="" folder="Target: Kyouko" sort="9" />
@@ -202,8 +202,8 @@
         <label id="166" label="" folder="Target: Sempai" sort="5" />
         <label id="168" label="" folder="Target: Sempai" sort="6" />
         <label id="180" label="" folder="Target: Dark Magician Girl" sort="9" />
-        <label id="182" label="" folder="Tags" sort="0" />
-        <label id="183" label="" folder="Tags" sort="6" />
+        <label id="182" label="" folder="Filters" sort="2" />
+        <label id="183" label="" folder="Filters" sort="6" />
         <label id="184" label="" folder="Target: Kyoko" sort="0" />
         <label id="185" label="" folder="Target: Kyouko" sort="6" />
         <label id="100" label="" folder="Target: Nagatoro" sort="0" />
@@ -216,12 +216,12 @@
         <label id="192" label="" folder="Target: Stage0" sort="0" />
         <label id="193" label="" folder="Target: Stage0" sort="3" />
         <label id="194" label="" folder="Target: Stage0" sort="5" />
-        <label id="195" label="" folder="Tags" sort="2" />
-        <label id="196" label="" folder="Tags" sort="4" />
-        <label id="197" label="" folder="Tags" sort="5" />
-        <label id="198" label="" folder="Tags" sort="7" />
+        <label id="195" label="" folder="Target: Stage0" sort="2" />
+        <label id="196" label="" folder="Filters" sort="4" />
+        <label id="197" label="" folder="Filters" sort="5" />
+        <label id="198" label="" folder="Situations" sort="7" />
         <label id="200" label="" folder="Target: Stage0" sort="6" />
-        <label id="201" label="" folder="Tags" sort="3" />
+        <label id="201" label="" folder="Filters" sort="3" />
         <label id="202" label="" folder="May to Right" sort="0" />
         <label id="203" label="" folder="May to Right" sort="2" />
         <label id="204" label="" folder="Target: May" sort="3" />
@@ -231,15 +231,25 @@
         <label id="11" label="" folder="Responses" sort="0" />
         <label id="29" label="" folder="Situations" sort="0" />
         <label id="10" label="" folder="Responses" sort="2" />
+        <label id="207" label="" folder="Filters" sort="7" />
+        <label id="208" label="" folder="Filters" sort="0" />
+        <label id="209" label="" folder="Target: Stage0" sort="10" />
+        <label id="210" label="" folder="Target: Stage0" sort="11" />
+        <label id="136" label="" folder="Responses" sort="6" />
+        <label id="211" label="" folder="Responses" sort="8" />
+        <label id="212" label="" folder="Responses" sort="7" />
+        <label id="213" label="" folder="Responses" sort="9" />
+        <label id="214" label="" folder="Responses" sort="11" />
+        <label id="215" label="" folder="Responses" sort="10" />
+        <label id="217" label="" folder="Target: May" sort="0" />
+        <label id="50" label="" folder="Target: May" sort="3" />
+        <label id="218" label="" folder="Target: May" sort="7" />
     </labels>
     <prefixes>
         <prefix>card</prefix>
     </prefixes>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>206</nextId>
+    <nextId>218</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="blue_disk" />
         <marker scope="Public" name="chiakiVideoGames" />
         <marker scope="Public" name="kyouko_tea_cardgame" />
@@ -266,6 +276,7 @@
         <marker scope="Public" name="tea_catastrophe" />
         <marker scope="Public" name="tea_chazz_cheat" />
         <marker scope="Public" name="tea_chazz_dmg1" />
+        <marker scope="Public" name="tea_chazz_strip0a" />
         <marker scope="Public" name="tea_chazz_strip1" />
         <marker scope="Public" name="tea_chazz_strip2" />
         <marker scope="Public" name="tea_chazz_strip2a" />
@@ -279,6 +290,7 @@
         <marker scope="Public" name="tea_cynthia_strip0" />
         <marker scope="Public" name="tea_dash_respond" />
         <marker scope="Public" name="tea_deckmaster" />
+        <marker scope="Public" name="tea_deckmaster_DMG1" />
         <marker scope="Public" name="tea_dmg_attraction" />
         <marker scope="Public" name="tea_dmg_attraction2a" />
         <marker scope="Public" name="tea_dmg_attraction2b" />
@@ -374,6 +386,7 @@
         <marker scope="Public" name="tea_may_startmast" />
         <marker scope="Public" name="tea_may_strip" />
         <marker scope="Public" name="tea_may_strip0a" />
+        <marker scope="Public" name="tea_may_strip0b" />
         <marker scope="Public" name="tea_may_strip1" />
         <marker scope="Public" name="tea_may_swimsuit" />
         <marker scope="Public" name="tea_miku_strip" />
@@ -402,6 +415,8 @@
         <marker scope="Public" name="tea_pool_end" />
         <marker scope="Public" name="tea_popipo" />
         <marker scope="Public" name="tea_probability" />
+        <marker scope="Public" name="tea_prompt_idol1" />
+        <marker scope="Public" name="tea_prompt_wealthy1" />
         <marker scope="Public" name="tea_queenie_start" />
         <marker scope="Public" name="tea_reply_aelia1" />
         <marker scope="Public" name="tea_rosa_huddle" />
@@ -448,5 +463,4 @@
         <marker scope="Public" name="tea_zodiac" />
         <marker scope="Public" name="yuno_resp1" />
     </markers>
-    <hasBanter>false</hasBanter>
 </metadata>
