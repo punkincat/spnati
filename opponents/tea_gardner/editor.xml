@@ -235,8 +235,11 @@
     <prefixes>
         <prefix>card</prefix>
     </prefixes>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
     <nextId>206</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="blue_disk" />
         <marker scope="Public" name="chiakiVideoGames" />
         <marker scope="Public" name="kyouko_tea_cardgame" />
@@ -445,4 +448,5 @@
         <marker scope="Public" name="tea_zodiac" />
         <marker scope="Public" name="yuno_resp1" />
     </markers>
+    <hasBanter>false</hasBanter>
 </metadata>
