@@ -888,7 +888,7 @@ namespace SPNATI_Character_Editor.Controls
 		private void SetColorButton(string colorCode)
 		{
 			ColorCode code = Definitions.Instance.Get<ColorCode>(colorCode);
-			if (code == null || code.ToString() == "0")
+			if (code == null || colorCode == "0")
 			{
 				cmdColorCode.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
 				cmdColorCode.Tag = null;
