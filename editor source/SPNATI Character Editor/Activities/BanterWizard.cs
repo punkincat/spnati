@@ -631,7 +631,11 @@ namespace SPNATI_Character_Editor.Activities
             if (e.RowIndex >= 0 && e.ColumnIndex == ColJump.Index)
             {
                 Character c = gridLines.Rows[e.RowIndex]?.Tag as Character;
-				string text = gridLines.Rows[e.RowIndex]?.Cells["ColText"].Value as string;
+                if (!c.IsFullyLoaded)
+                {
+                    c = CharacterDatabase.Load(c.FolderName);
+                }
+                string text = gridLines.Rows[e.RowIndex]?.Cells["ColText"].Value as string;
 				if (c == null || string.IsNullOrEmpty(text))
                 {
                     return;
@@ -721,19 +725,23 @@ namespace SPNATI_Character_Editor.Activities
             foreach (string folderName in folderNames)
             {
                 progressBar.Value = count++;
+                lblProgress.Text = "Scanning " + folderName + "...";
+                lblProgress.Refresh();
                 if (!CharacterDatabase.Exists(folderName))
                 {
                     continue;
                 }
-                lblProgress.Text = "Scanning "+folderName+"...";
-                lblProgress.Refresh();
-                Character loaded = CharacterDatabase.Load(folderName);
-                TargetingCharacter ch = new TargetingCharacter(loaded, _character);
-                _character.BanterData.TargetingCharacters.Add(ch);
+				Character loaded = CharacterDatabase.Get(folderName);
+				if (!loaded.IsFullyLoaded)
+				{ 
+					loaded = CharacterDatabase.Load(folderName);
+				}
+				TargetingCharacter ch = new TargetingCharacter(loaded, _character);
+				_character.BanterData.TargetingCharacters.Add(ch);
 				if (_character.BanterData.TargetingCharacters.Last().InboundCount > 0)
 				{
 					lstCharacters.Items.Add(loaded);
-				}
+				}	
             }
 
 			EndLoading();
@@ -760,8 +768,12 @@ namespace SPNATI_Character_Editor.Activities
 				lblProgress.Refresh();
                 if (ch.InboundCount > 0)
                 {
-                    Character loaded = CharacterDatabase.Load(ch.Id);
-                    lstCharacters.Items.Add(loaded);
+                    Character loaded = CharacterDatabase.Get(ch.Id);
+                    if (!loaded.IsFullyLoaded)
+                    {
+                        loaded = CharacterDatabase.Load(ch.Id);
+                    }
+					lstCharacters.Items.Add(loaded);
                 }
             }
 
@@ -796,7 +808,11 @@ namespace SPNATI_Character_Editor.Activities
 
                 if (matchingLineCount > 0)
                 {
-                    Character loaded = CharacterDatabase.Load(ch.Id);
+					Character loaded = CharacterDatabase.Get(ch.Id);
+					if (!loaded.IsFullyLoaded)
+					{
+						loaded = CharacterDatabase.Load(ch.Id);
+					}
                     lstCharacters.Items.Add(loaded);
                 }
             }
@@ -829,17 +845,21 @@ namespace SPNATI_Character_Editor.Activities
             folderNames = folderNames.Distinct().ToList();
 			progressBar.Maximum = Math.Max(1,folderNames.Count());
 
-            foreach (string folderName in folderNames)
+			foreach (string folderName in folderNames)
 			{
-                progressBar.Value = count++;
+				progressBar.Value = count++;
+				lblProgress.Text = "Scanning " + folderName + "...";
+				lblProgress.Refresh();
+
                 if (!CharacterDatabase.Exists(folderName))
                 {
                     continue;
                 }
-                lblProgress.Text = "Scanning " + folderName + "...";
-                lblProgress.Refresh();
-
-                Character loaded = CharacterDatabase.Load(folderName);
+                Character loaded = CharacterDatabase.Get(folderName);
+				if (!loaded.IsFullyLoaded)
+				{
+					loaded = CharacterDatabase.Load(folderName);
+				}
                 int index = _character.BanterData.TargetingCharacters.FindIndex(x => x.Id == folderName);
 
 				if (index == -1)
@@ -872,7 +892,6 @@ namespace SPNATI_Character_Editor.Activities
 					}
 
 					Dictionary<DialogueLine, Case> behaviourLines = new Dictionary<DialogueLine, Case>();
-
 
                     foreach (Case stageCase in loaded.GetWorkingCasesTargetedAtCharacter(_character, TargetType.DirectTarget))
                     {
@@ -936,7 +955,6 @@ namespace SPNATI_Character_Editor.Activities
 								}
 								if (minRatio < 0.35F)
 								{
-								//	linesModified.Add(banterLines[minLineIndex]);
                                     InboundLine inbound = _character.BanterData.TargetingCharacters[index].Inbounds.Find(x => x.Text == banterLines[minLineIndex].Text);
                                     int stageCaseHash = 1;
                                     foreach (TargetCondition condition in kvp.Value.Conditions)
