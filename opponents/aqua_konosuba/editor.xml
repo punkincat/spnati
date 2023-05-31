@@ -30,6 +30,12 @@
         <response id="429" opponent="aqua_kh" opponentId="77" />
         <response id="436" opponent="aqua_kh" opponentId="778" />
         <response id="437" opponent="kyoko_kirigiri" opponentId="1337" />
+        <response id="444" opponent="kyoko_kirigiri" opponentId="1339" />
+        <response id="445" opponent="kyoko_kirigiri" opponentId="1342" />
+        <response id="446" opponent="kyoko_kirigiri" opponentId="1340" />
+        <response id="450" opponent="revy" opponentId="269" />
+        <response id="452" opponent="meia" opponentId="800" />
+        <response id="454" opponent="jura" opponentId="622" />
     </responses>
     <notes>
         <note id="438">I believe Aqua is actually too lazy to go through with this, so that could potentially come up if Noire mentions the work it takes to be an idol.</note>
@@ -444,10 +450,22 @@
         <label id="441" label="" color="1" folder="Targets" sort="0" />
         <label id="442" label="" color="5" folder="Replies" sort="0" />
         <label id="443" label="" color="1" folder="Targets" sort="0" />
+        <label id="444" label="" color="5" folder="Replies" sort="0" />
+        <label id="445" label="" color="5" folder="Replies" sort="0" />
+        <label id="446" label="" color="5" folder="Replies" sort="0" />
+        <label id="447" label="" color="5" folder="Replies" sort="0" />
+        <label id="448" label="" color="5" folder="Replies" sort="0" />
+        <label id="449" label="" color="5" folder="Replies" sort="0" />
+        <label id="450" label="" color="1" folder="Replies" sort="0" />
+        <label id="451" label="" color="1" folder="Replies" sort="0" />
+        <label id="452" label="" color="1" folder="Replies" sort="0" />
+        <label id="453" label="" color="1" folder="Replies" sort="0" />
+        <label id="454" label="" color="1" folder="Replies" sort="0" />
+        <label id="455" label="" color="1" folder="Replies" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>443</nextId>
+    <nextId>455</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion" />
@@ -529,6 +547,8 @@
         <marker scope="Public" name="Inventory_drinks_ask" />
         <marker scope="Public" name="Inventory_drinks_ask_cont" />
         <marker scope="Public" name="Inventory_drinks_ask_end" />
+        <marker scope="Public" name="Jura_reply1" />
+        <marker scope="Public" name="Jura_reply1B" />
         <marker scope="Public" name="Kazuma_Boots1" />
         <marker scope="Public" name="Kazuma_Boots2" />
         <marker scope="Public" name="Kazuma_Boots3" />
@@ -603,7 +623,10 @@
         <marker scope="Public" name="KazumaDarkness_select_screen" />
         <marker scope="Public" name="KazumaMegumin_gameStart" />
         <marker scope="Public" name="KazumaMegumin_select_screen" />
+        <marker scope="Public" name="Kyoko_AquasNopan_reply" />
         <marker scope="Public" name="Kyoko_AquasTellApart_reply" />
+        <marker scope="Public" name="Kyoko_Overconfidence_reply" />
+        <marker scope="Public" name="Kyoko_SelfShowoff_reply" />
         <marker scope="Public" name="LastTwoPlayers" />
         <marker scope="Public" name="Megumin_Cape1" />
         <marker scope="Public" name="Megumin_Cape2" />
@@ -656,6 +679,8 @@
         <marker scope="Public" name="Megumin_Winner3" />
         <marker scope="Public" name="MeguminDarkness_gameStart" />
         <marker scope="Public" name="MeguminDarkness_select_screen" />
+        <marker scope="Public" name="Meia_reply1" />
+        <marker scope="Public" name="Meia_reply1B" />
         <marker scope="Public" name="No_bra_react" />
         <marker scope="Public" name="No_bra_react2" />
         <marker scope="Public" name="No_bra_react3" />
@@ -673,6 +698,8 @@
         <marker scope="Public" name="Player_Aqua" />
         <marker scope="Public" name="Player_Aqua_AquaKH" />
         <marker scope="Public" name="Realize_SelfForfeit" />
+        <marker scope="Public" name="Revy_reply1" />
+        <marker scope="Public" name="Revy_reply1B" />
         <marker scope="Public" name="Saki_bad_vibes" />
         <marker scope="Public" name="Saki_headless_react" />
         <marker scope="Public" name="Saki_keepYourHeadOn" />
