@@ -2805,7 +2805,7 @@ Opponent.prototype.applyHiddenStates = function (chosenCase, opp) {
         if (s1 != -1 && s2 != -1) 
         {
             var wrapperSpan = document.createElement('span');
-            wrapperSpan.innerHTML = c.rawDialogue.substring(s1, s2 + 9);
+            wrapperSpan.innerHTML = expandDialogue(c.rawDialogue.substring(s1, s2 + 9), this, opp);
             gameDisplays[this.slot - 1].dialogue.append(wrapperSpan);
         }
     }, this);
