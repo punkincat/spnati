@@ -168,10 +168,6 @@ var CANDY_LIST = [
     "asuna_yuuki/0-stripAh.png",
     "asuna_yuuki/4-embarrassed.png",
     "asuna_yuuki/4-pleased.png",
-    "myriam/0-confident.png",              // Has Recent Updates
-    "myriam/2-normal.png",
-    "myriam/3-think.png",
-    "myriam/4-flattered.png",
     "pyrrha/0-calm.png",                   // Has Recent Updates
     "pyrrha/0-awkward.png",
     "pyrrha/1-horny.png",
@@ -300,10 +296,6 @@ var CANDY_LIST = [
     "trixie/poses/1-flirt.png",
     "trixie/poses/4-disappointed.png",
     "trixie/poses/5-grumpy.png",
-    "lyralei/0-happy.png",                 // Has Recent Updates
-    "lyralei/1-embarrassed.png",
-    "lyralei/3-awkward.png",
-    "lyralei/5-stripped.png",
     "aaravi/0-smug.png",                   // Has Recent Updates
     "aaravi/1-excited.png",
     "aaravi/3-confident.png",
@@ -350,7 +342,7 @@ var CANDY_LIST = [
     "kaz/2-glad.png",
     "arueshalae/0-happy.png",              // Has Recent Updates
     "arueshalae/0-laughing.png",
-    "arueshalae/4-singing_happy.png",
+    "arueshalae/4-singing happy.png",
     "arueshalae/4-horny.png",
     "eichi/0-excited.png",                 // Has Recent Updates
     "eichi/0-flirt_altc.png",
@@ -496,6 +488,14 @@ var CANDY_LIST = [
     "videl/1-flying.png",
     "videl/4-happy.png",
     "videl/5-embarrassed.png",
+    "lyralei/0-happy.png",
+    "lyralei/1-embarrassed.png",
+    "lyralei/3-awkward.png",
+    "lyralei/5-stripped.png",
+    "myriam/0-confident.png",
+    "myriam/2-normal.png",
+    "myriam/3-think.png",
+    "myriam/4-flattered.png",
 */
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
