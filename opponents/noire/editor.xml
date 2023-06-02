@@ -37,6 +37,7 @@
         <id>2474</id>
         <id>2473</id>
         <id>2551</id>
+        <id>2552</id>
     </hidden>
     <responses>
         <response id="1" opponent="neptune" opponentId="1" />
@@ -2672,13 +2673,19 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2596" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2597" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2598" label="" folder="~Clear Dress costume" sort="0" />
+        <label id="2599" label="" folder="Various" sort="0" />
+        <label id="2600" label="" folder="~Cool Girl costume" sort="0" />
+        <label id="2601" label="" folder="~Cool Girl costume" sort="0" />
+        <label id="2602" label="" folder="~Cool Girl costume" sort="0" />
+        <label id="2603" label="" folder="~Cool Girl costume" sort="0" />
+        <label id="2604" label="" folder="CG" sort="0" />
+        <label id="2605" label="" folder="CG" sort="0" />
+        <label id="2606" label="" folder="CG" sort="0" />
+        <label id="2607" label="short hair" folder="~Male1Acc" sort="0" />
     </labels>
-    <posePreviewMarkers>
-        <posePreviewMarker>CDAltImg=B</posePreviewMarker>
-    </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2598</nextId>
+    <nextId>2607</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_costume1" />
@@ -2755,6 +2762,8 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="boboboDonPatchGirl" />
         <marker scope="Private" name="CDAltImg" />
         <marker scope="Private" name="CDStripRoute" />
+        <marker scope="Public" name="CGAltImg" />
+        <marker scope="Public" name="CGStripRoute" />
         <marker scope="Public" name="CollectibleBraceletsTakenOff" />
         <marker scope="Public" name="colress_resp_nano" />
         <marker scope="Public" name="colress_resp_nano2" />
@@ -3242,6 +3251,8 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="NoireCGBandaidsReveal" />
         <marker scope="Public" name="NoireCGBandaidsStrip" />
         <marker scope="Public" name="NoireCGSkirt" />
+        <marker scope="Public" name="NoireCGThighhighsHesitate" />
+        <marker scope="Public" name="NoireCGThighhighsStayOn1" />
         <marker scope="Public" name="NoireCGThighhighsStrip" />
         <marker scope="Public" name="NoireCGTop" />
         <marker scope="Private" name="NoireConsecutiveDefeats" />
@@ -3586,10 +3597,10 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="yuri1" />
     </markers>
     <pendingLines>
-        <line>Short hair is the default for men... Well, there aren't many who would still look manly with twintails and ribbons, are there?</line>
         <line>Some say that a girl's hair is her life, or maybe her life force. That's surely an overstatement, especially that men can look strong and full of vitality even if they're shaved bald.</line>
         <line>Some say that a girl's hair is her life, or maybe her life force. That's surely an overstatement, but even on a boy, long and shiny hair falling down his shoulders exudes vitality..</line>
         <line>Ah, your hair got slightly tousled under that hat. Let me fix it for you... Or rather just do it yourself!</line>
         <line>You should be more careful when you're wearing a hat, ~player~. Let me fix your hair a little... I-I mean, it's not in total disarray, so we can leave it as it is... Yeah...</line>
+        <line>I'm the Goddess of Victory.</line>
     </pendingLines>
 </metadata>
