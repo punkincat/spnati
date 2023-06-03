@@ -30,6 +30,9 @@
         <case name="NoireCGThighhighsStrip" id="1059" priority="FYI" min="6" max="6">
             <description>[Cool Girl costume] Noire leans forward and takes off her thigh-highs.</description>
         </case>
+        <case name="NoireCGThighhighsStayOn1" id="1076" priority="FYI" min="7" max="7">
+            <description>[Cool Girl costume] In some games, Noire hesitates, takes off only her armband and decides to keep her thigh-highs on for the rest of the game.</description>
+        </case>
     </noteworthy>
     <hidden>
         <id>2471</id>
@@ -1085,8 +1088,8 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="995" label="" folder="1TAGS" sort="0" />
         <label id="996" label="" folder="1Lore" sort="0" />
         <label id="997" label="shoes" folder="~Acc" sort="0" />
-        <label id="999" label="prompt resp. strip comm. 0-3" color="6" folder="~Generic" sort="0" />
-        <label id="1000" label="prompt resp. strip comm. 4-7" color="6" folder="~Generic" sort="0" />
+        <label id="999" label="prompt resp. strip comm. 0-3" color="6" folder="1Reactions" sort="0" />
+        <label id="1000" label="prompt resp. strip comm. 4-7" color="6" folder="1Reactions" sort="0" />
         <label id="1001" label="" color="6" folder="" sort="0" />
         <label id="1002" label="prompt resp. odd drinks" color="6" folder="MariSetogaya" sort="0" />
         <label id="1003" label="" color="1" folder="MariSetogaya" sort="0" />
@@ -2325,7 +2328,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2230" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2231" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2232" label="" folder="~Clear Dress costume" sort="0" />
-        <label id="2233" label="" color="2" folder="~Clear Dress costume" sort="0" />
+        <label id="2233" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2234" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2235" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2236" label="" folder="~Clear Dress costume" sort="0" />
@@ -2356,7 +2359,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2261" label="" color="2" folder="" sort="0" />
         <label id="2262" label="" color="2" folder="1TsunderingCDSpecific" sort="0" />
         <label id="2263" label="" color="2" folder="1TsunderingCDSpecific" sort="0" />
-        <label id="2264" label="" color="2" folder="~Clear Dress costume" sort="0" />
+        <label id="2264" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2265" label="" color="2" folder="~Clear Dress costume" sort="0" />
         <label id="2266" label="" color="2" folder="" sort="0" />
         <label id="2267" label="Rouge present" color="2" folder="RougeTreasureScope" sort="0" />
@@ -2667,7 +2670,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2590" label="" folder="~Markers" sort="0" />
         <label id="2591" label="" folder="~generic" sort="0" />
         <label id="2592" label="" folder="~Clear Dress costume" sort="0" />
-        <label id="2593" label="" color="2" folder="~Clear Dress costume" sort="0" />
+        <label id="2593" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2594" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2595" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2596" label="" folder="~Clear Dress costume" sort="0" />
@@ -2682,10 +2685,25 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2605" label="" folder="CG" sort="0" />
         <label id="2606" label="" folder="CG" sort="0" />
         <label id="2607" label="short hair" folder="~Male1Acc" sort="0" />
+        <label id="2608" label="not exposed" folder="~Male" sort="0" />
+        <label id="2609" label="" folder="~1Acc" sort="0" />
+        <label id="2610" label="" folder="~SelfStripOrder" sort="0" />
+        <label id="2611" label="" folder="~SelfStripOrder" sort="0" />
+        <label id="2612" label="" folder="~Clear Dress costume" sort="0" />
+        <label id="2613" label="" folder="~Clear Dress costume" sort="0" />
+        <label id="2616" label="" folder="~Markers" sort="0" />
+        <label id="2619" label="" folder="1Backgrounds" sort="0" />
+        <label id="2620" label="" folder="1Backgrounds" sort="0" />
+        <label id="2621" label="" folder="1Backgrounds" sort="0" />
+        <label id="2622" label="" folder="1Backgrounds" sort="0" />
+        <label id="2623" label="" folder="1Backgrounds" sort="0" />
+        <label id="2624" label="" folder="Beginning" sort="0" />
+        <label id="2625" label="" folder="Beginning" sort="0" />
+        <label id="2626" label="" folder="Beginning" sort="0" />
     </labels>
     <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2607</nextId>
+    <nextId>2626</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_costume1" />
@@ -2994,6 +3012,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="leon_notmyearth" />
         <marker scope="Public" name="leon_notmyearth_alt" />
         <marker scope="Public" name="leon_teachingwrestling" />
+        <marker scope="Public" name="LibraryStudyNaked" />
         <marker scope="Public" name="magmagrunt0" />
         <marker scope="Public" name="magmagrunt01" />
         <marker scope="Public" name="magmagrunt02" />
@@ -3251,7 +3270,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="NoireCGBandaidsReveal" />
         <marker scope="Public" name="NoireCGBandaidsStrip" />
         <marker scope="Public" name="NoireCGSkirt" />
-        <marker scope="Public" name="NoireCGThighhighsHesitate" />
+        <marker scope="Public" name="NoireCGThighhighsHesitation" />
         <marker scope="Public" name="NoireCGThighhighsStayOn1" />
         <marker scope="Public" name="NoireCGThighhighsStrip" />
         <marker scope="Public" name="NoireCGTop" />
@@ -3371,6 +3390,8 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Private" name="NoireWhoSlot3" />
         <marker scope="Private" name="NoireWhoSlot4" />
         <marker scope="Public" name="NoireZenraNiso" />
+        <marker scope="Public" name="NumberOfOpponentsText" />
+        <marker scope="Public" name="NumberOfOpponentText" />
         <marker scope="Private" name="NumberOfPlayersText" />
         <marker scope="Public" name="onlyNoireAndPlayer" />
         <marker scope="Public" name="petra0" />
@@ -3454,6 +3475,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="sannytess22" />
         <marker scope="Public" name="sannytessfinished" />
         <marker scope="Public" name="sayori0" />
+        <marker scope="Public" name="SchoolStudyNaked" />
         <marker scope="Public" name="scm_resp" />
         <marker scope="Public" name="senko_amenities" />
         <marker scope="Public" name="senko_pampering1" />
@@ -3601,6 +3623,6 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <line>Some say that a girl's hair is her life, or maybe her life force. That's surely an overstatement, but even on a boy, long and shiny hair falling down his shoulders exudes vitality..</line>
         <line>Ah, your hair got slightly tousled under that hat. Let me fix it for you... Or rather just do it yourself!</line>
         <line>You should be more careful when you're wearing a hat, ~player~. Let me fix your hair a little... I-I mean, it's not in total disarray, so we can leave it as it is... Yeah...</line>
-        <line>I'm the Goddess of Victory.</line>
+        <line>goddess of victory</line>
     </pendingLines>
 </metadata>
