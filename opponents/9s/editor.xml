@@ -35,6 +35,7 @@
         <id>1210</id>
         <id>1212</id>
         <id>1537</id>
+        <id>1554</id>
     </hidden>
     <responses>
         <response id="1" opponent="lotte" opponentId="1" />
@@ -51,6 +52,7 @@
         <note id="1211">Line references 9S' original dry orgasm climax, which has since been repaired. Disabled, as it no longer makes sense.</note>
         <note id="1210">Line references 9S' original dry orgasm climax, which has since been repaired. Disabled, as it no longer makes sense.</note>
         <note id="1212">Line references 9S' original dry orgasm climax, which has since been repaired. Disabled, as it no longer makes sense.</note>
+        <note id="1554">Refers to the game as a "simulation," an outdated scenario which is being removed.</note>
     </notes>
     <labels>
         <label id="74" label="" color="2" folder="Ladybug" sort="219" />
@@ -261,7 +263,7 @@
         <label id="221" label="" color="2" folder="Zizou" sort="299" />
         <label id="222" label="" color="2" folder="Monika" sort="304" />
         <label id="223" label="" color="2" folder="Tag Filters" sort="0" />
-        <label id="224" label="" color="2" folder="Tag Filters" sort="11" />
+        <label id="224" label="" color="2" folder="Filters - Tags" sort="11" />
         <label id="225" label="" color="2" folder="Tag Filters" sort="0" />
         <label id="226" label="" color="2" folder="Tag Filters" sort="0" />
         <label id="227" label="" color="2" folder="Tag Filters" sort="0" />
@@ -289,17 +291,17 @@
         <label id="249" label="" color="2" folder="Pit" sort="320" />
         <label id="250" label="" color="2" folder="Ryuji" sort="323" />
         <label id="251" label="" color="2" folder="Ryuji" sort="322" />
-        <label id="252" label="" color="2" folder="Tag Filters" sort="19" />
-        <label id="253" label="" color="2" folder="Tag Filters" sort="22" />
-        <label id="254" label="" color="2" folder="Tag Filters" sort="24" />
-        <label id="255" label="" color="2" folder="Tag Filters" sort="20" />
-        <label id="256" label="" color="2" folder="Tag Filters" sort="23" />
-        <label id="257" label="" color="2" folder="Tag Filters" sort="21" />
-        <label id="258" label="" color="2" folder="Tag Filters" sort="26" />
-        <label id="259" label="" color="2" folder="Tag Filters" sort="25" />
-        <label id="260" label="" color="2" folder="Tag Filters" sort="28" />
-        <label id="261" label="" color="2" folder="Tag Filters" sort="27" />
-        <label id="262" label="" color="2" folder="Tag Filters" sort="29" />
+        <label id="252" label="" color="2" folder="Filters - Tags" sort="19" />
+        <label id="253" label="" color="2" folder="Filters - Tags" sort="22" />
+        <label id="254" label="" color="2" folder="Filters - Tags" sort="24" />
+        <label id="255" label="" color="2" folder="Filters - Tags" sort="20" />
+        <label id="256" label="" color="2" folder="Filters - Tags" sort="23" />
+        <label id="257" label="" color="2" folder="Filters - Tags" sort="21" />
+        <label id="258" label="" color="2" folder="Filters - Tags" sort="26" />
+        <label id="259" label="" color="2" folder="Filters - Tags" sort="25" />
+        <label id="260" label="" color="2" folder="Filters - Tags" sort="28" />
+        <label id="261" label="" color="2" folder="Filters - Tags" sort="27" />
+        <label id="262" label="" color="2" folder="Filters - Tags" sort="29" />
         <label id="263" label="" color="2" folder="Ryuji" sort="340" />
         <label id="264" label="+ Remilia" color="2" folder="Jotaro" sort="324" />
         <label id="265" label="" color="2" folder="Corrin M" sort="326" />
@@ -1577,10 +1579,35 @@
         <label id="1535" label="" color="5" folder="" sort="0" />
         <label id="1536" label="" folder="Background" sort="0" />
         <label id="1537" label="" folder="Legacy" sort="0" />
+        <label id="1538" label="" folder="Player Layer Count" sort="0" />
+        <label id="1539" label="" folder="Player Layer Count" sort="0" />
+        <label id="1540" label="" folder="Player Layer Count" sort="0" />
+        <label id="1541" label="" folder="Player Layer Count" sort="0" />
+        <label id="1542" label="" folder="Player Layer Count" sort="0" />
+        <label id="1543" label="" folder="Player Layer Count" sort="0" />
+        <label id="1544" label="" folder="Player Layer Count" sort="0" />
+        <label id="1545" label="" folder="Player Layer Count" sort="0" />
+        <label id="1546" label="" folder="Player Layer Count" sort="0" />
+        <label id="1547" label="" folder="Human" sort="0" />
+        <label id="1548" label="" folder="Tag Filters (Not Compatible)" sort="0" />
+        <label id="1549" label="" folder="Tag Filters (Compatible)" sort="0" />
+        <label id="1550" label="" folder="Tag Filters (Not Compatible)" sort="0" />
+        <label id="1551" label="" folder="Filters - Clothing" sort="0" />
+        <label id="1552" label="" folder="Filters - Clothing" sort="0" />
+        <label id="1553" label="" folder="Conditionals" sort="0" />
+        <label id="1554" label="" folder="Legacy" sort="0" />
+        <label id="1556" label="" folder="(Compatible)" sort="0" />
+        <label id="1557" label="" folder="(Compatible)" sort="0" />
+        <label id="1555" label="" folder="(Compatible)" sort="0" />
+        <label id="1558" label="" folder="Filters - Clothing" sort="0" />
+        <label id="1559" label="" folder="(Not Compatible)" sort="0" />
+        <label id="1560" label="" folder="(Compatible)" sort="0" />
+        <label id="1561" label="" folder="(Compatible)" sort="0" />
+        <label id="1562" label="" folder="(Not Compatible)" sort="0" />
     </labels>
     <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1537</nextId>
+    <nextId>1562</nextId>
     <markers>
         <marker scope="Public" name="2corrins">There are two Corrins present. </marker>
         <marker scope="Public" name="9s_drinks">9S isn't quite sure what to drink, but he's down to get fucked up. </marker>
@@ -2003,6 +2030,7 @@
         <marker scope="Public" name="Mention_machinelifeforms">9S mentions machine lifeforms, YoRHa's sworn enemy. They are the robotic soldiers who have conquered Earth for an invading alien race.</marker>
         <marker scope="Public" name="Mention_oldworld">9S mentions the Old World, what androids call the time period when humans still inhabited Earth.</marker>
         <marker scope="Public" name="Mention_resistance">9S mentions the Resistance, the non-YoRHa android forces who live on Earth and fight to rid it of machine lifeforms.</marker>
+        <marker scope="Public" name="Mention_yorha">9S mentions YoRHa, a corps of elite android soldiers whose primary directive is to eradicate the aliens and machine lifeforms inhabiting Earth so that humanity can safely return to the planet.</marker>
         <marker scope="Public" name="MercyStrip0a" />
         <marker scope="Public" name="MercyStrip0b" />
         <marker scope="Public" name="MercyStrip0c" />
