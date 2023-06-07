@@ -71,6 +71,9 @@
         <response id="2628" opponent="aqua_konosuba" opponentId="438" />
         <response id="2630" opponent="aqua_konosuba" opponentId="440" />
         <response id="2631" opponent="aqua_konosuba" opponentId="441" />
+        <response id="2640" opponent="aqua_kh" opponentId="477" />
+        <response id="2642" opponent="aqua_kh" opponentId="481" />
+        <response id="2646" opponent="aqua_kh" opponentId="483" />
     </responses>
     <notes>
         <note id="882">Please split your marker into two or assign it a different value for each line, so that I can remove the "Saying Text" condition. By the way, there is a typo, if you haven't fixed it yet: "my fans also *calls*" -&gt; *call*</note>
@@ -2359,7 +2362,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2258" label="" folder="~Cool Girl costume" sort="0" />
         <label id="2259" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2260" label="" color="2" folder="PlayerCollectibleBracelets" sort="0" />
-        <label id="2261" label="" color="2" folder="" sort="0" />
+        <label id="2637" label="" folder="Throw" sort="0" />
         <label id="2262" label="" color="2" folder="1TsunderingCDSpecific" sort="0" />
         <label id="2263" label="" color="2" folder="1TsunderingCDSpecific" sort="0" />
         <label id="2264" label="" folder="~Clear Dress costume" sort="0" />
@@ -2709,10 +2712,25 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2630" label="" color="4" folder="AquaKS" sort="0" />
         <label id="2631" label="" color="4" folder="AquaKS" sort="0" />
         <label id="2632" label="" color="4" folder="AquaKS" sort="0" />
+        <label id="2633" label="" folder="Throw" sort="0" />
+        <label id="2634" label="" folder="Throw" sort="0" />
+        <label id="2635" label="" folder="Throw" sort="0" />
+        <label id="2636" label="" folder="Throw" sort="0" />
+        <label id="2638" label="" folder="Throw" sort="0" />
+        <label id="2639" label="" folder="Throw" sort="0" />
+        <label id="2640" label="" color="3" folder="AquaKH" sort="0" />
+        <label id="2641" label="" color="4" folder="AquaKH" sort="0" />
+        <label id="2642" label="" color="4" folder="AquaKH" sort="0" />
+        <label id="2643" label="" color="4" folder="AquaKH" sort="0" />
+        <label id="2644" label="" color="4" folder="AquaKH" sort="0" />
+        <label id="2645" label="" color="4" folder="AquaKH" sort="0" />
+        <label id="2646" label="" color="4" folder="AquaKH" sort="0" />
+        <label id="2647" label="" color="6" folder="AquaKS" sort="0" />
+        <label id="2648" label="1 - hidden: setting Aqua's nickname" folder="AquaKS" sort="0" />
     </labels>
     <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2632</nextId>
+    <nextId>2648</nextId>
     <markers>
         <marker scope="Public" name="adrien_costume1" />
         <marker scope="Public" name="adrien_costume2" />
@@ -2738,11 +2756,16 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="af_label" />
         <marker scope="Public" name="AFBelt" />
         <marker scope="Public" name="aimee0" />
+        <marker scope="Public" name="aqua_kh_bandaid_removal" />
+        <marker scope="Public" name="aqua_kh_expl0" />
+        <marker scope="Public" name="aqua_kh_lastation1" />
+        <marker scope="Public" name="aqua_kh_notexpl0" />
         <marker scope="Public" name="aquaKS_idol0" />
         <marker scope="Public" name="aquaKS_idol1" />
         <marker scope="Public" name="aquaKS_what0" />
         <marker scope="Public" name="aquaKS_what1" />
         <marker scope="Public" name="aquaKS0" />
+        <marker scope="Public" name="aquas_kh_ks" />
         <marker scope="Private" name="arc" />
         <marker scope="Private" name="arcChoice" />
         <marker scope="Private" name="arcDom" />
