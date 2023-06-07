@@ -190,6 +190,13 @@
         <response id="811" opponent="revy" opponentId="268" />
         <response id="812" opponent="kyoko_kirigiri" opponentId="1336" />
         <response id="813" opponent="mari" opponentId="790" />
+        <response id="814" opponent="monika" opponentId="1361" />
+        <response id="817" opponent="jura" opponentId="624" />
+        <response id="819" opponent="sweetheart" opponentId="43" />
+        <response id="820" opponent="steve" opponentId="70" />
+        <response id="821" opponent="steve" opponentId="71" />
+        <response id="822" opponent="myriam" opponentId="34" />
+        <response id="823" opponent="elphaba" opponentId="119" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -914,7 +921,7 @@
         <label id="704" label="" folder="Targets" sort="0" />
         <label id="705" label="" folder="Targets" sort="0" />
         <label id="706" label="" folder="Responses" sort="0" />
-        <label id="707" label="" folder="Targets" sort="0" />
+        <label id="707" label="" color="3" folder="Targets" sort="0" />
         <label id="708" label="" folder="Opponents" sort="0" />
         <label id="709" label="2f, 3m, target f" folder="Opponents" sort="0" />
         <label id="710" label="3f, 2m, target m" folder="Opponents" sort="0" />
@@ -1020,10 +1027,20 @@
         <label id="811" label="" folder="Responses" sort="0" />
         <label id="812" label="" folder="Responses" sort="0" />
         <label id="813" label="" folder="Situations" sort="0" />
+        <label id="814" label="" folder="Monika" sort="0" />
+        <label id="815" label="" folder="Monika" sort="0" />
+        <label id="816" label="" folder="Monika" sort="0" />
+        <label id="817" label="" folder="Responses" sort="0" />
+        <label id="818" label="" folder="Responses" sort="0" />
+        <label id="819" label="" folder="Situations" sort="0" />
+        <label id="820" label="" folder="Responses" sort="0" />
+        <label id="821" label="" folder="Responses" sort="0" />
+        <label id="822" label="" folder="Targets" sort="0" />
+        <label id="823" label="" folder="Prompts" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>813</nextId>
+    <nextId>823</nextId>
     <markers>
         <marker scope="Public" name="__lucina_nickname" />
         <marker scope="Public" name="ag_aquaKH_strip0b" />
@@ -1129,6 +1146,7 @@
         <marker scope="Public" name="aqua_jura_self4b" />
         <marker scope="Public" name="aqua_jura_self4c" />
         <marker scope="Public" name="aqua_jura_self5a" />
+        <marker scope="Public" name="aqua_jura_self5b" />
         <marker scope="Public" name="aqua_jura_self5c" />
         <marker scope="Public" name="aqua_jura_self6MustMast" />
         <marker scope="Public" name="aqua_kaz_self0a" />
@@ -1215,10 +1233,13 @@
         <marker scope="Public" name="aqua_mitama_shrinemaiden3" />
         <marker scope="Public" name="aqua_moni_blazer_deleted" />
         <marker scope="Public" name="aqua_moni_blazer_removed" />
+        <marker scope="Public" name="aqua_monika_betweenWorldsResp" />
         <marker scope="Public" name="aqua_monika_hairdown" />
         <marker scope="Public" name="aqua_monika_hairfilterResp" />
+        <marker scope="Public" name="aqua_monika_memorableCharactersResp" />
         <marker scope="Public" name="aqua_monika_muststrip_CE" />
         <marker scope="Public" name="aqua_monika_muststrip_CODE" />
+        <marker scope="Public" name="aqua_monika_readingResp" />
         <marker scope="Public" name="aqua_mustFF" />
         <marker scope="Public" name="aqua_nadia_finished" />
         <marker scope="Public" name="aqua_nagamimi_flawsPromptResp" />
@@ -1292,6 +1313,9 @@
         <marker scope="Public" name="aqua_solarflare_self0c" />
         <marker scope="Public" name="aqua_steve_chestReveal" />
         <marker scope="Public" name="aqua_steve_hawkins1" />
+        <marker scope="Public" name="aqua_steve_selfBoots1" />
+        <marker scope="Public" name="aqua_steve_selfSleeves1" />
+        <marker scope="Public" name="aqua_sweetheart_donut_reaction" />
         <marker scope="Public" name="aqua_takatoshi_cloningBluesResp" />
         <marker scope="Public" name="aqua_takatoshi_discipline1" />
         <marker scope="Public" name="aqua_takatoshi_homelessChestReveal" />
@@ -1356,6 +1380,7 @@
         <marker scope="Public" name="doesnt_have_time" />
         <marker scope="Public" name="dunban_aqua_ffHeavy4_Resp" />
         <marker scope="Public" name="dunban_specialflirting" />
+        <marker scope="Public" name="elphaba_goldenrule_Q" />
         <marker scope="Public" name="enemies_drop_money" />
         <marker scope="Public" name="epilogue_bonus_unlock" />
         <marker scope="Public" name="first_out_01">Chooses a line related to her being the first one to forfeit</marker>
@@ -1422,6 +1447,7 @@
         <marker scope="Public" name="manhunter">Targeting someone who is good at seducing men (or assumed to be)</marker>
         <marker scope="Public" name="mirage_arena">Mentions a bonus game area from KH:BBS</marker>
         <marker scope="Public" name="mirage_arena2" />
+        <marker scope="Public" name="myriam_face_reveal_real" />
         <marker scope="Public" name="nadia_headfalloff" />
         <marker scope="Public" name="nagatoro_butt2_react" />
         <marker scope="Public" name="nagatoro_player_pet" />
