@@ -1,4 +1,5 @@
 using Desktop;
+using Desktop.CommonControls;
 using Desktop.Skinning;
 using System;
 using System.Collections.Generic;
@@ -40,10 +41,14 @@ namespace SPNATI_Character_Editor.Activities
         private bool _filterDuplicate;
         private bool _filterUnlisted;
 
+		private bool _filterToOne;
+		private Character _oneCharacter;
+
         public BanterWizard()
 		{
 			InitializeComponent();
-		}
+            recOneCharacter.RecordType = typeof(Character);
+        }
 
 		public override string Caption
 		{
@@ -90,7 +95,9 @@ namespace SPNATI_Character_Editor.Activities
 			lstCharacters.Sorted = true;
             _filterToColor = false;
 			chkColorFilter.Checked = false;
-			_filterNew = true;
+			_filterToOne = false;
+			chkOneCharacter.Checked = false;
+            _filterNew = true;
 			_filterModText = true;
 			_filterModCond = true;
 			_filterOld = true;
@@ -710,15 +717,25 @@ namespace SPNATI_Character_Editor.Activities
 
             List<string> folderNames = new List<string>();
 
-			foreach (Opponent opponent in Listing.Instance.Characters)
+			if (_filterToOne && _oneCharacter != null)
 			{
-				if (opponent.Name == "human" || !CharacterFiltering(opponent.Name))
+				if (_oneCharacter.FolderName != "human" && CharacterFiltering(_oneCharacter.FolderName))
 				{
-					continue;
+					folderNames.Add(_oneCharacter.FolderName);
 				}
-                folderNames.Add(opponent.Name);
-            }
-			folderNames = folderNames.Distinct().ToList();
+			}
+			else
+			{
+				foreach (Opponent opponent in Listing.Instance.Characters)
+				{
+					if (opponent.Name == "human" || !CharacterFiltering(opponent.Name))
+					{
+						continue;
+					}
+					folderNames.Add(opponent.Name);
+				}
+				folderNames = folderNames.Distinct().ToList();
+			}
 
             progressBar.Maximum = Math.Max(1,folderNames.Count);
 			int count = 0;
@@ -758,6 +775,14 @@ namespace SPNATI_Character_Editor.Activities
             int count = 0;
             foreach (TargetingCharacter ch in _character.BanterData.TargetingCharacters)
             {
+				if (_filterToOne && _oneCharacter != null)
+				{
+					if (_oneCharacter.FolderName != ch.Id)
+					{
+						progressBar.Value = count++;
+						continue;
+					}
+				}
                 if (!CharacterFiltering(ch.Id))
                 {
                     progressBar.Value = count++;
@@ -788,6 +813,14 @@ namespace SPNATI_Character_Editor.Activities
             int count = 0;
             foreach (TargetingCharacter ch in _character.BanterData.TargetingCharacters)
             {
+                if (_filterToOne && _oneCharacter != null)
+                {
+					if (_oneCharacter.FolderName != ch.Id)
+					{
+                        progressBar.Value = count++;
+                        continue;
+					}
+                }
                 if (!CharacterFiltering(ch.Id))
                 {
                     progressBar.Value = count++;
@@ -834,15 +867,25 @@ namespace SPNATI_Character_Editor.Activities
 
 			List<string> folderNames = new List<string>();
 
-            foreach (Opponent opponent in Listing.Instance.Characters)
-            {
-                if (opponent.Name == "human" || !CharacterFiltering(opponent.Name))
-                {
-                    continue;
-                }
-                folderNames.Add(opponent.Name);
-            }
-            folderNames = folderNames.Distinct().ToList();
+			if (_filterToOne && _oneCharacter != null)
+			{
+				if (_oneCharacter.FolderName != "human" && CharacterFiltering(_oneCharacter.FolderName))
+				{
+					folderNames.Add(_oneCharacter.FolderName);
+				}
+			}
+			else
+			{
+				foreach (Opponent opponent in Listing.Instance.Characters)
+				{
+					if (opponent.Name == "human" || !CharacterFiltering(opponent.Name))
+					{
+						continue;
+					}
+					folderNames.Add(opponent.Name);
+				}
+				folderNames = folderNames.Distinct().ToList();
+			}
 			progressBar.Maximum = Math.Max(1,folderNames.Count());
 
 			foreach (string folderName in folderNames)
@@ -1027,14 +1070,24 @@ namespace SPNATI_Character_Editor.Activities
             if (!File.Exists(_path))
             {
 				List<string> folderNames = new List<string>();
-                foreach (Opponent opponent in Listing.Instance.Characters)
-                {
-                    if (opponent.Name == "human" || !CharacterFiltering(opponent.Name))
-                    {
-                        continue;
-                    }
-                    folderNames.Add(opponent.Name);
-                }
+				if (_filterToOne && _oneCharacter != null)
+				{
+					if (_oneCharacter.FolderName != "human" && CharacterFiltering(_oneCharacter.FolderName))
+					{
+						folderNames.Add(_oneCharacter.FolderName);
+					}
+				}
+				else
+				{
+					foreach (Opponent opponent in Listing.Instance.Characters)
+					{
+						if (opponent.Name == "human" || !CharacterFiltering(opponent.Name))
+						{
+							continue;
+						}
+						folderNames.Add(opponent.Name);
+					}
+				}
 				if (folderNames.Count == 0)
 				{
 					MessageBox.Show("No characters matching the filters.");
@@ -1120,6 +1173,11 @@ namespace SPNATI_Character_Editor.Activities
         {
 			_filterToColor = chkColorFilter.Checked;
         }
+		
+        private void chkOneCharacter_CheckedChanged(object sender, EventArgs e)
+        {
+            _filterToOne = chkOneCharacter.Checked;
+        }
 
         private void chkLineFiltering_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1145,6 +1203,11 @@ namespace SPNATI_Character_Editor.Activities
             _filterEvent = chkCharacterFiltering.GetItemChecked(4);
             _filterDuplicate = chkCharacterFiltering.GetItemChecked(5);
             _filterUnlisted = chkCharacterFiltering.GetItemChecked(6);
+        }
+
+        private void recOneCharacter_RecordChanged(object sender, RecordEventArgs e)
+        {
+            _oneCharacter = recOneCharacter.Record as Character;
         }
     }
 
