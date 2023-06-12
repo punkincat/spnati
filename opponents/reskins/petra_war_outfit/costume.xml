@@ -12,12 +12,13 @@
         <tag remove="true">school_uniform</tag>
         <tag remove="true">student</tag>
     </tags>
+    <layers>6</layers>
     <folder>opponents/reskins/petra_war_outfit/</folder>
     <wardrobe>
-        <clothing name="top" generic="shirt" position="upper" type="important" />
-        <clothing name="leggings" generic="leggings" position="lower" type="important" plural="true" />
-        <clothing name="leather armor" generic="armor" position="upper" type="major" />
-        <clothing name="skirt" generic="skirt" position="lower" type="major" />
+        <clothing name="top" generic="shirt" position="upper" type="major" />
+        <clothing name="leggings" generic="leggings" position="lower" type="major" plural="true" />
+        <clothing name="leather armor" generic="armor" position="upper" type="minor" />
+        <clothing name="skirt" generic="skirt" position="waist" type="minor" />
         <clothing name="bracelets" generic="jewelry" position="arms" type="minor" plural="true" />
         <clothing name="shoes" generic="shoes" position="feet" type="extra" plural="true" />
     </wardrobe>
