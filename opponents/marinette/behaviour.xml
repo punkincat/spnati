@@ -9944,7 +9944,7 @@
         </trigger>
 
         <trigger id="male_must_masturbate">
-            <case stage="10" id="1363" priority="600" addCharacterTags="tandem">
+            <case stage="10" id="1363" priority="600" addCharacterTags="tandem_giver,tandem_mf,intercourse_forfeit">
                 <condition role="target" character="adrien" stage="8" />
                 <test expr="~adrien.distance~" value="1" />
                 <state img="#-marinette_lostA.png" marker="adr_mari_dual">{mari}Kitty, you're not going to make me wait all night &lt;i&gt;again&lt;/i&gt;, are you?&lt;br&gt;{adrien}You want to team up, milady?{!reset}</state>
@@ -11055,7 +11055,7 @@
         </trigger>
 
         <trigger id="start_masturbating">
-            <case stage="8" id="1359" priority="400" addCharacterTags="tandem">
+            <case stage="8" id="1359" priority="400" addCharacterTags="tandem,tandem_mf,intercourse_forfeit">
                 <condition role="opp" character="adrien" stage="10" />
                 <condition role="self" saidMarker="mari_adr_dual" />
                 <state img="custom:#-cleanup" marker="adrimari_dualforfeit">{mari}Let's not waste a single drop... {adrien}&lt;br&gt;You're so good to me...{mari}Now that you're cleaned up... &lt;i&gt;je veux te faire jouir&lt;/i&gt;...{!reset}</state>

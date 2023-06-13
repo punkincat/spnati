@@ -9327,7 +9327,7 @@
         </trigger>
 
         <trigger id="female_must_masturbate">
-            <case stage="10" id="871" priority="999">
+            <case stage="10" id="871" priority="999" addCharacterTags="intercourse_forfeit,tandem_giver,tandem_mf">
                 <condition role="target" character="marinette" sayingMarker="mari_adr_dual" />
                 <test expr="~marinette.distance~" value="1" />
                 <state img="zblank.png">~blank~</state>
@@ -10221,7 +10221,7 @@
         </trigger>
 
         <trigger id="must_masturbate">
-            <case stage="8" id="873" priority="800" addCharacterTags="tandem">
+            <case stage="8" id="873" priority="800" addCharacterTags="intercourse_forfeit,tandem,tandem_mf">
                 <condition role="other" character="marinette" stage="10" sayingMarker="adr_mari_dual" />
                 <test expr="~self.distance~" value="1" />
                 <state img="zblank.png">~blank~</state>

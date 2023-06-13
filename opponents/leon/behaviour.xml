@@ -9563,7 +9563,7 @@
         </trigger>
 
         <trigger id="must_masturbate">
-            <case stage="7" id="1173" addCharacterTags="chair_forfeit,intercourse_forfeit,tandem">
+            <case stage="7" id="1173" addCharacterTags="chair_forfeit,intercourse_forfeit,tandem,tandem_mf">
                 <condition role="opp" character="rouge" stage="6" sayingMarker="leon_dual" />
                 <condition role="opp" character="hu_tao" />
                 <state img="#-chair.png" marker="rouge_dual">Not that I'm a by-the-book guy, but as long as I get to finish... Be happy to help you out too, Rouge. Tao, you could always join us, you know...  </state>
@@ -9602,7 +9602,7 @@
                 <condition role="other" character="blake_belladonna" stage="4-10" sayingMarker="blake_leon_favor" />
                 <state img="#-grinning.png" marker="blake_ff">You think I'm going to complain about a cute girl hitting on me while I jerk off? Be my guest. </state>
             </case>
-            <case stage="7" id="1164" addCharacterTags="chair_forfeit,intercourse_forfeit,tandem">
+            <case stage="7" id="1164" addCharacterTags="chair_forfeit,intercourse_forfeit,tandem,tandem_mf">
                 <condition role="opp" character="rouge" stage="6" sayingMarker="leon_dual" />
                 <state img="#-chair.png" marker="rouge_dual">Not that I'm a by-the-book guy, but as long as I get to finish... Be happy to help you out too, Rouge. </state>
             </case>
