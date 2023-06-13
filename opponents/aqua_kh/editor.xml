@@ -197,6 +197,15 @@
         <response id="821" opponent="steve" opponentId="71" />
         <response id="822" opponent="myriam" opponentId="34" />
         <response id="823" opponent="elphaba" opponentId="119" />
+        <response id="825" opponent="erufuda" opponentId="797" />
+        <response id="826" opponent="erufuda" opponentId="798" />
+        <response id="827" opponent="erufuda" opponentId="799" />
+        <response id="831" opponent="erufuda" opponentId="796" />
+        <response id="832" opponent="erufuda" opponentId="4" />
+        <response id="833" opponent="erufuda" opponentId="5" />
+        <response id="835" opponent="erufuda" opponentId="76" />
+        <response id="836" opponent="erufuda" opponentId="152" />
+        <response id="837" opponent="erufuda" opponentId="119" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -400,8 +409,8 @@
         <label id="181" label="" folder="Targets" sort="22" />
         <label id="182" label="" folder="Targets" sort="20" />
         <label id="183" label="" folder="Targets" sort="21" />
-        <label id="184" label="" folder="Targets" sort="8" />
-        <label id="185" label="" folder="Targets" sort="11" />
+        <label id="184" label="" color="3" folder="Targets" sort="8" />
+        <label id="185" label="" color="3" folder="Targets" sort="11" />
         <label id="188" label="" folder="Targets" sort="15" />
         <label id="189" label="sit on a bed" folder="Backgrounds" sort="12" />
         <label id="190" label="" folder="Logic" sort="3" />
@@ -1037,11 +1046,28 @@
         <label id="821" label="" folder="Responses" sort="0" />
         <label id="822" label="" folder="Targets" sort="0" />
         <label id="823" label="" folder="Prompts" sort="0" />
+        <label id="824" label="" folder="Targets" sort="0" />
+        <label id="825" label="" folder="Erufuda" sort="0" />
+        <label id="826" label="" folder="Erufuda" sort="0" />
+        <label id="827" label="" folder="Erufuda" sort="0" />
+        <label id="828" label="" folder="Erufuda" sort="0" />
+        <label id="829" label="" folder="Conditional" sort="0" />
+        <label id="830" label="" folder="Conditional" sort="0" />
+        <label id="831" label="" folder="Erufuda" sort="0" />
+        <label id="832" label="" folder="Erufuda" sort="0" />
+        <label id="834" label="" folder="Erufuda" sort="0" />
+        <label id="835" label="" folder="Erufuda" sort="0" />
+        <label id="836" label="" folder="Erufuda" sort="0" />
+        <label id="837" label="" folder="Erufuda" sort="0" />
+        <label id="838" label="" folder="Erufuda" sort="0" />
+        <label id="839" label="" folder="Yumeko" sort="0" />
+        <label id="840" label="" folder="Yumeko" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>823</nextId>
+    <nextId>840</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="__lucina_nickname" />
         <marker scope="Public" name="ag_aquaKH_strip0b" />
         <marker scope="Public" name="aqua_aaravi_hydro1" />
@@ -1056,6 +1082,8 @@
         <marker scope="Public" name="aqua_anatoly_gregorFrenResp" />
         <marker scope="Public" name="aqua_anatoly_penisRev" />
         <marker scope="Public" name="aqua_and_darkness_oppstrip">Either Aqua or Darkness (both from Konosuba) must strip - makes a comment on it</marker>
+        <marker scope="Public" name="aqua_any_slowly_1" />
+        <marker scope="Public" name="aqua_any_slowly_2" />
         <marker scope="Public" name="aqua_aqua_GoddessOfLust" />
         <marker scope="Public" name="aqua_aqua_self_sexy" />
         <marker scope="Public" name="aqua_aqua_self_sexyB" />
@@ -1116,10 +1144,20 @@
         <marker scope="Public" name="aqua_dwight_self0a" />
         <marker scope="Public" name="aqua_dwight_self1a" />
         <marker scope="Public" name="aqua_dwight_self2a" />
+        <marker scope="Public" name="Aqua_Earthbending_2" />
         <marker scope="Public" name="aqua_elphaba_self2a" />
         <marker scope="Public" name="aqua_elphaba_strip0a" />
         <marker scope="Public" name="aqua_elphaba_strip1a" />
         <marker scope="Public" name="aqua_epilogue_seen" />
+        <marker scope="Public" name="aqua_erufuda_faveworld1" />
+        <marker scope="Public" name="aqua_erufuda_favourite_dessert" />
+        <marker scope="Public" name="aqua_erufuda_gear1" />
+        <marker scope="Public" name="aqua_erufuda_holiday_weight_resp" />
+        <marker scope="Public" name="aqua_erufuda_lost_jacket" />
+        <marker scope="Public" name="aqua_erufuda_stockings1" />
+        <marker scope="Public" name="aqua_erufuda_stockings2" />
+        <marker scope="Public" name="aqua_erufuda_suck_it_in_fail_Resp" />
+        <marker scope="Public" name="aqua_erufuda_worldsResp" />
         <marker scope="Public" name="aqua_felix_accent1" />
         <marker scope="Public" name="aqua_felix_accent2" />
         <marker scope="Public" name="aqua_felix_accent3" />
@@ -1331,6 +1369,7 @@
         <marker scope="Public" name="aqua_tea_strip0c" />
         <marker scope="Public" name="aqua_toph_bendingmagic1" />
         <marker scope="Public" name="aqua_toph_bendingmagic2" />
+        <marker scope="Public" name="aqua_toph_bendingmagic3" />
         <marker scope="Public" name="aqua_toph_hairdown" />
         <marker scope="Public" name="aqua_toru0" />
         <marker scope="Public" name="aqua_toru1" />
@@ -1355,6 +1394,8 @@
         <marker scope="Public" name="aqua_yshtola_self1c" />
         <marker scope="Public" name="aqua_yshtola_self3a" />
         <marker scope="Public" name="aqua_yshtola_self3b" />
+        <marker scope="Public" name="aqua_yumeko_self0a" />
+        <marker scope="Public" name="aqua_yumeko_self2a" />
         <marker scope="Public" name="aqua_yuna_intro1" />
         <marker scope="Public" name="aqua_yuna_intro2" />
         <marker scope="Public" name="aqua_yuna_partners1" />
@@ -1383,6 +1424,8 @@
         <marker scope="Public" name="elphaba_goldenrule_Q" />
         <marker scope="Public" name="enemies_drop_money" />
         <marker scope="Public" name="epilogue_bonus_unlock" />
+        <marker scope="Public" name="erufuda_fav_food_resp" />
+        <marker scope="Public" name="erufuda_pantsRip" />
         <marker scope="Public" name="first_out_01">Chooses a line related to her being the first one to forfeit</marker>
         <marker scope="Public" name="first_out_02">Chooses a line related to her being the first one to forfeit</marker>
         <marker scope="Public" name="first_out_03">Chooses a line related to her being the first one to forfeit</marker>
