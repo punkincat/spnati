@@ -2024,10 +2024,43 @@ Karsa also added in the interview:
         <label id="1975" label="Haiku 420-Diviner" folder="Haiku Counter" sort="0" />
         <label id="1976" label="Haiku 420-Nohr Princess" folder="Haiku Counter" sort="0" />
         <label id="1977" label="" folder="Hand=Any banter" sort="0" />
+        <label id="1978" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="1979" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="1980" label="" folder="Hand=Any banter" sort="0" />
+        <label id="1981" label="Haiku 421-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="1982" label="Haiku 421-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="1983" label="Haiku 421-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="1984" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="1985" label="" folder="Hand=Any banter" sort="0" />
+        <label id="1986" label="" folder="Hand=Any banter" sort="0" />
+        <label id="1987" label="" folder="Hand=Any banter" sort="0" />
+        <label id="1988" label="" folder="Hand=Any banter" sort="0" />
+        <label id="1989" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="1990" label="Haiku 422-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="1991" label="Haiku 422-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="1992" label="Haiku 422-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="1993" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="1994" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="1995" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="1996" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="1997" label="Haiku 423-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="1998" label="Haiku 423-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="1999" label="Haiku 423-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="2000" label="Haiku 424-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="2001" label="Haiku 424-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="2002" label="Haiku 424-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="2003" label="" folder="Hand=Any banter" sort="0" />
+        <label id="2004" label="Haiku 425-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="2005" label="Haiku 425-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="2006" label="Haiku 425-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="2007" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="2008" label="" folder="Responses" sort="0" />
+        <label id="2009" label="" folder="Responses" sort="0" />
+        <label id="2010" label="" folder="Hand=Any banter" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1977</nextId>
+    <nextId>2010</nextId>
     <markers>
         <marker scope="Public" name="9s_muststrip_0" />
         <marker scope="Public" name="9s_muststrip_1" />
@@ -2154,7 +2187,17 @@ Karsa also added in the interview:
         <marker scope="Public" name="elphaba_answer_3a" />
         <marker scope="Public" name="elphaba_answer1b" />
         <marker scope="Public" name="elphaba_haiku" />
+        <marker scope="Public" name="elphaba_pastimes" />
         <marker scope="Public" name="elphaba_upset" />
+        <marker scope="Public" name="erufuda_bodytype" />
+        <marker scope="Public" name="erufuda_exercise" />
+        <marker scope="Public" name="erufuda_favfood" />
+        <marker scope="Public" name="erufuda_fries" />
+        <marker scope="Public" name="erufuda_rippedpants" />
+        <marker scope="Public" name="erufuda_temptation" />
+        <marker scope="Public" name="erufuda_tshirtwriting" />
+        <marker scope="Public" name="erufuda_winner" />
+        <marker scope="Public" name="erufuda_worlds" />
         <marker scope="Public" name="experiment" />
         <marker scope="Public" name="FinaAimeeWorried_resp" />
         <marker scope="Public" name="FinaAimeeWorried_resp1" />
@@ -3508,6 +3551,23 @@ Karsa also added in the interview:
         <marker scope="Public" name="haiku_420_Counter" />
         <marker scope="Public" name="haiku_420_DCounter" />
         <marker scope="Public" name="haiku_420_NCounter" />
+        <marker scope="Public" name="haiku_421_Counter" />
+        <marker scope="Public" name="haiku_421_DCounter" />
+        <marker scope="Public" name="haiku_421_NCounter" />
+        <marker scope="Public" name="haiku_422_Counter" />
+        <marker scope="Public" name="haiku_422_DCounter" />
+        <marker scope="Public" name="haiku_422_NCounter" />
+        <marker scope="Public" name="haiku_423" />
+        <marker scope="Public" name="haiku_423_Counter" />
+        <marker scope="Public" name="haiku_423_DCounter" />
+        <marker scope="Public" name="haiku_423_NCounter" />
+        <marker scope="Public" name="haiku_424" />
+        <marker scope="Public" name="haiku_424_Counter" />
+        <marker scope="Public" name="haiku_424_DCounter" />
+        <marker scope="Public" name="haiku_424_NCounter" />
+        <marker scope="Public" name="haiku_425_Counter" />
+        <marker scope="Public" name="haiku_425_DCounter" />
+        <marker scope="Public" name="haiku_425_NCounter" />
         <marker scope="Public" name="haiku_43" />
         <marker scope="Public" name="haiku_43_Counter" />
         <marker scope="Public" name="haiku_43_DCounter" />
@@ -3759,8 +3819,16 @@ Karsa also added in the interview:
         <marker scope="Public" name="hairties_strip" />
         <marker scope="Public" name="Hoshido_succession" />
         <marker scope="Public" name="inspiration_strike" />
+        <marker scope="Public" name="judgment" />
+        <marker scope="Public" name="jura_babies" />
+        <marker scope="Public" name="jura_birthday" />
+        <marker scope="Public" name="jura_boobreduction" />
+        <marker scope="Public" name="jura_boobreduction2" />
+        <marker scope="Public" name="jura_boobreduction3" />
+        <marker scope="Public" name="jura_girlseduction" />
         <marker scope="Public" name="jura_haiku" />
         <marker scope="Public" name="jura_haiku_second" />
+        <marker scope="Public" name="jura_hug" />
         <marker scope="Public" name="Jura_mitama_45_resp" />
         <marker scope="Public" name="Jura_Mitama0_resp" />
         <marker scope="Public" name="jura_mitama01_resp" />
@@ -3786,6 +3854,9 @@ Karsa also added in the interview:
         <marker scope="Public" name="Jura_mitama6s_resp" />
         <marker scope="Public" name="Jura_mitama7s_resp" />
         <marker scope="Public" name="jura_muststrip_0" />
+        <marker scope="Public" name="jura_muststrip_1" />
+        <marker scope="Public" name="jura_seduction" />
+        <marker scope="Public" name="jura_space" />
         <marker scope="Public" name="Jura_stripped_1" />
         <marker scope="Public" name="Jura_stripping_0" />
         <marker scope="Public" name="jura_stripping0" />
@@ -3923,7 +3994,9 @@ Karsa also added in the interview:
         <marker scope="Public" name="nohrshido">Basic exposition about Nohr and Hoshido, the two kingdoms Fire Emblem Fates revolves around.</marker>
         <marker scope="Public" name="Noire_de_natura_deorum" />
         <marker scope="Public" name="PA-15_job" />
+        <marker scope="Public" name="petra_haikuresp1" />
         <marker scope="Public" name="petra_queen" />
+        <marker scope="Public" name="petra_shrinemaidenresp1" />
         <marker scope="Public" name="petra_sleep" />
         <marker scope="Public" name="proper_order" />
         <marker scope="Public" name="QoH_kingdom" />
@@ -3954,6 +4027,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="seen_penis_medium">The first penis Mitama sees is of average size.</marker>
         <marker scope="Public" name="seen_penis_smol">The first penis Mitama sees is small.</marker>
         <marker scope="Public" name="seen_penis_yuge">The first penis Mitama sees is huge. Sorry, boys: you just can't compete with the Mettadong. Really. Like, have you seen that thing? What the fuck was Drankey thinking? </marker>
+        <marker scope="Public" name="self_shrinemaiden" />
         <marker scope="Public" name="senko_43_resp" />
         <marker scope="Public" name="senko_53_resp" />
         <marker scope="Public" name="senko_age_resp" />
@@ -4037,6 +4111,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="Tharja_02" />
         <marker scope="Public" name="tharja_31" />
         <marker scope="Public" name="tharja_bodysuit_strip" />
+        <marker scope="Public" name="tharja_boobreduction3" />
         <marker scope="Public" name="TharjaShrink_reaction" />
         <marker scope="Public" name="time_flow" />
         <marker scope="Public" name="TOKI_WA_KITA">It's time.</marker>
