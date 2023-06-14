@@ -250,6 +250,9 @@
         <response id="445" opponent="aqua_kh" opponentId="67" />
         <response id="447" opponent="tea_gardner" opponentId="106" />
         <response id="448" opponent="tea_gardner" opponentId="142" />
+        <response id="450" opponent="erufuda" opponentId="76" />
+        <response id="451" opponent="erufuda" opponentId="119" />
+        <response id="454" opponent="tea_gardner" opponentId="205" />
     </responses>
     <notes>
         <note id="192">Lower priority than costume lines</note>
@@ -572,6 +575,11 @@
         <label id="447" label="" folder="Tea to right" sort="0" />
         <label id="448" label="" folder="Tea to left" sort="0" />
         <label id="449" label="outdoors hot" folder="" sort="0" />
+        <label id="450" label="" folder="Erufuda to left" sort="0" />
+        <label id="451" label="" folder="Erufuda to left" sort="0" />
+        <label id="452" label="" folder="Tea to right" sort="0" />
+        <label id="453" label="" folder="Tea to right" sort="0" />
+        <label id="454" label="" folder="Tea to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
@@ -579,7 +587,7 @@
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>449</nextId>
+    <nextId>454</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrienSkitty" />
@@ -716,6 +724,8 @@
         <marker scope="Public" name="may_dawn_star_pokemon" />
         <marker scope="Public" name="may_dont_forget_your_underwear" />
         <marker scope="Public" name="may_emi_frills" />
+        <marker scope="Public" name="may_erufuda_favorite_food" />
+        <marker scope="Public" name="may_erufuda_holiday_weight" />
         <marker scope="Public" name="may_fashion_magazines" />
         <marker scope="Public" name="may_florina_flowers" />
         <marker scope="Public" name="may_fly" />
@@ -754,6 +764,7 @@
         <marker scope="Public" name="may_lose5" />
         <marker scope="Public" name="may_lose6" />
         <marker scope="Public" name="may_lose7" />
+        <marker scope="Public" name="may_lunchtime_yet" />
         <marker scope="Public" name="may_lux_love_to_but_bad_timing" />
         <marker scope="Public" name="may_lux_worst_timing" />
         <marker scope="Public" name="may_mari_beach_poker" />
@@ -788,6 +799,7 @@
         <marker scope="Public" name="may_nugi-chan_summer_suggests_playing" />
         <marker scope="Public" name="may_opponent_scantily_claw" />
         <marker scope="Public" name="may_paris_moonlight" />
+        <marker scope="Public" name="may_paris_romantic_dinner" />
         <marker scope="Public" name="may_pinkie_balloons" />
         <marker scope="Public" name="may_pinkie_pink_theme" />
         <marker scope="Public" name="may_pkmn_no_pockets" />
@@ -833,6 +845,7 @@
         <marker scope="Public" name="may_sock_on_doorknob" />
         <marker scope="Public" name="may_spats_comfy" />
         <marker scope="Public" name="may_spooky_fears" />
+        <marker scope="Public" name="may_stretchy_pants" />
         <marker scope="Public" name="may_summer_1" />
         <marker scope="Public" name="may_summer_10" />
         <marker scope="Public" name="may_summer_11" />
@@ -866,12 +879,15 @@
         <marker scope="Public" name="may_tandem_special_friend" />
         <marker scope="Public" name="may_tandem_tean" />
         <marker scope="Public" name="may_tea_end_friend" />
+        <marker scope="Public" name="may_tea_level_playing_field" />
         <marker scope="Public" name="may_tea_mt_m1" />
+        <marker scope="Public" name="may_tea_mt_m1]" />
         <marker scope="Public" name="may_tea_mt_m2" />
         <marker scope="Public" name="may_tea_mt_m3" />
         <marker scope="Public" name="may_tea_mt_t1" />
         <marker scope="Public" name="may_tea_mt_t2" />
         <marker scope="Public" name="may_tea_mt_t3" />
+        <marker scope="Public" name="may_tea_mt_t4" />
         <marker scope="Public" name="may_tea_rival_win" />
         <marker scope="Public" name="may_tea_romantic_guru_2" />
         <marker scope="Public" name="may_tea_tm_m18" />
@@ -880,6 +896,7 @@
         <marker scope="Public" name="may_tiki_alola" />
         <marker scope="Public" name="may_tiki_bar_warm" />
         <marker scope="Public" name="may_tiki_drinks" />
+        <marker scope="Public" name="may_tummy_time" />
         <marker scope="Public" name="may_two_mistys" />
         <marker scope="Public" name="may_wikipe-tan_cbt" />
         <marker scope="Public" name="may_wikipe-tan_cbt2" />
