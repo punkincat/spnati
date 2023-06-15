@@ -1006,56 +1006,21 @@ function wearClothing () {
     displayHumanPlayerClothing();
 }
 
-function candyLongestSubstring(ch, sk)
-{
-    if (sk.indexOf(ch) == -1)
-    {
-        return '';
-    }
-    for (let i = 0; i < CANDY_LIST.length; i++)
-    {
-        let candyId = CANDY_LIST[i].slice(0, CANDY_LIST[i].indexOf('\/'));
-        if (candyId.indexOf(ch) != -1)
-        {
-            if (candyId.length > ch.length && sk.indexOf(candyId) != -1)
-                return candyId;
-        }
-    }
-    return ch;
-}
-
-function candyDuplicates(c1, c2) {
-
-    var match1 = c1.match(/^([^\/]*)\/(([^_]*)?_?([^_\/]*)?).*$/);
-    var match2 = c2.match(/^([^\/]*)\/(([^_]*)?_?([^_\/]*)?).*$/);
-
-    if (!match1 || !match2)
-    {
-        console.log("RegExp error");
-        return false;
-    }
+function getCharacterForCostume(costumePath) {
+    const regex = /^([^\/]*)\/(([^_]*)?_?([^_\/]*)?).*$/;
+    const match = costumePath.match(regex);
     
-    if (match1[1] != 'reskins' && match2[1] != 'reskins')
-    {
-        return match1[1] == match2[1];
+    if (match[1] != "reskins") {
+        return match[1];
     }
-
-    if (match1[1] != 'reskins' && match2[1] == 'reskins')
-    {
-        return candyLongestSubstring(match1[1], match2[2]).length == match1[1].length;
-    }
-
-    if (match1[1] == 'reskins' && match2[1] != 'reskins')
-    {
-        return candyLongestSubstring(match2[1], match1[2]).length == match2[1].length;
-    }
-
-    if (match1[3] != match2[3])
-    {
-        return false;
-    }
-
-    return candyLongestSubstring(match1[3], match2[2]) == candyLongestSubstring(match2[3], match1[2]);
+    const opponent = loadedOpponents.find(opp => {
+        if ((opp.id) == match[3]) { // first part of costume name, e.g. reskins/mari_office -> mari
+            return true;
+        }
+        // if it's unclear, e.g. full_moon, check costumes of character.
+        return opp.alternate_costumes.findIndex(costume => costume.folder.endsWith(match[2]+ "/")) != -1;
+    });
+    return opponent.id;
 }
 
 /************************************************************
@@ -1063,15 +1028,29 @@ function candyDuplicates(c1, c2) {
  ************************************************************/
 function selectTitleCandy() {
     console.log("Selecting Candy...");
-    var candy1 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
-    var candy2 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
+    var candyImage1 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
+    var character1 = getCharacterForCostume(candyImage1);
+    var candyImage2 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
+    var character2 = getCharacterForCostume(candyImage2);
 
-    while (candyDuplicates(candy1, candy2)) {
-        candy2 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
+    while (character1 == character2) {
+        candyImage2 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
+        character2 = getCharacterForCostume(candyImage2);
     }
 
-    $titleCandy[0].attr("src", "opponents/" + candy1);
-    $titleCandy[1].attr("src", "opponents/" + candy2);
+    $titleCandy[0].attr("src", "opponents/" + candyImage1);
+    $titleCandy[1].attr("src", "opponents/" + candyImage2);
+        
+    var scale1 = (loadedOpponents.find(c => c.id == character1).scale / 100) || 1;
+    var scale2 = (loadedOpponents.find(c => c.id == character2).scale / 100) || 1;
+    
+    // if we're restarting, we need to remove previous CSS or it piles up when we re-add it.
+    var style1 = ($titleCandy[0].attr("style") || "").replace(/transform\:([a-zA-Z0-9\.\(\)\%\- ])+;/, "")
+    var style2 = ($titleCandy[1].attr("style") || "").replace(/transform\:([a-zA-Z0-9\.\(\)\%\- ])+;/, "")
+    
+    
+    $titleCandy[0].attr("style", style1 + "transform: scale(" + scale1  + ") translateX(-50%);");
+    $titleCandy[1].attr("style", style2 + "transform: scale(" + scale2  + ") translateX(50%);");
 }
 
 /************************************************************
