@@ -155,6 +155,10 @@
         <response id="229" opponent="wikipe-tan" opponentId="562" />
         <response id="230" opponent="dark_magician_girl" opponentId="6" />
         <response id="231" opponent="laevatein" opponentId="12" />
+        <response id="237" opponent="fluttershy" opponentId="20" />
+        <response id="238" opponent="aoba" opponentId="127" />
+        <response id="239" opponent="aoba" opponentId="197" />
+        <response id="240" opponent="kyoko_kirigiri" opponentId="711" />
     </responses>
     <labels>
         <label id="1" label="" folder="Friends Marker" sort="0" />
@@ -262,11 +266,39 @@
         <label id="234" label="" folder="Filters" sort="0" />
         <label id="235" label="" folder="Filters" sort="0" />
         <label id="236" label="" folder="Filters" sort="0" />
+        <label id="241" label="" folder="Backgrounds" sort="0" />
+        <label id="242" label="" folder="Backgrounds" sort="0" />
+        <label id="243" label="" folder="Backgrounds" sort="0" />
+        <label id="244" label="" folder="Backgrounds" sort="0" />
+        <label id="245" label="" folder="Filters" sort="0" />
+        <label id="246" label="" folder="Filters" sort="0" />
+        <label id="247" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="248" label="" folder="Target: Chazz" sort="0" />
+        <label id="249" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="250" label="Villain" folder="" sort="0" />
+        <label id="251" label="Villain w/DMG" folder="" sort="0" />
+        <label id="252" label="" folder="Filters" sort="0" />
+        <label id="253" label="" folder="Filters" sort="0" />
+        <label id="254" label="Double Dark" folder="" sort="0" />
+        <label id="255" label="" folder="Filters" sort="0" />
+        <label id="256" label="YGO Minor" folder="" sort="0" />
+        <label id="257" label="YGO Extra" folder="" sort="0" />
+        <label id="258" label="YGO Extra" folder="" sort="0" />
+        <label id="259" label="" folder="Situations" sort="0" />
+        <label id="260" label="" folder="Filters" sort="0" />
+        <label id="162" label="" folder="Followups" sort="0" />
+        <label id="261" label="" color="5" folder="Followups" sort="0" />
+        <label id="262" label="" color="5" folder="Followups" sort="0" />
+        <label id="263" label="" color="5" folder="Followups" sort="0" />
+        <label id="264" label="" color="3" folder="Followups" sort="0" />
+        <label id="265" label="" color="5" folder="Followups" sort="0" />
+        <label id="266" label="" color="5" folder="Followups" sort="0" />
+        <label id="267" label="" color="2" folder="Followups" sort="0" />
     </labels>
     <prefixes>
         <prefix>card</prefix>
     </prefixes>
-    <nextId>236</nextId>
+    <nextId>267</nextId>
     <markers>
         <marker scope="Public" name="blue_disk" />
         <marker scope="Public" name="chiakiVideoGames" />
@@ -284,6 +316,7 @@
         <marker scope="Public" name="tea_airhockey2" />
         <marker scope="Public" name="tea_airhockey3" />
         <marker scope="Public" name="tea_ancientruins" />
+        <marker scope="Public" name="tea_aobra" />
         <marker scope="Public" name="tea_aqua_freetime1a" />
         <marker scope="Public" name="tea_aqua_freetime1b" />
         <marker scope="Public" name="tea_aqua_freetime2" />
@@ -291,6 +324,7 @@
         <marker scope="Public" name="tea_aqua_miku" />
         <marker scope="Public" name="tea_attack_points" />
         <marker scope="Public" name="tea_bernie_breasts" />
+        <marker scope="Public" name="tea_card_pocket" />
         <marker scope="Public" name="tea_catastrophe" />
         <marker scope="Public" name="tea_chazz_cheat" />
         <marker scope="Public" name="tea_chazz_dmg1" />
@@ -299,14 +333,18 @@
         <marker scope="Public" name="tea_chazz_strip2" />
         <marker scope="Public" name="tea_chazz_strip2a" />
         <marker scope="Public" name="tea_ChazzAss" />
+        <marker scope="Public" name="tea_cheater" />
         <marker scope="Public" name="tea_chiaki_strip1a" />
         <marker scope="Public" name="tea_chiaki_strip1b" />
         <marker scope="Public" name="tea_chiaki1" />
+        <marker scope="Public" name="tea_consolewar" />
+        <marker scope="Public" name="tea_consolewarQ" />
         <marker scope="Public" name="tea_cynthia_mana" />
         <marker scope="Public" name="tea_cynthia_millenium" />
         <marker scope="Public" name="tea_cynthia_puzzle" />
         <marker scope="Public" name="tea_cynthia_rod" />
         <marker scope="Public" name="tea_cynthia_strip0" />
+        <marker scope="Public" name="tea_dark2" />
         <marker scope="Public" name="tea_dash_respond" />
         <marker scope="Public" name="tea_deckmaster" />
         <marker scope="Public" name="tea_deckmaster_DMG1" />
@@ -317,6 +355,7 @@
         <marker scope="Public" name="tea_dmg_danceB" />
         <marker scope="Public" name="tea_dmg_end" />
         <marker scope="Public" name="tea_dmg_finish" />
+        <marker scope="Public" name="tea_dmg_finishA" />
         <marker scope="Public" name="tea_dmg_horny" />
         <marker scope="Public" name="tea_dmg_horny2" />
         <marker scope="Public" name="tea_dmg_jinzo" />
@@ -325,6 +364,7 @@
         <marker scope="Public" name="tea_dmg_smash" />
         <marker scope="Public" name="tea_dmg_strip1" />
         <marker scope="Public" name="tea_dmg_strip3" />
+        <marker scope="Public" name="tea_dmg_villain" />
         <marker scope="Public" name="tea_dmg_waterA" />
         <marker scope="Public" name="tea_dmg_waterB" />
         <marker scope="Public" name="tea_dng_timewizard" />
@@ -343,7 +383,9 @@
         <marker scope="Public" name="tea_fashionA" />
         <marker scope="Public" name="tea_fashionB" />
         <marker scope="Public" name="tea_fashionC" />
+        <marker scope="Public" name="tea_fin_ddr" />
         <marker scope="Public" name="tea_finish_yugi" />
+        <marker scope="Public" name="tea_flutter_reason" />
         <marker scope="Public" name="tea_fluttershy_poker" />
         <marker scope="Public" name="tea_futab_chazz" />
         <marker scope="Public" name="tea_futab_start" />
@@ -382,6 +424,7 @@
         <marker scope="Public" name="tea_lucy_virgo2" />
         <marker scope="Public" name="tea_lucy_virgo3" />
         <marker scope="Public" name="tea_magicalgirl_wiki" />
+        <marker scope="Public" name="tea_male_table" />
         <marker scope="Public" name="tea_mari_chubby" />
         <marker scope="Public" name="tea_mari_guys" />
         <marker scope="Public" name="tea_mast_reply1" />
@@ -474,16 +517,25 @@
         <marker scope="Public" name="tea_sleight_lead" />
         <marker scope="Public" name="tea_sleight2" />
         <marker scope="Public" name="tea_SpiritExplain" />
+        <marker scope="Public" name="tea_spot_armor" />
+        <marker scope="Public" name="tea_spot_cheater" />
+        <marker scope="Public" name="tea_spot_hunie" />
+        <marker scope="Public" name="tea_spot_ua" />
+        <marker scope="Public" name="tea_spot_villain" />
         <marker scope="Public" name="tea_start_mast" />
         <marker scope="Public" name="tea_stream_reply1" />
         <marker scope="Public" name="tea_strip_mai" />
         <marker scope="Public" name="tea_strip_vision" />
+        <marker scope="Public" name="tea_v_bisexual" />
         <marker scope="Public" name="tea_v_chazz" />
+        <marker scope="Public" name="tea_v_cheater" />
         <marker scope="Public" name="tea_v_chihiro" />
         <marker scope="Public" name="tea_v_dmg" />
         <marker scope="Public" name="tea_v_lucy" />
         <marker scope="Public" name="tea_v_miku_arcade" />
+        <marker scope="Public" name="tea_v_spirit" />
         <marker scope="Public" name="tea_v_steve" />
+        <marker scope="Public" name="tea_v_yuru" />
         <marker scope="Public" name="tea_v_zombie" />
         <marker scope="Public" name="tea_vocaloid_table" />
         <marker scope="Public" name="tea_waterproof" />
