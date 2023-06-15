@@ -275,6 +275,16 @@
         <response id="1077" opponent="aqua_kh" opponentId="67" />
         <response id="1078" opponent="aqua_kh" opponentId="51" />
         <response id="1080" opponent="erufuda" opponentId="119" />
+        <response id="1088" opponent="fina" opponentId="686" />
+        <response id="1089" opponent="fluttershy" opponentId="18" />
+        <response id="1090" opponent="fluttershy" opponentId="20" />
+        <response id="1091" opponent="nami" opponentId="623" />
+        <response id="1092" opponent="nami" opponentId="624" />
+        <response id="1093" opponent="spooky" opponentId="26" />
+        <response id="1094" opponent="spooky" opponentId="77" />
+        <response id="1095" opponent="nugi-chan" opponentId="169" />
+        <response id="1098" opponent="nanoko-chan" opponentId="3" />
+        <response id="1099" opponent="yshtola" opponentId="101" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1299,6 +1309,21 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1085" label="" folder="Erufuda to left" sort="0" />
         <label id="1086" label="" folder="Erufuda to left" sort="0" />
         <label id="1087" label="" folder="Erufuda to left" sort="0" />
+        <label id="1088" label="" folder="Fina to left" sort="0" />
+        <label id="1089" label="" folder="Fluttershy to left" sort="0" />
+        <label id="1090" label="" folder="Fluttershy to left" sort="0" />
+        <label id="233" label="" folder="Fluttershy to left" sort="0" />
+        <label id="236" label="" folder="Fluttershy to left" sort="0" />
+        <label id="1091" label="" folder="Nami to left" sort="0" />
+        <label id="1092" label="" folder="Nami to left" sort="0" />
+        <label id="224" label="" folder="Nami to left" sort="0" />
+        <label id="1093" label="" folder="Spooky to left" sort="0" />
+        <label id="1094" label="" folder="Spooky to left" sort="0" />
+        <label id="1095" label="" folder="Nugi-chan to left" sort="0" />
+        <label id="1096" label="" folder="Nugi-chan to left" sort="0" />
+        <label id="1097" label="" folder="Nugi-chan to left" sort="0" />
+        <label id="1098" label="" folder="Nanoko-chan to left" sort="0" />
+        <label id="1099" label="" folder="Y'shtola to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
@@ -1307,7 +1332,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1087</nextId>
+    <nextId>1099</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1670,6 +1695,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_fina_prince" />
         <marker scope="Public" name="nagisa_fina_princess" />
         <marker scope="Public" name="nagisa_fina_proud_of_self" />
+        <marker scope="Public" name="nagisa_fina_public_masturbation_pro" />
         <marker scope="Public" name="nagisa_fina_quick_strip" />
         <marker scope="Public" name="nagisa_fina_regular_poker" />
         <marker scope="Public" name="nagisa_fina_respect" />
@@ -1796,12 +1822,14 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_fluttershy_not_the_only_one" />
         <marker scope="Public" name="nagisa_fluttershy_not_womanly" />
         <marker scope="Public" name="nagisa_fluttershy_pets_question" />
+        <marker scope="Public" name="nagisa_fluttershy_poker_question" />
         <marker scope="Public" name="nagisa_fluttershy_positive_feelings" />
         <marker scope="Public" name="nagisa_fluttershy_pretty_dress" />
         <marker scope="Public" name="nagisa_fluttershy_pretty_too" />
         <marker scope="Public" name="nagisa_fluttershy_private" />
         <marker scope="Public" name="nagisa_fluttershy_proud_of_you" />
         <marker scope="Public" name="nagisa_fluttershy_really_gonna" />
+        <marker scope="Public" name="nagisa_fluttershy_reason_for_coming_question" />
         <marker scope="Public" name="nagisa_fluttershy_reciprocated_support" />
         <marker scope="Public" name="nagisa_fluttershy_rescue_animals" />
         <marker scope="Public" name="nagisa_fluttershy_rescue_center" />
@@ -2389,8 +2417,11 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_nagatoro_hair_like_bug" />
         <marker scope="Public" name="nagisa_nagatoro_learning" />
         <marker scope="Public" name="nagisa_nagatoro_other_activities" />
+        <marker scope="Public" name="nagisa_nami_body_positive" />
+        <marker scope="Public" name="nagisa_nami_dangerous_places" />
         <marker scope="Public" name="nagisa_nami_dream_drama_club" />
         <marker scope="Public" name="nagisa_nami_splash_panties" />
+        <marker scope="Public" name="nagisa_nanoko-chan_virgin" />
         <marker scope="Public" name="nagisa_natsuki_1st_nude2" />
         <marker scope="Public" name="nagisa_natsuki_2loss" />
         <marker scope="Public" name="nagisa_natsuki_bathroom" />
@@ -2425,6 +2456,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_nugi-chan_be_careful" />
         <marker scope="Public" name="nagisa_nugi-chan_cute_couple" />
         <marker scope="Public" name="nagisa_nugi-chan_dont_understand" />
+        <marker scope="Public" name="nagisa_nugi-chan_good_games" />
         <marker scope="Public" name="nagisa_nugi-chan_juice_order" />
         <marker scope="Public" name="nagisa_nugi-chan_line_of_work" />
         <marker scope="Public" name="nagisa_nugi-chan_marked" />
@@ -2648,7 +2680,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_sola_kindergarten" />
         <marker scope="Public" name="nagisa_sola_sailor_hat" />
         <marker scope="Public" name="nagisa_special_lesson" />
+        <marker scope="Public" name="nagisa_spooky_fears" />
         <marker scope="Public" name="nagisa_spooky_knife_relief" />
+        <marker scope="Public" name="nagisa_spooky_places_to_eat" />
         <marker scope="Public" name="nagisa_st_both_of_you" />
         <marker scope="Public" name="nagisa_st_bringing_a_friend" />
         <marker scope="Public" name="nagisa_st_facts" />
@@ -2739,6 +2773,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_xander_school" />
         <marker scope="Public" name="nagisa_xander_starting_big" />
         <marker scope="Public" name="nagisa_xander_underwear" />
+        <marker scope="Public" name="nagisa_yshtola_rules" />
         <marker scope="Public" name="nagisa_yuelia_was_that_magic" />
         <marker scope="Public" name="nagisa_yuri_cold" />
         <marker scope="Public" name="nagisa_yuri_dogear" />
