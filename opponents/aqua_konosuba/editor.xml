@@ -45,6 +45,9 @@
         <response id="474" opponent="noire" opponentId="2632" />
         <response id="477" opponent="kyoko_kirigiri" opponentId="1338" />
         <response id="480" opponent="sweetheart" opponentId="43" />
+        <response id="483" opponent="nagatoro" opponentId="2189" />
+        <response id="484" opponent="noire" opponentId="2647" />
+        <response id="488" opponent="barbara" opponentId="17" />
     </responses>
     <notes>
         <note id="438">I believe Aqua is actually too lazy to go through with this, so that could potentially come up if Noire mentions the work it takes to be an idol.</note>
@@ -497,14 +500,22 @@
         <label id="476" label="" color="1" folder="Targets" sort="0" />
         <label id="477" label="" color="1" folder="Replies" sort="0" />
         <label id="478" label="" color="1" folder="Replies" sort="0" />
-        <label id="479" label="" color="1" folder="Targets" sort="0" />
+        <label id="479" label="" color="0" folder="Targets" sort="0" />
         <label id="480" label="" color="1" folder="Targets" sort="0" />
         <label id="481" label="" color="3" folder="Targets" sort="0" />
         <label id="482" label="" color="5" folder="Targets" sort="0" />
+        <label id="483" label="" color="1" folder="Replies" sort="0" />
+        <label id="484" label="" color="3" folder="Replies" sort="0" />
+        <label id="485" label="" color="1" folder="Targets" sort="0" />
+        <label id="486" label="" color="1" folder="Targets" sort="0" />
+        <label id="487" label="" color="1" folder="Targets" sort="0" />
+        <label id="488" label="" color="3" folder="PromptResponses" sort="0" />
+        <label id="489" label="" color="1" folder="Targets" sort="0" />
+        <label id="490" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>482</nextId>
+    <nextId>490</nextId>
     <markers>
         <marker scope="Public" name="AG_AquasFollowerSuggestion" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion_cont" />
@@ -533,6 +544,9 @@
         <marker scope="Public" name="Aquass_showOff2" />
         <marker scope="Public" name="Aquass_showOff3" />
         <marker scope="Public" name="Aquass_showOff4" />
+        <marker scope="Public" name="Barbara_Barbatos_question" />
+        <marker scope="Public" name="Barbara_Singing_question" />
+        <marker scope="Public" name="BarbaraDailyPrayer_react" />
         <marker scope="Public" name="Blessing_badHand" />
         <marker scope="Public" name="Blessing_warning" />
         <marker scope="Public" name="ConLoss_lightningStrike" />
@@ -722,6 +736,11 @@
         <marker scope="Public" name="MeguminDarkness_select_screen" />
         <marker scope="Public" name="Meia_reply1" />
         <marker scope="Public" name="Meia_reply1B" />
+        <marker scope="Public" name="Mitama_armor_question" />
+        <marker scope="Public" name="Mitama_haiku_request" />
+        <marker scope="Public" name="Mitama_poetry_question" />
+        <marker scope="Public" name="Mitama_poetry_questionB" />
+        <marker scope="Public" name="Nagatoro_SelfOutfit_reply" />
         <marker scope="Public" name="No_bra_react" />
         <marker scope="Public" name="No_bra_react2" />
         <marker scope="Public" name="No_bra_react3" />
@@ -740,6 +759,7 @@
         <marker scope="Public" name="Noire_idolOutfit_end" />
         <marker scope="Public" name="Noire_otherGods_question" />
         <marker scope="Public" name="Noire_SelfName_reply" />
+        <marker scope="Public" name="Noire_WateryHeart_reply" />
         <marker scope="Public" name="Player_Aqua" />
         <marker scope="Public" name="Player_Aqua_AquaKH" />
         <marker scope="Public" name="Queenie_fingers_question" />
@@ -809,6 +829,7 @@
         <marker scope="Public" name="Shy_SmugHelp_Others" />
         <marker scope="Public" name="Sweetheart_hole_react" />
         <marker scope="Public" name="Sweetheart_royalty1" />
+        <marker scope="Public" name="Sweetheart_royalty2" />
         <marker scope="Public" name="Sweetheart_too_much_selfLove" />
         <marker scope="Public" name="Yuno_SelfAquass_reply" />
         <marker scope="Public" name="Yunyun_GameStartReply" />
