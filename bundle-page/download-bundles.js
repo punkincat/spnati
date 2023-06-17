@@ -13,7 +13,6 @@ var SPECIAL_CASE_NAMES = {
     "hk416": "HK416",
     "kool-aid": "Kool-Aid Man",
     "larachel": "L'Arachel",
-    "mia": "Mia Fey",
     "mia_golden_sun": "Mia (Golden Sun)",
     "miki_miura": "Miki",
     "mom_alola": "Mom (Alola)",
@@ -36,17 +35,27 @@ var SPECIAL_CASE_NAMES = {
     "yshtola": "Y'shtola",
     "yuna_ffx": "Yuna (FFX)",
     "yuno_uno": "Yuno",
-        
+
+    // disambiguation
+    "alice": "Alice Liddell",
+    "amy": "Amy (DDLC)",
+    "annie": "Annie Edison",
+    "mia": "Mia Fey",
+    "mari": "Mari (OMORI)",
+    "penny": "Penny (Stardew Valley)",
+    "roll": "Roll Light",
+    "saki": "Saki Yoshida",
+
     // classic opponents
     "amy_rose_classic": "Amy Rose",
     "dawn_classic": "Dawn",
     "kyoko": "Kyoko Kirigiri",
-    "penny_classic": "Penny",
+    "penny_classic": "Penny (Stardew Valley)",
     "ryuko_classic": "Ryuko",
     "shantae_classic": "Shantae",
     "sheena_classic": "Sheena",
     "velma_classic": "Velma",
-    
+
     // newer opponents
     "asuna_yuuki": "Asuna",
     "blake_belladonna": "Blake",
