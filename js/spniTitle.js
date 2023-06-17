@@ -1007,19 +1007,19 @@ function wearClothing () {
 }
 
 function getCharacterForCostume(costumePath) {
-    const regex = /^([^\/]*)\/(([^_]*)?_?([^_\/]*)?).*$/;
-    const match = costumePath.match(regex);
+    const match = costumePath.split("/");
     
-    if (match[1] != "reskins") {
-        return match[1];
+    if (match[0] != "reskins") {
+        return match[0];
     }
     const opponent = loadedOpponents.find(opp => {
-        if ((opp.id) == match[3]) { // first part of costume name, e.g. reskins/mari_office -> mari
-            return true;
-        }
-        // if it's unclear, e.g. full_moon, check costumes of character.
-        return opp.alternate_costumes.findIndex(costume => costume.folder.endsWith(match[2]+ "/")) != -1;
+        // opponent has a costume that fits
+        return opp.alternate_costumes.findIndex(costume => costume.folder.endsWith(match[1]+ "/")) != -1;
     });
+    if (opponent == undefined) {
+        console.log(`Couldn't find opponent for costume "${costumePath}". The costume may be offline.`);
+        return "";
+    }
     return opponent.id;
 }
 
