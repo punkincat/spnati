@@ -159,6 +159,10 @@
         <response id="238" opponent="aoba" opponentId="127" />
         <response id="239" opponent="aoba" opponentId="197" />
         <response id="240" opponent="kyoko_kirigiri" opponentId="711" />
+        <response id="270" opponent="meia" opponentId="695" />
+        <response id="271" opponent="revy" opponentId="188" />
+        <response id="274" opponent="revy" opponentId="3" />
+        <response id="275" opponent="revy" opponentId="12" />
     </responses>
     <labels>
         <label id="1" label="" folder="Friends Marker" sort="0" />
@@ -294,11 +298,17 @@
         <label id="265" label="" color="5" folder="Followups" sort="0" />
         <label id="266" label="" color="5" folder="Followups" sort="0" />
         <label id="267" label="" color="2" folder="Followups" sort="0" />
+        <label id="268" label="" folder="Responses" sort="0" />
+        <label id="269" label="" folder="Responses" sort="0" />
+        <label id="272" label="" folder="May to Left" sort="0" />
+        <label id="273" label="" folder="May to Left" sort="0" />
     </labels>
     <prefixes>
         <prefix>card</prefix>
     </prefixes>
-    <nextId>267</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>275</nextId>
     <markers>
         <marker scope="Public" name="blue_disk" />
         <marker scope="Public" name="chiakiVideoGames" />
@@ -306,6 +316,8 @@
         <marker scope="Public" name="kyouko_tea_cardgame0" />
         <marker scope="Public" name="may_tea_losebra" />
         <marker scope="Public" name="may_tea_strip0" />
+        <marker scope="Public" name="may_tea_strip1" />
+        <marker scope="Public" name="may_tea_strip2" />
         <marker scope="Public" name="tea_4cards_reply1" />
         <marker scope="Public" name="tea_abroad" />
         <marker scope="Public" name="tea_adapt" />
@@ -383,6 +395,7 @@
         <marker scope="Public" name="tea_fashionA" />
         <marker scope="Public" name="tea_fashionB" />
         <marker scope="Public" name="tea_fashionC" />
+        <marker scope="Public" name="tea_female_table" />
         <marker scope="Public" name="tea_fin_ddr" />
         <marker scope="Public" name="tea_finish_yugi" />
         <marker scope="Public" name="tea_flutter_reason" />
@@ -399,6 +412,8 @@
         <marker scope="Public" name="tea_gwen_weevil" />
         <marker scope="Public" name="tea_gwen_weevill" />
         <marker scope="Public" name="tea_hands" />
+        <marker scope="Public" name="tea_jura_dmg1" />
+        <marker scope="Public" name="tea_jura_reply1" />
         <marker scope="Public" name="tea_keyblade" />
         <marker scope="Public" name="tea_kirigiri_strip1" />
         <marker scope="Public" name="tea_kirigiri_strip2" />
@@ -457,7 +472,9 @@
         <marker scope="Public" name="tea_may_strip0a" />
         <marker scope="Public" name="tea_may_strip0b" />
         <marker scope="Public" name="tea_may_strip1" />
+        <marker scope="Public" name="tea_may_strip2" />
         <marker scope="Public" name="tea_may_swimsuit" />
+        <marker scope="Public" name="tea_meia_reply1" />
         <marker scope="Public" name="tea_miku_strip" />
         <marker scope="Public" name="tea_miku_strip1" />
         <marker scope="Public" name="tea_mirrorforce" />
@@ -491,6 +508,8 @@
         <marker scope="Public" name="tea_prompt_wealthy1" />
         <marker scope="Public" name="tea_queenie_start" />
         <marker scope="Public" name="tea_reply_aelia1" />
+        <marker scope="Public" name="tea_revy_butt" />
+        <marker scope="Public" name="tea_revy_reply1" />
         <marker scope="Public" name="tea_rosa_huddle" />
         <marker scope="Public" name="tea_royalflush" />
         <marker scope="Public" name="tea_rule1" />
