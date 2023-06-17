@@ -132,6 +132,10 @@ var CANDY_LIST = [
     "felix/3-coquettish.png",
     "felix/4-grabby.png",
     "felix/5-butt-2.png",
+    "elphaba/0-mischievous.png",                 // Highlighted New Character
+    "elphaba/2-sarcastic.png",
+    "elphaba/4-amused.png",
+    "elphaba/5-calm.png",	
     "wasp/0-start.png",                    // Has Recent Updates
     "wasp/0-flirt.png",
     "wasp/0-excited.png",
