@@ -24,10 +24,6 @@ var $gameLoadProgress = $(".game-load-progress");
  *****                    Title Screen Variables                  *****
  **********************************************************************/
 var CANDY_LIST = [
-    "meia/0-interested.png",               // High Roster Position
-    "meia/2-pleased.png",
-    "meia/2-reminiscing.png",
-    "meia/3-happy.png",
     "natsuki/0-tsun.png",                  // High Roster Position
     "natsuki/1-laugh.png",
     "natsuki/2-happy.png",
@@ -60,10 +56,6 @@ var CANDY_LIST = [
     "kumatora/0-cheerful.png",
     "kumatora/0-idle2.png",
     "kumatora/0-stretching.png",
-    "jura/0-seductive.png",                // High Roster Position
-    "jura/1-teasing.png",
-    "jura/2-interested.png",
-    "jura/3-vain.png",
     "yuri/0-calm.png",                     // High Roster Position
     "yuri/0-happy.png",
     "yuri/3-chat.png",
@@ -124,6 +116,10 @@ var CANDY_LIST = [
     "stocking/2-hex.png",
     "stocking/3-stripping+.png",
     "stocking/4-aroused.png",
+    "megumin/0-smug.png",                  // High Roster Position
+    "megumin/0-flustered.png",
+    "megumin/2-ecstatic.png",
+    "megumin/3-embarrassed.png",
     "kora/0-cheer2.png",                   // Highlighted New Character
     "kora/1-cheer.png",
     "kora/2-smorny.png",
@@ -132,7 +128,7 @@ var CANDY_LIST = [
     "felix/3-coquettish.png",
     "felix/4-grabby.png",
     "felix/5-butt-2.png",
-    "elphaba/0-mischievous.png",                 // Highlighted New Character
+    "elphaba/0-mischievous.png",           // Highlighted New Character
     "elphaba/2-sarcastic.png",
     "elphaba/4-amused.png",
     "elphaba/5-calm.png",	
@@ -452,10 +448,6 @@ var CANDY_LIST = [
     "sly_cooper/0-Comms+.png",
     "sly_cooper/0-Select.png",
     "sly_cooper/0-Comms+.png",
-    "megumin/0-smug.png",
-    "megumin/0-flustered.png",
-    "megumin/2-ecstatic.png",
-    "megumin/3-embarrassed.png",
     "jin/0-Cracker.png",
     "jin/0-Excited.png",
     "jin/5-Stripped.png",
@@ -500,6 +492,14 @@ var CANDY_LIST = [
     "myriam/2-normal.png",
     "myriam/3-think.png",
     "myriam/4-flattered.png",
+    "meia/0-interested.png",
+    "meia/2-pleased.png",
+    "meia/2-reminiscing.png",
+    "meia/3-happy.png",
+    "jura/0-seductive.png",
+    "jura/1-teasing.png",
+    "jura/2-interested.png",
+    "jura/3-vain.png",
 */
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
