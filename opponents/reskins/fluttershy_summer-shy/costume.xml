@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>fluttershy_summer-shy</id>
+    <label>Fluttershy</label>
+    <tags>
+        <tag>alternative_skin</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/fluttershy_summer-shy/</folder>
+    <wardrobe>
+        <clothing name="bikini bottom" generic="underwear" position="lower" type="important" />
+        <clothing name="bikini top" generic="bra" position="upper" type="important" />
+        <clothing name="swimsuit" generic="swimsuit" position="both" type="major" />
+        <clothing name="sandals" generic="shoes" position="feet" type="minor" plural="true" />
+        <clothing name="skirt" generic="skirt" position="waist" type="extra" />
+        <clothing name="snorkel" position="head" type="extra" />
+    </wardrobe>
+
+</costume>
