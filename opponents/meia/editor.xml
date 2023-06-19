@@ -39,6 +39,9 @@
         <case name="Pilot Recruitment" id="9" priority="Prompt" min="0" max="2">
             <description>Meia mentions to the table that her Dread pilot team is looking for new recruits and asks if anyone would like to join.  (Prompt Marker)</description>
         </case>
+        <case name="Gymwear" id="900" priority="MustTarget" min="3" max="3">
+            <description>Meia is naked under her suit and puts on some underwear to keep playing for a bit longer.  (I don't personally consider this Must-Target, but if you do, please don't just state what's happening instead of making conversation.)</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <notes>
@@ -431,10 +434,14 @@
         <label id="897" label="" color="7" folder="" sort="0" />
         <label id="898" label="" color="7" folder="" sort="0" />
         <label id="899" label="" color="6" folder="" sort="0" />
+        <label id="901" label="" color="7" folder="" sort="0" />
+        <label id="902" label="" color="7" folder="" sort="0" />
+        <label id="903" label="" color="7" folder="" sort="0" />
+        <label id="906" label="" color="7" folder="" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>899</nextId>
+    <nextId>907</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="2butt">Meia shows off her butt while still in her bodysuit (or Cupid outfit).</marker>
