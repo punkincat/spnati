@@ -4,7 +4,7 @@
     <height>5'5" (165 cm)</height>
     <age>20</age>
     <pronunciation>mee - uh</pronunciation>
-    <othernotes>&lt;br&gt;&lt;br&gt;LORE &amp; GAME INFO&lt;br&gt;- Mia uses Psynergy. In a meta sense, Psynergy is a JRPG magic system that uses four elements, and is based on the power of the mind (made distinct from another source of power, Chi, which is 'the power of the body'). &lt;br&gt;- Psynergy is based on four elements; Venus (Earth), Mars (Fire), Jupiter (Wind) and Mercury (Water).&lt;br&gt;- People who can use Psynergy are called Adepts. Mia is a Mercury Adept.&lt;br&gt;- Mercury is associated with some of the strongest healing magic in the series, and Mia was originally acting as a faith healer in her town of Imil. Renowned for her great power even at a young age, she had two apprentices of her own.&lt;br&gt;- Psynergy is treated like psychic powers/PSI - only other Adepts can see Psynergy being used, non-Adepts can only see the effects (e.g. a boulder being moved, water appearing out of nowhere).&lt;br&gt;- She is written as if three years have passed since Alchemy returned to Weyard (the ending of Golden Sun: The Lost Age). She is mentioned in Dark Dawn, which is set decades after TLA, but is not seen.&lt;br&gt;&lt;br&gt;Random Trivia&lt;br&gt;- Mia is one of only two female party members in the series who can equip maces.</othernotes>
+    <othernotes>&lt;br&gt;&lt;br&gt;LORE &amp; GAME INFO&lt;br&gt;- Mia uses Psynergy. In a meta sense, Psynergy is a JRPG magic system that uses four elements, and is based on the power of the mind (made distinct from another source of power, Chi, which is 'the power of the body'). &lt;br&gt;- Psynergy is based on four elements; Venus (Earth), Mars (Fire), Jupiter (Wind) and Mercury (Water).&lt;br&gt;- People who can use Psynergy are called Adepts. Mia is a Mercury Adept.&lt;br&gt;- Mercury is associated with some of the strongest healing magic in the series, and Mia was originally acting as a faith healer in her town of Imil. Renowned for her great power even at a young age, she had two apprentices of her own.&lt;br&gt;- Psynergy is treated like psychic powers/PSI - only other Adepts can see Psynergy being used, non-Adepts can only see the effects (e.g. a boulder being moved, water appearing out of nowhere). For the sake of targeted interactions in SPNATI, this limitation can be ignored.&lt;br&gt;- She is written as if three years have passed since Alchemy returned to Weyard (the ending of Golden Sun: The Lost Age). She is mentioned in Dark Dawn, which is set decades after TLA, but is not seen.&lt;br&gt;&lt;br&gt;Random Trivia&lt;br&gt;- Mia is one of only two female party members in the series who can equip maces.</othernotes>
     <noteworthy>
         <case name="Swimwear-Underwear" id="1" priority="Noteworthy" min="4" max="4">
             <description>(saying the marker 'swimsuit') Mia is wearing a swimsuit under her dress, which she explains is actually an 'undergarment' for her clan (who are descended from Water elemental Adepts aka mages)</description>
@@ -40,6 +40,11 @@
         <response id="201" opponent="aqua_kh" opponentId="841" />
         <response id="202" opponent="aqua_kh" opponentId="842" />
         <response id="208" opponent="sweetheart" opponentId="43" />
+        <response id="238" opponent="jura" opponentId="683" />
+        <response id="239" opponent="meia" opponentId="876" />
+        <response id="241" opponent="revy" opponentId="289" />
+        <response id="249" opponent="chihiro" opponentId="213" />
+        <response id="250" opponent="chihiro" opponentId="1" />
     </responses>
     <notes>
         <note id="22">this can go in whatever direction you want; I just find it funny that the two of them are pious and water-themed</note>
@@ -286,13 +291,27 @@
         <label id="235" label="" folder="Targets" sort="0" />
         <label id="236" label="" folder="Targets" sort="0" />
         <label id="237" label="" folder="Tag Filters" sort="0" />
+        <label id="238" label="" folder="Responses" sort="0" />
+        <label id="239" label="" folder="Responses" sort="0" />
+        <label id="240" label="" folder="Responses" sort="0" />
+        <label id="241" label="" folder="Responses" sort="0" />
+        <label id="242" label="Disable the Towel" folder="Logic" sort="0" />
+        <label id="243" label="DISABLED Towel" folder="Backgrounds" sort="0" />
+        <label id="225" label="Towel already enabled" folder="" sort="0" />
+        <label id="244" label="Disable the Towel" folder="Logic" sort="0" />
+        <label id="245" label="" folder="Conditional" sort="0" />
+        <label id="246" label="" folder="Conditional" sort="0" />
+        <label id="247" label="Disable the Towel" folder="Logic" sort="0" />
+        <label id="248" label="" folder="Targets" sort="0" />
+        <label id="249" label="" folder="Situations" sort="0" />
+        <label id="250" label="" folder="Situations" sort="0" />
     </labels>
     <prefixes>
         <prefix>zz_</prefix>
     </prefixes>
     <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>237</nextId>
+    <nextId>250</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="a_djinni_was_in_my_cape">Fizz djinni situational marker</marker>
@@ -305,6 +324,8 @@
         <marker scope="Public" name="butt_pose">Showing off an butt pose</marker>
         <marker scope="Private" name="butt_pose_internal1">Internal use marker for tracking if a butt pose has been used in the hand line already</marker>
         <marker scope="Public" name="caulifua_SSJ">Reaction to Caulifla 'super saiyan' situation</marker>
+        <marker scope="Public" name="chihiro_alter_ego" />
+        <marker scope="Public" name="chihiro_is_a_guy" />
         <marker scope="Public" name="climax_player_name" />
         <marker scope="Public" name="djinn_lore_1">Talking about djinn</marker>
         <marker scope="Public" name="djinnToggle">If set to 1, a Mercury Djinni will appear.</marker>
@@ -319,10 +340,14 @@
         <marker scope="Public" name="mariS_wings_revealResp">Reaction to Mari S's wings reveal</marker>
         <marker scope="Public" name="mia_aquaKS_goddess1" />
         <marker scope="Public" name="Mia_BarbaraDailyPrayer_Resp">Interaction with Barbara</marker>
+        <marker scope="Public" name="mia_cag_founderOfAlchemy1" />
         <marker scope="Public" name="mia_dunban_scar_reveal">Interaction with Dunban</marker>
         <marker scope="Public" name="mia_jura_babiesPrompt">Response to Jura babies prompt</marker>
+        <marker scope="Public" name="mia_jura_gs0a" />
         <marker scope="Public" name="mia_larachel_staff_Tolbi" />
         <marker scope="Public" name="mia_mariS_acc_crazy_suggestResp" />
+        <marker scope="Public" name="mia_meia_gs0a" />
+        <marker scope="Public" name="mia_revy_gs0a" />
         <marker scope="Public" name="miaGS_barbara_waterPowers1">Interaction with Barbara</marker>
         <marker scope="Public" name="miaGS_toph_djinn1" />
         <marker scope="Public" name="miaGS_toph_djinn1_Fizz" />
@@ -348,6 +373,7 @@
         <marker scope="Public" name="swimsuit_top">Mia has taken down the top half of her swimsuit to expose her chest.</marker>
         <marker scope="Public" name="target_said_player_name" />
         <marker scope="Public" name="targets_that_said_player_name" />
+        <marker scope="Public" name="towel_disable" />
         <marker scope="Public" name="towel_enable">If set to 1, Mia has set down a towel that will remain for her forfeit/post-forfeit stages.</marker>
         <marker scope="Public" name="turandot_mercury_retrograde_resp" />
         <marker scope="Public" name="undead_sanctum" />
