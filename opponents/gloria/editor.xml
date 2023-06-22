@@ -158,6 +158,16 @@
         <response id="612" opponent="kyouko_toshinou" opponentId="91" />
         <response id="613" opponent="kyouko_toshinou" opponentId="108" />
         <response id="619" opponent="nagatoro" opponentId="1015" />
+        <response id="652" opponent="mia_golden_sun" opponentId="251" />
+        <response id="653" opponent="mia_golden_sun" opponentId="252" />
+        <response id="654" opponent="mia_golden_sun" opponentId="253" />
+        <response id="655" opponent="mia_golden_sun" opponentId="255" />
+        <response id="656" opponent="mia_golden_sun" opponentId="254" />
+        <response id="657" opponent="mia_golden_sun" opponentId="256" />
+        <response id="658" opponent="mia_golden_sun" opponentId="257" />
+        <response id="665" opponent="mia_golden_sun" opponentId="114" />
+        <response id="666" opponent="toph" opponentId="308" />
+        <response id="667" opponent="toph" opponentId="307" />
     </responses>
     <notes>
         <note id="10">expay shaer = exp share</note>
@@ -206,6 +216,7 @@ Rosa's costume index
         <note id="597">Shelving this line idea until there's a better way to check for this.</note>
         <note id="610">P.E. = physical education</note>
         <note id="648">this line plays when rosa is eating out gloria</note>
+        <note id="667">There is an entire 'Curry dex' of these that I can pull from, lol https://www.serebii.net/swordshield/currydex.shtml</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Situations" sort="9" />
@@ -838,11 +849,29 @@ Rosa's costume index
         <label id="648" label="" folder="Rosa" sort="0" />
         <label id="649" label="" folder="Rosa" sort="0" />
         <label id="650" label="" folder="Rosa" sort="0" />
+        <label id="651" label="" folder="Events" sort="0" />
+        <label id="652" label="" folder="Responses" sort="0" />
+        <label id="653" label="" folder="Responses" sort="0" />
+        <label id="654" label="" folder="Responses" sort="0" />
+        <label id="655" label="" folder="Responses" sort="0" />
+        <label id="657" label="" folder="Responses" sort="0" />
+        <label id="658" label="" folder="Responses" sort="0" />
+        <label id="656" label="" folder="Responses" sort="0" />
+        <label id="659" label="" folder="Targets" sort="0" />
+        <label id="660" label="" folder="Targets" sort="0" />
+        <label id="661" label="" folder="Targets" sort="0" />
+        <label id="662" label="" folder="Targets" sort="0" />
+        <label id="663" label="" folder="Targets" sort="0" />
+        <label id="664" label="" folder="Targets" sort="0" />
+        <label id="665" label="" folder="Targets" sort="0" />
+        <label id="666" label="" folder="Responses" sort="0" />
+        <label id="667" label="" folder="Responses" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>650</nextId>
+    <nextId>667</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="__human_nickname" />
         <marker scope="Public" name="accent_murder" />
         <marker scope="Public" name="ag_near_climax" />
@@ -1003,6 +1032,12 @@ Rosa's costume index
         <marker scope="Public" name="gloria_mg_strip0a" />
         <marker scope="Public" name="gloria_mg_vday_bothCostumed" />
         <marker scope="Public" name="gloria_mg_vday_selfNot" />
+        <marker scope="Public" name="gloria_miaGS_fizz1" />
+        <marker scope="Public" name="gloria_miaGS_fizz2" />
+        <marker scope="Public" name="gloria_miaGS_fizz3" />
+        <marker scope="Public" name="gloria_miaGS_summons1" />
+        <marker scope="Public" name="gloria_miaGS_summons2" />
+        <marker scope="Public" name="gloria_miaGS_summons3" />
         <marker scope="Public" name="gloria_miki_handy" />
         <marker scope="Public" name="gloria_miko_self0a" />
         <marker scope="Public" name="gloria_miko_self0b" />
@@ -1088,7 +1123,9 @@ Rosa's costume index
         <marker scope="Public" name="gloria_susie_strip1a" />
         <marker scope="Public" name="gloria_takatoshi_strip0a" />
         <marker scope="Public" name="gloria_toph_animals1Resp" />
+        <marker scope="Public" name="gloria_toph_animals2Resp" />
         <marker scope="Public" name="gloria_toph_food1Resp" />
+        <marker scope="Public" name="gloria_toph_food2Resp" />
         <marker scope="Public" name="gloria_trifle_gigantamix0" />
         <marker scope="Public" name="gloria_trixie_0Resp" />
         <marker scope="Public" name="gloria_trixie_biggeststolen" />
@@ -1130,6 +1167,13 @@ Rosa's costume index
         <marker scope="Public" name="male_counting_down" />
         <marker scope="Public" name="masturbation_warning" />
         <marker scope="Public" name="meia_juraForfeit" />
+        <marker scope="Public" name="miaGS_fizz_reveal" />
+        <marker scope="Public" name="miaGS_gloria_gay1" />
+        <marker scope="Public" name="miaGS_gloria_gay2" />
+        <marker scope="Public" name="miaGS_gloria_gay3" />
+        <marker scope="Public" name="miaGS_gloria_gayCont1" />
+        <marker scope="Public" name="miaGS_gloria_gayCont2" />
+        <marker scope="Public" name="miaGS_gloria_gayCont3" />
         <marker scope="Public" name="microwave_meal" />
         <marker scope="Public" name="new_chippy" />
         <marker scope="Public" name="nickname" />
@@ -1161,6 +1205,7 @@ Rosa's costume index
         <marker scope="Public" name="steve_chesthair" />
         <marker scope="Public" name="string_of_f_bombs" />
         <marker scope="Public" name="strip_poker_warning" />
+        <marker scope="Public" name="stripped_3_fizz" />
         <marker scope="Public" name="stripped_6_butt" />
         <marker scope="Public" name="stripped_6_butt_after" />
         <marker scope="Public" name="tea_dex" />
@@ -1227,5 +1272,4 @@ Rosa's costume index
             </cases>
         </recipe>
     </recipes>
-    <hasBanter>false</hasBanter>
 </metadata>
