@@ -77,9 +77,9 @@ var CANDY_LIST = [
     "adrien/2-wink.png",
     "adrien/3-smug.png",
     "noire/0-niya.png",                    // High Roster Position
-    "noire/0-smug.png",
-    "noire/0-teasing.png",
-    "noire/0-embarrassed.png",
+    "reskins/noire_clear_dress/0-embarrassed.png",
+    "reskins/noire_clear_dress/0-smug.png",
+    "reskins/noire_cool_girl/0-niya.png",
     "polly/0-Neutral.png",                 // High Roster Position
     "polly/0-Flirty.png",
     "polly/0-Excited.png",
@@ -181,9 +181,9 @@ var CANDY_LIST = [
     "yuno_uno/0-embarrassed.png",
     "yuno_uno/0-happy_to_be_here.png",
     "petra/0-select.png",                  // Has Recent Updates
-    "petra/0-wink.png",
+    "petra/4-wink.png",
     "reskins/petra_war_outfit/0-happy.png",
-    "reskins/petra_war_outfit/0-horny.png",
+    "reskins/petra_war_outfit/2-horny.png",
     "cagliostro/0-Cutesy.png",             // Has Recent Updates
     "reskins/cagliostro_alchemist_reborn/0-Excited.png",
     "cagliostro/3-Smug.png",
