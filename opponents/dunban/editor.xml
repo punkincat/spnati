@@ -182,6 +182,11 @@
         <response id="556" opponent="meia" opponentId="640" />
         <response id="557" opponent="meia" opponentId="641" />
         <response id="558" opponent="meia" opponentId="508" />
+        <response id="570" opponent="aqua_kh" opponentId="875" />
+        <response id="571" opponent="aqua_kh" opponentId="876" />
+        <response id="572" opponent="aqua_kh" opponentId="877" />
+        <response id="574" opponent="mia_golden_sun" opponentId="114" />
+        <response id="575" opponent="mia_golden_sun" opponentId="1" />
     </responses>
     <notes>
         <note id="10">Will be replaced if Sharla ever gets reworked lol</note>
@@ -769,10 +774,25 @@ c: say that he's been as high as the bionis' head?
         <label id="560" label="" folder="Targets" sort="0" />
         <label id="561" label="" folder="Targets" sort="0" />
         <label id="562" label="" folder="Targets" sort="0" />
+        <label id="563" label="" folder="Responses" sort="0" />
+        <label id="564" label="" folder="Filter" sort="0" />
+        <label id="565" label="" folder="Aqua (KH)" sort="0" />
+        <label id="566" label="" folder="Aqua (KH)" sort="0" />
+        <label id="567" label="" folder="Aqua (KH)" sort="0" />
+        <label id="568" label="" folder="Aqua (KH)" sort="0" />
+        <label id="569" label="" folder="Aqua (KH)" sort="0" />
+        <label id="570" label="" folder="Aqua (KH)" sort="0" />
+        <label id="572" label="" folder="Aqua (KH)" sort="0" />
+        <label id="573" label="" folder="Aqua (KH)" sort="0" />
+        <label id="574" label="" folder="Situations" sort="0" />
+        <label id="575" label="" folder="Targets" sort="0" />
+        <label id="576" label="" folder="Targets" sort="0" />
+        <label id="577" label="" folder="Targets" sort="0" />
+        <label id="578" label="" folder="Targets" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>562</nextId>
+    <nextId>578</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="20gOffer">Line that plays when Dunban offers a 20g bribe to whoever loses</marker>
@@ -826,12 +846,17 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_aoba_gameDev01" />
         <marker scope="Public" name="dunban_aoba_gameDev02" />
         <marker scope="Public" name="dunban_aoba_gameDev03" />
+        <marker scope="Public" name="dunban_aqua_boxers1Resp" />
+        <marker scope="Public" name="dunban_aqua_boxers2Resp" />
+        <marker scope="Public" name="dunban_aqua_boxers3Resp" />
         <marker scope="Public" name="dunban_aqua_company1" />
         <marker scope="Public" name="dunban_aqua_company2" />
         <marker scope="Public" name="dunban_aqua_ffHeavy1" />
         <marker scope="Public" name="dunban_aqua_ffHeavy2" />
         <marker scope="Public" name="dunban_aqua_ffHeavy3" />
         <marker scope="Public" name="dunban_aqua_ffHeavy4" />
+        <marker scope="Public" name="dunban_aqua_ffHeavy5" />
+        <marker scope="Public" name="dunban_aqua_ffHeavy6" />
         <marker scope="Public" name="dunban_aqua_keybladereveal" />
         <marker scope="Public" name="dunban_aqua_self1a" />
         <marker scope="Public" name="dunban_aqua_self1b" />
@@ -839,9 +864,13 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_aqua_selfshirtless1" />
         <marker scope="Public" name="dunban_aqua_selfshirtless2" />
         <marker scope="Public" name="dunban_aqua_selfshirtless3" />
+        <marker scope="Public" name="dunban_aqua_summerdress1" />
+        <marker scope="Public" name="dunban_aqua_summerdress2" />
+        <marker scope="Public" name="dunban_aqua_summerdress3" />
         <marker scope="Public" name="dunban_aqua_sword1" />
         <marker scope="Public" name="dunban_aqua_sword2" />
         <marker scope="Public" name="dunban_aqua_sword3" />
+        <marker scope="Public" name="dunban_aquakh_s1c" />
         <marker scope="Public" name="dunban_asuna_mature1" />
         <marker scope="Public" name="dunban_asuna_yuiDaughter01" />
         <marker scope="Public" name="dunban_asuna_yuiDaughter02" />
@@ -967,6 +996,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_maria_self0b" />
         <marker scope="Public" name="dunban_maria_self0c" />
         <marker scope="Public" name="dunban_maria_self1a" />
+        <marker scope="Public" name="dunban_maria_self1b" />
         <marker scope="Public" name="dunban_mariS_boxer_strip_fail" />
         <marker scope="Public" name="dunban_mariS_boxer_strip1" />
         <marker scope="Public" name="dunban_mariS_boxer_strip2" />
@@ -987,6 +1017,9 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_meia_self5a" />
         <marker scope="Public" name="dunban_mercy_fuckbuddiesResp" />
         <marker scope="Public" name="dunban_mg_buttReveal" />
+        <marker scope="Public" name="dunban_miaGS_powers1" />
+        <marker scope="Public" name="dunban_miaGS_powers2" />
+        <marker scope="Public" name="dunban_miaGS_powers3" />
         <marker scope="Public" name="dunban_mitama_arrival_resp" />
         <marker scope="Public" name="dunban_nadia_headroll" />
         <marker scope="Public" name="dunban_nagatoro_familiar01" />
@@ -1081,6 +1114,8 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="meia_dunban_sightseeing_Resp" />
         <marker scope="Public" name="meia_jura_arefighting" />
         <marker scope="Public" name="meia_revy_arefighting" />
+        <marker scope="Public" name="miaGS_fizz_reveal" />
+        <marker scope="Public" name="miaGS_swimsuit" />
         <marker scope="Public" name="midst_of_battle" />
         <marker scope="Public" name="military_exploits" />
         <marker scope="Public" name="nickname" />
