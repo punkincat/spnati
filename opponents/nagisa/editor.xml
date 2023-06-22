@@ -301,6 +301,11 @@
         <response id="1123" opponent="mercy" opponentId="170" />
         <response id="1124" opponent="mercy" opponentId="171" />
         <response id="1125" opponent="mercy" opponentId="173" />
+        <response id="1126" opponent="colt" opponentId="1" />
+        <response id="1127" opponent="yusuke" opponentId="210" />
+        <response id="1129" opponent="lucina" opponentId="669" />
+        <response id="1130" opponent="mitama" opponentId="3" />
+        <response id="1151" opponent="lucy" opponentId="652" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1369,6 +1374,32 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1123" label="" folder="Mercy to left" sort="0" />
         <label id="1124" label="" folder="Mercy to left" sort="0" />
         <label id="1125" label="" folder="Mercy to left" sort="0" />
+        <label id="1126" label="" folder="Colt to left" sort="0" />
+        <label id="1127" label="" folder="Yusuke to left" sort="0" />
+        <label id="1128" label="" folder="Yusuke to left" sort="0" />
+        <label id="1129" label="" folder="Lucina to left" sort="0" />
+        <label id="1130" label="classroom" folder="Mitama to left" sort="0" />
+        <label id="1131" label="" folder="Kyou to left" sort="0" />
+        <label id="1132" label="" folder="Kyou to left" sort="0" />
+        <label id="1133" label="" folder="Kyou to left" sort="0" />
+        <label id="1134" label="" folder="Kyou to right" sort="0" />
+        <label id="1135" label="" folder="Perona to left" sort="0" />
+        <label id="1136" label="holiday lodge" folder="Mitama to left" sort="0" />
+        <label id="1137" label="office" folder="Mitama to left" sort="0" />
+        <label id="1138" label="haunted forest" folder="Mitama to left" sort="0" />
+        <label id="1139" label="paris rooftop" folder="Mitama to left" sort="0" />
+        <label id="1140" label="modern library" folder="Mitama to left" sort="0" />
+        <label id="1141" label="armory" folder="Mitama to left" sort="0" />
+        <label id="1142" label="" folder="Mitama to left" sort="0" />
+        <label id="1143" label="" folder="Mitama to left" sort="0" />
+        <label id="1144" label="" folder="Mitama to left" sort="0" />
+        <label id="1145" label="" folder="Mitama to left" sort="0" />
+        <label id="1146" label="" folder="Mitama to left" sort="0" />
+        <label id="1147" label="" folder="Mitama to left" sort="0" />
+        <label id="1148" label="" folder="Mitama to left" sort="0" />
+        <label id="1149" label="" folder="Mitama to left" sort="0" />
+        <label id="1150" label="" folder="Mitama to left" sort="0" />
+        <label id="1151" label="" folder="Lucy to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
@@ -1377,7 +1408,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1125</nextId>
+    <nextId>1151</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1620,6 +1651,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_cold_outdoors" />
         <marker scope="Public" name="nagisa_collectible_skirt">Persistent marker to track Nagisa's skirt collectible progress.</marker>
         <marker scope="Public" name="nagisa_college_or_job" />
+        <marker scope="Public" name="nagisa_colt_beauty" />
         <marker scope="Public" name="nagisa_considers_leaving">Nagisa mentions leaving but never goes through with it.</marker>
         <marker scope="Public" name="nagisa_corrin_different_game" />
         <marker scope="Public" name="nagisa_critical_darling_glasses" />
@@ -2254,6 +2286,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_little_sister">Nagisa wants a little sister like the innocent female who removed a minor item.</marker>
         <marker scope="Public" name="nagisa_locker_room_boys" />
         <marker scope="Public" name="nagisa_locker_room_girls" />
+        <marker scope="Public" name="nagisa_lucina_travel" />
+        <marker scope="Public" name="nagisa_lucy_zodiac_sign" />
         <marker scope="Public" name="nagisa_lux_light_not_real" />
         <marker scope="Public" name="nagisa_lux_sunohara" />
         <marker scope="Public" name="nagisa_lux_tricked" />
@@ -2457,6 +2491,12 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_misato_shinji_comparison" />
         <marker scope="Public" name="nagisa_misty_cant_excercise" />
         <marker scope="Public" name="nagisa_misty_swimsuit" />
+        <marker scope="Public" name="nagisa_mitama_arrival_armory" />
+        <marker scope="Public" name="nagisa_mitama_arrival_classroom" />
+        <marker scope="Public" name="nagisa_mitama_arrival_holiday_lodge" />
+        <marker scope="Public" name="nagisa_mitama_arrival_modern_library" />
+        <marker scope="Public" name="nagisa_mitama_arrival_office" />
+        <marker scope="Public" name="nagisa_mitama_arrival_paris_rooftop" />
         <marker scope="Public" name="nagisa_monika_extra_desserts" />
         <marker scope="Public" name="nagisa_monika_glitched2" />
         <marker scope="Public" name="nagisa_monika_restarting_a_club" />
@@ -2848,6 +2888,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_yuri_plays" />
         <marker scope="Public" name="nagisa_yuri_spoil_book" />
         <marker scope="Public" name="nagisa_yuri_tea" />
+        <marker scope="Public" name="nagisa_yusuke_come_shopping_day" />
         <marker scope="Public" name="nagisa_yusuke_hide_behind" />
         <marker scope="Public" name="nagisa_yusuke_train_money" />
         <marker scope="Public" name="nagisa_zelda_give_those_back" />
