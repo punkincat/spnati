@@ -76,7 +76,7 @@ var CANDY_LIST = [
     "adrien/0-sarcastic.png",
     "adrien/2-wink.png",
     "adrien/3-smug.png",
-    "noire/0-niya.png",                    // High Roster Position
+    "noire/0-teasing.png",                    // High Roster Position
     "reskins/noire_clear_dress/0-embarrassed.png",
     "reskins/noire_clear_dress/0-smug.png",
     "reskins/noire_cool_girl/0-niya.png",
