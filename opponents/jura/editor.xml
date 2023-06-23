@@ -74,6 +74,9 @@
         <case name="Amalia Flower Gift" id="666" priority="Noteworthy" min="4" max="6">
             <description>Amalia gives Jura some flowers for not complaining about her covering herself.</description>
         </case>
+        <case name="Cheryl Hug" id="278" priority="Noteworthy" min="0" max="8">
+            <description>Feeling bad for Cheryl, Jura bearhugs her, insisting she be happier with herself.</description>
+        </case>
     </noteworthy>
     <notes>
         <note id="127">(leading into "It'd ruin my beauty!", etc.)</note>
@@ -88,7 +91,6 @@
         <note id="265">Lead-in to some combined pin-up poses.  I think it'd be a neat interaction.</note>
         <note id="266">Stages 5-8 have their own version.</note>
         <note id="277">I'm down for a legit hug pose, similar to the one Nagisa and Meia are getting.  On the Hand case?</note>
-        <note id="276">I'm down for a legit hug pose, similar to the one Nagisa and Meia are getting.  On the Hand case?</note>
         <note id="268">Waiting on a Cheryl butt pose?</note>
         <note id="300">Jura will eventually have negative versions of strip poses</note>
         <note id="363">how Mitama responds to this will probably affect Jura's overall attitude towards her (and may require target revision)</note>
@@ -192,11 +194,10 @@
         <label id="360" label="" color="4" folder="" sort="0" />
         <label id="361" label="" color="4" folder="" sort="0" />
         <label id="362" label="" color="4" folder="" sort="0" />
-        <label id="555" label="" color="4" folder="" sort="0" />
-        <label id="554" label="" color="4" folder="" sort="0" />
-        <label id="557" label="" color="4" folder="" sort="0" />
-        <label id="558" label="" color="4" folder="" sort="0" />
-        <label id="559" label="" color="4" folder="" sort="0" />
+        <label id="778" label="" color="4" folder="" sort="0" />
+        <label id="776" label="" color="4" folder="" sort="0" />
+        <label id="775" label="" color="4" folder="" sort="0" />
+        <label id="774" label="" color="4" folder="" sort="0" />
         <label id="560" label="" color="4" folder="" sort="0" />
         <label id="371" label="" color="4" folder="" sort="0" />
         <label id="372" label="" color="4" folder="" sort="0" />
@@ -224,7 +225,7 @@
         <label id="396" label="" color="4" folder="" sort="0" />
         <label id="486" label="" color="4" folder="" sort="0" />
         <label id="487" label="" color="4" folder="" sort="0" />
-        <label id="623" label="" color="4" folder="" sort="0" />
+        <label id="770" label="" color="4" folder="" sort="0" />
         <label id="488" label="" color="4" folder="" sort="0" />
         <label id="401" label="" color="4" folder="" sort="0" />
         <label id="403" label="" color="4" folder="" sort="0" />
@@ -268,8 +269,8 @@
         <label id="624" label="" color="4" folder="" sort="0" />
         <label id="565" label="" color="4" folder="" sort="0" />
         <label id="499" label="" color="4" folder="" sort="0" />
-        <label id="553" label="" color="4" folder="" sort="0" />
-        <label id="556" label="" color="4" folder="" sort="0" />
+        <label id="779" label="" color="4" folder="" sort="0" />
+        <label id="777" label="" color="4" folder="" sort="0" />
         <label id="551" label="" color="4" folder="" sort="0" />
         <label id="515" label="" color="4" folder="" sort="0" />
         <label id="516" label="" color="4" folder="" sort="0" />
@@ -297,7 +298,6 @@
         <label id="601" label="" color="4" folder="" sort="0" />
         <label id="600" label="" color="4" folder="" sort="0" />
         <label id="550" label="" color="4" folder="" sort="0" />
-        <label id="552" label="" color="4" folder="" sort="0" />
         <label id="562" label="" color="4" folder="" sort="0" />
         <label id="563" label="" color="4" folder="" sort="0" />
         <label id="586" label="" color="4" folder="" sort="0" />
@@ -479,14 +479,18 @@
         <label id="766" label="" color="4" folder="" sort="0" />
         <label id="767" label="" color="4" folder="" sort="0" />
         <label id="768" label="" color="7" folder="" sort="0" />
+        <label id="769" label="" color="4" folder="" sort="0" />
+        <label id="771" label="" color="4" folder="" sort="0" />
+        <label id="773" label="" color="4" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>jura</prefix>
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>768</nextId>
+    <nextId>779</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="1v1">Jura acknowledges that the game has come down to her and one other player.</marker>
         <marker scope="Public" name="aaravi0" />
         <marker scope="Public" name="adora0" />
@@ -1354,9 +1358,15 @@
         <marker scope="Public" name="misato_catrina12" />
         <marker scope="Public" name="mistyhgss_nostalgia0" />
         <marker scope="Public" name="mistyhgss0" />
+        <marker scope="Public" name="mitama_babies" />
         <marker scope="Public" name="mitama_haiku" />
+        <marker scope="Public" name="mitama_haiku2" />
         <marker scope="Public" name="mitama_resp0" />
         <marker scope="Public" name="mitama_resp01" />
+        <marker scope="Public" name="mitama_resp1" />
+        <marker scope="Public" name="mitama_resp2" />
+        <marker scope="Public" name="mitama_seduction" />
+        <marker scope="Public" name="mitama_seductionf" />
         <marker scope="Public" name="mitama0" />
         <marker scope="Public" name="mitama01" />
         <marker scope="Public" name="mitama1" />
@@ -1379,6 +1389,7 @@
         <marker scope="Public" name="mitama6" />
         <marker scope="Public" name="mitama67" />
         <marker scope="Public" name="mitama6s" />
+        <marker scope="Public" name="mitama7" />
         <marker scope="Public" name="mitama7s" />
         <marker scope="Public" name="mom_alola0" />
         <marker scope="Public" name="monika_glitched" />
@@ -1509,6 +1520,7 @@
         <marker scope="Public" name="natsuki_jason" />
         <marker scope="Public" name="natsuki_jessie" />
         <marker scope="Public" name="natsuki_megumin" />
+        <marker scope="Public" name="natsuki_mitama" />
         <marker scope="Public" name="natsuki_pyrrha" />
         <marker scope="Public" name="nayru_jm">Jura tells Nayru that Meia tends to relax the more naked she is.</marker>
         <marker scope="Public" name="neptune_bath" />
@@ -1766,6 +1778,7 @@
         <marker scope="Public" name="takatoshi0" />
         <marker scope="Public" name="téa0" />
         <marker scope="Public" name="tharja_bobobo" />
+        <marker scope="Public" name="tharja_mitama" />
         <marker scope="Public" name="tharja_normal0" />
         <marker scope="Public" name="tharja_supernova" />
         <marker scope="Public" name="tharja1">Tharja magically shrinks Jura's breasts upon being teased, leaving her shocked and livid.</marker>
