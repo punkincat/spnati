@@ -17,14 +17,25 @@
         <clothing position="" type="skip" />
         <clothing name="bikini bottom" generic="shorts" position="lower" type="major" />
         <clothing name="bikini top" position="upper" type="major" />
-        <clothing name="dress" generic="dress" position="both" type="minor" />
+        <clothing name="dress" generic="dress" position="both" type="major" />
         <clothing name="belts" generic="belt" position="waist" type="minor" plural="true" />
         <clothing name="shoes" generic="shoes" position="feet" type="extra" plural="true" />
     </wardrobe>
 
     <poses>
         <pose id="0-stripping">
-            <sprite id="z_stripping" src="reskins/aqua_kh_summer/0-z_stripping.png" x="0" y="0" />
+            <sprite id="z_stripping" src="reskins/aqua_kh_summer/0-z_stripping.png" x="0" y="0" alpha="100" />
+            <sprite id="z_stripping_b" src="reskins/aqua_kh_summer/0-z_stripping_b.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="z_stripping" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="1.5" alpha="100" />
+                <keyframe time="2.5" alpha="0" />
+            </directive>
+            <directive type="animation" id="z_stripping_b" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="1.5" alpha="0" />
+                <keyframe time="2.5" alpha="100" />
+            </directive>
         </pose>
         <pose id="1-_bedroom_sitting">
             <sprite id="_bedroom_sitting11" src="reskins/aqua_kh_summer/kibble/1-_bedroom_sitting1.png" x="16" y="-158" scalex="0.9" scaley="0.9" />
