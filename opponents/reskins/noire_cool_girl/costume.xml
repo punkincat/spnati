@@ -1802,7 +1802,7 @@
         <pose id="7-stA7jniya">
             <sprite id="niya" marker="CGAltImg==0" src="reskins/noire_cool_girl/7-niya.png" x="0" y="0" />
             <sprite id="niyaB" marker="CGAltImg==1" src="reskins/noire_cool_girl/7-niyaB.png" x="0" y="0" />
-        </pose>		
+        </pose>
         <pose id="7-startm">
             <sprite id="sbefore" marker="CGAltImg==0" src="reskins/noire_cool_girl/7-sbefore.png" x="0" y="0" />
             <sprite id="sbeforeB" marker="CGAltImg==1" src="reskins/noire_cool_girl/7-sbeforeB.png" x="0" y="0" />
@@ -1911,6 +1911,14 @@
                 <keyframe time="1" y="304" />
                 <keyframe time="2" y="304" />
                 <keyframe time="3" y="304" />
+            </directive>
+        </pose>
+        <pose id="1-stA1teas">
+            <sprite id="safter" src="reskins/noire_cool_girl/1-safter.png" x="0" y="0" alpha="100" />
+            <sprite id="teasing" delay="2" src="reskins/noire_cool_girl/1-teasing.png" x="0" y="0" />
+            <directive type="animation" id="safter" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/noire_cool_girl/1-safter.png" alpha="100" />
+                <keyframe time="2" alpha="0" />
             </directive>
         </pose>
     </poses>
