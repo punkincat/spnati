@@ -42,6 +42,12 @@
         <case name="Gymwear" id="900" priority="MustTarget" min="3" max="3">
             <description>Meia is naked under her suit and puts on some underwear to keep playing for a bit longer.  (I don't personally consider this Must-Target, but if you do, please don't just state what's happening instead of making conversation.)</description>
         </case>
+        <case name="Early Masturbation" id="992" priority="Noteworthy" min="6" max="6">
+            <description>Meia takes a while to ease into masturbating.  Lines vary slightly based on how much of the table is in a similar position.  Ends once she says the "early_mast4" marker.</description>
+        </case>
+        <case name="Masturbation" id="993" priority="Noteworthy" min="6" max="6">
+            <description>Meia gets over her initial awkwardness masturbating.  Lines vary slightly based on how much of the table is in a similar position.  Uses the "early_mast4" marker.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <notes>
@@ -518,7 +524,7 @@
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>991</nextId>
+    <nextId>993</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="2butt">Meia shows off her butt while still in her bodysuit (or Cupid outfit).</marker>
