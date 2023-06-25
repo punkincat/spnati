@@ -84,8 +84,6 @@ I promise, it just works.</note>
         <note id="860">The Dwight-on-right version of this line (which plays in the Hand=Any case) uses a different sprite if Dwight is at stage 6-9, which makes the line come off a little bit more overtly desire-laden.  It uses the marker dwight_stare3_lustVariation on the Hand=Any case, but if you want to respond to it you can also just have Dwight do that version based on his own stage.</note>
         <note id="902">It might happen.</note>
         <note id="1232">Kyoko's blood type is B, as it happens.</note>
-        <note id="1237">These last two cases in this sequence are hidden for now until Suzuya responds to them. For now, I've written them based on how I expect Suzuya to respond.</note>
-        <note id="1238">These last two cases in this sequence are hidden for now until Suzuya responds to them. For now, I've written them based on how I expect Suzuya to respond.</note>
         <note id="1241">First things first, the logic for responding to Kyoko is as follows: Just ignore everything in the "Duplicate dialogue" folder and respond to the "Revy-on-Kyoko's-left" cases in the "Inbound stage" folders. Trust me, it'll work itself out.
 
 I spent a long time thinking about this one, and ultimately decided it would be most interesting for Kyoko to just ignore Revy's close-but-not-quite inference and go straight for the trigger discipline issue. I honestly think that by far the most interesting dynamic for Kyoko and Revy to have is one where the former gets on Revy's bad side. Kyoko can come back to the undercover cop thing later.
@@ -112,6 +110,10 @@ In this case, "Are you suggesting a side wager, then?" is Kyoko's way of suggest
         <note id="1365">The card in question is Kyoko's DSC (Detective Shelf Classification) card. A copy of it is catalogued among other detectives' DSC cards at the Detective Library in Japan-- this is one of the ways Kyoko is contacted by clients. It bears an ID photo and a rank number ("910" in this case, denoting Kyoko as an extremely high-rank homicide detective specializing in "impossible murders"); the copy in the Detective Library is accompanied by a description of cases Kyoko has solved since her registration at the age of 13, 6 years before her SPNATI appearance.
 
 Feel free to have Téa take up either option or something else. Asking about Kyoko's gloves is okay IF you want to have Téa go that route-- I won't be having Kyoko take her gloves off, but I can have her explain the actual full story behind why she wears them. If you decide you want to have Téa take this in a kinky direction, I can ask Richar for new poses as appropriate.</note>
+        <note id="1379">This line basically treats the target like Celestia Ludenberg.</note>
+        <note id="1384">She only means this in terms of that she at least has the edge of overheating less easily on account of her toothpick build. Shameless tactlessness is one of Kyoko's funnier character traits.</note>
+        <note id="1385">Shameless tactlessness is one of Kyoko's funnier character traits.</note>
+        <note id="1387">She demands perfection from herself and her soup. How can she expect any less from her customer?</note>
     </notes>
     <labels>
         <label id="499" label="Shelved" folder="" sort="0" />
@@ -338,7 +340,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="260" label="" folder="Act 2" sort="2" />
         <label id="261" label="" folder="Act 3" sort="2" />
         <label id="262" label="Glasses last" folder="" sort="0" />
-        <label id="263" label="Glasses last" folder="Specific items" sort="0" />
+        <label id="263" label="Glasses last" folder="Specific items" sort="3" />
         <label id="264" label="Stand" folder="" sort="0" />
         <label id="266" label="" folder="April Fool's" sort="36" />
         <label id="267" label="" folder="Major" sort="11" />
@@ -523,7 +525,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="451" label="Boots" folder="" sort="0" />
         <label id="449" label="Boots off" folder="" sort="0" />
         <label id="452" label="Boots off" folder="" sort="0" />
-        <label id="453" label="Sun strip (Sunglasses or hat)" folder="Specific items" sort="0" />
+        <label id="453" label="Sun strip (Sunglasses or hat)" folder="Specific items" sort="4" />
         <label id="454" label="Sun strip" folder="" sort="0" />
         <label id="455" label="Stand" folder="" sort="0" />
         <label id="456" label="" folder="Extra/Minor: Odd order" sort="4" />
@@ -661,10 +663,10 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="607" label="Nagatoro IR 0-1" folder="Duplicate dialogue" sort="17" />
         <label id="608" label="Nagatoro IR 0-2" folder="Duplicate dialogue" sort="27" />
         <label id="609" label="Remember Toshinou" folder="" sort="0" />
-        <label id="605" label="Nagatoro IL 0-1" folder="Inbound stage 0" sort="0" />
-        <label id="606" label="Nagatoro IL 0-2" folder="Inbound stage 0" sort="5" />
+        <label id="605" label="Nagatoro IL 0-1" folder="Inbound stage 0" sort="2" />
+        <label id="606" label="Nagatoro IL 0-2" folder="Inbound stage 0" sort="24" />
         <label id="610" label="Toshinou L GodivaHair" folder="" sort="0" />
-        <label id="611" label="Toshinou IL boobies" folder="Inbound stage 6" sort="0" />
+        <label id="611" label="Toshinou IL boobies" folder="Inbound stage 6" sort="4" />
         <label id="612" label="Toshinou IR boobies" folder="Duplicate dialogue" sort="29" />
         <label id="613" label="Toshinou IR boobies" folder="Duplicate dialogue" sort="30" />
         <label id="614" label="Toshinou Ou 3-1" folder="Outbound stage 3" sort="0" />
@@ -675,13 +677,13 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="619" label="Temporary until fixed" folder="" sort="0" />
         <label id="620" label="Nagatoro IR Pre0-1" folder="Duplicate dialogue" sort="9" />
         <label id="621" label="Nagatoro IR Pre0-2" folder="Duplicate dialogue" sort="22" />
-        <label id="622" label="Nagatoro IL 0-3" folder="Inbound stage 0" sort="9" />
+        <label id="622" label="Nagatoro IL 0-3" folder="Inbound stage 0" sort="42" />
         <label id="623" label="" folder="April Fool's" sort="16" />
         <label id="624" label="DR1 Spoilers!" folder="Timeline" sort="0" />
         <label id="625" label="DR1 Spoilers!" folder="Timeline" sort="2" />
         <label id="626" label="DR1 Spoilers!" folder="Timeline" sort="3" />
-        <label id="627" label="Multi-belt" folder="Specific items" sort="0" />
-        <label id="628" label="Multi-belt" folder="Specific items" sort="0" />
+        <label id="627" label="Multi-belt" folder="Specific items" sort="5" />
+        <label id="628" label="Multi-belt" folder="Specific items" sort="7" />
         <label id="629" label="Nagatoro IL 1-1" folder="Inbound stage 1" sort="0" />
         <label id="630" label="Nagatoro IL 1-1" folder="Inbound stage 1" sort="0" />
         <label id="631" label="Nagatoro IL 1-2" folder="Inbound stage 1" sort="2" />
@@ -698,10 +700,10 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="642" label="Long forfeit R" folder="" sort="0" />
         <label id="643" label="Black is your color" folder="" sort="0" />
         <label id="644" label="CD and Kyoko annihilate the 4th wall" folder="" sort="0" />
-        <label id="645" label="Gloria IL 0-1" folder="Inbound stage 0" sort="0" />
-        <label id="646" label="Gloria IL 0-1B" color="3" folder="Inbound stage 0" sort="2" />
-        <label id="647" label="Gloria IL 0-1C" color="5" folder="Inbound stage 0" sort="4" />
-        <label id="648" label="Gloria IL 0-1A" color="2" folder="Inbound stage 0" sort="3" />
+        <label id="645" label="Gloria IL 0-1" folder="Inbound stage 0" sort="16" />
+        <label id="646" label="Gloria IL 0-1B" color="3" folder="Inbound stage 0" sort="8" />
+        <label id="647" label="Gloria IL 0-1C" color="5" folder="Inbound stage 0" sort="18" />
+        <label id="648" label="Gloria IL 0-1A" color="2" folder="Inbound stage 0" sort="12" />
         <label id="649" label="Poké Trainers" folder="Duplicate dialogue" sort="8" />
         <label id="650" label="Poké Trainers" folder="Outbound stage X" sort="2" />
         <label id="651" label="Gloria IR pre0-1A" folder="Duplicate dialogue" sort="11" />
@@ -720,9 +722,9 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="661" label="Nagatoro IR 0-1 variation" folder="Duplicate dialogue" sort="16" />
         <label id="662" label="Nagatoro IR 0-1 variation" folder="Duplicate dialogue" sort="15" />
         <label id="663" label="Nagatoro IR 0-1 variation" folder="Duplicate dialogue" sort="14" />
-        <label id="664" label="Gloria IL 0-2C" color="5" folder="Inbound stage 0" sort="6" />
-        <label id="665" label="Gloria IL 0-2A" color="2" folder="Inbound stage 0" sort="7" />
-        <label id="666" label="Gloria IL 0-2B" color="3" folder="Inbound stage 0" sort="8" />
+        <label id="664" label="Gloria IL 0-2C" color="5" folder="Inbound stage 0" sort="26" />
+        <label id="665" label="Gloria IL 0-2A" color="2" folder="Inbound stage 0" sort="32" />
+        <label id="666" label="Gloria IL 0-2B" color="3" folder="Inbound stage 0" sort="34" />
         <label id="667" label="Gloria IR 0-2A" color="2" folder="Duplicate dialogue" sort="30" />
         <label id="668" label="Gloria IR 0-2B" color="3" folder="Duplicate dialogue" sort="31" />
         <label id="669" label="Gloria IR 0-2C" color="5" folder="Duplicate dialogue" sort="32" />
@@ -797,7 +799,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="736" label="" folder="Duplicate dialogue" sort="0" />
         <label id="737" label="" folder="Duplicate dialogue" sort="0" />
         <label id="738" label="" folder="Aroused" sort="8" />
-        <label id="739" label="Cheryl IL 0-1" folder="Inbound stage 0" sort="9" />
+        <label id="739" label="Cheryl IL 0-1" folder="Inbound stage 0" sort="38" />
         <label id="740" label="Cheryl IR 0-1" folder="Duplicate dialogue" sort="47" />
         <label id="741" label="Cheryl IR pre0-1" folder="Duplicate dialogue" sort="38" />
         <label id="742" label="Theia CH Ou stage 1-0" folder="Moon+Mom CH" sort="0" />
@@ -879,17 +881,17 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="819" label="" folder="Must masturbate" sort="0" />
         <label id="820" label="" folder="Duplicate dialogue" sort="0" />
         <label id="821" label="Bella IL X-1" folder="Inbound stage X" sort="5" />
-        <label id="822" label="Miko IL 0-1" folder="Inbound stage 0" sort="4" />
-        <label id="823" label="Reimu IL 0-1A" color="2" folder="Inbound stage 0" sort="5" />
-        <label id="824" label="Reimu IL 0-1B" color="3" folder="Inbound stage 0" sort="3" />
+        <label id="822" label="Miko IL 0-1" folder="Inbound stage 0" sort="14" />
+        <label id="823" label="Reimu IL 0-1A" color="2" folder="Inbound stage 0" sort="22" />
+        <label id="824" label="Reimu IL 0-1B" color="3" folder="Inbound stage 0" sort="10" />
         <label id="825" label="Miko IR 0-1" folder="Duplicate dialogue" sort="52" />
         <label id="826" label="Miko IR pre0-1" folder="Duplicate dialogue" sort="28" />
         <label id="827" label="Reimu IR pre0-1A" folder="Duplicate dialogue" sort="29" />
         <label id="828" label="Reimu IR 0-1A" color="2" folder="Duplicate dialogue" sort="53" />
         <label id="829" label="Reimu IR 0-1B" color="3" folder="Duplicate dialogue" sort="50" />
         <label id="830" label="Reimu IR pre0-1B" folder="Duplicate dialogue" sort="30" />
-        <label id="831" label="Kennedy IL 0-1" folder="Inbound stage 0" sort="2" />
-        <label id="832" label="Kennedy IL 0-2" folder="Inbound stage 0" sort="11" />
+        <label id="831" label="Kennedy IL 0-1" folder="Inbound stage 0" sort="6" />
+        <label id="832" label="Kennedy IL 0-2" folder="Inbound stage 0" sort="46" />
         <label id="833" label="Kennedy IL 1-1" folder="Inbound stage 1" sort="2" />
         <label id="834" label="Kennedy IL 1-2" folder="Inbound stage 1" sort="6" />
         <label id="835" label="Kennedy IL 2-1A" color="2" folder="Inbound stage 2" sort="0" />
@@ -911,13 +913,13 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="851" label="" folder="Must masturbate" sort="21" />
         <label id="852" label="" folder="Must masturbate" sort="22" />
         <label id="853" label="" folder="Differential nicknames" sort="8" />
-        <label id="854" label="Miko IL 0-2" folder="Inbound stage 0" sort="16" />
-        <label id="855" label="Miko IL 0-2" folder="Inbound stage 0" sort="0" />
+        <label id="854" label="Miko IL 0-2" folder="Inbound stage 0" sort="52" />
+        <label id="855" label="Miko IL 0-2" folder="Inbound stage 0" sort="28" />
         <label id="856" label="Miko IR 0-2" folder="Duplicate dialogue" sort="85" />
         <label id="857" label="Miko IR pre0-2" folder="Duplicate dialogue" sort="71" />
-        <label id="858" label="Dwight IL 0-1" folder="Inbound stage 0" sort="6" />
-        <label id="859" label="Dwight IL 0-2" folder="Inbound stage 0" sort="17" />
-        <label id="860" label="Dwight IL 0-3" folder="Inbound stage 0" sort="19" />
+        <label id="858" label="Dwight IL 0-1" folder="Inbound stage 0" sort="30" />
+        <label id="859" label="Dwight IL 0-2" folder="Inbound stage 0" sort="54" />
+        <label id="860" label="Dwight IL 0-3" folder="Inbound stage 0" sort="60" />
         <label id="861" label="Dwight IL 1-1" folder="Inbound stage 1" sort="4" />
         <label id="862" label="Dwight IL 1-2" folder="Inbound stage 1" sort="8" />
         <label id="863" label="Dwight IL 1-3" folder="Inbound stage 1" sort="11" />
@@ -1282,14 +1284,14 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="1238" label="Suzuya PL Zodiac 5" folder="Prompt" sort="0" />
         <label id="1239" label="Ferris" folder="Inbound hand" sort="4" />
         <label id="1240" label="Chihiro" folder="Inbound hand" sort="5" />
-        <label id="1241" label="Revy IL 0-1" folder="Inbound stage 0" sort="8" />
+        <label id="1241" label="Revy IL 0-1" folder="Inbound stage 0" sort="36" />
         <label id="1242" label="Revy IR 0-1a" folder="Duplicate dialogue" sort="64" />
         <label id="1243" label="Revy IR 0-1b" folder="Duplicate dialogue" sort="65" />
         <label id="1244" label="Revy IR k0-1" color="5" folder="Duplicate dialogue" sort="38" />
         <label id="1245" label="Revy IR pre0-1a" folder="Duplicate dialogue" sort="39" />
         <label id="1246" label="Revy IR pre0-1b" folder="Duplicate dialogue" sort="40" />
         <label id="1248" label="" folder="Gloria+MG+Rosa" sort="0" />
-        <label id="1249" label="Queenie IL 0-1/Inbound stage 0" folder="Inbound stage 0" sort="9" />
+        <label id="1249" label="Queenie IL 0-1/Inbound stage 0" folder="Inbound stage 0" sort="40" />
         <label id="1250" label="Queenie IR 0-1" folder="Duplicate dialogue" sort="66" />
         <label id="1251" label="Queenie IR pre0-1" folder="Duplicate dialogue" sort="41" />
         <label id="1252" label="Butt Pose Count" folder="" sort="0" />
@@ -1305,16 +1307,16 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="1262" label="Maria IR 8-1" folder="Inbound stage 8" sort="0" />
         <label id="1263" label="Maria IL 8-1" folder="Inbound stage 8" sort="3" />
         <label id="1264" label="Maria IL 8-2" folder="Inbound stage 8" sort="2" />
-        <label id="1265" label="Mitama IL 0-1" folder="Inbound stage 0" sort="4" />
-        <label id="1266" label="Mitama IL 0-2" folder="Inbound stage 0" sort="17" />
+        <label id="1265" label="Mitama IL 0-1" folder="Inbound stage 0" sort="20" />
+        <label id="1266" label="Mitama IL 0-2" folder="Inbound stage 0" sort="56" />
         <label id="1267" label="Mitama IR pre0-1" folder="Duplicate dialogue" sort="19" />
         <label id="1268" label="Mitama IR pre0-2" folder="Duplicate dialogue" sort="70" />
         <label id="1269" label="Mitama IR 0-1" folder="Duplicate dialogue" sort="58" />
         <label id="1270" label="Mitama IR 0-2" folder="Duplicate dialogue" sort="89" />
-        <label id="1271" label="Téa IL 0-1" folder="Inbound stage 0" sort="10" />
+        <label id="1271" label="Téa IL 0-1" folder="Inbound stage 0" sort="44" />
         <label id="1272" label="Téa IR pre0-1" folder="Duplicate dialogue" sort="18" />
         <label id="1273" label="Téa IR 0-1" folder="Duplicate dialogue" sort="57" />
-        <label id="1274" label="Arle IL 0-1" folder="Inbound stage 0" sort="11" />
+        <label id="1274" label="Arle IL 0-1" folder="Inbound stage 0" sort="48" />
         <label id="1275" label="Arle IR pre0-1" folder="Duplicate dialogue" sort="17" />
         <label id="1276" label="Arle IR 0-1" folder="Duplicate dialogue" sort="56" />
         <label id="1277" label="Elphaba Ou 0-2A" color="2" folder="Outbound stage 0" sort="5" />
@@ -1383,9 +1385,9 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="1340" label="Dumbqua Ou 5-1" folder="Outbound forfeit" sort="0" />
         <label id="1341" label="Dumbqua Ou 5-1" folder="Outbound forfeit" sort="2" />
         <label id="1342" label="Nopan: KS Aqua stripped" color="3" folder="Aqua+Aqua" sort="8" />
-        <label id="1343" label="Smartqua IL 0-1" folder="Inbound stage 0" sort="12" />
-        <label id="1344" label="Smartqua IL 0-2" folder="Inbound stage 0" sort="18" />
-        <label id="1345" label="Smartqua IL 0-3" folder="Inbound stage 0" sort="27" />
+        <label id="1343" label="Smartqua IL 0-1" folder="Inbound stage 0" sort="50" />
+        <label id="1344" label="Smartqua IL 0-2" folder="Inbound stage 0" sort="58" />
+        <label id="1345" label="Smartqua IL 0-3" folder="Inbound stage 0" sort="64" />
         <label id="1346" label="Smartqua IR pre0-1" folder="Duplicate dialogue" sort="18" />
         <label id="1347" label="Smartqua IR pre0-2" folder="Duplicate dialogue" sort="73" />
         <label id="1348" label="Smartqua IR pre0-3" folder="Duplicate dialogue" sort="93" />
@@ -1395,30 +1397,54 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="1352" label="" folder="Differential nicknames" sort="23" />
         <label id="1353" label="" folder="Differential nicknames" sort="24" />
         <label id="1354" label="" folder="Bobobo+Ferris" sort="0" />
-        <label id="1355" label="" folder="Outbound forfeit" sort="0" />
-        <label id="1356" label="Socks" folder="Specific items" sort="0" />
-        <label id="1357" label="" folder="Specific items" sort="0" />
-        <label id="1358" label="" folder="Outbound stage 5" sort="0" />
-        <label id="1359" label="" folder="Outbound stage 5" sort="0" />
-        <label id="1360" label="" folder="Outbound stage 5" sort="0" />
-        <label id="1361" label="Téa IL 0-2" folder="Inbound stage 0" sort="0" />
-        <label id="1362" label="Téa IL 4-1" folder="Inbound stage 4" sort="0" />
-        <label id="1363" label="Téa IL 6-1AB" color="2" folder="Inbound stage 6" sort="0" />
-        <label id="1364" label="Téa IL 6-1C" color="5" folder="Inbound stage 6" sort="0" />
+        <label id="1355" label="" folder="Outbound forfeit" sort="3" />
+        <label id="1356" label="Socks" folder="Specific items" sort="6" />
+        <label id="1357" label="" folder="Specific items" sort="8" />
+        <label id="1358" label="" folder="Outbound stage 5" sort="3" />
+        <label id="1359" label="" folder="Outbound stage 5" sort="4" />
+        <label id="1360" label="" folder="Outbound stage 5" sort="2" />
+        <label id="1361" label="Téa IL 0-2" folder="Inbound stage 0" sort="62" />
+        <label id="1362" label="Téa IL 4-1" folder="Inbound stage 4" sort="2" />
+        <label id="1363" label="Téa IL 6-1AB" color="2" folder="Inbound stage 6" sort="3" />
+        <label id="1364" label="Téa IL 6-1C" color="5" folder="Inbound stage 6" sort="2" />
         <label id="1365" label="Téa IL 6-1D" color="3" folder="Inbound stage 6" sort="0" />
-        <label id="1366" label="Téa IR pre0-2" folder="Duplicate dialogue" sort="0" />
-        <label id="1367" label="Téa IR pre4-1" folder="Duplicate dialogue" sort="0" />
-        <label id="1368" label="Téa IR k6-1" color="5" folder="Duplicate dialogue" sort="0" />
-        <label id="1369" label="Téa IR pre6-1A" folder="Duplicate dialogue" sort="0" />
-        <label id="1370" label="Téa IR pre6-1B" folder="Duplicate dialogue" sort="0" />
-        <label id="1371" label="Téa IR pre6-1C" folder="Duplicate dialogue" sort="0" />
-        <label id="1372" label="Téa IR pre6-2D" folder="Duplicate dialogue" sort="0" />
-        <label id="1373" label="Téa IR 0-2" folder="Duplicate dialogue" sort="0" />
-        <label id="1374" label="Téa IR 4-1" folder="Duplicate dialogue" sort="0" />
-        <label id="1375" label="Téa IR 6-1A" folder="Duplicate dialogue" sort="0" />
-        <label id="1376" label="Téa IR 6-1B" folder="Duplicate dialogue" sort="0" />
-        <label id="1377" label="Téa IR 6-1C" folder="Duplicate dialogue" sort="0" />
-        <label id="1378" label="Téa IR 6-1D" folder="Duplicate dialogue" sort="0" />
+        <label id="1366" label="Téa IR pre0-2" folder="Duplicate dialogue" sort="84" />
+        <label id="1367" label="Téa IR pre4-1" folder="Duplicate dialogue" sort="22" />
+        <label id="1368" label="Téa IR k6-1" color="5" folder="Duplicate dialogue" sort="23" />
+        <label id="1369" label="Téa IR pre6-1A" folder="Duplicate dialogue" sort="18" />
+        <label id="1370" label="Téa IR pre6-1B" folder="Duplicate dialogue" sort="19" />
+        <label id="1371" label="Téa IR pre6-1C" folder="Duplicate dialogue" sort="21" />
+        <label id="1372" label="Téa IR pre6-2D" folder="Duplicate dialogue" sort="20" />
+        <label id="1373" label="Téa IR 0-2" folder="Duplicate dialogue" sort="106" />
+        <label id="1374" label="Téa IR 4-1" folder="Duplicate dialogue" sort="68" />
+        <label id="1375" label="Téa IR 6-1A" folder="Duplicate dialogue" sort="64" />
+        <label id="1376" label="Téa IR 6-1B" folder="Duplicate dialogue" sort="65" />
+        <label id="1377" label="Téa IR 6-1C" folder="Duplicate dialogue" sort="67" />
+        <label id="1378" label="Téa IR 6-1D" folder="Duplicate dialogue" sort="66" />
+        <label id="1379" label="Goth Lolita" folder="Remilia Sponsor: Misc." sort="2" />
+        <label id="1380" label="Confident goth Lolita" folder="Remilia Sponsor: Misc." sort="3" />
+        <label id="1381" label="Male goth Lolita" folder="Remilia Sponsor: Misc." sort="0" />
+        <label id="1382" label="Suzuya IL 0-1" folder="Inbound stage 0" sort="66" />
+        <label id="1383" label="Suzuya IL 0-2A" color="2" folder="Inbound stage 0" sort="68" />
+        <label id="1384" label="Suzuya IL 0-2B" color="3" folder="Inbound stage 0" sort="69" />
+        <label id="1385" label="Suzuya IL 0-2BB" color="3" folder="Duplicate dialogue" sort="69" />
+        <label id="1386" label="Suzuya IL 0-3" folder="Inbound stage 0" sort="70" />
+        <label id="1387" label="Suzuya IR pre0-1" folder="Duplicate dialogue" sort="66" />
+        <label id="1388" label="Suzuya IR pre0-2A" folder="Duplicate dialogue" sort="68" />
+        <label id="1389" label="Suzuya IR pre0-2B" folder="Duplicate dialogue" sort="69" />
+        <label id="1391" label="Suzuya IR pre0-3" folder="Duplicate dialogue" sort="70" />
+        <label id="1392" label="Suzuya IR 0-1" folder="Duplicate dialogue" sort="71" />
+        <label id="1393" label="Suzuya IR 0-2A" folder="Duplicate dialogue" sort="72" />
+        <label id="1394" label="Suzuya IR 0-2B" folder="Duplicate dialogue" sort="73" />
+        <label id="1395" label="Suzuya IR 0-3" folder="Duplicate dialogue" sort="74" />
+        <label id="1396" label="" folder="Naughty outbounds" sort="0" />
+        <label id="1397" label="" folder="Naughty outbounds" sort="2" />
+        <label id="1398" label="Suzuya Ou 5-3X" folder="Naughty outbounds" sort="3" />
+        <label id="1399" label="Arousal" color="1" folder="Naughty outbounds" sort="4" />
+        <label id="1400" label="" folder="Naughty outbounds" sort="0" />
+        <label id="1401" label="" folder="Naughty outbounds" sort="5" />
+        <label id="1402" label="" folder="Duplicate dialogue" sort="0" />
+        <label id="1403" label="Suzuya IR 0-2BB" folder="Duplicate dialogue" sort="73" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -1450,7 +1476,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
     </posePreviewMarkers>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1378</nextId>
+    <nextId>1403</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
@@ -1543,6 +1569,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="coffee">She has mentioned coffee X times. She's a fan.</marker>
         <marker scope="Public" name="coffeeHandLine" />
         <marker scope="Public" name="collectible_underwear">kirigiri_underwear collectible is unlocked</marker>
+        <marker scope="Public" name="confidentGothLoli" />
         <marker scope="Public" name="consent">She has given express verbal consent to a character looking at her while they masturbate.</marker>
         <marker scope="Public" name="consentB">"There's no reason to feel guilty about glancing at my body."</marker>
         <marker scope="Public" name="constanze_byebitchBetterLuck" />
@@ -1698,6 +1725,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="glovesOn">She has said she won't take her gloves off this game.</marker>
         <marker scope="Public" name="glovesOnForfeit" />
         <marker scope="Public" name="goingThrough" />
+        <marker scope="Public" name="gothLoli" />
         <marker scope="Private" name="hair">Controls position of her hair (whether standing or sitting.)</marker>
         <marker scope="Public" name="handBluffN0" />
         <marker scope="Public" name="handBluffN1" />
@@ -1762,6 +1790,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="mahiru_fingerCount">Mahiru has used her "excited" pose X times this game</marker>
         <marker scope="Public" name="makeOfThisFeeling" />
         <marker scope="Public" name="maleCaseBriefSurprise" />
+        <marker scope="Public" name="maleGothLoli" />
         <marker scope="Public" name="maleJewelry" />
         <marker scope="Public" name="mardiGras">Kyoko has said X lines related to asking an American female character about toplessness at Mardi Gras. These lines play on Tuesdays February 3-March 9.</marker>
         <marker scope="Public" name="maria_buttSpin" />
@@ -1904,6 +1933,15 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="stripNanamura" />
         <marker scope="Public" name="sunStrip" />
         <marker scope="Public" name="suzuya_bloodType" />
+        <marker scope="Public" name="suzuya_fashion1" />
+        <marker scope="Public" name="suzuya_fashion2" />
+        <marker scope="Public" name="suzuya_fashion2A" />
+        <marker scope="Public" name="suzuya_fashion2B" />
+        <marker scope="Public" name="suzuya_fashion3" />
+        <marker scope="Public" name="suzuya_givenPeek" />
+        <marker scope="Public" name="suzuya_givenPeek2" />
+        <marker scope="Public" name="suzuya_s5Helping" />
+        <marker scope="Public" name="suzuya_selfPreForfeit" />
         <marker scope="Public" name="suzuya_zodiac1" />
         <marker scope="Public" name="suzuya_zodiac2" />
         <marker scope="Public" name="suzuya_zodiac2A" />
@@ -2006,5 +2044,6 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <line>There’s still one question that bugs me, though. If you really are a guy, why did you hide that in the first place?</line>
         <line>You have such sightly hips, ~name~… Let’s see them in motion.</line>
         <line>REVY: Man, I can’t relate to some fuckin’ weekend warriors out for a little titty-thrill. Who here is the walking dead? Y’know…a killer.</line>
+        <line>"I have no intentions of turning back, I have no place to go back to from the beginning." (Kyoko, 69, DRKV7)</line>
     </pendingLines>
 </metadata>
