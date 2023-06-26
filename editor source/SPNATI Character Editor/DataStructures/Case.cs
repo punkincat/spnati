@@ -979,7 +979,7 @@ namespace SPNATI_Character_Editor
 					result = !string.IsNullOrEmpty(c.FilterNotTag);
                     if (result && c.Count == "0")
                     {
-                        Character character = CharacterDatabase.Get(c.FilterTag);
+                        Character character = CharacterDatabase.Get(c.FilterNotTag);
                         result = (character == null);
                     }
                     if (result) { return true; }
