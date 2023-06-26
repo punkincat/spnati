@@ -494,7 +494,14 @@ namespace SPNATI_Character_Editor
 							ValidateMarker(warnings, target, caseLabel, condition.SaidMarker, condition.Stage, context);
 							ValidateMarker(warnings, target, caseLabel, condition.SayingMarker, condition.Stage, context);
 						}
-					}
+
+                        if (condition.Role != "self" && string.IsNullOrEmpty(stageCase.Disabled))
+                        {
+                            ValidateMarkerScope(warnings, target, caseLabel, condition.NotSaidMarker, context);
+                            ValidateMarkerScope(warnings, target, caseLabel, condition.SaidMarker, context);
+                            ValidateMarkerScope(warnings, target, caseLabel, condition.SayingMarker, context);
+                        }
+                    }
 				}
 
 				if (condition.Role == "self")
@@ -981,6 +988,27 @@ namespace SPNATI_Character_Editor
 					&& !string.IsNullOrEmpty(test.Operator) && (test.Operator.Contains("<") || test.Operator.Contains(">")))
 				{
 					warnings.Add(new ValidationError(ValidationFilterLevel.Case, $"Clothing type doesn't support less-than or greater-than operators. {caseLabel}", context));
+				}
+			}
+		}
+
+		private static void ValidateMarkerScope(List<ValidationError> warnings, Character character, string caseLabel, string name, ValidationContext context)
+		{
+			string value;
+			MarkerOperator op;
+			bool perTarget;
+
+			name = Marker.ExtractConditionPieces(name, out op, out value, out perTarget);
+
+			foreach (Marker marker in character.Markers.Value.Values)
+			{
+				if (marker.Name == name)
+				{
+					if (marker.Scope == MarkerScope.Private)
+					{
+						warnings.Add(new ValidationError(ValidationFilterLevel.TargetedDialogue, string.Format("{1}'s marker {2} is private, so other characters should not use it in case conditions. {0}", caseLabel, character, name), context));
+					}
+					break;
 				}
 			}
 		}
