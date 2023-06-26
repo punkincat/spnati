@@ -133,7 +133,7 @@ var CANDY_LIST = [
     "elphaba/4-amused.png",
     "elphaba/5-calm.png",	
     "roll_caskett/0-wave.png",           // Highlighted New Character
-    "roll_caskett/1-smile.png",
+    "roll_caskett/1-smiling.png",
     "roll_caskett/1-wave.png",
     "roll_caskett/2-stretch.png",	
     "maria/0-smug.png",           // Highlighted New Character
