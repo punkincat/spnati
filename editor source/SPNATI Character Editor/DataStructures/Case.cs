@@ -990,31 +990,26 @@ namespace SPNATI_Character_Editor
 						string pattern = @"^([^\&\|]*)(\&?)([^\&\|]*)(\|?)([^\&\|]*)(\&?)([^\&\|]*)";
 						Regex reg = new Regex(pattern);
 						Match regMatch = reg.Match(c.FilterTagAdv);
-                        bool allPos = true;
-                        bool allNeg = true;
                         if (!regMatch.Success)
 						{
 							return false;
 						}
 						else
 						{
-							for (int i = 1; i < 8; i += 2)
+                            bool allNeg = true;
+                            for (int i = 1; i < 8; i += 2)
 							{
 								string val = regMatch.Groups[i].Value;
 								if (!string.IsNullOrEmpty(val))
 								{
-									if (val.StartsWith("!"))
-									{
-										allPos = false;
-									}
-									else
+									if (!val.StartsWith("!"))
 									{
 										allNeg = false;
 									}
 								}
 							}
-						}
-						result = (allPos && c.Count != "0") || (allNeg && c.Count == "0");
+                            result = (!allNeg && c.Count != "0") || (allNeg && c.Count == "0");
+                        }
 					}
                     return result;
 				});
