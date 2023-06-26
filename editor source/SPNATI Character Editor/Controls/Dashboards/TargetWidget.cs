@@ -79,15 +79,23 @@ namespace SPNATI_Character_Editor.Controls.Dashboards
 				lblName.Text = "Most Targeted Opponents";
 				CharacterHistory history = CharacterHistory.Get(_character, false);
 				LineWork work = history.Current;
+				int j = 0;
 				for (int i = 0; i < MaxTargets && i < work.Targets.Count; i++)
 				{
 					TargetingInformation info = work.Targets[i];
 					if (info.Target == "human")
 					{
 						info = work.Targets[MaxTargets];
+						Character c = CharacterDatabase.Get(info.Target);
+						series.AddPoint(MaxTargets - 1, info.LineCount, c?.ToString() ?? info.Target);
+						continue;
 					}
-					Character c = CharacterDatabase.Get(info.Target);
-					series.AddPoint(i, info.LineCount, c?.ToString() ?? info.Target);
+					else
+					{
+						Character c = CharacterDatabase.Get(info.Target);
+						series.AddPoint(j, info.LineCount, c?.ToString() ?? info.Target);
+						j++;
+					}
 				}
 				linkGo.Visible = false;
 			}
