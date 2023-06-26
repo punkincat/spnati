@@ -992,6 +992,17 @@ namespace SPNATI_Character_Editor
 				});
 				if (!filtered)
 				{
+					filtered = Expressions.Any(c =>
+					{
+						if (!c.Expression.Contains(".tag.") || c.Expression.Contains("self.") || c.Value != "true")
+						{
+							return false;
+						}
+						return true;
+					});
+				}				
+				if (!filtered)
+				{
 					filtered = AlternativeConditions.Any(a => a.HasFilters);
 				}
 				return filtered;
