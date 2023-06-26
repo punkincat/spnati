@@ -984,10 +984,38 @@ namespace SPNATI_Character_Editor
                     }
                     if (result) { return true; }
 
-                    result = !string.IsNullOrEmpty(c.FilterTagAdv);
-					if (c.Count == "0") { result = false; }
-					// This is an oversimplification and can be improved in the future.
-
+					result = !string.IsNullOrEmpty(c.FilterTagAdv);
+					if (result)
+					{ 
+						string pattern = @"^([^\&\|]*)(\&?)([^\&\|]*)(\|?)([^\&\|]*)(\&?)([^\&\|]*)";
+						Regex reg = new Regex(pattern);
+						Match regMatch = reg.Match(c.FilterTagAdv);
+                        bool allPos = true;
+                        bool allNeg = true;
+                        if (!regMatch.Success)
+						{
+							return false;
+						}
+						else
+						{
+							for (int i = 1; i < 8; i += 2)
+							{
+								string val = regMatch.Groups[i].Value;
+								if (!string.IsNullOrEmpty(val))
+								{
+									if (val.StartsWith("!"))
+									{
+										allPos = false;
+									}
+									else
+									{
+										allNeg = false;
+									}
+								}
+							}
+						}
+						result = (allPos && c.Count != "0") || (allNeg && c.Count == "0");
+					}
                     return result;
 				});
 				if (!filtered)
