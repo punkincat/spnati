@@ -1205,13 +1205,13 @@ namespace SPNATI_Character_Editor
 			{
 				response.Conditions.Add(cond.Copy());
 			}
-
+		
 			if ((caseIsTargetable && hasAlsoPlaying && !alsoPlayingIsResponder) || (!responseIsTargetable && !hasTarget && hasAlsoPlaying && !alsoPlayingIsResponder))
 			{
 				//for cases where AlsoPlaying is already in use, shift that character into a filter target condition
 				hasAlsoPlaying = false; //free this up for the responder to go into
 			}
-
+	
 			if (!caseIsTargetable && responseIsTargetable && !hasTarget && !hasAlsoPlaying)
 			{
 				CopySelfIntoTarget(response, speaker);
@@ -1255,7 +1255,7 @@ namespace SPNATI_Character_Editor
 			{
 				return null; //if I computed the truth table correctly, this should never happen
 			}
-
+			
 			string otherId = CharacterDatabase.GetId(responder);
 			foreach (ExpressionTest test in Expressions)
 			{
@@ -1607,11 +1607,11 @@ namespace SPNATI_Character_Editor
 				if (String.IsNullOrEmpty(tCond.NotSaidMarker))
 				{
 					cond.NotSaidMarker = tCond.NotSaidMarker;
-				}
+                }
 				if (String.IsNullOrEmpty(tCond.SaidMarker))
 				{
 					cond.SaidMarker = tCond.SaidMarker;
-				}
+                }
 			}
 
 			//If all lines set the same marker, use that marker in alsoPlayingSayingMarker
@@ -1803,13 +1803,13 @@ namespace SPNATI_Character_Editor
 				}
 				if (String.IsNullOrEmpty(tCond.NotSaidMarker))
 				{
-					cond.NotSaidMarker = tCond.NotSaidMarker;
-				}
+                    cond.NotSaidMarker = tCond.NotSaidMarker;
+                }
 				if (String.IsNullOrEmpty(tCond.SaidMarker))
 				{
 					cond.SaidMarker = tCond.SaidMarker;
-				}
-			}
+                }
+            }
 
 			//If all lines set the same marker, use that marker in alsoPlayingSayingMarker
 			if (Lines.Count > 0)
@@ -1845,7 +1845,7 @@ namespace SPNATI_Character_Editor
 
 			other.Conditions.Add(cond);
 
-			foreach (ExpressionTest test in Expressions)
+            foreach (ExpressionTest test in Expressions)
 			{
 				if (test.GetTarget() == "self")
 				{
@@ -1938,11 +1938,49 @@ namespace SPNATI_Character_Editor
 						cond.Stage = null;
 					}
 				}
-				if (cond.IsEmpty)
+
+				if (cond.Character == speaker.FolderName)
 				{
-					Conditions.RemoveAt(i);
-				}
-			}
+					if (cond.NotSaidMarker != null)
+					{
+						foreach (Marker marker in speaker.Markers.Value.Values)
+						{
+							if (marker.Name == cond.NotSaidMarker)
+							{
+								if (marker.Scope == MarkerScope.Private)
+								{
+									cond.NotSaidMarker = null;
+								}
+								break;
+							}
+						}
+					}
+
+					if (cond.SaidMarker != null)
+					{ 
+						foreach (Marker marker in speaker.Markers.Value.Values)
+						{
+							MarkerOperator op;
+							string value;
+							bool perTarget;
+							string name = Marker.ExtractConditionPieces(cond.SaidMarker, out op, out value, out perTarget);
+                            if (marker.Name == name)
+							{
+								if (marker.Scope == MarkerScope.Private)
+								{
+									cond.SaidMarker = null;
+								}
+								break;
+							}
+						}
+					}
+                }
+
+                if (cond.IsEmpty)
+                {
+                    Conditions.RemoveAt(i);
+                }
+            }
 
 			// compact conditions
 			for (int i = Conditions.Count - 1; i >= 0; i--)
