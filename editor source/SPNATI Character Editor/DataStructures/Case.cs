@@ -969,12 +969,26 @@ namespace SPNATI_Character_Editor
 					}
 
 					bool result = !string.IsNullOrEmpty(c.FilterTag);
-					if (result)
+					if (result && c.Count != "0")
 					{
 						Character character = CharacterDatabase.Get(c.FilterTag);
 						result = (character == null);
 					}
-					return result;
+					if (result) { return true; }
+
+					result = !string.IsNullOrEmpty(c.FilterNotTag);
+                    if (result && c.Count == "0")
+                    {
+                        Character character = CharacterDatabase.Get(c.FilterTag);
+                        result = (character == null);
+                    }
+                    if (result) { return true; }
+
+                    result = !string.IsNullOrEmpty(c.FilterTagAdv);
+					if (c.Count == "0") { result = false; }
+					// This is an oversimplification and can be improved in the future.
+
+                    return result;
 				});
 				if (!filtered)
 				{
