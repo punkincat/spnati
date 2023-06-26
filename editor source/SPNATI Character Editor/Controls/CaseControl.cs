@@ -121,6 +121,12 @@ namespace SPNATI_Character_Editor.Controls
 			PopulateStageCheckboxes();
 		}
 
+		public void UpdateAvailableImages()
+		{
+            HashSet<int> stages = GetSelectedStages();
+            gridDialogue.UpdateAvailableImagesForCase(stages, true);
+		}
+
 		public void UpdateMacros()
 		{
 			tableConditions.AddMacros();
