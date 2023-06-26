@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using SPNATI_Character_Editor.Activities;
 using System;
@@ -82,6 +82,10 @@ namespace SPNATI_Character_Editor.Controls.Dashboards
 				for (int i = 0; i < MaxTargets && i < work.Targets.Count; i++)
 				{
 					TargetingInformation info = work.Targets[i];
+					if (info.Target == "human")
+					{
+						info = work.Targets[MaxTargets];
+					}
 					Character c = CharacterDatabase.Get(info.Target);
 					series.AddPoint(i, info.LineCount, c?.ToString() ?? info.Target);
 				}
