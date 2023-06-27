@@ -1995,7 +1995,7 @@
         <label id="2028" label="" color="0" folder="Reply_Stage0" sort="83" />
         <label id="2029" label="" color="0" folder="Reply_Stage0" sort="112" />
         <label id="2030" label="" folder="Reply_Stage0" sort="0" />
-        <label id="2031" label="" color="4" folder="Reply_Stage0" sort="41" />
+        <label id="2031" label="" color="0" folder="Reply_Stage0" sort="41" />
         <label id="2032" label="" folder="Target_Stage0" sort="192" />
         <label id="2033" label="" folder="Target_Stage0" sort="0" />
         <label id="2034" label="" folder="Reply_Stage0" sort="42" />
@@ -2016,8 +2016,8 @@
         <label id="2049" label="" color="4" folder="Reply_Stage0_Neko" sort="0" />
         <label id="2050" label="" folder="Reply_Stage0" sort="0" />
         <label id="2051" label="" color="4" folder="Reply_Stage5" sort="0" />
-        <label id="2052" label="" color="4" folder="Reply_Stage2_B" sort="0" />
-        <label id="2053" label="" color="4" folder="Reply_Stage2_B" sort="3" />
+        <label id="2052" label="" color="0" folder="Reply_Stage2_B" sort="0" />
+        <label id="2053" label="" color="0" folder="Reply_Stage2_B" sort="3" />
         <label id="2054" label="" color="0" folder="Target_Stage4" sort="34" />
         <label id="2055" label="" color="0" folder="Reply_Stage0_Demon" sort="9" />
         <label id="2056" label="" color="0" folder="Reply_Stage0_Neko" sort="5" />
@@ -2174,10 +2174,16 @@
         <label id="2209" label="" color="3" folder="Reply_Stage0" sort="0" />
         <label id="2210" label="" color="3" folder="Target_Stage0" sort="0" />
         <label id="2211" label="" color="3" folder="Target_Stage0" sort="0" />
+        <label id="2212" label="" color="4" folder="Reply_Stage0" sort="0" />
+        <label id="2213" label="" color="4" folder="Reply_Stage2_B" sort="0" />
+        <label id="2214" label="" color="4" folder="Reply_Stage2_B" sort="0" />
+        <label id="2215" label="" color="4" folder="Reply_Stage2_B" sort="0" />
+        <label id="2216" label="" color="4" folder="Reply_Stage2_B" sort="0" />
+        <label id="2217" label="" folder="Reply_Stage2_B" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2211</nextId>
+    <nextId>2217</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="__aqua_kh_nickname" />
@@ -2796,6 +2802,8 @@
         <marker scope="Public" name="jura_reply21_2" />
         <marker scope="Public" name="jura_reply21_2a" />
         <marker scope="Public" name="jura_reply21_2b" />
+        <marker scope="Public" name="jura_reply21_2ba" />
+        <marker scope="Public" name="jura_reply21_2bb" />
         <marker scope="Public" name="jura_reply21alt" />
         <marker scope="Public" name="jura_reply22" />
         <marker scope="Public" name="jura_reply23" />
@@ -3171,6 +3179,7 @@
         <marker scope="Public" name="mikan31" />
         <marker scope="Public" name="mikan41" />
         <marker scope="Public" name="miko_reply01" />
+        <marker scope="Public" name="miko_reply02" />
         <marker scope="Public" name="miku" />
         <marker scope="Public" name="miku_reply01" />
         <marker scope="Public" name="miku01" />
@@ -3763,6 +3772,7 @@
         <marker scope="Public" name="tharja_standard4" />
         <marker scope="Public" name="tharja_standard5" />
         <marker scope="Public" name="these_cards_suck" />
+        <marker scope="Public" name="ticket" />
         <marker scope="Public" name="tie" />
         <marker scope="Public" name="tomoko01" />
         <marker scope="Public" name="toph01" />
