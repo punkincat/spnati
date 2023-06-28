@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1687308462820</lastupdate>
+    <lastupdate>1687915074462</lastupdate>
     <enabled>false</enabled>
     <first>Mitama</first>
     <last />
@@ -13,7 +13,10 @@
     <description>A young woman who was raised in a shrine. She is an avid poet, with a preference for haiku, and also greatly enjoys taking naps. </description>
     <layers>7</layers>
     <default-costume-name />
+    <alternates>
+        <costume folder="opponents/reskins/mitama_aestival_haijin/" img="0-sarcastic.png" set="summer" status="online" label="Mitama" layers="6">Aestival Haijin</costume>
+    </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>1664</lines>
+    <lines>1693</lines>
     <poses>179</poses>
 </opponent>
