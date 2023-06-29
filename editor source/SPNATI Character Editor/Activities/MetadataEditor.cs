@@ -226,5 +226,67 @@ namespace SPNATI_Character_Editor.Activities
 			lblPicScale.Visible = true;
 			valPicScale.Visible = true;
 		}
+
+		private void gridAISimplify()
+		{
+            int previousStage = 0;
+            string previousLevel = DialogueLine.AILevels[4];
+            for (int i = 0; i < gridAI.Rows.Count; i++)
+            {
+                int stage;
+                bool success = gridAI.Rows[i].Cells[0].Value != null;
+                if (!success)
+                {
+                    gridAI.Rows[i].Cells[0].Value = previousStage;
+                }
+                success = int.TryParse(gridAI.Rows[i].Cells[0].Value.ToString(), out stage);
+                if (!success)
+                {
+                    gridAI.Rows[i].Cells[0].Value = previousStage;
+                }
+                else if (stage < previousStage)
+                {
+                    gridAI.Rows[i].Cells[0].Value = previousStage;
+                }
+				else if (stage > _character.Layers)
+				{
+					gridAI.Rows[i].Cells[0].Value = _character.Layers;
+                }
+                previousStage = int.Parse(gridAI.Rows[i].Cells[0].Value.ToString());
+
+                if (gridAI.Rows[i].Cells[1].Value == null || gridAI.Rows[i].Cells[1].Value.ToString() == "")
+                {
+                    gridAI.Rows[i].Cells[1].Value = previousLevel;
+                }
+                else
+                {
+                    previousLevel = gridAI.Rows[i].Cells[1].Value.ToString();
+                }
+            }
+			for (int i = gridAI.Rows.Count - 1; i > 0; i--)
+			{
+				if (gridAI.Rows[i].Cells[0].Value.ToString() == gridAI.Rows[i - 1].Cells[0].Value.ToString() || gridAI.Rows[i].Cells[1].Value.ToString() == gridAI.Rows[i - 1].Cells[1].Value.ToString())
+				{
+					if (!gridAI.Rows[i].IsNewRow)
+					{
+						gridAI.Rows.RemoveAt(i);
+					}
+					else
+					{
+						gridAI.Rows[i].Cells[0].Value = null;
+						gridAI.Rows[i].Cells[1].Value = null;
+					}
+				}
+            }
+			if (gridAI.Rows[0].Cells[0].Value != null || gridAI.Rows[0].Cells[0].Value.ToString() != "0")
+			{
+				gridAI.Rows[0].Cells[0].Value = 0;
+			}
+        }
+
+        private void gridAI_Validated(object sender, EventArgs e)
+        {
+            gridAISimplify();
+        }
     }
 }
