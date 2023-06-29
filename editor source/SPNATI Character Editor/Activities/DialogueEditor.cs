@@ -591,6 +591,7 @@ namespace SPNATI_Character_Editor.Activities
         private void cmdRefreshImages_Click(object sender, EventArgs e)
         {
 			_character.PoseLibrary.initialized = false;
+			caseControl.UpdateAvailableImages();
         }
     }
 }
