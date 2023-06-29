@@ -304,10 +304,6 @@ namespace SPNATI_Character_Editor.Controls
 				foreach (string tag in TriggerDatabase.GetTags())
 				{
 					TriggerDefinition t = TriggerDatabase.GetTrigger(tag);
-					if (currentTrigger.HasTarget && currentTrigger.HasTarget != t.HasTarget)
-					{
-						continue;
-					}
 					if (tag == _selectedCase.Tag)
 						selection = t;
 					cboCaseTags.Items.Add(t);
