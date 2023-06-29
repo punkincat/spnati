@@ -969,13 +969,61 @@ namespace SPNATI_Character_Editor
 					}
 
 					bool result = !string.IsNullOrEmpty(c.FilterTag);
-					if (result)
+					if (result && c.Count != "0")
 					{
 						Character character = CharacterDatabase.Get(c.FilterTag);
 						result = (character == null);
 					}
-					return result;
+					if (result) { return true; }
+
+					result = !string.IsNullOrEmpty(c.FilterNotTag);
+                    if (result && c.Count == "0")
+                    {
+                        Character character = CharacterDatabase.Get(c.FilterNotTag);
+                        result = (character == null);
+                    }
+                    if (result) { return true; }
+
+					result = !string.IsNullOrEmpty(c.FilterTagAdv);
+					if (result)
+					{ 
+						string pattern = @"^([^\&\|]*)(\&?)([^\&\|]*)(\|?)([^\&\|]*)(\&?)([^\&\|]*)";
+						Regex reg = new Regex(pattern);
+						Match regMatch = reg.Match(c.FilterTagAdv);
+                        if (!regMatch.Success)
+						{
+							return false;
+						}
+						else
+						{
+                            bool allNeg = true;
+                            for (int i = 1; i < 8; i += 2)
+							{
+								string val = regMatch.Groups[i].Value;
+								if (!string.IsNullOrEmpty(val))
+								{
+									if (!val.StartsWith("!"))
+									{
+										allNeg = false;
+									}
+								}
+							}
+                            result = (!allNeg && c.Count != "0") || (allNeg && c.Count == "0");
+                        }
+					}
+                    return result;
 				});
+				if (!filtered)
+				{
+					filtered = Expressions.Any(c =>
+					{
+						if (!c.Expression.Contains(".tag.") || c.Expression.Contains("self.") || c.Value != "true")
+						{
+							return false;
+						}
+						return true;
+					});
+				}				
 				if (!filtered)
 				{
 					filtered = AlternativeConditions.Any(a => a.HasFilters);
