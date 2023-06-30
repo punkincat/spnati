@@ -699,8 +699,6 @@ function loadEventData () {
                     console.log("    * " + path);
                     CANDY_LIST.push(path);
                 });
-    
-                selectTitleCandy();
             }
 
             if (eventBackgrounds.size > 0) {
