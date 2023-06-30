@@ -2363,8 +2363,8 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2259" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2260" label="" color="2" folder="PlayerCollectibleBracelets" sort="0" />
         <label id="2637" label="" folder="Throw" sort="0" />
-        <label id="2262" label="" color="2" folder="1TsunderingCDSpecific" sort="0" />
-        <label id="2263" label="" color="2" folder="1TsunderingCDSpecific" sort="0" />
+        <label id="2262" label="" folder="1TsunderingCDSpecific" sort="0" />
+        <label id="2263" label="" folder="1TsunderingCDSpecific" sort="0" />
         <label id="2264" label="" folder="~Clear Dress costume" sort="0" />
         <label id="2265" label="" color="2" folder="~Clear Dress costume" sort="0" />
         <label id="2266" label="" color="2" folder="" sort="0" />
@@ -2715,7 +2715,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2636" label="" folder="Throw" sort="0" />
         <label id="2638" label="" folder="Throw" sort="0" />
         <label id="2639" label="" folder="Throw" sort="0" />
-        <label id="2640" label="" color="3" folder="AquaKH" sort="0" />
+        <label id="2640" label="" color="6" folder="AquaKH" sort="0" />
         <label id="2641" label="" color="4" folder="AquaKH" sort="0" />
         <label id="2642" label="" color="4" folder="AquaKH" sort="0" />
         <label id="2643" label="" color="4" folder="AquaKH" sort="0" />
@@ -2859,13 +2859,18 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2784" label="" color="4" folder="Robin" sort="0" />
         <label id="2785" label="" color="4" folder="Robin" sort="0" />
         <label id="2786" label="" color="4" folder="Robin" sort="0" />
+        <label id="2787" label="" folder="IncreasingReplayability" sort="0" />
+        <label id="2788" label="previousSwap" folder="1Markers" sort="0" />
+        <label id="2789" label="2+ layers" folder="~Player" sort="0" />
+        <label id="2790" label="" folder="Tags" sort="0" />
+        <label id="2791" label="" folder="Tags" sort="0" />
     </labels>
     <posePreviewMarkers>
         <posePreviewMarker>CDAltImg=0</posePreviewMarker>
     </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2786</nextId>
+    <nextId>2791</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_costume1" />
@@ -3579,6 +3584,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="NoireRandomLore" />
         <marker scope="Public" name="NoireRandomLoreSaid" />
         <marker scope="Public" name="NoireReplaceGoddesses" />
+        <marker scope="Public" name="NoireRoleExplanation" />
         <marker scope="Public" name="NoireSeesBL" />
         <marker scope="Public" name="NoireSeesBM" />
         <marker scope="Public" name="NoireSeesBS" />
@@ -3615,6 +3621,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Private" name="NoireWhoSlot3" />
         <marker scope="Private" name="NoireWhoSlot4" />
         <marker scope="Public" name="NoireZenraNiso" />
+        <marker scope="Public" name="NotACosplay" />
         <marker scope="Public" name="NumberOfOpponentsText" />
         <marker scope="Private" name="NumberOfPlayersText" />
         <marker scope="Public" name="onlyNoireAndPlayer" />

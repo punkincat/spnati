@@ -55,6 +55,9 @@
         <pose id="0-niya">
             <sprite id="niya" src="reskins/noire_cool_girl/0-niya.png" x="0" y="0" />
         </pose>
+        <pose id="0-notamused">
+            <sprite id="calm" src="reskins/noire_cool_girl/0-calm.png" x="0" y="0" />
+        </pose>
         <pose id="0-shocked">
             <sprite id="shocked" src="reskins/noire_cool_girl/0-shocked.png" x="0" y="0" />
         </pose>
@@ -96,6 +99,9 @@
         </pose>
         <pose id="1-niya">
             <sprite id="niya" src="reskins/noire_cool_girl/1-niya.png" x="0" y="0" />
+        </pose>
+        <pose id="1-notamused">
+            <sprite id="calm" src="reskins/noire_cool_girl/1-calm.png" x="0" y="0" />
         </pose>
         <pose id="1-shocked">
             <sprite id="shocked" src="reskins/noire_cool_girl/1-shocked.png" x="0" y="0" />
@@ -139,6 +145,9 @@
         <pose id="2-niya">
             <sprite id="niya" src="reskins/noire_cool_girl/2-niya.png" x="0" y="0" />
         </pose>
+        <pose id="2-notamused">
+            <sprite id="calm" src="reskins/noire_cool_girl/2-calm.png" x="0" y="0" />
+        </pose>
         <pose id="2-shocked">
             <sprite id="shocked" src="reskins/noire_cool_girl/2-shocked.png" x="0" y="0" />
         </pose>
@@ -180,6 +189,9 @@
         </pose>
         <pose id="3-niya">
             <sprite id="niya" src="reskins/noire_cool_girl/3-niya.png" x="0" y="0" />
+        </pose>
+        <pose id="3-notamused">
+            <sprite id="notamused" src="reskins/noire_cool_girl/3-notamused.png" x="0" y="0" />
         </pose>
         <pose id="3-shocked">
             <sprite id="shocked" src="reskins/noire_cool_girl/3-shocked.png" x="0" y="0" />
@@ -229,6 +241,9 @@
         <pose id="4-niya">
             <sprite id="niya" src="reskins/noire_cool_girl/4-niya.png" x="0" y="0" />
         </pose>
+        <pose id="4-notamused">
+            <sprite id="notamused" src="reskins/noire_cool_girl/4-notamused.png" x="0" y="0" />
+        </pose>
         <pose id="4-rear">
             <sprite id="rear" src="reskins/noire_cool_girl/4-rear.png" x="0" y="0" />
         </pose>
@@ -274,6 +289,9 @@
         <pose id="5-niya">
             <sprite id="niya" src="reskins/noire_cool_girl/5-niya.png" x="0" y="0" />
         </pose>
+        <pose id="5-notamused">
+            <sprite id="notamused" src="reskins/noire_cool_girl/5-notamused.png" x="0" y="0" />
+        </pose>
         <pose id="5-rear">
             <sprite id="rear" src="reskins/noire_cool_girl/4-rear.png" x="0" y="0" />
         </pose>
@@ -318,6 +336,9 @@
         </pose>
         <pose id="6-niya">
             <sprite id="niya" src="reskins/noire_cool_girl/6-niya.png" x="0" y="0" />
+        </pose>
+        <pose id="6-notamused">
+            <sprite id="notamused" src="reskins/noire_cool_girl/6-notamused.png" x="0" y="0" />
         </pose>
         <pose id="6-shocked">
             <sprite id="shocked" src="reskins/noire_cool_girl/6-shocked.png" x="0" y="0" />
@@ -370,6 +391,10 @@
         <pose id="7-niya">
             <sprite id="niya" marker="CGAltImg==0" src="reskins/noire_cool_girl/7-niya.png" x="0" y="0" />
             <sprite id="niyaB" marker="CGAltImg==1" src="reskins/noire_cool_girl/7-niyaB.png" x="0" y="0" />
+        </pose>
+        <pose id="7-notamused">
+            <sprite id="notamused" marker="CGAltImg==0" src="reskins/noire_cool_girl/7-notamused.png" x="0" y="0" />
+            <sprite id="notamusedB" marker="CGAltImg==1" src="reskins/noire_cool_girl/7-notamusedB.png" x="0" y="0" />
         </pose>
         <pose id="7-shocked">
             <sprite id="shocked" marker="CGAltImg==0" src="reskins/noire_cool_girl/7-shocked.png" x="0" y="0" />
@@ -1834,19 +1859,16 @@
         <pose id="zsco-be">
             <sprite id="betsuni" z="1" src="reskins/noire_cool_girl/0-betsuni.png" x="0" y="0" alpha="100" />
             <sprite id="scope-betsuni" src="reskins/noire_cool_girl/scope/scope-betsuni.png" x="0" y="0" alpha="100" />
+            <sprite id="shadow-betsuni" delay="2" src="reskins/noire_cool_girl/scope/shadow-betsuni.png" x="0" y="0" alpha="0" />
             <sprite id="Rouge_TreasureScope_Lens" z="100" src="reskins/noire_cool_girl/scope/Rouge_TreasureScope_Lens.png" x="261" y="304" alpha="0" />
             <directive type="animation" id="betsuni" ease="linear" interpolation="linear">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="100" />
                 <keyframe time="2.5" alpha="0" />
             </directive>
-            <directive type="animation" id="scope-betsuni" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="0" y="0" />
-                <keyframe time="3" x="0" y="0" />
-            </directive>
-            <directive type="animation" id="scope-betsuni" ease="linear" interpolation="linear">
-                <keyframe time="0" alpha="100" />
-                <keyframe time="3" alpha="100" />
+            <directive type="animation" id="shadow-betsuni" delay="2" ease="ease-out" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
             </directive>
             <directive type="animation" id="Rouge_TreasureScope_Lens" ease="ease-out" interpolation="linear">
                 <keyframe time="0" x="261" alpha="0" />
@@ -1864,15 +1886,16 @@
         <pose id="zsco-calm">
             <sprite id="calm" z="1" src="reskins/noire_cool_girl/0-calm.png" x="0" y="0" alpha="100" />
             <sprite id="scope-calm" src="reskins/noire_cool_girl/scope/scope-calm.png" x="0" y="0" alpha="100" />
+            <sprite id="shadow-calm" delay="2" src="reskins/noire_cool_girl/scope/shadow-calm.png" x="0" y="0" alpha="0" />
             <sprite id="Rouge_TreasureScope_Lens" z="100" src="reskins/noire_cool_girl/scope/Rouge_TreasureScope_Lens.png" x="261" y="304" alpha="0" />
             <directive type="animation" id="calm" ease="linear" interpolation="linear">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="100" />
                 <keyframe time="2.5" alpha="0" />
             </directive>
-            <directive type="animation" id="scope-calm" ease="linear" interpolation="linear">
-                <keyframe time="0" alpha="100" />
-                <keyframe time="3" alpha="100" />
+            <directive type="animation" id="shadow-calm" delay="2" ease="ease-out" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
             </directive>
             <directive type="animation" id="Rouge_TreasureScope_Lens" ease="ease-out" interpolation="linear">
                 <keyframe time="0" x="261" alpha="0" />
@@ -1890,15 +1913,16 @@
         <pose id="zsco-expl">
             <sprite id="explaining" z="1" src="reskins/noire_cool_girl/0-explaining.png" x="0" y="0" alpha="100" />
             <sprite id="scope-explaining" src="reskins/noire_cool_girl/scope/scope-explaining.png" x="0" y="0" alpha="100" />
+            <sprite id="shadow-explaining" delay="2" src="reskins/noire_cool_girl/scope/shadow-explaining.png" x="0" y="0" alpha="0" />
             <sprite id="Rouge_TreasureScope_Lens" z="100" src="reskins/noire_cool_girl/scope/Rouge_TreasureScope_Lens.png" x="261" y="304" alpha="0" />
             <directive type="animation" id="explaining" ease="linear" interpolation="linear">
                 <keyframe time="0" alpha="100" />
                 <keyframe time="2" alpha="100" />
                 <keyframe time="2.5" alpha="0" />
             </directive>
-            <directive type="animation" id="scope-explaining" ease="linear" interpolation="linear">
-                <keyframe time="0" alpha="100" />
-                <keyframe time="3" alpha="100" />
+            <directive type="animation" id="shadow-explaining" delay="2" ease="ease-out" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
             </directive>
             <directive type="animation" id="Rouge_TreasureScope_Lens" ease="ease-out" interpolation="linear">
                 <keyframe time="0" x="261" alpha="0" />
