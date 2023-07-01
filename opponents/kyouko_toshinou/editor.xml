@@ -49,6 +49,7 @@
         <response id="330" opponent="kyoko_kirigiri" opponentId="796" />
         <response id="332" opponent="nagatoro" opponentId="1724" />
         <response id="426" opponent="elphaba" opponentId="71" />
+        <response id="472" opponent="tea_gardner" opponentId="134" />
     </responses>
     <notes>
         <note id="5">The marker is available so other characters can see which uniform she's wearing just in case they absolutely need to know for whatever reason. FYI, it's always unset when she loses the red dress.
@@ -76,6 +77,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <note id="456">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
         <note id="457">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
         <note id="458">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
+        <note id="482">Literally don't have any better pose for this yet</note>
     </notes>
     <labels>
         <label id="2" label="Imitating Yuno" color="5" folder="Target: Yuno Uno" sort="0" />
@@ -434,7 +436,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="381" label="Kyouko knows a couple" folder="Target: Magical Sempai" sort="0" />
         <label id="382" label="0: Give us a trick" folder="Target: Magical Sempai" sort="0" />
         <label id="384" label="" folder="Nanamori Classic" sort="0" />
-        <label id="385" label="The three keys to happiness" color="3" folder="Target: Miko" sort="2" />
+        <label id="385" label="The three keys to happiness" color="5" folder="Target: Miko" sort="2" />
         <label id="386" label="" folder="Kyouko's birthday" sort="0" />
         <label id="387" label="Kyouko's birthday (knows player)" folder="" sort="0" />
         <label id="388" label="Kyouko's birthday (Sexy Tomato)" folder="" sort="0" />
@@ -468,7 +470,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="421" label="&quot;Slightly&quot; unusual" folder="Target: Tea Gardner" sort="2" />
         <label id="422" label="" folder="Target: Tea Gardner" sort="0" />
         <label id="423" label="The Kyo(u)kos" folder="" sort="0" />
-        <label id="424" label="Fun time" folder="" sort="0" />
+        <label id="424" label="Fun time" color="5" folder="" sort="0" />
         <label id="425" label="On point" folder="Target: Yuna" sort="2" />
         <label id="426" label="I cannot contain the silliness" folder="Target: Elphaba" sort="0" />
         <label id="427" label="" folder="Tags over small items" sort="0" />
@@ -515,12 +517,25 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="468" label="Socks - single AI w/o onesie" folder="Sponsors: Spaceman" sort="36" />
         <label id="469" label="" folder="Sponsors: Spaceman" sort="18" />
         <label id="470" label="" folder="Sponsors: Spaceman" sort="19" />
+        <label id="471" label="" folder="Sponsors: Nicole" sort="0" />
+        <label id="472" label="" folder="Target: Tea Gardner" sort="0" />
+        <label id="473" label="" color="5" folder="Target: Miko" sort="0" />
+        <label id="474" label="" color="5" folder="Target: Miko" sort="0" />
+        <label id="475" label="Topless before major lower" folder="Unusual Ordering" sort="0" />
+        <label id="476" label="Topless before major lower (wearing underwear)" folder="Unusual Ordering" sort="0" />
+        <label id="477" label="Topless before major lower (disapponted before)" folder="Unusual Ordering" sort="0" />
+        <label id="478" label="Topless before major lower (wearing underwear)" folder="Unusual Ordering" sort="0" />
+        <label id="479" label="Topless before major lower (no bra)" folder="Unusual Ordering" sort="0" />
+        <label id="480" label="" folder="Target: Chihiro" sort="0" />
+        <label id="481" label="" folder="Target: Chihiro" sort="0" />
+        <label id="482" label="" folder="Target: Chihiro" sort="0" />
+        <label id="483" label="" folder="Target: Chihiro" sort="0" />
+        <label id="484" label="" folder="Target: Chihiro" sort="0" />
     </labels>
     <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>470</nextId>
+    <nextId>484</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Private" name="B_">Background-related markers</marker>
         <marker scope="Public" name="B_DarkTricks">Dark backgrounds</marker>
         <marker scope="Public" name="B_Inventory_Booth">Inventory background</marker>
@@ -533,8 +548,10 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="D_Birthday_NoCostumes">She's the only one wearing a costume to her party?</marker>
         <marker scope="Public" name="D_BlowingHands" />
         <marker scope="Public" name="D_Boobies">Boobies? Boobies.</marker>
+        <marker scope="Public" name="D_BraBeforeClothing" />
         <marker scope="Public" name="D_CardHint" />
         <marker scope="Public" name="D_CardsOnBreak">Where are the good cards? How are they?</marker>
+        <marker scope="Public" name="D_ChestBeforeMajorLower" />
         <marker scope="Public" name="D_DiscardedCards">How do the discarded cards feel?</marker>
         <marker scope="Public" name="D_EatCards" />
         <marker scope="Public" name="D_FixHair">Return of the sidetails.</marker>
@@ -546,6 +563,8 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="D_Items">Throwing items into a game of poker</marker>
         <marker scope="Public" name="D_LightningRounds" />
         <marker scope="Public" name="D_LittleCardClub" />
+        <marker scope="Public" name="D_NonFutaReveal" />
+        <marker scope="Public" name="D_NoPanDisappointment" />
         <marker scope="Public" name="D_PostgameBoobs">...Boobs.</marker>
         <marker scope="Public" name="D_PostgameHelp">Her "help" might be junk poker advice. Or something else.</marker>
         <marker scope="Public" name="D_RemovingRibbon">Someone else is removing their hair ribbon.</marker>
@@ -554,9 +573,21 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="D_SwitchHandsA">She tries switching hands... for exactly one phase.</marker>
         <marker scope="Public" name="D_SwitchHandsB">Switches back to her right hand (or rather, both) immediately after trying to switch hands.</marker>
         <marker scope="Public" name="D_ToplessSquad">Triple Topless</marker>
+        <marker scope="Public" name="D_UnderwearBeforeSkirt" />
         <marker scope="Public" name="D_UnderwearCriesOut">Are you gonna show it the world?</marker>
         <marker scope="Public" name="D_WhatIfJunk">Predicting a low-scoring hand.</marker>
         <marker scope="Public" name="E_AmusementClub">The club's been out a room for a while now.</marker>
+        <marker scope="Public" name="E_ArtMajor" />
+        <marker scope="Public" name="E_ArtPractice" />
+        <marker scope="Public" name="E_ArtSupplies" />
+        <marker scope="Public" name="E_ClassSleeper" />
+        <marker scope="Public" name="E_CouncilJoins" />
+        <marker scope="Public" name="E_MoreClubs" />
+        <marker scope="Public" name="E_No1MirakurunCircle" />
+        <marker scope="Public" name="E_RarerMeetings" />
+        <marker scope="Public" name="E_StrangerVoid" />
+        <marker scope="Public" name="E_StudioArtsMajor" />
+        <marker scope="Public" name="E_WorkTime" />
         <marker scope="Private" name="F_">Tag filters</marker>
         <marker scope="Public" name="F_Artist" />
         <marker scope="Public" name="F_Artist_CompareStyles">Assuming they draw like she does.</marker>
@@ -605,7 +636,12 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Bobobo_TStrip0ShowUs">Bobobo Must Strip 0</marker>
         <marker scope="Public" name="T_Caitlin_Beans">Caitlin Must Strip 3 (Losing)</marker>
         <marker scope="Public" name="T_Cheryl_Strip0HereFor">Self Must Strip 0</marker>
-        <marker scope="Public" name="T_Elphaba_Strip0Silliness" />
+        <marker scope="Public" name="T_Chihiro_TStrip4Laptop">Chihiro Stripped 5</marker>
+        <marker scope="Public" name="T_Chihiro_TStrip4RunAway">Chihiro Stripping 4</marker>
+        <marker scope="Public" name="T_Chihiro_TStrip5Cute">Chihiro Stripped 6</marker>
+        <marker scope="Public" name="T_Chihiro_TStrip5Return">Chihiro Must Strip 5</marker>
+        <marker scope="Public" name="T_Chihiro_TStrip5Strong">Chihiro Stripping 5</marker>
+        <marker scope="Public" name="T_Elphaba_Strip0Silliness">Self Must Strip 0</marker>
         <marker scope="Public" name="T_Jura_Strip1Laze">Self Must Strip 1</marker>
         <marker scope="Public" name="T_Jura_Strip1NotEasy">Self Stripping 1</marker>
         <marker scope="Public" name="T_Kirigiri_AsMuchFun">Kirigiri Stripped 2</marker>
@@ -656,6 +692,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Queenie_Strip0Villains">Queenie Stripping 0</marker>
         <marker scope="Public" name="T_Queenie_TStrip0LoveJustice">Queenie Must Strip 0</marker>
         <marker scope="Public" name="T_Reimu_Strip0Attack">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_SannyTess_AyanoFuta" />
         <marker scope="Public" name="T_SannyTess_CockA">Sanny/Tess Stripping 2</marker>
         <marker scope="Public" name="T_SannyTess_CockB">Sanny/Tess Stripped 3</marker>
         <marker scope="Public" name="T_SannyTess_Gimmick">Sanny/Tess Must Strip 2</marker>
@@ -677,7 +714,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Tea_FunPrez">Game start</marker>
         <marker scope="Public" name="T_Tea_Strip3Normal">Self Stripping 3</marker>
         <marker scope="Public" name="T_Tea_Strip3Tomato">Self Must strip 3</marker>
-        <marker scope="Public" name="T_Tea_TStrip0CardGame" />
+        <marker scope="Public" name="T_Tea_TStrip0CardGame">Tea Must Strip 0</marker>
         <marker scope="Public" name="T_TripleKyokoKyou_Confusing">Kyoko Kirigiri and Kyou Fujibayashi selected, player named Kyouko or Kyoko</marker>
         <marker scope="Public" name="T_Wikipe-tan_Air" />
         <marker scope="Public" name="T_Yuna_Strip0Unifrom">Self Must strip 0</marker>
@@ -732,10 +769,4 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
             </cases>
         </recipe>
     </recipes>
-    <pendingLines>
-        <line>Distant future art changes: Ping Storm and Rem</line>
-        <line>Markerless outfit targets</line>
-        <line>I need to notify the below characters' authors when Kyouko gets the tomato costume because it will break those interactions</line>
-        <line>Characters that target ribbon removal early: Okino</line>
-    </pendingLines>
 </metadata>

@@ -4,11 +4,11 @@ Doing all 7
 
 ## Remillia
 
-- [ ] Raise generic count to 1000 (Total - (Targets + Filters)) (937/1000)
-- [ ] Raise her total targeted lines to 300 (129/300)
-- [ ] Raise her total filter amount to 75 (66/75)
+- [ ] Raise generic count to 1000 (Total - (Targets + Filters)) (955/1000)
+- [ ] Raise her total targeted lines to 300 (138/300)
+- [ ] Raise her total filter amount to 75 (72/75)
 
-- [ ] Add 10 more lines showing Kyouko's perverted/overactive imagination, in any case
+- [ ] Add 10 more lines showing Kyouko's perverted/overactive imagination, in any case (3/10)
 - [ ] Add 15 generic masturbation lines (not heavy masturbation) which are flirty/sexy in context
 - [ ] Add 10 more lines of self-exposition in hand=any, all with a play once.
   - This can be her talking about her friends, her school(college?), her club, her skills, her love of anime/manga, etc
@@ -18,7 +18,7 @@ Doing all 7
 
 ## L0kkit
 
-- [ ] Add at least 30 targeted lines
+- [ ] Add at least 30 targeted lines (4/30)
 - [ ] Add at least 30 hand quality lines
 - (S) Show her candid side more
 
@@ -63,19 +63,19 @@ Doing all 7
 - [ ] 6 lines total in opponent masturbating cases
 - [ ] 6 lines total in opponent heavy cases
 - [ ] 18 more lines total across any masturbation cases
-- [ ] 10 lines that fill in the 6-year gap.
+- [X] 10 lines that fill in the 6-year gap.
   - This can be stuff like how Kyouko has been adjusting to college, discussion of her college major (whether saying “Yeah I’m in Industrial Anthro History” outright or just discussing some of the stupid stuff she’s learned in her major), some unspecified third thing, how her doujin artist career has evolved, or anything else.
   - You’re free to think of this as being 3 lines each for her at age 20 and 19 respectively and a line each for 18, 17, 16, and 15.
 - Responses for Chihiro's situations
-  - [ ] Running away (4 stripping)
-  - [ ] Alter Ego (5 stripped)
-  - [ ] Return (5 stripping)
-  - [ ] Sex reveal (6 stripped)
+  - [X] Running away (4 stripping)
+  - [X] Alter Ego (5 stripped)
+  - [X] Return (5 stripping)
+  - [X] Sex reveal (6 stripped)
 - (S) Fade the chadkyouko sprite
 
 ## Non-sponsor to-do list
 
-- [ ] Change bio
+- [X] Change bio
 - [ ] Look into and maybe rework her stage 8 dialogue as a whole
 - [ ] Implement art update
   - [ ] More dynamic hair movement?
