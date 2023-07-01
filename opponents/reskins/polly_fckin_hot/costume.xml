@@ -5,7 +5,6 @@
     <tags>
         <tag>alternative_skin</tag>
     </tags>
-    <layers>5</layers>
     <folder>opponents/reskins/polly_fckin_hot/</folder>
     <wardrobe>
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
@@ -290,7 +289,7 @@
             </directive>
         </pose>
         <pose id="Polly_in_a_box" baseHeight="1395">
-            <sprite id="Polly Trap" src="Polly Trap.png" x="88" y="1066" scalex="0.71" scaley="0.71" pivotx="12%" pivoty="12%" />
+            <sprite id="Polly Trap" src="reskins/polly_fckin_hot/Polly Trap.png" x="88" y="1066" scalex="0.71" scaley="0.71" pivotx="12%" pivoty="12%" />
         </pose>
         <pose id="Scaring">
             <sprite id="Flirty" src="reskins/polly_fckin_hot/0-Flirty.png" x="0" y="0" alpha="100" />
@@ -307,7 +306,7 @@
         </pose>
         <pose id="Setting Up Trap">
             <sprite id="Finishing" src="reskins/polly_fckin_hot/6-Finishing.png" x="0" y="0" />
-            <sprite id="Polly Trap" src="Polly Trap.png" x="0" y="-800" scalex="0.71" scaley="0.71" rotation="-21" />
+            <sprite id="Polly Trap" src="reskins/polly_fckin_hot/Polly Trap.png" x="0" y="-800" scalex="0.71" scaley="0.71" rotation="-21" />
             <directive type="animation" id="Polly Trap" ease="smooth" interpolation="linear">
                 <keyframe time="0" x="0" y="-800" scalex="0.71" scaley="0.71" rotation="-21" />
                 <keyframe time="1.31" rotation="-21" />
@@ -323,7 +322,7 @@
                 <keyframe time="0" x="0" y="1000" scalex="0.71" scaley="0.71" skewx="0" />
             </directive>
             <directive type="animation" id="Polly Trap" ease="linear" interpolation="none">
-                <keyframe time="0" src="Polly Trap.png" />
+                <keyframe time="0" src="reskins/polly_fckin_hot/Polly Trap.png" />
                 <keyframe time="2" src="Polly Trap.png" />
             </directive>
             <directive type="animation" id="Polly Trap" delay="2" ease="linear" interpolation="none">
@@ -343,7 +342,7 @@
         </pose>
         <pose id="Trapped" baseHeight="1395">
             <sprite id="Surprised" src="reskins/polly_fckin_hot/7-Surprised.png" x="0" y="0" scalex="1" scaley="1" skewx="0" alpha="100" rotation="0" />
-            <sprite id="Polly Trap" src="Polly Trap.png" x="0" y="1000" scalex="0.71" scaley="0.71" />
+            <sprite id="Polly Trap" src="reskins/polly_fckin_hot/Polly Trap.png" x="0" y="1000" scalex="0.71" scaley="0.71" />
             <directive type="animation" id="Surprised" ease="smooth" interpolation="linear">
                 <keyframe time="0" x="0" y="0" scalex="1" scaley="1" skewx="0" alpha="100" rotation="0" />
                 <keyframe time="1.06" scalex="0.6" scaley="0.6" />
@@ -358,4 +357,5 @@
             </directive>
         </pose>
     </poses>
+    <layers>5</layers>
 </costume>
