@@ -84,6 +84,10 @@
         <response id="276" opponent="mari_setogaya" opponentId="2199" />
         <response id="277" opponent="mari_setogaya" opponentId="2201" />
         <response id="278" opponent="mari_setogaya" opponentId="2200" />
+        <response id="279" opponent="mari_setogaya" opponentId="2359" />
+        <response id="280" opponent="mari_setogaya" opponentId="2360" />
+        <response id="281" opponent="mari_setogaya" opponentId="2358" />
+        <response id="282" opponent="nagatoro" opponentId="2149" />
     </responses>
     <labels>
         <label id="2" label="" color="1" folder="Targets" sort="0" />
@@ -356,14 +360,20 @@
         <label id="275" label="" color="1" folder="Targets" sort="0" />
         <label id="276" label="" folder="Targets" sort="0" />
         <label id="277" label="" color="1" folder="Targets" sort="0" />
-        <label id="278" label="" color="1" folder="Targets" sort="0" />
+        <label id="278" label="" color="0" folder="Targets" sort="0" />
+        <label id="279" label="" color="1" folder="Targets" sort="0" />
+        <label id="280" label="" color="1" folder="Targets" sort="0" />
+        <label id="281" label="" color="1" folder="Targets" sort="0" />
+        <label id="282" label="" color="1" folder="Targets" sort="0" />
+        <label id="283" label="" folder="Targets" sort="0" />
+        <label id="284" label="" folder="Filtered" sort="0" />
     </labels>
     <prefixes>
         <prefix>aa</prefix>
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>278</nextId>
+    <nextId>284</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="1st_dong" />
@@ -441,9 +451,12 @@
         <marker scope="Public" name="magicsempai_skirtcards" />
         <marker scope="Public" name="magicsempai_socks" />
         <marker scope="Public" name="maris_guysaroundme" />
+        <marker scope="Public" name="maris_guysaroundme2" />
         <marker scope="Public" name="maris_outfitquestion" />
+        <marker scope="Public" name="maris_outfitquestion2" />
         <marker scope="Public" name="maris_sexposistion" />
         <marker scope="Public" name="maris_sexposition2" />
+        <marker scope="Public" name="maris_sexposition3" />
         <marker scope="Public" name="maris_wings" />
         <marker scope="Public" name="meia_01b" />
         <marker scope="Public" name="meia_01ba" />
@@ -466,6 +479,7 @@
         <marker scope="Public" name="mitama_howherenoringo" />
         <marker scope="Public" name="mitama_noclue" />
         <marker scope="Public" name="mitama_whatwrite" />
+        <marker scope="Public" name="naga_armor" />
         <marker scope="Public" name="naga_magic" />
         <marker scope="Public" name="naga_magicbully" />
         <marker scope="Public" name="naga_physical" />
@@ -505,6 +519,7 @@
         <marker scope="Public" name="revy_puyobattle" />
         <marker scope="Public" name="revy_puyobattle2" />
         <marker scope="Public" name="ringo_1ststrip" />
+        <marker scope="Public" name="ringo_enjoyrelax" />
         <marker scope="Public" name="ringo_howhere" />
         <marker scope="Public" name="ringo_howhere2" />
         <marker scope="Public" name="ringo_naga_puyovpuyo" />
