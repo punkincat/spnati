@@ -131,15 +131,19 @@ var CANDY_LIST = [
     "elphaba/0-mischievous.png",           // Highlighted New Character
     "elphaba/2-sarcastic.png",
     "elphaba/4-amused.png",
-    "elphaba/5-calm.png",	
+    "elphaba/5-calm.png",
     "roll_caskett/0-wave.png",             // Highlighted New Character
     "roll_caskett/1-smiling.png",
     "roll_caskett/1-wave.png",
-    "roll_caskett/2-stretch.png",	
+    "roll_caskett/2-stretch.png",
     "maria/0-smug.png",                    // Highlighted New Character
     "maria/0-seductive.png",
     "maria/1-sadistic.png",
-    "maria/1-chuckling.png",		
+    "maria/1-chuckling.png",
+    "mitama/0-yawn.png",                   // Highlighted New Character
+    "mitama/1-writing.png",
+    "mitama/2-mischievous.png",
+    "mitama/4-shrug.png",
     "wasp/0-start.png",                    // Has Recent Updates
     "wasp/0-flirt.png",
     "wasp/0-excited.png",
@@ -176,10 +180,6 @@ var CANDY_LIST = [
     "asuna_yuuki/0-stripAh.png",
     "asuna_yuuki/4-embarrassed.png",
     "asuna_yuuki/4-pleased.png",
-    "pyrrha/0-calm.png",                   // Has Recent Updates
-    "pyrrha/0-awkward.png",
-    "pyrrha/1-horny.png",
-    "pyrrha/2-encourage.png",
     "yshtola/0-calm.png",                  // Has Recent Updates
     "yshtola/0-content.png",
     "yshtola/0-coy.png",
@@ -212,10 +212,6 @@ var CANDY_LIST = [
     "senko/0-araara.png",
     "senko/2-hug.png",
     "senko/2-pampering.png",
-    "perona/0-calm.png",                   // Has Recent Updates
-    "perona/0-smiling.png",
-    "perona/1-enticed.png",
-    "perona/2-positive.png",
     "rouge/0-calm.png",                    // Has Recent Updates
     "rouge/0-mischievous.png",
     "rouge/0-comms.png",
@@ -244,14 +240,6 @@ var CANDY_LIST = [
     "moon/0-stripping_bra2.png",
     "reskins/full_moon/0-calm_b.png",
     "reskins/full_moon/0-calm_c.png",
-    "kamina/0-point.png",                  // Has Recent Updates
-    "kamina/0-cross.png",
-    "kamina/0-happy.png",
-    "kamina/0-excited.png",
-    "ignatz/0-friendly.png",               // Has Recent Updates
-    "ignatz/0-flustered.png",
-    "ignatz/3-happy.png",
-    "ignatz/3-sheepish.png",
     "leonie/0-calm.png",                   // Has Recent Updates
     "leonie/0-smug.png",
     "reskins/leonie_war_outfit/1-grin.png",
@@ -296,10 +284,6 @@ var CANDY_LIST = [
     "aqua_grunt/2-taunting.png",
     "aqua_grunt/4-tease.png",
     "aqua_grunt/5-leg_raised.png",
-    "anatoly/0-horny.png",                 // Has Recent Updates
-    "anatoly/1-embarrassed.png",
-    "anatoly/2-cute.png",
-    "anatoly/3-calm.png",
     "trixie/poses/0-wink.png",             // Has Recent Updates
     "trixie/poses/1-flirt.png",
     "trixie/poses/4-disappointed.png",
@@ -320,14 +304,6 @@ var CANDY_LIST = [
     "cheryl/2-happy.png",
     "cheryl/3-inspired.png",
     "cheryl/4-cheeky.png",
-    "neptune/0-victory.png",               // Has Recent Updates
-    "neptune/0-excited.png",
-    "neptune/2-happy.png",
-    "neptune/2-smug.png",
-    "aloy/0-Horny.png",                    // Has Recent Updates
-    "aloy/5-Smug.png",
-    "aloy/0-Angry.png",
-    "reskins/aloy_carja_blazon/0-Smug.png",
     "aqua_kh/0-giggling.png",              // Has Recent Updates
     "aqua_kh/0-happy.png",
     "aqua_kh/2-keyblade_stance.png",
@@ -508,6 +484,34 @@ var CANDY_LIST = [
     "jura/1-teasing.png",
     "jura/2-interested.png",
     "jura/3-vain.png",
+    "neptune/0-victory.png",
+    "neptune/0-excited.png",
+    "neptune/2-happy.png",
+    "neptune/2-smug.png",
+    "anatoly/0-horny.png",
+    "anatoly/1-embarrassed.png",
+    "anatoly/2-cute.png",
+    "anatoly/3-calm.png",
+    "pyrrha/0-calm.png",
+    "pyrrha/0-awkward.png",
+    "pyrrha/1-horny.png",
+    "pyrrha/2-encourage.png",
+    "ignatz/0-friendly.png",
+    "ignatz/0-flustered.png",
+    "ignatz/3-happy.png",
+    "ignatz/3-sheepish.png",
+    "perona/0-calm.png",
+    "perona/0-smiling.png",
+    "perona/1-enticed.png",
+    "perona/2-positive.png",
+    "kamina/0-point.png",
+    "kamina/0-cross.png",
+    "kamina/0-happy.png",
+    "kamina/0-excited.png",
+    "aloy/0-Horny.png",
+    "aloy/5-Smug.png",
+    "aloy/0-Angry.png",
+    "reskins/aloy_carja_blazon/0-Smug.png",
 */
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
