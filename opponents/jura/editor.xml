@@ -77,6 +77,15 @@
         <case name="Cheryl Hug" id="278" priority="Noteworthy" min="0" max="8">
             <description>Feeling bad for Cheryl, Jura bearhugs her, insisting she be happier with herself.</description>
         </case>
+        <case name="Nagatoro Tease" id="783" priority="Noteworthy" min="5" max="8">
+            <description>Jura teases Nagatoro by making a pass at the player.  There are two variations of this (a and b), but they're essentially the same.</description>
+        </case>
+        <case name="Nagatoro Block" id="785" priority="Noteworthy" min="5" max="8">
+            <description>Nagatoro panickedly blocks the player's view of Jura following her tease.  Again, there are two near-identical variations.</description>
+        </case>
+        <case name="Nagatoro Lift" id="787" priority="Noteworthy" min="5" max="8">
+            <description>Jura gets annoyed with Nagatoro blocking her and picks her up by the armpits, dropping her back into her slot.</description>
+        </case>
     </noteworthy>
     <notes>
         <note id="127">(leading into "It'd ruin my beauty!", etc.)</note>
@@ -483,16 +492,9 @@
         <label id="780" label="" color="4" folder="" sort="0" />
         <label id="781" label="" color="4" folder="" sort="0" />
         <label id="782" label="" color="4" folder="" sort="0" />
-        <label id="785" label="" color="4" folder="" sort="0" />
-        <label id="786" label="" color="4" folder="" sort="0" />
-        <label id="787" label="" color="4" folder="" sort="0" />
         <label id="789" label="" color="6" folder="" sort="0" />
         <label id="792" label="" color="4" folder="" sort="0" />
         <label id="793" label="" color="4" folder="" sort="0" />
-        <label id="794" label="" color="4" folder="" sort="0" />
-        <label id="795" label="" color="4" folder="" sort="0" />
-        <label id="796" label="" color="4" folder="" sort="0" />
-        <label id="797" label="" color="4" folder="" sort="0" />
         <label id="798" label="" color="4" folder="" sort="0" />
         <label id="799" label="" color="4" folder="" sort="0" />
         <label id="800" label="" color="4" folder="" sort="0" />
@@ -531,13 +533,32 @@
         <label id="833" label="" color="4" folder="" sort="0" />
         <label id="834" label="" color="4" folder="" sort="0" />
         <label id="835" label="" color="4" folder="" sort="0" />
+        <label id="836" label="" color="4" folder="" sort="0" />
+        <label id="837" label="" color="4" folder="" sort="0" />
+        <label id="838" label="" color="4" folder="" sort="0" />
+        <label id="839" label="" color="4" folder="" sort="0" />
+        <label id="840" label="" color="4" folder="" sort="0" />
+        <label id="841" label="" color="4" folder="" sort="0" />
+        <label id="842" label="" color="4" folder="" sort="0" />
+        <label id="843" label="" color="4" folder="" sort="0" />
+        <label id="844" label="" color="4" folder="" sort="0" />
+        <label id="845" label="" color="4" folder="" sort="0" />
+        <label id="846" label="" color="4" folder="" sort="0" />
+        <label id="847" label="" color="4" folder="" sort="0" />
+        <label id="848" label="" color="4" folder="" sort="0" />
+        <label id="849" label="" color="4" folder="" sort="0" />
+        <label id="850" label="" color="4" folder="" sort="0" />
+        <label id="851" label="" color="4" folder="" sort="0" />
+        <label id="852" label="" color="4" folder="" sort="0" />
+        <label id="853" label="" color="4" folder="" sort="0" />
+        <label id="854" label="" color="4" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>jura</prefix>
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>835</nextId>
+    <nextId>854</nextId>
     <markers>
         <marker scope="Public" name="1v1">Jura acknowledges that the game has come down to her and one other player.</marker>
         <marker scope="Public" name="aaravi0" />
@@ -1248,9 +1269,11 @@
         <marker scope="Public" name="kumatora6" />
         <marker scope="Public" name="kyoko_kirigiri0" />
         <marker scope="Public" name="kyoko_kirigiri0_meia" />
+        <marker scope="Public" name="kyou_mg0" />
         <marker scope="Public" name="kyou0" />
         <marker scope="Public" name="kyou01" />
         <marker scope="Public" name="kyou1" />
+        <marker scope="Public" name="kyouko_st0" />
         <marker scope="Public" name="kyouko0" />
         <marker scope="Public" name="kyouko1" />
         <marker scope="Public" name="kyouko12" />
@@ -1306,14 +1329,29 @@
         <marker scope="Public" name="lyralei0" />
         <marker scope="Public" name="mae0" />
         <marker scope="Public" name="magical_sempai0" />
+        <marker scope="Public" name="magma_cd0" />
         <marker scope="Public" name="magma_grunt0" />
         <marker scope="Public" name="magma_grunt1" />
         <marker scope="Public" name="magma_grunt2" />
         <marker scope="Public" name="magma_grunt3" />
         <marker scope="Public" name="magma_grunt4_ag" />
+        <marker scope="Public" name="magma_sc0" />
         <marker scope="Public" name="magma_tw0" />
         <marker scope="Public" name="malehuman">Jura greets the male player the first time he strips.</marker>
+        <marker scope="Public" name="mari_casual0" />
+        <marker scope="Public" name="mari_nurse0" />
+        <marker scope="Public" name="mari_office0" />
+        <marker scope="Public" name="mari_s_cv0" />
+        <marker scope="Public" name="mari_s_fv0" />
+        <marker scope="Public" name="mari_s_ls0" />
+        <marker scope="Public" name="mari_s_rs0" />
+        <marker scope="Public" name="mari_s_sb0" />
+        <marker scope="Public" name="mari_s_sdv0" />
+        <marker scope="Public" name="mari_s_ss0" />
         <marker scope="Public" name="mari_setogaya0" />
+        <marker scope="Public" name="mari_spring0" />
+        <marker scope="Public" name="mari_summer0" />
+        <marker scope="Public" name="mari_thanksgiving0" />
         <marker scope="Public" name="mari0" />
         <marker scope="Public" name="maria0" />
         <marker scope="Public" name="maria01" />
@@ -1328,8 +1366,10 @@
         <marker scope="Public" name="may_babies" />
         <marker scope="Public" name="may_contest" />
         <marker scope="Public" name="may_dance" />
+        <marker scope="Public" name="may_hb0" />
         <marker scope="Public" name="may_live" />
         <marker scope="Public" name="may_pokemon" />
+        <marker scope="Public" name="may_rn0" />
         <marker scope="Public" name="may_ss0" />
         <marker scope="Public" name="may_tharja" />
         <marker scope="Public" name="megamix0" />
