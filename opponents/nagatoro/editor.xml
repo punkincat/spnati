@@ -1962,7 +1962,7 @@
         <label id="1992" label="" color="0" folder="Reply_Stage4_Demon" sort="0" />
         <label id="1993" label="" color="0" folder="Reply_Stage4" sort="10" />
         <label id="1994" label="" color="0" folder="Target_Stage3" sort="58" />
-        <label id="1995" label="" color="4" folder="Reply_Stage4" sort="27" />
+        <label id="1995" label="" color="0" folder="Reply_Stage4" sort="27" />
         <label id="1996" label="" color="0" folder="Target_Stage4" sort="22" />
         <label id="1997" label="" color="0" folder="Reply_Stage0_Demon" sort="2" />
         <label id="1998" label="" color="0" folder="Reply_Stage0_Neko" sort="0" />
@@ -1983,7 +1983,7 @@
         <label id="2016" label="" color="0" folder="Reply_Stage3" sort="0" />
         <label id="2017" label="" color="3" folder="Reply_Stage2" sort="0" />
         <label id="2018" label="" color="0" folder="Reply_Stage0_Demon" sort="4" />
-        <label id="2019" label="" color="4" folder="Reply_Stage0_Neko" sort="3" />
+        <label id="2019" label="" color="0" folder="Reply_Stage0_Neko" sort="3" />
         <label id="2020" label="" color="0" folder="Reply_Stage3" sort="18" />
         <label id="2021" label="" color="0" folder="Target_Stage1" sort="0" />
         <label id="2022" label="" color="0" folder="Target_Stage0" sort="0" />
@@ -2094,14 +2094,14 @@
         <label id="2125" label="" folder="Target_Stage0" sort="0" />
         <label id="2126" label="" color="0" folder="Reply_Stage1" sort="3" />
         <label id="2127" label="" folder="Reply_Stage0" sort="84" />
-        <label id="2128" label="" color="4" folder="Reply_Stage0_Demon" sort="12" />
-        <label id="2129" label="" color="4" folder="Reply_Stage0_Neko" sort="6" />
-        <label id="2130" label="" color="4" folder="Reply_Stage1" sort="55" />
+        <label id="2128" label="" color="0" folder="Reply_Stage0_Demon" sort="12" />
+        <label id="2129" label="" color="0" folder="Reply_Stage0_Neko" sort="6" />
+        <label id="2130" label="" color="0" folder="Reply_Stage1" sort="55" />
         <label id="2131" label="" color="4" folder="Reply_Stage0_Demon" sort="10" />
-        <label id="2132" label="" color="4" folder="Reply_Stage0_Demon" sort="13" />
-        <label id="2134" label="" color="4" folder="Reply_Stage0_Demon" sort="14" />
+        <label id="2132" label="" color="0" folder="Reply_Stage0_Demon" sort="13" />
+        <label id="2134" label="" color="0" folder="Reply_Stage0_Demon" sort="14" />
         <label id="2135" label="" color="0" folder="Reply_Stage0_Demon" sort="9" />
-        <label id="2136" label="" color="4" folder="Reply_Stage0_Neko" sort="7" />
+        <label id="2136" label="" color="0" folder="Reply_Stage0_Neko" sort="7" />
         <label id="2137" label="" color="4" folder="Target_Stage4" sort="48" />
         <label id="2138" label="" color="0" folder="Target_Stage1" sort="128" />
         <label id="2140" label="" color="0" folder="Reply_Stage0" sort="86" />
@@ -2198,10 +2198,21 @@
         <label id="2234" label="" folder="BeachDay" sort="2" />
         <label id="2235" label="" folder="BeachDay" sort="2" />
         <label id="2236" label="" folder="BeachDay" sort="5" />
+        <label id="2237" label="" color="4" folder="Reply_Stage0_Neko" sort="8" />
+        <label id="2238" label="" color="4" folder="Reply_Stage0_Neko" sort="9" />
+        <label id="2239" label="" color="3" folder="Target_Stage0" sort="224" />
+        <label id="2240" label="" color="3" folder="Target_Stage2" sort="102" />
+        <label id="2241" label="" color="5" folder="Target_Stage0" sort="225" />
+        <label id="2242" label="" color="5" folder="Target_Stage1" sort="136" />
+        <label id="2243" label="" color="1" folder="Target_Stage0" sort="226" />
+        <label id="2244" label="" color="5" folder="Target_Stage0" sort="0" />
+        <label id="2245" label="" color="3" folder="Target_Stage2" sort="0" />
+        <label id="2246" label="" color="3" folder="Target_Stage2" sort="0" />
+        <label id="2247" label="" color="3" folder="Target_Stage0" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2236</nextId>
+    <nextId>2247</nextId>
     <markers>
         <marker scope="Public" name="__aqua_kh_nickname" />
         <marker scope="Public" name="__aqua_konosuba_nickname" />
@@ -2595,6 +2606,7 @@
         <marker scope="Public" name="dawn11" />
         <marker scope="Public" name="dawn21" />
         <marker scope="Public" name="dmg01" />
+        <marker scope="Public" name="dmg02" />
         <marker scope="Public" name="doing_it" />
         <marker scope="Public" name="doro01" />
         <marker scope="Public" name="dorothy_hand1" />
@@ -2811,6 +2823,8 @@
         <marker scope="Public" name="jura_reply01_neko" />
         <marker scope="Public" name="jura_reply02" />
         <marker scope="Public" name="jura_reply02_demoness" />
+        <marker scope="Public" name="jura_reply02a_neko" />
+        <marker scope="Public" name="jura_reply02b_neko" />
         <marker scope="Public" name="jura_reply03" />
         <marker scope="Public" name="jura_reply11" />
         <marker scope="Public" name="jura_reply12" />
@@ -3194,6 +3208,8 @@
         <marker scope="Public" name="mf01" />
         <marker scope="Public" name="mf01a" />
         <marker scope="Public" name="mf01b" />
+        <marker scope="Public" name="mia_fizz" />
+        <marker scope="Public" name="mia01" />
         <marker scope="Public" name="mikan_reply_medical1" />
         <marker scope="Public" name="mikan_reply_medical2" />
         <marker scope="Public" name="mikan21" />
@@ -3568,6 +3584,7 @@
         <marker scope="Public" name="revy_reply33" />
         <marker scope="Public" name="revy_reply41" />
         <marker scope="Public" name="revy_reply42" />
+        <marker scope="Public" name="revy_reply43" />
         <marker scope="Public" name="Revy_Resp_Bully" />
         <marker scope="Public" name="revy01_demon" />
         <marker scope="Public" name="revy02" />
@@ -3702,6 +3719,8 @@
         <marker scope="Public" name="senko43" />
         <marker scope="Public" name="shantae" />
         <marker scope="Public" name="shantae01" />
+        <marker scope="Public" name="sofia01" />
+        <marker scope="Public" name="sofia11" />
         <marker scope="Public" name="solar_reply_hand01" />
         <marker scope="Public" name="solar01" />
         <marker scope="Public" name="solar02" />
@@ -3913,12 +3932,15 @@
         <marker scope="Public" name="wiifit01" />
         <marker scope="Public" name="wont_go_down" />
         <marker scope="Public" name="wriggle" />
+        <marker scope="Public" name="yae01" />
+        <marker scope="Public" name="yae21" />
         <marker scope="Public" name="yshtola_reply01" />
         <marker scope="Public" name="yshtola_reply02" />
         <marker scope="Public" name="yshtola_reply03" />
         <marker scope="Public" name="yshtola01" />
         <marker scope="Public" name="yshtola02" />
         <marker scope="Public" name="yshtola03" />
+        <marker scope="Public" name="yumeko01" />
         <marker scope="Public" name="Yuno_Innocent" />
         <marker scope="Public" name="Yuno_Uno" />
         <marker scope="Public" name="Yuno_YunoUno" />
