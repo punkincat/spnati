@@ -565,7 +565,7 @@
         <label id="527" label="" color="1" folder="Replies" sort="0" />
         <label id="528" label="" color="1" folder="Replies" sort="0" />
         <label id="529" label="" color="1" folder="Replies" sort="0" />
-        <label id="530" label="" color="1" folder="Targets" sort="0" />
+        <label id="530" label="" color="0" folder="Targets" sort="0" />
         <label id="531" label="" color="1" folder="Targets" sort="0" />
         <label id="532" label="" color="1" folder="Targets" sort="0" />
         <label id="533" label="" color="1" folder="Targets" sort="0" />
@@ -593,20 +593,24 @@
         <label id="555" label="" color="3" folder="PromptResponses" sort="0" />
         <label id="556" label="" color="5" folder="PromptResponses" sort="0" />
         <label id="557" label="" color="1" folder="Targets" sort="0" />
-        <label id="558" label="" color="1" folder="Replies" sort="0" />
+        <label id="558" label="" color="0" folder="Replies" sort="0" />
         <label id="559" label="" color="3" folder="Targets" sort="0" />
         <label id="560" label="" color="1" folder="Targets" sort="0" />
         <label id="561" label="" color="5" folder="Targets" sort="0" />
         <label id="562" label="" color="1" folder="Targets" sort="0" />
+        <label id="563" label="" color="1" folder="Targets" sort="0" />
+        <label id="564" label="" color="1" folder="Replies" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>562</nextId>
+    <nextId>564</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aella_RemindsDarkness" />
+        <marker scope="Public" name="Aella_RemindsDarkness_cont" />
         <marker scope="Public" name="Aella_RemindsDarknessB" />
         <marker scope="Public" name="Aella_Stats_reply1" />
+        <marker scope="Public" name="Aella_Stats_reply2" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion_cont" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion_end" />
