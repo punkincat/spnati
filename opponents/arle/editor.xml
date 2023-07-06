@@ -88,6 +88,9 @@
         <response id="280" opponent="mari_setogaya" opponentId="2360" />
         <response id="281" opponent="mari_setogaya" opponentId="2358" />
         <response id="282" opponent="nagatoro" opponentId="2149" />
+        <response id="290" opponent="mari_setogaya" opponentId="2376" />
+        <response id="291" opponent="mari_setogaya" opponentId="2374" />
+        <response id="292" opponent="mari_setogaya" opponentId="2375" />
     </responses>
     <labels>
         <label id="2" label="" color="1" folder="Targets" sort="0" />
@@ -359,21 +362,29 @@
         <label id="274" label="" color="1" folder="Targets" sort="0" />
         <label id="275" label="" color="1" folder="Targets" sort="0" />
         <label id="276" label="" folder="Targets" sort="0" />
-        <label id="277" label="" color="1" folder="Targets" sort="0" />
+        <label id="277" label="" color="0" folder="Targets" sort="0" />
         <label id="278" label="" color="0" folder="Targets" sort="0" />
-        <label id="279" label="" color="1" folder="Targets" sort="0" />
-        <label id="280" label="" color="1" folder="Targets" sort="0" />
-        <label id="281" label="" color="1" folder="Targets" sort="0" />
+        <label id="279" label="" color="0" folder="Targets" sort="0" />
+        <label id="280" label="" color="0" folder="Targets" sort="0" />
+        <label id="281" label="" color="0" folder="Targets" sort="0" />
         <label id="282" label="" color="1" folder="Targets" sort="0" />
         <label id="283" label="" folder="Targets" sort="0" />
         <label id="284" label="" folder="Filtered" sort="0" />
+        <label id="285" label="" color="2" folder="Targets" sort="0" />
+        <label id="286" label="" folder="Targets" sort="0" />
+        <label id="287" label="" color="2" folder="Targets" sort="0" />
+        <label id="288" label="" color="2" folder="" sort="0" />
+        <label id="289" label="" color="2" folder="Targets" sort="0" />
+        <label id="290" label="" color="1" folder="Targets" sort="0" />
+        <label id="291" label="" color="1" folder="Targets" sort="0" />
+        <label id="292" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>aa</prefix>
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>284</nextId>
+    <nextId>292</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="1st_dong" />
@@ -452,11 +463,14 @@
         <marker scope="Public" name="magicsempai_socks" />
         <marker scope="Public" name="maris_guysaroundme" />
         <marker scope="Public" name="maris_guysaroundme2" />
+        <marker scope="Public" name="maris_guysaroundme3" />
         <marker scope="Public" name="maris_outfitquestion" />
         <marker scope="Public" name="maris_outfitquestion2" />
+        <marker scope="Public" name="maris_outfitquestion3" />
         <marker scope="Public" name="maris_sexposistion" />
         <marker scope="Public" name="maris_sexposition2" />
         <marker scope="Public" name="maris_sexposition3" />
+        <marker scope="Public" name="maris_sexposition4" />
         <marker scope="Public" name="maris_wings" />
         <marker scope="Public" name="meia_01b" />
         <marker scope="Public" name="meia_01ba" />
@@ -471,6 +485,8 @@
         <marker scope="Public" name="miko_gensokyotravel" />
         <marker scope="Public" name="miko_knightsorcerer" />
         <marker scope="Public" name="miku_idolquestion" />
+        <marker scope="Public" name="miku_idolquestion1" />
+        <marker scope="Public" name="miku_idolquestion2" />
         <marker scope="Public" name="miku_outfit" />
         <marker scope="Public" name="miku_outfitchoice" />
         <marker scope="Public" name="miku_puyoDA" />
