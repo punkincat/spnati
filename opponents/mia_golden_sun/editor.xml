@@ -62,6 +62,11 @@
         <response id="276" opponent="aqua_konosuba" opponentId="523" />
         <response id="277" opponent="aqua_konosuba" opponentId="524" />
         <response id="278" opponent="aqua_konosuba" opponentId="526" />
+        <response id="291" opponent="nagatoro" opponentId="2247" />
+        <response id="298" opponent="mari" opponentId="2377" />
+        <response id="299" opponent="wasp" opponentId="139" />
+        <response id="304" opponent="mari_setogaya" opponentId="2365" />
+        <response id="305" opponent="mari_setogaya" opponentId="2364" />
     </responses>
     <notes>
         <note id="22">this can go in whatever direction you want; I just find it funny that the two of them are pious and water-themed</note>
@@ -361,13 +366,33 @@
         <label id="285" label="" folder="Targets" sort="0" />
         <label id="286" label="" folder="Targets" sort="0" />
         <label id="287" label="" folder="Targets" sort="0" />
+        <label id="288" label="" folder="Targets" sort="0" />
+        <label id="289" label="" folder="Targets" sort="0" />
+        <label id="290" label="" folder="Targets" sort="0" />
+        <label id="291" label="" folder="Responses" sort="0" />
+        <label id="292" label="Opponent is in the lead (butt pose!)" folder="Head 2 Head" sort="0" />
+        <label id="293" label="" folder="Conditional" sort="0" />
+        <label id="294" label="" folder="Targets" sort="0" />
+        <label id="295" label="" folder="Targets" sort="0" />
+        <label id="296" label="" folder="Yumeko" sort="0" />
+        <label id="297" label="" folder="Yumeko" sort="0" />
+        <label id="298" label="" folder="Responses" sort="0" />
+        <label id="299" label="" folder="Situations" sort="0" />
+        <label id="300" label="" folder="Wasp" sort="0" />
+        <label id="301" label="" folder="Wasp" sort="0" />
+        <label id="302" label="" folder="Filter" sort="0" />
+        <label id="303" label="" folder="Filter" sort="0" />
+        <label id="304" label="" folder="Responses" sort="0" />
+        <label id="305" label="" folder="Responses" sort="0" />
+        <label id="306" label="" folder="Targets" sort="0" />
+        <label id="307" label="" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>zz_</prefix>
     </prefixes>
     <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>287</nextId>
+    <nextId>307</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="a_djinni_was_in_my_cape">Fizz djinni situational marker</marker>
@@ -403,11 +428,13 @@
         <marker scope="Public" name="gloria_miaGS_summons1" />
         <marker scope="Public" name="gloria_miaGS_summons2" />
         <marker scope="Public" name="gloria_miaGS_summons3" />
+        <marker scope="Public" name="hugebreasts_scantilyclad_chestwillbe" />
         <marker scope="Public" name="Imil_invitation" />
         <marker scope="Public" name="lucky_medal_fountain">Line mentioning the Lucky Medal Fountain minigame</marker>
         <marker scope="Public" name="mariS_wings_revealResp">Reaction to Mari S's wings reveal</marker>
         <marker scope="Public" name="meia_jura_fashion1" />
         <marker scope="Public" name="meia_jura_hair1" />
+        <marker scope="Public" name="meia_jura_worlds1" />
         <marker scope="Public" name="mia_aquaKHSquared1" />
         <marker scope="Public" name="mia_aquaKS_beachwearQuestion" />
         <marker scope="Public" name="mia_aquaKS_djinnQuestion" />
@@ -420,13 +447,31 @@
         <marker scope="Public" name="Mia_BarbaraDailyPrayer_Resp">Interaction with Barbara</marker>
         <marker scope="Public" name="mia_cag_founderOfAlchemy1" />
         <marker scope="Public" name="mia_dunban_scar_reveal">Interaction with Dunban</marker>
+        <marker scope="Public" name="mia_dunban_worlds1" />
+        <marker scope="Public" name="mia_dunban_worlds2" />
+        <marker scope="Public" name="mia_dunban_worlds3" />
         <marker scope="Public" name="mia_jura_babiesPrompt">Response to Jura babies prompt</marker>
         <marker scope="Public" name="mia_jura_gs0a" />
+        <marker scope="Public" name="mia_jura_hair1" />
+        <marker scope="Public" name="mia_jura_worlds1" />
         <marker scope="Public" name="mia_larachel_staff_Tolbi" />
+        <marker scope="Public" name="mia_mariO_Image1" />
         <marker scope="Public" name="mia_mariS_acc_crazy_suggestResp" />
+        <marker scope="Public" name="mia_mariS_eatFizz" />
+        <marker scope="Public" name="mia_mariS_fizzEatQuestion" />
         <marker scope="Public" name="mia_meia_anemos1" />
         <marker scope="Public" name="mia_meia_gs0a" />
+        <marker scope="Public" name="mia_nagatoro_self0b" />
         <marker scope="Public" name="mia_revy_gs0a" />
+        <marker scope="Public" name="mia_samus_armor1" />
+        <marker scope="Public" name="mia_samus_armor2" />
+        <marker scope="Public" name="mia_samus_armor3" />
+        <marker scope="Public" name="mia_sofia_speech1" />
+        <marker scope="Public" name="mia_sofia_speech2" />
+        <marker scope="Public" name="mia_wasp_team1" />
+        <marker scope="Public" name="mia_wasp_team2" />
+        <marker scope="Public" name="mia_yumeko_risk1" />
+        <marker scope="Public" name="mia_yumeko_risk2" />
         <marker scope="Public" name="miaGS_barbara_waterPowers1">Interaction with Barbara</marker>
         <marker scope="Public" name="miaGS_gloria_gay1" />
         <marker scope="Public" name="miaGS_gloria_gay2" />
@@ -468,6 +513,7 @@
         <marker scope="Public" name="treasurescope_followup1" />
         <marker scope="Public" name="turandot_mercury_retrograde_resp" />
         <marker scope="Public" name="undead_sanctum" />
+        <marker scope="Public" name="wasp_shrunk" />
     </markers>
     <recipes>
         <recipe key="b63879f6-9012-4054-b380-378a485ac1fa">
@@ -478,6 +524,11 @@
         <recipe key="4212731b-ae25-4c76-96dc-de77dc94a993">
             <cases>
                 <id>270</id>
+            </cases>
+        </recipe>
+        <recipe key="0f13d31c-7318-4c11-8fcb-4c91fa28b3a3">
+            <cases>
+                <id>293</id>
             </cases>
         </recipe>
     </recipes>
