@@ -50,6 +50,14 @@ $cardButtons = [$("#player-0-card-1"),
                 $("#player-0-card-3"),
                 $("#player-0-card-4"),
                 $("#player-0-card-5")];
+$characterDebugButtons =   [$("#character-debug-button-1"),
+                            $("#character-debug-button-2"),
+                            $("#character-debug-button-3"),
+                            $("#character-debug-button-4")];                          
+$devSelectButtons =    [$("#dev-select-button-1"),
+                        $("#dev-select-button-2"),
+                        $("#dev-select-button-3"),
+                        $("#dev-select-button-4")];                
 $debugButtons = [$("#debug-button-0"),
                  $("#debug-button-1"),
                  $("#debug-button-2"),
@@ -1061,7 +1069,6 @@ function game_keyUp(e)
         else if (e.key.toLowerCase() == 'q' && DEBUG) {
             showDebug = !showDebug;
             updateDebugState(showDebug);
-            setDevSelectorVisibility(showDebug);
         }
         else if (e.key.toLowerCase() == 't') {
             toggleTableVisibility();
@@ -1086,16 +1093,30 @@ function updateDebugState(show)
 {
     if (!show) {
         $('.character-debug-button').hide();
-        for (var i = 0; i < $debugButtons.length; i++) {
-            $debugButtons[i].hide();
-        }
+        $('.dev-select-button').hide();
+        $('.debug-button').hide();
     }
     else {
         $('.character-debug-button').show();
+        $('.dev-select-button').show();
+        $('.debug-button').show();
+
         for (var i = 0; i < $debugButtons.length; i++) {
-            if (players[i] && !players[i].out) {
-                $debugButtons[i].show();
+            if (!players[i] || players[i].out)
+            {
+                $debugButtons[i].hide();              
+            }
+            else
+            {
                 $debugButtons[i].removeClass("active");
+            }
+        }
+
+        for (var i = 0; i < $devSelectButtons.length; i++) {
+            if (!players[i + 1])
+            {
+                $devSelectButtons[i].hide();                
+                $characterDebugButtons[i].hide();
             }
         }
 
