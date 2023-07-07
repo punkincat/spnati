@@ -1,21 +1,5 @@
-var devSelectorButtons = [
-    $('#dev-select-button-1'),
-    $('#dev-select-button-2'),
-    $('#dev-select-button-3'),
-    $('#dev-select-button-4'),
-];
-
 var devModeActive = false;
 var devModeTarget = 0;
-
-function setDevSelectorVisibility (visible) {
-    if (visible) {
-        $('.dev-select-button').show();
-        if (devModeActive && devModeTarget) devSelectorButtons[devModeTarget-1].addClass('active');
-    } else {
-        $('.dev-select-button').removeClass('active').hide();
-    }
-}
 
 function setDevModeTarget (target) {
     $('.dev-select-button').removeClass('active');
