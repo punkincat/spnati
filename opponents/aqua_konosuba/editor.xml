@@ -60,6 +60,8 @@
         <response id="550" opponent="stocking" opponentId="227" />
         <response id="555" opponent="stocking" opponentId="49" />
         <response id="568" opponent="mitama" opponentId="2172" />
+        <response id="577" opponent="aella" opponentId="669" />
+        <response id="578" opponent="aella" opponentId="670" />
     </responses>
     <notes>
         <note id="438">I believe Aqua is actually too lazy to go through with this, so that could potentially come up if Noire mentions the work it takes to be an idol.</note>
@@ -602,8 +604,8 @@
         <label id="563" label="" color="0" folder="Targets" sort="0" />
         <label id="564" label="" color="0" folder="Replies" sort="0" />
         <label id="565" label="" color="3" folder="Replies" sort="0" />
-        <label id="566" label="" color="1" folder="Targets" sort="0" />
-        <label id="567" label="" color="1" folder="Replies" sort="0" />
+        <label id="566" label="" color="0" folder="Targets" sort="0" />
+        <label id="567" label="" color="0" folder="Replies" sort="0" />
         <label id="568" label="" color="1" folder="Replies" sort="0" />
         <label id="569" label="" color="1" folder="Targets" sort="0" />
         <label id="570" label="" color="1" folder="Targets" sort="0" />
@@ -611,19 +613,27 @@
         <label id="572" label="" color="1" folder="Targets" sort="0" />
         <label id="573" label="" color="1" folder="Targets" sort="0" />
         <label id="574" label="" color="1" folder="Targets" sort="0" />
+        <label id="575" label="" color="1" folder="Targets" sort="0" />
+        <label id="576" label="" color="1" folder="Targets" sort="0" />
+        <label id="577" label="" color="1" folder="Replies" sort="0" />
+        <label id="578" label="" color="1" folder="Replies" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>574</nextId>
+    <nextId>578</nextId>
     <markers>
         <marker scope="Public" name="" />
+        <marker scope="Public" name="Aella_howStrong" />
+        <marker scope="Public" name="Aella_party_question" />
         <marker scope="Public" name="Aella_RemindsDarkness" />
         <marker scope="Public" name="Aella_RemindsDarkness_cont" />
         <marker scope="Public" name="Aella_RemindsDarkness_end" />
         <marker scope="Public" name="Aella_RemindsDarknessB" />
+        <marker scope="Public" name="Aella_SelfParty_reply" />
         <marker scope="Public" name="Aella_Stats_reply1" />
         <marker scope="Public" name="Aella_Stats_reply2" />
         <marker scope="Public" name="Aella_Stats_reply3" />
+        <marker scope="Public" name="Aella_whyStripPoker_reply" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion_cont" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion_end" />
