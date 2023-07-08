@@ -12,6 +12,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
+using System.Text.RegularExpressions;
 
 namespace SPNATI_Character_Editor
 {
