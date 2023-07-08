@@ -1010,21 +1010,6 @@ namespace SPNATI_Character_Editor.DataStructures
 					}
 				}
 
-				//Remove any belts and such that appear in the pose but not in the clothing or base
-				foreach (KisekaeSubCode subcode in poseCode.GetSubCodesOfType<IPoseable>())
-				{
-					bool inBase = baseCode.HasSubCode(subcode.Id, subcode.Index);
-					bool inStage = stageCode.HasSubCode(subcode.Id, subcode.Index);
-					if (!inBase && !inStage)
-					{
-						//if it's not in the base or stage, remove it IF it's in at least one other stage, because that implies that the pose code is being recycled across stages for convenience
-						if (stages.Any(s => s.HasSubCode(subcode.Id, subcode.Index)))
-						{
-							subcode.Reset();
-						}
-					}
-				}
-
 				modelCode.MergeIn(poseCode, false, true);
 			}
 			else
