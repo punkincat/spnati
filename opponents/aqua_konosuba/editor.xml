@@ -59,6 +59,7 @@
         <response id="549" opponent="mia_golden_sun" opponentId="271" />
         <response id="550" opponent="stocking" opponentId="227" />
         <response id="555" opponent="stocking" opponentId="49" />
+        <response id="568" opponent="mitama" opponentId="2172" />
     </responses>
     <notes>
         <note id="438">I believe Aqua is actually too lazy to go through with this, so that could potentially come up if Noire mentions the work it takes to be an idol.</note>
@@ -525,7 +526,7 @@
         <label id="484" label="" color="3" folder="Replies" sort="0" />
         <label id="485" label="" color="1" folder="Targets" sort="151" />
         <label id="486" label="" color="0" folder="Targets" sort="98" />
-        <label id="487" label="" color="1" folder="Targets" sort="55" />
+        <label id="487" label="" color="0" folder="Targets" sort="55" />
         <label id="488" label="" color="3" folder="PromptResponses" sort="0" />
         <label id="489" label="" color="1" folder="Targets" sort="99" />
         <label id="490" label="" color="1" folder="Targets" sort="65" />
@@ -545,12 +546,12 @@
         <label id="504" label="" color="1" folder="Replies" sort="18" />
         <label id="508" label="" color="0" folder="Replies" sort="16" />
         <label id="509" label="" color="0" folder="Replies" sort="19" />
-        <label id="510" label="" color="1" folder="Targets" sort="155" />
-        <label id="511" label="" color="1" folder="Targets" sort="156" />
-        <label id="512" label="" color="1" folder="Targets" sort="157" />
-        <label id="513" label="" color="1" folder="Targets" sort="158" />
-        <label id="514" label="" color="1" folder="Targets" sort="159" />
-        <label id="515" label="" color="1" folder="Targets" sort="160" />
+        <label id="510" label="" color="0" folder="Targets" sort="155" />
+        <label id="511" label="" color="0" folder="Targets" sort="156" />
+        <label id="512" label="" color="0" folder="Targets" sort="157" />
+        <label id="513" label="" color="0" folder="Targets" sort="158" />
+        <label id="514" label="" color="0" folder="Targets" sort="159" />
+        <label id="515" label="" color="0" folder="Targets" sort="160" />
         <label id="516" label="" color="1" folder="Targets" sort="202" />
         <label id="517" label="" color="1" folder="Targets" sort="203" />
         <label id="518" label="" color="0" folder="Replies" sort="17" />
@@ -603,10 +604,17 @@
         <label id="565" label="" color="3" folder="Replies" sort="0" />
         <label id="566" label="" color="1" folder="Targets" sort="0" />
         <label id="567" label="" color="1" folder="Replies" sort="0" />
+        <label id="568" label="" color="1" folder="Replies" sort="0" />
+        <label id="569" label="" color="1" folder="Targets" sort="0" />
+        <label id="570" label="" color="1" folder="Targets" sort="0" />
+        <label id="571" label="" color="1" folder="Targets" sort="0" />
+        <label id="572" label="" color="1" folder="Targets" sort="0" />
+        <label id="573" label="" color="1" folder="Targets" sort="0" />
+        <label id="574" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>567</nextId>
+    <nextId>574</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aella_RemindsDarkness" />
@@ -862,16 +870,23 @@
         <marker scope="Public" name="Mia_SelfGoddess_reply2" />
         <marker scope="Public" name="Mia_swimsuit_react" />
         <marker scope="Public" name="Mitama_armor_cont" />
+        <marker scope="Public" name="Mitama_armor_end" />
         <marker scope="Public" name="Mitama_armor_question" />
         <marker scope="Public" name="Mitama_haiku_request" />
         <marker scope="Public" name="Mitama_haiku_request_cont" />
         <marker scope="Public" name="Mitama_haiku_request_contA" />
         <marker scope="Public" name="Mitama_haiku_request_contB" />
         <marker scope="Public" name="Mitama_haiku_request_contC" />
+        <marker scope="Public" name="Mitama_haiku_request_endA" />
+        <marker scope="Public" name="Mitama_haiku_request_endB" />
+        <marker scope="Public" name="Mitama_haiku_request_endC" />
         <marker scope="Public" name="Mitama_poetry_cont" />
         <marker scope="Public" name="Mitama_poetry_contB" />
+        <marker scope="Public" name="Mitama_poetry_end" />
+        <marker scope="Public" name="Mitama_poetry_endB" />
         <marker scope="Public" name="Mitama_poetry_question" />
         <marker scope="Public" name="Mitama_poetry_questionB" />
+        <marker scope="Public" name="Mitama_SelfDomain_reply" />
         <marker scope="Public" name="Nagatoro_SelfOutfit_reply" />
         <marker scope="Public" name="No_bra_react" />
         <marker scope="Public" name="No_bra_react2" />
