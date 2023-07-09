@@ -1955,7 +1955,7 @@ Player.prototype.populateDebugStatusInfo = function () {
 
     if (this.out && !this.finished) {
         createDebugSectionRow(
-            "Timer", this.timer + (player.forfeit[0] === PLAYER_HEAVY_MASTURBATING ? " (heavy)" : "")
+            "Timer", this.timer + (this.forfeit[0] === PLAYER_HEAVY_MASTURBATING ? " (heavy)" : "")
         ).appendTo(listing);
     } else if (!this.out) {
         createDebugSectionRow("Stamina", this.stamina).appendTo(listing);
