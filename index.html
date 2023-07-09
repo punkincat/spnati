@@ -702,7 +702,7 @@
                         <div class="bordered left-cap extra-details-row opponent-details-field opponent-lastupdate-field">
                             <div class="opponent-details-label left-cap">Last update</div>
                             <div class="opponent-details-value opponent-lastupdate"></div>
-                        </div>    
+			</div>
                             <div class="bordered left-cap extra-details-row opponent-details-field opponent-added-field">
                                 <div class="opponent-details-label left-cap">Added</div>
                                 <div class="opponent-details-value opponent-added"></div>
@@ -3025,9 +3025,6 @@
                             class="glyphicon glyphicon-remove"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-entry-button edit-preview"><span
                             class="glyphicon glyphicon-eye-open"></span></button>
-                    <button type="button"
-                        class="bordered smooth-button dialogue-init-button dialogue-respond-button"><span
-                            class="glyphicon glyphicon-comment"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-init-button dialogue-edit-button"><span
                             class="glyphicon glyphicon-pencil"></span></button>
                     <button type="button"
@@ -3049,9 +3046,6 @@
                             class="glyphicon glyphicon-remove"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-entry-button edit-preview"><span
                             class="glyphicon glyphicon-eye-open"></span></button>
-                    <button type="button"
-                        class="bordered smooth-button dialogue-init-button dialogue-respond-button"><span
-                            class="glyphicon glyphicon-comment"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-init-button dialogue-edit-button"><span
                             class="glyphicon glyphicon-pencil"></span></button>
                     <button type="button"
@@ -3073,9 +3067,6 @@
                             class="glyphicon glyphicon-remove"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-entry-button edit-preview"><span
                             class="glyphicon glyphicon-eye-open"></span></button>
-                    <button type="button"
-                        class="bordered smooth-button dialogue-init-button dialogue-respond-button"><span
-                            class="glyphicon glyphicon-comment"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-init-button dialogue-edit-button"><span
                             class="glyphicon glyphicon-pencil"></span></button>
                     <button type="button"
@@ -3097,9 +3088,6 @@
                             class="glyphicon glyphicon-remove"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-entry-button edit-preview"><span
                             class="glyphicon glyphicon-eye-open"></span></button>
-                    <button type="button"
-                        class="bordered smooth-button dialogue-init-button dialogue-respond-button"><span
-                            class="glyphicon glyphicon-comment"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-init-button dialogue-edit-button"><span
                             class="glyphicon glyphicon-pencil"></span></button>
                     <button type="button"
@@ -3169,17 +3157,6 @@
                         <img id="player-1-card-4" class="bordered small-card-image" src="img/blank.png" alt="">
                         <img id="player-1-card-5" class="bordered small-card-image" src="img/blank.png" alt="">
                     </div>
-                    <button id="character-debug-button-1" class="bordered character-debug-button" onclick="players[1].showDebugModal()"
-                        hidden>
-                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
-                    </button>
-                    <button id="dev-select-button-1" class="bordered dev-select-button" onclick="setDevModeTarget(1)"
-                        hidden>
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    </button>
-                    <button id="debug-button-1" class="bordered debug-button" onclick="selectDebug(1)" hidden>
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </button>
                 </div>
                 <div id="game-opponent-area-2" class="optional-bordered halfLeft opponent-area" data-toggle="tooltip"
                     data-placement="top">
@@ -3191,17 +3168,6 @@
                         <img id="player-2-card-4" class="bordered small-card-image" src="img/blank.png" alt="">
                         <img id="player-2-card-5" class="bordered small-card-image" src="img/blank.png" alt="">
                     </div>
-                    <button id="character-debug-button-2" class="bordered character-debug-button" onclick="players[2].showDebugModal()"
-                        hidden>
-                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
-                    </button>
-                    <button id="dev-select-button-2" class="bordered dev-select-button" onclick="setDevModeTarget(2)"
-                        hidden>
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    </button>
-                    <button id="debug-button-2" class="bordered debug-button" onclick="selectDebug(2)" hidden>
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </button>
                 </div>
                 <div id="game-opponent-area-3" class="optional-bordered halfRight opponent-area" data-toggle="tooltip"
                     data-placement="top">
@@ -3213,17 +3179,6 @@
                         <img id="player-3-card-4" class="bordered small-card-image" src="img/blank.png" alt="">
                         <img id="player-3-card-5" class="bordered small-card-image" src="img/blank.png" alt="">
                     </div>
-                    <button id="character-debug-button-3" class="bordered character-debug-button" onclick="players[3].showDebugModal()"
-                        hidden>
-                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
-                    </button>
-                    <button id="dev-select-button-3" class="bordered dev-select-button" onclick="setDevModeTarget(3)"
-                        hidden>
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    </button>
-                    <button id="debug-button-3" class="bordered debug-button" onclick="selectDebug(3)" hidden>
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </button>
                 </div>
                 <div id="game-opponent-area-4" class="optional-bordered right opponent-area" data-toggle="tooltip"
                     data-placement="top">
@@ -3235,17 +3190,6 @@
                         <img id="player-4-card-4" class="bordered small-card-image" src="img/blank.png" alt="">
                         <img id="player-4-card-5" class="bordered small-card-image" src="img/blank.png" alt="">
                     </div>
-                    <button id="character-debug-button-4" class="bordered character-debug-button" onclick="players[4].showDebugModal()"
-                        hidden>
-                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
-                    </button>
-                    <button id="dev-select-button-4" class="bordered dev-select-button" onclick="setDevModeTarget(4)"
-                        hidden>
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    </button>
-                    <button id="debug-button-4" class="bordered debug-button" onclick="selectDebug(4)" hidden>
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </button>
                 </div>
 
                 <!-- Player Clothing and Label -->
@@ -3341,6 +3285,64 @@
             <div id="game-hidden-area" class="centred-deck-area">
                 <img id="deck" class="bordered dock-card" src="img/unknown.jpg" alt="Deck">
                 <div id="player-countdown" class="bordered" hidden>1</div>
+
+                <!-- Opponent Areas -->
+                <div id="game-hidden-opponent-area-1" class="optional-bordered left opponent-area" data-toggle="tooltip"
+                    data-placement="top">
+                    <button id="character-debug-button-1" class="bordered character-debug-button" onclick="players[1].showDebugModal()"
+                        hidden>
+                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                    </button>
+                    <button id="dev-select-button-1" class="bordered dev-select-button" onclick="setDevModeTarget(1)"
+                        hidden>
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                    <button id="debug-button-1" class="bordered debug-button" onclick="selectDebug(1)" hidden>
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div id="game-hidden-opponent-area-2" class="optional-bordered halfLeft opponent-area" data-toggle="tooltip"
+                    data-placement="top">
+                    <button id="character-debug-button-2" class="bordered character-debug-button" onclick="players[2].showDebugModal()"
+                        hidden>
+                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                    </button>
+                    <button id="dev-select-button-2" class="bordered dev-select-button" onclick="setDevModeTarget(2)"
+                        hidden>
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                    <button id="debug-button-2" class="bordered debug-button" onclick="selectDebug(2)" hidden>
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div id="game-hidden-opponent-area-3" class="optional-bordered halfRight opponent-area" data-toggle="tooltip"
+                    data-placement="top">
+                    <button id="character-debug-button-3" class="bordered character-debug-button" onclick="players[3].showDebugModal()"
+                        hidden>
+                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                    </button>
+                    <button id="dev-select-button-3" class="bordered dev-select-button" onclick="setDevModeTarget(3)"
+                        hidden>
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                    <button id="debug-button-3" class="bordered debug-button" onclick="selectDebug(3)" hidden>
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div id="game-hidden-opponent-area-4" class="optional-bordered right opponent-area" data-toggle="tooltip"
+                    data-placement="top">
+                    <button id="character-debug-button-4" class="bordered character-debug-button" onclick="players[4].showDebugModal()"
+                        hidden>
+                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                    </button>
+                    <button id="dev-select-button-4" class="bordered dev-select-button" onclick="setDevModeTarget(4)"
+                        hidden>
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                    <button id="debug-button-4" class="bordered debug-button" onclick="selectDebug(4)" hidden>
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
 
                 <!-- Option Buttons -->
                 <button id="debug-button-0" class="bordered debug-button" onclick="selectDebug(0)" hidden>

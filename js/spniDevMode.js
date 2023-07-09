@@ -1,21 +1,5 @@
-var devSelectorButtons = [
-    $('#dev-select-button-1'),
-    $('#dev-select-button-2'),
-    $('#dev-select-button-3'),
-    $('#dev-select-button-4'),
-];
-
 var devModeActive = false;
 var devModeTarget = 0;
-
-function setDevSelectorVisibility (visible) {
-    if (visible) {
-        $('.dev-select-button').show();
-        if (devModeActive && devModeTarget) devSelectorButtons[devModeTarget-1].addClass('active');
-    } else {
-        $('.dev-select-button').removeClass('active').hide();
-    }
-}
 
 function setDevModeTarget (target) {
     $('.dev-select-button').removeClass('active');
@@ -69,7 +53,6 @@ Opponent.prototype.initDevMode = function () {
     
     this.devModeInitialized = true;
     this.stateIndex = stateIndex;
-    this.originalXml = $(this.xml).clone();
 }
 
 
@@ -84,14 +67,12 @@ function DevModeDialogueBox(gameBubbleElem) {
     this.poseList = gameBubbleElem.find('.edit-pose-list');
     
     this.editButton = gameBubbleElem.find('.dialogue-edit-button');
-    this.newResponseButton = gameBubbleElem.find('.dialogue-respond-button');
     this.confirmButton = gameBubbleElem.find('.edit-confirm');
     this.cancelButton = gameBubbleElem.find('.edit-cancel');
     this.previewButton = gameBubbleElem.find('.edit-preview');
     this.poseButton = gameBubbleElem.find('.edit-pose');
     
     this.editButton.click(this.editCurrentState.bind(this));
-    this.newResponseButton.click(this.startNewResponse.bind(this));
     
     this.previewButton.click(this.togglePreview.bind(this));
     this.cancelButton.click(this.cancelEdit.bind(this));
@@ -106,16 +87,6 @@ function DevModeDialogueBox(gameBubbleElem) {
     /* The player this object concerns itself with. */
     this.player = null;
     
-    /* The player currently targeted for a new response line, if any.
-     * (If null, indicates that a new generic line is being written.)
-     */
-    this.respondingToPlayer = null;
-    
-    /* If true, then a preexisting State is being edited. 
-     * Affects handling in :saveEdits().
-     */
-    this.editingState = false;
-    
     /* An object with 'text' and 'image' fields for storing state data
      * during editing.
      * (editData.text = current entered dialogue text)
@@ -128,11 +99,6 @@ function DevModeDialogueBox(gameBubbleElem) {
      */
     this.currentState = null;
     
-    /* If true, currentState contains 'new' data that isn't reflected in the original XML.
-     * This indicates to :saveEdits() to modify edit log entries instead of XML data.
-     */
-    this.currentStateModified = false;
-    
     /* The parentCase of the last played State for this player. */
     this.currentCase = null;
 }
@@ -143,7 +109,6 @@ DevModeDialogueBox.prototype.update = function (player) {
     
     this.currentCase = player.chosenState.parentCase;
     this.currentState = {'text': player.chosenState.rawDialogue, 'image': player.chosenState.image};
-    this.currentStateModified = false;
     
     /* Reset all editing state... */
     if (this.container.attr('data-editing')) {
@@ -200,16 +165,12 @@ DevModeDialogueBox.prototype.startEditMode = function (start_text, status_line) 
         return $(elem);
     }));
     
-    /* Hide the 'edit' and 'response' buttons: */
+    /* Hide the 'edit' button: */
     this.editButton.hide();
-    gameDisplays.forEach(function (disp) {
-        disp.devModeController.newResponseButton.hide();
-    });
 }
 
 DevModeDialogueBox.prototype.exitEditMode = function () {
     this.editData = null;
-    this.respondingToPlayer = null;
     
     /* Hide the data entry elements: */
     this.container.attr('data-editing', null);
@@ -226,11 +187,8 @@ DevModeDialogueBox.prototype.exitEditMode = function () {
     gameDisplays[this.player.slot-1].updateText(this.player);
     gameDisplays[this.player.slot-1].updateImage(this.player);
     
-    /* Show the 'edit' and 'response' buttons: */
+    /* Show the 'edit' button: */
     this.editButton.show();
-    gameDisplays.forEach(function (disp) {
-        disp.devModeController.newResponseButton.show();
-    });
 }
 
 DevModeDialogueBox.prototype.cancelEdit = function () {
@@ -239,12 +197,8 @@ DevModeDialogueBox.prototype.cancelEdit = function () {
 
 DevModeDialogueBox.prototype.saveEdits = function () {
 
-    /* Save editData to currentState, which will then get flushed to
-     * player.chosenState.
-     */
     this.currentState.text = this.editData.text;
     this.currentState.image = this.editData.image;
-    this.currentStateModified = true;
     
     this.exitEditMode();
 }
@@ -252,32 +206,7 @@ DevModeDialogueBox.prototype.saveEdits = function () {
 DevModeDialogueBox.prototype.editCurrentState = function () {
     if (!this.currentState) return;
     
-    this.editingState = true;
     this.startEditMode(this.currentState.text, "Editing");
-}
-
-DevModeDialogueBox.prototype.newResponseState = function (respondTo) {
-    if (!this.player) return;
-    
-    this.respondingToPlayer = respondTo;
-    this.editingState = false;
-
-    this.startEditMode(
-        "",
-        !respondTo ? "New Generic" : "Response: "+this.respondingToPlayer.label
-    );
-}
-
-DevModeDialogueBox.prototype.startNewResponse = function () {
-    if (!this.player || !devModeActive) return;
-    
-    if (devModeTarget === this.player.slot) {
-        // create a new generic state:
-        this.newResponseState(null);
-    } else {
-        // delegate to the dev-target dialogue box controller:
-        gameDisplays[devModeTarget-1].devModeController.newResponseState(this.player);
-    }
 }
 
 DevModeDialogueBox.prototype.togglePreview = function () {
