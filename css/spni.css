@@ -1460,7 +1460,7 @@ ul.dropdown-menu>li {
     text-align: left;
 }
 
-.debug-marker-basename, .debug-marker-target-id, .debug-marker-value {
+.debug-marker-basename, .debug-marker-target-id, .debug-marker-value, .debug-tag-name {
     font-family: monospace;
     display: inline-block;
 }
@@ -1487,6 +1487,37 @@ ul.dropdown-menu>li {
 
 .debug-marker-value.empty-value::before {
     font-style: normal;
+}
+
+#debug-tag-listing {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.debug-tag-entry {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding-bottom: 0.75rem;
+}
+
+.debug-tag-removed {
+    text-decoration: line-through;
+}
+
+.debug-tag-modified-stage {
+    font-style: italic;
+    padding-left: 0.6rem;
+}
+
+.debug-tag-modified-stage::before {
+    content: "(";
+}
+
+.debug-tag-modified-stage::after {
+    content: ")";
 }
 
 

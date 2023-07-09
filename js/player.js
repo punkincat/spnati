@@ -119,6 +119,9 @@ Player.prototype.resetState = function () {
     this.saidDialogue = {};
     this.hand = null;
 
+    /** @type {{[tag: string]: {present: boolean, stage: number}}} */
+    this.tagModifications = {};
+
     if (this.xml !== null) {
         /* Initialize reaction handling state. */
         this.currentTarget = null;
@@ -259,17 +262,23 @@ Player.prototype.stageChangeUpdate = function () {
 }
 
 Player.prototype.addTag = function(tag) {
-    if (tag) this.baseTags.push(canonicalizeTag(tag));
+    if (tag) {
+        this.tagModifications[tag] = {present: true, stage: this.stage};
+        this.baseTags.push(canonicalizeTag(tag));
+    }
 }
 
 Player.prototype.removeTag = function(tag) {
     tag = canonicalizeTag(tag);
 
-    this.baseTags = this.baseTags.filter(function (t) {
-        if (typeof(t) === 'string') { return t !== tag };
-        if (!t.tag) return false;
-        return t.tag !== tag;
-    });
+    if (this.hasTag(tag)) {
+        this.tagModifications[tag] = {present: false, stage: this.stage};
+        this.baseTags = this.baseTags.filter(function (t) {
+            if (typeof(t) === 'string') { return t !== tag };
+            if (!t.tag) return false;
+            return t.tag !== tag;
+        });
+    }
 }
 
 Player.prototype.hasTag = function(tag) {
@@ -1740,6 +1749,50 @@ Player.prototype.populateDebugMarkers = function () {
     }
 }
 
+Player.prototype.populateDebugTags = function () {
+    $("#debug-tag-listing").empty();
+
+    for (let tag of this.tags) {
+        if (tag === this.id) continue;
+        if (this.alt_costume && tag === this.alt_costume.id) continue;
+
+        var entry = $('<div>', {"class": "debug-tag-entry"});
+        entry.append($('<span>', {"class": "debug-tag-name", "text": tag}));
+        
+        if (this.tagModifications[tag] && this.tagModifications[tag].present) {
+            entry.append($('<span>', {"class": "debug-tag-modified-stage", "text": "added in stage " + this.tagModifications[tag].stage}))
+                .prependTo("#debug-tag-listing");
+        } else {
+            entry.appendTo("#debug-tag-listing");
+        }
+    }
+
+    for (let tag of Object.keys(this.tagModifications)) {
+        if (!this.tagModifications[tag].present && !this.tags.includes(tag)) {
+            $('<div>', {"class": "debug-tag-entry"})
+                .append($('<span>', {"class": "debug-tag-name debug-tag-removed", "text": tag}))
+                .append($('<span>', {"class": "debug-tag-modified-stage", "text": "removed in stage " + this.tagModifications[tag].stage}))
+                .prependTo("#debug-tag-listing");
+        }
+    }
+
+    var statusIndicator = $("#debug-tag-header .debug-info-header-status");
+    var header = $("#debug-tag-header");
+    var container = $("#debug-tag-container");
+    
+    let collapsed = false;
+    header.on("click", function () {
+        collapsed = !collapsed;
+        if (collapsed) {
+            statusIndicator.removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+            container.slideUp();
+        } else {
+            statusIndicator.removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+            container.slideDown();
+        }
+    });
+}
+
 /**
  * 
  * @param {Condition} condition
@@ -1986,6 +2039,7 @@ Player.prototype.showDebugModal = function() {
     this.populateDebugStatusInfo();
     this.populateDebugCaseInfo();
     this.populateDebugMarkers();
+    this.populateDebugTags();
 
     $characterDebugModal.modal("show");
 }
