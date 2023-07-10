@@ -74,6 +74,10 @@
         <response id="2640" opponent="aqua_kh" opponentId="477" />
         <response id="2642" opponent="aqua_kh" opponentId="481" />
         <response id="2646" opponent="aqua_kh" opponentId="483" />
+        <response id="2826" opponent="meia" opponentId="1054" />
+        <response id="2827" opponent="meia" opponentId="1055" />
+        <response id="2828" opponent="revy" opponentId="458" />
+        <response id="2829" opponent="revy" opponentId="459" />
     </responses>
     <notes>
         <note id="882">Please split your marker into two or assign it a different value for each line, so that I can remove the "Saying Text" condition. By the way, there is a typo, if you haven't fixed it yet: "my fans also *calls*" -&gt; *call*</note>
@@ -121,6 +125,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <note id="2455">The marker takes two values, so you can respond to both lines at once or to each one separately.</note>
         <note id="2462">Noire starts in a tsun way, but actually would love to pamper someone and/or be pampered herself. She won't acknowledge it at first, but maybe we can explore this in lines for later stages.</note>
         <note id="2585">two values of the marker</note>
+        <note id="2830">In Neptunia, the Technique stat determines chance to hit.</note>
     </notes>
     <labels>
         <label id="3" label="" folder="SpecialNames" sort="0" />
@@ -199,7 +204,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="77" label="" folder="ParticularClothes" sort="0" />
         <label id="78" label="belt, females" folder="~ClothingNames" sort="0" />
         <label id="79" label="belt" folder="~ClothingNames" sort="0" />
-        <label id="80" label="" folder="~PlayerMaleClothingNames" sort="0" />
+        <label id="80" label="" folder="~PlayerClothingNames" sort="0" />
         <label id="81" label="headphones, bar" folder="~ClothingNames" sort="0" />
         <label id="82" label="belt" folder="~ClothingNames" sort="0" />
         <label id="83" label="bracelet(s)" folder="~ClothingNames" sort="0" />
@@ -479,7 +484,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="372" label="" color="3" folder="Kyou" sort="0" />
         <label id="373" label="" color="1" folder="Revy" sort="0" />
         <label id="374" label="" color="3" folder="Fina" sort="0" />
-        <label id="375" label="" color="4" folder="Revy" sort="0" />
+        <label id="375" label="" color="3" folder="Revy" sort="0" />
         <label id="376" label="" color="3" folder="Neptune" sort="0" />
         <label id="377" label="" color="3" folder="HuTao" sort="0" />
         <label id="378" label="" color="3" folder="HuTao" sort="0" />
@@ -540,7 +545,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="433" label="" color="3" folder="HuTao" sort="0" />
         <label id="434" label="" color="4" folder="Jura" sort="0" />
         <label id="435" label="" color="3" folder="Meia" sort="0" />
-        <label id="436" label="" color="4" folder="Revy" sort="0" />
+        <label id="436" label="" color="3" folder="Revy" sort="0" />
         <label id="437" label="" color="3" folder="Neptune" sort="0" />
         <label id="438" label="" color="4" folder="Jura" sort="0" />
         <label id="439" label="" color="3" folder="Neptune" sort="0" />
@@ -578,7 +583,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="471" label="" color="5" folder="Adrien" sort="0" />
         <label id="472" label="" color="5" folder="Adrien" sort="0" />
         <label id="473" label="" folder="Lore" sort="0" />
-        <label id="474" label="" folder="~PlayerMaleClothingNames" sort="0" />
+        <label id="474" label="" folder="~PlayerClothingNames" sort="0" />
         <label id="475" label="" folder="1Lore" sort="0" />
         <label id="476" label="" folder="Lore" sort="0" />
         <label id="477" label="" folder="Lore" sort="0" />
@@ -941,10 +946,10 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="838" label="" folder="1TAGS" sort="0" />
         <label id="839" label="" folder="1TAGS" sort="0" />
         <label id="840" label="" folder="1TsunderingThePlayer" sort="0" />
-        <label id="841" label="" folder="1TsunderingThePlayer" sort="0" />
-        <label id="842" label="" folder="1TsunderingThePlayer" sort="0" />
-        <label id="843" label="" folder="1TsunderingThePlayer" sort="0" />
-        <label id="844" label="" folder="1TsunderingThePlayer" sort="0" />
+        <label id="841" label="" folder="2Players" sort="0" />
+        <label id="842" label="" folder="2Players" sort="0" />
+        <label id="843" label="" folder="2Players" sort="0" />
+        <label id="844" label="" folder="2Players" sort="0" />
         <label id="845" label="" color="3" folder="Nami" sort="0" />
         <label id="846" label="" color="6" folder="1ResponsesToPrompts" sort="0" />
         <label id="847" label="" color="6" folder="1ResponsesToPrompts" sort="0" />
@@ -2107,7 +2112,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2000" label="" folder="~Player" sort="0" />
         <label id="2001" label="" folder="~Player" sort="0" />
         <label id="2002" label="" folder="~Player" sort="0" />
-        <label id="2003" label="marker" folder="Markers" sort="0" />
+        <label id="2003" label="current status" folder="Markers" sort="0" />
         <label id="2004" label="marker" folder="" sort="0" />
         <label id="2005" label="markers" folder="" sort="0" />
         <label id="2006" label="markers" folder="" sort="0" />
@@ -2421,12 +2426,12 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2324" label="" folder="Beginning" sort="0" />
         <label id="2325" label="" folder="Males" sort="0" />
         <label id="2326" label="" folder="PlayerMale" sort="0" />
-        <label id="2327" label="" folder="PlayerAttire" sort="0" />
+        <label id="2327" label="headphones" folder="1Player.Wearing" sort="0" />
         <label id="2328" label="" folder="Males" sort="0" />
         <label id="2329" label="" folder="Generic" sort="0" />
         <label id="2330" label="" folder="Generic" sort="0" />
         <label id="2331" label="" folder="Generic" sort="0" />
-        <label id="2332" label="" folder="PlayerAttire" sort="0" />
+        <label id="2332" label="gloves" folder="1Player.Wearing" sort="0" />
         <label id="2333" label="" folder="PlayerStatus" sort="0" />
         <label id="2334" label="" folder="Generic" sort="0" />
         <label id="2335" label="" folder="PlayerMale" sort="0" />
@@ -2441,21 +2446,21 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2344" label="" folder="Males" sort="0" />
         <label id="2345" label="" folder="OpponentTags" sort="0" />
         <label id="2346" label="" folder="OpponentTags" sort="0" />
-        <label id="2347" label="" folder="Markers" sort="0" />
-        <label id="2348" label="" folder="Markers" sort="0" />
-        <label id="2349" label="" folder="Markers" sort="0" />
-        <label id="2350" label="" folder="Markers" sort="0" />
-        <label id="2351" label="" folder="Markers" sort="0" />
-        <label id="2352" label="" folder="Markers" sort="0" />
-        <label id="2353" label="" folder="Markers" sort="0" />
-        <label id="2354" label="" folder="Markers" sort="0" />
-        <label id="2355" label="" folder="Markers" sort="0" />
-        <label id="2356" label="" folder="Markers" sort="0" />
-        <label id="2357" label="" folder="Markers" sort="0" />
-        <label id="2358" label="" folder="Markers" sort="0" />
-        <label id="2359" label="" folder="Markers" sort="0" />
-        <label id="2360" label="" folder="Markers" sort="0" />
-        <label id="2361" label="" folder="Markers" sort="0" />
+        <label id="2347" label="1 dom" folder="Markers" sort="0" />
+        <label id="2348" label="1 sub" folder="Markers" sort="0" />
+        <label id="2349" label="1 exh" folder="Markers" sort="0" />
+        <label id="2350" label="1 males" folder="Markers" sort="0" />
+        <label id="2351" label="1 females" folder="Markers" sort="0" />
+        <label id="2352" label="1" folder="Markers" sort="0" />
+        <label id="2353" label="2" folder="Markers" sort="0" />
+        <label id="2354" label="3" folder="Markers" sort="0" />
+        <label id="2355" label="4" folder="Markers" sort="0" />
+        <label id="2356" label="5" folder="Markers" sort="0" />
+        <label id="2357" label="dom" folder="Markers" sort="0" />
+        <label id="2358" label="sub" folder="Markers" sort="0" />
+        <label id="2359" label="exh" folder="Markers" sort="0" />
+        <label id="2360" label="males" folder="Markers" sort="0" />
+        <label id="2361" label="females" folder="Markers" sort="0" />
         <label id="2362" label="" folder="GenericIdol" sort="0" />
         <label id="2363" label="" folder="Sub" sort="0" />
         <label id="2364" label="3rd+ time (alternative) (Rouge not present)" color="3" folder="RougeTreasureScope" sort="0" />
@@ -2864,13 +2869,54 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2789" label="2+ layers" folder="~Player" sort="0" />
         <label id="2790" label="" folder="Tags" sort="0" />
         <label id="2791" label="" folder="Tags" sort="0" />
+        <label id="2792" label="sword 0-3" folder="1Player.Wearing" sort="0" />
+        <label id="2793" label="sword 4-7" folder="1Player.Wearing" sort="0" />
+        <label id="2794" label="sword, male" folder="1Player.Wearing" sort="0" />
+        <label id="2795" label="sword, male" folder="1Player.Wearing" sort="0" />
+        <label id="2796" label="sword, male" folder="1Player.Wearing" sort="0" />
+        <label id="2797" label="sword, female" folder="1Player.Wearing" sort="0" />
+        <label id="2798" label="sword, male" folder="1Player.Wearing" sort="0" />
+        <label id="2799" label="sword 4-7" folder="1Player.Wearing" sort="0" />
+        <label id="2800" label="sword 4-7" folder="1Player.Wearing" sort="0" />
+        <label id="2801" label="boxers" folder="1Player.Wearing" sort="0" />
+        <label id="2802" label="" folder="~Markers" sort="0" />
+        <label id="2803" label="" folder="2Players" sort="0" />
+        <label id="2804" label="" folder="2Players" sort="0" />
+        <label id="2805" label="" folder="2Players" sort="0" />
+        <label id="2806" label="" folder="2Players" sort="0" />
+        <label id="2807" label="" folder="2Players" sort="0" />
+        <label id="2808" label="" folder="2Players" sort="0" />
+        <label id="2809" label="" folder="2Players" sort="0" />
+        <label id="2810" label="" folder="2Players" sort="0" />
+        <label id="2811" label="" folder="2Players" sort="0" />
+        <label id="2812" label="" color="6" folder="1ResponsesToPrompts" sort="0" />
+        <label id="2813" label="" folder="~PlayerMale3Maj" sort="0" />
+        <label id="2814" label="1" folder="PH" sort="0" />
+        <label id="2815" label="1 PH, dis" folder="Markers" sort="0" />
+        <label id="2816" label="6" folder="Markers" sort="0" />
+        <label id="2817" label="PH" folder="Markers" sort="0" />
+        <label id="2818" label="3" folder="PH" sort="0" />
+        <label id="2819" label="4" folder="PH" sort="0" />
+        <label id="2820" label="5" folder="PH" sort="0" />
+        <label id="2821" label="6" folder="PH" sort="0" />
+        <label id="2822" label="1 games, dis" folder="Markers" sort="0" />
+        <label id="2823" label="games" folder="Markers" sort="0" />
+        <label id="2824" label="" folder="games" sort="0" />
+        <label id="2825" label="2" folder="PH" sort="0" />
+        <label id="2826" label="" color="4" folder="Meia" sort="0" />
+        <label id="2828" label="" color="4" folder="Revy" sort="0" />
+        <label id="2827" label="" color="4" folder="Meia" sort="0" />
+        <label id="2829" label="" color="4" folder="Revy" sort="0" />
+        <label id="2830" label="" color="4" folder="Revy" sort="0" />
+        <label id="2831" label="" color="4" folder="Revy" sort="0" />
+        <label id="2832" label="0" folder="Markers" sort="0" />
     </labels>
     <posePreviewMarkers>
         <posePreviewMarker>CDAltImg=0</posePreviewMarker>
     </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2791</nextId>
+    <nextId>2832</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_costume1" />
@@ -2897,6 +2943,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="af_label" />
         <marker scope="Public" name="AFBelt" />
         <marker scope="Public" name="aimee0" />
+        <marker scope="Public" name="aoba_playstation" />
         <marker scope="Public" name="aqua_kh_bandaid_removal" />
         <marker scope="Public" name="aqua_kh_expl0" />
         <marker scope="Public" name="aqua_kh_lastation1" />
@@ -2912,8 +2959,10 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Private" name="arcDom" />
         <marker scope="Private" name="arcExh" />
         <marker scope="Private" name="arcFemales" />
+        <marker scope="Private" name="arcGames" />
         <marker scope="Private" name="arcMales" />
         <marker scope="Private" name="arcNum" />
+        <marker scope="Private" name="arcPH" />
         <marker scope="Private" name="arcSub" />
         <marker scope="Public" name="asuna0" />
         <marker scope="Public" name="asuna01" />
@@ -2953,6 +3002,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="bobobo5" />
         <marker scope="Public" name="boboboDonPatch" />
         <marker scope="Public" name="boboboDonPatchGirl" />
+        <marker scope="Public" name="BoxersPadded" />
         <marker scope="Private" name="CDAltImg" />
         <marker scope="Private" name="CDStripRoute" />
         <marker scope="Public" name="CGAltImg" />
@@ -3275,6 +3325,8 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="marinette_magicalgirl1" />
         <marker scope="Public" name="marinette_magicalgirl2" />
         <marker scope="Public" name="marinette_transformation1" />
+        <marker scope="Public" name="meia_cd0" />
+        <marker scope="Public" name="meia_cg0" />
         <marker scope="Public" name="meia_combat" />
         <marker scope="Public" name="meia_idol" />
         <marker scope="Public" name="meia_idol1" />
@@ -3480,7 +3532,6 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="NoireAndPlayerTsun0" />
         <marker scope="Public" name="NoireAndPlayerTsun1" />
         <marker scope="Public" name="NoireAndPlayerTsun2" />
-        <marker scope="Private" name="NoireAnnoyed" />
         <marker scope="Public" name="NoireAnonydeathMention" />
         <marker scope="Public" name="NoireAwake" />
         <marker scope="Public" name="NoireBlancExplain" />
@@ -3632,6 +3683,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="petra2" />
         <marker scope="Public" name="petra21" />
         <marker scope="Public" name="petra22" />
+        <marker scope="Public" name="PH" />
         <marker scope="Public" name="pit_superhero1" />
         <marker scope="Public" name="PlayerBetterThanExpected" />
         <marker scope="Public" name="PlayerCheesingCollectibles" />
@@ -3682,10 +3734,14 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="raynor22" />
         <marker scope="Public" name="raynor22alt" />
         <marker scope="Public" name="resp_jura_seduction" />
+        <marker scope="Public" name="revy_cd0" />
+        <marker scope="Public" name="revy_cg0" />
         <marker scope="Public" name="revy_videogames" />
         <marker scope="Public" name="revy_videogames_alt" />
         <marker scope="Public" name="revy_videogames_alt2" />
+        <marker scope="Public" name="revy_videogames1" />
         <marker scope="Public" name="revy0" />
+        <marker scope="Public" name="revy1" />
         <marker scope="Public" name="ringo_goodfight1" />
         <marker scope="Public" name="ringo_goodfight2" />
         <marker scope="Public" name="ringo_goodfight3" />
@@ -3808,6 +3864,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="streaming_tease" />
         <marker scope="Public" name="streaming_waifu" />
         <marker scope="Public" name="streaming_yiff" />
+        <marker scope="Public" name="Sword_47" />
         <marker scope="Public" name="TargetHighCard" />
         <marker scope="Public" name="ThighHighsGame" />
         <marker scope="Public" name="TreasureScopeSeen" />
@@ -3815,6 +3872,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="trixie_goddesses1" />
         <marker scope="Public" name="trixie_goddesses2" />
         <marker scope="Public" name="trixie0" />
+        <marker scope="Private" name="tsun" />
         <marker scope="Public" name="twintail" />
         <marker scope="Public" name="twintailCount" />
         <marker scope="Public" name="twoSideUp" />
