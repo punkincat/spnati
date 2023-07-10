@@ -1346,7 +1346,7 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
                 if ([IMPORTANT_ARTICLE, MAJOR_ARTICLE, MINOR_ARTICLE, EXTRA_ARTICLE].indexOf(keyword) >= 0) {
                     types.push(keyword);
                 } else if ([UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE, OTHER_ARTICLE,
-                            'arms', 'feet', 'hands', 'head', 'legs', 'neck', 'waist', 'held', 'other'].indexOf(keyword) >= 0) {
+                            'arms', 'feet', 'hands', 'head', 'legs', 'neck', 'waist', 'held'].indexOf(keyword) >= 0) {
                     positions.push(keyword);
                 } else {
                     names.push(keyword);
