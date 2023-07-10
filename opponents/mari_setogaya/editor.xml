@@ -439,6 +439,7 @@
         <response id="2356" opponent="aqua_kh" opponentId="861" />
         <response id="2361" opponent="mia_golden_sun" opponentId="115" />
         <response id="2366" opponent="mia_golden_sun" opponentId="1" />
+        <response id="2390" opponent="joey" opponentId="389" />
     </responses>
     <notes>
         <note id="412">Yes, Mari is implying that Kazuma is lying just to see her pose naked for him. You are free to have Kazuma defend his case, so to speak.</note>
@@ -459,6 +460,7 @@
         <note id="2124">The lines are bit different in what Mari says, so in case you want to have Felix reply differently to each I gave them different values. But otherwise you can just use the marker they share (b^-^)b</note>
         <note id="2183">Mari is trying to taunt Aaravi into proving she can win the game while also ending up naked. Feel free to have Aaravi fall for or not fall for the taunt, I'm prepared to write for either!</note>
         <note id="2365">Obviously Mia wouldn't know, but to clarify, Mari is joking and does not actually plan to eat Fizz (she wouldn't even be able to anyway. You could have Mia react differently if Mari said the Self_Odd_drinks marker where she indicates that she could only eat bodily fluids)</note>
+        <note id="2394">To clarify, Mari is saying it wrong and I did that on purpose</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Nform" sort="7" />
@@ -2608,15 +2610,15 @@
         <label id="2183" label="" color="1" folder="Targets" sort="105" />
         <label id="2184" label="" color="1" folder="Replies" sort="196" />
         <label id="2185" label="" color="1" folder="Replies" sort="197" />
-        <label id="2186" label="" color="1" folder="Targets" sort="657" />
-        <label id="2187" label="" color="1" folder="Targets" sort="658" />
-        <label id="2188" label="" color="1" folder="Targets" sort="659" />
-        <label id="2189" label="" color="1" folder="Targets" sort="232" />
+        <label id="2186" label="" color="0" folder="Targets" sort="657" />
+        <label id="2187" label="" color="0" folder="Targets" sort="658" />
+        <label id="2188" label="" color="0" folder="Targets" sort="659" />
+        <label id="2189" label="" color="0" folder="Targets" sort="232" />
         <label id="2190" label="" color="3" folder="Replies" sort="481" />
         <label id="2191" label="" color="1" folder="Targets" sort="61" />
         <label id="2192" label="" color="1" folder="Targets" sort="62" />
         <label id="2193" label="" color="1" folder="Targets" sort="63" />
-        <label id="2194" label="" color="1" folder="Targets" sort="233" />
+        <label id="2194" label="" color="0" folder="Targets" sort="233" />
         <label id="2195" label="" color="0" folder="Felix Game Over" sort="7" />
         <label id="2196" label="" folder="Collectible" sort="0" />
         <label id="2197" label="" color="1" folder="Replies" sort="0" />
@@ -2802,19 +2804,27 @@
         <label id="2377" label="" color="0" folder="Replies" sort="0" />
         <label id="2378" label="" color="3" folder="Replies" sort="0" />
         <label id="2379" label="" color="3" folder="Replies" sort="0" />
-        <label id="2380" label="" color="1" folder="Targets" sort="0" />
-        <label id="2381" label="" color="1" folder="Targets" sort="0" />
-        <label id="2382" label="" color="3" folder="Replies" sort="0" />
+        <label id="2380" label="" color="0" folder="Targets" sort="0" />
+        <label id="2381" label="" color="0" folder="Targets" sort="0" />
+        <label id="2382" label="" color="0" folder="Replies" sort="0" />
         <label id="2383" label="" color="1" folder="Targets" sort="0" />
         <label id="2384" label="" color="1" folder="NTargets" sort="0" />
         <label id="2385" label="" color="1" folder="Targets" sort="0" />
         <label id="2386" label="" color="1" folder="Targets" sort="0" />
         <label id="2387" label="" color="3" folder="Targets" sort="0" />
         <label id="2388" label="" color="1" folder="Targets" sort="0" />
+        <label id="2389" label="" color="1" folder="Targets" sort="0" />
+        <label id="2390" label="" color="1" folder="Replies" sort="0" />
+        <label id="2391" label="" color="0" folder="Targets" sort="0" />
+        <label id="2392" label="" color="1" folder="Targets" sort="0" />
+        <label id="2393" label="" color="1" folder="Targets" sort="0" />
+        <label id="2394" label="" color="1" folder="Targets" sort="0" />
+        <label id="2395" label="" color="1" folder="Targets" sort="0" />
+        <label id="2396" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2388</nextId>
+    <nextId>2396</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aaravi_CulturalExchange_replyA" />
@@ -3363,6 +3373,10 @@
         <marker scope="Public" name="Jim_u_a_spaceman_bro" />
         <marker scope="Public" name="Jim_u_a_spaceman_bro2" />
         <marker scope="Public" name="Jim_u_a_spaceman_bro3" />
+        <marker scope="Public" name="Joey_" />
+        <marker scope="Public" name="Joey_BoobsHonk_question" />
+        <marker scope="Public" name="Joey_burlesque_question" />
+        <marker scope="Public" name="Joey_ClownShoes_question" />
         <marker scope="Public" name="Joey_clownTricks_cont" />
         <marker scope="Public" name="Joey_clownTricks_end" />
         <marker scope="Public" name="Joey_clownTricks_question" />
@@ -3373,6 +3387,7 @@
         <marker scope="Public" name="Joey_school_reply1" />
         <marker scope="Public" name="Joey_school_reply2" />
         <marker scope="Public" name="Joey_school_reply3" />
+        <marker scope="Public" name="Joey_SelfFood_reply1" />
         <marker scope="Public" name="Jura_lot_of_guys_reply" />
         <marker scope="Public" name="Jura_recent_events_reply" />
         <marker scope="Public" name="Jura_supermodel_question" />
@@ -3396,11 +3411,13 @@
         <marker scope="Public" name="Kazuma_succubus_culture_reply" />
         <marker scope="Public" name="Kazuma_tail_pull_reply" />
         <marker scope="Public" name="Kora_cuteAndFierce" />
+        <marker scope="Public" name="Kora_cuteAndFierce_cont" />
         <marker scope="Public" name="Kora_cuteAndFierceQuestion" />
         <marker scope="Public" name="Kora_howOftenStrip" />
         <marker scope="Public" name="Kora_howOftenStrip_cont" />
         <marker scope="Public" name="Kora_howOftenStrip_end" />
         <marker scope="Public" name="Kora_othersWeirdLooks" />
+        <marker scope="Public" name="Kora_othersWeirdLooks_cont" />
         <marker scope="Public" name="Kora_pointy_ears_reply" />
         <marker scope="Public" name="Kora_ShootLightning" />
         <marker scope="Public" name="Kora_ShootLightning_cont" />
@@ -3677,6 +3694,7 @@
         <marker scope="Public" name="Nami_bigChest_question" />
         <marker scope="Public" name="Nami_body_positive" />
         <marker scope="Public" name="Nami_bouncyBoobs" />
+        <marker scope="Public" name="Nami_bouncyBoobs_cont" />
         <marker scope="Public" name="Nami_is_a_pirate" />
         <marker scope="Public" name="Nami_losing_belt" />
         <marker scope="Public" name="Nami_lost_belt" />
