@@ -368,10 +368,11 @@ namespace SPNATI_Character_Editor
 			}
 		}
 
-		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+		#pragma warning disable IDE0051
 		private bool UseXmlText()
 		{
 			return Images.Count == 0 && Markers.Count == 0 && ((DialogueOperations == null) || DialogueOperations.IsEmpty());
 		}
+		#pragma warning restore IDE0051
 	}
 }
