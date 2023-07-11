@@ -67,6 +67,14 @@
         <response id="299" opponent="wasp" opponentId="139" />
         <response id="304" opponent="mari_setogaya" opponentId="2365" />
         <response id="305" opponent="mari_setogaya" opponentId="2364" />
+        <response id="308" opponent="mari_setogaya" opponentId="2383" />
+        <response id="320" opponent="aqua_kh" opponentId="994" />
+        <response id="321" opponent="aqua_kh" opponentId="998" />
+        <response id="322" opponent="aqua_kh" opponentId="999" />
+        <response id="323" opponent="aqua_kh" opponentId="997" />
+        <response id="328" opponent="binah" opponentId="1" />
+        <response id="329" opponent="joey" opponentId="39" />
+        <response id="330" opponent="wikipe-tan" opponentId="175" />
     </responses>
     <notes>
         <note id="22">this can go in whatever direction you want; I just find it funny that the two of them are pious and water-themed</note>
@@ -386,19 +394,46 @@
         <label id="305" label="" folder="Responses" sort="0" />
         <label id="306" label="" folder="Targets" sort="0" />
         <label id="307" label="" folder="Targets" sort="0" />
+        <label id="308" label="" folder="Responses" sort="0" />
+        <label id="309" label="" folder="Human" sort="0" />
+        <label id="310" label="" folder="Human" sort="0" />
+        <label id="311" label="" folder="Aqua (KH)" sort="0" />
+        <label id="312" label="" folder="Targets" sort="0" />
+        <label id="313" label="" folder="Aqua (KH)" sort="0" />
+        <label id="314" label="" folder="Aqua (KH)" sort="0" />
+        <label id="315" label="" folder="Targets" sort="0" />
+        <label id="316" label="" folder="Aqua (KH)" sort="0" />
+        <label id="317" label="" folder="Aqua (KH)" sort="0" />
+        <label id="318" label="" folder="Aqua (KH)" sort="0" />
+        <label id="319" label="" folder="Aqua (KH)" sort="0" />
+        <label id="320" label="" folder="Aqua (KH)" sort="0" />
+        <label id="321" label="" folder="Aqua (KH)" sort="0" />
+        <label id="322" label="" folder="Aqua (KH)" sort="0" />
+        <label id="323" label="" folder="Aqua (KH)" sort="0" />
+        <label id="324" label="" folder="Aqua (KH)" sort="0" />
+        <label id="325" label="" folder="Aqua (KH)" sort="0" />
+        <label id="326" label="" folder="Targets" sort="0" />
+        <label id="327" label="" folder="Targets" sort="0" />
+        <label id="328" label="" folder="Situations" sort="0" />
+        <label id="329" label="" folder="Prompts" sort="0" />
+        <label id="330" label="" folder="Prompts" sort="0" />
+        <label id="331" label="" folder="Targets" sort="0" />
+        <label id="332" label="" folder="Targets" sort="0" />
+        <label id="333" label="" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>zz_</prefix>
     </prefixes>
     <onlyCustomPoses>true</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>307</nextId>
+    <nextId>333</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="a_djinni_was_in_my_cape">Fizz djinni situational marker</marker>
         <marker scope="Public" name="aqua_keyblade_revealResp">Reaction to Aqua KH 'keyblade reveal' situation</marker>
         <marker scope="Public" name="aqua_miaGS_clan1" />
         <marker scope="Public" name="aqua_miaGS_clan2" />
+        <marker scope="Public" name="aquakh_mia_hug1" />
         <marker scope="Public" name="aquaKS_blessing_react">Reaction to Aqua 'blessing' situation</marker>
         <marker scope="Public" name="barbara_praying_reaction">Reaction to Barbara 'praying' situation</marker>
         <marker scope="Public" name="breasts_smaller_clothed" />
@@ -435,6 +470,17 @@
         <marker scope="Public" name="meia_jura_fashion1" />
         <marker scope="Public" name="meia_jura_hair1" />
         <marker scope="Public" name="meia_jura_worlds1" />
+        <marker scope="Public" name="mia_aquakh_hug1" />
+        <marker scope="Public" name="mia_aquakh_hug2" />
+        <marker scope="Public" name="mia_aquakh_hug3" />
+        <marker scope="Public" name="mia_aquakh_hug4" />
+        <marker scope="Public" name="mia_aquakh_lewdhug1" />
+        <marker scope="Public" name="mia_aquakh_lewdhug2" />
+        <marker scope="Public" name="mia_aquakh_lewdhug3" />
+        <marker scope="Public" name="mia_aquakh_lewdhug4" />
+        <marker scope="Public" name="mia_aquakh_swimsuit1" />
+        <marker scope="Public" name="mia_aquakh_swimsuit2" />
+        <marker scope="Public" name="mia_aquakh_swimsuit3" />
         <marker scope="Public" name="mia_aquaKHSquared1" />
         <marker scope="Public" name="mia_aquaKS_beachwearQuestion" />
         <marker scope="Public" name="mia_aquaKS_djinnQuestion" />
@@ -446,10 +492,14 @@
         <marker scope="Public" name="mia_aquaSquared1" />
         <marker scope="Public" name="Mia_BarbaraDailyPrayer_Resp">Interaction with Barbara</marker>
         <marker scope="Public" name="mia_cag_founderOfAlchemy1" />
+        <marker scope="Public" name="mia_caitlin_PSIpowers1" />
+        <marker scope="Public" name="mia_caitlin_PSIpowers2" />
+        <marker scope="Public" name="mia_caitlin_PSIpowers3" />
         <marker scope="Public" name="mia_dunban_scar_reveal">Interaction with Dunban</marker>
         <marker scope="Public" name="mia_dunban_worlds1" />
         <marker scope="Public" name="mia_dunban_worlds2" />
         <marker scope="Public" name="mia_dunban_worlds3" />
+        <marker scope="Public" name="mia_joey_question1" />
         <marker scope="Public" name="mia_jura_babiesPrompt">Response to Jura babies prompt</marker>
         <marker scope="Public" name="mia_jura_gs0a" />
         <marker scope="Public" name="mia_jura_hair1" />
@@ -458,10 +508,13 @@
         <marker scope="Public" name="mia_mariO_Image1" />
         <marker scope="Public" name="mia_mariS_acc_crazy_suggestResp" />
         <marker scope="Public" name="mia_mariS_eatFizz" />
+        <marker scope="Public" name="mia_mariS_fizzEatCont" />
         <marker scope="Public" name="mia_mariS_fizzEatQuestion" />
         <marker scope="Public" name="mia_meia_anemos1" />
         <marker scope="Public" name="mia_meia_gs0a" />
         <marker scope="Public" name="mia_nagatoro_self0b" />
+        <marker scope="Public" name="mia_nami_flatworld1" />
+        <marker scope="Public" name="mia_nami_s0a" />
         <marker scope="Public" name="mia_revy_gs0a" />
         <marker scope="Public" name="mia_samus_armor1" />
         <marker scope="Public" name="mia_samus_armor2" />
@@ -470,6 +523,7 @@
         <marker scope="Public" name="mia_sofia_speech2" />
         <marker scope="Public" name="mia_wasp_team1" />
         <marker scope="Public" name="mia_wasp_team2" />
+        <marker scope="Public" name="mia_wikipe_blueHair" />
         <marker scope="Public" name="mia_yumeko_risk1" />
         <marker scope="Public" name="mia_yumeko_risk2" />
         <marker scope="Public" name="miaGS_barbara_waterPowers1">Interaction with Barbara</marker>
