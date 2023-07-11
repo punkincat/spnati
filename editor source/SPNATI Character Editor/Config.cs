@@ -731,6 +731,12 @@ namespace SPNATI_Character_Editor
 
 			return false;
 		}
+
+		public static string DefaultResponder
+		{
+			get { return GetString("defaultResponder"); }
+			set { Set("defaultResponder", value); }
+		}
 	}
 
 	public static class Settings

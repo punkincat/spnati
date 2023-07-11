@@ -160,11 +160,12 @@ namespace SPNATI_Character_Editor
 			return text;
 		}
 
-		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+		#pragma warning disable IDE0051
 		private bool FilterRecords(IRecord record)
 		{
 			Character c = record as Character;
 			return c.FolderName != "human";
 		}
+		#pragma warning restore IDE0051
 	}
 }
