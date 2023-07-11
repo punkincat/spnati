@@ -141,10 +141,10 @@ namespace SPNATI_Character_Editor
 					ReadLegacySettings(filename);
 				}
 				else
-                {
+				{
 					// default settings
 					Set("autosave", 10);
-                }
+				}
 			}
 		}
 

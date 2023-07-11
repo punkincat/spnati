@@ -182,11 +182,11 @@ namespace SPNATI_Character_Editor.Controls
 			}
 
 			if (_character.Metadata.BubblePosition == DialogueLayer.over)
-            {
+			{
 				_line.Layer = chkLayer.Checked ? "" : "under";
 			}
 			else
-            {
+			{
 				_line.Layer = chkLayer.Checked ? "over" : "";
 			}
 
@@ -232,13 +232,13 @@ namespace SPNATI_Character_Editor.Controls
 					_line.DialogueOperations.ForfeitOps.Add(heavyOp);
 				}
 			} else if (_line.DialogueOperations != null && _line.DialogueOperations.ForfeitOps != null)
-            {
+			{
 				_line.DialogueOperations.ForfeitOps.Clear();
 				if (_line.DialogueOperations.IsEmpty())
-                {
+				{
 					_line.DialogueOperations = null;
-                }
-            }
+				}
+			}
 
 			return _line;
 		}
@@ -263,33 +263,33 @@ namespace SPNATI_Character_Editor.Controls
 			cboHeavy.Enabled = !chkResetHeavy.Checked;
 		}
 
-        private void cboFontSize_SelectedIndexChanged(object sender, EventArgs e)
-        {
+		private void cboFontSize_SelectedIndexChanged(object sender, EventArgs e)
+		{
 			if (!_settingData) DataUpdated?.Invoke(this, e);
 		}
 
-        private void chkLayer_CheckedChanged(object sender, EventArgs e)
-        {
+		private void chkLayer_CheckedChanged(object sender, EventArgs e)
+		{
 			if (!_settingData) DataUpdated?.Invoke(this, e);
 		}
 
-        private void skinnedGroupBox2_Enter(object sender, EventArgs e)
-        {
+		private void skinnedGroupBox2_Enter(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void skinnedLabel2_Click(object sender, EventArgs e)
-        {
+		private void skinnedLabel2_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void cboAI_SelectedIndexChanged(object sender, EventArgs e)
-        {
+		private void cboAI_SelectedIndexChanged(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void cboAttr_SelectedIndexChanged(object sender, EventArgs e)
-        {
+		private void cboAttr_SelectedIndexChanged(object sender, EventArgs e)
+		{
 			string attr = cboAttr.Text;
 			if (attr == "redirect-finish")
 			{
@@ -298,7 +298,7 @@ namespace SPNATI_Character_Editor.Controls
 				cboOp.SelectedItem = "=";
 			}
 			else
-            {
+			{
 				cboOp.Items.Clear();
 				cboOp.Items.AddRange(new string[] { "=", "+", "-", "*", "/", "%" });
 				cboOp.SelectedItem = "=";
@@ -308,22 +308,22 @@ namespace SPNATI_Character_Editor.Controls
 		}
 
 		private void cboOp_SelectedIndexChanged(object sender, EventArgs e)
-        {
+		{
 			if (!_settingData) DataUpdated?.Invoke(this, e);
 		}
 
-        private void label5_Click(object sender, EventArgs e)
-        {
+		private void label5_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void cboHeavy_SelectedIndexChanged(object sender, EventArgs e)
-        {
+		private void cboHeavy_SelectedIndexChanged(object sender, EventArgs e)
+		{
 			
-        }
-    }
+		}
+	}
 
-    public interface IDialogueDropDownControl : ISkinnedPanel, ISkinControl
+	public interface IDialogueDropDownControl : ISkinnedPanel, ISkinControl
 	{
 		event EventHandler DataUpdated;
 		int RowIndex { get; }

@@ -70,11 +70,11 @@ namespace SPNATI_Character_Editor
 		[XmlArrayItem("prefix")]
 		public List<string> IgnoredPrefixes = new List<string>();
 
-        [XmlArray("posePreviewMarkers")]
-        [XmlArrayItem("posePreviewMarker")]
-        public List<string> PosePreviewMarkers = new List<string>();
+		[XmlArray("posePreviewMarkers")]
+		[XmlArrayItem("posePreviewMarker")]
+		public List<string> PosePreviewMarkers = new List<string>();
 
-        [XmlElement("onlyCustomPoses")]
+		[XmlElement("onlyCustomPoses")]
 		public bool OnlyCustomPoses;
 
 		[XmlElement("hidePrefixlessImages")]

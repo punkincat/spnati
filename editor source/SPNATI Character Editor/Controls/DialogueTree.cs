@@ -656,9 +656,9 @@ namespace SPNATI_Character_Editor.Controls
 			_view.MoveItem(e.Source, e.Target, e.Before);
 		}
 
-    }
+	}
 
-    public class CaseSelectionEventArgs : EventArgs
+	public class CaseSelectionEventArgs : EventArgs
 	{
 		public Stage Stage;
 		public Case Case;

@@ -228,13 +228,13 @@ namespace SPNATI_Character_Editor.Activities
 				UpdatePreview();
 			}
 			else if (e.PropertyName == "Wearable")
-            {
+			{
 				ToggleClothingVisibility();
 			}
 		}
 
 		private void ToggleClothingVisibility()
-        {
+		{
 			Collectible collectible = _selectedItem.Tag as Collectible;
 
 			Control[] rows = table.Controls.Find("PropertyTableRow", true);

@@ -607,7 +607,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				case KeyframeDrawStyle.Begin:   // >
 					pts = new Point[] { new Point(x, y - KeyframeRadius), new Point(x + KeyframeRadius, y), new Point(x, y + KeyframeRadius) };
 					break;
-				case KeyframeDrawStyle.End:     // <
+				case KeyframeDrawStyle.End:	 // <
 					pts = new Point[] { new Point(x, y - KeyframeRadius), new Point(x, y + KeyframeRadius), new Point(x - KeyframeRadius, y) };
 					break;
 				case KeyframeDrawStyle.Split:   // <|>
