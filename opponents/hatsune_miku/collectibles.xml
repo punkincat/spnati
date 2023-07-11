@@ -14,4 +14,21 @@
         <hidden>true</hidden>
         <hide-details>true</hide-details>
     </collectible>
+    <collectible id="Miku_Tie" status="online" img="opponents/hatsune_miku/Epilogue/tie.png" thumbnail="opponents/hatsune_miku/Epilogue/tiethumbnail.png">
+        <title>Miku's Tie</title>
+        <subtitle>Hugely Iconic!</subtitle>
+        <text>As you get ready to leave the inventory for the evening, Miku comes up to you, and in her hand is her tie. Well... not her real tie. "I usually have a couple spares on hand, and I thought you could take one!" She leaves the tie in your hand, and as she walks off, she waves and says: "I hope we get to play again soon!"</text>
+        <unlock>Lose a game where Hatsune Miku, at the very least, loses her tie. She doesn't have to win.</unlock>
+        <wearable>true</wearable>
+        <clothing name="Tie" generic="tie" position="neck" type="extra" img="opponents/hatsune_miku/Epilogue/tiethumbnail.png" />
+    </collectible>
+    <collectible id="headset" status="online" img="opponents/hatsune_miku/Epilogue/headset_thumbnail.png" thumbnail="opponents/hatsune_miku/Epilogue/headset_thumbnail.png">
+        <title>Miku's Headset</title>
+        <subtitle>An Authentic Piece of Idol Memorabilia</subtitle>
+        <text>Miku tends to keep her headset on almost all the time. However, she tends to keep a spare on hand in case of backup, and thought she'd give it to you as a gift for beating her so swiftly. You're not entirely sure what you'll do with an idol headset, but you reason it could work well as a gaming headset, or something of that matter. The simple fact of the matter is: you have it in your possession, and are now free to brag about it.</text>
+        <unlock>Win against Miku 3 times.</unlock>
+        <counter>3</counter>
+        <wearable>true</wearable>
+        <clothing name="Headset" generic="headphones" position="head" type="extra" img="opponents/hatsune_miku/Epilogue/headset_thumbnail.png" plural="true" />
+    </collectible>
 </collectibles>
