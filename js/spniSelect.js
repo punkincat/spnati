@@ -534,10 +534,56 @@ function getCostumeOption(alt_costume, selected_costume) {
 }
 
 function fillCostumeSelector($selector, defaultname, costumes, selected_costume) {
-    var defaultn = defaultname;
+    var defaultn = '\u{1f455} ' + defaultname;
     if (defaultname == '') {
-        defaultn = 'Default Costume';
+        defaultn = '\u{1f455} Default Costume';
     }
+	
+	costumes.sort(function(c1, c2) {
+		var a = 0, b = 0;
+		
+        if (c1.status != "online") {
+            a -= 100;
+        }
+		
+        if (c2.status != "online") {
+            b -= 100;
+        }
+        
+        if (c1.set == "valentines") {
+            a--;
+        } else if (c1.set == "april_fools") {
+            a -= 2;
+        } else if (c1.set == "easter") {
+            a -= 3;
+        } else if (c1.set == "summer") {
+            a -= 4;
+        } else if (c1.set == "halloween") {
+            a -= 5;
+        } else if (c1.set == "xmas") {
+            a -= 6;
+        } else if (c1.set == "sleepover") {
+            a -= 7;
+        }
+		
+        if (c2.set == "valentines") {
+            b--;
+        } else if (c2.set == "april_fools") {
+            b -= 2;
+        } else if (c2.set == "easter") {
+            b -= 3;
+        } else if (c2.set == "summer") {
+            b -= 4;
+        } else if (c2.set == "halloween") {
+            b -= 5;
+        } else if (c2.set == "xmas") {
+            b -= 6;
+        } else if (c2.set == "sleepover") {
+            b -= 7;
+        }
+			
+		return b - a;
+	});
 
     $selector.empty().append($('<option>', {
         val: '',
@@ -557,12 +603,12 @@ function fillCostumeSelector($selector, defaultname, costumes, selected_costume)
             emoji = '\u{1f430} ';
         } else if (c.set == "summer") {
             emoji = '\u{2600}\u{fe0f} ';
-        } else if (c.set == "oktoberfest") {
-            emoji = '\u{1f37a} ';
         } else if (c.set == "halloween") {
             emoji = '\u{1f383} ';
         } else if (c.set == "xmas") {
             emoji = '\u{1f384} ';
+        } else if (c.set == "sleepover") {
+            emoji = '\u{1f6cf}\u{fe0f} ';
         }
         
         return $('<option>', {
