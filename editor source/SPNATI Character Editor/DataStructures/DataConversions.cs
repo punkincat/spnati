@@ -673,7 +673,7 @@ namespace SPNATI_Character_Editor
 			}
 
 			if (character.Styles != null)
-            {
+			{
 				foreach (StyleRule rule in character.Styles.Rules)
 				{
 					foreach (StyleAttribute att in rule.Attributes)

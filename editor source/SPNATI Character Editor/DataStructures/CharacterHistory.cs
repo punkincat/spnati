@@ -241,7 +241,7 @@ namespace SPNATI_Character_Editor
 
 				// also, subfolders may contain custom pose assets
 				foreach (DirectoryInfo d in directory.EnumerateDirectories())
-                {
+				{
 					foreach (FileInfo file in d.EnumerateFiles()
 						.Where(f => f.Extension == ".png" || f.Extension == ".gif"))
 					{

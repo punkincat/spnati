@@ -12,9 +12,9 @@ namespace SPNATI_Character_Editor.Activities
 		private bool _linkDataChanged = false;
 		private Costume _costume;
 		private bool _populatingImages;
-        private bool _exportOnQuit;
+		private bool _exportOnQuit;
 
-        public SkinEditor()
+		public SkinEditor()
 		{
 			InitializeComponent();
 
@@ -120,37 +120,37 @@ namespace SPNATI_Character_Editor.Activities
 			_populatingImages = false;
 		}
 
-        private bool PromptToSave()
-        {
-            if (_costume == null || !_costume.IsDirty)
-                return true;
-            DialogResult result = MessageBox.Show(string.Format("Do you wish to save {0} first?", _costume.Link.Name), "Save changes", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                _exportOnQuit = true;
-                return true;
-            }
-            else if (result == DialogResult.No)
-            {
-                return true;
-            }
-            return false;
-        }
+		private bool PromptToSave()
+		{
+			if (_costume == null || !_costume.IsDirty)
+				return true;
+			DialogResult result = MessageBox.Show(string.Format("Do you wish to save {0} first?", _costume.Link.Name), "Save changes", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+			if (result == DialogResult.Yes)
+			{
+				_exportOnQuit = true;
+				return true;
+			}
+			else if (result == DialogResult.No)
+			{
+				return true;
+			}
+			return false;
+		}
 
-        public override bool CanQuit(CloseArgs args)
-        {
-            return PromptToSave();
-        }
+		public override bool CanQuit(CloseArgs args)
+		{
+			return PromptToSave();
+		}
 
-        public override void Quit()
-        {
-            if (_exportOnQuit)
-            {
-                OnSaveWorkspace(false);
-            }
-        }
+		public override void Quit()
+		{
+			if (_exportOnQuit)
+			{
+				OnSaveWorkspace(false);
+			}
+		}
 
-        public override void Save()
+		public override void Save()
 		{
 			_costume.Labels = gridLabels.Values;
 
@@ -172,16 +172,16 @@ namespace SPNATI_Character_Editor.Activities
 
 				string label = _costume.Labels.Count > 0 ? _costume.Labels[0].Value : null;
 
-                int countUnskipped = 0;
-                foreach (Clothing c in _costume.Wardrobe)
-                {
-                    if (c != null && c.Type != "skip")
-                    {
-                        countUnskipped++;
-                    }
-                }
+				int countUnskipped = 0;
+				foreach (Clothing c in _costume.Wardrobe)
+				{
+					if (c != null && c.Type != "skip")
+					{
+						countUnskipped++;
+					}
+				}
 
-                if (txtName.Text != _costume.Link.Name || status != _costume.Link.Status || set != _costume.Link.Set || _costume.Link.IsDirty
+				if (txtName.Text != _costume.Link.Name || status != _costume.Link.Status || set != _costume.Link.Set || _costume.Link.IsDirty
 					|| gender != _costume.Link.Gender || label != _costume.Link.Label || countUnskipped != _costume.Link.LayersNonSkip)
 				{
 					_linkDataChanged = true;
@@ -236,5 +236,5 @@ namespace SPNATI_Character_Editor.Activities
 			}
 			Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_costume, image, 0));
 		}
-    }
+	}
 }

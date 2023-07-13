@@ -2859,10 +2859,10 @@ namespace SPNATI_Character_Editor
 		/// Removes extraneous conditions to leave only the bare minimum
 		/// </summary>
 		public void SimplifyConditions()
-        {
-            return; //disable for now until fixed
+		{
+			return; //disable for now until fixed
 
-            for (int i = Conditions.Count - 1; i>= 0; i--)
+			for (int i = Conditions.Count - 1; i>= 0; i--)
 			{
 				TargetCondition condition = Conditions[i];
 				if (string.IsNullOrEmpty(condition.SayingMarker))

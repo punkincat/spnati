@@ -235,15 +235,15 @@ namespace SPNATI_Character_Editor.Activities
 				}
 			}
 
-            PoseStage s1 = _sheet.Stages[0];
+			PoseStage s1 = _sheet.Stages[0];
 			bool found;
-            foreach (PoseStage stage in _sheet.Stages)
+			foreach (PoseStage stage in _sheet.Stages)
 			{
 				//create new columns as necessary
 				foreach (PoseEntry pose in stage.Poses)
 				{
-                    found = false;
-                    if (!string.IsNullOrEmpty(pose.Key) && !_columns.ContainsKey(pose.Key))
+					found = false;
+					if (!string.IsNullOrEmpty(pose.Key) && !_columns.ContainsKey(pose.Key))
 					{
 						AddColumn(pose.Key);
 					}
@@ -259,11 +259,11 @@ namespace SPNATI_Character_Editor.Activities
 						}
 						if (found == false)
 						{
-                            PoseEntry cell = new PoseEntry();
-                            cell.Key = pose.Key;
+							PoseEntry cell = new PoseEntry();
+							cell.Key = pose.Key;
 							cell.Stage = s1;
-                            s1.Poses.Add(cell);
-                        }
+							s1.Poses.Add(cell);
+						}
 					}
 
 				}
@@ -1170,7 +1170,7 @@ namespace SPNATI_Character_Editor.Activities
 			DataGridViewCell cell;
 			bool usingWardrobe = false;
 			foreach (DataGridViewCell cell2 in grid.SelectedCells)
-            {
+			{
 				PoseStage stage = _sheet.Stages[cell2.RowIndex];
 				usingWardrobe = usingWardrobe || !string.IsNullOrEmpty(stage.Code);
 				if (usingWardrobe && string.IsNullOrEmpty(stage.Code))
@@ -1824,7 +1824,7 @@ namespace SPNATI_Character_Editor.Activities
 						p2.Code = null;
 						p2.Crop = new Rect(0, 0, 600, 1400);
 						p2.ExtraMetadata.Clear();
-						p2.LastUpdate = 0;                    
+						p2.LastUpdate = 0;					
 					}
 				}
 			}
@@ -2054,9 +2054,9 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			CheckmarkSelectedCells();
 		}
-    }
+	}
 
-    public class CellClipboardData
+	public class CellClipboardData
 	{
 		private List<Tuple<Point, PoseEntry>> _cells = new List<Tuple<Point, PoseEntry>>();
 

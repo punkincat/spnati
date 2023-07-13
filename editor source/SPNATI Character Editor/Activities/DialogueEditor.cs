@@ -193,10 +193,10 @@ namespace SPNATI_Character_Editor.Activities
 			_pendingWardrobeChange = true;
 		}
 
-        private void OnSaveCaseNotes()
-        {
+		private void OnSaveCaseNotes()
+		{
 			caseControl.SaveNotes();
-        }
+		}
 
 		private void OnSkinChanged()
 		{
