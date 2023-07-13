@@ -1,33 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>yumeko</owner>
-    <height />
-    <age>20</age>
-    <pronunciation>YOO-mek-oh ja-BA-mee</pronunciation>
-    <othernotes />
-    <noteworthy>
-        <case name="Games, anyone?" id="1" priority="Prompt" min="0" max="6">
-            <description>Yumeko asks the others if they've played any noteworthy games of chance she might not have heard of.</description>
-        </case>
-        <case name="Yumeko in despair..." id="2" priority="Noteworthy" min="6" max="6">
-            <description>She seems sad about losing. Has she forgotten her bluster about the joy of the risks...?</description>
-        </case>
-        <case name="...Or not." id="3" priority="Noteworthy" min="6" max="6">
-            <description>Nope! Looks like she's actually quite enthusiastic about--- wait, is that a pair of cat ears and a collar?</description>
-        </case>
-    </noteworthy>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
     <nextId>3</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="abstractgames" />
+        <marker scope="Public" name="Aqua" />
+        <marker scope="Public" name="Aqua1a" />
         <marker scope="Public" name="Aqua2a" />
         <marker scope="Public" name="AquaKH0a" />
         <marker scope="Public" name="AquaKH0b" />
+        <marker scope="Public" name="AquaKH0c" />
         <marker scope="Public" name="AquaKH2a" />
         <marker scope="Public" name="AquaKH2b" />
+        <marker scope="Public" name="AquaKH2c" />
+        <marker scope="Public" name="AquaKH2c2" />
         <marker scope="Public" name="AquaKonosuba0a" />
         <marker scope="Public" name="AquaKonosuba0b" />
-        <marker scope="Public" name="Aquakonosuba0c" />
         <marker scope="Public" name="AquaKonosuba0c" />
         <marker scope="Public" name="Arueshalae_determination" />
         <marker scope="Public" name="Arueshalae_ontheline" />
@@ -100,9 +90,12 @@
         <marker scope="Public" name="Jim8b" />
         <marker scope="Public" name="Jura_resp0a" />
         <marker scope="Public" name="Mari_S0a" />
+        <marker scope="Public" name="Mari_S1a" />
         <marker scope="Public" name="MariS0b" />
         <marker scope="Public" name="MariS0c" />
         <marker scope="Public" name="Meia_resp0a" />
+        <marker scope="Public" name="Mia_resp2a" />
+        <marker scope="Public" name="Mia_resp2b" />
         <marker scope="Public" name="Miku_housecat" />
         <marker scope="Public" name="Miku_lowstakes" />
         <marker scope="Public" name="Miku_resp0a" />
@@ -163,6 +156,7 @@
         <marker scope="Public" name="Playerscorn0b" />
         <marker scope="Public" name="publicmasturbation" />
         <marker scope="Public" name="quickloss" />
+        <marker scope="Public" name="Reimu_resp0a" />
         <marker scope="Public" name="Revy_resp0a" />
         <marker scope="Public" name="rookorknight" />
         <marker scope="Public" name="Sakura_housepet" />
@@ -187,7 +181,6 @@
         <marker scope="Public" name="Sakura4c2" />
         <marker scope="Public" name="Sakura5a" />
         <marker scope="Public" name="Sakura5b" />
-        <marker scope="Public" name="Sakura5b2" />
         <marker scope="Public" name="Sakura5c" />
         <marker scope="Public" name="Sakura6a" />
         <marker scope="Public" name="Sakura6b" />
