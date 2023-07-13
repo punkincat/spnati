@@ -69,9 +69,9 @@ namespace SPNATI_Character_Editor
 		public static string DecodeEntityReferences(string text)
 		{
 			if (text == null)
-            {
+			{
 				return null;
-            }
+			}
 
 			//these are done by the game itself now
 			//text = text.Replace("&lt;i&gt;", "<i>");

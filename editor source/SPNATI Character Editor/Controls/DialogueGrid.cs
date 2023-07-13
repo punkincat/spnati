@@ -70,9 +70,9 @@ namespace SPNATI_Character_Editor.Controls
 			_intellisense = new IntellisenseControl();
 			_intellisense.InsertSnippet += _intellisense_InsertSnippet;
 			Controls.Add(_intellisense);
-        }
+		}
 
-        protected override void OnCreateControl()
+		protected override void OnCreateControl()
 		{
 			base.OnCreateControl();
 			foreach (Control ctl in Controls)
@@ -292,10 +292,10 @@ namespace SPNATI_Character_Editor.Controls
 		{
 			if (_character == null || _selectedCase == null) { return; }
 
-            HashSet<int> imageStages = new HashSet<int>(selectedStages, selectedStages.Comparer);
+			HashSet<int> imageStages = new HashSet<int>(selectedStages, selectedStages.Comparer);
 
-            if (_selectedCase.Tag == "stripped")
-            {
+			if (_selectedCase.Tag == "stripped")
+			{
 				if (_character.CurrentSkin != null)
 				{
 					foreach (int stage in selectedStages)
@@ -309,8 +309,8 @@ namespace SPNATI_Character_Editor.Controls
 								while (_character.CurrentSkin.Wardrobe[_character.Layers - i - 1].Type == "skip" && i < _character.Layers)
 								{
 									i++;
-                                    if (i == _character.Layers) { break; }
-                                }								
+									if (i == _character.Layers) { break; }
+								}								
 								if (!imageStages.Contains(i))
 								{
 									imageStages.Add(i);
@@ -325,34 +325,34 @@ namespace SPNATI_Character_Editor.Controls
 				}
 				else
 				{
-                    foreach (int stage in selectedStages)
-                    {
-                        if (stage < _character.Layers)
-                        {
-                            if (_character.Wardrobe[_character.Layers - stage - 1].Type == "skip")
-                            {
-                                imageStages.Remove(stage);
-                                int i = stage;
-                                while (_character.Wardrobe[_character.Layers - i - 1].Type == "skip" && i < _character.Layers)
-                                {
-                                    i++;
+					foreach (int stage in selectedStages)
+					{
+						if (stage < _character.Layers)
+						{
+							if (_character.Wardrobe[_character.Layers - stage - 1].Type == "skip")
+							{
+								imageStages.Remove(stage);
+								int i = stage;
+								while (_character.Wardrobe[_character.Layers - i - 1].Type == "skip" && i < _character.Layers)
+								{
+									i++;
 									if (i == _character.Layers) { break; }
-                                }
-                                if (!imageStages.Contains(i))
-                                {
-                                    imageStages.Add(i);
-                                }
-                            }
-                        }
-                        else
-                        {
-                            imageStages.Remove(stage);
-                        }
-                    }
-                }
-            }
+								}
+								if (!imageStages.Contains(i))
+								{
+									imageStages.Add(i);
+								}
+							}
+						}
+						else
+						{
+							imageStages.Remove(stage);
+						}
+					}
+				}
+			}
 
-            List<object> values = new List<object>();
+			List<object> values = new List<object>();
 			if (retainValue)
 			{
 				//save off values
@@ -367,25 +367,25 @@ namespace SPNATI_Character_Editor.Controls
 			int stageId = _selectedStage == null ? 0 : _selectedStage.Id;
 			if (_selectedCase.Tag == "stripped" && stageId < _character.Layers)
 			{
-                int i = stageId;
+				int i = stageId;
 				if (_character.CurrentSkin != null)
 				{
 					while (_character.CurrentSkin.Wardrobe[_character.Layers - i - 1].Type == "skip" && i < _character.Layers)
 					{
 						i++;
-                        if (i == _character.Layers) { break; }
-                    }
+						if (i == _character.Layers) { break; }
+					}
 				}
 				else
-                {
-                    while (_character.Wardrobe[_character.Layers - i - 1].Type == "skip" && i < _character.Layers)
-                    {
+				{
+					while (_character.Wardrobe[_character.Layers - i - 1].Type == "skip" && i < _character.Layers)
+					{
 						i++;
-                        if (i == _character.Layers) { break; }
-                    }
-                }
-                stageId = i;
-            }
+						if (i == _character.Layers) { break; }
+					}
+				}
+				stageId = i;
+			}
 			SkinnedDataGridViewComboBoxColumn col = gridDialogue.Columns["ColImage"] as SkinnedDataGridViewComboBoxColumn;
 			col.Items.Clear();
 			HashSet<PoseMapping> images = new HashSet<PoseMapping>();

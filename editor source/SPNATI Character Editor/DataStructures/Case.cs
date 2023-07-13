@@ -12,6 +12,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
+using System.Text.RegularExpressions;
 
 namespace SPNATI_Character_Editor
 {
@@ -969,13 +970,61 @@ namespace SPNATI_Character_Editor
 					}
 
 					bool result = !string.IsNullOrEmpty(c.FilterTag);
-					if (result)
+					if (result && c.Count != "0")
 					{
 						Character character = CharacterDatabase.Get(c.FilterTag);
 						result = (character == null);
 					}
+					if (result) { return true; }
+
+					result = !string.IsNullOrEmpty(c.FilterNotTag);
+					if (result && c.Count == "0")
+					{
+						Character character = CharacterDatabase.Get(c.FilterNotTag);
+						result = (character == null);
+					}
+					if (result) { return true; }
+
+					result = !string.IsNullOrEmpty(c.FilterTagAdv);
+					if (result)
+					{ 
+						string pattern = @"^([^\&\|]*)(\&?)([^\&\|]*)(\|?)([^\&\|]*)(\&?)([^\&\|]*)";
+						Regex reg = new Regex(pattern);
+						Match regMatch = reg.Match(c.FilterTagAdv);
+						if (!regMatch.Success)
+						{
+							return false;
+						}
+						else
+						{
+							bool allNeg = true;
+							for (int i = 1; i < 8; i += 2)
+							{
+								string val = regMatch.Groups[i].Value;
+								if (!string.IsNullOrEmpty(val))
+								{
+									if (!val.StartsWith("!"))
+									{
+										allNeg = false;
+									}
+								}
+							}
+							result = (!allNeg && c.Count != "0") || (allNeg && c.Count == "0");
+						}
+					}
 					return result;
 				});
+				if (!filtered)
+				{
+					filtered = Expressions.Any(c =>
+					{
+						if (!c.Expression.Contains(".tag.") || c.Expression.Contains("self.") || c.Value != "true")
+						{
+							return false;
+						}
+						return true;
+					});
+				}				
 				if (!filtered)
 				{
 					filtered = AlternativeConditions.Any(a => a.HasFilters);
@@ -1205,13 +1254,13 @@ namespace SPNATI_Character_Editor
 			{
 				response.Conditions.Add(cond.Copy());
 			}
-
+		
 			if ((caseIsTargetable && hasAlsoPlaying && !alsoPlayingIsResponder) || (!responseIsTargetable && !hasTarget && hasAlsoPlaying && !alsoPlayingIsResponder))
 			{
 				//for cases where AlsoPlaying is already in use, shift that character into a filter target condition
 				hasAlsoPlaying = false; //free this up for the responder to go into
 			}
-
+	
 			if (!caseIsTargetable && responseIsTargetable && !hasTarget && !hasAlsoPlaying)
 			{
 				CopySelfIntoTarget(response, speaker);
@@ -1255,7 +1304,7 @@ namespace SPNATI_Character_Editor
 			{
 				return null; //if I computed the truth table correctly, this should never happen
 			}
-
+			
 			string otherId = CharacterDatabase.GetId(responder);
 			foreach (ExpressionTest test in Expressions)
 			{
@@ -1380,9 +1429,9 @@ namespace SPNATI_Character_Editor
 		private bool HasTarget()
 		{
 			foreach (TargetCondition cond in Conditions)
-            {
+			{
 				if (cond.Role == "target") { return true; }
-            }
+			}
 
 			return false;
 		}
@@ -1425,13 +1474,13 @@ namespace SPNATI_Character_Editor
 			string condStage = null;
 
 			foreach (TargetCondition cond in Conditions)
-            {
+			{
 				if (cond.Role == "target" && !string.IsNullOrEmpty(cond.Stage))
-                {
+				{
 					condStage = cond.Stage;
 					break;
-                }
-            }
+				}
+			}
 
 			if (!string.IsNullOrEmpty(condStage))
 			{
@@ -1485,7 +1534,7 @@ namespace SPNATI_Character_Editor
 			}
 
 			for (int i = Conditions.Count - 1; i >= 0; i--)
-            {
+			{
 				if (Conditions[i].Role != "target") { continue; }
 
 				TargetCondition selfCond = new TargetCondition();
@@ -1493,10 +1542,10 @@ namespace SPNATI_Character_Editor
 				bool hasConds = false;
 
 				if (!string.IsNullOrEmpty(Conditions[i].Hand))
-                {
+				{
 					selfCond.Hand = Conditions[i].Hand;
 					hasConds = true;
-                }
+				}
 				if (!string.IsNullOrEmpty(Conditions[i].SaidMarker))
 				{
 					selfCond.SaidMarker = Conditions[i].SaidMarker;
@@ -1519,9 +1568,9 @@ namespace SPNATI_Character_Editor
 				}
 
 				if (hasConds)
-                {
+				{
 					Conditions.Add(selfCond);
-                }
+				}
 
 				if (!string.IsNullOrEmpty(Conditions[i].FilterTag))
 				{
@@ -1546,7 +1595,7 @@ namespace SPNATI_Character_Editor
 		/// </summary>
 		/// <param name="other"></param>
 		private void CopyAlsoPlaying(Case other)
-        {
+		{
 			foreach (TargetCondition cond in Conditions)
 			{
 				if (cond.Role == "other")
@@ -1788,11 +1837,11 @@ namespace SPNATI_Character_Editor
 			cond.Stage = speakerStageRange;
 
 			foreach (TargetCondition tCond in Conditions)
-            {
+			{
 				if(String.IsNullOrEmpty(tCond.TimeInStage))
-                {
+				{
 					cond.TimeInStage = tCond.TimeInStage;
-                }
+				}
 				if (String.IsNullOrEmpty(tCond.ConsecutiveLosses))
 				{
 					cond.ConsecutiveLosses = tCond.ConsecutiveLosses;
@@ -1833,13 +1882,13 @@ namespace SPNATI_Character_Editor
 					cond.SayingMarker = marker;
 
 					foreach (TargetCondition theCond in other.Conditions)
-                    {
+					{
 						if (theCond.Role == "target" && theCond.Character == speaker.FolderName && theCond.NotSaidMarker == marker)
-                        {
+						{
 							//if they had a not said marker for the same thing, clear that
 							theCond.NotSaidMarker = null;
 						}
-                    }
+					}
 				}
 			}
 
@@ -1938,6 +1987,44 @@ namespace SPNATI_Character_Editor
 						cond.Stage = null;
 					}
 				}
+
+				if (cond.Character == speaker.FolderName)
+				{
+					if (cond.NotSaidMarker != null)
+					{
+						foreach (Marker marker in speaker.Markers.Value.Values)
+						{
+							if (marker.Name == cond.NotSaidMarker)
+							{
+								if (marker.Scope == MarkerScope.Private)
+								{
+									cond.NotSaidMarker = null;
+								}
+								break;
+							}
+						}
+					}
+
+					if (cond.SaidMarker != null)
+					{ 
+						foreach (Marker marker in speaker.Markers.Value.Values)
+						{
+							MarkerOperator op;
+							string value;
+							bool perTarget;
+							string name = Marker.ExtractConditionPieces(cond.SaidMarker, out op, out value, out perTarget);
+							if (marker.Name == name)
+							{
+								if (marker.Scope == MarkerScope.Private)
+								{
+									cond.SaidMarker = null;
+								}
+								break;
+							}
+						}
+					}
+				}
+
 				if (cond.IsEmpty)
 				{
 					Conditions.RemoveAt(i);
@@ -1950,11 +2037,11 @@ namespace SPNATI_Character_Editor
 				for (int j = i - 1; j >= 0; j--)
 				{
 					if (Conditions[j].Role == Conditions[i].Role)
-                    {
+					{
 						if (Conditions[j].Role == "self" || Conditions[j].Character == Conditions[i].Character)
-                        {
+						{
 							if (String.IsNullOrEmpty(Conditions[j].Status) || Conditions[j].Status == Conditions[i].Status)
-                            {
+							{
 								Conditions[j].Status = Conditions[i].Status;
 								Conditions[i].Status = null;
 							}
@@ -2056,7 +2143,7 @@ namespace SPNATI_Character_Editor
 								if (i < 0) { break; }
 							}
 						}
-                    }
+					}
 				}
 			}
 		}
@@ -2373,29 +2460,29 @@ namespace SPNATI_Character_Editor
 				bool foundConflict = false;
 
 				foreach (TargetCondition cond in c.Conditions)
-                {
+				{
 					if (cond.Role != "self" && cond.Role != "target")
-                    {
+					{
 						foreach (TargetCondition otherCond in sourceCase.Conditions)
-                        {
+						{
 							if (cond.Role == otherCond.Role && cond.Character != otherCond.Character)
-                            {
+							{
 								foundConflict = true; //conflict; they're checking for different also playings. Okay, it's not technically a conflict, but it's highly unlikely they want to respond to this case
 								break;
-                            }
-                        }
+							}
+						}
 
 						if (foundConflict) { break; }
-                    }
+					}
 
 					if (cond.Role == "self")
-                    {
+					{
 						foreach (TargetCondition otherCond in sourceCase.Conditions)
 						{
 							if (otherCond.Role != "target") { continue; }
 
 							if (!string.IsNullOrEmpty(otherCond.SaidMarker) && cond.NotSaidMarker == otherCond.SaidMarker)
-                            {
+							{
 								foundConflict = true; //if they're looking for a marker and the other is looking for not having the marker, then it's a clear conflict of interests
 								break;
 							}
@@ -2445,7 +2532,7 @@ namespace SPNATI_Character_Editor
 
 						if (foundConflict) { break; }
 					}
-                }
+				}
 
 				if (foundConflict) { continue; }
 
@@ -2456,7 +2543,7 @@ namespace SPNATI_Character_Editor
 			return cases;
 		}
 
-		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+		#pragma warning disable IDE0051
 		private bool FilterTargetByCase(IRecord record)
 		{
 			Character character = record as Character;
@@ -2478,6 +2565,7 @@ namespace SPNATI_Character_Editor
 			}
 			return false;
 		}
+		#pragma warning restore IDE0051
 
 		/// <summary>
 		/// Gets whether at least one line touches a collectible
@@ -2519,9 +2607,9 @@ namespace SPNATI_Character_Editor
 			List<string> list = new List<string>();
 
 			foreach (TargetCondition cond in Conditions)
-            {
+			{
 				if (cond.Role == "self" && !string.IsNullOrEmpty(cond.SaidMarker) && (!cond.SaidMarker.Contains("!=") || cond.SaidMarker.EndsWith("!=0")) && !cond.SaidMarker.EndsWith("==0"))
-                {
+				{
 					int splitIndex = cond.SaidMarker.IndexOfAny(new char[] { '=', '>', '<', '!' });
 					if (splitIndex > 0)
 					{
@@ -2532,7 +2620,7 @@ namespace SPNATI_Character_Editor
 						list.Add(cond.SaidMarker);
 					}
 				}
-            }
+			}
 			foreach (ExpressionTest test in Expressions)
 			{
 				if (test.Expression.StartsWith("~marker.") || test.Expression.StartsWith("~self.marker."))
@@ -2771,10 +2859,10 @@ namespace SPNATI_Character_Editor
 		/// Removes extraneous conditions to leave only the bare minimum
 		/// </summary>
 		public void SimplifyConditions()
-        {
-            return; //disable for now until fixed
+		{
+			return; //disable for now until fixed
 
-            for (int i = Conditions.Count - 1; i>= 0; i--)
+			for (int i = Conditions.Count - 1; i>= 0; i--)
 			{
 				TargetCondition condition = Conditions[i];
 				if (string.IsNullOrEmpty(condition.SayingMarker))

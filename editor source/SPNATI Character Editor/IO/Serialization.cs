@@ -226,9 +226,9 @@ namespace SPNATI_Character_Editor
 				deleteTags = true;
 			}
 			if (name == "meta" && CharacterDatabase.GetEditorData(character).Height != null)
-            {
+			{
 				deleteHeight = true;
-            }
+			}
 
 			if (ExportXml(data, filename, deleteTags, deleteHeight))
 			{

@@ -680,51 +680,51 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 		private bool MarkerTest(string value1, MarkerOperator op, string value2)
 		{
-            switch (op)
-            {
-                case MarkerOperator.Equals:
-                    if (value1 == value2)
-                    {
-                        return true;
-                    }
-                    break;
-                case MarkerOperator.LessThan:
-                    if (int.TryParse(value1, out int val1) && int.TryParse(value2, out int val2))
-                        if (val1 < val2)
-                        {
-                            return true;
-                        }
-                    break;
-                case MarkerOperator.LessThanOrEqual:
-                    if (int.TryParse(value1, out int val3) && int.TryParse(value2, out int val4))
-                        if (val3 <= val4)
-                        {
-                            return true;
-                        }
-                    break;
-                case MarkerOperator.GreaterThan:
-                    if (int.TryParse(value1, out int val5) && int.TryParse(value2, out int val6))
-                        if (val5 > val6)
-                        {
-                            return true;
-                        }
-                    break;
-                case MarkerOperator.GreaterThanOrEqual:
-                    if (int.TryParse(value1, out int val7) && int.TryParse(value2, out int val8))
-                        if (val7 >= val8)
-                        {
-                            return true;
-                        }
-                    break;
-                default: //NotEqual
-                    if (value1 != value2)
-                    {
-                        return true;
-                    }
-                    break;
-            }
+			switch (op)
+			{
+				case MarkerOperator.Equals:
+					if (value1 == value2)
+					{
+						return true;
+					}
+					break;
+				case MarkerOperator.LessThan:
+					if (int.TryParse(value1, out int val1) && int.TryParse(value2, out int val2))
+						if (val1 < val2)
+						{
+							return true;
+						}
+					break;
+				case MarkerOperator.LessThanOrEqual:
+					if (int.TryParse(value1, out int val3) && int.TryParse(value2, out int val4))
+						if (val3 <= val4)
+						{
+							return true;
+						}
+					break;
+				case MarkerOperator.GreaterThan:
+					if (int.TryParse(value1, out int val5) && int.TryParse(value2, out int val6))
+						if (val5 > val6)
+						{
+							return true;
+						}
+					break;
+				case MarkerOperator.GreaterThanOrEqual:
+					if (int.TryParse(value1, out int val7) && int.TryParse(value2, out int val8))
+						if (val7 >= val8)
+						{
+							return true;
+						}
+					break;
+				default: //NotEqual
+					if (value1 != value2)
+					{
+						return true;
+					}
+					break;
+			}
 			return false;
-        }
+		}
 
 		public bool HiddenByMarker(List<string> markers)
 		{
@@ -739,26 +739,26 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 						string op = "";
 						string value = "";
 						string pattern = @"^([-\w\.]+)(\s*(\=\=|\=)?\s*([-\w]+|~[-\w]+~))?$";
-	                    Regex regex = new Regex(pattern);
-		                Match match = regex.Match(marker);
+						Regex regex = new Regex(pattern);
+						Match match = regex.Match(marker);
 
-                        if (match.Success)
-                        {
-                            name = match.Groups[1].Value;
-                            op = match.Groups[3].Value;
-                            value = match.Groups[4].Value;
+						if (match.Success)
+						{
+							name = match.Groups[1].Value;
+							op = match.Groups[3].Value;
+							value = match.Groups[4].Value;
 
 							if (string.IsNullOrEmpty(op) || string.IsNullOrEmpty(value))
 							{
 								value = "1";
 							}
 
-                        }
-                        else
-                        {
+						}
+						else
+						{
 							name = marker;
 							value = "1";
-                        }
+						}
 
 						if (name == MarkerName)
 						{

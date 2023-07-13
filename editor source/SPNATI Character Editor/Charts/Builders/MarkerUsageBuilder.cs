@@ -25,14 +25,14 @@ namespace SPNATI_Character_Editor.Charts.Builders
 				foreach (Case stageCase in c.Behavior.EnumerateSourceCases())
 				{
 					foreach (TargetCondition cond in stageCase.Conditions)
-                    {
+					{
 						if (!string.IsNullOrEmpty(cond.Character) && CharacterDatabase.Exists(cond.Character))
-                        {
+						{
 							TrackMarker(markers, cond.Character, cond.SaidMarker);
 							TrackMarker(markers, cond.Character, cond.NotSaidMarker);
 							TrackMarker(markers, cond.Character, cond.SayingMarker);
 						}
-                    }
+					}
 				}
 			}
 			foreach (var kvp in markers)

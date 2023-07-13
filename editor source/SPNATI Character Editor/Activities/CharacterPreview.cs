@@ -43,12 +43,12 @@ namespace SPNATI_Character_Editor.Activities
 			}
 
 			_posePreviewMarkers = CharacterDatabase.GetEditorData(_character).PosePreviewMarkers;
-            SubscribeWorkspace<DialogueLine>(WorkspaceMessages.PreviewLine, UpdatePreview);
+			SubscribeWorkspace<DialogueLine>(WorkspaceMessages.PreviewLine, UpdatePreview);
 			SubscribeWorkspace<UpdateImageArgs>(WorkspaceMessages.UpdatePreviewImage, UpdatePreviewImage);
 			SubscribeWorkspace<List<string>>(WorkspaceMessages.UpdateMarkers, UpdateMarkers);
-            SubscribeWorkspace<Character>(WorkspaceMessages.PreviewCharacterChanged, RepopulateSkinCombo);
-            Workspace.SendMessage(WorkspaceMessages.UpdateMarkers, Enumerable.Empty<string>());
-            UpdateLineCount();
+			SubscribeWorkspace<Character>(WorkspaceMessages.PreviewCharacterChanged, RepopulateSkinCombo);
+			Workspace.SendMessage(WorkspaceMessages.UpdateMarkers, Enumerable.Empty<string>());
+			UpdateLineCount();
 		}
 
 		protected override void OnActivate()
@@ -143,7 +143,7 @@ namespace SPNATI_Character_Editor.Activities
 		private void UpdatePreviewImage(UpdateImageArgs data)
 		{
 			if (data == null)
-            {
+			{
 				picPortrait.RefreshImage();
 			}
 			else if (data.Image != null)
