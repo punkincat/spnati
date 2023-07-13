@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SPNATI_Character_Editor.Activities
 {
@@ -82,6 +83,7 @@ namespace SPNATI_Character_Editor.Activities
 					{
 						foreach (string skinFolder in Directory.EnumerateDirectories(path))
 						{
+							lblProgress.BeginInvoke(new MethodInvoker(delegate { lblProgress.Text = $"Loading {skinFolder.Split(new [] {"opponents\\"}, StringSplitOptions.None)[1]}..."; }));
 							Costume reskin = Serialization.ImportSkin(skinFolder);
 							if (reskin != null)
 							{
@@ -250,7 +252,10 @@ namespace SPNATI_Character_Editor.Activities
 
 		private Task LoadChunk(string caption, int progress, Action action)
 		{
-			lblProgress.Text = $"Loading {caption}...";
+			if (caption != "reskins")
+			{
+				lblProgress.Text = $"Loading {caption}...";
+			}
 			progressBar.Value = Math.Min(progressBar.Maximum, progress);
 			return Task.Run(action);
 		}
