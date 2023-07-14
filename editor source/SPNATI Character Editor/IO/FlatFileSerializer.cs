@@ -771,10 +771,10 @@ namespace SPNATI_Character_Editor
 					case "pic":
 						character.Metadata.Portrait.Image = value;
 						break;
-                    case "default costume":
-                        character.Metadata.DefaultCostumeName = value;
-                        break;
-                    case "from":
+					case "default costume":
+						character.Metadata.DefaultCostumeName = value;
+						break;
+					case "from":
 						character.Metadata.Source = value;
 						break;
 					case "writer":

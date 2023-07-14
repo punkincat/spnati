@@ -1284,14 +1284,14 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
         return player.gender;
     case 'intelligence':
         return player.intelligence;
-	case 'tostutter':
-		var n = Math.min(Math.max((parseInt(args, 10) || 1), 1), 10);
-		var name = expandNicknames(self, player);
-		var ret = name;
-		for (var i = 0; i < n; i++) {
-			ret = name[0] + "-" + ret;
-		}
-		return ret;
+    case 'tostutter':
+        var n = Math.min(Math.max((parseInt(args, 10) || 1), 1), 10);
+        var name = expandNicknames(self, player);
+        var ret = name;
+        for (var i = 0; i < n; i++) {
+            ret = name[0] + "-" + ret;
+        }
+        return ret;
     case 'ifmale':
         return args.split('|')[(player.gender == 'male' ? 0 : 1)];
     case 'place':
@@ -1346,7 +1346,7 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
                 if ([IMPORTANT_ARTICLE, MAJOR_ARTICLE, MINOR_ARTICLE, EXTRA_ARTICLE].indexOf(keyword) >= 0) {
                     types.push(keyword);
                 } else if ([UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE, OTHER_ARTICLE,
-                            'arms', 'feet', 'hands', 'head', 'legs', 'neck', 'waist'].indexOf(keyword) >= 0) {
+                            'arms', 'feet', 'hands', 'head', 'legs', 'neck', 'waist', 'held'].indexOf(keyword) >= 0) {
                     positions.push(keyword);
                 } else {
                     names.push(keyword);

@@ -114,12 +114,12 @@ namespace SPNATI_Character_Editor
 			get { return ""; }
 		}
 
-        public int Layers
+		public int Layers
 		{
 			get { return Wardrobe.Count; }
 		}
 
-        [XmlElement("layers")]
+		[XmlElement("layers")]
 		public int LayersNonSkip { get; set; }
 
 		public override string ToString()
@@ -129,17 +129,17 @@ namespace SPNATI_Character_Editor
 
 		public void OnBeforeSerialize() {
 
-            int countUnskipped = 0;
-            foreach (Clothing c in Wardrobe)
-            {
-                if (c != null && c.Type != "skip")
-                {
-                    countUnskipped++;
-                }
-            }
+			int countUnskipped = 0;
+			foreach (Clothing c in Wardrobe)
+			{
+				if (c != null && c.Type != "skip")
+				{
+					countUnskipped++;
+				}
+			}
 
 			LayersNonSkip = countUnskipped;
-        }
+		}
 
 		public void OnAfterDeserialize(string source)
 		{

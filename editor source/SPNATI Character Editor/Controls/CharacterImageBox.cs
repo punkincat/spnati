@@ -213,7 +213,7 @@ namespace SPNATI_Character_Editor.Controls
 		}
 
 		public void RefreshImage()
-        {
+		{
 			Destroy();
 
 			UpdateSceneTransform();

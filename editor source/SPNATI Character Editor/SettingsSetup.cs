@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using Desktop.CommonControls;
 
 namespace SPNATI_Character_Editor
 {
@@ -49,6 +50,9 @@ namespace SPNATI_Character_Editor
 			chkSafeMode.Checked = Config.SafeMode;
 			chkLegacyPoses.Checked = Config.ShowLegacyPoseTabs;
 			txtAutoOpen.Text = Config.GetString(Settings.AutoOpenCharacter);
+			recResponder.RecordType = typeof(Character);
+			recResponder.RecordFilter = ResponderFilter;
+			recResponder.Record = CharacterDatabase.GetById(Config.DefaultResponder);
 
 			HashSet<string> pauses = Config.AutoPauseDirectives;
 			foreach (DirectiveDefinition def in Definitions.Instance.Get<DirectiveDefinition>())
@@ -72,6 +76,16 @@ namespace SPNATI_Character_Editor
 			{
 				chkStatuses.Items.Add(status, statusFilters.Contains(status));
 			}
+		}
+
+		private bool ResponderFilter(IRecord record)
+		{
+			Character character = record as Character;
+			if (character.FolderName == "human")
+			{
+				return false;
+			}
+			return true;
 		}
 
 		private void cmdBrowse_Click(object sender, EventArgs e)
@@ -155,6 +169,14 @@ namespace SPNATI_Character_Editor
 			Config.MaxFranchisePartners = (int)valFranchise.Value;
 			Config.AutoPopulateStageImages = chkAutoFill.Checked;
 			Config.WarnAboutIncompleteStatus = chkWarnIncomplete.Checked;
+			if (recResponder.Record != null)
+			{
+				Config.DefaultResponder = CharacterDatabase.GetId(recResponder.Record as Character);
+			}
+			else
+			{
+				Config.DefaultResponder = "";
+			}
 
 			bool oldSafeMode = Config.SafeMode;
 			Config.SafeMode = chkSafeMode.Checked;
@@ -193,7 +215,7 @@ namespace SPNATI_Character_Editor
 		}
 
 
-        private void cmdBrowseKisekae_Click(object sender, EventArgs e)
+		private void cmdBrowseKisekae_Click(object sender, EventArgs e)
 		{
 			if (!string.IsNullOrEmpty(txtKisekae.Text))
 			{
@@ -298,6 +320,18 @@ namespace SPNATI_Character_Editor
 		private void chkSafeMode_CheckedChanged(object sender, EventArgs e)
 		{
 			chkHideImages.Checked = !chkSafeMode.Checked;
+		}
+
+		private void recResponder_RecordChanged(object sender, RecordEventArgs e)
+		{
+			if (recResponder.Record != null)
+			{
+				Config.DefaultResponder = CharacterDatabase.GetId(recResponder.Record as Character);
+			}
+			else
+			{
+				Config.DefaultResponder = "";
+			}
 		}
 	}
 }

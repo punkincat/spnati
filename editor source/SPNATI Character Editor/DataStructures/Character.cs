@@ -135,7 +135,7 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
-        [XmlElement("timer")]
+		[XmlElement("timer")]
 		public int Stamina
 		{
 			get { return Get<int>(); }
@@ -575,27 +575,27 @@ namespace SPNATI_Character_Editor
 						int index = layer - 1;
 						Clothing lastClothes = Wardrobe[Layers - 1 - index];
 						Clothing clothes = Wardrobe[Layers - 1 - layer];
-                        if (lastClothes.ToString() != "SKIP")
-                        {
+						if (lastClothes.ToString() != "SKIP")
+						{
 							label = "Lost " + lastClothes.ToString();
 						}
-                        else
-                        {
-                            if (clothes.ToString() == "SKIP")
-                            {
-                                label = "EMPTY STAGE";
-                            }
-                            else
-                            {
-                                do
-                                {
-                                    index--;
-                                    clothes = Wardrobe[Layers - 1 - index];
-                                } while (clothes.ToString() == "SKIP");
-                                label = "Lost " + clothes.ToString();
-                            }
-                        }
-                    }
+						else
+						{
+							if (clothes.ToString() == "SKIP")
+							{
+								label = "EMPTY STAGE";
+							}
+							else
+							{
+								do
+								{
+									index--;
+									clothes = Wardrobe[Layers - 1 - index];
+								} while (clothes.ToString() == "SKIP");
+								label = "Lost " + clothes.ToString();
+							}
+						}
+					}
 					else if (layer == Wardrobe.Count)
 					{
 						label = "Naked";
@@ -705,29 +705,29 @@ namespace SPNATI_Character_Editor
 
 			// dumb and also bad
 			foreach (Pose pose in Poses)
-            {
+			{
 				foreach (Sprite sp in pose.Sprites)
-                {
+				{
 					if (sp.Src.Contains(FolderName + "/"))
-                    {
+					{
 						sp.Src = sp.Src.Substring(FolderName.Length + 1);
 
 						// dumber and also worse (I mean REALLY bad, I hate it)
 						foreach (Character c in CharacterDatabase.Characters)
-                        {
+						{
 							if (sp.Src.StartsWith(c.FolderName + "/"))
-                            {
+							{
 								sp.Src = "../" + sp.Src;
 								break;
-                            }
-                        }
-                    }
+							}
+						}
+					}
 				}
 
 				foreach (Directive dir in pose.Directives)
-                {
+				{
 					foreach (Keyframe keyf in dir.Keyframes)
-                    {
+					{
 						if (!String.IsNullOrEmpty(keyf.Src) && keyf.Src.Contains(FolderName + "/"))
 						{
 							keyf.Src = keyf.Src.Substring(FolderName.Length + 1);
@@ -743,8 +743,8 @@ namespace SPNATI_Character_Editor
 							}
 						}
 					}
-                }
-            }
+				}
+			}
 
 			Behavior.Serializing = false;
 		}
@@ -771,12 +771,12 @@ namespace SPNATI_Character_Editor
 
 				// dumb and also bad
 				foreach (Sprite sp in pose.Sprites)
-                {
+				{
 					if (!sp.Src.Contains(FolderName + "/"))
 					{
 						sp.Src = FolderName + "/" + sp.Src;
 					}
-                }
+				}
 
 				foreach (Directive dir in pose.Directives)
 				{
@@ -898,8 +898,8 @@ namespace SPNATI_Character_Editor
 						if (img.Image != null)
 						{
 							foreach (int stage in img.Stages)
-                            {
-                                usedStages.Add(stage);
+							{
+								usedStages.Add(stage);
 								string imgToAdd = img.Image.Replace("#", stage.ToString());
 								if (imgToAdd.Contains("custom:") && !imgToAdd.Contains(stage.ToString()))
 								{
@@ -1060,13 +1060,13 @@ namespace SPNATI_Character_Editor
 					bool directlyTargeted = false;
 
 					foreach (TargetCondition cond in stageCase.Conditions)
-                    {
+					{
 						if (cond.Character == character.FolderName)
-                        {
+						{
 							directlyTargeted = true;
 							break;
-                        }
-                    }
+						}
+					}
 
 					if (directlyTargeted)
 						count++;
@@ -1140,13 +1140,13 @@ namespace SPNATI_Character_Editor
 		}
 
 		public List<Clothing> GetConvertedWardrobe()
-        {
+		{
 			List<Clothing> ConvertedWardrobe = new List<Clothing>();
 			
 			foreach (Clothing c in Wardrobe)
-            {
+			{
 				ConvertedWardrobe.Add(c.Copy());
-            }
+			}
 
 			int lowestMajorUpper = 1000;
 			int lowestMajorLower = 1000;
@@ -1168,9 +1168,9 @@ namespace SPNATI_Character_Editor
 				}
 
 				if (importantUpper != 1000 && importantLower != 1000)
-                {
+				{
 					break;
-                }
+				}
 			}
 
 			// if both chest and crotch are exposed at once, no important upper
@@ -1194,13 +1194,13 @@ namespace SPNATI_Character_Editor
 				}
 
 				if (lowestMajorUpper != 1000 && lowestMajorLower != 1000)
-                {
+				{
 					break;
 				}
-            }
+			}
 
 			if (lowestMajorLower < importantLower)
-            {
+			{
 				ConvertedWardrobe[lowestMajorLower].Type = "important";
 				ConvertedWardrobe[lowestMajorLower].Position = "lower";
 			}

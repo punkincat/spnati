@@ -44,12 +44,12 @@ namespace SPNATI_Character_Editor
 		/// </summary>
 		public const int UpdateMarkers = 8;
 
-        /// <summary>
-        /// Sent to inform the case control to save the case notes (the case folder name etc.)
-        /// </summary>
-        public const int SaveCaseNotes = 9;
+		/// <summary>
+		/// Sent to inform the case control to save the case notes (the case folder name etc.)
+		/// </summary>
+		public const int SaveCaseNotes = 9;
 
-    }
+	}
 
 	public class UpdateImageArgs
 	{

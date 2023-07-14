@@ -41,7 +41,7 @@ namespace SPNATI_Character_Editor
 		public List<PoseMapping> GetPoses(int stage)
 		{
 			List<PoseMapping> list = new List<PoseMapping>();
-            CharacterEditorData editorData = CharacterDatabase.GetEditorData(_character);
+			CharacterEditorData editorData = CharacterDatabase.GetEditorData(_character);
 
 			if (editorData != null)
 			{
@@ -74,10 +74,10 @@ namespace SPNATI_Character_Editor
 			return list;
 		}
 
-        public List<PoseMapping> GetPortraitPoses()
-        {
-            List<PoseMapping> list = new List<PoseMapping>();
-            CharacterEditorData editorData = CharacterDatabase.GetEditorData(_character);
+		public List<PoseMapping> GetPortraitPoses()
+		{
+			List<PoseMapping> list = new List<PoseMapping>();
+			CharacterEditorData editorData = CharacterDatabase.GetEditorData(_character);
 
 			if (editorData != null)
 			{
@@ -91,18 +91,18 @@ namespace SPNATI_Character_Editor
 			}
 			else
 			{
-                foreach (PoseMapping pose in Poses)
-                {
-                    if (pose.ContainsStage(0))
-                    {
-                        list.Add(pose);
-                    }
-                }
-            }
-            return list;
-        }
+				foreach (PoseMapping pose in Poses)
+				{
+					if (pose.ContainsStage(0))
+					{
+						list.Add(pose);
+					}
+				}
+			}
+			return list;
+		}
 
-        private bool Filter(PoseMapping pose, CharacterEditorData editorData)
+		private bool Filter(PoseMapping pose, CharacterEditorData editorData)
 		{
 			string key = pose.Key;
 			if (editorData.OnlyCustomPoses && !key.StartsWith("custom:"))
@@ -119,24 +119,24 @@ namespace SPNATI_Character_Editor
 			return false;
 		}
 
-        private bool FilterPortrait(PoseMapping pose, CharacterEditorData editorData)
-        {
-            string key = pose.Key;
+		private bool FilterPortrait(PoseMapping pose, CharacterEditorData editorData)
+		{
+			string key = pose.Key;
 			if (key.StartsWith("custom:"))
 			{
 				return true;
 			}			
-            foreach (string p in editorData.IgnoredPrefixes)
-            {
-                if (key.StartsWith(p))
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
+			foreach (string p in editorData.IgnoredPrefixes)
+			{
+				if (key.StartsWith(p))
+				{
+					return true;
+				}
+			}
+			return false;
+		}
 
-        private void Initialize()
+		private void Initialize()
 		{
 			string dir = _character.GetDirectory();
 			if (string.IsNullOrEmpty(dir))

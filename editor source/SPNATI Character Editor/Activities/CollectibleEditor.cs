@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using Desktop.Skinning;
 using SPNATI_Character_Editor.Controls;
@@ -196,9 +196,9 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			table.Save();
 
-            foreach (AlternateSkin alt in _character.Metadata.AlternateSkins)
-            {
-                foreach (SkinLink link in alt.Skins)
+			foreach (AlternateSkin alt in _character.Metadata.AlternateSkins)
+			{
+				foreach (SkinLink link in alt.Skins)
 				{
 					if (link.Collectible != null)
 					{
@@ -263,15 +263,16 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				UpdatePreview();
 			}
+
 			else if (e.PropertyName == "Extra")
-            {
+			{
 				ToggleClothingVisibility();
 				ToggleCostumeVisibility();
 			}
 		}
 
 		private void ToggleClothingVisibility()
-        {
+		{
 			Collectible collectible = _selectedItem.Tag as Collectible;
 
 			Control[] rows = table.Controls.Find("PropertyTableRow", true);
@@ -286,24 +287,24 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-        private void ToggleCostumeVisibility()
-        {
-            Collectible collectible = _selectedItem.Tag as Collectible;
+		private void ToggleCostumeVisibility()
+		{
+			Collectible collectible = _selectedItem.Tag as Collectible;
 
-            Control[] rows = table.Controls.Find("PropertyTableRow", true);
-            String[] names = { "Costume" };
+			Control[] rows = table.Controls.Find("PropertyTableRow", true);
+			String[] names = { "Costume" };
 
-            foreach (PropertyTableRow c in rows)
-            {
-                if (names.Contains(c.Record.Key))
-                {
-                    c.Visible = collectible.costumeUnlock;
-                }
-            }
-        }
+			foreach (PropertyTableRow c in rows)
+			{
+				if (names.Contains(c.Record.Key))
+				{
+					c.Visible = collectible.costumeUnlock;
+				}
+			}
+		}
 
  
-        private void UpdatePreview()
+		private void UpdatePreview()
 		{
 			Collectible collectible = _selectedItem.Tag as Collectible;
 			if (collectible != null)

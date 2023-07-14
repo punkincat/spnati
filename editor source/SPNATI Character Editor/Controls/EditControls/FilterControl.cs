@@ -103,9 +103,9 @@ namespace SPNATI_Character_Editor
 			{
 				string count = values[0];
 				string tag = values[1];
-                string nottag = values[2];
+				string nottag = values[2];
 				string tagAdv = values[3];
-                string gender = values[4];
+				string gender = values[4];
 				string status = values[5];
 				if (string.IsNullOrEmpty(gender))
 				{
@@ -123,23 +123,23 @@ namespace SPNATI_Character_Editor
 				{
 					_filter.FilterTag = tag;
 				}
-                if (string.IsNullOrEmpty(nottag))
-                {
-                    _filter.FilterNotTag = null;
-                }
-                else
-                {
-                    _filter.FilterNotTag = nottag;
-                }
-                if (string.IsNullOrEmpty(tagAdv))
-                {
-                    _filter.FilterTagAdv = null;
-                }
-                else
-                {
-                    _filter.FilterTagAdv = tagAdv;
-                }
-                SetCount(count);
+				if (string.IsNullOrEmpty(nottag))
+				{
+					_filter.FilterNotTag = null;
+				}
+				else
+				{
+					_filter.FilterNotTag = nottag;
+				}
+				if (string.IsNullOrEmpty(tagAdv))
+				{
+					_filter.FilterTagAdv = null;
+				}
+				else
+				{
+					_filter.FilterTagAdv = tagAdv;
+				}
+				SetCount(count);
 
 				_filter.Status = status;
 
@@ -175,14 +175,14 @@ namespace SPNATI_Character_Editor
 		{
 			string count = GetCount() ?? "";
 			string tag = _filter.FilterTag ?? "";
-            string nottag = _filter.FilterNotTag ?? "";
-            string tagAdv = _filter.FilterTagAdv ?? "";
-            string gender = _filter.Gender ?? "";
+			string nottag = _filter.FilterNotTag ?? "";
+			string tagAdv = _filter.FilterTagAdv ?? "";
+			string gender = _filter.Gender ?? "";
 			values.Add(count);
 			values.Add(tag);
-            values.Add(nottag);
+			values.Add(nottag);
 			values.Add(tagAdv);
-            values.Add(gender);
+			values.Add(gender);
 			values.Add(_filter.Status);
 			values.Add(_filter.Role);
 			values.Add(_filter.Variable);

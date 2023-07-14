@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using SPNATI_Character_Editor.Forms;
 using System;
 using System.Windows.Forms;
@@ -170,7 +170,7 @@ namespace SPNATI_Character_Editor.Controls
 			SaveEnding();
 			Config.LastEnding = ending?.Title ?? "";
 			_ending = ending;
-			if (_ending.Version == 0)
+			if (_ending!= null && _ending.Version == 0)
 			{
 				using (EpilogueSelectForm form = new EpilogueSelectForm())
 				{
@@ -185,28 +185,31 @@ namespace SPNATI_Character_Editor.Controls
 			tableGeneral.Context = new EpilogueContext(_character, _ending, null);
 			tableGeneral.Data = _ending;
 
-			if (_ending.Version != _version)
+			if (_ending != null)
 			{
-				_version = _ending.Version;
-				if (_version == 1)
+				if (_ending.Version != _version)
 				{
-					tabs.TabPages.Add(pageScenes);
-					tabs.TabPages.Remove(pageEditor);
+					_version = _ending.Version;
+					if (_version == 1)
+					{
+						tabs.TabPages.Add(pageScenes);
+						tabs.TabPages.Remove(pageEditor);
+					}
+					else
+					{
+						tabs.TabPages.Add(pageEditor);
+						tabs.TabPages.Remove(pageScenes);
+					}
+				}
+
+				if (_ending.Version == 2)
+				{
+					liveEditor.SetEpilogue(_character, _ending);
 				}
 				else
 				{
-					tabs.TabPages.Add(pageEditor);
-					tabs.TabPages.Remove(pageScenes);
+					canvas.SetEpilogue(_ending, _character);
 				}
-			}
-
-			if (_ending.Version == 2)
-			{
-				liveEditor.SetEpilogue(_character, _ending);
-			}
-			else
-			{
-				canvas.SetEpilogue(_ending, _character);
 			}
 
 			if (ending != null)
@@ -293,10 +296,13 @@ namespace SPNATI_Character_Editor.Controls
 			_ending = null;
 			LoadEnding(null);
 			PopulateEndingCombo();
+			tabs.TabPages.Remove(pageScenes);
+			tabs.TabPages.Remove(pageEditor);
+			gridMarkers.SetMarkers(null, _character);
 			if (_character.Endings.Count > 0)
 			{
 				cboEnding.SelectedIndex = 0;
 			}
 		}
-    }
+	}
 }

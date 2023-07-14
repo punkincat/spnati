@@ -207,23 +207,23 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				foreach (string charToLoad in autoloadCharacter.Split(','))
 				{
-                    if (failedCharacters.Contains(charToLoad))
-                    {
-                        ShellLogic.RecoverCharacter(charToLoad);
-                    }
+					if (failedCharacters.Contains(charToLoad))
+					{
+						ShellLogic.RecoverCharacter(charToLoad);
+					}
 					else
-                    {
-                        if (CharacterDatabase.Get(charToLoad) != null)
-                        {
-                            Character autoload = CharacterDatabase.Load(charToLoad);
-                            Shell.Instance.LaunchWorkspace(autoload);
-                        }
+					{
+						if (CharacterDatabase.Get(charToLoad) != null)
+						{
+							Character autoload = CharacterDatabase.Load(charToLoad);
+							Shell.Instance.LaunchWorkspace(autoload);
+						}
 						else if (CharacterDatabase.GetSkin($"opponents/reskins/{charToLoad}/") != null)
 						{
 							Costume autoload = CharacterDatabase.GetSkin($"opponents/reskins/{charToLoad}/");
 							Shell.Instance.LaunchWorkspace<Costume>(autoload);
 						}
-                    }
+					}
 				}
 			}
 			else if (!string.IsNullOrEmpty(lastCharacter))

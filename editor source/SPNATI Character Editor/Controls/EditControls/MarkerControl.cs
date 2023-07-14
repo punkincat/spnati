@@ -38,10 +38,10 @@ namespace SPNATI_Character_Editor
 		private bool FilterPrivateMarkers(IRecord record)
 		{
 			TargetCondition condition = Data as TargetCondition;
-            if (condition != null && condition.Role == "self")
-            {
-                return true;
-            }
+			if (condition != null && condition.Role == "self")
+			{
+				return true;
+			}
 
 			Marker marker = record as Marker;
 			return marker.Scope == MarkerScope.Public;

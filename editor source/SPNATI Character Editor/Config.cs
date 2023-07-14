@@ -141,10 +141,10 @@ namespace SPNATI_Character_Editor
 					ReadLegacySettings(filename);
 				}
 				else
-                {
+				{
 					// default settings
 					Set("autosave", 10);
-                }
+				}
 			}
 		}
 
@@ -730,6 +730,12 @@ namespace SPNATI_Character_Editor
 			}
 
 			return false;
+		}
+
+		public static string DefaultResponder
+		{
+			get { return GetString("defaultResponder"); }
+			set { Set("defaultResponder", value); }
 		}
 	}
 

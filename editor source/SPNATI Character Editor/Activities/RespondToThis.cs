@@ -83,10 +83,10 @@ namespace SPNATI_Character_Editor.Activities
 				imgResponse.SetImage(image, stage);
 			}
 			DialogueLine dialogueLine = responseControl.GetLine(line);
-            if (!string.IsNullOrEmpty(dialogueLine.Text))
-            {
-                imgResponse.SetText(dialogueLine, _responder.Metadata.TextSize.ToString());
-            }
+			if (!string.IsNullOrEmpty(dialogueLine.Text))
+			{
+				imgResponse.SetText(dialogueLine, _responder.Metadata.TextSize.ToString());
+			}
 		}
 
 		public override bool CanDeactivate(DeactivateArgs args)

@@ -12,8 +12,6 @@ namespace SPNATI_Character_Editor.Activities
 	[Tutorial("https://www.youtube.com/watch?v=LtoaFoN-RaQ&list=PL171KBpYNIxNEgFoI-eZSKC38HLP_YNJ8")]
 	public partial class DialogueEditor : Activity
 	{
-		private const string FavoriteConditionsSetting = "FavoritedConditions";
-
 		private Character _character;
 		private CharacterEditorData _editorData;
 		private Stage _selectedStage;
@@ -195,10 +193,10 @@ namespace SPNATI_Character_Editor.Activities
 			_pendingWardrobeChange = true;
 		}
 
-        private void OnSaveCaseNotes()
-        {
+		private void OnSaveCaseNotes()
+		{
 			caseControl.SaveNotes();
-        }
+		}
 
 		private void OnSkinChanged()
 		{
@@ -361,7 +359,15 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				last = "";
 			}
-			Character responder = RecordLookup.DoLookup(typeof(Character), last, false, CharacterDatabase.FilterHuman, true, null) as Character;
+			Character responder;
+			if (!string.IsNullOrEmpty(Config.DefaultResponder))
+			{
+				responder = CharacterDatabase.GetById(Config.DefaultResponder);
+			}
+			else
+			{
+				responder = RecordLookup.DoLookup(typeof(Character), last, false, CharacterDatabase.FilterHuman, true, null) as Character;
+			}
 			if (responder != null)
 			{
 				if (!responder.IsFullyLoaded)
@@ -588,10 +594,10 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-        private void cmdRefreshImages_Click(object sender, EventArgs e)
-        {
+		private void cmdRefreshImages_Click(object sender, EventArgs e)
+		{
 			_character.PoseLibrary.initialized = false;
 			caseControl.UpdateAvailableImages();
-        }
-    }
+		}
+	}
 }

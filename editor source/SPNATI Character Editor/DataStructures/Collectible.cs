@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls.PropertyControls;
 using Desktop.DataStructures;
 using SPNATI_Character_Editor.Categories;
@@ -116,14 +116,14 @@ namespace SPNATI_Character_Editor.DataStructures
 			set { Set(value); }
 		}
 
-        [DefaultValue("")]
-        [ComboBox(DisplayName = "Extra", Description = "Is it a simple collectible, or does it unlock a costume for the character or a wearable item for the player", GroupOrder = 129, Options = new string[] {
-            "wearable",
-            "unlocks a costume",
-        })]
-        public string Extra
-        {
-            get 
+		[DefaultValue("")]
+		[ComboBox(DisplayName = "Extra", Description = "Is it a simple collectible, or does it unlock a costume for the character or a wearable item for the player", GroupOrder = 129, Options = new string[] {
+			"wearable",
+			"unlocks a costume",
+		})]
+		public string Extra
+		{
+			get 
 			{
 				if (Wearable) 
 				{
@@ -138,34 +138,34 @@ namespace SPNATI_Character_Editor.DataStructures
 					return "";
 				}
 			}
-            set 
+			set 
 			{ 
 				if (value == "wearable")
 				{
 					Wearable = true;
-                    if (clothing == null)
-                    {
-                        clothing = new Clothing();
-                    }
+					if (clothing == null)
+					{
+						clothing = new Clothing();
+					}
 					costumeUnlock = false;
 					costumeFolder = "";
-                }
+				}
 				else if (value == "unlocks a costume")
 				{
 					Wearable = false;
-                    clothing = null;
+					clothing = null;
 					costumeUnlock = true;
-                }
+				}
 				else
 				{
 					Wearable = false;
 					clothing = null;
 					costumeUnlock = false;
-                    costumeFolder = "";
-                }
+					costumeFolder = "";
+				}
 
-                Set(value); }
-        }
+				Set(value); }
+		}
 
 		[RecordSelect(RecordType = typeof(Costume), AllowCreate = false, DisplayName = "Costume", Description = "The costume that this collectible unlocks", GroupOrder = 150, RecordFilter = "FilterCostume")]
 		[DefaultValue("")]
@@ -185,30 +185,31 @@ namespace SPNATI_Character_Editor.DataStructures
 			}
 		}
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        private bool FilterCostume(IRecord record)
-        {
-            if (Character == null)
-            {
-                return false;
-            }
-            Costume costume = record as Costume;
+		#pragma warning disable IDE0051
+		private bool FilterCostume(IRecord record)
+		{
+			if (Character == null)
+			{
+				return false;
+			}
+			Costume costume = record as Costume;
 			return costume.Character == Character;
-        }
+		}
+		#pragma warning restore IDE0051
 
-        [XmlElement("costume")]
-        [DefaultValue(false)]
-        public bool costumeUnlock;
+		[XmlElement("costume")]
+		[DefaultValue(false)]
+		public bool costumeUnlock;
 
-        [XmlElement("costume-folder")]
-        [DefaultValue("")]
-        public string costumeFolder;
+		[XmlElement("costume-folder")]
+		[DefaultValue("")]
+		public string costumeFolder;
 
 		[XmlElement("wearable")]
 		[DefaultValue(false)]
-        public bool Wearable;
+		public bool Wearable;
 
-        [XmlElement("clothing")]
+		[XmlElement("clothing")]
 		public Clothing clothing;
 
 		[Text(DisplayName = "ClothingName", Description = "The name of the wearable form of this item, as used in characters' dialogue", GroupOrder = 140)]
