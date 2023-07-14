@@ -34,21 +34,21 @@ namespace SPNATI_Character_Editor.Activities
 		private bool _filterOld;
 
 		private bool _filterMain;
-        private bool _filterTesting;
-        private bool _filterOffline;
-        private bool _filterIncomplete;
-        private bool _filterEvent;
-        private bool _filterDuplicate;
-        private bool _filterUnlisted;
+		private bool _filterTesting;
+		private bool _filterOffline;
+		private bool _filterIncomplete;
+		private bool _filterEvent;
+		private bool _filterDuplicate;
+		private bool _filterUnlisted;
 
 		private bool _filterToOne;
 		private Character _oneCharacter;
 
-        public BanterWizard()
+		public BanterWizard()
 		{
 			InitializeComponent();
-            recOneCharacter.RecordType = typeof(Character);
-        }
+			recOneCharacter.RecordType = typeof(Character);
+		}
 
 		public override string Caption
 		{
@@ -67,25 +67,25 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			_character = Record as Character;
 			_character.IsDirty = true;
-            _path = Path.Combine(Config.GetString(Settings.GameDirectory), "opponents/" + _character.FolderName + "/banter.xml");
-            ColJump.Flat = true;
+			_path = Path.Combine(Config.GetString(Settings.GameDirectory), "opponents/" + _character.FolderName + "/banter.xml");
+			ColJump.Flat = true;
 			if(!File.Exists(_path))
-            {
-                cmdUpdateBanter.Text = "Generate";
+			{
+				cmdUpdateBanter.Text = "Generate";
 				cmdSaveBanter.Enabled = false;
 				cmdLoadBanter.Enabled = false;
-            }
+			}
 			else
 			{
 				cmdUpdateBanter.Text = "Generate/Update";
-                toolTip1.SetToolTip(this.cmdUpdateBanter, "Update banter data. Use this after pulling other characters' updates from Git.\nYour unsaved changes will be discarded.");
-                cmdSaveBanter.Enabled = true;
+				toolTip1.SetToolTip(this.cmdUpdateBanter, "Update banter data. Use this after pulling other characters' updates from Git.\nYour unsaved changes will be discarded.");
+				cmdSaveBanter.Enabled = true;
 				cmdLoadBanter.Enabled = true;
 			}
 			cmdCreateResponse.Visible = false;
-            panelLoad.BringToFront();
+			panelLoad.BringToFront();
 			progressBar.Visible = false;
-        }
+		}
 
 		protected override void OnFirstActivate()
 		{
@@ -93,78 +93,78 @@ namespace SPNATI_Character_Editor.Activities
 			HideResponses();
 			lblCharacters.Text = string.Format(lblCharacters.Text, _character);
 			lstCharacters.Sorted = true;
-            _filterToColor = false;
+			_filterToColor = false;
 			chkColorFilter.Checked = false;
 			_filterToOne = false;
 			chkOneCharacter.Checked = false;
-            _filterNew = true;
+			_filterNew = true;
 			_filterModText = true;
 			_filterModCond = true;
 			_filterOld = true;
 			chkLineFiltering.SetItemChecked(0, true);
-            chkLineFiltering.SetItemChecked(1, true);
-            chkLineFiltering.SetItemChecked(2, true);
-            chkLineFiltering.SetItemChecked(3, true);
+			chkLineFiltering.SetItemChecked(1, true);
+			chkLineFiltering.SetItemChecked(2, true);
+			chkLineFiltering.SetItemChecked(3, true);
 
 			_filterMain = true;
 			_filterTesting = true;
 			_filterOffline = false;
 			_filterIncomplete = false;
-            _filterEvent = false;
-            _filterDuplicate = false;
+			_filterEvent = false;
+			_filterDuplicate = false;
 			_filterUnlisted = false;
 			chkCharacterFiltering.SetItemChecked(0, true);
-            chkCharacterFiltering.SetItemChecked(1, true);
-            chkCharacterFiltering.SetItemChecked(2, false);
-            chkCharacterFiltering.SetItemChecked(3, false);
-            chkCharacterFiltering.SetItemChecked(4, false);
-            chkCharacterFiltering.SetItemChecked(5, false);
-            chkCharacterFiltering.SetItemChecked(6, false);
-        }
+			chkCharacterFiltering.SetItemChecked(1, true);
+			chkCharacterFiltering.SetItemChecked(2, false);
+			chkCharacterFiltering.SetItemChecked(3, false);
+			chkCharacterFiltering.SetItemChecked(4, false);
+			chkCharacterFiltering.SetItemChecked(5, false);
+			chkCharacterFiltering.SetItemChecked(6, false);
+		}
 
 		protected override void OnActivate()
 		{
-            if (!File.Exists(_path))
-            {
-                cmdUpdateBanter.Text = "Generate";
-                cmdSaveBanter.Enabled = false;
-                cmdLoadBanter.Enabled = false;
-            }
-            else
-            {
-                cmdUpdateBanter.Text = "Generate/Update";
-                cmdSaveBanter.Enabled = true;
-                cmdLoadBanter.Enabled = true;
-            }
+			if (!File.Exists(_path))
+			{
+				cmdUpdateBanter.Text = "Generate";
+				cmdSaveBanter.Enabled = false;
+				cmdLoadBanter.Enabled = false;
+			}
+			else
+			{
+				cmdUpdateBanter.Text = "Generate/Update";
+				cmdSaveBanter.Enabled = true;
+				cmdLoadBanter.Enabled = true;
+			}
 			if (_selectedCharacter != null && _currentInbound != null)
 			{
-                int stage;
-                if (_currentInbound.StageRange == "10")
-                {
-                    stage = 10;
-                }
-                else
-                {
-                    stage = int.Parse(_currentInbound.StageRange[0].ToString());
-                }
+				int stage;
+				if (_currentInbound.StageRange == "10")
+				{
+					stage = 10;
+				}
+				else
+				{
+					stage = int.Parse(_currentInbound.StageRange[0].ToString());
+				}
 
-                PoseMapping pose = _selectedCharacter.PoseLibrary.GetPose(_currentInbound.Img);
-                if (pose != null)
-                {
-                    Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_selectedCharacter, pose, stage));
-                }
+				PoseMapping pose = _selectedCharacter.PoseLibrary.GetPose(_currentInbound.Img);
+				if (pose != null)
+				{
+					Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_selectedCharacter, pose, stage));
+				}
 
-                DialogueLine dialogueLine = new DialogueLine();
-                dialogueLine.Text = _currentInbound.Text;
-                Workspace.SendMessage(WorkspaceMessages.PreviewLine, dialogueLine);
-            }
-        }
+				DialogueLine dialogueLine = new DialogueLine();
+				dialogueLine.Text = _currentInbound.Text;
+				Workspace.SendMessage(WorkspaceMessages.PreviewLine, dialogueLine);
+			}
+		}
 
 		protected override void OnParametersUpdated(params object[] parameters)
 		{
 		}
 
-        public override bool CanQuit(CloseArgs args)
+		public override bool CanQuit(CloseArgs args)
 		{
 			if (_loading)
 			{
@@ -186,8 +186,8 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			if (_character != null)
 			{
-                Workspace.SendMessage(WorkspaceMessages.PreviewCharacterChanged, _character);
-            }
+				Workspace.SendMessage(WorkspaceMessages.PreviewCharacterChanged, _character);
+			}
 		}
 
 		private void lstCharacters_SelectedIndexChanged(object sender, EventArgs e)
@@ -201,33 +201,33 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				_selectedCharacter = lstCharacters.SelectedItem as Character;
 				BanterTargetedLines(_selectedCharacter);
-                Workspace.SendMessage(WorkspaceMessages.PreviewCharacterChanged, _selectedCharacter);
-                SelectLine(0);
+				Workspace.SendMessage(WorkspaceMessages.PreviewCharacterChanged, _selectedCharacter);
+				SelectLine(0);
 				cmdCreateResponse.Visible = true;
 			}
-        }
-        private bool CharacterFiltering(string folderName)
-        {
+		}
+		private bool CharacterFiltering(string folderName)
+		{
 			string status = Listing.Instance.GetCharacterStatus(folderName);
 
-            if (status == OpponentStatus.Main)
-                return _filterMain;
-            if (status == OpponentStatus.Testing)
-                return _filterTesting;
-            if (status == OpponentStatus.Offline)
-                return _filterOffline;
-            if (status == OpponentStatus.Incomplete)
-                return _filterIncomplete;
-            if (status == OpponentStatus.Event)
-                return _filterEvent;
-            if (status == OpponentStatus.Duplicate)
-                return _filterDuplicate;
-            if (status == OpponentStatus.Unlisted)
-                return _filterUnlisted;
-            return true;
-        }
+			if (status == OpponentStatus.Main)
+				return _filterMain;
+			if (status == OpponentStatus.Testing)
+				return _filterTesting;
+			if (status == OpponentStatus.Offline)
+				return _filterOffline;
+			if (status == OpponentStatus.Incomplete)
+				return _filterIncomplete;
+			if (status == OpponentStatus.Event)
+				return _filterEvent;
+			if (status == OpponentStatus.Duplicate)
+				return _filterDuplicate;
+			if (status == OpponentStatus.Unlisted)
+				return _filterUnlisted;
+			return true;
+		}
 
-        private bool LineFiltering(InboundLine line)
+		private bool LineFiltering(InboundLine line)
 		{
 			if (_filterToColor)
 			{
@@ -272,9 +272,9 @@ namespace SPNATI_Character_Editor.Activities
 					count++;
 				}
 			}
-            gridLines.Visible = (count > 0);
-            lblNoMatches.Visible = (count == 0);
-        }
+			gridLines.Visible = (count > 0);
+			lblNoMatches.Visible = (count == 0);
+		}
 
 
 		private void gridLines_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -282,66 +282,66 @@ namespace SPNATI_Character_Editor.Activities
 			SelectLine(e.RowIndex);
 		}
 
-        private void ShowBasicLines(Character character, Case workingCase)
-        {
+		private void ShowBasicLines(Character character, Case workingCase)
+		{
 
-            //show the default lines that the character is probably reacting to
-            lstBasicLines.Items.Clear();
+			//show the default lines that the character is probably reacting to
+			lstBasicLines.Items.Clear();
 
-            List<Case> possibleCases = Case.GetMatchingCases(workingCase, character, _character);
-            if (possibleCases.Count == 0) { return; }
+			List<Case> possibleCases = Case.GetMatchingCases(workingCase, character, _character);
+			if (possibleCases.Count == 0) { return; }
 
-            int index = -1;
+			int index = -1;
 
-            for (int i = 0; i < possibleCases.Count; i++)
-            {
-                if (Character.IsCaseTargetedAtCharacter(possibleCases[i], character, TargetType.DirectTarget))
-                {
-                    index = i;
-                    break;
-                }
+			for (int i = 0; i < possibleCases.Count; i++)
+			{
+				if (Character.IsCaseTargetedAtCharacter(possibleCases[i], character, TargetType.DirectTarget))
+				{
+					index = i;
+					break;
+				}
 
-                foreach (DialogueLine ln in possibleCases[i].Lines)
-                {
-                    if (!string.IsNullOrEmpty(ln.Marker) && workingCase.Conditions.Find((c => c.Character == _character.FolderName && c.SayingMarker == ln.Marker)) != null)
-                    {
-                        index = i;
-                        break;
-                    }
+				foreach (DialogueLine ln in possibleCases[i].Lines)
+				{
+					if (!string.IsNullOrEmpty(ln.Marker) && workingCase.Conditions.Find((c => c.Character == _character.FolderName && c.SayingMarker == ln.Marker)) != null)
+					{
+						index = i;
+						break;
+					}
 
-                    foreach (MarkerOperation marker in ln.Markers)
-                    {
-                        if (workingCase.Conditions.Find((c => c.Character == _character.FolderName && c.SayingMarker == marker.Name)) != null)
-                        {
-                            index = i;
-                            break;
-                        }
-                    }
+					foreach (MarkerOperation marker in ln.Markers)
+					{
+						if (workingCase.Conditions.Find((c => c.Character == _character.FolderName && c.SayingMarker == marker.Name)) != null)
+						{
+							index = i;
+							break;
+						}
+					}
 
-                    if (index != -1) { break; }
+					if (index != -1) { break; }
 
-                    if (workingCase.Conditions.Find((c => c.Character == _character.FolderName && c.Saying == ln.Text)) != null)
-                    {
-                        index = i;
-                        break;
-                    }
-                }
+					if (workingCase.Conditions.Find((c => c.Character == _character.FolderName && c.Saying == ln.Text)) != null)
+					{
+						index = i;
+						break;
+					}
+				}
 
-                if (index != -1) { break; }
-            }
+				if (index != -1) { break; }
+			}
 
-            if (index != -1)
-            {
-                lblBasicText.Text = possibleCases[index].ToString();
-                foreach (var line in possibleCases[index].Lines)
-                {
-                    lstBasicLines.Items.Add(line);
-                }
-            }
-            return;
-        }
+			if (index != -1)
+			{
+				lblBasicText.Text = possibleCases[index].ToString();
+				foreach (var line in possibleCases[index].Lines)
+				{
+					lstBasicLines.Items.Add(line);
+				}
+			}
+			return;
+		}
 
-        private void CheckForResponses(Character character, string text)
+		private void CheckForResponses(Character character, string text)
 		{
 			foreach (Case workingCase in character.Behavior.GetWorkingCases())
 			{
@@ -373,12 +373,12 @@ namespace SPNATI_Character_Editor.Activities
 							if (!hasResponses)
 							{
 								ShowBasicLines(character, workingCase);
-                            }
+							}
 
-                            _selectedCase = workingCase;
-                        }
+							_selectedCase = workingCase;
+						}
 
-                        return;
+						return;
 					}
 				}
 			}
@@ -396,9 +396,9 @@ namespace SPNATI_Character_Editor.Activities
 				_currentInbound = inbound;
 				SetColorButton(inbound.ColorCode);
 				grpBaseLine.Text = string.Format("{0} may be reacting to these lines from {1}:", c, _character);
-                CheckForResponses(c, inbound.Text);
+				CheckForResponses(c, inbound.Text);
 
-                int stage;
+				int stage;
 				if (inbound.StageRange == "10")
 				{
 					stage = 10;
@@ -417,7 +417,7 @@ namespace SPNATI_Character_Editor.Activities
 				dialogueLine.Text = inbound.Text;
 				Workspace.SendMessage(WorkspaceMessages.PreviewLine, dialogueLine);
 
-            }
+			}
 			else
 			{
 				lstBasicLines.Items.Clear();
@@ -432,13 +432,13 @@ namespace SPNATI_Character_Editor.Activities
 			if (ctlResponse.Visible)
 			{
 				image = ctlResponse.GetImage(index);
-                Workspace.SendMessage(WorkspaceMessages.PreviewLine, ctlResponse.GetLine(index));
-            }
+				Workspace.SendMessage(WorkspaceMessages.PreviewLine, ctlResponse.GetLine(index));
+			}
 			else
 			{
 				image = gridResponse.GetImage(index);
-                Workspace.SendMessage(WorkspaceMessages.PreviewLine, gridResponse.GetLine(index));
-            }
+				Workspace.SendMessage(WorkspaceMessages.PreviewLine, gridResponse.GetLine(index));
+			}
 			if (image != null)
 			{
 				Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_character, image, _workingResponse.Stages[0]));
@@ -510,7 +510,7 @@ namespace SPNATI_Character_Editor.Activities
 				}
 				_workingResponse = null;
 				_selectedCase = null;
-            }
+			}
 		}
 		
 		private void ShowResponse(Case response, bool editing)
@@ -581,25 +581,25 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			ctlResponse.Save();
 			_character.Behavior.AddWorkingCase(_workingResponse);
-            BanterTargetedLines(_selectedCharacter);
-            SelectLine(0);
-        }
+			BanterTargetedLines(_selectedCharacter);
+			SelectLine(0);
+		}
 
 		private void cmdDiscard_Click(object sender, EventArgs e)
 		{
 			HideResponses();
 		}
 
-        private void gridLines_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
+		private void gridLines_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+		{
 			if (e.RowIndex >= 0)
 			{
 				InboundLine line = gridLines.Rows[e.RowIndex]?.Cells["ColText"].Tag as InboundLine;
-                if (line == null)
-                {
-                    return;
-                }
-                if (e.ColumnIndex == ColJump.Index)
+				if (line == null)
+				{
+					return;
+				}
+				if (e.ColumnIndex == ColJump.Index)
 				{
 					Image img = Properties.Resources.GoToLine;
 					e.Paint(e.CellBounds, DataGridViewPaintParts.All);
@@ -616,10 +616,10 @@ namespace SPNATI_Character_Editor.Activities
 					if (line.ColorCode == null)
 					{
 						e.CellStyle.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
-                    }
+					}
 					else
 					{
-                        ColorCode code = Definitions.Instance.Get<ColorCode>(line.ColorCode);
+						ColorCode code = Definitions.Instance.Get<ColorCode>(line.ColorCode);
 						if (code == null)
 						{
 							e.CellStyle.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
@@ -627,28 +627,28 @@ namespace SPNATI_Character_Editor.Activities
 						else
 						{
 							e.CellStyle.BackColor = code.GetColor();
-                        }
+						}
 					}
 				}
 			}
-        }
+		}
 
-        private void gridLines_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex == ColJump.Index)
-            {
-                Character c = gridLines.Rows[e.RowIndex]?.Tag as Character;
-                if (!c.IsFullyLoaded)
-                {
-                    c = CharacterDatabase.Load(c.FolderName);
-                }
-                string text = gridLines.Rows[e.RowIndex]?.Cells["ColText"].Value as string;
+		private void gridLines_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			if (e.RowIndex >= 0 && e.ColumnIndex == ColJump.Index)
+			{
+				Character c = gridLines.Rows[e.RowIndex]?.Tag as Character;
+				if (!c.IsFullyLoaded)
+				{
+					c = CharacterDatabase.Load(c.FolderName);
+				}
+				string text = gridLines.Rows[e.RowIndex]?.Cells["ColText"].Value as string;
 				if (c == null || string.IsNullOrEmpty(text))
-                {
-                    return;
-                }
+				{
+					return;
+				}
 
-                foreach (Case workingCase in c.Behavior.GetWorkingCases())
+				foreach (Case workingCase in c.Behavior.GetWorkingCases())
 				{
 					foreach(DialogueLine dialogueLine in workingCase.Lines)
 					{
@@ -657,13 +657,13 @@ namespace SPNATI_Character_Editor.Activities
 							Shell.Instance.Launch<Character, DialogueEditor>(c, new ValidationContext(new Stage(workingCase.Stages[0]), workingCase, dialogueLine));
 							return;
 						}
-                    }
+					}
 				}
-            }
-        }
+			}
+		}
 
-        private void cmdSaveBanter_Click(object sender, EventArgs e)
-        {
+		private void cmdSaveBanter_Click(object sender, EventArgs e)
+		{
 			if (_character.BanterData.Timestamp == 0)
 			{
 				MessageBox.Show("No banter data to save.");
@@ -671,51 +671,51 @@ namespace SPNATI_Character_Editor.Activities
 			else
 			{
 				_character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-                Serialization.BackupBanter(_character, Convert.ToString(_character.BanterData.Timestamp));
-                cmdLoadBanter.Enabled = true;
-            }
-        }
+				Serialization.BackupBanter(_character, Convert.ToString(_character.BanterData.Timestamp));
+				cmdLoadBanter.Enabled = true;
+			}
+		}
 
 		private void GenerateBanterXML()
 		{
 			_character.BanterData.LinkOwner(_character);
 			_character.BanterData.WriteCEVersion();
-            _character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+			_character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 			ListCharacters();
 			cmdSaveBanter.Enabled = true;
 		}
 
 		private void BeginLoading()
 		{
-            _loading = true;
-            Cursor.Current = Cursors.WaitCursor;
-            splitContainer1.Panel1.Enabled = false;
-            splitContainer2.Visible = false;
-            panelLoad.Visible = true;
-            progressBar.Visible = true;
+			_loading = true;
+			Cursor.Current = Cursors.WaitCursor;
+			splitContainer1.Panel1.Enabled = false;
+			splitContainer2.Visible = false;
+			panelLoad.Visible = true;
+			progressBar.Visible = true;
 			progressBar.Value = 0;
-            lblProgress.Visible = true;
-            lstCharacters.Items.Clear();
-            gridLines.Rows.Clear();
-        }
+			lblProgress.Visible = true;
+			lstCharacters.Items.Clear();
+			gridLines.Rows.Clear();
+		}
 
 		private void EndLoading()
 		{
-            panelLoad.Visible = false;
-            progressBar.Visible = false;
-            lblProgress.Visible = false;
-            splitContainer2.Visible = true;
-            splitContainer1.Panel1.Enabled = true;
-            Cursor.Current = Cursors.Default;
-            _loading = false;
-        }
+			panelLoad.Visible = false;
+			progressBar.Visible = false;
+			lblProgress.Visible = false;
+			splitContainer2.Visible = true;
+			splitContainer1.Panel1.Enabled = true;
+			Cursor.Current = Cursors.Default;
+			_loading = false;
+		}
 
 
-        private void ListCharacters()
-        {
+		private void ListCharacters()
+		{
 			BeginLoading();
 
-            List<string> folderNames = new List<string>();
+			List<string> folderNames = new List<string>();
 
 			if (_filterToOne && _oneCharacter != null)
 			{
@@ -737,17 +737,17 @@ namespace SPNATI_Character_Editor.Activities
 				folderNames = folderNames.Distinct().ToList();
 			}
 
-            progressBar.Maximum = Math.Max(1,folderNames.Count);
+			progressBar.Maximum = Math.Max(1,folderNames.Count);
 			int count = 0;
-            foreach (string folderName in folderNames)
-            {
-                progressBar.Value = count++;
-                lblProgress.Text = "Scanning " + folderName + "...";
-                lblProgress.Refresh();
-                if (!CharacterDatabase.Exists(folderName))
-                {
-                    continue;
-                }
+			foreach (string folderName in folderNames)
+			{
+				progressBar.Value = count++;
+				lblProgress.Text = "Scanning " + folderName + "...";
+				lblProgress.Refresh();
+				if (!CharacterDatabase.Exists(folderName))
+				{
+					continue;
+				}
 				Character loaded = CharacterDatabase.Get(folderName);
 				if (!loaded.IsFullyLoaded)
 				{ 
@@ -759,22 +759,22 @@ namespace SPNATI_Character_Editor.Activities
 				{
 					lstCharacters.Items.Add(loaded);
 				}	
-            }
+			}
 
 			EndLoading();
-        }
+		}
 
-        private void ListCharactersFromFile()
-        {
+		private void ListCharactersFromFile()
+		{
 			BeginLoading();
 
-            _character.BanterData = Serialization.ImportBanter(_character.FolderName);
-            _character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+			_character.BanterData = Serialization.ImportBanter(_character.FolderName);
+			_character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 
 			progressBar.Maximum = _character.BanterData.TargetingCharacters.Count;
-            int count = 0;
-            foreach (TargetingCharacter ch in _character.BanterData.TargetingCharacters)
-            {
+			int count = 0;
+			foreach (TargetingCharacter ch in _character.BanterData.TargetingCharacters)
+			{
 				if (_filterToOne && _oneCharacter != null)
 				{
 					if (_oneCharacter.FolderName != ch.Id)
@@ -783,52 +783,52 @@ namespace SPNATI_Character_Editor.Activities
 						continue;
 					}
 				}
-                if (!CharacterFiltering(ch.Id))
-                {
-                    progressBar.Value = count++;
-                    continue;
-                }
-                progressBar.Value = count++;
-                lblProgress.Text = "Loading " + ch.Id + "...";
+				if (!CharacterFiltering(ch.Id))
+				{
+					progressBar.Value = count++;
+					continue;
+				}
+				progressBar.Value = count++;
+				lblProgress.Text = "Loading " + ch.Id + "...";
 				lblProgress.Refresh();
-                if (ch.InboundCount > 0)
-                {
-                    Character loaded = CharacterDatabase.Get(ch.Id);
-                    if (!loaded.IsFullyLoaded)
-                    {
-                        loaded = CharacterDatabase.Load(ch.Id);
-                    }
+				if (ch.InboundCount > 0)
+				{
+					Character loaded = CharacterDatabase.Get(ch.Id);
+					if (!loaded.IsFullyLoaded)
+					{
+						loaded = CharacterDatabase.Load(ch.Id);
+					}
 					lstCharacters.Items.Add(loaded);
-                }
-            }
+				}
+			}
 
 			EndLoading();
-        }
+		}
 
 		private void ReListCharacters()
 		{
 			BeginLoading();
 
-            progressBar.Maximum = _character.BanterData.TargetingCharacters.Count;
-            int count = 0;
-            foreach (TargetingCharacter ch in _character.BanterData.TargetingCharacters)
-            {
-                if (_filterToOne && _oneCharacter != null)
-                {
+			progressBar.Maximum = _character.BanterData.TargetingCharacters.Count;
+			int count = 0;
+			foreach (TargetingCharacter ch in _character.BanterData.TargetingCharacters)
+			{
+				if (_filterToOne && _oneCharacter != null)
+				{
 					if (_oneCharacter.FolderName != ch.Id)
 					{
-                        progressBar.Value = count++;
-                        continue;
+						progressBar.Value = count++;
+						continue;
 					}
-                }
-                if (!CharacterFiltering(ch.Id))
-                {
-                    progressBar.Value = count++;
-                    continue;
-                }
-                progressBar.Value = count++;
-                lblProgress.Text = "Loading " + ch.Id + "...";
-                lblProgress.Refresh();
+				}
+				if (!CharacterFiltering(ch.Id))
+				{
+					progressBar.Value = count++;
+					continue;
+				}
+				progressBar.Value = count++;
+				lblProgress.Text = "Loading " + ch.Id + "...";
+				lblProgress.Refresh();
 				int matchingLineCount = 0;
 
 				foreach (InboundLine inbound in ch.Inbounds)
@@ -839,20 +839,20 @@ namespace SPNATI_Character_Editor.Activities
 					}
 				}
 
-                if (matchingLineCount > 0)
-                {
+				if (matchingLineCount > 0)
+				{
 					Character loaded = CharacterDatabase.Get(ch.Id);
 					if (!loaded.IsFullyLoaded)
 					{
 						loaded = CharacterDatabase.Load(ch.Id);
 					}
-                    lstCharacters.Items.Add(loaded);
-                }
-            }
+					lstCharacters.Items.Add(loaded);
+				}
+			}
 
-            EndLoading();
+			EndLoading();
 
-        }
+		}
 
 		private void UpdateBanter()
 		{
@@ -860,8 +860,8 @@ namespace SPNATI_Character_Editor.Activities
 
 			if (_character.BanterData.Timestamp == 0)
 			{
-                _character.BanterData = Serialization.ImportBanter(_character.FolderName);
-            }
+				_character.BanterData = Serialization.ImportBanter(_character.FolderName);
+			}
 
 			int count = 0;
 
@@ -894,16 +894,16 @@ namespace SPNATI_Character_Editor.Activities
 				lblProgress.Text = "Scanning " + folderName + "...";
 				lblProgress.Refresh();
 
-                if (!CharacterDatabase.Exists(folderName))
-                {
-                    continue;
-                }
-                Character loaded = CharacterDatabase.Get(folderName);
+				if (!CharacterDatabase.Exists(folderName))
+				{
+					continue;
+				}
+				Character loaded = CharacterDatabase.Get(folderName);
 				if (!loaded.IsFullyLoaded)
 				{
 					loaded = CharacterDatabase.Load(folderName);
 				}
-                int index = _character.BanterData.TargetingCharacters.FindIndex(x => x.Id == folderName);
+				int index = _character.BanterData.TargetingCharacters.FindIndex(x => x.Id == folderName);
 
 				if (index == -1)
 				{
@@ -921,11 +921,11 @@ namespace SPNATI_Character_Editor.Activities
 					{
 						line.Newness = "";
 					}
-                    if (_character.BanterData.TargetingCharacters[index].InboundCount > 0)
-                    {
-                        lstCharacters.Items.Add(loaded);
-                    }
-                    continue;
+					if (_character.BanterData.TargetingCharacters[index].InboundCount > 0)
+					{
+						lstCharacters.Items.Add(loaded);
+					}
+					continue;
 				}
 				else
 				{
@@ -936,8 +936,8 @@ namespace SPNATI_Character_Editor.Activities
 
 					Dictionary<DialogueLine, Case> behaviourLines = new Dictionary<DialogueLine, Case>();
 
-                    foreach (Case stageCase in loaded.GetWorkingCasesTargetedAtCharacter(_character, TargetType.DirectTarget))
-                    {
+					foreach (Case stageCase in loaded.GetWorkingCasesTargetedAtCharacter(_character, TargetType.DirectTarget))
+					{
 						foreach (DialogueLine dialogueLine in stageCase.Lines)
 						{
 							InboundLine inbound = _character.BanterData.TargetingCharacters[index].Inbounds.Find(x => x.Text == dialogueLine.Text);
@@ -947,13 +947,13 @@ namespace SPNATI_Character_Editor.Activities
 							}
 							else
 							{
-                                int stageCaseHash = 1;
-                                foreach (TargetCondition condition in stageCase.Conditions)
-                                {
-                                    stageCaseHash *= condition.GetHashCode();
-                                }
+								int stageCaseHash = 1;
+								foreach (TargetCondition condition in stageCase.Conditions)
+								{
+									stageCaseHash *= condition.GetHashCode();
+								}
 
-                                if (stageCaseHash != inbound.Condition)
+								if (stageCaseHash != inbound.Condition)
 								{
 									inbound.Newness = "C";
 									inbound.Condition = stageCaseHash;
@@ -964,13 +964,13 @@ namespace SPNATI_Character_Editor.Activities
 								}
 							}
 
-                        }
-                    }
+						}
+					}
 
-                    List<InboundLine> banterLines = new List<InboundLine>();
-                    List<InboundLine> linesToRemove = new List<InboundLine>();
+					List<InboundLine> banterLines = new List<InboundLine>();
+					List<InboundLine> linesToRemove = new List<InboundLine>();
 
-                    if (behaviourLines.Count > 0) 
+					if (behaviourLines.Count > 0) 
 					{ 
 						foreach (InboundLine line in _character.BanterData.TargetingCharacters[index].Inbounds)
 						{
@@ -998,77 +998,77 @@ namespace SPNATI_Character_Editor.Activities
 								}
 								if (minRatio < 0.35F)
 								{
-                                    InboundLine inbound = _character.BanterData.TargetingCharacters[index].Inbounds.Find(x => x.Text == banterLines[minLineIndex].Text);
-                                    int stageCaseHash = 1;
-                                    foreach (TargetCondition condition in kvp.Value.Conditions)
-                                    {
-                                        stageCaseHash *= condition.GetHashCode();
-                                    }
+									InboundLine inbound = _character.BanterData.TargetingCharacters[index].Inbounds.Find(x => x.Text == banterLines[minLineIndex].Text);
+									int stageCaseHash = 1;
+									foreach (TargetCondition condition in kvp.Value.Conditions)
+									{
+										stageCaseHash *= condition.GetHashCode();
+									}
 
-                                    if (stageCaseHash != inbound.Condition)
-                                    {
-                                        inbound.Newness = "B";
-                                        inbound.Condition = stageCaseHash;
+									if (stageCaseHash != inbound.Condition)
+									{
+										inbound.Newness = "B";
+										inbound.Condition = stageCaseHash;
 										inbound.Text = kvp.Key.Text;
-                                    }
-                                    else
-                                    {
-                                        inbound.Newness = "T";
+									}
+									else
+									{
+										inbound.Newness = "T";
 										inbound.Text = kvp.Key.Text;
-                                    }
-                                    banterLines.RemoveAt(minLineIndex);
+									}
+									banterLines.RemoveAt(minLineIndex);
 								}
 								else
 								{
-                                    InboundLine inboundLine = new InboundLine(kvp.Value, kvp.Key);
-                                    _character.BanterData.TargetingCharacters[index].Inbounds.Add(inboundLine);
-                                }
+									InboundLine inboundLine = new InboundLine(kvp.Value, kvp.Key);
+									_character.BanterData.TargetingCharacters[index].Inbounds.Add(inboundLine);
+								}
 							}
 						}
 						else
 						{
 							foreach (KeyValuePair< DialogueLine, Case> kvp in behaviourLines)
 							{
-                                InboundLine inboundLine = new InboundLine(kvp.Value, kvp.Key);
-                                _character.BanterData.TargetingCharacters[index].Inbounds.Add(inboundLine);
-                            }
-                        }
-                    }
+								InboundLine inboundLine = new InboundLine(kvp.Value, kvp.Key);
+								_character.BanterData.TargetingCharacters[index].Inbounds.Add(inboundLine);
+							}
+						}
+					}
 
-                    foreach (InboundLine line in _character.BanterData.TargetingCharacters[index].Inbounds)
-                    {
-                        if (line.Newness == "X")
-                        {
-                                linesToRemove.Add(line);
-                        }
-                    }
-                    
+					foreach (InboundLine line in _character.BanterData.TargetingCharacters[index].Inbounds)
+					{
+						if (line.Newness == "X")
+						{
+								linesToRemove.Add(line);
+						}
+					}
+					
 					foreach (InboundLine line in linesToRemove)
 					{
 						_character.BanterData.TargetingCharacters[index].Inbounds.Remove(line);
 					}
 
-                    _character.BanterData.TargetingCharacters[index].InboundCount = _character.BanterData.TargetingCharacters[index].Inbounds.Count;
+					_character.BanterData.TargetingCharacters[index].InboundCount = _character.BanterData.TargetingCharacters[index].Inbounds.Count;
 
-                    if (_character.BanterData.TargetingCharacters[index].InboundCount > 0)
-                    {
-                        lstCharacters.Items.Add(loaded);
-                    }
-                }
+					if (_character.BanterData.TargetingCharacters[index].InboundCount > 0)
+					{
+						lstCharacters.Items.Add(loaded);
+					}
+				}
 			}
 
 			_character.BanterData.TargetingCharacters = _character.BanterData.TargetingCharacters.OrderBy(x => x?.Id).ToList();
 
-            _character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-            _character.BanterData.WriteCEVersion();
+			_character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+			_character.BanterData.WriteCEVersion();
 
 			EndLoading();
 		}
 
 		private void cmdUpdateBanter_Click(object sender, EventArgs e)
 		{
-            if (!File.Exists(_path))
-            {
+			if (!File.Exists(_path))
+			{
 				List<string> folderNames = new List<string>();
 				if (_filterToOne && _oneCharacter != null)
 				{
@@ -1093,206 +1093,206 @@ namespace SPNATI_Character_Editor.Activities
 					MessageBox.Show("No characters matching the filters.");
 					return;
 				}
-                GenerateBanterXML();
-                cmdUpdateBanter.Text = "Generate/Update";
-                _character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-                Serialization.BackupBanter(_character, Convert.ToString(_character.BanterData.Timestamp));
-                cmdLoadBanter.Enabled = true;
-            }
-            else
-            {
+				GenerateBanterXML();
+				cmdUpdateBanter.Text = "Generate/Update";
+				_character.BanterData.Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+				Serialization.BackupBanter(_character, Convert.ToString(_character.BanterData.Timestamp));
+				cmdLoadBanter.Enabled = true;
+			}
+			else
+			{
 				UpdateBanter();
-            }
+			}
 		}
 
-        private void cmdLoadBanter_Click(object sender, EventArgs e)
-        {
-            ListCharactersFromFile();
-        }
+		private void cmdLoadBanter_Click(object sender, EventArgs e)
+		{
+			ListCharactersFromFile();
+		}
 
 
-        private void cmdColorCode_Click(object sender, EventArgs e)
-        {
-            ColorCode color = RecordLookup.DoLookup(typeof(ColorCode), "", false, null) as ColorCode;
-            if (color != null)
-            {
-                SetColorButton(color.Key);
-            }
-        }
+		private void cmdColorCode_Click(object sender, EventArgs e)
+		{
+			ColorCode color = RecordLookup.DoLookup(typeof(ColorCode), "", false, null) as ColorCode;
+			if (color != null)
+			{
+				SetColorButton(color.Key);
+			}
+		}
 
-        private void SetColorButton(string colorCode)
-        {
-            ColorCode code = Definitions.Instance.Get<ColorCode>(colorCode);
-            if (code == null || colorCode == "0")
-            {
-                cmdColorCode.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
-                cmdColorCode.Tag = null;
-                if (_currentInbound != null)
-                {
-                    _currentInbound.ColorCode = null;
-                }
-            }
+		private void SetColorButton(string colorCode)
+		{
+			ColorCode code = Definitions.Instance.Get<ColorCode>(colorCode);
+			if (code == null || colorCode == "0")
+			{
+				cmdColorCode.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
+				cmdColorCode.Tag = null;
+				if (_currentInbound != null)
+				{
+					_currentInbound.ColorCode = null;
+				}
+			}
 			else
-            {
-                cmdColorCode.BackColor = code.GetColor();
-                cmdColorCode.Tag = colorCode;
-                if (_currentInbound != null)
-                {
-                    _currentInbound.ColorCode = cmdColorCode.Tag?.ToString();
-                }
-            }
-        }
+			{
+				cmdColorCode.BackColor = code.GetColor();
+				cmdColorCode.Tag = colorCode;
+				if (_currentInbound != null)
+				{
+					_currentInbound.ColorCode = cmdColorCode.Tag?.ToString();
+				}
+			}
+		}
 
-        private void cmdColorFilter_Click(object sender, EventArgs e)
-        {
-            ColorCode color = RecordLookup.DoLookup(typeof(ColorCode), "", false, null) as ColorCode;
-            if (color != null)
-            {
-                SetColorFilterButton(color.Key);
-            }
-        }
+		private void cmdColorFilter_Click(object sender, EventArgs e)
+		{
+			ColorCode color = RecordLookup.DoLookup(typeof(ColorCode), "", false, null) as ColorCode;
+			if (color != null)
+			{
+				SetColorFilterButton(color.Key);
+			}
+		}
 
-        private void SetColorFilterButton(string colorCode)
-        {
-            ColorCode code = Definitions.Instance.Get<ColorCode>(colorCode);
-            if (code == null || colorCode == "0")
-            {
-                cmdColorFilter.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
-                cmdColorFilter.Tag = null;
+		private void SetColorFilterButton(string colorCode)
+		{
+			ColorCode code = Definitions.Instance.Get<ColorCode>(colorCode);
+			if (code == null || colorCode == "0")
+			{
+				cmdColorFilter.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
+				cmdColorFilter.Tag = null;
 				_colorFilter = null;
-            }
-            else
-            {
-                cmdColorFilter.BackColor = code.GetColor();
-                cmdColorFilter.Tag = colorCode;
+			}
+			else
+			{
+				cmdColorFilter.BackColor = code.GetColor();
+				cmdColorFilter.Tag = colorCode;
 				_colorFilter = colorCode;
 			}
-        }
+		}
 
-        private void chkColorFilter_CheckedChanged(object sender, EventArgs e)
-        {
+		private void chkColorFilter_CheckedChanged(object sender, EventArgs e)
+		{
 			_filterToColor = chkColorFilter.Checked;
-        }
+		}
 		
-        private void chkOneCharacter_CheckedChanged(object sender, EventArgs e)
-        {
-            _filterToOne = chkOneCharacter.Checked;
-        }
+		private void chkOneCharacter_CheckedChanged(object sender, EventArgs e)
+		{
+			_filterToOne = chkOneCharacter.Checked;
+		}
 
-        private void chkLineFiltering_SelectedIndexChanged(object sender, EventArgs e)
-        {
+		private void chkLineFiltering_SelectedIndexChanged(object sender, EventArgs e)
+		{
 			
-            _filterNew = chkLineFiltering.GetItemChecked(0);
-            _filterModText = chkLineFiltering.GetItemChecked(1);
-            _filterModCond = chkLineFiltering.GetItemChecked(2);
-            _filterOld = chkLineFiltering.GetItemChecked(3);		
-        }
+			_filterNew = chkLineFiltering.GetItemChecked(0);
+			_filterModText = chkLineFiltering.GetItemChecked(1);
+			_filterModCond = chkLineFiltering.GetItemChecked(2);
+			_filterOld = chkLineFiltering.GetItemChecked(3);		
+		}
 
-        private void cmdApplyFilters_Click(object sender, EventArgs e)
-        {
+		private void cmdApplyFilters_Click(object sender, EventArgs e)
+		{
 			if (_character.BanterData.Timestamp != 0)
 				ReListCharacters();
-        }
+		}
 
-        private void chkCharacterFiltering_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            _filterMain = chkCharacterFiltering.GetItemChecked(0);
-            _filterTesting = chkCharacterFiltering.GetItemChecked(1);
-            _filterOffline = chkCharacterFiltering.GetItemChecked(2);
-            _filterIncomplete = chkCharacterFiltering.GetItemChecked(3);
-            _filterEvent = chkCharacterFiltering.GetItemChecked(4);
-            _filterDuplicate = chkCharacterFiltering.GetItemChecked(5);
-            _filterUnlisted = chkCharacterFiltering.GetItemChecked(6);
-        }
+		private void chkCharacterFiltering_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			_filterMain = chkCharacterFiltering.GetItemChecked(0);
+			_filterTesting = chkCharacterFiltering.GetItemChecked(1);
+			_filterOffline = chkCharacterFiltering.GetItemChecked(2);
+			_filterIncomplete = chkCharacterFiltering.GetItemChecked(3);
+			_filterEvent = chkCharacterFiltering.GetItemChecked(4);
+			_filterDuplicate = chkCharacterFiltering.GetItemChecked(5);
+			_filterUnlisted = chkCharacterFiltering.GetItemChecked(6);
+		}
 
-        private void recOneCharacter_RecordChanged(object sender, RecordEventArgs e)
-        {
-            _oneCharacter = recOneCharacter.Record as Character;
-        }
-    }
+		private void recOneCharacter_RecordChanged(object sender, RecordEventArgs e)
+		{
+			_oneCharacter = recOneCharacter.Record as Character;
+		}
+	}
 
 
-    public partial class Levenshtein
-    {
-        private readonly string storedValue;
-        private readonly int[] costs;
+	public partial class Levenshtein
+	{
+		private readonly string storedValue;
+		private readonly int[] costs;
 
-        /// <summary>
-        /// Creates a new instance with a value to test other values against
-        /// </summary>
-        /// <param Name="value">Value to compare other values to.</param>
-        public Levenshtein(string value)
-        {
-            this.storedValue = value;
-            // Create matrix row
-            this.costs = new int[this.storedValue.Length];
-        }
+		/// <summary>
+		/// Creates a new instance with a value to test other values against
+		/// </summary>
+		/// <param Name="value">Value to compare other values to.</param>
+		public Levenshtein(string value)
+		{
+			this.storedValue = value;
+			// Create matrix row
+			this.costs = new int[this.storedValue.Length];
+		}
 
-        /// <summary>
-        /// gets the length of the stored value that is tested against
-        /// </summary>
-        public int StoredLength => this.storedValue.Length;
+		/// <summary>
+		/// gets the length of the stored value that is tested against
+		/// </summary>
+		public int StoredLength => this.storedValue.Length;
 
-        /// <summary>
-        /// Compares a value to the stored value. 
-        /// Not thread safe.
-        /// </summary>
-        /// <returns>Difference. 0 complete match.</returns>
-        public int DistanceFrom(string value)
-        {
-            if (costs.Length == 0)
-            {
-                return value.Length;
-            }
+		/// <summary>
+		/// Compares a value to the stored value. 
+		/// Not thread safe.
+		/// </summary>
+		/// <returns>Difference. 0 complete match.</returns>
+		public int DistanceFrom(string value)
+		{
+			if (costs.Length == 0)
+			{
+				return value.Length;
+			}
 
-            // Add indexing for insertion to first row
-            for (int i = 0; i < this.costs.Length;)
-            {
-                this.costs[i] = ++i;
-            }
+			// Add indexing for insertion to first row
+			for (int i = 0; i < this.costs.Length;)
+			{
+				this.costs[i] = ++i;
+			}
 
-            for (int i = 0; i < value.Length; i++)
-            {
-                // cost of the first index
-                int cost = i;
-                int previousCost = i;
+			for (int i = 0; i < value.Length; i++)
+			{
+				// cost of the first index
+				int cost = i;
+				int previousCost = i;
 
-                // cache value for inner loop to avoid index lookup and bonds checking, profiled this is quicker
-                char value1Char = value[i];
+				// cache value for inner loop to avoid index lookup and bonds checking, profiled this is quicker
+				char value1Char = value[i];
 
-                for (int j = 0; j < this.storedValue.Length; j++)
-                {
-                    int currentCost = cost;
+				for (int j = 0; j < this.storedValue.Length; j++)
+				{
+					int currentCost = cost;
 
-                    // assigning this here reduces the array reads we do, improvement of the old version
-                    cost = costs[j];
+					// assigning this here reduces the array reads we do, improvement of the old version
+					cost = costs[j];
 
-                    if (value1Char != this.storedValue[j])
-                    {
-                        if (previousCost < currentCost)
-                        {
-                            currentCost = previousCost;
-                        }
+					if (value1Char != this.storedValue[j])
+					{
+						if (previousCost < currentCost)
+						{
+							currentCost = previousCost;
+						}
 
-                        if (cost < currentCost)
-                        {
-                            currentCost = cost;
-                        }
+						if (cost < currentCost)
+						{
+							currentCost = cost;
+						}
 
-                        ++currentCost;
-                    }
+						++currentCost;
+					}
 
-                    /* 
-                     * Improvement on the older versions.
-                     * Swapping the variables here results in a performance improvement for modern intel CPU’s, but I have no idea why?
-                     */
-                    costs[j] = currentCost;
-                    previousCost = currentCost;
-                }
-            }
+					/* 
+					 * Improvement on the older versions.
+					 * Swapping the variables here results in a performance improvement for modern intel CPU’s, but I have no idea why?
+					 */
+					costs[j] = currentCost;
+					previousCost = currentCost;
+				}
+			}
 
-            return this.costs[this.costs.Length - 1];
-        }
-    }
+			return this.costs[this.costs.Length - 1];
+		}
+	}
 
 }

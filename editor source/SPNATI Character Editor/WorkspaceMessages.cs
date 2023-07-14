@@ -55,7 +55,7 @@ namespace SPNATI_Character_Editor
 		public const int PreviewCharacterChanged = 10;
 	}
 
-    public class UpdateImageArgs
+	public class UpdateImageArgs
 	{
 		public PoseMapping Pose;
 		public int Stage;

@@ -101,15 +101,15 @@ namespace SPNATI_Character_Editor.Activities
 			}
 			if (_character != null && _selectedCase != null && _selectedStage != null)
 			{
-                PoseMapping image = caseControl.GetImage(0);
-                if (image != null)
-                {
-                    DisplayImage(image, caseControl.PreviewStage);
-                }
-                DialogueLine line = caseControl.GetLine(0);
-                DisplayText(line);
-            }
-        }
+				PoseMapping image = caseControl.GetImage(0);
+				if (image != null)
+				{
+					DisplayImage(image, caseControl.PreviewStage);
+				}
+				DialogueLine line = caseControl.GetLine(0);
+				DisplayText(line);
+			}
+		}
 
 		protected override void OnParametersUpdated(params object[] parameters)
 		{

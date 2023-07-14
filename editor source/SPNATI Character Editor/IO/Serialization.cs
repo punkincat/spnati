@@ -72,7 +72,7 @@ namespace SPNATI_Character_Editor
 
 			if (character.BanterData.Timestamp == 0)
 			{
-                success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
+				success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
 				BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
 				BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
 				BackupAndExportXml(character, editorData, "editor", timestamp) &&
@@ -81,17 +81,17 @@ namespace SPNATI_Character_Editor
 			}
 			else
 			{
-                Banter banter = ImportBanterWithoutOverwriting(character);
-                success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
-                BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
-                BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
-                BackupAndExportXml(character, editorData, "editor", timestamp) &&
-                BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
-                BackupAndExportXml(character, banter, "banter", timestamp) &&
-                CharacterHistory.Save(character);
-            }
+				Banter banter = ImportBanterWithoutOverwriting(character);
+				success = BackupAndExportXml(character, character, "behaviour", timestamp) &&
+				BackupAndExportXml(character, character.Metadata, "meta", timestamp) &&
+				BackupAndExportXml(character, character.TagList, "tags", timestamp) &&
+				BackupAndExportXml(character, editorData, "editor", timestamp) &&
+				BackupAndExportXml(character, character.Collectibles, "collectibles", timestamp) &&
+				BackupAndExportXml(character, banter, "banter", timestamp) &&
+				CharacterHistory.Save(character);
+			}
 
-            if (success && !string.IsNullOrEmpty(character.StyleSheetName))
+			if (success && !string.IsNullOrEmpty(character.StyleSheetName))
 			{
 				CharacterStyleSheetSerializer.Save(character, character.Styles);
 			}
@@ -116,8 +116,8 @@ namespace SPNATI_Character_Editor
 			DeleteFile(character, "markers.edit.bak");
 			DeleteFile(character, "editor.edit.bak");
 
-            // I really wish I didn't have to put this here
-            foreach (Pose pose in character.Poses)
+			// I really wish I didn't have to put this here
+			foreach (Pose pose in character.Poses)
 			{
 				foreach (Sprite sp in pose.Sprites)
 				{
@@ -293,28 +293,28 @@ namespace SPNATI_Character_Editor
 
 		public static Banter ImportBanter(string folderName)
 		{
-            string folder = Config.GetRootDirectory(folderName);
-            if (!Directory.Exists(folder))
-                return null;
+			string folder = Config.GetRootDirectory(folderName);
+			if (!Directory.Exists(folder))
+				return null;
 
-            string filename = Path.Combine(folder, "banter.xml");
-            if (!File.Exists(filename))
-                return null;
+			string filename = Path.Combine(folder, "banter.xml");
+			if (!File.Exists(filename))
+				return null;
 
-            return ImportXml<Banter>(filename);
-        }
+			return ImportXml<Banter>(filename);
+		}
 
-        public static Banter ImportBanterWithoutOverwriting(Character character)
-        {
-            string folder = Config.GetRootDirectory(character.FolderName);
-            if (!Directory.Exists(folder))
-                return null;
+		public static Banter ImportBanterWithoutOverwriting(Character character)
+		{
+			string folder = Config.GetRootDirectory(character.FolderName);
+			if (!Directory.Exists(folder))
+				return null;
 
-            string filename = Path.Combine(folder, "banter.xml");
-            if (!File.Exists(filename))
-                return character.BanterData;
+			string filename = Path.Combine(folder, "banter.xml");
+			if (!File.Exists(filename))
+				return character.BanterData;
 
-            Banter imported = ImportXml<Banter>(filename);
+			Banter imported = ImportXml<Banter>(filename);
 			List<string> chToUpdate = new List<string>();
 
 			foreach (TargetingCharacter ch in character.BanterData.TargetingCharacters)
@@ -332,7 +332,7 @@ namespace SPNATI_Character_Editor
 
 			foreach (string toUpdate in chToUpdate)
 			{
-                TargetingCharacter chImported = imported.TargetingCharacters.Find(x => x.Id == toUpdate);
+				TargetingCharacter chImported = imported.TargetingCharacters.Find(x => x.Id == toUpdate);
 				TargetingCharacter ch = character.BanterData.TargetingCharacters.Find(x => x.Id == toUpdate);
 				chImported.Timestamp = ch.Timestamp;
 				chImported.InboundCount = ch.InboundCount;
@@ -341,41 +341,41 @@ namespace SPNATI_Character_Editor
 				{
 					chImported.Inbounds.Add(inbound);
 				}
-            }
+			}
 			
-            imported.TargetingCharacters = imported.TargetingCharacters.OrderBy(x => x?.Id).ToList();
+			imported.TargetingCharacters = imported.TargetingCharacters.OrderBy(x => x?.Id).ToList();
 
 			return imported;
-        }
+		}
 
 
-        public static bool BackupBanter(Character character, string timestamp)
-        {
-            string dir = Config.GetRootDirectory(character);
-            string editorPath = Path.Combine(dir, "editor.xml");
-            string banterPath = Path.Combine(dir, "banter.xml");
+		public static bool BackupBanter(Character character, string timestamp)
+		{
+			string dir = Config.GetRootDirectory(character);
+			string editorPath = Path.Combine(dir, "editor.xml");
+			string banterPath = Path.Combine(dir, "banter.xml");
 
-            bool deleteTags = false;
-            bool deleteHeight = false;
+			bool deleteTags = false;
+			bool deleteHeight = false;
 
 			CharacterEditorData editorData = CharacterDatabase.GetEditorData(character);
 
-            Banter banter = ImportBanterWithoutOverwriting(character);
-            if (ExportXml(editorData, editorPath, deleteTags, deleteHeight) && ExportXml(banter, banterPath, deleteTags, deleteHeight))
-            {
-                bool backupEnabled = Config.BackupEnabled;
-                if (backupEnabled)
-                {
-                    BackupFile(character, "editor", timestamp);
-                    BackupFile(character, "banter", timestamp);
-                }
-                return true;
-            }
+			Banter banter = ImportBanterWithoutOverwriting(character);
+			if (ExportXml(editorData, editorPath, deleteTags, deleteHeight) && ExportXml(banter, banterPath, deleteTags, deleteHeight))
+			{
+				bool backupEnabled = Config.BackupEnabled;
+				if (backupEnabled)
+				{
+					BackupFile(character, "editor", timestamp);
+					BackupFile(character, "banter", timestamp);
+				}
+				return true;
+			}
 
-            return false;
-        }
+			return false;
+		}
 
-        public static Character ImportCharacter(string folderName)
+		public static Character ImportCharacter(string folderName)
 		{
 			string folder = Config.GetRootDirectory(folderName);
 			if (!Directory.Exists(folder))
@@ -481,10 +481,10 @@ namespace SPNATI_Character_Editor
 			Metadata meta = ImportXml<Metadata>(Path.Combine(folder, $"meta-{timestamp}.bak"));
 			recoveredCharacter.Metadata = meta ?? character.Metadata;
 
-            Banter banterData = ImportXml<Banter>(Path.Combine(folder, $"banter-{timestamp}.bak"));
-            recoveredCharacter.BanterData = banterData ?? character.BanterData;
+			Banter banterData = ImportXml<Banter>(Path.Combine(folder, $"banter-{timestamp}.bak"));
+			recoveredCharacter.BanterData = banterData ?? character.BanterData;
 
-            string markerFile = Path.Combine(folder, $"markers-{timestamp}.bak");
+			string markerFile = Path.Combine(folder, $"markers-{timestamp}.bak");
 			if (File.Exists(markerFile))
 			{
 				MarkerData markers = ImportXml<MarkerData>(markerFile);
@@ -518,25 +518,25 @@ namespace SPNATI_Character_Editor
 			return recoveredCharacter;
 		}
 
-        /// <summary>
-        /// Imports an XML file
-        /// </summary>
-        /// <typeparam name="T">Type of data to ipmort</typeparam>
-        /// <param name="filename">Filename to import</param>
-        /// <returns>An object of type T or null if it failed</returns>
-        public static T ImportXml<T>(string filename)
+		/// <summary>
+		/// Imports an XML file
+		/// </summary>
+		/// <typeparam name="T">Type of data to ipmort</typeparam>
+		/// <param name="filename">Filename to import</param>
+		/// <returns>An object of type T or null if it failed</returns>
+		public static T ImportXml<T>(string filename)
 		{
 			TextReader reader = null;
 			try
 			{
-                //XML files can contain HTML-encoding characters which aren't recognized in real XML, so the file is preprocessed to decode these
-                //before passing through the actual serializer
+				//XML files can contain HTML-encoding characters which aren't recognized in real XML, so the file is preprocessed to decode these
+				//before passing through the actual serializer
 
-                string text = File.ReadAllText(filename);
+				string text = File.ReadAllText(filename);
 
 
-                //Also, italics are a funky case since they use invalid XML. Encode these to make the serializer happy, and then they will be switched back to the "bad" format in the character's OnAfterDeserialize
-                text = XMLHelper.EncodeEntityReferences(text);
+				//Also, italics are a funky case since they use invalid XML. Encode these to make the serializer happy, and then they will be switched back to the "bad" format in the character's OnAfterDeserialize
+				text = XMLHelper.EncodeEntityReferences(text);
 
 				//Now do the actual deserialization
 				reader = new StringReader(text);
@@ -549,7 +549,7 @@ namespace SPNATI_Character_Editor
 					hook.OnAfterDeserialize(filename);
 				}
 
-                return result;
+				return result;
 			}
 			catch (Exception e)
 			{

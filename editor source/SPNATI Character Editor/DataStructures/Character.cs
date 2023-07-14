@@ -233,14 +233,14 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
-        [XmlIgnore]
-        public Banter BanterData
-        {
-            get { return Get<Banter>(); }
-            set { Set(value); }
-        }
+		[XmlIgnore]
+		public Banter BanterData
+		{
+			get { return Get<Banter>(); }
+			set { Set(value); }
+		}
 
-        private bool _built;
+		private bool _built;
 
 		public event EventHandler<bool> OnDirtyChanged;
 
