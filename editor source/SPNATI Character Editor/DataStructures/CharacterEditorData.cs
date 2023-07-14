@@ -75,9 +75,11 @@ namespace SPNATI_Character_Editor
 		public List<string> PosePreviewMarkers = new List<string>();
 
 		[XmlElement("onlyCustomPoses")]
+		[DefaultValue(false)]		
 		public bool OnlyCustomPoses;
 
 		[XmlElement("hidePrefixlessImages")]
+		[DefaultValue(false)]		
 		public bool HidePrefixlessImages;
 
 
