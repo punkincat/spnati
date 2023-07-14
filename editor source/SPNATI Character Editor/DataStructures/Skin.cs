@@ -475,8 +475,8 @@ namespace SPNATI_Character_Editor
 		public int LayersNonSkip;
 
 		[XmlAttribute("collectible")]
-        [DefaultValue("")]
-        public string Collectible;
+		[DefaultValue("")]
+		public string Collectible;
 
 		[XmlIgnore]
 		public Costume Costume { get; set; }
