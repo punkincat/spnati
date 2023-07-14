@@ -76,7 +76,38 @@ namespace SPNATI_Character_Editor
 			{
 				chkStatuses.Items.Add(status, statusFilters.Contains(status));
 			}
+
+			_initialized = false;
+			ConfigLocation[] locations = new ConfigLocation[] {
+				new ConfigLocation("appdata", "%APPDATA% (default and recommended)"),
+				new ConfigLocation("CEFolder", "the CE's folder"),
+			};
+
+			foreach (ConfigLocation loc in locations)
+			{
+				cboLocation.Items.Add(loc);
+			}
+
+			string path = Config.ConfigPath;
+			if (path == "")
+			{
+				cboLocation.SelectedIndex = 0;
+			}
+			else
+			{
+				foreach (ConfigLocation loc in locations)
+				{
+					if (loc.Key == path)
+					{
+						cboLocation.SelectedItem = loc;
+						break;
+					}
+				}
+			}
+			_initialized = true;
 		}
+
+		private bool _initialized;
 
 		private bool ResponderFilter(IRecord record)
 		{
@@ -144,6 +175,7 @@ namespace SPNATI_Character_Editor
 				return;
 			}
 			Config.Set(Settings.GameDirectory, dir);
+			Config.ConfigPath = (cboLocation.SelectedItem as ConfigLocation).Key;
 			Config.AutoSaveInterval = (int)valAutoSave.Value;
 			Config.UserName = txtUserName.Text;
 			Config.UseIntellisense = chkIntellisense.Checked;
@@ -333,5 +365,35 @@ namespace SPNATI_Character_Editor
 				Config.DefaultResponder = "";
 			}
 		}
+		private void cboLocation_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (_initialized)
+			{
+				string path = Config.ConfigDirectory;
+				Config.ConfigPath = (cboLocation.SelectedItem as ConfigLocation).Key;
+				Config.Save(path);  // saves the new location to the old config file
+				Config.Save(); // saves the new config file
+				MessageBox.Show("The location of the config.ini file and the backups has been changed.\nIt is recommended to quit the CE, copy or move the SPNATI folder to the newly selected location, and restart the CE.");
+			}
+		}
+
+		private class ConfigLocation
+		{
+			public string Key;
+			public string Description;
+
+			public ConfigLocation (string key, string description)
+			{
+				Key = key;
+				Description = description;
+			}
+
+			public override string ToString()
+			{
+				return Description;
+			}
+		}
+
+
 	}
 }

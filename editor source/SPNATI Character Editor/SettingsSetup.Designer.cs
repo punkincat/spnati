@@ -50,6 +50,7 @@ namespace SPNATI_Character_Editor
 			this.txtTinify = new Desktop.Skinning.SkinnedTextBox();
 			this.chkWarnEmpty = new Desktop.Skinning.SkinnedCheckBox();
 			this.skinnedLabel5 = new Desktop.Skinning.SkinnedLabel();
+			this.helpLocation = new Desktop.Skinning.SkinnedIcon();
 			this.chkIntellisense = new Desktop.Skinning.SkinnedCheckBox();
 			this.tabsSections = new Desktop.Skinning.SkinnedTabControl();
 			this.tabGeneral = new System.Windows.Forms.TabPage();
@@ -92,6 +93,8 @@ namespace SPNATI_Character_Editor
 			this.label6 = new Desktop.Skinning.SkinnedLabel();
 			this.lstPauses = new Desktop.Skinning.SkinnedCheckedListBox();
 			this.tabBackups = new System.Windows.Forms.TabPage();
+			this.cboLocation = new Desktop.Skinning.SkinnedComboBox();
+			this.lblLocation = new Desktop.Skinning.SkinnedLabel();
 			this.panelSnapshot = new Desktop.Skinning.SkinnedPanel();
 			this.skinnedLabel1 = new Desktop.Skinning.SkinnedLabel();
 			this.skinnedLabel2 = new Desktop.Skinning.SkinnedLabel();
@@ -389,6 +392,21 @@ namespace SPNATI_Character_Editor
 			this.skinnedLabel5.Text = "Auto-open:";
 			this.toolTip1.SetToolTip(this.skinnedLabel5, "List of character labels divided by commas. Put a costume\'s folder name as an ite" +
         "m to auto-open an alternate costume.");
+			// 
+			// helpLocation
+			// 
+			this.helpLocation.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+			this.helpLocation.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+			this.helpLocation.Flat = false;
+			this.helpLocation.FlatAppearance.BorderSize = 0;
+			this.helpLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.helpLocation.Image = global::SPNATI_Character_Editor.Properties.Resources.Help;
+			this.helpLocation.Location = new System.Drawing.Point(374, 146);
+			this.helpLocation.Name = "helpLocation";
+			this.helpLocation.Size = new System.Drawing.Size(21, 23);
+			this.helpLocation.TabIndex = 22;
+			this.toolTip1.SetToolTip(this.helpLocation, "This does not automatically copy or move all the existing files, and if you later update the CE, you may have to copy or move the SPNATI folder again.");
+			this.helpLocation.UseVisualStyleBackColor = true;
 			// 
 			// chkIntellisense
 			// 
@@ -965,6 +983,9 @@ namespace SPNATI_Character_Editor
 			// tabBackups
 			// 
 			this.tabBackups.BackColor = System.Drawing.Color.White;
+			this.tabBackups.Controls.Add(this.helpLocation);
+			this.tabBackups.Controls.Add(this.cboLocation);
+			this.tabBackups.Controls.Add(this.lblLocation);
 			this.tabBackups.Controls.Add(this.panelSnapshot);
 			this.tabBackups.Controls.Add(this.chkAutoBackup);
 			this.tabBackups.Controls.Add(this.helpAutoSave);
@@ -978,6 +999,37 @@ namespace SPNATI_Character_Editor
 			this.tabBackups.TabIndex = 5;
 			this.tabBackups.Text = "Backups";
 			// 
+			// cboLocation
+			// 
+			this.cboLocation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.cboLocation.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.cboLocation.BackColor = System.Drawing.Color.White;
+			this.cboLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+			this.cboLocation.FieldType = Desktop.Skinning.SkinnedFieldType.Surface;
+			this.cboLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+			this.cboLocation.KeyMember = null;
+			this.cboLocation.Location = new System.Drawing.Point(10, 146);
+			this.cboLocation.Name = "cboLocation";
+			this.cboLocation.SelectedIndex = -1;
+			this.cboLocation.SelectedItem = null;
+			this.cboLocation.Size = new System.Drawing.Size(358, 23);
+			this.cboLocation.Sorted = false;
+			this.cboLocation.TabIndex = 21;
+			this.cboLocation.SelectedIndexChanged += new System.EventHandler(this.cboLocation_SelectedIndexChanged);
+			// 
+			// lblLocation
+			// 
+			this.lblLocation.AutoSize = true;
+			this.lblLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+			this.lblLocation.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.lblLocation.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+			this.lblLocation.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+			this.lblLocation.Location = new System.Drawing.Point(7, 130);
+			this.lblLocation.Name = "lblLocation";
+			this.lblLocation.Size = new System.Drawing.Size(195, 13);
+			this.lblLocation.TabIndex = 20;
+			this.lblLocation.Text = "Location of the Config file, backups etc.";
+			// 
 			// panelSnapshot
 			// 
 			this.panelSnapshot.Controls.Add(this.valFrequency);
@@ -989,7 +1041,7 @@ namespace SPNATI_Character_Editor
 			this.panelSnapshot.Location = new System.Drawing.Point(3, 55);
 			this.panelSnapshot.Name = "panelSnapshot";
 			this.panelSnapshot.PanelType = Desktop.Skinning.SkinnedBackgroundType.Background;
-			this.panelSnapshot.Size = new System.Drawing.Size(206, 100);
+			this.panelSnapshot.Size = new System.Drawing.Size(206, 60);
 			this.panelSnapshot.TabIndex = 18;
 			this.panelSnapshot.TabSide = Desktop.Skinning.TabSide.None;
 			// 
@@ -1225,5 +1277,8 @@ namespace SPNATI_Character_Editor
         private Desktop.Skinning.SkinnedTextBox txtAutoOpen;
         private Desktop.CommonControls.RecordField recResponder;
         private Desktop.Skinning.SkinnedLabel lblResponder;
-    }
+		private Desktop.Skinning.SkinnedLabel lblLocation;
+		private Desktop.Skinning.SkinnedComboBox cboLocation;
+		private Desktop.Skinning.SkinnedIcon helpLocation;
+	}
 }

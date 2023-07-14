@@ -318,7 +318,7 @@ namespace SPNATI_Character_Editor.DataStructures
 			_nextId = 1000;
 
 			//Custom definitions
-			string filepath = Path.Combine(Config.AppDataDirectory, "cases.json");
+			string filepath = Path.Combine(Config.ConfigDirectory, "cases.json");
 			if (File.Exists(filepath))
 			{
 				try
@@ -343,7 +343,7 @@ namespace SPNATI_Character_Editor.DataStructures
 		{
 			EnsureLoaded();
 
-			string filepath = Path.Combine(Config.AppDataDirectory, "cases.json");
+			string filepath = Path.Combine(Config.ConfigDirectory, "cases.json");
 			CaseDefinitions defs = new CaseDefinitions();
 			foreach (CaseGroup group in Groups)
 			{
