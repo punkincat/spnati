@@ -988,6 +988,7 @@ function MainSelectScreenDisplay (slot) {
     this.prefillSuggestionBadges = {
         'new': this.prefillBadgeRow.children('.badge-icon[data-badge="new"]'),
         'updated': this.prefillBadgeRow.children('.badge-icon[data-badge="updated"]'),
+        'birthday': this.prefillBadgeRow.children('.badge-icon[data-badge="birthday"]'),
         'epilogue': this.prefillBadgeRow.children('.badge-icon[data-badge="epilogue"]'),
         'costume': this.prefillBadgeRow.children('.badge-icon[data-badge="costume"]'),
     }
@@ -1072,6 +1073,7 @@ MainSelectScreenDisplay.prototype.displaySingleSuggestion = function () {
 
     this.prefillSuggestionBadges.new.toggle(player.highlightStatus === 'new');
     this.prefillSuggestionBadges.updated.toggle(player.highlightStatus === 'updated');
+    this.prefillSuggestionBadges.birthday.toggle(player.highlightStatus === 'birthday');
     this.badges.epilogue.toggle(!!player.endings);
     var epilogueStatus = player.getEpilogueStatus();
     if (epilogueStatus) {
@@ -1241,6 +1243,15 @@ function OpponentSelectionCard (opponent) {
     this.imageArea = $(this.imageArea);
 
     var badgeSidebar = this.mainElem.appendChild(createElementWithClass('div', 'badge-sidebar'));
+
+    if (opponent.hasBirthday) {
+        $(badgeSidebar.appendChild(createElementWithClass('img', 'badge-icon'))).attr({
+            src: "img/balloon.svg",
+            alt: "Birthday"
+        }).css({
+            padding: '7%',
+        });
+    }
 
     if (opponent.endings) {
         this.epilogueBadge = $(badgeSidebar.appendChild(createElementWithClass('img', 'badge-icon epilogue-badge'))).attr({

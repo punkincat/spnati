@@ -551,6 +551,8 @@ function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber,
     this.fontSize = $metaXml.children('font-size').text();
     if (!['small', 'smaller'].includes(this.fontSize)) this.fontSize = undefined;
     this.lastUpdated = parseInt($metaXml.children('lastupdate').text(), 10) || 0;
+    const $bday = $metaXml.children('birthday'), now = new Date();
+    this.hasBirthday = ($bday.length && $bday.attr('month') == now.getMonth() + 1 && $bday.attr('day') == now.getDate());
 
     /* For sorting purposes. 
      * Simplifies diacritics (to solve the Pokemon problem), removes punctuation,
@@ -678,6 +680,10 @@ function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber,
         }
         return false;
     }.bind(this));
+    if (this.hasBirthday) {
+        this.force_prefill = true;
+        this.highlightStatus = 'birthday';
+    }
 
     if (this.event_sort_order !== 0 || this.event_partition !== 0) eventSortingActive = true;
 

@@ -145,7 +145,7 @@ var sortingOptionsMap = {
     target: sortOpponentsByMostTargeted(50, Infinity),
     oldest: sortOpponentsByMultipleFields(["release", "-listingIndex"]),
     newest: sortOpponentsByMultipleFields(["-release", "listingIndex"]),
-    featured: sortOpponentsByMultipleFields(["-effectiveScore"]),
+    featured: sortOpponentsByMultipleFields(["-hasBirthday", "-effectiveScore"]),
 };
 var groupCreditsShown = false;
 
@@ -1300,15 +1300,11 @@ function loadDefaultFillSuggestions () {
     });
 
     if (forcedPrefills.length > 0) {
-        /* select forced prefill characters from events */
-        for (var i = 0; i < 4; i++) {
-            if (forcedPrefills.length === 0) break;
-
-            let idx = getRandomNumber(0, forcedPrefills.length);
-            let randomOpponent = forcedPrefills[idx];
-            forcedPrefills.splice(idx, 1);
-
-            fillPlayers.push(randomOpponent);
+        /* select forced prefill characters from events and birthdays */
+        shuffleArray(forcedPrefills);
+        forcedPrefills.sort(sortOpponentsByField("-hasBirthday"));
+        for (let i = 0; i < 4 && i < forcedPrefills.length; i++) {
+            fillPlayers.push(forcedPrefills[i]);
         }
     }
 
