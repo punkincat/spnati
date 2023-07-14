@@ -832,6 +832,10 @@ namespace SPNATI_Character_Editor.Activities
 			UpdateCell(null, _currentPose);
 
 			string dir = Path.Combine(_character.GetBackupDirectory(), "images");
+			if (!Directory.Exists(dir))
+			{
+				Directory.CreateDirectory(dir);
+			}
 			string img;
 
 			if (_currentPose.Stage.Name == null)

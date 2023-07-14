@@ -128,22 +128,37 @@ namespace SPNATI_Character_Editor
 		{
 			//3.0 and up use config.ini. Older versions use settings.ini. Using different filenames to allow side-by-side installs since the structure was changed
 
-			string filename = Path.Combine(AppDataDirectory, "config.ini");
+			string filename = Path.Combine(ExecutableDirectory, "SPNATI\\config.ini");
+			bool read = false;
 			if (File.Exists(filename))
 			{
 				ReadSettings(filename);
+				if (ConfigPath == "CEFolder")
+				{
+					read = true;
+				}
 			}
-			else
+
+			if (!read)
 			{
-				filename = Path.Combine(AppDataDirectory, "settings.ini");
+				filename = Path.Combine(AppDataDirectory, "config.ini");
 				if (File.Exists(filename))
 				{
-					ReadLegacySettings(filename);
+					ReadSettings(filename);
+					ConfigPath = "appdata";
 				}
 				else
 				{
-					// default settings
-					Set("autosave", 10);
+					filename = Path.Combine(AppDataDirectory, "settings.ini");
+					if (File.Exists(filename))
+					{
+						ReadLegacySettings(filename);
+					}
+					else
+					{
+						// default settings
+						Set("autosave", 10);
+					}
 				}
 			}
 		}
@@ -179,9 +194,17 @@ namespace SPNATI_Character_Editor
 			catch { }
 		}
 
-		public static void Save()
+		public static void Save(string dir = "")
 		{
-			string dataDir = AppDataDirectory;
+			string dataDir;
+			if (!string.IsNullOrEmpty(dir))
+			{
+				dataDir = dir;
+			}
+			else
+			{
+				dataDir = ConfigDirectory;
+			}
 			string filename = Path.Combine(dataDir, "config.ini");
 			if (!Directory.Exists(dataDir))
 			{
@@ -252,6 +275,21 @@ namespace SPNATI_Character_Editor
 			get { return GetString(Settings.GameDirectory); }
 		}
 
+		public static string ConfigDirectory
+		{
+			get
+			{
+				if (ConfigPath == "CEFolder")
+				{
+					return Path.Combine(ExecutableDirectory, "SPNATI");
+				}
+				else
+				{
+					return AppDataDirectory;
+				}
+			}
+		}
+
 		/// <summary>
 		/// Gets where SPNATI is located
 		/// </summary>
@@ -316,7 +354,7 @@ namespace SPNATI_Character_Editor
 		{
 			if (character == null || string.IsNullOrEmpty(character.FolderName))
 				return "";
-			return Path.Combine(AppDataDirectory, character.FolderName);
+			return Path.Combine(ConfigDirectory, character.FolderName);
 		}
 
 		/// <summary>
@@ -329,6 +367,12 @@ namespace SPNATI_Character_Editor
 			if (GetString(Settings.GameDirectory) == null || folder == null)
 				return "";
 			return Path.Combine(GetString(Settings.GameDirectory), "opponents", folder);
+		}
+
+		public static string ConfigPath
+		{
+			get { return GetString("configPath"); }
+			set { Set("configPath", value); }
 		}
 
 		/// <summary>

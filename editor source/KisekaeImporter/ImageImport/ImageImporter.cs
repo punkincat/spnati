@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms.VisualStyles;
 
 namespace KisekaeImporter.ImageImport
 {
@@ -37,6 +38,8 @@ namespace KisekaeImporter.ImageImport
 		/// </summary>
 		private const int RetryLimit = RetryTimeLimit / RetryInterval;
 
+		private string _path;
+
 		/// <summary>
 		/// appdata folder for kkl.exe
 		/// </summary>
@@ -44,7 +47,15 @@ namespace KisekaeImporter.ImageImport
 		{
 			get
 			{
-				string directory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "kkl", "Local Store");
+				string directory;
+				if (string.IsNullOrEmpty(_path))
+				{
+					directory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "kkl", "Local Store");
+				}
+				else
+				{
+					directory = _path;
+				}
 				return directory;
 			}
 		}
@@ -85,8 +96,9 @@ namespace KisekaeImporter.ImageImport
 
 		private Client _client;
 
-		public ImageImporter(bool allowRemoteControl)
+		public ImageImporter(bool allowRemoteControl, string path = "")
 		{
+			_path = path;
 			_client = new Client();
 			if (allowRemoteControl)
 			{
