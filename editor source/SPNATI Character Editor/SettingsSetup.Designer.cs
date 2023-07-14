@@ -29,7 +29,6 @@ namespace SPNATI_Character_Editor
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsSetup));
 			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 			this.txtApplicationDirectory = new Desktop.Skinning.SkinnedTextBox();
 			this.label1 = new Desktop.Skinning.SkinnedLabel();
@@ -406,7 +405,7 @@ namespace SPNATI_Character_Editor
 			this.helpLocation.Name = "helpLocation";
 			this.helpLocation.Size = new System.Drawing.Size(21, 23);
 			this.helpLocation.TabIndex = 22;
-			this.toolTip1.SetToolTip(this.helpLocation, resources.GetString("helpLocation.ToolTip"));
+			this.toolTip1.SetToolTip(this.helpLocation, "This does not automatically copy or move all the existing files, and if you later update the CE, you may have to copy or move the SPNATI folder again.");
 			this.helpLocation.UseVisualStyleBackColor = true;
 			// 
 			// chkIntellisense

@@ -373,7 +373,7 @@ namespace SPNATI_Character_Editor
 				Config.ConfigPath = (cboLocation.SelectedItem as ConfigLocation).Key;
 				Config.Save(path);  // saves the new location to the old config file
 				Config.Save(); // saves the new config file
-				MessageBox.Show("The location of the config.ini file and the backups has been changed.\nIt is recommended to quit the CE, copy or move the /SPNATI folder to the newly selected location, and restart the CE.");
+				MessageBox.Show("The location of the config.ini file and the backups has been changed.\nIt is recommended to quit the CE, copy or move the SPNATI folder to the newly selected location, and restart the CE.");
 			}
 		}
 
