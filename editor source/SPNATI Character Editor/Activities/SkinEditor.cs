@@ -182,7 +182,9 @@ namespace SPNATI_Character_Editor.Activities
 				}
 
 				if (txtName.Text != _costume.Link.Name || status != _costume.Link.Status || set != _costume.Link.Set || _costume.Link.IsDirty
-					|| gender != _costume.Link.Gender || label != _costume.Link.Label || countUnskipped != _costume.Link.LayersNonSkip)
+					|| gender != _costume.Link.Gender || label != _costume.Link.Label 
+					|| _costume.Link.LayersNonSkip == 0 && countUnskipped != _costume.Layers
+					|| _costume.Link.LayersNonSkip != 0 && countUnskipped != _costume.Link.LayersNonSkip)
 				{
 					_linkDataChanged = true;
 				}
@@ -194,7 +196,14 @@ namespace SPNATI_Character_Editor.Activities
 					_costume.Link.Status = status;
 					_costume.Link.Set = set;
 					_costume.Link.Label = label;
-					_costume.Link.LayersNonSkip = countUnskipped;
+					if (countUnskipped != _costume.Layers)
+					{
+						_costume.Link.LayersNonSkip = countUnskipped;
+					}
+					else
+					{
+						_costume.Link.LayersNonSkip = 0;
+					}
 
 					if (gender != _costume.Character.Gender)
 					{

@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
+using System.ComponentModel;
 
 namespace SPNATI_Character_Editor
 {
@@ -471,6 +472,7 @@ namespace SPNATI_Character_Editor
 		public string Label;
 
 		[XmlAttribute("layers")]
+		[DefaultValue(0)]
 		public int LayersNonSkip;
 
 		[XmlIgnore]
