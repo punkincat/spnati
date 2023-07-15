@@ -17,6 +17,7 @@
         <tag from="0" to="0">weapon</tag>
         <tag>witch</tag>
     </tags>
+    <layers>8</layers>
     <folder>opponents/reskins/ringo_ando_poison_ringo/</folder>
     <folder stage="8">opponents/ringo_ando/</folder>
     <wardrobe>
@@ -27,7 +28,7 @@
         <clothing name="cape" generic="cape" position="other" type="minor" />
         <clothing name="hat" generic="hat" position="head" type="minor" />
         <clothing name="boots" generic="shoes" position="feet" type="minor" plural="true" />
-        <clothing name="staff" position="hands" type="extra" />
+        <clothing name="staff" position="held" type="extra" />
     </wardrobe>
 
     <poses>
