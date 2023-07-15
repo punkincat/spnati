@@ -62,6 +62,11 @@
         <response id="568" opponent="mitama" opponentId="2172" />
         <response id="577" opponent="aella" opponentId="669" />
         <response id="578" opponent="aella" opponentId="670" />
+        <response id="579" opponent="aella" opponentId="673" />
+        <response id="585" opponent="aella" opponentId="674" />
+        <response id="586" opponent="aella" opponentId="675" />
+        <response id="589" opponent="yumeko" opponentId="4" />
+        <response id="590" opponent="yumeko" opponentId="5" />
     </responses>
     <notes>
         <note id="438">I believe Aqua is actually too lazy to go through with this, so that could potentially come up if Noire mentions the work it takes to be an idol.</note>
@@ -260,20 +265,18 @@
         <label id="216" label="" color="3" folder="Targets" sort="130" />
         <label id="217" label="" color="5" folder="Targets" sort="206" />
         <label id="218" label="" color="5" folder="Targets" sort="120" />
-        <label id="219" label="" color="3" folder="Targets" sort="107" />
-        <label id="220" label="" color="3" folder="Targets" sort="113" />
+        <label id="219" label="" color="0" folder="Targets" sort="107" />
+        <label id="220" label="" color="0" folder="Targets" sort="113" />
         <label id="221" label="" folder="Targets" sort="0" />
         <label id="222" label="" color="5" folder="Targets" sort="38" />
-        <label id="223" label="" color="3" folder="" sort="0" />
-        <label id="224" label="" color="3" folder="" sort="0" />
         <label id="225" label="" color="5" folder="Targets" sort="39" />
-        <label id="226" label="" color="3" folder="Targets" sort="123" />
+        <label id="226" label="" color="0" folder="Targets" sort="123" />
         <label id="227" label="" color="5" folder="Targets" sort="125" />
-        <label id="228" label="" color="3" folder="Targets" sort="74" />
-        <label id="229" label="" color="3" folder="Targets" sort="59" />
+        <label id="228" label="" color="0" folder="Targets" sort="74" />
+        <label id="229" label="" color="0" folder="Targets" sort="59" />
         <label id="230" label="" color="3" folder="Targets" sort="60" />
-        <label id="231" label="" color="3" folder="Targets" sort="61" />
-        <label id="232" label="" color="3" folder="Targets" sort="131" />
+        <label id="231" label="" color="0" folder="Targets" sort="61" />
+        <label id="232" label="" color="0" folder="Targets" sort="131" />
         <label id="233" label="" color="3" folder="Targets" sort="62" />
         <label id="234" label="" color="3" folder="Targets" sort="132" />
         <label id="235" label="" color="3" folder="Targets" sort="63" />
@@ -286,7 +289,7 @@
         <label id="242" label="" color="5" folder="Targets" sort="183" />
         <label id="243" label="" color="3" folder="Targets" sort="129" />
         <label id="244" label="" color="5" folder="Targets" sort="180" />
-        <label id="245" label="" color="3" folder="Targets" sort="121" />
+        <label id="245" label="" color="0" folder="Targets" sort="121" />
         <label id="246" label="" color="5" folder="Targets" sort="124" />
         <label id="247" label="" folder="Targets" sort="21" />
         <label id="248" label="" color="1" folder="Targets" sort="18" />
@@ -603,7 +606,7 @@
         <label id="562" label="" color="1" folder="Targets" sort="0" />
         <label id="563" label="" color="0" folder="Targets" sort="0" />
         <label id="564" label="" color="0" folder="Replies" sort="0" />
-        <label id="565" label="" color="3" folder="Replies" sort="0" />
+        <label id="565" label="" color="0" folder="Replies" sort="0" />
         <label id="566" label="" color="0" folder="Targets" sort="0" />
         <label id="567" label="" color="0" folder="Replies" sort="0" />
         <label id="568" label="" color="1" folder="Replies" sort="0" />
@@ -613,27 +616,49 @@
         <label id="572" label="" color="1" folder="Targets" sort="0" />
         <label id="573" label="" color="1" folder="Targets" sort="0" />
         <label id="574" label="" color="1" folder="Targets" sort="0" />
-        <label id="575" label="" color="1" folder="Targets" sort="0" />
-        <label id="576" label="" color="1" folder="Targets" sort="0" />
-        <label id="577" label="" color="1" folder="Replies" sort="0" />
-        <label id="578" label="" color="1" folder="Replies" sort="0" />
+        <label id="575" label="" color="0" folder="Targets" sort="0" />
+        <label id="576" label="" color="0" folder="Targets" sort="0" />
+        <label id="577" label="" color="0" folder="Replies" sort="0" />
+        <label id="578" label="" color="0" folder="Replies" sort="0" />
+        <label id="579" label="" color="1" folder="Replies" sort="0" />
+        <label id="580" label="" color="1" folder="Summer Goddess of Axis" sort="0" />
+        <label id="581" label="" color="1" folder="Replies" sort="0" />
+        <label id="582" label="" color="1" folder="Replies" sort="0" />
+        <label id="583" label="" color="1" folder="Summer Goddess of Axis" sort="0" />
+        <label id="584" label="" color="1" folder="Replies" sort="0" />
+        <label id="585" label="" color="1" folder="Replies" sort="0" />
+        <label id="586" label="" color="1" folder="Replies" sort="0" />
+        <label id="587" label="" color="1" folder="Targets" sort="0" />
+        <label id="588" label="" color="1" folder="Targets" sort="0" />
+        <label id="589" label="" color="1" folder="Replies" sort="0" />
+        <label id="590" label="" color="1" folder="Replies" sort="0" />
+        <label id="591" label="" color="1" folder="Replies" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>578</nextId>
+    <nextId>591</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aella_howStrong" />
+        <marker scope="Public" name="Aella_howStrong_cont" />
         <marker scope="Public" name="Aella_party_question" />
+        <marker scope="Public" name="Aella_party_question2" />
         <marker scope="Public" name="Aella_RemindsDarkness" />
         <marker scope="Public" name="Aella_RemindsDarkness_cont" />
         <marker scope="Public" name="Aella_RemindsDarkness_end" />
         <marker scope="Public" name="Aella_RemindsDarknessB" />
         <marker scope="Public" name="Aella_SelfParty_reply" />
+        <marker scope="Public" name="Aella_SelfParty_reply2A" />
+        <marker scope="Public" name="Aella_SelfParty_reply2ADarkness" />
+        <marker scope="Public" name="Aella_SelfParty_reply2AKazuma" />
+        <marker scope="Public" name="Aella_SelfParty_reply2AMegumin" />
+        <marker scope="Public" name="Aella_SelfParty_reply2B" />
+        <marker scope="Public" name="Aella_SelfParty_reply2Megumin" />
         <marker scope="Public" name="Aella_Stats_reply1" />
         <marker scope="Public" name="Aella_Stats_reply2" />
         <marker scope="Public" name="Aella_Stats_reply3" />
         <marker scope="Public" name="Aella_whyStripPoker_reply" />
+        <marker scope="Public" name="Aella_whyStripPoker_reply2" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion_cont" />
         <marker scope="Public" name="AG_AquasFollowerSuggestion_end" />
@@ -1007,6 +1032,9 @@
         <marker scope="Public" name="Yumeko_reply1" />
         <marker scope="Public" name="Yumeko_reply1_cont" />
         <marker scope="Public" name="Yumeko_reply1_end" />
+        <marker scope="Public" name="Yumeko_reply2" />
+        <marker scope="Public" name="Yumeko_reply3" />
+        <marker scope="Public" name="Yumeko_reply3B" />
         <marker scope="Public" name="Yuno_erection_react" />
         <marker scope="Public" name="Yuno_erection_reactAquass" />
         <marker scope="Public" name="Yuno_SelfAquass_reply" />
