@@ -82,7 +82,6 @@ namespace SPNATI_Character_Editor
 		[DefaultValue(false)]		
 		public bool HidePrefixlessImages;
 
-
 		[XmlElement("nextId")]
 		/// <summary>
 		/// Next unique ID to assign

@@ -46,6 +46,7 @@ namespace SPNATI_Character_Editor.Activities
 			SubscribeWorkspace<DialogueLine>(WorkspaceMessages.PreviewLine, UpdatePreview);
 			SubscribeWorkspace<UpdateImageArgs>(WorkspaceMessages.UpdatePreviewImage, UpdatePreviewImage);
 			SubscribeWorkspace<List<string>>(WorkspaceMessages.UpdateMarkers, UpdateMarkers);
+			SubscribeWorkspace<Character>(WorkspaceMessages.PreviewCharacterChanged, RepopulateSkinCombo);
 			Workspace.SendMessage(WorkspaceMessages.UpdateMarkers, Enumerable.Empty<string>());
 			UpdateLineCount();
 		}
@@ -83,6 +84,38 @@ namespace SPNATI_Character_Editor.Activities
 				cboSkin.SelectedItem = previous;
 			}
 		}
+
+		private void RepopulateSkinCombo(Character character)
+		{
+			if (character == null) { return; }
+			if (character == _character) { return; }
+
+			_character = character;
+
+			cboSkin.Items.Clear();
+			cboSkin.Items.Add("- Default - ");
+			foreach (AlternateSkin alt in _character.Metadata.AlternateSkins)
+			{
+				foreach (SkinLink link in alt.Skins)
+				{
+					cboSkin.Items.Add(link);
+				}
+			}
+			cboSkin.Sorted = true;
+			cboSkin.Visible = cboSkin.Items.Count > 1;
+			lblSkin.Visible = cboSkin.Visible;
+
+			cboSkin.SelectedIndex = 0;
+
+			if (character.Behavior.UniqueLines == 0)
+			{
+				character.PrepareForEdit();
+			}
+			
+			lblLinesOfDialogue.Text = $"Unique lines: {character.Behavior.UniqueLines.ToString()}";
+
+		}
+
 
 		private void WorkingCasesChanged(object sender, Case e)
 		{

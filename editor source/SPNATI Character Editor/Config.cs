@@ -476,15 +476,6 @@ namespace SPNATI_Character_Editor
 		}
 
 		/// <summary>
-		/// Load other character info up front in banter wizard
-		/// </summary>
-		public static bool AutoLoadBanterWizard
-		{
-			get { return GetBoolean("autoloadbanter"); }
-			set { Set("autoloadbanter", value); }
-		}
-
-		/// <summary>
 		/// Auto-open record select for targets, markers, etc. in dialogue
 		/// </summary>
 		public static bool AutoOpenConditions

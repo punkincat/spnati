@@ -49,6 +49,10 @@ namespace SPNATI_Character_Editor
 		/// </summary>
 		public const int SaveCaseNotes = 9;
 
+		/// <summary>
+		/// Sent when the previewed character has changed
+		/// </summary>
+		public const int PreviewCharacterChanged = 10;
 	}
 
 	public class UpdateImageArgs

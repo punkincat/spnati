@@ -233,6 +233,13 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
+		[XmlIgnore]
+		public Banter BanterData
+		{
+			get { return Get<Banter>(); }
+			set { Set(value); }
+		}
+
 		private bool _built;
 
 		public event EventHandler<bool> OnDirtyChanged;
@@ -332,6 +339,7 @@ namespace SPNATI_Character_Editor
 			Wardrobe = new List<Clothing>();
 			Collectibles = new CollectibleData();
 			PoseLibrary = new PoseMap(this);
+			BanterData = new Banter();
 		}
 
 		/// <summary>
@@ -357,6 +365,7 @@ namespace SPNATI_Character_Editor
 			Version = "";
 			Nicknames = new ObservableCollection<Nickname>();
 			Collectibles = new CollectibleData();
+			BanterData = new Banter();
 		}
 
 		public override string ToString()
