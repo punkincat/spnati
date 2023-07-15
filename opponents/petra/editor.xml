@@ -258,6 +258,12 @@
         <response id="786" opponent="aqua_kh" opponentId="67" />
         <response id="792" opponent="hilda" opponentId="305" />
         <response id="802" opponent="aella" opponentId="264" />
+        <response id="803" opponent="jura" opponentId="866" />
+        <response id="804" opponent="jura" opponentId="869" />
+        <response id="805" opponent="jura" opponentId="868" />
+        <response id="806" opponent="jura" opponentId="377" />
+        <response id="807" opponent="jura" opponentId="378" />
+        <response id="808" opponent="jura" opponentId="379" />
     </responses>
     <notes>
         <note id="13">https://www.youtube.com/watch?v=5EbnoElOJx0 please dont actually respond to this really dumb joke</note>
@@ -998,13 +1004,23 @@ Why? Do people think we are?"</note>
         <label id="800" label="" folder="Targets" sort="0" />
         <label id="801" label="" folder="Targets" sort="0" />
         <label id="802" label="" folder="Situations" sort="0" />
+        <label id="803" label="" folder="Inbound Responses" sort="0" />
+        <label id="804" label="" folder="Inbound Responses" sort="0" />
+        <label id="175" label="" folder="Prompt Responses" sort="0" />
+        <label id="805" label="" folder="Inbound Responses" sort="0" />
+        <label id="806" label="" folder="Inbound Responses" sort="0" />
+        <label id="807" label="" folder="Inbound Responses" sort="0" />
+        <label id="808" label="" folder="Inbound Responses" sort="0" />
+        <label id="809" label="" folder="Post-Epilogue (Summer)" sort="0" />
+        <label id="810" label="" folder="Post-Epilogue (Summer)" sort="0" />
+        <label id="811" label="" folder="Also Playing" sort="0" />
     </labels>
     <prefixes>
         <prefix>sunglasses</prefix>
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>802</nextId>
+    <nextId>811</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="!" />
@@ -1043,6 +1059,7 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="gamestart_chara_devil" />
         <marker scope="Public" name="gamestart_hilda">Talked to Hilda in game start.</marker>
         <marker scope="Public" name="gamestart_hilda_leonie_bernie_and_human">Game start line when Petra, Hilda, Leonie, and Bernadetta are present. Mentions the human.</marker>
+        <marker scope="Public" name="gamestart_hilda_summer" />
         <marker scope="Public" name="gamestart_ignatz">Talked to Ignatz in game start.</marker>
         <marker scope="Public" name="gamestart_leonie">Talked to Leonie in game start.</marker>
         <marker scope="Public" name="gamestart_respond_leonie" />
@@ -1269,6 +1286,9 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="petra_elphaba_strip2b" />
         <marker scope="Public" name="petra_emi_leg_removal" />
         <marker scope="Public" name="petra_emi_leg_removalB" />
+        <marker scope="Public" name="petra_epilogue_summer_comment1" />
+        <marker scope="Public" name="petra_epilogue_summer_comment2" />
+        <marker scope="Public" name="petra_epilogue_summer_seen" />
         <marker scope="Public" name="petra_erufuda_0a" />
         <marker scope="Public" name="petra_erufuda_0b" />
         <marker scope="Public" name="petra_erufuda_holidayWeightResp" />
@@ -1360,8 +1380,14 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="petra_jura_babies_resp" />
         <marker scope="Public" name="petra_jura_seductionA" />
         <marker scope="Public" name="petra_jura_seductionB" />
+        <marker scope="Public" name="petra_jura_self1a" />
+        <marker scope="Public" name="petra_jura_self2a" />
+        <marker scope="Public" name="petra_jura_self3a" />
         <marker scope="Public" name="petra_jura_strip0a" />
         <marker scope="Public" name="petra_jura0_resp" />
+        <marker scope="Public" name="petra_juraBB0_resp" />
+        <marker scope="Public" name="petra_juraVQ0_resp" />
+        <marker scope="Public" name="petra_juraWO0_resp" />
         <marker scope="Public" name="petra_kaz_self0a" />
         <marker scope="Public" name="petra_kaz_strip0a" />
         <marker scope="Public" name="petra_kaz_strip0b" />
