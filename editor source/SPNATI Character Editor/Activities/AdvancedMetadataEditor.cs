@@ -155,10 +155,10 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-        private void valScale_ValueChanged(object sender, EventArgs e)
-        {
+		private void valScale_ValueChanged(object sender, EventArgs e)
+		{
 			_character.Metadata.Scale = (float)valScale.Value;
 			Workspace.SendMessage<UpdateImageArgs>(WorkspaceMessages.UpdatePreviewImage, null);
 		}
-    }
+	}
 }

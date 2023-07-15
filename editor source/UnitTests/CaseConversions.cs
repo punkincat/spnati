@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SPNATI_Character_Editor;
 
 namespace UnitTests
@@ -10,10 +10,10 @@ namespace UnitTests
 		public void TransfersTarget()
 		{
 			Case c = new Case();
-			c.Target = "bob";
+			c.LegacyTarget = "bob";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.Target);
+			Assert.IsNull(c.LegacyTarget);
 			Assert.AreEqual("target", c.Conditions[0].Role);
 			Assert.AreEqual("bob", c.Conditions[0].Character);
 		}
@@ -22,10 +22,10 @@ namespace UnitTests
 		public void TransfersTargetStage()
 		{
 			Case c = new Case();
-			c.TargetStage = "0-5";
+			c.LegacyTargetStage = "0-5";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.TargetStage);
+			Assert.IsNull(c.LegacyTargetStage);
 			Assert.AreEqual("target", c.Conditions[0].Role);
 			Assert.AreEqual("0-5", c.Conditions[0].Stage);
 		}
@@ -34,10 +34,10 @@ namespace UnitTests
 		public void TransfersTargetHand()
 		{
 			Case c = new Case();
-			c.TargetHand = "blah";
+			c.LegacyTargetHand = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.TargetHand);
+			Assert.IsNull(c.LegacyTargetHand);
 			Assert.AreEqual("target", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].Hand);
 		}
@@ -46,10 +46,10 @@ namespace UnitTests
 		public void TransfersTargetLayers()
 		{
 			Case c = new Case();
-			c.TargetLayers = "blah";
+			c.LegacyTargetLayers = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.TargetLayers);
+			Assert.IsNull(c.LegacyTargetLayers);
 			Assert.AreEqual("target", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].Layers);
 		}
@@ -58,10 +58,10 @@ namespace UnitTests
 		public void TransfersTargetStartingLayers()
 		{
 			Case c = new Case();
-			c.TargetStartingLayers = "blah";
+			c.LegacyTargetStartingLayers = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.TargetStartingLayers);
+			Assert.IsNull(c.LegacyTargetStartingLayers);
 			Assert.AreEqual("target", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].StartingLayers);
 		}
@@ -70,10 +70,10 @@ namespace UnitTests
 		public void TransfersTargetStatus()
 		{
 			Case c = new Case();
-			c.TargetStatus = "blah";
+			c.LegacyTargetStatus = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.TargetStatus);
+			Assert.IsNull(c.LegacyTargetStatus);
 			Assert.AreEqual("target", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].Status);
 		}
@@ -82,10 +82,10 @@ namespace UnitTests
 		public void TransfersTargetSaidMarker()
 		{
 			Case c = new Case();
-			c.TargetSaidMarker = "blah";
+			c.LegacyTargetSaidMarker = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.TargetSaidMarker);
+			Assert.IsNull(c.LegacyTargetSaidMarker);
 			Assert.AreEqual("target", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].SaidMarker);
 		}
@@ -94,10 +94,10 @@ namespace UnitTests
 		public void TransfersTargetSayingMarker()
 		{
 			Case c = new Case();
-			c.TargetSayingMarker = "blah";
+			c.LegacyTargetSayingMarker = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.TargetSayingMarker);
+			Assert.IsNull(c.LegacyTargetSayingMarker);
 			Assert.AreEqual("target", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].SayingMarker);
 		}
@@ -106,10 +106,10 @@ namespace UnitTests
 		public void TransfersTargetNotSaidMarker()
 		{
 			Case c = new Case();
-			c.TargetNotSaidMarker = "blah";
+			c.LegacyTargetNotSaidMarker = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.TargetNotSaidMarker);
+			Assert.IsNull(c.LegacyTargetNotSaidMarker);
 			Assert.AreEqual("target", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].NotSaidMarker);
 		}
@@ -118,10 +118,10 @@ namespace UnitTests
 		public void TransfersTargetSaying()
 		{
 			Case c = new Case();
-			c.TargetSaying = "blah";
+			c.LegacyTargetSaying = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.TargetSaying);
+			Assert.IsNull(c.LegacyTargetSaying);
 			Assert.AreEqual("target", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].Saying);
 		}
@@ -130,10 +130,10 @@ namespace UnitTests
 		public void TransfersTargetTimeInStage()
 		{
 			Case c = new Case();
-			c.TargetTimeInStage = "blah";
+			c.LegacyTargetTimeInStage = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.TargetTimeInStage);
+			Assert.IsNull(c.LegacyTargetTimeInStage);
 			Assert.AreEqual("target", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].TimeInStage);
 		}
@@ -144,10 +144,10 @@ namespace UnitTests
 			Case c = new Case();
 			TriggerDatabase.AddTrigger(new TriggerDefinition("opponent_lost", "opponent_lost") { HasTarget = true });
 			c.Tag = "opponent_lost";
-			c.ConsecutiveLosses = "blah";
+			c.LegacyConsecutiveLosses = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.ConsecutiveLosses);
+			Assert.IsNull(c.LegacyConsecutiveLosses);
 			Assert.AreEqual("target", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].ConsecutiveLosses);
 		}
@@ -156,10 +156,10 @@ namespace UnitTests
 		public void TransfersSelfHand()
 		{
 			Case c = new Case();
-			c.HasHand = "blah";
+			c.LegacyHasHand = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.HasHand);
+			Assert.IsNull(c.LegacyHasHand);
 			Assert.AreEqual("self", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].Hand);
 		}
@@ -168,10 +168,10 @@ namespace UnitTests
 		public void TransfersSelfSaidMarker()
 		{
 			Case c = new Case();
-			c.SaidMarker = "blah";
+			c.LegacySaidMarker = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.SaidMarker);
+			Assert.IsNull(c.LegacySaidMarker);
 			Assert.AreEqual("self", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].SaidMarker);
 		}
@@ -180,10 +180,10 @@ namespace UnitTests
 		public void TransfersSelfNotSaidMarker()
 		{
 			Case c = new Case();
-			c.NotSaidMarker = "blah";
+			c.LegacyNotSaidMarker = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.NotSaidMarker);
+			Assert.IsNull(c.LegacyNotSaidMarker);
 			Assert.AreEqual("self", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].NotSaidMarker);
 		}
@@ -192,10 +192,10 @@ namespace UnitTests
 		public void TransfersSelfTimeInStage()
 		{
 			Case c = new Case();
-			c.TimeInStage = "blah";
+			c.LegacyTimeInStage = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.TimeInStage);
+			Assert.IsNull(c.LegacyTimeInStage);
 			Assert.AreEqual("self", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].TimeInStage);
 		}
@@ -204,10 +204,10 @@ namespace UnitTests
 		public void TransfersSelfConsecutiveLosses()
 		{
 			Case c = new Case();
-			c.ConsecutiveLosses = "blah";
+			c.LegacyConsecutiveLosses = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.ConsecutiveLosses);
+			Assert.IsNull(c.LegacyConsecutiveLosses);
 			Assert.AreEqual("self", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].ConsecutiveLosses);
 		}
@@ -216,10 +216,10 @@ namespace UnitTests
 		public void TransfersAlsoPlaying()
 		{
 			Case c = new Case();
-			c.AlsoPlaying = "bob";
+			c.LegacyAlsoPlaying = "bob";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.AlsoPlaying);
+			Assert.IsNull(c.LegacyAlsoPlaying);
 			Assert.AreEqual("other", c.Conditions[0].Role);
 			Assert.AreEqual("bob", c.Conditions[0].Character);
 		}
@@ -228,10 +228,10 @@ namespace UnitTests
 		public void TransfersAlsoPlayingStage()
 		{
 			Case c = new Case();
-			c.AlsoPlayingStage = "0-5";
+			c.LegacyAlsoPlayingStage = "0-5";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.AlsoPlayingStage);
+			Assert.IsNull(c.LegacyAlsoPlayingStage);
 			Assert.AreEqual("other", c.Conditions[0].Role);
 			Assert.AreEqual("0-5", c.Conditions[0].Stage);
 		}
@@ -240,10 +240,10 @@ namespace UnitTests
 		public void TransfersAlsoPlayingHand()
 		{
 			Case c = new Case();
-			c.AlsoPlayingHand = "blah";
+			c.LegacyAlsoPlayingHand = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.AlsoPlayingHand);
+			Assert.IsNull(c.LegacyAlsoPlayingHand);
 			Assert.AreEqual("other", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].Hand);
 		}
@@ -252,10 +252,10 @@ namespace UnitTests
 		public void TransfersAlsoPlayingSaidMarker()
 		{
 			Case c = new Case();
-			c.AlsoPlayingSaidMarker = "blah";
+			c.LegacyAlsoPlayingSaidMarker = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.AlsoPlayingSaidMarker);
+			Assert.IsNull(c.LegacyAlsoPlayingSaidMarker);
 			Assert.AreEqual("other", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].SaidMarker);
 		}
@@ -264,10 +264,10 @@ namespace UnitTests
 		public void TransfersAlsoPlayingSayingMarker()
 		{
 			Case c = new Case();
-			c.AlsoPlayingSayingMarker = "blah";
+			c.LegacyAlsoPlayingSayingMarker = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.AlsoPlayingSayingMarker);
+			Assert.IsNull(c.LegacyAlsoPlayingSayingMarker);
 			Assert.AreEqual("other", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].SayingMarker);
 		}
@@ -276,10 +276,10 @@ namespace UnitTests
 		public void TransfersAlsoPlayingNotSaidMarker()
 		{
 			Case c = new Case();
-			c.AlsoPlayingNotSaidMarker = "blah";
+			c.LegacyAlsoPlayingNotSaidMarker = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.AlsoPlayingNotSaidMarker);
+			Assert.IsNull(c.LegacyAlsoPlayingNotSaidMarker);
 			Assert.AreEqual("other", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].NotSaidMarker);
 		}
@@ -288,10 +288,10 @@ namespace UnitTests
 		public void TransfersAlsoPlayingSaying()
 		{
 			Case c = new Case();
-			c.AlsoPlayingSaying = "blah";
+			c.LegacyAlsoPlayingSaying = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.AlsoPlayingSaying);
+			Assert.IsNull(c.LegacyAlsoPlayingSaying);
 			Assert.AreEqual("other", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].Saying);
 		}
@@ -300,10 +300,10 @@ namespace UnitTests
 		public void TransfersAlsoPlayingTimeInStage()
 		{
 			Case c = new Case();
-			c.AlsoPlayingTimeInStage = "blah";
+			c.LegacyAlsoPlayingTimeInStage = "blah";
 			DataConversions.ConvertCase5_2(c);
 			Assert.AreEqual(1, c.Conditions.Count);
-			Assert.IsNull(c.AlsoPlayingTimeInStage);
+			Assert.IsNull(c.LegacyAlsoPlayingTimeInStage);
 			Assert.AreEqual("other", c.Conditions[0].Role);
 			Assert.AreEqual("blah", c.Conditions[0].TimeInStage);
 		}

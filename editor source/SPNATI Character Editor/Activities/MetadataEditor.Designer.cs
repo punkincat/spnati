@@ -30,9 +30,9 @@ namespace SPNATI_Character_Editor.Activities
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtLabel = new Desktop.Skinning.SkinnedTextBox();
             this.label1 = new Desktop.Skinning.SkinnedLabel();
             this.gridAI = new Desktop.Skinning.SkinnedDataGridView();
@@ -62,6 +62,7 @@ namespace SPNATI_Character_Editor.Activities
             this.lblSize = new Desktop.Skinning.SkinnedLabel();
             this.cboGender = new Desktop.Skinning.SkinnedComboBox();
             this.skinnedGroupBox1 = new Desktop.Skinning.SkinnedGroupBox();
+            this.txtDefaultCostumeName = new Desktop.Skinning.SkinnedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.valPicScale = new Desktop.Skinning.SkinnedNumericUpDown();
             this.lblPicScale = new Desktop.Skinning.SkinnedLabel();
@@ -86,7 +87,6 @@ namespace SPNATI_Character_Editor.Activities
             this.lblTitleLabel = new Desktop.Skinning.SkinnedLabel();
             this.skinnedGroupBox4 = new Desktop.Skinning.SkinnedGroupBox();
             this.skinnedGroupBox5 = new Desktop.Skinning.SkinnedGroupBox();
-            this.txtDefaultCostumeName = new Desktop.Skinning.SkinnedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridAI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.valRounds)).BeginInit();
             this.skinnedGroupBox1.SuspendLayout();
@@ -130,27 +130,27 @@ namespace SPNATI_Character_Editor.Activities
             this.gridAI.BackgroundColor = System.Drawing.Color.White;
             this.gridAI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridAI.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridAI.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridAI.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridAI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridAI.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColAIStage,
             this.ColDifficulty});
             this.gridAI.Data = null;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridAI.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridAI.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridAI.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.gridAI.EnableHeadersVisualStyles = false;
             this.gridAI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -158,17 +158,18 @@ namespace SPNATI_Character_Editor.Activities
             this.gridAI.Location = new System.Drawing.Point(107, 27);
             this.gridAI.Name = "gridAI";
             this.gridAI.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridAI.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridAI.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridAI.RowHeadersVisible = false;
             this.gridAI.Size = new System.Drawing.Size(230, 125);
             this.gridAI.TabIndex = 18;
+            this.gridAI.Validated += new System.EventHandler(this.gridAI_Validated);
             // 
             // ColAIStage
             // 
@@ -541,6 +542,17 @@ namespace SPNATI_Character_Editor.Activities
             this.skinnedGroupBox1.TabStop = false;
             this.skinnedGroupBox1.Text = "Demographics";
             // 
+            // txtDefaultCostumeName
+            // 
+            this.txtDefaultCostumeName.BackColor = System.Drawing.Color.White;
+            this.txtDefaultCostumeName.ForeColor = System.Drawing.Color.Black;
+            this.txtDefaultCostumeName.Location = new System.Drawing.Point(529, 102);
+            this.txtDefaultCostumeName.Name = "txtDefaultCostumeName";
+            this.txtDefaultCostumeName.Size = new System.Drawing.Size(148, 20);
+            this.txtDefaultCostumeName.TabIndex = 118;
+            this.toolTip1.SetToolTip(this.txtDefaultCostumeName, "The name of the character\'s default costume, shown on the character select screen" +
+        "");
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -891,17 +903,6 @@ namespace SPNATI_Character_Editor.Activities
             this.skinnedGroupBox5.TabIndex = 113;
             this.skinnedGroupBox5.TabStop = false;
             this.skinnedGroupBox5.Text = "Other Notes";
-            // 
-            // txtDefaultCostumeName
-            // 
-            this.txtDefaultCostumeName.BackColor = System.Drawing.Color.White;
-            this.txtDefaultCostumeName.ForeColor = System.Drawing.Color.Black;
-            this.txtDefaultCostumeName.Location = new System.Drawing.Point(529, 102);
-            this.txtDefaultCostumeName.Name = "txtDefaultCostumeName";
-            this.txtDefaultCostumeName.Size = new System.Drawing.Size(148, 20);
-            this.txtDefaultCostumeName.TabIndex = 118;
-            this.toolTip1.SetToolTip(this.txtDefaultCostumeName, "The name of the character\'s default costume, shown on the character select screen" +
-        "");
             // 
             // MetadataEditor
             // 

@@ -46,10 +46,10 @@ namespace SPNATI_Character_Editor
 		[XmlElement("writer")]
 		public string Writer;
 
-        [XmlElement("default-costume-name")]
-        public string DefaultCostumeName;
+		[XmlElement("default-costume-name")]
+		public string DefaultCostumeName;
 
-        [XmlElement("lastupdate")]
+		[XmlElement("lastupdate")]
 		public long LastUpdate;
 
 		public override bool IsFullyLoaded { get { return false; } }

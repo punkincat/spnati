@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using Desktop.CommonControls;
 
 namespace SPNATI_Character_Editor
 {
@@ -49,6 +50,9 @@ namespace SPNATI_Character_Editor
 			chkSafeMode.Checked = Config.SafeMode;
 			chkLegacyPoses.Checked = Config.ShowLegacyPoseTabs;
 			txtAutoOpen.Text = Config.GetString(Settings.AutoOpenCharacter);
+			recResponder.RecordType = typeof(Character);
+			recResponder.RecordFilter = ResponderFilter;
+			recResponder.Record = CharacterDatabase.GetById(Config.DefaultResponder);
 
 			HashSet<string> pauses = Config.AutoPauseDirectives;
 			foreach (DirectiveDefinition def in Definitions.Instance.Get<DirectiveDefinition>())
@@ -72,6 +76,47 @@ namespace SPNATI_Character_Editor
 			{
 				chkStatuses.Items.Add(status, statusFilters.Contains(status));
 			}
+
+			_initialized = false;
+			ConfigLocation[] locations = new ConfigLocation[] {
+				new ConfigLocation("appdata", "%APPDATA% (default and recommended)"),
+				new ConfigLocation("CEFolder", "the CE's folder"),
+			};
+
+			foreach (ConfigLocation loc in locations)
+			{
+				cboLocation.Items.Add(loc);
+			}
+
+			string path = Config.ConfigPath;
+			if (path == "")
+			{
+				cboLocation.SelectedIndex = 0;
+			}
+			else
+			{
+				foreach (ConfigLocation loc in locations)
+				{
+					if (loc.Key == path)
+					{
+						cboLocation.SelectedItem = loc;
+						break;
+					}
+				}
+			}
+			_initialized = true;
+		}
+
+		private bool _initialized;
+
+		private bool ResponderFilter(IRecord record)
+		{
+			Character character = record as Character;
+			if (character.FolderName == "human")
+			{
+				return false;
+			}
+			return true;
 		}
 
 		private void cmdBrowse_Click(object sender, EventArgs e)
@@ -130,6 +175,7 @@ namespace SPNATI_Character_Editor
 				return;
 			}
 			Config.Set(Settings.GameDirectory, dir);
+			Config.ConfigPath = (cboLocation.SelectedItem as ConfigLocation).Key;
 			Config.AutoSaveInterval = (int)valAutoSave.Value;
 			Config.UserName = txtUserName.Text;
 			Config.UseIntellisense = chkIntellisense.Checked;
@@ -155,6 +201,14 @@ namespace SPNATI_Character_Editor
 			Config.MaxFranchisePartners = (int)valFranchise.Value;
 			Config.AutoPopulateStageImages = chkAutoFill.Checked;
 			Config.WarnAboutIncompleteStatus = chkWarnIncomplete.Checked;
+			if (recResponder.Record != null)
+			{
+				Config.DefaultResponder = CharacterDatabase.GetId(recResponder.Record as Character);
+			}
+			else
+			{
+				Config.DefaultResponder = "";
+			}
 
 			bool oldSafeMode = Config.SafeMode;
 			Config.SafeMode = chkSafeMode.Checked;
@@ -193,7 +247,7 @@ namespace SPNATI_Character_Editor
 		}
 
 
-        private void cmdBrowseKisekae_Click(object sender, EventArgs e)
+		private void cmdBrowseKisekae_Click(object sender, EventArgs e)
 		{
 			if (!string.IsNullOrEmpty(txtKisekae.Text))
 			{
@@ -299,5 +353,47 @@ namespace SPNATI_Character_Editor
 		{
 			chkHideImages.Checked = !chkSafeMode.Checked;
 		}
+
+		private void recResponder_RecordChanged(object sender, RecordEventArgs e)
+		{
+			if (recResponder.Record != null)
+			{
+				Config.DefaultResponder = CharacterDatabase.GetId(recResponder.Record as Character);
+			}
+			else
+			{
+				Config.DefaultResponder = "";
+			}
+		}
+		private void cboLocation_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (_initialized)
+			{
+				string path = Config.ConfigDirectory;
+				Config.ConfigPath = (cboLocation.SelectedItem as ConfigLocation).Key;
+				Config.Save(path);  // saves the new location to the old config file
+				Config.Save(); // saves the new config file
+				MessageBox.Show("The location of the config.ini file and the backups has been changed.\nIt is recommended to quit the CE, copy or move the SPNATI folder to the newly selected location, and restart the CE.");
+			}
+		}
+
+		private class ConfigLocation
+		{
+			public string Key;
+			public string Description;
+
+			public ConfigLocation (string key, string description)
+			{
+				Key = key;
+				Description = description;
+			}
+
+			public override string ToString()
+			{
+				return Description;
+			}
+		}
+
+
 	}
 }

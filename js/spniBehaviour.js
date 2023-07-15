@@ -1287,14 +1287,14 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
         return player.gender;
     case 'intelligence':
         return player.intelligence;
-	case 'tostutter':
-		var n = Math.min(Math.max((parseInt(args, 10) || 1), 1), 10);
-		var name = expandNicknames(self, player);
-		var ret = name;
-		for (var i = 0; i < n; i++) {
-			ret = name[0] + "-" + ret;
-		}
-		return ret;
+    case 'tostutter':
+        var n = Math.min(Math.max((parseInt(args, 10) || 1), 1), 10);
+        var name = expandNicknames(self, player);
+        var ret = name;
+        for (var i = 0; i < n; i++) {
+            ret = name[0] + "-" + ret;
+        }
+        return ret;
     case 'ifmale':
         return args.split('|')[(player.gender == 'male' ? 0 : 1)];
     case 'subj':
@@ -1357,7 +1357,7 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
                 if ([IMPORTANT_ARTICLE, MAJOR_ARTICLE, MINOR_ARTICLE, EXTRA_ARTICLE].indexOf(keyword) >= 0) {
                     types.push(keyword);
                 } else if ([UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE, OTHER_ARTICLE,
-                            'arms', 'feet', 'hands', 'head', 'legs', 'neck', 'waist'].indexOf(keyword) >= 0) {
+                            'arms', 'feet', 'hands', 'head', 'legs', 'neck', 'waist', 'held'].indexOf(keyword) >= 0) {
                     positions.push(keyword);
                 } else {
                     names.push(keyword);
@@ -1740,6 +1740,10 @@ function inInterval (value, interval) {
     return !interval || interval.contains(value);
 }
 
+function notInInterval (value, interval) {
+	return !interval || !interval.contains(value);
+}
+
 /************************************************************
  * Special function to check stage conditions, which can contain a
  * space-separated list of intervals.
@@ -1759,7 +1763,8 @@ function evalOperator (val, op, cmpVal) {
     case '<=': return val <= cmpVal;
     case '!=': return val != cmpVal;
     case '!!': return !!val;
-    case '@': return inInterval(val, cmpVal);
+    case '!@': return notInInterval(val, cmpVal);
+    case '@': return inInterval(val, cmpVal); 
     default:
     case '=':
     case '==':
@@ -1777,7 +1782,7 @@ function evalOperator (val, op, cmpVal) {
  * the current state marker.
  ************************************************************/
 function checkMarker(predicate, self, target, currentOnly) {
-    var match = predicate.match(/^([\w\-\+]+)(\*?)(\s*(\<\=|\>\=|\<|\>|\=\=|!\=|\=|\@)?\s*(.+))?\s*$/);
+    var match = predicate.match(/^([\w\-\+]+)(\*?)(\s*(\<\=|\>\=|\<|\>|\=\=|!\=|\=|!\@|\@)?\s*(.+))?\s*$/);
     
     var name;
     var perTarget;
@@ -1797,7 +1802,7 @@ function checkMarker(predicate, self, target, currentOnly) {
         if (match[3]) {
             op = match[4];
             cmpVal = expandDialogue(match[5], self, target);
-            if (op == '@')
+            if (op == '@' || op == '!@')
             {
                 cmpVal = parseInterval(cmpVal);
             }

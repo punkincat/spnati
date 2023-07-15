@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using SPNATI_Character_Editor.Forms;
 using System.Windows.Forms;
 
@@ -72,7 +72,6 @@ namespace SPNATI_Character_Editor.Activities
 			imgSource.SetImage(image, _sourceCase.Stages[0]);
 		}
 
-
 		private void ResponseControl_HighlightRow(object sender, int line)
 		{
 			if (line == -1)
@@ -83,7 +82,11 @@ namespace SPNATI_Character_Editor.Activities
 				int stage = _responseCase.Stages[0];
 				imgResponse.SetImage(image, stage);
 			}
-			
+			DialogueLine dialogueLine = responseControl.GetLine(line);
+			if (!string.IsNullOrEmpty(dialogueLine.Text))
+			{
+				imgResponse.SetText(dialogueLine, _responder.Metadata.TextSize.ToString());
+			}
 		}
 
 		public override bool CanDeactivate(DeactivateArgs args)
@@ -103,7 +106,6 @@ namespace SPNATI_Character_Editor.Activities
 			Shell.Instance.CloseWorkspace(Workspace);
 			return true;
 		}
-
 
 		public override void Quit()
 		{

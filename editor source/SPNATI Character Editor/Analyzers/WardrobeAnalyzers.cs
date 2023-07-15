@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace SPNATI_Character_Editor.Analyzers
 {
@@ -59,7 +59,7 @@ namespace SPNATI_Character_Editor.Analyzers
 
 		public string[] GetValues()
 		{
-			return new string[] { "upper", "lower", "both", "head", "neck", "hands", "arms", "feet", "legs", "waist", "other" };
+			return new string[] { "upper", "lower", "both", "head", "neck", "hands", "arms", "feet", "legs", "waist", "held", "other" };
 		}
 
 		public Type GetValueType()

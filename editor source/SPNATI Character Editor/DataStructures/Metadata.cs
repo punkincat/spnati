@@ -241,8 +241,8 @@ namespace SPNATI_Character_Editor
 			{
 				foreach (AlternateSkin skin in c.Metadata.AlternateSkins)
 					foreach (SkinLink link in skin.Skins)
-						if (link.LayersNonSkip == 0)
-							link.LayersNonSkip = c.Layers;
+						if (link.LayersNonSkip == c.Layers)
+							link.LayersNonSkip = 0;
 			}
 		}
 

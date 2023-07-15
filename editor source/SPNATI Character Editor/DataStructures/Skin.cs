@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
+using System.ComponentModel;
 
 namespace SPNATI_Character_Editor
 {
@@ -113,12 +114,12 @@ namespace SPNATI_Character_Editor
 			get { return ""; }
 		}
 
-        public int Layers
+		public int Layers
 		{
 			get { return Wardrobe.Count; }
 		}
 
-        [XmlElement("layers")]
+		[XmlElement("layers")]
 		public int LayersNonSkip { get; set; }
 
 		public override string ToString()
@@ -128,17 +129,17 @@ namespace SPNATI_Character_Editor
 
 		public void OnBeforeSerialize() {
 
-            int countUnskipped = 0;
-            foreach (Clothing c in Wardrobe)
-            {
-                if (c != null && c.Type != "skip")
-                {
-                    countUnskipped++;
-                }
-            }
+			int countUnskipped = 0;
+			foreach (Clothing c in Wardrobe)
+			{
+				if (c != null && c.Type != "skip")
+				{
+					countUnskipped++;
+				}
+			}
 
 			LayersNonSkip = countUnskipped;
-        }
+		}
 
 		public void OnAfterDeserialize(string source)
 		{
@@ -299,7 +300,7 @@ namespace SPNATI_Character_Editor
 
 		public string GetPosePath(string sheetName, string subfolder, string poseName, bool asset)
 		{
-			string root = asset ? Path.Combine(Config.AppDataDirectory, Folder, sheetName) : Path.Combine(GetDirectory());
+			string root = asset ? Path.Combine(Config.ConfigDirectory, Folder, sheetName) : Path.Combine(GetDirectory());
 			if (!string.IsNullOrEmpty(subfolder))
 			{
 				root = Path.Combine(root, subfolder);
@@ -471,6 +472,7 @@ namespace SPNATI_Character_Editor
 		public string Label;
 
 		[XmlAttribute("layers")]
+		[DefaultValue(0)]
 		public int LayersNonSkip;
 
 		[XmlIgnore]

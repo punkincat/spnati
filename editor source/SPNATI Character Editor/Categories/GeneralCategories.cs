@@ -230,6 +230,7 @@ namespace SPNATI_Character_Editor.Categories
 				new ClothingPositionCategory("feet", "feet"),
 				new ClothingPositionCategory("legs", "legs"),
 				new ClothingPositionCategory("waist", "waist"),
+				new ClothingPositionCategory("held", "held"),
 				new ClothingPositionCategory("other", "other"),
 				new ClothingPositionCategory("", ""),
 				};

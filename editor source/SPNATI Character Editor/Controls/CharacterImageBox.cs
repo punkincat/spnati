@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.Messaging;
 using Desktop.Skinning;
 using SPNATI_Character_Editor.EpilogueEditor;
@@ -63,7 +63,6 @@ namespace SPNATI_Character_Editor.Controls
 			}
 
 			_textBorder = new Pen(Color.Black, TextBorder);
-			UpdateFont();
 		}
 
 		public void SetCharacter(ISkin character)
@@ -214,7 +213,7 @@ namespace SPNATI_Character_Editor.Controls
 		}
 
 		public void RefreshImage()
-        {
+		{
 			Destroy();
 
 			UpdateSceneTransform();
