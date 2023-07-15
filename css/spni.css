@@ -3165,11 +3165,13 @@ ul.dropdown-menu>li {
     display: none;
 }
 
-.opponent-added-field:not(.has-added-date) {
+.opponent-added-field:not(.has-added-date),
+.opponent-birthday-field:not(.has-birthday) {
     display: none;
 }
 
-.opponent-added-field .has-added-date {
+.opponent-added-field .has-added-date,
+.opponent-birthday-field .has-birthday {
     display: flex;
 }
 

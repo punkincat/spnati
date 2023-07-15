@@ -552,7 +552,13 @@ function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber,
     if (!['small', 'smaller'].includes(this.fontSize)) this.fontSize = undefined;
     this.lastUpdated = parseInt($metaXml.children('lastupdate').text(), 10) || 0;
     const $bday = $metaXml.children('birthday'), now = new Date();
-    this.hasBirthday = ($bday.length && $bday.attr('month') == now.getMonth() + 1 && $bday.attr('day') == now.getDate());
+    if ($bday.length) {
+        this.birthday = {
+            month: Number($bday.attr('month')),
+            day: Number($bday.attr('day')),
+        }
+        this.hasBirthday = (this.birthday.month == now.getMonth() + 1 && this.birthday == now.getDate());
+    }
 
     /* For sorting purposes. 
      * Simplifies diacritics (to solve the Pokemon problem), removes punctuation,
