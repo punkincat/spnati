@@ -440,6 +440,7 @@
         <response id="2361" opponent="mia_golden_sun" opponentId="115" />
         <response id="2366" opponent="mia_golden_sun" opponentId="1" />
         <response id="2390" opponent="joey" opponentId="389" />
+        <response id="2406" opponent="joey" opponentId="393" />
     </responses>
     <notes>
         <note id="412">Yes, Mari is implying that Kazuma is lying just to see her pose naked for him. You are free to have Kazuma defend his case, so to speak.</note>
@@ -460,7 +461,6 @@
         <note id="2124">The lines are bit different in what Mari says, so in case you want to have Felix reply differently to each I gave them different values. But otherwise you can just use the marker they share (b^-^)b</note>
         <note id="2183">Mari is trying to taunt Aaravi into proving she can win the game while also ending up naked. Feel free to have Aaravi fall for or not fall for the taunt, I'm prepared to write for either!</note>
         <note id="2365">Obviously Mia wouldn't know, but to clarify, Mari is joking and does not actually plan to eat Fizz (she wouldn't even be able to anyway. You could have Mia react differently if Mari said the Self_Odd_drinks marker where she indicates that she could only eat bodily fluids)</note>
-        <note id="2394">To clarify, Mari is saying it wrong and I did that on purpose</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Nform" sort="7" />
@@ -2765,8 +2765,8 @@
         <label id="2338" label="" folder="Sunny Day Vampire" sort="0" />
         <label id="2339" label="" folder="Sunny Day Vampire" sort="0" />
         <label id="2340" label="" color="0" folder="Replies" sort="0" />
-        <label id="2341" label="" folder="Cform" sort="0" />
-        <label id="2342" label="" folder="Nform" sort="0" />
+        <label id="2341" label="" folder="Sunny Day Vampire Cform" sort="0" />
+        <label id="2342" label="" folder="Sunny Day Vampire Nform" sort="0" />
         <label id="2343" label="" color="5" folder="Replies" sort="0" />
         <label id="2344" label="" color="5" folder="Replies" sort="0" />
         <label id="2345" label="" color="1" folder="Replies" sort="0" />
@@ -2802,29 +2802,42 @@
         <label id="2375" label="" color="0" folder="Targets" sort="0" />
         <label id="2376" label="" color="0" folder="Targets" sort="0" />
         <label id="2377" label="" color="0" folder="Replies" sort="0" />
-        <label id="2378" label="" color="3" folder="Replies" sort="0" />
-        <label id="2379" label="" color="3" folder="Replies" sort="0" />
+        <label id="2378" label="" color="0" folder="Replies" sort="0" />
+        <label id="2379" label="" color="0" folder="Replies" sort="0" />
         <label id="2380" label="" color="0" folder="Targets" sort="0" />
         <label id="2381" label="" color="0" folder="Targets" sort="0" />
         <label id="2382" label="" color="0" folder="Replies" sort="0" />
-        <label id="2383" label="" color="1" folder="Targets" sort="0" />
+        <label id="2383" label="" color="0" folder="Targets" sort="0" />
         <label id="2384" label="" color="1" folder="NTargets" sort="0" />
         <label id="2385" label="" color="1" folder="Targets" sort="0" />
         <label id="2386" label="" color="1" folder="Targets" sort="0" />
         <label id="2387" label="" color="3" folder="Targets" sort="0" />
         <label id="2388" label="" color="1" folder="Targets" sort="0" />
         <label id="2389" label="" color="1" folder="Targets" sort="0" />
-        <label id="2390" label="" color="1" folder="Replies" sort="0" />
+        <label id="2390" label="" color="0" folder="Replies" sort="0" />
         <label id="2391" label="" color="0" folder="Targets" sort="0" />
-        <label id="2392" label="" color="1" folder="Targets" sort="0" />
-        <label id="2393" label="" color="1" folder="Targets" sort="0" />
-        <label id="2394" label="" color="1" folder="Targets" sort="0" />
+        <label id="2392" label="" color="0" folder="Targets" sort="0" />
+        <label id="2393" label="" color="0" folder="Targets" sort="0" />
+        <label id="2394" label="" color="0" folder="Targets" sort="0" />
         <label id="2395" label="" color="1" folder="Targets" sort="0" />
         <label id="2396" label="" color="1" folder="Targets" sort="0" />
+        <label id="2397" label="" folder="Sunny Day Vampire Nform" sort="0" />
+        <label id="2398" label="" folder="Sunny Day Vampire Nform" sort="0" />
+        <label id="2399" label="" folder="Sunny Day Vampire Cform" sort="0" />
+        <label id="2400" label="" folder="Sunny Day Vampire Cform" sort="0" />
+        <label id="2401" label="" folder="Sunny Day Vampire Cform" sort="0" />
+        <label id="2402" label="" color="1" folder="Targets" sort="0" />
+        <label id="2403" label="" color="1" folder="Replies" sort="0" />
+        <label id="2404" label="" color="1" folder="Replies" sort="0" />
+        <label id="2405" label="" color="1" folder="Targets" sort="0" />
+        <label id="2406" label="" color="1" folder="Replies" sort="0" />
+        <label id="2407" label="" color="1" folder="Targets" sort="0" />
+        <label id="2408" label="" color="1" folder="Targets" sort="0" />
+        <label id="2409" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2396</nextId>
+    <nextId>2409</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aaravi_CulturalExchange_replyA" />
@@ -3065,6 +3078,7 @@
         <marker scope="Public" name="CCag_changePrompt_reply" />
         <marker scope="Public" name="CCupil_reveal_react" />
         <marker scope="Public" name="Cform_dinner_tonight" />
+        <marker scope="Public" name="Cform_SDV_down2Business" />
         <marker scope="Public" name="Cheryl_creampie_reply" />
         <marker scope="Public" name="Cheryl_creampie_reply2" />
         <marker scope="Public" name="Cheryl_creampie_reply3" />
@@ -3374,8 +3388,11 @@
         <marker scope="Public" name="Jim_u_a_spaceman_bro2" />
         <marker scope="Public" name="Jim_u_a_spaceman_bro3" />
         <marker scope="Public" name="Joey_" />
+        <marker scope="Public" name="Joey_BoobsHonk_cont" />
         <marker scope="Public" name="Joey_BoobsHonk_question" />
+        <marker scope="Public" name="Joey_burlesque_cont" />
         <marker scope="Public" name="Joey_burlesque_question" />
+        <marker scope="Public" name="Joey_ClownShoes_cont" />
         <marker scope="Public" name="Joey_ClownShoes_question" />
         <marker scope="Public" name="Joey_clownTricks_cont" />
         <marker scope="Public" name="Joey_clownTricks_end" />
@@ -3388,6 +3405,7 @@
         <marker scope="Public" name="Joey_school_reply2" />
         <marker scope="Public" name="Joey_school_reply3" />
         <marker scope="Public" name="Joey_SelfFood_reply1" />
+        <marker scope="Public" name="Joey_SelfFood_reply2" />
         <marker scope="Public" name="Jura_lot_of_guys_reply" />
         <marker scope="Public" name="Jura_recent_events_reply" />
         <marker scope="Public" name="Jura_supermodel_question" />
@@ -3612,6 +3630,7 @@
         <marker scope="Public" name="MG_tight_costume" />
         <marker scope="Public" name="MGandAG_game_start_nicknames" />
         <marker scope="Public" name="Mia_Fizz_eat_cont" />
+        <marker scope="Public" name="Mia_Fizz_eat_end" />
         <marker scope="Public" name="Mia_Fizz_eat_question" />
         <marker scope="Public" name="Mia_Fizz_NLiteralEat_cont" />
         <marker scope="Public" name="Mia_Fizz_NLiteralEat_question" />
@@ -4284,9 +4303,12 @@
         <marker scope="Public" name="Yshtola_weird_name" />
         <marker scope="Public" name="Yshtola_weird_name_cont" />
         <marker scope="Public" name="Yshtola_weird_name_end" />
+        <marker scope="Public" name="Yumeko_pokerPro_question" />
         <marker scope="Public" name="Yumeko_reply1" />
         <marker scope="Public" name="Yumeko_reply2" />
         <marker scope="Public" name="Yumeko_reply3" />
+        <marker scope="Public" name="Yumeko_reply4" />
+        <marker scope="Public" name="Yumeko_whyHere_reply" />
         <marker scope="Public" name="Yuno_bigSuccAfter_SelfForfeitLines" />
         <marker scope="Public" name="Yuno_BoxersFirst_Suggestion" />
         <marker scope="Public" name="Yuno_BoxersFirst_Suggestion_cont" />
