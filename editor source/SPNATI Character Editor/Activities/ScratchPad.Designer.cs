@@ -38,12 +38,12 @@ namespace SPNATI_Character_Editor.Activities
 			this.scratchPadControl1.Name = "scratchPadControl1";
 			this.scratchPadControl1.Size = new System.Drawing.Size(1143, 624);
 			// 
-			// LineImporter
+			// ScratchPad
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.scratchPadControl1);
-			this.Name = "LineImporter";
+			this.Name = "ScratchPad";
 			this.Size = new System.Drawing.Size(1157, 680);
 			this.ResumeLayout(false);
 
