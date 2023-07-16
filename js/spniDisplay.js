@@ -1073,7 +1073,7 @@ MainSelectScreenDisplay.prototype.displaySingleSuggestion = function () {
 
     this.prefillSuggestionBadges.new.toggle(player.highlightStatus === 'new');
     this.prefillSuggestionBadges.updated.toggle(player.highlightStatus === 'updated');
-    this.prefillSuggestionBadges.birthday.toggle(player.highlightStatus === 'birthday');
+    this.prefillSuggestionBadges.birthday.toggle(player.hasBirthdayToday);
     this.badges.epilogue.toggle(!!player.endings);
     var epilogueStatus = player.getEpilogueStatus();
     if (epilogueStatus) {

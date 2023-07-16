@@ -145,7 +145,7 @@ var sortingOptionsMap = {
     target: sortOpponentsByMostTargeted(50, Infinity),
     oldest: sortOpponentsByMultipleFields(["release", "-listingIndex"]),
     newest: sortOpponentsByMultipleFields(["-release", "listingIndex"]),
-    featured: sortOpponentsByMultipleFields(["-hasBirthdayToday", "-effectiveScore"]),
+    featured: sortOpponentsByMultipleFields(["-effectiveScore"]),
 };
 var groupCreditsShown = false;
 
@@ -1297,7 +1297,7 @@ function loadDefaultFillSuggestions () {
             return false;
         }
 
-        return opp.force_prefill && !isCharacterUsed(opp);
+        return (opp.force_prefill || opp.hasBirthdayToday && Math.random() < 0.5) && !isCharacterUsed(opp);
     });
 
     if (forcedPrefills.length > 0) {
