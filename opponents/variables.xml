@@ -83,6 +83,7 @@
       <param name="true" label="When male:" description="Text when male (ex. his)." example="Hector" />
       <param name="false" label="When female:" description="Text when not male (ex. her)." example="Florina" />
     </function>
+    <function name="happybirthday" description="Expands to 'true' if it's the character's birthday, else 'false'"/>
     <function name="subj" description="Expands to 'he' or 'she' depending on the character's gender." example="she"/>
     <function name="obj" description="Expands to 'him' or 'her' depending on the character's gender." example="him"/>
     <function name="poss" description="Expands to 'his' or 'her' depending on the character's gender." example="her"/>
@@ -121,6 +122,7 @@
     <function name="diff" description="Difference between the number of layers of this player and other.">
       <param name="other" label="Other character:" description="ID of the character to compare to." example="florina" />
     </function>
+    <function name="happybirthday" description="Expands to 'true' if it's the character's birthday, else 'false'"/>
     <function name="toStutter" description="Returns the character's name, prefixed with the first letter and a dash to indicate a stutter." example="F-Florina">
       <param name="count" label="Stutter count:" description="How many times to stutter the letter. Min 1, Max 10." example="2" />
     </function>
