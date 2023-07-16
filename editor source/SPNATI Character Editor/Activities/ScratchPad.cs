@@ -5,11 +5,11 @@ namespace SPNATI_Character_Editor.Activities
 {
 	[Activity(typeof(Character), 315, DelayRun = true, Caption = "Scratch Pad")]
 	[Tutorial("https://www.youtube.com/watch?v=CLRoebAM4zk")]
-	public partial class LineImporter : Activity
+	public partial class ScratchPad : Activity
 	{
 		private Character _character;
 
-		public LineImporter()
+		public ScratchPad()
 		{
 			InitializeComponent();
 		}
@@ -27,8 +27,6 @@ namespace SPNATI_Character_Editor.Activities
 		protected override void OnFirstActivate()
 		{
 			scratchPadControl1.SetCharacter(_character);
-			int startIndex = Config.GetInt("importtab");
-			tabs.SelectedIndex = Math.Min(startIndex, tabs.TabPages.Count - 1);
 		}
 
 		protected override void OnDeactivate()
@@ -38,24 +36,7 @@ namespace SPNATI_Character_Editor.Activities
 
 		public override void Save()
 		{
-			if (tabs.SelectedTab == tabScratchPad)
-			{
-				scratchPadControl1.Save();
-			}
-		}
-
-		private void tabs_SelectedIndexChanged(object sender, System.EventArgs e)
-		{
-			if (tabs.SelectedIndex == -1)
-			{
-				return;
-			}
-			int current = Config.GetInt("importtab");
-			if (current != tabs.SelectedIndex)
-			{
-				Config.Set("importtab", tabs.SelectedIndex);
-				Config.Save();
-			}
+			scratchPadControl1.Save();
 		}
 	}
 }
