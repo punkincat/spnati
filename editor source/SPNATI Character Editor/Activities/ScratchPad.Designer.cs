@@ -26,31 +26,31 @@ namespace SPNATI_Character_Editor.Activities
 		/// Required method for Designer support - do not modify 
 		/// the contents of this method with the code editor.
 		/// </summary>
-		private void InitializeComponent()
-		{
-			this.scratchPadControl1 = new SPNATI_Character_Editor.Controls.ScratchPadControl();
-			this.SuspendLayout();
-			// 
-			// scratchPadControl1
-			// 
-			this.scratchPadControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.scratchPadControl1.Location = new System.Drawing.Point(3, 3);
-			this.scratchPadControl1.Name = "scratchPadControl1";
-			this.scratchPadControl1.Size = new System.Drawing.Size(1143, 624);
-			// 
-			// ScratchPad
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.scratchPadControl1);
-			this.Name = "ScratchPad";
-			this.Size = new System.Drawing.Size(1157, 680);
-			this.ResumeLayout(false);
+        private void InitializeComponent()
+        {
+            this.scratchPadControl1 = new SPNATI_Character_Editor.Controls.ScratchPadControl();
+            this.SuspendLayout();
+            // 
+            // scratchPadControl1
+            // 
+            this.scratchPadControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scratchPadControl1.Location = new System.Drawing.Point(3, 3);
+            this.scratchPadControl1.Name = "scratchPadControl1";
+            this.scratchPadControl1.Size = new System.Drawing.Size(1143, 624);
+            // 
+            // ScratchPad
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.scratchPadControl1);
+            this.Name = "ScratchPad";
+            this.Size = new System.Drawing.Size(1157, 680);
+            this.ResumeLayout(false);
 
-		}
+        }
 
 		#endregion
 
-		private Controls.ScratchPadControl scratchPadControl1;
-	}
+        private Controls.ScratchPadControl scratchPadControl1;
+    }
 }
