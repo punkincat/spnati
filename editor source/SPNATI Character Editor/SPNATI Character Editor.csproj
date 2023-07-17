@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -186,11 +186,11 @@
     <Compile Include="Activities\DictionaryEditor.Designer.cs">
       <DependentUpon>DictionaryEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\LineImporter.cs">
+    <Compile Include="Activities\ScratchPad.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Activities\LineImporter.Designer.cs">
-      <DependentUpon>LineImporter.cs</DependentUpon>
+    <Compile Include="Activities\ScratchPad.Designer.cs">
+      <DependentUpon>ScratchPad.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\PoseMatrixEditor.cs">
       <SubType>UserControl</SubType>
@@ -1534,8 +1534,8 @@
     <EmbeddedResource Include="Activities\DictionaryEditor.resx">
       <DependentUpon>DictionaryEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Activities\LineImporter.resx">
-      <DependentUpon>LineImporter.cs</DependentUpon>
+    <EmbeddedResource Include="Activities\ScratchPad.resx">
+      <DependentUpon>ScratchPad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Activities\MarkerEditor.resx">
       <DependentUpon>MarkerEditor.cs</DependentUpon>
