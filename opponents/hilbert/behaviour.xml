@@ -2071,7 +2071,7 @@
                 <state img="#-anger.png">You really have &lt;i&gt;no&lt;/i&gt; place to taunt me, ~cynthia~. You've already lost, I haven't.</state>
                 <state img="#-unimpressed.png">You're talking a lot of smack for someone actively fingering herself in front of strangers.</state>
             </case>
-            <case stage="0" oneShotId="205" id="564">
+            <case stage="0" oneShotId="208" id="564">
                 <condition role="other" character="meia" stage="0-5" sayingMarker="hilbert_fof0" />
                 <test expr="~target.costume~" value="hilbert_halloween" />
                 <state img="#-joking.png" marker="meia_fof0">Nah, it's just a tradition for people to have Pokémon-inspired costumes on Fight-or-Fright Night. ...This is just the closest I could find to a detective outfit, heheh...</state>
