@@ -429,8 +429,6 @@
         <prefix>accent</prefix>
         <prefix>STREETS</prefix>
     </prefixes>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
     <nextId>566</nextId>
     <markers>
         <marker scope="Public" name="" />
@@ -477,6 +475,8 @@
         <marker scope="Public" name="Bobobo_ItStandsForPersonalProtectiveEEEEEE2" />
         <marker scope="Public" name="Bobobo_ItStandsForPersonalProtectiveEEEEEE3" />
         <marker scope="Public" name="bobobo_Name_0A" />
+        <marker scope="Public" name="Bobobo_NotAYugiohReference1" />
+        <marker scope="Public" name="Bobobo_NotAYugiohReference2" />
         <marker scope="Public" name="Bobobo_Potato3" />
         <marker scope="Public" name="Bobobo_SetAsHomePoint" />
         <marker scope="Public" name="Bobobo_SimpinAintEasy1" />
@@ -865,6 +865,7 @@
         <marker scope="Public" name="Miko_RlSrsBsns3" />
         <marker scope="Public" name="Miko_TeacherIHardlyKnowHer1" />
         <marker scope="Public" name="Miko_TeacherIHardlyKnowHer2" />
+        <marker scope="Public" name="Miko_TeacherIHardlyKnowHer3" />
         <marker scope="Public" name="Miko_Tojiko1">Bobobo espies a ghost</marker>
         <marker scope="Public" name="Miko_Tojiko10" />
         <marker scope="Public" name="Miko_Tojiko2">Bobobo espies a ghost, again.</marker>
@@ -1043,6 +1044,43 @@
         <marker scope="Public" name="ServiceMan" />
         <marker scope="Public" name="SliferSummon" />
         <marker scope="Public" name="SmackoverArkansas" />
+        <marker scope="Public" name="Sofia_" />
+        <marker scope="Public" name="Sofia_AintNoWaistcoat1" />
+        <marker scope="Public" name="Sofia_AintNoWaistcoat2" />
+        <marker scope="Public" name="Sofia_AintNoWaistcoat3" />
+        <marker scope="Public" name="Sofia_AndTheSixers1" />
+        <marker scope="Public" name="Sofia_AndTheSixers2" />
+        <marker scope="Public" name="Sofia_AndTheSixers3" />
+        <marker scope="Public" name="Sofia_Detrius1" />
+        <marker scope="Public" name="Sofia_Detrius2" />
+        <marker scope="Public" name="Sofia_Detrius3" />
+        <marker scope="Public" name="Sofia_FarmerInTheDell1" />
+        <marker scope="Public" name="Sofia_FarmerInTheDell2" />
+        <marker scope="Public" name="Sofia_FarmerInTheDell3" />
+        <marker scope="Public" name="Sofia_GeographyLesson1" />
+        <marker scope="Public" name="Sofia_GeographyLesson2" />
+        <marker scope="Public" name="Sofia_GeographyLesson3" />
+        <marker scope="Public" name="Sofia_GinJoint1" />
+        <marker scope="Public" name="Sofia_GinJoint2" />
+        <marker scope="Public" name="Sofia_GinJoint3" />
+        <marker scope="Public" name="Sofia_Pointy1" />
+        <marker scope="Public" name="Sofia_Pointy2" />
+        <marker scope="Public" name="Sofia_Pointy3" />
+        <marker scope="Public" name="Sofia_SapphicWin1" />
+        <marker scope="Public" name="Sofia_SapphicWin2" />
+        <marker scope="Public" name="Sofia_SapphicWin3" />
+        <marker scope="Public" name="Sofia_SheGetsIt1" />
+        <marker scope="Public" name="Sofia_SheGetsIt2" />
+        <marker scope="Public" name="Sofia_SheGetsIt3" />
+        <marker scope="Public" name="Sofia_StellarIsASongByIncubus1" />
+        <marker scope="Public" name="Sofia_StellarIsASongByIncubus2" />
+        <marker scope="Public" name="Sofia_StellarIsASongByIncubus3" />
+        <marker scope="Public" name="Sofia_WeMakeDo1" />
+        <marker scope="Public" name="Sofia_WeMakeDo2" />
+        <marker scope="Public" name="Sofia_WeMakeDo3" />
+        <marker scope="Public" name="Sofia_YayViolence1" />
+        <marker scope="Public" name="Sofia_YayViolence2" />
+        <marker scope="Public" name="Sofia_YayViolence3" />
         <marker scope="Public" name="Softon" />
         <marker scope="Public" name="Steve_DarkAppointment" />
         <marker scope="Public" name="STREETS">STREETS</marker>
@@ -1088,6 +1126,43 @@
         <marker scope="Public" name="Wikipetan_YesIDoShutup2a" />
         <marker scope="Public" name="Wikipetan_YesIDoShutup2b" />
         <marker scope="Public" name="Wikipetan_YesIDoShutup2c" />
+        <marker scope="Public" name="Yae_" />
+        <marker scope="Public" name="Yae_BigImpact1" />
+        <marker scope="Public" name="Yae_BigImpact2" />
+        <marker scope="Public" name="Yae_BigImpact3" />
+        <marker scope="Public" name="Yae_Donposal1" />
+        <marker scope="Public" name="Yae_Donposal2" />
+        <marker scope="Public" name="Yae_Donposal3" />
+        <marker scope="Public" name="Yae_FairPlay1" />
+        <marker scope="Public" name="Yae_FairPlay2" />
+        <marker scope="Public" name="Yae_FairPlay3" />
+        <marker scope="Public" name="Yae_GoeGoeDo1" />
+        <marker scope="Public" name="Yae_GoeGoeDo2" />
+        <marker scope="Public" name="Yae_GoeGoeDo3" />
+        <marker scope="Public" name="Yae_HaHaHowSarcastic1" />
+        <marker scope="Public" name="Yae_HaHaHowSarcastic2" />
+        <marker scope="Public" name="Yae_HaHaHowSarcastic3" />
+        <marker scope="Public" name="Yae_HypeSquad1" />
+        <marker scope="Public" name="Yae_HypeSquad2" />
+        <marker scope="Public" name="Yae_HypeSquad3" />
+        <marker scope="Public" name="Yae_Labels1" />
+        <marker scope="Public" name="Yae_Labels2" />
+        <marker scope="Public" name="Yae_Labels3" />
+        <marker scope="Public" name="Yae_MartialFarts1" />
+        <marker scope="Public" name="Yae_MartialFarts2" />
+        <marker scope="Public" name="Yae_MartialFarts3" />
+        <marker scope="Public" name="Yae_NotAYugiohReference1" />
+        <marker scope="Public" name="Yae_NotAYugiohReference2" />
+        <marker scope="Public" name="Yae_NotAYugiohReference3" />
+        <marker scope="Public" name="Yae_QuickChange1" />
+        <marker scope="Public" name="Yae_QuickChange2" />
+        <marker scope="Public" name="Yae_QuickChange3" />
+        <marker scope="Public" name="Yae_SolidYae1" />
+        <marker scope="Public" name="Yae_SolidYae2" />
+        <marker scope="Public" name="Yae_SolidYae3" />
+        <marker scope="Public" name="Yae_Training1" />
+        <marker scope="Public" name="Yae_Training2" />
+        <marker scope="Public" name="Yae_Training3" />
         <marker scope="Public" name="Yang_Barber">Bobobo doesn't do haircuts. He does the opposite of haircuts.</marker>
         <marker scope="Public" name="Yang_Barber2">Bobobo doesn't do haircuts. He does the opposite of haircuts.</marker>
         <marker scope="Public" name="Yang_Barber3">Bobobo doesn't do haircuts. He does the opposite of haircuts. Also, a pun.</marker>
