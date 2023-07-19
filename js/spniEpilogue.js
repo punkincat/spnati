@@ -1200,7 +1200,10 @@ EpiloguePlayer.prototype.load = function () {
         for (var j = 0; j < scene.directives.length; j++) {
             var directive = scene.directives[j];
             if (directive.src) {
-                directive.src = directive.src.charAt(0) === '/' ? directive.src.substring(1) : this.epilogue.player.base_folder + directive.src;
+                if (!directive.src.startsWith("opponents/"))
+                {
+                    directive.src = directive.src.charAt(0) === '/' ? directive.src.substring(1) : this.epilogue.player.base_folder + directive.src;
+                }
                 this.fetchImage(directive.src);
             }
             
@@ -1208,7 +1211,10 @@ EpiloguePlayer.prototype.load = function () {
                 for (var k = 0; k < directive.keyframes.length; k++) {
                     var keyframe = directive.keyframes[k];
                     if (keyframe.src && keyframe !== directive) {
-                        keyframe.src = keyframe.src.charAt(0) === '/' ? keyframe.src.substring(1) : this.epilogue.player.base_folder + keyframe.src;
+                        if (!keyframe.src.startsWith("opponents/"))
+                        {
+                            keyframe.src = keyframe.src.charAt(0) === '/' ? keyframe.src.substring(1) : this.epilogue.player.base_folder + keyframe.src;
+                        }                        
                         this.fetchImage(keyframe.src);
                     }
                 }
