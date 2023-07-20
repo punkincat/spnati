@@ -75,6 +75,14 @@
         <response id="328" opponent="binah" opponentId="1" />
         <response id="329" opponent="joey" opponentId="39" />
         <response id="330" opponent="wikipe-tan" opponentId="175" />
+        <response id="336" opponent="shamiko" opponentId="30" />
+        <response id="338" opponent="shamiko" opponentId="37" />
+        <response id="342" opponent="aoba" opponentId="118" />
+        <response id="343" opponent="sweetheart" opponentId="65" />
+        <response id="344" opponent="caitlin" opponentId="65" />
+        <response id="375" opponent="fluttershy" opponentId="421" />
+        <response id="376" opponent="fluttershy" opponentId="20" />
+        <response id="379" opponent="nagatoro" opponentId="2264" />
     </responses>
     <notes>
         <note id="22">this can go in whatever direction you want; I just find it funny that the two of them are pious and water-themed</note>
@@ -88,6 +96,10 @@
         <note id="277">she can also elaborate on the Summon system that involve combining djinn together after spending their power</note>
         <note id="278">I'll make Fizz leave in this case. You can comment on it, or we can continue the beachwear discussion</note>
         <note id="285">"The Anemos (from Ancient Greek: ἄνεμος ánemos = wind) were a legendary tribe of Jupiter Adepts. They were well known for amazing Psynergy powers, such as being able to see the future as well as the ability to fly. This tribe of Wind Adepts is said to have raised its ancient city into the sky, where its underside is still visible as the moon. All modern Wind Adepts are thought to be descended from the Anemos. "</note>
+        <note id="347">technically I made this up entirely, but Mind Read is something that a party member can do (and they are a Jupiter adept) and I'm rolling with, Mia probably met other adepts after Golden Sun 2.</note>
+        <note id="348">technically I made this up entirely, but Mind Read is something that a party member can do (and they are a Jupiter adept) and I'm rolling with, Mia probably met other adepts after Golden Sun 2.</note>
+        <note id="369">djinn is the plural, djinni is singular</note>
+        <note id="380">I'm expecting a simple response like "No!" or "Completely incorrect!" lol</note>
     </notes>
     <labels>
         <label id="2" label="" folder="Targets" sort="2" />
@@ -319,10 +331,10 @@
         <label id="230" label="1 opponent out" folder="Conditional" sort="37" />
         <label id="231" label="2-4 opponents out" folder="Conditional" sort="38" />
         <label id="232" label="" folder="Filter" sort="16" />
-        <label id="233" label="" folder="Targets" sort="6" />
-        <label id="234" label="" folder="Targets" sort="17" />
-        <label id="235" label="" folder="Targets" sort="3" />
-        <label id="236" label="" folder="Targets" sort="7" />
+        <label id="233" label="0 - sight 1" folder="Targets" sort="6" />
+        <label id="234" label="0 - sight 2" folder="Targets" sort="17" />
+        <label id="235" label="1 - fizz 1" folder="Targets" sort="3" />
+        <label id="236" label="1 - djinn 1" folder="Targets" sort="7" />
         <label id="237" label="" folder="Tag Filters" sort="2" />
         <label id="238" label="" folder="Responses" sort="3" />
         <label id="239" label="" folder="Responses" sort="0" />
@@ -377,7 +389,7 @@
         <label id="288" label="" folder="Targets" sort="0" />
         <label id="289" label="" folder="Targets" sort="0" />
         <label id="290" label="" folder="Targets" sort="0" />
-        <label id="291" label="" folder="Responses" sort="0" />
+        <label id="291" label="" color="3" folder="Responses" sort="0" />
         <label id="292" label="Opponent is in the lead (butt pose!)" folder="Head 2 Head" sort="0" />
         <label id="293" label="" folder="Conditional" sort="0" />
         <label id="294" label="" folder="Targets" sort="0" />
@@ -392,8 +404,8 @@
         <label id="303" label="" folder="Filter" sort="0" />
         <label id="304" label="" folder="Responses" sort="0" />
         <label id="305" label="" folder="Responses" sort="0" />
-        <label id="306" label="" folder="Targets" sort="0" />
-        <label id="307" label="" folder="Targets" sort="0" />
+        <label id="306" label="" color="3" folder="Targets" sort="0" />
+        <label id="307" label="" color="3" folder="Targets" sort="0" />
         <label id="308" label="" folder="Responses" sort="0" />
         <label id="309" label="" folder="Human" sort="0" />
         <label id="310" label="" folder="Human" sort="0" />
@@ -420,19 +432,66 @@
         <label id="331" label="" folder="Targets" sort="0" />
         <label id="332" label="" folder="Targets" sort="0" />
         <label id="333" label="" folder="Targets" sort="0" />
+        <label id="334" label="" folder="Yumeko" sort="0" />
+        <label id="335" label="" folder="Responses" sort="0" />
+        <label id="336" label="" folder="Prompts" sort="0" />
+        <label id="337" label="" folder="Prompts" sort="0" />
+        <label id="338" label="" folder="Situations" sort="0" />
+        <label id="339" label="" folder="Situations" sort="0" />
+        <label id="340" label="" folder="Targets" sort="0" />
+        <label id="341" label="" folder="Targets" sort="0" />
+        <label id="343" label="" folder="Situations" sort="0" />
+        <label id="344" label="" folder="Situations" sort="0" />
+        <label id="345" label="" folder="Targets" sort="0" />
+        <label id="346" label="0/1 - sight 3" folder="Targets" sort="0" />
+        <label id="347" label="1 - fizz 2" folder="Targets" sort="0" />
+        <label id="348" label="1 - djinn 2" folder="Targets" sort="0" />
+        <label id="349" label="1/2 - fizz 3" folder="Targets" sort="0" />
+        <label id="350" label="1/2 - djinn 3" folder="Targets" sort="0" />
+        <label id="351" label="" folder="Responses" sort="0" />
+        <label id="352" label="" folder="Responses" sort="0" />
+        <label id="354" label="" folder="Responses" sort="0" />
+        <label id="355" label="" folder="Responses" sort="0" />
+        <label id="356" label="" folder="Responses" sort="0" />
+        <label id="357" label="" folder="Responses" sort="0" />
+        <label id="358" label="" folder="Responses" sort="0" />
+        <label id="359" label="" folder="Responses" sort="0" />
+        <label id="360" label="" folder="Responses" sort="0" />
+        <label id="361" label="" folder="Responses" sort="0" />
+        <label id="362" label="" folder="Targets" sort="0" />
+        <label id="363" label="" folder="Targets" sort="0" />
+        <label id="364" label="" folder="Targets" sort="0" />
+        <label id="365" label="" folder="Targets" sort="0" />
+        <label id="366" label="" folder="Targets" sort="0" />
+        <label id="367" label="" folder="Targets" sort="0" />
+        <label id="368" label="" folder="Responses" sort="0" />
+        <label id="369" label="Fizz / Mercury Djinn situation" folder="Responses" sort="0" />
+        <label id="370" label="" folder="Targets" sort="0" />
+        <label id="371" label="" folder="Targets" sort="0" />
+        <label id="372" label="" folder="Targets" sort="0" />
+        <label id="373" label="" folder="Targets" sort="0" />
+        <label id="374" label="" folder="Targets" sort="0" />
+        <label id="375" label="" folder="Situations" sort="0" />
+        <label id="376" label="" folder="Prompts" sort="0" />
+        <label id="377" label="" folder="Prompts" sort="0" />
+        <label id="378" label="" folder="Situations" sort="0" />
+        <label id="379" label="" color="3" folder="" sort="0" />
+        <label id="380" label="" folder="Targets" sort="0" />
+        <label id="381" label="" folder="Responses" sort="0" />
+        <label id="382" label="" folder="Player Names" sort="0" />
+        <label id="383" label="" folder="Player Names" sort="0" />
     </labels>
     <prefixes>
         <prefix>zz_</prefix>
     </prefixes>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>333</nextId>
+    <nextId>383</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="a_djinni_was_in_my_cape">Fizz djinni situational marker</marker>
         <marker scope="Public" name="aqua_keyblade_revealResp">Reaction to Aqua KH 'keyblade reveal' situation</marker>
         <marker scope="Public" name="aqua_miaGS_clan1" />
         <marker scope="Public" name="aqua_miaGS_clan2" />
+        <marker scope="Public" name="aquagrunt_magmagrunt_STUPID" />
         <marker scope="Public" name="aquakh_mia_hug1" />
         <marker scope="Public" name="aquaKS_blessing_react">Reaction to Aqua 'blessing' situation</marker>
         <marker scope="Public" name="barbara_praying_reaction">Reaction to Barbara 'praying' situation</marker>
@@ -453,6 +512,10 @@
         <marker scope="Public" name="dunban_miaGS_powers3" />
         <marker scope="Public" name="fizz_butt_pose_appearance">Fizz appears during this butt pose.</marker>
         <marker scope="Public" name="fizz_goes_away">note: Fizz died on the way back to his home planet</marker>
+        <marker scope="Public" name="fluttershy_butt1" />
+        <marker scope="Public" name="fluttershy_reasonforComing_resp" />
+        <marker scope="Public" name="fluttershy_reasonforComing_resp_HOT" />
+        <marker scope="Public" name="foobar" />
         <marker scope="Public" name="game_tickets">Line mentioning the item 'Game Tickets'</marker>
         <marker scope="Public" name="gameover_haunted_forest">Game is over, background is haunted forest</marker>
         <marker scope="Public" name="giygas_ply">Using Ply series psynergy against Giygas.</marker>
@@ -491,7 +554,11 @@
         <marker scope="Public" name="mia_aquaKS_psynergyQuestion" />
         <marker scope="Public" name="mia_aquaSquared1" />
         <marker scope="Public" name="Mia_BarbaraDailyPrayer_Resp">Interaction with Barbara</marker>
+        <marker scope="Public" name="mia_bowsette_0a" />
+        <marker scope="Public" name="mia_bowsette_0b" />
+        <marker scope="Public" name="mia_bowsette_0c" />
         <marker scope="Public" name="mia_cag_founderOfAlchemy1" />
+        <marker scope="Public" name="mia_caitlin_heavystart" />
         <marker scope="Public" name="mia_caitlin_PSIpowers1" />
         <marker scope="Public" name="mia_caitlin_PSIpowers2" />
         <marker scope="Public" name="mia_caitlin_PSIpowers3" />
@@ -499,12 +566,15 @@
         <marker scope="Public" name="mia_dunban_worlds1" />
         <marker scope="Public" name="mia_dunban_worlds2" />
         <marker scope="Public" name="mia_dunban_worlds3" />
+        <marker scope="Public" name="mia_fluttershy_allies1" />
+        <marker scope="Public" name="mia_fluttershy_animals1" />
         <marker scope="Public" name="mia_joey_question1" />
         <marker scope="Public" name="mia_jura_babiesPrompt">Response to Jura babies prompt</marker>
         <marker scope="Public" name="mia_jura_gs0a" />
         <marker scope="Public" name="mia_jura_hair1" />
         <marker scope="Public" name="mia_jura_worlds1" />
         <marker scope="Public" name="mia_larachel_staff_Tolbi" />
+        <marker scope="Public" name="mia_link_fidget1" />
         <marker scope="Public" name="mia_mariO_Image1" />
         <marker scope="Public" name="mia_mariS_acc_crazy_suggestResp" />
         <marker scope="Public" name="mia_mariS_eatFizz" />
@@ -512,6 +582,7 @@
         <marker scope="Public" name="mia_mariS_fizzEatQuestion" />
         <marker scope="Public" name="mia_meia_anemos1" />
         <marker scope="Public" name="mia_meia_gs0a" />
+        <marker scope="Public" name="mia_nagatoro_self0a" />
         <marker scope="Public" name="mia_nagatoro_self0b" />
         <marker scope="Public" name="mia_nami_flatworld1" />
         <marker scope="Public" name="mia_nami_s0a" />
@@ -519,13 +590,35 @@
         <marker scope="Public" name="mia_samus_armor1" />
         <marker scope="Public" name="mia_samus_armor2" />
         <marker scope="Public" name="mia_samus_armor3" />
+        <marker scope="Public" name="mia_shami_magic1" />
+        <marker scope="Public" name="mia_shamiko_horns1" />
+        <marker scope="Public" name="mia_shamiko_magic1" />
+        <marker scope="Public" name="mia_sofia_self0a" />
         <marker scope="Public" name="mia_sofia_speech1" />
         <marker scope="Public" name="mia_sofia_speech2" />
+        <marker scope="Public" name="mia_sofia_speech3" />
+        <marker scope="Public" name="mia_solarflare_ColdOutdoor1" />
+        <marker scope="Public" name="mia_solarflare_HotOutdoor1" />
+        <marker scope="Public" name="mia_sweetheart_selflove" />
+        <marker scope="Public" name="mia_toph_bending1_resp" />
+        <marker scope="Public" name="mia_toph_bending2_resp" />
+        <marker scope="Public" name="mia_toph_bending3_resp" />
+        <marker scope="Public" name="mia_toph_bending4_resp" />
+        <marker scope="Public" name="mia_toph_healer1_resp" />
+        <marker scope="Public" name="mia_toph_healer2_resp" />
+        <marker scope="Public" name="mia_toph_healer3_resp" />
+        <marker scope="Public" name="mia_toph_healer4_resp" />
+        <marker scope="Public" name="mia_toph_treatment1" />
+        <marker scope="Public" name="mia_toph_treatment2" />
+        <marker scope="Public" name="mia_toph_treatment3" />
         <marker scope="Public" name="mia_wasp_team1" />
         <marker scope="Public" name="mia_wasp_team2" />
         <marker scope="Public" name="mia_wikipe_blueHair" />
         <marker scope="Public" name="mia_yumeko_risk1" />
         <marker scope="Public" name="mia_yumeko_risk2" />
+        <marker scope="Public" name="mia_yumeko_risk3" />
+        <marker scope="Public" name="mia_yunyun_hometown1" />
+        <marker scope="Public" name="mia_yunyun_hometown2" />
         <marker scope="Public" name="miaGS_barbara_waterPowers1">Interaction with Barbara</marker>
         <marker scope="Public" name="miaGS_gloria_gay1" />
         <marker scope="Public" name="miaGS_gloria_gay2" />
@@ -535,8 +628,13 @@
         <marker scope="Public" name="miaGS_gloria_gayCont3" />
         <marker scope="Public" name="miaGS_toph_djinn1" />
         <marker scope="Public" name="miaGS_toph_djinn1_Fizz" />
+        <marker scope="Public" name="miaGS_toph_djinn2" />
+        <marker scope="Public" name="miaGS_toph_djinn2_Fizz" />
+        <marker scope="Public" name="miaGS_toph_djinn3" />
+        <marker scope="Public" name="miaGS_toph_djinn3_Fizz" />
         <marker scope="Public" name="miaGS_toph_sight1" />
         <marker scope="Public" name="miaGS_toph_sight2" />
+        <marker scope="Public" name="miaGS_toph_sight3" />
         <marker scope="Private" name="mouthdisable">Disables custom mouths. Internal use only.</marker>
         <marker scope="Public" name="nickname" />
         <marker scope="Public" name="noire_coolgirl_bandaids" />
@@ -553,6 +651,9 @@
         <marker scope="Public" name="self_finished">Internal marker. Used to track if she has finished.</marker>
         <marker scope="Public" name="self_finished2">Internal marker. Used to track if she has finished.</marker>
         <marker scope="Public" name="senko_modern_amenitiesResp">Response to Senko modern amenities prompt</marker>
+        <marker scope="Public" name="shami_postTransform" />
+        <marker scope="Public" name="shami_transform" />
+        <marker scope="Public" name="shamiNickname" />
         <marker scope="Public" name="spiderwomanmask" />
         <marker scope="Public" name="stocking_noEatFizz" />
         <marker scope="Public" name="stripped_3_fizz">Fizz djinni situational marker</marker>
