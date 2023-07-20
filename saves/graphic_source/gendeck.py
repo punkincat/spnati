@@ -17,13 +17,15 @@ for suit in suits:
         for path in layer.findall('{*}path'):
             if path.get('id') != suit:
                 layer.remove(path)
+            else:
+                del path.attrib['class']
         text = layer.find('.{*}text')
         rankspan = text.find('{*}tspan')
         rankspan.text = str(ranks[rank - 1])
         if suit == 'clubs' and rank == 10:
             text.attrib['y'] = rankspan.attrib['y'] = '94'
         elif suit == 'heart':
-            text.attrib['y'] = rankspan.attrib['y'] = '86'
+            text.attrib['y'] = rankspan.attrib['y'] = '85.5'
         elif suit == 'diamo' and rank == 1:
             text.attrib['y'] = rankspan.attrib['y'] = '84'
         elif suit == 'spade':
@@ -36,5 +38,5 @@ for suit in suits:
 
         if suit == 'clubs' or suit == 'diamo':
             path = card.find('.//{*}path')
-            path.attrib['stroke'] = path.attrib['fill'] = "#187800" if suit == 'clubs' else "#1020ff"
+            path.attrib['stroke'] = path.attrib['fill'] = "#187800" if suit == 'clubs' else "#0070e0"
             card.write('%s%s%i.tmp.svg' % ('green' if suit == 'clubs' else 'blue', suit, rank))
