@@ -20,6 +20,8 @@ var ORGASM_DELAY = 2000;
 /* The earliest and latest a character starts heavy masturbation, counted in phases before they finish */
 const HEAVY_EARLIEST_TIME = 5;
 const HEAVY_LATEST_TIME = 3;
+
+var playersFinished = [];
  
 /**********************************************************************
  *****                      Forfeit Functions                     *****
@@ -112,11 +114,10 @@ function tickForfeitTimers () {
     
     var masturbatingPlayers = [], heavyMasturbatingPlayers = [];
 
-    for (var i = 0; i < players.length; i++) {
-        if (players[i] && players[i].out && !players[i].finished && players[i].timer == 0) {
-            finishMasturbation(i);
-            return true;
-        }
+    // Do Finished Masturbating dialogue if someone has just finished
+    if (playersFinished.length) {
+        finishMasturbation(playersFinished.shift());
+        return true;
     }
 
     let finishing = false
@@ -124,6 +125,7 @@ function tickForfeitTimers () {
         if (players[i] && players[i].out && players[i].timer == 1) {
             players[i].timer = 0;
             players[i].ticksInStage++;
+            players[i].finishing = true;
             /* set the button state */
             $mainButton.html("Cumming...");
 
@@ -136,7 +138,6 @@ function tickForfeitTimers () {
                 });
             }
             if (i == HUMAN_PLAYER) {
-
                 /* player's timer is up */
                 /* TEMP FIX: prevent this animation on Safari */
                 if (PLAYER_FINISHING_EFFECT) {
@@ -144,16 +145,21 @@ function tickForfeitTimers () {
                         $gamePlayerCountdown.hide();
                         $gamePlayerCountdown.removeClass('explode');
                         /* finish */
-                        if (!players.some(p => p.out && p.timer == 0 && !p.finished)) {
+                        if (playersFinished.length) {
                             // If a character has finished simultaneously, pause as usual
-                            finishMasturbation(i);
+                            playersFinished.unshift(HUMAN_PLAYER);
+                        } else {
+                            finishMasturbation(HUMAN_PLAYER);
                         }
                     });
                     $gamePlayerCountdown.addClass('explode');
                 } else {
                     $gamePlayerCountdown.hide();
-                    if (!players.some(p => p.out && p.timer == 1)) {
-                        finishMasturbation(i);
+                    // If a character is also about to finish, let them and do the Finished Masturbating dialogue together.
+                    if (players.some(p => p.out && p.timer == 1)) {
+                        playersFinished.push(HUMAN_PLAYER);
+                    } else {
+                        finishMasturbation(HUMAN_PLAYER);
                     }
                 }
                 $gamePlayerCountdown.html('');
@@ -161,6 +167,7 @@ function tickForfeitTimers () {
 
             } else {
                 /* let the player speak again */
+                playersFinished.push(i);
                 players[i].forfeit = [PLAYER_FINISHING_MASTURBATING, CAN_SPEAK];
 
                 /* show them cumming */
@@ -186,6 +193,10 @@ function tickForfeitTimers () {
                 globalSavedTableVisibility = tableVisible;
                 if (AUTO_FADE) forceTableVisibility(false);
             }
+            players[i].stage++;
+            players[i].finished = true;
+            players[i].forfeit = [[[PLAYER_AFTER_MASTURBATING], [PLAYER_FINISHED_MASTURBATING]], CAN_SPEAK];
+            players[i].stageChangeUpdate();
             finishing = true;
         }
     }
@@ -246,12 +257,6 @@ function tickForfeitTimers () {
  * A player has 'finished' masturbating.
  ************************************************************/
 function finishMasturbation (player) {
-    // HARD SET STAGE
-    players[player].stage += 1;
-    players[player].finished = true;
-    players[player].forfeit = [[[PLAYER_AFTER_MASTURBATING], [PLAYER_FINISHED_MASTURBATING]], CAN_SPEAK];
-    players[player].stageChangeUpdate();
-    
     /* update player dialogue */
     updateAllBehaviours(
         player, 
@@ -259,16 +264,18 @@ function finishMasturbation (player) {
         [[players[player].gender == eGender.MALE ? MALE_FINISHED_MASTURBATING : FEMALE_FINISHED_MASTURBATING,
          OPPONENT_FINISHED_MASTURBATING]]
     );
-    players[player].ticksInStage = 0;
-    players[player].timeInStage = 0;
-    
+
     if (AUTO_FADE && globalSavedTableVisibility !== undefined) {
         forceTableVisibility(globalSavedTableVisibility);
         globalSavedTableVisibility = undefined;
     }
-    if (players.some(p => p.out && p.timer == 0 && !p.finished)) { // Players still to finish
+    if (playersFinished.length) { // Players still to finish
         allowProgression(eGamePhase.END_FORFEIT);
     } else {
+        players.forEach(function(p) {
+            p.ticksInStage = p.timeInStage = 0;
+            p.finishing = false;
+        });
         allowProgression();
     }
 }

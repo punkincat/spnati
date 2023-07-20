@@ -106,7 +106,7 @@ Player.prototype.initClothingStatus = function () {
  * (Re)Initialize the player properties that change during a game
  *******************************************************************/
 Player.prototype.resetState = function () {
-    this.out = this.finished = false;
+    this.out = this.finished = this.finishing = false;
     this.outOrder = undefined;
     this.biggestLead = 0;
     this.forfeit = "";
@@ -373,6 +373,8 @@ Player.prototype.checkStatus = function(status) {
         return this.countLayers() == 0;
     case STATUS_MASTURBATING:
         return this.out && !this.finished;
+    case STATUS_FINISHING:
+	return this.finishing;
     case STATUS_FINISHED:
         return this.finished;
     }

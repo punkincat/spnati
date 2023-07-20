@@ -106,6 +106,7 @@ Using tags to target the human player and/or their gender is deprecated.
 | `lost_all`       | Lost all layers                 | Has 0 layers left.
 | `alive`          | Still in the game               | Not out; has not started masturbating. The negation of this is the same as Masturbating or Finished Masturbating.
 | `masturbating`   | Masturbating                    | Is about to start masturbating or is in the masturbating stage (number of layers + 1).
+| `finishing`      | Finishing masturbating          | Is finishing right now or did just finish. This is relevant in Finishing (self) and Finished (self) cases to notice other players who finished at the exact same time, and in Finished (male/female/opponent) cases to notice that your character also just finished.
 | `finished`       | Finished masturbating           | Is in the finished stage (number of layers + 2).
 
 Obviously, statuses are not generally mutually exclusive. Note in particular that `exposed` through `lost_all` are all still true when a player is out.
