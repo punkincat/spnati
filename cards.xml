@@ -80,10 +80,18 @@
 
     <deck id="colors">
         <title>Color suits</title>
-        <subtitle>Standard club and diamond cards in different colors</subtitle>
+        <subtitle>Blue diamonds and green clubs</subtitle>
         <description>Lets you play with a four color poker deck similar to many online poker sites, making it easier to see flushes.</description>
         <front suit="clubs" src="img/cards/default/green%s%i.svg" />
         <front suit="diamonds" src="img/cards/default/blue%s%i.svg" />
+    </deck>
+
+    <deck id="colorblind">
+        <title>Color blind friendly</title>
+        <subtitle>Orange diamonds and blue clubs</subtitle>
+        <description>Lets you play with a four color poker deck that is better for red-green color blind.</description>
+        <front suit="clubs" src="img/cards/default/blue%s%i.svg" />
+        <front suit="diamonds" src="img/cards/default/orange%s%i.svg" />
     </deck>
 
     <deck id="xmas">
