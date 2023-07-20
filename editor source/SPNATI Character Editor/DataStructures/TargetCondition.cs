@@ -242,6 +242,7 @@ namespace SPNATI_Character_Editor
 			new KeyValuePair<string, string>("lost_all", "Lost all layers"),
 			new KeyValuePair<string, string>("alive", "Still in the game"),
 			new KeyValuePair<string, string>("masturbating", "Masturbating"),
+			new KeyValuePair<string, string>("heavy_masturbating", "Masturbating (heavy)"),
 			new KeyValuePair<string, string>("finished", "Finished masturbating")
 		};
 
@@ -259,6 +260,7 @@ namespace SPNATI_Character_Editor
 			new KeyValuePair<string, string>("lost_all", "Lost all layers"),
 			new KeyValuePair<string, string>("alive", "Still in the game"),
 			new KeyValuePair<string, string>("masturbating", "Forfeiting"),
+			new KeyValuePair<string, string>("heavy_masturbating", "Forfeiting (heavy)"),
 			new KeyValuePair<string, string>("finished", "Finished forfeit")
 		};
 
