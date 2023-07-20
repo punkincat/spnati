@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1687967613095</lastupdate>
+    <lastupdate>1689830798341</lastupdate>
     <enabled>false</enabled>
     <first>Toph</first>
     <last>Beifong</last>
@@ -13,7 +13,10 @@
     <description>Blind from birth, Toph Beifong is an extremely masterful earthbender and is as brash and competitive as she is talented.</description>
     <layers>6</layers>
     <default-costume-name />
+    <alternates>
+        <costume folder="opponents/reskins/toph_fire_nation_vacation/" img="0-calm.png" set="summer" status="unlisted" label="Toph" layers="5">Fire Nation Vacation</costume>
+    </alternates>
     <has_collectibles>false</has_collectibles>
-    <lines>845</lines>
+    <lines>883</lines>
     <poses>262</poses>
 </opponent>
