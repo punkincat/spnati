@@ -5,12 +5,14 @@
         <subtitle>The Baby Boar</subtitle>
         <text>A plushie of a baby boar known as Botan... Wait, did this thing just move?</text>
         <unlock>Win a game while Kyou is playing.</unlock>
+        <hide-details>true</hide-details>
     </collectible>
     <collectible id="kyou_bento" status="online" img="opponents/kyou/bento.png" thumbnail="opponents/kyou/bento.png">
         <title>Bento</title>
         <subtitle>Kyou's Bento Lunchbox</subtitle>
-        <text>A bento lunchbox made by Kyou for you to enjoy. Smells Declicious!</text>
-        <unlock>Forfeit while playing with Kyou 3 times.</unlock>
+        <text>A bento lunchbox made by Kyou for you to enjoy. Smells declicious!</text>
+        <unlock>Forfeit while playing with Kyou in 3 different games.</unlock>
+        <hide-details>true</hide-details>
         <counter>3</counter>
     </collectible>
 </collectibles>
