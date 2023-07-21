@@ -49,6 +49,7 @@ namespace SPNATI_Character_Editor
 		/// </summary>
 		/// <returns></returns>
 		List<Pose> CustomPoses { get; set; }
+		List<PoseSet> CustomPoseSets { get; set; }		
 		ISkin Skin { get; }
 		List<CharacterTag> Tags { get; set; }
 		/// <summary>

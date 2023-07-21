@@ -80,6 +80,11 @@ namespace SPNATI_Character_Editor
 		[XmlArray("poses")]
 		[XmlArrayItem("pose")]
 		public List<Pose> Poses = new List<Pose>();
+		
+		[XmlNewLine]
+		[XmlArray("pose-sets")]
+		[XmlArrayItem("set")]
+		public List<PoseSet> PoseSets = new List<PoseSet>();
 
 		[XmlAnyElement]
 		public List<XmlElement> ExtraXml;
@@ -312,6 +317,12 @@ namespace SPNATI_Character_Editor
 		{
 			get { return Poses; }
 			set { Poses = value; }
+		}
+		
+		public List<PoseSet> CustomPoseSets
+		{
+			get { return PoseSets; }
+			set { PoseSets = value; }
 		}
 
 		public string Gender

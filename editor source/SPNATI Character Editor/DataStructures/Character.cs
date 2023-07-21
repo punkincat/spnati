@@ -210,6 +210,11 @@ namespace SPNATI_Character_Editor
 		[XmlArray("poses")]
 		[XmlArrayItem("pose")]
 		public List<Pose> Poses { get; set; }
+		
+		[XmlNewLine]
+		[XmlArray("pose-sets")]
+		[XmlArrayItem("set")]
+		public List<PoseSet> PoseSets { get; set; }
 
 		[XmlNewLine(XmlNewLinePosition.Both)]
 		[XmlElement("behaviour")]
@@ -1256,6 +1261,13 @@ namespace SPNATI_Character_Editor
 			get { return Poses; }
 			set { Poses = value; }
 		}
+		
+		public List<PoseSet> CustomPoseSets
+		{
+			get { return PoseSets; }
+			set { PoseSets = value; }
+		}
+
 
 		/// <summary>
 		/// Enumerates through all tags belonging to a certain group

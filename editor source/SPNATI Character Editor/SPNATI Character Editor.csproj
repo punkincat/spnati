@@ -120,6 +120,12 @@
     <Compile Include="Activities\CaseTemplateEditor.Designer.cs">
       <DependentUpon>CaseTemplateEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\PoseSetEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Activities\PoseSetEditor.Designer.cs">
+      <DependentUpon>PoseSetEditor.cs</DependentUpon>
+    </Compile>	
     <Compile Include="Activities\CharacterConfiguration.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -269,6 +275,12 @@
     <Compile Include="Charts\SkinnedChart.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\PoseSetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PoseSetControl.Designer.cs">
+      <DependentUpon>PoseSetControl.cs</DependentUpon>
+    </Compile>	
     <Compile Include="Controls\CaseControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -817,6 +829,7 @@
     <Compile Include="DataStructures\CharacterTagList.cs" />
     <Compile Include="DataStructures\ChecklistTask.cs" />
     <Compile Include="DataStructures\Choice.cs" />
+    <Compile Include="DataStructures\PoseSet.cs" />	
     <Compile Include="DataStructures\ClothingDatabase.cs" />
     <Compile Include="DataStructures\ClothingDefinitions.cs" />
     <Compile Include="DataStructures\Collectible.cs" />
@@ -1501,6 +1514,9 @@
     <EmbeddedResource Include="Activities\CaseTemplateEditor.resx">
       <DependentUpon>CaseTemplateEditor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Activities\PoseSetEditor.resx">
+      <DependentUpon>PoseSetEditor.cs</DependentUpon>
+    </EmbeddedResource>	
     <EmbeddedResource Include="Activities\CharacterConfiguration.resx">
       <DependentUpon>CharacterConfiguration.cs</DependentUpon>
     </EmbeddedResource>
@@ -1603,6 +1619,9 @@
     <EmbeddedResource Include="Charts\BarChart.resx">
       <DependentUpon>BarChart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PoseSetControl.resx">
+      <DependentUpon>PoseSetControl.cs</DependentUpon>
+    </EmbeddedResource>	
     <EmbeddedResource Include="Controls\CaseControl.resx">
       <DependentUpon>CaseControl.cs</DependentUpon>
     </EmbeddedResource>

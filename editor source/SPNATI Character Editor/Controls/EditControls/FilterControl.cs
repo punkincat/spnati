@@ -4,7 +4,6 @@ using Desktop.Skinning;
 using SPNATI_Character_Editor.Providers;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 
 namespace SPNATI_Character_Editor
 {
