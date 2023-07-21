@@ -40,5 +40,5 @@ for suit in suits:
             path = card.find('.//{*}path')
             path.attrib['stroke'] = path.attrib['fill'] = "#187800" if suit == 'clubs' else "#0070e0"
             card.write('%s%s%i.tmp.svg' % ('green' if suit == 'clubs' else 'blue', suit, rank))
-            path.attrib['stroke'] = path.attrib['fill'] = "#0000e5" if suit == 'clubs' else "#ff8000"
+            path.attrib['stroke'] = path.attrib['fill'] = "#0000e5" if suit == 'clubs' else "#f89900"
             card.write('%s%s%i.tmp.svg' % ('blue' if suit == 'clubs' else 'orange', suit, rank))
