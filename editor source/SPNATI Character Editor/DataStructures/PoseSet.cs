@@ -20,8 +20,15 @@ namespace SPNATI_Character_Editor
 		public PoseSet()
 		{
 			Id = "new set";
-			PoseSetEntry entry = new PoseSetEntry();
-			Entries.Add(entry);
+			//PoseSetEntry entry = new PoseSetEntry();
+			//Entries.Add(entry);
+		}
+
+		public PoseSet(ISkin character)
+		{
+			Id = "new set";
+			//PoseSetEntry entry = new PoseSetEntry(character);
+			//Entries.Add(entry);
 		}
 
 		public object Clone()
@@ -56,7 +63,7 @@ namespace SPNATI_Character_Editor
 		[XmlIgnore]
 		public string Character;
 
-		[StageSelect(DisplayName = "Stage", GroupName = "Conditions", GroupOrder = 2, Description = "Stage", BoundProperties = new string[] { "Character" }, FilterStagesToTarget = false, SkinVariable = "~self.costume~")]
+		[StageSelect(DisplayName = "Stage", GroupName = "Conditions", GroupOrder = 2, Description = "Stage (Required)", BoundProperties = new string[] { "Character" }, FilterStagesToTarget = false, SkinVariable = "~self.costume~")]
 		[XmlAttribute("stage")]
 		public string Stage;
 
@@ -76,7 +83,7 @@ namespace SPNATI_Character_Editor
 		[XmlAttribute("priority")]
 		public int Priority;
 
-		[DefaultValue(1.0f)]
+		[DefaultValue(0F)]
 		[XmlAttribute("weight")]
 		public float Weight;
 
@@ -87,7 +94,11 @@ namespace SPNATI_Character_Editor
 
 		public PoseSetEntry() 
 		{
-			Stage = "0";
+		}
+
+		public PoseSetEntry(ISkin character)
+		{
+			Character = character.Character.ToString();
 		}
 
 		public object Clone()

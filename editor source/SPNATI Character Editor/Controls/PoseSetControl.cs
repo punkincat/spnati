@@ -4,6 +4,8 @@ using Desktop.Skinning;
 using SPNATI_Character_Editor.Forms;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 
@@ -18,6 +20,7 @@ namespace SPNATI_Character_Editor.Controls
 		public PoseSetControl()
 		{
 			InitializeComponent();
+			cboDirection.DataSource = DialogueLine.ArrowDirections;
 		}
 
 
@@ -47,6 +50,7 @@ namespace SPNATI_Character_Editor.Controls
 				{
 					tabsPoseSetEntries.TabPages.RemoveAt(i);
 				}
+
 			}
 			_selectedSet = workingSet;
 			if (_selectedSet != null)
@@ -58,7 +62,32 @@ namespace SPNATI_Character_Editor.Controls
 				tabsPoseSetEntries.SelectedIndexChanged += tabsPoseSetEntries_SelectedIndexChanged;
 			}
 			_selectedEntry = _selectedSet.Entries[0];
+			SetPoseSetEntry();
+		}
+
+		private void SetPoseSetEntry()
+		{
 			PopulateImageDropdown(_selectedEntry.Stage);
+			if (!string.IsNullOrEmpty(_selectedEntry.Img))
+			{
+				PoseMapping pose = _character.Character.PoseLibrary.GetPose(_selectedEntry.Img);
+				cboPose.SelectedItem = pose;
+			}
+			chkLayer.Checked = _selectedEntry.DialogueLayer == "over" || (_character.Character.Metadata.BubblePosition.ToString() == "over" && _selectedEntry.DialogueLayer != "under");
+			valWeight.Value = Math.Max(valWeight.Minimum, Math.Min(valWeight.Maximum, (decimal)_selectedEntry.Weight));
+			float location;
+			string loc = _selectedEntry.Location;
+			if (loc != null && loc.EndsWith("%"))
+			{
+				loc = loc.Substring(0, loc.Length - 1);
+			}
+			if (!float.TryParse(loc, NumberStyles.Number, CultureInfo.InvariantCulture, out location))
+			{
+				location = 50;
+			}
+			valLocation.Value = Math.Max(valLocation.Minimum, Math.Min(valLocation.Maximum, (decimal)location));
+			cboDirection.Text = _selectedEntry.Direction ?? "";
+			valPriority.Value = Math.Max(valPriority.Minimum, Math.Min(valPriority.Maximum, _selectedEntry.Priority));
 			PopulatePoseEntryTable();
 		}
 
@@ -90,9 +119,9 @@ namespace SPNATI_Character_Editor.Controls
 					return;
 				}
 			}
-			//HashSet<int> imageStages = new HashSet<int>(selectedStages, selectedStages.Comparer);
 
 			List<PoseMapping> poses = new List<PoseMapping>();
+			List<PoseMapping> existingPoses = new List<PoseMapping>();
 			for (int i = 0; i < selectedStages.Count; i++)
 			{
 				foreach (PoseMapping pose in _character.Character.PoseLibrary.GetPoses(selectedStages[i]))
@@ -117,156 +146,22 @@ namespace SPNATI_Character_Editor.Controls
 				}
 				if (allExist)
 				{
-					cboPose.Items.Add(image);
+					existingPoses.Add(image);
 				}
 			}
+			cboPose.DataSource = existingPoses;
 		}
 
 
-		/*
-		public void UpdateAvailableImages(string stages, bool retainValue)
-		{
-			if (_character == null || _selectedEntry == null) { return; }
-			HashSet<int> selectedStages = new HashSet<int>();
-			if (int.TryParse(stages, out int x))
-			{
-				selectedStages.Add(x);
-			}
-			else
-			{
-				string[] strings = stages.Split('-');
-				if (strings.Length != 2)
-				{
-					return;
-				}
-				if (int.TryParse(strings[0], out int y) && int.TryParse(strings[1], out int z))
-				{
-					for (int i = y; i <= z; i++)
-					{
-						selectedStages.Add(i);
-					}
-				}
-				else
-				{
-					return;
-				}
-			}
-			HashSet<int> imageStages = new HashSet<int>(selectedStages, selectedStages.Comparer);
-
-			/*
-			List<object> values = new List<object>();
-			if (retainValue)
-			{
-				//save off values
-				for (int i = 0; i < gridDialogue.Rows.Count; i++)
-				{
-					DataGridViewRow row = gridDialogue.Rows[i];
-					values.Add(row.Cells["ColImage"].Value);
-				}
-			}
-			*/
-
-		//			bool hasStageImages = _selectedCase.Lines.Find(l => l.Images.Count > 0) != null;
-		//			int stageId = _selectedStage == null ? 0 : _selectedStage.Id;
-		/*
-					cboPose.Items.Clear();
-					HashSet<PoseMapping> images = new HashSet<PoseMapping>();
-					if (selectedStages == null)
-					{
-						images.AddRange(_character.Character.PoseLibrary.GetPoses(0));
-						foreach (var image in images)
-						{
-							col.Items.Add(image);
-						}
-					}
-					else
-					{
-						if (hasStageImages)
-						{
-							foreach (int selectedStage in _selectedEntry.Stage)
-							{
-								images.AddRange(_character.Character.PoseLibrary.GetPoses(selectedStage));
-							}
-						}
-						else
-						{
-							images.AddRange(_character.Character.PoseLibrary.GetPoses(stageId));
-						}
-
-						foreach (PoseMapping image in images)
-						{
-							bool isGeneric = image.IsGeneric;
-							bool allExist = true;
-							if (!isGeneric && !hasStageImages)
-							{
-								foreach (int stage in imageStages)
-								{
-									if (!image.ContainsStage(stage))
-									{
-										allExist = false;
-										break;
-									}
-								}
-							}
-							if (allExist)
-							{
-								col.Items.Add(image);
-							}
-						}
-					}
-
-					foreach (DataGridViewRow row in gridDialogue.Rows)
-					{
-						SkinnedDataGridViewComboBoxCell cellCol = row.Cells[ColImage.Index] as SkinnedDataGridViewComboBoxCell;
-						if (cellCol != null)
-						{
-							object old = cellCol.Value;
-							cellCol.Items.Clear();
-							foreach (object item in col.Items)
-							{
-								cellCol.Items.Add(item);
-							}
-							cellCol.Value = old;
-						}
-					}
-					col.DisplayMember = "DefaultName";
-
-					if (retainValue)
-					{
-						//restore values
-						for (int i = 0; i < gridDialogue.Rows.Count; i++)
-						{
-							DataGridViewRow row = gridDialogue.Rows[i];
-
-							//Make sure the value is still valid
-							bool found = false;
-							foreach (var item in col.Items)
-							{
-								PoseMapping img = item as PoseMapping;
-								PoseMapping oldImg = values[i] as PoseMapping;
-								if (oldImg == img)
-								{
-									row.Cells["ColImage"].Value = item;
-									found = true;
-									break;
-								}
-							}
-							if (!found)
-							{
-								row.Cells["ColImage"].Value = null;
-							}
-						}
-					}
-				}
-		*/
 
 		private void tabsPoseSetEntries_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (_selectedSet == null) { return; }
+			SavePoseSetEntry();
 			int index = tabsPoseSetEntries.SelectedIndex;
 			
 			_selectedEntry = _selectedSet.Entries[index];
-			PopulatePoseEntryTable();
+			SetPoseSetEntry();
 		}
 
 		private void AddSetEntryTab()
@@ -280,96 +175,28 @@ namespace SPNATI_Character_Editor.Controls
 			if (tablePoseSetEntry.Data != _selectedEntry)
 			{
 				tablePoseSetEntry.Data = _selectedEntry;
-				AddSpeedButtonsSet(tablePoseSetEntry);
+				//AddSpeedButtonsSet(tablePoseSetEntry);
 			}
 		}
 
-		public bool AutoOpenConditions
-		{
-			set { tablePoseSetEntry.RunInitialAddEvents = value; }
-		}
 
 
-
-		public void Save()
-		{
-			SavePoseSet();
-		}
+		//public void Save()
+		//{
+		//}
 
 		public void SavePoseSetEntry()
 		{
-
-		}
-
-
-		public static void AddSpeedButtonsSet(PropertyTable table)
-		{
-			//table.AddSpeedButton("Property", "Img", (data) => { return AddFilter("property", data, "Img"); });
-			table.AddSpeedButton("Property", "Stage", (data) => { return AddFilter("self", data, "Stage"); });
-			//table.AddSpeedButton("Property", "Location", (data) => { return AddFilter("property", data, "Location"); });
-			//table.AddSpeedButton("Property", "Direction", (data) => { return AddFilter("property", data, "Direction"); });
-			//table.AddSpeedButton("Property", "Dialogue-Layer", (data) => { return AddFilter("property", data, "Dialogue-Layer"); });
-
-			//table.AddSpeedButton("Conditions", "Variable Test", (data) => { return AddVariableTest("~_~", data); });
-			//table.AddSpeedButton("Conditions", "Marker", (data) => { return AddVariableTest("~_.marker.*~", data); });
-			//table.AddSpeedButton("Conditions", "Priority", (data) => { return AddFilter("condition", data, "Priority"); });
-			//table.AddSpeedButton("Conditions", "Weight", (data) => { return AddFilter("condition", data, "Weight"); });
-		}
-
-		private static SpeedButtonData AddVariableTest(string variable, object data)
-		{
-			PoseSetEntry theEntry = data as PoseSetEntry;
-			theEntry.Tests.Add(new ExpressionTest(variable, ""));
-			return new SpeedButtonData("Expressions");
-		}
-
-		private static SpeedButtonData AddFilter(string role, object data, string subproperty = null, Character character = null)
-		{
-			PoseSetEntry entry = data as PoseSetEntry;
-
-			//Case theCase = new Case();
-			//TargetCondition condition = theCase.Conditions.Find(c => c.Role == role && (character == null || c.Character == character.FolderName));
-			//if (subproperty == null)
-			//{
-			//	condition = null; //always create new filters for roles
-			//}
-			//if (entry.HasProperty(subproperty)
-			//TargetCondition condition = new TargetCondition();
-			/*if (condition == null || condition.HasProperty(subproperty))
-			{
-				condition = new TargetCondition();
-				condition.Role = role;
-				theCase.Conditions.Add(condition);
-				if (character != null)
-				{
-					condition.Character = character.FolderName;
-				}
-			}
-			*/
-
-
-			return new SpeedButtonData("Property", subproperty) { ListItem = entry };
-		}
-
-		public Func<PropertyRecord, bool> GetRecordFilter(object data)
-		{
-			Case tag = data as Case;
-			TriggerDefinition trigger = TriggerDatabase.GetTrigger(tag.Tag);
-			return null;
-		}
-
-
-		private void SavePoseSet()
-		{
-			if (_selectedSet == null)
-			{
+			_selectedEntry.Weight = (float) valWeight.Value;
+			_selectedEntry.Priority = (int) valPriority.Value;
+			_selectedEntry.Direction = cboDirection.Text;
+			PoseMapping image = cboPose.SelectedItem as PoseMapping;
+			if (image == null)
 				return;
-			}
-
-			var s = _selectedSet;
-
+			_selectedEntry.Img = image.Key;
 			tablePoseSetEntry.Save();
 		}
+
 
 
 
@@ -380,17 +207,12 @@ namespace SPNATI_Character_Editor.Controls
 		}
 
 
-		public object CreateData()
+		/*public object CreateData()
 		{
 			PoseSetEntry poseEntry = new PoseSetEntry();
-			//tag.AddStages(_selectedSet.Stages);
 			return poseEntry;
-		}
+		}*/
 
-		public object GetRecordContext()
-		{
-			return _character;
-		}
 
 
 
@@ -398,6 +220,8 @@ namespace SPNATI_Character_Editor.Controls
 		{
 			if (_selectedSet == null) { return; }
 			PoseSetEntry entry = new PoseSetEntry();
+			entry.Stage = "0";
+			entry.Character = _character.ToString();
 			_selectedSet.Entries.Add(entry);
 			AddSetEntryTab();
 			tabsPoseSetEntries.SelectedIndex = tabsPoseSetEntries.TabPages.Count;
@@ -423,9 +247,20 @@ namespace SPNATI_Character_Editor.Controls
 
 		private void stripPoseSetEntries_TabIndexChanged(object sender, EventArgs e)
 		{
+			SavePoseSetEntry();
 			_selectedEntry = _selectedSet.Entries[tabsPoseSetEntries.SelectedIndex];
-			PopulatePoseEntryTable();
-
+			SetPoseSetEntry();
+		}
+		private void chkLayer_CheckedChanged(object sender, EventArgs e)
+		{
+			if (_character.Character.Metadata.BubblePosition == DialogueLayer.over)
+			{
+				_selectedEntry.DialogueLayer = chkLayer.Checked ? "" : "under";
+			}
+			else
+			{
+				_selectedEntry.DialogueLayer = chkLayer.Checked ? "over" : "";
+			}
 		}
 	}
 }

@@ -9,7 +9,7 @@ namespace SPNATI_Character_Editor.Activities
 	public partial class PoseSetEditor : Activity
 	{
 		private ISkin _character;
-
+		bool _initialized = false;
 		PoseSet _selectedSet;
 
 		public override string Caption
@@ -47,6 +47,7 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				lstPoseSets.SelectedIndex = 0;
 			}
+			_initialized = true;
 		}
 
 		private void lstPoseSets_SelectedIndexChanged(object sender, EventArgs e)
@@ -54,6 +55,10 @@ namespace SPNATI_Character_Editor.Activities
 			PoseSet poseSet = lstPoseSets.SelectedItem as PoseSet;
 			if (poseSet != null)
 			{
+				if (_initialized)
+				{
+					poseSetControl1.SavePoseSetEntry();
+				}
 				_selectedSet = poseSet;
 				txtPoseSetRename.Text = _selectedSet.Id;
 				poseSetControl1.SetPoseSet(_selectedSet);
@@ -80,7 +85,12 @@ namespace SPNATI_Character_Editor.Activities
 
 		private void tsAddPoseSet_Click(object sender, EventArgs e)
 		{
+			//PoseSet poseSet = new PoseSet(_character);
 			PoseSet poseSet = new PoseSet();
+			PoseSetEntry entry = new PoseSetEntry();
+			entry.Stage = "0";
+			entry.Character = _character.Character.FolderName;
+			poseSet.Entries.Add(entry);
 			lstPoseSets.Items.Add(poseSet);
 			lstPoseSets.SelectedItem = poseSet;
 			_character.CustomPoseSets.Add(poseSet);
