@@ -187,7 +187,7 @@ namespace SPNATI_Character_Editor.Controls
 
 		public void SavePoseSetEntry()
 		{
-			_selectedEntry.Weight = (float) valWeight.Value;
+			_selectedEntry.Weight = (float)valWeight.Value == 0.001f ? 0f : (float)valWeight.Value;
 			_selectedEntry.Priority = (int) valPriority.Value;
 			_selectedEntry.Direction = cboDirection.Text;
 			PoseMapping image = cboPose.SelectedItem as PoseMapping;
