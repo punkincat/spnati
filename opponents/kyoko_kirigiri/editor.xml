@@ -50,6 +50,9 @@
         <response id="673" opponent="okino" opponentId="42" />
         <response id="1248" opponent="magma_grunt" opponentId="878" />
         <response id="1249" opponent="queenie" opponentId="138" />
+        <response id="0" opponent="giygas" opponentId="209" />
+        <response id="0" opponent="aimee" opponentId="2" />
+        <response id="0" opponent="giygas" opponentId="210" />
     </responses>
     <notes>
         <note id="6">Make separate case for non-humans</note>
@@ -114,6 +117,14 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <note id="1384">She only means this in terms of that she at least has the edge of overheating less easily on account of her toothpick build. Shameless tactlessness is one of Kyoko's funnier character traits.</note>
         <note id="1385">Shameless tactlessness is one of Kyoko's funnier character traits.</note>
         <note id="1387">She demands perfection from herself and her soup. How can she expect any less from her customer?</note>
+        <note id="1407">DUMMY marker condition won't be applied once this case gets fully implemented, I just slapped it on so that this line wouldn't play in actual gameplay yet even as a hidden line.
+
+I’ve decided that Kyoko's gloves are actually valuable enough that they should show up on the scope, what with them being custom-tailored for her hands and made out of some material suitable for touching both dead bodies and everyday objects with. A) this doesn't need a custom pose and B) I don't need to deal with the messy ramifications of the player looking at Kyoko's bare hands, because while she's fine showing conventional chest-and-crotch nudity, there's zero way she'd be cool with that. I would encourage you to have Rouge comment on the potential price point of this purple-peepered poker-playing PI's palm protection (English: value of Kyoko's gloves) to help sell this explanation.
+
+Also, I've made this stage 1 instead of stage 0 because of Kyoko's line about her jacket costing 900 Swiss Francs, which adds up to over a grand in USD (before adjustment from 2010 inflation). If her gloves show up on the scope, then her jacket probably would too. Hope that's alright.</note>
+        <note id="1425">Loosely based on a true story.</note>
+        <note id="1431">This line generously donated by MisterSolitaire</note>
+        <note id="1432">The logic for responding to Kyoko targets like these is to ignore everything in the "Duplicate dialogue" folder; just respond to everything with Shamiko on the left, and the hidden lines will make sure it works out.</note>
     </notes>
     <labels>
         <label id="499" label="Shelved" folder="" sort="0" />
@@ -300,7 +311,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="207" label="Toy forfeit" folder="" sort="0" />
         <label id="208" label="Toy forfeit" folder="" sort="0" />
         <label id="209" label="" folder="April Fool's" sort="10" />
-        <label id="210" label="MARKED FOR REWRITE" color="1" folder="Extra/Minor" sort="10" />
+        <label id="210" label="" folder="Extra/Minor" sort="10" />
         <label id="211" label="" folder="Major" sort="5" />
         <label id="212" label="" folder="Major" sort="7" />
         <label id="221" label="" folder="Major" sort="14" />
@@ -745,7 +756,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="685" label="Gloria Ou 0-1" folder="Outbound stage 0" sort="3" />
         <label id="686" label="Gloria Ou 0-2" folder="Outbound stage 0" sort="2" />
         <label id="687" label="Gloria O" folder="Outbound stage 0" sort="0" />
-        <label id="258" label="Poké Trainers" folder="" sort="0" />
+        <label id="258" label="Series-specific: Pokémon" folder="Prompts" sort="0" />
         <label id="591" label="Ringo In 4-2" folder="Inbound stage 4" sort="0" />
         <label id="688" label="Ringo In 8-2A" color="2" folder="Inbound stage 8" sort="3" />
         <label id="689" label="Ringo In 8-2B" color="3" folder="Inbound stage 8" sort="2" />
@@ -806,7 +817,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="743" label="Kyoko's Hair Marker" folder="" sort="0" />
         <label id="744" label="Kyoko's Hair Marker" folder="" sort="0" />
         <label id="745" label="Kyoko's Hair Marker" folder="" sort="0" />
-        <label id="746" label="Nikaidou Ou 6-0" folder="Outbound stage 6" sort="3" />
+        <label id="746" label="ZLS Head Drop 1-1" folder="Outbound stage X" sort="3" />
         <label id="747" label="Visual arousal marker" folder="Aroused" sort="10" />
         <label id="748" label="Visual arousal marker" folder="Aroused" sort="4" />
         <label id="749" label="Visual arousal marker" folder="Aroused" sort="12" />
@@ -953,7 +964,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="894" label="Giygas Ou 5-1" folder="Outbound stage 5" sort="2" />
         <label id="895" label="Giygas Ou 6-1A" color="2" folder="Outbound stage 6" sort="8" />
         <label id="896" label="Giygas Ou 6-1B" color="3" folder="Outbound stage 6" sort="7" />
-        <label id="897" label="SCM In X-1" folder="Inbound hand" sort="0" />
+        <label id="897" label="SCM In X-1" folder="Inbound hand" sort="2" />
         <label id="898" label="SCM In X-1 conditional" folder="Inbound hand" sort="2" />
         <label id="899" label="SCM In X-1 conditional" folder="Inbound hand" sort="3" />
         <label id="900" label="Solar Flare Ou 6-1" folder="Outbound stage 6" sort="0" />
@@ -1421,9 +1432,9 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="1376" label="Téa IR 6-1B" folder="Duplicate dialogue" sort="65" />
         <label id="1377" label="Téa IR 6-1C" folder="Duplicate dialogue" sort="67" />
         <label id="1378" label="Téa IR 6-1D" folder="Duplicate dialogue" sort="66" />
-        <label id="1379" label="Goth Lolita" folder="Remilia Sponsor: Misc." sort="2" />
-        <label id="1380" label="Confident goth Lolita" folder="Remilia Sponsor: Misc." sort="3" />
-        <label id="1381" label="Male goth Lolita" folder="Remilia Sponsor: Misc." sort="0" />
+        <label id="1379" label="Goth Lolita" folder="Remillia Sponsor: Misc." sort="2" />
+        <label id="1380" label="Confident goth Lolita" folder="Remillia Sponsor: Misc." sort="3" />
+        <label id="1381" label="Male goth Lolita" folder="Remillia Sponsor: Misc." sort="0" />
         <label id="1382" label="Suzuya IL 0-1" folder="Inbound stage 0" sort="66" />
         <label id="1383" label="Suzuya IL 0-2A" color="2" folder="Inbound stage 0" sort="68" />
         <label id="1384" label="Suzuya IL 0-2B" color="3" folder="Inbound stage 0" sort="69" />
@@ -1437,17 +1448,49 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <label id="1393" label="Suzuya IR 0-2A" folder="Duplicate dialogue" sort="72" />
         <label id="1394" label="Suzuya IR 0-2B" folder="Duplicate dialogue" sort="73" />
         <label id="1395" label="Suzuya IR 0-3" folder="Duplicate dialogue" sort="74" />
-        <label id="1396" label="" folder="Naughty outbounds" sort="0" />
+        <label id="1396" label="" folder="Naughty outbounds" sort="4" />
         <label id="1397" label="" folder="Naughty outbounds" sort="2" />
         <label id="1398" label="Suzuya Ou 5-3X" folder="Naughty outbounds" sort="3" />
         <label id="1399" label="Arousal" color="1" folder="Naughty outbounds" sort="4" />
         <label id="1400" label="" folder="Naughty outbounds" sort="0" />
         <label id="1401" label="" folder="Naughty outbounds" sort="5" />
-        <label id="1402" label="" folder="Duplicate dialogue" sort="0" />
+        <label id="1402" label="" folder="Duplicate dialogue" sort="139" />
         <label id="1403" label="Suzuya IR 0-2BB" folder="Duplicate dialogue" sort="73" />
-        <label id="1404" label="Yae Ou 1-3" folder="Outbound stage 1" sort="0" />
-        <label id="1405" label="Sofia Ou 0-3A" color="2" folder="Outbound stage 0" sort="0" />
+        <label id="1404" label="Yae Ou 1-3" folder="Outbound stage 1" sort="5" />
+        <label id="1405" label="Sofia Ou 0-3A" color="2" folder="Outbound stage 0" sort="12" />
         <label id="1406" label="" folder="Bobobo+Yae" sort="0" />
+        <label id="1407" label="Treasure Scope" color="5" folder="Inbound hand" sort="0" />
+        <label id="1408" label="" color="6" folder="April Fool's" sort="40" />
+        <label id="496" label="Regular" folder="" sort="0" />
+        <label id="1409" label="Noises" folder="" sort="0" />
+        <label id="1410" label="Tandem/Extreme" folder="" sort="0" />
+        <label id="1411" label="Duplicate" color="6" folder="April Fool's" sort="20" />
+        <label id="1412" label="" color="6" folder="April Fool's" sort="0" />
+        <label id="1413" label="Duplicate" color="6" folder="April Fool's" sort="22" />
+        <label id="1414" label="Duplicate" color="6" folder="April Fool's" sort="21" />
+        <label id="1415" label="" color="6" folder="April Fool's" sort="48" />
+        <label id="1416" label="" color="6" folder="April Fool's" sort="29" />
+        <label id="1417" label="" color="6" folder="April Fool's" sort="0" />
+        <label id="1418" label="" color="6" folder="April Fool's" sort="13" />
+        <label id="1419" label="" color="6" folder="April Fool's" sort="14" />
+        <label id="1420" label="" color="6" folder="April Fool's" sort="15" />
+        <label id="1421" label="" color="6" folder="April Fool's" sort="17" />
+        <label id="1422" label="" folder="Remillia sponsor: Sexuality" sort="0" />
+        <label id="1423" label="Series-specific: DC" folder="Prompts" sort="0" />
+        <label id="1425" label="Pasties" folder="Specific items" sort="0" />
+        <label id="1426" label="MARKED FOR REWRITE" color="1" folder="" sort="0" />
+        <label id="1427" label="Also has a prompt!" folder="Remillia Sponsor: Sexuality" sort="0" />
+        <label id="1428" label="" folder="Remillia Sponsor: Sexuality" sort="0" />
+        <label id="1429" label="" folder="Outbound stage 4" sort="0" />
+        <label id="1430" label="" folder="Constanze+Revy" sort="0" />
+        <label id="1431" label="" folder="April Fool's" sort="0" />
+        <label id="1432" label="Shamiko IL 0-1A" color="2" folder="Inbound stage 0" sort="0" />
+        <label id="1433" label="Shamiko IL 0-1B" color="3" folder="Inbound stage 0" sort="0" />
+        <label id="1434" label="Shamiko IR pre0-1B" folder="Duplicate dialogue" sort="0" />
+        <label id="1435" label="Shamiko IR 0-1B" color="3" folder="Duplicate dialogue" sort="0" />
+        <label id="1436" label="Shamiko IL pre0-1A" folder="Duplicate dialogue" sort="0" />
+        <label id="1437" label="Shamiko IR 0-1B" color="3" folder="Duplicate dialogue" sort="0" />
+        <label id="1438" label="Shamiko IR 0-1A" color="2" folder="Duplicate dialogue" sort="0" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -1479,11 +1522,12 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
     </posePreviewMarkers>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1406</nextId>
+    <nextId>1438</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
         <marker scope="Public" name="+quips" />
+        <marker scope="Public" name="+zombieHeadDrops" />
         <marker scope="Public" name="ae86_strip" />
         <marker scope="Public" name="ae86_strip01" />
         <marker scope="Public" name="alwaysReady">"Always ready, I see" and other versions of the line</marker>
@@ -1506,6 +1550,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="arousalVisible" />
         <marker scope="Public" name="aroused">Her vulva is or will be visibly secreting fluid prior to her forfeit while nude (and in the second tick of her forfeit).</marker>
         <marker scope="Public" name="attractedAttention" />
+        <marker scope="Public" name="batmanPrompt" />
         <marker scope="Public" name="bella_1" />
         <marker scope="Public" name="bella_885" />
         <marker scope="Public" name="bella_invegaroo" />
@@ -1526,9 +1571,11 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="bluffsWon_lo">Won X hands while bluffing=lo</marker>
         <marker scope="Public" name="bluffsWon_no">Won X hands while bluffing=no</marker>
         <marker scope="Public" name="bobobo_HEY_PAUL" />
+        <marker scope="Public" name="bobobo_layerLimit" />
         <marker scope="Public" name="bobobo_leto" />
         <marker scope="Public" name="bodyUsefulLesbians" />
         <marker scope="Public" name="bossMode">Game started with a player name triggering stronger AI for Kyoko</marker>
+        <marker scope="Public" name="bustToBust" />
         <marker scope="Public" name="buttPoseGranted" />
         <marker scope="Public" name="buttPoseGrantedA" />
         <marker scope="Public" name="buttPoseGrantedB" />
@@ -1569,6 +1616,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="chihiro_outGeneric" />
         <marker scope="Public" name="chihiroOutsGeneric" />
         <marker scope="Public" name="chivulva" />
+        <marker scope="Public" name="clue" />
         <marker scope="Public" name="coffee">She has mentioned coffee X times. She's a fan.</marker>
         <marker scope="Public" name="coffeeHandLine" />
         <marker scope="Public" name="collectible_underwear">kirigiri_underwear collectible is unlocked</marker>
@@ -1578,11 +1626,13 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="constanze_byebitchBetterLuck" />
         <marker scope="Public" name="constanze_byebitchNoU" />
         <marker scope="Public" name="constanze_sugarRe" />
+        <marker scope="Public" name="constanze_whatYouEat" />
         <marker scope="Public" name="constanze_youGotThis" />
         <marker scope="Public" name="corner" />
         <marker scope="Public" name="cornered" />
         <marker scope="Public" name="costume">Marker indicating her costume using strings. 0 = default; FF = Future Foundation costume; swimsuit = Danganronpa S swimsuit costume.</marker>
         <marker scope="Public" name="cute">"It really is quite cute." "What? I'm allowed to like cute things." (=3 if triggered by male opponent)</marker>
+        <marker scope="Public" name="death_accusation" />
         <marker scope="Public" name="deepBreathStart" />
         <marker scope="Public" name="detectiveReveal">She has stated outright or otherwise confirmed that she is a detective.</marker>
         <marker scope="Public" name="deutsch">X times, she has said something in the German language</marker>
@@ -1617,6 +1667,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="exhibitionExpectation" />
         <marker scope="Public" name="explainedForfeit">She's explained early in the game that masturbation is a penalty for losing.</marker>
         <marker scope="Public" name="extraRound1" />
+        <marker scope="Public" name="fastLearnerPrompt" />
         <marker scope="Public" name="Felix_QuestionNotMyMethods2" />
         <marker scope="Public" name="feris_V_pq" />
         <marker scope="Public" name="feris_V_pq=his" />
@@ -1744,6 +1795,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="hauntedVoyeurs" />
         <marker scope="Public" name="haveToUntie">"Just a second. I have to untie this."</marker>
         <marker scope="Public" name="hayato" />
+        <marker scope="Public" name="heavyNoise" />
         <marker scope="Public" name="hopesPeak">She has mentioned Hope's Peak Academy, her High School, X times.</marker>
         <marker scope="Public" name="howLossFeels" />
         <marker scope="Public" name="hugePenis">She has seen and reacted to a penis with the huge_penis tag.</marker>
@@ -1756,6 +1808,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="humanWearingCaseBriefs" />
         <marker scope="Public" name="ibtcompany" />
         <marker scope="Public" name="immaculateFrame" />
+        <marker scope="Public" name="junkoPastiesTip" />
         <marker scope="Public" name="kazumaTinder" />
         <marker scope="Public" name="keepInShape" />
         <marker scope="Public" name="kekko_glovesOnly1" />
@@ -1778,6 +1831,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="kyoka_intro" />
         <marker scope="Public" name="kyuSchoolPrompt">Kyoko will respond to one of Kyu's comments about her schoolgirl uniform.</marker>
         <marker scope="Public" name="kyuSchoolResponse">Kyoko has responded to one of Kyu's comments about her schoolgirl uniform.</marker>
+        <marker scope="Public" name="largeBreastPrompt" />
         <marker scope="Public" name="lastDone" />
         <marker scope="Public" name="lastHand">Only the human player and Kyoko Kirigiri remain in the game, and both have lost all layers.</marker>
         <marker scope="Public" name="lastOut" />
@@ -1807,6 +1861,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="maria_smodeDressStrip2Normal" />
         <marker scope="Public" name="meanHero">"They act cold, but I suspect they're nobler than they let on.""</marker>
         <marker scope="Public" name="mentalPhysicalStrengthPrompt" />
+        <marker scope="Public" name="miaFey_parentTrouble" />
         <marker scope="Public" name="mikan_confident1Re" />
         <marker scope="Public" name="mikan_confident2Re" />
         <marker scope="Public" name="mikan_listen" />
@@ -1825,6 +1880,11 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="nagatoro_stalkingArrest" />
         <marker scope="Public" name="nagatoro_stalkingLawyer" />
         <marker scope="Public" name="nagatoro_stalkingRe" />
+        <marker scope="Public" name="nagatoro_swimsuitWeapon" />
+        <marker scope="Public" name="namiHito_bye" />
+        <marker scope="Public" name="namiHito_cashPoker" />
+        <marker scope="Public" name="namiHito_eh" />
+        <marker scope="Public" name="namiHito_leave" />
         <marker scope="Public" name="nanamuraSantaHat" />
         <marker scope="Public" name="neededThis" />
         <marker scope="Public" name="nickname" />
@@ -1870,6 +1930,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="revy_discipline" />
         <marker scope="Public" name="revy_disciplineA" />
         <marker scope="Public" name="revy_disciplineB" />
+        <marker scope="Public" name="revy_killingRe" />
         <marker scope="Public" name="revy_wtfbbqlol" />
         <marker scope="Public" name="ringo_bornDetective" />
         <marker scope="Public" name="ringo_deduction1" />
@@ -1887,6 +1948,9 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="ringo_ultimateTalentRe" />
         <marker scope="Public" name="roll_spa" />
         <marker scope="Public" name="rosa_hairstyles" />
+        <marker scope="Public" name="rouge_treasureScope" />
+        <marker scope="Public" name="rouge_treasureScope_A" />
+        <marker scope="Public" name="rouge_treasureScope_B" />
         <marker scope="Public" name="safeAnotherRound" />
         <marker scope="Public" name="safeForNow" />
         <marker scope="Public" name="saidNameFinish">Kyoko said the human player's name while finishing.</marker>
@@ -1904,6 +1968,8 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="selfTrimComment" />
         <marker scope="Public" name="sflare_elimination" />
         <marker scope="Public" name="sflare_start" />
+        <marker scope="Public" name="shamiko_bibliophile" />
+        <marker scope="Public" name="shamiko_legDay" />
         <marker scope="Public" name="sheSaidFuck" />
         <marker scope="Public" name="SHE-SAYS-FUCK" />
         <marker scope="Public" name="shyExtraFirst" />
@@ -1955,6 +2021,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="suzuya_zodiac5" />
         <marker scope="Public" name="sweetheart_selfPillow" />
         <marker scope="Public" name="swissFrancs">Despite being Japanese, she says her jacket cost 90 Swiss francs.</marker>
+        <marker scope="Public" name="takeOffMyUndies" />
         <marker scope="Public" name="tea_dontCare" />
         <marker scope="Public" name="tea_dontCare_A" />
         <marker scope="Public" name="tea_dontCare_B" />
@@ -2027,6 +2094,8 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <marker scope="Public" name="yuno_nyc" />
         <marker scope="Public" name="yuno_nyc_hontou" />
         <marker scope="Public" name="yuno_nyc_truly" />
+        <marker scope="Public" name="zlsHeadDrop1" />
+        <marker scope="Public" name="zombieHeadDrops" />
     </markers>
     <recipes>
         <recipe key="43e68bf4-4dc8-4938-a5d7-8f1e17e1202e">
@@ -2037,6 +2106,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <recipe key="797c82ff-421e-4c29-a950-094bca5a147d">
             <cases>
                 <id>161</id>
+                <id>1424</id>
             </cases>
         </recipe>
         <recipe key="eb570363-dbe2-45bb-ac47-916fc820de42">
@@ -2051,5 +2121,11 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <line>You have such sightly hips, ~name~… Let’s see them in motion.</line>
         <line>REVY: Man, I can’t relate to some fuckin’ weekend warriors out for a little titty-thrill. Who here is the walking dead? Y’know…a killer.</line>
         <line>"I have no intentions of turning back, I have no place to go back to from the beginning." (Kyoko, 69, DRKV7)</line>
+        <line>Shock and awe</line>
+        <line>There's no need to act so timid. There's more of an audience for this than you think, I assure you...</line>
+        <line>Believe it or not, high-profile cases can get even stranger. lotsa ehhhhh weirdos making weird rules</line>
+        <line>Revy is Junko (Japanese)</line>
+        <line>Shares an English VA (Erika Harlacher) with: Videl, Yumeko, Ami, Ann, and Crusch.</line>
+        <line>Comments on Deck styles</line>
     </pendingLines>
 </metadata>
