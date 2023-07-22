@@ -118,6 +118,7 @@ Feel free to have Téa take up either option or something else. Asking about Kyo
         <note id="1385">Shameless tactlessness is one of Kyoko's funnier character traits.</note>
         <note id="1387">She demands perfection from herself and her soup. How can she expect any less from her customer?</note>
         <note id="1407">DUMMY marker condition won't be applied once this case gets fully implemented, I just slapped it on so that this line wouldn't play in actual gameplay yet even as a hidden line.
+Poses for this line contain assets that haven’t been merged yet, but the first line is set to play with one based on her stern pose (front-facing) and the second is set to play with her rear-facing pose (without eye contact). It's your call whether the first line is appropriate or not, given Rouge in some lines seems to prefer having the player look while the target is too distracted to notice the scope in use.
 
 I’ve decided that Kyoko's gloves are actually valuable enough that they should show up on the scope, what with them being custom-tailored for her hands and made out of some material suitable for touching both dead bodies and everyday objects with. A) this doesn't need a custom pose and B) I don't need to deal with the messy ramifications of the player looking at Kyoko's bare hands, because while she's fine showing conventional chest-and-crotch nudity, there's zero way she'd be cool with that. I would encourage you to have Rouge comment on the potential price point of this purple-peepered poker-playing PI's palm protection (English: value of Kyoko's gloves) to help sell this explanation.
 
@@ -271,7 +272,7 @@ Also, I've made this stage 1 instead of stage 0 because of Kyoko's line about he
         <label id="167" label="Junko" folder="" sort="0" />
         <label id="168" label="Junko" folder="" sort="0" />
         <label id="169" label="Junko" folder="" sort="0" />
-        <label id="170" label="" folder="Minor" sort="4" />
+        <label id="170" label="Prompt inside!" folder="Minor" sort="4" />
         <label id="171" label="" folder="Minor" sort="2" />
         <label id="172" label="" folder="Minor" sort="3" />
         <label id="173" label="" folder="Minor" sort="0" />
@@ -827,10 +828,10 @@ Also, I've made this stage 1 instead of stage 0 because of Kyoko's line about he
         <label id="753" label="Player accessory" folder="Extra/Minor" sort="8" />
         <label id="754" label="Opponent fled" folder="" sort="0" />
         <label id="755" label="Jewelry" folder="Specific items" sort="0" />
-        <label id="756" label="MARKED FOR DELETION" color="1" folder="Ferris pseudo-generics" sort="4" />
-        <label id="757" label="MARKED FOR DELETION" color="1" folder="Ferris pseudo-generics" sort="5" />
+        <label id="756" label="MARKED FOR DELETION" color="1" folder="Ferris pseudo-generics" sort="0" />
+        <label id="757" label="" folder="Ferris pseudo-generics" sort="5" />
         <label id="758" label="Set 1" folder="Ferris pseudo-generics" sort="3" />
-        <label id="759" label="Set 1" folder="Ferris pseudo-generics" sort="2" />
+        <label id="759" label="Set 1" folder="Ferris pseudo-generics" sort="0" />
         <label id="760" label="Set 5" folder="Ferris pseudo-generics" sort="3" />
         <label id="761" label="" folder="Ferris pseudo-generics" sort="6" />
         <label id="762" label="" folder="Ferris pseudo-generics" sort="8" />
@@ -1384,8 +1385,8 @@ Also, I've made this stage 1 instead of stage 0 because of Kyoko's line about he
         <label id="1328" label="" folder="Extra: Normal" sort="0" />
         <label id="1329" label="" folder="Extra: Normal" sort="0" />
         <label id="1330" label="" folder="Major/Important" sort="2" />
-        <label id="1331" label="MARKED FOR DELETION" color="1" folder="Extra" sort="0" />
-        <label id="1332" label="MARKED FOR DELETION" color="1" folder="Extra" sort="2" />
+        <label id="1331" label="" folder="Extra" sort="0" />
+        <label id="1332" label="" folder="Extra" sort="2" />
         <label id="1333" label="Jewelry" folder="Specific items" sort="2" />
         <label id="1334" label="Generic" folder="" sort="0" />
         <label id="1335" label="Magic" folder="Outbound hand" sort="0" />
@@ -1459,7 +1460,7 @@ Also, I've made this stage 1 instead of stage 0 because of Kyoko's line about he
         <label id="1404" label="Yae Ou 1-3" folder="Outbound stage 1" sort="5" />
         <label id="1405" label="Sofia Ou 0-3A" color="2" folder="Outbound stage 0" sort="12" />
         <label id="1406" label="" folder="Bobobo+Yae" sort="0" />
-        <label id="1407" label="Treasure Scope" color="5" folder="Inbound hand" sort="0" />
+        <label id="1407" label="Treasure Scope" color="5" folder="Inbound hand" sort="6" />
         <label id="1408" label="" color="6" folder="April Fool's" sort="40" />
         <label id="496" label="Regular" folder="" sort="0" />
         <label id="1409" label="Noises" folder="" sort="0" />
@@ -1476,21 +1477,21 @@ Also, I've made this stage 1 instead of stage 0 because of Kyoko's line about he
         <label id="1420" label="" color="6" folder="April Fool's" sort="15" />
         <label id="1421" label="" color="6" folder="April Fool's" sort="17" />
         <label id="1422" label="" folder="Remillia sponsor: Sexuality" sort="0" />
-        <label id="1423" label="Series-specific: DC" folder="Prompts" sort="0" />
-        <label id="1425" label="Pasties" folder="Specific items" sort="0" />
+        <label id="1423" label="Series-specific: DC" folder="Prompts" sort="2" />
+        <label id="1425" label="Pasties" folder="Specific items" sort="3" />
         <label id="1426" label="MARKED FOR REWRITE" color="1" folder="" sort="0" />
-        <label id="1427" label="Also has a prompt!" folder="Remillia Sponsor: Sexuality" sort="0" />
+        <label id="1427" label="Also has a prompt!" folder="Remillia Sponsor: Sexuality" sort="2" />
         <label id="1428" label="" folder="Remillia Sponsor: Sexuality" sort="0" />
-        <label id="1429" label="" folder="Outbound stage 4" sort="0" />
+        <label id="1429" label="" folder="Outbound stage 4" sort="9" />
         <label id="1430" label="" folder="Constanze+Revy" sort="0" />
-        <label id="1431" label="" folder="April Fool's" sort="0" />
-        <label id="1432" label="Shamiko IL 0-1A" color="2" folder="Inbound stage 0" sort="0" />
-        <label id="1433" label="Shamiko IL 0-1B" color="3" folder="Inbound stage 0" sort="0" />
-        <label id="1434" label="Shamiko IR pre0-1B" folder="Duplicate dialogue" sort="0" />
+        <label id="1431" label="" folder="April Fool's" sort="20" />
+        <label id="1432" label="Shamiko IL 0-1A" color="2" folder="Inbound stage 0" sort="4" />
+        <label id="1433" label="Shamiko IL 0-1B" color="3" folder="Inbound stage 0" sort="3" />
+        <label id="1434" label="Shamiko IR pre0-1B" folder="Duplicate dialogue" sort="53" />
         <label id="1435" label="Shamiko IR 0-1B" color="3" folder="Duplicate dialogue" sort="0" />
-        <label id="1436" label="Shamiko IL pre0-1A" folder="Duplicate dialogue" sort="0" />
-        <label id="1437" label="Shamiko IR 0-1B" color="3" folder="Duplicate dialogue" sort="0" />
-        <label id="1438" label="Shamiko IR 0-1A" color="2" folder="Duplicate dialogue" sort="0" />
+        <label id="1436" label="Shamiko IL pre0-1A" folder="Duplicate dialogue" sort="54" />
+        <label id="1437" label="Shamiko IR 0-1B" color="3" folder="Duplicate dialogue" sort="72" />
+        <label id="1438" label="Shamiko IR 0-1A" color="2" folder="Duplicate dialogue" sort="73" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -1908,6 +1909,7 @@ Also, I've made this stage 1 instead of stage 0 because of Kyoko's line about he
         <marker scope="Public" name="parentTrouble">Kyoko has reacted with X divided by 2 lines to Mia Fey asking about if anyone else had parents leave at a young age.</marker>
         <marker scope="Public" name="penisTiming" />
         <marker scope="Public" name="pirateBooty" />
+        <marker scope="Public" name="pocketItemsPrompt" />
         <marker scope="Public" name="pokeTrainers" />
         <marker scope="Public" name="precumQuestion" />
         <marker scope="Public" name="quadRoyalFlush" />
