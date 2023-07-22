@@ -122,7 +122,7 @@ namespace SPNATI_Character_Editor
 		private bool FilterPortrait(PoseMapping pose, CharacterEditorData editorData)
 		{
 			string key = pose.Key;
-			if (key.StartsWith("custom:") && key.StartsWith("set:"))
+			if (key.StartsWith("custom:") || key.StartsWith("set:"))
 			{
 				return true;
 			}			
@@ -341,7 +341,7 @@ namespace SPNATI_Character_Editor
 				}
 				else if (key.StartsWith("set:"))
 				{
-					key = "set:#-" + key.Substring("set:".Length);
+				//	key = "set:#-" + key.Substring("set:".Length);
 				}
 				else
 				{
@@ -370,6 +370,7 @@ namespace SPNATI_Character_Editor
 			int stage;
 			string id;
 			string ext = null;
+			string key;
 			if (!name.StartsWith("custom:") && !name.StartsWith("set:"))
 			{
 				ext = Path.GetExtension(name);
@@ -378,9 +379,15 @@ namespace SPNATI_Character_Editor
 					name = name.Substring(0, name.Length - ext.Length);
 				}
 			}
-			ParseImage(name, out stage, out id);
-			string key = GetPoseKey(stage, id, ext);
-
+			if (!name.StartsWith("set:"))
+			{
+				ParseImage(name, out stage, out id);
+				key = GetPoseKey(stage, id, ext);
+			}
+			else
+			{
+				key = name;
+			}
 			PoseMapping pose;
 			_poseMap.TryGetValue(key, out pose);
 			return pose;
