@@ -36,10 +36,10 @@ namespace SPNATI_Character_Editor.Activities
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsDuplicatePoseSet = new System.Windows.Forms.ToolStripButton();
             this.lstPoseSets = new Desktop.CommonControls.RefreshableListBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txtPoseSetRename = new Desktop.Skinning.SkinnedTextBox();
             this.lblPoseSetRename = new Desktop.Skinning.SkinnedLabel();
+            this.txtPoseSetRename = new Desktop.Skinning.SkinnedTextBox();
             this.poseSetControl1 = new SPNATI_Character_Editor.Controls.PoseSetControl();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -128,16 +128,6 @@ namespace SPNATI_Character_Editor.Activities
             this.lstPoseSets.TabIndex = 5;
             this.lstPoseSets.SelectedIndexChanged += new System.EventHandler(this.lstPoseSets_SelectedIndexChanged);
             // 
-            // txtPoseSetRename
-            // 
-            this.txtPoseSetRename.BackColor = System.Drawing.Color.White;
-            this.txtPoseSetRename.ForeColor = System.Drawing.Color.Black;
-            this.txtPoseSetRename.Location = new System.Drawing.Point(64, 14);
-            this.txtPoseSetRename.Name = "txtPoseSetRename";
-            this.txtPoseSetRename.Size = new System.Drawing.Size(167, 20);
-            this.txtPoseSetRename.TabIndex = 4;
-            this.txtPoseSetRename.TextChanged += new System.EventHandler(this.txtPoseSetRename_TextChanged);
-            // 
             // lblPoseSetRename
             // 
             this.lblPoseSetRename.AutoSize = true;
@@ -150,6 +140,16 @@ namespace SPNATI_Character_Editor.Activities
             this.lblPoseSetRename.Size = new System.Drawing.Size(54, 13);
             this.lblPoseSetRename.TabIndex = 5;
             this.lblPoseSetRename.Text = "Set Name";
+            // 
+            // txtPoseSetRename
+            // 
+            this.txtPoseSetRename.BackColor = System.Drawing.Color.White;
+            this.txtPoseSetRename.ForeColor = System.Drawing.Color.Black;
+            this.txtPoseSetRename.Location = new System.Drawing.Point(64, 14);
+            this.txtPoseSetRename.Name = "txtPoseSetRename";
+            this.txtPoseSetRename.Size = new System.Drawing.Size(167, 20);
+            this.txtPoseSetRename.TabIndex = 4;
+            this.txtPoseSetRename.TextChanged += new System.EventHandler(this.txtPoseSetRename_TextChanged);
             // 
             // poseSetControl1
             // 

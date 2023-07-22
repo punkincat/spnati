@@ -1,6 +1,4 @@
 ﻿using Desktop.CommonControls.PropertyControls;
-using Desktop.DataStructures;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,15 +18,6 @@ namespace SPNATI_Character_Editor
 		public PoseSet()
 		{
 			Id = "new set";
-			//PoseSetEntry entry = new PoseSetEntry();
-			//Entries.Add(entry);
-		}
-
-		public PoseSet(ISkin character)
-		{
-			Id = "new set";
-			//PoseSetEntry entry = new PoseSetEntry(character);
-			//Entries.Add(entry);
 		}
 
 		public object Clone()
@@ -94,11 +83,6 @@ namespace SPNATI_Character_Editor
 
 		public PoseSetEntry() 
 		{
-		}
-
-		public PoseSetEntry(ISkin character)
-		{
-			Character = character.Character.ToString();
 		}
 
 		public object Clone()

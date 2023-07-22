@@ -47,6 +47,7 @@
             this.cboPose = new System.Windows.Forms.ComboBox();
             this.tablePoseSetEntry = new Desktop.CommonControls.PropertyTable();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.skinnedLabel1 = new Desktop.Skinning.SkinnedLabel();
             this.tabsPoseSetEntries.SuspendLayout();
             this.skinnedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valWeight)).BeginInit();
@@ -108,6 +109,7 @@
             this.skinnedPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinnedPanel1.Controls.Add(this.skinnedLabel1);
             this.skinnedPanel1.Controls.Add(this.chkLayer);
             this.skinnedPanel1.Controls.Add(this.lblDirection);
             this.skinnedPanel1.Controls.Add(this.cboDirection);
@@ -328,6 +330,17 @@
             this.tablePoseSetEntry.UndoManager = null;
             this.tablePoseSetEntry.UseAutoComplete = true;
             // 
+            // skinnedLabel1
+            // 
+            this.skinnedLabel1.AutoSize = true;
+            this.skinnedLabel1.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.skinnedLabel1.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.skinnedLabel1.Location = new System.Drawing.Point(108, 151);
+            this.skinnedLabel1.Name = "skinnedLabel1";
+            this.skinnedLabel1.Size = new System.Drawing.Size(190, 13);
+            this.skinnedLabel1.TabIndex = 75;
+            this.skinnedLabel1.Text = "(Each pose requires a Stage condition)";
+            // 
             // PoseSetControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,5 +379,6 @@
         private Desktop.Skinning.SkinnedLabel lblDirection;
         private Desktop.Skinning.SkinnedComboBox cboDirection;
         private Desktop.Skinning.SkinnedLabel lblWeight;
+        private Desktop.Skinning.SkinnedLabel skinnedLabel1;
     }
 }

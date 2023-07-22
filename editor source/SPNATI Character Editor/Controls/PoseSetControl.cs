@@ -1,12 +1,7 @@
-using Desktop;
-using Desktop.CommonControls;
 using Desktop.Skinning;
-using SPNATI_Character_Editor.Forms;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Globalization;
-using System.IO;
 using System.Windows.Forms;
 
 namespace SPNATI_Character_Editor.Controls
@@ -22,9 +17,6 @@ namespace SPNATI_Character_Editor.Controls
 			InitializeComponent();
 			cboDirection.DataSource = DialogueLine.ArrowDirections;
 		}
-
-
-
 
 		public void OnUpdateSkin(Skin skin)
 		{
@@ -126,7 +118,9 @@ namespace SPNATI_Character_Editor.Controls
 			{
 				foreach (PoseMapping pose in _character.Character.PoseLibrary.GetPoses(selectedStages[i]))
 				{
-					poses.Add(pose);
+					if (!pose.Key.StartsWith("set:"))
+						if (!poses.Contains(pose))
+							poses.Add(pose);
 				}
 			}
 			foreach (PoseMapping image in poses)
@@ -152,8 +146,6 @@ namespace SPNATI_Character_Editor.Controls
 			cboPose.DataSource = existingPoses;
 		}
 
-
-
 		private void tabsPoseSetEntries_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (_selectedSet == null) { return; }
@@ -171,7 +163,7 @@ namespace SPNATI_Character_Editor.Controls
 
 		private void PopulatePoseEntryTable()
 		{
-			_selectedEntry.Character = _character.Character.ToString();
+			_selectedEntry.Character = _character.Character.FolderName;
 			if (tablePoseSetEntry.Data != _selectedEntry)
 			{
 				tablePoseSetEntry.Data = _selectedEntry;
@@ -179,14 +171,13 @@ namespace SPNATI_Character_Editor.Controls
 			}
 		}
 
-
-
 		//public void Save()
 		//{
 		//}
 
 		public void SavePoseSetEntry()
 		{
+			_character.IsDirty = true;
 			_selectedEntry.Weight = (float)valWeight.Value == 0.001f ? 0f : (float)valWeight.Value;
 			_selectedEntry.Priority = (int) valPriority.Value;
 			_selectedEntry.Direction = cboDirection.Text;
@@ -196,9 +187,6 @@ namespace SPNATI_Character_Editor.Controls
 			_selectedEntry.Img = image.Key;
 			tablePoseSetEntry.Save();
 		}
-
-
-
 
 
 		public SkinnedBackgroundType PanelType
@@ -213,21 +201,16 @@ namespace SPNATI_Character_Editor.Controls
 			return poseEntry;
 		}*/
 
-
-
-
 		private void stripPoseSetEntries_AddButtonClicked(object sender, EventArgs e)
 		{
 			if (_selectedSet == null) { return; }
 			PoseSetEntry entry = new PoseSetEntry();
 			entry.Stage = "0";
-			entry.Character = _character.ToString();
+			entry.Character = _character.FolderName;
 			_selectedSet.Entries.Add(entry);
 			AddSetEntryTab();
 			tabsPoseSetEntries.SelectedIndex = tabsPoseSetEntries.TabPages.Count;
 		}
-
-
 
 		private void stripPoseSetEntries_CloseButtonClicked(object sender, EventArgs e)
 		{

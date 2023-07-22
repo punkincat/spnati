@@ -11,6 +11,7 @@ namespace SPNATI_Character_Editor.Activities
 		private ISkin _character;
 		bool _initialized = false;
 		PoseSet _selectedSet;
+		bool _selecting = true;
 
 		public override string Caption
 		{
@@ -60,8 +61,10 @@ namespace SPNATI_Character_Editor.Activities
 					poseSetControl1.SavePoseSetEntry();
 				}
 				_selectedSet = poseSet;
+				_selecting = true;
 				txtPoseSetRename.Text = _selectedSet.Id;
 				poseSetControl1.SetPoseSet(_selectedSet);
+				_selecting = false;
 			}
 		}
 
@@ -73,8 +76,9 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				return;
 			}
+			_character.IsDirty = true;
 			_character.CustomPoseSets.Remove(_selectedSet);
-			//_character.Character.PoseLibrary.Remove(_sourcePose);
+			_character.Character.PoseLibrary.Remove(_selectedSet);
 			lstPoseSets.Items.Remove(_selectedSet);
 			if (lstPoseSets.Items.Count > 0)
 			{
@@ -85,7 +89,7 @@ namespace SPNATI_Character_Editor.Activities
 
 		private void tsAddPoseSet_Click(object sender, EventArgs e)
 		{
-			//PoseSet poseSet = new PoseSet(_character);
+			_character.IsDirty = true;
 			PoseSet poseSet = new PoseSet();
 			PoseSetEntry entry = new PoseSetEntry();
 			entry.Stage = "0";
@@ -95,36 +99,33 @@ namespace SPNATI_Character_Editor.Activities
 			lstPoseSets.SelectedItem = poseSet;
 			_character.CustomPoseSets.Add(poseSet);
 			_character.CustomPoseSets.Sort();
-			//_character.Character.PoseLibrary.Add(poseSet);
+			_character.Character.PoseLibrary.Add(poseSet);
 		}
 
 		private void tsDuplicatePoseSet_Click(object sender, EventArgs e)
 		{
 			if (_selectedSet == null) { return; }
-			SavePoseSet();
+			poseSetControl1.SavePoseSetEntry();
 
 			PoseSet copy = _selectedSet.Clone() as PoseSet;
-			lstPoseSets.Items.Add(_selectedSet);
+			lstPoseSets.Items.Add(copy);
 			lstPoseSets.SelectedItem = copy;
 			_character.CustomPoseSets.Add(copy);
-
-		}
-
-		private void SavePoseSet()
-		{
-
 		}
 
 		public override void Save()
 		{
-	
+			poseSetControl1.SavePoseSetEntry();
 		}
 
 		private void txtPoseSetRename_TextChanged(object sender, EventArgs e)
 		{
-			if (_selectedSet != null)
+			if (_selectedSet != null && !_selecting)
 			{
+				_character.IsDirty = true;
 				_selectedSet.Id = txtPoseSetRename.Text;
+				_character.Character.PoseLibrary.Rename(_selectedSet);
+				lstPoseSets.RefreshListItems();
 			}
 		}
 	}
