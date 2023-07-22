@@ -1975,25 +1975,7 @@ VariableTest.prototype.evaluate = function (self, opp, bindings) {
 function Case($xml, trigger) {
     this.trigger =                  trigger;
     this.stage =                    $xml.attr('stage');
-    this.target =                   $xml.attr("target");
-    this.targetStage =              parseInterval($xml.attr("targetStage"));
-    this.targetSaidMarker =         $xml.attr("targetSaidMarker");
-    this.targetNotSaidMarker =      $xml.attr("targetNotSaidMarker");
-    this.targetSayingMarker =       $xml.attr("targetSayingMarker");
-    this.targetSaying =             $xml.attr("targetSaying");
-    this.alsoPlaying =              $xml.attr("alsoPlaying");
-    this.alsoPlayingStage =         parseInterval($xml.attr("alsoPlayingStage"));
-    this.alsoPlayingHand =          $xml.attr("alsoPlayingHand");
-    this.alsoPlayingTimeInStage =   parseInterval($xml.attr("alsoPlayingTimeInStage"));
-    this.alsoPlayingSaidMarker =    $xml.attr("alsoPlayingSaidMarker");
-    this.alsoPlayingNotSaidMarker = $xml.attr("alsoPlayingNotSaidMarker");
-    this.alsoPlayingSayingMarker =  $xml.attr("alsoPlayingSayingMarker");
-    this.alsoPlayingSaying =        $xml.attr("alsoPlayingSaying");
-    this.totalMales =               parseInterval($xml.attr("totalMales"));
-    this.totalFemales =             parseInterval($xml.attr("totalFemales"));
-    this.timeInStage =              parseInterval($xml.attr("timeInStage"));
     this.totalRounds =              parseInterval($xml.attr("totalRounds"));
-    this.saidMarker =               $xml.attr("saidMarker");
     this.notSaidMarker =            $xml.attr("notSaidMarker");
     this.customPriority =           parseInt($xml.attr("priority"), 10);
     this.hidden =                   $xml.attr("hidden");
@@ -2068,27 +2050,7 @@ function Case($xml, trigger) {
         this.priority = this.customPriority;
     } else {
         this.priority = 0;
-        if (this.target)                   this.priority += 300;
-        if (this.targetStage)              this.priority += 80;
-        if (this.targetSaidMarker)         this.priority += 1;
-        if (this.targetSayingMarker)       this.priority += 1;
-        if (this.targetSaying)             this.priority += 1;
-        if (this.targetNotSaidMarker)      this.priority += 1;
-
-        if (this.alsoPlaying)              this.priority += 100;
-        if (this.alsoPlayingStage)         this.priority += 40;
-        if (this.alsoPlayingTimeInStage)   this.priority += 15;
-        if (this.alsoPlayingHand)          this.priority += 5;
-        if (this.alsoPlayingSaidMarker)    this.priority += 1;
-        if (this.alsoPlayingNotSaidMarker) this.priority += 1;
-        if (this.alsoPlayingSayingMarker)  this.priority += 1;
-        if (this.alsoPlayingSaying)        this.priority += 1;
-
         if (this.totalRounds)              this.priority += 10;
-        if (this.timeInStage)              this.priority += 8;
-        if (this.totalMales)               this.priority += 5;
-        if (this.totalFemales)             this.priority += 5;
-        if (this.saidMarker)               this.priority += 1;
         if (this.notSaidMarker)            this.priority += 1;
 
         this.counters.forEach(function (c) { this.priority += c.priority; }, this);
@@ -2104,11 +2066,9 @@ function Case($xml, trigger) {
         this.priority += (tests.length * 50);
     }
 
-    this.isVolatile = this.targetSayingMarker || this.targetSaying
-        || this.alsoPlayingSayingMarker || this.alsoPlayingSaying
-        || this.counters.some(function(c) {
-            return c.sayingMarker || c.saying || c.pose;
-        });
+    this.isVolatile = this.counters.some(function(c) {
+        return c.sayingMarker || c.saying || c.pose;
+    });
 }
 
 /**
@@ -2182,20 +2142,6 @@ Case.prototype.toJSON = function () {
     return ser;
 }
 
-Case.prototype.getAlsoPlaying = function (opp) {
-    if (!this.alsoPlaying) return null;
-    
-    var ap = null;
-    
-    players.forEach(function (p) {
-        if (!ap && p !== opp && p.id === this.alsoPlaying) {
-            ap = p;
-        }
-    }.bind(this));
-    
-    return ap;
-}
-
 Case.prototype.checkConditions = function (self, opp, postDialogue) {
     var volatileDependencies = new Set();
     
@@ -2218,101 +2164,6 @@ Case.prototype.checkConditions = function (self, opp, postDialogue) {
             return false; // failed "stage" requirement
         }
     }
-    
-    // target
-    if (this.target) {
-        if (!opp || this.target !== opp.id) {
-            return false; // failed "target" requirement
-        }
-    }
-    
-    // targetStage
-    if (this.targetStage) {
-        if (!opp || !inInterval(opp.stage, this.targetStage)) {
-            return false; // failed "targetStage" requirement
-        }
-    }
-    
-    // targetSaidMarker
-    if (this.targetSaidMarker) {
-        if (!opp || !checkMarker(this.targetSaidMarker, opp, null)) {
-            return false;
-        }
-    }
-    
-    // targetNotSaidMarker
-    if (this.targetNotSaidMarker) {
-        if (!opp || checkMarker(this.targetNotSaidMarker, opp, null)) {
-            return false;
-        }
-    }
-
-    if (this.targetSayingMarker) {
-        if (!opp || !checkMarker(this.targetSayingMarker, opp, null, true)) {
-            return false;
-        }
-        volatileDependencies.add(opp);
-    }
-    if (this.targetSaying) {
-        if (!opp || !opp.chosenState || opp.updatePending) return false;
-        if (normalizeConditionText(opp.chosenState.rawDialogue).indexOf(normalizeConditionText(this.targetSaying)) < 0) return false;
-        volatileDependencies.add(opp);
-    }
-
-    // alsoPlaying, alsoPlayingStage, alsoPlayingTimeInStage, alsoPlayingHand (priority = 100, 40, 15, 5)
-    if (this.alsoPlaying) {
-        var ap = this.getAlsoPlaying(opp);
-        
-        if (!ap) {
-            return false; // failed "alsoPlaying" requirement
-        } else {
-            if (this.alsoPlayingStage) {
-                if (!inInterval(ap.stage, this.alsoPlayingStage)) {
-                    return false;        // failed "alsoPlayingStage" requirement
-                }
-            }
-                    
-            if (this.alsoPlayingTimeInStage) {
-                if (!inInterval(ap.timeInStage, this.alsoPlayingTimeInStage)) {
-                    return false;        // failed "alsoPlayingTimeInStage" requirement
-                }
-            }
-                    
-            if (this.alsoPlayingHand) {
-                if (!ap.hand || ap.hand.strength !== handStrengthFromString(this.alsoPlayingHand))
-                {
-                    return false;        // failed "alsoPlayingHand" requirement
-                }
-            }
-                    
-            // marker checks have very low priority as they're mainly intended to be used with other target types
-            if (this.alsoPlayingSaidMarker) {
-                if (!checkMarker(this.alsoPlayingSaidMarker, ap, opp)) {
-                    return false;
-                }
-            }
-                    
-            if (this.alsoPlayingNotSaidMarker) {
-                // Negated marker condition - false if it matches
-                if (checkMarker(this.alsoPlayingNotSaidMarker, ap, opp)) {
-                    return false;
-                }
-            }
-
-            if (this.alsoPlayingSayingMarker) {
-                if (!checkMarker(this.alsoPlayingSayingMarker, ap, opp, true)) {
-                    return false;
-                }
-                volatileDependencies.add(ap);
-            }
-            if (this.alsoPlayingSaying) {
-                if (ap.updatePending || !ap.chosenState || normalizeConditionText(ap.chosenState.rawDialogue).indexOf(normalizeConditionText(this.alsoPlayingSaying)) < 0) {
-                    return false;
-                }
-                volatileDependencies.add(ap);
-            }
-        }
-    }
 
     // totalRounds
     if (this.totalRounds) {
@@ -2321,43 +2172,7 @@ Case.prototype.checkConditions = function (self, opp, postDialogue) {
         }
     }
 
-    // timeInStage
-    if (this.timeInStage) {
-        if (!inInterval(self.timeInStage == -1 ? 0 //allow post-strip time to count as 0
-                       : self.timeInStage, this.timeInStage)) {
-                           return false; // failed "timeInStage" requirement
-        }
-    }
-
-    // totalMales
-    if (this.totalMales) {
-        var count = players.countTrue(function(p) {
-            return p && p.gender === eGender.MALE;
-        });
-        
-        if (!inInterval(count, this.totalMales)) {
-            return false; // failed "totalMales" requirement
-        }
-    }
-
-    // totalFemales
-    if (this.totalFemales) {
-        var count = players.countTrue(function(p) {
-            return p && p.gender === eGender.FEMALE;
-        });
-        
-        if (!inInterval(count, this.totalFemales)) {
-            return false; // failed "totalFemales" requirement
-        }
-    }
-
     // self marker checks
-    if (this.saidMarker) {
-        if (!checkMarker(this.saidMarker, self, opp)) {
-            return false;
-        }
-    }
-    
     if (this.notSaidMarker) {
         if (checkMarker(this.notSaidMarker, self, opp)) {
             return false;
