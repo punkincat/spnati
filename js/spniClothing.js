@@ -614,10 +614,11 @@ function closeStrippingModal () {
             if (!humanPlayer.isCovered(position)) {
                 humanPlayer.exposed[position] = true;
             } else if ((removedClothing.type == IMPORTANT_ARTICLE && removedClothing.position == position)) {
+                // Position still covered (removing underwear from under major); don't trigger crotch/chest reveal.
                 removedClothing.type = MAJOR_ARTICLE;
             }
         }
-        // For the future; there are no human clothes with position = both, especially no important ones.
+        // For the future; there are no important human clothes with position = both.
         if (removedClothing.position == FULL_ARTICLE && removedClothing.type == IMPORTANT_ARTICLE && humanPlayer.isCovered()) {
             removedClothing.type = MAJOR_ARTICLE;
         }
@@ -625,7 +626,6 @@ function closeStrippingModal () {
     if ([IMPORTANT_ARTICLE, MAJOR_ARTICLE, MINOR_ARTICLE].indexOf(removedClothing.type) >= 0) {
         humanPlayer.mostlyClothed = false;
     }
-    humanPlayer.decent = humanPlayer.isDecent();
     
     /* determine its dialogue trigger */
     var dialogueTrigger = getClothingTrigger(humanPlayer, removedClothing, true);
@@ -675,7 +675,6 @@ function stripAIPlayer (player) {
                 players[player].exposed[position] = true;
             }
         }
-        players[player].decent = false;
     }
     var dialogueTrigger = getClothingTrigger(players[player], removedClothing, true);
 

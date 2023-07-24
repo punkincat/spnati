@@ -87,19 +87,10 @@ Player.prototype.initClothingStatus = function () {
     this.startingLayers = this.countLayers();
     this.exposed = { upper: true, lower: true };
     for (var position in this.exposed) {
-        if (this.clothing.some(function(c) {
-            return (c.type == IMPORTANT_ARTICLE || c.type == MAJOR_ARTICLE)
-                && (c.position == position || c.position == FULL_ARTICLE);
-        })) {
-            this.exposed[position] = false;
-        };
+        this.exposed[position] = !this.isCovered(position);
     }
     this.numStripped = { extra: 0, minor: 0, major: 0, important: 0 };
-    this.mostlyClothed = this.decent = !(this.exposed.upper || this.exposed.lower)
-        && this.clothing.some(function(c) {
-            return c.type == MAJOR_ARTICLE
-                && [UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE].indexOf(c.position) >= 0;
-        });
+    this.mostlyClothed = this.isDecent();
 }
 
 /*******************************************************************
@@ -354,7 +345,7 @@ Player.prototype.checkStatus = function(status) {
     case STATUS_MOSTLY_CLOTHED:
         return this.mostlyClothed;
     case STATUS_DECENT:
-        return this.decent;
+        return this.isDecent();
     case STATUS_EXPOSED_TOP:
         return this.exposed.upper;
     case STATUS_EXPOSED_BOTTOM:
