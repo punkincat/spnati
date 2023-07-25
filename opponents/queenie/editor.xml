@@ -45,6 +45,15 @@
         <response id="53" opponent="sakura" opponentId="2" />
         <response id="96" opponent="caulifla" opponentId="2" />
         <response id="0" opponent="caulifla" opponentId="4" />
+        <response id="302" opponent="shamiko" opponentId="37" />
+        <response id="0" opponent="florina" opponentId="6" />
+        <response id="0" opponent="sakura" opponentId="3" />
+        <response id="0" opponent="ignatz" opponentId="164" />
+        <response id="0" opponent="florina" opponentId="5" />
+        <response id="0" opponent="jessie" opponentId="22" />
+        <response id="0" opponent="polly" opponentId="39" />
+        <response id="305" opponent="marinette" opponentId="1361" />
+        <response id="0" opponent="gwen" opponentId="1" />
     </responses>
     <labels>
         <label id="1" label="" folder="Hysteria" sort="0" />
@@ -72,24 +81,24 @@
         <label id="24" label="" folder="Hysteric" sort="0" />
         <label id="25" label="" folder="Ecstatic" sort="0" />
         <label id="31" label="Yuelia MT" folder="Targets" sort="51" />
-        <label id="32" label="" folder="Targets" sort="66" />
+        <label id="32" label="Yuelia MT" folder="Targets" sort="66" />
         <label id="33" label="Ladybug MT" folder="Targets" sort="57" />
         <label id="36" label="Ladybug MT" folder="Targets" sort="68" />
-        <label id="37" label="" folder="Targets" sort="74" />
+        <label id="37" label="Binah NT" folder="Targets" sort="74" />
         <label id="38" label="" folder="Targets" sort="0" />
-        <label id="40" label="" folder="Targets" sort="63" />
-        <label id="41" label="" folder="Targets" sort="72" />
-        <label id="42" label="" folder="Targets" sort="73" />
-        <label id="45" label="" folder="Targets" sort="70" />
-        <label id="46" label="" folder="Targets" sort="62" />
+        <label id="40" label="Sayaka NT" folder="Targets" sort="63" />
+        <label id="41" label="Sayaka MT" folder="Targets" sort="72" />
+        <label id="42" label="Sayaka MT" folder="Targets" sort="73" />
+        <label id="45" label="Kora NT" folder="Targets" sort="70" />
+        <label id="46" label="Aqua NT" folder="Targets" sort="62" />
         <label id="47" label="Aqua NT" folder="Targets" sort="2" />
         <label id="48" label="Noir MT" folder="Targets" sort="56" />
         <label id="49" label="Bobobo MT" folder="Targets" sort="54" />
-        <label id="50" label="" folder="Targets" sort="65" />
-        <label id="51" label="" folder="Targets" sort="71" />
-        <label id="52" label="" folder="Targets" sort="61" />
+        <label id="50" label="Bobobo MT" folder="Targets" sort="65" />
+        <label id="51" label="Chihiro MT" folder="Targets" sort="71" />
+        <label id="52" label="Fortune MT" folder="Targets" sort="61" />
         <label id="53" label="Sakura MT" folder="Targets" sort="55" />
-        <label id="54" label="" folder="Targets" sort="67" />
+        <label id="54" label="Sayaka MT" folder="Targets" sort="67" />
         <label id="30" label="Yuelia MT" folder="Targets" sort="0" />
         <label id="56" label="Aqua 1" folder="Targets" sort="22" />
         <label id="57" label="" folder="Targets" sort="0" />
@@ -133,7 +142,7 @@
         <label id="94" label="" folder="Backgrounds" sort="0" />
         <label id="95" label="" folder="Backgrounds" sort="2" />
         <label id="96" label="Caulifla MT" folder="Targets" sort="58" />
-        <label id="97" label="" folder="Targets" sort="69" />
+        <label id="97" label="Caulifla MT" folder="Targets" sort="69" />
         <label id="98" label="" folder="Play Once" sort="2" />
         <label id="99" label="Miku 1" folder="Targets" sort="48" />
         <label id="100" label="Aloy 1" folder="Targets" sort="27" />
@@ -288,41 +297,119 @@
         <label id="250" label="" folder="Villains" sort="0" />
         <label id="251" label="" folder="Villains" sort="0" />
         <label id="252" label="" folder="Villains" sort="0" />
+        <label id="302" label="Shamiko MT" folder="Targets" sort="0" />
+        <label id="303" label="Shamiko MT" folder="Targets" sort="0" />
+        <label id="262" label="Florina MT" folder="Targets" sort="0" />
+        <label id="287" label="Jewelry" folder="Clothes" sort="0" />
+        <label id="295" label="Aqua KS 1.1" folder="Targets" sort="0" />
+        <label id="257" label="Kyoko 1.1" folder="Targets" sort="0" />
+        <label id="270" label="Elphaba 1.1" folder="Targets" sort="0" />
+        <label id="264" label="Florina MT" folder="Targets" sort="0" />
+        <label id="276" label="Polly MT" folder="Targets" sort="0" />
+        <label id="266" label="Chara 1.1" folder="Targets" sort="0" />
+        <label id="267" label="Chara 2.1" folder="Targets" sort="0" />
+        <label id="288" label="Jewelry" folder="Clothes" sort="0" />
+        <label id="289" label="Jewelry" folder="Clothes" sort="0" />
+        <label id="283" label="Sempai NT" folder="Targets" sort="0" />
+        <label id="273" label="Gwen NT" folder="Targets" sort="0" />
+        <label id="285" label="Scars" folder="Tags" sort="0" />
+        <label id="272" label="Magma G Prompt" folder="Targets" sort="0" />
+        <label id="277" label="Polly MT" folder="Targets" sort="0" />
+        <label id="263" label="Florina MT" folder="Targets" sort="0" />
+        <label id="286" label="Scars" folder="Tags" sort="0" />
+        <label id="274" label="9S 1" folder="Targets" sort="0" />
+        <label id="284" label="Aqua KS 1" folder="Targets" sort="0" />
+        <label id="253" label="Cagliostro 1" folder="Targets" sort="0" />
+        <label id="265" label="Chara 1" folder="Targets" sort="0" />
+        <label id="282" label="Dwight 1" folder="Targets" sort="0" />
+        <label id="254" label="Elphaba 1" folder="Targets" sort="0" />
+        <label id="279" label="Marinette 1" folder="Targets" sort="0" />
+        <label id="261" label="Nagamimi 1" folder="Targets" sort="0" />
+        <label id="275" label="Polly 1" folder="Targets" sort="0" />
+        <label id="278" label="Wasp 1" folder="Targets" sort="0" />
+        <label id="269" label="Caulifla 1" folder="Targets" sort="0" />
+        <label id="292" label="Aliens" folder="Tags" sort="0" />
+        <label id="291" label="Bounty Hunters" folder="Tags" sort="0" />
+        <label id="290" label="Fourth Walls" folder="Tags" sort="0" />
+        <label id="293" label="Monsters" folder="Tags" sort="0" />
+        <label id="304" label="Yumeko 1" folder="Targets" sort="0" />
+        <label id="305" label="Cat Noir MT" folder="Targets" sort="0" />
+        <label id="306" label="Shamiko 1" folder="Targets" sort="0" />
+        <label id="307" label="Yae 1" folder="Targets" sort="0" />
+        <label id="308" label="Kyoko 1.2" folder="Targets" sort="0" />
+        <label id="256" label="Elphaba 1" folder="Targets" sort="0" />
+        <label id="255" label="Elphaba 1" folder="Targets" sort="0" />
+        <label id="296" label="Aqua KS 1" folder="Targets" sort="0" />
+        <label id="299" label="Sweetheart 1" folder="Targets" sort="0" />
+        <label id="297" label="Aqua KS 2" folder="Targets" sort="0" />
+        <label id="281" label="Petra 2" folder="Targets" sort="0" />
+        <label id="298" label="Aqua KS 3" folder="Targets" sort="0" />
+        <label id="301" label="Sweetheart 1.2" folder="Targets" sort="0" />
+        <label id="271" label="Elphaba 1.1" folder="Targets" sort="0" />
+        <label id="258" label="Kyouko 1.1" folder="Targets" sort="0" />
+        <label id="259" label="Petra 1.1" folder="Targets" sort="0" />
+        <label id="300" label="Sweetheart 1.1" folder="Targets" sort="0" />
+        <label id="268" label="Steve Prompt" folder="Targets" sort="0" />
     </labels>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>252</nextId>
+    <nextId>308</nextId>
     <markers>
         <marker scope="Public" name="" />
+        <marker scope="Public" name="9s_queenie_1" />
         <marker scope="Public" name="aaravi_cards" />
         <marker scope="Public" name="aaravi_cards_2a" />
         <marker scope="Public" name="aaravi_nature_1" />
         <marker scope="Public" name="aaravi_nature_1a" />
         <marker scope="Public" name="aaravi_queenie_1" />
         <marker scope="Public" name="aaravi_queenie_1a" />
+        <marker scope="Public" name="adrien" />
+        <marker scope="Public" name="adrien_queenie_burn" />
         <marker scope="Public" name="aqua_keyblade" />
         <marker scope="Public" name="aqua_queenie_1" />
         <marker scope="Public" name="aqua_queenie_1a" />
+        <marker scope="Public" name="aquaks_queenie_1" />
+        <marker scope="Public" name="aquaks_queenie_1a" />
         <marker scope="Public" name="binah_queenie_1" />
+        <marker scope="Public" name="binah_queenie_pillar" />
         <marker scope="Public" name="bobobo_patch" />
         <marker scope="Public" name="bobobo_patched" />
+        <marker scope="Public" name="cagliostro_queenie_1" />
         <marker scope="Public" name="caulifla_transformed" />
         <marker scope="Public" name="caulifla_transforming" />
+        <marker scope="Public" name="chara_queenie_1" />
+        <marker scope="Public" name="chara_queenie_1a" />
+        <marker scope="Public" name="chara_queenie_2a" />
+        <marker scope="Public" name="chihiro_queenie_run" />
+        <marker scope="Public" name="dwight_queenie_1" />
+        <marker scope="Public" name="elphaba_queenie_1" />
+        <marker scope="Public" name="elphaba_queenie_1a" />
         <marker scope="Public" name="entry_teleport">Teleporting into the game, ready to win!</marker>
+        <marker scope="Public" name="florina_bee" />
+        <marker scope="Public" name="florina_flee" />
         <marker scope="Public" name="flutter_transform" />
         <marker scope="Public" name="fortune_head" />
+        <marker scope="Public" name="gebura_hire" />
+        <marker scope="Public" name="gwen_queenie_mask" />
+        <marker scope="Public" name="kora_queenie_blade" />
         <marker scope="Public" name="kyoko_queenie_1" />
+        <marker scope="Public" name="kyoko_queenie_1a" />
+        <marker scope="Public" name="kyoko_queenie_1b" />
         <marker scope="Public" name="magic_stripped" />
         <marker scope="Public" name="magic_stripping" />
+        <marker scope="Public" name="magma_queenie_ocean" />
+        <marker scope="Public" name="marinette_queenie_1" />
         <marker scope="Public" name="marinette_transform" />
         <marker scope="Public" name="miku_queenie_1" />
         <marker scope="Public" name="miku_queenie_1a" />
         <marker scope="Public" name="miku_queenie_1b" />
         <marker scope="Public" name="missing_person" />
         <marker scope="Public" name="mitama_love" />
+        <marker scope="Public" name="nagamimi_queenie_1" />
         <marker scope="Public" name="nagatoro_queenie_1" />
         <marker scope="Public" name="nagatoro_queenie_1a" />
         <marker scope="Public" name="nagatoro_queenie_1b" />
+        <marker scope="Public" name="polly_queenie_1" />
+        <marker scope="Public" name="polly_queenie_fade" />
+        <marker scope="Public" name="polly_queenie_unfade" />
         <marker scope="Public" name="poor_justice" />
         <marker scope="Public" name="queen_intro">Here comes the magical girl!</marker>
         <marker scope="Public" name="queenie_aloy_1" />
@@ -334,6 +421,9 @@
         <marker scope="Public" name="queenie_aqua_3b" />
         <marker scope="Public" name="queenie_aqua_intro1" />
         <marker scope="Public" name="queenie_aqua_unversed" />
+        <marker scope="Public" name="queenie_aquaks_1" />
+        <marker scope="Public" name="queenie_aquaks_2" />
+        <marker scope="Public" name="queenie_aquaks_3" />
         <marker scope="Public" name="queenie_cheryl_1a" />
         <marker scope="Public" name="queenie_cheryl_1b" />
         <marker scope="Public" name="queenie_cheryl_2" />
@@ -343,8 +433,11 @@
         <marker scope="Public" name="queenie_cheryl_3b" />
         <marker scope="Public" name="queenie_cheryl_4" />
         <marker scope="Public" name="queenie_cheryl_4a" />
+        <marker scope="Public" name="queenie_elphaba_1" />
+        <marker scope="Public" name="queenie_elphaba_1a" />
         <marker scope="Public" name="queenie_jura_1" />
         <marker scope="Public" name="queenie_kyouko_1" />
+        <marker scope="Public" name="queenie_kyouko_1a" />
         <marker scope="Public" name="queenie_marinette_1" />
         <marker scope="Public" name="queenie_marinette_2" />
         <marker scope="Public" name="queenie_marinette_3" />
@@ -354,6 +447,8 @@
         <marker scope="Public" name="queenie_nagatoro_2" />
         <marker scope="Public" name="queenie_nagatoro_2a" />
         <marker scope="Public" name="queenie_petra_1" />
+        <marker scope="Public" name="queenie_petra_1a" />
+        <marker scope="Public" name="queenie_petra_2" />
         <marker scope="Public" name="queenie_revy_1" />
         <marker scope="Public" name="queenie_senko_1" />
         <marker scope="Public" name="queenie_senko_2" />
@@ -362,15 +457,25 @@
         <marker scope="Public" name="queenie_solar_strip1" />
         <marker scope="Public" name="queenie_solar_strip2" />
         <marker scope="Public" name="queenie_solar_strip3" />
+        <marker scope="Public" name="queenie_sweetheart_1" />
+        <marker scope="Public" name="queenie_sweetheart_1a" />
+        <marker scope="Public" name="queenie_sweetheart_1b" />
         <marker scope="Public" name="royalty" />
         <marker scope="Public" name="sakura_makeup" />
+        <marker scope="Public" name="sakura_queenie_disembowl" />
         <marker scope="Public" name="sayaka_familiar1" />
         <marker scope="Public" name="sayaka_familiar2" />
         <marker scope="Public" name="sayaka_familiar2a" />
         <marker scope="Public" name="sempai_queenie_1" />
+        <marker scope="Public" name="sempai_queenie_trick" />
+        <marker scope="Public" name="shamiko_queenie_1" />
+        <marker scope="Public" name="shamiko_queenie_reclothe" />
         <marker scope="Public" name="spiders_over_snakes" />
         <marker scope="Public" name="trixie_queenie_1" />
         <marker scope="Public" name="VILLAINS">VILLAINS, ALL OF YOU!!!!!</marker>
+        <marker scope="Public" name="wasp_queenie_1" />
         <marker scope="Public" name="why_did_it_have_to_be_snakes">Snakes are scary.</marker>
+        <marker scope="Public" name="yae_queenie_1" />
+        <marker scope="Public" name="yumeko_queenie_1" />
     </markers>
 </metadata>
