@@ -194,6 +194,11 @@
         <response id="585" opponent="elphaba" opponentId="109" />
         <response id="591" opponent="mia_golden_sun" opponentId="289" />
         <response id="592" opponent="mia_golden_sun" opponentId="290" />
+        <response id="593" opponent="polly" opponentId="483" />
+        <response id="597" opponent="jura" opponentId="125" />
+        <response id="598" opponent="jura" opponentId="402" />
+        <response id="599" opponent="jura" opponentId="401" />
+        <response id="600" opponent="jura" opponentId="403" />
     </responses>
     <notes>
         <note id="10">Will be replaced if Sharla ever gets reworked lol</note>
@@ -318,8 +323,8 @@ c: say that he's been as high as the bionis' head?
         <label id="86" label="Bodysuit (!= small_breasts)" folder="Clothing" sort="12" />
         <label id="87" label="" folder="Tags" sort="6" />
         <label id="88" label="" color="3" folder="Targets" sort="27" />
-        <label id="89" label="" color="1" folder="Targets" sort="51" />
-        <label id="90" label="" color="1" folder="Targets" sort="54" />
+        <label id="89" label="" color="3" folder="Targets" sort="51" />
+        <label id="90" label="" color="3" folder="Targets" sort="54" />
         <label id="91" label="ddlc" folder="Tags" sort="3" />
         <label id="92" label="ddlc" folder="Tags" sort="4" />
         <label id="93" label="ddlc" folder="Tags" sort="5" />
@@ -771,7 +776,7 @@ c: say that he's been as high as the bionis' head?
         <label id="549" label="" folder="Targets" sort="0" />
         <label id="550" label="" folder="Responses" sort="0" />
         <label id="551" label="" folder="Targets" sort="0" />
-        <label id="552" label="" folder="Targets" sort="0" />
+        <label id="552" label="" color="6" folder="Targets" sort="0" />
         <label id="553" label="" folder="Responses" sort="0" />
         <label id="554" label="" folder="Responses" sort="0" />
         <label id="555" label="" folder="Responses" sort="0" />
@@ -811,10 +816,18 @@ c: say that he's been as high as the bionis' head?
         <label id="590" label="" folder="Responses" sort="0" />
         <label id="591" label="" folder="Responses" sort="0" />
         <label id="592" label="" folder="Responses" sort="0" />
+        <label id="593" label="" folder="Polly" sort="0" />
+        <label id="594" label="" color="6" folder="Targets" sort="0" />
+        <label id="595" label="" color="6" folder="Targets" sort="0" />
+        <label id="596" label="" color="6" folder="Targets" sort="0" />
+        <label id="597" label="" folder="Responses" sort="0" />
+        <label id="598" label="" folder="Responses" sort="0" />
+        <label id="599" label="" folder="Responses" sort="0" />
+        <label id="600" label="" folder="Responses" sort="0" />
+        <label id="601" label="" color="6" folder="Targets" sort="0" />
+        <label id="602" label="" folder="Targets" sort="0" />
     </labels>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>592</nextId>
+    <nextId>602</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="20gOffer">Line that plays when Dunban offers a 20g bribe to whoever loses</marker>
@@ -987,9 +1000,17 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_jim_revenge2" />
         <marker scope="Public" name="dunban_jim_self0a" />
         <marker scope="Public" name="dunban_jura_beauty1" />
+        <marker scope="Public" name="dunban_jura_beauty2" />
+        <marker scope="Public" name="dunban_jura_beauty2_meia" />
+        <marker scope="Public" name="dunban_jura_flirt1" />
         <marker scope="Public" name="dunban_jura_rapier01" />
+        <marker scope="Public" name="dunban_jura_rapier02" />
         <marker scope="Public" name="dunban_jura_seduction" />
+        <marker scope="Public" name="dunban_jura_self0a" />
+        <marker scope="Public" name="dunban_jura_self1a" />
         <marker scope="Public" name="dunban_jura_self2" />
+        <marker scope="Public" name="dunban_jura_self2b" />
+        <marker scope="Public" name="dunban_jura_self3a" />
         <marker scope="Public" name="dunban_kaz_demonSlayer1" />
         <marker scope="Public" name="dunban_kaz_demonSlayer2" />
         <marker scope="Public" name="dunban_kaz_self0a" />
@@ -1033,6 +1054,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_mariS_positionQ" />
         <marker scope="Public" name="dunban_meia_command01" />
         <marker scope="Public" name="dunban_meia_command02" />
+        <marker scope="Public" name="dunban_meia_command03" />
         <marker scope="Public" name="dunban_meia_earth_sightseeResp" />
         <marker scope="Public" name="dunban_meia_self0" />
         <marker scope="Public" name="dunban_meia_self0b" />
@@ -1153,6 +1175,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="nickname" />
         <marker scope="Public" name="polly_disappear" />
         <marker scope="Public" name="polly_reappear" />
+        <marker scope="Public" name="pollyPossessionAccept" />
         <marker scope="Public" name="samus_removing_armor" />
         <marker scope="Public" name="scar_explain" />
         <marker scope="Public" name="scar_explain1" />
