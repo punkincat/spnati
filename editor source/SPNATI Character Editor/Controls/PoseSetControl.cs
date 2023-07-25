@@ -177,6 +177,7 @@ namespace SPNATI_Character_Editor.Controls
 
 		public void SavePoseSetEntry()
 		{
+			if (_selectedEntry == null) { return; }
 			_character.IsDirty = true;
 			_selectedEntry.Weight = (float)valWeight.Value == 0.001f ? 0f : (float)valWeight.Value;
 			_selectedEntry.Priority = (int) valPriority.Value;
