@@ -199,6 +199,10 @@
         <response id="598" opponent="jura" opponentId="402" />
         <response id="599" opponent="jura" opponentId="401" />
         <response id="600" opponent="jura" opponentId="403" />
+        <response id="614" opponent="aqua_kh" opponentId="735" />
+        <response id="623" opponent="aqua_kh" opponentId="1026" />
+        <response id="627" opponent="nadeshiko" opponentId="18" />
+        <response id="629" opponent="nadeshiko" opponentId="9" />
     </responses>
     <notes>
         <note id="10">Will be replaced if Sharla ever gets reworked lol</note>
@@ -826,8 +830,36 @@ c: say that he's been as high as the bionis' head?
         <label id="600" label="" folder="Responses" sort="0" />
         <label id="601" label="" color="6" folder="Targets" sort="0" />
         <label id="602" label="" folder="Targets" sort="0" />
+        <label id="603" label="Dual Forfeit (Stage 1)" folder="Aqua (KH) S" sort="0" />
+        <label id="604" label="Dual Forfeit (Stage 2)" folder="Aqua (KH) S" sort="0" />
+        <label id="605" label="" folder="Aqua (KH) S" sort="0" />
+        <label id="606" label="Dual Forfeit (Stage 3)" folder="Aqua (KH) S" sort="0" />
+        <label id="607" label="Dual Forfeit (Stage 3)" folder="Aqua (KH) S" sort="0" />
+        <label id="608" label="Dual Forfeit (Stage 1 -&gt; 2)" folder="Aqua (KH) S" sort="0" />
+        <label id="609" label="" folder="Aqua (KH) S" sort="0" />
+        <label id="571" label="" folder="Aqua (KH)" sort="0" />
+        <label id="610" label="" folder="Aqua (KH) S" sort="0" />
+        <label id="611" label="Dual Forfeit (Finishing)" folder="Aqua (KH) S" sort="0" />
+        <label id="612" label="Dual Forfeit (Finished)" folder="Aqua (KH) S" sort="0" />
+        <label id="613" label="Dual Forfeit (Stage 3) (Aqua just finished)" folder="Aqua (KH) S" sort="0" />
+        <label id="614" label="" folder="Aqua (KH)" sort="0" />
+        <label id="615" label="" folder="Aqua (KH)" sort="0" />
+        <label id="616" label="" folder="Aqua (KH)" sort="0" />
+        <label id="617" label="" folder="Aqua (KH)" sort="0" />
+        <label id="618" label="" folder="Aqua (KH)" sort="0" />
+        <label id="619" label="" folder="Aqua (KH)" sort="0" />
+        <label id="620" label="" folder="Aqua (KH)" sort="0" />
+        <label id="621" label="" folder="Aqua (KH) S" sort="0" />
+        <label id="622" label="" folder="Aqua (KH) S" sort="0" />
+        <label id="624" label="" folder="Aqua (KH) S" sort="0" />
+        <label id="623" label="" folder="Aqua (KH) S" sort="0" />
+        <label id="625" label="Dual Forfeit (After)" folder="Aqua (KH) S" sort="0" />
+        <label id="626" label="" folder="Targets" sort="0" />
+        <label id="627" label="" folder="Responses" sort="0" />
+        <label id="628" label="" folder="Responses" sort="0" />
+        <label id="629" label="" folder="Responses" sort="0" />
     </labels>
-    <nextId>602</nextId>
+    <nextId>629</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="20gOffer">Line that plays when Dunban offers a 20g bribe to whoever loses</marker>
@@ -837,14 +869,22 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="adrien_transform_firstseen" />
         <marker scope="Public" name="aqua_dunban_piercer1Resp" />
         <marker scope="Public" name="aqua_dunban_piercer2Resp" />
+        <marker scope="Public" name="aqua_dunban_self2a" />
+        <marker scope="Public" name="aqua_dunban_self2b" />
+        <marker scope="Public" name="aqua_dunban_self5b" />
         <marker scope="Public" name="aqua_ff_key_lock" />
         <marker scope="Public" name="aqua_sf_fingers" />
         <marker scope="Public" name="aqua_sf_foreplay" />
         <marker scope="Public" name="aqua_sf_legs" />
         <marker scope="Public" name="aqua_sf_nipples" />
         <marker scope="Public" name="aqua_sf_playerFocus1" />
-        <marker scope="Private" name="aqua_specialflirting" />
+        <marker scope="Public" name="aqua_specialflirting" />
         <marker scope="Public" name="aqua_traverse_town_resp" />
+        <marker scope="Public" name="aquaff_heavyState" />
+        <marker scope="Public" name="aquakh_doubleforfeit_after1" />
+        <marker scope="Public" name="aquakh_doubleforfeit_dunbanFinish" />
+        <marker scope="Public" name="aquakh_doubleforfeit_end" />
+        <marker scope="Public" name="aquakh_doubleforfeit_start" />
         <marker scope="Private" name="binah_teatime_seen" />
         <marker scope="Public" name="bionis_view_1" />
         <marker scope="Public" name="bionis_view_2" />
@@ -895,6 +935,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_aqua_keybladereveal" />
         <marker scope="Public" name="dunban_aqua_self1a" />
         <marker scope="Public" name="dunban_aqua_self1b" />
+        <marker scope="Public" name="dunban_aqua_self1c" />
         <marker scope="Public" name="dunban_aqua_self4a" />
         <marker scope="Public" name="dunban_aqua_selfshirtless1" />
         <marker scope="Public" name="dunban_aqua_selfshirtless2" />
@@ -905,7 +946,14 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_aqua_sword1" />
         <marker scope="Public" name="dunban_aqua_sword2" />
         <marker scope="Public" name="dunban_aqua_sword3" />
+        <marker scope="Public" name="dunban_aquakh_5a" />
+        <marker scope="Public" name="dunban_aquakh_5b" />
+        <marker scope="Public" name="dunban_aquakh_5c" />
+        <marker scope="Public" name="dunban_aquakh_offerDual" />
         <marker scope="Public" name="dunban_aquakh_s1c" />
+        <marker scope="Public" name="dunban_aquakh_strip2a" />
+        <marker scope="Public" name="dunban_aquakh_strip2b" />
+        <marker scope="Public" name="dunban_aquakh_strip2c" />
         <marker scope="Public" name="dunban_asuna_mature1" />
         <marker scope="Public" name="dunban_asuna_yuiDaughter01" />
         <marker scope="Public" name="dunban_asuna_yuiDaughter02" />
@@ -1075,6 +1123,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_miaGS_powers2" />
         <marker scope="Public" name="dunban_miaGS_powers3" />
         <marker scope="Public" name="dunban_mitama_arrival_resp" />
+        <marker scope="Public" name="dunban_nadeshiko_outdoors1" />
         <marker scope="Public" name="dunban_nadia_headroll" />
         <marker scope="Public" name="dunban_nagatoro_familiar01" />
         <marker scope="Public" name="dunban_nagatoro_selfMustFF" />
@@ -1148,6 +1197,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_yshtola_self4a" />
         <marker scope="Public" name="dunban_yuno_stripAyumi01" />
         <marker scope="Public" name="dunban_zoe_selected" />
+        <marker scope="Public" name="dunbanff_aqua_finishing" />
         <marker scope="Public" name="dwight_start_ff" />
         <marker scope="Public" name="filtered_kind&amp;lonely" />
         <marker scope="Private" name="finished" />
@@ -1172,6 +1222,9 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="miaGS_swimsuit" />
         <marker scope="Public" name="midst_of_battle" />
         <marker scope="Public" name="military_exploits" />
+        <marker scope="Public" name="NadeshikoCheckingInResp" />
+        <marker scope="Public" name="nadeshikoCityResp" />
+        <marker scope="Public" name="NadeshikoPartnerPreferenceResp" />
         <marker scope="Public" name="nickname" />
         <marker scope="Public" name="polly_disappear" />
         <marker scope="Public" name="polly_reappear" />
