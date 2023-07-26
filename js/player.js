@@ -2058,6 +2058,10 @@ Player.prototype.populateDebugStatusInfo = function () {
 
     if (this.out) {
         createDebugSectionRow("Out Order", this.outOrder).appendTo(listing);
+        
+        if (this.finishingTarget && this.finishingTarget !== this) {
+            createDebugSectionRow("Finish Redirect Target", this.finishingTarget.id + " (slot " + this.finishingTarget.slot + ")").appendTo(listing);
+        }
     }
 
     if (this.out && !this.finished) {
