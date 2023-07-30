@@ -76,7 +76,6 @@ function Player (id) {
     this.tags = this.baseTags = [];
     this.xml = null;
     this.persistentMarkers = {};
-    this.exposed = { upper: false, lower: false };
 }
 
 /*******************************************************************
@@ -85,10 +84,6 @@ function Player (id) {
  *******************************************************************/
 Player.prototype.initClothingStatus = function () {
     this.startingLayers = this.countLayers();
-    this.exposed = { upper: true, lower: true };
-    for (var position in this.exposed) {
-        this.exposed[position] = !this.isCovered(position);
-    }
     this.numStripped = { extra: 0, minor: 0, major: 0, important: 0 };
     this.mostlyClothed = this.isDecent();
 }
@@ -347,17 +342,17 @@ Player.prototype.checkStatus = function(status) {
     case STATUS_DECENT:
         return this.isDecent();
     case STATUS_EXPOSED_TOP:
-        return this.exposed.upper;
+        return !this.isCovered(UPPER_ARTICLE);
     case STATUS_EXPOSED_BOTTOM:
-        return this.exposed.lower;
+        return !this.isCovered(LOWER_ARTICLE);
     case STATUS_EXPOSED:
-        return this.exposed.upper || this.exposed.lower;
+        return !this.isCovered(UPPER_ARTICLE) || !this.isCovered(LOWER_ARTICLE);
     case STATUS_EXPOSED_TOP_ONLY:
-        return this.exposed.upper && !this.exposed.lower;
+        return !this.isCovered(UPPER_ARTICLE) && this.isCovered(LOWER_ARTICLE);
     case STATUS_EXPOSED_BOTTOM_ONLY:
-        return !this.exposed.upper && this.exposed.lower;
+        return this.isCovered(UPPER_ARTICLE) && !this.isCovered(LOWER_ARTICLE);
     case STATUS_NAKED:
-        return this.exposed.upper && this.exposed.lower;
+        return !this.isCovered(UPPER_ARTICLE) && !this.isCovered(LOWER_ARTICLE);
     case STATUS_ALIVE:
         return !this.out;
     case STATUS_LOST_ALL:
