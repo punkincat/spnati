@@ -2385,8 +2385,8 @@ Opponent.prototype.findBehaviour = function(triggers, opp, volatileOnly) {
             && state.checkUnwanteds(this, opp);
     }.bind(this));
 
-    const weightedAdjustedMin = Math.min(...states.map(s => ((this.repeatLog[s.rawDialogue] || 0) + 1) / s.weight));
-    const statesLessPlayed = states.filter(s => (this.repeatLog[s.rawDialogue] || 0) / s.weight < weightedAdjustedMin);
+    const weightedAdjustedMin = Math.min(...states.map(s => ((this.repeatLog[s.rawDialogue] || 0) + 0.5) / s.weight));
+    const statesLessPlayed = states.filter(s => (this.repeatLog[s.rawDialogue] || 0) / s.weight <= weightedAdjustedMin);
     if (statesLessPlayed.length > 0) {
         states = statesLessPlayed;
     }
