@@ -36,12 +36,13 @@ var STATUS_FINISHED = "finished";
 /************************************************************
  * Stores information on an article of clothing.
  ************************************************************/
-function Clothing (name, generic, type, position, plural) {
+function Clothing (name, generic, type, position, plural, fromStage) {
     this.name = name;
     this.generic = generic || name;
     this.type = type;
     this.position = position;
     this.plural = (plural === undefined ? false : plural);
+    this.fromStage = fromStage;
 }
 
 /*************************************************************
@@ -50,9 +51,9 @@ function Clothing (name, generic, type, position, plural) {
  * player is "decent".
  *************************************************************/
 Player.prototype.isDecent = function() {
-    return this.clothing.some(function(c) {
+    return this.currentClothing.some(function(c) {
         return (c.position == UPPER_ARTICLE || c.position == FULL_ARTICLE) && c.type == MAJOR_ARTICLE;
-    }) && this.clothing.some(function(c) {
+    }) && this.currentClothing.some(function(c) {
         return (c.position == LOWER_ARTICLE || c.position == FULL_ARTICLE) && c.type == MAJOR_ARTICLE;
     });
 };
@@ -65,7 +66,7 @@ Player.prototype.isCovered = function(position, except) {
     if (position == FULL_ARTICLE || position === undefined) {
         return this.isCovered(UPPER_ARTICLE, except) && this.isCovered(LOWER_ARTICLE, except);
     }
-    return this.clothing.some(function(c) {
+    return this.currentClothing.some(function(c) {
         return (except === undefined || c !== except)
             && (c.type == IMPORTANT_ARTICLE || c.type == MAJOR_ARTICLE)
             && (c.position == position || c.position == FULL_ARTICLE);
@@ -80,8 +81,7 @@ Player.prototype.isCovered = function(position, except) {
 Player.prototype.findClothing = function(types, positions, names) {
     var covered = { upper: false, lower: false };
     var matches = [];
-    for (var i = this.clothing.length - 1; i >= 0; i--) {
-        var article = this.clothing[i];
+    for (const article of this.currentClothing.reverse()) {
         if ((types == undefined || types.indexOf(article.type) >= 0)
             && (positions == undefined || positions.indexOf(article.position) >= 0)
                 && (names == undefined || names.indexOf(article.name) >= 0
@@ -361,9 +361,9 @@ function playerMustStrip (player) {
     var clothing = players[player].clothing;
 
     saveTranscriptMessage("<b>"+players[recentLoser].label.escapeHTML()+"</b> has lost the hand"
-                          + (clothing.length > 0 ? '.' : ', and is out of clothes.'));
+                          + (players[player].countLayers() > 0 ? '.' : ', and is out of clothes.'));
 
-    if (clothing.length) {
+    if (players[player].countLayers() > 0) {
         /* the player has clothes and will strip */
         if (player == HUMAN_PLAYER) {
             var trigger;
@@ -430,9 +430,8 @@ function prepareToStripPlayer (player) {
             humanPlayer.gender == eGender.MALE ? MALE_HUMAN_MUST_STRIP : FEMALE_HUMAN_MUST_STRIP
         );
     } else {
-        var toBeRemovedClothing = players[player].clothing[players[player].clothing.length - 1];
-        players[player].removedClothing = toBeRemovedClothing;
-        var dialogueTrigger = getClothingTrigger(players[player], toBeRemovedClothing, false);
+        const toBeRemovedClothing = players[player].removedClothing = players[player].clothing.at(-1);
+        const dialogueTrigger = getClothingTrigger(players[player], toBeRemovedClothing, false);
         dialogueTrigger.push(OPPONENT_STRIPPING);
 
         updateAllBehaviours(player, PLAYER_STRIPPING, [dialogueTrigger]);
@@ -643,7 +642,11 @@ function stripAIPlayer (player) {
         updateGameVisual(player);
     }
 
-   
+    for (const c of players[player].clothing) {
+        if (c.fromStage == players[player].stage) {
+            c.fromStage = undefined;
+        }
+    }
 }
 
 /************************************************************

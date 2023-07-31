@@ -88,6 +88,16 @@ Player.prototype.initClothingStatus = function () {
     this.mostlyClothed = this.isDecent();
 }
 
+Object.defineProperty(Player.prototype, 'currentClothing', {
+    get: function() {
+        /* Because we want clothing that is put on later to be visible
+         * _after_ the STRIPPED phase (which happens in the new
+         * stage), we set fromStage to undefined at that point and
+         * just check for undefined here. */
+        return this.clothing.filter(c => c.fromStage === undefined);
+    },
+});
+
 /*******************************************************************
  * (Re)Initialize the player properties that change during a game
  *******************************************************************/
@@ -154,8 +164,9 @@ Player.prototype.resetState = function () {
             var position = $(this).attr('position');
             var plural = $(this).attr('plural');
             plural = (plural == 'null' ? null : plural == 'true');
+            var fromStage = Number($(this).attr('fromStage')) || undefined;
 
-            var newClothing = new Clothing(name, generic, type, position, plural);
+            var newClothing = new Clothing(name, generic, type, position, plural, fromStage);
 
             clothingArr.push(newClothing);
         });
