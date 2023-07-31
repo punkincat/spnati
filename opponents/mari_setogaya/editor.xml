@@ -452,6 +452,7 @@
         <response id="2461" opponent="aqua_konosuba" opponentId="651" />
         <response id="2462" opponent="aqua_konosuba" opponentId="652" />
         <response id="2468" opponent="aqua_konosuba" opponentId="16" />
+        <response id="2480" opponent="nadeshiko" opponentId="9" />
     </responses>
     <notes>
         <note id="412">Yes, Mari is implying that Kazuma is lying just to see her pose naked for him. You are free to have Kazuma defend his case, so to speak.</note>
@@ -2513,7 +2514,7 @@
         <label id="2075" label="" color="0" folder="Replies" sort="328" />
         <label id="2076" label="" color="0" folder="Replies" sort="329" />
         <label id="2077" label="" color="0" folder="Targets" sort="636" />
-        <label id="2078" label="" color="0" folder="Targets" sort="637" />
+        <label id="2078" label="" folder="Targets" sort="637" />
         <label id="2079" label="" color="0" folder="Lovestruck Succubus" sort="0" />
         <label id="2080" label="" color="3" folder="Targets" sort="28" />
         <label id="2081" label="" color="3" folder="Targets" sort="247" />
@@ -2629,7 +2630,7 @@
         <label id="2191" label="" color="1" folder="Targets" sort="61" />
         <label id="2192" label="" color="1" folder="Targets" sort="62" />
         <label id="2193" label="" color="1" folder="Targets" sort="63" />
-        <label id="2194" label="" color="0" folder="Targets" sort="233" />
+        <label id="2194" label="" folder="Targets" sort="233" />
         <label id="2195" label="" color="0" folder="Felix Game Over" sort="7" />
         <label id="2196" label="" folder="Collectible" sort="0" />
         <label id="2197" label="" color="1" folder="Replies" sort="0" />
@@ -2793,7 +2794,7 @@
         <label id="2355" label="" color="3" folder="Replies" sort="0" />
         <label id="2356" label="" color="3" folder="Replies" sort="0" />
         <label id="2357" label="" color="3" folder="Replies" sort="0" />
-        <label id="2358" label="" color="0" folder="Targets" sort="0" />
+        <label id="2358" label="" folder="Targets" sort="0" />
         <label id="2359" label="" color="0" folder="Targets" sort="0" />
         <label id="2360" label="" color="0" folder="Targets" sort="0" />
         <label id="2361" label="" color="0" folder="PromptResponses" sort="0" />
@@ -2830,8 +2831,8 @@
         <label id="2392" label="" folder="Targets" sort="0" />
         <label id="2393" label="" folder="Targets" sort="0" />
         <label id="2394" label="" folder="Targets" sort="0" />
-        <label id="2395" label="" color="1" folder="Targets" sort="0" />
-        <label id="2396" label="" color="1" folder="Targets" sort="0" />
+        <label id="2395" label="" folder="Targets" sort="0" />
+        <label id="2396" label="" folder="Targets" sort="0" />
         <label id="2397" label="" folder="Sunny Day Vampire Nform" sort="0" />
         <label id="2398" label="" folder="Sunny Day Vampire Nform" sort="0" />
         <label id="2399" label="" folder="Sunny Day Vampire Cform" sort="0" />
@@ -2910,10 +2911,15 @@
         <label id="2472" label="" folder="Targets" sort="0" />
         <label id="2473" label="" folder="Targets" sort="0" />
         <label id="2474" label="" folder="Targets" sort="0" />
+        <label id="2475" label="" color="1" folder="Targets" sort="0" />
+        <label id="2476" label="" color="1" folder="Targets" sort="0" />
+        <label id="2477" label="" color="1" folder="Targets" sort="0" />
+        <label id="2478" label="" color="1" folder="Targets" sort="0" />
+        <label id="2479" label="" color="1" folder="Targets" sort="0" />
+        <label id="2480" label="" color="3" folder="PromptResponses" sort="0" />
     </labels>
-    <nextId>2474</nextId>
+    <nextId>2480</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="Aaravi_CulturalExchange_replyA" />
         <marker scope="Public" name="Aaravi_CulturalExchange_replyB" />
         <marker scope="Public" name="Aaravi_humanRealm_reply" />
@@ -3552,12 +3558,14 @@
         <marker scope="Public" name="Kazuma_tail_pull_reply" />
         <marker scope="Public" name="Kora_cuteAndFierce" />
         <marker scope="Public" name="Kora_cuteAndFierce_cont" />
+        <marker scope="Public" name="Kora_cuteAndFierce_end" />
         <marker scope="Public" name="Kora_cuteAndFierceQuestion" />
         <marker scope="Public" name="Kora_howOftenStrip" />
         <marker scope="Public" name="Kora_howOftenStrip_cont" />
         <marker scope="Public" name="Kora_howOftenStrip_end" />
         <marker scope="Public" name="Kora_othersWeirdLooks" />
         <marker scope="Public" name="Kora_othersWeirdLooks_cont" />
+        <marker scope="Public" name="Kora_othersWeirdLooks_end" />
         <marker scope="Public" name="Kora_pointy_ears_reply" />
         <marker scope="Public" name="Kora_ShootLightning" />
         <marker scope="Public" name="Kora_ShootLightning_cont" />
@@ -3784,6 +3792,9 @@
         <marker scope="Public" name="MsFortune_why_u_called_that" />
         <marker scope="Public" name="Myriam_game_start" />
         <marker scope="Public" name="Myriam_game_start_halloween" />
+        <marker scope="Public" name="Nadeshiko_hotClothes" />
+        <marker scope="Public" name="Nadeshiko_hotClothes_warmBG" />
+        <marker scope="Public" name="Nadeshiko_SpicyCamps_question" />
         <marker scope="Public" name="Nagatoro_bloodCup_reply" />
         <marker scope="Public" name="Nagatoro_cute" />
         <marker scope="Public" name="Nagatoro_ff_justkidding_react" />
