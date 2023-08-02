@@ -2429,8 +2429,26 @@ Karsa also added in the interview:
         <label id="2383" label="" folder="Background" sort="0" />
         <label id="2384" label="" folder="Background" sort="0" />
         <label id="2385" label="" folder="Background" sort="0" />
+        <label id="2386" label="Haiku 475-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="2387" label="Haiku 475-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="2388" label="Haiku 475-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="2389" label="" folder="Hand=Any banter" sort="0" />
+        <label id="2390" label="" folder="Responses" sort="0" />
+        <label id="2391" label="" folder="Hand=Any banter" sort="0" />
+        <label id="2392" label="" folder="Hand=Any banter" sort="0" />
+        <label id="2393" label="" folder="Responses" sort="0" />
+        <label id="2394" label="Haiku 476-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="2395" label="Haiku 476-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="2396" label="Haiku 476-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="2397" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="2398" label="" folder="Opponent Lost Targets" sort="0" />
+        <label id="2399" label="Haiku 477 Sleep Check" folder="Sleep Counter" sort="0" />
+        <label id="2400" label="Haiku 477-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="2401" label="Haiku 477-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="2402" label="Haiku 477-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="2403" label="" folder="Responses" sort="0" />
     </labels>
-    <nextId>2385</nextId>
+    <nextId>2403</nextId>
     <markers>
         <marker scope="Public" name="4mitama_hand1_1" />
         <marker scope="Public" name="4mitama_hand1_2" />
@@ -2476,7 +2494,6 @@ Karsa also added in the interview:
         <marker scope="Public" name="aqua_cinderella" />
         <marker scope="Public" name="aqua_cinderella_2" />
         <marker scope="Public" name="aqua_keyblade" />
-        <marker scope="Public" name="aqua_ks_" />
         <marker scope="Public" name="aqua_ks_armor" />
         <marker scope="Public" name="Aqua_ks_armor_cont" />
         <marker scope="Public" name="aqua_ks_armor_end" />
@@ -2497,6 +2514,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="aqua_ks_poetry_end" />
         <marker scope="Public" name="aqua_ks_poetry_endB" />
         <marker scope="Public" name="aqua_ks_poetry_endB_resp" />
+        <marker scope="Public" name="aqua_ks_status" />
         <marker scope="Public" name="aqua_ks_summer" />
         <marker scope="Public" name="aqua_ks_vacation" />
         <marker scope="Public" name="aqua_muststrip" />
@@ -2520,6 +2538,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="arash_insomnia" />
         <marker scope="Public" name="arash_midnight" />
         <marker scope="Public" name="arash_name" />
+        <marker scope="Public" name="arash_seasons" />
         <marker scope="Public" name="arash_serenity" />
         <marker scope="Public" name="arash_thoughts" />
         <marker scope="Public" name="arash_throws">Also haiku 285.</marker>
@@ -4229,6 +4248,16 @@ Karsa also added in the interview:
         <marker scope="Public" name="haiku_474_Counter" />
         <marker scope="Public" name="haiku_474_DCounter" />
         <marker scope="Public" name="haiku_474_NCounter" />
+        <marker scope="Public" name="haiku_475_Counter" />
+        <marker scope="Public" name="haiku_475_DCounter" />
+        <marker scope="Public" name="haiku_475_NCounter" />
+        <marker scope="Public" name="haiku_476_Counter" />
+        <marker scope="Public" name="haiku_476_DCounter" />
+        <marker scope="Public" name="haiku_476_NCounter" />
+        <marker scope="Public" name="haiku_477" />
+        <marker scope="Public" name="haiku_477_Counter" />
+        <marker scope="Public" name="haiku_477_DCounter" />
+        <marker scope="Public" name="haiku_477_NCounter" />
         <marker scope="Public" name="haiku_48" />
         <marker scope="Public" name="haiku_48_Counter" />
         <marker scope="Public" name="haiku_48_DCounter" />
@@ -4558,6 +4587,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="meia_haiku" />
         <marker scope="Public" name="meia_haiku_second" />
         <marker scope="Public" name="Meia_mitama_ah0_resp" />
+        <marker scope="Public" name="Meia_mitama_ah01tiki_resp" />
         <marker scope="Public" name="meia_mitama0_resp">Also haiku 176</marker>
         <marker scope="Public" name="meia_mitama01_resp" />
         <marker scope="Public" name="meia_mitama1_resp" />
@@ -4594,6 +4624,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="Miko_Armor_2_resp" />
         <marker scope="Public" name="Miko_Armor1_resp" />
         <marker scope="Public" name="Miko_Armor2_resp" />
+        <marker scope="Public" name="Miko_armor3_resp" />
         <marker scope="Public" name="Miko_Capelet1_resp" />
         <marker scope="Public" name="miko_colors" />
         <marker scope="Public" name="miko_colors2" />
@@ -4643,6 +4674,12 @@ Karsa also added in the interview:
         <marker scope="Public" name="monika_weirdpoems2" />
         <marker scope="Public" name="monika_weirdpoems3" />
         <marker scope="Public" name="mounted_healers" />
+        <marker scope="Public" name="Nadeshiko_cook" />
+        <marker scope="Public" name="nadeshiko_muststrip2" />
+        <marker scope="Public" name="Nadeshiko_partner_preference" />
+        <marker scope="Public" name="nadeshiko_pursuit" />
+        <marker scope="Public" name="nadeshiko_whycamp" />
+        <marker scope="Public" name="Nadeshiko_world_resp" />
         <marker scope="Public" name="nagatoro_mitama01_resp" />
         <marker scope="Public" name="nagatoro_mitama02_resp" />
         <marker scope="Public" name="nagatoro_mitama11_resp" />
