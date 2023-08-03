@@ -66,6 +66,12 @@ namespace SPNATI_Character_Editor
 				return OpponentStatus.Unlisted;
 			}
 		}
+
+		public bool IsCharacterReleased(string name)
+		{
+			var opponent = Characters.Find(opp => opp.Name == name);
+			return (opponent != null && opponent.ReleaseNumber != null);
+		}
 	}
 
 	public static class OpponentStatus
