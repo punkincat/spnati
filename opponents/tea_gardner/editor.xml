@@ -169,9 +169,16 @@
         <response id="293" opponent="sofia" opponentId="1" />
         <response id="298" opponent="barbara" opponentId="17" />
         <response id="299" opponent="barbara" opponentId="10" />
+        <response id="306" opponent="lotte" opponentId="1" />
     </responses>
     <notes>
         <note id="277">For WitchHanna sponsorship</note>
+        <note id="310">For Nord Sponsorship</note>
+        <note id="311">For Nord Sponsorship</note>
+        <note id="312">For Nord Sponsorship</note>
+        <note id="313">For Nord Sponsorship</note>
+        <note id="319">For Nord sponsorship.</note>
+        <note id="320">For Nord sponsorship.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Friends Marker" sort="0" />
@@ -239,7 +246,7 @@
         <label id="192" label="" folder="Target: Stage0" sort="0" />
         <label id="193" label="" folder="Target: Stage0" sort="3" />
         <label id="194" label="" folder="Target: Stage0" sort="5" />
-        <label id="195" label="" folder="Target: Stage0" sort="2" />
+        <label id="195" label="" folder="Filters" sort="2" />
         <label id="196" label="" folder="Filters" sort="4" />
         <label id="197" label="" folder="Filters" sort="5" />
         <label id="198" label="" folder="Situations" sort="7" />
@@ -296,7 +303,7 @@
         <label id="255" label="" folder="Filters" sort="0" />
         <label id="256" label="YGO Minor" folder="" sort="0" />
         <label id="257" label="YGO Extra" folder="" sort="0" />
-        <label id="258" label="YGO Extra" folder="" sort="0" />
+        <label id="258" label="YGO Major" folder="" sort="0" />
         <label id="259" label="" folder="Situations" sort="0" />
         <label id="260" label="" folder="Filters" sort="0" />
         <label id="162" label="" folder="Followups" sort="0" />
@@ -333,13 +340,38 @@
         <label id="32" label="" folder="Target: Stage0" sort="0" />
         <label id="296" label="" folder="Target: Stage0" sort="0" />
         <label id="297" label="" folder="Target: Stage0" sort="0" />
+        <label id="300" label="" color="2" folder="Target: Stage0" sort="0" />
+        <label id="301" label="" folder="Responses" sort="0" />
+        <label id="302" label="" folder="Responses" sort="0" />
+        <label id="303" label="" folder="Target: Stage0" sort="0" />
+        <label id="304" label="" color="6" folder="Target: Stage0" sort="0" />
+        <label id="305" label="" folder="Target: Stage0" sort="0" />
+        <label id="308" label="" folder="Filters" sort="0" />
+        <label id="309" label="YGO Minor" folder="" sort="0" />
+        <label id="310" label="Nord" color="6" folder="" sort="0" />
+        <label id="311" label="Nord" color="6" folder="" sort="0" />
+        <label id="312" label="Nord" color="6" folder="" sort="0" />
+        <label id="313" label="Nord (Follow Up)" color="6" folder="" sort="0" />
+        <label id="314" label="" folder="Situations" sort="0" />
+        <label id="315" label="" folder="Filters" sort="0" />
+        <label id="316" label="" folder="Filters" sort="0" />
+        <label id="317" label="" folder="Filters" sort="0" />
+        <label id="318" label="" folder="Target: Stage0" sort="0" />
+        <label id="319" label="Nord" color="5" folder="" sort="0" />
+        <label id="320" label="Nord" color="5" folder="" sort="0" />
+        <label id="321" label="" folder="Backgrounds" sort="0" />
+        <label id="322" label="" folder="Target: Stage0" sort="0" />
+        <label id="323" label="" color="6" folder="Target: Stage0" sort="0" />
+        <label id="324" label="" folder="Filters" sort="0" />
+        <label id="325" label="" folder="Situations" sort="0" />
+        <label id="326" label="DMG Collectable" color="3" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>card</prefix>
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>299</nextId>
+    <nextId>326</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="blue_disk" />
@@ -479,6 +511,13 @@
         <marker scope="Public" name="tea_lose_1" />
         <marker scope="Public" name="tea_lose_2" />
         <marker scope="Public" name="tea_lose_3" />
+        <marker scope="Public" name="tea_lotte_" />
+        <marker scope="Public" name="tea_lotte_end" />
+        <marker scope="Public" name="tea_lotte_fanfic" />
+        <marker scope="Public" name="tea_lotte_firstlossC" />
+        <marker scope="Public" name="tea_lotte_shy_girl" />
+        <marker scope="Public" name="tea_lotte_shygirl" />
+        <marker scope="Public" name="tea_lotte_strip0" />
         <marker scope="Public" name="tea_lucy_boobs" />
         <marker scope="Public" name="tea_lucy_butt" />
         <marker scope="Public" name="tea_lucy_expert" />
@@ -506,6 +545,7 @@
         <marker scope="Public" name="tea_may_firststrike" />
         <marker scope="Public" name="tea_may_here1a" />
         <marker scope="Public" name="tea_may_here1b" />
+        <marker scope="Public" name="tea_may_heroD" />
         <marker scope="Public" name="tea_may_love" />
         <marker scope="Public" name="tea_may_openup" />
         <marker scope="Public" name="tea_may_rabbit" />
@@ -528,6 +568,8 @@
         <marker scope="Public" name="tea_mirrorforce" />
         <marker scope="Public" name="tea_misty_noguys" />
         <marker scope="Public" name="tea_monkey" />
+        <marker scope="Public" name="tea_nade_lake" />
+        <marker scope="Public" name="tea_nadeshiko_strip0" />
         <marker scope="Public" name="tea_naga_acc0" />
         <marker scope="Public" name="tea_naga_butt" />
         <marker scope="Public" name="tea_naga_strip1" />
@@ -548,6 +590,7 @@
         <marker scope="Public" name="tea_othergames" />
         <marker scope="Public" name="tea_persona_shadow" />
         <marker scope="Public" name="tea_petra_birthday" />
+        <marker scope="Public" name="tea_playlewd" />
         <marker scope="Public" name="tea_pokemon" />
         <marker scope="Public" name="tea_pool_end" />
         <marker scope="Public" name="tea_popipo" />
@@ -585,8 +628,10 @@
         <marker scope="Public" name="tea_sleight_lead" />
         <marker scope="Public" name="tea_sleight2" />
         <marker scope="Public" name="tea_sofia_malelost" />
+        <marker scope="Public" name="tea_sofia_reply1a" />
         <marker scope="Public" name="tea_sofia_start" />
         <marker scope="Public" name="tea_sofia_strip1a" />
+        <marker scope="Public" name="tea_sofia_strip1b" />
         <marker scope="Public" name="tea_SpiritExplain" />
         <marker scope="Public" name="tea_spot_armor" />
         <marker scope="Public" name="tea_spot_cheater" />
@@ -597,11 +642,13 @@
         <marker scope="Public" name="tea_stream_reply1" />
         <marker scope="Public" name="tea_strip_mai" />
         <marker scope="Public" name="tea_strip_vision" />
+        <marker scope="Public" name="tea_tribute" />
         <marker scope="Public" name="tea_v_bisexual" />
         <marker scope="Public" name="tea_v_chazz" />
         <marker scope="Public" name="tea_v_cheater" />
         <marker scope="Public" name="tea_v_chihiro" />
         <marker scope="Public" name="tea_v_dmg" />
+        <marker scope="Public" name="tea_v_idol" />
         <marker scope="Public" name="tea_v_lucy" />
         <marker scope="Public" name="tea_v_miku_arcade" />
         <marker scope="Public" name="tea_v_spirit" />
@@ -612,7 +659,9 @@
         <marker scope="Public" name="tea_waterproof" />
         <marker scope="Public" name="tea_whyquit_reply" />
         <marker scope="Public" name="tea_winging" />
+        <marker scope="Public" name="tea_yae_reply1a" />
         <marker scope="Public" name="tea_yae_strip1a" />
+        <marker scope="Public" name="tea_yae_strip1b" />
         <marker scope="Public" name="tea_yuno_ayumi" />
         <marker scope="Public" name="tea_yuno_earworm" />
         <marker scope="Public" name="tea_yuno_strip1" />
@@ -620,6 +669,7 @@
         <marker scope="Public" name="tea_yuno_strip1b" />
         <marker scope="Public" name="tea_yuno_strip2" />
         <marker scope="Public" name="tea_zodiac" />
+        <marker scope="Public" name="yea" />
         <marker scope="Public" name="yuno_resp1" />
     </markers>
 </metadata>

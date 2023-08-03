@@ -15,6 +15,12 @@
         <case name="Keyblade Magic" id="69" priority="Noteworthy" min="2" max="2">
             <description>Aqua explains that the magic of the Keyblade is what makes it 'sharp' (or 'dangerous'). Perhaps other characters might not take this at face value.</description>
         </case>
+        <case name="Aqua &amp; Mia Lewd Hug" id="993" priority="FYI" min="6" max="8">
+            <description>Mia comes up to give Aqua a "hug"... or rather, to cop a feel of Aqua's chest. Aqua in turn grabs Mia's hip.</description>
+        </case>
+        <case name="Aqua &amp; Mia Hug" id="985" priority="FYI" min="3" max="3">
+            <description>Mia comes up to hug Aqua (KH) from behind. Mia can do this from her stages 0-4. All you need for conditions would be aquakh_mia_hug4.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -239,6 +245,20 @@
         <response id="1001" opponent="mia_golden_sun" opponentId="187" />
         <response id="1002" opponent="nami" opponentId="1392" />
         <response id="1003" opponent="nami" opponentId="1393" />
+        <response id="1005" opponent="dunban" opponentId="607" />
+        <response id="1010" opponent="dunban" opponentId="605" />
+        <response id="1013" opponent="dunban" opponentId="615" />
+        <response id="1014" opponent="dunban" opponentId="616" />
+        <response id="1015" opponent="dunban" opponentId="617" />
+        <response id="1017" opponent="dunban" opponentId="618" />
+        <response id="1018" opponent="dunban" opponentId="619" />
+        <response id="1020" opponent="dunban" opponentId="620" />
+        <response id="1022" opponent="dunban" opponentId="621" />
+        <response id="1024" opponent="dunban" opponentId="622" />
+        <response id="1027" opponent="dunban" opponentId="625" />
+        <response id="1031" opponent="dunban" opponentId="424" />
+        <response id="1032" opponent="dunban" opponentId="337" />
+        <response id="1033" opponent="dunban" opponentId="426" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -268,6 +288,7 @@
         <note id="809">I love responding to revy because she is *really* pushing Aqua's attempts to be nice and I'm enjoying this</note>
         <note id="864">This is a little bit too meta for Aqua but, meh?</note>
         <note id="887">idk, just felt like making a comment for it</note>
+        <note id="1029">bit of a short response because I'm not sure how else to have her react</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Player Names" sort="0" />
@@ -1260,10 +1281,38 @@
         <label id="1001" label="" folder="Mia (GS)" sort="0" />
         <label id="1002" label="" folder="Responses" sort="0" />
         <label id="1003" label="" folder="Responses" sort="0" />
+        <label id="1004" label="" folder="Dunban S" sort="0" />
+        <label id="1005" label="" folder="Dunban S" sort="0" />
+        <label id="1006" label="" folder="Dunban S" sort="0" />
+        <label id="1007" label="" folder="Dunban S" sort="0" />
+        <label id="1008" label="" folder="Dunban" sort="0" />
+        <label id="1009" label="" folder="Dunban S" sort="0" />
+        <label id="1010" label="" folder="Dunban S" sort="0" />
+        <label id="1011" label="" folder="Dunban S" sort="0" />
+        <label id="1012" label="" folder="Dunban S" sort="0" />
+        <label id="1013" label="" folder="Dunban" sort="0" />
+        <label id="1015" label="" folder="Dunban" sort="0" />
+        <label id="1014" label="" folder="Dunban" sort="0" />
+        <label id="1016" label="" folder="Dunban" sort="0" />
+        <label id="1017" label="" folder="Dunban S" sort="0" />
+        <label id="1018" label="" folder="Dunban S" sort="0" />
+        <label id="1019" label="" folder="Dunban S" sort="0" />
+        <label id="1020" label="" folder="Dunban S" sort="0" />
+        <label id="1021" label="" folder="Dunban" sort="0" />
+        <label id="1022" label="" folder="Dunban S" sort="0" />
+        <label id="1023" label="" folder="Dunban S" sort="0" />
+        <label id="1024" label="" folder="Dunban S" sort="0" />
+        <label id="1025" label="" folder="Dunban S" sort="0" />
+        <label id="1026" label="" folder="Dunban S" sort="0" />
+        <label id="1027" label="" folder="Dunban S" sort="0" />
+        <label id="1028" label="" folder="Dunban S" sort="0" />
+        <label id="1029" label="" folder="Yumeko" sort="0" />
+        <label id="1030" label="" folder="Yumeko" sort="0" />
+        <label id="1031" label="" folder="Targets" sort="0" />
+        <label id="1032" label="" folder="Targets" sort="0" />
+        <label id="1033" label="" folder="Targets" sort="0" />
     </labels>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1003</nextId>
+    <nextId>1033</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="__lucina_nickname" />
@@ -1330,6 +1379,7 @@
         <marker scope="Public" name="aqua_DMG_strip1a" />
         <marker scope="Public" name="aqua_DMG_strip4b" />
         <marker scope="Public" name="aqua_DMG_summerFunStripped5" />
+        <marker scope="Public" name="aqua_dunban_afterdual_1" />
         <marker scope="Public" name="aqua_dunban_armexplain3" />
         <marker scope="Public" name="aqua_dunban_bionis_view_1" />
         <marker scope="Public" name="aqua_dunban_bionis_view_2" />
@@ -1345,6 +1395,13 @@
         <marker scope="Public" name="aqua_dunban_s1_a" />
         <marker scope="Public" name="aqua_dunban_s1_b" />
         <marker scope="Public" name="aqua_dunban_s1_c" />
+        <marker scope="Public" name="aqua_dunban_self2a" />
+        <marker scope="Public" name="aqua_dunban_self2b" />
+        <marker scope="Public" name="aqua_dunban_self2c" />
+        <marker scope="Public" name="aqua_dunban_self5a" />
+        <marker scope="Public" name="aqua_dunban_self5b" />
+        <marker scope="Public" name="aqua_dunban_self5c" />
+        <marker scope="Public" name="aqua_dunban_self5d" />
         <marker scope="Public" name="aqua_dunban_shirtless1" />
         <marker scope="Public" name="aqua_dunban_shirtless2" />
         <marker scope="Public" name="aqua_dunban_shirtless3" />
@@ -1679,6 +1736,7 @@
         <marker scope="Public" name="aqua_yshtola_self3b" />
         <marker scope="Public" name="aqua_yumeko_self0a" />
         <marker scope="Public" name="aqua_yumeko_self0b" />
+        <marker scope="Public" name="aqua_yumeko_self0c" />
         <marker scope="Public" name="aqua_yumeko_self2a" />
         <marker scope="Public" name="aqua_yumeko_self2b" />
         <marker scope="Public" name="aqua_yuna_intro1" />
@@ -1729,12 +1787,18 @@
         <marker scope="Public" name="chestmale_beach_topless_male_selftopless" />
         <marker scope="Public" name="cunt">Hearing someone else say the word "cunt" while she is masturbating puts her off</marker>
         <marker scope="Public" name="doesnt_have_time" />
+        <marker scope="Public" name="dunanff_heavyState" />
         <marker scope="Public" name="dunban_aqua_boxers1Resp" />
         <marker scope="Public" name="dunban_aqua_boxers2Resp" />
         <marker scope="Public" name="dunban_aqua_ffHeavy4_Resp" />
         <marker scope="Public" name="dunban_aqua_ffHeavy5_Resp" />
         <marker scope="Public" name="dunban_aqua_ffHeavy6_Resp" />
+        <marker scope="Public" name="dunban_aquakh_offerDualResp" />
+        <marker scope="Public" name="dunban_mariS_boxers" />
+        <marker scope="Public" name="dunban_mariS_boxers2" />
+        <marker scope="Public" name="dunban_mariS_boxers3" />
         <marker scope="Public" name="dunban_specialflirting" />
+        <marker scope="Public" name="dunbanff_aqua_finishing" />
         <marker scope="Public" name="elphaba_goldenrule_Q" />
         <marker scope="Public" name="enemies_drop_money" />
         <marker scope="Public" name="epilogue_bonus_unlock" />

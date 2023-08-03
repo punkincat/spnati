@@ -53,7 +53,7 @@ var CARDS_PER_HAND = 5;
 /* image constants */
 var CARD_CONFIG_FILE = "cards.xml";
 var BLANK_CARD_IMAGE = IMG + "blank.png";
-var UNKNOWN_CARD_IMAGE = IMG + "unknown.jpg";
+var UNKNOWN_CARD_IMAGE = IMG + "cards/default/unknown.svg";
 var SUIT_PREFIXES = ["spade", "heart", "diamo", "clubs"];
 var ACTIVE_CARD_IMAGES = new ActiveCardImages();
 var CARD_IMAGE_SETS = {};
@@ -595,7 +595,7 @@ ActiveCardImages.prototype.getCardImage = function (visible, card) {
 
     if (visible) {
         var set = this.frontImageMap[k];
-        var ret = CARD_IMAGE_SETS[DEFAULT_CARD_DECK].frontImages[k] || (IMG + k + ".jpg");
+        var ret = CARD_IMAGE_SETS[DEFAULT_CARD_DECK].frontImages[k] || (IMG + "cards/default/" + k + ".svg");
 
         if (set && CARD_IMAGE_SETS[set]) {
             ret = CARD_IMAGE_SETS[set].frontImages[k] || ret;
@@ -641,7 +641,7 @@ ActiveCardImages.prototype.preloadImages = function () {
     for (var suit = 0; suit < 4; suit++) {
         for (var i = 2; i < 15; i++) {
             var key = cardImageKey(suit, i);
-            var src = CARD_IMAGE_SETS[DEFAULT_CARD_DECK].frontImages[key] || (IMG + k + ".jpg");
+            var src = CARD_IMAGE_SETS[DEFAULT_CARD_DECK].frontImages[key] || (IMG + "cards/default/" + key + ".svg");
             var set_id = this.frontImageMap[key];
 
             if (set_id && CARD_IMAGE_SETS[set_id]) {

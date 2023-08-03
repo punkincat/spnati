@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <collectibles>
-    <collectible id="aqua_wayfinder" img="opponents/aqua_kh/collectibles/collectible_1.png" thumbnail="opponents/aqua_kh/collectibles/aqua_wayfinder.png">
+    <collectible id="aqua_wayfinder" status="online" img="opponents/aqua_kh/collectibles/collectible_1.png" thumbnail="opponents/aqua_kh/collectibles/aqua_wayfinder.png">
         <title>Wayfinder Charm</title>
         <subtitle>An unbreakable connection.</subtitle>
         <text>A star-shaped lucky charm used to provide luck to travelers. It is designed to resemble the paopu fruit, which is said to tie friends together. Aqua made one for herself and her friends, Terra and Ventus, before she and Terra took the Mark of Mastery exam.&lt;br&gt;&lt;br&gt;Wearing this charm in a game with Aqua may cause her to try and appeal to you more directly.</text>
@@ -8,5 +8,13 @@
         <counter>1</counter>
         <wearable>true</wearable>
         <clothing name="charm" generic="jewelry" position="neck" type="extra" img="opponents/aqua_kh/collectibles/aqua_wayfinder.png" />
+    </collectible>
+    <collectible id="aqua_bionis_keyblade" status="online" img="opponents/aqua_kh/collectibles/ether_nexus.png" thumbnail="opponents/aqua_kh/collectibles/ether_nexus_charm.png">
+        <title>Ether Nexus (Keyblade)</title>
+        <subtitle>An unexpected connection.</subtitle>
+        <text>A cherry blossom keychain acts as a memento of an unexpected meeting with a hero from another world, one who managed to woo Aqua in ways she didn't know she wanted. When used on her Keyblade, it took this form.</text>
+        <unlock>Play with Aqua (Kingdom Hearts) and Dunban (Xenoblade Chronicles). Put them next to each other. See what happens if both of them lose around the same time. Don't wear her Wayfinder collectible.</unlock>
+        <hide-details>true</hide-details>
+        <counter>1</counter>
     </collectible>
 </collectibles>

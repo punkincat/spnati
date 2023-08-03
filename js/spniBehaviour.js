@@ -2487,7 +2487,7 @@ Opponent.prototype.clearChosenState = function () {
  ************************************************************/
 Opponent.prototype.updateBehaviour = function(triggers, opp) {
     /* determine if the AI is dialogue locked */
-    if (this.out && this.forfeit[1] == CANNOT_SPEAK && triggers !== DEALING_CARDS) {
+    if (this.out && this.forfeit[1] == CANNOT_SPEAK && triggers !== DEALING_CARDS && triggers !== OPPONENT_FINISHING_MASTURBATING) {
         /* their is restricted to this only */
         triggers = [this.forfeit[0]];
     }
