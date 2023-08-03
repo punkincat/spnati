@@ -91,11 +91,17 @@ Player.prototype.initClothingStatus = function () {
 Object.defineProperty(Player.prototype, 'currentClothing', {
     get: function() {
         /* Because we want clothing that is put on later to be visible
-         * _after_ the STRIPPED phase (which happens in the new
-         * stage), we set fromStage to undefined at that point and
-         * just check for undefined here. */
+         * _after_ the STRIPPED phase (which happens in the new stage)
+         * if fromDeal is true, we set fromStage to undefined at that
+         * point and just check for undefined here. */
         return this.clothing.filter(c => c.fromStage === undefined);
     },
+});
+Object.defineProperty(Player.prototype, 'nextStageClothing', {
+    get: function() {
+        return this.clothing.filter(c => c.fromStage === undefined
+                                    || c.fromStage == this.stage + 1 && !c.fromDeal);
+    }
 });
 
 /*******************************************************************
@@ -165,13 +171,14 @@ Player.prototype.resetState = function () {
             var plural = $(this).attr('plural');
             plural = (plural == 'null' ? null : plural == 'true');
             var fromStage = Number($(this).attr('fromStage')) || undefined;
+            var fromDeal = $(this).attr('fromDeal') === 'true';
             var pretendLayer = Number($(this).attr('pretendLayer')) || undefined;
             if (pretendLayer > clothingArr.length || pretendLayer < 0) {
                 console.error('Invalid pretend layer');
                 pretendLayer = undefined;
             }
 
-            var newClothing = new Clothing(name, generic, type, position, plural, fromStage, pretendLayer);
+            var newClothing = new Clothing(name, generic, type, position, plural, fromStage, fromDeal, pretendLayer);
 
             clothingArr.push(newClothing);
         });

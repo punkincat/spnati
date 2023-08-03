@@ -36,13 +36,14 @@ var STATUS_FINISHED = "finished";
 /************************************************************
  * Stores information on an article of clothing.
  ************************************************************/
-function Clothing (name, generic, type, position, plural, fromStage, pretendLayer) {
+function Clothing (name, generic, type, position, plural, fromStage, fromDeal, pretendLayer) {
     this.name = name;
     this.generic = generic || name;
     this.type = type;
     this.position = position;
     this.plural = (plural === undefined ? false : plural);
     this.fromStage = fromStage;
+    this.fromDeal = fromDeal;
     this.pretendLayer = pretendLayer;
 }
 
@@ -67,7 +68,7 @@ Player.prototype.isCovered = function(position, except) {
     if (position == FULL_ARTICLE || position === undefined) {
         return this.isCovered(UPPER_ARTICLE, except) && this.isCovered(LOWER_ARTICLE, except);
     }
-    return this.currentClothing.some(function(c) {
+    return (except != undefined ? this.nextStageClothing : this.currentClothing).some(function(c) {
         return (except === undefined || c !== except)
             && (c.type == IMPORTANT_ARTICLE || c.type == MAJOR_ARTICLE)
             && (c.position == position || c.position == FULL_ARTICLE);
