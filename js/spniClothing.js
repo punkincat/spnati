@@ -36,13 +36,14 @@ var STATUS_FINISHED = "finished";
 /************************************************************
  * Stores information on an article of clothing.
  ************************************************************/
-function Clothing (name, generic, type, position, plural, fromStage) {
+function Clothing (name, generic, type, position, plural, fromStage, pretendLayer) {
     this.name = name;
     this.generic = generic || name;
     this.type = type;
     this.position = position;
     this.plural = (plural === undefined ? false : plural);
     this.fromStage = fromStage;
+    this.pretendLayer = pretendLayer;
 }
 
 /*************************************************************
@@ -430,7 +431,11 @@ function prepareToStripPlayer (player) {
             humanPlayer.gender == eGender.MALE ? MALE_HUMAN_MUST_STRIP : FEMALE_HUMAN_MUST_STRIP
         );
     } else {
-        const toBeRemovedClothing = players[player].removedClothing = players[player].clothing.at(-1);
+        let toBeRemovedClothing = players[player].clothing.at(-1);
+        if (toBeRemovedClothing.pretendLayer !== undefined) {
+            toBeRemovedClothing = players[player].clothing[toBeRemovedClothing.pretendLayer];
+        }
+        players[player].removedClothing = toBeRemovedClothing;
         const dialogueTrigger = getClothingTrigger(players[player], toBeRemovedClothing, false);
         dialogueTrigger.push(OPPONENT_STRIPPING);
 

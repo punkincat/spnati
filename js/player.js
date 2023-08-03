@@ -165,8 +165,13 @@ Player.prototype.resetState = function () {
             var plural = $(this).attr('plural');
             plural = (plural == 'null' ? null : plural == 'true');
             var fromStage = Number($(this).attr('fromStage')) || undefined;
+            var pretendLayer = Number($(this).attr('pretendLayer')) || undefined;
+            if (pretendLayer > clothingArr.length || pretendLayer < 0) {
+                console.error('Invalid pretend layer');
+                pretendLayer = undefined;
+            }
 
-            var newClothing = new Clothing(name, generic, type, position, plural, fromStage);
+            var newClothing = new Clothing(name, generic, type, position, plural, fromStage, pretendLayer);
 
             clothingArr.push(newClothing);
         });
