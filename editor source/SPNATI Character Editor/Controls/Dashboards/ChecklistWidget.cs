@@ -275,9 +275,17 @@ namespace SPNATI_Character_Editor.Controls.Dashboards
 			CharacterHistory history = CharacterHistory.Get(_character, false);
 			TestRequirements requirements = TestRequirements.Instance;
 			float size = history.GetTotalFileSize(false);
-			if (size > requirements.SizeLimit)
+
+			int sizeLimit = requirements.SizeLimit;
+
+			if (Listing.Instance.IsCharacterReleased(_character.FolderName))
 			{
-				AddTask("Compress images", $"Characters are allowed to use {requirements.SizeLimit}MB for non-epilogue images. Consider compressing your poses if you haven't yet in order to conserve space.", typeof(ScreenshotTaker));
+				sizeLimit = requirements.BiggerSizeLimit;
+			}
+
+			if (size > sizeLimit)
+			{
+				AddTask("Compress images", $"Characters are allowed to use {sizeLimit}MB for non-epilogue images. Consider compressing your poses if you haven't yet in order to conserve space.", typeof(ScreenshotTaker));
 			}
 		}
 
