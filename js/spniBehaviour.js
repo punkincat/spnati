@@ -1255,7 +1255,7 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
                 return 0;
             } else if (split_fn[2] && split_fn[2] === 'wearing') {
                 if (targetCollectible && targetCollectible.clothing) {
-                    return humanPlayer.clothing.some(function (clothing) {
+                    return humanPlayer.getClothing().some(function (clothing) {
                         return clothing.id === targetCollectible.clothing.id;
                     });
                 }
@@ -1468,7 +1468,7 @@ function expandDialogue (dialogue, self, target, bindings) {
                         }
                     } else if (fn_parts[1] && fn_parts[1] === 'wearing') {
                         if (targetCollectible && targetCollectible.clothing) {
-                            substitution = humanPlayer.clothing.some(function (clothing) {
+                            substitution = humanPlayer.getClothing().some(function (clothing) {
                                 return clothing.id === targetCollectible.clothing.id;
                             });
                         } else {
@@ -2596,7 +2596,7 @@ Opponent.prototype.commitBehaviourUpdate = function () {
     this.applyState(this.chosenState, this.currentTarget);
     
     this.stateCommitted = true;
-    if (this.clothing.at(-1)?.type != "skip") {
+    if (this.countLayers() == 0 || this.clothing.at(-1 - this.stage).type != "skip") {
         updateGameVisual(this.slot);
     }
 }

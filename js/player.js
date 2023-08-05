@@ -88,21 +88,19 @@ Player.prototype.initClothingStatus = function () {
     this.mostlyClothed = this.isDecent();
 }
 
-Object.defineProperty(Player.prototype, 'currentClothing', {
-    get: function() {
-        /* Because we want clothing that is put on later to be visible
-         * _after_ the STRIPPED phase (which happens in the new stage)
-         * if fromDeal is true, we set fromStage to undefined at that
-         * point and just check for undefined here. */
-        return this.clothing.filter(c => c.fromStage === undefined);
-    },
-});
-Object.defineProperty(Player.prototype, 'nextStageClothing', {
-    get: function() {
-        return this.clothing.filter(c => c.fromStage === undefined
-                                    || c.fromStage == this.stage + 1 && !c.fromDeal);
-    }
-});
+/********************************************************************
+ * Gets the currently worn wardrobe, possible before (stageDelta ==
+ * -1) or after (stageDelta == 1) stripping removedClothing.
+ ********************************************************************/
+Player.prototype.getClothing = function(stageDelta, removedClothing) {
+    removedClothing ||= this.removedClothing;
+    return this.clothing.filter(c =>
+        c.type != 'skip'
+            && (!c.removed || (stageDelta == -1 && c == removedClothing))
+            && (stageDelta != 1 || c != removedClothing)
+            && (c.fromStage === undefined
+                || (stageDelta == 1 && c.fromStage == this.stage + 1 && !c.fromDeal)));
+};
 
 /*******************************************************************
  * (Re)Initialize the player properties that change during a game
@@ -350,7 +348,7 @@ Player.prototype.hasTags = function(tagAdv) {
 }
 
 Player.prototype.countLayers = function() {
-    return this.clothing.countTrue(c => c.type != "skip");
+    return this.clothing.countTrue(c => !c.removed && c.type != "skip");
 };
 
 Player.prototype.checkStatus = function(status) {
