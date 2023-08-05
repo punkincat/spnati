@@ -1440,7 +1440,7 @@ function expandDialogue (dialogue, self, target, bindings) {
                 substitution = '';
                 if ([UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE].indexOf(clothing.position) >= 0) {
                     var revealedClothing
-                        = target.findClothing(undefined,
+                        = target.findClothing(clothing.type == IMPORTANT_ARTICLE ? [IMPORTANT_ARTICLE, EXTRA_ARTICLE] : undefined,
                                               clothing.position == FULL_ARTICLE
                                               ? [UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE]
                                               : [clothing.position, FULL_ARTICLE]);

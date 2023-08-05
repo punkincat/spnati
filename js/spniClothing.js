@@ -81,27 +81,23 @@ Player.prototype.isCovered = function(position, except) {
  * covered by others. 
  **************************************************************/
 Player.prototype.findClothing = function(types, positions, names) {
-    var covered = { upper: false, lower: false };
-    var matches = [];
-    for (const article of this.currentClothing.reverse()) {
-        if ((types == undefined || types.indexOf(article.type) >= 0)
-            && (positions == undefined || positions.indexOf(article.position) >= 0)
-                && (names == undefined || names.indexOf(article.name) >= 0
-                    || names.indexOf(article.generic) >= 0)) {
-            if (!(article.position == FULL_ARTICLE && covered.upper && covered.lower)
-                && !covered[article.position]) {
-                matches.push(article);
-            }
-        }
-        if ([MINOR_ARTICLE, MAJOR_ARTICLE, IMPORTANT_ARTICLE].indexOf(article.type) >= 0) {
-            for (var position in covered) {
-                if (article.position == position || article.position == FULL_ARTICLE) {
-                    covered[position] = true;
-                }
-            }
-        }
-    }
-    return matches;
+    return this.currentClothing.filter((c, i, clothing) =>
+        (types === undefined || types.includes(c.type))
+            && (positions === undefined || positions.includes(c.position))
+            && (names === undefined || names.includes(c.name)
+                || names.includes(c.generic))
+        // Check if the article can be seen
+            && !clothing.some((c2, j) =>
+                /* "both" covers both "upper" and "lower" */
+                (c2.position == c.position
+                 || c2.position == FULL_ARTICLE && [UPPER_ARTICLE, LOWER_ARTICLE].includes(c.position))
+                /* "extra" (or other future types never covers anything) */
+                    && [MINOR_ARTICLE, MAJOR_ARTICLE, IMPORTANT_ARTICLE].includes(c2.type)
+                /* "important" is assumed to actually be beneath all major articles */
+                    && (j > i || (c.type == IMPORTANT_ARTICLE && c2.type == MAJOR_ARTICLE))
+                    && !(c.type == MAJOR_ARTICLE && c2.type == IMPORTANT_ARTICLE)
+            )
+    );
 };
 
 /**
