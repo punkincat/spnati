@@ -174,6 +174,11 @@
         <response id="426" opponent="mitama" opponentId="1203" />
         <response id="428" opponent="monika" opponentId="1339" />
         <response id="429" opponent="yumeko" opponentId="1" />
+        <response id="430" opponent="mitama" opponentId="2186" />
+        <response id="431" opponent="mitama" opponentId="2187" />
+        <response id="432" opponent="mitama" opponentId="2213" />
+        <response id="433" opponent="nami" opponentId="1391" />
+        <response id="434" opponent="kyoko_kirigiri" opponentId="1468" />
     </responses>
     <notes>
         <note id="99">Note: This is a blatent lie</note>
@@ -501,9 +506,7 @@
         <label id="393" label="" folder="Prompt Responses" sort="0" />
         <label id="408" label="" folder="Spouse Responses" sort="0" />
     </labels>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>429</nextId>
+    <nextId>434</nextId>
     <markers>
         <marker scope="Public" name="AimeeArmband1" />
         <marker scope="Public" name="AimeeCowboyOutfit1" />
@@ -532,9 +535,11 @@
         <marker scope="Public" name="ArueshalaeShoes1_resp" />
         <marker scope="Public" name="ArueshalaeShoes2_resp" />
         <marker scope="Public" name="ArueshalaeShoes3_resp" />
+        <marker scope="Public" name="ArueshalaeSkirt1_resp" />
         <marker scope="Public" name="ArueshalaeSocks1_resp" />
         <marker scope="Public" name="ArueshalaeSocks2_resp" />
         <marker scope="Public" name="ArueshalaeUndershirt1" />
+        <marker scope="Public" name="ArueshalaeUndershirt2" />
         <marker scope="Public" name="BarbaraBothLost" />
         <marker scope="Public" name="BarbaraCollar1" />
         <marker scope="Public" name="BarbaraCollar2" />
@@ -783,7 +788,11 @@
         <marker scope="Public" name="KumatoraShoes1_resp" />
         <marker scope="Public" name="KyokoKirigiriJacket1" />
         <marker scope="Public" name="KyokoKirigiriJacket2" />
+        <marker scope="Public" name="KyokoKirigiriJacket3" />
+        <marker scope="Public" name="KyokoKirigiriShoes1_resp" />
         <marker scope="Public" name="KyokoKirigiriTie1" />
+        <marker scope="Public" name="KyokoKirigiriTie2" />
+        <marker scope="Public" name="KyokoKirigiriTie3" />
         <marker scope="Public" name="KyoukoToshinouSexyPose_resp" />
         <marker scope="Public" name="KyoukoToshinouShoes1" />
         <marker scope="Public" name="KyoukoToshinouShoes2" />
@@ -978,18 +987,22 @@
         <marker scope="Public" name="MitamaCapelet1" />
         <marker scope="Public" name="MitamaCapelet2" />
         <marker scope="Public" name="MitamaCapelet3" />
+        <marker scope="Public" name="MitamaDress1" />
         <marker scope="Public" name="MitamaSandals1" />
         <marker scope="Public" name="MitamaSandals2" />
         <marker scope="Public" name="MitamaSandals3" />
         <marker scope="Public" name="MitamaShirt1_resp" />
         <marker scope="Public" name="MitamaShirt2_resp" />
+        <marker scope="Public" name="MitamaShirt3_resp" />
         <marker scope="Public" name="MitamaShirt3a_resp" />
         <marker scope="Public" name="MitamaShirt3b_resp" />
         <marker scope="Public" name="MitamaShoes1_resp" />
         <marker scope="Public" name="MitamaShoes2_resp" />
         <marker scope="Public" name="MitamaShoes3_resp" />
+        <marker scope="Public" name="MitamaSkirt1_resp" />
         <marker scope="Public" name="MitamaSocks1_resp" />
         <marker scope="Public" name="MitamaSocks2_resp" />
+        <marker scope="Public" name="MitamaSocks3_resp" />
         <marker scope="Public" name="MonikaBothLost" />
         <marker scope="Public" name="MonikaMustMast" />
         <marker scope="Public" name="MonikaPlayerWon" />
@@ -1035,10 +1048,13 @@
         <marker scope="Public" name="NamiDreams_resp" />
         <marker scope="Public" name="NamiGetRichQuick_resp" />
         <marker scope="Public" name="NamiJeans1" />
+        <marker scope="Public" name="NamiJeans2A" />
+        <marker scope="Public" name="NamiJeans2B" />
         <marker scope="Public" name="NamiSandals1" />
         <marker scope="Public" name="NamiSandals2" />
         <marker scope="Public" name="NamiSandals2B" />
         <marker scope="Public" name="NamiSandals3" />
+        <marker scope="Public" name="NamiShirt1_resp" />
         <marker scope="Public" name="NamiShoes1_resp" />
         <marker scope="Public" name="NamiShoes2_resp" />
         <marker scope="Public" name="NamiShoes3_resp" />
@@ -1143,6 +1159,7 @@
         <marker scope="Public" name="SuzuyaImageChange_resp" />
         <marker scope="Public" name="SuzuyaPraise_resp" />
         <marker scope="Public" name="SuzuyaWannaBuy_resp" />
+        <marker scope="Public" name="SweetheartDress1" />
         <marker scope="Public" name="SyrenneBath_resp" />
         <marker scope="Public" name="SyrenneDye_resp" />
         <marker scope="Public" name="SyrenneGetRichQuick_resp" />
@@ -1180,6 +1197,7 @@
         <marker scope="Public" name="YoukaiExplanation">You may think Reimu's a bad guy for wanting to exterminate youkai, but that's all a facade. She secretly cares for the youkai of Gensokyo.</marker>
         <marker scope="Public" name="YumekoNewGame_resp" />
         <marker scope="Public" name="YumekoShoes1" />
+        <marker scope="Public" name="YumekoShoes2" />
         <marker scope="Public" name="YunaVest1" />
         <marker scope="Public" name="YunoAwakening_resp" />
         <marker scope="Public" name="YunoCompressionGlove_resp" />
