@@ -567,8 +567,19 @@ function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber,
     this.image = picElem.text();
     this.height = $metaXml.children('height').text();
     this.source = $metaXml.children('from').text();
-    this.artist = $metaXml.children('artist').text();
-    this.writer = $metaXml.children('writer').text();
+    for (let field of ['artist', 'writer', 'othercred']) {
+        if ($metaXml.children(field).length > 1 || $metaXml.children(field).attr('comment') !== undefined) {
+            this[field] = $metaXml.children(field).map(n => n.map(function() {
+                return {
+                    name: $(this).text(),
+                    comment: $(this).attr('comment'),
+                    minor: $(this).attr('minor') === 'true',
+                };
+            }).get())
+        } else {
+            this[field] = parseCreatorField($metaXml.children(field).text());
+        }
+    }
     this.description = fixupDialogue($metaXml.children('description').html());
     this.has_collectibles = $metaXml.children('has_collectibles').text() === "true";
     this.collectibles = null;

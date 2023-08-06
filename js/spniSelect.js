@@ -248,15 +248,54 @@ function loadSelectScreen () {
     return p;
 }
 
-function splitCreatorField (field) {
-    // First, remove any parenthetical info in the field.
-    // Then, split on observed creator separators.
-    return field
-            .replace(/\([^\)]+\)|\[[^\]]+\]/gm, '')
-            .split(/\s*(?:,|&|\:|and|\+|\/|\\|<(?:\/\\)?\s*br\s*(?:\/\\)?>)\s*/gm)
-            .map(function (s) {
-                return s.trim();
-            });
+function parseCreatorField (field) {
+    const tokenRE = /(by|:)|((?:(?:[,;.&]|and|<br>|$)\s*)+)|\s+|[()]|[^,;.&<()\s]+/g;
+    const ret = [];
+    let inParen = false;
+    let tmp = '';
+    let persistComment, comment;
+    let creator;
+    let m;
+    while (m = tokenRE.exec(field)) {
+        if (m[1]) { // "by" or colon
+            persistComment = tmp.trim();
+            tmp = '';
+        } else if (m[0] == '(') {
+            inParen = true;
+            comment = '';
+        } else if (m[0] == ')') {
+            inParen = false;
+        } else if (m[2] !== undefined) { // separator
+            if (inParen) {
+                comment += m[0];
+            } else {
+                ret.push({
+                    name: tmp.trim(),
+                    comment: comment || persistComment,
+                });
+                tmp = '';
+            }
+            if (m[0] === "") break; // avoid infinite loop due to $ alone not consuming anything
+        } else {
+            if (inParen) {
+                comment += m[0];
+            } else {
+                tmp += m[0];
+            }
+        }
+    }
+    return ret;
+}
+
+function formatCreatorField (data, nameCallback) {
+    const ret = [];
+    for (const [i, x] of data.entries()) {
+        if (i > 0) ret.push(', ');
+        ret.push($(data.minor ? '<small>' : '<span>')
+                 .append(nameCallback ? nameCallback(x.name) : document.createTextNode(x.name))
+                 .append(x.comment ? document.createTextNode(' (' + x.comment + ')') : ''));
+    }
+    return ret;
 }
 
 String.prototype.simplifyDiacritics = function() {
@@ -306,11 +345,9 @@ function loadListingFile () {
                 const prefix = opp.source.substring(0, wordRE.lastIndex);
                 sourcePrefixCounts.set(prefix, (sourcePrefixCounts.get(prefix) ?? 0) + 1);
             }
-            
-            splitCreatorField(opp.artist).forEach(creatorSet.add.bind(creatorSet));
-            
-            splitCreatorField(opp.writer).forEach(creatorSet.add.bind(creatorSet));
-            
+            opp.artist.forEach(a => creatorSet.add(a.name));
+            opp.writer.forEach(w => creatorSet.add(w.name));
+
             var disp = new OpponentSelectionCard(opp);
             opp.selectionCard = disp;
             disp.statusIcon.tooltip({ delay: { show: 200 }, placement: 'bottom',
@@ -712,8 +749,8 @@ function updateGroupSelectScreen (ignore_bg) {
             $groupPrefersLabels[i].html(opponent.label);
             $groupSexLabels[i].html(opponent.gender);
             $groupSourceLabels[i].html(opponent.source);
-            $groupWriterLabels[i].html(opponent.writer);
-            $groupArtistLabels[i].html(opponent.artist);
+            $groupWriterLabels[i].empty().append(formatCreatorField(opponent.writer));
+            $groupArtistLabels[i].empty().append(formatCreatorField(opponent.artist));
             $groupDescriptionLabels[i].html(opponent.description);
             var epilogueStatus = opponent.getEpilogueStatus();
 
@@ -815,7 +852,7 @@ function filterOpponent(opp, name, source, creator, tags) {
     }
     
     // filter by creator
-    if (creator && opp.artist.simplifyDiacritics().indexOf(creator) < 0 && opp.writer.simplifyDiacritics().indexOf(creator) < 0) {
+    if (creator && !opp.artist.some(a => a.name.simplifyDiacritics().includes(creator)) && !opp.writer.some(w => w.name.simplifyDiacritics().includes(creator))) {
         return false;
     }
 

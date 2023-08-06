@@ -1639,7 +1639,7 @@ OpponentDetailsDisplay = function () {
     this.showMoreButton.click(function () {
         this.mainView.toggleClass('show-more');
     }.bind(this));
-    this.mainView.on('click', '.opponent-details-value>a', function(ev) {
+    this.mainView.on('click', '.opponent-details-value a', function(ev) {
         $(ev.target).data('search-field').val($(ev.target).data('search-text') || ev.target.innerText).trigger('input');
     });
 
@@ -1913,15 +1913,11 @@ OpponentDetailsDisplay.prototype.update = function (opponent) {
         this.sourceLabel.append(new Text(opponent.source.substring(lastPrefixLen)));
     }
     [[this.writerLabel, opponent.writer], [this.artistLabel, opponent.artist]].forEach(function ([label, data]) {
-        const interesting = splitCreatorField(data).filter(s => loadedOpponents.countTrue(opp => filterOpponent(opp, '', '', s)) > 1);
-        if (interesting.length) {
-            const re = new RegExp('(' + interesting.map(escapeRegExp).join('|') + ')');
-            label.empty().append(data.split(re).map(function(part, ix) {
-                return (ix % 2) ? $('<a>', { href: '#', text: part }).data('search-field', $searchCreator) : part;
-            }));
-        } else {
-            label.text(data);
-        }
+        label.empty().append(formatCreatorField(data, function (n) {
+            if (loadedOpponents.countTrue(opp => filterOpponent(opp, '', '', n)) > 1) {
+                return $('<a>', { href: '#', text: n }).data('search-field', $searchCreator);
+            } else return n;
+        }));
     });
     if (this.opponent.lastUpdated) {
         var timeStyle = Date.now() - this.opponent.lastUpdated > TESTING_MAX_AGE ? undefined : 'short';
