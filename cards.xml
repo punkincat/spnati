@@ -351,4 +351,13 @@
         <unlockChar>bobobo</unlockChar>
         <unlockCollectible>slifer_the_executive_producer</unlockCollectible>
     </deck>
+    
+    <deck id="ddlc">
+        <title>DDLC Deck</title>
+        <subtitle>Hand-crafted, with love!</subtitle>
+        <description>A deck of cards created by the literature club for special occasions.</description>
+        <credits>Another_NSFWAlt</credits>
+        <front src="img/cards/DDLC/%s%i.jpg" />
+        <back id="1" src="img/cards/DDLC/back.jpg" />
+    </deck>
 </card-decks>
