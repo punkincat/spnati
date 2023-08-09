@@ -53,6 +53,8 @@
         <response id="0" opponent="giygas" opponentId="209" />
         <response id="0" opponent="aimee" opponentId="2" />
         <response id="0" opponent="giygas" opponentId="210" />
+        <response id="1482" opponent="hilbert" opponentId="11" />
+        <response id="1485" opponent="hilbert" opponentId="9" />
     </responses>
     <notes>
         <note id="6">Make separate case for non-humans</note>
@@ -110,9 +112,6 @@ In this case, "Are you suggesting a side wager, then?" is Kyoko's way of suggest
         <note id="1316">Danganronpa Kirigiri Volume 4, Chapter 2.</note>
         <note id="1354">Real-world pop culture exists in the Danganronpa universe and prequel materials indicate Kyoko is a fan of mystery novels (which American Psycho is not quite) and heavily imply she's likely been to New York. The events of Danganronpa: Trigger Happy Havoc take place circa 2010-2012, with SPNATI Kyoko being aged at around a year afterwards, so Suicide Squad (2016) isn't a thing for her.</note>
         <note id="1356">In Chapter 3 of Danganronpa, Kyoko considers searching a character's socks to be worse than searching his underwear.</note>
-        <note id="1365">The card in question is Kyoko's DSC (Detective Shelf Classification) card. A copy of it is catalogued among other detectives' DSC cards at the Detective Library in Japan-- this is one of the ways Kyoko is contacted by clients. It bears an ID photo and a rank number ("910" in this case, denoting Kyoko as an extremely high-rank homicide detective specializing in "impossible murders"); the copy in the Detective Library is accompanied by a description of cases Kyoko has solved since her registration at the age of 13, 6 years before her SPNATI appearance.
-
-Feel free to have Téa take up either option or something else. Asking about Kyoko's gloves is okay IF you want to have Téa go that route-- I won't be having Kyoko take her gloves off, but I can have her explain the actual full story behind why she wears them. If you decide you want to have Téa take this in a kinky direction, I can ask Richar for new poses as appropriate.</note>
         <note id="1379">This line basically treats the target like Celestia Ludenberg.</note>
         <note id="1384">She only means this in terms of that she at least has the edge of overheating less easily on account of her toothpick build. Shameless tactlessness is one of Kyoko's funnier character traits.</note>
         <note id="1385">Shameless tactlessness is one of Kyoko's funnier character traits.</note>
@@ -131,6 +130,7 @@ Also, I've made this stage 1 instead of stage 0 because of Kyoko's line about he
         <note id="1469">The "is that so" implies quite a bit of subtext that I'm having Kyoko shelf for later. Kyoko considers herself a born detective-- it's the family business and she's been at it since she was like 5-7 years old-- but Miko's words would imply to Kyoko that Miko is calling her entire life and career decisions into question just because Kyoko eagerly took the path that was laid in front of her instead of inventing herself her own way. Kyoko has been surrounded with detectives who went far off the normal courses of their lives to be detectives (particularly her former partner, Yui Samidare), and has a very complicated relationship with her father, who chose NOT to be a detective like the rest of the family and ended up being very absent from her life as a result.
 
 TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying this and they might come up later.</note>
+        <note id="1476">Hopefully, it isn't too crazy that Kyoko can answer this in two different ways on two different cases (and different from the Disney-magic way she usually does). Let me know if it's too much to bear.</note>
     </notes>
     <labels>
         <label id="499" label="Shelved" folder="" sort="0" />
@@ -1292,13 +1292,13 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <label id="1229" label="" folder="Clothing vocabulary" sort="322" />
         <label id="1230" label="" folder="Clothing vocabulary" sort="323" />
         <label id="1231" label="" folder="Clothing vocabulary" sort="324" />
-        <label id="1232" label="Suzuya PL Blood 1" folder="Prompt" sort="2" />
-        <label id="1233" label="Suzuya PL Zodiac 1" folder="Prompt" sort="3" />
-        <label id="1234" label="Suzuya PL Zodiac 2A" color="2" folder="Prompt" sort="5" />
-        <label id="1235" label="Suzuya PL Zodiac 2B" color="3" folder="Prompt" sort="4" />
-        <label id="1236" label="Suzuya PL Zodiac 3" folder="Prompt" sort="6" />
-        <label id="1237" label="Suzuya PL Zodiac 4" folder="Prompt" sort="7" />
-        <label id="1238" label="Suzuya PL Zodiac 5" folder="Prompt" sort="0" />
+        <label id="1232" label="Suzuya PL Blood 1" folder="Prompted" sort="2" />
+        <label id="1233" label="Suzuya PL Zodiac 1" folder="Prompted" sort="3" />
+        <label id="1234" label="Suzuya PL Zodiac 2A" color="2" folder="Prompted" sort="5" />
+        <label id="1235" label="Suzuya PL Zodiac 2B" color="3" folder="Prompted" sort="4" />
+        <label id="1236" label="Suzuya PL Zodiac 3" folder="Prompted" sort="6" />
+        <label id="1237" label="Suzuya PL Zodiac 4" folder="Prompted" sort="7" />
+        <label id="1238" label="Suzuya PL Zodiac 5" folder="Prompted" sort="2" />
         <label id="1239" label="Ferris" folder="Inbound hand" sort="4" />
         <label id="1240" label="Chihiro" folder="Inbound hand" sort="5" />
         <label id="1241" label="Revy IL 0-1" folder="Inbound stage 0" sort="48" />
@@ -1533,6 +1533,22 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <label id="1472" label="Miko IR 0-3A" color="2" folder="Duplicate dialogue" sort="72" />
         <label id="1473" label="Miko IR 0-3B" color="3" folder="Duplicate dialogue" sort="74" />
         <label id="1474" label="Miko IR pre0-3" folder="Duplicate dialogue" sort="78" />
+        <label id="1475" label="Okino PL advice" folder="Prompted" sort="5" />
+        <label id="1476" label="Okino PR advice" folder="Prompted" sort="12" />
+        <label id="1477" label="Okino IL 3-X/Inbound stage 3" folder="" sort="0" />
+        <label id="1478" label="Okino IR pre3-X" folder="Duplicate dialogue" sort="155" />
+        <label id="1479" label="Okino IR 3-X" folder="Duplicate dialogue" sort="16" />
+        <label id="1480" label="" folder="Remillia Sponsor: Sexuality" sort="4" />
+        <label id="1481" label="" folder="Must masturbate" sort="24" />
+        <label id="1483" label="Ties and goths" folder="Remillia Sponsor: Misc." sort="5" />
+        <label id="1484" label="Tie (goth target)" folder="Specific items" sort="5" />
+        <label id="1485" label="Hilbert PL Truth-Ideals" folder="Prompted" sort="6" />
+        <label id="1486" label="Hilbert PR Truth-Ideals" folder="Prompted" sort="0" />
+        <label id="1487" label="" folder="Prompted" sort="7" />
+        <label id="1488" label="" folder="Remillia Sponsor: Misc." sort="6" />
+        <label id="1489" label="" folder="Remillia Sponsor: Misc." sort="7" />
+        <label id="1490" label="" folder="Remillia Sponsor: Misc." sort="12" />
+        <label id="1482" label="Hilbert Scar" folder="Outbound stage 2" sort="0" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -1562,23 +1578,18 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
     <posePreviewMarkers>
         <posePreviewMarker>hair==1</posePreviewMarker>
     </posePreviewMarkers>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1474</nextId>
+    <nextId>1490</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="." />
         <marker scope="Public" name="+careerMention" />
-        <marker scope="Public" name="+quips" />
-        <marker scope="Public" name="+zombieHeadDrops" />
         <marker scope="Public" name="ae86_strip" />
         <marker scope="Public" name="ae86_strip01" />
-        <marker scope="Public" name="alwaysReady">"Always ready, I see" and other versions of the line</marker>
+        <marker scope="Public" name="aella_weapons" />
+        <marker scope="Public" name="alwaysReady">Semper paratus!</marker>
         <marker scope="Public" name="aquaKH_aceDetective" />
         <marker scope="Public" name="aquaKH_masterNickname" />
         <marker scope="Public" name="aquaKH_shadow" />
         <marker scope="Public" name="aquaKH_sixYears" />
-        <marker scope="Public" name="aquaKS_" />
         <marker scope="Public" name="aquaKS_deads" />
         <marker scope="Public" name="aquaKS_deads_idea" />
         <marker scope="Public" name="aquaKS_deads_stern" />
@@ -1599,10 +1610,10 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="bella_885" />
         <marker scope="Public" name="bella_invegaroo" />
         <marker scope="Public" name="biAtFinish">Finished forfeit while having the bisexual tag</marker>
-        <marker scope="Public" name="biFromStart" />
+        <marker scope="Public" name="biFromStart">An all-female table with bisexualGameFinish marked fast-tracks Kyoko's trip to the world of girl love.</marker>
         <marker scope="Public" name="bigButt">"(Don't comment on their rear...)" and alternate versions of the line</marker>
         <marker scope="Public" name="birthday">The game is being played on Kyoko's birthday, October 6, and she has mentioned it X times.</marker>
-        <marker scope="Public" name="bisexualGameFinish">Kyoko has ended the game after a fully bisexual awakening at least once.</marker>
+        <marker scope="Public" name="bisexualGameFinish">Kyoko has ended the game after a fully bisexual awakening at least once. Persistent tag.</marker>
         <marker scope="Public" name="blackIsYourColor">Removed Major, Female - Target is also wearing black underwear</marker>
         <marker scope="Public" name="blackjack">Hand, 14+ rounds: She favorably compares the game to blackjack and says it feels a bit boring without betting</marker>
         <marker scope="Public" name="blades">"I didn't take you for the type to put sharp blades near their most delicate parts."</marker>
@@ -1614,14 +1625,13 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="bluffsWon_hi">Won X hands while bluffing=hi</marker>
         <marker scope="Public" name="bluffsWon_lo">Won X hands while bluffing=lo</marker>
         <marker scope="Public" name="bluffsWon_no">Won X hands while bluffing=no</marker>
-        <marker scope="Public" name="bobobo_HEY_PAUL" />
-        <marker scope="Public" name="bobobo_layerLimit" />
+        <marker scope="Public" name="bobobo_HEY_PAUL">I know that it's crazy, I know that it's nowhere.</marker>
+        <marker scope="Public" name="bobobo_layerLimit">Eight right? Yeah, eight.</marker>
         <marker scope="Public" name="bobobo_leto" />
         <marker scope="Public" name="bodyNvm" />
         <marker scope="Public" name="bodyUsefulLesbians" />
         <marker scope="Public" name="bossMode">Game started with a player name triggering stronger AI for Kyoko</marker>
         <marker scope="Public" name="braColor" />
-        <marker scope="Public" name="braColor==1" />
         <marker scope="Public" name="bustToBust" />
         <marker scope="Public" name="buttPoseGranted" />
         <marker scope="Public" name="buttPoseGrantedA" />
@@ -1630,7 +1640,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="buttPoseOfferA" />
         <marker scope="Public" name="buttPoseOfferA=2" />
         <marker scope="Public" name="buttPoseOfferB" />
-        <marker scope="Public" name="buttPoses" />
+        <marker scope="Public" name="buttPoses">Counts how many times she's used a rear-facing pose with no lower clothing left.</marker>
         <marker scope="Public" name="cameLikeThatQuery" />
         <marker scope="Public" name="car_cards" />
         <marker scope="Public" name="car_casette" />
@@ -1651,7 +1661,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="car_strip02" />
         <marker scope="Public" name="car_surprises" />
         <marker scope="Public" name="cardsWillDo" />
-        <marker scope="Public" name="careerMention">Kyoko has alluded to her career as a detective X times.</marker>
+        <marker scope="Public" name="careerMention">Counts how many times she's alluded to her career as a detective.</marker>
         <marker scope="Public" name="caseBriefsTrimComment" />
         <marker scope="Public" name="cd_fourthWallClassicKyoko" />
         <marker scope="Public" name="cd_maleStaminaRe" />
@@ -1664,7 +1674,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="chihiroOutsGeneric" />
         <marker scope="Public" name="chivulva" />
         <marker scope="Public" name="clue" />
-        <marker scope="Public" name="coffee">She has mentioned coffee X times. She's a fan.</marker>
+        <marker scope="Public" name="coffee">X times, she's mentioned coffee. She's a fan.</marker>
         <marker scope="Public" name="coffeeHandLine" />
         <marker scope="Public" name="collectible_underwear">kirigiri_underwear collectible is unlocked</marker>
         <marker scope="Public" name="confidentGothLoli" />
@@ -1689,7 +1699,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="dontExpletive" />
         <marker scope="Public" name="dontHesitate" />
         <marker scope="Public" name="dorothy_nami_superAwkward" />
-        <marker scope="Public" name="draws">Absolute ties</marker>
+        <marker scope="Public" name="draws">Absolute ties.</marker>
         <marker scope="Public" name="dressCode" />
         <marker scope="Public" name="dwight_blackCoffee1" />
         <marker scope="Public" name="dwight_blackCoffee2" />
@@ -1703,12 +1713,11 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="dwight_stare3_lustVariation" />
         <marker scope="Public" name="earnMyTrust" />
         <marker scope="Public" name="eatShitYuuhain" />
-        <marker scope="Private" name="ellipsisCount">Automatically counts lines that are just ellipsis, lacking any letters that a word could be made out of. Decrements by 1 each strip phase. Swapping cards lines are not counted.</marker>
-        <marker scope="Public" name="-ellipsisCount" />
+        <marker scope="Private" name="ellipsisCount">She's said X lines that are just ellipsis, lacking any letters that a word could be made out of. Decrements by 1 each strip phase. Swapping cards lines are not counted.</marker>
         <marker scope="Public" name="elphaba_notWitchcraft" />
         <marker scope="Public" name="elphaba_sorceryVsWitchcraft" />
         <marker scope="Public" name="elphaba_witchcraft" />
-        <marker scope="Public" name="embarrassedYanks" />
+        <marker scope="Public" name="embarrassedYanks">She thought you were Ameri-can, not Ameri-can't.</marker>
         <marker scope="Public" name="enxNotRunning" />
         <marker scope="Public" name="enxReaction">Stripped important, tag=ENF/ENM, lines referencing ~target~ covering up with their hands.</marker>
         <marker scope="Public" name="evidenceFloor">"I see now I should've kept my shoes on longer" and other versions of the line</marker>
@@ -1717,8 +1726,6 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="extraRound1" />
         <marker scope="Public" name="fastLearnerPrompt" />
         <marker scope="Public" name="Felix_QuestionNotMyMethods2" />
-        <marker scope="Public" name="feris_V_pq" />
-        <marker scope="Public" name="feris_V_pq=his" />
         <marker scope="Public" name="ferris_anyPronouns" />
         <marker scope="Public" name="ferris_causeArousal" />
         <marker scope="Public" name="ferris_causeArousal2" />
@@ -1738,16 +1745,12 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="ferris_tights2a" />
         <marker scope="Public" name="ferris_tights2c" />
         <marker scope="Public" name="ferris_tightsBasedArousal" />
-        <marker scope="Public" name="ferris_V_po" />
-        <marker scope="Public" name="ferris_V_po=him" />
-        <marker scope="Public" name="ferris_V_pp" />
-        <marker scope="Public" name="ferris_V_pp=his" />
-        <marker scope="Public" name="ferris_V_pq" />
-        <marker scope="Public" name="ferris_V_ps" />
-        <marker scope="Public" name="ferris_V_ps=he" />
-        <marker scope="Public" name="ferris_V_ps=she" />
-        <marker scope="Public" name="ferris_VK_p" />
-        <marker scope="Public" name="ferrisDom" />
+        <marker scope="Private" name="ferris_V_po" />
+        <marker scope="Private" name="ferris_V_pp" />
+        <marker scope="Private" name="ferris_V_pq" />
+        <marker scope="Private" name="ferris_V_ps" />
+        <marker scope="Private" name="ferris_VK_p" />
+        <marker scope="Public" name="ferrisDom">Escape-velocity horny for a certain he/her catboy.</marker>
         <marker scope="Public" name="ferrisDom_anything" />
         <marker scope="Public" name="ferrisDom_cuffs" />
         <marker scope="Public" name="ferrisDom_cushionSlip" />
@@ -1789,17 +1792,14 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="FFcostume">Used while Kyoko is wearing the Future Foundation outfit.</marker>
         <marker scope="Public" name="finishedApology" />
         <marker scope="Public" name="finishLikeThatQuery" />
-        <marker scope="Public" name="forfeitAct" />
-        <marker scope="Public" name="forfeitAct==1" />
-        <marker scope="Public" name="forfeitAct==2" />
-        <marker scope="Public" name="forfeitAct==3" />
+        <marker scope="Public" name="forfeitAct">Throughout her forfeit, things get progressively more redacted to conform with local and international censorship laws. Goes from 1 to 3, and that's before her heavy phase.</marker>
         <marker scope="Public" name="forfeitFlesh" />
         <marker scope="Public" name="forfeitMaleAttention" />
         <marker scope="Public" name="forfeitPile" />
         <marker scope="Public" name="forfeitSensation" />
         <marker scope="Public" name="gamblingDislike" />
         <marker scope="Public" name="gawking" />
-        <marker scope="Public" name="giddyCount">The giddy pose has appeared X times this game. Counted with hidden lines.</marker>
+        <marker scope="Public" name="giddyCount">X times, the giddy pose has appeared this game. Counted with hidden lines.</marker>
         <marker scope="Public" name="giygas_doThyWorst" />
         <marker scope="Public" name="giygas_flashback" />
         <marker scope="Public" name="giygas_newOne" />
@@ -1838,14 +1838,16 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="handBluffP1" />
         <marker scope="Public" name="handBluffP2" />
         <marker scope="Public" name="handBluffP3" />
-        <marker scope="Public" name="hardEvidence" />
+        <marker scope="Public" name="hardEvidence">It's not just hard, it's conclusive too!</marker>
         <marker scope="Public" name="hattersGonnaHat" />
         <marker scope="Public" name="hatterSuggestion" />
         <marker scope="Public" name="hauntedVoyeurs" />
         <marker scope="Public" name="haveToUntie">"Just a second. I have to untie this."</marker>
-        <marker scope="Public" name="hayato" />
+        <marker scope="Public" name="hayato">She stares into your soul and utters not one word but your name.</marker>
         <marker scope="Public" name="heavyNoise" />
-        <marker scope="Public" name="hopesPeak">She has mentioned Hope's Peak Academy, her High School, X times.</marker>
+        <marker scope="Public" name="hilbert_scars" />
+        <marker scope="Public" name="hilbert_truth" />
+        <marker scope="Public" name="hopesPeak">X times, she has mentioned Hope's Peak Academy, her High School.</marker>
         <marker scope="Public" name="howLossFeels" />
         <marker scope="Public" name="hugePenis">She has seen and reacted to a penis with the huge_penis tag.</marker>
         <marker scope="Public" name="humanBra" />
@@ -1893,12 +1895,12 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="lossToVillain">"..." in response to a villain being ahead of her with two pair or better.</marker>
         <marker scope="Public" name="lostToHuman" />
         <marker scope="Public" name="mahiru_cumeraResponse" />
-        <marker scope="Public" name="mahiru_fingerCount">Mahiru has used her "excited" pose X times this game</marker>
+        <marker scope="Private" name="mahiru_fingerCount">X times, Mahiru has used her "excited" pose.</marker>
         <marker scope="Public" name="makeOfThisFeeling" />
         <marker scope="Public" name="maleCaseBriefSurprise" />
         <marker scope="Public" name="maleGothLoli" />
         <marker scope="Public" name="maleJewelry" />
-        <marker scope="Public" name="mardiGras">Kyoko has said X lines related to asking an American female character about toplessness at Mardi Gras. These lines play on Tuesdays February 3-March 9.</marker>
+        <marker scope="Public" name="mardiGras">X times, Kyoko has said a related to asking an American female character about toplessness at Mardi Gras. These lines play on Tuesdays February 3-March 9.</marker>
         <marker scope="Public" name="maria_buttSpin" />
         <marker scope="Public" name="maria_buttSpinBefore" />
         <marker scope="Public" name="maria_buttSpinL" />
@@ -1916,7 +1918,6 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="mikan_listen" />
         <marker scope="Public" name="mikan_quietRe" />
         <marker scope="Public" name="miki_akane" />
-        <marker scope="Public" name="miko_" />
         <marker scope="Public" name="miko_capybara" />
         <marker scope="Public" name="miko_cuffs" />
         <marker scope="Public" name="miko_cuffsA" />
@@ -1925,7 +1926,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="mitama_goodGuessButActuallyNo" />
         <marker scope="Public" name="mitama_immaDetective" />
         <marker scope="Public" name="movedHair">Activates if she has moved her hair out of the way of her chest at stage 8 (naked). Should activate automatically if she uses any pose other than the strips or aside2 during stage 8.</marker>
-        <marker scope="Public" name="multiBelt" />
+        <marker scope="Public" name="multiBelt">Heaven or Hell! Duel One! Let's Rock!</marker>
         <marker scope="Public" name="nagatoro_fun" />
         <marker scope="Public" name="nagatoro_funBest" />
         <marker scope="Public" name="nagatoro_funWork" />
@@ -1939,11 +1940,8 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="namiHito_cashPoker" />
         <marker scope="Public" name="namiHito_eh" />
         <marker scope="Public" name="namiHito_leave" />
-        <marker scope="Public" name="nanamuraSantaHat" />
         <marker scope="Public" name="neededThis" />
         <marker scope="Public" name="nervousAreYou" />
-        <marker scope="Public" name="nickname" />
-        <marker scope="Public" name="nikaido_" />
         <marker scope="Public" name="nikaidou_headOff" />
         <marker scope="Public" name="nippleStim" />
         <marker scope="Public" name="noCeleste">"I'm glad Celeste isn't here tonight."</marker>
@@ -1955,18 +1953,21 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="notLast">Kyoko has not become the first player to forfeit this game.</marker>
         <marker scope="Public" name="notMindCamera" />
         <marker scope="Public" name="notNervous" />
+        <marker scope="Public" name="okino_loveAdvice" />
+        <marker scope="Public" name="okino_perception" />
         <marker scope="Public" name="okino_revealChihiro" />
         <marker scope="Public" name="okino_revealForfeit" />
         <marker scope="Public" name="okino_revealNormal" />
         <marker scope="Public" name="okino_revealRe" />
         <marker scope="Public" name="okino_toshinou_tomatoNickname" />
-        <marker scope="Public" name="pantsPreference" />
+        <marker scope="Public" name="pantsPreference">In the "Skirts 4 Lyfe" vs. "Give Me Pants Or Else" Splatfest, Kyoko sides with Marie.</marker>
         <marker scope="Public" name="parentTrouble">Kyoko has reacted with X divided by 2 lines to Mia Fey asking about if anyone else had parents leave at a young age.</marker>
         <marker scope="Public" name="penisTiming" />
         <marker scope="Public" name="pirateBooty" />
         <marker scope="Public" name="pocketItemsPrompt" />
         <marker scope="Public" name="pokeTrainers" />
         <marker scope="Public" name="precumQuestion" />
+        <marker scope="Public" name="punkTie" />
         <marker scope="Public" name="quadRoyalFlush" />
         <marker scope="Public" name="quadRoyalLoss" />
         <marker scope="Public" name="quadRoyalWin" />
@@ -1975,10 +1976,10 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="queen_yareyare" />
         <marker scope="Public" name="queenie_magician" />
         <marker scope="Public" name="queenie_villains" />
-        <marker scope="Public" name="quieresVungen" />
+        <marker scope="Public" name="quieresVungen">May I introduce you in some 'jayjay juice? Some pussy punch? A snatch Slurpee? Some Cunt-a-Cola?</marker>
         <marker scope="Public" name="quieresVungenNonsmall" />
         <marker scope="Public" name="quieresVungenSmall" />
-        <marker scope="Public" name="quips">Kyoko has cracked X jokes during the game.</marker>
+        <marker scope="Public" name="quips">X times, she's cracked a joke this game.</marker>
         <marker scope="Public" name="quiteTheTime" />
         <marker scope="Public" name="rappSnitchKnishes">Kyoko has advised an opponent not to tell all their business, sit in the court, and be their own star witness.</marker>
         <marker scope="Public" name="raynor_bar" />
@@ -1994,8 +1995,8 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="revy_discipline" />
         <marker scope="Public" name="revy_disciplineA" />
         <marker scope="Public" name="revy_disciplineB" />
-        <marker scope="Public" name="revy_killingRe" />
-        <marker scope="Public" name="revy_wtfbbqlol" />
+        <marker scope="Public" name="revy_killingRe">She makes a killing off of people who make a killing.</marker>
+        <marker scope="Public" name="revy_wtfbbqlol">Any resemblance between Kyoko's gloves and the Hamburger Helper mascot is entirely coincidential.</marker>
         <marker scope="Public" name="ringo_bornDetective" />
         <marker scope="Public" name="ringo_deduction1" />
         <marker scope="Public" name="ringo_deduction1Normal" />
@@ -2010,7 +2011,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="ringo_ultimateDetectiveRe" />
         <marker scope="Public" name="ringo_ultimatesRe" />
         <marker scope="Public" name="ringo_ultimateTalentRe" />
-        <marker scope="Public" name="roll_spa" />
+        <marker scope="Public" name="roll_spa">As in Small Penis Appreciation, not as in mud masks and tiny towels for your toes.</marker>
         <marker scope="Public" name="rosa_hairstyles" />
         <marker scope="Public" name="rouge_treasureScope" />
         <marker scope="Public" name="rouge_treasureScope_A" />
@@ -2019,9 +2020,8 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="safeForNow" />
         <marker scope="Public" name="saidNameFinish">Kyoko said the human player's name while finishing.</marker>
         <marker scope="Public" name="samus_armor" />
-        <marker scope="Public" name="santaHatStory" />
-        <marker scope="Public" name="sayMyName" />
-        <marker scope="Public" name="sayMyName*" />
+        <marker scope="Public" name="santaHatStory">She regales the story of how a nice man invited her to Christmas dinner and leaves out the detail that they had Roast Maid for the main course.</marker>
+        <marker scope="Public" name="sayMyName">Per-target marker; Kyoko says a certain character's name while finishing.</marker>
         <marker scope="Public" name="scm_batDeduction" />
         <marker scope="Public" name="scm_batDeduction_" />
         <marker scope="Public" name="scm_batDeduction_friends" />
@@ -2038,7 +2038,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="SHE-SAYS-FUCK" />
         <marker scope="Public" name="shyExtraFirst" />
         <marker scope="Public" name="skimpyPacing" />
-        <marker scope="Public" name="smallPenisSpeech">Kyoko has said X lines in a multi-screen speech on her preference to small penises, which she begins once 3 or more small penises are exposed with no women other than herself and/or the player present.</marker>
+        <marker scope="Public" name="smallPenisSpeech">X times, she's said a line in a multi-screen speech on her preference to small penises, which she begins once 3 or more small penises are exposed with no women other than herself and/or the player present.</marker>
         <marker scope="Public" name="sockPromise" />
         <marker scope="Public" name="sofia_opening" />
         <marker scope="Public" name="spankDare" />
@@ -2046,7 +2046,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="splashZone">"Stand back unless you feel like being in the splash zone.</marker>
         <marker scope="Public" name="stage5Reasons" />
         <marker scope="Public" name="stage8Arousal" />
-        <marker scope="Public" name="stood" />
+        <marker scope="Private" name="stood">Get up, stand up, stand up for your rights-- to watch the rest of the game play out after orgasming in front of everyone.</marker>
         <marker scope="Public" name="strangeNudity">"It feels strange, doesn't it? Kind of like a part of your body is missing..."</marker>
         <marker scope="Public" name="strangeSituationQuery" />
         <marker scope="Public" name="strip0" />
@@ -2087,7 +2087,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="suzuya_zodiac5" />
         <marker scope="Public" name="sweetheart_selfPillow" />
         <marker scope="Public" name="swissFrancs">Despite being Japanese, she says her jacket cost 90 Swiss francs.</marker>
-        <marker scope="Public" name="takeOffMyUndies" />
+        <marker scope="Public" name="takeOffMyUndies">And don't let her catch you wearing them again!</marker>
         <marker scope="Public" name="tea_dontCare" />
         <marker scope="Public" name="tea_dontCare_A" />
         <marker scope="Public" name="tea_dontCare_B" />
@@ -2096,22 +2096,21 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="tea_sideBet" />
         <marker scope="Public" name="tea_sideBet2" />
         <marker scope="Public" name="tea_whyQuit" />
-        <marker scope="Public" name="theiaCH_" />
+        <marker scope="Public" name="theiaCH_">Moon and her Mom on the Clubs or Hearts routes.</marker>
         <marker scope="Public" name="theiaCH_relationship" />
         <marker scope="Public" name="theirTurn" />
-        <marker scope="Public" name="thenThereWereNone" />
+        <marker scope="Public" name="thenThereWereNone">Sayonara, cracka!</marker>
         <marker scope="Public" name="theyLeftTheGameHeadass" />
         <marker scope="Public" name="theyStripHere" />
         <marker scope="Public" name="thighRub">"Word of advice...try rubbing your thighs together."</marker>
         <marker scope="Public" name="thinkIllBeJoining" />
         <marker scope="Public" name="tieCompletes">"A classmate in high school once told me this tie completes my outfit."</marker>
-        <marker scope="Public" name="timeline" />
-        <marker scope="Public" name="timeline=thh" />
-        <marker scope="Public" name="timeline2" />
+        <marker scope="Public" name="timeline">A value of either thh or school. Fewer people she knows are dead in the latter. "if" is also an option if the sixteenth student, hidden somewhere in this school, the one they call the Ultimate Despair (watch out for her) is present as an opponent.</marker>
+        <marker scope="Public" name="timeline2">What has become of Yui Samidare?</marker>
         <marker scope="Public" name="TO_mg_quieres" />
         <marker scope="Public" name="TO_toshinou_deathIsMuted" />
         <marker scope="Public" name="TO_toshinou_noDyingZone" />
-        <marker scope="Public" name="tooManyKyokos" />
+        <marker scope="Public" name="tooManyKyokos">No such thing.</marker>
         <marker scope="Public" name="toru_chest" />
         <marker scope="Public" name="toru_chestB" />
         <marker scope="Public" name="toru_secretShlick" />
@@ -2135,34 +2134,37 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="toshinou_tomatoUndies" />
         <marker scope="Public" name="toshinouBoobies">Response to Kyouko Toshinou simply asking, "Boobies?" =2 when fully responded, =1 when preparing to respond next case.</marker>
         <marker scope="Public" name="travelPerk" />
-        <marker scope="Public" name="underdog">She has lost the first 8 hands in a row, but goes up to Best AI instantly.</marker>
+        <marker scope="Public" name="underdog">She's lost the first 8 hands in a row, but goes up to Best AI instantly.</marker>
         <marker scope="Public" name="underPressure" />
         <marker scope="Public" name="upskirtSituation" />
-        <marker scope="Public" name="V_clothing" />
-        <marker scope="Public" name="V_clothing.uncountable" />
-        <marker scope="Public" name="v_linekey" />
-        <marker scope="Public" name="V_lineKey" />
-        <marker scope="Public" name="V_revealed" />
-        <marker scope="Public" name="V_revealed.uncountable" />
-        <marker scope="Public" name="V_seed" />
+        <marker scope="Private" name="V_clothing">Based on custom vocabulary; for use in-line in place of ~clothing~.</marker>
+        <marker scope="Private" name="V_clothing.uncountable" />
+        <marker scope="Public" name="V_customFirst">Some goofy edge cases change this; her first name, for use in-line if you’re too weird for ~target~, or if you want to change a nickname for her mid-game.</marker>
+        <marker scope="Public" name="V_customLast">Some goofy edge cases change this; her last name, for use in-line if you’re too weird for ~target~, or if you want to change a nickname for her mid-game.</marker>
+        <marker scope="Private" name="V_lineKey" />
+        <marker scope="Private" name="V_revealed">Based on custom vocabulary; for use in-line in place of ~revealed~.</marker>
+        <marker scope="Private" name="V_revealed.uncountable" />
+        <marker scope="Private" name="V_seed">Mysterious mayhem makes you merry! Spin the wheel of fun!</marker>
         <marker scope="Public" name="wellYouLost" />
         <marker scope="Public" name="whatKindaStrip" />
-        <marker scope="Public" name="whydYouNameYourselfAnthrax" />
+        <marker scope="Public" name="wheresWallysWeapons">I spy with my little eye, something that could make you die!</marker>
+        <marker scope="Public" name="wheresWallysWeapons=2" />
+        <marker scope="Public" name="whydYouNameYourselfAnthrax">I wouldn't be caught dead with a name like that.</marker>
         <marker scope="Public" name="whySocks" />
         <marker scope="Public" name="willBeStaring" />
-        <marker scope="Public" name="won7High">She remarked X times on having High Card 7 as her hand and winning anyway.</marker>
+        <marker scope="Public" name="won7High">X times, she's remarked on having High Card 7 as her hand and winning anyway.</marker>
         <marker scope="Public" name="yae_compromised" />
-        <marker scope="Public" name="yae_fuqYouSay" />
-        <marker scope="Public" name="yagami_pseudonym" />
+        <marker scope="Public" name="yae_fuqYouSay">Choose yaer next words very carefully.</marker>
+        <marker scope="Public" name="yagami_pseudonym">Changes ~kyoko_kirigiri.marker.V_customFirst~ to Yoko and ~kyoko_kirigiri.marker.V_customLast~ to Yadorigi with it. Detective Yadorigi is ready to hand Mr. Yagami an L.</marker>
         <marker scope="Public" name="yuno_erect" />
         <marker scope="Public" name="yuno_erectForfeit" />
         <marker scope="Public" name="yuno_erectNormal" />
-        <marker scope="Public" name="yuno_erectSamesies" />
+        <marker scope="Public" name="yuno_erectSamesies">OMG, we have, like, so much in common!</marker>
         <marker scope="Public" name="yuno_nyc" />
         <marker scope="Public" name="yuno_nyc_hontou" />
         <marker scope="Public" name="yuno_nyc_truly" />
         <marker scope="Public" name="zlsHeadDrop1" />
-        <marker scope="Public" name="zombieHeadDrops" />
+        <marker scope="Public" name="zombieHeadDrops">X times, a targeted line for a zombie character's head falling off has played. We got at least three of those in this game!</marker>
     </markers>
     <recipes>
         <recipe key="43e68bf4-4dc8-4938-a5d7-8f1e17e1202e">
