@@ -205,6 +205,19 @@
         <note id="528">For Mama_Zuuja's sponsorship!</note>
         <note id="529">Line 3 was for Mama_Zuuja's sponsorship!</note>
         <note id="530">Lines 3 and 4 were for Mama_Zuuja's sponsorship!</note>
+        <note id="531">Line 3 was written for Mama_Zuuja's sponsorship!</note>
+        <note id="532">Lines 2 and 3 were written for Mama_Zuuja's sponsorship!</note>
+        <note id="533">Lines 2 and 3 were written for Mama_Zuuja's sponsorship!</note>
+        <note id="534">Line 4 was written for Mama_Zuuja's sponsorship!</note>
+        <note id="535">For Mama_Zuuja's sponsorship!</note>
+        <note id="537">For Mama_Zuuja's sponsorship!</note>
+        <note id="546">For Mama_Zuuja's sponsorship!</note>
+        <note id="549">For Mama_Zuuja's sponsorship!</note>
+        <note id="550">For Mama_Zuuja's sponsorship!</note>
+        <note id="559">The last line was for Mama_Zuuja's sponsorship!</note>
+        <note id="560">The last line was for Mama_Zuuja's sponsorship!</note>
+        <note id="561">For Mama_Zuuja's sponsorship!</note>
+        <note id="562">For Mama_Zuuja's sponsorship!</note>
     </notes>
     <labels>
         <label id="1" label="Toph lets her hair down" folder="" sort="0" />
@@ -227,7 +240,7 @@
         <label id="19" label="Library" folder="Backgrounds" sort="0" />
         <label id="22" label="Tiki Bar" folder="Backgrounds" sort="0" />
         <label id="21" label="" color="2" folder="" sort="0" />
-        <label id="23" label="" color="5" folder="" sort="0" />
+        <label id="23" label="Flies" color="5" folder="Filters" sort="0" />
         <label id="24" label="Cold" folder="Backgrounds" sort="0" />
         <label id="25" label="Hot" folder="Backgrounds" sort="0" />
         <label id="26" label="Braille" color="3" folder="Targets" sort="0" />
@@ -682,8 +695,27 @@
         <label id="525" label="Exposing Oneself" color="1" folder="Targets" sort="0" />
         <label id="526" label="Final Test" color="1" folder="Targets" sort="0" />
         <label id="527" label="Violence in Lecherous Situations" color="1" folder="Targets" sort="0" />
+        <label id="536" label="No Men" folder="Filters" sort="0" />
+        <label id="538" label="One Guy" folder="Filters" sort="0" />
+        <label id="539" label="Confidence" color="6" folder="Targets" sort="0" />
+        <label id="541" label="Forgetting about Toph's Blindness" color="6" folder="Targets" sort="0" />
+        <label id="542" label="Getting Used to Blindness" color="6" folder="Targets" sort="0" />
+        <label id="543" label="Resolve" color="7" folder="Targets" sort="0" />
+        <label id="540" label="Similarities" color="7" folder="Targets" sort="0" />
+        <label id="544" label="Learning" color="7" folder="Targets" sort="0" />
+        <label id="545" label="4 War Stories" color="6" folder="Targets" sort="0" />
+        <label id="547" label="4 Dragons" color="6" folder="Targets" sort="0" />
+        <label id="548" label="5 Slaying the Dragon" color="6" folder="Targets" sort="0" />
+        <label id="551" label="5 Break" color="7" folder="Targets" sort="0" />
+        <label id="552" label="5 Confidence with Intimacy" color="7" folder="Targets" sort="0" />
+        <label id="553" label="6 A Very Big Step for Arueshalae" color="7" folder="Targets" sort="0" />
+        <label id="554" label="5 Slaying Dragons" color="7" folder="Targets" sort="0" />
+        <label id="555" label="5 Were Dragons Dangerous" color="7" folder="Targets" sort="0" />
+        <label id="556" label="Seeing How Cute Cag Is" color="5" folder="Targets" sort="0" />
+        <label id="557" label="0 Metal" color="5" folder="Targets" sort="0" />
+        <label id="558" label="1 Secrets" color="3" folder="Targets" sort="0" />
     </labels>
-    <nextId>530</nextId>
+    <nextId>562</nextId>
     <markers>
         <marker scope="Public" name="Aaravi_Backstory_1">Aaravi Targets: Aaravi Strip</marker>
         <marker scope="Public" name="Aella_Adventures_Resp">Aella Targets: Any Hand</marker>
@@ -705,6 +737,13 @@
         <marker scope="Public" name="Arueshalae_Blind_1">Arueshalae Targets: Toph Strip 0-1</marker>
         <marker scope="Public" name="Arueshalae_Blind_2">Arueshalae Targets: Toph Stripping 0-1</marker>
         <marker scope="Public" name="Arueshalae_Blind_3">Arueshalae Targets: Toph Stripped 0-1</marker>
+        <marker scope="Public" name="Arueshalae_Break_1">Arueshalae Targets: Arueshalae Strip 5-6</marker>
+        <marker scope="Public" name="Arueshalae_Break_2">Arueshalae Targets: Arueshalae Stripping 5-6</marker>
+        <marker scope="Public" name="Arueshalae_Break_3">Arueshalae Targets: Arueshalae Stripped 5-6</marker>
+        <marker scope="Public" name="Arueshalae_Confidence_1">Arueshalae Targets: Toph Strip 4-5</marker>
+        <marker scope="Public" name="Arueshalae_Confidence_2">Arueshalae Targets: Toph Stripping 4-5</marker>
+        <marker scope="Public" name="Arueshalae_Confidence_3">Arueshalae Targets: Toph Stripped 4-5</marker>
+        <marker scope="Public" name="Arueshalae_Dragon_Answer">Arueshalae Targets: Any Hand</marker>
         <marker scope="Public" name="Arueshalae_Exposing_1">Arueshalae Targets: Toph Strip 3-4</marker>
         <marker scope="Public" name="Arueshalae_Exposing_2">Arueshalae Targets: Toph Stripping 3-4</marker>
         <marker scope="Public" name="Arueshalae_Exposing_3">Arueshalae Targets: Toph Stripped 3-4</marker>
@@ -715,12 +754,19 @@
         <marker scope="Public" name="Arueshalae_Reason_1">Arueshalae Targets: Toph Strip 2-3</marker>
         <marker scope="Public" name="Arueshalae_Reason_2">Arueshalae Targets: Toph Stripping 2-3</marker>
         <marker scope="Public" name="Arueshalae_Reason_3">Arueshalae Targets: Toph Stripped 2-3</marker>
+        <marker scope="Public" name="Arueshalae_Resolve_1">Arueshalae Targets: Toph Strip 5-6</marker>
+        <marker scope="Public" name="Arueshalae_Resolve_2">Arueshalae Targets: Toph Stripping 5-6</marker>
+        <marker scope="Public" name="Arueshalae_Resolve_3">Arueshalae Targets: Toph Stripped 5-6</marker>
         <marker scope="Public" name="Arueshalae_Succ_1">Arueshalae Targets: Arueshalae Strip 1-2</marker>
         <marker scope="Public" name="Arueshalae_Succ_2">Arueshalae Targets: Arueshalae Stripping 1-2</marker>
         <marker scope="Public" name="Arueshalae_Succ_3">Arueshalae Targets: Arueshalae Stripped 1-2</marker>
         <marker scope="Public" name="Arueshalae_Vibrations_1">Arueshalae Targets: Toph Strip 1-2</marker>
         <marker scope="Public" name="Arueshalae_Vibrations_2">Arueshalae Targets: Toph Stripping 1-2</marker>
         <marker scope="Public" name="Arueshalae_Vibrations_3">Arueshalae Targets: Toph Stripped 1-2</marker>
+        <marker scope="Public" name="Arueshalae_WarStories_1">Arueshalae Targets: Arueshalae Strip 4-5</marker>
+        <marker scope="Public" name="Arueshalae_WarStories_2">Arueshalae Targets: Arueshalae Stripping 4-5</marker>
+        <marker scope="Public" name="Arueshalae_WarStories_3">Arueshalae Targets: Arueshalae Stripped 4-5</marker>
+        <marker scope="Public" name="Arueshalae_WarStories_4">Arueshalae Targets: Any Hand</marker>
         <marker scope="Public" name="Arueshalae_Wings_1">Arueshalae Targets: Arueshalae Strip 0-1</marker>
         <marker scope="Public" name="Arueshalae_Wings_2">Arueshalae Targets: Arueshalae Stripping 0-1</marker>
         <marker scope="Public" name="Arueshalae_Wings_3">Arueshalae Targets: Arueshalae Stripped 0-1</marker>
@@ -734,7 +780,10 @@
         <marker scope="Public" name="Blake_SenseEars_1">Blake Belladonna Targets: Blake Strip 0-1</marker>
         <marker scope="Public" name="BlindMinor1" />
         <marker scope="Public" name="Bracelet_Demo" />
+        <marker scope="Public" name="Cagliostro_Alchemist_1">Cagliostro Targets: Cagliostro Strip 0-1</marker>
         <marker scope="Public" name="Cagliostro_Blind_1">Cagliostro Targets: Toph Strip 0-1</marker>
+        <marker scope="Public" name="Cagliostro_Blind_2">Cagliostro Targets: Toph Stripping 0-1</marker>
+        <marker scope="Public" name="Cagliostro_Secrets_1">Cagliostro Targets: Caglistro Strip 0-1</marker>
         <marker scope="Public" name="Cagliostro_Seeing_1">Cagliostro Targets: Toph Strip 3-4</marker>
         <marker scope="Public" name="Caulifla_SeismicSense_1">Caulifla Targets: Toph Stripping 0-1</marker>
         <marker scope="Public" name="Critical_Blind_1">Critical Darling Targets: Toph Strip 0-1</marker>
