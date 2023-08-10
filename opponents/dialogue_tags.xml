@@ -537,6 +537,51 @@
     <defaultImage>shocked</defaultImage>
     <defaultText>What the character says after the female character's crotch has become visible.</defaultText>
   </trigger>
+  <trigger tag="futanari_crotch_will_be_visible" start="0" end="10" label="Will Be Visible (Crotch, Futanari)" relatedGroup="8" hasTarget="true" gender="female" description="A futanari opponent is about to reveal her penis" group="7" order="2" color="4" safeLabel="Before Bottom (Futanari)">
+    <vars>
+      <string>name</string>
+      <string>clothing</string>
+      <string>target</string>
+    </vars>
+    <defaultImage>horny</defaultImage>
+    <defaultText>What the character says when a futanari character is about to remove the last piece of clothing covering their crotch. This is a clothing element on the "lower" location, with the "important" type.</defaultText>
+  </trigger>
+  <trigger tag="futanari_small_crotch_is_visible" start="0" end="10" label="Visible (Crotch, Futanari, Small)" relatedGroup="8" hasTarget="true" gender="female" size="small" description="A futanari opponent has revealed a small penis" group="7" order="3" color="4" safeLabel="Bottom (Futanari, Small)">
+    <vars>
+      <string>name</string>
+      <string>clothing</string>
+      <string>target</string>
+    </vars>
+    <defaultImage>calm</defaultImage>
+    <defaultText>What the character says after the futanari character's crotch is visible, and has a size value of "small".</defaultText>
+  </trigger>
+  <trigger tag="futanari_medium_crotch_is_visible" start="0" end="10" label="Visible (Crotch, Futanari, Medium)" relatedGroup="8" hasTarget="true" gender="female" size="medium" description="A futanari opponent has revealed a medium penis" group="7" order="4" color="4" safeLabel="Bottom (Futanari, Medium)">
+    <vars>
+      <string>name</string>
+      <string>clothing</string>
+      <string>target</string>
+    </vars>
+    <defaultImage>awkward</defaultImage>
+    <defaultText>What the character says after the futanari character's crotch is visible, and has a size value of "medium".</defaultText>
+  </trigger>
+  <trigger tag="futanari_large_crotch_is_visible" start="0" end="10" label="Visible (Crotch, Futanari, Large)" relatedGroup="8" hasTarget="true" gender="female" size="large" description="A futanari opponent has revealed a large penis" group="7" order="5" color="4" safeLabel="Bottom (Futanari, Large)">
+    <vars>
+      <string>name</string>
+      <string>clothing</string>
+      <string>target</string>
+    </vars>
+    <defaultImage>shocked</defaultImage>
+    <defaultText>What the character says after the futanari character's crotch is visible, and has a size value of "large".</defaultText>
+  </trigger>
+  <trigger tag="futanari_crotch_is_visible" optional="true" start="0" end="10" label="Visible (Crotch, Futanari)" relatedGroup="8" hasTarget="true" gender="female" description="A futanari opponent has revealed a penis of any size" group="7" order="6" color="4" safeLabel="Bottom (Futanari)">
+    <vars>
+      <string>name</string>
+      <string>clothing</string>
+      <string>target</string>
+    </vars>
+    <defaultImage>horny</defaultImage>
+    <defaultText>What the character says after the futanari character's crotch is visible.</defaultText>
+  </trigger>
   <trigger tag="opponent_start_masturbating" start="0" end="10" optional="true" label="Start Masturbating (Opponent)" hasTarget="true" description="An opponent of either gender has started masturbating" group="8" order="7" color="4" safeLabel="Start Forfeit (Opponent)">
     <vars>
       <string>name</string>
@@ -665,6 +710,51 @@
     </vars>
     <defaultImage>shocked</defaultImage>
     <defaultText>What the character says when a female character "finishes" masturbating.</defaultText>
+    <generic>opponent_finished_masturbating</generic>
+  </trigger>
+  <trigger tag="futanari_must_masturbate" start="0" end="10" label="Must Masturbate (Futanari)" hasTarget="true" gender="female" description="A futanari opponent must start masturbating" group="9" order="0" color="4" safeLabel="Must Forfeit (Futanari)">
+    <vars>
+      <string>name</string>
+      <string>target</string>
+    </vars>
+    <defaultImage>interested</defaultImage>
+    <defaultText>What the character says when a futanari character has lost a hand while nude, and must masturbate.</defaultText>
+    <generic>opponent_lost</generic>
+  </trigger>
+  <trigger tag="futanari_start_masturbating" start="0" end="10" label="Start Masturbating (Futanari)" hasTarget="true" gender="female" description="A futanari opponent has started masturbating" group="9" order="1" color="4" safeLabel="Start Forfeit (Futanari)">
+    <vars>
+      <string>name</string>
+      <string>target</string>
+    </vars>
+    <defaultImage>horny</defaultImage>
+    <defaultText>What the character says when a futanari character has started masturbating.</defaultText>
+    <generic>opponent_start_masturbating</generic>
+  </trigger>
+  <trigger tag="futanari_masturbating" start="0" end="10" label="Masturbating (Futanari)" hasTarget="true" gender="female" description="A futanari opponent is masturbating" group="9" order="2" color="4" safeLabel="In Forfeit (Futanari)">
+    <vars>
+      <string>name</string>
+      <string>target</string>
+    </vars>
+    <defaultImage>horny</defaultImage>
+    <defaultText>What the character says while a futanari character is masturbating.</defaultText>
+    <generic>opponent_masturbating</generic>
+  </trigger>
+  <trigger tag="futanari_heavy_masturbating" start="0" end="10" label="Masturbating (Heavy, Futanari)" optional="true" hasTarget="true" gender="female" description="A futanari opponent is masturbating heavily" group="9" order="3" color="4" safeLabel="In Forfeit (Futanari, Near End)">
+    <vars>
+      <string>name</string>
+      <string>target</string>
+    </vars>
+    <defaultImage>horny</defaultImage>
+    <defaultText>What the character says while a futanari character is close to cumming.</defaultText>
+    <generic>opponent_heavy_masturbating</generic>
+  </trigger>
+  <trigger tag="futanari_finished_masturbating" start="0" end="10" label="Finished (Futanari)" hasTarget="true" gender="female" description="A futanari opponent has just finished masturbating" group="9" order="4" color="4">
+    <vars>
+      <string>name</string>
+      <string>target</string>
+    </vars>
+    <defaultImage>shocked</defaultImage>
+    <defaultText>What the character says when a futanari character "finishes" masturbating.</defaultText>
     <generic>opponent_finished_masturbating</generic>
   </trigger>
   <trigger tag="game_over_victory" start="0" end="8" label="Game Over (Victory)" oncePerStage="true" description="The game is over and this character won" group="11" order="0">   <vars />
