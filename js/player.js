@@ -983,6 +983,48 @@ Opponent.prototype.setIntelligence = function (intelligence) {
     }
 }
 
+/* Just in case a character tries to do something like clear all of their size metadata...
+ * 
+ * This also ensures that legacy characters using gender-changing ops under the assumption of a single size field
+ * get the semantics they expect, by switching size values around as necessary.
+ * 
+ * Finally, this does a tag update to ensure those are consistent (e.g. in case a character becomes a futa mid-game).
+ */
+Opponent.prototype.validateSizeMetadata = function () {
+    if (this.gender === eGender.MALE && !this.penis) {
+        if (this.breasts) {
+            this.penis = this.breasts;
+            this.breasts = null;
+        } else {
+            this.penis = eSize.MEDIUM;
+        }
+    } else if (this.gender === eGender.FEMALE && !this.breasts) {
+        if (this.penis) {
+            this.breasts = this.penis;
+            this.penis = null;
+        } else {
+            this.breasts = eSize.MEDIUM;
+        }
+    }
+
+    this.updateTags();
+}
+
+Opponent.prototype.setPenisSize = function (value) {
+    this.penis = value;
+    this.validateSizeMetadata();
+} 
+
+Opponent.prototype.setBreastSize = function (value) {
+    this.breasts = value;
+    this.validateSizeMetadata();
+}
+
+Opponent.prototype.setGender = function (value) {
+    this.gender = value;
+    this.validateSizeMetadata();
+}
+
 Opponent.prototype.updateFolder = function () {
     if (this.folders) this.folder = this.getByStage(this.folders);
     if (!this.folder) {

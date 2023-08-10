@@ -505,19 +505,20 @@ PlayerAttributeOperation.prototype.apply = function (self, opp) {
         self.setLabel(value);
         break;
     case "penis":
-        self.penis = value;
+        self.setPenisSize(value);
         break;
     case "breasts":
-        self.breasts = value;
+        self.setBreastSize(value);
+        break;
     case "size":
         if (self.gender === eGender.MALE) {
-            self.penis = value;
+            self.setPenisSize(value);
         } else {
-            self.breasts = value;
+            self.setBreastSize(value);
         }
         break;
     case "gender":
-        self.gender = value;
+        self.setGender(value);
         break;
     default:
         console.error("Unknown player attribute: ", this.attr);
@@ -533,7 +534,19 @@ PlayerAttributeOperation.prototype.apply = function (self, opp) {
  * @returns {number}
  */
 PlayerAttributeOperation.prototype.sortKey = function () {
-    return (this.attr == "label") ? 0 : 1;
+    /* Run gender-changing ops before size-changing ones
+     * so that the size metadata consistency logic for the
+     * former doesn't interfere with the latter.
+     */
+    switch (this.attr) {
+    case "label": return 0;
+    case "gender": return 1;
+    case "penis":
+    case "breasts":
+    case "size":
+    default:
+        return 2;
+    }
 }
 
 /**
