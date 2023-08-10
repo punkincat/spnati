@@ -25,6 +25,47 @@ const HEAVY_LATEST_TIME = 3;
  *****                      Forfeit Functions                     *****
  **********************************************************************/
 
+/** 
+ * Resolves the specific dialogue trigger to use for forfeit situations based on
+ * this character's gender and futanari status.
+ * 
+ * @param {"must_masturbate" | "start_masturbating" | "masturbating" | "heavy_masturbating" | "finished_masturbating"} triggerType
+ * @returns {string}
+ */
+Player.prototype.getForfeitTrigger = function (triggerType) {
+    if (this.gender === eGender.MALE) {
+        switch (triggerType) {
+            case "must_masturbate": return MALE_MUST_MASTURBATE;
+            case "start_masturbating": return MALE_START_MASTURBATING;
+            case "masturbating": return MALE_MASTURBATING;
+            case "heavy_masturbating": return MALE_HEAVY_MASTURBATING;
+            case "finished_masturbating": return MALE_FINISHED_MASTURBATING;
+            default: return null;
+        }
+    } else if (this.gender === "female") {
+        if (this.penis) {
+            switch (triggerType) {
+                case "must_masturbate": return FEMALE_MUST_MASTURBATE;
+                case "start_masturbating": return FEMALE_START_MASTURBATING;
+                case "masturbating": return FEMALE_MASTURBATING;
+                case "heavy_masturbating": return FEMALE_HEAVY_MASTURBATING;
+                case "finished_masturbating": return FEMALE_FINISHED_MASTURBATING;
+                default: return null;
+            }
+        } else {
+            switch (triggerType) {
+                case "must_masturbate": return FUTA_MUST_MASTURBATE;
+                case "start_masturbating": return FUTA_START_MASTURBATING;
+                case "masturbating": return FUTA_MASTURBATING;
+                case "heavy_masturbating": return FUTA_HEAVY_MASTURBATING;
+                case "finished_masturbating": return FUTA_FINISHED_MASTURBATING;
+                default: return null;
+            }
+        }
+    }
+}
+
+
  /**
   * Update this player's heavy masturbation status and return it.
   *
@@ -85,8 +126,7 @@ function startMasturbation (player) {
     updateAllBehaviours(
         player, 
         PLAYER_START_MASTURBATING,
-        [[players[player].gender == eGender.MALE ? MALE_START_MASTURBATING : FEMALE_START_MASTURBATING,
-         OPPONENT_START_MASTURBATING]]
+        [[players[player].getForfeitTrigger("start_masturbating"), OPPONENT_START_MASTURBATING]]
     );
 
     players[player].stage += 1;
@@ -222,13 +262,10 @@ function tickForfeitTimers () {
     // Show a player masturbating while dealing or after the game, if there is one available
     if (masturbatingPlayers.length > 0
         && ((gamePhase == eGamePhase.DEAL && humanPlayer.out) || gamePhase == eGamePhase.EXCHANGE || gamePhase == eGamePhase.END_LOOP)) {
-        var playerToShow = masturbatingPlayers[getRandomNumber(0, masturbatingPlayers.length)]
-        var others_tags = [[players[playerToShow].gender == eGender.MALE ? MALE_MASTURBATING : FEMALE_MASTURBATING, OPPONENT_MASTURBATING]];
+        var playerToShow = masturbatingPlayers[getRandomNumber(0, masturbatingPlayers.length)];
+        var others_tags = [[players[player].getForfeitTrigger("masturbating"), OPPONENT_MASTURBATING]];
         if (players[playerToShow].forfeit[0] == PLAYER_HEAVY_MASTURBATING) {
-            others_tags.unshift([
-                players[playerToShow].gender == eGender.MALE ? MALE_HEAVY_MASTURBATING : FEMALE_HEAVY_MASTURBATING,
-                OPPONENT_HEAVY_MASTURBATING
-            ]);
+            others_tags.unshift([players[player].getForfeitTrigger("heavy_masturbating"), OPPONENT_HEAVY_MASTURBATING]);
         }
         
         updateAllBehaviours(
@@ -257,8 +294,7 @@ function finishMasturbation (player) {
     updateAllBehaviours(
         player, 
         PLAYER_FINISHED_MASTURBATING,
-        [[players[player].gender == eGender.MALE ? MALE_FINISHED_MASTURBATING : FEMALE_FINISHED_MASTURBATING,
-         OPPONENT_FINISHED_MASTURBATING]]
+        [[players[player].getForfeitTrigger("finished_masturbating"), OPPONENT_FINISHED_MASTURBATING]]
     );
     players[player].ticksInStage = 0;
     players[player].timeInStage = 0;

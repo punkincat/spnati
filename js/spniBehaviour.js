@@ -101,6 +101,18 @@ var FEMALE_MASTURBATING = "female_masturbating";
 var FEMALE_HEAVY_MASTURBATING = "female_heavy_masturbating";
 var FEMALE_FINISHED_MASTURBATING = "female_finished_masturbating";
 
+var FUTA_CROTCH_WILL_BE_VISIBLE = "futanari_crotch_will_be_visible";
+var FUTA_SMALL_CROTCH_IS_VISIBLE = "futanari_small_crotch_is_visible";
+var FUTA_MEDIUM_CROTCH_IS_VISIBLE = "futanari_medium_crotch_is_visible";
+var FUTA_LARGE_CROTCH_IS_VISIBLE = "futanari_large_crotch_is_visible";
+var FUTA_CROTCH_IS_VISIBLE = "futanari_crotch_is_visible";
+
+var FUTA_MUST_MASTURBATE = "futanari_must_masturbate";
+var FUTA_START_MASTURBATING = "futanari_start_masturbating";
+var FUTA_MASTURBATING = "futanari_masturbating";
+var FUTA_HEAVY_MASTURBATING = "futanari_heavy_masturbating";
+var FUTA_FINISHED_MASTURBATING = "futanari_finished_masturbating";
+
 var GAME_OVER_VICTORY = "game_over_victory";
 var GAME_OVER_DEFEAT = "game_over_defeat";
 
@@ -118,6 +130,7 @@ var CONVERT_STRIP_CASES = [
     FEMALE_REMOVING_MAJOR,
     FEMALE_CHEST_WILL_BE_VISIBLE,
     FEMALE_CROTCH_WILL_BE_VISIBLE,
+    FUTA_CROTCH_WILL_BE_VISIBLE,
 ];
 
 var CONVERT_STRIPPED_CASES = [
@@ -137,6 +150,10 @@ var CONVERT_STRIPPED_CASES = [
     FEMALE_LARGE_CHEST_IS_VISIBLE,
     FEMALE_CHEST_IS_VISIBLE,
     FEMALE_CROTCH_IS_VISIBLE,
+    FUTA_SMALL_CROTCH_IS_VISIBLE,
+    FUTA_MEDIUM_CROTCH_IS_VISIBLE,
+    FUTA_LARGE_CROTCH_IS_VISIBLE,
+    FUTA_CROTCH_IS_VISIBLE,
 ];
 
 /* Tag alias list, mapping aliases to canonical tag names. */
@@ -2060,12 +2077,16 @@ function Case($xml, trigger) {
     }
 	
 	if (targetID && (targetID != "human")) { // Generalize crotch/chest reveal lines
-		if (this.trigger == MALE_SMALL_CROTCH_IS_VISIBLE || this.trigger == MALE_MEDIUM_CROTCH_IS_VISIBLE || this.trigger == MALE_LARGE_CROTCH_IS_VISIBLE || this.trigger == FEMALE_CROTCH_IS_VISIBLE) {
-			this.trigger = OPPONENT_CROTCH_IS_VISIBLE;
-		} else if (this.trigger == FEMALE_SMALL_CHEST_IS_VISIBLE || this.trigger == FEMALE_MEDIUM_CHEST_IS_VISIBLE || this.trigger == FEMALE_LARGE_CHEST_IS_VISIBLE || this.trigger == MALE_CHEST_IS_VISIBLE) {
-			this.trigger = OPPONENT_CHEST_IS_VISIBLE;
-		}
-	}
+		if (
+            this.trigger == MALE_SMALL_CROTCH_IS_VISIBLE || this.trigger == MALE_MEDIUM_CROTCH_IS_VISIBLE || this.trigger == MALE_LARGE_CROTCH_IS_VISIBLE
+            || this.trigger == FUTA_SMALL_CROTCH_IS_VISIBLE || this.trigger == FUTA_MEDIUM_CROTCH_IS_VISIBLE || this.trigger == FUTA_LARGE_CROTCH_IS_VISIBLE
+            || this.trigger == FEMALE_CROTCH_IS_VISIBLE
+        ) {
+            this.trigger = OPPONENT_CROTCH_IS_VISIBLE;
+        } else if (this.trigger == FEMALE_SMALL_CHEST_IS_VISIBLE || this.trigger == FEMALE_MEDIUM_CHEST_IS_VISIBLE || this.trigger == FEMALE_LARGE_CHEST_IS_VISIBLE || this.trigger == MALE_CHEST_IS_VISIBLE) {
+            this.trigger = OPPONENT_CHEST_IS_VISIBLE;
+        }
+    }
     
     // Calculate case priority ahead of time.
     if (this.hidden) {
