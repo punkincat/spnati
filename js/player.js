@@ -196,11 +196,27 @@ Player.prototype.singleBehaviourUpdate = function() { }
  * Convert a tags list to canonical form:
  * - Canonicalize each input tag
  * - Resolve tag implications
+ * - Add automatic tags for character/costume ID, genital size, and futanari status
  * This function also filters out duplicated tags.
  **********************************************************************/
 Player.prototype.expandTagsList = function(input_tags) {
     let tmp = input_tags.map(canonicalizeTag);
     let output_tags = [];
+
+    tmp.push(this.id);
+
+    if (this.alt_costume && this.alt_costume.id) {
+        tmp.push(this.alt_costume.id);
+    }
+
+    /* Automatically add futanari tag if necessary. */
+    if (this.gender === "female" && this.penis) {
+        tmp.push("futanari");
+    }
+
+    /* Add size tags. */
+    if (this.penis) tmp.push(this.penis + "_penis");
+    if (this.breasts) tmp.push(this.breasts + "_breasts");
 
     while (tmp.length > 0) {
         let tag = tmp.shift();
@@ -221,17 +237,38 @@ Player.prototype.expandTagsList = function(input_tags) {
         output_tags.push("curvy");
     }
 
+    /* Ensure tags are consistent with size and gender metadata. */
+    output_tags = output_tags.filter((tag) => {
+        if (tag === "large_penis" || tag === "medium_penis" || tag === "small_penis") {
+            return tag === (this.penis + "_penis");
+        } else if (tag === "huge_penis") {
+            /* huge_penis requires large_penis */
+            return this.penis === "large";
+        } else if (tag === "circumcised" || tag === "uncircumcised") {
+            /* Penis appearance tags require the presence of a penis */
+            return this.penis;
+        } else if (tag === "large_breasts" || tag === "medium_breasts" || tag === "small_breasts") {
+            return tag === (this.breasts + "_breasts");
+        } else if (tag === "huge_breasts") {
+            /* huge_breasts requires large_breasts */
+            return this.breasts === "large";
+        } else if (tag === "flat_chest") {
+            /* flat_chest requires small_breasts */
+            return this.breasts === "small";
+        } else if (tag === "futanari" || tag === "futanari_sans_balls" || tag === "futanari_full_package" || tag === "futanari_newhalf") {
+            return (this.gender === "female") && this.penis;
+        } else {
+            return true;
+        }
+    });
+
     return output_tags;
 }
 
 /* Compute the Player's tags list from their baseTags list. */
 Player.prototype.updateTags = function () {
-    var tags = [this.id];
+    var tags = [];
     var stage = this.stage || 0;
-
-    if (this.alt_costume && this.alt_costume.id) {
-        tags.push(this.alt_costume.id);
-    }
 
     this.baseTags.forEach(function (tag_desc) {
         if (typeof(tag_desc) === 'string') {

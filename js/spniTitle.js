@@ -916,8 +916,8 @@ function setPlayerTags () {
             return true;
         });
     }
-    /* applies tags to the player*/
-    console.log(playerTagList);
+
+    /* applies tags to the player */
     humanPlayer.baseTags = playerTagList.map(canonicalizeTag);
     humanPlayer.updateTags();
 }

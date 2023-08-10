@@ -155,7 +155,6 @@ var TAG_ALIASES = {
 /* Tag implications list, mapping tags to lists of implied tags. */
 var TAG_IMPLICATIONS = {
     // Add tag implications as follows:
-    'huge_breasts': ['large_breasts'],
     'muscular': ['athletic'],
     'very_long_hair': ['long_hair'],
     'blue_hair': ['exotic_hair'],
