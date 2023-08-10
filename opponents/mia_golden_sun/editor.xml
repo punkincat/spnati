@@ -87,6 +87,8 @@
         <response id="403" opponent="fluttershy" opponentId="827" />
         <response id="404" opponent="yuno_uno" opponentId="1004" />
         <response id="425" opponent="hanako" opponentId="463" />
+        <response id="428" opponent="nadeshiko" opponentId="9" />
+        <response id="440" opponent="steve" opponentId="1" />
     </responses>
     <notes>
         <note id="22">this can go in whatever direction you want; I just find it funny that the two of them are pious and water-themed</note>
@@ -107,6 +109,8 @@
         <note id="400">This may be a little wordy, but I think it fits. She's basically saying she healed it using her water magic.</note>
         <note id="403">Notes partially for myself: Mia comes equipped with Fizz when you get her as a party member and you can't actually 'miss' getting him. Because the Djinn were released at the start of the game, they wouldn't have actually known each other for very long by the time you recruit her.</note>
         <note id="424">Went with Mia thinking she's got the hang of it, then immediately misunderstanding again</note>
+        <note id="439">chance for steve to confuse/fascinate mia with the idea of food brands and having literally millions of options for food</note>
+        <note id="438">can be broad, vague, or specific as you like. I can work with anything. maybe narrowing it down to indiana and hawkis would work well for follow up ideas. the concept of a nation so large it has 50 states, and those states have hundreds of towns each, is mind boggling to Mia. you could even work in some cold war era propoganda lol</note>
     </notes>
     <labels>
         <label id="2" label="" folder="Targets" sort="2" />
@@ -530,12 +534,36 @@
         <label id="424" label="" folder="Targets" sort="0" />
         <label id="425" label="" folder="Targets" sort="0" />
         <label id="426" label="" folder="Situations" sort="0" />
+        <label id="427" label="" folder="Events" sort="0" />
+        <label id="428" label="" folder="Targets" sort="0" />
+        <label id="429" label="" folder="Targets" sort="0" />
+        <label id="430" label="2 - journeys 1" folder="Targets" sort="0" />
+        <label id="431" label="2 - journeys 2" folder="Targets" sort="0" />
+        <label id="432" label="2/3 - journeys 3" folder="Targets" sort="0" />
+        <label id="433" label="3 - library 1" folder="Targets" sort="0" />
+        <label id="434" label="3 - library 2" folder="Targets" sort="0" />
+        <label id="435" label="3/4 - library 3" folder="Targets" sort="0" />
+        <label id="436" label="" folder="Responses" sort="0" />
+        <label id="437" label="" folder="Targets" sort="0" />
+        <label id="438" label="" folder="Targets" sort="0" />
+        <label id="439" label="" folder="Targets" sort="0" />
+        <label id="440" label="" folder="Targets" sort="0" />
+        <label id="441" label="" folder="Conditional" sort="0" />
+        <label id="442" label="" folder="Conditional" sort="0" />
+        <label id="443" label="" folder="Conditional" sort="0" />
+        <label id="444" label="4 - love life 1" folder="Targets" sort="0" />
+        <label id="445" label="4 - love life 2" folder="Targets" sort="0" />
+        <label id="446" label="4/5 - love life 3" folder="Targets" sort="0" />
+        <label id="447" label="5 - bedroom bending 1" folder="Targets" sort="0" />
+        <label id="448" label="5 - bedroom bending 2" folder="Targets" sort="0" />
+        <label id="449" label="5/6 - bedroom bending 3 (water)" folder="Targets" sort="0" />
+        <label id="450" label="5/6 - bedroom bending 3 (earth)" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>zz_</prefix>
     </prefixes>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>426</nextId>
+    <nextId>450</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="a_djinni_was_in_my_cape">Fizz djinni situational marker</marker>
@@ -555,6 +583,7 @@
         <marker scope="Public" name="chihiro_is_a_guy" />
         <marker scope="Public" name="climax_player_name" />
         <marker scope="Public" name="crossbone_isle_chill" />
+        <marker scope="Public" name="css_enable-custom-box" />
         <marker scope="Public" name="djinn_lore_1">Talking about djinn</marker>
         <marker scope="Public" name="djinnToggle">If set to 1, a Mercury Djinni will appear.</marker>
         <marker scope="Public" name="dunban_bionis_view_3" />
@@ -638,6 +667,7 @@
         <marker scope="Public" name="mia_mariS_fizzEatQuestion" />
         <marker scope="Public" name="mia_meia_anemos1" />
         <marker scope="Public" name="mia_meia_gs0a" />
+        <marker scope="Public" name="mia_nadeshiko_strip0a" />
         <marker scope="Public" name="mia_nagatoro_self0a" />
         <marker scope="Public" name="mia_nagatoro_self0b" />
         <marker scope="Public" name="mia_nami_flatworld1" />
@@ -674,7 +704,13 @@
         <marker scope="Public" name="mia_sofia_strip0a" />
         <marker scope="Public" name="mia_solarflare_ColdOutdoor1" />
         <marker scope="Public" name="mia_solarflare_HotOutdoor1" />
+        <marker scope="Public" name="mia_steve_america1" />
+        <marker scope="Public" name="mia_steve_food1" />
         <marker scope="Public" name="mia_sweetheart_selflove" />
+        <marker scope="Public" name="mia_toph_bedroombending1" />
+        <marker scope="Public" name="mia_toph_bedroombending2" />
+        <marker scope="Public" name="mia_toph_bedroombending3_earth" />
+        <marker scope="Public" name="mia_toph_bedroombending3_water" />
         <marker scope="Public" name="mia_toph_bending1_resp" />
         <marker scope="Public" name="mia_toph_bending2_resp" />
         <marker scope="Public" name="mia_toph_bending3_resp" />
@@ -683,6 +719,16 @@
         <marker scope="Public" name="mia_toph_healer2_resp" />
         <marker scope="Public" name="mia_toph_healer3_resp" />
         <marker scope="Public" name="mia_toph_healer4_resp" />
+        <marker scope="Public" name="mia_toph_journeys1" />
+        <marker scope="Public" name="mia_toph_journeys2" />
+        <marker scope="Public" name="mia_toph_journeys3" />
+        <marker scope="Public" name="mia_toph_library1" />
+        <marker scope="Public" name="mia_toph_library2" />
+        <marker scope="Public" name="mia_toph_library3" />
+        <marker scope="Public" name="mia_toph_library4" />
+        <marker scope="Public" name="mia_toph_lovelife1" />
+        <marker scope="Public" name="mia_toph_lovelife2" />
+        <marker scope="Public" name="mia_toph_lovelife3" />
         <marker scope="Public" name="mia_toph_treatment1" />
         <marker scope="Public" name="mia_toph_treatment2" />
         <marker scope="Public" name="mia_toph_treatment3" />
@@ -712,6 +758,8 @@
         <marker scope="Public" name="miaGS_toph_sight2" />
         <marker scope="Public" name="miaGS_toph_sight3" />
         <marker scope="Private" name="mouthdisable">Disables custom mouths. Internal use only.</marker>
+        <marker scope="Public" name="nadeshiko_partnerPref_RespA" />
+        <marker scope="Public" name="nadeshiko_partnerPref_RespB" />
         <marker scope="Public" name="nickname" />
         <marker scope="Public" name="noire_coolgirl_bandaids" />
         <marker scope="Public" name="opp_revealed_thong1">Targets the first thong reveal of the game</marker>
@@ -732,6 +780,7 @@
         <marker scope="Public" name="shami_transform" />
         <marker scope="Public" name="shamiNickname" />
         <marker scope="Public" name="spiderwomanmask" />
+        <marker scope="Public" name="steve_SongPrompt" />
         <marker scope="Public" name="stocking_noEatFizz" />
         <marker scope="Public" name="stripped_3_fizz">Fizz djinni situational marker</marker>
         <marker scope="Public" name="sweetheart_whats_a_donut" />
