@@ -11834,7 +11834,7 @@
         </trigger>
 
         <trigger id="global">
-            <case stage="9" id="553" oneShotId="348" priority="998" addCharacterTags="tandem">
+            <case stage="9" id="553" oneShotId="348" priority="998" addCharacterTags="tandem,tandem_ff,uses_toy">
                 <condition role="self" saidMarker="TomomegStart" />
                 <state img="Tomomeg_3.png">{Tomoko}&lt;i&gt;(Don't be nervous! You do this shit &lt;/i&gt;all&lt;i&gt; the time on yourself anyway...)&lt;/i&gt; Uh, so, y-yeah... Y-You just m-move it l-like this{!reset}... &lt;br&gt;{Megumin}O-Oh!!! T-This sensation!{!reset}</state>
             </case>

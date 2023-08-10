@@ -11968,7 +11968,7 @@
                 <state img="#-strip.png" marker="lyralei_gilgamesh1">Really got to show my boobs now, huh? This is situation is very Gilgamesh...</state>
                 <state img="#-strip.png" marker="lyralei_gilgamesh2">Alright, alright. Let's get it over with. This is so Gilgamesh right now...</state>
             </case>
-            <case stage="5" id="1033" priority="1" addCharacterTags="pubic_hair_peek">
+            <case stage="5" id="1033" priority="1">
                 <test expr="~background.exhibition~" value="true" />
                 <state img="#-strip.png" marker="strip_5_public">I'm normally not too shy about going bottomless, but in this place...</state>
                 <state img="#-strip.png" marker="strip_5_public">I'm normally not too shy about going bottomless, but this is quite public...</state>
@@ -12001,7 +12001,7 @@
                 <state img="#-strip.png">I'm starting to run out of clothes here. Alright then, shirt it is.</state>
                 <state img="#-strip.png">Is this the point where I should start worrying? Don't have too much left...</state>
             </case>
-            <case stage="5" id="403" addCharacterTags="pubic_hair_peek">
+            <case stage="5" id="403">
                 <state img="#-strip.png">Don't judge, underwear just gets in the way.</state>
                 <state img="#-strip.png">So... uhm... this might be showing more than you expected...</state>
                 <state img="#-strip.png">Oh boy, this a bit embarrassing...</state>
@@ -12090,7 +12090,7 @@
                 <condition role="other" character="lucy" stage="0-7" />
                 <state img="#-stripped.png" marker="lyralei_lucy_cape_response1">That cape is so light, you just don't notice wearing it, Lucy. First time that's a disadvantage for me, though.</state>
             </case>
-            <case stage="6" removeCharacterTags="pubic_hair_peek">
+            <case stage="6">
                 <condition role="other" character="mulan" stage="0-8" />
                 <state img="#-stripped.png" marker="lyralei_mulan_forest">Are you talking about &lt;i&gt;my&lt;/i&gt; forest there, ~Mulan~? It's always worth a visit. </state>
             </case>
@@ -12109,7 +12109,7 @@
                 <condition role="other" character="lucy" />
                 <state img="#-stripped.png" marker="lyralei_lucy_aim_response1">Ah-hah, no chance, Lucy! I'd have that totally in the bag!</state>
             </case>
-            <case stage="6" removeCharacterTags="pubic_hair_peek">
+            <case stage="6">
                 <condition role="other" character="wikipe-tan" />
                 <state img="#-scheming.png" marker="wikipe_underwear_response">That sounds... interesting, Wikipe-tan. Do they look cute? You'll need to tell me more about those after the game... </state>
             </case>
@@ -12121,7 +12121,7 @@
                 <condition role="other" character="lucy" />
                 <state img="#-stripped.png">Not half as painful as having to show everyone how flat I am, Lucy. Just look away, please!</state>
             </case>
-            <case stage="6" removeCharacterTags="pubic_hair_peek">
+            <case stage="6">
                 <condition role="other" character="lucy" />
                 <state img="#-stripped.png">I'm a busy woman, Lucy. I'm allowed to forget things sometimes! Although, I didn't really forget... I just don't like it.</state>
             </case>
@@ -12129,7 +12129,7 @@
                 <condition role="self" saidMarker="almost_perfect" />
                 <state img="#-stripped.png">Oh well, I'm still winning!</state>
             </case>
-            <case stage="6" id="1034" priority="1" removeCharacterTags="pubic_hair_peek">
+            <case stage="6" id="1034" priority="1">
                 <condition role="self" saidMarker="strip_5_public" />
                 <test expr="~background.exhibition~" value="true" />
                 <state img="#-stripped.png">No point in hiding it, just look if you want. Don't think I ever did this with so many watching...</state>
@@ -12137,7 +12137,7 @@
                 <state img="#-stripped.png">I have to be agile and underwear just doesn't help with that. Maybe not the best excuse, but that's all you're gonna get.</state>
                 <state img="#-stripped.png">Keeping everything shaved down there isn't your biggest concern when you have to protect a forest.</state>
             </case>
-            <case stage="6" id="1038" removeCharacterTags="pubic_hair_peek">
+            <case stage="6" id="1038">
                 <condition role="self" saidMarker="strip_5_public" />
                 <state img="#-stripped.png" marker="lyralei_doomed_forest">I recently had to save a doomed forest from a big threat, so I hope everyone watching here understands that there wasn't much time to shave for this.</state>
             </case>
@@ -12176,7 +12176,7 @@
                 <state img="#-stripped.png">To be honest, I don't even know what this type of top is called. But it wasn't hiding too much anyways.</state>
                 <state img="#-stripped.png">Time to start winning. And not losing.</state>
             </case>
-            <case stage="6" id="404" removeCharacterTags="pubic_hair_peek">
+            <case stage="6" id="404">
                 <state img="#-stripped.png">At least there's no doubt left that I'm an actual ginger, right?</state>
                 <state img="#-stripped.png">I have to be agile and underwear just doesn't help with that. Maybe not the best excuse, but that's all you're gonna get!</state>
                 <state img="#-stripped.png">Never worried too much about being bottomless, to be honest. But this is still a bit strange.</state>
@@ -12203,7 +12203,7 @@
                 <test expr="~background.exhibition~" value="true" />
                 <state img="#-stripped.png">Can everyone just stop looking? And I mean {b}EVERYONE!{!reset}</state>
             </case>
-            <case stage="6" id="1272" removeCharacterTags="pubic_hair_peek">
+            <case stage="6" id="1272">
                 <state img="#-stripped.png" marker="lyralei_doomed_forest">I recently had to save a doomed forest from a big threat, so there wasn't much time to shave for this.</state>
             </case>
         </trigger>
