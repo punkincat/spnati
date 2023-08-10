@@ -876,7 +876,14 @@ function updateTitleScreen () {
  * screen, or this was called by an internal source.
  ************************************************************/
 function changePlayerSize (size) {
-    humanPlayer.size = size;
+    if (humanPlayer.gender === eGender.MALE) {
+        humanPlayer.penis = size;
+        humanPlayer.breasts = null;
+    } else {
+        humanPlayer.breasts = size;
+        humanPlayer.penis = null;
+    }
+
     $sizeBlocks[humanPlayer.gender].find('.title-size-button').each(function() {
         $(this).toggleClass('selected', $(this).data('size') == size);
     });
@@ -891,8 +898,10 @@ $('.title-size-block').on('click', '.title-size-button', function(ev) {
  * dialog and the size.
  **************************************************************/
 function setPlayerTags () {
-    var playerTagList = ['human', 'human_' + humanPlayer.gender,
-                         humanPlayer.size + (humanPlayer.gender == 'male' ? '_penis' : '_breasts')];
+    var playerTagList = [
+        'human',
+        'human_' + humanPlayer.gender
+    ];
 
     for (category in playerTagSelections) {
         var sel = playerTagSelections[category];

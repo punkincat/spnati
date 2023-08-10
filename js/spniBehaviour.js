@@ -505,8 +505,17 @@ PlayerAttributeOperation.prototype.apply = function (self, opp) {
     case "label":
         self.setLabel(value);
         break;
+    case "penis":
+        self.penis = value;
+        break;
+    case "breasts":
+        self.breasts = value;
     case "size":
-        self.size = value;
+        if (self.gender === eGender.MALE) {
+            self.penis = value;
+        } else {
+            self.breasts = value;
+        }
         break;
     case "gender":
         self.gender = value;
@@ -1282,7 +1291,11 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
         if (!player.alt_costume) return 'default';
         return player.alt_costume.id;
     case 'size':
-        return player.size;
+        return (player.gender === eGender.MALE) ? player.penis : player.breasts;
+    case "penis":
+        return player.penis;
+    case "breasts":
+        return player.breasts;
     case 'gender':
         return player.gender;
     case 'intelligence':

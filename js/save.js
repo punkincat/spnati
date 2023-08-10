@@ -281,7 +281,7 @@ Save.prototype.loadPlayer = function() {
 Save.prototype.savePlayer = function() {
     var profile = {
         name: $nameField.val(),
-        size: humanPlayer.size,
+        size: (humanPlayer.gender === eGender.MALE) ? humanPlayer.penis : humanPlayer.breasts,
         tags: playerTagSelections
     };
 

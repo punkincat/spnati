@@ -68,7 +68,8 @@ function Player (id) {
     this.last = '';
     this.labels = undefined;
     this.folders = undefined;
-    this.size = eSize.MEDIUM;
+    this.penis = null;
+    this.breasts = null;
     this.intelligence = eIntelligence.AVERAGE;
     this.gender = eGender.MALE;
     this.stamina = 20;
@@ -147,7 +148,8 @@ Player.prototype.resetState = function () {
          * for the character.
          */
         this.gender = appearance.gender;
-        this.size = appearance.size;
+        this.penis = appearance.penis;
+        this.breasts = appearance.breasts;
 
         this.stamina = Number(this.xml.children('timer').text());
 
@@ -1060,6 +1062,7 @@ Opponent.prototype.loadAlternateCostume = function () {
             level: 'info'
         });
 
+        var legacySize = $xml.children('size').text() || eSize.MEDIUM;
         this.alt_costume = {
             id: $xml.children('id').text(),
             labels: $xml.children('label'),
@@ -1068,8 +1071,9 @@ Opponent.prototype.loadAlternateCostume = function () {
             folders: $xml.children('folder'),
             wardrobe: $xml.children('wardrobe'),
             gender: $xml.children('gender').text() || this.selectGender,
-            size: $xml.children('size').text() || this.default_costume.size,
             layers: parseInt($xml.children('layers').text(), 10) || this.selectLayers,
+            penis: $xml.children('penis').text() || (this.metaGender === eGender.MALE ? legacySize : null),
+            breasts: $xml.children('breasts').text() || (this.metaGender === eGender.FEMALE ? legacySize : null)
         };
 
         var poses = $xml.children('poses');
@@ -1390,14 +1394,17 @@ Opponent.prototype.loadBehaviour = function (slot, individual, selectInfo) {
             this.xml = $xml;
             this.intelligences = $xml.children('intelligence');
 
+            var legacySize = $xml.children('size').text() || eSize.MEDIUM;
+            var gender = $xml.children('gender').text();
             this.default_costume = {
                 id: null,
                 labels: $xml.children('label'),
                 tags: this.originalTags,
                 folders: this.folder,
                 wardrobe: $xml.children('wardrobe'),
-                gender: $xml.children('gender').text(),
-                size: $xml.children('size').text(),
+                gender: gender,
+                penis: $xml.children('penis').text() || (gender === eGender.MALE ? legacySize : null),
+                breasts: $xml.children('breasts').text() || (gender === eGender.FEMALE ? legacySize : null),
             };
 
             var poses = $xml.children('poses');
