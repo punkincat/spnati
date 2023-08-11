@@ -1183,6 +1183,7 @@ Opponent.prototype.getAllEpilogueStatus = function () {
             requiredCharacters: null,
             characterIsMissing: false,
             hint: undefined,
+            description: undefined,
         };
 
         summary.unlocked = save.hasEnding(this.id, $elem.text());
@@ -1212,6 +1213,7 @@ Opponent.prototype.getAllEpilogueStatus = function () {
         }
 
         summary.hint = $elem.attr('hint');
+        summary.description = $elem.attr('description');
         summary.extraConditions = $elem.attr('markers') == 'true';
         summary.score = (summary.wrongGender ? 4 : 0)
             + (summary.characterIsMissing ? 2 : 0)

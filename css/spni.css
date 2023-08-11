@@ -4310,6 +4310,14 @@ ul.dropdown-menu>li {
     content: "Hint: ";
 }
 
+.epilogue-entry.unavailable .epilogue-description {
+    font-style: italic;
+}
+
+.epilogue-entry.unavailable .epilogue-description::before {
+    content: "Info: ";
+}
+
 .epilogue-viewport {
     position: absolute;
     left: 50%;
