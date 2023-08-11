@@ -849,20 +849,24 @@ function addEpilogueEntry(epilogue) {
     var clickAction = "selectEpilogue(" + num + ")";
     var unlocked = save.hasEnding(player.id, epilogue.title) ? " unlocked" : "";
 
+    var entryElem = createElementWithClass('li', 'epilogue-entry ' + unlocked);
+    entryElem.id = idName;
+
     var btnElem = document.createElement("button");
     btnElem.addEventListener("click", function (ev) {
         selectEpilogue(num);
     });
     btnElem.innerText = epilogueTitle;
     
-    var descElem = createElementWithClass("span", "epilogue-description");
-    descElem.innerText = epilogueDescription;
-    
-    var entryElem = createElementWithClass('li', 'epilogue-entry ' + unlocked);
-    entryElem.id = idName;
     entryElem.appendChild(btnElem);
-    entryElem.appendChild(document.createElement("br"));
-    entryElem.appendChild(descElem);
+    
+    if (epilogueDescription) {
+        var descElem = createElementWithClass("span", "epilogue-description");
+        descElem.innerText = epilogueDescription;
+    
+        entryElem.appendChild(document.createElement("br"));
+        entryElem.appendChild(descElem);
+    }
 
     $epilogueList.append(entryElem);
     epilogueSelections.push($(entryElem));
