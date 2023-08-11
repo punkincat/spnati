@@ -6,13 +6,10 @@
     <pronunciation>tojosatomʲimʲi no mʲiko</pronunciation>
     <othernotes>https://en.touhouwiki.net/wiki/Toyosatomimi_no_Miko</othernotes>
     <noteworthy>
-        <case name="Tojiko Appears" id="6" priority="Noteworthy" min="0" max="0">
-            <description>The Crown Prince's ghost consort has appeared out of hiding to take Miko's cape away.</description>
-        </case>
         <case name="Tojiko Tandem" id="7" priority="Noteworthy" min="8" max="8">
-            <description>The Crown Prince's ghost consort has appeared out of hiding to fuck her.</description>
+            <description>The Crown Prince has sex with her ghost consort.</description>
         </case>
-        <case name="Spellcard Attack" id="1" priority="Noteworthy" min="8" max="8">
+        <case name="Spellcard Attack" id="1" priority="FYI" min="8" max="8">
             <description>Miko has unleashed a powerful Special Attack, Human Sign "Tradition of Just Rewards," against Saki.</description>
         </case>
         <case name="True Desires (Prompt Marker)" id="12" priority="Prompt" min="0" max="8">
@@ -151,6 +148,10 @@
         <response id="122" opponent="arle" opponentId="241" />
         <response id="123" opponent="arle" opponentId="269" />
         <response id="124" opponent="arle" opponentId="268" />
+        <response id="126" opponent="aqua_konosuba" opponentId="774" />
+        <response id="127" opponent="aqua_konosuba" opponentId="775" />
+        <response id="128" opponent="aqua_konosuba" opponentId="776" />
+        <response id="129" opponent="aqua_konosuba" opponentId="780" />
     </responses>
     <notes>
         <note id="48">I'm great now</note>
@@ -159,8 +160,9 @@
         <note id="106">This is a good opportunity for Kaz to talk about Magistocrats</note>
         <note id="112">shes talkin about boobs</note>
         <note id="125">Ignore miko's shitty old horny poses, I'm going to change all of that in the rework.</note>
+        <note id="130">Aqua and Miko shouldn't get along, since Aqua is in charge of leading people into the afterlife and Miko is immortal through the power of cheating death.</note>
     </notes>
-    <nextId>125</nextId>
+    <nextId>130</nextId>
     <markers>
         <marker scope="Public" name="9SBoots1" />
         <marker scope="Public" name="9SGloves1" />
@@ -175,6 +177,11 @@
         <marker scope="Public" name="AmyRoseBracelets3" />
         <marker scope="Public" name="AmyRoseShopping_resp" />
         <marker scope="Public" name="AmyRoseSweater1" />
+        <marker scope="Public" name="AquaKonosubaBoots1" />
+        <marker scope="Public" name="AquaKonosubaCape1_resp" />
+        <marker scope="Public" name="AquaKonosubaCape2_resp" />
+        <marker scope="Public" name="AquaKonosubaCape3_resp" />
+        <marker scope="Public" name="AquaKonosubaSword1_resp" />
         <marker scope="Public" name="ArashArmor1" />
         <marker scope="Public" name="ArashArmor2" />
         <marker scope="Public" name="ArashArmor3" />
@@ -546,6 +553,7 @@
         <marker scope="Public" name="KyokoKirigiriJacket1" />
         <marker scope="Public" name="KyokoKirigiriJacket2" />
         <marker scope="Public" name="KyokoKirigiriJacket3" />
+        <marker scope="Public" name="KyokoKirigiriTie1" />
         <marker scope="Public" name="KyoukoToshinouJacket1" />
         <marker scope="Public" name="KyoukoToshinouShoes1" />
         <marker scope="Public" name="KyoukoToshinouShoes2" />
