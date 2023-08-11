@@ -4285,6 +4285,14 @@ ul.dropdown-menu>li {
     background: #DDDDDD;
 }
 
+.epilogue-entry .epilogue-description {
+    font-style: italic;
+}
+
+.epilogue-entry .epilogue-description::before {
+    content: "Info: ";
+}
+
 .epilogue-entry.unlocked button::after {
     color: darkgreen;
     content: "\2714";
@@ -4308,14 +4316,6 @@ ul.dropdown-menu>li {
 
 .epilogue-entry.unavailable .epilogue-hint::before {
     content: "Hint: ";
-}
-
-.epilogue-entry.unavailable .epilogue-description {
-    font-style: italic;
-}
-
-.epilogue-entry.unavailable .epilogue-description::before {
-    content: "Info: ";
 }
 
 .epilogue-viewport {
