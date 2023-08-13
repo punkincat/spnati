@@ -21,6 +21,9 @@
         <case name="Nadeshiko the Cook" id="92" priority="Noteworthy" min="0" max="8">
             <description>Nadeshiko reveals to the other players she's a good cook. This could be a good time for characters with the chef tag to talk about their cooking experiences with Nadeshiko</description>
         </case>
+        <case name="Specials" id="126" priority="Prompt" min="0" max="5">
+            <description>Nadeshiko asks the table what sort of specials are offered at the Inventory on a certain day of the week. </description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -151,12 +154,17 @@
         <response id="119" opponent="jura" opponentId="787" />
         <response id="120" opponent="yusuke" opponentId="210" />
         <response id="121" opponent="wikipe-tan" opponentId="576" />
+        <response id="122" opponent="polly" opponentId="38" />
+        <response id="123" opponent="sweetheart" opponentId="43" />
+        <response id="124" opponent="heris" opponentId="125" />
+        <response id="125" opponent="nagatoro" opponentId="1602" />
+        <response id="127" opponent="shamiko" opponentId="30" />
     </responses>
     <labels>
         <label id="114" label="Ramen Markers Reset" folder="" sort="0" />
         <label id="115" label="Pose Maker Markers Reset" folder="" sort="0" />
     </labels>
-    <nextId>121</nextId>
+    <nextId>127</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="amy_confess_sonic_prompt_alt_R" />
@@ -236,12 +244,16 @@
         <marker scope="Public" name="NadeMikuWhereBag" />
         <marker scope="Public" name="Nadeshiko" />
         <marker scope="Public" name="Nadeshiko_Amy_StrangeHarmony_R" />
+        <marker scope="Public" name="Nadeshiko_DountGirl_Reaction" />
         <marker scope="Public" name="Nadeshiko_GreenEyes" />
+        <marker scope="Public" name="Nadeshiko_Heris_Labcoat" />
         <marker scope="Public" name="Nadeshiko_HerisSurroundingsR" />
+        <marker scope="Public" name="Nadeshiko_hotClothes_R" />
         <marker scope="Public" name="Nadeshiko_hotClothes_warmBG_R" />
         <marker scope="Public" name="Nadeshiko_Nagisa_Dango" />
         <marker scope="Public" name="nadeshiko_pursuit_R" />
         <marker scope="Public" name="Nadeshiko_Revy_1A" />
+        <marker scope="Public" name="Nadeshiko_SpicyCamps_question_R" />
         <marker scope="Public" name="Nadeshiko_UndresstoImpress" />
         <marker scope="Public" name="Nadeshiko_UndresstoImpress_2" />
         <marker scope="Public" name="nadeshiko_whycamp_R" />
@@ -267,10 +279,13 @@
         <marker scope="Public" name="NadeshikoYumeko1_1" />
         <marker scope="Public" name="NadeshikoYumeko1_2" />
         <marker scope="Public" name="NadeshikoYumeko1_3" />
+        <marker scope="Public" name="NadeshikoYumeko2_1" />
+        <marker scope="Public" name="NadeshikoYumeko2_2" />
         <marker scope="Public" name="NadeshikoYumeko2_3" />
         <marker scope="Public" name="NadeshikoYumeko3_3" />
         <marker scope="Public" name="NadeshikoYunoCollege" />
         <marker scope="Public" name="NadeshikoYusukeGrocery" />
+        <marker scope="Public" name="nagatoro_extra_last2_R" />
         <marker scope="Public" name="nagisa_christmas_date_Tnagisa_christmas_date_R" />
         <marker scope="Public" name="nagisa_college_or_job_r" />
         <marker scope="Public" name="Noodles" />
@@ -292,6 +307,7 @@
         <marker scope="Public" name="Rin_Shima">Any line referring to Nadeshiko's friend Rin Shima</marker>
         <marker scope="Public" name="Sakura_Kagamihara">Any line referring to Nadeshiko's older sister Sakura Kagamihara</marker>
         <marker scope="Public" name="SalesmanNadeshiko" />
+        <marker scope="Public" name="Shami_Nadeshiko_tents_R" />
         <marker scope="Public" name="smallFemale">Used for any line tied to a female opponent with small breasts</marker>
         <marker scope="Public" name="smallMale">Used for any line tied to a male opponent with a small penis</marker>
         <marker scope="Public" name="SoundAdvice" />
