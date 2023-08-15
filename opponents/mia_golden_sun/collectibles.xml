@@ -1,2 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<collectibles />
+<collectibles>
+    <collectible id="mia_mercury_djinn" img="opponents/mia_golden_sun/djinn/fizz.png" thumbnail="opponents/mia_golden_sun/djinn/fizz.png">
+        <title>Cloud the Mercury Djinn</title>
+        <text>This little guy followed you around after the game with Mia. Every so often, it emits a fine mist that protects you from attacks. You can wear it as a hat, I suppose? </text>
+        <unlock>Finish a game where Mia (Golden Sun) loses.</unlock>
+        <hidden>true</hidden>
+        <hide-details>true</hide-details>
+        <counter>1</counter>
+    </collectible>
+</collectibles>
