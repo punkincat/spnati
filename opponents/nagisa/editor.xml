@@ -4,7 +4,7 @@
     <height>5'1"</height>
     <age>18</age>
     <pronunciation>Na-gi-sa</pronunciation>
-    <othernotes />
+    <othernotes>Banter Wizard key:&lt;br&gt;&lt;br&gt;green = Nagisa replied&lt;br&gt;blue = a response to Nagisa that makes sense without further reply</othernotes>
     <noteworthy>
         <case name="No butt scar" id="54" priority="Prompt" min="9" max="9">
             <description>Nagisa doesn't know if she has a scar on her butt. (She doesn't.)</description>
@@ -317,6 +317,15 @@
         <response id="1161" opponent="aoba" opponentId="81" />
         <response id="1162" opponent="aoba" opponentId="83" />
         <response id="1164" opponent="aoba" opponentId="127" />
+        <response id="1165" opponent="mitama" opponentId="2208" />
+        <response id="1166" opponent="mitama" opponentId="2282" />
+        <response id="1167" opponent="petra" opponentId="242" />
+        <response id="1168" opponent="petra" opponentId="239" />
+        <response id="1171" opponent="arash" opponentId="137" />
+        <response id="1172" opponent="arash" opponentId="143" />
+        <response id="1173" opponent="arash" opponentId="144" />
+        <response id="1174" opponent="arash" opponentId="145" />
+        <response id="1175" opponent="arash" opponentId="146" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1423,13 +1432,24 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1162" label="" folder="Aoba to left" sort="0" />
         <label id="1163" label="" folder="Aoba to left or right" sort="0" />
         <label id="1164" label="" folder="Aoba to left" sort="0" />
+        <label id="1165" label="" folder="Mitama to right" sort="0" />
+        <label id="1166" label="" folder="Mitama to right" sort="0" />
+        <label id="1167" label="" folder="Petra to left" sort="0" />
+        <label id="1168" label="" folder="Petra to right" sort="0" />
+        <label id="1169" label="" folder="Megumin to left" sort="0" />
+        <label id="1170" label="" folder="Megumin to right" sort="0" />
+        <label id="1171" label="" folder="Arash to left" sort="0" />
+        <label id="1172" label="" folder="Arash to left" sort="0" />
+        <label id="1173" label="" folder="Arash to left" sort="0" />
+        <label id="1174" label="" folder="Arash to left" sort="0" />
+        <label id="1175" label="" folder="Arash to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1164</nextId>
+    <nextId>1175</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1518,6 +1538,11 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_aqua_keyblade_reveal" />
         <marker scope="Public" name="nagisa_aqua_keyblade_sharpness" />
         <marker scope="Public" name="nagisa_aqua_shorts_down" />
+        <marker scope="Public" name="nagisa_arash_question_anne_maryA" />
+        <marker scope="Public" name="nagisa_arash_question_edison_tesla" />
+        <marker scope="Public" name="nagisa_arash_question_hans" />
+        <marker scope="Public" name="nagisa_arash_question_kiyohime" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_name" />
         <marker scope="Public" name="nagisa_arle_principal" />
         <marker scope="Public" name="nagisa_arwen_beautiful_lady" />
         <marker scope="Public" name="nagisa_asks_buffy_about_school">Nagisa and Buffy feel differently about high school.</marker>
@@ -2380,6 +2405,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_may_hair" />
         <marker scope="Public" name="nagisa_may_scar" />
         <marker scope="Private" name="nagisa_meanie">Nagisa calls out a meanie.</marker>
+        <marker scope="Public" name="nagisa_megumin_selected_" />
+        <marker scope="Public" name="nagisa_megumin_selected_pre-response" />
+        <marker scope="Public" name="nagisa_megumin_selected_response" />
         <marker scope="Public" name="nagisa_mei_count_your_glasses" />
         <marker scope="Public" name="nagisa_mei_cupid_dream" />
         <marker scope="Public" name="nagisa_mei_dont_freeze_me" />
@@ -2531,6 +2559,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_mitama_arrival_modern_library" />
         <marker scope="Public" name="nagisa_mitama_arrival_office" />
         <marker scope="Public" name="nagisa_mitama_arrival_paris_rooftop" />
+        <marker scope="Public" name="nagisa_mitama_lewd_haiku_feedback" />
+        <marker scope="Public" name="nagisa_mitama_paris_scar" />
         <marker scope="Public" name="nagisa_monika_extra_desserts" />
         <marker scope="Public" name="nagisa_monika_glitched2" />
         <marker scope="Public" name="nagisa_monika_restarting_a_club" />
@@ -2665,6 +2695,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_perona_statue" />
         <marker scope="Public" name="nagisa_perona_won" />
         <marker scope="Public" name="nagisa_persona_evil_game" />
+        <marker scope="Public" name="nagisa_petra_bedroom_cuddle" />
+        <marker scope="Public" name="nagisa_petra_pn_n1" />
         <marker scope="Public" name="nagisa_pinkie_baloon_animals" />
         <marker scope="Public" name="nagisa_pinkie_place" />
         <marker scope="Public" name="nagisa_piper_freckles" />
