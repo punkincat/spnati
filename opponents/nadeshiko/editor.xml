@@ -24,6 +24,9 @@
         <case name="Specials" id="126" priority="Prompt" min="0" max="5">
             <description>Nadeshiko asks the table what sort of specials are offered at the Inventory on a certain day of the week. </description>
         </case>
+        <case name="Need a Friend?" id="132" priority="Noteworthy" min="0" max="0">
+            <description>Nadeshiko offers her friendship to a character with the "lonely" tag.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -161,12 +164,14 @@
         <response id="127" opponent="shamiko" opponentId="30" />
         <response id="128" opponent="senko" opponentId="168" />
         <response id="129" opponent="mari_setogaya" opponentId="16" />
+        <response id="130" opponent="jura" opponentId="952" />
+        <response id="131" opponent="nagatoro" opponentId="2" />
     </responses>
     <labels>
         <label id="114" label="Ramen Markers Reset" folder="" sort="0" />
         <label id="115" label="Pose Maker Markers Reset" folder="" sort="0" />
     </labels>
-    <nextId>129</nextId>
+    <nextId>132</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="amy_confess_sonic_prompt_alt_R" />
@@ -243,6 +248,7 @@
         <marker scope="Public" name="MikuNadeshikoB" />
         <marker scope="Public" name="MikuNadeshikoC" />
         <marker scope="Public" name="Nad" />
+        <marker scope="Public" name="Nade_Nagisa_SchoolUniform" />
         <marker scope="Public" name="NadeMikuWhereBag" />
         <marker scope="Public" name="Nadeshiko" />
         <marker scope="Public" name="Nadeshiko_Amy_StrangeHarmony_R" />
@@ -251,7 +257,10 @@
         <marker scope="Public" name="Nadeshiko_Heris_Labcoat" />
         <marker scope="Public" name="Nadeshiko_HerisSurroundingsR" />
         <marker scope="Public" name="Nadeshiko_hotClothes_R" />
+        <marker scope="Public" name="Nadeshiko_hotClothes_R2" />
         <marker scope="Public" name="Nadeshiko_hotClothes_warmBG_R" />
+        <marker scope="Public" name="Nadeshiko_hotClothes_warmBG_R2" />
+        <marker scope="Public" name="Nadeshiko_Lonely" />
         <marker scope="Public" name="Nadeshiko_Nagisa_Dango" />
         <marker scope="Public" name="nadeshiko_pursuit_R" />
         <marker scope="Public" name="Nadeshiko_Revy_1A" />
@@ -259,6 +268,7 @@
         <marker scope="Public" name="Nadeshiko_Sakura_1-2" />
         <marker scope="Public" name="Nadeshiko_Sakura_2-1" />
         <marker scope="Public" name="Nadeshiko_Sakura_2-2" />
+        <marker scope="Public" name="Nadeshiko_Sleeping_R" />
         <marker scope="Public" name="Nadeshiko_SpicyCamps_question_R" />
         <marker scope="Public" name="Nadeshiko_UndresstoImpress" />
         <marker scope="Public" name="Nadeshiko_UndresstoImpress_2" />
