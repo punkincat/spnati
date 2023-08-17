@@ -1,72 +1,73 @@
-(Note: As you're probably aware, Estelle has a ridiculous number of alternate outfits. If you want the conversation to make sense in all those outfits, it's probably best not to comment too much on clothing. I guess that's true in general, but it's -especially- true for Estelle. I might branch some responses based on which outfit Estelle's currently wearing, similar to her targets with Fina.)
- -- (Cipher) If you want suggestions, both Nagisa and Estelle were raised to be "proper". with a lot of constraints on the way they lived their lives (or that's my impression based on Fina's targets with Nagisa). Something that ties into those similarities might prompt a conversation.
- -- a difference between Estelle and Nagisa is that Nagisa's technology is from approx. 2004
+Notes from Cipher: Estelle has a ridiculous number of alternate outfits. If we want the conversation to make sense in all those outfits, it's probably best not to comment too much on clothing. I guess that's true in general, but it's -especially- true for Estelle. 
+Both Nagisa and Estelle were raised to be "proper". with a lot of constraints on the way they lived their lives (or that's my impression based on Fina's targets with Nagisa). Something that ties into those similarities might prompt a conversation.
+However, a difference between Estelle and Nagisa is that Nagisa's technology is from approximately 2004.
+
 
 If Nagisa to left and Estelle to right:
 
 NAGISA MUST STRIP SHOES:
-Nagisa []*: Me? Oh, yeah. That makes sense. Does anyone know how long this game normally goes for? If I'm not home by a reasonable time to~background.time~, my mom and dad might start getting worried about me.
+Nagisa [nagisa_estelle_ne_n1]: Me? Oh, yeah. That makes sense. Does anyone know how long this game normally goes for? If I'm not home by a reasonable time to~background.time~, my mom and dad might start getting worried about me.
 Estelle [NagisaEstelleReply1]*: Oh, is that so, ~nagisa~? We'd better be careful, then---I wouldn't want you to miss your curfew! If we're taking too much time, it should be fine if you just leave early.
 
 NAGISA STRIPPING SHOES (accessory):
-Nagisa []*: It wouldn't be fair to everyone else if I left early. If it starts getting late, I'll see if I can find a payphone to let them know not to worry.
-Estelle [NagisaEstelleReplyContinue1]*: A payphone? Those work like blastia that allow you to communicate over long distances, right? I've read about them, but I've never seen one before. Could I come with you to see the payphone? -- She's read books at the Inventory or something, I guess. I usually just go ahead and say Estelle's read about something if I think it's helpful for an interaction.
+Nagisa [nagisa_estelle_ne_n2]: It wouldn't be fair to everyone else if I left early. If it starts getting late, I'll see if I can find a payphone to let them know not to worry.
+Estelle [NagisaEstelleReplyContinue1]*: A payphone? Those work like blastia that allow you to communicate over long distances, right? I've read about them, but I've never seen one before. Could I come with you to see the payphone?
 
 NAGISA STRIPPED SHOES (accessory):
-Nagisa []*: I'm not really sure what a "ballista" is, but sure, we can go together! And I could walk you home if you're staying nearby. -- "ballista" error intentional
+Nagisa [nagisa_estelle_ne_n3]*: I'm not really sure what a "ballista" is, but sure, we can go together! And I could walk you home if you're staying nearby. -- "ballista" error intentional
 Estelle [NagisaEstelleReplyEnd1=blastia]*: <i>"Blastia use the primeval power of aer that fills the world to provide us with fire, water, and light. They provide us with everything that has made the empire prosper."</i> ...And thank you, but I don't live nearby.
      OR [NagisaEstelleReplyEnd1=payphones]*: How wonderful! I'm so excited to visit one of your world's bustling metropolises, with majestic payphones dotting the streets as far as the eye can see... And that's all right, I don't live around here.
 
 
 NAGISA MUST STRIP SOCKS:
-Nagisa []*: It's me again. That's okay. Should I ask permission to take my socks off? It's probably expected, but I don't want to be impolite.
+Nagisa [nagisa_estelle_ne_n4]: It's me again. That's okay. Should I ask permission to take my socks off? It's probably expected, but I don't want to be impolite.
 Estelle [NagisaEstelleReply2]*: I'm sure it's fine, ~nagisa~. It's certainly what <i>I'd</i> expect, and I don't think anyone in particular is in charge of the game, so I don't know who you'd ask. If anyone objects, I'll take full responsibility.
 
 NAGISA STRIPPING SOCKS (minor):
-Nagisa []*: I couldn't let you do take responsibility for something I did, Estelle! If I'm the one who's doing something wrong, then I accept any punishment decided for me.
+Nagisa [nagisa_estelle_ne_n5]: I couldn't let you do take responsibility for something I did, Estelle! If I'm the one who's doing something wrong, then I accept any punishment decided for me.
 Estelle [NagisaEstelleReplyContinue2]*: But if I tell you it's acceptable to remove your socks and I'm wrong, the whole thing is <i>my</i> fault for giving you incorrect information. So I think it makes more sense that <i>I'd</i> receive the punishment.
 
 NAGISA STRIPPED SOCKS (minor):
-Nagisa []*: Let's agree that we should <i>both</i> be punished then. That way we can share responsibility. But who is going to punish us?
+Nagisa [nagisa_estelle_ne_n6]*: Let's agree that we should <i>both</i> be punished then. That way we can share responsibility. But who is going to punish us?
 Estelle [NagisaEstelleReplyEnd2]*: I suppose that's an acceptable compromise. Perhaps ~player~ should be in charge of punishing us, since ~player.ifMale(he|she)~ invited us here? Ah, but you've removed them already, and no one's objected. Never mind, then.
 
 
 NAGISA MUST STRIP JACKET:
-Nagisa []*: This is my first ever time playing an adult game like this. Thanks for putting up with me! I'm doing my best.
+Nagisa [nagisa_estelle_ne_n7]: This is my first ever time playing an adult game like this. Thanks for putting up with me! I'm doing my best.
 Estelle [NagisaEstelleReply3]*: Think nothing of it, ~nagisa~. I haven't ever done anything like this, either---but if we're determined enough, and don't let these lewd circumstances affect us, I'm certain we'll be able to get through it!
 
 NAGISA STRIPPING JACKET (accessory):
-Nagisa []*: I have to admit, I didn't know what to expect. It's still hard to imagine anyone having <i>those</i> kinds of thoughts about someone like me.
+Nagisa [nagisa_estelle_ne_n8]: I have to admit, I didn't know what to expect. It's still hard to imagine anyone having <i>those</i> kinds of thoughts about someone like me.
 Estelle [NagisaEstelleReplyContinue3]*: Were you kept indoors a lot growing up? Because I was, and I understand exactly what you mean. I'm not completely accustomed to the idea of others thinking about me like that, either.
 
 NAGISA STRIPPED JACKET (accessory):
-Nagisa []*: Yeah... I have to stay indoors a lot, especially over winter, because I get sick sometimes. I don't get to meet too many people outside of school.
+Nagisa [nagisa_estelle_ne_n9]*: Yeah... I have to stay indoors a lot, especially over winter, because I get sick sometimes. I don't get to meet too many people outside of school.
 Estelle [NagisaEstelleReplyEnd3]*: I'm sorry to hear that... Then we must be here for similar reasons. We're not satisfied with being sheltered from the world---and so we've come here to explore ourselves, and take matters into our own hands!
 
 
 NAGISA MUST STRIP SHIRT:
-Nagisa []*: Um, may I have everyone's attention? I... I have to take my ~clothing~ off... I don't want you to think I'm being improper, but it's the rules. And... and my chest isn't very impressive, but please don't be too disappointed.
+Nagisa [nagisa_estelle_ne_n10]: Um, may I have everyone's attention? I... I have to take my ~clothing~ off... I don't want you to think I'm being improper, but it's the rules. And... and my chest isn't very impressive, but please don't be too disappointed.
 Estelle [NagisaEstelleReply4]*: I'd never accuse you of impropriety for following the rules, ~nagisa~. Though it certainly is a strange idea, isn't it? Normally, laws exist to <i>prevent</i> such indecent behavior... This game turns everything on its head!
 
 NAGISA STRIPPING SHIRT (major):
-Nagisa []*: I didn't even think of that! Are we breaking the law? Am I a criminal now?!
+Nagisa [nagisa_estelle_ne_n11]: I didn't even think of that! Are we breaking the law? Am I a criminal now?!
 Estelle [NagisaEstelleReplyContinue4]*: Well, I certainly don't think so. Yuri didn't seem concerned about this place's legality when he described it to me. But then again, he's never that worried about---oh my, I hope this <i>is</i> legal!
 
 NAGISA STRIPPED SHIRT (major):
-Nagisa []*: What if this makes the newspaper?! "Famous princess and local girl jailed"?! I don't want my photo on the front page!
+Nagisa [nagisa_estelle_ne_n12]*: What if this makes the newspaper?! "Famous princess and local girl jailed"?! I don't want my photo on the front page!
 Estelle [NagisaEstelleReplyEnd4]*: It's all right, ~nagisa~---if it comes to that, I promise I'll figure it out. The worst they'll do to <i>me</i> is take me back to the castle, so all I need to do is convince them it was my fault, and they'll let you go.
 
 
 NAGISA MUST STRIP SKIRT:
-Nagisa []*: Ah. Um, please don't get the wrong idea. I'm not trying to lose or anything. Not in front of such important company...
+Nagisa [nagisa_estelle_ne_n13]: Ah. Um, please don't get the wrong idea. I'm not trying to lose or anything. Not in front of such important company...
 Estelle [NagisaEstelleReply5]*: I didn't think you were, ~nagisa~, but I'm glad to hear it. I suppose some commoners might be so afraid to win against a noble like me that they'd throw the game, but I'd much rather you gave it your all! -- Hopefully that wording is sufficiently flexible that it'll make sense even if Estelle's already lost, since Nagisa could still lose alongside Estelle.
 
 NAGISA STRIPPING SKIRT (major):
-Nagisa []*: I suppose where you're from, Estelle, ladies would even take their skirts off and put them in front of you so your feet don't have to touch the dirty ~background.surface~. At least that's what I remember from a movie once... So, um, you can stand on mine if you want to.
+Nagisa [nagisa_estelle_ne_n14]: I suppose where you're from, Estelle, ladies would even take their skirts off and put them in front of you so your feet don't have to touch the dirty ~background.surface~. At least that's what I remember from a movie once... So, um, you can stand on mine if you want to.
 Estelle [NagisaEstelleReplyContinue5]*: That's very kind of you, but I couldn't agree to that. Stepping on a commoner's possessions just to preserve your own elegance... That's definitely not the type of noble I'd like to be.
 
 NAGISA STRIPPED SKIRT (major):
-Nagisa []*: That's a relief. My mom would probably start to wonder if I came home with footprints on my clothes.
+Nagisa [nagisa_estelle_ne_n15]*: That's a relief. My mom would probably start to wonder if I came home with footprints on my clothes.
 Estelle [NagisaEstelleReplyEnd5]*: 
 
 
