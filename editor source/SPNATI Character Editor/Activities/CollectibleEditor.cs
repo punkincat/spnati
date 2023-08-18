@@ -33,11 +33,6 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-		public override bool CanRun()
-		{
-			return !Config.SafeMode;
-		}
-
 		protected override void OnInitialize()
 		{
 			_character = Record as Character;
@@ -104,6 +99,19 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			ListViewItem item = new ListViewItem(c.Title);
 			item.Tag = c;
+			item.ImageKey = ThumbnailImageKey(c);
+			lstCollectibles.Items.Add(item);
+			if (select)
+			{
+				item.Selected = true;
+			}
+			UpdateAddButton();
+		}
+
+		private string ThumbnailImageKey(Collectible c)
+		{
+			if (Config.SafeMode)
+				return "";
 			Bitmap thumbnail = GetImage(c.Thumbnail);
 			if (thumbnail != null)
 			{
@@ -111,18 +119,12 @@ namespace SPNATI_Character_Editor.Activities
 				{
 					lstCollectibles.LargeImageList.Images.Add(c.Thumbnail, thumbnail);
 				}
-				item.ImageKey = c.Thumbnail;
+				return c.Thumbnail;
 			}
 			else
 			{
-				item.ImageKey = "???";
+				return "???";
 			}
-			lstCollectibles.Items.Add(item);
-			if (select)
-			{
-				item.Selected = true;
-			}
-			UpdateAddButton();
 		}
 
 		public static Bitmap GetImage(string src)
@@ -209,19 +211,7 @@ namespace SPNATI_Character_Editor.Activities
 			else if (e.PropertyName == "Thumbnail")
 			{
 				Collectible collectible = _selectedItem.Tag as Collectible;
-				Bitmap thumbnail = GetImage(collectible.Thumbnail);
-				if (thumbnail != null)
-				{
-					if (!lstCollectibles.LargeImageList.Images.ContainsKey(collectible.Thumbnail))
-					{
-						lstCollectibles.LargeImageList.Images.Add(collectible.Thumbnail, thumbnail);
-					}
-					_selectedItem.ImageKey = collectible.Thumbnail;
-				}
-				else
-				{
-					_selectedItem.ImageKey = "???";
-				}
+				_selectedItem.ImageKey = ThumbnailImageKey(collectible);
 			}
 			else if (e.PropertyName == "Image")
 			{
@@ -251,6 +241,11 @@ namespace SPNATI_Character_Editor.Activities
 
 		private void UpdatePreview()
 		{
+			if (Config.SafeMode)
+			{
+				picPreview.Image = null;
+				return;
+			}
 			Collectible collectible = _selectedItem.Tag as Collectible;
 			if (collectible != null)
 			{
