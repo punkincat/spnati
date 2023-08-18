@@ -83,6 +83,10 @@
         <response id="689" opponent="supernova" opponentId="198" />
         <response id="690" opponent="supernova" opponentId="193" />
         <response id="692" opponent="supernova" opponentId="194" />
+        <response id="694" opponent="aloy" opponentId="2" />
+        <response id="696" opponent="nadeshiko" opponentId="9" />
+        <response id="701" opponent="chihiro" opponentId="1" />
+        <response id="702" opponent="chihiro" opponentId="2" />
     </responses>
     <notes>
         <note id="272">For Repulsive_Trifle_551's sponsorship!</note>
@@ -876,11 +880,22 @@
         <label id="687" label="0-8 Killing Someone to Save the World" color="4" folder="Targets" sort="0" />
         <label id="689" label="2 Space Headphones" color="3" folder="Targets" sort="0" />
         <label id="693" label="Arriving Through a Portal" folder="Targets" sort="0" />
+        <label id="694" label="3-8 History" color="4" folder="Targets" sort="0" />
+        <label id="696" label="4-6 Looks vs. Personality" color="4" folder="Targets" sort="0" />
+        <label id="697" label="Sensing Things You Don't Want To" color="1" folder="Targets" sort="0" />
+        <label id="698" label="0 Judo" color="5" folder="Targets" sort="0" />
+        <label id="699" label="1 Swimming" color="3" folder="Targets" sort="0" />
+        <label id="700" label="2 Undressing for the Player" color="2" folder="Targets" sort="0" />
+        <label id="702" label="4 Chihiro Bails" color="6" folder="Targets" sort="0" />
+        <label id="703" label="5 Alter Ego" color="6" folder="Targets" sort="0" />
+        <label id="701" label="6 Gender Reveal" color="7" folder="Targets" sort="0" />
+        <label id="704" label="5 Chihiro Returns" color="7" folder="Targets" sort="0" />
     </labels>
-    <nextId>693</nextId>
+    <nextId>704</nextId>
     <markers>
         <marker scope="Public" name="Aaravi_Backstory_1">Aaravi Targets: Aaravi Strip</marker>
         <marker scope="Public" name="Aella_Adventures_Resp">Aella Targets: Any Hand</marker>
+        <marker scope="Public" name="Aloy_History_Resp">Aloy Targets: Any Hand</marker>
         <marker scope="Public" name="Anatoly_Illiterate">Anatoly Targets: Any Hand</marker>
         <marker scope="Public" name="Aoba_HajimeResp">Aoba Targets: Any Hand</marker>
         <marker scope="Public" name="Aqua_Aqua_Aqua_Grunt">Aqua Grunt, Aqua (KH), and Aqua (KonoSuba) Targets: Game Start</marker>
@@ -938,6 +953,7 @@
         <marker scope="Public" name="Aqua_KS_Runaway_3">Aqua (KonoSuba) Targets: Toph Stripped 2-3</marker>
         <marker scope="Public" name="Aqua_KS_SeismicSense_1">Aqua (KonoSuba) Targets: Toph Strip 3-4</marker>
         <marker scope="Public" name="Aqua_KS_SeismicSense_2">Aqua (KonoSuba) Targets: Toph Stripping 3-4</marker>
+        <marker scope="Public" name="Aqua_KS_SeismicSense_3">Aqua (KonoSuba) Targets: Toph Stripped 3-4</marker>
         <marker scope="Public" name="Aqua_KS_TeamAvatar_1">Aqua (KonoSuba) Targets: Toph Strip 3-4</marker>
         <marker scope="Public" name="Aqua_KS_TeamAvatar_2">Aqua (KonoSuba) Targets: Toph Stripping 3-4</marker>
         <marker scope="Public" name="Aqua_KS_TeamAvatar_3">Aqua (KonoSuba) Targets: Toph Stripped 3-4</marker>
@@ -1009,6 +1025,10 @@
         <marker scope="Public" name="Cagliostro_Seeing_1">Cagliostro Targets: Toph Strip 3-4</marker>
         <marker scope="Public" name="Cagliostro_Techniques_1">Cagliostro Targets: Toph Strip 2-3</marker>
         <marker scope="Public" name="Caulifla_SeismicSense_1">Caulifla Targets: Toph Stripping 0-1</marker>
+        <marker scope="Public" name="Chihiro_AlterEgo">Chihiro Targets: Chihiro Stripped 4-5</marker>
+        <marker scope="Public" name="Chihiro_Return">Chihiro Targets: Chihiro Strip 5-6</marker>
+        <marker scope="Public" name="Chihiro_Reveal">Chihiro Targets: Chihiro Stripped 5-6</marker>
+        <marker scope="Public" name="Chihiro_Runaway">Chihiro Targets: Chihiro Stripping 4-5</marker>
         <marker scope="Public" name="Critical_Blind_1">Critical Darling Targets: Toph Strip 0-1</marker>
         <marker scope="Public" name="Critical_Blind_2">Critical Darling Targets: Toph Stripping 0-1</marker>
         <marker scope="Public" name="Critical_Game_1">Critical Darling Targets: Toph Strip 1-2</marker>
@@ -1173,22 +1193,26 @@
         <marker scope="Public" name="Mia_Treatment_3">Mia Targets: Mia Stripped 2-3</marker>
         <marker scope="Public" name="Misty_SkinnyDip">Misty Targets: Game Start</marker>
         <marker scope="Public" name="Myriam_Bonebending">Myriam Targets: Any Hand</marker>
+        <marker scope="Public" name="Nadeshiko_Partner_Resp">Nadeshiko Targets: Any Hand</marker>
         <marker scope="Public" name="Nagamimi_Dragons_Resp">Nagamimi Targets: Any Hand</marker>
         <marker scope="Public" name="Nagatoro_Blind_1">Nagatoro Targets: Toph Strip 1-2</marker>
         <marker scope="Public" name="Nagatoro_Blind_2">Nagatoro Targets: Toph Stripped 1-2</marker>
         <marker scope="Public" name="Nagatoro_Fighter_1">Nagatoro Targets: Toph Strip 2-3</marker>
         <marker scope="Public" name="Nagatoro_Fighter_2">Nagatoro Targets: Toph Stripping 2-3</marker>
         <marker scope="Public" name="Nagatoro_Judo_1">Nagatoro Targets: Nagatoro Strip 0-1</marker>
+        <marker scope="Public" name="Nagatoro_Judo_2">Nagatoro Targets: Nagatoro Stripping 0-1</marker>
         <marker scope="Public" name="Nagatoro_Reason_1">Nagatoro Targets: Toph Strip 4-5</marker>
         <marker scope="Public" name="Nagatoro_Shoes_1">Nagatoro Targets: Toph Strip 0-1</marker>
         <marker scope="Public" name="Nagatoro_Shoes_2">Nagatoro Targets: Toph Stripping 0-1</marker>
         <marker scope="Public" name="Nagatoro_Shoes_3">Nagatoro Targets: Toph Stripped 0-1</marker>
         <marker scope="Public" name="Nagatoro_Swim_1">Nagatoro Targets: Nagatoro Strip 1-2</marker>
+        <marker scope="Public" name="Nagatoro_Swim_2">Nagatoro Targets: Nagatoro Stripping 1-2</marker>
         <marker scope="Public" name="Nagatoro_Training_0">Nagatoro Targets: Toph Strip 3-4</marker>
         <marker scope="Public" name="Nagatoro_Training_1">Nagatoro Targets: Toph Stripping 3-4</marker>
         <marker scope="Public" name="Nagatoro_Training_2">Nagatoro Targets: Toph Stripped 3-4</marker>
         <marker scope="Public" name="Nagatoro_Training_3">Nagatoro Targets: Any Hand</marker>
         <marker scope="Public" name="Nagatoro_TrueFeelings_1">Nagatoro Targets: Nagatoro Strip 2-3</marker>
+        <marker scope="Public" name="Nagatoro_TrueFeelings_2">Nagatoro Targets: Nagatoro Stripping 2-3</marker>
         <marker scope="Public" name="Nami_Pretty_1">Nami Targets: Toph Strip 1-2</marker>
         <marker scope="Public" name="Nami_Rich_1">Nami Targets: Toph Strip 0-1</marker>
         <marker scope="Public" name="Nami_Rich_2a">Nami Targets: Toph Stripping 0-1</marker>
@@ -1438,4 +1462,8 @@
         <marker scope="Public" name="Yuno_Title_1">Yuno Targets: Toph Strip 0-1</marker>
         <marker scope="Public" name="Yuno_Uno_1">Yuno Targets: Yuno Strip 1-2</marker>
     </markers>
+    <pendingLines>
+        <line>Well, I like hanging with Sokka, and the rest of Team Avatar as well--Katara, Aang, Zuko, all of them! But since I stared running the Academy, I barely get any chances to spend much time with them, except when there's a battle to be fought. (Resp. to NadeshikoFriends, for the Removing Accessory case, or the Any Hand case if it's moved to it)</line>
+        <line>Also respond to NadeshikoHome</line>
+    </pendingLines>
 </metadata>
