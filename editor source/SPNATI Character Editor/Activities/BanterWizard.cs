@@ -84,11 +84,6 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-		public override bool CanRun()
-		{
-			return !Config.SafeMode;
-		}
-
 		protected override void OnInitialize()
 		{
 			_character = Record as Character;
