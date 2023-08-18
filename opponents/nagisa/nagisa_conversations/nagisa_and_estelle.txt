@@ -14,7 +14,7 @@ Nagisa [nagisa_estelle_ne_n2]: It wouldn't be fair to everyone else if I left ea
 Estelle [NagisaEstelleReplyContinue1]*: A payphone? Those work like blastia that allow you to communicate over long distances, right? I've read about them, but I've never seen one before. Could I come with you to see the payphone?
 
 NAGISA STRIPPED SHOES (accessory):
-Nagisa [nagisa_estelle_ne_n3]*: I'm not really sure what a "ballista" is, but sure, we can go together! And I could walk you home if you're staying nearby. -- "ballista" error intentional
+Nagisa [nagisa_estelle_ne_n3]: I'm not really sure what a "ballista" is, but sure, we can go together! And I could walk you home if you're staying nearby.
 Estelle [NagisaEstelleReplyEnd1=blastia]*: <i>"Blastia use the primeval power of aer that fills the world to provide us with fire, water, and light. They provide us with everything that has made the empire prosper."</i> ...And thank you, but I don't live nearby.
      OR [NagisaEstelleReplyEnd1=payphones]*: How wonderful! I'm so excited to visit one of your world's bustling metropolises, with majestic payphones dotting the streets as far as the eye can see... And that's all right, I don't live around here.
 
@@ -28,7 +28,7 @@ Nagisa [nagisa_estelle_ne_n5]: I couldn't let you do take responsibility for som
 Estelle [NagisaEstelleReplyContinue2]*: But if I tell you it's acceptable to remove your socks and I'm wrong, the whole thing is <i>my</i> fault for giving you incorrect information. So I think it makes more sense that <i>I'd</i> receive the punishment.
 
 NAGISA STRIPPED SOCKS (minor):
-Nagisa [nagisa_estelle_ne_n6]*: Let's agree that we should <i>both</i> be punished then. That way we can share responsibility. But who is going to punish us?
+Nagisa [nagisa_estelle_ne_n6]: Let's agree that we should <i>both</i> be punished then. That way we can share responsibility. But who is going to punish us?
 Estelle [NagisaEstelleReplyEnd2]*: I suppose that's an acceptable compromise. Perhaps ~player~ should be in charge of punishing us, since ~player.ifMale(he|she)~ invited us here? Ah, but you've removed them already, and no one's objected. Never mind, then.
 
 
@@ -41,7 +41,7 @@ Nagisa [nagisa_estelle_ne_n8]: I have to admit, I didn't know what to expect. It
 Estelle [NagisaEstelleReplyContinue3]*: Were you kept indoors a lot growing up? Because I was, and I understand exactly what you mean. I'm not completely accustomed to the idea of others thinking about me like that, either.
 
 NAGISA STRIPPED JACKET (accessory):
-Nagisa [nagisa_estelle_ne_n9]*: Yeah... I have to stay indoors a lot, especially over winter, because I get sick sometimes. I don't get to meet too many people outside of school.
+Nagisa [nagisa_estelle_ne_n9]: Yeah... I have to stay indoors a lot, especially over winter, because I get sick sometimes. I don't get to meet too many people outside of school.
 Estelle [NagisaEstelleReplyEnd3]*: I'm sorry to hear that... Then we must be here for similar reasons. We're not satisfied with being sheltered from the world---and so we've come here to explore ourselves, and take matters into our own hands!
 
 
@@ -54,7 +54,7 @@ Nagisa [nagisa_estelle_ne_n11]: I didn't even think of that! Are we breaking the
 Estelle [NagisaEstelleReplyContinue4]*: Well, I certainly don't think so. Yuri didn't seem concerned about this place's legality when he described it to me. But then again, he's never that worried about---oh my, I hope this <i>is</i> legal!
 
 NAGISA STRIPPED SHIRT (major):
-Nagisa [nagisa_estelle_ne_n12]*: What if this makes the newspaper?! "Famous princess and local girl jailed"?! I don't want my photo on the front page!
+Nagisa [nagisa_estelle_ne_n12]: What if this makes the newspaper?! "Famous princess and local girl jailed"?! I don't want my photo on the front page!
 Estelle [NagisaEstelleReplyEnd4]*: It's all right, ~nagisa~---if it comes to that, I promise I'll figure it out. The worst they'll do to <i>me</i> is take me back to the castle, so all I need to do is convince them it was my fault, and they'll let you go.
 
 
@@ -67,7 +67,7 @@ Nagisa [nagisa_estelle_ne_n14]: I suppose where you're from, Estelle, ladies wou
 Estelle [NagisaEstelleReplyContinue5]*: That's very kind of you, but I couldn't agree to that. Stepping on a commoner's possessions just to preserve your own elegance... That's definitely not the type of noble I'd like to be.
 
 NAGISA STRIPPED SKIRT (major):
-Nagisa [nagisa_estelle_ne_n15]*: That's a relief. My mom would probably start to wonder if I came home with footprints on my clothes.
+Nagisa [nagisa_estelle_ne_n15]: That's a relief. My mom would probably start to wonder if I came home with footprints on my clothes.
 Estelle [NagisaEstelleReplyEnd5]*: 
 
 
@@ -99,90 +99,86 @@ Estelle [NagisaEstelleReplyEnd7]*:
 ---
 
 ESTELLE MUST STRIP GLOVES:
-Nagisa []*: Excuse me, Estelle, but I think you might have lost this one. It's nice to meet you, by the way. Sorry if I didn't say that before. My name's Nagisa. Oh, you already know that. Anyway, sorry!
+Nagisa [nagisa_estelle_ne_e1]: Excuse me, Estelle, but I think you might have lost this one. It's nice to meet you, by the way. Sorry if I didn't say that before. My name's Nagisa. Oh, you already know that. Anyway, sorry!
 Estelle [EstelleNagisaReply1]*: It's nice to meet you too, ~nagisa~, but you don't need to apologize! Are you intimidated because I'm royalty? I'd really like us to be friends, so it's fine if you just relax and treat me like you would anyone.
 
 ESTELLE STRIPPING GLOVES (accessory):
-Nagisa []*: You're royalty? Oh, wow. I was daydreaming earlier, so I'm sorry if you were announced. I didn't even wear my nice dress! I've never been friends with a princess before. Do you live in a castle? Are you married to a prince? No, of course not. Unless it was an arranged marriage? That's personal, so I shouldn't ask about that. Do you have a tiara? What country are you from? Is your dad the king? Sorry for asking so many questions... -- This rambling line isn't visible after the word "arranged" if Nagisa has her waitress headpiece on. If not, it can be read until "personal."
+Nagisa [nagisa_estelle_ne_e2]*: You're royalty? Oh, wow. I was daydreaming earlier, so I'm sorry if you were announced. I didn't even wear my nice dress! I've never been friends with a princess before. Do you live in a castle? Are you married to a prince? No, of course not. Unless it was an arranged marriage? That's personal, so I shouldn't ask about that. Do you have a tiara? What country are you from? Is your dad the king? Sorry for asking so many questions... -- This rambling line isn't visible after the word "arranged" if Nagisa has her waitress headpiece on. If not, it can be read until "personal."
 Estelle [EstelleNagisaReplyContinue1]*: Well, let me see... I used to live in a castle. but nowadays I spend most of my time traveling. I'm not married to anyone, and.... ah... Sorry, I don't think I heard everything you were trying to ask.
 
 ESTELLE STRIPPED GLOVES (accessory):
-Nagisa []*: Um, may I ask what you prefer to be called? Is it "your highness" or "your worship"? I always get those mixed up.
+Nagisa [nagisa_estelle_ne_e3]*: Um, may I ask what you prefer to be called? Is it "your highness" or "your worship"? I always get those mixed up.
 Estelle [EstelleNagisaReplyEnd1]*: Oh, please, just call me Estelle! It's not appropriate to call a friend either of those things... Why don't you share a high five with me? Perhaps that'll help you think of me in a more companionable way.
 
 ESTELLE HAND AFTER STRIPPED GLOVES
-Nagisa []*: Are you sure your bodyguards won't mind if we high five? I don't want to get arrested.
+Nagisa [nagisa_estelle_ne_e3_hand]*: Are you sure your bodyguards won't mind if we high five? I don't want to get arrested.
 Estelle []*: ~Nagisa~, the Knights wouldn't arrest you for that even if they somehow found us here. And even if they <i>did</i> arrest you for some reason, I'd see to it that they let you go, so please don't worry!
 
 
---Divided these up by outfit as well as the ones later on. I've copied over the lines already written, but feel free to change your lines for any of them, and I can write different responses to them.
-
 ESTELLE MUST STRIP OVERDRESS, DEFAULT OUTFIT:
-Nagisa []*: So... I was wondering. Your highness--- ah, I mean <i>Estelle</i>. Are you sure it's okay to be playing a game like this with a commoner like me?
+Nagisa [nagisa_estelle_ne_e4_default]: So... I was wondering. Your highness--- ah, I mean <i>Estelle</i>. Are you sure it's okay to be playing a game like this with a commoner like me?
 Estelle [EstelleNagisaReply2=default]*: I think so, ~nagisa~. Some among the nobility might disagree, but it's exactly that sort of arrogance that's been corrupting the Empire, so I don't really care whether they do or not.
 
 ESTELLE STRIPPING OVERDRESS, DEFAULT OUTFIT (minor):
-Nagisa []*: I wouldn't want you to lose the respect of your subjects just because you made some new friends. You shouldn't have to give up the claim to the throne over something like that.
+Nagisa [nagisa_estelle_ne_e5_default]*: I wouldn't want you to lose the respect of your subjects just because you made some new friends. You shouldn't have to give up the claim to the throne over something like that.
 Estelle [EstelleNagisaReplyContinue2=default]*: Oh, I've spent plenty of time traveling with commoners already, and I have no claim to the throne anymore, either. So---oof, sorry. I'll just be a moment...
 
 ESTELLE STRIPPED OVERDRESS, DEFAULT OUTFIT (minor; messy hair):
-Nagisa []*: Oh no. That doesn't seem fair. I think you really look the part for a queen. Um, when you have all of your dress on and your hair was like it was a minute ago, I mean.
+Nagisa [nagisa_estelle_ne_e6_default]*: Oh no. That doesn't seem fair. I think you really look the part for a queen. Um, when you have all of your dress on and your hair was like it was a minute ago, I mean.
 Estelle [EstelleNagisaReplyEnd2=default]*: Oh, thank you for saying so! But I'd rather not deal with the responsibility of becoming queen, anyway. Ioder will do a much better job of uniting the world than I---wait, what's wrong with my hair?
 
 
 ESTELLE MUST STRIP VEST, VDAY OUTFIT:
-Nagisa []*: Estelle, did someone make you take off your skirt before I got here? Maybe you should skip this turn. I don't think it would be fair if we made a princess start in her underwear.
+Nagisa [nagisa_estelle_ne_e4_vday]: Estelle, did someone make you take off your skirt before I got here? Maybe you should skip this turn. I don't think it would be fair if we made a princess start in her underwear.
 Estelle [EstelleNagisaReply2=vday]*: Huh? W-Well, no, this is just a, er... I'm still wearing a skirt, it's just quite... This is a special outfit, I suppose. It's designed to... attract attention.
 
 ESTELLE STRIPPING VEST, VDAY OUTFIT (minor):
-Nagisa []*: Oh, I see... Wait, Estelle! You're not trapped in some prince's harem, are you?! I'm sure we could rescue you if we all worked together.
+Nagisa [nagisa_estelle_ne_e5_vday]*: Oh, I see... Wait, Estelle! You're not trapped in some prince's harem, are you?! I'm sure we could rescue you if we all worked together.
 Estelle [EstelleNagisaReplyContinue2=vday]*: No, no! I just have this outfit because Karol wanted---er, because Yuri said---Well, it's not important why I have it, but I'm using it now to seduce ~player~. Ah, how does this even come off again?
 
 ESTELLE STRIPPED VEST, VDAY OUTFIT (minor; messy hair):
-Nagisa []*: Ohhhhhh... You just mean you're going to flirt with ~player~, right? You're not going to start kissing or anything, right?
+Nagisa [nagisa_estelle_ne_e6_vday]*: Ohhhhhh... You just mean you're going to flirt with ~player~, right? You're not going to start kissing or anything, right?
 Estelle [EstelleNagisaReplyEnd2=vday]*: Yes, exactly. I was hoping to convince ~player.ifMale(him|her)~ to have dinner with me, or go for a walk---even hold hands if we were feeling <i>really</i> adventurous. Oh, but I should fix my hair before we do that.
 
 
 ESTELLE MUST STRIP HAT, CHRISTMAS OUTFIT:
-Nagisa []*: I like your outfit, Estelle. It's so... seasonal. My birthday is on December 24, so Christmas is a special time of year for me too.
+Nagisa [nagisa_estelle_ne_e4_christmas]: I like your outfit, Estelle. It's so... seasonal. My birthday is on December 24, so Christmas is a special time of year for me too.
 Estelle [EstelleNagisaReply2=christmas]*: Thank you so much, ~nagisa~! We don't exactly have Christmas in Terca Lumireis, but it sounds wonderful, and I've read so much about it that I'm confident I can accurately conform to its traditions.
 
 ESTELLE STRIPPING HAT, CHRISTMAS OUTFIT (minor):
-Nagisa []*: Christmas is meant to be a romantic time of year, so a lot of people like to go on dates. But it can get pretty cold too! -- Comment: I'm deliberately avoiding mentioning if it's December right now because the player might be using Estelle's costume at a different time of year.
+Nagisa [nagisa_estelle_ne_e5_christmas]*: Christmas is meant to be a romantic time of year, so a lot of people like to go on dates. But it can get pretty cold too! -- Comment: I'm deliberately avoiding mentioning if it's December right now because the player might be using Estelle's costume at a different time of year.
 Estelle [EstelleNagisaReplyContinue2=christmas]*: Yes, but the cold only encourages you to sit by the fire indoors, holding hands and roasting chestnuts... It's enough to make anyone's heart tingle with joy. Oh, my hair's tingling, too...
 
 ESTELLE STRIPPED HAT, CHRISTMAS OUTFIT (minor; messy hair):
-Nagisa []*: Oh, Estelle, your hair is all messed up! That happens to me all the time too, especially at this time of year. No matter how hard I try, it will never all sit flat.
+Nagisa [nagisa_estelle_ne_e6_christmas]*: Oh, Estelle, your hair is all messed up! That happens to me all the time too, especially at this time of year. No matter how hard I try, it will never all sit flat.
 Estelle [EstelleNagisaReplyEnd2=christmas]*: Ah, I should have been more careful... I think I have it easier than you, since my hair isn't hard to manage as long as I brush it frequently. Hmmm, I did remember to bring a hairbrush with me, didn't I? 
 
 
 ESTELLE MUST STRIP HAT, SUMMER OUTFIT:
-Nagisa []*: You're so brave to be wearing a bikini to a game like this, Estelle. Sheer materials are so pretty... but they're hard to wear to the beach when they're see-through...
+Nagisa [nagisa_estelle_ne_e4_summer]: You're so brave to be wearing a bikini to a game like this, Estelle. Sheer materials are so pretty... but they're hard to wear to the beach when they're see-through...
 Estelle [EstelleNagisaReply2=summer]*: Huh? Wait... is my shirt actually that transparent? With the way it bunches up and the patterning, I didn't think you'd be able to see right through it like that...
 
 ESTELLE STRIPPING HAT, SUMMER OUTFIT (minor):
-Nagisa []*: Well it's not <i>completely</i> transparent, but it kind of makes me feel like I have x-ray vision. It looks good on you because you have a really nice figure... unless we weren't supposed to know that yet.
+Nagisa [nagisa_estelle_ne_e5_summer]*: Well it's not <i>completely</i> transparent, but it kind of makes me feel like I have x-ray vision. It looks good on you because you have a really nice figure... unless we weren't supposed to know that yet.
 Estelle [EstelleNagisaReplyContinue2=summer]*: ??
 
 ESTELLE STRIPPED HAT, SUMMER OUTFIT (minor; messy hair):
-Nagisa []*: ??
+Nagisa [nagisa_estelle_ne_e6_summer]*: ??
 Estelle [EstelleNagisaReplyEnd2=summer]*: ??
 
 
---Note to self for Cipher: Rita should probably react to these lines if she's present.
----Reply from Arndress: I've added a section for Rita below. I'm planning to do something similar for Panty to chime in on whatever's Stocking's saying, but without trying to steer a conversation.
 ESTELLE MUST STRIP WITCH HAT, WITCH OUTFIT: 
-Nagisa []*: I'm sorry! I didn't mean to get a witch-princess mad with me! Please don't turn us into frogs... If I have to be turned into something, please turn me into a dango.
+Nagisa [nagisa_estelle_ne_e4_witch]: I'm sorry! I didn't mean to get a witch-princess mad with me! Please don't turn us into frogs... If I have to be turned into something, please turn me into a dango.
 Estelle [EstelleNagisaReply2=witch]*: Huh? You didn't anger me, ~nagisa~, I just lost. And I'm not planning to use my magic on anything other than my own clothing. Rita didn't teach me any spells to use on other players.
 Rita [RitaEstelleNagisaReplyReact2=witch]:* Turning people into animals is overrated anyway. Do you have any idea how much aer that would take? Or how difficult the calculations would be? Living things are complicated, you know.
 
 ESTELLE STRIPPING WITCH HAT, WITCH OUTFIT (minor):
-Nagisa []*: So she just taught you how to turn your clothes into frogs? That doesn't seem like a very good idea for when you want to get dressed later, but I suppose you could cover yourself strategically with them...
+Nagisa [nagisa_estelle_ne_e5_witch]*: So she just taught you how to turn your clothes into frogs? That doesn't seem like a very good idea for when you want to get dressed later, but I suppose you could cover yourself strategically with them...
 Estelle [EstelleNagisaReplyContinue2=witch]*: No, not turn them into frogs. I don't have any idea what to feed a frog, so I don't know what I'd do with the poor things. It just makes them vanish, like this!
 Rita [RitaEstelleNagisaReplyContinueReact2=witch]:* Come on, ~nagisa~, <i>clothes</i> to frogs isn't any better. That's almost <i>worse</i>, since they're not alive in the first place! Why are amateurs always so obsessed with the whole frog thi---uh, ~estelle~, your form's a bit off...
 
 ESTELLE STRIPPED WITCH HAT, WITCH OUTFIT (minor; messy hair):
-Nagisa []*: Whoa... real magic. That's amazing, Estelle. You could've won the whole game just by pointing your wand at people. You shouldn't, of course. That would be cheating.
+Nagisa [nagisa_estelle_ne_e6_witch]*: Whoa... real magic. That's amazing, Estelle. You could've won the whole game just by pointing your wand at people. You shouldn't, of course. That would be cheating.
 Estelle [EstelleNagisaReplyEnd2=witch]*: It's more complicated than that, anyway, ~nagisa~... I have to learn a new variation of the spell for each item. Rita said it's easy to modify it on the fly, but the calculations she uses for that are so difficult...
 OR (if Rita is present)
 Estelle [EstelleNagisaRitaReplyEnd2=witch]*: I'd have to learn a new variation of the spell to do something like that anyway, ~nagisa~. I know you told me how to recalculate the formula for other items, ~rita~, but, er... it's pretty difficult...
