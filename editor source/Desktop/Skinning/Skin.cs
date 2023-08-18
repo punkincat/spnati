@@ -106,7 +106,7 @@ namespace Desktop.Skinning
 		public Color Gray = Color.Gray;
 		[Color(DisplayName = "Light Gray")]
 		public Color LightGray = Color.LightGray;
-		[Color(DisplayName = "Orange")]
+		/*[Color(DisplayName = "Orange")]
 		public Color Orange = Color.OrangeRed;
 		[Color(DisplayName = "Green")]
 		public Color Green = Color.Green;
@@ -117,7 +117,36 @@ namespace Desktop.Skinning
 		[Color(DisplayName = "Pink")]
 		public Color Pink = Color.Pink;
 		[Color(DisplayName = "Red")]
-		public Color Red = Color.Red;
+		public Color Red = Color.Red;*/
+		[Color(DisplayName = "Orange")]
+		public Color Orange = Color.DarkOrange;
+		[Color(DisplayName = "Green")]
+		public Color Green = Color.Aquamarine;
+		[Color(DisplayName = "Blue")]
+		public Color Blue = Color.DeepSkyBlue;
+		[Color(DisplayName = "Blue (Cornflower)")]
+		public Color CornflowerBlue = Color.CornflowerBlue;
+		[Color(DisplayName = "Blue (Light)")]
+		public Color LightBlue = Color.PowderBlue;
+		[Color(DisplayName = "Purple")]
+		public Color Purple = Color.Indigo;
+		[Color(DisplayName = "Pink")]
+		public Color Pink = Color.HotPink;
+		[Color(DisplayName = "Red")]
+		public Color Red = Color.DarkRed;
+		[Color(DisplayName = "Teal")]
+		public Color Teal = Color.Teal;
+		[Color(DisplayName = "Turquoise")]
+		public Color Turquoise = Color.DarkTurquoise;
+		[Color(DisplayName = "Pink (Light)")]
+		public Color LightPink = Color.LightPink;
+		[Color(DisplayName = "Violet")]
+		public Color Violet = Color.BlueViolet;
+		[Color(DisplayName = "Brown")]
+		public Color Brown = Color.SaddleBrown;
+		[Color(DisplayName = "Salmon")]
+		public Color Salmon = Color.LightSalmon;
+
 		#endregion
 
 		#region Accordion Groupers
