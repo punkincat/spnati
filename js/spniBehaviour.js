@@ -2348,14 +2348,14 @@ Opponent.prototype.findBehaviour = function(triggers, opp, volatileOnly) {
         });
     }, this);
 
+    /* Evaluate pre-dialogue hidden cases if we're not doing a reaction pass. */
+    if (!volatileOnly) this.evaluateHiddenCases(triggers, opp, false);
+
     /* quick check to see if the trigger exists */
     if (cases.length <= 0) {
         console.log("Warning: couldn't find " + triggers + " dialogue for player " + this.slot + " at stage " + stageNum);
         return false;
     }
-
-    /* Evaluate pre-dialogue hidden cases if we're not doing a reaction pass. */
-    if (!volatileOnly) this.evaluateHiddenCases(triggers, opp, false);
 
     /* Find the best match, as well as potential volatile matches. */
     var bestMatch = [];
