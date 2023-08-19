@@ -1832,6 +1832,9 @@ function checkMarker(predicate, self, target, currentOnly) {
     return evalOperator(val, op, cmpVal);
 }
 
+function checkMarkers(predicate, self, target, currentOnly) {
+    return predicate.split('\|').some(subs => subs.split('&').every(expr => checkMarker(expr, self, target, currentOnly)));
+}
 
 function checkSaidText(predicate, player) {
     var match = predicate.match(/^(.+)##\s*((?:\>|\<|\=|\!)\=?)\s*(\d+)\s*$/);

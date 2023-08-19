@@ -448,7 +448,7 @@ function Pose(poseDef, display, onLoadCallback) {
     this.container = container;
     
     poseDef.sprites.forEach(function (def) {
-        if (def.marker && !checkMarker(def.marker, this.player)) {
+        if (def.marker && !checkMarkers(def.marker, this.player)) {
             return;
         }
         var sprite = new PoseSprite(def.id, def.src, this.onSpriteLoaded.bind(this), this, def);
@@ -465,7 +465,7 @@ function Pose(poseDef, display, onLoadCallback) {
     }
     
     poseDef.animations.forEach(function (def) {
-        if (def.marker && !checkMarker(def.marker, this.player)) {
+        if (def.marker && !checkMarkers(def.marker, this.player)) {
           return;
         }
         var target = this.sprites[def.id];
