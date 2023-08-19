@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Desktop.CommonControls.PropertyControls;
 using Desktop.DataStructures;
-using Newtonsoft.Json.Linq;
 using SPNATI_Character_Editor.Controls;
 
 namespace SPNATI_Character_Editor.EpilogueEditor
@@ -103,19 +102,9 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			get { return Get<string>(); }
 			set
 			{
-				//bool perTarget;
-				//MarkerOperator op;
-				//string markerValue;
-				//MarkerName = SPNATI_Character_Editor.Marker.ExtractConditionPieces(value, out op, out markerValue, out perTarget);
-				//MarkerOp = op;
-				//MarkerValue = markerValue;
 				Set(value);
 			}
 		}
-
-		//private string MarkerName;
-		//private MarkerOperator MarkerOp;
-		//private string MarkerValue;
 
 		[Numeric(DisplayName = "Layer", Key = "z", GroupOrder = 15, Minimum = -100)]
 		public int Z
@@ -778,7 +767,6 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 		public bool HiddenByMarker(List<string> markers)
 		{
-			//return string.IsNullOrEmpty(Marker) ? false : Marker.Split('|').Any(conj => !conj.Split('&').Any(expr => !MarkersTest(markers, expr)));
 			return !string.IsNullOrEmpty(Marker) && !Marker.Split(new char[] {'|'}, StringSplitOptions.RemoveEmptyEntries).Any(conj => !conj.Split(new char[] {'&'}, StringSplitOptions.RemoveEmptyEntries).Any(expr => !MarkersTest(markers, expr)));
 		}
 
