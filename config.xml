@@ -31,6 +31,17 @@
     <!-- Set to true to force all collectibles to appear as unlocked. -->
     <collectibles-unlocked>false</collectibles-unlocked>
 
+    <!-- Set to true to enable user customization of card decks.  -->
+    <custom-cards>true</custom-cards>
+
+    <!--
+        The ID of the default selected card deck.
+        This still has an effect even if <custom-cards> is set to false; in
+        this case, the configured default card deck will always be applied,
+        though the user will not be able to configure it.
+    -->
+    <default-card-deck>default</default-card-deck>
+
     <!-- Set to false to disable alternate costume functionality.  -->
     <alternate-costumes>true</alternate-costumes>
 
@@ -47,17 +58,6 @@
         and other events will be disabled.)
     -->
     <!-- <event>summer</event> -->
-
-    <!-- Set to true to enable user customization of card decks.  -->
-    <custom-cards>true</custom-cards>
-
-    <!--
-        The ID of the default selected card deck.
-        This still has an effect even if <custom-cards> is set to false; in
-        this case, the configured default card deck will always be applied,
-        though the user will not be able to configure it.
-    -->
-    <default-card-deck>default</default-card-deck>
 
     <!--
         Each <alternate-costume-sets> element specifies one costume set
