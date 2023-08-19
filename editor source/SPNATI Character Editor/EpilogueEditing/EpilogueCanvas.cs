@@ -8,7 +8,6 @@ using Desktop.CommonControls.PropertyControls;
 using SPNATI_Character_Editor.EpilogueEditing;
 using SPNATI_Character_Editor.Properties;
 using System.Globalization;
-using SPNATI_Character_Editor.Forms;
 using Desktop.Skinning;
 
 namespace SPNATI_Character_Editor.Controls
@@ -1842,6 +1841,7 @@ namespace SPNATI_Character_Editor.Controls
 		/// </summary>
 		private void BuildScene(bool previewMode)
 		{
+			_markers = CharacterDatabase.GetEditorData(_character).PosePreviewMarkers;
 			_selectedObject = null;
 			_selectedAnimation = null;
 			_animations.Clear();
@@ -2603,17 +2603,6 @@ namespace SPNATI_Character_Editor.Controls
 		{
 			_showOverlay = !_showOverlay;
 			canvas.Invalidate();
-		}
-
-		private void cmdMarkers_Click(object sender, EventArgs e)
-		{
-			MarkerSetup form = new MarkerSetup();
-			form.SetData(_character, _markers);
-			if (form.ShowDialog() == DialogResult.OK)
-			{
-				_markers = form.Markers;
-				BuildScene(false);
-			}
 		}
 
 		public void OnUpdateSkin(Skin skin)

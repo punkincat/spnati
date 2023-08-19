@@ -102,11 +102,11 @@ namespace SPNATI_Character_Editor.Activities
 			if (_character != null && _selectedCase != null && _selectedStage != null)
 			{
 				PoseMapping image = caseControl.GetImage(0);
+				DialogueLine line = caseControl.GetLine(0);
 				if (image != null)
 				{
-					DisplayImage(image, caseControl.PreviewStage);
+					DisplayImage(image, caseControl.PreviewStage, line);
 				}
-				DialogueLine line = caseControl.GetLine(0);
 				DisplayText(line);
 			}
 		}
@@ -289,12 +289,11 @@ namespace SPNATI_Character_Editor.Activities
 			if (index == -1)
 				return;
 			PoseMapping image = caseControl.GetImage(index);
+			DialogueLine line = caseControl.GetLine(index);
 			if (image != null)
 			{
-				DisplayImage(image, caseControl.PreviewStage);
+				DisplayImage(image, caseControl.PreviewStage, line);
 			}
-
-			DialogueLine line = caseControl.GetLine(index);
 			DisplayText(line);
 		}
 
@@ -307,12 +306,27 @@ namespace SPNATI_Character_Editor.Activities
 		/// Displays an image in the preview box
 		/// </summary>
 		/// <param name="image">Image to display</param>
-		private void DisplayImage(PoseMapping image, int stage)
+		private void DisplayImage(PoseMapping image, int stage, DialogueLine line)
 		{
 			int imageStage = stage;
+			List<string> markers = new List<string>();
+			if (line != null)
+			{
+				if (!string.IsNullOrEmpty(line.Marker))
+				{
+					markers.Add(line.Marker);
+				}
+				foreach (MarkerOperation marker in line.Markers)
+				{
+					if (marker.Value != "0")
+					{
+						markers.Add(marker.Name);
+					}
+				}
+			}
 			if (_selectedCase != null)
 			{
-				List<string> markers = _selectedCase.GetMarkers();
+				markers.AddRange(_selectedCase.GetMarkers());
 				Workspace.SendMessage(WorkspaceMessages.UpdateMarkers, markers);
 				if (_selectedCase.Tag == "stripped" && stage < _character.Layers)
 				{
