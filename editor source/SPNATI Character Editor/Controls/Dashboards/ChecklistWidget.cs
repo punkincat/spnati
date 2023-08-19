@@ -416,15 +416,15 @@ namespace SPNATI_Character_Editor.Controls.Dashboards
 					string message;
 					if (!string.IsNullOrEmpty(c.Metadata.Writer))
 					{
-						message = $"{c.Metadata.Writer} took the time to call out some important dialogue for {c}";
+						message = $"{c.Metadata.Writer} took the time to call out some important dialogue for {c.ToString().Replace(" & ", " && ")}";
 					}
 					else
 					{
-						message = $"{c} has had some noteworthy situations called out";
+						message = $"{c.ToString().Replace(" & ", " && ")} has had some noteworthy situations called out";
 					}
 					message += $", but you haven't written anything to acknowledge their existence.\r\n\r\n" +
-						$"Use the Writing Aid to write a line towards {c}.";
-					AddTask($"{c} is feeling neglected", message, typeof(WritingAid), c);
+						$"Use the Writing Aid to write a line towards {c.ToString().Replace(" & ", " && ")}.";
+					AddTask($"{c.ToString().Replace(" & ", " && ")} is feeling neglected", message, typeof(WritingAid), c);
 					yield break;
 				}
 				count++;
