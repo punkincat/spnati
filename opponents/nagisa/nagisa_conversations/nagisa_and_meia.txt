@@ -209,7 +209,7 @@ Meia []: Where I'm from, the more beauty you show, the better.  That goes for an
 
 
 MEIA MUST STRIP ARMOR:
-Nagisa [nagisa_meia_blue_hair]: I like your blue hair, Meia. It reminds me of T---<br>a boy I know.
+Nagisa [nagisa_meia_blue_hair]: Your hair is such a nice blue sky color, Meia. One of my best friends has blue hair, but he's a boy and it's more like an ocean blue.
 Meia [nagisa_resp1bluehair]: Uh--Nagisa, I'm not sure what a "boy" is.  Like, a man our age?
   OR [nagisa_resp1bluehair]: ...Your hair is nice, too, Nagisa.  Is a "boy" a girl in your class, or...a man?
   OR [nagisa_resp1bluehair]: ...You don't need to pay me compliments, Nagisa.  <br>"Boy" means a man, right?
@@ -225,21 +225,30 @@ Nagisa [nagisa_meia_boy_smiles]: It's really nice when a handsome boy in uniform
 Meia []: Apparently our prisoners didn't used to smile much before they met us.  The same goes for me.
   OR []: Tarak does seem depressing, even on the surface.  None of our prisoners have fond memories of it.
 
+MEIA HAND AFTER STRIPPED ARMOR IN DEFAULT OUTFIT:
+Nagisa [nagisa_meia_nudesuit_left]: Meia, I was just wondering... I don't see any zippers or anything on your wetsuit. Unless that's your skin... I'm so sorry if that's your skin and I didn't notice! I didn't mean to offend you!
+Meia [nagisa_nudesuit]: ...It's a flightsuit, Nagisa.  There's just nothing underneath.
+  OR [nagisa_nudesuit]: It's a suit, Nagisa.  Most of the Dread pilots wear one.  I brought my underwear separate.
+
 
 MEIA MUST STRIP BODYSUIT IN DEFAULT OUTFIT:
-Nagisa [nagisa_meia_suit_skin]: Oh, Meia. I'm sorry you lost. Are... are you out now? I don't see any zippers or anything on your wetsuit. Unless that's your skin... I'm so sorry if that's your skin and I didn't notice! I didn't mean to offend you!
-Meia [nagisa_resp2]: It's a flightsuit, Nagisa.  The zipper's right in front.
-  OR [nagisa_resp2]: It's a suit, Nagisa.  Most of the Dread pilots wear one.  Do you see the zipper now?
+Nagisa [nagisa_meia_nm_m7]: Your turn again, Meia. I'm not sure what your plan is now, but you don't seem worried, so I'll leave everything to you.
+Meia [nagisa_resp2]: ?? -- line to remove is: It's a flightsuit, Nagisa.  The zipper's right in front.
+  OR [nagisa_resp2]: ?? -- line to remove is: It's a suit, Nagisa.  Most of the Dread pilots wear one.  Do you see the zipper now?
 
 MEIA STRIPPING BODYSUIT (major) IN DEFAULT OUTFIT:
-Nagisa [nagisa_meia_suit_tight]: Oh! I... I see that now. It's just so tight on you that I was wondering all this time...
-Meia [nagisa_resp23]: Sometimes it <i>does</i> feel like a second skin.  It's nice how it doesn't get in the way.
-  OR [nagisa_resp23]: You get used to moving in it.  After a while, it <i>feels</i> like part of your body.
+Nagisa [nagisa_meia_nm_m8]: ?? -- Nagisa will start to realise the seriousness here
+Meia [nagisa_resp23]: ?? -- line to remove is: Sometimes it <i>does</i> feel like a second skin.  It's nice how it doesn't get in the way.
+  OR [nagisa_resp23]: ?? -- line to remove is: You get used to moving in it.  After a while, it <i>feels</i> like part of your body.
 
 MEIA STRIPPED BODYSUIT (major) IN DEFAULT OUTFIT:
-Nagisa [nagisa_meia_curves]: Are you okay with everyone seeing all of your... um... curves? I mean, now more than ever, but even when you're wearing your suit?
-Meia []: You can't walk around expecting to hide your body.  It's good motivation to train.
-  OR []: It's who I am.  I don't want to be ashamed of it.  <br>...And I work out to keep it that way.
+Nagisa [nagisa_meia_nm_m9]: ?? -- Even bigger reaction
+Meia []: ?? -- line to remove is: You can't walk around expecting to hide your body.  It's good motivation to train.
+  OR []: ?? -- line to remove is: It's who I am.  I don't want to be ashamed of it.<br>...And I work out to keep it that way.
+
+MEIA HAND AFTER STRIPPED BODYSUIT:
+Nagisa [nagisa_meia_nm_m8_hand]: ??
+Meia []: ??
 
 
 MEIA MUST STRIP HAT IN CUPID OUTFIT:
@@ -291,8 +300,8 @@ Meia [nagisa_resp5s]: Pride <i>is</i> one of my bad habits.  But it's a lot wors
 
 HAND AFTER MEIA STRIPPED SHORTS (holding butt pose):
 Nagisa [nagisa_meia_nice_butt]: It's... it's nice. I'm just telling you because you can't see it, Meia. Maybe if I had a butt like that, I'd want to show it off too...
-Meia [?]: ??
-  OR [?]: ??
+Meia [nagisa_nice_butt]: ...There you go again.
+  OR [nagisa_nice_butt]: I told you---don't be so modest.
 
 ---
 DUE TO POSITION DETECTION, CONVERSATIONS ABOVE AND BELOW THIS LINE WON'T PLAY IN THE SAME GAME.
@@ -317,10 +326,10 @@ Nagisa [nagisa_meia_reliable]: I can tell. You have a reliable aura about you, y
 
 
 NAGISA MUST STRIP SHOES IN WAITRESS OUTFIT:
-Meia [nagisa_waitress0]: You look cute in that outfit, Nagisa.  Mejare has maid cafés like that, too.
-  OR [nagisa_waitress0]: It's been a while since I saw a girl dressed in a maid café outfit.  They exist on Mejare, too...in scattered locations.
-  OR [nagisa_waitress0]: ...I can't stay stoic when a sweet girl like you dresses up.  I visited a few maid cafés on my homeworld.
-  OR [nagisa_waitress0]: As if we didn't know it was Valentine's Day, Nagisa comes dressed like that...Mejare's maid cafés were packed around this time, too.
+Meia [nagisa_waitress0]: You look cute in that outfit, Nagisa.  Mejare has maid caf s like that, too.
+  OR [nagisa_waitress0]: It's been a while since I saw a girl dressed in a maid caf  outfit.  They exist on Mejare, too...in scattered locations.
+  OR [nagisa_waitress0]: ...I can't stay stoic when a sweet girl like you dresses up.  I visited a few maid caf s on my homeworld.
+  OR [nagisa_waitress0]: As if we didn't know it was Valentine's Day, Nagisa comes dressed like that...Mejare's maid caf s were packed around this time, too.
 Nagisa [nagisa_meia_waitress_uniform]: I'm glad my uniform is making you happy, Meia. Have you ever worked at a cafe yourself?
 
 NAGISA STRIPPING SHOES (accessory) IN WAITRESS OUTFIT:
@@ -498,16 +507,21 @@ Meia [nagisa_resp2s_right]: I know--it's about understanding your opponents.  Li
   OR [nagisa_resp2s_right]: It's a social game.  Control your feelings and learn about the other players.  <br>...You take everyone at their word.
 Nagisa [nagisa_meia_read_book]: You can read me like a book, Meia! But I think I'm getting a better idea of where you're coming from too.
 
+MEIA HAND DURING STAGE 2 (STRIPPED ARMOR)
+Meia [nagisa_nudesuit_right]: ...I have underwear, by the way.  Just not <i>underneath.</i>
+  OR [nagisa_nudesuit_right]: ...If you're thinking my suit all looks like one piece, it's because it is.  I'll go grab my underwear when I need it.
+Nagisa [nagisa_meia_nudesuit_right]:* That's your decision to make, I suppose. I normally just keep my underwear under my clothes... or in my underwear drawer. 
+
 
 MEIA MUST STRIP BODYSUIT:
 Meia [nagisa_resp2right]: ...This was starting to stick, anyway.  Now I can get some training done.
-  OR [nagisa_resp2right]: <i>Mm--</i>I wore my gym clothes underneath, just in case.  It'll be good to stay moving.
+  OR [nagisa_resp2right]: <i>...Mm---</i>I brought some gym clothes in case this happened.  It'll be good to stay moving.
 Nagisa [nagisa_meia_sweating]: You must be much more active than I am, Meia. I try not to break a sweat if I can help it, but that can be difficult when I'm nervous.
 
 MEIA STRIPPING BODYSUIT (major):
 Meia [nagisa_resp23right]: I know you're a civilian, but it's still good to exercise.  It's--how I <i>ease</i> tension.
   OR [nagisa_resp23right]: Exercising <i>helps</i> me when I'm nervous.  It's not like it's only good for fighters to do it.
-Nagisa [nagisa_meia_inactive]: I'm not really able to be too active. But maybe that's why you seem so confident. It's because you know you're the best you can be...
+Nagisa [nagisa_meia_inactive]: Oh! You're already, um... What was I saying? I'm... I'm not really able to be too active. B-But maybe that's why you seem so confident. It's because you know you're the best you can be...
 
 MEIA STRIPPED BODYSUIT (major):
 Meia [nagisa_resp3s_right]: I can always be better.  So I know it's always there for me.  What do <i>you</i> do with those feelings?
@@ -521,12 +535,12 @@ Meia [nagisa_resp3right]: ...This isn't some bust reveal.  Losing my <i>armor</i
 Nagisa [nagisa_meia_bra_secrets]: A bra can still keep some of a girl's secrets, even if they're not big secrets. Oh! Not that I'm saying you have little secrets, Meia! They're perfectly normal secrets! I'm sure they're lovely...
 
 MEIA STRIPPING BRA (revealing chest):
-Meia [nagisa_resp34right]: <i>Nagisa...</i>  <br>...Well, they don't sag, at least.  And it's good for combat.
+Meia [nagisa_resp34right]: <i>Nagisa...</i><br>...Well, they don't sag, at least.  And it's good for combat.
   OR [nagisa_resp34right]: ...I know what you meant, Nagisa.  On the plus side, they're perky, and easy to fight with.
 Nagisa [nagisa_meia_dangerous]: I never even thought about if mine would be good for combat... You're in such great shape, but I keep forgetting that it's because your job is so dangerous! I hope you can find some time to relax, even if that isn't right now...
 
 MEIA STRIPPED BRA (revealed chest):
-Meia [nagisa_resp4s_right]: ...You know, it's kind of relaxing to <i>talk</i> to you.  To meet new people.  And to show them--who I am.  [Meia's stripped pose here looks kind of negative, but she'll eventually get emotional variations.]
+Meia [nagisa_resp4s_right]: ...You know, it's kind of relaxing to <i>talk</i> to you.  To meet new people.  And to show them--who I am.
   OR [nagisa_resp4s_right]: ...I actually feel pretty relaxed.  Talking with you, in this game.  We've got nothing to hide.
 Nagisa [nagisa_meia_meeting]: I feel the same way! Meeting you and talking to everyone is really getting me through this. But to make it easier, I'm trying to imagine everyone with clothes on...
 

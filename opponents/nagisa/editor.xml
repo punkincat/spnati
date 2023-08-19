@@ -15,9 +15,6 @@
         <case name="Can customers walk in?" id="56" priority="Prompt" min="0" max="7">
             <description>Nagisa asks if customers can walk into the Inventory at embarrassing times</description>
         </case>
-        <case name="Sticky floorboards" id="57" priority="Prompt" min="0" max="3">
-            <description>Nagisa asks if the Inventory's floorboards are sticky because people spill their drinks</description>
-        </case>
         <case name="Masturbation play" id="58" priority="Noteworthy" min="7" max="7">
             <description>Nagisa starts reciting a play while masturbating. She only does this if she loses first.</description>
         </case>
@@ -1211,11 +1208,11 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="950" label="" folder="Meia to right" sort="30" />
         <label id="951" label="" folder="Meia to right" sort="37" />
         <label id="952" label="" folder="Meia to right" sort="38" />
-        <label id="953" label="" folder="Meia to right" sort="41" />
+        <label id="953" label="" folder="Meia to right" sort="0" />
         <label id="954" label="" folder="Meia to right" sort="42" />
         <label id="955" label="" folder="Meia to right" sort="45" />
         <label id="956" label="" folder="Meia to right" sort="46" />
-        <label id="957" label="" folder="Meia to right" sort="48" />
+        <label id="957" label="" folder="Meia to right" sort="0" />
         <label id="958" label="" folder="Meia to right" sort="49" />
         <label id="959" label="" folder="Meia to right" sort="52" />
         <label id="960" label="" color="0" folder="Meia to right" sort="53" />
@@ -1486,13 +1483,22 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1216" label="" folder="Estelle to right" sort="0" />
         <label id="1217" label="" folder="Estelle to right" sort="0" />
         <label id="1218" label="" folder="Estelle to right" sort="0" />
+        <label id="1219" label="" folder="Estelle to right" sort="0" />
+        <label id="1220" label="" folder="Estelle to right" sort="0" />
+        <label id="1221" label="" folder="Estelle to right" sort="0" />
+        <label id="1222" label="" folder="Estelle to right" sort="0" />
+        <label id="1223" label="" folder="Estelle to right" sort="0" />
+        <label id="1224" label="" folder="Estelle to right" sort="0" />
+        <label id="1225" label="" folder="Meia to right" sort="0" />
+        <label id="1226" label="" folder="Noire to right" sort="0" />
+        <label id="1227" label="" folder="Noire to right" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1218</nextId>
+    <nextId>1227</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1794,11 +1800,17 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_erufuda_holiday_weight" />
         <marker scope="Public" name="nagisa_erufuda_ne_e4" />
         <marker scope="Public" name="nagisa_estelle_ne_e1" />
+        <marker scope="Public" name="nagisa_estelle_ne_e2" />
         <marker scope="Public" name="nagisa_estelle_ne_e4_christmas" />
         <marker scope="Public" name="nagisa_estelle_ne_e4_default" />
         <marker scope="Public" name="nagisa_estelle_ne_e4_summer" />
         <marker scope="Public" name="nagisa_estelle_ne_e4_vday" />
         <marker scope="Public" name="nagisa_estelle_ne_e4_witch" />
+        <marker scope="Public" name="nagisa_estelle_ne_e5_christmas" />
+        <marker scope="Public" name="nagisa_estelle_ne_e5_default" />
+        <marker scope="Public" name="nagisa_estelle_ne_e5_summer" />
+        <marker scope="Public" name="nagisa_estelle_ne_e5_vday" />
+        <marker scope="Public" name="nagisa_estelle_ne_e5_witch" />
         <marker scope="Public" name="nagisa_estelle_ne_n1" />
         <marker scope="Public" name="nagisa_estelle_ne_n10" />
         <marker scope="Public" name="nagisa_estelle_ne_n11" />
@@ -2544,12 +2556,14 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_naked_walk_2" />
         <marker scope="Public" name="nagisa_meia_negative_feelings" />
         <marker scope="Public" name="nagisa_meia_nice_butt" />
+        <marker scope="Public" name="nagisa_meia_nm_m7" />
         <marker scope="Public" name="nagisa_meia_no_to_space" />
         <marker scope="Public" name="nagisa_meia_not_a_kid" />
         <marker scope="Public" name="nagisa_meia_not_all_girls" />
         <marker scope="Public" name="nagisa_meia_not_running" />
         <marker scope="Public" name="nagisa_meia_not_second-guessing" />
         <marker scope="Public" name="nagisa_meia_not_staring" />
+        <marker scope="Public" name="nagisa_meia_nudesuit_left" />
         <marker scope="Public" name="nagisa_meia_on_purpose" />
         <marker scope="Public" name="nagisa_meia_panties_choice" />
         <marker scope="Public" name="nagisa_meia_pilot" />
@@ -2686,7 +2700,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_neptune_street_brave" />
         <marker scope="Public" name="nagisa_neptune_thrown_bracelet" />
         <marker scope="Public" name="nagisa_neptune_uniform" />
+        <marker scope="Public" name="nagisa_noire_costume" />
         <marker scope="Public" name="nagisa_noire_kyou_club_play" />
+        <marker scope="Public" name="nagisa_noire_pratice" />
         <marker scope="Public" name="nagisa_not_21_yet" />
         <marker scope="Public" name="nagisa_nugi-chan_be_careful" />
         <marker scope="Public" name="nagisa_nugi-chan_cute_couple" />
