@@ -41,7 +41,6 @@ namespace SPNATI_Character_Editor.Activities
 				lblSkin.Visible = false;
 				cboSkin.Visible = false;
 			}
-
 			_posePreviewMarkers = CharacterDatabase.GetEditorData(_character).PosePreviewMarkers;
 			SubscribeWorkspace<DialogueLine>(WorkspaceMessages.PreviewLine, UpdatePreview);
 			SubscribeWorkspace<UpdateImageArgs>(WorkspaceMessages.UpdatePreviewImage, UpdatePreviewImage);
@@ -131,6 +130,7 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			if (markers == null || markers.Count == 0)
 			{
+				_posePreviewMarkers = CharacterDatabase.GetEditorData(_character).PosePreviewMarkers;
 				markers = _posePreviewMarkers;
 			}
 			else

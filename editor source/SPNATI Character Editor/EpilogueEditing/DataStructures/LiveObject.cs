@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Desktop.CommonControls.PropertyControls;
 using Desktop.DataStructures;
+using Newtonsoft.Json.Linq;
 using SPNATI_Character_Editor.Controls;
 
 namespace SPNATI_Character_Editor.EpilogueEditor
@@ -102,19 +103,19 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			get { return Get<string>(); }
 			set
 			{
-				bool perTarget;
-				MarkerOperator op;
-				string markerValue;
-				MarkerName = SPNATI_Character_Editor.Marker.ExtractConditionPieces(value, out op, out markerValue, out perTarget);
-				MarkerOp = op;
-				MarkerValue = markerValue;
+				//bool perTarget;
+				//MarkerOperator op;
+				//string markerValue;
+				//MarkerName = SPNATI_Character_Editor.Marker.ExtractConditionPieces(value, out op, out markerValue, out perTarget);
+				//MarkerOp = op;
+				//MarkerValue = markerValue;
 				Set(value);
 			}
 		}
 
-		private string MarkerName;
-		private MarkerOperator MarkerOp;
-		private string MarkerValue;
+		//private string MarkerName;
+		//private MarkerOperator MarkerOp;
+		//private string MarkerValue;
 
 		[Numeric(DisplayName = "Layer", Key = "z", GroupOrder = 15, Minimum = -100)]
 		public int Z
@@ -726,56 +727,59 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			return false;
 		}
 
-		public bool HiddenByMarker(List<string> markers)
+		private bool MarkersTest(List<string> markers, string expr)
 		{
-			bool markerFound = false;
-			if (markers != null && !string.IsNullOrEmpty(MarkerName))
+			if (string.IsNullOrEmpty(expr))
 			{
-				foreach (string marker in markers)
+				return true;
+			}
+			bool perTarget;
+			MarkerOperator markerOperator;
+			string markerValue;
+			string markerName = SPNATI_Character_Editor.Marker.ExtractConditionPieces(expr, out markerOperator, out markerValue, out perTarget);
+
+			foreach (string marker in markers)
+			{
+				if (!string.IsNullOrEmpty(marker))
 				{
-					if(!string.IsNullOrEmpty(marker))
+					string name;
+					string op;
+					string value;
+					string pattern = @"^([-\w\.]+)(\s*(\=\=|\=)?\s*([-\w]+|~[-\w]+~))?$";
+					Regex regex = new Regex(pattern);
+					Match match = regex.Match(marker);
+
+					if (match.Success)
 					{
-						string name = "";
-						string op = "";
-						string value = "";
-						string pattern = @"^([-\w\.]+)(\s*(\=\=|\=)?\s*([-\w]+|~[-\w]+~))?$";
-						Regex regex = new Regex(pattern);
-						Match match = regex.Match(marker);
+						name = match.Groups[1].Value;
+						op = match.Groups[3].Value;
+						value = match.Groups[4].Value;
 
-						if (match.Success)
+						if (string.IsNullOrEmpty(op) || string.IsNullOrEmpty(value))
 						{
-							name = match.Groups[1].Value;
-							op = match.Groups[3].Value;
-							value = match.Groups[4].Value;
-
-							if (string.IsNullOrEmpty(op) || string.IsNullOrEmpty(value))
-							{
-								value = "1";
-							}
-
-						}
-						else
-						{
-							name = marker;
 							value = "1";
 						}
 
-						if (name == MarkerName)
-						{
-							markerFound = true;
-							return !MarkerTest(value, MarkerOp, MarkerValue);
-						}
+					}
+					else
+					{
+						name = marker;
+						value = "1";
+					}
+
+					if (name == markerName)
+					{
+						return MarkerTest(value, markerOperator, markerValue);
 					}
 				}
 			}
-			if(!string.IsNullOrEmpty(MarkerName))
-			{
-				if (!markerFound)
-				{
-					return !MarkerTest("0", MarkerOp, MarkerValue);
-				}
-			}
-			return false;
+			return MarkerTest("0", markerOperator, markerValue);
+		}
+
+		public bool HiddenByMarker(List<string> markers)
+		{
+			//return string.IsNullOrEmpty(Marker) ? false : Marker.Split('|').Any(conj => !conj.Split('&').Any(expr => !MarkersTest(markers, expr)));
+			return !string.IsNullOrEmpty(Marker) && !Marker.Split(new char[] {'|'}, StringSplitOptions.RemoveEmptyEntries).Any(conj => !conj.Split(new char[] {'&'}, StringSplitOptions.RemoveEmptyEntries).Any(expr => !MarkersTest(markers, expr)));
 		}
 
 		#region Point-and-click editing
