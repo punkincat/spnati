@@ -119,10 +119,13 @@ namespace SPNATI_Character_Editor
 
 			// stupid workaround because *some people* put exclamation points in their markers...
 			marker = marker.Replace("!=", "zzzzzz1njnr3icn4");
+			marker = marker.Replace("!@", "zzzzzz1njnr3icn5");
 			marker = marker.Replace("!", "zzzzzz1njnr3icnx");
 			marker = marker.Replace("zzzzzz1njnr3icn4", "!=");
+			marker = marker.Replace("zzzzzz1njnr3icn5", "!@");
 
-			Match match = Regex.Match(marker, @"([^\>\<\=\!\*]+)(\*?)(\s*((?:\>|\<|\=|\!)\=?)\s*(\-?[\w ]+|~\w+~))?");
+			//Match match = Regex.Match(marker, @"([^\>\<\=\!\*]+)(\*?)(\s*((?:\>|\<|\=|\!)\=?)\s*(\-?[\w ]+|~\w+~))?");
+			Match match = Regex.Match(marker, @"^([-\w\.]+)(\*?)(\s*(\<\=|\>\=|\<|\>|\=\=|!\=|\=|!\@|\@)?\s*([-\w]+|~[-\w]+~))?");
 			op = ToOperator(match.Groups[4].ToString());
 			value = match.Groups[5]?.ToString();
 			if (value == "")
@@ -198,7 +201,6 @@ namespace SPNATI_Character_Editor
 			///Note: I originally converted *SaidMarker strings into a class instead of repeatedly piecing and unpiecing the parts, 
 			///but it complicated a number of things with serialization, primarily performance and maintaining member order
 
-
 			marker = Regex.Replace(marker, @"\s+", ""); //throw away any whitespace
 			Match match = Regex.Match(marker, @"(\w+)((==|<|<=|>=|>|!=)(\w+))*");
 			if (match.Groups.Count > 4)
@@ -231,6 +233,10 @@ namespace SPNATI_Character_Editor
 					return MarkerOperator.GreaterThan;
 				case ">=":
 					return MarkerOperator.GreaterThanOrEqual;
+				case "@":
+					return MarkerOperator.InRange;
+				case "!@":
+					return MarkerOperator.NotInRange;
 			}
 			return MarkerOperator.Equals;
 		}
@@ -279,6 +285,10 @@ namespace SPNATI_Character_Editor
 					return intValue <= targetIntValue;
 				case MarkerOperator.NotEqual:
 					return setValue != value;
+				case MarkerOperator.InRange:
+					return IntInterval.ParseInterval(setValue, out IntInterval interval1) && interval1.InInterval(value);
+				case MarkerOperator.NotInRange:
+					return IntInterval.ParseInterval(setValue, out IntInterval interval2) && interval2.NotInInterval(value);
 			}
 			return true;
 		}
@@ -302,6 +312,10 @@ namespace SPNATI_Character_Editor
 					return ">=";
 				case MarkerOperator.NotEqual:
 					return "!=";
+				case MarkerOperator.InRange:
+					return "@";
+				case MarkerOperator.NotInRange:
+					return "!@";
 			}
 			return "";
 		}
@@ -314,12 +328,80 @@ namespace SPNATI_Character_Editor
 		LessThanOrEqual,
 		GreaterThan,
 		GreaterThanOrEqual,
-		NotEqual
+		NotEqual,
+		InRange,
+		NotInRange
 	}
 
 	public enum MarkerScope
 	{
 		Private,
 		Public
+	}
+
+	public class IntInterval
+	{
+		public int Start;
+		public int End;
+
+		public IntInterval() { }
+
+		public IntInterval(int start, int end)
+		{
+			Start = start;
+			End = end;
+		}
+
+		public static bool ParseInterval(string str, out IntInterval interval)
+		{
+			string[] split = str.Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
+			int start;
+			int end;
+			if (!int.TryParse(split[0], out start))
+			{
+				interval = null;
+				return false;
+			}
+			if (split.Length == 1)
+			{
+				interval = new IntInterval(start, start);
+				return true;
+			}
+			if (!int.TryParse(split[1], out end))
+			{
+				interval = null;
+				return false;
+			}
+			if (start > end)
+			{
+				interval = null;
+				return false;
+			}
+			interval = new IntInterval(start, end);
+			return true;
+		}
+
+		public override string ToString()
+		{ 
+			return Start.ToString() + "-" + End.ToString();
+		}
+
+		public bool InInterval(string str)
+		{
+			if (int.TryParse(str, out int value))
+			{
+				return value >= Start && value <= End;
+			}
+			return false;
+		}
+
+		public bool NotInInterval(string str)
+		{
+			if (int.TryParse(str, out int value))
+			{
+				return value < Start || value > End;
+			}
+			return false;
+		}
 	}
 }

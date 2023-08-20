@@ -36,10 +36,11 @@ namespace SPNATI_Character_Editor.Activities
             this.cmdMakeResponse = new Desktop.Skinning.SkinnedButton();
             this.cmdCallOut = new Desktop.Skinning.SkinnedButton();
             this.cmdAddRecipe = new Desktop.Skinning.SkinnedButton();
+            this.cmdRefreshImages = new Desktop.Skinning.SkinnedButton();
+            this.chkCaseMarkers = new Desktop.Skinning.SkinnedCheckBox();
             this.splitDialogue = new Desktop.Skinning.SkinnedSplitContainer();
             this.treeDialogue = new SPNATI_Character_Editor.Controls.DialogueTree();
             this.panelCase = new System.Windows.Forms.Panel();
-            this.cmdRefreshImages = new Desktop.Skinning.SkinnedButton();
             this.caseControl = new SPNATI_Character_Editor.Controls.CaseControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitDialogue)).BeginInit();
             this.splitDialogue.Panel1.SuspendLayout();
@@ -60,9 +61,9 @@ namespace SPNATI_Character_Editor.Activities
             this.cmdMakeResponse.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.cmdMakeResponse.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
             this.cmdMakeResponse.Flat = false;
-            this.cmdMakeResponse.Location = new System.Drawing.Point(478, 2);
+            this.cmdMakeResponse.Location = new System.Drawing.Point(528, 2);
             this.cmdMakeResponse.Name = "cmdMakeResponse";
-            this.cmdMakeResponse.Size = new System.Drawing.Size(104, 23);
+            this.cmdMakeResponse.Size = new System.Drawing.Size(80, 23);
             this.cmdMakeResponse.TabIndex = 45;
             this.cmdMakeResponse.Text = "Respond";
             this.toolTip1.SetToolTip(this.cmdMakeResponse, "Creates a response to this case on another character");
@@ -75,9 +76,9 @@ namespace SPNATI_Character_Editor.Activities
             this.cmdCallOut.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.cmdCallOut.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
             this.cmdCallOut.Flat = false;
-            this.cmdCallOut.Location = new System.Drawing.Point(588, 2);
+            this.cmdCallOut.Location = new System.Drawing.Point(612, 2);
             this.cmdCallOut.Name = "cmdCallOut";
-            this.cmdCallOut.Size = new System.Drawing.Size(104, 23);
+            this.cmdCallOut.Size = new System.Drawing.Size(80, 23);
             this.cmdCallOut.TabIndex = 44;
             this.cmdCallOut.Text = "Call Out";
             this.toolTip1.SetToolTip(this.cmdCallOut, "Marks this situation as being \"noteworthy\" so it will appear in other character\'s" +
@@ -91,14 +92,48 @@ namespace SPNATI_Character_Editor.Activities
             this.cmdAddRecipe.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.cmdAddRecipe.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
             this.cmdAddRecipe.Flat = false;
-            this.cmdAddRecipe.Location = new System.Drawing.Point(368, 2);
+            this.cmdAddRecipe.Location = new System.Drawing.Point(444, 2);
             this.cmdAddRecipe.Name = "cmdAddRecipe";
-            this.cmdAddRecipe.Size = new System.Drawing.Size(104, 23);
+            this.cmdAddRecipe.Size = new System.Drawing.Size(80, 23);
             this.cmdAddRecipe.TabIndex = 47;
             this.cmdAddRecipe.Text = "To Recipe";
             this.toolTip1.SetToolTip(this.cmdAddRecipe, "Creates a recipe out of this case");
             this.cmdAddRecipe.UseVisualStyleBackColor = true;
             this.cmdAddRecipe.Click += new System.EventHandler(this.cmdAddRecipe_Click);
+            // 
+            // cmdRefreshImages
+            // 
+            this.cmdRefreshImages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdRefreshImages.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdRefreshImages.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.cmdRefreshImages.Flat = false;
+            this.cmdRefreshImages.Location = new System.Drawing.Point(320, 2);
+            this.cmdRefreshImages.Name = "cmdRefreshImages";
+            this.cmdRefreshImages.Size = new System.Drawing.Size(120, 23);
+            this.cmdRefreshImages.TabIndex = 48;
+            this.cmdRefreshImages.Text = "refresh images";
+            this.toolTip1.SetToolTip(this.cmdRefreshImages, "Refreshes the image list");
+            this.cmdRefreshImages.UseVisualStyleBackColor = true;
+            this.cmdRefreshImages.Click += new System.EventHandler(this.cmdRefreshImages_Click);
+            // 
+            // chkCaseMarkers
+            // 
+            this.chkCaseMarkers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkCaseMarkers.AutoSize = true;
+            this.chkCaseMarkers.BackColor = System.Drawing.SystemColors.Control;
+            this.chkCaseMarkers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.chkCaseMarkers.Checked = true;
+            this.chkCaseMarkers.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkCaseMarkers.FieldType = Desktop.Skinning.SkinnedFieldType.Surface;
+            this.chkCaseMarkers.Location = new System.Drawing.Point(210, 6);
+            this.chkCaseMarkers.Name = "chkCaseMarkers";
+            this.chkCaseMarkers.Size = new System.Drawing.Size(104, 17);
+            this.chkCaseMarkers.TabIndex = 49;
+            this.chkCaseMarkers.Text = "Preview markers";
+            this.toolTip1.SetToolTip(this.chkCaseMarkers, "If checked, the in-editor character preview will use marker values \nset by the di" +
+        "alogue line or assumed to be set by Said Marker conditions.");
+            this.chkCaseMarkers.UseVisualStyleBackColor = false;
+            this.chkCaseMarkers.CheckedChanged += new System.EventHandler(this.chkCaseMarkers_CheckedChanged);
             // 
             // splitDialogue
             // 
@@ -138,6 +173,7 @@ namespace SPNATI_Character_Editor.Activities
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelCase.BackColor = System.Drawing.SystemColors.Control;
+            this.panelCase.Controls.Add(this.chkCaseMarkers);
             this.panelCase.Controls.Add(this.cmdRefreshImages);
             this.panelCase.Controls.Add(this.cmdAddRecipe);
             this.panelCase.Controls.Add(this.cmdMakeResponse);
@@ -148,21 +184,6 @@ namespace SPNATI_Character_Editor.Activities
             this.panelCase.Name = "panelCase";
             this.panelCase.Size = new System.Drawing.Size(697, 668);
             this.panelCase.TabIndex = 28;
-            // 
-            // cmdRefreshImages
-            // 
-            this.cmdRefreshImages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdRefreshImages.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.cmdRefreshImages.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.cmdRefreshImages.Flat = false;
-            this.cmdRefreshImages.Location = new System.Drawing.Point(242, 2);
-            this.cmdRefreshImages.Name = "cmdRefreshImages";
-            this.cmdRefreshImages.Size = new System.Drawing.Size(120, 23);
-            this.cmdRefreshImages.TabIndex = 48;
-            this.cmdRefreshImages.Text = "refresh images";
-            this.cmdRefreshImages.UseVisualStyleBackColor = true;
-            this.cmdRefreshImages.Click += new System.EventHandler(this.cmdRefreshImages_Click);
-            this.toolTip1.SetToolTip(this.cmdRefreshImages, "Refreshes the image list");
             // 
             // caseControl
             // 
@@ -185,6 +206,7 @@ namespace SPNATI_Character_Editor.Activities
             ((System.ComponentModel.ISupportInitialize)(this.splitDialogue)).EndInit();
             this.splitDialogue.ResumeLayout(false);
             this.panelCase.ResumeLayout(false);
+            //this.panelCase.PerformLayout();
             this.ResumeLayout(false);
 
 		}
@@ -201,5 +223,6 @@ namespace SPNATI_Character_Editor.Activities
 		private CaseControl caseControl;
 		private Desktop.Skinning.SkinnedButton cmdAddRecipe;
         private Desktop.Skinning.SkinnedButton cmdRefreshImages;
+        private Desktop.Skinning.SkinnedCheckBox chkCaseMarkers;
     }
 }
