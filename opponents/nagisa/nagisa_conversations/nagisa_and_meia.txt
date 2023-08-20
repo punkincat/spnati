@@ -233,22 +233,23 @@ Meia [nagisa_nudesuit]: ...It's a flightsuit, Nagisa.  There's just nothing unde
 
 MEIA MUST STRIP BODYSUIT IN DEFAULT OUTFIT:
 Nagisa [nagisa_meia_nm_m7]: Your turn again, Meia. I'm not sure what your plan is now, but you don't seem worried, so I'll leave everything to you.
-Meia [nagisa_resp2]: ?? -- line to remove is: It's a flightsuit, Nagisa.  The zipper's right in front.
-  OR [nagisa_resp2]: ?? -- line to remove is: It's a suit, Nagisa.  Most of the Dread pilots wear one.  Do you see the zipper now?
+Meia [nagisa_resp2]: I don't really <i>plan</i> too much, Nagisa.  I just use my instincts.
+  OR [nagisa_resp2]: Half my plans are on the spot, Nagisa.
 
 MEIA STRIPPING BODYSUIT (major) IN DEFAULT OUTFIT:
-Nagisa [nagisa_meia_nm_m8]: ?? -- Nagisa will start to realise the seriousness here
-Meia [nagisa_resp23]: ?? -- line to remove is: Sometimes it <i>does</i> feel like a second skin.  It's nice how it doesn't get in the way.
+Nagisa [nagisa_meia_nm_m8]: Ah! There's... there's really nothing under there. I thought you were just kidding around before...
+Meia [nagisa_resp23]: ??
   OR [nagisa_resp23]: ?? -- line to remove is: You get used to moving in it.  After a while, it <i>feels</i> like part of your body.
 
 MEIA STRIPPED BODYSUIT (major) IN DEFAULT OUTFIT:
-Nagisa [nagisa_meia_nm_m9]: ?? -- Even bigger reaction
+Nagisa [nagisa_meia_nm_m9]*: ?? -- Even bigger reaction
 Meia []: ?? -- line to remove is: You can't walk around expecting to hide your body.  It's good motivation to train.
   OR []: ?? -- line to remove is: It's who I am.  I don't want to be ashamed of it.<br>...And I work out to keep it that way.
 
 MEIA HAND AFTER STRIPPED BODYSUIT:
-Nagisa [nagisa_meia_nm_m8_hand]: ??
-Meia []: ??
+Nagisa [nagisa_meia_nm_m8_hand]*: ??
+Meia [nagisa_hand3_resp]*: ??
+  OR [nagisa_hand3_resp]*: ??
 
 
 MEIA MUST STRIP HAT IN CUPID OUTFIT:
