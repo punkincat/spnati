@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SPNATI_Character_Editor.Activities
 {
@@ -16,6 +17,7 @@ namespace SPNATI_Character_Editor.Activities
 	public partial class BanterWizard : Activity
 	{
 		private Character _character;
+		private IWardrobe _costume;
 		private Case _workingResponse;
 		private Case _selectedCase;
 		private Character _selectedCharacter;
@@ -48,6 +50,7 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			InitializeComponent();
 			recOneCharacter.RecordType = typeof(Character);
+			recReferenceCostume.RecordType = typeof(Costume);
 		}
 
 		public override string Caption
@@ -55,6 +58,24 @@ namespace SPNATI_Character_Editor.Activities
 			get
 			{
 				return "Banter Wizard";
+			}
+		}
+		private bool FilterRefCostume(IRecord record)
+		{
+			Costume costume = record as Costume;
+			return costume.Character == _character || costume.Key == "default";
+		}
+
+		private void recReferenceCostume_RecordChanged(object sender, RecordEventArgs e)
+		{
+			Costume costume = recReferenceCostume.Record as Costume;
+			if (costume.Key == "default")
+			{
+				_costume = _character;
+			}
+			else
+			{
+				_costume = costume;
 			}
 		}
 
@@ -68,6 +89,8 @@ namespace SPNATI_Character_Editor.Activities
 			_character = Record as Character;
 			_character.IsDirty = true;
 			_path = Path.Combine(Config.GetString(Settings.GameDirectory), "opponents/" + _character.FolderName + "/banter.xml");
+			recReferenceCostume.RecordFilter = FilterRefCostume;
+			recReferenceCostume.Record = CharacterDatabase.GetSkin("default");
 			ColJump.Flat = true;
 			if(!File.Exists(_path))
 			{
@@ -341,7 +364,37 @@ namespace SPNATI_Character_Editor.Activities
 			return;
 		}
 
-		private void CheckForResponses(Character character, string text)
+		private void RenameCaseTag(Case workingCase, DataGridViewRow row)
+		{
+			bool removing;
+			bool lookForward;
+			removing = workingCase.Tag.Contains("removing_");
+			lookForward = removing || workingCase.Tag == "opponent_stripping";
+			string stages = "";
+			int stage;
+			foreach (TargetCondition cond in workingCase.Conditions)
+			{
+				if (cond.Character == _character.FolderName && !string.IsNullOrEmpty(cond.Stage))
+				{
+					stages = cond.Stage;
+					break;
+				}
+			}
+			if (!string.IsNullOrEmpty(stages))
+			{
+				if (stages == "10")
+				{
+					stage = 10;
+				}
+				else
+				{
+					stage = int.Parse(stages[0].ToString());
+				}
+				row.Cells["ColCase"].Value = _character.LayerToStageName(stage, lookForward, _costume) + " (" + stages + ")";
+			}
+		}
+
+		private void CheckForResponses(Character character, string text, DataGridViewRow row)
 		{
 			foreach (Case workingCase in character.Behavior.GetWorkingCases())
 			{
@@ -349,6 +402,10 @@ namespace SPNATI_Character_Editor.Activities
 				{
 					if (dialogueLine.Text == text)
 					{
+						if (Character.IsCaseTargetedAtCharacter(workingCase, _character, TargetType.DirectTarget))
+						{
+							RenameCaseTag(workingCase, row);
+						}
 						Case sampleResponse = workingCase.CreateResponse(character, _character);
 						if (sampleResponse == null)
 						{
@@ -386,7 +443,6 @@ namespace SPNATI_Character_Editor.Activities
 
 		private void SelectLine(int rowIndex)
 		{
-			
 			DataGridViewRow row = gridLines.Rows[rowIndex];
 			Character c = row.Tag as Character;
 			InboundLine inbound = row.Cells["ColText"].Tag as InboundLine;
@@ -396,7 +452,7 @@ namespace SPNATI_Character_Editor.Activities
 				_currentInbound = inbound;
 				SetColorButton(inbound.ColorCode);
 				grpBaseLine.Text = string.Format("{0} may be reacting to these lines from {1}:", c, _character);
-				CheckForResponses(c, inbound.Text);
+				CheckForResponses(c, inbound.Text, row);
 
 				int stage;
 				if (inbound.StageRange == "10")
@@ -416,7 +472,6 @@ namespace SPNATI_Character_Editor.Activities
 				DialogueLine dialogueLine = new DialogueLine();
 				dialogueLine.Text = inbound.Text;
 				Workspace.SendMessage(WorkspaceMessages.PreviewLine, dialogueLine);
-
 			}
 			else
 			{
@@ -443,7 +498,6 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_character, image, _workingResponse.Stages[0]));
 			}
-
 		}
 
 		private void cmdCreateResponse_Click(object sender, EventArgs e)
@@ -963,7 +1017,6 @@ namespace SPNATI_Character_Editor.Activities
 									inbound.Newness = "";
 								}
 							}
-
 						}
 					}
 

@@ -1569,7 +1569,7 @@ namespace SPNATI_Character_Editor
 
 				if (hasConds)
 				{
-					Conditions.Add(selfCond);
+					other.Conditions.Add(selfCond);
 				}
 
 				if (!string.IsNullOrEmpty(Conditions[i].FilterTag))
@@ -1786,7 +1786,7 @@ namespace SPNATI_Character_Editor
 
 				if (hasConds)
 				{
-					Conditions.Add(selfCond);
+					other.Conditions.Add(selfCond);
 				}
 			}
 		}
