@@ -2608,12 +2608,11 @@ namespace SPNATI_Character_Editor
 
 			foreach (TargetCondition cond in Conditions)
 			{
-				if (cond.Role == "self" && !string.IsNullOrEmpty(cond.SaidMarker) && (!cond.SaidMarker.Contains("!=") || cond.SaidMarker.EndsWith("!=0")) && !cond.SaidMarker.EndsWith("==0"))
+				if (cond.Role == "self" && !string.IsNullOrEmpty(cond.SaidMarker))
 				{
-					int splitIndex = cond.SaidMarker.IndexOfAny(new char[] { '=', '>', '<', '!' });
+					int splitIndex = cond.SaidMarker.IndexOfAny(new char[] { '>', '<', '!', '@' });
 					if (splitIndex > 0)
 					{
-						list.Add(cond.SaidMarker.Substring(0, splitIndex));
 					}
 					else
 					{

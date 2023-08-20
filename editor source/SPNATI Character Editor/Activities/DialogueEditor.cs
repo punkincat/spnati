@@ -19,6 +19,7 @@ namespace SPNATI_Character_Editor.Activities
 		private FindReplace _findForm;
 		private bool _pendingWardrobeChange;
 		private bool _exportOnQuit;
+		private bool _useCaseMarkers;
 
 		private enum TreeFilterMode
 		{
@@ -82,6 +83,7 @@ namespace SPNATI_Character_Editor.Activities
 			treeDialogue.SetData(c);
 			_selectedStage = null;
 			_selectedCase = null;
+			_useCaseMarkers = true;
 
 			caseControl.Activate();
 			_character = c;
@@ -286,6 +288,11 @@ namespace SPNATI_Character_Editor.Activities
 		/// <param name="index"></param>
 		private void HighlightRow(object sender, int index)
 		{
+			DisplayRow(index);
+		}
+
+		private void DisplayRow(int index)
+		{
 			if (index == -1)
 				return;
 			PoseMapping image = caseControl.GetImage(index);
@@ -310,7 +317,7 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			int imageStage = stage;
 			List<string> markers = new List<string>();
-			if (line != null)
+			if (line != null && _useCaseMarkers)
 			{
 				if (!string.IsNullOrEmpty(line.Marker))
 				{
@@ -318,15 +325,18 @@ namespace SPNATI_Character_Editor.Activities
 				}
 				foreach (MarkerOperation marker in line.Markers)
 				{
-					if (marker.Value != "0")
+					if (marker.Operator == "=")
 					{
-						markers.Add(marker.Name);
+						markers.Add(marker.ToString());
 					}
 				}
 			}
 			if (_selectedCase != null)
 			{
-				markers.AddRange(_selectedCase.GetMarkers());
+				if (_useCaseMarkers)
+				{
+					markers.AddRange(_selectedCase.GetMarkers());
+				}
 				Workspace.SendMessage(WorkspaceMessages.UpdateMarkers, markers);
 				if (_selectedCase.Tag == "stripped" && stage < _character.Layers)
 				{
@@ -622,6 +632,12 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			_character.PoseLibrary.initialized = false;
 			caseControl.UpdateAvailableImages();
+		}
+
+		private void chkCaseMarkers_CheckedChanged(object sender, EventArgs e)
+		{
+			_useCaseMarkers = chkCaseMarkers.Checked;
+			DisplayRow(caseControl.GetHighlightedLineIndex());
 		}
 	}
 }

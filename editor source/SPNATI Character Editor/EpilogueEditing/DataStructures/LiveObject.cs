@@ -706,6 +706,20 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 							return true;
 						}
 					break;
+				case MarkerOperator.InRange:
+					if (IntInterval.ParseInterval(value2, out IntInterval interval1))
+						if (interval1.InInterval(value1))
+						{
+							return true;
+						}
+					break;
+				case MarkerOperator.NotInRange:
+					if (IntInterval.ParseInterval(value2, out IntInterval interval2))
+						if (interval2.NotInInterval(value1))
+						{
+							return true;
+						}
+					break;
 				default: //NotEqual
 					if (value1 != value2)
 					{
