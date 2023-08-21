@@ -323,6 +323,7 @@
         <response id="1173" opponent="arash" opponentId="144" />
         <response id="1174" opponent="arash" opponentId="145" />
         <response id="1175" opponent="arash" opponentId="146" />
+        <response id="1250" opponent="arash" opponentId="159" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1506,13 +1507,24 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1237" label="" folder="Estelle to left" sort="0" />
         <label id="1238" label="" folder="Estelle to left" sort="0" />
         <label id="1239" label="" folder="Estelle to left" sort="0" />
+        <label id="1240" label="" folder="Meia to right" sort="0" />
+        <label id="1241" label="" folder="Nadeshiko to right" sort="0" />
+        <label id="1242" label="" folder="Nadeshiko to right" sort="0" />
+        <label id="1243" label="" folder="Nadeshiko to right" sort="0" />
+        <label id="1244" label="" folder="Magma Grunt to right" sort="0" />
+        <label id="1245" label="" folder="Magma Grunt to right" sort="0" />
+        <label id="1246" label="" folder="Magma Grunt to right" sort="0" />
+        <label id="1247" label="" folder="Magma Grunt to right" sort="0" />
+        <label id="1248" label="" folder="Magma Grunt to right" sort="0" />
+        <label id="1249" label="" folder="Magma Grunt to right" sort="0" />
+        <label id="1250" label="" folder="Arash to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1239</nextId>
+    <nextId>1250</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1608,6 +1620,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_arash_question_hans" />
         <marker scope="Public" name="nagisa_arash_question_kiyohime" />
         <marker scope="Public" name="nagisa_arash_smalltalk_name" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_seasons" />
         <marker scope="Public" name="nagisa_arle_principal" />
         <marker scope="Public" name="nagisa_arwen_beautiful_lady" />
         <marker scope="Public" name="nagisa_asks_buffy_about_school">Nagisa and Buffy feel differently about high school.</marker>
@@ -2456,6 +2469,11 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_lyralei_focus" />
         <marker scope="Public" name="nagisa_lyralei_making_someone_happy" />
         <marker scope="Public" name="nagisa_lyralei_picture_drop" />
+        <marker scope="Public" name="nagisa_magma_grunt_nm_m1" />
+        <marker scope="Public" name="nagisa_magma_grunt_nm_n1" />
+        <marker scope="Public" name="nagisa_magma_grunt_nm_n10_hand" />
+        <marker scope="Public" name="nagisa_magma_grunt_nm_n7" />
+        <marker scope="Public" name="nagisa_magma_grunt_nm_n8" />
         <marker scope="Public" name="nagisa_mahiru_camera_0">Nagisa reacts differently to Mahiru's camera depending on her state of undress.</marker>
         <marker scope="Public" name="nagisa_mahiru_camera_1">Nagisa reacts differently to Mahiru's camera depending on her state of undress.</marker>
         <marker scope="Public" name="nagisa_mahiru_camera_2">Nagisa reacts differently to Mahiru's camera depending on her state of undress.</marker>
@@ -2581,6 +2599,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_nice_butt" />
         <marker scope="Public" name="nagisa_meia_nm_m7" />
         <marker scope="Public" name="nagisa_meia_nm_m8" />
+        <marker scope="Public" name="nagisa_meia_nm_m9" />
         <marker scope="Public" name="nagisa_meia_no_to_space" />
         <marker scope="Public" name="nagisa_meia_not_a_kid" />
         <marker scope="Public" name="nagisa_meia_not_all_girls" />
@@ -2679,8 +2698,11 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_moon_stripping_on_purpose" />
         <marker scope="Public" name="nagisa_mysterious_scar">Nagisa's father claims that she has a mysterious scar on her butt.</marker>
         <marker scope="Public" name="nagisa_nadeshiiko_selected_uniform" />
+        <marker scope="Public" name="nagisa_nadeshiko_any_tips" />
         <marker scope="Public" name="nagisa_nadeshiko_dango" />
+        <marker scope="Public" name="nagisa_nadeshiko_dango_comeback" />
         <marker scope="Public" name="nagisa_nadeshiko_rugged_up" />
+        <marker scope="Public" name="nagisa_nadeshiko_undressing_up" />
         <marker scope="Public" name="nagisa_nagaotoro_chigau" />
         <marker scope="Public" name="nagisa_nagatoro_be_nice" />
         <marker scope="Public" name="nagisa_nagatoro_brought_a_friend" />
@@ -2825,6 +2847,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_play">Nagisa sets this marker when she announces that she's going to recite a play for her forfeit.</marker>
         <marker scope="Public" name="nagisa_played_tomoyo_after">Nagisa claims to have played the Tomoyo After game.</marker>
         <marker scope="Public" name="nagisa_playing_with_boys">In the first round, Nagisa can announce that she didn't realize that boys would be playing too.</marker>
+        <marker scope="Public" name="nagisa_please_be_nice_to_me" />
         <marker scope="Public" name="nagisa_poem_prompt" />
         <marker scope="Public" name="nagisa_polly_a_ghost" />
         <marker scope="Public" name="nagisa_polly_breasts_exposed" />
