@@ -1,5 +1,4 @@
 using Desktop;
-using SPNATI_Character_Editor.DataStructures;
 using System;
 using System.Windows.Forms;
 
