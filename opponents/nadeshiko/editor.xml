@@ -27,6 +27,9 @@
         <case name="Need a Friend?" id="132" priority="Noteworthy" min="0" max="0">
             <description>Nadeshiko offers her friendship to a character with the "lonely" tag.</description>
         </case>
+        <case name="Journalism Tips for a friend" id="137" priority="Prompt" min="0" max="0">
+            <description>If a character with the "Journalist" tag is present, Nadeshiko will mention her friend Rin is planning to do something in the journalism fie</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -167,12 +170,15 @@
         <response id="130" opponent="jura" opponentId="952" />
         <response id="131" opponent="nagatoro" opponentId="2" />
         <response id="133" opponent="dwight" opponentId="1" />
+        <response id="134" opponent="adrien" opponentId="489" />
+        <response id="135" opponent="kaz" opponentId="15" />
+        <response id="136" opponent="zone-tan" opponentId="7" />
     </responses>
     <labels>
         <label id="114" label="Ramen Markers Reset" folder="" sort="0" />
         <label id="115" label="Pose Maker Markers Reset" folder="" sort="0" />
     </labels>
-    <nextId>133</nextId>
+    <nextId>137</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="amy_confess_sonic_prompt_alt_R" />
@@ -253,6 +259,7 @@
         <marker scope="Public" name="Nad" />
         <marker scope="Public" name="Nade_Nagisa_1-1" />
         <marker scope="Public" name="Nade_Nagisa_SchoolUniform" />
+        <marker scope="Public" name="Nade_Nagisa_Tips" />
         <marker scope="Public" name="NadeMikuWhereBag" />
         <marker scope="Public" name="Nadeshiko" />
         <marker scope="Public" name="Nadeshiko_Amy_StrangeHarmony_R" />
@@ -264,9 +271,11 @@
         <marker scope="Public" name="Nadeshiko_hotClothes_R2" />
         <marker scope="Public" name="Nadeshiko_hotClothes_warmBG_R" />
         <marker scope="Public" name="Nadeshiko_hotClothes_warmBG_R2" />
+        <marker scope="Public" name="Nadeshiko_Journalist" />
         <marker scope="Public" name="Nadeshiko_Lonely" />
         <marker scope="Public" name="Nadeshiko_Nagisa_Dango" />
         <marker scope="Public" name="Nadeshiko_Nagisa_Dango-2" />
+        <marker scope="Public" name="Nadeshiko_Nagisa_Dango-3" />
         <marker scope="Public" name="Nadeshiko_PizzaToppings" />
         <marker scope="Public" name="nadeshiko_pursuit_R" />
         <marker scope="Public" name="Nadeshiko_Revy_1A" />
@@ -276,6 +285,7 @@
         <marker scope="Public" name="Nadeshiko_Sakura_2-2" />
         <marker scope="Public" name="Nadeshiko_Sleeping_R" />
         <marker scope="Public" name="Nadeshiko_SpicyCamps_question_R" />
+        <marker scope="Public" name="Nadeshiko_Toph_1-1" />
         <marker scope="Public" name="Nadeshiko_UndresstoImpress" />
         <marker scope="Public" name="Nadeshiko_UndresstoImpress_2" />
         <marker scope="Public" name="nadeshiko_whycamp_R" />
@@ -299,6 +309,7 @@
         <marker scope="Public" name="NadeshikoStories" />
         <marker scope="Public" name="NadeshikoVictory" />
         <marker scope="Public" name="NadeshikoWorld" />
+        <marker scope="Public" name="NadeshikoYumeko_Forfeit" />
         <marker scope="Public" name="NadeshikoYumeko1_1" />
         <marker scope="Public" name="NadeshikoYumeko1_2" />
         <marker scope="Public" name="NadeshikoYumeko1_3" />
@@ -316,6 +327,15 @@
         <marker scope="Public" name="NadeshikoYumeko5_1" />
         <marker scope="Public" name="NadeshikoYumeko5_2" />
         <marker scope="Public" name="NadeshikoYumeko5_3" />
+        <marker scope="Public" name="NadeshikoYumeko6_1" />
+        <marker scope="Public" name="NadeshikoYumeko6_2" />
+        <marker scope="Public" name="NadeshikoYumeko6_3" />
+        <marker scope="Public" name="NadeshikoYumeko7_1" />
+        <marker scope="Public" name="NadeshikoYumeko7_2" />
+        <marker scope="Public" name="NadeshikoYumeko7_3" />
+        <marker scope="Public" name="NadeshikoYumeko8_1" />
+        <marker scope="Public" name="NadeshikoYumeko8_2" />
+        <marker scope="Public" name="NadeshikoYumeko8_3" />
         <marker scope="Public" name="NadeshikoYunoCollege" />
         <marker scope="Public" name="NadeshikoYusukeGrocery" />
         <marker scope="Public" name="nagatoro_extra_last2_R" />
@@ -342,6 +362,7 @@
         <marker scope="Public" name="Sakura_Nadeshiko_1-1" />
         <marker scope="Public" name="SalesmanNadeshiko" />
         <marker scope="Public" name="Shami_Nadeshiko_tents_R" />
+        <marker scope="Public" name="SkinnyDippingNoLake" />
         <marker scope="Public" name="smallFemale">Used for any line tied to a female opponent with small breasts</marker>
         <marker scope="Public" name="smallMale">Used for any line tied to a male opponent with a small penis</marker>
         <marker scope="Public" name="SoundAdvice" />
