@@ -174,19 +174,19 @@ Meia [nagisa_hug_postforfeit]: Tch.  That's what I get for not paying attention.
 
 ---
 
-MEIA MUST STRIP EYEPIECE:
+MEIA MUST STRIP HEADPIECE:
 Nagisa [nagisa_meia_astronaut]: You look really cool, Meia. Are you an astronaut?
 Meia [nagisa_astronaut]: "Cool"?  <br>...I pilot an assault craft for a pirate crew, Nagisa.  Astronauts aren't fighters.
   OR [nagisa_astronaut]: ..."Astronaut" is more for explorers, Nagisa.  I'm on an attack squad.
   OR [nagisa_astronaut]: Uh...I'm part of an assault team, Nagisa.  Astronauts are scientists.
   OR [nagisa_astronaut]: ...Thank you, Nagisa, but astronauts are peaceful.  I'm a fighter pilot.
 
-MEIA STRIPPING EYEPIECE (accessory):
+MEIA STRIPPING HEADPIECE (accessory):
 Nagisa [nagisa_meia_star_wars]: Oh, sorry for getting it wrong. I learned that everyone who goes up into space is an astronaut. But I don't know much about star wars kinds of stuff.
 Meia [nagisa_resp01]: I think this time is before Earth settled other colonies.  Everyone in space <i>would</i> be an explorer.
   OR [nagisa_resp01]: ...In this time, that might be true.  It seems like Earth hasn't expanded to other planets yet.
 
-MEIA STRIPPED EYEPIECE (accessory):
+MEIA STRIPPED HEADPIECE (accessory):
 Nagisa [nagisa_meia_moon_landing]: We might not have travelled to other planets, but we landed on the moon. I think that's a pretty good effort.
 Meia []: ...This is further back than I thought.
   OR []: ...The big one, right nearby?  This must be <i>ancient</i> history.
@@ -243,13 +243,13 @@ Meia [nagisa_resp23]: ...You thought I was <i>kidding around?</i>
 
 MEIA STRIPPED BODYSUIT (temporary full nudity reveal) IN DEFAULT OUTFIT:
 Nagisa [nagisa_meia_nm_m9]: M-Meia! Don't give up yet!<br>Oh, is that...? If you wanted to put that on, we could pretend like we didn't see anything. I'm sure everyone would be okay with that.
-Meia []: ?? -- line to remove is: You can't walk around expecting to hide your body.  It's good motivation to train.
-  OR []: ?? -- line to remove is: It's who I am.  I don't want to be ashamed of it.<br>...And I work out to keep it that way.
+Meia [nagisa_resp3s]: They're going to have to be.
+  OR [nagisa_resp3s]: A pirate's way of doing things isn't usually welcome.
 
 MEIA HAND AFTER STRIPPED BODYSUIT:
-Nagisa [nagisa_meia_nm_m8_hand]*: ??
-Meia [nagisa_hand3_resp]*: ??
-  OR [nagisa_hand3_resp]*: ??
+Nagisa [nagisa_meia_nm_m8_hand]: You gave us such a surprise. Was that your plan all along?
+Meia [nagisa_hand3_resp]: I just don't have many clothes, Nagisa.  And that's not going to stop me from learning more about Earth...
+  OR [nagisa_hand3_resp]: I told you, Nagisa...I didn't have a plan.  I barely have any clothes.  That's why I'm stuck doing this...
 
 
 MEIA MUST STRIP HAT IN CUPID OUTFIT:
@@ -477,17 +477,17 @@ Nagisa [nagisa_meia_did_it]: Maybe you're right. I never thought I could do that
 
 ---
 
-MEIA MUST STRIP EYEPIECE:
+MEIA MUST STRIP HEADPIECE:
 Meia [nagisa_resp0right]: ...My turn.  I'll keep this simple--<i>poker</i> hasn't changed.
   OR [nagisa_resp0right]: ...It looks like poker's still the same game our quartermaster plays.
 Nagisa [nagisa_meia_poker_in_space]: Oh, do you have poker in space too, Meia? How do you stop the cards from floating away?
  
-MEIA STRIPPING EYEPIECE (accessory):
+MEIA STRIPPING HEADPIECE (accessory):
 Meia [nagisa_resp01right]: ...Artificial gravity.
   OR [nagisa_resp01right]: We have gravity control, just like pressure and temperature.
 Nagisa [nagisa_meia_gravity_chaos]: Oh, right. But if the gravity turned off, it would be chaos!
 
-MEIA STRIPPED EYEPIECE (accessory):
+MEIA STRIPPED HEADPIECE (accessory):
 Meia [nagisa_resp1s_right]: It doesn't take much power.  By the time the plating failed, we'd all be dead, anyway.
   OR [nagisa_resp1s_right]: It's designed to be the last system that fails.  We'd just be floating bodies by then.
 Nagisa [nagisa_meia_no_to_space]: ... I don't think I want to visit space anymore. I'll just stick to the planetarium. -- Reminder to self: make this conditional on a marker

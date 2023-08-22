@@ -324,6 +324,14 @@
         <response id="1174" opponent="arash" opponentId="145" />
         <response id="1175" opponent="arash" opponentId="146" />
         <response id="1250" opponent="arash" opponentId="159" />
+        <response id="1252" opponent="fluttershy" opponentId="814" />
+        <response id="1253" opponent="fluttershy" opponentId="816" />
+        <response id="1255" opponent="arash" opponentId="147" />
+        <response id="1256" opponent="arash" opponentId="148" />
+        <response id="1257" opponent="arash" opponentId="149" />
+        <response id="1258" opponent="arash" opponentId="150" />
+        <response id="1259" opponent="arash" opponentId="158" />
+        <response id="1260" opponent="arash" opponentId="160" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1518,13 +1526,23 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1248" label="" folder="Magma Grunt to right" sort="0" />
         <label id="1249" label="" folder="Magma Grunt to right" sort="0" />
         <label id="1250" label="" folder="Arash to left" sort="0" />
+        <label id="1251" label="" folder="Meia to right" sort="0" />
+        <label id="1252" label="" folder="Fluttershy to right" sort="0" />
+        <label id="1253" label="" folder="Fluttershy to left" sort="0" />
+        <label id="1254" label="" folder="Fluttershy to right" sort="0" />
+        <label id="1255" label="" folder="Arash to left" sort="0" />
+        <label id="1256" label="" folder="Arash to left" sort="0" />
+        <label id="1257" label="" folder="Arash to left" sort="0" />
+        <label id="1258" label="" folder="Arash to left" sort="0" />
+        <label id="1259" label="" folder="Arash to left" sort="0" />
+        <label id="1260" label="" folder="Arash to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1250</nextId>
+    <nextId>1260</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1619,6 +1637,12 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_arash_question_edison_tesla" />
         <marker scope="Public" name="nagisa_arash_question_hans" />
         <marker scope="Public" name="nagisa_arash_question_kiyohime" />
+        <marker scope="Public" name="nagisa_arash_question_martha" />
+        <marker scope="Public" name="nagisa_arash_question_okita" />
+        <marker scope="Public" name="nagisa_arash_question_serenity" />
+        <marker scope="Public" name="nagisa_arash_question_waver_iskandar" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_books" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_hobbies" />
         <marker scope="Public" name="nagisa_arash_smalltalk_name" />
         <marker scope="Public" name="nagisa_arash_smalltalk_seasons" />
         <marker scope="Public" name="nagisa_arle_principal" />
@@ -2032,6 +2056,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_fluttershy_encouragement" />
         <marker scope="Public" name="nagisa_fluttershy_exhibitionist" />
         <marker scope="Public" name="nagisa_fluttershy_first_time" />
+        <marker scope="Public" name="nagisa_fluttershy_fn_f11_summer" />
         <marker scope="Public" name="nagisa_fluttershy_friends" />
         <marker scope="Public" name="nagisa_fluttershy_friendship_endangered" />
         <marker scope="Public" name="nagisa_fluttershy_garden" />
@@ -2060,6 +2085,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_fluttershy_nervous_socks" />
         <marker scope="Public" name="nagisa_fluttershy_nervousness_plan" />
         <marker scope="Public" name="nagisa_fluttershy_nervousness_plan_2" />
+        <marker scope="Public" name="nagisa_fluttershy_nf_f1_summer" />
+        <marker scope="Public" name="nagisa_fluttershy_nf_f11_summer" />
         <marker scope="Public" name="nagisa_fluttershy_nice_figure" />
         <marker scope="Public" name="nagisa_fluttershy_nice_girl" />
         <marker scope="Public" name="nagisa_fluttershy_nice_person" />
@@ -2599,6 +2626,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_nice_butt" />
         <marker scope="Public" name="nagisa_meia_nm_m7" />
         <marker scope="Public" name="nagisa_meia_nm_m8" />
+        <marker scope="Public" name="nagisa_meia_nm_m8_hand" />
         <marker scope="Public" name="nagisa_meia_nm_m9" />
         <marker scope="Public" name="nagisa_meia_no_to_space" />
         <marker scope="Public" name="nagisa_meia_not_a_kid" />
