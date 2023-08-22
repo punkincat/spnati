@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text.RegularExpressions;
 
 namespace SPNATI_Character_Editor
@@ -393,7 +394,7 @@ namespace SPNATI_Character_Editor
 
 			foreach (Pose pose in character.Poses)
 			{
-				ValidatePose(character, pose, unusedImages);
+				ValidatePose(character, pose, warnings, unusedImages);
 			}
 
 			foreach (Collectible collectible in character.Collectibles.Collectibles)
@@ -1299,11 +1300,18 @@ namespace SPNATI_Character_Editor
 		/// <param name="pose"></param>
 		/// <param name="warnings"></param>
 		/// <param name="baseImages"></param>
-		private static void ValidatePose(Character character, Pose pose, HashSet<string> unusedImages)
+		private static void ValidatePose(Character character, Pose pose, List<ValidationError> warnings, HashSet<string> unusedImages)
 		{
 			unusedImages.Remove("custom:" + pose.Id);
+			List<string> spriteIDs = new List<string>();
 			foreach (Sprite sprite in pose.Sprites)
 			{
+				if (spriteIDs.Contains(sprite.Id))
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.MissingImages, string.Format("Pose custom:{0} contains multiple sprites with the same ID {1}", pose.Id, sprite.Id), null));
+					continue;
+				}
+				spriteIDs.Add(sprite.Id);
 				string path = GetRelativeImagePath(character, sprite.Src);
 				if (!string.IsNullOrEmpty(path))
 				{
@@ -1565,7 +1573,7 @@ namespace SPNATI_Character_Editor
 
 			foreach (Pose pose in skin.Poses)
 			{
-				ValidatePose(character, pose, unusedImages);
+				ValidatePose(character, pose, warnings, unusedImages);
 				missingImages.Remove("custom:" + pose.Id);
 			}
 
