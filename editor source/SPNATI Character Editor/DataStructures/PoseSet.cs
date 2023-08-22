@@ -52,9 +52,17 @@ namespace SPNATI_Character_Editor
 		[XmlIgnore]
 		public string Character;
 
+		private string _stage;
 		[StageSelect(DisplayName = "Stage", GroupName = "Conditions", GroupOrder = 2, Description = "Stage (Required)", BoundProperties = new string[] { "Character" }, FilterStagesToTarget = false, SkinVariable = "~self.costume~")]
 		[XmlAttribute("stage")]
-		public string Stage;
+		public string Stage
+		{
+			get { return _stage; }
+			set
+			{
+				_stage = value ?? "0";
+			}
+		}
 
 		[DefaultValue("")]
 		[XmlAttribute("location")]

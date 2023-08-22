@@ -30,8 +30,29 @@ namespace SPNATI_Character_Editor.Controls
 		public void SetCharacter(ISkin character)
 		{
 			_character = character;
+			lblStage.Visible = _character.CustomPoseSets.Count > 0;
 //			tablePoseSets.Context = character;
 		}
+		public void Clear()
+		{
+			lblStage.Visible = false;
+			tablePoseSetEntry.Data = null;
+			cboPose.DataSource = null;
+			chkLayer.Checked = false;
+			valWeight.Value = (decimal) 0.001;
+			valPriority.Value = 0;
+			valLocation.Value = 50;
+			cboDirection.Text = "";
+		}
+
+		public void ShowLblStage()
+		{
+			if (!lblStage.Visible)
+			{
+				lblStage.Visible = true;
+			}
+		}
+
 		public void SetPoseSet(PoseSet workingSet)
 		{
 			if (_selectedSet != null)
@@ -42,7 +63,6 @@ namespace SPNATI_Character_Editor.Controls
 				{
 					tabsPoseSetEntries.TabPages.RemoveAt(i);
 				}
-
 			}
 			_selectedSet = workingSet;
 			if (_selectedSet != null)
@@ -52,9 +72,9 @@ namespace SPNATI_Character_Editor.Controls
 					AddSetEntryTab();
 				}
 				tabsPoseSetEntries.SelectedIndexChanged += tabsPoseSetEntries_SelectedIndexChanged;
+				_selectedEntry = _selectedSet.Entries[0];
+				SetPoseSetEntry();
 			}
-			_selectedEntry = _selectedSet.Entries[0];
-			SetPoseSetEntry();
 		}
 
 		private void SetPoseSetEntry()
@@ -82,7 +102,6 @@ namespace SPNATI_Character_Editor.Controls
 			valPriority.Value = Math.Max(valPriority.Minimum, Math.Min(valPriority.Maximum, _selectedEntry.Priority));
 			PopulatePoseEntryTable();
 		}
-
 
 		private void PopulateImageDropdown(string stages)
 		{

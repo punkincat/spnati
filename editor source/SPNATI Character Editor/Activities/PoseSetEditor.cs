@@ -1,4 +1,5 @@
 using Desktop;
+using SPNATI_Character_Editor.DataStructures;
 using System;
 using System.Windows.Forms;
 
@@ -84,7 +85,10 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				lstPoseSets.SelectedIndex = 0;
 			}
-
+			else
+			{
+				poseSetControl1.Clear();
+			}
 		}
 
 		private void tsAddPoseSet_Click(object sender, EventArgs e)
@@ -100,6 +104,7 @@ namespace SPNATI_Character_Editor.Activities
 			_character.CustomPoseSets.Add(poseSet);
 			_character.CustomPoseSets.Sort();
 			_character.Character.PoseLibrary.Add(poseSet);
+			poseSetControl1.ShowLblStage();
 		}
 
 		private void tsDuplicatePoseSet_Click(object sender, EventArgs e)

@@ -339,6 +339,15 @@ namespace SPNATI_Character_Editor
 										warnings.Add(new ValidationError(ValidationFilterLevel.MissingImages, string.Format("Pose {1} does not exist. {0}", caseLabel, img), context));
 									}
 								}
+								else if (img.StartsWith("set:"))
+								{
+									string id = img.Substring(4);
+									PoseSet set = character.PoseSets.Find(p => p.Id == id);
+									if (set == null)
+									{
+										warnings.Add(new ValidationError(ValidationFilterLevel.MissingImages, string.Format("Pose set {1} does not exist. {0}", caseLabel, img), context));
+									}
+								}
 								else
 								{
 									if (!File.Exists(Path.Combine(Config.GetRootDirectory(character), img)))
