@@ -161,7 +161,7 @@ namespace SPNATI_Character_Editor.Activities
 			SubscribeWorkspace(WorkspaceMessages.Find, OnFind);
 			SubscribeWorkspace(WorkspaceMessages.Replace, OnReplace);
 			SubscribeWorkspace(WorkspaceMessages.WardrobeUpdated, OnWardrobeChanged);
-			SubscribeWorkspace(WorkspaceMessages.SkinChanged, OnSkinChanged);			
+			SubscribeWorkspace<IWardrobe>(WorkspaceMessages.SkinChanged, SkinChanged);			
 			SubscribeWorkspace(WorkspaceMessages.SaveCaseNotes, OnSaveCaseNotes);
 			SubscribeDesktop(DesktopMessages.SettingsUpdated, OnSettingsUpdated);
 			SubscribeDesktop(DesktopMessages.MacrosUpdated, OnMacrosUpdated);
@@ -210,7 +210,7 @@ namespace SPNATI_Character_Editor.Activities
 			caseControl.SaveNotes();
 		}
 
-		private void OnSkinChanged()
+		private void SkinChanged(IWardrobe costume)
 		{
 			caseControl.Save();
 			caseControl.UpdateStages();

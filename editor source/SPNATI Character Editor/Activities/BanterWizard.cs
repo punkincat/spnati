@@ -17,6 +17,7 @@ namespace SPNATI_Character_Editor.Activities
 	{
 		private Character _character;
 		private IWardrobe _costume;
+		private IWardrobe _targetersCostume;
 		private Case _workingResponse;
 		private Case _selectedCase;
 		private Character _selectedCharacter;
@@ -50,6 +51,11 @@ namespace SPNATI_Character_Editor.Activities
 			InitializeComponent();
 			recOneCharacter.RecordType = typeof(Character);
 			recReferenceCostume.RecordType = typeof(Costume);
+		}
+
+		private void SkinChanged(IWardrobe costume)
+		{
+			_targetersCostume = costume;
 		}
 
 		public override string Caption
@@ -87,6 +93,7 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			_character = Record as Character;
 			_character.IsDirty = true;
+			SubscribeWorkspace<IWardrobe>(WorkspaceMessages.SkinChanged, SkinChanged);
 			_path = Path.Combine(Config.GetString(Settings.GameDirectory), "opponents/" + _character.FolderName + "/banter.xml");
 			recReferenceCostume.RecordFilter = FilterRefCostume;
 			recReferenceCostume.Record = CharacterDatabase.GetSkin("default");
@@ -363,12 +370,25 @@ namespace SPNATI_Character_Editor.Activities
 			return;
 		}
 
-		private void RenameCaseTag(Case workingCase, DataGridViewRow row)
+		private void RenameCaseTagSelf(Character character, Case workingCase, DataGridViewRow row)
 		{
-			bool removing;
-			bool lookForward;
-			removing = workingCase.Tag.Contains("removing_");
-			lookForward = removing || workingCase.Tag == "opponent_stripping";
+			if (workingCase.Stages.Count != 1)
+				return;
+			int stage = workingCase.Stages[0];
+			if (workingCase.Tag == "must_strip" || workingCase.Tag.Contains("must_strip_"))
+			{
+				row.Cells["ColCase"].Value = character + " must strip (" + stage + ")";
+				return;
+			}
+			bool lookForward = workingCase.Tag == "stripping";
+			IWardrobe costume = _targetersCostume ?? character;
+			row.Cells["ColCase"].Value = character + " " + character.LayerToStageName(stage, lookForward, costume) + " (" + stage + ")";
+		}
+
+		private void RenameCaseTagTarget(Case workingCase, DataGridViewRow row)
+		{
+			bool removing = workingCase.Tag.Contains("removing_");
+			bool lookForward = removing || workingCase.Tag == "opponent_stripping";
 			string stages = "";
 			int stage;
 			foreach (TargetCondition cond in workingCase.Conditions)
@@ -389,7 +409,14 @@ namespace SPNATI_Character_Editor.Activities
 				{
 					stage = int.Parse(stages[0].ToString());
 				}
-				row.Cells["ColCase"].Value = _character.LayerToStageName(stage, lookForward, _costume) + " (" + stages + ")";
+				if (workingCase.Tag == "opponent_lost" || workingCase.Tag.Contains("_must_strip"))
+				{
+					row.Cells["ColCase"].Value = _character + " must strip" + " (" + stage + ")";
+				}
+				else
+				{
+					row.Cells["ColCase"].Value = _character + " " + _character.LayerToStageName(stage, lookForward, _costume) + " (" + stages + ")";
+				}
 			}
 		}
 
@@ -401,10 +428,15 @@ namespace SPNATI_Character_Editor.Activities
 				{
 					if (dialogueLine.Text == text)
 					{
-						if (Character.IsCaseTargetedAtCharacter(workingCase, _character, TargetType.DirectTarget))
+						if (workingCase.Tag == "must_strip" || workingCase.Tag == "stripping" || workingCase.Tag == "stripped" || workingCase.Tag.Contains("must_strip_"))
 						{
-							RenameCaseTag(workingCase, row);
+							RenameCaseTagSelf(character, workingCase, row);
 						}
+						else if ((workingCase.Tag.Contains("_must_strip") || workingCase.Tag.Contains("removing") || workingCase.Tag.Contains("removed") || workingCase.Tag == "opponent_lost" || workingCase.Tag.Contains("opponent_stripp")) && Character.IsCaseTargetedAtCharacter(workingCase, _character, TargetType.DirectTarget))
+						{
+							RenameCaseTagTarget(workingCase, row);
+						}
+
 						Case sampleResponse = workingCase.CreateResponse(character, _character);
 						if (sampleResponse == null)
 						{
