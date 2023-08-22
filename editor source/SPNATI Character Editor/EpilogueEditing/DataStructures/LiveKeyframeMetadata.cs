@@ -77,7 +77,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		{
 			_property = property;
 			Interpolation = (property == "Src" || property == "Text" || property == "Burst") ? "none" : "linear";
-			Ease = (property == "Src" || property == "Text") ? "linear" : "smooth";
+			Ease = "linear";
 		}
 
 		public string ToKey()
