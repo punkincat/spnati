@@ -591,7 +591,8 @@ namespace SPNATI_Character_Editor
 		protected void ExtractExpressionPieces(out string targetType, out string variable)
 		{
 			ExpressionTest expression = GetValue() as ExpressionTest;
-			string expr = expression.Expression?.ToLower() ?? "";
+			//string expr = expression.Expression?.ToLower() ?? "";
+			string expr = expression.Expression ?? "";
 			expr = expr.Trim('~');
 			int period = expr.IndexOf('.');
 			targetType = "";
@@ -607,7 +608,6 @@ namespace SPNATI_Character_Editor
 			{
 				targetType = expr;
 			}
-
 			variable = expr;
 		}
 	}
