@@ -49,6 +49,8 @@ namespace SPNATI_Character_Editor.Activities
             this.lblCharacters = new Desktop.Skinning.SkinnedLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.grpLines = new Desktop.Skinning.SkinnedGroupBox();
+            this.lblReferenceCostume = new Desktop.Skinning.SkinnedLabel();
+            this.recReferenceCostume = new Desktop.CommonControls.RecordField();
             this.cmdColorCode = new System.Windows.Forms.Button();
             this.gridLines = new Desktop.Skinning.SkinnedDataGridView();
             this.ColColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -132,7 +134,7 @@ namespace SPNATI_Character_Editor.Activities
             this.chkOneCharacter.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
             this.chkOneCharacter.Location = new System.Drawing.Point(12, 523);
             this.chkOneCharacter.Name = "chkOneCharacter";
-            this.chkOneCharacter.Size = new System.Drawing.Size(71, 17);
+            this.chkOneCharacter.Size = new System.Drawing.Size(63, 17);
             this.chkOneCharacter.TabIndex = 17;
             this.chkOneCharacter.Text = "Filter to:";
             this.chkOneCharacter.UseVisualStyleBackColor = true;
@@ -355,6 +357,8 @@ namespace SPNATI_Character_Editor.Activities
             // grpLines
             // 
             this.grpLines.BackColor = System.Drawing.Color.White;
+            this.grpLines.Controls.Add(this.lblReferenceCostume);
+            this.grpLines.Controls.Add(this.recReferenceCostume);
             this.grpLines.Controls.Add(this.cmdColorCode);
             this.grpLines.Controls.Add(this.gridLines);
             this.grpLines.Controls.Add(this.lblNoMatches);
@@ -370,6 +374,37 @@ namespace SPNATI_Character_Editor.Activities
             this.grpLines.TabIndex = 5;
             this.grpLines.TabStop = false;
             this.grpLines.Text = "Lines";
+            // 
+            // lblReferenceCostume
+            // 
+            this.lblReferenceCostume.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblReferenceCostume.AutoSize = true;
+            this.lblReferenceCostume.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblReferenceCostume.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblReferenceCostume.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblReferenceCostume.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.lblReferenceCostume.Location = new System.Drawing.Point(580, 248);
+            this.lblReferenceCostume.Name = "lblReferenceCostume";
+            this.lblReferenceCostume.Size = new System.Drawing.Size(54, 13);
+            this.lblReferenceCostume.TabIndex = 7;
+            this.lblReferenceCostume.Text = "Ref. Skin:";
+            // 
+            // recReferenceCostume
+            // 
+            this.recReferenceCostume.AllowCreate = false;
+            this.recReferenceCostume.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.recReferenceCostume.Location = new System.Drawing.Point(640, 244);
+            this.recReferenceCostume.Name = "recReferenceCostume";
+            this.recReferenceCostume.PlaceholderText = null;
+            this.recReferenceCostume.Record = null;
+            this.recReferenceCostume.RecordContext = null;
+            this.recReferenceCostume.RecordFilter = null;
+            this.recReferenceCostume.RecordKey = null;
+            this.recReferenceCostume.RecordType = null;
+            this.recReferenceCostume.Size = new System.Drawing.Size(141, 23);
+            this.recReferenceCostume.TabIndex = 6;
+            this.recReferenceCostume.UseAutoComplete = false;
+            this.recReferenceCostume.RecordChanged += new System.EventHandler<Desktop.CommonControls.RecordEventArgs>(this.recReferenceCostume_RecordChanged);
             // 
             // cmdColorCode
             // 
@@ -821,5 +856,7 @@ namespace SPNATI_Character_Editor.Activities
         private Desktop.Skinning.SkinnedCheckedListBox chkCharacterFiltering;
         private Desktop.Skinning.SkinnedCheckBox chkOneCharacter;
         private Desktop.CommonControls.RecordField recOneCharacter;
+        private Desktop.CommonControls.RecordField recReferenceCostume;
+        private Desktop.Skinning.SkinnedLabel lblReferenceCostume;
     }
 }
