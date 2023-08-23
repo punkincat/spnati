@@ -292,7 +292,7 @@ namespace SPNATI_Character_Editor.Activities
 					row.Cells["ColText"].Value = line.Text;
 					row.Cells["ColText"].Tag = line;
 					row.Cells["ColStage"].Value = line.StageRange;
-					row.Cells["ColCase"].Value = line.CaseTag;
+					row.Cells["ColCase"].Value = TriggerDatabase.GetLabel(line.CaseTag);
 					count++;
 				}
 			}
@@ -372,7 +372,7 @@ namespace SPNATI_Character_Editor.Activities
 			int stage = workingCase.Stages[0];
 			if (workingCase.Tag == "must_strip" || workingCase.Tag.Contains("must_strip_"))
 			{
-				row.Cells["ColCase"].Value = character + " must strip (" + stage + ")";
+				row.Cells["ColCase"].Value = Config.SafeMode ? character + " lost (" + stage + ")" : character + " must strip (" + stage + ")";
 				return;
 			}
 			bool lookForward = workingCase.Tag == "stripping";
@@ -406,7 +406,7 @@ namespace SPNATI_Character_Editor.Activities
 				}
 				if (workingCase.Tag == "opponent_lost" || workingCase.Tag.Contains("_must_strip"))
 				{
-					row.Cells["ColCase"].Value = _character + " must strip" + " (" + stage + ")";
+					row.Cells["ColCase"].Value = Config.SafeMode? _character + " lost (" + stage + ")" : _character + " must strip (" + stage + ")";
 				}
 				else
 				{
