@@ -332,6 +332,12 @@
         <response id="1258" opponent="arash" opponentId="150" />
         <response id="1259" opponent="arash" opponentId="158" />
         <response id="1260" opponent="arash" opponentId="160" />
+        <response id="1263" opponent="arash" opponentId="161" />
+        <response id="1264" opponent="arash" opponentId="163" />
+        <response id="1265" opponent="arash" opponentId="164" />
+        <response id="1266" opponent="arash" opponentId="165" />
+        <response id="1267" opponent="arash" opponentId="166" />
+        <response id="1269" opponent="arash" opponentId="170" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1536,13 +1542,23 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1258" label="" folder="Arash to left" sort="0" />
         <label id="1259" label="" folder="Arash to left" sort="0" />
         <label id="1260" label="" folder="Arash to left" sort="0" />
+        <label id="1261" label="" folder="Nadeshiko to right" sort="0" />
+        <label id="1262" label="" folder="Nadeshiko to left" sort="0" />
+        <label id="1263" label="" folder="Arash to left" sort="0" />
+        <label id="1264" label="" folder="Arash to left" sort="0" />
+        <label id="1265" label="" folder="Arash to left" sort="0" />
+        <label id="1266" label="" folder="Arash to left" sort="0" />
+        <label id="1267" label="" folder="Arash to left" sort="0" />
+        <label id="1268" label="" folder="Arash to left" sort="0" />
+        <label id="1269" label="" folder="Arash to left" sort="0" />
+        <label id="1270" label="" folder="Arash to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1260</nextId>
+    <nextId>1270</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1641,10 +1657,18 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_arash_question_okita" />
         <marker scope="Public" name="nagisa_arash_question_serenity" />
         <marker scope="Public" name="nagisa_arash_question_waver_iskandar" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_animals" />
         <marker scope="Public" name="nagisa_arash_smalltalk_books" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_excuses" />
         <marker scope="Public" name="nagisa_arash_smalltalk_hobbies" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_midnight_day" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_midnight_night" />
         <marker scope="Public" name="nagisa_arash_smalltalk_name" />
         <marker scope="Public" name="nagisa_arash_smalltalk_seasons" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_temperature" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_temperature_cold" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_thoughts" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_travel" />
         <marker scope="Public" name="nagisa_arle_principal" />
         <marker scope="Public" name="nagisa_arwen_beautiful_lady" />
         <marker scope="Public" name="nagisa_asks_buffy_about_school">Nagisa and Buffy feel differently about high school.</marker>
@@ -2729,6 +2753,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_nadeshiko_any_tips" />
         <marker scope="Public" name="nagisa_nadeshiko_dango" />
         <marker scope="Public" name="nagisa_nadeshiko_dango_comeback" />
+        <marker scope="Public" name="nagisa_nadeshiko_dango_too_cute" />
+        <marker scope="Public" name="nagisa_nadeshiko_my_best" />
         <marker scope="Public" name="nagisa_nadeshiko_rugged_up" />
         <marker scope="Public" name="nagisa_nadeshiko_undressing_up" />
         <marker scope="Public" name="nagisa_nagaotoro_chigau" />
