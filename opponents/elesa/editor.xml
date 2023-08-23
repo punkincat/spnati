@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>elesa</owner>
+    <height />
+    <age />
+    <pronunciation />
+    <othernotes />
     <noteworthy>
         <case name="Introduction" id="1" priority="Noteworthy" min="0" max="0">
             <description>Elesa dramatically tosses off her coat.</description>
@@ -9,13 +13,42 @@
             <description>Elesa allows her shorts to fall off of her.</description>
         </case>
     </noteworthy>
-    <nextId>2</nextId>
+    <responses>
+        <response id="4" opponent="caitlin" opponentId="253" />
+        <response id="6" opponent="caitlin" opponentId="254" />
+        <response id="7" opponent="caitlin" opponentId="255" />
+        <response id="10" opponent="caitlin" opponentId="263" />
+        <response id="11" opponent="caitlin" opponentId="261" />
+        <response id="12" opponent="caitlin" opponentId="265" />
+        <response id="15" opponent="caitlin" opponentId="262" />
+    </responses>
+    <labels>
+        <label id="3" label="" folder="Caitlin" sort="0" />
+        <label id="4" label="" folder="Caitlin" sort="0" />
+        <label id="6" label="" folder="Caitlin" sort="0" />
+        <label id="7" label="" folder="Caitlin" sort="0" />
+        <label id="8" label="" folder="Caitlin" sort="0" />
+        <label id="9" label="" folder="Caitlin" sort="0" />
+    </labels>
+    <nextId>15</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Ask_electroplay">Elesa asks the target their opinion on electrostimulation.</marker>
         <marker scope="Public" name="ask_movies">Elesa asks her opponents about their favorite movies.</marker>
         <marker scope="Public" name="bodyconfidence">Elesa boasts about her confidence in her own body and talks about body confidence.</marker>
         <marker scope="Public" name="booty">Elesa's butt-pose triggers.</marker>
+        <marker scope="Public" name="Caitlin_Elesa_0BR" />
+        <marker scope="Public" name="Caitlin_Elesa0AR" />
+        <marker scope="Public" name="Caitlin_Elesa0BR" />
+        <marker scope="Public" name="Caitlin_Elesa0CR" />
+        <marker scope="Public" name="Elesa_Caitlin_0A" />
+        <marker scope="Public" name="Elesa_Caitlin_0C" />
+        <marker scope="Public" name="Elesa_Caitlin_1A" />
+        <marker scope="Public" name="Elesa_Caitlin_1C" />
+        <marker scope="Public" name="Elesa_Caitlin_2A" />
+        <marker scope="Public" name="Elesa_Caitlin0B" />
+        <marker scope="Public" name="Elesa_Caitlin1B" />
+        <marker scope="Public" name="Elesa_Caitlin2B" />
         <marker scope="Public" name="elesa_ensemble">Elesa asks her opponents about fashion and their favorite outfits.</marker>
         <marker scope="Public" name="Elesa_Lucina_Outfit1" />
         <marker scope="Public" name="Elesa_Lucina_Outfit2" />

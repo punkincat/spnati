@@ -20,9 +20,14 @@ Additionally, if a variable is written in all caps (e.g. `~PLAYER~`), then the e
 | `~name~`     | The name (label) of the current target. The same as `~target~`. The target depends on the situation and not all situations have a target. | 
 | `~background~` | The name of the current background. |
 | `~rng(lo-hi)~` | Generates a random number between `lo` and `hi`, inclusive. |
+| `~blank~`      | Expands to a blank (i.e. empty) string. This is mostly useful for creating lines where a character says nothing at all, such as during joint interactions. |
 
 Note that backgrounds have lots of information that can be accessed using variables;
 see the page on backgrounds for more details.
+
+## Backgrounds ##
+
+[A full list of background-related variables can be found here.](/docs/dialogue/backgrounds.html)
 
 ## Cards ##
 
@@ -69,6 +74,23 @@ more detail on how those work.
 | `~month~` | The current month, from January to December |
 | `~month.number~` | The current month as a number (1-12) |
 
+## Events ##
+
+These variables can be used to check if an event is active. Note that events can hypothetically overlap, though the current event schedule does not contain any such events.
+
+In general, these variables take the form `~event.event_id~`, where `event_id` is the internal ID for each event; these variables expand to `true` if the event is active, and `false` otherwise.
+
+Event variables for all major events as of writing should be listed below. The full definition and ID for each event can also be found in `events.xml`.
+
+| Variable              | Event              |
+|-----------------------|--------------------|
+| `~event.summer~`      | Summer             |
+| `~event.valentines~`  | Valentine's Day    |
+| `~event.easter~`      | Easter             |
+| `~event.halloween~`   | Halloween          |
+| `~event.xmas~`        | Christmas          |
+| `~event.april_fools~` | April Fool's Day   |
+
 ## Markers ##
 
 These variables can also be used as player subvariables; see the section below for
@@ -113,7 +135,11 @@ Note that you _don't_ have to define a custom variable to reference a specific c
 | `.size`         | The player's breast or penis size depending on the gender (`small`, `medium`, or `large`). |
 | `.intelligence` | The player's AI intelligence. For the human player, this always expands to `average`. |
 | `.gender`       | The player's (current) gender, `male` or `female`. |
-| `.ifmale` | Outputs "text if male" if the player is male and "text if female" otherwise. Typically uses with `he\|she`, `him\|her` etc. in cases that don't depend on the particular player's gender except for the choice of pronouns. See the section below for how to use this variable. |
+| `.subj`         | The player's subjective pronoun, `he` or `she`. |
+| `.obj`          | The player's objective pronoun, `him` or `her`. |
+| `.poss`         | The player's possessive determiner, `his` or `her`. |
+| `.poss2`        | The player's possessive pronoun, `his` or `hers`. |
+| `.ifmale`       | Outputs "text if male" if the player is male and "text if female" otherwise. See the section below for how to use this variable. |
 | `.place`        | The player's current rank in terms of layers left or the reverse order they are eliminated, between 1 and 5 (if there are that many players). Two (or more) players can be in the same place if they have the same number of layers. In other words, the number of other players that have more layers left or were eliminated after this player, plus one. |
 | `.revplace`     | Like `.place`, but counting from the bottom. The number of other players that were eliminated before this player or have fewer layers left, plus one. This mainly exists because the number of players isn't always five. |
 | `.lead`         | The difference in number of layers between this player and the best of the rest. If this player shares first place, this is 0. If this player isn't in first place, this is negative. If and only if this is > 1 when the player loses a hand, they are considered "winning". |

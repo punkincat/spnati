@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>nagatoro_beach_day</id>
+    <label>Nagatoro</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag remove="true">school_uniform</tag>
+        <tag>summer_skin</tag>
+        <tag>tan_lines</tag>
+    </tags>
+    <layers>4</layers>
+    <folder>opponents/reskins/nagatoro_beach_day/</folder>
+    <folder stage="5">opponents/nagatoro/</folder>
+    <wardrobe>
+        <clothing name="bikini bottom" generic="swimsuit" position="lower" type="important" />
+        <clothing name="bikini top" generic="swimsuit" position="upper" type="important" />
+        <clothing position="" type="skip" />
+        <clothing name="shirt" generic="shirt" position="both" type="major" />
+        <clothing name="flip-flops" generic="shoes" position="feet" type="minor" plural="true" />
+    </wardrobe>
+
+    <poses>
+        <pose id="0-stripping">
+            <sprite id="kicking" src="reskins/nagatoro_beach_day/1-shoe.png" x="0" y="0" scalex="1" />
+            <sprite id="shew" delay="0.45" src="reskins/nagatoro_beach_day/shew_beach.png" x="-458" y="1049" scalex="0.4" scaley="0.4" alpha="100" rotation="34" />
+            <directive type="animation" id="kicking" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/nagatoro_beach_day/1-shoe.png" />
+                <keyframe time="0.45" src="reskins/nagatoro_beach_day/1-shoe_kick.png" />
+            </directive>
+            <directive type="animation" id="kicking" ease="linear" interpolation="linear">
+                <keyframe time="0" scalex="1" />
+                <keyframe time="0.45" scalex="1" />
+                <keyframe time="0.5" scalex="1.1" />
+                <keyframe time="0.55" scalex="1" />
+            </directive>
+            <directive type="animation" id="shew" delay="0.45" ease="linear" interpolation="linear">
+                <keyframe time="0" x="-458" y="1049" />
+                <keyframe time="1" x="-4000" y="751" />
+            </directive>
+            <directive type="animation" id="shew" delay="0.45" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/nagatoro_beach_day/shew_beach.png" />
+                <keyframe time="1" src="nagatoro/shew.png" />
+            </directive>
+            <directive type="animation" id="shew" delay="0.45" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="0.4" scaley="0.4" alpha="100" rotation="34" />
+                <keyframe time="1" alpha="100" rotation="-800" />
+            </directive>
+        </pose>
+        <pose id="0-stripping-">
+            <sprite id="kicking" src="reskins/nagatoro_beach_day/1-shoe-.png" x="0" y="0" scalex="1" />
+            <sprite id="shew" delay="0.45" src="reskins/nagatoro_beach_day/shew_beach.png" x="-458" y="1049" scalex="0.4" scaley="0.4" alpha="100" rotation="34" />
+            <directive type="animation" id="kicking" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/nagatoro_beach_day/1-shoe-.png" />
+                <keyframe time="0.45" src="reskins/nagatoro_beach_day/1-shoe_kick-.png" />
+            </directive>
+            <directive type="animation" id="kicking" ease="linear" interpolation="linear">
+                <keyframe time="0" scalex="1" />
+                <keyframe time="0.45" scalex="1" />
+                <keyframe time="0.5" scalex="1.1" />
+                <keyframe time="0.55" scalex="1" />
+            </directive>
+            <directive type="animation" id="shew" delay="0.45" ease="linear" interpolation="linear">
+                <keyframe time="0" x="-458" y="1049" />
+                <keyframe time="1" x="-4000" y="751" />
+            </directive>
+            <directive type="animation" id="shew" delay="0.45" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/nagatoro_beach_day/shew_beach.png" />
+                <keyframe time="1" src="nagatoro/shew.png" />
+            </directive>
+            <directive type="animation" id="shew" delay="0.45" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="0.4" scaley="0.4" alpha="100" rotation="34" />
+                <keyframe time="1" alpha="100" rotation="-800" />
+            </directive>
+        </pose>
+        <pose id="0-stripping_darkness">
+            <sprite id="kicking" src="reskins/nagatoro_beach_day/1-shoe.png" x="0" y="0" scalex="1" />
+            <sprite id="shew" delay="0.45" src="reskins/nagatoro_beach_day/shew_beach.png" x="-458" y="1049" scalex="0.3" scaley="0.3" alpha="100" rotation="34" />
+            <directive type="animation" id="kicking" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/nagatoro_beach_day/1-shoe.png" />
+                <keyframe time="0.45" src="reskins/nagatoro_beach_day/1-shoe_kick-.png" />
+            </directive>
+            <directive type="animation" id="kicking" ease="linear" interpolation="linear">
+                <keyframe time="0" scalex="1" />
+                <keyframe time="0.45" scalex="1" />
+                <keyframe time="0.5" scalex="1.1" />
+                <keyframe time="0.55" scalex="1" />
+            </directive>
+            <directive type="animation" id="shew" delay="0.45" ease="linear" interpolation="linear">
+                <keyframe time="0" x="-458" y="1049" />
+                <keyframe time="1" x="-458" y="-4000" />
+            </directive>
+            <directive type="animation" id="shew" delay="0.45" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="0.3" scaley="0.3" alpha="100" rotation="34" />
+                <keyframe time="1" scalex="0.3" alpha="100" rotation="-800" />
+            </directive>
+        </pose>
+        <pose id="0-treasure_scope">
+            <sprite id="flirty" z="1" src="reskins/nagatoro_beach_day/0-hime.png" x="0" y="0" alpha="100" />
+            <sprite id="Rouge_TreasureScope_XRay" src="reskins/nagatoro_beach_day/0-treasure_scope.png" x="0" y="0" alpha="100" />
+            <sprite id="Rouge_TreasureScope_Lens" z="100" src="nagatoro/../rouge/Rouge_TreasureScope_Lens.png" x="250" y="409" alpha="0" />
+            <directive type="animation" id="flirty" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="2" alpha="100" />
+                <keyframe time="2.5" alpha="0" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_XRay" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="3" alpha="100" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_Lens" ease="ease-out" interpolation="linear">
+                <keyframe time="0" x="250" alpha="0" />
+                <keyframe time="1" x="250" alpha="0" />
+                <keyframe time="2" x="0" alpha="100" />
+                <keyframe time="3" x="0" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_Lens" ease="smooth" interpolation="linear">
+                <keyframe time="0" y="409" />
+                <keyframe time="3" y="409" />
+            </directive>
+        </pose>
+        <pose id="3-stripping">
+            <sprite id="2-strip" src="reskins/nagatoro_beach_day/3-strip.png" x="0" y="0" />
+            <sprite id="skaato2" delay="1.5" src="reskins/nagatoro_beach_day/bikini_top.png" x="-15" y="512" scalex="0.7" scaley="0.7" />
+            <directive type="animation" id="2-strip" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/nagatoro_beach_day/3-strip.png" />
+                <keyframe time="1.5" src="reskins/nagatoro_beach_day/4-toppull.png" />
+            </directive>
+            <directive type="animation" id="2-strip" delay="1.5" ease="linear" interpolation="linear">
+                <keyframe time="0" scalex="1" />
+                <keyframe time="0.04999995" scalex="1.05" />
+                <keyframe time="0.1" scalex="1" />
+            </directive>
+            <directive type="animation" id="skaato2" delay="1.5" ease="linear" interpolation="linear">
+                <keyframe time="0" x="-15" />
+                <keyframe time="0.5599999" x="-8" />
+            </directive>
+            <directive type="animation" id="skaato2" delay="1.5" ease="ease-in" interpolation="linear">
+                <keyframe time="0" y="512" />
+                <keyframe time="0.5599999" y="1313" />
+            </directive>
+            <directive type="animation" id="skaato2" delay="1.5" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="0.7" scaley="0.7" />
+                <keyframe time="0.5599999" scaley="0.72" />
+            </directive>
+            <directive type="animation" id="skaato2" delay="2.06" ease="smooth" interpolation="linear">
+                <keyframe time="0" rotation="8" />
+            </directive>
+        </pose>
+        <pose id="3-stripping-">
+            <sprite id="2-strip" src="reskins/nagatoro_beach_day/3-strip-.png" x="0" y="0" />
+            <sprite id="skaato2" delay="1.5" src="reskins/nagatoro_beach_day/bikini_top.png" x="-15" y="512" scalex="0.7" scaley="0.7" />
+            <directive type="animation" id="2-strip" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/nagatoro_beach_day/3-strip-.png" />
+                <keyframe time="1.5" src="reskins/nagatoro_beach_day/4-toppull-.png" />
+            </directive>
+            <directive type="animation" id="2-strip" delay="1.5" ease="linear" interpolation="linear">
+                <keyframe time="0" scalex="1" />
+                <keyframe time="0.04999995" scalex="1.05" />
+                <keyframe time="0.1" scalex="1" />
+            </directive>
+            <directive type="animation" id="skaato2" delay="1.5" ease="linear" interpolation="linear">
+                <keyframe time="0" x="-15" />
+                <keyframe time="0.5599999" x="-8" />
+            </directive>
+            <directive type="animation" id="skaato2" delay="1.5" ease="ease-in" interpolation="linear">
+                <keyframe time="0" y="512" />
+                <keyframe time="0.5599999" y="1313" />
+            </directive>
+            <directive type="animation" id="skaato2" delay="1.5" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="0.7" scaley="0.7" />
+                <keyframe time="0.5599999" scaley="0.72" />
+            </directive>
+            <directive type="animation" id="skaato2" delay="2.06" ease="smooth" interpolation="linear">
+                <keyframe time="0" rotation="8" />
+            </directive>
+        </pose>
+        <pose id="4-stripping">
+            <sprite id="4-strip" src="reskins/nagatoro_beach_day/4-strip.png" x="0" y="0" />
+            <directive type="animation" id="4-strip" ease="linear" interpolation="linear">
+                <keyframe time="0" y="0" />
+                <keyframe time="1.25" y="0" />
+                <keyframe time="1.3" y="14" />
+                <keyframe time="1.35" y="0" />
+            </directive>
+            <directive type="animation" id="4-strip" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/nagatoro_beach_day/4-strip.png" />
+                <keyframe time="1.25" src="reskins/nagatoro_beach_day/botpull.png" />
+            </directive>
+            <directive type="animation" id="4-strip" delay="1.25" ease="linear" interpolation="linear">
+                <keyframe time="0" scaley="1" />
+                <keyframe time="0.04999995" scaley="0.98" />
+                <keyframe time="0.1" scaley="1" />
+            </directive>
+        </pose>
+        <pose id="4-stripping-">
+            <sprite id="4-strip" src="reskins/nagatoro_beach_day/4-strip-.png" x="0" y="0" />
+            <directive type="animation" id="4-strip" ease="linear" interpolation="linear">
+                <keyframe time="0" y="0" />
+                <keyframe time="1.25" y="0" />
+                <keyframe time="1.3" y="14" />
+                <keyframe time="1.35" y="0" />
+            </directive>
+            <directive type="animation" id="4-strip" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/nagatoro_beach_day/4-strip-.png" />
+                <keyframe time="1.25" src="reskins/nagatoro_beach_day/botpull-.png" />
+            </directive>
+            <directive type="animation" id="4-strip" delay="1.25" ease="linear" interpolation="linear">
+                <keyframe time="0" scaley="1" />
+                <keyframe time="0.04999995" scaley="0.98" />
+                <keyframe time="0.1" scaley="1" />
+            </directive>
+        </pose>
+        <pose id="3-butt_ohno">
+            <sprite id="butt_ohno" src="reskins/nagatoro_beach_day/butt_ohno.png" x="0" y="0" />
+        </pose>
+        <pose id="3-butt_yarashii">
+            <sprite id="butt_yarashii" src="reskins/nagatoro_beach_day/butt_yarashii.png" x="0" y="0" />
+        </pose>
+        <pose id="1-stripping">
+            <sprite id="strip" src="reskins/nagatoro_beach_day/1-strip.png" x="0" y="0" />
+            <sprite id="top" delay="1" src="reskins/nagatoro_beach_day/shirt.png" x="25" y="-20" scalex="0.86" scaley="0.54" skewy="0" alpha="100" rotation="184" />
+            <directive type="animation" id="strip" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/nagatoro_beach_day/1-strip.png" />
+                <keyframe time="1" src="reskins/nagatoro_beach_day/2-display.png" />
+            </directive>
+            <directive type="animation" id="strip" delay="1.05" ease="linear" interpolation="linear">
+                <keyframe time="0" scalex="0.95" />
+            </directive>
+            <directive type="animation" id="strip" delay="1.1" ease="linear" interpolation="linear">
+                <keyframe time="0" scalex="1" />
+            </directive>
+            <directive type="animation" id="strip" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" scaley="1" />
+                <keyframe time="0.04999995" scaley="1.05" />
+                <keyframe time="0.1" scaley="1" />
+            </directive>
+            <directive type="animation" id="top" delay="1" ease="linear" interpolation="linear">
+                <keyframe time="0" x="25" y="-20" scalex="0.86" scaley="0.54" alpha="100" rotation="184" />
+                <keyframe time="0.2" x="58" y="-300" alpha="0" rotation="193" />
+            </directive>
+        </pose>
+        <pose id="1-stripping-">
+            <sprite id="strip" src="reskins/nagatoro_beach_day/1-strip-.png" x="0" y="0" />
+            <sprite id="top" delay="1" src="reskins/nagatoro_beach_day/shirt.png" x="25" y="-20" scalex="0.86" scaley="0.54" skewy="0" alpha="100" rotation="184" />
+            <directive type="animation" id="strip" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/nagatoro_beach_day/1-strip-.png" />
+                <keyframe time="1" src="reskins/nagatoro_beach_day/2-display-.png" />
+            </directive>
+            <directive type="animation" id="strip" delay="1.05" ease="linear" interpolation="linear">
+                <keyframe time="0" scalex="0.95" />
+            </directive>
+            <directive type="animation" id="strip" delay="1.1" ease="linear" interpolation="linear">
+                <keyframe time="0" scalex="1" />
+            </directive>
+            <directive type="animation" id="strip" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" scaley="1" />
+                <keyframe time="0.04999995" scaley="1.05" />
+                <keyframe time="0.1" scaley="1" />
+            </directive>
+            <directive type="animation" id="top" delay="1" ease="linear" interpolation="linear">
+                <keyframe time="0" x="25" y="-20" scalex="0.86" scaley="0.54" alpha="100" rotation="184" />
+                <keyframe time="0.2" x="58" y="-300" alpha="0" rotation="193" />
+            </directive>
+        </pose>
+    </poses>
+</costume>

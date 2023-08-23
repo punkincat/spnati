@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>mari_setogaya_sunny_day_vampire</id>
+    <label>Mari</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>bottomless_first</tag>
+        <tag from="3" to="8">exotic_eyes</tag>
+        <tag from="0" to="0">hat</tag>
+        <tag from="0" to="5">jewelry</tag>
+        <tag>no_underwear</tag>
+        <tag from="3" to="8">red_eyes</tag>
+        <tag remove="true">school_uniform</tag>
+        <tag remove="true">shimapan</tag>
+        <tag>summer_skin</tag>
+        <tag from="0" to="2">sunglasses</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/mari_setogaya_sunny_day_vampire/</folder>
+    <folder stage="6">opponents/mari_setogaya/</folder>
+    <wardrobe>
+        <clothing name="necklace" generic="jewelry" position="neck" type="extra" />
+        <clothing name="bra" generic="bra" position="upper" type="major" />
+        <clothing name="dress" generic="dress" position="lower" type="major" />
+        <clothing name="bracelet and sunglasses" position="other" type="extra" plural="true" />
+        <clothing name="sandals" generic="shoes" position="feet" type="minor" plural="true" />
+        <clothing name="hat" generic="hat" position="head" type="extra" />
+    </wardrobe>
+
+    <poses>
+        <pose id="4-Ctransform">
+            <sprite id="4-Ctransform" src="reskins/mari_setogaya_sunny_day_vampire/Transform1.png" x="0" y="0" />
+            <directive type="animation" id="4-Ctransform" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_sunny_day_vampire/Transform1.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_sunny_day_vampire/Transform2C.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_sunny_day_vampire/Transform3C.png" />
+            </directive>
+        </pose>
+        <pose id="4-Ntransform">
+            <sprite id="4-Ntransform" src="reskins/mari_setogaya_sunny_day_vampire/Transform1.png" x="0" y="0" />
+            <directive type="animation" id="4-Ntransform" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_sunny_day_vampire/Transform1.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_sunny_day_vampire/Transform2N.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_sunny_day_vampire/Transform3N.png" />
+            </directive>
+        </pose>
+    </poses>
+</costume>

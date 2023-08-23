@@ -69,6 +69,9 @@
         <case name="Really Bad Fanfictions" id="735" priority="Noteworthy" min="0" max="8">
             <description>Miku mentions her hate of bad fanfictions. If you prompt her to respond, she'll go more in depth into it.</description>
         </case>
+        <case name="I Can Sing Anything!" id="750" priority="Noteworthy" min="0" max="10">
+            <description>Miku brings up she's so many different kinds of songs over her career, she has to have something that appeals to everyone, and will sing something from the genre of their choice if prompted.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -743,6 +746,8 @@
         <response id="744" opponent="marinette" opponentId="1361" />
         <response id="746" opponent="kumatora" opponentId="208" />
         <response id="747" opponent="heris" opponentId="232" />
+        <response id="748" opponent="meia" opponentId="900" />
+        <response id="749" opponent="sweetheart" opponentId="43" />
     </responses>
     <prefixes>
         <prefix>Epilogue A</prefix>
@@ -750,7 +755,7 @@
     </prefixes>
     <onlyCustomPoses>false</onlyCustomPoses>
     <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>747</nextId>
+    <nextId>750</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="AAAFRICA">I bless the rains down in AAAFFFRICCAAA</marker>
@@ -1075,6 +1080,7 @@
         <marker scope="Public" name="Miku_Cynthia_Pokemon" />
         <marker scope="Public" name="Miku_Expo" />
         <marker scope="Public" name="Miku_Gamertag" />
+        <marker scope="Public" name="Miku_GenreRequests" />
         <marker scope="Public" name="Miku_HerisLoyalty_R" />
         <marker scope="Public" name="Miku_Hotspring" />
         <marker scope="Public" name="Miku_Idols_Joint_Concert" />
@@ -1085,6 +1091,8 @@
         <marker scope="Public" name="miku_ms0_R" />
         <marker scope="Public" name="Miku_Nagatoro_2" />
         <marker scope="Public" name="Miku_NoToCamera" />
+        <marker scope="Public" name="miku_outfit_R1" />
+        <marker scope="Public" name="Miku_outfitchoice_R" />
         <marker scope="Public" name="Miku_QA_Dreams" />
         <marker scope="Public" name="Miku_QA_Joy" />
         <marker scope="Public" name="Miku_QA_Music" />
@@ -1106,6 +1114,7 @@
         <marker scope="Public" name="MikuBarbaraEncouragement" />
         <marker scope="Public" name="MikuBeingHuman" />
         <marker scope="Public" name="MikuBeingHuman_2" />
+        <marker scope="Public" name="MikuBirthday" />
         <marker scope="Public" name="MikuBobobo_Hair" />
         <marker scope="Public" name="MikuCelebrityQA" />
         <marker scope="Public" name="MikuCharlieIdol" />
@@ -1149,6 +1158,7 @@
         <marker scope="Public" name="MikuMariPiano" />
         <marker scope="Public" name="MikuMariWings" />
         <marker scope="Public" name="MikuMeetsNoire" />
+        <marker scope="Public" name="MikuMeiaCheat" />
         <marker scope="Public" name="MikuMeiaWorkingTogether" />
         <marker scope="Public" name="MikuMikiHappyWithBody" />
         <marker scope="Public" name="MikuMonikaMusic" />
@@ -1217,6 +1227,7 @@
         <marker scope="Public" name="MikuStockings">Used when Miku is talking about her stockings</marker>
         <marker scope="Public" name="MikuStudentQA" />
         <marker scope="Public" name="MikuSucroseCuriousity" />
+        <marker scope="Public" name="MikuSweetheartHole" />
         <marker scope="Public" name="MikuTomokoSus" />
         <marker scope="Public" name="MikuTriesDirtyTalk" />
         <marker scope="Public" name="MikuTrixieMikuDay" />
@@ -1224,6 +1235,25 @@
         <marker scope="Public" name="MikuVideoGames" />
         <marker scope="Public" name="MikuVideoGamesQuestion" />
         <marker scope="Public" name="MikuVirgin">Used when Miku talks about being a virgin. </marker>
+        <marker scope="Public" name="MikuYumeko1_1" />
+        <marker scope="Public" name="MikuYumeko1_2" />
+        <marker scope="Public" name="MikuYumeko1_3" />
+        <marker scope="Public" name="MikuYumeko2_@" />
+        <marker scope="Public" name="MikuYumeko2_1" />
+        <marker scope="Public" name="MikuYumeko2_2" />
+        <marker scope="Public" name="MikuYumeko2_3" />
+        <marker scope="Public" name="MikuYumeko3_1" />
+        <marker scope="Public" name="MikuYumeko3_2" />
+        <marker scope="Public" name="MikuYumeko3_3" />
+        <marker scope="Public" name="MikuYumeko4_1" />
+        <marker scope="Public" name="MikuYumeko4_2" />
+        <marker scope="Public" name="MikuYumeko4_3" />
+        <marker scope="Public" name="MikuYumeko5_1" />
+        <marker scope="Public" name="MikuYumeko5_2" />
+        <marker scope="Public" name="MikuYumeko5_3" />
+        <marker scope="Public" name="MikuYumeko6_1" />
+        <marker scope="Public" name="MikuYumeko6_2" />
+        <marker scope="Public" name="MikuYumeko6_3" />
         <marker scope="Public" name="MikuYunoCrowd" />
         <marker scope="Public" name="MikuYunoCrowd_2" />
         <marker scope="Public" name="MikuYunoCrowd_3" />
@@ -1505,6 +1535,7 @@
         <marker scope="Public" name="YouGottaHaveBlueHair">Denotes Target for specific dialouge with another character. </marker>
         <marker scope="Public" name="YoureABoldOneKenobi" />
         <marker scope="Public" name="YoureAwesome" />
+        <marker scope="Public" name="YumekoMiku3_1" />
         <marker scope="Public" name="yuno_miku_strip1b_R" />
         <marker scope="Public" name="Yuno_Po_Pi_Po" />
         <marker scope="Public" name="YunoMikuFavSong" />
@@ -1512,6 +1543,7 @@
         <marker scope="Public" name="YunoMikuStrip0c_R" />
         <marker scope="Public" name="YunoMikuStrip1a_R" />
         <marker scope="Public" name="yuri_book_reccomendations">Denotes Target for specific dialouge with another character. </marker>
+        <marker scope="Public" name="yuri_book_reccomendations_R" />
         <marker scope="Public" name="zelossize2">Denotes Target for specific dialouge with another character. </marker>
         <marker scope="Public" name="zoey_belt">Denotes Target for specific dialouge with another character. </marker>
     </markers>

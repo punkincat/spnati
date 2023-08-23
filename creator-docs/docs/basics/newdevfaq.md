@@ -36,7 +36,7 @@ A: Unfortunately not. When this game was first created it only supported male/fe
 
 ### Q: Why can I not make an OC for my first character?
 
-[A recently added rule](/docs/policy/rules.html) now prohibits creators from making an original character. Starting with an OC effectively doubles a new dev's workload, as they need to both learn proper SPNatI development *and* design an appealing character. It's also more difficult to get the community excited for a character they don't know over a familiar face. We're not opposed to OCs, but seek to prevent new creators from giving themselves uphill battles at the outset.
+[One of our rules](/docs/policy/rules.html) prohibits new creators from making an original character. Starting with an OC effectively doubles a new dev's workload, as they need to both learn proper SPNatI development *and* design an appealing character. It's also more difficult to get the community excited for a character they don't know over a familiar face. We're not opposed to OCs, but seek to prevent new creators from giving themselves uphill battles at the outset.
 
 ### Q: Do I need to join the Discord?
 

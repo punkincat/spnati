@@ -243,6 +243,7 @@
         monika_pl.markers['joint-masturbation'] = 1;
         sayori.markers['joint-masturbation'] = 1;
         monika_pl.addTag('tandem');
+        monika_pl.addTag('tandem_ff');
         monika_pl.addTag('bondage_forfeit');
         monika_pl.forfeit = [PLAYER_MASTURBATING, CAN_SPEAK];
 
@@ -299,6 +300,8 @@
             sayori.markers['joint-masturbation-finished-1'] = 1;
             sayori.removeTag('bi-curious');
             sayori.addTag('bisexual');
+            sayori.addTag('tandem_ff');
+            sayori.addTag('tandem_giver');
 
             /* Hard reset stage, forfeit status, and other data for Sayori. */
             sayori.stage = 9;

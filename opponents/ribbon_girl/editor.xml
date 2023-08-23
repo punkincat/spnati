@@ -27,6 +27,9 @@
         <case name="Celebrity Nudity" id="146" priority="FYI" min="7" max="7">
             <description>After removing her bra, Ribbon Girl will muse about celebrity nudity, and how it shouldn't be that big of a deal for pop stars to expose themselves.</description>
         </case>
+        <case name="Custom Arm" id="342" priority="Prompt" min="0" max="10">
+            <description>Ribbon Girl asks what kind of new Arm others would like to see get made.</description>
+        </case>
     </noteworthy>
     <responses>
         <response id="34" opponent="sakura" opponentId="2" />
@@ -126,7 +129,6 @@
         <label id="29" label="" color="4" folder="" sort="0" />
         <label id="30" label="" color="4" folder="" sort="0" />
         <label id="31" label="" color="4" folder="" sort="0" />
-        <label id="33" label="" color="4" folder="" sort="0" />
         <label id="37" label="" folder="Player Wager" sort="2" />
         <label id="39" label="" color="4" folder="" sort="0" />
         <label id="40" label="" color="4" folder="" sort="0" />
@@ -234,26 +236,15 @@
         <label id="244" label="Removed Minor" folder="Duplicate Cases" sort="23" />
         <label id="245" label="Removed Minor" folder="Duplicate Cases" sort="24" />
         <label id="246" label="Removed Minor" folder="Duplicate Cases" sort="25" />
-        <label id="259" label="" color="1" folder="" sort="0" />
-        <label id="260" label="" color="1" folder="" sort="0" />
-        <label id="261" label="" color="1" folder="" sort="0" />
-        <label id="262" label="" color="1" folder="" sort="0" />
-        <label id="340" label="" color="1" folder="Duplicate Cases" sort="0" />
-        <label id="266" label="" color="1" folder="" sort="0" />
+        <label id="340" label="" color="1" folder="Duplicate Cases" sort="34" />
+        <label id="341" label="" folder="Prompts" sort="0" />
         <label id="275" label="" color="1" folder="" sort="0" />
-        <label id="277" label="" color="1" folder="" sort="0" />
-        <label id="281" label="" color="1" folder="" sort="0" />
-        <label id="282" label="" color="1" folder="" sort="0" />
-        <label id="283" label="" color="5" folder="" sort="0" />
-        <label id="284" label="" color="1" folder="" sort="0" />
-        <label id="285" label="" color="1" folder="" sort="0" />
-        <label id="286" label="" color="1" folder="" sort="0" />
         <label id="287" label="" color="5" folder="" sort="0" />
         <label id="288" label="" color="4" folder="" sort="0" />
         <label id="289" label="" color="4" folder="" sort="0" />
         <label id="302" label="Masturbating Opponent" folder="" sort="0" />
         <label id="304" label="" color="1" folder="" sort="0" />
-        <label id="306" label="" color="1" folder="" sort="0" />
+        <label id="342" label="" folder="Prompts" sort="2" />
         <label id="311" label="Removing Major" folder="Duplicate Cases" sort="26" />
         <label id="312" label="Removing Major" folder="Duplicate Cases" sort="27" />
         <label id="313" label="Removing Major" folder="Duplicate Cases" sort="28" />
@@ -262,20 +253,22 @@
         <label id="316" label="Removed Major" folder="Duplicate Cases" sort="31" />
         <label id="317" label="Removed Major" folder="Duplicate Cases" sort="32" />
         <label id="318" label="Removed Major" folder="Duplicate Cases" sort="33" />
-        <label id="319" label="" color="1" folder="" sort="0" />
-        <label id="320" label="" color="1" folder="" sort="0" />
-        <label id="321" label="" color="1" folder="" sort="0" />
-        <label id="322" label="" color="1" folder="" sort="0" />
         <label id="330" label="" folder="Duplicate Cases" sort="34" />
         <label id="331" label="" folder="Duplicate Cases" sort="35" />
         <label id="332" label="" folder="Duplicate Cases" sort="36" />
         <label id="333" label="" folder="Duplicate Cases" sort="37" />
         <label id="334" label="" color="1" folder="" sort="0" />
+        <label id="343" label="" folder="Prompts" sort="3" />
     </labels>
-    <nextId>340</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>343</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="1v1" />
+        <marker scope="Public" name="9S_Blind1" />
+        <marker scope="Public" name="9S_CuteEyes" />
+        <marker scope="Public" name="9S_NoNipples" />
         <marker scope="Public" name="AellaChargeArms" />
         <marker scope="Public" name="AllArmsTalk" />
         <marker scope="Public" name="AmyArms" />
@@ -383,6 +376,8 @@
         <marker scope="Public" name="Polly1" />
         <marker scope="Public" name="PowerBoots">Ribbon Girl explains that her boots are not the source of her air-jumping ability.</marker>
         <marker scope="Public" name="PowerShoes" />
+        <marker scope="Public" name="Prompt_Competitive" />
+        <marker scope="Public" name="Prompt_CustomArms" />
         <marker scope="Public" name="RealRibbonHair" />
         <marker scope="Public" name="RibbonHair">Ribbon Girl mentions that her hair is made of ribbons.</marker>
         <marker scope="Public" name="RobotKnockout" />
@@ -397,6 +392,7 @@
         <marker scope="Public" name="Stella" />
         <marker scope="Public" name="StellaARMS" />
         <marker scope="Public" name="Stripped1" />
+        <marker scope="Public" name="StripVBall" />
         <marker scope="Public" name="Supernova" />
         <marker scope="Public" name="Supernova1" />
         <marker scope="Public" name="Supernova2" />

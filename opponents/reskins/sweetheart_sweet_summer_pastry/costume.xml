@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>sweetheart_sweet_summer_pastry</id>
+    <label>Sweetheart</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>bottomless_first</tag>
+        <tag from="0" to="2">high_heels</tag>
+        <tag remove="true">lingerie</tag>
+        <tag>scantily-clad</tag>
+        <tag>summer_skin</tag>
+        <tag from="0" to="6">swimwear</tag>
+        <tag remove="true">thigh_highs</tag>
+        <tag from="0" to="5">twintails</tag>
+        <tag from="7" to="9">twintails</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/sweetheart_sweet_summer_pastry/</folder>
+    <folder stage="7">opponents/sweetheart/</folder>
+    <wardrobe>
+        <clothing name="bikini top" generic="bra" position="upper" type="major" />
+        <clothing name="donuts" generic="hair decoration" position="head" type="extra" plural="true" />
+        <clothing position="" type="skip" />
+        <clothing name="fan" generic="jewelry" position="held" type="extra" />
+        <clothing name="heels" generic="shoes" position="feet" type="minor" plural="true" />
+        <clothing name="bikini bottom" generic="underwear" position="lower" type="major" />
+        <clothing name="blouse" generic="shirt" position="upper" type="major" />
+    </wardrobe>
+
+    <poses>
+        <pose id="3-stripping">
+            <sprite id="stripping" src="reskins/sweetheart_sweet_summer_pastry/3-stripping.png" x="0" y="0" alpha="100" />
+            <sprite id="230630kisekae22" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae22.png" x="284" y="122" scalex="0.45" scaley="0.45" rotation="0" />
+            <sprite id="230630kisekae2222" delay="1" z="-2" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae2222.png" x="231" y="83" scalex="0.4" scaley="0.4" rotation="-20" />
+            <sprite id="230630kisekae22222" delay="2.75" z="-1" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae22222.png" x="374" y="-52" scalex="0.1" scaley="0" skewx="0" skewy="0" />
+            <directive type="animation" id="230630kisekae22" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="284" y="122" scalex="0.45" scaley="0.45" rotation="0" />
+                <keyframe time="1" x="284" y="122" scalex="0.45" scaley="0.45" rotation="0" />
+                <keyframe time="1.05" x="231" y="83" rotation="-20" />
+            </directive>
+            <directive type="animation" id="230630kisekae22" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae22.png" />
+                <keyframe time="1" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae22.png" />
+                <keyframe time="1.06" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae222.png" />
+            </directive>
+            <directive type="animation" id="230630kisekae2222" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="231" y="83" scalex="0.4" scaley="0.4" rotation="-20" />
+                <keyframe time="0.03999996" x="231" y="83" scalex="0.4" scaley="0.4" rotation="-20" />
+                <keyframe time="0.25" x="415" y="-999" rotation="-360" />
+                <keyframe time="2" x="395" y="0" scalex="0" scaley="0" rotation="720" />
+            </directive>
+            <directive type="animation" id="230630kisekae2222" delay="1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae2222.png" />
+                <keyframe time="0.03999996" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae2222.png" />
+            </directive>
+            <directive type="animation" id="230630kisekae22222" delay="2.75" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="374" y="-52" scalex="0.1" scaley="0" skewx="0" skewy="0" />
+                <keyframe time="0.1300001" x="374" scalex="0.1" scaley="0.1" skewx="0" skewy="0" />
+                <keyframe time="0.25" x="374" scalex="0.1" scaley="0" skewx="0" skewy="0" />
+            </directive>
+        </pose>
+        <pose id="3-stripping1">
+            <sprite id="stripping" src="reskins/sweetheart_sweet_summer_pastry/3-stripping.png" x="0" y="0" alpha="100" />
+            <sprite id="230630kisekae22" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae22.png" x="284" y="122" scalex="0.45" scaley="0.45" rotation="0" />
+            <sprite id="230630kisekae2222" delay="1" z="-2" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae2222.png" x="231" y="83" scalex="0.4" scaley="0.4" rotation="-20" />
+            <directive type="animation" id="230630kisekae22" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="284" y="122" scalex="0.45" scaley="0.45" rotation="0" />
+                <keyframe time="1" x="284" y="122" scalex="0.45" scaley="0.45" rotation="0" />
+                <keyframe time="1.05" x="231" y="83" rotation="-20" />
+            </directive>
+            <directive type="animation" id="230630kisekae22" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae22.png" />
+                <keyframe time="1" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae22.png" />
+                <keyframe time="1.06" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae222.png" />
+            </directive>
+            <directive type="animation" id="230630kisekae2222" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="231" y="83" scalex="0.4" scaley="0.4" rotation="-20" />
+                <keyframe time="0.03999996" x="231" y="83" scalex="0.4" scaley="0.4" rotation="-20" />
+                <keyframe time="0.25" x="415" y="-999" rotation="-360" />
+            </directive>
+            <directive type="animation" id="230630kisekae2222" delay="1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae2222.png" />
+                <keyframe time="0.03999996" src="reskins/sweetheart_sweet_summer_pastry/230630kisekae2222.png" />
+            </directive>
+        </pose>
+    </poses>
+</costume>

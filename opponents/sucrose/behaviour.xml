@@ -8015,7 +8015,7 @@
         </trigger>
 
         <trigger id="start_masturbating">
-            <case stage="7" priority="500" addCharacterTags="tandem">
+            <case stage="7" priority="500" addCharacterTags="tandem,tandem_ff">
                 <condition role="self" saidMarker="cag_ff" />
                 <state img="#-Starting Dual.png">{sucrose}I-I see… I hope I make as worthy of a test subject as I do a researcher… {!reset}&lt;hr&gt;{cagliostro}I’ll be the judge of that. Just be a good girl and stay still.</state>
             </case>

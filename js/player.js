@@ -119,6 +119,9 @@ Player.prototype.resetState = function () {
     this.saidDialogue = {};
     this.hand = null;
 
+    /** @type {{[tag: string]: {present: boolean, stage: number}}} */
+    this.tagModifications = {};
+
     if (this.xml !== null) {
         /* Initialize reaction handling state. */
         this.currentTarget = null;
@@ -259,17 +262,23 @@ Player.prototype.stageChangeUpdate = function () {
 }
 
 Player.prototype.addTag = function(tag) {
-    if (tag) this.baseTags.push(canonicalizeTag(tag));
+    if (tag) {
+        this.tagModifications[tag] = {present: true, stage: this.stage};
+        this.baseTags.push(canonicalizeTag(tag));
+    }
 }
 
 Player.prototype.removeTag = function(tag) {
     tag = canonicalizeTag(tag);
 
-    this.baseTags = this.baseTags.filter(function (t) {
-        if (typeof(t) === 'string') { return t !== tag };
-        if (!t.tag) return false;
-        return t.tag !== tag;
-    });
+    if (this.hasTag(tag)) {
+        this.tagModifications[tag] = {present: false, stage: this.stage};
+        this.baseTags = this.baseTags.filter(function (t) {
+            if (typeof(t) === 'string') { return t !== tag };
+            if (!t.tag) return false;
+            return t.tag !== tag;
+        });
+    }
 }
 
 Player.prototype.hasTag = function(tag) {
@@ -488,6 +497,38 @@ Player.prototype.inboundLinesFromSelected = function (filterStatus, cap) {
 }
 
 /**
+ * Given a pose name, resolve it to either a custom pose,
+ * a pose set, or an image file path.
+ * 
+ * If this function returns a string, it is a full image file path
+ * that is ready to be used as e.g. the `src` attribute for an `<img>` element.
+ * 
+ * @param {string} image 
+ * @param {number?} stage
+ * @returns {string | PoseDefinition | PoseSet}
+ */
+Player.prototype.resolvePoseName = function (image, stage) {
+    if (!image) {
+        return null;
+    }
+
+    if (stage === null || stage === undefined) {
+        stage = this.stage;
+    }
+
+    image = image.replace("#", stage);
+    if (image.startsWith("custom:") && this.poses) {
+        let key = image.substring(7);
+        return this.poses[key];
+    } else if (image.startsWith("set:") && this.poseSets) {
+        let key = image.substring(4);
+        return this.poseSets[key];
+    } else {
+        return getActualSpriteSrc(image, this, stage);
+    }
+}
+
+/**
  * Subclass of Player for AI-controlled players.
  *
  * @constructor
@@ -496,10 +537,11 @@ Player.prototype.inboundLinesFromSelected = function (filterStatus, cap) {
  * @param {jQuery} $metaXml
  * @param {string} status
  * @param {number} [rosterScore]
+ * @param {string} [addedDate]
  * @param {number} [releaseNumber]
  * @param {string} [highlightStatus]
  */
-function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightStatus) {
+function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber, highlightStatus) {
     Player.call(this, id);
 
     this.id = id;
@@ -558,6 +600,8 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
     this.rosterScore = rosterScore;
     this.effectiveScore = -Infinity;
 
+    this.addedDate = addedDate;
+
     this.endings = null;
     if (EPILOGUES_ENABLED) {
         var $endings = $metaXml.children('epilogue').filter(function (idx, elem) {
@@ -577,6 +621,7 @@ function Opponent (id, metaFiles, status, rosterScore, releaseNumber, highlightS
     this.alt_costume = null;
     this.default_costume = null;
     this.poses = {};
+    this.poseSets = {};
     this.imageCache = {};
     this.labelOverridden = this.intelligenceOverridden = false;
     this.pendingCollectiblePopups = [];
@@ -913,8 +958,10 @@ Opponent.prototype.updateFolder = function () {
 
     if (this.folder == this.base_folder) {
         this.poses = this.default_costume.poses;
+        this.poseSets = this.default_costume.poseSets;
     } else if (this.alt_costume) {
         this.poses = this.alt_costume.poses;
+        this.poseSets = this.alt_costume.poseSets;
     }
 }
 
@@ -1033,7 +1080,18 @@ Opponent.prototype.loadAlternateCostume = function () {
             poseDefs[def.id] = def;
         }.bind(this));
 
+        var setElems = $xml.children('pose-sets');
+        var poseSets = {};
+        Object.assign(poseSets, this.default_costume.poseSets);
+        $(setElems).children("set").each(
+            (i, elem) => {
+                let parsed = PoseSet.parseXML(this, $(elem));
+                poseSets[parsed.id] = parsed;
+            }
+        );
+
         this.alt_costume.poses = poseDefs;
+        this.alt_costume.poseSets = poseSets;
 
         var costumeTags = this.default_costume.tags.slice();
         var tagMods = $xml.children('tags');
@@ -1258,6 +1316,7 @@ Opponent.prototype.unloadOpponent = function () {
     });
 
     this.unloadStylesheet();
+    updateAllBehaviours(this.slot, null, [[OPPONENT_DESELECTED]]);
 
     this.slot = undefined;
     this.selectInfo = null;
@@ -1348,7 +1407,17 @@ Opponent.prototype.loadBehaviour = function (slot, individual, selectInfo) {
                 poseDefs[def.id] = def;
             }.bind(this));
 
+            var setElems = $xml.children('pose-sets');
+            var poseSets = {};
+            $(setElems).children("set").each(
+                (i, elem) => {
+                    let parsed = PoseSet.parseXML(this, $(elem));
+                    poseSets[parsed.id] = parsed;
+                }
+            );
+
             this.default_costume.poses = poseDefs;
+            this.default_costume.poseSets = poseSets;
 
             /* Load forward-declarations for persistent markers. */
             $xml.find('persistent-markers>marker').each(function (i, elem) {
@@ -1520,8 +1589,6 @@ Player.prototype.getImagesForStage = function (stage) {
 
     var poseSet = {};
     var imageSet = {};
-    var folder = this.folders ? this.getByStage(this.folders, stage === -1 ? 0 : stage) : this.folder;
-    var advPoses = this.poses;
     
     function processCase (c) {
         /* Skip cases requiring characters that aren't present. */
@@ -1565,16 +1632,17 @@ Player.prototype.getImagesForStage = function (stage) {
     /* Finally, transform the set of collected pose names into a
      * set of image file paths.
      */
-    Object.keys(poseSet).forEach(function (poseName) {
-        if (poseName.startsWith('custom:')) {
-            var actualStage = (stage > -1) ? stage : 0;
-            var key = poseName.split(':', 2)[1].replace('#', actualStage);
-            var pose = advPoses[key];
-            if (pose) pose.getUsedImages(actualStage).forEach(function (img) {
-                imageSet[img.replace('#', actualStage)] = true;
+    Object.keys(poseSet).forEach((poseName) => {
+        var actualStage = (stage > -1) ? stage : 0;
+        var resolved = this.resolvePoseName(poseName, actualStage);
+
+        if (!resolved) return;
+        if (resolved instanceof PoseSet || resolved instanceof PoseDefinition) {
+            resolved.getUsedImages(actualStage).forEach((img) => {
+                imageSet[img] = true;
             });
         } else {
-            imageSet[folder + poseName] = true;
+            imageSet[resolved] = true;
         }
     });
 
@@ -1734,6 +1802,50 @@ Player.prototype.populateDebugMarkers = function () {
         header.hide();
         header.off("click");
     }
+}
+
+Player.prototype.populateDebugTags = function () {
+    $("#debug-tag-listing").empty();
+
+    for (let tag of this.tags) {
+        if (tag === this.id) continue;
+        if (this.alt_costume && tag === this.alt_costume.id) continue;
+
+        var entry = $('<div>', {"class": "debug-tag-entry"});
+        entry.append($('<span>', {"class": "debug-tag-name", "text": tag}));
+        
+        if (this.tagModifications[tag] && this.tagModifications[tag].present) {
+            entry.append($('<span>', {"class": "debug-tag-modified-stage", "text": "added in stage " + this.tagModifications[tag].stage}))
+                .prependTo("#debug-tag-listing");
+        } else {
+            entry.appendTo("#debug-tag-listing");
+        }
+    }
+
+    for (let tag of Object.keys(this.tagModifications)) {
+        if (!this.tagModifications[tag].present && !this.tags.includes(tag)) {
+            $('<div>', {"class": "debug-tag-entry"})
+                .append($('<span>', {"class": "debug-tag-name debug-tag-removed", "text": tag}))
+                .append($('<span>', {"class": "debug-tag-modified-stage", "text": "removed in stage " + this.tagModifications[tag].stage}))
+                .prependTo("#debug-tag-listing");
+        }
+    }
+
+    var statusIndicator = $("#debug-tag-header .debug-info-header-status");
+    var header = $("#debug-tag-header");
+    var container = $("#debug-tag-container");
+    
+    let collapsed = false;
+    header.on("click", function () {
+        collapsed = !collapsed;
+        if (collapsed) {
+            statusIndicator.removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+            container.slideUp();
+        } else {
+            statusIndicator.removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+            container.slideDown();
+        }
+    });
 }
 
 /**
@@ -1951,7 +2063,7 @@ Player.prototype.populateDebugStatusInfo = function () {
 
     if (this.out && !this.finished) {
         createDebugSectionRow(
-            "Timer", this.timer + (player.forfeit[0] === PLAYER_HEAVY_MASTURBATING ? " (heavy)" : "")
+            "Timer", this.timer + (this.forfeit[0] === PLAYER_HEAVY_MASTURBATING ? " (heavy)" : "")
         ).appendTo(listing);
     } else if (!this.out) {
         createDebugSectionRow("Stamina", this.stamina).appendTo(listing);
@@ -1982,6 +2094,7 @@ Player.prototype.showDebugModal = function() {
     this.populateDebugStatusInfo();
     this.populateDebugCaseInfo();
     this.populateDebugMarkers();
+    this.populateDebugTags();
 
     $characterDebugModal.modal("show");
 }

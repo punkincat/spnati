@@ -391,6 +391,7 @@ function loadListingFile () {
             }
             var highlightStatus = $(this).attr('highlight');
             var rosterScore = $(this).attr('score');
+            var addedDate = $(this).attr('addedDate');
 
             // Keep the unsorted characters in order
             if (rosterScore === undefined) {
@@ -403,7 +404,7 @@ function loadListingFile () {
                 loadProgress[fileIdx].total++;
                 opponentMap[id] = oppDefaultIndex++;
 
-                return loadOpponentMeta(id, oppStatus, rosterScore, releaseNumber, highlightStatus)
+                return loadOpponentMeta(id, oppStatus, rosterScore, addedDate, releaseNumber, highlightStatus)
                     .then(onComplete).then(function () {
                         loadProgress[fileIdx].current++;
                         var progress = loadProgress.reduce(function (acc, val) {
@@ -485,14 +486,14 @@ function loadListingFile () {
 /***************************************************************
  * Loads and parses the meta and tags XML files of an opponent.
  ***************************************************************/
-function loadOpponentMeta (id, status, rosterScore, releaseNumber, highlightStatus) {
+function loadOpponentMeta (id, status, rosterScore, addedDate, releaseNumber, highlightStatus) {
     /* grab and parse the opponent meta file */
     console.log("Loading metadata for \""+id+"\"");
 
     return Promise.all(metaFiles.map(function (filename) {
         return metadataIndex.getFile("opponents/" + id + "/" + filename);
     })).then(function(files) {
-        return new Opponent(id, files, status, rosterScore, releaseNumber, highlightStatus);
+        return new Opponent(id, files, status, rosterScore, addedDate, releaseNumber, highlightStatus);
     }).catch(function(err) {
         console.error("Failed reading \""+id+"\":");
         captureError(err);
@@ -533,10 +534,56 @@ function getCostumeOption(alt_costume, selected_costume) {
 }
 
 function fillCostumeSelector($selector, defaultname, costumes, selected_costume) {
-    var defaultn = defaultname;
+    var defaultn = '\u{1f455} ' + defaultname;
     if (defaultname == '') {
-        defaultn = 'Default Costume';
+        defaultn = '\u{1f455} Default Costume';
     }
+	
+	costumes.sort(function(c1, c2) {
+		var a = 0, b = 0;
+		
+        if (c1.status != "online") {
+            a -= 100;
+        }
+		
+        if (c2.status != "online") {
+            b -= 100;
+        }
+        
+        if (c1.set == "valentines") {
+            a--;
+        } else if (c1.set == "april_fools") {
+            a -= 2;
+        } else if (c1.set == "easter") {
+            a -= 3;
+        } else if (c1.set == "summer") {
+            a -= 4;
+        } else if (c1.set == "halloween") {
+            a -= 5;
+        } else if (c1.set == "xmas") {
+            a -= 6;
+        } else if (c1.set == "sleepover") {
+            a -= 7;
+        }
+		
+        if (c2.set == "valentines") {
+            b--;
+        } else if (c2.set == "april_fools") {
+            b -= 2;
+        } else if (c2.set == "easter") {
+            b -= 3;
+        } else if (c2.set == "summer") {
+            b -= 4;
+        } else if (c2.set == "halloween") {
+            b -= 5;
+        } else if (c2.set == "xmas") {
+            b -= 6;
+        } else if (c2.set == "sleepover") {
+            b -= 7;
+        }
+			
+		return b - a;
+	});
 
     $selector.empty().append($('<option>', {
         val: '',
@@ -556,12 +603,12 @@ function fillCostumeSelector($selector, defaultname, costumes, selected_costume)
             emoji = '\u{1f430} ';
         } else if (c.set == "summer") {
             emoji = '\u{2600}\u{fe0f} ';
-        } else if (c.set == "oktoberfest") {
-            emoji = '\u{1f37a} ';
         } else if (c.set == "halloween") {
             emoji = '\u{1f383} ';
         } else if (c.set == "xmas") {
             emoji = '\u{1f384} ';
+        } else if (c.set == "sleepover") {
+            emoji = '\u{1f6cf}\u{fe0f} ';
         }
         
         return $('<option>', {

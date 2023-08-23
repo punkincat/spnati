@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>aqua_kh_summer</id>
+    <label>Aqua</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag remove="true">no_bra</tag>
+        <tag remove="true">no_underwear</tag>
+        <tag>summer_skin</tag>
+        <tag from="0" to="5">swimwear</tag>
+        <tag remove="true">thigh_highs</tag>
+    </tags>
+    <layers>5</layers>
+    <folder>opponents/reskins/aqua_kh_summer/</folder>
+    <folder stage="6">opponents/aqua_kh/</folder>
+    <wardrobe>
+        <clothing position="" type="skip" />
+        <clothing name="bikini bottom" generic="shorts" position="lower" type="major" />
+        <clothing name="bikini top" position="upper" type="major" />
+        <clothing name="dress" generic="dress" position="both" type="major" />
+        <clothing name="belts" generic="belt" position="waist" type="minor" plural="true" />
+        <clothing name="shoes" generic="shoes" position="feet" type="extra" plural="true" />
+    </wardrobe>
+
+    <poses>
+        <pose id="0-stripping">
+            <sprite id="z_stripping" src="reskins/aqua_kh_summer/0-z_stripping.png" x="0" y="0" alpha="100" />
+            <sprite id="z_stripping_b" src="reskins/aqua_kh_summer/0-z_stripping_b.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="z_stripping" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="1.5" alpha="100" />
+                <keyframe time="2.5" alpha="0" />
+            </directive>
+            <directive type="animation" id="z_stripping_b" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="1.5" alpha="0" />
+                <keyframe time="2.5" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="1-_bedroom_sitting">
+            <sprite id="_bedroom_sitting11" src="reskins/aqua_kh_summer/kibble/1-_bedroom_sitting1.png" x="16" y="-158" scalex="0.9" scaley="0.9" />
+        </pose>
+        <pose id="1-stripping">
+            <sprite id="z_stripping1" src="reskins/aqua_kh_summer/1-z_stripping.png" x="0" y="0" alpha="100" />
+            <sprite id="z_stripping_b" src="reskins/aqua_kh_summer/1-z_stripping_b.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="z_stripping1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="1.5" alpha="100" />
+                <keyframe time="2" alpha="0" />
+            </directive>
+            <directive type="animation" id="z_stripping_b" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="1.5" alpha="0" />
+                <keyframe time="2" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="2-keyblade_dismiss">
+            <sprite id="keyblade_stance" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_2.png" x="58" y="0" />
+            <sprite id="keyblade_summon_1_BladeAndArm" z="2" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_2_BladeAndArm.png" x="58" y="0" alpha="100" />
+            <sprite id="keyblade_summon_1_BladeAndArm_Glow" z="3" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_2_BladeAndArm_Glow.png" x="60" y="0" alpha="0" />
+            <directive type="animation" id="keyblade_summon_1_BladeAndArm" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="58" y="0" />
+                <keyframe time="1.87" y="0" />
+                <keyframe time="3.25" y="0" />
+            </directive>
+            <directive type="animation" id="keyblade_summon_1_BladeAndArm" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_2_BladeAndArm.png" />
+                <keyframe time="1.87" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_2_BladeAndArm.png" />
+            </directive>
+            <directive type="animation" id="keyblade_summon_1_BladeAndArm" ease="ease-in-out-cubic" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="1.87" alpha="100" />
+                <keyframe time="3.25" alpha="0" />
+            </directive>
+            <directive type="animation" id="keyblade_summon_1_BladeAndArm_Glow" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="60" y="0" alpha="0" />
+                <keyframe time="0.25" x="60" y="0" alpha="0" />
+                <keyframe time="0.5" alpha="25" />
+                <keyframe time="0.75" alpha="50" />
+                <keyframe time="1.62" alpha="75" />
+                <keyframe time="1.75" alpha="100" />
+                <keyframe time="2" alpha="100" />
+                <keyframe time="2.13" alpha="75" />
+                <keyframe time="2.75" alpha="50" />
+                <keyframe time="3" alpha="25" />
+                <keyframe time="3.25" alpha="0" />
+            </directive>
+            <directive type="animation" id="keyblade_summon_1_BladeAndArm_Glow" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_2_BladeAndArm_Glow.png" />
+                <keyframe time="0.25" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_2_BladeAndArm_Glow.png" />
+            </directive>
+        </pose>
+        <pose id="2-keyblade_reveal">
+            <sprite id="keyblade_stance" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_1.png" x="-230" y="0" />
+            <sprite id="keyblade_summon_1_BladeAndArm" z="2" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_1_BladeAndArm.png" x="-329" y="0" alpha="0" />
+            <sprite id="keyblade_summon_1_BladeAndArm_Glow" delay="0.25" z="3" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_1_BladeAndArm_Glow.png" x="-329" y="0" alpha="0" />
+            <directive type="animation" id="keyblade_summon_1_BladeAndArm" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="-329" y="0" />
+                <keyframe time="1.86" y="0" />
+                <keyframe time="3.24" y="0" />
+            </directive>
+            <directive type="animation" id="keyblade_summon_1_BladeAndArm" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_1_BladeAndArm.png" />
+                <keyframe time="1.86" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_1_BladeAndArm.png" />
+                <keyframe time="3.24" src="reskins/aqua_kh_summer/kibble/2-keyblade_summon_1_BladeAndArm.png" />
+            </directive>
+            <directive type="animation" id="keyblade_summon_1_BladeAndArm" ease="ease-in-out-cubic" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1.86" alpha="0" />
+                <keyframe time="3.24" alpha="100" />
+            </directive>
+            <directive type="animation" id="keyblade_summon_1_BladeAndArm_Glow" delay="0.25" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="-329" y="0" alpha="0" />
+                <keyframe time="0.25" alpha="25" />
+                <keyframe time="0.5" alpha="50" />
+                <keyframe time="1.38" alpha="75" />
+                <keyframe time="1.5" alpha="100" />
+                <keyframe time="1.75" alpha="100" />
+                <keyframe time="1.88" alpha="75" />
+                <keyframe time="2.5" alpha="50" />
+                <keyframe time="2.75" alpha="25" />
+                <keyframe time="3" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="2-stripping">
+            <sprite id="z_stripping1" src="reskins/aqua_kh_summer/2-z_stripping.png" x="0" y="0" alpha="100" />
+            <sprite id="z_stripping_b" src="reskins/aqua_kh_summer/2-z_stripping_b.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="z_stripping1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="1.5" alpha="100" />
+                <keyframe time="2" alpha="0" />
+            </directive>
+            <directive type="animation" id="z_stripping_b" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="1.5" alpha="0" />
+                <keyframe time="2" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="3-stripping">
+            <sprite id="z_stripping" src="reskins/aqua_kh_summer/3-z_stripping.png" x="0" y="0" alpha="100" />
+            <sprite id="z_stripping_b" src="reskins/aqua_kh_summer/3-z_stripping_b.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="z_stripping" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="1.75" alpha="100" />
+                <keyframe time="2.5" alpha="0" />
+            </directive>
+            <directive type="animation" id="z_stripping_b" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="1.75" alpha="0" />
+                <keyframe time="2.5" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="4-_lake_view">
+            <sprite id="butt_3" src="reskins/aqua_kh_summer/4-butt_3.png" x="21" y="-120" scalex="0.8" scaley="0.8" alpha="0" />
+            <sprite id="blushing" src="reskins/aqua_kh_summer/4-blushing.png" x="0" y="0" alpha="100" />
+            <directive type="animation" id="butt_3" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="21" y="-120" scalex="0.8" scaley="0.8" alpha="0" />
+                <keyframe time="2.25" alpha="0" />
+                <keyframe time="3.25" alpha="100" />
+            </directive>
+            <directive type="animation" id="blushing" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="1.5" alpha="100" />
+                <keyframe time="2.25" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="4-stripping">
+            <sprite id="z_stripping" src="reskins/aqua_kh_summer/4-z_stripping.png" x="0" y="-10" alpha="100" />
+            <sprite id="z_stripping_b" src="reskins/aqua_kh_summer/4-z_stripping_b.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="z_stripping" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="-10" alpha="100" />
+                <keyframe time="1.5" alpha="100" />
+                <keyframe time="2.5" alpha="0" />
+            </directive>
+            <directive type="animation" id="z_stripping_b" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="1.5" alpha="0" />
+                <keyframe time="2.5" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="3-hug-MiaGS_0">
+            <sprite id="zz_mia_hug_aqua" z="1" src="reskins/aqua_kh_summer/3-zz_mia_hug_aqua.png" />
+            <sprite id="zz_mia_hug_mia" src="aqua_kh/kibble/3-zz_mia_hug_mia0.png" x="0" y="0" />
+            <sprite id="mia_arm_gloved" z="3" src="aqua_kh/kibble/mia_arm_gloved.png" x="-39" y="407" pivotx="15%" pivoty="54%" rotation="-365" />
+            <sprite id="mia_arm_gloved1" z="4" src="aqua_kh/kibble/mia_arm_gloved.png" x="-39" y="473" scalex="-1" rotation="-7" />
+        </pose>
+        <pose id="3-hug-MiaGS_1">
+            <sprite id="zz_mia_hug_mia" src="aqua_kh/kibble/3-zz_mia_hug_mia0.png" x="0" y="0" />
+            <sprite id="mia_arm" z="3" src="aqua_kh/kibble/mia_arm_noglove.png" x="-39" y="407" pivotx="15%" pivoty="54%" rotation="-365" />
+            <sprite id="mia_arm_1" z="4" src="aqua_kh/kibble/mia_arm_noglove.png" x="-39" y="473" scalex="-1" rotation="-7" />
+            <sprite id="zz_mia_hug_aqua" z="1" src="reskins/aqua_kh_summer/3-zz_mia_hug_aqua.png" />
+        </pose>
+        <pose id="3-hug-MiaGS_2">
+            <sprite id="zz_mia_hug_mia" src="aqua_kh/kibble/3-zz_mia_hug_mia2.png" x="0" y="0" />
+            <sprite id="mia_arm" z="3" src="aqua_kh/kibble/mia_arm_noglove.png" x="-39" y="407" pivotx="15%" pivoty="54%" rotation="-365" />
+            <sprite id="mia_arm_1" z="4" src="aqua_kh/kibble/mia_arm_noglove.png" x="-39" y="473" scalex="-1" rotation="-7" />
+            <sprite id="zz_mia_hug_aqua" z="1" src="reskins/aqua_kh_summer/3-zz_mia_hug_aqua.png" />
+        </pose>
+        <pose id="3-hug-MiaGS_3">
+            <sprite id="zz_mia_hug_mia" src="aqua_kh/kibble/3-zz_mia_hug_mia3.png" x="0" y="0" />
+            <sprite id="mia_arm" z="3" src="aqua_kh/kibble/mia_arm_noglove.png" x="-39" y="407" pivotx="15%" pivoty="54%" rotation="-365" />
+            <sprite id="mia_arm_1" z="4" src="aqua_kh/kibble/mia_arm_noglove.png" x="-39" y="473" scalex="-1" rotation="-7" />
+            <sprite id="zz_mia_hug_aqua" z="1" src="reskins/aqua_kh_summer/3-zz_mia_hug_aqua.png" />
+        </pose>
+        <pose id="3-hug-MiaGS_4">
+            <sprite id="zz_mia_hug_mia" src="aqua_kh/kibble/3-zz_mia_hug_mia4.png" x="0" y="0" />
+            <sprite id="mia_arm" z="3" src="aqua_kh/kibble/mia_arm_bare.png" x="-39" y="407" pivotx="15%" pivoty="54%" rotation="-365" />
+            <sprite id="mia_arm_1" z="4" src="aqua_kh/kibble/mia_arm_bare.png" x="-39" y="473" scalex="-1" rotation="-7" />
+            <sprite id="zz_mia_hug_aqua" z="1" src="reskins/aqua_kh_summer/3-zz_mia_hug_aqua.png" />
+        </pose>
+    </poses>
+</costume>

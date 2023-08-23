@@ -144,6 +144,11 @@
         <response id="113" opponent="kumatora" opponentId="299" />
         <response id="116" opponent="nico_robin" opponentId="817" />
         <response id="117" opponent="nico_robin" opponentId="818" />
+        <response id="118" opponent="arle" opponentId="64" />
+        <response id="119" opponent="arle" opponentId="243" />
+        <response id="120" opponent="arle" opponentId="240" />
+        <response id="121" opponent="arle" opponentId="242" />
+        <response id="122" opponent="arle" opponentId="241" />
     </responses>
     <notes>
         <note id="48">I'm great now</note>
@@ -152,8 +157,14 @@
         <note id="106">This is a good opportunity for Kaz to talk about Magistocrats</note>
         <note id="112">shes talkin about boobs</note>
     </notes>
-    <nextId>117</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>122</nextId>
     <markers>
+        <marker scope="Public" name="9SBoots1" />
+        <marker scope="Public" name="9SGloves1" />
+        <marker scope="Public" name="9SGloves2" />
+        <marker scope="Public" name="9SGloves3" />
         <marker scope="Public" name="AimeeOrgy">Aimee' wife is her gun. That's canon now.</marker>
         <marker scope="Public" name="AmyRoseBoots1" />
         <marker scope="Public" name="AmyRoseBoots2" />
@@ -175,6 +186,12 @@
         <marker scope="Public" name="ArashScarf1" />
         <marker scope="Public" name="ArashScarf2" />
         <marker scope="Public" name="ArashScarf3" />
+        <marker scope="Public" name="ArleAdapt_resp" />
+        <marker scope="Public" name="ArleCape2_resp" />
+        <marker scope="Public" name="ArleCapeAndArmor1" />
+        <marker scope="Public" name="ArleDiffWorld_resp" />
+        <marker scope="Public" name="ArleMermaid_resp" />
+        <marker scope="Public" name="ArlePet_resp" />
         <marker scope="Public" name="ArrangedMarriage">Miko wants to unite kingdoms through political marriages.</marker>
         <marker scope="Public" name="AsterCape1_resp" />
         <marker scope="Public" name="AsterCape2_resp" />
@@ -214,6 +231,8 @@
         <marker scope="Public" name="BoboboExtraUndies2" />
         <marker scope="Public" name="BoboboExtraUndies3" />
         <marker scope="Public" name="BoboboFundoshi1_resp" />
+        <marker scope="Public" name="BoboboFundoshi2_resp" />
+        <marker scope="Public" name="BoboboFundoshi3_resp" />
         <marker scope="Public" name="BoboboFuto_resp" />
         <marker scope="Public" name="BoboboHairVoice_resp" />
         <marker scope="Public" name="BoboboHeadphones1_resp" />
@@ -317,6 +336,7 @@
         <marker scope="Public" name="FateRelic_resp" />
         <marker scope="Public" name="FateStories_resp" />
         <marker scope="Public" name="FelixShoes1" />
+        <marker scope="Public" name="FelixShoes2" />
         <marker scope="Public" name="FinaAdornments1_resp" />
         <marker scope="Public" name="FinaAdornments2_resp" />
         <marker scope="Public" name="FinaAdornments3_resp" />
@@ -375,6 +395,7 @@
         <marker scope="Public" name="GanyuDress1" />
         <marker scope="Public" name="GanyuDress2" />
         <marker scope="Public" name="GanyuDress3" />
+        <marker scope="Public" name="GiygasStripping" />
         <marker scope="Public" name="GloriaBoots1" />
         <marker scope="Public" name="GloriaBoots2" />
         <marker scope="Public" name="GloriaBoots3" />
@@ -453,6 +474,7 @@
         <marker scope="Public" name="KamiKaze">Shima was successfully lewded so that Miko may survive.</marker>
         <marker scope="Public" name="KazAdornments1_resp" />
         <marker scope="Public" name="KazAdornments2_resp" />
+        <marker scope="Public" name="KazAdornments3_resp" />
         <marker scope="Public" name="KazBelts1_resp" />
         <marker scope="Public" name="KazBelts2_resp" />
         <marker scope="Public" name="KazBelts3_resp" />
@@ -462,7 +484,9 @@
         <marker scope="Public" name="KazCape1_resp" />
         <marker scope="Public" name="KazCape2_resp" />
         <marker scope="Public" name="KazCape3_resp" />
+        <marker scope="Public" name="KazHeadphones1_resp" />
         <marker scope="Public" name="KazShirt1" />
+        <marker scope="Public" name="KazShirt2" />
         <marker scope="Public" name="KazShoes1" />
         <marker scope="Public" name="KazShoes2" />
         <marker scope="Public" name="KazShoes3" />
@@ -517,8 +541,11 @@
         <marker scope="Public" name="Kyoko02" />
         <marker scope="Public" name="KyokoKirigiriJacket1" />
         <marker scope="Public" name="KyokoKirigiriJacket2" />
+        <marker scope="Public" name="KyokoKirigiriJacket3" />
+        <marker scope="Public" name="KyoukoToshinouJacket1" />
         <marker scope="Public" name="KyoukoToshinouShoes1" />
         <marker scope="Public" name="KyoukoToshinouShoes2" />
+        <marker scope="Public" name="KyoukoToshinouShoes3" />
         <marker scope="Public" name="LastWordL" />
         <marker scope="Public" name="LastWordN" />
         <marker scope="Public" name="LastWordW" />
@@ -628,6 +655,7 @@
         <marker scope="Public" name="MikoBelts2_resp">PyrrhaBelts2_resp</marker>
         <marker scope="Public" name="MissMargatroid">Alice Margatroid is another Touhou.</marker>
         <marker scope="Public" name="MitamaArmor1" />
+        <marker scope="Public" name="MitamaArmor2" />
         <marker scope="Public" name="MitamaCapelet1" />
         <marker scope="Public" name="MitamaCapelet2" />
         <marker scope="Public" name="MonikaBelts1_resp" />
@@ -649,6 +677,8 @@
         <marker scope="Public" name="MyriamBelts3_resp" />
         <marker scope="Public" name="MyriamHand1_resp" />
         <marker scope="Public" name="NagatoroShoes1" />
+        <marker scope="Public" name="NagatoroShoes2" />
+        <marker scope="Public" name="NagatoroShoes3" />
         <marker scope="Public" name="NagisaJacket1" />
         <marker scope="Public" name="NagisaJacket2" />
         <marker scope="Public" name="NagisaJacket3" />
@@ -904,6 +934,16 @@
         <marker scope="Public" name="SusieMask1" />
         <marker scope="Public" name="SusieMask2" />
         <marker scope="Public" name="SusieYear_resp" />
+        <marker scope="Public" name="SuzuyaBlazer1" />
+        <marker scope="Public" name="SuzuyaBlazer2" />
+        <marker scope="Public" name="SuzuyaBlazer3" />
+        <marker scope="Public" name="SuzuyaBloodtypes_resp" />
+        <marker scope="Public" name="SuzuyaDatespots_resp" />
+        <marker scope="Public" name="SuzuyaHoroscopes_resp" />
+        <marker scope="Public" name="SuzuyaImageChange_resp" />
+        <marker scope="Public" name="SuzuyaPraise_resp" />
+        <marker scope="Public" name="SuzuyaWannaBuy_resp" />
+        <marker scope="Public" name="SweetheartDress1" />
         <marker scope="Public" name="SyrenneBath_resp" />
         <marker scope="Public" name="SyrenneBoots2" />
         <marker scope="Public" name="SyrenneBoots3" />
@@ -970,6 +1010,7 @@
         <marker scope="Public" name="WikipeShoes2" />
         <marker scope="Public" name="WikipeShoes3" />
         <marker scope="Public" name="WikipeStartMasturbation" />
+        <marker scope="Public" name="YaeShoes1" />
         <marker scope="Private" name="YoukaiSatisfaction" />
         <marker scope="Public" name="Yuelia_Andy_resp">Yuelia Response</marker>
         <marker scope="Public" name="Yuelia_Cervantes_resp">Yuelia Response</marker>

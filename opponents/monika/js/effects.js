@@ -561,21 +561,16 @@
         this.target_player = players[target_slot];
         this.glitchTime = glitch_time;
         this.dest_pose_name = dest_pose;
+        this.dest_pose = this.target_player.resolvePoseName(dest_pose);
         this.currentTimerID = null;
 
-        if (!dest_pose) {
-            this.dest_pose = null;
-        } else if (dest_pose.startsWith('custom:')) {
-            var key = dest_pose.split(':', 2)[1];
-            var poseDef = this.target_player.poses[key];
-
-            if (poseDef) {
-                this.dest_pose = new Pose(poseDef, this);
+        if (this.dest_pose instanceof PoseSet) {
+            let entry = this.dest_pose.selectEntry(this.target_player);
+            if (entry) {
+                this.dest_pose = this.target_player.resolvePoseName(entry.image);
             } else {
                 this.dest_pose = null;
             }
-        } else {
-            this.dest_pose = this.target_player.folder + dest_pose;
         }
     }
 

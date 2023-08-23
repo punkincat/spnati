@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>dwight_special_delivery</id>
+    <label>Dwight</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag remove="true">butt_pose</tag>
+        <tag remove="true">formal_attire</tag>
+        <tag>hat</tag>
+        <tag remove="true">office_worker</tag>
+        <tag from="6" to="6">pubic_hair_peek</tag>
+        <tag from="5" to="6">visible_bulge</tag>
+    </tags>
+    <layers>7</layers>
+    <folder>opponents/reskins/dwight_special_delivery/</folder>
+    <wardrobe>
+        <clothing name="boxers" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="shirt" generic="shirt" position="upper" type="major" />
+        <clothing name="pants" generic="pants" position="lower" type="major" plural="true" />
+        <clothing name="belt" generic="belt" position="lower" type="minor" />
+        <clothing name="socks" generic="socks" position="feet" type="extra" plural="true" />
+        <clothing name="sneakers" generic="shoes" position="feet" type="extra" plural="true" />
+        <clothing name="gloves" generic="gloves" position="hands" type="extra" plural="true" />
+    </wardrobe>
+
+    <layers>7</layers>
+    <layers>7</layers>
+    <layers>7</layers>
+    <layers>7</layers>
+</costume>

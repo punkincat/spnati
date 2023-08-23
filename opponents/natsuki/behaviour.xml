@@ -23278,7 +23278,7 @@
         </trigger>
 
         <trigger id="start_masturbating">
-            <case stage="8" id="108" oneShotId="4" priority="990" addCharacterTags="tandem">
+            <case stage="8" id="108" oneShotId="4" priority="990" addCharacterTags="tandem,tandem_ff">
                 <condition role="other" character="amy" stage="10" saidMarker="natsuki_co_forfeit_start" />
                 <condition filter="ddlc" />
                 <state img="#-zdual.png" marker="+amy_co_masturbating">{Natsuki}W-what are you doing?{!reset}&lt;br&gt;{Amy}If you want me to stop, I will...{!reset}&lt;br&gt;{Natsuki}~Player~'s right... there...{!reset}&lt;br&gt;{Amy}Let's warm up for ~player~ then!{!reset}&lt;br&gt;{Natsuki}Nn-- o-okay! B-but-- i-it's not like I'm gay for you--{!reset}</state>

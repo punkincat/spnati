@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>wasp_summer</id>
+    <label>Janet</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag remove="true">choker</tag>
+        <tag remove="true">no_bra</tag>
+        <tag>scantily-clad</tag>
+        <tag remove="true">shimapan</tag>
+        <tag>summer_skin</tag>
+        <tag from="0" to="0">sunglasses</tag>
+        <tag from="0" to="6">swimwear</tag>
+    </tags>
+    <layers>4</layers>
+    <folder>opponents/reskins/wasp_summer/</folder>
+    <folder stage="7">opponents/wasp/</folder>
+    <wardrobe>
+        <clothing name="bikini bottoms" generic="swimsuit" position="lower" type="major" plural="true" />
+        <clothing position="" type="skip" />
+        <clothing name="bikini top" generic="swimsuit" position="upper" type="major" />
+        <clothing position="" type="skip" />
+        <clothing name="sandals" generic="shoes" position="feet" type="minor" plural="true" />
+        <clothing position="" type="skip" />
+        <clothing name="sunglasses" generic="glasses" position="head" type="extra" plural="true" />
+    </wardrobe>
+
+</costume>

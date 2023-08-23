@@ -1,4 +1,5 @@
 using Desktop;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SPNATI_Character_Editor.Activities
@@ -62,6 +63,7 @@ namespace SPNATI_Character_Editor.Activities
 					_editorData.PosePreviewMarkers.Add(marker);
 				}
 			}
+			Workspace.SendMessage(WorkspaceMessages.UpdateMarkers, Enumerable.Empty<string>());
 		}
 	}
 }

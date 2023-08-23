@@ -24,10 +24,6 @@ var $gameLoadProgress = $(".game-load-progress");
  *****                    Title Screen Variables                  *****
  **********************************************************************/
 var CANDY_LIST = [
-    "meia/0-interested.png",               // High Roster Position
-    "meia/2-pleased.png",
-    "meia/2-reminiscing.png",
-    "meia/3-happy.png",
     "natsuki/0-tsun.png",                  // High Roster Position
     "natsuki/1-laugh.png",
     "natsuki/2-happy.png",
@@ -60,10 +56,6 @@ var CANDY_LIST = [
     "kumatora/0-cheerful.png",
     "kumatora/0-idle2.png",
     "kumatora/0-stretching.png",
-    "jura/0-seductive.png",                // High Roster Position
-    "jura/1-teasing.png",
-    "jura/2-interested.png",
-    "jura/3-vain.png",
     "yuri/0-calm.png",                     // High Roster Position
     "yuri/0-happy.png",
     "yuri/3-chat.png",
@@ -84,10 +76,10 @@ var CANDY_LIST = [
     "adrien/0-sarcastic.png",
     "adrien/2-wink.png",
     "adrien/3-smug.png",
-    "noire/0-niya.png",                    // High Roster Position
-    "noire/0-smug.png",
-    "noire/0-teasing.png",
-    "noire/0-embarrassed.png",
+    "noire/0-teasing.png",                    // High Roster Position
+    "reskins/noire_clear_dress/0-embarrassed.png",
+    "reskins/noire_clear_dress/0-smug.png",
+    "reskins/noire_cool_girl/0-niya.png",
     "polly/0-Neutral.png",                 // High Roster Position
     "polly/0-Flirty.png",
     "polly/0-Excited.png",
@@ -124,30 +116,34 @@ var CANDY_LIST = [
     "stocking/2-hex.png",
     "stocking/3-stripping+.png",
     "stocking/4-aroused.png",
-    "dwight/0-startled.png",               // Highlighted New Character
-    "dwight/4-fidgeting.png",
-    "dwight/1-thinking.png",
-    "dwight/3-conversational.png",
-    "cheryl/0-inquisitive.png",            // Highlighted New Character
-    "cheryl/2-happy.png",
-    "cheryl/3-inspired.png",
-    "cheryl/4-cheeky.png",
-    "neptune/0-victory.png",               // Highlighted New Character
-    "neptune/0-excited.png",
-    "neptune/2-happy.png",
-    "neptune/2-smug.png",
-    "aloy/0-Horny.png",                    // Highlighted New Character
-    "aloy/5-Smug.png",
-    "aloy/0-Angry.png",
-    "reskins/aloy_carja_blazon/0-Smug.png",	
-    "aqua_kh/0-giggling.png",              // Highlighted New Character
-    "aqua_kh/0-happy.png",
-    "aqua_kh/2-keyblade_stance.png",
-    "aqua_kh/2-turned_on.png",
+    "megumin/0-smug.png",                  // High Roster Position
+    "megumin/0-flustered.png",
+    "megumin/2-ecstatic.png",
+    "megumin/3-embarrassed.png",
     "kora/0-cheer2.png",                   // Highlighted New Character
     "kora/1-cheer.png",
     "kora/2-smorny.png",
     "kora/2-after_butt.png",
+    "felix/0-default.png",                 // Highlighted New Character
+    "felix/3-coquettish.png",
+    "felix/4-grabby.png",
+    "felix/5-butt-2.png",
+    "elphaba/0-mischievous.png",           // Highlighted New Character
+    "elphaba/2-sarcastic.png",
+    "elphaba/4-amused.png",
+    "elphaba/5-calm.png",
+    "roll_caskett/0-wave.png",             // Highlighted New Character
+    "roll_caskett/1-smiling.png",
+    "roll_caskett/1-wave.png",
+    "roll_caskett/2-stretch.png",
+    "maria/0-smug.png",                    // Highlighted New Character
+    "maria/0-seductive.png",
+    "maria/1-sadistic.png",
+    "maria/1-chuckling.png",
+    "mitama/0-yawn.png",                   // Highlighted New Character
+    "mitama/1-writing.png",
+    "mitama/2-mischievous.png",
+    "mitama/4-shrug.png",
     "wasp/0-start.png",                    // Has Recent Updates
     "wasp/0-flirt.png",
     "wasp/0-excited.png",
@@ -168,18 +164,6 @@ var CANDY_LIST = [
     "critical_darling/0-ice.png",
     "critical_darling/3-sing.png",
     "critical_darling/3-rockin.png",
-    "ryuko/0-senketsu-happy.png",          // Has Recent Updates
-    "ryuko/2-mako-sad.png",
-    "ryuko/3-pissed.png",
-    "ryuko/5-awkward.png",
-    "jin/0-Cracker.png",                   // Has Recent Updates
-    "jin/0-Excited.png",
-    "jin/5-Stripped.png",
-    "jin/5-Happy.png",
-    "lux/0-calm.png",                      // Has Recent Updates
-    "lux/0-cocky.png",
-    "lux/3-quizzical.png",
-    "lux/4-joyous.png",
     "caulifla/0-Confident.png",            // Has Recent Updates
     "caulifla/0-Happy.png",
     "caulifla/1-Laughing.png",
@@ -196,22 +180,6 @@ var CANDY_LIST = [
     "asuna_yuuki/0-stripAh.png",
     "asuna_yuuki/4-embarrassed.png",
     "asuna_yuuki/4-pleased.png",
-    "sayori/0-excited.png",                // Has Recent Updates
-    "sayori/1-happy.png",
-    "sayori/2-thinking.png",
-    "sayori/3-embarassed.png",
-    "myriam/0-confident.png",              // Has Recent Updates
-    "myriam/2-normal.png",
-    "myriam/3-think.png",
-    "myriam/4-flattered.png",
-    "wiifitfemale/0-StretchBack.png",      // Has Recent Updates
-    "wiifitfemale/0-calm.png",
-    "wiifitfemale/0-happy.png",
-    "wiifitfemale/0-interested.png",
-    "pyrrha/0-calm.png",                   // Has Recent Updates
-    "pyrrha/0-awkward.png",
-    "pyrrha/1-horny.png",
-    "pyrrha/2-encourage.png",
     "yshtola/0-calm.png",                  // Has Recent Updates
     "yshtola/0-content.png",
     "yshtola/0-coy.png",
@@ -221,13 +189,9 @@ var CANDY_LIST = [
     "yuno_uno/0-embarrassed.png",
     "yuno_uno/0-happy_to_be_here.png",
     "petra/0-select.png",                  // Has Recent Updates
-    "petra/0-wink.png",
+    "petra/4-wink.png",
     "reskins/petra_war_outfit/0-happy.png",
-    "reskins/petra_war_outfit/0-horny.png",
-    "videl/0-confident.png",               // Has Recent Updates
-    "videl/1-flying.png",
-    "videl/4-happy.png",
-    "videl/5-embarrassed.png",
+    "reskins/petra_war_outfit/2-horny.png",
     "cagliostro/0-Cutesy.png",             // Has Recent Updates
     "reskins/cagliostro_alchemist_reborn/0-Excited.png",
     "cagliostro/3-Smug.png",
@@ -244,18 +208,10 @@ var CANDY_LIST = [
     "aella/0-competitive.png",
     "aella/1-enthused.png",
     "aella/2-horny.png",
-    "barbara/0-cheering.png",              // Has Recent Updates
-    "barbara/0-surprised.png",
-    "barbara/0-sheepish.png",
-    "barbara/0-happy.png",
     "senko/0-interested.png",              // Has Recent Updates
     "senko/0-araara.png",
     "senko/2-hug.png",
     "senko/2-pampering.png",
-    "perona/0-calm.png",                   // Has Recent Updates
-    "perona/0-smiling.png",
-    "perona/1-enticed.png",
-    "perona/2-positive.png",
     "rouge/0-calm.png",                    // Has Recent Updates
     "rouge/0-mischievous.png",
     "rouge/0-comms.png",
@@ -276,10 +232,6 @@ var CANDY_LIST = [
     "ringo_ando/1-glad.png",
     "ringo_ando/2-balanceapple.png",
     "ringo_ando/3-bounceapple.png",
-    "estelle/0-calm.png",                  // Has Recent Updates
-    "estelle/1-determind.png",
-    "estelle/2-lecture.png",
-    "estelle/3-brush.png",
     "fluttershy/0-kind2.png",              // Has Recent Updates
     "fluttershy/0-flirty.png",
     "fluttershy/0-amused.png",
@@ -288,14 +240,6 @@ var CANDY_LIST = [
     "moon/0-stripping_bra2.png",
     "reskins/full_moon/0-calm_b.png",
     "reskins/full_moon/0-calm_c.png",
-    "kamina/0-point.png",                  // Has Recent Updates
-    "kamina/0-cross.png",
-    "kamina/0-happy.png",
-    "kamina/0-excited.png",
-    "ignatz/0-friendly.png",               // Has Recent Updates
-    "ignatz/0-flustered.png",
-    "ignatz/3-fearthedeer.png",
-    "ignatz/3-inspired.png",
     "leonie/0-calm.png",                   // Has Recent Updates
     "leonie/0-smug.png",
     "reskins/leonie_war_outfit/1-grin.png",
@@ -340,26 +284,10 @@ var CANDY_LIST = [
     "aqua_grunt/2-taunting.png",
     "aqua_grunt/4-tease.png",
     "aqua_grunt/5-leg_raised.png",
-    "anatoly/0-horny.png",                 // Has Recent Updates
-    "anatoly/1-embarrassed.png",
-    "anatoly/2-cute.png",
-    "anatoly/3-calm.png",
-    "eichi/0-excited.png",                 // Has Recent Updates
-    "eichi/0-flirt_altc.png",
-    "eichi/2-flirt.png",
-    "eichi/3-tease.png",
     "trixie/poses/0-wink.png",             // Has Recent Updates
     "trixie/poses/1-flirt.png",
     "trixie/poses/4-disappointed.png",
     "trixie/poses/5-grumpy.png",
-    "binah/0-teatime.png",                 // Has Recent Updates
-    "binah/1-haughty.png",
-    "binah/2-quoth.png",
-    "binah/5-sadistic.png",
-    "lyralei/0-happy.png",                 // Has Recent Updates
-    "lyralei/1-embarrassed.png",
-    "lyralei/3-awkward.png",
-    "lyralei/5-stripped.png",
     "aaravi/0-smug.png",                   // Has Recent Updates
     "aaravi/1-excited.png",
     "aaravi/3-confident.png",
@@ -368,6 +296,46 @@ var CANDY_LIST = [
     "dunban/0-dramatic.png",
     "dunban/2-scheming.png",
     "dunban/5-coverse.png",
+    "dwight/0-startled.png",               // Has Recent Updates
+    "dwight/4-fidgeting.png",
+    "dwight/1-thinking.png",
+    "dwight/3-conversational.png",
+    "cheryl/0-inquisitive.png",            // Has Recent Updates
+    "cheryl/2-happy.png",
+    "cheryl/3-inspired.png",
+    "cheryl/4-cheeky.png",
+    "aqua_kh/0-giggling.png",              // Has Recent Updates
+    "aqua_kh/0-happy.png",
+    "aqua_kh/2-keyblade_stance.png",
+    "aqua_kh/2-turned_on.png",
+    "beatrix/0-curtsy.png",                // Has Recent Updates
+    "beatrix/0-happy.png",
+    "beatrix/0-interested.png",
+    "beatrix/0-oops.png",
+    "joey/0-cheer.png",                    // Has Recent Updates
+    "joey/2-approve.png",
+    "joey/3-wink.png",
+    "joey/4-hot.png",
+    "hilda/0-conversational.png",          // Has Recent Updates
+    "hilda/1-relaxed.png",
+    "hilda/2-smug.png",
+    "hilda/3-flirty.png",
+    "kaz/0-showoff.png",                   // Has Recent Updates
+    "kaz/0-aback.png",
+    "kaz/1-toblerone.png",
+    "kaz/2-glad.png",
+    "arueshalae/0-happy.png",              // Has Recent Updates
+    "arueshalae/0-laughing.png",
+    "arueshalae/4-singing happy.png",
+    "arueshalae/4-horny.png",
+    "eichi/0-excited.png",                 // Has Recent Updates
+    "eichi/0-flirt_altc.png",
+    "eichi/2-flirt.png",
+    "eichi/3-tease.png",
+    "tomoko/0-idle1.png",                  // Has Recent Updates
+    "tomoko/0-excited.png",
+    "tomoko/0-serene.png",
+    "tomoko/0-shy.png",
 ];
 
 /* Storage for old candy images in case the characters qualify again */
@@ -428,14 +396,6 @@ var CANDY_LIST = [
     "dust/0-victory.png",
     "dust/1-pensive.png",
     "dust/2-laugh.png",
-    "tomoko/0-idle1.png",
-    "tomoko/0-excited.png",
-    "tomoko/0-serene.png",
-    "tomoko/0-shy.png",
-    "beatrix/0-curtsy.png",
-    "beatrix/0-happy.png",
-    "beatrix/0-interested.png",
-    "beatrix/0-oops.png",
     "supernova/0-entering.png",
     "supernova/0-imagine.png",
     "supernova/4-giggle.png",
@@ -456,10 +416,6 @@ var CANDY_LIST = [
     "yusuke/3-Expository.png",
     "yusuke/4-Confused.png",
     "yusuke/4-Frame.png",
-    "joey/0-cheer.png",
-    "joey/2-approve.png",
-    "joey/3-wink.png",
-    "joey/4-hot.png",
     "n/0-coNfused.png",
     "n/4-Naturally.png",
     "n/2-fiddliNg.png",
@@ -476,14 +432,86 @@ var CANDY_LIST = [
     "sly_cooper/0-Comms+.png",
     "sly_cooper/0-Select.png",
     "sly_cooper/0-Comms+.png",
-    "hilda/0-conversational.png",
-    "hilda/1-relaxed.png",
-    "hilda/2-smug.png",
-    "hilda/3-flirty.png",
-    "megumin/0-smug.png",
-    "megumin/0-flustered.png",
-    "megumin/2-ecstatic.png",
-    "megumin/3-embarrassed.png",
+    "jin/0-Cracker.png",
+    "jin/0-Excited.png",
+    "jin/5-Stripped.png",
+    "jin/5-Happy.png",
+    "barbara/0-cheering.png",
+    "barbara/0-surprised.png",
+    "barbara/0-sheepish.png",
+    "barbara/0-happy.png",
+    "binah/0-teatime.png",
+    "binah/1-haughty.png",
+    "binah/2-quoth.png",
+    "binah/5-sadistic.png",
+    "wiifitfemale/0-StretchBack.png",
+    "wiifitfemale/0-calm.png",
+    "wiifitfemale/0-happy.png",
+    "wiifitfemale/0-interested.png",
+    "estelle/0-calm.png",
+    "estelle/1-determind.png",
+    "estelle/2-lecture.png",
+    "estelle/3-brush.png",
+    "sayori/0-excited.png",
+    "sayori/1-happy.png",
+    "sayori/2-thinking.png",
+    "sayori/3-embarassed.png",
+    "ryuko/0-senketsu-happy.png",
+    "ryuko/2-mako-sad.png",
+    "ryuko/3-pissed.png",
+    "ryuko/5-awkward.png",
+    "lux/0-calm.png",
+    "lux/0-cocky.png",
+    "lux/3-quizzical.png",
+    "lux/4-joyous.png",
+    "videl/0-confident.png",
+    "videl/1-flying.png",
+    "videl/4-happy.png",
+    "videl/5-embarrassed.png",
+    "lyralei/0-happy.png",
+    "lyralei/1-embarrassed.png",
+    "lyralei/3-awkward.png",
+    "lyralei/5-stripped.png",
+    "myriam/0-confident.png",
+    "myriam/2-normal.png",
+    "myriam/3-think.png",
+    "myriam/4-flattered.png",
+    "meia/0-interested.png",
+    "meia/2-pleased.png",
+    "meia/2-reminiscing.png",
+    "meia/3-happy.png",
+    "jura/0-seductive.png",
+    "jura/1-teasing.png",
+    "jura/2-interested.png",
+    "jura/3-vain.png",
+    "neptune/0-victory.png",
+    "neptune/0-excited.png",
+    "neptune/2-happy.png",
+    "neptune/2-smug.png",
+    "anatoly/0-horny.png",
+    "anatoly/1-embarrassed.png",
+    "anatoly/2-cute.png",
+    "anatoly/3-calm.png",
+    "pyrrha/0-calm.png",
+    "pyrrha/0-awkward.png",
+    "pyrrha/1-horny.png",
+    "pyrrha/2-encourage.png",
+    "ignatz/0-friendly.png",
+    "ignatz/0-flustered.png",
+    "ignatz/3-happy.png",
+    "ignatz/3-sheepish.png",
+    "perona/0-calm.png",
+    "perona/0-smiling.png",
+    "perona/1-enticed.png",
+    "perona/2-positive.png",
+    "kamina/0-point.png",
+    "kamina/0-cross.png",
+    "kamina/0-happy.png",
+    "kamina/0-excited.png",
+    "aloy/0-Horny.png",
+    "aloy/5-Smug.png",
+    "aloy/0-Angry.png",
+    "reskins/aloy_carja_blazon/0-Smug.png",
 */
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
@@ -500,10 +528,11 @@ var playerTagOptions = {
     },
     'eye_color': {
         values: [
-            { value: 'dark_eyes' }, { value: 'pale_eyes' },
-            { value: 'red_eyes' }, { value: 'amber_eyes' },
-            { value: 'green_eyes' }, { value: 'blue_eyes' },
-            { value: 'violet_eyes' },
+            { value: 'brown_eyes' }, { value: 'dark_eyes' },
+            { value: 'pale_eyes' }, { value: 'red_eyes' },
+            { value: 'amber_eyes' }, { value: 'green_eyes' },
+            { value: 'blue_eyes' }, { value: 'violet_eyes' },
+            { value: 'pink_eyes' },
         ],
     },
     'skin_color': {
@@ -993,23 +1022,51 @@ function wearClothing () {
     displayHumanPlayerClothing();
 }
 
+function getCharacterForCostume(costumePath) {
+    const match = costumePath.split("/");
+    
+    if (match[0] != "reskins") {
+        return match[0];
+    }
+    const opponent = loadedOpponents.find(opp => {
+        // opponent has a costume that fits
+        return opp.alternate_costumes.findIndex(costume => costume.folder.endsWith(match[1]+ "/")) != -1;
+    });
+    if (opponent == undefined) {
+        console.log(`Couldn't find opponent for costume "${costumePath}". The costume may be offline.`);
+        return "";
+    }
+    return opponent.id;
+}
 
 /************************************************************
  * Randomly selects two characters for the title images.
  ************************************************************/
 function selectTitleCandy() {
     console.log("Selecting Candy...");
-    var candy1 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
-    var candy2 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
+    var candyImage1 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
+    var character1 = getCharacterForCostume(candyImage1);
+    var candyImage2 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
+    var character2 = getCharacterForCostume(candyImage2);
 
-
-
-    while (candy1.slice(0, candy1.lastIndexOf("/")) == candy2.slice(0, candy2.lastIndexOf("/"))) {
-        candy2 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
+    while (character1 == character2) {
+        candyImage2 = CANDY_LIST[getRandomNumber(0, CANDY_LIST.length)];
+        character2 = getCharacterForCostume(candyImage2);
     }
 
-    $titleCandy[0].attr("src", "opponents/" + candy1);
-    $titleCandy[1].attr("src", "opponents/" + candy2);
+    $titleCandy[0].attr("src", "opponents/" + candyImage1);
+    $titleCandy[1].attr("src", "opponents/" + candyImage2);
+        
+    var scale1 = (loadedOpponents.find(c => c.id == character1).scale / 100) || 1;
+    var scale2 = (loadedOpponents.find(c => c.id == character2).scale / 100) || 1;
+    
+    // if we're restarting, we need to remove previous CSS or it piles up when we re-add it.
+    var style1 = ($titleCandy[0].attr("style") || "").replace(/transform\:([a-zA-Z0-9\.\(\)\%\- ])+;/, "")
+    var style2 = ($titleCandy[1].attr("style") || "").replace(/transform\:([a-zA-Z0-9\.\(\)\%\- ])+;/, "")
+    
+    
+    $titleCandy[0].attr("style", style1 + "transform: scale(" + scale1  + ") translateX(-50%);");
+    $titleCandy[1].attr("style", style2 + "transform: scale(" + scale2  + ") translateX(50%);");
 }
 
 /************************************************************

@@ -165,9 +165,6 @@ function initialSetup () {
     tableOpacity = 1;
     $gameTable.css({opacity:1});
 
-    /* Load title screen info first, since that's fast and synchronous */
-    selectTitleCandy();
-
     /* Attempt to detect broken images as caused by running SPNATI from an invalid archive. */
     detectBrokenOffline();
 
@@ -200,6 +197,7 @@ function initialSetup () {
         save.load();
         return loadVersionInfo();
     }).then(metadataIndex.loadIndex.bind(metadataIndex)).then(loadSelectScreen).then(loadAllCollectibles).then(function () {
+        selectTitleCandy();
         setupTitleClothing();
         finishStartupLoading();
 

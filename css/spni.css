@@ -1245,14 +1245,6 @@ ul.dropdown-menu>li {
  * Classes for Developer Mode.
  ************************************************************/
 
-#game-dev-export-button {
-    display: none;
-}
-
-.dev-mode #game-dev-export-button {
-    display: inline-flex;
-}
-
 .dev-select-button {
     position: absolute;
     right: 20%;
@@ -1348,12 +1340,6 @@ ul.dropdown-menu>li {
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: left;
-}
-
-#export-edit-log {
-    font-family: monospace;
-    font-size: 1.45rem;
-    cursor: text;
 }
 
 .screen .dialogue-bubble.under {
@@ -1474,7 +1460,7 @@ ul.dropdown-menu>li {
     text-align: left;
 }
 
-.debug-marker-basename, .debug-marker-target-id, .debug-marker-value {
+.debug-marker-basename, .debug-marker-target-id, .debug-marker-value, .debug-tag-name {
     font-family: monospace;
     display: inline-block;
 }
@@ -1501,6 +1487,37 @@ ul.dropdown-menu>li {
 
 .debug-marker-value.empty-value::before {
     font-style: normal;
+}
+
+#debug-tag-listing {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.debug-tag-entry {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding-bottom: 0.75rem;
+}
+
+.debug-tag-removed {
+    text-decoration: line-through;
+}
+
+.debug-tag-modified-stage {
+    font-style: italic;
+    padding-left: 0.6rem;
+}
+
+.debug-tag-modified-stage::before {
+    content: "(";
+}
+
+.debug-tag-modified-stage::after {
+    content: ")";
 }
 
 
@@ -1774,7 +1791,7 @@ ul.dropdown-menu>li {
     grid-template-columns: repeat(6, max-content);
     row-gap: 0.3rem;
     column-gap: 0.6rem;
-    padding-right: 0.6rem;
+    padding-right: 2.0rem;
     height: 23rem;
     width: max-content;
     overflow-y: auto;
@@ -2070,11 +2087,13 @@ ul.dropdown-menu>li {
 }
 
 #left-title-candy {
-    left: 0;
+    left: 8em;
+    transform-origin: bottom left;
 }
 
 #right-title-candy {
-    right: 0;
+    right: 8em;
+    transform-origin: bottom right;
 }
 
 .title-candy {
@@ -3140,6 +3159,14 @@ ul.dropdown-menu>li {
 .opponent-epilogues-field:not(.has-epilogues),
 .opponent-collectibles-field:not(.has-collectibles) {
     display: none;
+}
+
+.opponent-added-field:not(.has-added-date) {
+    display: none;
+}
+
+.opponent-added-field .has-added-date {
+    display: flex;
 }
 
 /* Modifications on non-widescreen devices
@@ -5031,5 +5058,5 @@ ul.dropdown-menu>li {
  ************************************************************/
 .sprite
 {
-    vertical-align: top; //overrides bootstrap
+    vertical-align: top; /*overrides bootstrap*/
 }

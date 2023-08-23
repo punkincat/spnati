@@ -18,13 +18,9 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		
 		private bool _recording;
 		public bool Playing { get; private set; }
-		private ISkin _character;
 		private LiveData _data;
 		private ICanvasViewport _viewport;
 		private List<string> _markers = new List<string>();
-		private List<string> _userMarkers = new List<string>();
-		private List<string> _addedMarkers = new List<string>();
-		private List<string> _removedMarkers = new List<string>();
 		private bool _ignoreMarkers = false;
 
 		private Point _lastMouse;
@@ -143,7 +139,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		public void SetData(ISkin character, LiveData data)
 		{
 			CleanUp();
-			_character = character;
+			_markers = CharacterDatabase.GetEditorData(character.Character).PosePreviewMarkers;
 			_data = data;
 			if (_data != null)
 			{
@@ -251,22 +247,6 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		{
 			if (_selectionSource != null)
 			{
-				foreach (string marker in _removedMarkers)
-				{
-					if (_userMarkers.Contains(marker))
-					{
-						_markers.Add(marker);
-					}
-				}
-				_removedMarkers.Clear();
-				foreach (string marker in _addedMarkers)
-				{
-					if (!_userMarkers.Contains(marker))
-					{
-						_markers.Remove(marker);
-					}
-				}
-				_addedMarkers.Clear();
 				ICanInvalidate invalidatableSource = _selectionSource as ICanInvalidate;
 				if (invalidatableSource != null)
 				{
@@ -296,16 +276,6 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				string value;
 				bool perTarget;
 				string marker = Marker.ExtractConditionPieces(_selectedPreview.Marker, out op, out value, out perTarget);
-				if (value == "0" && op == MarkerOperator.Equals || value != "0" && op == MarkerOperator.NotEqual)
-				{
-					_removedMarkers.Add(marker);
-					_markers.Remove(marker);
-				}
-				else if (value != "0" && op != MarkerOperator.NotEqual && !_markers.Contains(marker))
-				{
-					_addedMarkers.Add(marker);
-					_markers.Add(marker);
-				}
 			}
 			canvas.Invalidate();
 		}
@@ -923,31 +893,6 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		private void UpdateArrowPosition()
 		{
 			_selectedPreview.UpdateArrowPosition(_moveContext);
-		}
-
-		private void cmdMarkers_Click(object sender, EventArgs e)
-		{
-			MarkerSetup form = new MarkerSetup();
-			form.SetData(_character.Character, _userMarkers);
-			if (form.ShowDialog() == DialogResult.OK)
-			{
-				_userMarkers = form.Markers;
-				_markers.Clear();
-				_markers.AddRange(_userMarkers);
-				foreach (string marker in _removedMarkers)
-				{
-					_markers.Remove(marker);
-				}
-				foreach (string marker in _addedMarkers)
-				{
-					if (!_markers.Contains(marker))
-					{
-						_markers.Add(marker);
-					}
-				}
-
-				canvas.Invalidate();
-			}
 		}
 
 		private void cmdFit_Click(object sender, EventArgs e)

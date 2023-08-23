@@ -52,6 +52,9 @@ namespace SPNATI_Character_Editor
 		[XmlElement("sizelimit")]
 		public int SizeLimit;
 
+		[XmlElement("biggersizelimit")]
+		public int BiggerSizeLimit;
+
 		[XmlElement("collectibleLines")]
 		public int LinesPerCollectible;
 

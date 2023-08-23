@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>aella_swimsuit</id>
+    <label>Aella</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag remove="true">armor</tag>
+        <tag from="0" to="5">jewelry</tag>
+        <tag remove="true">no_bra</tag>
+        <tag>scantily-clad</tag>
+        <tag>summer_skin</tag>
+        <tag from="0" to="4">swimwear</tag>
+    </tags>
+    <layers>5</layers>
+    <folder>opponents/reskins/aella_swimsuit/</folder>
+    <wardrobe>
+        <clothing name="accessories" position="" type="extra" plural="true" />
+        <clothing name="shorts" position="lower" type="important" plural="true" />
+        <clothing name="sarong" position="lower" type="major" />
+        <clothing name="top" position="upper" type="major" />
+        <clothing position="" type="skip" />
+        <clothing name="sandals" position="feet" type="extra" plural="true" />
+    </wardrobe>
+
+</costume>

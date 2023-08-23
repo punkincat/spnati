@@ -22,6 +22,8 @@
     <notes>
         <note id="6">Fun fact: This is based on how Blind Guardian, the band that most of Arueshalae's songs are from, did a cover of a few Beach Boys songs, including Barbara Ann.</note>
     </notes>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
     <nextId>6</nextId>
     <markers>
         <marker scope="Public" name="" />
@@ -34,6 +36,7 @@
         <marker scope="Public" name="Aaravi_resp1c" />
         <marker scope="Public" name="Aaravi_resp2a" />
         <marker scope="Public" name="Aaravi_resp2b" />
+        <marker scope="Public" name="Aaravi_resp2c" />
         <marker scope="Public" name="Aaravi_resp3a" />
         <marker scope="Public" name="Aaravi_resp3b" />
         <marker scope="Public" name="Aaravi_resp3c" />
@@ -45,6 +48,7 @@
         <marker scope="Public" name="Aaravi1c" />
         <marker scope="Public" name="Aaravi2a" />
         <marker scope="Public" name="Aaravi2b" />
+        <marker scope="Public" name="Aaravi2c" />
         <marker scope="Public" name="Anatoly0a" />
         <marker scope="Public" name="Anatoly0b" />
         <marker scope="Public" name="Anatoly0c" />
@@ -157,6 +161,7 @@
         <marker scope="Public" name="Jin_resp0a" />
         <marker scope="Public" name="Joey_resp0a" />
         <marker scope="Public" name="Jura_resp0a" />
+        <marker scope="Public" name="Jura_resp0b" />
         <marker scope="Public" name="Kumatora_resp0a" />
         <marker scope="Public" name="Ladybug_resp0a" />
         <marker scope="Public" name="Ladybug_resp0b" />
@@ -240,7 +245,9 @@
         <marker scope="Public" name="MariS3b" />
         <marker scope="Public" name="Mary_resp0a" />
         <marker scope="Public" name="Meia_resp0a" />
+        <marker scope="Public" name="Meia_resp0b" />
         <marker scope="Public" name="Meia_resp1a" />
+        <marker scope="Public" name="Meia_resp1b" />
         <marker scope="Public" name="Nagatoro_demon_0a" />
         <marker scope="Public" name="Nagatoro_demon_0b" />
         <marker scope="Public" name="Nagatoro_demon_0c" />
@@ -257,6 +264,7 @@
         <marker scope="Public" name="Nagatoro_resp2b" />
         <marker scope="Public" name="Nagatoro_resp2c" />
         <marker scope="Public" name="Nagatoro_resp3a" />
+        <marker scope="Public" name="Nagatoro_resp4a" />
         <marker scope="Public" name="Nagatoro0a" />
         <marker scope="Public" name="Nagatoro0b" />
         <marker scope="Public" name="Nagatoro0c" />
@@ -268,12 +276,16 @@
         <marker scope="Public" name="Nagatoro2c" />
         <marker scope="Public" name="Nagatoro3a" />
         <marker scope="Public" name="Nagatoro3b" />
+        <marker scope="Public" name="Nagatoro3c" />
+        <marker scope="Public" name="Nagatoro4a" />
+        <marker scope="Public" name="Nagatoro4b" />
         <marker scope="Public" name="Nami_resp0a" />
         <marker scope="Public" name="Nami_resp0b" />
         <marker scope="Public" name="Nami_resp0c" />
         <marker scope="Public" name="Nami_resp1a" />
         <marker scope="Public" name="Nami_resp1b" />
         <marker scope="Public" name="Nami_resp1c" />
+        <marker scope="Public" name="Nickname_resp" />
         <marker scope="Public" name="Nico_resp0a" />
         <marker scope="Public" name="Nico_resp0b" />
         <marker scope="Public" name="Nico_resp0c" />
@@ -290,6 +302,7 @@
         <marker scope="Public" name="Reimu_resp0c" />
         <marker scope="Public" name="Reimu_resp1a" />
         <marker scope="Public" name="Reimu_resp1b" />
+        <marker scope="Public" name="Reimu_resp2a" />
         <marker scope="Public" name="Reimu_resp2c" />
         <marker scope="Public" name="Reimu0a" />
         <marker scope="Public" name="Reimu0b" />
@@ -300,9 +313,12 @@
         <marker scope="Public" name="Reimu2a" />
         <marker scope="Public" name="Reimu2b" />
         <marker scope="Public" name="Reimu2c" />
+        <marker scope="Public" name="Reimu3a" />
         <marker scope="Public" name="Remilia0a" />
         <marker scope="Public" name="Revy_resp0a" />
+        <marker scope="Public" name="Revy_resp0b" />
         <marker scope="Public" name="Revy0a" />
+        <marker scope="Public" name="Revy0b" />
         <marker scope="Public" name="Sakura_resp0a" />
         <marker scope="Public" name="Sakura_resp0b" />
         <marker scope="Public" name="Sakura_resp0c" />
@@ -343,20 +359,50 @@
         <marker scope="Public" name="Sanny&amp;Tess2a" />
         <marker scope="Public" name="Sanny&amp;Tess2b" />
         <marker scope="Public" name="Sanny&amp;Tess2c" />
+        <marker scope="Public" name="Shamiko_resp0a" />
+        <marker scope="Public" name="Shamiko_resp0b" />
+        <marker scope="Public" name="Shamiko0a" />
+        <marker scope="Public" name="Shamiko0b" />
+        <marker scope="Public" name="Shamiko0c" />
         <marker scope="Public" name="Susie0a" />
         <marker scope="Public" name="Trifle0a" />
         <marker scope="Public" name="Trifle0b" />
         <marker scope="Public" name="Trixie_resp0a" />
         <marker scope="Public" name="Trixie_resp0b" />
+        <marker scope="Public" name="Trixie_resp0c" />
         <marker scope="Public" name="Trixie_resp1a" />
         <marker scope="Public" name="Trixie_resp1b" />
+        <marker scope="Public" name="Trixie_resp1c" />
         <marker scope="Public" name="Trixie0a" />
         <marker scope="Public" name="Trixie0b" />
+        <marker scope="Public" name="Trixie0c" />
         <marker scope="Public" name="Turandot_intense" />
         <marker scope="Public" name="Turandot_resp0a" />
         <marker scope="Public" name="Turandot_resp0b" />
         <marker scope="Public" name="Turandot_resp0c" />
         <marker scope="Public" name="Turandot0a" />
+        <marker scope="Public" name="Yumeko_Desna" />
+        <marker scope="Public" name="Yumeko_forfeit" />
+        <marker scope="Public" name="Yumeko_punishing" />
+        <marker scope="Public" name="Yumeko_WTF" />
+        <marker scope="Public" name="Yumeko0a" />
+        <marker scope="Public" name="Yumeko0b" />
+        <marker scope="Public" name="Yumeko0c" />
+        <marker scope="Public" name="Yumeko1a" />
+        <marker scope="Public" name="Yumeko1b" />
+        <marker scope="Public" name="Yumeko1c" />
+        <marker scope="Public" name="Yumeko2a" />
+        <marker scope="Public" name="Yumeko2b" />
+        <marker scope="Public" name="Yumeko2c" />
+        <marker scope="Public" name="Yumeko3a" />
+        <marker scope="Public" name="Yumeko3b" />
+        <marker scope="Public" name="Yumeko3c" />
+        <marker scope="Public" name="Yumeko4a" />
+        <marker scope="Public" name="Yumeko4b" />
+        <marker scope="Public" name="Yumeko4c" />
+        <marker scope="Public" name="Yumeko5a" />
+        <marker scope="Public" name="Yumeko5b" />
+        <marker scope="Public" name="Yumeko5c" />
         <marker scope="Public" name="Yuno_Barbara_Ann" />
         <marker scope="Public" name="Yuno_glove" />
         <marker scope="Public" name="Yuno_powerup" />

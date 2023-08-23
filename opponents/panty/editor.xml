@@ -137,6 +137,11 @@
         <response id="318" opponent="senko" opponentId="137" />
         <response id="322" opponent="senko" opponentId="15" />
         <response id="325" opponent="senko" opponentId="187" />
+        <response id="327" opponent="nagatoro" opponentId="2138" />
+        <response id="332" opponent="suzuya" opponentId="169" />
+        <response id="333" opponent="suzuya" opponentId="168" />
+        <response id="0" opponent="aqua_kh" opponentId="67" />
+        <response id="341" opponent="aqua_kh" opponentId="51" />
     </responses>
     <labels>
         <label id="1" label="SPH" folder="" sort="0" />
@@ -330,14 +335,26 @@
         <label id="322" label="" folder="Senko to left" sort="0" />
         <label id="323" label="" folder="Senko to left" sort="0" />
         <label id="324" label="" folder="Senko to left" sort="0" />
+        <label id="326" label="" folder="Kaz to left" sort="0" />
+        <label id="327" label="" folder="Nagatoro to left" sort="0" />
+        <label id="328" label="" folder="Stocking to left" sort="0" />
+        <label id="329" label="" folder="Amy to left" sort="0" />
+        <label id="330" label="" folder="Elesa to left" sort="0" />
+        <label id="153" label="" folder="Meia to left" sort="0" />
+        <label id="162" label="" folder="Nami to left" sort="0" />
+        <label id="331" label="" folder="Panty to left" sort="0" />
+        <label id="334" label="" folder="Meia to left" sort="0" />
+        <label id="335" label="" folder="Meia to left" sort="0" />
+        <label id="336" label="" folder="Miki to right" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>325</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>341</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="AkkoGauntlet" />
         <marker scope="Public" name="AkkoHowMany" />
         <marker scope="Public" name="AkkoShow" />
@@ -460,6 +477,9 @@
         <marker scope="Public" name="panty_amy_limerick" />
         <marker scope="Public" name="panty_anatoly_crickets" />
         <marker scope="Public" name="panty_angel_titties" />
+        <marker scope="Public" name="panty_aqua_kh_angel" />
+        <marker scope="Public" name="panty_aquakh_angel" />
+        <marker scope="Public" name="panty_aquakh_lost_shorts" />
         <marker scope="Public" name="panty_bobobo_selected" />
         <marker scope="Public" name="panty_bobobo_what_the_shit" />
         <marker scope="Public" name="panty_boots_ground" />
@@ -470,7 +490,6 @@
         <marker scope="Public" name="panty_caulifla_pent_up" />
         <marker scope="Public" name="panty_caulifla_wtf_energy" />
         <marker scope="Public" name="panty_cd_veronica_glory" />
-        <marker scope="Public" name="panty_chazz_bedroom_throw" />
         <marker scope="Public" name="panty_chazz_booooring" />
         <marker scope="Public" name="panty_chazz_cock_locked" />
         <marker scope="Public" name="panty_chazz_crusty" />
@@ -521,9 +540,11 @@
         <marker scope="Public" name="panty_jessie_pro" />
         <marker scope="Public" name="panty_jessie_recognition" />
         <marker scope="Public" name="panty_kaz_kp_p1" />
+        <marker scope="Public" name="panty_kaz_kp_p2" />
         <marker scope="Public" name="panty_kazuma_competition" />
         <marker scope="Public" name="panty_kazuma_competition_lost" />
         <marker scope="Public" name="panty_kazuma_work_out" />
+        <marker scope="Public" name="panty_kekko_selected" />
         <marker scope="Public" name="panty_kumatora_kt" />
         <marker scope="Public" name="panty_kumatora_porky" />
         <marker scope="Public" name="panty_kumatora_skillz" />
@@ -560,9 +581,15 @@
         <marker scope="Public" name="panty_megumin_yesterday" />
         <marker scope="Public" name="panty_megumun_lets_go" />
         <marker scope="Public" name="panty_meia_pineapple" />
+        <marker scope="Public" name="panty_meia_pm_p1" />
+        <marker scope="Public" name="panty_meia_that_butt" />
+        <marker scope="Public" name="panty_miki_pm_m1" />
+        <marker scope="Public" name="panty_miki_pm_p1" />
         <marker scope="Public" name="panty_miku_bad_career_advice" />
         <marker scope="Public" name="panty_misty_two_piece" />
         <marker scope="Public" name="panty_misty_whole" />
+        <marker scope="Public" name="panty_monika_glitched2_ghost" />
+        <marker scope="Public" name="panty_monika_glitched2_high" />
         <marker scope="Public" name="panty_moon_stop_hogging" />
         <marker scope="Public" name="panty_moon_sucks_to_be_you" />
         <marker scope="Public" name="panty_motorboating" />
@@ -573,6 +600,9 @@
         <marker scope="Public" name="panty_nagatoro_np_p3" />
         <marker scope="Public" name="panty_nagatoro_np_p4" />
         <marker scope="Public" name="panty_nagatoro_np_p5" />
+        <marker scope="Public" name="panty_nagatoro_np_p6" />
+        <marker scope="Public" name="panty_nagatoro_pn_n1" />
+        <marker scope="Public" name="panty_nagatoro_pn_p1" />
         <marker scope="Public" name="panty_nagatoro_startff" />
         <marker scope="Public" name="panty_nami_butt_booty" />
         <marker scope="Public" name="panty_nami_detatchable" />
@@ -620,6 +650,10 @@
         <marker scope="Public" name="panty_stocking_chara_right_back_at_you" />
         <marker scope="Public" name="panty_stocking_chatty" />
         <marker scope="Public" name="panty_stocking_classy" />
+        <marker scope="Public" name="panty_stocking_deselected_1" />
+        <marker scope="Public" name="panty_stocking_deselected_2" />
+        <marker scope="Public" name="panty_stocking_deselected_3" />
+        <marker scope="Public" name="panty_stocking_deselected_4" />
         <marker scope="Public" name="panty_stocking_dignity" />
         <marker scope="Public" name="panty_stocking_disaster_follows" />
         <marker scope="Public" name="panty_stocking_distant_second" />
@@ -642,6 +676,7 @@
         <marker scope="Public" name="panty_stocking_parking" />
         <marker scope="Public" name="panty_stocking_perfect_match" />
         <marker scope="Public" name="panty_stocking_pillory" />
+        <marker scope="Public" name="panty_stocking_player_panty" />
         <marker scope="Public" name="panty_stocking_public_relations" />
         <marker scope="Public" name="panty_stocking_pure_maiden" />
         <marker scope="Public" name="panty_stocking_sad_sacks" />
@@ -676,6 +711,8 @@
         <marker scope="Public" name="panty_stocking_whats_the_worst" />
         <marker scope="Public" name="panty_stripped_accessories" />
         <marker scope="Public" name="panty_stripping_dress" />
+        <marker scope="Public" name="panty_suzuya_ps_10" />
+        <marker scope="Public" name="panty_suzuya_ps_13" />
         <marker scope="Public" name="panty_tomoko_angel" />
         <marker scope="Public" name="panty_tomoko_bedroom_eyes" />
         <marker scope="Public" name="panty_tomoko_clean" />
@@ -690,6 +727,10 @@
         <marker scope="Public" name="panty_tomoko_sleeping" />
         <marker scope="Public" name="panty_tomoko_story" />
         <marker scope="Public" name="panty_tomoko_work_it" />
+        <marker scope="Public" name="panty_toru_mast1" />
+        <marker scope="Public" name="panty_toru_mast2" />
+        <marker scope="Public" name="panty_toru_pt_18" />
+        <marker scope="Public" name="panty_toru_selected" />
         <marker scope="Public" name="panty_tropical_island_paradise" />
         <marker scope="Public" name="panty_twins" />
         <marker scope="Public" name="panty_ww_amazon" />
