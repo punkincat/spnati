@@ -340,7 +340,7 @@ namespace SPNATI_Character_Editor
 			TriggerDefinition trigger;
 			if (_triggers.TryGetValue(tag, out trigger))
 			{
-				return trigger.Label;
+				return trigger.ToString();
 			}
 			return tag;
 		}

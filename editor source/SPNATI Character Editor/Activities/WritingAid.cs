@@ -119,7 +119,7 @@ namespace SPNATI_Character_Editor.Activities
 			_character.Behavior.CaseAdded -= Behavior_CaseAdded;
 		}
 
-		private void cboFilter_SelectedIndexChanged(object sender, System.EventArgs e)
+		private void cboFilter_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (!_activated)
 			{
