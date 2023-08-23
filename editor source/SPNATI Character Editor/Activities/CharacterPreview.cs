@@ -169,7 +169,7 @@ namespace SPNATI_Character_Editor.Activities
 				CharacterHistory history = CharacterHistory.Get(_character, true);
 				if (history == null)
 				{
-					lblLinesOfDialogue.Text = $"Unique lines: {(_character.Behavior.UniqueLines.ToString())}";
+					lblLinesOfDialogue.Text = $"Unique lines: {_character.Behavior.UniqueLines.ToString()}";
 				}
 				else
 				{
@@ -193,16 +193,28 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-		private void cboSkin_SelectedIndexChanged(object sender, System.EventArgs e)
+		private void cboSkin_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (_character == null) { return; }
 			SkinLink current = cboSkin.SelectedItem as SkinLink;
 			_character.CurrentSkin = current?.Costume;
 			cmdEditSkin.Visible = current?.Costume != null;
-			Workspace.SendMessage(WorkspaceMessages.SkinChanged);
+			if (current?.Costume != null)
+			{
+				IWardrobe costume;
+				if (_character.CurrentSkin.Key == "default")
+				{
+					costume = _character;
+				}
+				else
+				{
+					costume = _character.CurrentSkin;
+				}
+				Workspace.SendMessage(WorkspaceMessages.SkinChanged, costume);
+			}
 		}
 
-		private void cmdReference_Click(object sender, System.EventArgs e)
+		private void cmdReference_Click(object sender, EventArgs e)
 		{
 			splitContainer1.Panel2Collapsed = !splitContainer1.Panel2Collapsed;
 			cmdReference.Image = splitContainer1.Panel2Collapsed ? Properties.Resources.ChevronUp : Properties.Resources.ChevronDown;
@@ -219,7 +231,7 @@ namespace SPNATI_Character_Editor.Activities
 			tabsReference.Height = splitContainer1.Panel2.Height - stripReference.Height;
 			TagGuide guide = new TagGuide();
 			tabTags.Controls.Add(guide);
-			guide.Dock = System.Windows.Forms.DockStyle.Fill;
+			guide.Dock = DockStyle.Fill;
 			TargetReport report = new TargetReport(this._character);
 			tabTargets.Controls.Add(report);
 			report.Dock = DockStyle.Fill;
@@ -232,7 +244,7 @@ namespace SPNATI_Character_Editor.Activities
 			SkinManager.UpdateSkin(report, SkinManager.Instance.CurrentSkin);
 		}
 
-		private void splitContainer1_Panel1_Resize(object sender, System.EventArgs e)
+		private void splitContainer1_Panel1_Resize(object sender, EventArgs e)
 		{
 			splitContainer1.Panel1.Invalidate(true);
 		}
