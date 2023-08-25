@@ -224,13 +224,14 @@ namespace SPNATI_Character_Editor
 				AlsoPlaying = e.AlsoPlaying,
 				PlayerStartingLayers = e.PlayerStartingLayers,
 				Hint = e.Hint,
+				EpilogueDescription = e.EpilogueDescription,
 				HasMarkerConditions = !string.IsNullOrWhiteSpace(e.AllMarkers)
 					|| !string.IsNullOrWhiteSpace(e.AnyMarkers)
 					|| !string.IsNullOrWhiteSpace(e.NotMarkers)
 					|| !string.IsNullOrWhiteSpace(e.AlsoPlayingAllMarkers)
 					|| !string.IsNullOrWhiteSpace(e.AlsoPlayingAnyMarkers)
 					|| !string.IsNullOrWhiteSpace(e.AlsoPlayingNotMarkers)
-			});
+			}) ;
 			Tags = c.Tags;
 			HasCollectibles = c.Collectibles.Count > 0;
 			int lines, poses;
@@ -305,6 +306,9 @@ namespace SPNATI_Character_Editor
 
 		[XmlAttribute("hint")]
 		public string Hint;
+
+		[XmlAttribute("description")]
+		public string EpilogueDescription;
 
 		[XmlText]
 		public string Title;
