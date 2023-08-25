@@ -16,7 +16,7 @@ namespace SPNATI_Character_Editor
 
 		[Text(DisplayName = "Description", GroupOrder = 6, Description = "Description of the ending")]
 		[XmlAttribute("description")]
-		public string Descr;
+		public string EpilogueDescription;
 
 		[ComboBox(DisplayName = "Player Gender", GroupOrder = 2, Description = "Player's required gender to be able to view this ending", Options = new string[] { "any", "female", "male" })]
 		[XmlAttribute("gender")]
