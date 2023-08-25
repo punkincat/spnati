@@ -68,7 +68,7 @@ namespace SPNATI_Character_Editor.Controls
 		private SceneObject _overlay = null;
 		private List<SceneAnimation> _animations = new List<SceneAnimation>();
 
-		private Font _font = new Font(Shell.Instance.Fonts.Families[0], 11.3f);
+		private Font _font;
 		private StringFormat _textFormat = new StringFormat() { Alignment = StringAlignment.Center };
 		private Pen _borderPen;
 		private Pen _penOuterSelection;
@@ -89,6 +89,15 @@ namespace SPNATI_Character_Editor.Controls
 		public EpilogueCanvas()
 		{
 			InitializeComponent();
+
+			if (Shell.Instance != null)
+			{
+				_font = new Font(Shell.Instance.Fonts.Families[0], 11.3f);
+			}
+			else
+			{
+				_font = new Font("Trebuchet MS", 14);
+			}
 
 			_outsideBrush = new SolidBrush(Color.FromArgb(80, 0, 10, 30));
 
