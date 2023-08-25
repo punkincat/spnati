@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1692061782520</lastupdate>
+    <lastupdate>1692726581024</lastupdate>
     <enabled>false</enabled>
     <first>Téa</first>
     <last>Gardner</last>
@@ -12,7 +12,10 @@
     <artist>AceDiamond45</artist>
     <description>A graduate of Domino City High School, Tea is a newcomer to card games who dreams of becoming a professional dancer. Though she wouldn't call herself a duelist, her bravery won't allow her to back away from a challenge.</description>
     <layers>6</layers>
-    <default-costume-name />
+    <default-costume-name>Battle City</default-costume-name>
+    <alternates>
+        <costume folder="opponents/reskins/tea_gardner_season1/" img="0-z_portrait.png" label="Téa" layers="6">Duelist Kingdom</costume>
+    </alternates>
     <has_collectibles>true</has_collectibles>
     <lines>1361</lines>
     <poses>189</poses>
