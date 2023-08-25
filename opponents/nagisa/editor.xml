@@ -341,6 +341,10 @@
         <response id="1278" opponent="wikipe-tan" opponentId="563" />
         <response id="1280" opponent="wikipe-tan" opponentId="175" />
         <response id="1281" opponent="wikipe-tan" opponentId="183" />
+        <response id="1298" opponent="arash" opponentId="171" />
+        <response id="1299" opponent="arash" opponentId="172" />
+        <response id="1300" opponent="arash" opponentId="173" />
+        <response id="1301" opponent="arash" opponentId="174" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -372,17 +376,17 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="24" label="" folder="Waitress" sort="8" />
         <label id="25" label="nagisa_sakura_11" folder="Sakura to left" sort="2" />
         <label id="26" label="nagisa_sakura_01" folder="Sakura to left" sort="0" />
-        <label id="27" label="nagisa_sakura_02" folder="" sort="0" />
-        <label id="28" label="nagisa_sakura_12" folder="" sort="0" />
+        <label id="27" label="nagisa_sakura_02" folder="Sakura to left" sort="0" />
+        <label id="28" label="nagisa_sakura_12" folder="Sakura to left" sort="0" />
         <label id="29" label="nagisa_sakura_03" folder="Sakura to left" sort="0" />
         <label id="30" label="nagisa_sakura_13" folder="Sakura to left" sort="0" />
-        <label id="31" label="nagisa_sakura_22" folder="" sort="0" />
+        <label id="31" label="nagisa_sakura_22" folder="Sakura to left" sort="0" />
         <label id="32" label="nagisa_sakura_21" folder="Sakura to left" sort="3" />
         <label id="33" label="nagisa_sakura_23" folder="Sakura to left" sort="0" />
         <label id="34" label="stockings outdoors" folder="" sort="0" />
         <label id="35" label="" folder="Waitress" sort="22" />
         <label id="36" label="nagisa_sakura_32" folder="" sort="0" />
-        <label id="37" label="nagisa_sakura_42" folder="" sort="0" />
+        <label id="37" label="nagisa_sakura_42" folder="Sakura to left" sort="0" />
         <label id="38" label="nagisa_sakura_43 (Sakura to left)" folder="" sort="0" />
         <label id="39" label="indoors" folder="" sort="0" />
         <label id="40" label="nagisa_sakura_43 (Sakura to right)" folder="" sort="0" />
@@ -1566,13 +1570,33 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1279" label="" folder="Perona to left" sort="0" />
         <label id="1280" label="" folder="Wikipe-tan to left" sort="0" />
         <label id="1281" label="" folder="Wikipe-tan to left" sort="0" />
+        <label id="1282" label="" folder="Estelle to left" sort="0" />
+        <label id="1283" label="" folder="Perona to left" sort="0" />
+        <label id="1284" label="" folder="Saki N to left" sort="0" />
+        <label id="1285" label="" folder="Streaming-chan to left" sort="0" />
+        <label id="1286" label="" folder="Streaming-chan to left" sort="0" />
+        <label id="1287" label="" folder="Streaming-chan to left" sort="0" />
+        <label id="1288" label="" folder="Perona to left" sort="0" />
+        <label id="1289" label="" folder="Perona to left" sort="0" />
+        <label id="1290" label="" folder="Perona to right" sort="0" />
+        <label id="1291" label="" folder="Perona to left" sort="0" />
+        <label id="1292" label="" folder="Perona to left" sort="0" />
+        <label id="1293" label="" folder="Estelle to left" sort="0" />
+        <label id="1294" label="" folder="Estelle to left" sort="0" />
+        <label id="1295" label="" folder="Estelle to left" sort="0" />
+        <label id="1296" label="" folder="Estelle to left" sort="0" />
+        <label id="1297" label="" folder="Estelle to left" sort="0" />
+        <label id="1298" label="" folder="Arash to left" sort="0" />
+        <label id="1299" label="" folder="Arash to left" sort="0" />
+        <label id="1300" label="" folder="Arash to left" sort="0" />
+        <label id="1301" label="" folder="Arash to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1281</nextId>
+    <nextId>1301</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1673,12 +1697,16 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_arash_question_waver_iskandar" />
         <marker scope="Public" name="nagisa_arash_smalltalk_animals" />
         <marker scope="Public" name="nagisa_arash_smalltalk_books" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_drunk" />
         <marker scope="Public" name="nagisa_arash_smalltalk_excuses" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_flowers" />
         <marker scope="Public" name="nagisa_arash_smalltalk_hobbies" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_holidays" />
         <marker scope="Public" name="nagisa_arash_smalltalk_midnight_day" />
         <marker scope="Public" name="nagisa_arash_smalltalk_midnight_night" />
         <marker scope="Public" name="nagisa_arash_smalltalk_name" />
         <marker scope="Public" name="nagisa_arash_smalltalk_seasons" />
+        <marker scope="Public" name="nagisa_arash_smalltalk_singing" />
         <marker scope="Public" name="nagisa_arash_smalltalk_temperature" />
         <marker scope="Public" name="nagisa_arash_smalltalk_temperature_cold" />
         <marker scope="Public" name="nagisa_arash_smalltalk_thoughts" />
@@ -1893,11 +1921,17 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_estelle_en_e6_default_hand" />
         <marker scope="Public" name="nagisa_estelle_en_n1" />
         <marker scope="Public" name="nagisa_estelle_en_n10" />
+        <marker scope="Public" name="nagisa_estelle_en_n11" />
         <marker scope="Public" name="nagisa_estelle_en_n13_female" />
         <marker scope="Public" name="nagisa_estelle_en_n13_male" />
+        <marker scope="Public" name="nagisa_estelle_en_n14_female" />
+        <marker scope="Public" name="nagisa_estelle_en_n14_male" />
         <marker scope="Public" name="nagisa_estelle_en_n16" />
+        <marker scope="Public" name="nagisa_estelle_en_n2" />
         <marker scope="Public" name="nagisa_estelle_en_n4" />
+        <marker scope="Public" name="nagisa_estelle_en_n5" />
         <marker scope="Public" name="nagisa_estelle_en_n7" />
+        <marker scope="Public" name="nagisa_estelle_en_n8" />
         <marker scope="Public" name="nagisa_estelle_ne_e1" />
         <marker scope="Public" name="nagisa_estelle_ne_e2" />
         <marker scope="Public" name="nagisa_estelle_ne_e3" />
