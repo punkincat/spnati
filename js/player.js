@@ -567,7 +567,6 @@ function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber,
     var picElem = $metaXml.children('pic');
 
     this.image = picElem.text();
-    this.height = $metaXml.children('height').text();
     this.source = $metaXml.children('from').text();
     this.artist = $metaXml.children('artist').text();
     this.writer = $metaXml.children('writer').text();
