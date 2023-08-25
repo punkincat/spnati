@@ -50,9 +50,9 @@ namespace SPNATI_Character_Editor.Activities
 				txtDescription.Text = _character.Metadata.Description.Replace("<br>", Environment.NewLine);
 			}
 
-			if(_character.Metadata.Height != null)
+			if(_character.Metadata.LegacyHeight != null)
 			{
-				txtHeight.Text = _character.Metadata.Height;
+				txtHeight.Text = _character.Metadata.LegacyHeight;
 			}
 			else
 			{
@@ -146,6 +146,8 @@ namespace SPNATI_Character_Editor.Activities
 			_character.Size = cboSize.SelectedItem.ToString();
 			_character.Metadata.Description = txtDescription.Text.Replace(Environment.NewLine, "<br>");
 			CharacterDatabase.GetEditorData(_character).Height = txtHeight.Text;
+			_character.Metadata.LegacyHeight = "";
+			_character.Metadata.LegacyTags = null;
 			CharacterDatabase.GetEditorData(_character).Age = txtAge.Text;
 			CharacterDatabase.GetEditorData(_character).pronunciationGuide = txtpronunciationGuide.Text;
 			_character.Metadata.Source = txtSource.Text;
