@@ -349,6 +349,10 @@
         <response id="1307" opponent="aoba" opponentId="152" />
         <response id="1308" opponent="arash" opponentId="169" />
         <response id="1315" opponent="aoba" opponentId="153" />
+        <response id="1322" opponent="arueshalae" opponentId="4" />
+        <response id="1332" opponent="arueshalae" opponentId="1" />
+        <response id="1333" opponent="arueshalae" opponentId="2" />
+        <response id="1334" opponent="arle" opponentId="240" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1614,13 +1618,35 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1313" label="" folder="Estelle to left" sort="0" />
         <label id="1314" label="" folder="Estelle to left" sort="0" />
         <label id="1315" label="" folder="Aoba to left" sort="0" />
+        <label id="1316" label="" folder="Estelle to left" sort="0" />
+        <label id="1317" label="" folder="Estelle to left" sort="0" />
+        <label id="1318" label="" folder="Estelle to left" sort="0" />
+        <label id="1319" label="" folder="Estelle to left" sort="0" />
+        <label id="1320" label="" folder="Estelle to left" sort="0" />
+        <label id="1321" label="" folder="Estelle to left" sort="0" />
+        <label id="1322" label="" folder="Arueshalae to left" sort="0" />
+        <label id="1323" label="" folder="Perona to left" sort="0" />
+        <label id="79" label="" folder="Perona to left" sort="0" />
+        <label id="1324" label="" folder="Perona to left" sort="0" />
+        <label id="212" label="" folder="Pyrrha to left" sort="0" />
+        <label id="1325" label="" folder="Perona to left" sort="0" />
+        <label id="1326" label="" folder="Perona to left" sort="0" />
+        <label id="109" label="" folder="Perona to left" sort="0" />
+        <label id="1327" label="" folder="Perona to left" sort="0" />
+        <label id="1328" label="" folder="Perona to left" sort="0" />
+        <label id="1329" label="" folder="Perona to right" sort="0" />
+        <label id="1330" label="" folder="Perona to left" sort="0" />
+        <label id="1331" label="" folder="Perona to left" sort="0" />
+        <label id="1332" label="" folder="Arueshalae to left" sort="0" />
+        <label id="1333" label="" folder="Arueshalae to left" sort="0" />
+        <label id="1334" label="" folder="Arle to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1315</nextId>
+    <nextId>1334</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1739,7 +1765,11 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_arash_smalltalk_temperature_cold" />
         <marker scope="Public" name="nagisa_arash_smalltalk_thoughts" />
         <marker scope="Public" name="nagisa_arash_smalltalk_travel" />
+        <marker scope="Public" name="nagisa_arle_mermaid" />
         <marker scope="Public" name="nagisa_arle_principal" />
+        <marker scope="Public" name="nagisa_arueshalae_bad_dreams" />
+        <marker scope="Public" name="nagisa_arueshalae_favorite_feature" />
+        <marker scope="Public" name="nagisa_arueshalae_good_dreams" />
         <marker scope="Public" name="nagisa_arwen_beautiful_lady" />
         <marker scope="Public" name="nagisa_asks_buffy_about_school">Nagisa and Buffy feel differently about high school.</marker>
         <marker scope="Public" name="nagisa_asks_zt_for_help">Nagisa asks Zone-tan if her hand is good. It isn't.</marker>
@@ -1944,9 +1974,15 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_erufuda_buns" />
         <marker scope="Public" name="nagisa_erufuda_holiday_weight" />
         <marker scope="Public" name="nagisa_erufuda_ne_e4" />
+        <marker scope="Public" name="nagisa_estelle_en_e2" />
         <marker scope="Public" name="nagisa_estelle_en_e3_known_hand" />
         <marker scope="Public" name="nagisa_estelle_en_e3_unknown_hand" />
+        <marker scope="Public" name="nagisa_estelle_en_e5_default" />
+        <marker scope="Public" name="nagisa_estelle_en_e5_hat" />
+        <marker scope="Public" name="nagisa_estelle_en_e5_vday" />
+        <marker scope="Public" name="nagisa_estelle_en_e5_witch" />
         <marker scope="Public" name="nagisa_estelle_en_e6_default_hand" />
+        <marker scope="Public" name="nagisa_estelle_en_e8" />
         <marker scope="Public" name="nagisa_estelle_en_n1" />
         <marker scope="Public" name="nagisa_estelle_en_n10" />
         <marker scope="Public" name="nagisa_estelle_en_n11" />
