@@ -46,8 +46,22 @@ namespace SPNATI_Character_Editor.Activities
             this.iconMarkers = new Desktop.Skinning.SkinnedIcon();
             this.gridMarkers = new Desktop.Skinning.SkinnedDataGridView();
             this.labelMarkers = new Desktop.Skinning.SkinnedLabel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tsGroups = new System.Windows.Forms.ToolStrip();
+            this.tsAddGroup = new System.Windows.Forms.ToolStripButton();
+            this.tsRemoveGroup = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsDuplicateGroup = new System.Windows.Forms.ToolStripButton();
+            this.lstGroups = new Desktop.CommonControls.RefreshableListBox();
+            this.characterSettingControl1 = new SPNATI_Character_Editor.Controls.CharacterSettingControl();
+            this.tsLabel = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gridPrefixes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridMarkers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.tsGroups.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +71,7 @@ namespace SPNATI_Character_Editor.Activities
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
             this.label1.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Location = new System.Drawing.Point(3, 312);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(316, 13);
             this.label1.TabIndex = 0;
@@ -97,7 +111,7 @@ namespace SPNATI_Character_Editor.Activities
             this.gridPrefixes.EnableHeadersVisualStyles = false;
             this.gridPrefixes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.gridPrefixes.GridColor = System.Drawing.Color.LightGray;
-            this.gridPrefixes.Location = new System.Drawing.Point(6, 19);
+            this.gridPrefixes.Location = new System.Drawing.Point(6, 339);
             this.gridPrefixes.Name = "gridPrefixes";
             this.gridPrefixes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -110,7 +124,7 @@ namespace SPNATI_Character_Editor.Activities
             this.gridPrefixes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridPrefixes.RowHeadersVisible = false;
             this.gridPrefixes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.gridPrefixes.Size = new System.Drawing.Size(313, 155);
+            this.gridPrefixes.Size = new System.Drawing.Size(313, 113);
             this.gridPrefixes.TabIndex = 1;
             // 
             // ColPrefix
@@ -129,7 +143,7 @@ namespace SPNATI_Character_Editor.Activities
             // 
             this.chkOnlyCustomPoses.AutoSize = true;
             this.chkOnlyCustomPoses.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.chkOnlyCustomPoses.Location = new System.Drawing.Point(325, 19);
+            this.chkOnlyCustomPoses.Location = new System.Drawing.Point(338, 403);
             this.chkOnlyCustomPoses.Name = "chkOnlyCustomPoses";
             this.chkOnlyCustomPoses.Size = new System.Drawing.Size(141, 17);
             this.chkOnlyCustomPoses.TabIndex = 2;
@@ -141,7 +155,7 @@ namespace SPNATI_Character_Editor.Activities
             // 
             this.chkHidePrefixlessImages.AutoSize = true;
             this.chkHidePrefixlessImages.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.chkHidePrefixlessImages.Location = new System.Drawing.Point(325, 42);
+            this.chkHidePrefixlessImages.Location = new System.Drawing.Point(337, 426);
             this.chkHidePrefixlessImages.Name = "chkHidePrefixlessImages";
             this.chkHidePrefixlessImages.Size = new System.Drawing.Size(142, 17);
             this.chkHidePrefixlessImages.TabIndex = 3;
@@ -156,7 +170,7 @@ namespace SPNATI_Character_Editor.Activities
             this.iconHidePrefixlessImages.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
             this.iconHidePrefixlessImages.Flat = false;
             this.iconHidePrefixlessImages.Image = global::SPNATI_Character_Editor.Properties.Resources.Help;
-            this.iconHidePrefixlessImages.Location = new System.Drawing.Point(459, 38);
+            this.iconHidePrefixlessImages.Location = new System.Drawing.Point(476, 399);
             this.iconHidePrefixlessImages.Name = "iconHidePrefixlessImages";
             this.iconHidePrefixlessImages.Size = new System.Drawing.Size(26, 23);
             this.iconHidePrefixlessImages.TabIndex = 4;
@@ -170,7 +184,7 @@ namespace SPNATI_Character_Editor.Activities
             this.iconMarkers.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
             this.iconMarkers.Flat = false;
             this.iconMarkers.Image = global::SPNATI_Character_Editor.Properties.Resources.Help;
-            this.iconMarkers.Location = new System.Drawing.Point(270, 184);
+            this.iconMarkers.Location = new System.Drawing.Point(272, 458);
             this.iconMarkers.Name = "iconMarkers";
             this.iconMarkers.Size = new System.Drawing.Size(23, 18);
             this.iconMarkers.TabIndex = 5;
@@ -213,7 +227,7 @@ namespace SPNATI_Character_Editor.Activities
             this.gridMarkers.EnableHeadersVisualStyles = false;
             this.gridMarkers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.gridMarkers.GridColor = System.Drawing.Color.LightGray;
-            this.gridMarkers.Location = new System.Drawing.Point(6, 205);
+            this.gridMarkers.Location = new System.Drawing.Point(6, 490);
             this.gridMarkers.Name = "gridMarkers";
             this.gridMarkers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -226,7 +240,7 @@ namespace SPNATI_Character_Editor.Activities
             this.gridMarkers.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gridMarkers.RowHeadersVisible = false;
             this.gridMarkers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.gridMarkers.Size = new System.Drawing.Size(313, 190);
+            this.gridMarkers.Size = new System.Drawing.Size(313, 141);
             this.gridMarkers.TabIndex = 3;
             // 
             // labelMarkers
@@ -236,16 +250,108 @@ namespace SPNATI_Character_Editor.Activities
             this.labelMarkers.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelMarkers.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
             this.labelMarkers.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.labelMarkers.Location = new System.Drawing.Point(3, 189);
+            this.labelMarkers.Location = new System.Drawing.Point(3, 463);
             this.labelMarkers.Name = "labelMarkers";
             this.labelMarkers.Size = new System.Drawing.Size(263, 13);
             this.labelMarkers.TabIndex = 4;
             this.labelMarkers.Text = "Marker values for custom pose previewing in dialogue:";
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.tsGroups);
+            this.splitContainer1.Panel1.Controls.Add(this.lstGroups);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.characterSettingControl1);
+            this.splitContainer1.Size = new System.Drawing.Size(935, 300);
+            this.splitContainer1.SplitterDistance = 200;
+            this.splitContainer1.TabIndex = 7;
+            // 
+            // tsGroups
+            // 
+            this.tsGroups.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.tsGroups.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsLabel,
+            this.tsAddGroup,
+            this.tsRemoveGroup,
+            this.toolStripSeparator1,
+            this.tsDuplicateGroup});
+            this.tsGroups.Location = new System.Drawing.Point(0, 0);
+            this.tsGroups.Name = "tsGroups";
+            this.tsGroups.Size = new System.Drawing.Size(200, 25);
+            this.tsGroups.TabIndex = 10;
+            this.tsGroups.Tag = "Surface";
+            // 
+            // tsAddGroup
+            // 
+            this.tsAddGroup.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsAddGroup.Image = global::SPNATI_Character_Editor.Properties.Resources.Add;
+            this.tsAddGroup.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsAddGroup.Name = "tsAddGroup";
+            this.tsAddGroup.Size = new System.Drawing.Size(23, 22);
+            this.tsAddGroup.Text = "Add Settings Group";
+            this.tsAddGroup.Click += new System.EventHandler(this.tsAddGroup_Click);
+            // 
+            // tsRemoveGroup
+            // 
+            this.tsRemoveGroup.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsRemoveGroup.Image = global::SPNATI_Character_Editor.Properties.Resources.Remove;
+            this.tsRemoveGroup.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsRemoveGroup.Name = "tsRemoveGroup";
+            this.tsRemoveGroup.Size = new System.Drawing.Size(23, 22);
+            this.tsRemoveGroup.Text = "Remove Settings Group";
+            this.tsRemoveGroup.Click += new System.EventHandler(this.tsRemoveGroup_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsDuplicateGroup
+            // 
+            this.tsDuplicateGroup.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsDuplicateGroup.Image = global::SPNATI_Character_Editor.Properties.Resources.Duplicate;
+            this.tsDuplicateGroup.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsDuplicateGroup.Name = "tsDuplicateGroup";
+            this.tsDuplicateGroup.Size = new System.Drawing.Size(23, 22);
+            this.tsDuplicateGroup.Text = "Duplicate Settings Group";
+            this.tsDuplicateGroup.Click += new System.EventHandler(this.tsDuplicateGroup_Click);
+            // 
+            // lstGroups
+            // 
+            this.lstGroups.BackColor = System.Drawing.Color.White;
+            this.lstGroups.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lstGroups.ForeColor = System.Drawing.Color.Black;
+            this.lstGroups.FormattingEnabled = true;
+            this.lstGroups.Location = new System.Drawing.Point(6, 59);
+            this.lstGroups.Name = "lstGroups";
+            this.lstGroups.Size = new System.Drawing.Size(191, 238);
+            this.lstGroups.TabIndex = 9;
+            // 
+            // characterSettingControl1
+            // 
+            this.characterSettingControl1.Location = new System.Drawing.Point(3, 6);
+            this.characterSettingControl1.Name = "characterSettingControl1";
+            this.characterSettingControl1.Size = new System.Drawing.Size(561, 294);
+            this.characterSettingControl1.TabIndex = 6;
+            // 
+            // tsLabel
+            // 
+            this.tsLabel.Name = "tsLabel";
+            this.tsLabel.Size = new System.Drawing.Size(103, 22);
+            this.tsLabel.Text = "Character Settings";
+            // 
             // CharacterConfiguration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.iconHidePrefixlessImages);
             this.Controls.Add(this.chkHidePrefixlessImages);
             this.Controls.Add(this.chkOnlyCustomPoses);
@@ -258,6 +364,13 @@ namespace SPNATI_Character_Editor.Activities
             this.Size = new System.Drawing.Size(935, 644);
             ((System.ComponentModel.ISupportInitialize)(this.gridPrefixes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridMarkers)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.tsGroups.ResumeLayout(false);
+            this.tsGroups.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,5 +389,14 @@ namespace SPNATI_Character_Editor.Activities
         private Desktop.Skinning.SkinnedDataGridView gridMarkers;
         private Desktop.Skinning.SkinnedLabel labelMarkers;
         private Desktop.Skinning.SkinnedIcon iconMarkers;
+        private Controls.CharacterSettingControl characterSettingControl1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private Desktop.CommonControls.RefreshableListBox lstGroups;
+        private System.Windows.Forms.ToolStrip tsGroups;
+        private System.Windows.Forms.ToolStripButton tsAddGroup;
+        private System.Windows.Forms.ToolStripButton tsRemoveGroup;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton tsDuplicateGroup;
+        private System.Windows.Forms.ToolStripLabel tsLabel;
     }
 }

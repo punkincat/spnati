@@ -1,6 +1,8 @@
 using Desktop;
+using System;
 using System.Linq;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace SPNATI_Character_Editor.Activities
 {
@@ -64,6 +66,45 @@ namespace SPNATI_Character_Editor.Activities
 				}
 			}
 			Workspace.SendMessage(WorkspaceMessages.UpdateMarkers, Enumerable.Empty<string>());
+		}
+
+		private void tsAddGroup_Click(object sender, EventArgs e)
+		{
+			/*Pose pose = new Pose();
+			pose.Id = "new_pose";
+			lstPoses.Items.Add(pose);
+			lstPoses.SelectedItem = pose;
+			_character.CustomPoses.Add(pose);
+			_character.CustomPoses.Sort();
+			_character.Character.PoseLibrary.Add(pose);*/
+		}
+
+		private void tsRemoveGroup_Click(object sender, EventArgs e)
+		{
+			/*if (_pose == null ||
+				MessageBox.Show($"Are you sure you want to permanently delete {_pose}? This operation cannot be undone.",
+						"Remove Pose", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+			{
+				return;
+			}
+			_character.CustomPoses.Remove(_sourcePose);
+			_character.Character.PoseLibrary.Remove(_sourcePose);
+			lstPoses.Items.Remove(_sourcePose);
+			if (lstPoses.Items.Count > 0)
+			{
+				lstPoses.SelectedIndex = 0;
+			}*/
+		}
+
+		private void tsDuplicateGroup_Click(object sender, EventArgs e)
+		{
+			/*if (_pose == null) { return; }
+			SavePose();
+
+			Pose copy = _sourcePose.Clone() as Pose;
+			lstPoses.Items.Add(copy);
+			lstPoses.SelectedItem = copy;
+			_character.CustomPoses.Add(copy);*/
 		}
 	}
 }
