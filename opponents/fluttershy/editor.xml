@@ -347,6 +347,7 @@
         <response id="825" opponent="mia_golden_sun" opponentId="1" />
         <response id="826" opponent="mia_golden_sun" opponentId="114" />
         <response id="828" opponent="toph" opponentId="430" />
+        <response id="838" opponent="nagisa" opponentId="1254" />
     </responses>
     <notes>
         <note id="412">I intentionally made Fluttershy ask Oz a question that Fischl herself could reply to. To further solidify her unintentional ignoring of Fischl over Oz.</note>
@@ -593,19 +594,23 @@
         <label id="807" label="" color="1" folder="" sort="0" />
         <label id="811" label="" color="1" folder="" sort="0" />
         <label id="812" label="" color="3" folder="" sort="0" />
-        <label id="832" label="" color="1" folder="" sort="0" />
+        <label id="843" label="" color="1" folder="" sort="0" />
         <label id="814" label="" folder="Nagisa to left" sort="5" />
         <label id="815" label="" folder="Nagisa to right" sort="4" />
         <label id="816" label="" folder="Nagisa to right" sort="15" />
-        <label id="833" label="" color="1" folder="" sort="0" />
         <label id="834" label="" color="3" folder="" sort="0" />
-        <label id="827" label="" color="1" folder="" sort="0" />
-        <label id="831" label="" color="1" folder="" sort="0" />
+        <label id="841" label="" color="3" folder="" sort="0" />
+        <label id="836" label="" color="1" folder="Nagisa to right" sort="25" />
+        <label id="837" label="" color="1" folder="Nagisa to left" sort="20" />
+        <label id="838" label="" color="1" folder="Nagisa to left" sort="5" />
+        <label id="839" label="" color="1" folder="Nagisa to left" sort="6" />
+        <label id="840" label="" color="3" folder="" sort="0" />
+        <label id="842" label="" color="3" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>Fluttershy_</prefix>
     </prefixes>
-    <nextId>835</nextId>
+    <nextId>886</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="act_confident_self" />
@@ -1088,10 +1093,14 @@
         <marker scope="Public" name="Mi" />
         <marker scope="Public" name="Mia_allies_reply" />
         <marker scope="Public" name="Mia_allies_reply2" />
+        <marker scope="Public" name="Mia_allies_reply3" />
         <marker scope="Public" name="Mia_allies_replyB" />
         <marker scope="Public" name="Mia_allies_replyB2" />
+        <marker scope="Public" name="Mia_allies_replyB3" />
         <marker scope="Public" name="Mia_animals_reply" />
         <marker scope="Public" name="Mia_animals_reply2" />
+        <marker scope="Public" name="Mia_animals_reply3" />
+        <marker scope="Public" name="Mia_fizz_meeting_cont" />
         <marker scope="Public" name="Mia_fizz_meeting_question" />
         <marker scope="Public" name="Mia_fizz_react" />
         <marker scope="Public" name="Mikan_are_you_ok" />
@@ -1150,6 +1159,84 @@
         <marker scope="Public" name="Myriam_stripping_box" />
         <marker scope="Public" name="Myriam_stripping_dress" />
         <marker scope="Public" name="Myriam_uncomfortable_box" />
+        <marker scope="Public" name="Nadeshiko_braStrip" />
+        <marker scope="Public" name="Nadeshiko_campEverfree_reply" />
+        <marker scope="Public" name="Nadeshiko_campEverfree_reply2" />
+        <marker scope="Public" name="Nadeshiko_campEverfree_reply3" />
+        <marker scope="Public" name="Nadeshiko_camping_love" />
+        <marker scope="Public" name="Nadeshiko_camping_love2" />
+        <marker scope="Public" name="Nadeshiko_camping_love3" />
+        <marker scope="Public" name="Nadeshiko_comfyOutfit" />
+        <marker scope="Public" name="Nadeshiko_comfyOutfit2" />
+        <marker scope="Public" name="Nadeshiko_comfyOutfit2A" />
+        <marker scope="Public" name="Nadeshiko_comfyOutfit2B" />
+        <marker scope="Public" name="Nadeshiko_comfyOutfit2Swim" />
+        <marker scope="Public" name="Nadeshiko_comfyOutfit3" />
+        <marker scope="Public" name="Nadeshiko_comfyOutfit3A" />
+        <marker scope="Public" name="Nadeshiko_comfyOutfit3B" />
+        <marker scope="Public" name="Nadeshiko_comfyOutfit3Swim" />
+        <marker scope="Public" name="Nadeshiko_DuelForfeitSetup_reply" />
+        <marker scope="Public" name="Nadeshiko_DuelForfeitStart_reply" />
+        <marker scope="Public" name="Nadeshiko_friends_cont" />
+        <marker scope="Public" name="Nadeshiko_friends_end" />
+        <marker scope="Public" name="Nadeshiko_friends_question" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_reply" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_reply2" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_reply3" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replyPP" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replyPP2" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replyPP3" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replyRa" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replyRa2" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replyRa3" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replyRD" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replyRD2" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replyRD3" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replySciTW" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replySciTW2" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replySciTW3" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replyTW" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replyTW2" />
+        <marker scope="Public" name="Nadeshiko_friendsPowers_replyTW3" />
+        <marker scope="Public" name="Nadeshiko_hotClothes" />
+        <marker scope="Public" name="Nadeshiko_hotClothes2" />
+        <marker scope="Public" name="Nadeshiko_hotClothes3" />
+        <marker scope="Public" name="Nadeshiko_niceLegs" />
+        <marker scope="Public" name="Nadeshiko_niceLegs_cont" />
+        <marker scope="Public" name="Nadeshiko_niceLegs_end" />
+        <marker scope="Public" name="Nadeshiko_NoPresentFriends" />
+        <marker scope="Public" name="Nadeshiko_NoPresentFriends2" />
+        <marker scope="Public" name="Nadeshiko_NoPresentFriends2B" />
+        <marker scope="Public" name="Nadeshiko_NoPresentFriends3" />
+        <marker scope="Public" name="Nadeshiko_NoPresentFriends3B" />
+        <marker scope="Public" name="Nadeshiko_NoPresentFriendsB" />
+        <marker scope="Public" name="Nadeshiko_pendant_reply" />
+        <marker scope="Public" name="Nadeshiko_pendant_reply2" />
+        <marker scope="Public" name="Nadeshiko_pendant_reply3" />
+        <marker scope="Public" name="Nadeshiko_prettyHair" />
+        <marker scope="Public" name="Nadeshiko_prettyHair2" />
+        <marker scope="Public" name="Nadeshiko_prettyHair3" />
+        <marker scope="Public" name="Nadeshiko_relaxingCamping_cont" />
+        <marker scope="Public" name="Nadeshiko_relaxingCamping_end" />
+        <marker scope="Public" name="Nadeshiko_relaxingCamping_question" />
+        <marker scope="Public" name="Nadeshiko_selfBra_reply" />
+        <marker scope="Public" name="Nadeshiko_selfBra_reply2" />
+        <marker scope="Public" name="Nadeshiko_selfBra_reply3" />
+        <marker scope="Public" name="Nadeshiko_SelfButt" />
+        <marker scope="Public" name="Nadeshiko_SelfGorgeous_reply" />
+        <marker scope="Public" name="Nadeshiko_SelfGorgeous_reply2" />
+        <marker scope="Public" name="Nadeshiko_SelfGorgeous_reply3" />
+        <marker scope="Public" name="Nadeshiko_SelfMustForfeit_reply" />
+        <marker scope="Public" name="Nadeshiko_SelfPanties_reply" />
+        <marker scope="Public" name="Nadeshiko_SelfPanties_reply2" />
+        <marker scope="Public" name="Nadeshiko_SelfPanties_reply3" />
+        <marker scope="Public" name="Nadeshiko_SelfStartForfeit_reply" />
+        <marker scope="Public" name="Nadeshiko_SelfWetsuit_reply" />
+        <marker scope="Public" name="Nadeshiko_SelfWetsuit_reply2" />
+        <marker scope="Public" name="Nadeshiko_SelfWetsuit_reply3" />
+        <marker scope="Public" name="Nadeshiko_visited_places" />
+        <marker scope="Public" name="Nadeshiko_visited_places2" />
+        <marker scope="Public" name="Nadeshiko_visited_places3" />
         <marker scope="Public" name="Nagatoro_favorite_animal_reply" />
         <marker scope="Public" name="Nagatoro_favorite_animal_reply2" />
         <marker scope="Public" name="Nagatoro_favorite_animal_reply3" />
@@ -1247,8 +1334,12 @@
         <marker scope="Public" name="nagisa_strength_reply" />
         <marker scope="Public" name="nagisa_strip_hard_for_anyone" />
         <marker scope="Public" name="nagisa_strip_not_the_only_one" />
+        <marker scope="Public" name="Nagisa_swimHere_replyA" />
+        <marker scope="Public" name="Nagisa_swimHere_replyB" />
+        <marker scope="Public" name="nagisa_swimsuit_not_hot_reply" />
         <marker scope="Public" name="nagisa_take_off_bra_now" />
         <marker scope="Public" name="nagisa_take_this_off_slowly" />
+        <marker scope="Public" name="nagisa_takeOffSwimsuit_myself" />
         <marker scope="Public" name="nagisa_this_is_the_end_now" />
         <marker scope="Public" name="nagisa_till_the_very_end" />
         <marker scope="Public" name="nagisa_uncommon_underwear_sight" />
