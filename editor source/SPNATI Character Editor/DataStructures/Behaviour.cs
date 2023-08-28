@@ -1,4 +1,5 @@
 using Desktop.DataStructures;
+using SPNATI_Character_Editor.DataStructures;
 using SPNATI_Character_Editor.IO;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,10 @@ namespace SPNATI_Character_Editor
 		[XmlNewLine(XmlNewLinePosition.After)]
 		[XmlElement("stage")]
 		public List<Stage> Stages = new List<Stage>();
+
+		[XmlNewLine(XmlNewLinePosition.After)]
+		[XmlElement("settings")]
+		public List<CharacterSettingsGroup> CharacterSettingsGroups = new List<CharacterSettingsGroup>();
 
 		[XmlNewLine(XmlNewLinePosition.After)]
 		[XmlElement("trigger")]

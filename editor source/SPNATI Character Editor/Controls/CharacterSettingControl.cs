@@ -32,10 +32,12 @@ namespace SPNATI_Character_Editor.Controls
 		public void Clear()
 		{
 			tableCharacterSetting.Data = null;
+			txtDescription.Text = "";
+			txtValue.Text = "";
 			chkDefault.Checked = false;
 		}
 
-		public void SetCharacterSetting(CharacterSetting workingCS)
+		public void SetGroup(CharacterSettingsGroup workingGroup)
 		{
 			if (_selectedGroup != null)
 			{
@@ -46,7 +48,7 @@ namespace SPNATI_Character_Editor.Controls
 					tabsCharacterSettings.TabPages.RemoveAt(i);
 				}
 			}
-			_selectedCharacterSetting = workingCS;
+			_selectedGroup = workingGroup;
 			if (_selectedGroup != null)
 			{
 				for (int i = 0; i < _selectedGroup.CharacterSettings.Count - 1; i++)
@@ -62,6 +64,8 @@ namespace SPNATI_Character_Editor.Controls
 		private void SetCharacterSetting()
 		{
 			chkDefault.Checked = _selectedCharacterSetting.Default;
+			txtDescription.Text = _selectedCharacterSetting.Name;
+			txtValue.Text = _selectedCharacterSetting.Value;
 			PopulateCSTable();
 		}
 
@@ -92,6 +96,7 @@ namespace SPNATI_Character_Editor.Controls
 			if (_selectedCharacterSetting == null) { return; }
 			_character.IsDirty = true;
 			_selectedCharacterSetting.Value = txtValue.Text;
+			_selectedCharacterSetting.Name = txtDescription.Text;
 			_selectedCharacterSetting.Default = chkDefault.Checked;
 			tableCharacterSetting.Save();
 		}

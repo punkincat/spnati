@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 
 namespace SPNATI_Character_Editor.DataStructures
 {
-	public class CharacterSettingsGroup : ICloneable
+	public class CharacterSettingsGroup : ICloneable, IComparable<CharacterSettingsGroup>
 	{
 		[Text(DisplayName = "ID", GroupOrder = 0)]
 		[XmlAttribute("id")]
@@ -33,6 +33,10 @@ namespace SPNATI_Character_Editor.DataStructures
 			}
 			return group;
 		}
+		public int CompareTo(CharacterSettingsGroup other)
+		{
+			return Id.CompareTo(other.Id);
+		}
 
 		public override string ToString()
 		{
@@ -48,8 +52,7 @@ namespace SPNATI_Character_Editor.DataStructures
 		[XmlAttribute("default")]
 		public bool Default;
 
-		//[JsonProperty("lines")]
-		//[XmlOrder(410)]
+		[Expression(DisplayName = "Variable Test (+)", GroupName = "Conditions", GroupOrder = 1, Description = "Tests the value of a variable. Multiple can be added")]
 		[XmlElement("test")]
 		public List<ExpressionTest> Tests = new List<ExpressionTest>();
 

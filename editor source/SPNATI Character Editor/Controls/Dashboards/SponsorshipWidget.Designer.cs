@@ -231,13 +231,13 @@
             // barCollectibles
             // 
             this.barCollectibles.CapacityMode = true;
-            this.barCollectibles.Caption = "Allowed Coll.";
+            this.barCollectibles.Caption = "Allowed Collectibles";
             this.barCollectibles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.barCollectibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.barCollectibles.HighlightOverCapacity = true;
             this.barCollectibles.InvertCapacityColors = false;
             this.barCollectibles.Location = new System.Drawing.Point(120, 153);
-            this.barCollectibles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barCollectibles.Margin = new System.Windows.Forms.Padding(2);
             this.barCollectibles.Maximum = new decimal(new int[] {
             100,
             0,
@@ -262,7 +262,7 @@
             // barSettings
             // 
             this.barSettings.CapacityMode = true;
-            this.barSettings.Caption = "Allowed Sett.";
+            this.barSettings.Caption = "Allowed Settings";
             this.barSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.barSettings.HighlightOverCapacity = true;
             this.barSettings.InvertCapacityColors = false;
