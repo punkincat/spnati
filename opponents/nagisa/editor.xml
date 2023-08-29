@@ -4,7 +4,7 @@
     <height>5'1"</height>
     <age>18</age>
     <pronunciation>Na-gi-sa</pronunciation>
-    <othernotes>Banter Wizard key:&lt;br&gt;&lt;br&gt;green = Nagisa replied&lt;br&gt;blue = a response to Nagisa that makes sense without further reply</othernotes>
+    <othernotes>Nagisa is a Japanese schoolgirl repeating her final year of high school due to the absence caused by her weak constitution. Her former friends all graduated the year prior, and she has difficulty making new friends due to her shy nature. However, her sweet, bubbly, and sometimes-naive personality endears her to people she gets closer to.&lt;br&gt;&lt;br&gt;She adores the Big Dango Family, a fictional brand mascot with its own theme song. As an only child who loves her family dearly, she is envious that they are a family of 100. She is eager to tell people about the Big Dango Family, and she insists that they're well known nationwide.&lt;br&gt;&lt;br&gt;Nagisa has an interest in acting and wishes to restart her school's drama club, which currently has no members. &lt;br&gt;&lt;br&gt;&lt;br&gt;Banter Wizard key:&lt;br&gt;green = Nagisa replied&lt;br&gt;blue = a response to Nagisa that makes sense without further reply</othernotes>
     <noteworthy>
         <case name="No butt scar" id="54" priority="Prompt" min="9" max="9">
             <description>Nagisa doesn't know if she has a scar on her butt. (She doesn't.)</description>
@@ -357,6 +357,8 @@
         <response id="1337" opponent="fluttershy" opponentId="837" />
         <response id="1338" opponent="fluttershy" opponentId="838" />
         <response id="1339" opponent="fluttershy" opponentId="839" />
+        <response id="1356" opponent="sanako" opponentId="21" />
+        <response id="1357" opponent="meia" opponentId="5" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1656,13 +1658,27 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1344" label="" folder="Estelle to left" sort="0" />
         <label id="1345" label="" folder="Estelle to left" sort="0" />
         <label id="1346" label="" folder="Estelle to left" sort="0" />
+        <label id="1347" label="" folder="Estelle to left" sort="0" />
+        <label id="1348" label="" folder="Estelle to left" sort="0" />
+        <label id="1349" label="" folder="Estelle to left" sort="0" />
+        <label id="1350" label="" folder="Estelle to left" sort="0" />
+        <label id="1351" label="" folder="Estelle to left" sort="0" />
+        <label id="1352" label="" folder="Estelle to left" sort="0" />
+        <label id="1353" label="" folder="Estelle to left" sort="0" />
+        <label id="1354" label="" folder="Estelle to left" sort="0" />
+        <label id="1355" label="" folder="Estelle to left" sort="0" />
+        <label id="1356" label="" folder="Sanako to left" sort="0" />
+        <label id="1357" label="" folder="Meia to left" sort="0" />
+        <label id="1358" label="" folder="Meia to left" sort="0" />
+        <label id="1359" label="" folder="Meia to left" sort="0" />
+        <label id="1360" label="" folder="Meia to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1346</nextId>
+    <nextId>1360</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="hall_club_meetings" />
@@ -1993,6 +2009,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_estelle_en_e1" />
         <marker scope="Public" name="nagisa_estelle_en_e2" />
         <marker scope="Public" name="nagisa_estelle_en_e3_known_hand" />
+        <marker scope="Public" name="nagisa_estelle_en_e3_known_in" />
+        <marker scope="Public" name="nagisa_estelle_en_e3_known_out" />
+        <marker scope="Public" name="nagisa_estelle_en_e3_unknown" />
         <marker scope="Public" name="nagisa_estelle_en_e3_unknown_hand" />
         <marker scope="Public" name="nagisa_estelle_en_e4_default" />
         <marker scope="Public" name="nagisa_estelle_en_e4_hat" />
@@ -2002,9 +2021,14 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_estelle_en_e5_hat" />
         <marker scope="Public" name="nagisa_estelle_en_e5_vday" />
         <marker scope="Public" name="nagisa_estelle_en_e5_witch" />
+        <marker scope="Public" name="nagisa_estelle_en_e6_default" />
         <marker scope="Public" name="nagisa_estelle_en_e6_default_hand" />
+        <marker scope="Public" name="nagisa_estelle_en_e6_hat" />
+        <marker scope="Public" name="nagisa_estelle_en_e6_vday" />
+        <marker scope="Public" name="nagisa_estelle_en_e6_witch" />
         <marker scope="Public" name="nagisa_estelle_en_e7" />
         <marker scope="Public" name="nagisa_estelle_en_e8" />
+        <marker scope="Public" name="nagisa_estelle_en_e9" />
         <marker scope="Public" name="nagisa_estelle_en_n1" />
         <marker scope="Public" name="nagisa_estelle_en_n10" />
         <marker scope="Public" name="nagisa_estelle_en_n11" />
@@ -2789,6 +2813,10 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_lookout" />
         <marker scope="Public" name="nagisa_meia_lots_of_men" />
         <marker scope="Public" name="nagisa_meia_meeting" />
+        <marker scope="Public" name="nagisa_meia_men_info_1" />
+        <marker scope="Public" name="nagisa_meia_men_info_2" />
+        <marker scope="Public" name="nagisa_meia_men_info_3" />
+        <marker scope="Public" name="nagisa_meia_men_info_4" />
         <marker scope="Public" name="nagisa_meia_missed_out" />
         <marker scope="Public" name="nagisa_meia_mixed_bathing" />
         <marker scope="Public" name="nagisa_meia_moon_landing" />
@@ -3151,6 +3179,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_sanako_drama_club" />
         <marker scope="Public" name="nagisa_sanako_familiar" />
         <marker scope="Public" name="nagisa_sanako_mom" />
+        <marker scope="Public" name="nagisa_sanako_mom_had_to_go_out" />
         <marker scope="Public" name="nagisa_sanako_muusic_appreciation_class" />
         <marker scope="Public" name="nagisa_sanako_panty_flash" />
         <marker scope="Public" name="nagisa_sanako_present">Nagisa recongizes Sanako's uniform as being from the same school.</marker>
