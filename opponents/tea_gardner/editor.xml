@@ -33,9 +33,6 @@
         <case name="See Persona" id="162" priority="Noteworthy" min="2" max="2">
             <description>Tea asks a Persona character if they understand the shadow world.</description>
         </case>
-        <case name="Other Games" id="206" priority="Prompt" min="0" max="0">
-            <description>Duel Monsters isn't the only game Tea played.</description>
-        </case>
         <case name="Trap Card Bluff" id="291" priority="Noteworthy" min="0" max="2">
             <description>Tea will try a bluff to throw the other players off. Problem is she's still wired to Duel Monsters terms.</description>
         </case>
@@ -372,12 +369,14 @@
         <label id="331" label="" folder="Tables" sort="0" />
         <label id="332" label="" folder="Filters" sort="0" />
         <label id="333" label="" folder="Filters" sort="0" />
+        <label id="334" label="" color="6" folder="Responses" sort="0" />
     </labels>
     <prefixes>
         <prefix>card</prefix>
     </prefixes>
-    <nextId>333</nextId>
+    <nextId>334</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="blue_disk" />
         <marker scope="Public" name="chiakiVideoGames" />
         <marker scope="Public" name="kyoko_reply6a" />
@@ -595,6 +594,7 @@
         <marker scope="Public" name="tea_nagatoro_taunt" />
         <marker scope="Public" name="tea_nagisa_replt1" />
         <marker scope="Public" name="tea_nagisa_reply1" />
+        <marker scope="Public" name="tea_nami_reply1" />
         <marker scope="Public" name="tea_ojamas" />
         <marker scope="Public" name="tea_oneliner_detective" />
         <marker scope="Public" name="tea_othergames" />
@@ -654,6 +654,7 @@
         <marker scope="Public" name="tea_spot_ua_alt" />
         <marker scope="Public" name="tea_spot_villain" />
         <marker scope="Public" name="tea_start_mast" />
+        <marker scope="Public" name="tea_start_playerchest" />
         <marker scope="Public" name="tea_stream_reply1" />
         <marker scope="Public" name="tea_strip_mai" />
         <marker scope="Public" name="tea_strip_vision" />
