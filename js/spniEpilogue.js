@@ -592,7 +592,6 @@ function parseEpilogue(player, rawEpilogue) {
                     overlayColor: $scene.attr("overlay"),
                     overlayAlpha: $scene.attr("overlay-alpha"),
                     directives: [],
-                    marker: $scene.attr("marker")
                 }
                 scenes.push(scene);
                 scene.x = toSceneX($scene.attr("x"), scene);
