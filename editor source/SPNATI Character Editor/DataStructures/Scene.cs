@@ -2,7 +2,6 @@
 using Desktop.CommonControls;
 using Desktop.CommonControls.PropertyControls;
 using SPNATI_Character_Editor.Controls;
-
 using SPNATI_Character_Editor.EditControls;
 using SPNATI_Character_Editor.EpilogueEditor;
 using System;
