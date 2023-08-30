@@ -564,7 +564,9 @@ function parseEpilogue(player, rawEpilogue) {
         var scene;
         $epilogue.children("scene").each(function (index, rawScene) {
             var $scene = $(rawScene);
-            if ($scene.attr("transition")) {
+            if ($scene.attr("marker") && !checkMarker($scene.attr("marker"), player)){
+            }
+            else if ($scene.attr("transition")) {
                 if (scenes.length === 0) {
                     //add a blank scene to transition from
                     scene = {
@@ -590,6 +592,7 @@ function parseEpilogue(player, rawEpilogue) {
                     overlayColor: $scene.attr("overlay"),
                     overlayAlpha: $scene.attr("overlay-alpha"),
                     directives: [],
+                    marker: $scene.attr("marker")
                 }
                 scenes.push(scene);
                 scene.x = toSceneX($scene.attr("x"), scene);
