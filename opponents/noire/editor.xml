@@ -127,6 +127,8 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <note id="2585">two values of the marker</note>
         <note id="2830">In Neptunia, the Technique stat determines chance to hit.</note>
         <note id="2833">Neptune, Noire, Blanc and Vert made a crossover appearance in Azur Lane. This stage's dialogue can be about Suzuyas from Azur Lane and Kancolle.</note>
+        <note id="2839">Noire doesn't say that she herself doesn't believe that Aqua is a goddess, only that other people may doubt it. Maybe Aqua would be more respected if she were known under a more divine name.</note>
+        <note id="2844">Noire is being a tsundere, but she'll say more positive things about Purple Heart in the next line(s).</note>
     </notes>
     <labels>
         <label id="3" label="" folder="SpecialNames" sort="0" />
@@ -2710,11 +2712,11 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2625" label="" folder="Beginning" sort="0" />
         <label id="2626" label="" folder="Beginning" sort="0" />
         <label id="2627" label="" folder="Tags" sort="0" />
-        <label id="2628" label="" color="4" folder="AquaKS" sort="0" />
-        <label id="2629" label="" color="4" folder="AquaKS" sort="0" />
-        <label id="2630" label="" color="4" folder="AquaKS" sort="0" />
-        <label id="2631" label="" color="4" folder="AquaKS" sort="0" />
-        <label id="2632" label="" color="4" folder="AquaKS" sort="0" />
+        <label id="2628" label="" color="3" folder="AquaKS" sort="0" />
+        <label id="2629" label="" color="3" folder="AquaKS" sort="0" />
+        <label id="2630" label="" color="3" folder="AquaKS" sort="0" />
+        <label id="2631" label="" color="3" folder="AquaKS" sort="0" />
+        <label id="2632" label="" color="3" folder="AquaKS" sort="0" />
         <label id="2633" label="" folder="Throw" sort="0" />
         <label id="2634" label="" folder="Throw" sort="0" />
         <label id="2635" label="" folder="Throw" sort="0" />
@@ -2912,15 +2914,34 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2831" label="" color="4" folder="Revy" sort="0" />
         <label id="2832" label="0" folder="Markers" sort="0" />
         <label id="2833" label="" color="4" folder="Suzuya" sort="0" />
+        <label id="2834" label="" color="3" folder="Nagisa" sort="0" />
+        <label id="2835" label="Nagisa and Kyou, school uniforms" color="3" folder="OpponentsPresent" sort="0" />
+        <label id="2836" label="" folder="Nagisa" sort="0" />
+        <label id="2837" label="" color="4" folder="Nagisa" sort="0" />
+        <label id="2838" label="" folder="~generic" sort="0" />
+        <label id="2839" label="" color="4" folder="" sort="0" />
+        <label id="2840" label="" color="4" folder="" sort="0" />
+        <label id="2841" label="" color="4" folder="" sort="0" />
+        <label id="2842" label="" color="4" folder="" sort="0" />
+        <label id="2843" label="" color="4" folder="AquaKS" sort="0" />
+        <label id="2844" label="" color="4" folder="AquaKS" sort="0" />
+        <label id="2845" label="" color="4" folder="AquaKS" sort="0" />
+        <label id="2846" label="" color="4" folder="AquaKS" sort="0" />
+        <label id="2847" label="" color="3" folder="" sort="0" />
+        <label id="2848" label="" color="3" folder="" sort="0" />
+        <label id="2849" label="" color="3" folder="" sort="0" />
+        <label id="2850" label="" color="3" folder="" sort="0" />
+        <label id="2851" label="" color="3" folder="" sort="0" />
+        <label id="2852" label="" color="3" folder="" sort="0" />
+        <label id="2853" label="" color="3" folder="" sort="0" />
+        <label id="2854" label="" color="3" folder="" sort="0" />
     </labels>
     <posePreviewMarkers>
         <posePreviewMarker>CDAltImg=0</posePreviewMarker>
     </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2833</nextId>
+    <nextId>2854</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_costume1" />
         <marker scope="Public" name="adrien_costume2" />
         <marker scope="Public" name="adrien_fightingevil1" />
@@ -2950,11 +2971,19 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="aqua_kh_expl0" />
         <marker scope="Public" name="aqua_kh_lastation1" />
         <marker scope="Public" name="aqua_kh_notexpl0" />
+        <marker scope="Public" name="aqua_KS_blanc1" />
+        <marker scope="Public" name="aqua_KS_neptune1" />
+        <marker scope="Public" name="aqua_KS_uni1" />
+        <marker scope="Public" name="aqua_KS_vert1" />
         <marker scope="Public" name="aquaKS_idol0" />
         <marker scope="Public" name="aquaKS_idol1" />
+        <marker scope="Public" name="aquaKS_idol2" />
         <marker scope="Public" name="aquaKS_what0" />
         <marker scope="Public" name="aquaKS_what1" />
+        <marker scope="Public" name="aquaKS_what2" />
         <marker scope="Public" name="aquaKS0" />
+        <marker scope="Public" name="aquaKS01" />
+        <marker scope="Public" name="aquaKS01a" />
         <marker scope="Public" name="aquas_kh_ks" />
         <marker scope="Private" name="arc" />
         <marker scope="Private" name="arcChoice" />
@@ -3007,8 +3036,8 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="BoxersPadded" />
         <marker scope="Private" name="CDAltImg" />
         <marker scope="Private" name="CDStripRoute" />
-        <marker scope="Public" name="CGAltImg" />
-        <marker scope="Public" name="CGStripRoute" />
+        <marker scope="Private" name="CGAltImg" />
+        <marker scope="Private" name="CGStripRoute" />
         <marker scope="Public" name="CollectibleBraceletsTakenOff" />
         <marker scope="Public" name="colress_resp_nano" />
         <marker scope="Public" name="colress_resp_nano2" />
@@ -3405,6 +3434,11 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="nagat_intro_collar" />
         <marker scope="Public" name="nagat_intro_demoness" />
         <marker scope="Public" name="nagatoro_keepaneye1" />
+        <marker scope="Public" name="nagisa_costume0_left" />
+        <marker scope="Public" name="nagisa_kyou_intro" />
+        <marker scope="Public" name="nagisa_practice0" />
+        <marker scope="Public" name="nagisa_restart_club" />
+        <marker scope="Public" name="nagisa0_left" />
         <marker scope="Public" name="nami_games1" />
         <marker scope="Public" name="nami_games2a" />
         <marker scope="Public" name="nami_games2b" />
