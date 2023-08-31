@@ -97,6 +97,21 @@
         <response id="473" opponent="meia" opponentId="1187" />
         <response id="474" opponent="meia" opponentId="1189" />
         <response id="475" opponent="meia" opponentId="1190" />
+        <response id="485" opponent="jura" opponentId="1007" />
+        <response id="486" opponent="jura" opponentId="1006" />
+        <response id="488" opponent="aqua_konosuba" opponentId="544" />
+        <response id="489" opponent="aqua_konosuba" opponentId="545" />
+        <response id="490" opponent="aqua_konosuba" opponentId="546" />
+        <response id="493" opponent="aqua_konosuba" opponentId="547" />
+        <response id="494" opponent="aqua_konosuba" opponentId="548" />
+        <response id="0" opponent="yuno_uno" opponentId="775" />
+        <response id="495" opponent="yuno_uno" opponentId="12" />
+        <response id="496" opponent="yuno_uno" opponentId="175" />
+        <response id="497" opponent="sly_cooper" opponentId="1" />
+        <response id="498" opponent="fluttershy" opponentId="181" />
+        <response id="499" opponent="fluttershy" opponentId="843" />
+        <response id="504" opponent="nami" opponentId="1433" />
+        <response id="508" opponent="gloria" opponentId="119" />
     </responses>
     <notes>
         <note id="22">this can go in whatever direction you want; I just find it funny that the two of them are pious and water-themed</note>
@@ -119,6 +134,7 @@
         <note id="424">Went with Mia thinking she's got the hang of it, then immediately misunderstanding again</note>
         <note id="439">chance for steve to confuse/fascinate mia with the idea of food brands and having literally millions of options for food</note>
         <note id="438">can be broad, vague, or specific as you like. I can work with anything. maybe narrowing it down to indiana and hawkis would work well for follow up ideas. the concept of a nation so large it has 50 states, and those states have hundreds of towns each, is mind boggling to Mia. you could even work in some cold war era propoganda lol</note>
+        <note id="491">"but wouldnt you know" in the sense of the continuing sentence "wouldnt you know it, lighting it was key to saving the world from a slow demise anyway"</note>
     </notes>
     <labels>
         <label id="2" label="" folder="Targets" sort="2" />
@@ -254,7 +270,7 @@
         <label id="133" label="" folder="Lore" sort="0" />
         <label id="134" label="" folder="Generic Follow-ups" sort="0" />
         <label id="137" label="" folder="Situations" sort="0" />
-        <label id="136" label="" folder="Situations" sort="19" />
+        <label id="136" label="" color="6" folder="Situations" sort="19" />
         <label id="135" label="" folder="Situations" sort="13" />
         <label id="138" label="thong reveal (1st)" folder="Clothing" sort="2" />
         <label id="139" label="thong reveal (2nd)" folder="Clothing" sort="0" />
@@ -338,7 +354,7 @@
         <label id="218" label="" folder="Targets" sort="20" />
         <label id="219" label="" folder="Conditional" sort="0" />
         <label id="220" label="" folder="Backgrounds" sort="3" />
-        <label id="221" label="" folder="Targets" sort="5" />
+        <label id="221" label="" color="3" folder="Targets" sort="5" />
         <label id="222" label="" folder="Conditional" sort="0" />
         <label id="223" label="" folder="Conditional" sort="2" />
         <label id="224" label="" folder="Filter" sort="10" />
@@ -391,12 +407,12 @@
         <label id="271" label="" folder="Targets" sort="0" />
         <label id="272" label="" folder="Responses" sort="0" />
         <label id="273" label="" folder="Responses" sort="0" />
-        <label id="274" label="" folder="Aqua Konosuba" sort="0" />
-        <label id="275" label="" folder="Aqua Konosuba" sort="0" />
-        <label id="276" label="" folder="Aqua Konosuba" sort="0" />
-        <label id="277" label="" folder="Aqua Konosuba" sort="0" />
-        <label id="278" label="" folder="Aqua Konosuba" sort="0" />
-        <label id="279" label="" folder="Targets" sort="0" />
+        <label id="274" label="" color="3" folder="Aqua Konosuba" sort="0" />
+        <label id="275" label="" color="3" folder="Aqua Konosuba" sort="0" />
+        <label id="276" label="" color="3" folder="Aqua Konosuba" sort="0" />
+        <label id="277" label="" color="3" folder="Aqua Konosuba" sort="0" />
+        <label id="278" label="" color="3" folder="Aqua Konosuba" sort="0" />
+        <label id="279" label="" color="3" folder="Targets" sort="0" />
         <label id="280" label="Rouge present" folder="Treasure Scope" sort="0" />
         <label id="281" label="Rouge NOT present" folder="Treasure Scope" sort="0" />
         <label id="282" label="" folder="Treasure Scope" sort="0" />
@@ -598,12 +614,36 @@
         <label id="480" label="" folder="Targets" sort="0" />
         <label id="481" label="stage 1 'allies'" folder="Targets" sort="0" />
         <label id="483" label="stage 1 'allies' (MLP friends present)" folder="Targets" sort="0" />
+        <label id="484" label="" folder="Targets" sort="0" />
+        <label id="485" label="" folder="Responses" sort="0" />
+        <label id="486" label="" folder="Responses" sort="0" />
+        <label id="487" label="" folder="Targets" sort="0" />
+        <label id="488" label="" folder="Aqua Konosuba" sort="0" />
+        <label id="489" label="" folder="Aqua Konosuba" sort="0" />
+        <label id="492" label="" folder="Targets" sort="0" />
+        <label id="490" label="" folder="Aqua Konosuba" sort="0" />
+        <label id="491" label="" folder="Aqua Konosuba" sort="0" />
+        <label id="493" label="" folder="Aqua Konosuba" sort="0" />
+        <label id="494" label="" folder="Aqua Konosuba" sort="0" />
+        <label id="495" label="" folder="Situations" sort="0" />
+        <label id="496" label="" folder="Situations" sort="0" />
+        <label id="497" label="" folder="Situations" sort="0" />
+        <label id="498" label="" folder="Situations" sort="0" />
+        <label id="499" label="" folder="Responses" sort="0" />
+        <label id="500" label="" folder="Targets" sort="0" />
+        <label id="502" label="" folder="Targets" sort="0" />
+        <label id="503" label="" folder="Tag Filters" sort="0" />
+        <label id="504" label="" folder="Responses" sort="0" />
+        <label id="505" label="" folder="Targets" sort="0" />
+        <label id="506" label="" folder="Targets" sort="0" />
+        <label id="507" label="" folder="Responses" sort="0" />
+        <label id="508" label="" folder="Situations" sort="0" />
     </labels>
     <prefixes>
         <prefix>zz_</prefix>
     </prefixes>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>483</nextId>
+    <nextId>508</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="a_djinni_was_in_my_cape">Fizz djinni situational marker</marker>
@@ -635,9 +675,11 @@
         <marker scope="Public" name="fluttershy_butt1" />
         <marker scope="Public" name="fluttershy_reasonforComing_resp" />
         <marker scope="Public" name="fluttershy_reasonforComing_resp_HOT" />
+        <marker scope="Public" name="fluttershy_snailworries" />
         <marker scope="Public" name="foobar" />
         <marker scope="Public" name="game_tickets">Line mentioning the item 'Game Tickets'</marker>
         <marker scope="Public" name="gameover_haunted_forest">Game is over, background is haunted forest</marker>
+        <marker scope="Public" name="gamestart_morrigan" />
         <marker scope="Public" name="giygas_ply">Using Ply series psynergy against Giygas.</marker>
         <marker scope="Public" name="giygas_wish">Using Wish series psynergy against Giygas.</marker>
         <marker scope="Public" name="gloria_miaGS_fizz1" />
@@ -655,6 +697,7 @@
         <marker scope="Public" name="meia_jura_fashion1" />
         <marker scope="Public" name="meia_jura_hair1" />
         <marker scope="Public" name="meia_jura_worlds1" />
+        <marker scope="Public" name="mia_9s_pod1" />
         <marker scope="Public" name="mia_aquakh_hug1" />
         <marker scope="Public" name="mia_aquakh_hug2" />
         <marker scope="Public" name="mia_aquakh_hug3" />
@@ -667,12 +710,19 @@
         <marker scope="Public" name="mia_aquakh_swimsuit2" />
         <marker scope="Public" name="mia_aquakh_swimsuit3" />
         <marker scope="Public" name="mia_aquaKHSquared1" />
+        <marker scope="Public" name="mia_aquaKS_beachwear_cont" />
         <marker scope="Public" name="mia_aquaKS_beachwearQuestion" />
+        <marker scope="Public" name="mia_aquaKS_Djinn_cont" />
         <marker scope="Public" name="mia_aquaKS_djinnQuestion" />
         <marker scope="Public" name="mia_aquaKS_goddess1" />
         <marker scope="Public" name="mia_aquaKS_goddess2" />
+        <marker scope="Public" name="mia_aquaKS_goddess3" />
+        <marker scope="Public" name="mia_aquaKS_HealerContResp" />
         <marker scope="Public" name="mia_aquaKS_HealerQuestion" />
+        <marker scope="Public" name="mia_aquaKS_MercuryClanCont" />
+        <marker scope="Public" name="mia_aquaKS_MercuryClanContB" />
         <marker scope="Public" name="mia_aquaKS_mercuryClanQuestion" />
+        <marker scope="Public" name="mia_aquaKS_psynergyCont" />
         <marker scope="Public" name="mia_aquaKS_psynergyQuestion" />
         <marker scope="Public" name="mia_aquaSquared1" />
         <marker scope="Public" name="Mia_BarbaraDailyPrayer_Resp">Interaction with Barbara</marker>
@@ -698,16 +748,22 @@
         <marker scope="Public" name="mia_fluttershy_animals1" />
         <marker scope="Public" name="mia_fluttershy_animals2" />
         <marker scope="Public" name="mia_fluttershy_animals3" />
+        <marker scope="Public" name="mia_fluttershy_meeting_cont" />
         <marker scope="Public" name="mia_fluttershy_meeting_question_Resp" />
+        <marker scope="Public" name="Mia_healer_cont" />
         <marker scope="Public" name="mia_joey_question1" />
         <marker scope="Public" name="mia_jura_babiesPrompt">Response to Jura babies prompt</marker>
         <marker scope="Public" name="mia_jura_gs0a" />
         <marker scope="Public" name="mia_jura_gs0b" />
         <marker scope="Public" name="mia_jura_gs1" />
+        <marker scope="Public" name="mia_jura_gs1b" />
+        <marker scope="Public" name="mia_jura_gs2" />
+        <marker scope="Public" name="mia_jura_gs2a" />
         <marker scope="Public" name="mia_jura_hair1" />
         <marker scope="Public" name="mia_jura_hair2" />
         <marker scope="Public" name="mia_jura_worlds1" />
         <marker scope="Public" name="mia_jura_worlds2" />
+        <marker scope="Public" name="mia_jura_worlds3" />
         <marker scope="Public" name="mia_larachel_staff_Tolbi" />
         <marker scope="Public" name="mia_link_fidget1" />
         <marker scope="Public" name="mia_mariO_Image1" />
@@ -725,7 +781,10 @@
         <marker scope="Public" name="mia_nagatoro_self0a" />
         <marker scope="Public" name="mia_nagatoro_self0b" />
         <marker scope="Public" name="mia_nami_flatworld1" />
+        <marker scope="Public" name="mia_nami_flatworld2" />
         <marker scope="Public" name="mia_nami_s0a" />
+        <marker scope="Public" name="mia_nami_s0b" />
+        <marker scope="Public" name="mia_nami_self0a" />
         <marker scope="Public" name="mia_queenie_mustmast" />
         <marker scope="Public" name="mia_queenie_startmast" />
         <marker scope="Public" name="mia_queenie_strip0a" />
@@ -749,8 +808,10 @@
         <marker scope="Public" name="mia_samus_armor2" />
         <marker scope="Public" name="mia_samus_armor3" />
         <marker scope="Public" name="mia_shami_magic1" />
+        <marker scope="Public" name="mia_shami_magic2" />
         <marker scope="Public" name="mia_shamiko_horns1" />
         <marker scope="Public" name="mia_shamiko_magic1" />
+        <marker scope="Public" name="mia_sly_strip2a" />
         <marker scope="Public" name="mia_sofia_self0a" />
         <marker scope="Public" name="mia_sofia_speech1" />
         <marker scope="Public" name="mia_sofia_speech2" />
@@ -842,6 +903,7 @@
         <marker scope="Public" name="shami_postTransform" />
         <marker scope="Public" name="shami_transform" />
         <marker scope="Public" name="shamiNickname" />
+        <marker scope="Public" name="sly_cantswim" />
         <marker scope="Public" name="spiderwomanmask" />
         <marker scope="Public" name="steve_SongPrompt" />
         <marker scope="Public" name="stocking_noEatFizz" />
@@ -861,6 +923,9 @@
         <marker scope="Public" name="turandot_mercury_retrograde_resp" />
         <marker scope="Public" name="undead_sanctum" />
         <marker scope="Public" name="wasp_shrunk" />
+        <marker scope="Public" name="yuno_erection" />
+        <marker scope="Public" name="yuno_injuryA" />
+        <marker scope="Public" name="yuno_injuryB" />
         <marker scope="Public" name="yuno_yuneko_selfstartmast" />
     </markers>
     <recipes>
