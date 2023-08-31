@@ -341,6 +341,7 @@ namespace SPNATI_Character_Editor
 			Nicknames = new ObservableCollection<Nickname>();
 			Behavior = new Behaviour();
 			Poses = new List<Pose>();
+			PoseSets = new List<PoseSet>();
 			Wardrobe = new List<Clothing>();
 			Collectibles = new CollectibleData();
 			PoseLibrary = new PoseMap(this);
@@ -367,6 +368,7 @@ namespace SPNATI_Character_Editor
 			StartingLines = new List<DialogueLine>();
 			Endings = new List<Epilogue>();
 			Poses = new List<Pose>();
+			PoseSets = new List<PoseSet>();
 			Version = "";
 			Nicknames = new ObservableCollection<Nickname>();
 			Collectibles = new CollectibleData();
