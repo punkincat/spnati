@@ -91,6 +91,8 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			InitializeComponent();
 
 			AllowZoom = true;
+			_ignoreMarkers = false;
+			tsFilter.ToolTipText = "Toggle Pose Preview Markers off";
 			canvas.MouseWheel += Canvas_MouseWheel;
 			canvas.KeyDown += Canvas_KeyDown;
 			UpdateSceneTransform();
@@ -1000,10 +1002,12 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			_ignoreMarkers = tsFilter.Checked;
 			if (_ignoreMarkers)
 			{
+				tsFilter.ToolTipText = "Toggle Pose Preview Markers on";
 				_markers = new List<string>();
 			}
 			else
 			{
+				tsFilter.ToolTipText = "Toggle Pose Preview Markers off";
 				_markers = CharacterDatabase.GetEditorData(_character).PosePreviewMarkers;
 			}
 			canvas.Invalidate();
