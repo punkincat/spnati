@@ -466,16 +466,11 @@ namespace SPNATI_Character_Editor
 				}
 			}
 
-			if (!string.IsNullOrEmpty(segment.Marker))
+			finalDirectives.ForEach(d =>
 			{
-				finalDirectives.ForEach(d =>
-				{
-					if (string.IsNullOrEmpty(d.Marker))
-					{
-						d.Marker = segment.Marker;
-					}
-				});
-			}
+				d.Marker = segment.Marker;
+			});
+
 
 			return finalDirectives;
 		}

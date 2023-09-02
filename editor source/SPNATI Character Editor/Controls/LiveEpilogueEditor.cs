@@ -107,7 +107,7 @@ namespace SPNATI_Character_Editor.Controls
 			return obj.FilterRecord(record.Key);
 		}
 
-		private void Canvas_CanvasClicked(object sender, System.EventArgs e)
+		private void Canvas_CanvasClicked(object sender, EventArgs e)
 		{
 			timeline.ResumePlayback();
 		}
@@ -328,7 +328,7 @@ namespace SPNATI_Character_Editor.Controls
 			}
 		}
 
-		private void _labelData_LabelChanged(object sender, System.EventArgs e)
+		private void _labelData_LabelChanged(object sender, EventArgs e)
 		{
 			ILabel labelData = sender as ILabel;
 			if (labelData != null)
@@ -377,7 +377,7 @@ namespace SPNATI_Character_Editor.Controls
 			SetScene(scene);
 		}
 
-		private void lstSegments_SelectedIndexChanged(object sender, System.EventArgs e)
+		private void lstSegments_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			SetSegment(lstSegments.SelectedIndex);
 		}
@@ -605,7 +605,7 @@ namespace SPNATI_Character_Editor.Controls
 			}
 		}
 
-		private void addSpriteToolStripMenuItem_Click(object sender, System.EventArgs e)
+		private void addSpriteToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			if (_segment == null) { return; }
 			openFileDialog1.UseAbsolutePaths = true;
@@ -626,21 +626,21 @@ namespace SPNATI_Character_Editor.Controls
 			}
 		}
 
-		private void addSpeechBubbleToolStripMenuItem_Click(object sender, System.EventArgs e)
+		private void addSpeechBubbleToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			if (_segment == null) { return; }
 			LiveBubble bubble = _segment.AddBubble(_time);
 			timeline.SelectObject(timeline.CreateWidget(bubble));
 		}
 
-		private void addEmitterToolStripMenuItem_Click(object sender, System.EventArgs e)
+		private void addEmitterToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			if (_segment == null) { return; }
 			LiveEmitter emitter = _segment.AddEmitter(_time);
 			timeline.SelectObject(timeline.CreateWidget(emitter));
 		}
 
-		private void tmrRealtime_Tick(object sender, System.EventArgs e)
+		private void tmrRealtime_Tick(object sender, EventArgs e)
 		{
 			DateTime now = DateTime.Now;
 			float elapsedSec = (float)(now - _lastTick).TotalSeconds;
