@@ -347,7 +347,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			return null;
 		}
 
-		public override LiveObject GetObjectAtPoint(int x, int y, Matrix sceneTransform, bool ignoreMarkers, List<string> markers)
+		public override LiveObject GetObjectAtPoint(int x, int y, Matrix sceneTransform, List<string> markers)
 		{
 			return null;
 		}

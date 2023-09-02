@@ -18,6 +18,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		
 		private bool _recording;
 		public bool Playing { get; private set; }
+		private Character _character;
 		private LiveData _data;
 		private ICanvasViewport _viewport;
 		private List<string> _markers = new List<string>();
@@ -139,7 +140,8 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		public void SetData(ISkin character, LiveData data)
 		{
 			CleanUp();
-			_markers = CharacterDatabase.GetEditorData(character.Character).PosePreviewMarkers;
+			_character = character.Character;
+			_markers = _ignoreMarkers? new List<string>() : CharacterDatabase.GetEditorData(character.Character).PosePreviewMarkers;
 			_data = data;
 			if (_data != null)
 			{
@@ -313,13 +315,12 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			g.DrawLine(_penBoundary, canvas.Width / 2 + _canvasOffset.X, 0, canvas.Width / 2 + _canvasOffset.X, canvas.Height);
 
 			//draw the data
-			List<string> markers = _ignoreMarkers ? null : _markers;
 			LiveObject preview = _selectedPreview;
 			if (preview != null && (!preview.IsVisible || (!_recording && Playing)))
 			{
 				preview = null;
 			}
-			_data.Draw(g, SceneTransform, markers, _selectionSource, preview, Playing);
+			_data.Draw(g, SceneTransform, _markers, _selectionSource, preview, Playing);
 
 			//selection and gizmos
 			if (_selectionSource != null && _selectedPreview != null && _selectedPreview.IsVisible && !_selectionSource.Hidden && (_recording || !Playing))
@@ -404,7 +405,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 					//object
 					if (obj == null)
 					{
-						obj = _data.GetObjectAtPoint(e.X, e.Y, SceneTransform, _ignoreMarkers, _markers);
+						obj = _data.GetObjectAtPoint(e.X, e.Y, SceneTransform, _markers);
 					}
 
 					if (obj != null && _selectedPreview != obj)
@@ -444,12 +445,12 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		/// <param name="worldPt"></param>
 		private HoverContext GetContext(PointF screenPt)
 		{
-			LiveObject objAtPoint = _data.GetObjectAtPoint((int)screenPt.X, (int)screenPt.Y, SceneTransform, _ignoreMarkers, _markers);
+			LiveObject objAtPoint = _data.GetObjectAtPoint((int)screenPt.X, (int)screenPt.Y, SceneTransform, _markers);
 			if (_selectedPreview != null)
 			{
 				List<LiveObject> selection = new List<LiveObject>();
 				selection.Add(_selectedPreview);
-				LiveObject selected = _data.GetObjectAtPoint((int)screenPt.X, (int)screenPt.Y, SceneTransform, _ignoreMarkers, _markers);
+				LiveObject selected = _data.GetObjectAtPoint((int)screenPt.X, (int)screenPt.Y, SceneTransform, _markers);
 				if (selected != null)
 				{
 					objAtPoint = selected;
@@ -997,7 +998,16 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		private void tsFilter_Click(object sender, EventArgs e)
 		{
 			_ignoreMarkers = tsFilter.Checked;
+			if (_ignoreMarkers)
+			{
+				_markers = new List<string>();
+			}
+			else
+			{
+				_markers = CharacterDatabase.GetEditorData(_character).PosePreviewMarkers;
+			}
 			canvas.Invalidate();
+			canvas.Update();
 		}
 
 		private void tsBackColor_Click(object sender, EventArgs e)

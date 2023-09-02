@@ -128,9 +128,9 @@ namespace SPNATI_Character_Editor
 			Match match = Regex.Match(marker, @"^([-\w\.]+)(\*?)(\s*(\<\=|\>\=|\<|\>|\=\=|!\=|\=|!\@|\@)?\s*([-\w]+|~[-\w]+~))?");
 			op = ToOperator(match.Groups[4].ToString());
 			value = match.Groups[5]?.ToString();
-			if (value == "")
+			if (string.IsNullOrEmpty(value))
 			{
-				value = null;
+				value = "1";
 			}
 			perTarget = !string.IsNullOrEmpty(match.Groups[2]?.ToString());
 			return match.Groups[1].ToString().Replace("zzzzzz1njnr3icnx", "!");
