@@ -140,8 +140,6 @@
             this.tsFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsFilter.Name = "tsFilter";
             this.tsFilter.Size = new System.Drawing.Size(23, 22);
-            this.tsFilter.Text = "Toggle marker conditionals";
-            this.tsFilter.ToolTipText = "Toggle marker conditionals";
             this.tsFilter.Click += new System.EventHandler(this.tsFilter_Click);
             // 
             // toolStripSeparator2
