@@ -381,6 +381,10 @@
         <response id="1391" opponent="beatrix" opponentId="58" />
         <response id="1392" opponent="chell_wheatley" opponentId="13" />
         <response id="1393" opponent="chell_wheatley" opponentId="62" />
+        <response id="1394" opponent="aoba" opponentId="197" />
+        <response id="1395" opponent="anna" opponentId="33" />
+        <response id="1396" opponent="aoba" opponentId="154" />
+        <response id="1397" opponent="aaravi" opponentId="88" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1725,17 +1729,31 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1391" label="" folder="Beatrix to left" sort="0" />
         <label id="1392" label="" folder="Chell to left" sort="0" />
         <label id="1393" label="" folder="Chell to left" sort="0" />
+        <label id="1394" label="" folder="Aoba to left" sort="0" />
+        <label id="1395" label="" folder="Anna to left" sort="0" />
+        <label id="1396" label="" folder="Aoba to left" sort="0" />
+        <label id="1397" label="" folder="Aaravi to left" sort="0" />
+        <label id="1398" label="" folder="Aaravi to left" sort="0" />
+        <label id="1399" label="" folder="Reimu to left" sort="0" />
+        <label id="1400" label="" folder="Reimu to left" sort="0" />
+        <label id="1401" label="" folder="Reimu to left" sort="0" />
+        <label id="1377" label="" folder="Reimu to left" sort="0" />
+        <label id="1378" label="" folder="Reimu to left" sort="0" />
+        <label id="1402" label="" folder="Reimu to left" sort="0" />
+        <label id="1403" label="" folder="Reimu to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1393</nextId>
+    <nextId>1403</nextId>
     <markers>
         <marker scope="Public" name="hall_club_meetings" />
         <marker scope="Public" name="kyou_nagisa_staying_strong" />
         <marker scope="Public" name="nagisa_9s_are_you_lost" />
+        <marker scope="Public" name="nagisa_aaravi_side_quest" />
+        <marker scope="Public" name="nagisa_aaravi_side_quest_2" />
         <marker scope="Public" name="nagisa_ae86_look_out" />
         <marker scope="Public" name="nagisa_aella_hp" />
         <marker scope="Public" name="nagisa_aella_looks_strong" />
@@ -1802,12 +1820,14 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_angie_careful_with_ribbon" />
         <marker scope="Public" name="nagisa_angie_nice_uniform" />
         <marker scope="Public" name="nagisa_angie_rich" />
+        <marker scope="Public" name="nagisa_anna_annazon" />
         <marker scope="Public" name="nagisa_anna_best_deal" />
         <marker scope="Public" name="nagisa_anna_craziest_thing_done_for_money" />
         <marker scope="Public" name="nagisa_anna_money_word" />
         <marker scope="Public" name="nagisa_anna_no_siblings" />
         <marker scope="Public" name="nagisa_anna_pinch_pennies" />
         <marker scope="Public" name="nagisa_anna_spending_stimulus_money" />
+        <marker scope="Public" name="nagisa_aoba_an_a21" />
         <marker scope="Public" name="nagisa_aoba_health" />
         <marker scope="Public" name="nagisa_aoba_kitty_cat" />
         <marker scope="Public" name="nagisa_aoba_monsters" />
@@ -1817,6 +1837,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_aoba_playstation_xbox" />
         <marker scope="Public" name="nagisa_aoba_qa_day" />
         <marker scope="Public" name="nagisa_aoba_qa_food" />
+        <marker scope="Public" name="nagisa_aoba_qa_weather" />
         <marker scope="Public" name="nagisa_aoba_surpassing" />
         <marker scope="Public" name="nagisa_april_fools" />
         <marker scope="Public" name="nagisa_april_straight_from_school" />
@@ -3172,10 +3193,15 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_queenie_partake_in_love" />
         <marker scope="Public" name="nagisa_quiet_here" />
         <marker scope="Public" name="nagisa_rear" />
+        <marker scope="Public" name="nagisa_reimu_barbara_all_married" />
+        <marker scope="Public" name="nagisa_reimu_barbara_shrine" />
+        <marker scope="Public" name="nagisa_reimu_doggo" />
         <marker scope="Public" name="nagisa_reimu_get_rich_quick_1" />
         <marker scope="Public" name="nagisa_reimu_get_rich_quick_2" />
+        <marker scope="Public" name="nagisa_reimu_sake_talk" />
         <marker scope="Public" name="nagisa_reimu_spouse_qualities_1" />
         <marker scope="Public" name="nagisa_reimu_spouse_qualities_2" />
+        <marker scope="Public" name="nagisa_reimu_sumireko_ligma" />
         <marker scope="Public" name="nagisa_repeating" />
         <marker scope="Public" name="nagisa_restart_club" />
         <marker scope="Public" name="nagisa_restaurant_manager" />
