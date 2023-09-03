@@ -385,6 +385,11 @@
         <response id="1395" opponent="anna" opponentId="33" />
         <response id="1396" opponent="aoba" opponentId="154" />
         <response id="1397" opponent="aaravi" opponentId="88" />
+        <response id="1407" opponent="meia" opponentId="1247" />
+        <response id="1409" opponent="meia" opponentId="1248" />
+        <response id="1411" opponent="meia" opponentId="1249" />
+        <response id="1412" opponent="meia" opponentId="1254" />
+        <response id="1413" opponent="moon" opponentId="186" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1741,13 +1746,23 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1378" label="" folder="Reimu to left" sort="0" />
         <label id="1402" label="" folder="Reimu to left" sort="0" />
         <label id="1403" label="" folder="Reimu to left" sort="0" />
+        <label id="1404" label="" folder="Cagliostro to right" sort="0" />
+        <label id="1405" label="nice 0" folder="Cagliostro to right" sort="0" />
+        <label id="1406" label="naughty 0" folder="Cagliostro to right" sort="0" />
+        <label id="1407" label="" folder="Meia to left" sort="0" />
+        <label id="1408" label="" folder="Meia to left" sort="0" />
+        <label id="1409" label="" folder="Meia to left" sort="0" />
+        <label id="1410" label="" folder="Meia to left" sort="0" />
+        <label id="1411" label="" folder="Meia to left" sort="0" />
+        <label id="1412" label="" folder="Meia to left" sort="0" />
+        <label id="1413" label="" folder="Moon to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1403</nextId>
+    <nextId>1413</nextId>
     <markers>
         <marker scope="Public" name="hall_club_meetings" />
         <marker scope="Public" name="kyou_nagisa_staying_strong" />
@@ -2021,6 +2036,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_buffy_xander_looking" />
         <marker scope="Public" name="nagisa_bulma_no_panties" />
         <marker scope="Public" name="nagisa_bulma_waiting_quietly" />
+        <marker scope="Public" name="nagisa_cag_nc_c1" />
+        <marker scope="Public" name="nagisa_cag_nc1_n1" />
+        <marker scope="Public" name="nagisa_cag_nc2_n1" />
         <marker scope="Public" name="nagisa_cd_boys1" />
         <marker scope="Public" name="nagisa_cd_fun_1" />
         <marker scope="Public" name="nagisa_cd_help_mom" />
@@ -2067,6 +2085,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_dreamcatcher_prompt_spicyfood" />
         <marker scope="Public" name="nagisa_dva_bikini" />
         <marker scope="Public" name="nagisa_earth_sightseeing_1" />
+        <marker scope="Public" name="nagisa_earth_sightseeing_1a" />
         <marker scope="Public" name="nagisa_eichi_happybday1" />
         <marker scope="Public" name="nagisa_eichi_happybday2" />
         <marker scope="Public" name="nagisa_eight_boobies" />
@@ -2874,7 +2893,11 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_did_it" />
         <marker scope="Public" name="nagisa_meia_disappointment_ahead" />
         <marker scope="Public" name="nagisa_meia_earth_sightseeing_2" />
+        <marker scope="Public" name="nagisa_meia_earth_sightseeing_2a" />
+        <marker scope="Public" name="nagisa_meia_earth_sightseeing_2b" />
         <marker scope="Public" name="nagisa_meia_earth_sightseeing_3" />
+        <marker scope="Public" name="nagisa_meia_earth_sightseeing_3a" />
+        <marker scope="Public" name="nagisa_meia_earth_sightseeing_3b" />
         <marker scope="Public" name="nagisa_meia_family_stand_out" />
         <marker scope="Public" name="nagisa_meia_fights" />
         <marker scope="Public" name="nagisa_meia_forgive" />
@@ -2901,6 +2924,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_lots_of_men" />
         <marker scope="Public" name="nagisa_meia_meeting" />
         <marker scope="Public" name="nagisa_meia_men_info_1" />
+        <marker scope="Public" name="nagisa_meia_men_info_1a" />
         <marker scope="Public" name="nagisa_meia_men_info_2" />
         <marker scope="Public" name="nagisa_meia_men_info_3" />
         <marker scope="Public" name="nagisa_meia_men_info_4" />
@@ -3007,6 +3031,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_monika_writing_tip_2" />
         <marker scope="Public" name="nagisa_monika_writing_tip_3_4" />
         <marker scope="Public" name="nagisa_monika_writing_tip_5_6" />
+        <marker scope="Public" name="nagisa_moon_age" />
         <marker scope="Public" name="nagisa_moon_ashamed" />
         <marker scope="Public" name="nagisa_moon_savior" />
         <marker scope="Public" name="nagisa_moon_stripping_on_purpose" />
