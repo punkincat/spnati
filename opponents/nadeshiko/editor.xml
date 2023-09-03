@@ -33,6 +33,9 @@
         <case name="Interesting Stories" id="150" priority="Prompt" min="1" max="3">
             <description>Description about what's interesting happening with the character (i.e. why should others target this?)</description>
         </case>
+        <case name="So...Where are We?" id="151" priority="FYI" min="0" max="0">
+            <description>Nadeshiko asks how they're all here together, as everyone at the table came from a wide variety of places. </description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -188,13 +191,16 @@
         <response id="147" opponent="streaming-chan" opponentId="21" />
         <response id="148" opponent="hu_tao" opponentId="50" />
         <response id="149" opponent="hu_tao" opponentId="82" />
+        <response id="152" opponent="anatoly" opponentId="4" />
+        <response id="153" opponent="rainbow_dash" opponentId="20" />
     </responses>
     <labels>
         <label id="114" label="Ramen Markers Reset" folder="" sort="0" />
         <label id="115" label="Pose Maker Markers Reset" folder="" sort="0" />
     </labels>
-    <nextId>150</nextId>
+    <nextId>153</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="amy_confess_sonic_prompt_alt_R" />
         <marker scope="Public" name="AnotherTie" />
         <marker scope="Public" name="Aoi_Iyanuma">Tied to any line referring to Nadeshiko's friend Aoi Iyanuma</marker>
@@ -243,13 +249,33 @@
         <marker scope="Public" name="FirstTie" />
         <marker scope="Public" name="Fluttershy_Nadeshiko_1-1" />
         <marker scope="Public" name="Fluttershy_Nadeshiko_1-1-Wetsuit" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_1-2" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_1-2-Wetsuit" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_1-3" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_1-3-Wetsuit" />
         <marker scope="Public" name="Fluttershy_Nadeshiko_2-1" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_2-2" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_2-3" />
         <marker scope="Public" name="Fluttershy_Nadeshiko_3-1" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_3-2" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_3-2Dash" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_3-2Pinkie" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_3-2Rarity" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_3-2RegTwi" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_3-2SciTwi" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_3-3" />
         <marker scope="Public" name="Fluttershy_Nadeshiko_4-1" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_4-2" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_4-3" />
         <marker scope="Public" name="Fluttershy_Nadeshiko_5-1" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_5-2" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_5-3" />
         <marker scope="Public" name="Fluttershy_Nadeshiko_6-1" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_6-2" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_6-3" />
         <marker scope="Public" name="Fluttershy_Nadeshiko_Butt" />
         <marker scope="Public" name="Fluttershy_Nadeshiko_FlutterOutFirst" />
+        <marker scope="Public" name="Fluttershy_Nadeshiko_FlutterStart" />
         <marker scope="Public" name="gen_talent_R" />
         <marker scope="Public" name="Gloria_Nade_Pokemon" />
         <marker scope="Public" name="GramaShikoBadHand" />
@@ -283,11 +309,14 @@
         <marker scope="Public" name="MikuNadeshikoC" />
         <marker scope="Public" name="Nad" />
         <marker scope="Public" name="Nade_HuTao_Ghost" />
+        <marker scope="Public" name="Nade_Meia_Nature" />
         <marker scope="Public" name="Nade_Nagisa_1-1" />
+        <marker scope="Public" name="Nade_Nagisa_1-2" />
         <marker scope="Public" name="Nade_Nagisa_SchoolUniform" />
         <marker scope="Public" name="Nade_Nagisa_Tips" />
         <marker scope="Public" name="Nade_Nagisa_Tips2" />
         <marker scope="Public" name="Nade_Nami_1-1" />
+        <marker scope="Public" name="Nade_Rainbow_EatingContest" />
         <marker scope="Public" name="Nade_Sayaka_R" />
         <marker scope="Public" name="NadeMikuWhereBag" />
         <marker scope="Public" name="Nadeshiko" />
@@ -305,6 +334,16 @@
         <marker scope="Public" name="Nadeshiko_Fluttershy_1-3" />
         <marker scope="Public" name="Nadeshiko_Fluttershy_1-3B" />
         <marker scope="Public" name="Nadeshiko_Fluttershy_1-3Hot" />
+        <marker scope="Public" name="Nadeshiko_Fluttershy_2-1" />
+        <marker scope="Public" name="Nadeshiko_Fluttershy_2-2" />
+        <marker scope="Public" name="Nadeshiko_Fluttershy_2-3" />
+        <marker scope="Public" name="Nadeshiko_Fluttershy_3-1" />
+        <marker scope="Public" name="Nadeshiko_Fluttershy_3-2" />
+        <marker scope="Public" name="Nadeshiko_Fluttershy_3-3" />
+        <marker scope="Public" name="Nadeshiko_Fluttershy_4-1-NoFriends" />
+        <marker scope="Public" name="Nadeshiko_Fluttershy_4-2NoFriends" />
+        <marker scope="Public" name="Nadeshiko_Fluttershy_4-2-NoFriends" />
+        <marker scope="Public" name="Nadeshiko_Fluttershy_4-3NoFriends" />
         <marker scope="Public" name="Nadeshiko_Fluttershy_MagicalNature" />
         <marker scope="Public" name="Nadeshiko_GreenEyes" />
         <marker scope="Public" name="Nadeshiko_Heris_Labcoat" />
@@ -316,10 +355,13 @@
         <marker scope="Public" name="Nadeshiko_Jogging" />
         <marker scope="Public" name="Nadeshiko_Journalist" />
         <marker scope="Public" name="Nadeshiko_Lonely" />
+        <marker scope="Public" name="Nadeshiko_Meia_NatureA" />
+        <marker scope="Public" name="Nadeshiko_Meia_Planet" />
         <marker scope="Public" name="Nadeshiko_Nagisa_Dango" />
         <marker scope="Public" name="Nadeshiko_Nagisa_Dango-2" />
         <marker scope="Public" name="Nadeshiko_Nagisa_Dango-3" />
         <marker scope="Public" name="Nadeshiko_PizzaToppings" />
+        <marker scope="Public" name="Nadeshiko_Player_Inventory" />
         <marker scope="Public" name="nadeshiko_pursuit_R" />
         <marker scope="Public" name="Nadeshiko_Revy_1A" />
         <marker scope="Public" name="Nadeshiko_Sakura_1-1" />
@@ -332,6 +374,7 @@
         <marker scope="Public" name="Nadeshiko_Toph_1-1" />
         <marker scope="Public" name="Nadeshiko_UndresstoImpress" />
         <marker scope="Public" name="Nadeshiko_UndresstoImpress_2" />
+        <marker scope="Public" name="Nadeshiko_WhereareWe" />
         <marker scope="Public" name="nadeshiko_whycamp_R" />
         <marker scope="Public" name="Nadeshiko_Yumeko_5_1" />
         <marker scope="Public" name="NadeshikoBeach" />
@@ -342,6 +385,7 @@
         <marker scope="Public" name="NadeshikoCook_LeonieR" />
         <marker scope="Public" name="NadeshikoDawnLatestInOutdoorFashion" />
         <marker scope="Public" name="NadeshikoExpertCamper" />
+        <marker scope="Public" name="Nadeshiko-Fluttershy-2-2" />
         <marker scope="Public" name="NadeshikoFriends" />
         <marker scope="Public" name="NadeshikoGloriaCamping" />
         <marker scope="Public" name="NadeshikoGloriaExpertCamper" />
