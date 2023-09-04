@@ -7,6 +7,7 @@
 	<!-- Individual Listings -->
 	<individuals>
 		<opponent addedDate="2019-07-26" release="179" score="14.463">nami</opponent>
+		<opponent addedDate="2018-01-17" release="100" score="14.109" highlight="updated">meia</opponent> <!-- expires 2023-10-02 -->
 		<opponent addedDate="2021-09-17" release="246" score="13.114">mari</opponent>
 		<opponent addedDate="2020-03-06" release="190" score="12.682">komi-san</opponent>
 		<opponent addedDate="2018-04-28" release="117" score="12.598" highlight="updated">jura</opponent> <!-- expires 2023-09-23 -->
@@ -209,7 +210,6 @@
 		<opponent addedDate="2023-07-09" status="testing">shamiko</opponent>
 		<opponent addedDate="2022-09-21" status="testing">caitlin</opponent>
 		<opponent addedDate="2018-10-15" release="138" status="testing">lotte</opponent> <!-- score="3.241" -->
-		<opponent addedDate="2018-01-17" release="100" status="testing">meia</opponent> <!-- score="14.109" -->
 		<opponent addedDate="2023-06-26" status="testing">yae</opponent>
 		<opponent addedDate="2023-06-26" status="testing">sofia</opponent>
 		<opponent addedDate="2022-10-14" status="testing">okino</opponent>
@@ -446,6 +446,7 @@
 
 	<!-- Group Listings -->
 	<groups>
+		<group title="Growing Pains" opp1="nagatoro" opp2="cheryl" opp3="jura" opp4="nico_robin" background="birthday backyard" />
 		<group title="Duelist Kingdom" opp1="dark_magician_girl" opp2="may" opp3="tea_gardner" opp4="chazz" background="locker room" />
 		<group title="Force of Nature" opp1="elphaba" opp2="amalia" opp3="trixie" opp4="erufuda" background="lake" />
 		<group title="Three Kitties and an Owner" opp1="felix" opp2="mari_setogaya" opp3="nagatoro" costume3="nagatoro_nekotoro" opp4="cagliostro" background="lake" />
