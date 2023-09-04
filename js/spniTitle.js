@@ -76,7 +76,7 @@ var CANDY_LIST = [
     "adrien/0-sarcastic.png",
     "adrien/2-wink.png",
     "adrien/3-smug.png",
-    "noire/0-teasing.png",                    // High Roster Position
+    "noire/0-teasing.png",                 // High Roster Position
     "reskins/noire_clear_dress/0-embarrassed.png",
     "reskins/noire_clear_dress/0-smug.png",
     "reskins/noire_cool_girl/0-niya.png",
@@ -116,10 +116,6 @@ var CANDY_LIST = [
     "stocking/2-hex.png",
     "stocking/3-stripping+.png",
     "stocking/4-aroused.png",
-    "megumin/0-smug.png",                  // High Roster Position
-    "megumin/0-flustered.png",
-    "megumin/2-ecstatic.png",
-    "megumin/3-embarrassed.png",
     "kora/0-cheer2.png",                   // Highlighted New Character
     "kora/1-cheer.png",
     "kora/2-smorny.png",
@@ -144,6 +140,14 @@ var CANDY_LIST = [
     "mitama/1-writing.png",
     "mitama/2-mischievous.png",
     "mitama/4-shrug.png",
+    "meia/0-interested.png",               // Highlighted New Character
+    "meia/2-pleased.png",
+    "meia/2-reminiscing.png",
+    "meia/3-happy.png",
+    "jura/0-seductive.png",                // Highlighted New Character
+    "jura/1-teasing.png",
+    "jura/2-interested.png",
+    "jura/3-vain.png",
     "wasp/0-start.png",                    // Has Recent Updates
     "wasp/0-flirt.png",
     "wasp/0-excited.png",
@@ -164,10 +168,6 @@ var CANDY_LIST = [
     "reimu/0-smug.png",
     "reimu/0-bluffing.png",
     "reimu/0-pleasant.png",
-    "spooky/0-innocent.png",               // Has Recent Updates
-    "spooky/1-distracted.png",
-    "spooky/2-annoyed.png",
-    "spooky/2-horny.png",
     "asuna_yuuki/0-overjoyed.png",         // Has Recent Updates
     "asuna_yuuki/0-stripAh.png",
     "asuna_yuuki/4-embarrassed.png",
@@ -264,10 +264,6 @@ var CANDY_LIST = [
     "aqua_kh/0-happy.png",
     "aqua_kh/2-keyblade_stance.png",
     "aqua_kh/2-turned_on.png",
-    "beatrix/0-curtsy.png",                // Has Recent Updates
-    "beatrix/0-happy.png",
-    "beatrix/0-interested.png",
-    "beatrix/0-oops.png",
     "joey/0-cheer.png",                    // Has Recent Updates
     "joey/2-approve.png",
     "joey/3-wink.png",
@@ -436,14 +432,6 @@ var CANDY_LIST = [
     "myriam/2-normal.png",
     "myriam/3-think.png",
     "myriam/4-flattered.png",
-    "meia/0-interested.png",
-    "meia/2-pleased.png",
-    "meia/2-reminiscing.png",
-    "meia/3-happy.png",
-    "jura/0-seductive.png",
-    "jura/1-teasing.png",
-    "jura/2-interested.png",
-    "jura/3-vain.png",
     "neptune/0-victory.png",
     "neptune/0-excited.png",
     "neptune/2-happy.png",
@@ -512,6 +500,18 @@ var CANDY_LIST = [
     "rarity_eg/0-brelaxed.png",
     "rarity_eg/0-cinterested.png",
     "rarity_eg/4-ahappy.png",
+    "beatrix/0-curtsy.png",
+    "beatrix/0-happy.png",
+    "beatrix/0-interested.png",
+    "beatrix/0-oops.png",
+    "spooky/0-innocent.png",
+    "spooky/1-distracted.png",
+    "spooky/2-annoyed.png",
+    "spooky/2-horny.png",
+    "megumin/0-smug.png",
+    "megumin/0-flustered.png",
+    "megumin/2-ecstatic.png",
+    "megumin/3-embarrassed.png",
 */
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
