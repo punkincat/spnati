@@ -316,8 +316,8 @@ Meia [nagisa0, shyness]: I wouldn't expect a shy schoolgirl to be here.  What ar
 Nagisa [nagisa_meia_big_step]: Oh, me? I don't mind being called that, but I can't stay that way forever. This game is kind of... a big step. Maybe too big.
 
 NAGISA STRIPPING SHOES (accessory):
-Meia [nagisa01]: You don't need to strip to be mature.  I've spent time in places like this.  We used to heckle the shy ones.
-  OR [nagisa01]: This <i>is</i> extreme if you want to be less shy.  Bars always have people who try to take advantage of others.
+Meia if at a bar [nagisa01]: This <i>is</i> extreme if you want to be less shy.  Bars always have people who try to take advantage of others.
+   OR if non-bar [nagisa01]: You don't need to strip to be mature.  I've spent time in places like this.  We used to heckle the shy ones.
 Nagisa [nagisa_meia_tough]: I knew it would be tough, but I want to at least try. Thank you for the advice, Meia. I hope we can rely on each other when things get tougher.
 
 NAGISA STRIPPED SHOES (accessory):
@@ -383,7 +383,7 @@ NAGISA MUST STRIP SOCKS AND NAGISA ALREADY SAID nagisa_playing_with_boys (one or
 Meia [nagisa1boys]: When it comes to men, you seem especially shy.  I guess I figured Earth girls were all used to them.
   OR [nagisa1boys]: I guess growing up around men doesn't mean you'll be confident around them.  It seems to bother you, too.
   OR [nagisa1boys]: I pictured Earth girls stripping around men the same way we'd do with each other.  Maybe some shyness is just instinct.
-Nagisa [nagisa_meia_lots_of_men]: I do know lots of men. That's true. But, um... I don't... I don't normally take my clothes of for them...
+Nagisa [nagisa_meia_lots_of_men]: I do know lots of men. That's true. But, um... I don't... I don't normally take my clothes off for them...
 
 NAGISA STRIPPING SOCKS (minor) AND NAGISA ALREADY SAID nagisa_playing_with_boys (one or more males):
 Meia [nagisa12boys]: Neither do we.  I think a lot of us are still worried about their germs.
@@ -441,7 +441,7 @@ Nagisa [nagisa_meia_dango_all_ages]: I-It's not just for kids! The Big Dango Fam
 NAGISA STRIPPED SKIRT (major):
 Meia [nagisa5s]: It's not a bad thing.  Our <i>crew</i> tries to be a big family--and that means accepting everyone.  Even men.
   OR [nagisa5s]: We're called Magno's Family for a reason.  We don't reject people for not fitting in.  We even came around on the men.
-Nagisa [nagisa_meia_acceptance]: I'd like to think the Big Dango Family would accept me as I am. Maybe even your crew would... ~player.ifMale(|Maybe even... a guy one day?)~
+Nagisa [nagisa_meia_acceptance]: I'd like to think the Big Dango Family would accept me as I am. Maybe even your crew would... ~player.ifMale(Maybe even... a boy... someday.|Girls are so much easier to get along with than boys.)~
 
 
 NAGISA MUST STRIP BRA:
