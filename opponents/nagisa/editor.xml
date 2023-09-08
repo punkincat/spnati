@@ -390,6 +390,12 @@
         <response id="1411" opponent="meia" opponentId="1249" />
         <response id="1412" opponent="meia" opponentId="1254" />
         <response id="1413" opponent="moon" opponentId="186" />
+        <response id="1528" opponent="meia" opponentId="1253" />
+        <response id="1530" opponent="meia" opponentId="1251" />
+        <response id="1531" opponent="meia" opponentId="1252" />
+        <response id="1533" opponent="meia" opponentId="1255" />
+        <response id="1534" opponent="meia" opponentId="1256" />
+        <response id="1535" opponent="meia" opponentId="1257" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1856,13 +1862,35 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1511" label="" folder="Reimu to left" sort="0" />
         <label id="1512" label="" folder="Reimu to left" sort="0" />
         <label id="1513" label="" folder="Reimu to left" sort="0" />
+        <label id="1514" label="" folder="Miku to right" sort="0" />
+        <label id="1515" label="" folder="Miku to right" sort="0" />
+        <label id="1516" label="" folder="Jura to right" sort="0" />
+        <label id="1517" label="" folder="Jura to right" sort="0" />
+        <label id="1518" label="" folder="Jura to right" sort="0" />
+        <label id="1519" label="" folder="Jura to right" sort="0" />
+        <label id="1520" label="" folder="Jura to right" sort="0" />
+        <label id="1521" label="" folder="Jura to right" sort="0" />
+        <label id="1522" label="" folder="Jura to right" sort="0" />
+        <label id="1523" label="" folder="Jura to right" sort="0" />
+        <label id="1524" label="" folder="Jura to right" sort="0" />
+        <label id="1525" label="" folder="Jura to right" sort="0" />
+        <label id="1526" label="" folder="Jura to right" sort="0" />
+        <label id="1527" label="" folder="Meia to right" sort="0" />
+        <label id="1528" label="" folder="Meia to left" sort="0" />
+        <label id="1529" label="" folder="Meia to left" sort="0" />
+        <label id="1530" label="" folder="Meia to left" sort="0" />
+        <label id="1531" label="" folder="Meia to left" sort="0" />
+        <label id="1532" label="" folder="Meia to left" sort="0" />
+        <label id="1533" label="" folder="Meia to left" sort="0" />
+        <label id="1534" label="" folder="Meia to left" sort="0" />
+        <label id="1535" label="" folder="Meia to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1513</nextId>
+    <nextId>1535</nextId>
     <markers>
         <marker scope="Public" name="hall_club_meetings" />
         <marker scope="Public" name="kyou_nagisa_staying_strong" />
@@ -2729,6 +2757,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_jura_dont_know_anything" />
         <marker scope="Public" name="nagisa_jura_hair_could_cover" />
         <marker scope="Public" name="nagisa_jura_hair_hangs_down" />
+        <marker scope="Public" name="nagisa_jura_jn_j1" />
         <marker scope="Public" name="nagisa_jura_long_hair_envy" />
         <marker scope="Public" name="nagisa_jura_lovely_hair" />
         <marker scope="Public" name="nagisa_jura_male_private_parts" />
@@ -3028,8 +3057,12 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_men_info_1" />
         <marker scope="Public" name="nagisa_meia_men_info_1a" />
         <marker scope="Public" name="nagisa_meia_men_info_2" />
+        <marker scope="Public" name="nagisa_meia_men_info_2a" />
         <marker scope="Public" name="nagisa_meia_men_info_3" />
+        <marker scope="Public" name="nagisa_meia_men_info_3a" />
         <marker scope="Public" name="nagisa_meia_men_info_4" />
+        <marker scope="Public" name="nagisa_meia_men_info_4a" />
+        <marker scope="Public" name="nagisa_meia_men_info_4b" />
         <marker scope="Public" name="nagisa_meia_missed_out" />
         <marker scope="Public" name="nagisa_meia_mixed_bathing" />
         <marker scope="Public" name="nagisa_meia_moon_landing" />
@@ -3053,8 +3086,11 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_on_purpose" />
         <marker scope="Public" name="nagisa_meia_pilot" />
         <marker scope="Public" name="nagisa_meia_pilot_recruitment_1" />
+        <marker scope="Public" name="nagisa_meia_pilot_recruitment_1a" />
         <marker scope="Public" name="nagisa_meia_pilot_recruitment_2" />
+        <marker scope="Public" name="nagisa_meia_pilot_recruitment_2a" />
         <marker scope="Public" name="nagisa_meia_pilot_recruitment_3_4" />
+        <marker scope="Public" name="nagisa_meia_pilot_recruitment_3_4a" />
         <marker scope="Public" name="nagisa_meia_poker_in_space" />
         <marker scope="Public" name="nagisa_meia_post-hug_first_loss" />
         <marker scope="Public" name="nagisa_meia_post-hug_loss" />
@@ -3073,6 +3109,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_so_calm" />
         <marker scope="Public" name="nagisa_meia_society" />
         <marker scope="Public" name="nagisa_meia_star_wars" />
+        <marker scope="Public" name="nagisa_meia_suit_skin" />
         <marker scope="Public" name="nagisa_meia_sweating" />
         <marker scope="Public" name="nagisa_meia_teams" />
         <marker scope="Public" name="nagisa_meia_telling_tomoya" />
@@ -3114,7 +3151,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_miko_mn_n05" />
         <marker scope="Public" name="nagisa_miko_mn_n06" />
         <marker scope="Public" name="nagisa_miku_nm_m1" />
+        <marker scope="Public" name="nagisa_miku_nm_m2" />
         <marker scope="Public" name="nagisa_miku_nm_n1" />
+        <marker scope="Public" name="nagisa_miku_nm_n2" />
         <marker scope="Public" name="nagisa_mileena_bandages" />
         <marker scope="Public" name="nagisa_mileena_basically_naked" />
         <marker scope="Public" name="nagisa_misato_shinji_comparison" />
