@@ -184,7 +184,7 @@
       <string>female_must_strip</string>
     </bulk>
     <defaultImage>interested</defaultImage>
-    <defaultText>What they say to a male NPC who has lost a round</defaultText>
+    <defaultText>What they say to a male character who has lost a round</defaultText>
     <generic>opponent_lost</generic>
   </trigger>
   <trigger tag="female_human_must_strip" optional="true" start="0" end="10" label="Must Strip (Player, Female)" hasTarget="true" description="The human female player has lost a round and must remove something" group="3" order="2" color="4" safeLabel="Lost Hand (Player, Female)">
@@ -209,7 +209,7 @@
       <string>male_must_strip</string>
     </bulk>
     <defaultImage>interested</defaultImage>
-    <defaultText>What they say to a female NPC who has lost a round</defaultText>
+    <defaultText>What they say to a female character who has lost a round</defaultText>
     <generic>opponent_lost</generic>
   </trigger>
   <trigger tag="tie" start="0" end="10" label="Absolute tie" hasTarget="false" optional="true" description="Two (or more) players are tied for the worst hand" group="3" order="4" color="4">
