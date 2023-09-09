@@ -203,6 +203,13 @@
         <response id="623" opponent="aqua_kh" opponentId="1026" />
         <response id="627" opponent="nadeshiko" opponentId="18" />
         <response id="629" opponent="nadeshiko" opponentId="9" />
+        <response id="671" opponent="meia" opponentId="1196" />
+        <response id="672" opponent="meia" opponentId="1191" />
+        <response id="673" opponent="meia" opponentId="1193" />
+        <response id="674" opponent="meia" opponentId="1192" />
+        <response id="676" opponent="meia" opponentId="1195" />
+        <response id="677" opponent="meia" opponentId="1194" />
+        <response id="678" opponent="cagliostro" opponentId="2" />
     </responses>
     <notes>
         <note id="10">Will be replaced if Sharla ever gets reworked lol</note>
@@ -251,6 +258,7 @@ c: say that he's been as high as the bionis' head?
         <note id="560">xenoblade 1 characters wouldnt really know what a navy is because nobody lives near the endless ocean at the bottom of their world. so in short he's heard of a 'navy' secondhand at the inventory.</note>
         <note id="589">for clarity; he is asking if she has ever gone flying on her broom while topless or naked or something.</note>
         <note id="657">Jim: Take it from me, Dunban. If it ain't about something bigger than you, then it's not worth it. Dunban_resp3c</note>
+        <note id="673">Other lines have him say similar insight, it's a way of showing his battle intelligence</note>
     </notes>
     <labels>
         <label id="4" label="" folder="April Fools" sort="0" />
@@ -900,8 +908,38 @@ c: say that he's been as high as the bionis' head?
         <label id="668" label="" folder="Jim Raynor" sort="0" />
         <label id="669" label="" folder="Targets" sort="0" />
         <label id="670" label="" folder="Targets" sort="0" />
+        <label id="671" label="" folder="Responses" sort="0" />
+        <label id="672" label="" folder="Responses" sort="0" />
+        <label id="673" label="" folder="Responses" sort="0" />
+        <label id="674" label="" folder="Responses" sort="0" />
+        <label id="675" label="" folder="Responses" sort="0" />
+        <label id="676" label="" folder="Responses" sort="0" />
+        <label id="677" label="" folder="Responses" sort="0" />
+        <label id="678" label="" folder="Prompts" sort="0" />
+        <label id="679" label="" folder="Targets" sort="0" />
+        <label id="680" label="" folder="Targets" sort="0" />
+        <label id="681" label="" folder="Targets" sort="0" />
+        <label id="682" label="" folder="Targets" sort="0" />
+        <label id="683" label="" folder="Responses" sort="0" />
+        <label id="684" label="" folder="Responses" sort="0" />
+        <label id="685" label="" folder="Responses" sort="0" />
+        <label id="686" label="" folder="Responses" sort="0" />
+        <label id="687" label="" folder="Responses" sort="0" />
+        <label id="688" label="" folder="Responses" sort="0" />
+        <label id="689" label="" folder="Responses" sort="0" />
+        <label id="690" label="" folder="Responses" sort="0" />
+        <label id="691" label="" folder="Responses" sort="0" />
+        <label id="692" label="" folder="Responses" sort="0" />
+        <label id="693" label="" folder="Responses" sort="0" />
+        <label id="694" label="" folder="Responses" sort="0" />
+        <label id="695" label="" folder="Responses" sort="0" />
+        <label id="696" label="" folder="Responses" sort="0" />
+        <label id="697" label="" folder="Responses" sort="0" />
+        <label id="698" label="" folder="Responses" sort="0" />
+        <label id="699" label="" folder="Responses" sort="0" />
+        <label id="700" label="" folder="Responses" sort="0" />
     </labels>
-    <nextId>670</nextId>
+    <nextId>700</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="20gOffer">Line that plays when Dunban offers a 20g bribe to whoever loses</marker>
@@ -935,6 +973,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="braile_cards" />
         <marker scope="Public" name="brock_hitbyrocket" />
         <marker scope="Public" name="brock_hitbyrocket2" />
+        <marker scope="Public" name="cag_ChangePrompt" />
         <marker scope="Public" name="caulifla_transformation" />
         <marker scope="Public" name="caulifla_transformation2" />
         <marker scope="Public" name="ddlc_poet_1" />
@@ -1014,6 +1053,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_blake_strip0a" />
         <marker scope="Public" name="dunban_blake_strip1a" />
         <marker scope="Public" name="dunban_cagliostro_alchemy1" />
+        <marker scope="Public" name="dunban_cagliostro_strip2a" />
         <marker scope="Public" name="dunban_cait_Mindread01" />
         <marker scope="Public" name="dunban_cait_Mindread02" />
         <marker scope="Public" name="dunban_cait_Mindread1a" />
@@ -1191,11 +1231,17 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_meia_self0c" />
         <marker scope="Public" name="dunban_meia_self1a" />
         <marker scope="Public" name="dunban_meia_self1b" />
+        <marker scope="Public" name="dunban_meia_self1c" />
         <marker scope="Public" name="dunban_meia_self2a" />
         <marker scope="Public" name="dunban_meia_self2b" />
+        <marker scope="Public" name="dunban_meia_self2c" />
         <marker scope="Public" name="dunban_meia_self3a" />
+        <marker scope="Public" name="dunban_meia_self3b" />
         <marker scope="Public" name="dunban_meia_self4a" />
+        <marker scope="Public" name="dunban_meia_self4b" />
         <marker scope="Public" name="dunban_meia_self5a" />
+        <marker scope="Public" name="dunban_meia_self5b" />
+        <marker scope="Public" name="dunban_meia_self6a" />
         <marker scope="Public" name="dunban_mercy_fuckbuddiesResp" />
         <marker scope="Public" name="dunban_mg_buttReveal" />
         <marker scope="Public" name="dunban_mia_self1a" />
@@ -1204,11 +1250,13 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_miaGS_powers1" />
         <marker scope="Public" name="dunban_miaGS_powers2" />
         <marker scope="Public" name="dunban_miaGS_powers3" />
+        <marker scope="Public" name="dunban_miku_strip0a" />
         <marker scope="Public" name="dunban_mitama_arrival_resp" />
         <marker scope="Public" name="dunban_nadeshiko_outdoors1" />
         <marker scope="Public" name="dunban_nadia_headroll" />
         <marker scope="Public" name="dunban_nagatoro_familiar01" />
         <marker scope="Public" name="dunban_nagatoro_selfMustFF" />
+        <marker scope="Public" name="dunban_nagisa_strip1a_right" />
         <marker scope="Public" name="dunban_nami_pirate1" />
         <marker scope="Public" name="dunban_nami_pirate2" />
         <marker scope="Public" name="dunban_nami_pirate3" />
@@ -1277,6 +1325,24 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_wikitan_theXenoblade" />
         <marker scope="Public" name="dunban_yshtola_self0a" />
         <marker scope="Public" name="dunban_yshtola_self4a" />
+        <marker scope="Public" name="dunban_yumeko_self0a" />
+        <marker scope="Public" name="dunban_yumeko_self0b" />
+        <marker scope="Public" name="dunban_yumeko_self0c" />
+        <marker scope="Public" name="dunban_yumeko_self1a" />
+        <marker scope="Public" name="dunban_yumeko_self1b" />
+        <marker scope="Public" name="dunban_yumeko_self1c" />
+        <marker scope="Public" name="dunban_yumeko_self2a" />
+        <marker scope="Public" name="dunban_yumeko_self2b" />
+        <marker scope="Public" name="dunban_yumeko_self2c" />
+        <marker scope="Public" name="dunban_yumeko_self3a" />
+        <marker scope="Public" name="dunban_yumeko_self3b" />
+        <marker scope="Public" name="dunban_yumeko_self3c" />
+        <marker scope="Public" name="dunban_yumeko_self4a" />
+        <marker scope="Public" name="dunban_yumeko_self4b" />
+        <marker scope="Public" name="dunban_yumeko_self4c" />
+        <marker scope="Public" name="dunban_yumeko_self5a" />
+        <marker scope="Public" name="dunban_yumeko_self5b" />
+        <marker scope="Public" name="dunban_yumeko_self5c" />
         <marker scope="Public" name="dunban_yuno_stripAyumi01" />
         <marker scope="Public" name="dunban_zoe_selected" />
         <marker scope="Public" name="dunbanff_aqua_finishing" />
@@ -1303,6 +1369,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="miaGS_fizz_reveal" />
         <marker scope="Public" name="miaGS_swimsuit" />
         <marker scope="Public" name="midst_of_battle" />
+        <marker scope="Public" name="miku_AdventurerQuestion" />
         <marker scope="Public" name="military_exploits" />
         <marker scope="Public" name="NadeshikoCheckingInResp" />
         <marker scope="Public" name="nadeshikoCityResp" />
@@ -1319,6 +1386,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="self6strip_volunteer" />
         <marker scope="Public" name="setogaya_6_stripping" />
         <marker scope="Public" name="shoes_off_forest" />
+        <marker scope="Public" name="SMODE" />
         <marker scope="Public" name="suzuya_bra_removed" />
         <marker scope="Public" name="sweetheart_donut" />
         <marker scope="Public" name="target_noUndergarments" />
