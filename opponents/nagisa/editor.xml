@@ -406,6 +406,7 @@
         <response id="1543" opponent="ae86" opponentId="5" />
         <response id="1544" opponent="ae86" opponentId="6" />
         <response id="1545" opponent="lyralei" opponentId="1462" />
+        <response id="1546" opponent="dunban" opponentId="679" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1899,13 +1900,23 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1538" label="" folder="Jura to left" sort="0" />
         <label id="1540" label="" folder="Caitlin to left" sort="0" />
         <label id="1542" label="" folder="Miki to left" sort="0" />
+        <label id="1546" label="" folder="Dunban to left" sort="0" />
+        <label id="1547" label="" folder="Dunban to right" sort="0" />
+        <label id="1548" label="" folder="Sanako to right" sort="0" />
+        <label id="1549" label="" folder="Sanako to right" sort="0" />
+        <label id="1550" label="" folder="Sanako to right" sort="0" />
+        <label id="1551" label="" folder="Sanako to right" sort="0" />
+        <label id="1552" label="" folder="Sanako to left" sort="0" />
+        <label id="1553" label="" folder="Sanako to left" sort="0" />
+        <label id="1554" label="" folder="Sanako to left" sort="0" />
+        <label id="1555" label="" folder="Sanako to right" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1545</nextId>
+    <nextId>1555</nextId>
     <markers>
         <marker scope="Public" name="hall_club_meetings" />
         <marker scope="Public" name="kyou_nagisa_staying_strong" />
@@ -2232,6 +2243,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_dreamcatcher_prompt_giant" />
         <marker scope="Public" name="nagisa_dreamcatcher_prompt_sleepwear" />
         <marker scope="Public" name="nagisa_dreamcatcher_prompt_spicyfood" />
+        <marker scope="Public" name="nagisa_dunban_dn_n4" />
+        <marker scope="Public" name="nagisa_dunban_nd_d1" />
         <marker scope="Public" name="nagisa_dva_bikini" />
         <marker scope="Public" name="nagisa_earth_sightseeing_1" />
         <marker scope="Public" name="nagisa_earth_sightseeing_1a" />
@@ -3553,10 +3566,20 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_sanako_mom" />
         <marker scope="Public" name="nagisa_sanako_mom_had_to_go_out" />
         <marker scope="Public" name="nagisa_sanako_muusic_appreciation_class" />
+        <marker scope="Public" name="nagisa_sanako_ns_n7" />
+        <marker scope="Public" name="nagisa_sanako_ns_n8" />
+        <marker scope="Public" name="nagisa_sanako_ns_n9" />
+        <marker scope="Public" name="nagisa_sanako_ns_n9_doubletake" />
+        <marker scope="Public" name="nagisa_sanako_ns_s1" />
+        <marker scope="Public" name="nagisa_sanako_ns_s2" />
+        <marker scope="Public" name="nagisa_sanako_ns_s3" />
         <marker scope="Public" name="nagisa_sanako_panty_flash" />
         <marker scope="Public" name="nagisa_sanako_present">Nagisa recongizes Sanako's uniform as being from the same school.</marker>
         <marker scope="Public" name="nagisa_sanako_selected" />
         <marker scope="Public" name="nagisa_sanako_should_introduce" />
+        <marker scope="Public" name="nagisa_sanako_sn_n1" />
+        <marker scope="Public" name="nagisa_sanako_sn_n2" />
+        <marker scope="Public" name="nagisa_sanako_sn_n3" />
         <marker scope="Public" name="nagisa_sanako_sorry_for_winning" />
         <marker scope="Public" name="nagisa_sanako_weird" />
         <marker scope="Public" name="nagisa_sans_the_knockening" />
