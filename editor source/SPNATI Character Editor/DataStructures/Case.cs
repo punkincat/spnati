@@ -1273,7 +1273,6 @@ namespace SPNATI_Character_Editor
 			else if (!caseIsTargetable && responseIsTargetable && !hasTarget && hasAlsoPlaying && !alsoPlayingIsResponder)
 			{
 				CopySelfIntoTarget(response, speaker);
-				CopyAlsoPlaying(response);
 			}
 			else if ((caseIsTargetable || !responseIsTargetable) && !hasTarget && !alsoPlayingIsResponder)
 			{
@@ -1286,7 +1285,6 @@ namespace SPNATI_Character_Editor
 			}
 			else if (caseIsTargetable && hasTarget && !targetingResponder && !hasAlsoPlaying)
 			{
-				CopyTarget(response);
 				CopySelfIntoAlsoPlaying(response, speaker);
 			}
 			else if (caseIsTargetable && hasTarget && !hasAlsoPlaying && targetingResponder)
@@ -1297,7 +1295,6 @@ namespace SPNATI_Character_Editor
 			else if (caseIsTargetable && hasTarget && !targetingResponder && alsoPlayingIsResponder)
 			{
 				CopyAlsoPlayingIntoSelf(response, responder);
-				CopyTarget(response);
 				CopySelfIntoAlsoPlaying(response, speaker);
 			}
 			else
@@ -1451,21 +1448,6 @@ namespace SPNATI_Character_Editor
 		}
 
 		/// <summary>
-		/// Copies target properties into another case's target
-		/// </summary>
-		/// <param name="other"></param>
-		private void CopyTarget(Case other)
-		{
-			foreach (TargetCondition cond in Conditions)
-			{
-				if (cond.Role == "target")
-				{
-					other.Conditions.Add(cond);
-				}
-			}
-		}
-
-		/// <summary>
 		/// Copies Target properties into another case's self properties
 		/// </summary>
 		/// <param name="other"></param>
@@ -1591,21 +1573,6 @@ namespace SPNATI_Character_Editor
 		}
 
 		/// <summary>
-		/// Copies AlsoPlaying properties into another case's AlsoPlaying
-		/// </summary>
-		/// <param name="other"></param>
-		private void CopyAlsoPlaying(Case other)
-		{
-			foreach (TargetCondition cond in Conditions)
-			{
-				if (cond.Role == "other")
-				{
-					other.Conditions.Add(cond);
-				}
-			}
-		}
-
-		/// <summary>
 		/// Copies this tag's self-targeting properties into another's AlsoPlaying
 		/// </summary>
 		/// <param name="other"></param>
@@ -1641,23 +1608,23 @@ namespace SPNATI_Character_Editor
 
 			foreach (TargetCondition tCond in Conditions)
 			{
-				if (String.IsNullOrEmpty(tCond.TimeInStage))
+				if (string.IsNullOrEmpty(tCond.TimeInStage))
 				{
 					cond.TimeInStage = tCond.TimeInStage;
 				}
-				if (String.IsNullOrEmpty(tCond.ConsecutiveLosses))
+				if (string.IsNullOrEmpty(tCond.ConsecutiveLosses))
 				{
 					cond.ConsecutiveLosses = tCond.ConsecutiveLosses;
 				}
-				if (String.IsNullOrEmpty(tCond.Hand))
+				if (string.IsNullOrEmpty(tCond.Hand))
 				{
 					cond.Hand = tCond.Hand;
 				}
-				if (String.IsNullOrEmpty(tCond.NotSaidMarker))
+				if (string.IsNullOrEmpty(tCond.NotSaidMarker))
 				{
 					cond.NotSaidMarker = tCond.NotSaidMarker;
 				}
-				if (String.IsNullOrEmpty(tCond.SaidMarker))
+				if (string.IsNullOrEmpty(tCond.SaidMarker))
 				{
 					cond.SaidMarker = tCond.SaidMarker;
 				}
@@ -1838,23 +1805,23 @@ namespace SPNATI_Character_Editor
 
 			foreach (TargetCondition tCond in Conditions)
 			{
-				if(String.IsNullOrEmpty(tCond.TimeInStage))
+				if(string.IsNullOrEmpty(tCond.TimeInStage))
 				{
 					cond.TimeInStage = tCond.TimeInStage;
 				}
-				if (String.IsNullOrEmpty(tCond.ConsecutiveLosses))
+				if (string.IsNullOrEmpty(tCond.ConsecutiveLosses))
 				{
 					cond.ConsecutiveLosses = tCond.ConsecutiveLosses;
 				}
-				if (String.IsNullOrEmpty(tCond.Hand))
+				if (string.IsNullOrEmpty(tCond.Hand))
 				{
 					cond.Hand = tCond.Hand;
 				}
-				if (String.IsNullOrEmpty(tCond.NotSaidMarker))
+				if (string.IsNullOrEmpty(tCond.NotSaidMarker))
 				{
 					cond.NotSaidMarker = tCond.NotSaidMarker;
 				}
-				if (String.IsNullOrEmpty(tCond.SaidMarker))
+				if (string.IsNullOrEmpty(tCond.SaidMarker))
 				{
 					cond.SaidMarker = tCond.SaidMarker;
 				}
@@ -2040,97 +2007,97 @@ namespace SPNATI_Character_Editor
 					{
 						if (Conditions[j].Role == "self" || Conditions[j].Character == Conditions[i].Character)
 						{
-							if (String.IsNullOrEmpty(Conditions[j].Status) || Conditions[j].Status == Conditions[i].Status)
+							if (string.IsNullOrEmpty(Conditions[j].Status) || Conditions[j].Status == Conditions[i].Status)
 							{
 								Conditions[j].Status = Conditions[i].Status;
 								Conditions[i].Status = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].Stage) || Conditions[j].Stage == Conditions[i].Stage)
+							if (string.IsNullOrEmpty(Conditions[j].Stage) || Conditions[j].Stage == Conditions[i].Stage)
 							{
 								Conditions[j].Stage = Conditions[i].Stage;
 								Conditions[i].Stage = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].TimeInStage) || Conditions[j].TimeInStage == Conditions[i].TimeInStage)
+							if (string.IsNullOrEmpty(Conditions[j].TimeInStage) || Conditions[j].TimeInStage == Conditions[i].TimeInStage)
 							{
 								Conditions[j].TimeInStage = Conditions[i].TimeInStage;
 								Conditions[i].TimeInStage = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].ConsecutiveLosses) || Conditions[j].ConsecutiveLosses == Conditions[i].ConsecutiveLosses)
+							if (string.IsNullOrEmpty(Conditions[j].ConsecutiveLosses) || Conditions[j].ConsecutiveLosses == Conditions[i].ConsecutiveLosses)
 							{
 								Conditions[j].ConsecutiveLosses = Conditions[i].ConsecutiveLosses;
 								Conditions[i].ConsecutiveLosses = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].SaidMarker) || Conditions[j].SaidMarker == Conditions[i].SaidMarker)
+							if (string.IsNullOrEmpty(Conditions[j].SaidMarker) || Conditions[j].SaidMarker == Conditions[i].SaidMarker)
 							{
 								Conditions[j].SaidMarker = Conditions[i].SaidMarker;
 								Conditions[i].SaidMarker = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].SayingMarker) || Conditions[j].SayingMarker == Conditions[i].SayingMarker)
+							if (string.IsNullOrEmpty(Conditions[j].SayingMarker) || Conditions[j].SayingMarker == Conditions[i].SayingMarker)
 							{
 								Conditions[j].SayingMarker = Conditions[i].SayingMarker;
 								Conditions[i].SayingMarker = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].NotSaidMarker) || Conditions[j].NotSaidMarker == Conditions[i].NotSaidMarker)
+							if (string.IsNullOrEmpty(Conditions[j].NotSaidMarker) || Conditions[j].NotSaidMarker == Conditions[i].NotSaidMarker)
 							{
 								Conditions[j].NotSaidMarker = Conditions[i].NotSaidMarker;
 								Conditions[i].NotSaidMarker = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].Saying) || Conditions[j].Saying == Conditions[i].Saying)
+							if (string.IsNullOrEmpty(Conditions[j].Saying) || Conditions[j].Saying == Conditions[i].Saying)
 							{
 								Conditions[j].Saying = Conditions[i].Saying;
 								Conditions[i].Saying = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].Hand) || Conditions[j].Hand == Conditions[i].Hand)
+							if (string.IsNullOrEmpty(Conditions[j].Hand) || Conditions[j].Hand == Conditions[i].Hand)
 							{
 								Conditions[j].Hand = Conditions[i].Hand;
 								Conditions[i].Hand = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].Layers) || Conditions[j].Layers == Conditions[i].Layers)
+							if (string.IsNullOrEmpty(Conditions[j].Layers) || Conditions[j].Layers == Conditions[i].Layers)
 							{
 								Conditions[j].Layers = Conditions[i].Layers;
 								Conditions[i].Layers = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].StartingLayers) || Conditions[j].StartingLayers == Conditions[i].StartingLayers)
+							if (string.IsNullOrEmpty(Conditions[j].StartingLayers) || Conditions[j].StartingLayers == Conditions[i].StartingLayers)
 							{
 								Conditions[j].StartingLayers = Conditions[i].StartingLayers;
 								Conditions[i].StartingLayers = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].Gender) || Conditions[j].Gender == Conditions[i].Gender)
+							if (string.IsNullOrEmpty(Conditions[j].Gender) || Conditions[j].Gender == Conditions[i].Gender)
 							{
 								Conditions[j].Gender = Conditions[i].Gender;
 								Conditions[i].Gender = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].FilterTag) || Conditions[j].FilterTag == Conditions[i].FilterTag)
+							if (string.IsNullOrEmpty(Conditions[j].FilterTag) || Conditions[j].FilterTag == Conditions[i].FilterTag)
 							{
 								Conditions[j].FilterTag = Conditions[i].FilterTag;
 								Conditions[i].FilterTag = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].FilterNotTag) || Conditions[j].FilterNotTag == Conditions[i].FilterNotTag)
+							if (string.IsNullOrEmpty(Conditions[j].FilterNotTag) || Conditions[j].FilterNotTag == Conditions[i].FilterNotTag)
 							{
 								Conditions[j].FilterNotTag = Conditions[i].FilterNotTag;
 								Conditions[i].FilterNotTag = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].FilterTagAdv) || Conditions[j].FilterTagAdv == Conditions[i].FilterTagAdv)
+							if (string.IsNullOrEmpty(Conditions[j].FilterTagAdv) || Conditions[j].FilterTagAdv == Conditions[i].FilterTagAdv)
 							{
 								Conditions[j].FilterTagAdv = Conditions[i].FilterTagAdv;
 								Conditions[i].FilterTagAdv = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].Pose) || Conditions[j].Pose == Conditions[i].Pose)
+							if (string.IsNullOrEmpty(Conditions[j].Pose) || Conditions[j].Pose == Conditions[i].Pose)
 							{
 								Conditions[j].Pose = Conditions[i].Pose;
 								Conditions[i].Pose = null;
