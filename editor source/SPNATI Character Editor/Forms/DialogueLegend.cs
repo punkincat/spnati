@@ -16,7 +16,7 @@ namespace SPNATI_Character_Editor.Forms
 			lblGray.ForeColor = skin.Gray;
 			lblGreen.ForeColor = skin.Green;
 			lblLightGray.ForeColor = skin.LightGray;
-			lblOrange.ForeColor = skin.Orange;
+			lblOrange.ForeColor = skin.OrangeRed;
 		}
 	}
 }

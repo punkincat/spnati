@@ -213,7 +213,7 @@ namespace Desktop.CommonControls
 				case 2:
 					return skin.Green;
 				case 3:
-					return skin.Orange;
+					return skin.OrangeRed;
 				case 4:
 					return skin.Purple;
 				case 5:
