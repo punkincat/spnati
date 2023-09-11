@@ -40,6 +40,13 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			set { Set(value); LabelChanged?.Invoke(this, EventArgs.Empty); }
 		}
 
+		[Text(DisplayName = "Marker", GroupOrder = 2, Description = "Conditional marker for the scene")]
+		public string Marker
+		{
+			get { return Get<string>(); }
+			set { Set(value); }
+		}
+
 		private Image _background;
 		[FileSelect(DisplayName = "Background", GroupOrder = 5, Description = "Scene background image")]
 		public string BackgroundImage
@@ -143,6 +150,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		{
 			Character = character;
 			Name = scene.Name ?? "New scene";
+			Marker = scene.SceneMarker;
 			if (!string.IsNullOrEmpty(scene.BackgroundColor))
 			{
 				try
