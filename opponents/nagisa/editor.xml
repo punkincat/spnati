@@ -407,6 +407,12 @@
         <response id="1544" opponent="ae86" opponentId="6" />
         <response id="1545" opponent="lyralei" opponentId="1462" />
         <response id="1546" opponent="dunban" opponentId="679" />
+        <response id="1556" opponent="meia" opponentId="1274" />
+        <response id="1557" opponent="reimu" opponentId="523" />
+        <response id="1561" opponent="sanako" opponentId="25" />
+        <response id="1563" opponent="sanako" opponentId="42" />
+        <response id="1564" opponent="aqua_kh" opponentId="993" />
+        <response id="1565" opponent="mary" opponentId="41" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1910,13 +1916,22 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1553" label="" folder="Sanako to left" sort="0" />
         <label id="1554" label="" folder="Sanako to left" sort="0" />
         <label id="1555" label="" folder="Sanako to right" sort="0" />
+        <label id="1556" label="" folder="Meia to left" sort="0" />
+        <label id="1557" label="" folder="Reimu to left" sort="0" />
+        <label id="1558" label="" folder="Dunban to right" sort="0" />
+        <label id="1559" label="" folder="Yumeko to right" sort="0" />
+        <label id="1560" label="" folder="Yumeko to right" sort="0" />
+        <label id="1561" label="" folder="Sanako to left" sort="0" />
+        <label id="1562" label="" folder="Sanako to left" sort="0" />
+        <label id="1563" label="" folder="Sanako to left" sort="0" />
+        <label id="1565" label="" folder="Mary to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1555</nextId>
+    <nextId>1565</nextId>
     <markers>
         <marker scope="Public" name="hall_club_meetings" />
         <marker scope="Public" name="kyou_nagisa_staying_strong" />
@@ -3023,6 +3038,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_marinette_still_in" />
         <marker scope="Public" name="nagisa_marinette_tv" />
         <marker scope="Public" name="nagisa_marinette_twintails" />
+        <marker scope="Public" name="nagisa_mary_dakku" />
         <marker scope="Public" name="nagisa_may_hair" />
         <marker scope="Public" name="nagisa_may_scar" />
         <marker scope="Private" name="nagisa_meanie">Nagisa calls out a meanie.</marker>
@@ -3100,6 +3116,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_meia_men_info_4b" />
         <marker scope="Public" name="nagisa_meia_missed_out" />
         <marker scope="Public" name="nagisa_meia_mixed_bathing" />
+        <marker scope="Public" name="nagisa_meia_mn_n4_alt" />
         <marker scope="Public" name="nagisa_meia_moon_landing" />
         <marker scope="Public" name="nagisa_meia_naked_bath" />
         <marker scope="Public" name="nagisa_meia_naked_bath_2" />
@@ -3172,6 +3189,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_mettaton_calculator_dress" />
         <marker scope="Public" name="nagisa_mettaton_created_pair" />
         <marker scope="Public" name="nagisa_mettaton_play" />
+        <marker scope="Public" name="nagisa_mia_aqua_lewdhug4" />
         <marker scope="Public" name="nagisa_mia_big_dango_family" />
         <marker scope="Public" name="nagisa_mia_bottomless_first" />
         <marker scope="Public" name="nagisa_mia_girl_secrets" />
@@ -3492,6 +3510,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_reimu_rn_r8" />
         <marker scope="Public" name="nagisa_reimu_rn_r9" />
         <marker scope="Public" name="nagisa_reimu_sake_talk" />
+        <marker scope="Public" name="nagisa_reimu_sake_talk_2" />
         <marker scope="Public" name="nagisa_reimu_spouse_qualities_1" />
         <marker scope="Public" name="nagisa_reimu_spouse_qualities_2" />
         <marker scope="Public" name="nagisa_reimu_sumireko_ligma" />
@@ -3558,6 +3577,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_samus_zero_suit" />
         <marker scope="Public" name="nagisa_sanako_bra" />
         <marker scope="Public" name="nagisa_sanako_cant_watch" />
+        <marker scope="Public" name="nagisa_sanako_card_peek" />
         <marker scope="Public" name="nagisa_sanako_class" />
         <marker scope="Public" name="nagisa_sanako_dango_song" />
         <marker scope="Public" name="nagisa_sanako_dont_tell_mom" />
@@ -3581,6 +3601,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_sanako_sn_n2" />
         <marker scope="Public" name="nagisa_sanako_sn_n3" />
         <marker scope="Public" name="nagisa_sanako_sorry_for_winning" />
+        <marker scope="Public" name="nagisa_sanako_uniform_cute" />
         <marker scope="Public" name="nagisa_sanako_weird" />
         <marker scope="Public" name="nagisa_sans_the_knockening" />
         <marker scope="Public" name="nagisa_sayla_cant_give_up" />
@@ -3716,6 +3737,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_xander_underwear" />
         <marker scope="Public" name="nagisa_yshtola_rules" />
         <marker scope="Public" name="nagisa_yuelia_was_that_magic" />
+        <marker scope="Public" name="nagisa_yumeko_ny_n1" />
+        <marker scope="Public" name="nagisa_yumeko_ny_y1" />
         <marker scope="Public" name="nagisa_yuno_prompt_earworm_songs_2" />
         <marker scope="Public" name="nagisa_yuri_cold" />
         <marker scope="Public" name="nagisa_yuri_dogear" />

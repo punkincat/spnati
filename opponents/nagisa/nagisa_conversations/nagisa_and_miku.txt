@@ -2,19 +2,19 @@ If Nagisa to left and Miku to right:
 
 NAGISA MUST STRIP SHOES:
 Nagisa [nagisa_miku_nm_n1]: Oh, I'm sorry. I wasn't paying attention. I was just singing a little song to myself...
-Miku [nagisa_miku_nm_n1_R]*: Don't worry about it! In fact, I think your voice is beautiful!
+Miku [nagisa_miku_nm_n1_R]: Don't worry about it! In fact, I think your voice is beautiful!
 
 NAGISA STRIPPING SHOES (accessory):
-Nagisa [nagisa_miku_quiet_song]*: Y-You could hear me, Miku? I thought I was being really quiet...
-Miku [nagisa_miku_quiet_song_R]*: Yeah! I have a tendency to pick up on song a lot. By the way, what were you singing?
+Nagisa [nagisa_miku_nm_n2]: Y-You could hear me, Miku? I thought I was being really quiet...
+Miku [nagisa_miku_nm_n2_R]*: Yeah! I have a tendency to pick up on song a lot. By the way, what were you singing?
 
 NAGISA STRIPPED SHOES (accessory):
 Nagisa [nagisa_miku_nm_n3]*: Do you remember the Big Dango Family? They used to be really popular. They have really catchy theme song, and sometimes I hum it to myself if I'm feeling a little out of place.
-Miku []*: ??
+Miku [nagisa_miku_nm_n3_R]*: The Big Dango Family? I think I've heard about them, but that's about it.
 
 
 NAGISA MUST STRIP SOCKS:
-Nagisa [nagisa_miku_nm_n4]*: ??
+Nagisa [nagisa_miku_nm_n4]*: I don't mean to interrupt the game, but did all of you really not know about the Big Dango Family? I could tell you about them if that's okay.
 Miku []*: ??
 
 NAGISA STRIPPING SOCKS (minor):
@@ -94,19 +94,19 @@ Miku []*: ??
 
 MIKU MUST STRIP TIE:
 Nagisa [nagisa_miku_nm_m1]: I hope don't mind me saying so, but your hair is so beautiful, Miku! You must spend a long time combing it.
-Miku []*: Aw, thanks, Nagisa-chan! It actually doesn't take as long to comb as you might think!
+Miku [nagisa_miku_nm_m1_R]: Aw, thanks, Nagisa-chan! It actually doesn't take as long to comb as you might think!
 
 MIKU STRIPPING TIE (accessory):
-Nagisa [nagisa_miku_nm_m2]*: How long did it take to grow that long, can I ask? Did you have to start growing it before middle school?
-Miku []*: I've actually had it since Day One, Nagisa! It's a little difficult to explain, but I'm not exactly like other girls.
+Nagisa [nagisa_miku_nm_m2]: How long did it take to grow that long, can I ask? Did you have to start growing it before middle school?
+Miku [nagisa_miku_nm_m2_R]*: I've actually had it since Day One, Nagisa! It's a little difficult to explain, but I'm not exactly like other girls.
 
 MIKU STRIPPED TIE (accessory):
 Nagisa [nagisa_miku_nm_m3]*: That must mean... it's a wig? Ah! I'm sorry for blurting that out, Miku! I didn't mean to spill your secret!
-Miku []*: ??
+Miku [nagisa_miku_nm_m3_R]*: Well... it's not a wig either. It's all natural, if you can believe it! Well, as natural as a digital idol can get.
 
 
 MIKU MUST STRIP SLEEVES:
-Nagisa [nagisa_miku_nm_m4]*: ??
+Nagisa [nagisa_miku_nm_m4]*: Miku, I hope it's okay if we put you on the spot again. Could you tell us what it's like to be an idol? What did you mean by a digital idol? Does that mean you have a web site?
 Miku []*: ??
 
 MIKU STRIPPING SLEEVES (accessory):
@@ -294,15 +294,15 @@ Nagisa [nagisa_miku_mn_n21]*: ??
 ---
 
 MIKU MUST STRIP TIE:
-Miku []*: ?? -- For lines in this conversation stream, Miku should say something that you think Nagisa will have an opinion about. Nagisa will reply, and conversation will ensue. Avoid the temptation Nagisa specifically here, as Miku stripping is Miku's turn in the spotlight.
-Nagisa [nagisa_miku_mn_m1]*: ??
+Miku [Miku_Nagisa_1-1]*: You know, it's pretty wild having been an idol for pratically all my existence, but I wouldn't trade this life for anything in the world!
+Nagisa [nagisa_miku_mn_m1]*: I can just imagine you as a little girl in a little idol group, Miku. That must have been so cute! What's your earlier memory of performing?
 
 MIKU STRIPPING TIE (accessory):
-Miku []*: ??
+Miku [Miku_Nagisa_1-2]*: ??
 Nagisa [nagisa_miku_mn_m2]*: ??
 
 MIKU STRIPPED TIE (accessory):
-Miku []*: ??
+Miku [Miku_Nagisa_1-3]*: ??
 Nagisa [nagisa_miku_mn_m3]*: ??
 
 
@@ -323,11 +323,11 @@ MIKU MUST STRIP SHOES:
 Miku []*: ??
 Nagisa [nagisa_miku_mn_m7]*: ??
 
-MIKU STRIPPING SHOES (minor but should be "extra"):
+MIKU STRIPPING SHOES (minor but should be extra/accessory):
 Miku []*: ??
 Nagisa [nagisa_miku_mn_m8]*: ??
 
-MIKU STRIPPED SHOES (minor but should be "extra"):
+MIKU STRIPPED SHOES (minor but should be extra/accessory):
 Miku []*: ??
 Nagisa [nagisa_miku_mn_m9]*: ??
 
