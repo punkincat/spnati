@@ -161,12 +161,12 @@ if (!sans) var sans = (function (root) {
     root.updateGameVisual = hookWrapper('updateGameVisual');
 
     function sansStyling () {
-        lineContent = $('span[data-character="sans"]')[2].innerHTML; // WHAT???
+        lineContent = $('span[data-character="sans"]')[1].innerHTML; // WHAT???
 
         if (lineContent === null || lineContent === "") { return; }
 
-        $('span[data-character="sans"]')[2].innerHTML = lineContent.toLowerCase();
-        $('span[data-character="sans"]')[2].classList.add("comicsans");
+        $('span[data-character="sans"]')[1].innerHTML = lineContent.toLowerCase();
+        $('span[data-character="sans"]')[1].classList.add("comicsans");
     }
     registerHook('updateGameVisual', 'post', sansStyling);
 
