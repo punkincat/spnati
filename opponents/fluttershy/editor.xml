@@ -348,6 +348,7 @@
         <response id="826" opponent="mia_golden_sun" opponentId="114" />
         <response id="828" opponent="toph" opponentId="430" />
         <response id="838" opponent="nagisa" opponentId="1254" />
+        <response id="895" opponent="rouge" opponentId="635" />
     </responses>
     <notes>
         <note id="412">I intentionally made Fluttershy ask Oz a question that Fischl herself could reply to. To further solidify her unintentional ignoring of Fischl over Oz.</note>
@@ -500,7 +501,7 @@
         <label id="627" label="" color="1" folder="" sort="0" />
         <label id="629" label="" color="1" folder="" sort="0" />
         <label id="418" label="" color="5" folder="" sort="0" />
-        <label id="537" label="" color="1" folder="" sort="0" />
+        <label id="892" label="" color="1" folder="" sort="0" />
         <label id="440" label="" color="1" folder="" sort="0" />
         <label id="441" label="" color="1" folder="" sort="0" />
         <label id="484" label="" color="1" folder="" sort="0" />
@@ -530,8 +531,8 @@
         <label id="630" label="" color="1" folder="" sort="0" />
         <label id="539" label="" color="1" folder="" sort="0" />
         <label id="548" label="" color="5" folder="" sort="0" />
-        <label id="549" label="" color="3" folder="" sort="0" />
-        <label id="550" label="" color="3" folder="" sort="0" />
+        <label id="893" label="" color="1" folder="" sort="0" />
+        <label id="891" label="" color="1" folder="" sort="0" />
         <label id="551" label="" color="3" folder="" sort="0" />
         <label id="552" label="" color="5" folder="" sort="0" />
         <label id="553" label="" color="5" folder="" sort="0" />
@@ -594,27 +595,28 @@
         <label id="807" label="" color="1" folder="" sort="0" />
         <label id="811" label="" color="1" folder="" sort="0" />
         <label id="812" label="" color="3" folder="" sort="0" />
-        <label id="843" label="" color="1" folder="" sort="0" />
+        <label id="897" label="" color="3" folder="Nagisa to left" sort="0" />
         <label id="814" label="" folder="Nagisa to left" sort="5" />
         <label id="815" label="" folder="Nagisa to right" sort="4" />
         <label id="816" label="" folder="Nagisa to right" sort="15" />
         <label id="834" label="" color="3" folder="" sort="0" />
-        <label id="841" label="" color="3" folder="" sort="0" />
         <label id="836" label="" folder="Nagisa to right" sort="25" />
         <label id="837" label="" folder="Nagisa to left" sort="20" />
         <label id="838" label="" folder="Nagisa to left" sort="5" />
         <label id="839" label="" folder="Nagisa to left" sort="6" />
-        <label id="840" label="" color="3" folder="" sort="0" />
-        <label id="842" label="" color="3" folder="" sort="0" />
-        <label id="887" label="" color="1" folder="Nagisa to left" sort="0" />
+        <label id="898" label="" color="3" folder="Nagisa to left" sort="0" />
+        <label id="887" label="" folder="Nagisa to left" sort="0" />
         <label id="888" label="" color="1" folder="Nagisa to left" sort="0" />
-        <label id="889" label="" color="1" folder="Nagisa to left" sort="0" />
+        <label id="889" label="" folder="Nagisa to left" sort="0" />
         <label id="890" label="" color="3" folder="Nagisa to left" sort="0" />
+        <label id="894" label="" color="1" folder="" sort="0" />
+        <label id="895" label="" color="1" folder="" sort="0" />
+        <label id="896" label="" color="1" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>Fluttershy_</prefix>
     </prefixes>
-    <nextId>890</nextId>
+    <nextId>898</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="act_confident_self" />
@@ -1105,6 +1107,7 @@
         <marker scope="Public" name="Mia_animals_reply2" />
         <marker scope="Public" name="Mia_animals_reply3" />
         <marker scope="Public" name="Mia_fizz_meeting_cont" />
+        <marker scope="Public" name="Mia_fizz_meeting_end" />
         <marker scope="Public" name="Mia_fizz_meeting_question" />
         <marker scope="Public" name="Mia_fizz_react" />
         <marker scope="Public" name="Mikan_are_you_ok" />
@@ -1346,8 +1349,10 @@
         <marker scope="Public" name="nagisa_strip_not_the_only_one" />
         <marker scope="Public" name="Nagisa_swimHere_replyA" />
         <marker scope="Public" name="Nagisa_swimHere_replyA2" />
+        <marker scope="Public" name="Nagisa_swimHere_replyA3" />
         <marker scope="Public" name="Nagisa_swimHere_replyB" />
         <marker scope="Public" name="Nagisa_swimHere_replyB2" />
+        <marker scope="Public" name="Nagisa_swimHere_replyB3" />
         <marker scope="Public" name="nagisa_swimsuit_not_hot_reply" />
         <marker scope="Public" name="nagisa_take_off_bra_now" />
         <marker scope="Public" name="nagisa_take_this_off_slowly" />
@@ -1575,6 +1580,7 @@
         <marker scope="Public" name="Rouge_nice_boobs" />
         <marker scope="Public" name="Rouge_no_underwear" />
         <marker scope="Public" name="Rouge_no_underwear_cont" />
+        <marker scope="Public" name="Rouge_no_underwear_end" />
         <marker scope="Public" name="Rouge_openHeartAndLegs_reply" />
         <marker scope="Public" name="Rouge_pettingInvitation_reply" />
         <marker scope="Public" name="Rouge_pityTitties_A1a" />
@@ -1594,6 +1600,8 @@
         <marker scope="Public" name="Rouge_sheddingInhibitions_reply" />
         <marker scope="Public" name="Rouge_shelterPetting_reply" />
         <marker scope="Public" name="Rouge_shyAnimalException_reply" />
+        <marker scope="Public" name="Rouge_sideWager_SelfLost" />
+        <marker scope="Public" name="Rouge_sideWager_start" />
         <marker scope="Public" name="Rouge_softboobs_replyA" />
         <marker scope="Public" name="Rouge_softboobs_replyB" />
         <marker scope="Public" name="Rouge_strip1" />
@@ -1635,6 +1643,7 @@
         <marker scope="Public" name="Sci-Twi_third_strip3" />
         <marker scope="Public" name="Scm_reply1" />
         <marker scope="Public" name="sea_turtle_trivia" />
+        <marker scope="Public" name="Self_gropedRouge" />
         <marker scope="Public" name="self_strip_dress_nagisa_thankful" />
         <marker scope="Public" name="Self_thanks_Pit" />
         <marker scope="Public" name="senko_costume" />
