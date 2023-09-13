@@ -363,7 +363,7 @@ Kyou []*: ??
 Nagisa []*: ?? -- falls back to default line, as Kyou has nothing more to say on this.
 
 
-NAGISA MUST STRIP SOCKS:
+NAGISA MUST STRIP SOCKS: equal priority with block below
 Meia [nagisa1]: You're better settled in now, aren't you?  I don't get much practice talking to civilians.
   OR [nagisa1]: I hope you're starting to feel more confident.  I'm not used to giving girls all day to prepare themselves.
 Nagisa [nagisa_meia_got_here_early]: Well, I haven't had to do much yet, but I think I'll be okay. It helped that I got here a little bit early to get used to this place before we started.
@@ -377,6 +377,23 @@ NAGISA STRIPPED SOCKS (minor):
 Meia [nagisa2s]: I report it to the bridge and turn back.  I've only been captured once, when it was a loner hiding in a comet trail.
   OR [nagisa2s]: It's easy to spot them and retreat.  The one time I was captured was my own fault--bad visibility and a lone straggler.
 Nagisa [nagisa_meia_loner]: Even if he was lonely, that's no excuse for capturing you!
+
+
+NAGISA MUST STRIP SOCKS: equal priority with block above
+Meia [nagisa1_alt]: We have a reputation back home, but as a member of Magno's Family, we don't mean you any harm.
+  OR [nagisa1_alt]: If you're worried about us, Magno's Family doesn't target civilians.  We recruit them.
+Nagisa [nagisa_meia_mn_n4_alt]: Where I'm from, we call it the Big Dango Family, but I'm not surprised that they're popular even on other planets. How many are in your version, Meia? Our one has a hundred of them all working hard to make their way through life. And they're so cute!
+
+NAGISA STRIPPING SOCKS (minor):
+Meia [nagisa12_alt]: Uh...our crew is about 150.  Plus more back on Mejare.
+  OR [nagisa12_alt]: ...What?  There's---150.  On our ship, at least.
+Nagisa [nagisa_meia_mn_n5_alt]: You must have so much fun playing with them, Meia! If I joined the Big Magno Family, I don't think I'd ever get any work done, hehehe!
+
+NAGISA STRIPPED SOCKS (minor):
+Meia [nagisa2s_alt]: ??
+  OR [nagisa2s_alt]: ??
+Nagisa [nagisa_meia_mn_n6_alt]: ??
+(reminder for Arndress later: possible the Magno Family hand response might be conditional on this exchange not happening)
 
 
 NAGISA MUST STRIP SOCKS AND NAGISA ALREADY SAID nagisa_playing_with_boys (one or more males):
