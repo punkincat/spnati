@@ -37,7 +37,7 @@ namespace Desktop.CommonControls
 			_barBrushes[0].Color = skin.Blue;
 			_barBrushes[1].Color = skin.Red;
 			_barBrushes[2].Color = skin.Green;
-			_barBrushes[3].Color = skin.OrangeRed;
+			_barBrushes[3].Color = skin.Orange;
 			_barBrushes[4].Color = skin.Purple;
 			_barBrushes[5].Color = skin.Gray;
 			_barBrushes[6].Color = skin.Pink;
