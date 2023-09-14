@@ -286,7 +286,7 @@ namespace SPNATI_Character_Editor
 		{
 			Definitions.Instance.Add(new ColorCode("(None)", 0, skin => skin.Surface.ForeColor));
 			Definitions.Instance.Add(new ColorCode("Red", 1, skin => skin.Red));
-			Definitions.Instance.Add(new ColorCode("Orange", 2, skin => skin.OrangeBrown));
+			Definitions.Instance.Add(new ColorCode("Orange", 2, skin => skin.Orange));
 			Definitions.Instance.Add(new ColorCode("Green", 3, skin => skin.Green));
 			Definitions.Instance.Add(new ColorCode("Blue", 4, skin => skin.Blue));
 			Definitions.Instance.Add(new ColorCode("Purple", 5, skin => skin.Purple));

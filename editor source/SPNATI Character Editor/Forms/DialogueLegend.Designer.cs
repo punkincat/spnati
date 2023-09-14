@@ -68,7 +68,7 @@
             // lblOrange
             // 
             this.lblOrange.AutoSize = true;
-            this.lblOrange.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblOrange.ForeColor = System.Drawing.Color.Orange;
             this.lblOrange.Location = new System.Drawing.Point(3, 36);
             this.lblOrange.Name = "lblOrange";
             this.lblOrange.Size = new System.Drawing.Size(106, 13);
