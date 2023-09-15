@@ -435,6 +435,13 @@
         <response id="1617" opponent="jura" opponentId="1093" />
         <response id="1618" opponent="jura" opponentId="1094" />
         <response id="1619" opponent="jura" opponentId="1096" />
+        <response id="1625" opponent="sanako" opponentId="59" />
+        <response id="1626" opponent="sanako" opponentId="61" />
+        <response id="1627" opponent="sanako" opponentId="63" />
+        <response id="1628" opponent="sanako" opponentId="60" />
+        <response id="1629" opponent="sanako" opponentId="62" />
+        <response id="1630" opponent="sanako" opponentId="64" />
+        <response id="1632" opponent="sakura" opponentId="3" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -479,7 +486,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="37" label="nagisa_sakura_42" folder="Sakura to left" sort="7" />
         <label id="38" label="nagisa_sakura_43 (Sakura to left)" folder="" sort="0" />
         <label id="39" label="indoors" folder="" sort="0" />
-        <label id="40" label="nagisa_sakura_43 (Sakura to right)" folder="" sort="0" />
+        <label id="40" label="nagisa_sakura_43 (Sakura to right)" folder="Sakura to right" sort="0" />
         <label id="41" label="" folder="Waitress" sort="10" />
         <label id="42" label="" folder="Waitress" sort="12" />
         <label id="43" label="" folder="Waitress" sort="16" />
@@ -514,7 +521,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="97" label="library" folder="" sort="0" />
         <label id="98" label="arcade" folder="" sort="0" />
         <label id="99" label="haunted forest" folder="" sort="0" />
-        <label id="100" label="nagisa_sakura_33" folder="" sort="0" />
+        <label id="100" label="nagisa_sakura_33" folder="Sakura to left" sort="0" />
         <label id="101" label="nagisa_mast" folder="" sort="0" />
         <label id="105" label="beach" folder="" sort="0" />
         <label id="106" label="bedroom prompt" folder="CONVERSATION STARTERS" sort="12" />
@@ -2004,17 +2011,27 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1618" label="" folder="Jura to left" sort="0" />
         <label id="1619" label="" folder="Jura to left" sort="0" />
         <label id="1620" label="" folder="Jura to right" sort="0" />
+        <label id="1621" label="" folder="Sanako to right" sort="0" />
+        <label id="1622" label="" folder="Sanako to right" sort="0" />
+        <label id="1623" label="" folder="Sanako to right" sort="0" />
+        <label id="1624" label="" folder="Sanako to left" sort="0" />
+        <label id="1625" label="" folder="Sanako to left" sort="0" />
+        <label id="1626" label="" folder="Sanako to left" sort="0" />
+        <label id="1627" label="" folder="Sanako to left" sort="0" />
+        <label id="1628" label="" folder="Sanako to left" sort="0" />
+        <label id="1629" label="" folder="Sanako to left" sort="0" />
+        <label id="1630" label="" folder="Sanako to left" sort="0" />
+        <label id="1631" label="" folder="Sakura to right" sort="0" />
+        <label id="102" label="" folder="Sakura to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1620</nextId>
+    <nextId>1632</nextId>
     <markers>
         <marker scope="Public" name="" />
-        <marker scope="Public" name="hall_club_meetings" />
-        <marker scope="Public" name="kyou_nagisa_staying_strong" />
         <marker scope="Public" name="nagisa_9s_are_you_lost" />
         <marker scope="Public" name="nagisa_9s_n9_91" />
         <marker scope="Public" name="nagisa_9s_n9_n1" />
@@ -3041,6 +3058,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_kyou_shell" />
         <marker scope="Public" name="nagisa_kyou_show_off" />
         <marker scope="Public" name="nagisa_kyou_starting_out" />
+        <marker scope="Public" name="nagisa_kyou_staying_strong" />
         <marker scope="Public" name="nagisa_kyou_sunohara" />
         <marker scope="Public" name="nagisa_kyou_supportive" />
         <marker scope="Public" name="nagisa_kyou_swimsuit" />
@@ -3673,6 +3691,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_sakura_believing_in_me" />
         <marker scope="Public" name="nagisa_sakura_dango_bra" />
         <marker scope="Public" name="nagisa_sakura_fan" />
+        <marker scope="Public" name="nagisa_sakura_headless" />
         <marker scope="Public" name="nagisa_sakura_hobbies_nonanswer" />
         <marker scope="Public" name="nagisa_sakura_i_can_do_this" />
         <marker scope="Public" name="nagisa_sakura_jacket_removal" />
@@ -3706,6 +3725,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_sanako_ns_n9" />
         <marker scope="Public" name="nagisa_sanako_ns_n9_doubletake" />
         <marker scope="Public" name="nagisa_sanako_ns_s1" />
+        <marker scope="Public" name="nagisa_sanako_ns_s10" />
+        <marker scope="Public" name="nagisa_sanako_ns_s11" />
+        <marker scope="Public" name="nagisa_sanako_ns_s12" />
         <marker scope="Public" name="nagisa_sanako_ns_s2" />
         <marker scope="Public" name="nagisa_sanako_ns_s3" />
         <marker scope="Public" name="nagisa_sanako_ns_s4" />
@@ -3721,6 +3743,12 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_sanako_sn_n1" />
         <marker scope="Public" name="nagisa_sanako_sn_n2" />
         <marker scope="Public" name="nagisa_sanako_sn_n3" />
+        <marker scope="Public" name="nagisa_sanako_sn_n4" />
+        <marker scope="Public" name="nagisa_sanako_sn_n5" />
+        <marker scope="Public" name="nagisa_sanako_sn_n6" />
+        <marker scope="Public" name="nagisa_sanako_sn_n7" />
+        <marker scope="Public" name="nagisa_sanako_sn_n8" />
+        <marker scope="Public" name="nagisa_sanako_sn_n9" />
         <marker scope="Public" name="nagisa_sanako_sorry_for_winning" />
         <marker scope="Public" name="nagisa_sanako_uniform_cute" />
         <marker scope="Public" name="nagisa_sanako_weird" />
@@ -3894,6 +3922,12 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_zone-tan_no_videos" />
         <marker scope="Public" name="naigsa_meia_insecure" />
         <marker scope="Public" name="nickname" />
+        <marker scope="Public" name="sanako_nagisa_ns_s4" />
+        <marker scope="Public" name="sanako_nagisa_ns_s5" />
+        <marker scope="Public" name="sanako_nagisa_ns_s7" />
+        <marker scope="Public" name="sanako_nagisa_ns_s8" />
+        <marker scope="Public" name="sanako_nagisa_sn_n6" />
+        <marker scope="Public" name="sanako_nagisa_sn_n8" />
     </markers>
     <recipes>
         <recipe key="d408a547-4643-48c6-8121-5c650855c6d3">
