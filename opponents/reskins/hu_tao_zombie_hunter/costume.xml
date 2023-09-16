@@ -16,10 +16,11 @@
         <tag remove="true">twintails</tag>
         <tag remove="true">very_long_hair</tag>
     </tags>
+    <layers>6</layers>
     <folder>opponents/reskins/hu_tao_zombie_hunter/</folder>
     <wardrobe>
-        <clothing name="hat" generic="hat" position="lower" type="extra" />
-        <clothing name="pants" generic="pants" position="lower" type="important" plural="true" />
+        <clothing name="hat" generic="hat" position="head" type="extra" />
+        <clothing name="pants" generic="pants" position="lower" type="major" plural="true" />
         <clothing name="bra" generic="bra" position="upper" type="important" />
         <clothing name="shirt" generic="shirt" position="upper" type="major" />
         <clothing name="gear" position="both" type="extra" />
