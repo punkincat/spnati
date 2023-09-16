@@ -442,6 +442,14 @@
         <response id="1629" opponent="sanako" opponentId="62" />
         <response id="1630" opponent="sanako" opponentId="64" />
         <response id="1632" opponent="sakura" opponentId="3" />
+        <response id="1635" opponent="jura" opponentId="1116" />
+        <response id="1636" opponent="jura" opponentId="1117" />
+        <response id="1637" opponent="jura" opponentId="1118" />
+        <response id="1638" opponent="jura" opponentId="1119" />
+        <response id="1639" opponent="jura" opponentId="1120" />
+        <response id="1640" opponent="jura" opponentId="1121" />
+        <response id="1641" opponent="ms.fortune" opponentId="24" />
+        <response id="1642" opponent="noire" opponentId="284" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -1955,7 +1963,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1563" label="" folder="Sanako to left" sort="2" />
         <label id="1565" label="" folder="Mary to left" sort="0" />
         <label id="1566" label="" folder="Jura to left" sort="7" />
-        <label id="1567" label="" folder="Jura to left" sort="6" />
+        <label id="1567" label="waitress" folder="Jura to left" sort="6" />
         <label id="1569" label="indoors" folder="Jura to left" sort="13" />
         <label id="1570" label="outdoors" folder="Jura to left" sort="14" />
         <label id="1571" label="" folder="Nadeshiko to right" sort="2" />
@@ -1968,7 +1976,6 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1578" label="" folder="Jura to left" sort="9" />
         <label id="1579" label="" folder="Jura to left" sort="11" />
         <label id="1580" label="" folder="Jura to left" sort="5" />
-        <label id="1581" label="old line?" folder="" sort="0" />
         <label id="1539" label="" folder="Jura to left" sort="3" />
         <label id="1568" label="" folder="Jura to left" sort="8" />
         <label id="1582" label="" folder="Jura to left" sort="0" />
@@ -2023,13 +2030,22 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1630" label="" folder="Sanako to left" sort="0" />
         <label id="1631" label="" folder="Sakura to right" sort="0" />
         <label id="102" label="" folder="Sakura to left" sort="0" />
+        <label id="1633" label="" folder="Jura to right" sort="0" />
+        <label id="1634" label="" folder="Jura to right" sort="0" />
+        <label id="1635" label="" folder="Jura to left" sort="0" />
+        <label id="1636" label="" folder="Jura to left" sort="0" />
+        <label id="1637" label="" folder="Jura to left" sort="0" />
+        <label id="1638" label="" folder="Jura to left" sort="0" />
+        <label id="1639" label="" folder="Jura to left" sort="0" />
+        <label id="1640" label="" folder="Jura to left" sort="0" />
+        <label id="1642" label="" folder="Noire to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1632</nextId>
+    <nextId>1642</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="nagisa_9s_are_you_lost" />
@@ -2739,6 +2755,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_grass_butt" />
         <marker scope="Public" name="nagisa_gwen_friends" />
         <marker scope="Public" name="nagisa_hairclips">Nagisa wears red hairclips not visible from the front. She doesn't think to use them as an extra layer.</marker>
+        <marker scope="Public" name="nagisa_hall_club_meetings" />
         <marker scope="Public" name="nagisa_happy_birthday" />
         <marker scope="Public" name="nagisa_harley_actress_tips" />
         <marker scope="Public" name="nagisa_haunted_forest_ghosts" />
@@ -2906,6 +2923,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_jura_jn_j11" />
         <marker scope="Public" name="nagisa_jura_jn_j12" />
         <marker scope="Public" name="nagisa_jura_jn_j13" />
+        <marker scope="Public" name="nagisa_jura_jn_j14" />
+        <marker scope="Public" name="nagisa_jura_jn_j14]" />
+        <marker scope="Public" name="nagisa_jura_jn_j16" />
         <marker scope="Public" name="nagisa_jura_jn_j2" />
         <marker scope="Public" name="nagisa_jura_jn_j3" />
         <marker scope="Public" name="nagisa_jura_jn_j3_indoors" />
@@ -2915,12 +2935,15 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_jura_jn_j6" />
         <marker scope="Public" name="nagisa_jura_jn_j7" />
         <marker scope="Public" name="nagisa_jura_jn_j8" />
+        <marker scope="Public" name="nagisa_jura_jn_j9" />
         <marker scope="Public" name="nagisa_jura_jn_n1" />
         <marker scope="Public" name="nagisa_jura_jn_n1_waitress" />
         <marker scope="Public" name="nagisa_jura_jn_n10" />
+        <marker scope="Public" name="nagisa_jura_jn_n11" />
         <marker scope="Public" name="nagisa_jura_jn_n13" />
         <marker scope="Public" name="nagisa_jura_jn_n14" />
         <marker scope="Public" name="nagisa_jura_jn_n15" />
+        <marker scope="Public" name="nagisa_jura_jn_n16" />
         <marker scope="Public" name="nagisa_jura_jn_n2" />
         <marker scope="Public" name="nagisa_jura_jn_n2_waitress" />
         <marker scope="Public" name="nagisa_jura_jn_n3" />
@@ -2930,12 +2953,15 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_jura_jn_n6" />
         <marker scope="Public" name="nagisa_jura_jn_n7" />
         <marker scope="Public" name="nagisa_jura_jn_n8" />
+        <marker scope="Public" name="nagisa_jura_jn_n9" />
         <marker scope="Public" name="nagisa_jura_long_hair_envy" />
         <marker scope="Public" name="nagisa_jura_lovely_hair" />
         <marker scope="Public" name="nagisa_jura_male_private_parts" />
         <marker scope="Public" name="nagisa_jura_nervous_when_people_naked" />
         <marker scope="Public" name="nagisa_jura_never_tubed" />
         <marker scope="Public" name="nagisa_jura_nj_j1" />
+        <marker scope="Public" name="nagisa_jura_nj_j2" />
+        <marker scope="Public" name="nagisa_jura_nj_n1" />
         <marker scope="Public" name="nagisa_jura_seduction" />
         <marker scope="Public" name="nagisa_jura_seems_grown_up" />
         <marker scope="Public" name="nagisa_jura_so_brave" />
@@ -3358,6 +3384,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_moon_ashamed" />
         <marker scope="Public" name="nagisa_moon_savior" />
         <marker scope="Public" name="nagisa_moon_stripping_on_purpose" />
+        <marker scope="Public" name="nagisa_msfortune_headless" />
         <marker scope="Public" name="nagisa_mysterious_scar">Nagisa's father claims that she has a mysterious scar on her butt.</marker>
         <marker scope="Public" name="nagisa_nadeshiiko_selected_uniform" />
         <marker scope="Public" name="nagisa_nadeshiko_any_tips" />
@@ -3415,6 +3442,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_noire_costume" />
         <marker scope="Public" name="nagisa_noire_costume_2" />
         <marker scope="Public" name="nagisa_noire_kyou_club_play" />
+        <marker scope="Public" name="nagisa_noire_player2" />
         <marker scope="Public" name="nagisa_noire_pratice" />
         <marker scope="Public" name="nagisa_noire_pratice_2" />
         <marker scope="Public" name="nagisa_not_21_yet" />
