@@ -455,6 +455,9 @@
         <response id="1648" opponent="jura" opponentId="1128" />
         <response id="1649" opponent="jura" opponentId="1126" />
         <response id="1650" opponent="jura" opponentId="1127" />
+        <response id="1657" opponent="jura" opponentId="1131" />
+        <response id="1658" opponent="jura" opponentId="1132" />
+        <response id="1659" opponent="jura" opponentId="1133" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -2055,13 +2058,23 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1651" label="" folder="Nico Robin to right" sort="0" />
         <label id="1652" label="" folder="Nico Robin to right" sort="0" />
         <label id="1653" label="" folder="Yunyun to right" sort="0" />
+        <label id="1654" label="with guys" folder="Jura to right" sort="0" />
+        <label id="1655" label="without guys" folder="Jura to right" sort="0" />
+        <label id="1656" label="" folder="Jura to right" sort="0" />
+        <label id="1657" label="" folder="Jura to left" sort="0" />
+        <label id="1658" label="" folder="Jura to left" sort="0" />
+        <label id="1659" label="" folder="Jura to left" sort="0" />
+        <label id="1660" label="" folder="Jura to right" sort="0" />
+        <label id="1661" label="" folder="Jura to left" sort="0" />
+        <label id="1662" label="" folder="Yumeko to right" sort="0" />
+        <label id="1663" label="" folder="Yumeko to right" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1653</nextId>
+    <nextId>1663</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="nagisa_9s_are_you_lost" />
@@ -2944,6 +2957,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_jura_jn_j15" />
         <marker scope="Public" name="nagisa_jura_jn_j16" />
         <marker scope="Public" name="nagisa_jura_jn_j17" />
+        <marker scope="Public" name="nagisa_jura_jn_j18" />
         <marker scope="Public" name="nagisa_jura_jn_j2" />
         <marker scope="Public" name="nagisa_jura_jn_j3" />
         <marker scope="Public" name="nagisa_jura_jn_j3_indoors" />
@@ -2964,9 +2978,12 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_jura_jn_n15" />
         <marker scope="Public" name="nagisa_jura_jn_n16" />
         <marker scope="Public" name="nagisa_jura_jn_n17" />
+        <marker scope="Public" name="nagisa_jura_jn_n18" />
         <marker scope="Public" name="nagisa_jura_jn_n19" />
         <marker scope="Public" name="nagisa_jura_jn_n2" />
         <marker scope="Public" name="nagisa_jura_jn_n2_waitress" />
+        <marker scope="Public" name="nagisa_jura_jn_n20" />
+        <marker scope="Public" name="nagisa_jura_jn_n21" />
         <marker scope="Public" name="nagisa_jura_jn_n3" />
         <marker scope="Public" name="nagisa_jura_jn_n3_waitress" />
         <marker scope="Public" name="nagisa_jura_jn_n4" />
@@ -2983,8 +3000,12 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_jura_nj_j1" />
         <marker scope="Public" name="nagisa_jura_nj_j2" />
         <marker scope="Public" name="nagisa_jura_nj_j3" />
+        <marker scope="Public" name="nagisa_jura_nj_j4" />
         <marker scope="Public" name="nagisa_jura_nj_n1" />
         <marker scope="Public" name="nagisa_jura_nj_n2" />
+        <marker scope="Public" name="nagisa_jura_nj_n3_no_peeping" />
+        <marker scope="Public" name="nagisa_jura_nj_n3_unusual" />
+        <marker scope="Public" name="nagisa_jura_nj_n4" />
         <marker scope="Public" name="nagisa_jura_seduction" />
         <marker scope="Public" name="nagisa_jura_seems_grown_up" />
         <marker scope="Public" name="nagisa_jura_so_brave" />
@@ -3940,7 +3961,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_yshtola_rules" />
         <marker scope="Public" name="nagisa_yuelia_was_that_magic" />
         <marker scope="Public" name="nagisa_yumeko_ny_n1" />
+        <marker scope="Public" name="nagisa_yumeko_ny_n2" />
         <marker scope="Public" name="nagisa_yumeko_ny_y1" />
+        <marker scope="Public" name="nagisa_yumeko_ny_y2" />
         <marker scope="Public" name="nagisa_yuno_prompt_earworm_songs_2" />
         <marker scope="Public" name="nagisa_yunyun_ny_y1" />
         <marker scope="Public" name="nagisa_yuri_cold" />
