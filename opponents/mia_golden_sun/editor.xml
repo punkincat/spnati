@@ -732,14 +732,26 @@
         <label id="583" label="" folder="Responses" sort="0" />
         <label id="584" label="" color="1" folder="Targets" sort="0" />
         <label id="585" label="" color="1" folder="Targets" sort="0" />
+        <label id="586" label="" folder="Human" sort="0" />
+        <label id="587" label="" folder="Human" sort="0" />
+        <label id="588" label="" folder="Human" sort="0" />
+        <label id="589" label="" folder="Human" sort="0" />
+        <label id="590" label="" folder="Human" sort="0" />
+        <label id="591" label="" folder="Human" sort="0" />
+        <label id="592" label="" folder="Epilogue" sort="0" />
+        <label id="593" label="" folder="Epilogue" sort="0" />
+        <label id="594" label="" folder="Epilogue" sort="0" />
+        <label id="595" label="" folder="Epilogue" sort="0" />
     </labels>
     <prefixes>
         <prefix>zz_</prefix>
     </prefixes>
+    <posePreviewMarkers>
+        <posePreviewMarker>epilogue_playerskintone==3</posePreviewMarker>
+    </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>585</nextId>
+    <nextId>595</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="a_djinni_was_in_my_cape">Fizz djinni situational marker</marker>
         <marker scope="Public" name="angara_is_isolated" />
         <marker scope="Public" name="aqua_keyblade_revealResp">Reaction to Aqua KH 'keyblade reveal' situation</marker>
@@ -765,6 +777,7 @@
         <marker scope="Public" name="dunban_miaGS_powers1" />
         <marker scope="Public" name="dunban_miaGS_powers2" />
         <marker scope="Public" name="dunban_miaGS_powers3" />
+        <marker scope="Public" name="epilogue_playerskintone">0 = pale (default), 1 = fair, 2 = olive, 3 = dark</marker>
         <marker scope="Public" name="fizz_butt_pose_appearance">Fizz appears during this butt pose.</marker>
         <marker scope="Public" name="fizz_goes_away">note: Fizz died on the way back to his home planet</marker>
         <marker scope="Public" name="fluttershy_butt1" />
@@ -787,6 +800,7 @@
         <marker scope="Public" name="hanako_shirt_off" />
         <marker scope="Public" name="hero_of_vale" />
         <marker scope="Public" name="hugebreasts_scantilyclad_chestwillbe" />
+        <marker scope="Public" name="human_post_ff_flirting_butt_pose" />
         <marker scope="Public" name="Imil_invitation" />
         <marker scope="Public" name="jura_mia_gs_babiesResp" />
         <marker scope="Public" name="lucky_medal_fountain">Line mentioning the Lucky Medal Fountain minigame</marker>
@@ -1045,6 +1059,7 @@
         <marker scope="Public" name="water_in_a_fight" />
         <marker scope="Public" name="weyard_is_flat" />
         <marker scope="Public" name="weyard_is_medieval" />
+        <marker scope="Public" name="yuno_distraction" />
         <marker scope="Public" name="yuno_erection" />
         <marker scope="Public" name="yuno_injuryA" />
         <marker scope="Public" name="yuno_injuryB" />
