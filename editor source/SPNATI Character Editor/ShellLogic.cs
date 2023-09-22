@@ -269,6 +269,21 @@ namespace SPNATI_Character_Editor
 			property = new PropertyDefinition("SkewY", "Skew (Y)", typeof(float), 65);
 			Definitions.Instance.Add(property);
 
+			property = new PropertyDefinition("ClipLeft", "Clip Left", typeof(float), 70);
+			Definitions.Instance.Add(property);
+
+			property = new PropertyDefinition("ClipTop", "Clip Top", typeof(float), 71);
+			Definitions.Instance.Add(property);
+
+			property = new PropertyDefinition("ClipRight", "Clip Right", typeof(float), 72);
+			Definitions.Instance.Add(property);
+
+			property = new PropertyDefinition("ClipBottom", "Clip Bottom", typeof(float), 73);
+			Definitions.Instance.Add(property);
+
+			property = new PropertyDefinition("ClipRound", "Clip Round", typeof(float), 74);
+			Definitions.Instance.Add(property);
+
 			property = new PropertyDefinition("Zoom", "Zoom", typeof(float), 20);
 			Definitions.Instance.Add(property);
 

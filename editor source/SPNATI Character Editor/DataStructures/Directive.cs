@@ -524,6 +524,26 @@ namespace SPNATI_Character_Editor
 		[XmlAttribute("zoom")]
 		public string Zoom;
 
+		[Float(DisplayName = "Clip Left", Key = "clipleft", GroupOrder = 24, Description = "Clip Left", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[XmlAttribute("clipleft")]
+		public string ClipLeft;
+
+		[Float(DisplayName = "Clip Top", Key = "cliptop", GroupOrder = 25, Description = "Clip Top", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[XmlAttribute("clipleft")]
+		public string ClipTop;
+
+		[Float(DisplayName = "Clip Right", Key = "clipright", GroupOrder = 26, Description = "Clip Right", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[XmlAttribute("clipright")]
+		public string ClipRight;
+
+		[Float(DisplayName = "Clip Bottom", Key = "clipbottom", GroupOrder = 27, Description = "Clip Bottom", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[XmlAttribute("clipbottom")]
+		public string ClipBottom;
+
+		[Float(DisplayName = "Clip Round", Key = "clipround", GroupOrder = 28, Description = "Clip Round", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[XmlAttribute("clipround")]
+		public string ClipRound;
+
 		[XmlIgnore]
 		public Dictionary<string, object> Properties = new Dictionary<string, object>();
 
@@ -538,7 +558,8 @@ namespace SPNATI_Character_Editor
 		{
 			return !string.IsNullOrEmpty(X) || !string.IsNullOrEmpty(Y) || !string.IsNullOrEmpty(Scale) || !string.IsNullOrEmpty(ScaleX) || !string.IsNullOrEmpty(ScaleY)
 				 || !string.IsNullOrEmpty(Color) || !string.IsNullOrEmpty(Alpha) || !string.IsNullOrEmpty(Rotation) || !string.IsNullOrEmpty(Zoom) || !string.IsNullOrEmpty(Src)
-				 || !string.IsNullOrEmpty(SkewX) || !string.IsNullOrEmpty(SkewY);
+				 || !string.IsNullOrEmpty(SkewX) || !string.IsNullOrEmpty(SkewY) || !string.IsNullOrEmpty(ClipLeft) || !string.IsNullOrEmpty(ClipTop) || !string.IsNullOrEmpty(ClipRight)
+				 || !string.IsNullOrEmpty(ClipBottom) || !string.IsNullOrEmpty(ClipRound);
 		}
 
 		public Keyframe() { }
@@ -564,6 +585,11 @@ namespace SPNATI_Character_Editor
 			Rotation = src.Rotation;
 			Zoom = src.Zoom;
 			Src = src.Src;
+			ClipLeft = src.ClipLeft;
+			ClipTop = src.ClipTop;
+			ClipRight = src.ClipRight;
+			ClipBottom = src.ClipBottom;
+			ClipRound = src.ClipRound;
 
 			src.Time = null;
 			src.X = null;
@@ -578,6 +604,11 @@ namespace SPNATI_Character_Editor
 			src.SkewX = null;
 			src.SkewY = null;
 			src.Src = null;
+			src.ClipLeft = null;
+			src.ClipTop = null;
+			src.ClipRight = null;
+			src.ClipBottom = null;
+			src.ClipRound = null;
 
 			Properties = src.Properties;
 			src.Properties = new Dictionary<string, object>();
@@ -681,6 +712,26 @@ namespace SPNATI_Character_Editor
 			if (!string.IsNullOrEmpty(Src))
 			{
 				sb.Append($" Src:{Src}");
+			}
+			if (!string.IsNullOrEmpty(ClipLeft))
+			{
+				sb.Append($" ClipLeft:{ClipLeft}");
+			}
+			if (!string.IsNullOrEmpty(ClipTop))
+			{
+				sb.Append($" ClipTop:{ClipTop}");
+			}
+			if (!string.IsNullOrEmpty(ClipRight))
+			{
+				sb.Append($" ClipRight:{ClipRight}");
+			}
+			if (!string.IsNullOrEmpty(ClipBottom))
+			{
+				sb.Append($" ClipBottom:{ClipBottom}");
+			}
+			if (!string.IsNullOrEmpty(ClipRound))
+			{
+				sb.Append($" ClipRound:{ClipRound}");
 			}
 			return sb.ToString();
 		}

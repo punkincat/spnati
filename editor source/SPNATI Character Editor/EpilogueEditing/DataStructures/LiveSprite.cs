@@ -250,6 +250,31 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				AddValue<float>(time, "SkewY", kf.SkewY, addBreak);
 				properties.Add("SkewY");
 			}
+			if (!string.IsNullOrEmpty(kf.ClipLeft))
+			{
+				AddValue<float>(time, "ClipLeft", kf.ClipLeft, addBreak);
+				properties.Add("ClipLeft");
+			}
+			if (!string.IsNullOrEmpty(kf.ClipTop))
+			{
+				AddValue<float>(time, "ClipTop", kf.ClipTop, addBreak);
+				properties.Add("ClipTop");
+			}
+			if (!string.IsNullOrEmpty(kf.ClipRight))
+			{
+				AddValue<float>(time, "ClipRight", kf.ClipRight, addBreak);
+				properties.Add("ClipRight");
+			}
+			if (!string.IsNullOrEmpty(kf.ClipBottom))
+			{
+				AddValue<float>(time, "ClipBottom", kf.ClipBottom, addBreak);
+				properties.Add("ClipBottom");
+			}
+			if (!string.IsNullOrEmpty(kf.ClipRound))
+			{
+				AddValue<float>(time, "ClipRound", kf.ClipRound, addBreak);
+				properties.Add("ClipRound");
+			}
 		}
 
 		protected override void OnUpdate(float time, float offset, string easeOverride, string interpolationOverride, bool? looped, bool inPlayback)
@@ -265,6 +290,11 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			Rotation = GetPropertyValue("Rotation", time, offset, 0.0f, easeOverride, interpolationOverride, looped);
 			SkewX = GetPropertyValue("SkewX", time, offset, 0f, easeOverride, interpolationOverride, looped);
 			SkewY = GetPropertyValue("SkewY", time, offset, 0f, easeOverride, interpolationOverride, looped);
+			ClipLeft = GetPropertyValue("ClipLeft", time, offset, 0f, easeOverride, interpolationOverride, looped);
+			ClipTop = GetPropertyValue("ClipTop", time, offset, 0f, easeOverride, interpolationOverride, looped);
+			ClipRight = GetPropertyValue("ClipRight", time, offset, 0f, easeOverride, interpolationOverride, looped);
+			ClipBottom = GetPropertyValue("ClipBottom", time, offset, 0f, easeOverride, interpolationOverride, looped);
+			ClipRound = GetPropertyValue("ClipRound", time, offset, 0f, easeOverride, interpolationOverride, looped);
 		}
 
 		private void UpdateImage()
@@ -401,6 +431,26 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 					if (initialFrame.Alpha.HasValue)
 					{
 						sprite.Alpha = initialFrame.Alpha.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipLeft.HasValue)
+					{
+						sprite.ClipLeft = initialFrame.ClipLeft.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipTop.HasValue)
+					{
+						sprite.ClipTop = initialFrame.ClipTop.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipRight.HasValue)
+					{
+						sprite.ClipRight = initialFrame.ClipRight.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipBottom.HasValue)
+					{
+						sprite.ClipBottom = initialFrame.ClipBottom.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipRound.HasValue)
+					{
+						sprite.ClipRound = initialFrame.ClipRound.Value.ToString(CultureInfo.InvariantCulture);
 					}
 
 					UpdateHistory(initialFrame);
