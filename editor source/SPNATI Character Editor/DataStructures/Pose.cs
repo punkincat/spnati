@@ -150,9 +150,9 @@ namespace SPNATI_Character_Editor
 					{
 						sprite.ClipBottom = initialFrame.ClipBottom.Value.ToString(CultureInfo.InvariantCulture);
 					}
-					if (initialFrame.ClipRound.HasValue)
+					if (initialFrame.ClipRadius.HasValue)
 					{
-						sprite.ClipRound = initialFrame.ClipRound.Value.ToString(CultureInfo.InvariantCulture);
+						sprite.ClipRadius = initialFrame.ClipRadius.Value.ToString(CultureInfo.InvariantCulture);
 					}
 					if (initialFrame.Rotation.HasValue)
 					{
@@ -310,8 +310,8 @@ namespace SPNATI_Character_Editor
 				case "ClipBottom":
 					frame.ClipBottom = kf.ClipBottom.Value.ToString(CultureInfo.InvariantCulture);
 					break;
-				case "ClipRound":
-					frame.ClipRound = kf.ClipRound.Value.ToString(CultureInfo.InvariantCulture);
+				case "ClipRadius":
+					frame.ClipRadius = kf.ClipRadius.Value.ToString(CultureInfo.InvariantCulture);
 					break;
 			}
 		}

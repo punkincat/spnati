@@ -350,14 +350,14 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 		}
 
-		private float _clipRound = 0;
-		public float ClipRound
+		private float _clipRadius = 0;
+		public float ClipRadius
 		{
-			get { return _clipRound; }
+			get { return _clipRadius; }
 			set
 			{
 				value = (float)Math.Round(value, 2);
-				_clipRound = value;
+				_clipRadius = value;
 				InvalidateTransform();
 			}
 		}

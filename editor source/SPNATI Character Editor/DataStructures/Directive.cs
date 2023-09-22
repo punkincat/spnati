@@ -529,7 +529,7 @@ namespace SPNATI_Character_Editor
 		public string ClipLeft;
 
 		[Float(DisplayName = "Clip Top", Key = "cliptop", GroupOrder = 25, Description = "Clip Top", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
-		[XmlAttribute("clipleft")]
+		[XmlAttribute("cliptop")]
 		public string ClipTop;
 
 		[Float(DisplayName = "Clip Right", Key = "clipright", GroupOrder = 26, Description = "Clip Right", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
@@ -540,9 +540,9 @@ namespace SPNATI_Character_Editor
 		[XmlAttribute("clipbottom")]
 		public string ClipBottom;
 
-		[Float(DisplayName = "Clip Round", Key = "clipround", GroupOrder = 28, Description = "Clip Round", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
-		[XmlAttribute("clipround")]
-		public string ClipRound;
+		[Float(DisplayName = "Clip Radius", Key = "clipradius", GroupOrder = 28, Description = "Clip Radius", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[XmlAttribute("clipradius")]
+		public string ClipRadius;
 
 		[XmlIgnore]
 		public Dictionary<string, object> Properties = new Dictionary<string, object>();
@@ -559,7 +559,7 @@ namespace SPNATI_Character_Editor
 			return !string.IsNullOrEmpty(X) || !string.IsNullOrEmpty(Y) || !string.IsNullOrEmpty(Scale) || !string.IsNullOrEmpty(ScaleX) || !string.IsNullOrEmpty(ScaleY)
 				 || !string.IsNullOrEmpty(Color) || !string.IsNullOrEmpty(Alpha) || !string.IsNullOrEmpty(Rotation) || !string.IsNullOrEmpty(Zoom) || !string.IsNullOrEmpty(Src)
 				 || !string.IsNullOrEmpty(SkewX) || !string.IsNullOrEmpty(SkewY) || !string.IsNullOrEmpty(ClipLeft) || !string.IsNullOrEmpty(ClipTop) || !string.IsNullOrEmpty(ClipRight)
-				 || !string.IsNullOrEmpty(ClipBottom) || !string.IsNullOrEmpty(ClipRound);
+				 || !string.IsNullOrEmpty(ClipBottom) || !string.IsNullOrEmpty(ClipRadius);
 		}
 
 		public Keyframe() { }
@@ -589,7 +589,7 @@ namespace SPNATI_Character_Editor
 			ClipTop = src.ClipTop;
 			ClipRight = src.ClipRight;
 			ClipBottom = src.ClipBottom;
-			ClipRound = src.ClipRound;
+			ClipRadius = src.ClipRadius;
 
 			src.Time = null;
 			src.X = null;
@@ -608,7 +608,7 @@ namespace SPNATI_Character_Editor
 			src.ClipTop = null;
 			src.ClipRight = null;
 			src.ClipBottom = null;
-			src.ClipRound = null;
+			src.ClipRadius = null;
 
 			Properties = src.Properties;
 			src.Properties = new Dictionary<string, object>();
@@ -729,9 +729,9 @@ namespace SPNATI_Character_Editor
 			{
 				sb.Append($" ClipBottom:{ClipBottom}");
 			}
-			if (!string.IsNullOrEmpty(ClipRound))
+			if (!string.IsNullOrEmpty(ClipRadius))
 			{
-				sb.Append($" ClipRound:{ClipRound}");
+				sb.Append($" ClipRadius:{ClipRadius}");
 			}
 			return sb.ToString();
 		}

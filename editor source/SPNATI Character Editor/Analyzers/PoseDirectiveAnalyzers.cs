@@ -163,9 +163,9 @@ namespace SPNATI_Character_Editor.Analyzers
 	{
 		public override string PropertyName { get { return "ClipBottom"; } }
 	}
-	public class PoseClipRoundAnalyzer : PoseDirectivePropertyAnalyzer
+	public class PoseClipRadiusAnalyzer : PoseDirectivePropertyAnalyzer
 	{
-		public override string PropertyName { get { return "ClipRound"; } }
+		public override string PropertyName { get { return "ClipRadius"; } }
 	}
 
 	public class PoseParentingAnalyzer : BooleanAnalyzer

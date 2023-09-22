@@ -102,7 +102,7 @@ namespace SPNATI_Character_Editor
 			DirectiveDefinition def = provider.Create("sprite") as DirectiveDefinition;
 			def.Description = "Adds a sprite to the scene.";
 			def.SortOrder = 15;
-			foreach (string key in new string[] { "id", "src", "layer", "width", "height", "x", "y", "scalex", "scaley", "rotation", "alpha", "pivotx", "pivoty", "marker", "delay", "skewx", "skewy" })
+			foreach (string key in new string[] { "id", "src", "layer", "width", "height", "x", "y", "scalex", "scaley", "rotation", "alpha", "pivotx", "pivoty", "marker", "delay", "skewx", "skewy", "clipleft", "cliptop", "clipright", "clipbottom", "clipradius" })
 			{
 				def.AllowedProperties.Add(key);
 			}
@@ -136,7 +136,7 @@ namespace SPNATI_Character_Editor
 			def.Description = "Moves/rotates/scales a sprite or emitter.";
 			def.FilterPropertiesById = true;
 			def.SortOrder = 50;
-			foreach (string key in new string[] { "id", "src", "x", "y", "scalex", "scaley", "rotation", "alpha", "rate", "time", "delay", "loop", "ease", "tween", "clamp", "iterations", "marker", "skewx", "skewy" })
+			foreach (string key in new string[] { "id", "src", "x", "y", "scalex", "scaley", "rotation", "alpha", "rate", "time", "delay", "loop", "ease", "tween", "clamp", "iterations", "marker", "skewx", "skewy", "clipleft", "cliptop", "clipright", "clipbottom", "clipradius" })
 			{
 				def.AllowedProperties.Add(key);
 			}
@@ -281,7 +281,7 @@ namespace SPNATI_Character_Editor
 			property = new PropertyDefinition("ClipBottom", "Clip Bottom", typeof(float), 73);
 			Definitions.Instance.Add(property);
 
-			property = new PropertyDefinition("ClipRound", "Clip Round", typeof(float), 74);
+			property = new PropertyDefinition("ClipRadius", "Clip Radius", typeof(float), 74);
 			Definitions.Instance.Add(property);
 
 			property = new PropertyDefinition("Zoom", "Zoom", typeof(float), 20);

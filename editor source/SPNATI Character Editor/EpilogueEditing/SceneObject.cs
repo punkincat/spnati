@@ -31,7 +31,7 @@ namespace SPNATI_Character_Editor.EpilogueEditing
 		public float ClipRight = 0;
 		public float ClipTop = 0;
 		public float ClipBottom = 0;
-		public float ClipRound = 0;
+		public float ClipRadius = 0;
 		private float _alpha = 100;
 		public float Alpha
 		{
@@ -242,7 +242,7 @@ namespace SPNATI_Character_Editor.EpilogueEditing
 			ClipTop = source.ClipTop;
 			ClipRight = source.ClipRight;
 			ClipBottom = source.ClipBottom;
-			ClipRound = source.ClipRound;
+			ClipRadius = source.ClipRadius;
 			PivotX = source.PivotX;
 			PivotY = source.PivotY;
 			Rotation = source.Rotation;
@@ -374,9 +374,9 @@ namespace SPNATI_Character_Editor.EpilogueEditing
 			{
 				float.TryParse(frame.ClipBottom, NumberStyles.Float, CultureInfo.InvariantCulture, out ClipBottom);
 			}
-			if (!string.IsNullOrEmpty(frame.ClipRound))
+			if (!string.IsNullOrEmpty(frame.ClipRadius))
 			{
-				float.TryParse(frame.ClipRound, NumberStyles.Float, CultureInfo.InvariantCulture, out ClipRound);
+				float.TryParse(frame.ClipRadius, NumberStyles.Float, CultureInfo.InvariantCulture, out ClipRadius);
 			}
 			if (!string.IsNullOrEmpty(frame.Rotation))
 			{
@@ -487,9 +487,9 @@ namespace SPNATI_Character_Editor.EpilogueEditing
 			{
 				ClipBottom = Interpolate(last.ClipBottom, frame.ClipBottom, frame.Tween, time, lastLast.ClipBottom, nextNext.ClipBottom);
 			}
-			if ((last.LinkedFrame == null || !string.IsNullOrEmpty(last.LinkedFrame.ClipRound)) && (frame.LinkedFrame == null || !string.IsNullOrEmpty(frame.LinkedFrame.ClipRound)))
+			if ((last.LinkedFrame == null || !string.IsNullOrEmpty(last.LinkedFrame.ClipRadius)) && (frame.LinkedFrame == null || !string.IsNullOrEmpty(frame.LinkedFrame.ClipRadius)))
 			{
-				ClipRound = Interpolate(last.ClipRound, frame.ClipRound, frame.Tween, time, lastLast.ClipRound, nextNext.ClipRound);
+				ClipRadius = Interpolate(last.ClipRadius, frame.ClipRadius, frame.Tween, time, lastLast.ClipRadius, nextNext.ClipRadius);
 			}
 			if ((last.LinkedFrame == null || !string.IsNullOrEmpty(last.LinkedFrame.Zoom)) && (frame.LinkedFrame == null || !string.IsNullOrEmpty(frame.LinkedFrame.Zoom)))
 			{

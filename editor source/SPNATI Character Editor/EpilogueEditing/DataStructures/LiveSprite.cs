@@ -270,10 +270,10 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				AddValue<float>(time, "ClipBottom", kf.ClipBottom, addBreak);
 				properties.Add("ClipBottom");
 			}
-			if (!string.IsNullOrEmpty(kf.ClipRound))
+			if (!string.IsNullOrEmpty(kf.ClipRadius))
 			{
-				AddValue<float>(time, "ClipRound", kf.ClipRound, addBreak);
-				properties.Add("ClipRound");
+				AddValue<float>(time, "ClipRadius", kf.ClipRadius, addBreak);
+				properties.Add("ClipRadius");
 			}
 		}
 
@@ -294,7 +294,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			ClipTop = GetPropertyValue("ClipTop", time, offset, 0f, easeOverride, interpolationOverride, looped);
 			ClipRight = GetPropertyValue("ClipRight", time, offset, 0f, easeOverride, interpolationOverride, looped);
 			ClipBottom = GetPropertyValue("ClipBottom", time, offset, 0f, easeOverride, interpolationOverride, looped);
-			ClipRound = GetPropertyValue("ClipRound", time, offset, 0f, easeOverride, interpolationOverride, looped);
+			ClipRadius = GetPropertyValue("ClipRadius", time, offset, 0f, easeOverride, interpolationOverride, looped);
 		}
 
 		private void UpdateImage()
@@ -448,9 +448,9 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 					{
 						sprite.ClipBottom = initialFrame.ClipBottom.Value.ToString(CultureInfo.InvariantCulture);
 					}
-					if (initialFrame.ClipRound.HasValue)
+					if (initialFrame.ClipRadius.HasValue)
 					{
-						sprite.ClipRound = initialFrame.ClipRound.Value.ToString(CultureInfo.InvariantCulture);
+						sprite.ClipRadius = initialFrame.ClipRadius.Value.ToString(CultureInfo.InvariantCulture);
 					}
 
 					UpdateHistory(initialFrame);
