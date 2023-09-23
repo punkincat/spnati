@@ -472,6 +472,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <note id="22">This marker name is outdated, but Fina and Twisted Fate rely on it to reply.</note>
         <note id="982">This line has manual priority to allow it to play only when Nagisa doesn't have a different targeted line to play. Note that this doesn't seem to work when the human player is the target, and I'm unsure why. But it does work when another non-Meia opponent is the target.</note>
         <note id="1002">See the note on the other case with the marker nagisa_meia_post-hug_other for more information.</note>
+        <note id="1196">can play without previous Estelle line</note>
+        <note id="1238">Priority is so high to make sure it plays instead of nagisa_waitress_how_much_you_mean_to_me, which can play in a subsequent round.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Waitress" sort="30" />
@@ -2085,15 +2087,24 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1679" label="" folder="Sanako to right" sort="0" />
         <label id="1680" label="" folder="Sanako to right" sort="0" />
         <label id="1681" label="" folder="Sanako to right" sort="0" />
+        <label id="1682" label="" folder="Jura to right" sort="0" />
+        <label id="1683" label="" folder="Jura to right" sort="0" />
+        <label id="1684" label="" folder="Natsuki to right" sort="0" />
+        <label id="1685" label="" folder="Natsuki to right" sort="0" />
+        <label id="1686" label="" folder="Natsuki to right" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1681</nextId>
+    <nextId>1686</nextId>
     <markers>
         <marker scope="Public" name="" />
+        <marker scope="Public" name="EstelleNagisaReply1" />
+        <marker scope="Public" name="EstelleNagisaReply2" />
+        <marker scope="Public" name="EstelleNagisaReplyContinue1" />
+        <marker scope="Public" name="EstelleNagisaReplyContinue2" />
         <marker scope="Public" name="nagisa_9s_are_you_lost" />
         <marker scope="Public" name="nagisa_9s_n9_91" />
         <marker scope="Public" name="nagisa_9s_n9_n1" />
@@ -2648,8 +2659,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_fina_work_it_out" />
         <marker scope="Public" name="nagisa_fina_you_can_make_it" />
         <marker scope="Public" name="nagisa_fina_your_highness" />
-        <marker scope="Private" name="nagisa_finished_1">This is Nagisa's first final stage line. It does not repeat.</marker>
-        <marker scope="Private" name="nagisa_finished_2">This is Nagisa's second final stage line. It does not repeat.</marker>
+        <marker scope="Public" name="nagisa_finished_1">This is Nagisa's first final stage line. It does not repeat.</marker>
+        <marker scope="Public" name="nagisa_finished_2">This is Nagisa's second final stage line. It does not repeat.</marker>
         <marker scope="Public" name="nagisa_first_time_playing">Nagisa has never played strip poker before this game.</marker>
         <marker scope="Public" name="nagisa_fischl_fairytale" />
         <marker scope="Public" name="nagisa_florina_cant_blame" />
@@ -3021,7 +3032,10 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_jura_nj_j5" />
         <marker scope="Public" name="nagisa_jura_nj_j6" />
         <marker scope="Public" name="nagisa_jura_nj_j7" />
+        <marker scope="Public" name="nagisa_jura_nj_j8" />
         <marker scope="Public" name="nagisa_jura_nj_n1" />
+        <marker scope="Public" name="nagisa_jura_nj_n10" />
+        <marker scope="Public" name="nagisa_jura_nj_n11" />
         <marker scope="Public" name="nagisa_jura_nj_n2" />
         <marker scope="Public" name="nagisa_jura_nj_n3_no_peeping" />
         <marker scope="Public" name="nagisa_jura_nj_n3_unusual" />
@@ -3260,7 +3274,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_mary_dakku" />
         <marker scope="Public" name="nagisa_may_hair" />
         <marker scope="Public" name="nagisa_may_scar" />
-        <marker scope="Private" name="nagisa_meanie">Nagisa calls out a meanie.</marker>
+        <marker scope="Public" name="nagisa_meanie">Nagisa calls out a meanie.</marker>
         <marker scope="Public" name="nagisa_megumin_selected_response" />
         <marker scope="Public" name="nagisa_mei_count_your_glasses" />
         <marker scope="Public" name="nagisa_mei_dont_freeze_me" />
@@ -3482,13 +3496,16 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_nanoko-chan_virgin" />
         <marker scope="Public" name="nagisa_natsuki_1st_nude2" />
         <marker scope="Public" name="nagisa_natsuki_2loss" />
+        <marker scope="Public" name="nagisa_natsuki_baked_treats" />
         <marker scope="Public" name="nagisa_natsuki_bathroom" />
         <marker scope="Public" name="nagisa_natsuki_butt" />
         <marker scope="Public" name="nagisa_natsuki_butt_naked" />
         <marker scope="Public" name="nagisa_natsuki_laevatein_tips" />
         <marker scope="Public" name="nagisa_natsuki_laevatein_tips_ready" />
         <marker scope="Public" name="nagisa_natsuki_poem" />
+        <marker scope="Public" name="nagisa_natsuki_skirt_strangers" />
         <marker scope="Public" name="nagisa_natsuki_slepy_gurl" />
+        <marker scope="Public" name="nagisa_natsuki_still_be_friends" />
         <marker scope="Public" name="nagisa_natsuki_wiggle" />
         <marker scope="Public" name="nagisa_neptune_arcade" />
         <marker scope="Public" name="nagisa_neptune_beach" />
@@ -3890,7 +3907,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_shirt_off_for_strangers" />
         <marker scope="Public" name="nagisa_singing_dango_song" />
         <marker scope="Public" name="nagisa_singing_dango_song_2" />
-        <marker scope="Private" name="nagisa_skirt_in_danger">Nagisa doesn't know how she got into this mess.</marker>
+        <marker scope="Public" name="nagisa_skirt_in_danger">Nagisa doesn't know how she got into this mess.</marker>
         <marker scope="Public" name="nagisa_sola_dango_panties" />
         <marker scope="Public" name="nagisa_sola_kindergarten" />
         <marker scope="Public" name="nagisa_sola_sailor_hat" />
@@ -3965,6 +3982,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_uravity_space">Nagisa has never been to space.</marker>
         <marker scope="Public" name="nagisa_uravity_theater">Nagisa mistakes Uravity for an actress.</marker>
         <marker scope="Public" name="nagisa_valentines_present" />
+        <marker scope="Public" name="nagisa_waitress_how_much_you_mean_to_me" />
         <marker scope="Public" name="nagisa_waitress_just_kidding" />
         <marker scope="Public" name="nagisa_waitress_order" />
         <marker scope="Public" name="nagisa_wanda_hands" />
