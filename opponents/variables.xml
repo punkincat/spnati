@@ -77,6 +77,7 @@
     <function name="surface" description="Displays the type of floor in the current background (ex. floor vs sand)." example="floor" />
     <function name="term" description="Displays a term referring to the current background in a more general way, useful in a sentence." example="bedroom" />
     <function name="preposition" description="Displays a suitable preposition for being at the current background (on a roof, in a room, etc.)." example="in" />
+	<function name="if" description="Displays text conditionally based on whether the background has the given tag." useBackgroundTags="true" />	
   </variable>
   <variable name="target" description="Displays the target's name, same as ~name~." example="Florina">
     <function name="costume" description="Expands to the ID of the current skin the target is using, or 'default' by default." example="florina_easter" />
