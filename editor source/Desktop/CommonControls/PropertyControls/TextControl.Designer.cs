@@ -28,42 +28,43 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			this.txtValue = new Desktop.CommonControls.TextField();
-			this.error = new System.Windows.Forms.ErrorProvider(this.components);
-			((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// txtValue
-			// 
-			this.txtValue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.components = new System.ComponentModel.Container();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtValue = new Desktop.Skinning.SkinnedTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
+            // txtValue
+            // 
+            this.txtValue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtValue.Location = new System.Drawing.Point(0, 0);
-			this.txtValue.Name = "txtValue";
-			this.txtValue.Size = new System.Drawing.Size(558, 20);
-			this.txtValue.TabIndex = 1;
-			// 
-			// error
-			// 
-			this.error.ContainerControl = this;
-			// 
-			// TextControl
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.txtValue);
-			this.Name = "TextControl";
-			this.Size = new System.Drawing.Size(576, 20);
-			((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.txtValue.BackColor = System.Drawing.Color.White;
+            this.txtValue.ForeColor = System.Drawing.Color.Black;
+            this.txtValue.Location = new System.Drawing.Point(0, 0);
+            this.txtValue.MaxLength = 1048575;
+            this.txtValue.Name = "txtValue";
+            this.txtValue.Size = new System.Drawing.Size(573, 20);
+            this.txtValue.TabIndex = 2;
+            // 
+            // TextControl
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtValue);
+            this.Name = "TextControl";
+            this.Size = new System.Drawing.Size(576, 20);
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
 		#endregion
-
-		private TextField txtValue;
 		private System.Windows.Forms.ErrorProvider error;
-	}
+        private Skinning.SkinnedTextBox txtValue;
+    }
 }
