@@ -161,6 +161,8 @@
         <response id="1038" opponent="mia_golden_sun" opponentId="487" />
         <response id="1071" opponent="senko" opponentId="614" />
         <response id="1072" opponent="senko" opponentId="615" />
+        <response id="1115" opponent="rouge" opponentId="5" />
+        <response id="1117" opponent="rouge" opponentId="6" />
     </responses>
     <notes>
         <note id="438">I believe Aqua is actually too lazy to go through with this, so that could potentially come up if Noire mentions the work it takes to be an idol.</note>
@@ -595,7 +597,7 @@
         <label id="457" label="" folder="Dark Creatures" sort="69" />
         <label id="458" label="" color="0" folder="Replies" sort="13" />
         <label id="507" label="" color="1" folder="Targets" sort="154" />
-        <label id="460" label="" color="0" folder="PromptResponses" sort="3" />
+        <label id="460" label="" folder="PromptResponses" sort="3" />
         <label id="461" label="" color="0" folder="Targets" sort="93" />
         <label id="462" label="" color="1" folder="Targets" sort="0" />
         <label id="463" label="" color="0" folder="Targets" sort="94" />
@@ -1201,8 +1203,8 @@
         <label id="1098" label="" color="1" folder="Replies" sort="0" />
         <label id="1099" label="" color="1" folder="Replies" sort="0" />
         <label id="1100" label="" color="3" folder="Replies" sort="0" />
-        <label id="1101" label="" color="1" folder="Targets" sort="0" />
-        <label id="1102" label="" color="1" folder="Targets" sort="0" />
+        <label id="1101" label="" folder="Targets" sort="0" />
+        <label id="1102" label="" folder="Targets" sort="0" />
         <label id="1103" label="" folder="Replies" sort="0" />
         <label id="1104" label="" folder="Accessories and Minor" sort="0" />
         <label id="1105" label="" folder="Dark Creatures" sort="0" />
@@ -1213,8 +1215,14 @@
         <label id="1110" label="" folder="PromptResponses" sort="0" />
         <label id="1111" label="" folder="PromptResponses" sort="0" />
         <label id="1112" label="" folder="Targets" sort="0" />
+        <label id="1113" label="" color="1" folder="Targets" sort="0" />
+        <label id="1114" label="" color="1" folder="Targets" sort="0" />
+        <label id="1115" label="" color="3" folder="PromptResponses" sort="0" />
+        <label id="1116" label="" color="3" folder="PromptResponses" sort="0" />
+        <label id="1117" label="" color="3" folder="PromptResponses" sort="0" />
+        <label id="1118" label="" color="5" folder="" sort="0" />
     </labels>
-    <nextId>1112</nextId>
+    <nextId>1118</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aella_howStrong" />
@@ -1285,11 +1293,13 @@
         <marker scope="Public" name="Aquass_showOff2" />
         <marker scope="Public" name="Aquass_showOff3" />
         <marker scope="Public" name="Aquass_showOff4" />
+        <marker scope="Public" name="Asuna_fakeAdventurer" />
         <marker scope="Public" name="Asuna_fantasy_world" />
         <marker scope="Public" name="Asuna_fantasy_world_cont" />
         <marker scope="Public" name="Asuna_fantasy_world_contB" />
         <marker scope="Public" name="Asuna_fantasy_world_end" />
         <marker scope="Public" name="Asuna_fantasy_world_endB" />
+        <marker scope="Public" name="Asuna_VR_AR_complain" />
         <marker scope="Public" name="Bad_cards_contTantrum" />
         <marker scope="Public" name="BadCardies_Loss" />
         <marker scope="Public" name="BadCardies_Loss_cont" />
@@ -1716,6 +1726,10 @@
         <marker scope="Public" name="Revy_reply1" />
         <marker scope="Public" name="Revy_reply1B" />
         <marker scope="Public" name="Revy_SGAreply1" />
+        <marker scope="Public" name="Rouge_clubRouge_reply" />
+        <marker scope="Public" name="Rouge_clubRouge_replyB" />
+        <marker scope="Public" name="Rouge_favoriteJewel_reply" />
+        <marker scope="Public" name="Rouge_loot_react" />
         <marker scope="Public" name="Saki_bad_vibes" />
         <marker scope="Public" name="Saki_headless_react" />
         <marker scope="Public" name="Saki_keepYourHeadOn" />
