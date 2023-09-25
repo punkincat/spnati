@@ -176,9 +176,7 @@
 		<opponent addedDate="2016-08-05" release="9" score="2.490">nugi-chan</opponent>
 		<opponent addedDate="2018-05-26" release="115" score="2.408">rainbow_mika</opponent>
 		<opponent addedDate="2019-02-07" release="167" score="2.402">croix</opponent>
-		<opponent addedDate="2017-07-30" release="84" score="2.343">zizou</opponent>
 		<opponent addedDate="2018-04-23" release="121" score="2.113">joey</opponent>
-		<opponent addedDate="2017-08-09" release="85" score="2.043">sola</opponent>
 		<opponent addedDate="2018-12-07" release="148" score="2.008">coco</opponent>
 		<opponent addedDate="2019-10-12" release="216" score="1.962">dust</opponent>
 		<opponent addedDate="2017-08-26" release="98" score="1.855">sei</opponent>
@@ -262,11 +260,13 @@
 		<opponent addedDate="2017-05-23" release="70" status="offline">sharla</opponent>
 		<opponent addedDate="2017-02-15" release="55" status="offline">shazza</opponent>
 		<opponent addedDate="2017-08-13" release="83" status="offline">shego</opponent>
+		<opponent addedDate="2017-08-09" release="85" status="offline">sola</opponent>
 		<opponent addedDate="2017-02-05" release="47" status="offline">sonya</opponent>
 		<opponent addedDate="2016-08-17" release="12" status="offline">tifa</opponent>
 		<opponent addedDate="2016-11-21" release="33" status="offline">tracer</opponent>
 		<opponent addedDate="2017-02-17" release="56" status="offline">xander</opponent>
 		<opponent addedDate="2017-03-03" release="63" status="offline">zelda</opponent>
+		<opponent addedDate="2017-07-30" release="84" status="offline">zizou</opponent>
 		<opponent addedDate="2015-06-30" release="2" status="offline">zoey</opponent>
 		<opponent addedDate="2018-03-25" release="105" status="incomplete">9s</opponent> <!-- score="1.191" -->
 		<opponent addedDate="2021-08-17" status="incomplete">adora</opponent>
@@ -511,7 +511,7 @@
 		<group title="Vivid Fantasies" opp1="komi-san" opp2="catria" opp3="tomoko" opp4="yuri" background="inventory" />
 		<group title="Collected Shadows" opp1="hu_tao" opp2="tharja" opp3="cynthia" opp4="jura" background="inventory" />
 		<group title="Bedroom Dwellers" opp1="tomoko" opp2="kazuma" opp3="futaba" opp4="saki" background="bedroom" />
-		<group title="Mythological Study" opp1="cynthia" opp2="miko" opp3="pit" opp4="zizou" background="library" />
+		<group title="Mythological Study" opp1="cynthia" opp2="miko" opp3="pit" opp4="yuelia" background="library" />
 		<group title="What is a Man?" opp1="chihiro" opp2="mulan" opp3="kamina" opp4="remilia" background="inventory" />
 		<group title="The Equestrian Table" opp1="rainbow_dash" opp2="rarity_eg" opp3="pinkie_pie" opp4="twilight" background="tiki bar" />
 		<group title="Fantasy Worlds" opp1="yuelia" opp2="estelle" opp3="megumin" opp4="aella" background="inventory" />
@@ -523,13 +523,13 @@
 		<group title="Two Worlds One Classroom" opp1="rin" opp2="emi" opp3="monika" opp4="sayori" background="classroom" />
 		<group title="One Track Mind" opp1="guzma" opp2="megumin" opp3="miko" opp4="kamina" background="inventory" />
 		<group title="Elevator Girls" opp1="dark_magician_girl" opp2="pinkie_pie" opp3="sakura" opp4="ini" background="office" />
-		<group title="Magical Stripping" opp1="kazuma" opp2="kyu" opp3="akko" opp4="zizou" background="purple room" />
+		<group title="Magical Stripping" opp1="kazuma" opp2="kyu" opp3="akko" opp4="tharja" background="purple room" />
 		<group title="Classy Combatants" opp1="weiss_schnee" opp2="misato" opp3="mulan" opp4="haru" background="armory" />
 		<group title="Uncommon Autumn" opp1="starfire" opp2="mae" opp3="raven" opp4="misato" background="inventory" />
 		<group title="Heart of Darkness" opp1="megumin" opp2="natsuki" opp3="sei" opp4="streaming-chan" background="inventory" />
 		<group title="By the Books" opp1="estelle" opp2="hanako" opp3="tharja" opp4="sayori" background="library" />
 		<group title="Sweet and Elite" opp1="rarity_eg" opp2="larachel" opp3="weiss_schnee" opp4="amalia" background="mansion" />
-		<group title="Supurple Power" opp1="sola" opp2="jessie" opp3="mavis" opp4="kyu" background="purple room" />
+		<group title="Supurple Power" opp1="zoe" opp2="jessie" opp3="mavis" opp4="kyu" background="purple room" />
 		<group title="Poor Little Human Girl" opp1="mavis" opp2="remilia" opp3="polly" opp4="miko" background="haunted forest" />
 		<group title="Dominance" opp1="haru" opp2="croix" opp3="juri" opp4="coco" background="inventory" />
 		<group title="Lewd Streamers" opp1="jessie" opp2="streaming-chan" opp3="zone-tan" opp4="kizuna" background="bedroom" />
@@ -545,23 +545,23 @@
 		<group title="Flat Pack" opp1="sayori" opp2="lucina" opp3="megumin" opp4="weiss_schnee" />
 		<group title="In the Zone" opp1="raven" opp2="zone-tan" opp3="ryuko" opp4="amalia" background="purple room" />
 		<group title="Fire Emblem" opp1="lyn" opp2="florina" opp3="laevatein" opp4="catria" background="armory" />
-		<group title="Bewitched" opp1="zizou" opp2="dark_magician_girl" opp3="elphaba" opp4="akko" background="library" />
+		<group title="Bewitched" opp1="megumin" opp2="dark_magician_girl" opp3="elphaba" opp4="akko" background="library" />
 		<group title="Family Values" opp1="stocking" opp2="panty" opp3="jotaro" opp4="jolyne" />
 		<group title="Heteroflexible" opp1="ruby" opp2="yuno_uno" opp3="ringo_ando" opp4="jin" />
-		<group title="Heroes" opp1="shantae" opp2="raven" opp3="wasp" opp4="sola" background="roof" />
+		<group title="Heroes" opp1="shantae" opp2="raven" opp3="wasp" opp4="aloy" background="roof" />
 		<group title="Gingerly" opp1="aloy" opp2="misty_hgss" opp3="nami" opp4="mahiru" />
 		<group title="Nintendo" opp1="wiifitfemale" opp2="samus_aran" opp3="lyn" opp4="palutena" />
-		<group title="Flat Justice" opp1="zizou" opp2="shimakaze" opp3="natsuki" opp4="hu_tao" />
+		<group title="Flat Justice" opp1="tomoko" opp2="shimakaze" opp3="natsuki" opp4="hu_tao" />
 		<group title="Differently Uniform" opp1="saki" opp2="ignatz" opp3="chihiro" opp4="hanako" background="classroom" />
 		<group title="Gamers" opp1="kizuna" opp2="futaba" opp3="wiifitfemale" opp4="chiaki" />
-		<group title="Piety" opp1="palutena" opp2="pit" opp3="zizou" opp4="kyu" background="romantic" />
+		<group title="Piety" opp1="palutena" opp2="pit" opp3="neptune" opp4="kyu" background="romantic" />
 		<group title="Release the Kraken!" opp1="nami" opp2="zone-tan" opp3="amalia" opp4="kizuna" background="beach" />
 		<group title="DDLC" opp1="monika" opp2="sayori" opp3="natsuki" opp4="yuri" background="classroom" />
 		<group title="Street Fighters" opp1="juri" opp2="cammy_white" opp3="chun-li" opp4="rainbow_mika" background="street" />
 		<group title="Personae" opp1="futaba" opp2="haru" opp3="ryuji" opp4="yusuke" background="roof" />
 		<group title="Watersports" opp1="shimakaze" opp2="nami" opp3="misty_hgss" opp4="moon" background="tiki bar" />
-		<group title="Expensive Tastes" opp1="nugi-chan" opp2="senko" opp3="remilia" opp4="zizou" background="mansion" />
-		<group title="Combo Couples" opp1="natsuki" opp2="pit" opp3="zizou" opp4="sayaka" />
+		<group title="Expensive Tastes" opp1="nugi-chan" opp2="senko" opp3="remilia" opp4="turandot" background="mansion" />
+		<group title="Combo Couples" opp1="natsuki" opp2="pit" opp3="bernadetta" opp4="nagisa" />
 		<group title="SPH" opp1="misato" opp2="rinkah" opp3="nugi-chan" opp4="mahiru" />
 		<group title="Danganronpa" opp1="mahiru" opp2="chiaki" opp3="ini" opp4="chihiro" background="library" />
 		<group title="Sordid Art Online" opp1="streaming-chan" opp2="kizuna" opp3="futaba" opp4="monika" background="classic" />
@@ -580,7 +580,7 @@
 		<group title="Flygirls" opp1="videl" opp2="uravity" opp3="navi" opp4="kyu" background="roof" />
 		<group title="Girls with Glasses" opp1="velma" opp2="heris" opp3="mary" opp4="sucrose" background="library" />
 		<group title="Backside Admiration" opp1="zone-tan" opp2="velma" opp3="leggy" opp4="jin" />
-		<group title="After Stories" opp1="catria" opp2="zizou" opp3="chun-li" opp4="sheena" />
+		<group title="After Stories" opp1="catria" opp2="futaba" opp3="chun-li" opp4="sheena" />
 		<group title="Shaved" opp1="videl" opp2="kyu" opp3="florina" opp4="moon" />
 		<group title="Shortstacks" opp1="natsuki" opp2="trixie" opp3="shantae" opp4="spooky" />
 		<group title="Pirates" opp1="nugi-chan" opp2="perona" opp3="nami" opp4="meia" background="beach" />
@@ -590,7 +590,7 @@
 		<group title="Doomed" opp1="saki" opp2="chiaki" opp3="chihiro" opp4="sayaka" />
 		<group title="Doubledown" opp1="elizabeth" opp2="rainbow_mika" opp3="jotaro" opp4="miko" />
 		<group title="Poor Planning" opp1="raven" opp2="kazuma" opp3="jolyne" opp4="rin" />
-		<group title="Hands Are Overrated" opp1="monika" opp2="zizou" opp3="shimakaze" opp4="rin" />
+		<group title="Hands Are Overrated" opp1="monika" opp2="akko" opp3="shimakaze" opp4="rin" />
 		<group title="Bullet Heck" opp1="miko" opp2="reimu" opp3="shimakaze" opp4="chara_dreemurr" />
 		<group title="Blue Belles" opp1="meia" opp2="sei" opp3="marinette" opp4="rainbow_dash" />
 		<group title="Epic Epilogues" opp1="cammy_white" opp2="remilia" opp3="mae" opp4="nami" />
