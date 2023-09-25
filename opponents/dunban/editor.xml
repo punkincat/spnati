@@ -210,6 +210,18 @@
         <response id="676" opponent="meia" opponentId="1195" />
         <response id="677" opponent="meia" opponentId="1194" />
         <response id="678" opponent="cagliostro" opponentId="2" />
+        <response id="723" opponent="nico_robin" opponentId="804" />
+        <response id="724" opponent="nico_robin" opponentId="805" />
+        <response id="725" opponent="mia_golden_sun" opponentId="596" />
+        <response id="727" opponent="mia_golden_sun" opponentId="599" />
+        <response id="728" opponent="mia_golden_sun" opponentId="598" />
+        <response id="730" opponent="mia_golden_sun" opponentId="601" />
+        <response id="732" opponent="meia" opponentId="1307" />
+        <response id="733" opponent="lysithea" opponentId="21" />
+        <response id="738" opponent="meia" opponentId="1308" />
+        <response id="739" opponent="jura" opponentId="983" />
+        <response id="741" opponent="jura" opponentId="980" />
+        <response id="742" opponent="jura" opponentId="1146" />
     </responses>
     <notes>
         <note id="10">Will be replaced if Sharla ever gets reworked lol</note>
@@ -259,6 +271,8 @@ c: say that he's been as high as the bionis' head?
         <note id="589">for clarity; he is asking if she has ever gone flying on her broom while topless or naked or something.</note>
         <note id="657">Jim: Take it from me, Dunban. If it ain't about something bigger than you, then it's not worth it. Dunban_resp3c</note>
         <note id="673">Other lines have him say similar insight, it's a way of showing his battle intelligence</note>
+        <note id="737">For 'dunban_lysithea_magicGift1' I am deliberately giving you a chance for her to respond negatively, with "this is from training, not just because I was born with it" etc</note>
+        <note id="739">haha funny joke</note>
     </notes>
     <labels>
         <label id="4" label="" folder="April Fools" sort="0" />
@@ -908,13 +922,13 @@ c: say that he's been as high as the bionis' head?
         <label id="668" label="" folder="Jim Raynor" sort="0" />
         <label id="669" label="" folder="Targets" sort="0" />
         <label id="670" label="" folder="Targets" sort="0" />
-        <label id="671" label="" folder="Responses" sort="0" />
+        <label id="671" label="" color="1" folder="Responses" sort="0" />
         <label id="672" label="" folder="Responses" sort="0" />
         <label id="673" label="" folder="Responses" sort="0" />
         <label id="674" label="" folder="Responses" sort="0" />
         <label id="675" label="" folder="Responses" sort="0" />
-        <label id="676" label="" folder="Responses" sort="0" />
-        <label id="677" label="" folder="Responses" sort="0" />
+        <label id="676" label="" color="1" folder="Responses" sort="0" />
+        <label id="677" label="" color="1" folder="Responses" sort="0" />
         <label id="678" label="" folder="Prompts" sort="0" />
         <label id="679" label="" folder="Targets" sort="0" />
         <label id="680" label="" folder="Targets" sort="0" />
@@ -938,8 +952,52 @@ c: say that he's been as high as the bionis' head?
         <label id="698" label="" folder="Responses" sort="0" />
         <label id="699" label="" folder="Responses" sort="0" />
         <label id="700" label="" folder="Responses" sort="0" />
+        <label id="701" label="" folder="Responses" sort="0" />
+        <label id="702" label="" folder="Responses" sort="0" />
+        <label id="703" label="" folder="Responses" sort="0" />
+        <label id="704" label="" folder="Responses" sort="0" />
+        <label id="705" label="" folder="Targets" sort="0" />
+        <label id="706" label="" folder="Targets" sort="0" />
+        <label id="707" label="" folder="Targets" sort="0" />
+        <label id="708" label="" folder="Targets" sort="0" />
+        <label id="709" label="" folder="Targets" sort="0" />
+        <label id="710" label="" folder="Targets" sort="0" />
+        <label id="711" label="" folder="Targets" sort="0" />
+        <label id="712" label="" folder="Targets" sort="0" />
+        <label id="713" label="" folder="Targets" sort="0" />
+        <label id="714" label="" folder="Targets" sort="0" />
+        <label id="715" label="" folder="Targets" sort="0" />
+        <label id="716" label="" folder="Targets" sort="0" />
+        <label id="717" label="" folder="Targets" sort="0" />
+        <label id="718" label="" folder="Targets" sort="0" />
+        <label id="719" label="" folder="Targets" sort="0" />
+        <label id="720" label="" folder="Targets" sort="0" />
+        <label id="721" label="" folder="Targets" sort="0" />
+        <label id="722" label="" folder="Targets" sort="0" />
+        <label id="723" label="" folder="Responses" sort="0" />
+        <label id="724" label="" folder="Responses" sort="0" />
+        <label id="725" label="" folder="Responses" sort="0" />
+        <label id="726" label="" folder="Targets" sort="0" />
+        <label id="727" label="" folder="Responses" sort="0" />
+        <label id="728" label="" folder="Responses" sort="0" />
+        <label id="729" label="" folder="Responses" sort="0" />
+        <label id="730" label="" folder="Responses" sort="0" />
+        <label id="731" label="" folder="Targets" sort="0" />
+        <label id="732" label="" folder="Responses" sort="0" />
+        <label id="733" label="" folder="Responses" sort="0" />
+        <label id="734" label="" folder="Responses" sort="0" />
+        <label id="735" label="" folder="Responses" sort="0" />
+        <label id="736" label="" folder="Targets" sort="0" />
+        <label id="737" label="" folder="Targets" sort="0" />
+        <label id="738" label="" color="1" folder="Responses" sort="0" />
+        <label id="739" label="" folder="Responses" sort="0" />
+        <label id="740" label="" folder="Responses" sort="0" />
+        <label id="741" label="" folder="Responses" sort="0" />
+        <label id="742" label="" folder="Responses" sort="0" />
+        <label id="743" label="" folder="Targets" sort="0" />
+        <label id="744" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>700</nextId>
+    <nextId>744</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="20gOffer">Line that plays when Dunban offers a 20g bribe to whoever loses</marker>
@@ -1052,6 +1110,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_blake_earsJoke" />
         <marker scope="Public" name="dunban_blake_strip0a" />
         <marker scope="Public" name="dunban_blake_strip1a" />
+        <marker scope="Public" name="dunban_bowsette_royalty1" />
         <marker scope="Public" name="dunban_cagliostro_alchemy1" />
         <marker scope="Public" name="dunban_cagliostro_strip2a" />
         <marker scope="Public" name="dunban_cait_Mindread01" />
@@ -1180,7 +1239,10 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_jura_self1a" />
         <marker scope="Public" name="dunban_jura_self2" />
         <marker scope="Public" name="dunban_jura_self2b" />
+        <marker scope="Public" name="dunban_jura_self2c" />
         <marker scope="Public" name="dunban_jura_self3a" />
+        <marker scope="Public" name="dunban_jura_self3b" />
+        <marker scope="Public" name="dunban_jura_selfMustFF" />
         <marker scope="Public" name="dunban_kaz_demonSlayer1" />
         <marker scope="Public" name="dunban_kaz_demonSlayer2" />
         <marker scope="Public" name="dunban_kaz_self0a" />
@@ -1206,6 +1268,13 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_leon_jointaoResp" />
         <marker scope="Public" name="dunban_leon_self0a" />
         <marker scope="Public" name="dunban_leon_self1a" />
+        <marker scope="Public" name="dunban_lysithea_discipline1" />
+        <marker scope="Public" name="dunban_lysithea_future1" />
+        <marker scope="Public" name="dunban_lysithea_magicGift1" />
+        <marker scope="Public" name="dunban_lysithea_physicallimitsResp" />
+        <marker scope="Public" name="dunban_lysithea_recognizeResp" />
+        <marker scope="Public" name="dunban_lysithea_trainSResp" />
+        <marker scope="Public" name="dunban_lysithea_trainSwordResp" />
         <marker scope="Public" name="dunban_mari_01" />
         <marker scope="Public" name="dunban_mari_21" />
         <marker scope="Public" name="dunban_mari_Arm3Resp" />
@@ -1240,19 +1309,24 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_meia_self4a" />
         <marker scope="Public" name="dunban_meia_self4b" />
         <marker scope="Public" name="dunban_meia_self5a" />
+        <marker scope="Public" name="dunban_meia_self5aAlt" />
         <marker scope="Public" name="dunban_meia_self5b" />
         <marker scope="Public" name="dunban_meia_self6a" />
+        <marker scope="Public" name="dunban_meia_selfMustFF" />
         <marker scope="Public" name="dunban_mercy_fuckbuddiesResp" />
         <marker scope="Public" name="dunban_mg_buttReveal" />
         <marker scope="Public" name="dunban_mia_self1a" />
         <marker scope="Public" name="dunban_mia_self1b" />
         <marker scope="Public" name="dunban_mia_self1c" />
+        <marker scope="Public" name="dunban_mia_self4a" />
+        <marker scope="Public" name="dunban_mia_self4b" />
         <marker scope="Public" name="dunban_miaGS_powers1" />
         <marker scope="Public" name="dunban_miaGS_powers2" />
         <marker scope="Public" name="dunban_miaGS_powers3" />
         <marker scope="Public" name="dunban_miku_strip0a" />
         <marker scope="Public" name="dunban_mitama_arrival_resp" />
         <marker scope="Public" name="dunban_nadeshiko_outdoors1" />
+        <marker scope="Public" name="dunban_nadeshiko_outdoors2" />
         <marker scope="Public" name="dunban_nadia_headroll" />
         <marker scope="Public" name="dunban_nagatoro_familiar01" />
         <marker scope="Public" name="dunban_nagatoro_selfMustFF" />
@@ -1266,8 +1340,10 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_nami_self1b" />
         <marker scope="Public" name="dunban_nicorobin_self0a" />
         <marker scope="Public" name="dunban_nicorobin_self0b" />
+        <marker scope="Public" name="dunban_nicorobin_self0c" />
         <marker scope="Public" name="dunban_nicorobin_self1a" />
         <marker scope="Public" name="dunban_nicorobin_self1b" />
+        <marker scope="Public" name="dunban_nicorobin_self1c" />
         <marker scope="Public" name="dunban_Nrobin_ability01" />
         <marker scope="Public" name="dunban_Nrobin_ability02" />
         <marker scope="Public" name="dunban_Nrobin_ability03" />
@@ -1343,7 +1419,29 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_yumeko_self5a" />
         <marker scope="Public" name="dunban_yumeko_self5b" />
         <marker scope="Public" name="dunban_yumeko_self5c" />
+        <marker scope="Public" name="dunban_yumeko_self6a" />
+        <marker scope="Public" name="dunban_yumeko_self6b" />
+        <marker scope="Public" name="dunban_yumeko_self6c" />
+        <marker scope="Public" name="dunban_yumeko_strip0a" />
+        <marker scope="Public" name="dunban_yumeko_strip0b" />
+        <marker scope="Public" name="dunban_yumeko_strip0c" />
+        <marker scope="Public" name="dunban_yumeko_strip1a" />
+        <marker scope="Public" name="dunban_yumeko_strip1b" />
+        <marker scope="Public" name="dunban_yumeko_strip1c" />
+        <marker scope="Public" name="dunban_yumeko_strip2a" />
+        <marker scope="Public" name="dunban_yumeko_strip2b" />
+        <marker scope="Public" name="dunban_yumeko_strip2c" />
+        <marker scope="Public" name="dunban_yumeko_strip3a" />
+        <marker scope="Public" name="dunban_yumeko_strip3b" />
+        <marker scope="Public" name="dunban_yumeko_strip3c" />
+        <marker scope="Public" name="dunban_yumeko_strip4a" />
+        <marker scope="Public" name="dunban_yumeko_strip4b" />
+        <marker scope="Public" name="dunban_yumeko_strip4c" />
+        <marker scope="Public" name="dunban_yumeko_strip5a" />
+        <marker scope="Public" name="dunban_yumeko_strip5b" />
+        <marker scope="Public" name="dunban_yumeko_strip5c" />
         <marker scope="Public" name="dunban_yuno_stripAyumi01" />
+        <marker scope="Public" name="dunban_zeke_strip0a" />
         <marker scope="Public" name="dunban_zoe_selected" />
         <marker scope="Public" name="dunbanff_aqua_finishing" />
         <marker scope="Public" name="dwight_start_ff" />
@@ -1366,6 +1464,8 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="meia_dunban_sightseeing_Resp" />
         <marker scope="Public" name="meia_jura_arefighting" />
         <marker scope="Public" name="meia_revy_arefighting" />
+        <marker scope="Public" name="mia_heal_dunban_arm" />
+        <marker scope="Public" name="mia_heal_dunban_arm2" />
         <marker scope="Public" name="miaGS_fizz_reveal" />
         <marker scope="Public" name="miaGS_swimsuit" />
         <marker scope="Public" name="midst_of_battle" />
@@ -1396,6 +1496,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="treasureScope1" />
         <marker scope="Public" name="treasureScope2" />
         <marker scope="Public" name="worst_possible_hand" />
+        <marker scope="Public" name="yumeko_dunban_satisfaction" />
     </markers>
     <recipes>
         <recipe key="1ac2b058-5e06-4321-9ea7-d6bc3098748e">
