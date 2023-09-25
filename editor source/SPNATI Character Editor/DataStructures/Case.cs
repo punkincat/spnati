@@ -1,7 +1,6 @@
 using Desktop;
 using Desktop.CommonControls;
 using Desktop.CommonControls.PropertyControls;
-using Desktop.Reporting;
 using Newtonsoft.Json;
 using SPNATI_Character_Editor.IO;
 using System;
@@ -21,7 +20,7 @@ namespace SPNATI_Character_Editor
 	/// since storing PropertyChanged handlers starts to really add up when you have thousands of these.
 	/// </remarks>
 	[JsonObject(MemberSerialization = MemberSerialization.OptIn)]
-	public class Case : INotifyPropertyChanged, IPropertyChangedNotifier, IComparable<Case>, ISliceable
+	public class Case : INotifyPropertyChanged, IPropertyChangedNotifier, IComparable<Case>
 	{
 		private static long s_globalId;
 
