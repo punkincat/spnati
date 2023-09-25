@@ -29,11 +29,15 @@ namespace SPNATI_Character_Editor
 		[XmlAttribute("name")]
 		public string Name;
 
-		[FileSelect(DisplayName = "Background", GroupOrder = 0, Description = "Scene's background image")]
+		[Text(DisplayName = "Marker", GroupOrder = 0, Description = "Run this scene only if the marker's condition is met")]
+		[XmlAttribute("marker")]
+		public string SceneMarker;
+
+		[FileSelect(DisplayName = "Background", GroupOrder = 1, Description = "Scene's background image")]
 		[XmlAttribute("background")]
 		public string Background;
 
-		[Color(DisplayName = "Back Color", Key = "color", GroupOrder = 1, Description = "Scene's background color")]
+		[Color(DisplayName = "Back Color", Key = "color", GroupOrder = 2, Description = "Scene's background color")]
 		[XmlAttribute("color")]
 		public string BackgroundColor;
 
@@ -291,6 +295,7 @@ namespace SPNATI_Character_Editor
 			{
 				Name = "";
 			}
+			SceneMarker = scene.Marker;
 			Background = FixPath(scene.BackgroundImage, scene.Character);
 			BackgroundColor = scene.BackColor.A == 0 ? null : scene.BackColor.ToHexValue();
 			Width = scene.Width.ToString(CultureInfo.InvariantCulture);
@@ -476,6 +481,7 @@ namespace SPNATI_Character_Editor
 					}
 				});
 			}
+
 
 			return finalDirectives;
 		}

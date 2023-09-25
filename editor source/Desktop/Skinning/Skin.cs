@@ -157,8 +157,8 @@ namespace Desktop.Skinning
 		[Color(DisplayName = "Brown")]
 		public Color Brown = Color.FromArgb(146, 73, 0);
 		//public Color Brown = Color.SaddleBrown;
-		[Color(DisplayName = "Brown (Light)")]
-		public Color Salmon = Color.FromArgb(219, 109, 0);
+		//[Color(DisplayName = "Orange")]
+		//public Color OrangeBrown = Color.FromArgb(219, 109, 0);
 		//public Color Salmon = Color.LightSalmon;
 
 		#endregion

@@ -29,6 +29,7 @@ namespace SPNATI_Character_Editor
 		[XmlAttribute("parent")]
 		public string ParentId;
 
+		[DefaultValue("")]
 		[DirectiveMarker(DisplayName = "Marker", GroupOrder = 0, Key = "marker", Description = "Run this directive only if the marker's condition is met", ShowPrivate = true)]
 		[XmlAttribute("marker")]
 		public string Marker;

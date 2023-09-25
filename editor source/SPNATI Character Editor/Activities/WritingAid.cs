@@ -43,11 +43,6 @@ namespace SPNATI_Character_Editor.Activities
 			cboPriority.SelectedIndex = 0;
 		}
 
-		public override bool CanRun()
-		{
-			return !Config.SafeMode;
-		}
-
 		private bool FilterRecords(IRecord record)
 		{
 			if (record == _character || record.Key == "human")
@@ -124,7 +119,7 @@ namespace SPNATI_Character_Editor.Activities
 			_character.Behavior.CaseAdded -= Behavior_CaseAdded;
 		}
 
-		private void cboFilter_SelectedIndexChanged(object sender, System.EventArgs e)
+		private void cboFilter_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (!_activated)
 			{

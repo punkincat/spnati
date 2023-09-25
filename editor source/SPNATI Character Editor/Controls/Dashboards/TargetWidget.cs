@@ -85,6 +85,8 @@ namespace SPNATI_Character_Editor.Controls.Dashboards
 					TargetingInformation info = work.Targets[i];
 					if (info.Target == "human")
 					{
+						if (MaxTargets >= work.Targets.Count)
+							continue;
 						info = work.Targets[MaxTargets];
 						Character c = CharacterDatabase.Get(info.Target);
 						series.AddPoint(MaxTargets - 1, info.LineCount, c?.ToString() ?? info.Target);
