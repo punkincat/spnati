@@ -72,12 +72,6 @@
     <Compile Include="CommonControls\DataGridView\RecordEditingControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CommonControls\DataSlicerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CommonControls\DataSlicerControl.Designer.cs">
-      <DependentUpon>DataSlicerControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="CommonControls\DBTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -309,38 +303,6 @@
     <Compile Include="Providers\MacroProvider.cs" />
     <Compile Include="Providers\PropertyProvider.cs" />
     <Compile Include="Providers\SkinProvider.cs" />
-    <Compile Include="Providers\SlicerProvider.cs" />
-    <Compile Include="Reporting\BaseSlicer.cs" />
-    <Compile Include="Reporting\BooleanSlicer.cs" />
-    <Compile Include="Reporting\ComboSlicer.cs" />
-    <Compile Include="Reporting\Controls\BooleanSlicerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Reporting\Controls\BooleanSlicerControl.Designer.cs">
-      <DependentUpon>BooleanSlicerControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reporting\Controls\ComboSlicerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Reporting\Controls\ComboSlicerControl.Designer.cs">
-      <DependentUpon>ComboSlicerControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reporting\Controls\RecordSlicerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Reporting\Controls\RecordSlicerControl.Designer.cs">
-      <DependentUpon>RecordSlicerControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reporting\Controls\SlicerGroupEntry.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Reporting\Controls\SlicerGroupEntry.Designer.cs">
-      <DependentUpon>SlicerGroupEntry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reporting\DataSlicer.cs" />
-    <Compile Include="Reporting\DataSlicerControlMap.cs" />
-    <Compile Include="Reporting\RecordSlicer.cs" />
-    <Compile Include="Reporting\SlicerGroup.cs" />
     <Compile Include="Serialization\DateConverter.cs" />
     <Compile Include="Serialization\Json.cs" />
     <Compile Include="Serialization\PropertyTypeInfo.cs" />
@@ -455,9 +417,6 @@
     <EmbeddedResource Include="CommonControls\ActivityLink.resx">
       <DependentUpon>ActivityLink.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CommonControls\DataSlicerControl.resx">
-      <DependentUpon>DataSlicerControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CommonControls\EnumSelect.resx">
       <DependentUpon>EnumSelect.cs</DependentUpon>
     </EmbeddedResource>
@@ -524,18 +483,6 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reporting\Controls\BooleanSlicerControl.resx">
-      <DependentUpon>BooleanSlicerControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reporting\Controls\ComboSlicerControl.resx">
-      <DependentUpon>ComboSlicerControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reporting\Controls\RecordSlicerControl.resx">
-      <DependentUpon>RecordSlicerControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reporting\Controls\SlicerGroupEntry.resx">
-      <DependentUpon>SlicerGroupEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shell.resx">
       <DependentUpon>Shell.cs</DependentUpon>
