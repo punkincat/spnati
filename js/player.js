@@ -373,6 +373,8 @@ Player.prototype.checkStatus = function(status) {
         return this.countLayers() == 0;
     case STATUS_MASTURBATING:
         return this.out && !this.finished;
+    case STATUS_HEAVY_MASTURBATING:
+        return this.out && !this.finished && this.forfeit[0] === PLAYER_HEAVY_MASTURBATING;
     case STATUS_FINISHED:
         return this.finished;
     }

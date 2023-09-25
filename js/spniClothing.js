@@ -31,6 +31,7 @@ var STATUS_NAKED = "naked";
 var STATUS_LOST_ALL = "lost_all";
 var STATUS_ALIVE = "alive";
 var STATUS_MASTURBATING = "masturbating";
+var STATUS_HEAVY_MASTURBATING = "heavy_masturbating";
 var STATUS_FINISHED = "finished";
 
 /************************************************************
