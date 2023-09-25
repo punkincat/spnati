@@ -4285,6 +4285,14 @@ ul.dropdown-menu>li {
     background: #DDDDDD;
 }
 
+.epilogue-entry .epilogue-description {
+    font-style: italic;
+}
+
+.epilogue-entry .epilogue-description::before {
+    content: "Info: ";
+}
+
 .epilogue-entry.unlocked button::after {
     color: darkgreen;
     content: "\2714";

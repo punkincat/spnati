@@ -23,6 +23,7 @@ $galleryStartButton = $('#gallery-start-ending-button');
 $selectedEndingPreview = $('#selected-ending-previev');
 $selectedEndingLabels = [$('#selected-ending-title'), $('#selected-ending-character'), $('#selected-ending-gender')];
 $selectedEndingHint = [$('#selected-ending-hint-container'), $('#selected-ending-hint')];
+$selectedEndingDesc = [$('#selected-ending-description-container'), $('#selected-ending-description')];
 
 /**********************************************************************
  *****          Collectibles Gallery Screen UI Elements           *****
@@ -79,6 +80,7 @@ function GEnding(player, ending){
     this.rawTitle = $(ending).html()
     this.title = offlineIndicator + $(ending).html();
     this.unlockHint = $(ending).attr('hint');
+	this.description = $(ending).attr('description');
     this.unlocked = function() { return EPILOGUES_UNLOCKED || save.hasEnding(player.id, this.rawTitle); };
 }
 
@@ -599,6 +601,13 @@ function selectEnding(i) {
         $selectedEndingHint[1].html(ending.unlockHint);
     } else {
         $selectedEndingHint[0].hide();
+    }
+
+    if (ending.description) {
+        $selectedEndingDesc[0].show();
+        $selectedEndingDesc[1].html(ending.description);
+    } else {
+        $selectedEndingDesc[0].hide();
     }
 
     if (ending.unlocked()) {
