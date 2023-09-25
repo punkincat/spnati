@@ -1,9 +1,6 @@
 ﻿using Desktop;
-using Desktop.Providers;
-using Desktop.Reporting;
 using Desktop.Skinning;
 using SPNATI_Character_Editor.Activities;
-using SPNATI_Character_Editor.DataSlicers;
 using SPNATI_Character_Editor.DataStructures;
 using SPNATI_Character_Editor.Forms;
 using System;
@@ -91,7 +88,6 @@ namespace SPNATI_Character_Editor
 			BuildDirectiveTypes();
 			BuildPropertyTypes();
 			BuildColorCodes();
-			BuildDataSlicers();
 		}
 
 		public static void BuildDirectiveTypes()
@@ -300,51 +296,6 @@ namespace SPNATI_Character_Editor
 			Definitions.Instance.Add(new ColorCode("Blue (Light)", 13, skin => skin.LightBlue));
 			Definitions.Instance.Add(new ColorCode("Brown", 14, skin => skin.Brown));
 			Definitions.Instance.Add(new ColorCode("Yellow", 15, skin => skin.Yellow));
-		}
-
-		private static void BuildDataSlicers()
-		{
-			SlicerProvider.AddSlicer("Case Type", "Groups by case type", () => new RecordSlicer(typeof(TriggerDefinition), "Tag", "Case Type", true, false));
-			SlicerProvider.AddSlicer("Target", "Groups by target", () => new RecordSlicer(typeof(Character), "Target", "Target", true, true));
-			SlicerProvider.AddSlicer("Target Hand", "Groups by self hand", () => new ComboSlicer(typeof(Case), "TargetHand", "Target Hand"));
-			SlicerProvider.AddSlicer("Target Stage", "Groups by target stage", () => new IntervalSlicer("TargetStage", "Target Stage", 0, 10));
-			SlicerProvider.AddSlicer("Target Tag", "Groups by target tag", () => new RecordSlicer(typeof(Tag), "Filter", "Tag", true, true));
-			SlicerProvider.AddSlicer("Target Time In Stage", "Groups by target time in stage", () => new IntervalSlicer("TargetTimeInStage", "Target Time In Stage", 0, 20));
-			SlicerProvider.AddSlicer("Target Layers", "Groups by target remaining layers", () => new IntervalSlicer("TargetLayers", "Target Layers", 0, 8));
-			SlicerProvider.AddSlicer("Target Starting Layers", "Groups by target remaining layers", () => new IntervalSlicer("TargetStartingLayers", "Target Starting Layers", 0, 8));
-			KeyValuePair<string, string>[] statuses = new KeyValuePair<string, string>[TargetCondition.StatusTypes.Length * 2];
-			for (int i = 0; i < TargetCondition.StatusTypes.Length; i++)
-			{
-				statuses[i * 2] = TargetCondition.StatusTypes[i];
-				statuses[i * 2 + 1] = new KeyValuePair<string, string>(TargetCondition.StatusTypes[i].Key == null ? null : "not_" + TargetCondition.StatusTypes[i].Key, "Not " + TargetCondition.StatusTypes[i].Value);
-			}
-			SlicerProvider.AddSlicer("Target Status", "Groups by target status", () => new ComboSlicer(typeof(Case), "TargetStatus", "Target Status", statuses));
-
-			SlicerProvider.AddSlicer("Also Playing", "Groups by Also Playing", () => new RecordSlicer(typeof(Character), "AlsoPlaying", "Also Playing", true, true));
-			SlicerProvider.AddSlicer("Also Playing Hand", "Groups by another character's hand", () => new ComboSlicer(typeof(Case), "AlsoPlayingHand", "Also Playing Hand"));
-			SlicerProvider.AddSlicer("Also Playing Stage", "Groups by another character's stage", () => new IntervalSlicer("AlsoPlayingStage", "Also Playing Stage", 0, 10));
-			SlicerProvider.AddSlicer("Also Playing Time In Stage", "Groups by another character's time in stage", () => new IntervalSlicer("AlsoPlayingTimeInStage", "Also Playing Time In Stage", 0, 20));
-
-			SlicerProvider.AddSlicer("Total Males", "Groups by total males", () => new IntervalSlicer("TotalMales", "Total Males", 0, 5));
-			SlicerProvider.AddSlicer("Total Females", "Groups by total females", () => new IntervalSlicer("TotalFemales", "Total Females", 0, 5));
-			SlicerProvider.AddSlicer("Total Playing", "Groups by total playing", () => new IntervalSlicer("TotalPlaying", "Total Playing", 0, 5));
-			SlicerProvider.AddSlicer("Total Exposed", "Groups by total exposed", () => new IntervalSlicer("TotalExposed", "Total Exposed", 0, 5));
-			SlicerProvider.AddSlicer("Total Naked", "Groups by total naked", () => new IntervalSlicer("TotalNaked", "Total Naked", 0, 5));
-			SlicerProvider.AddSlicer("Total Masturbating", "Groups by total masturbating", () => new IntervalSlicer("TotalMasturbating", "Total Masturbating", 0, 5));
-			SlicerProvider.AddSlicer("Total Finished", "Groups by total finished", () => new IntervalSlicer("TotalFinished", "Total Finished", 0, 5));
-			SlicerProvider.AddSlicer("Time In Stage", "Groups by own time in stage", () => new IntervalSlicer("TimeInStage", "Time In Stage", 0, 20));
-			SlicerProvider.AddSlicer("Total Rounds", "Groups by own total rounds completed", () => new IntervalSlicer("TotalRounds", "Total Rounds", 0, 20));
-			SlicerProvider.AddSlicer("Consecutive Losses", "Groups by losses in a row", () => new IntervalSlicer("ConsecutiveLosses", "Consecutive Losses", 0, 20));
-
-			SlicerProvider.AddSlicer("Hidden", "Groups by Hidden case", () => new BooleanSlicer("Hidden", "Hidden"));
-			SlicerProvider.AddSlicer("Disabled", "Groups by Disabled case", () => new BooleanSlicer("Disabled", "Disabled"));
-			SlicerProvider.AddSlicer("Said Marker", "Groups by marker", () => new RecordSlicer(typeof(Marker), "SaidMarker", "Said Marker", true, true));
-			SlicerProvider.AddSlicer("Not Said Marker", "Groups by marker not said", () => new RecordSlicer(typeof(Marker), "NotSaidMarker", "Not Said Marker", true, true));
-
-			SlicerProvider.AddSlicer("Play Once", "Groups by cases that play once per game", () => new OneShotSlicer());
-			SlicerProvider.AddSlicer("Has Hand", "Groups by self hand", () => new ComboSlicer(typeof(Case), "HasHand", "Own Hand"));
-
-			SlicerProvider.AddSlicer("Case Stage", "Groups by what stage the case applies to", () => new StageSlicer());
 		}
 
 		private static bool DoInitialSetup()
