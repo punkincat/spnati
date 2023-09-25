@@ -287,7 +287,7 @@ function randomizeRosterOrder(startStd, endStd) {
     roster.forEach(function (opp, idx) {
         if (opp.rosterScore > 0) {
             let curStd = ((idx / rosterLength) * (endStd - startStd)) + startStd;
-            let multiplier = Math.exp(rng.randomNormal(0, curStd));
+            let multiplier = Math.exp(rng.randomNormal(-curStd * curStd / 2, curStd));
             opp.effectiveScore = opp.rosterScore * multiplier;
         } else {
             opp.effectiveScore = opp.rosterScore;
