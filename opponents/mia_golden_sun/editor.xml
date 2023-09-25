@@ -18,6 +18,9 @@
         <case name="Mercury Djinn" id="114" priority="Noteworthy" min="3" max="3">
             <description>If she is saying the marker stripped_3_fizz, then a small creature which Mia referrs to as "Fizz" has just appeared from behind her cape, and will hover around her for a few turns.</description>
         </case>
+        <case name="Mia heals Dunban" id="596" priority="Noteworthy" min="0" max="6">
+            <description>Mia uses her 'Ply' Psynergy in order to ease the pain of Dunban's right arm.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -31,7 +34,6 @@
         <response id="136" opponent="aqua_konosuba" opponentId="16" />
         <response id="137" opponent="fina" opponentId="107" />
         <response id="142" opponent="jura" opponentId="33" />
-        <response id="143" opponent="dunban" opponentId="2" />
         <response id="151" opponent="aqua_kh" opponentId="67" />
         <response id="152" opponent="mari_setogaya" opponentId="35" />
         <response id="164" opponent="samus_aran" opponentId="1" />
@@ -129,6 +131,11 @@
         <response id="568" opponent="meia" opponentId="1208" />
         <response id="569" opponent="meia" opponentId="1206" />
         <response id="570" opponent="meia" opponentId="1209" />
+        <response id="597" opponent="dunban" opponentId="726" />
+        <response id="602" opponent="nami" opponentId="1472" />
+        <response id="604" opponent="nami" opponentId="1474" />
+        <response id="610" opponent="perona" opponentId="402" />
+        <response id="611" opponent="perona" opponentId="403" />
     </responses>
     <notes>
         <note id="22">this can go in whatever direction you want; I just find it funny that the two of them are pious and water-themed</note>
@@ -152,6 +159,10 @@
         <note id="439">chance for steve to confuse/fascinate mia with the idea of food brands and having literally millions of options for food</note>
         <note id="438">can be broad, vague, or specific as you like. I can work with anything. maybe narrowing it down to indiana and hawkis would work well for follow up ideas. the concept of a nation so large it has 50 states, and those states have hundreds of towns each, is mind boggling to Mia. you could even work in some cold war era propoganda lol</note>
         <note id="491">"but wouldnt you know" in the sense of the continuing sentence "wouldnt you know it, lighting it was key to saving the world from a slow demise anyway"</note>
+        <note id="608">if too weak or hard to reply to, let me know</note>
+        <note id="613">just a general icebreaker comment</note>
+        <note id="612">pushing further to get to know her; making a connection</note>
+        <note id="614">just a general icebreaker comment</note>
     </notes>
     <labels>
         <label id="2" label="" folder="Targets" sort="2" />
@@ -293,7 +304,7 @@
         <label id="139" label="thong reveal (2nd)" folder="Clothing" sort="2" />
         <label id="141" label="" folder="April Fools" sort="0" />
         <label id="142" label="" folder="Prompts" sort="2" />
-        <label id="143" label="" folder="Targets" sort="11" />
+        <label id="143" label="" folder="Targets" sort="0" />
         <label id="144" label="butt pose (other people with butt poses are here)" folder="Situations" sort="7" />
         <label id="145" label="butt pose (just to show off to the player) (5+ rounds)" folder="Situations" sort="6" />
         <label id="146" label="" folder="Conditional" sort="12" />
@@ -476,8 +487,8 @@
         <label id="323" label="" folder="Aqua (KH)" sort="10" />
         <label id="324" label="" folder="Aqua (KH)" sort="9" />
         <label id="325" label="" folder="Aqua (KH)" sort="17" />
-        <label id="326" label="" folder="Targets" sort="21" />
-        <label id="327" label="" folder="Targets" sort="22" />
+        <label id="326" label="" color="3" folder="Targets" sort="21" />
+        <label id="327" label="" color="3" folder="Targets" sort="22" />
         <label id="328" label="" folder="Situations" sort="39" />
         <label id="329" label="" folder="Prompts" sort="7" />
         <label id="330" label="" folder="Prompts" sort="9" />
@@ -650,9 +661,9 @@
         <label id="500" label="" folder="Targets" sort="8" />
         <label id="502" label="" folder="Targets" sort="9" />
         <label id="503" label="" folder="Tag Filters" sort="8" />
-        <label id="504" label="" folder="Responses" sort="32" />
-        <label id="505" label="" folder="Targets" sort="64" />
-        <label id="506" label="" folder="Targets" sort="65" />
+        <label id="504" label="" color="3" folder="Responses" sort="32" />
+        <label id="505" label="" color="3" folder="Targets" sort="64" />
+        <label id="506" label="" color="3" folder="Targets" sort="65" />
         <label id="507" label="" folder="Responses" sort="43" />
         <label id="508" label="" folder="Situations" sort="4" />
         <label id="509" label="" folder="Responses" sort="45" />
@@ -742,16 +753,32 @@
         <label id="593" label="" folder="Epilogue" sort="0" />
         <label id="594" label="" folder="Epilogue" sort="0" />
         <label id="595" label="" folder="Epilogue" sort="0" />
+        <label id="596" label="" folder="Situations" sort="0" />
+        <label id="597" label="" folder="Situations" sort="0" />
+        <label id="598" label="" folder="Targets" sort="0" />
+        <label id="599" label="" folder="Targets" sort="0" />
+        <label id="600" label="" folder="Targets" sort="0" />
+        <label id="601" label="" folder="Targets" sort="0" />
+        <label id="602" label="" color="1" folder="Responses" sort="0" />
+        <label id="603" label="" color="1" folder="Targets" sort="0" />
+        <label id="604" label="" color="1" folder="Targets" sort="0" />
+        <label id="605" label="" color="1" folder="Targets" sort="0" />
+        <label id="606" label="" color="1" folder="Responses" sort="0" />
+        <label id="607" label="" color="1" folder="Targets" sort="0" />
+        <label id="608" label="" color="1" folder="Targets" sort="0" />
+        <label id="609" label="" color="1" folder="Targets" sort="0" />
+        <label id="610" label="" color="1" folder="Responses" sort="0" />
+        <label id="612" label="" folder="Targets" sort="0" />
+        <label id="613" label="" folder="Targets" sort="0" />
+        <label id="614" label="" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>zz_</prefix>
     </prefixes>
-    <posePreviewMarkers>
-        <posePreviewMarker>epilogue_playerskintone==3</posePreviewMarker>
-    </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>595</nextId>
+    <nextId>614</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="a_djinni_was_in_my_cape">Fizz djinni situational marker</marker>
         <marker scope="Public" name="angara_is_isolated" />
         <marker scope="Public" name="aqua_keyblade_revealResp">Reaction to Aqua KH 'keyblade reveal' situation</marker>
@@ -847,7 +874,10 @@
         <marker scope="Public" name="mia_caitlin_PSIpowers1" />
         <marker scope="Public" name="mia_caitlin_PSIpowers2" />
         <marker scope="Public" name="mia_caitlin_PSIpowers3" />
+        <marker scope="Public" name="mia_dream_epilogue_seen" />
         <marker scope="Public" name="mia_dunban_scar_reveal">Interaction with Dunban</marker>
+        <marker scope="Public" name="mia_dunban_strip4a" />
+        <marker scope="Public" name="mia_dunban_strip4b" />
         <marker scope="Public" name="mia_dunban_worlds1" />
         <marker scope="Public" name="mia_dunban_worlds2" />
         <marker scope="Public" name="mia_dunban_worlds3" />
@@ -863,6 +893,8 @@
         <marker scope="Public" name="mia_fluttershy_animals3" />
         <marker scope="Public" name="mia_fluttershy_meeting_cont" />
         <marker scope="Public" name="mia_fluttershy_meeting_question_Resp" />
+        <marker scope="Public" name="mia_heal_dunban_arm" />
+        <marker scope="Public" name="mia_heal_dunban_arm2" />
         <marker scope="Public" name="Mia_healer_cont" />
         <marker scope="Public" name="mia_is_a_healer" />
         <marker scope="Public" name="mia_is_bicurious" />
@@ -881,6 +913,8 @@
         <marker scope="Public" name="mia_jura_worlds3" />
         <marker scope="Public" name="mia_larachel_staff_Tolbi" />
         <marker scope="Public" name="mia_link_fidget1" />
+        <marker scope="Public" name="mia_lysithea_strip0a" />
+        <marker scope="Public" name="mia_lysithea_strip1a" />
         <marker scope="Public" name="mia_mariO_Image1" />
         <marker scope="Public" name="mia_mariS_acc_crazy_suggestResp" />
         <marker scope="Public" name="mia_mariS_eatFizz" />
@@ -900,13 +934,23 @@
         <marker scope="Public" name="mia_meia_self4a" />
         <marker scope="Public" name="mia_nadeshiko_foodResp" />
         <marker scope="Public" name="mia_nadeshiko_strip0a" />
+        <marker scope="Public" name="mia_nadeshiko_strip0b" />
         <marker scope="Public" name="mia_nagatoro_self0a" />
         <marker scope="Public" name="mia_nagatoro_self0b" />
         <marker scope="Public" name="mia_nami_flatworld1" />
         <marker scope="Public" name="mia_nami_flatworld2" />
+        <marker scope="Public" name="mia_nami_flatworld3_gravity" />
+        <marker scope="Public" name="mia_nami_flatworld3_seasons" />
         <marker scope="Public" name="mia_nami_s0a" />
         <marker scope="Public" name="mia_nami_s0b" />
+        <marker scope="Public" name="mia_nami_s0c" />
         <marker scope="Public" name="mia_nami_self0a" />
+        <marker scope="Public" name="mia_nami_self0b" />
+        <marker scope="Public" name="mia_nicorobin_arch1" />
+        <marker scope="Public" name="mia_nicorobin_injuries1" />
+        <marker scope="Public" name="mia_nicorobin_self0a" />
+        <marker scope="Public" name="mia_perona_self0a" />
+        <marker scope="Public" name="mia_perona_self3a" />
         <marker scope="Public" name="mia_queenie_mustmast" />
         <marker scope="Public" name="mia_queenie_startmast" />
         <marker scope="Public" name="mia_queenie_strip0a" />

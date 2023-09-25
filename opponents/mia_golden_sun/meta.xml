@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1695278121642</lastupdate>
+    <lastupdate>1695610969558</lastupdate>
     <enabled>false</enabled>
     <first>Mia</first>
     <last />
@@ -14,8 +14,12 @@
     <epilogue gender="male" img="epilogue/mia_dream_thumbnail.png" hint="Finish a game against Mia (Golden Sun).">Mia's Dream</epilogue>
     <layers>6</layers>
     <default-costume-name>Mercury Clan</default-costume-name>
+    <alternates>
+        <costume folder="opponents/reskins/mia_golden_sun_halloween/" img="0-calm.png" set="halloween" status="unlisted" label="Mia" layers="5">Lighthouse Siren</costume>
+        <costume folder="opponents/reskins/mia_golden_sun_sleepwear/" img="0-calm.png" set="sleepover" status="unlisted" label="Mia">mia_golden_sun_sleepwear</costume>
+    </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>1162</lines>
-    <poses>273</poses>
+    <lines>1190</lines>
+    <poses>280</poses>
     <z-index>-1</z-index>
 </opponent>
