@@ -29,7 +29,6 @@ namespace SPNATI_Character_Editor.Controls.Dashboards
 		{
 			CharacterHistory history = CharacterHistory.Get(_character, false);
 			TestRequirements requirements = TestRequirements.Instance;
-			//StringBuilder sb = new StringBuilder();
 			float fileSize = history.GetTotalFileSize(true);
 			LineWork current = history.Current;
 			barLines.Maximum = requirements.Lines;
@@ -63,7 +62,7 @@ namespace SPNATI_Character_Editor.Controls.Dashboards
 				int currentSettings = 0;
 				foreach (CharacterSettingsGroup group in _character.Behavior.CharacterSettingsGroups)
 				{
-					currentSettings += group.CharacterSettings.Count - 1;
+					currentSettings += group.CharacterSettings.Count;
 				}
 				barSettings.Visible = true;
 				barSettings.Maximum = maxSettings;

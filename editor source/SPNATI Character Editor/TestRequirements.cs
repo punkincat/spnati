@@ -79,7 +79,7 @@ namespace SPNATI_Character_Editor
 			{
 				return 0;
 			}
-			return (lineCount - FirstSetting) / LinesPerSetting + 1; 
+			return (lineCount - FirstSetting) / LinesPerSetting + 2; 
 		}
 	}
 }
