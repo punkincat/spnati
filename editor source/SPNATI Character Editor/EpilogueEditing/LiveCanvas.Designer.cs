@@ -36,6 +36,7 @@
             this.tsZoom = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsFilter = new System.Windows.Forms.ToolStripButton();
+            this.tsDrawSelectionBoxes = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsRecord = new System.Windows.Forms.ToolStripButton();
             this.tsRight = new System.Windows.Forms.ToolStrip();
@@ -80,11 +81,12 @@
             this.tsZoom,
             this.toolStripSeparator1,
             this.tsFilter,
+            this.tsDrawSelectionBoxes,
             this.toolStripSeparator2,
             this.tsRecord});
             this.canvasStrip.Location = new System.Drawing.Point(0, 0);
             this.canvasStrip.Name = "canvasStrip";
-            this.canvasStrip.Size = new System.Drawing.Size(176, 25);
+            this.canvasStrip.Size = new System.Drawing.Size(199, 25);
             this.canvasStrip.TabIndex = 19;
             this.canvasStrip.Tag = "PrimaryLight";
             // 
@@ -141,6 +143,16 @@
             this.tsFilter.Name = "tsFilter";
             this.tsFilter.Size = new System.Drawing.Size(23, 22);
             this.tsFilter.Click += new System.EventHandler(this.tsFilter_Click);
+            // 
+            // tsDrawSelectionBoxes
+            // 
+            this.tsDrawSelectionBoxes.CheckOnClick = true;
+            this.tsDrawSelectionBoxes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsDrawSelectionBoxes.Image = global::SPNATI_Character_Editor.Properties.Resources.Select;
+            this.tsDrawSelectionBoxes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsDrawSelectionBoxes.Name = "tsDrawSelectionBoxes";
+            this.tsDrawSelectionBoxes.Size = new System.Drawing.Size(23, 22);
+            this.tsDrawSelectionBoxes.Click += new System.EventHandler(this.tsDrawSelectionBoxes_Click);
             // 
             // toolStripSeparator2
             // 
@@ -244,5 +256,6 @@
 		private System.Windows.Forms.ToolStripButton tsBackColor;
 		private System.Windows.Forms.ColorDialog colorDialog1;
 		private Desktop.Skinning.SkinnedPanel skinnedPanel1;
-	}
+        private System.Windows.Forms.ToolStripButton tsDrawSelectionBoxes;
+    }
 }
