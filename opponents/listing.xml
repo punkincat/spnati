@@ -202,6 +202,8 @@
 		<opponent addedDate="2023-01-07" release="281" highlight="unsorted">mitama</opponent>
 		<opponent addedDate="2022-07-20" release="282" highlight="unsorted">toph</opponent>
 		<opponent addedDate="2023-03-13" release="283" highlight="unsorted">tea_gardner</opponent>
+		<opponent addedDate="2023-05-28" release="284" highlight="new">aqua_konosuba</opponent> <!-- expires 2023-10-18 -->
+		<opponent addedDate="2023-06-10" release="285" highlight="new">yumeko</opponent> <!-- expires 2023-10-18 -->
 		<opponent addedDate="2023-09-23" status="testing">lysithea</opponent>
 		<opponent addedDate="2021-01-16" status="testing">bowsette</opponent>
 		<opponent addedDate="2023-07-24" status="testing">nadeshiko</opponent>
@@ -211,8 +213,6 @@
 		<opponent addedDate="2023-06-26" status="testing">yae</opponent>
 		<opponent addedDate="2023-06-26" status="testing">sofia</opponent>
 		<opponent addedDate="2023-06-17" status="testing">mia_golden_sun</opponent>
-		<opponent addedDate="2023-06-10" status="testing">yumeko</opponent>
-		<opponent addedDate="2023-05-28" status="testing">aqua_konosuba</opponent>
 		<opponent addedDate="2023-04-04" status="testing">arle</opponent>
 		<opponent addedDate="2022-12-11" status="testing">kyoko_kirigiri</opponent>
 		<opponent addedDate="2017-06-30" release="92" status="offline">aimee</opponent>
@@ -447,7 +447,8 @@
 
 	<!-- Group Listings -->
 	<groups>
-	        <group title="The Milky Way" opp1="mitama" opp2="meia" opp3="aqua_kh" opp4="galatea" background="purple room" />
+		<group title="Aquas and Spicy Reds" opp1="aqua_konosuba" opp2="aqua_grunt" opp3="magma_grunt" opp4="mari_setogaya" costume4="mari_setogaya_casual_vampire" background="lake" />
+	    <group title="The Milky Way" opp1="mitama" opp2="meia" opp3="aqua_kh" opp4="galatea" background="purple room" />
 		<group title="Growing Pains" opp1="nagatoro" opp2="cheryl" opp3="jura" opp4="nico_robin" background="birthday backyard" />
 		<group title="Duelist Kingdom" opp1="dark_magician_girl" opp2="may" opp3="tea_gardner" opp4="chazz" background="locker room" />
 		<group title="Force of Nature" opp1="elphaba" opp2="amalia" opp3="trixie" opp4="erufuda" background="lake" />
