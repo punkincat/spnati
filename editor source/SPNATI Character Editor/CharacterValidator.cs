@@ -385,6 +385,14 @@ namespace SPNATI_Character_Editor
 				warnings.Add(new ValidationError(ValidationFilterLevel.Case, "Character has no After Finished lines. Even if the Finished lines purposefully handle this case, it is advised to separate the Finished and After Finished lines into separate cases."));
 			}
 
+			foreach (Marker marker in character.Markers.Value.Values)
+			{
+				if (Regex.IsMatch(marker.Name, @"[^\w+]"))
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Case, string.Format("Unless other characters already target marker {0}, it is advised to rename it using only letters, numbers, and underscores.", marker.Name)));
+				}
+			}
+
 			//endings
 			foreach (Epilogue ending in character.Endings)
 			{
