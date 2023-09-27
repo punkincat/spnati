@@ -468,10 +468,8 @@ namespace SPNATI_Character_Editor.Activities
 			caseControl.Save();
 		}
 
-		private void tree_SelectedCaseChanged(object sender, CaseSelectionEventArgs e)
+		private void UpdatePanel2()
 		{
-			_selectedStage = e.Stage;
-			_selectedCase = e.Case;
 			if (_selectedCase != null)
 			{
 				splitDialogue.Panel2.Visible = true;
@@ -485,6 +483,13 @@ namespace SPNATI_Character_Editor.Activities
 			}
 
 			caseControl.SetCase(_selectedStage, _selectedCase);
+		}
+
+		private void tree_SelectedCaseChanged(object sender, CaseSelectionEventArgs e)
+		{
+			_selectedStage = e.Stage;
+			_selectedCase = e.Case;
+			UpdatePanel2();
 		}
 
 		private void tree_CreatingCase(object sender, CaseCreationEventArgs e)
@@ -639,5 +644,13 @@ namespace SPNATI_Character_Editor.Activities
 			_useCaseMarkers = chkCaseMarkers.Checked;
 			DisplayRow(caseControl.GetHighlightedLineIndex());
 		}
+
+		private void splitDialogue_Panel2_Resize(object sender, EventArgs e)
+		{
+			if (_selectedStage == null) 
+				return;
+			UpdatePanel2();
+		}
+
 	}
 }
