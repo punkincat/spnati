@@ -608,22 +608,22 @@ namespace SPNATI_Character_Editor.Controls
 				if (obj.AlignmentX == "right")
 				{
 					int width = (int)(position.Width + arrowWidth);
-					position.X = (position.X - width);
+					position.X -= width;
 				}
 				else if (obj.AlignmentX == "center")
 				{
 					int width = (int)(position.Width + arrowWidth);
-					position.X = (position.X - width * 0.5f);
+					position.X -= width * 0.5f;
 				}
 				if (obj.AlignmentY == "bottom")
 				{
 					int height = (int)(position.Height + arrowHeight);
-					position.Y = (position.Y - height);
+					position.Y -= height;
 				}
 				else if (obj.AlignmentY == "center")
 				{
 					int height = (int)(position.Height + arrowHeight);
-					position.Y = (position.Y - height * 0.5f);
+					position.Y -= height * 0.5f;
 				}
 				return position;
 			}

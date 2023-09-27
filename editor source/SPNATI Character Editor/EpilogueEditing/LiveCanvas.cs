@@ -22,7 +22,8 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		private LiveData _data;
 		private ICanvasViewport _viewport;
 		private List<string> _markers = new List<string>();
-		private bool _ignoreMarkers = false;
+		private bool _ignoreMarkers;
+		private bool _drawSelectionBoxes;
 
 		private Point _lastMouse;
 		private Point _canvasOffset = new Point(0, 0);
@@ -93,6 +94,8 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			AllowZoom = true;
 			_ignoreMarkers = false;
 			tsFilter.ToolTipText = "Toggle Pose Preview Markers off";
+			_drawSelectionBoxes = true;
+			tsDrawSelectionBoxes.ToolTipText = "Do not draw selection boxes";
 			canvas.MouseWheel += Canvas_MouseWheel;
 			canvas.KeyDown += Canvas_KeyDown;
 			UpdateSceneTransform();
@@ -358,7 +361,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				return;
 			}
 
-			selection.DrawSelection(g, SceneTransform, _state, _moveContext);
+			selection.DrawSelection(g, SceneTransform, _state, _moveContext, _drawSelectionBoxes);
 		}
 
 		private void Canvas_KeyDown(object sender, KeyEventArgs e)
@@ -1010,6 +1013,14 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				tsFilter.ToolTipText = "Toggle Pose Preview Markers off";
 				_markers = CharacterDatabase.GetEditorData(_character).PosePreviewMarkers;
 			}
+			canvas.Invalidate();
+			canvas.Update();
+		}
+
+		private void tsDrawSelectionBoxes_Click(object sender, EventArgs e)
+		{
+			_drawSelectionBoxes = !tsDrawSelectionBoxes.Checked;
+			tsDrawSelectionBoxes.ToolTipText = _drawSelectionBoxes ? "Do not draw selection boxes" : "Draw selection boxes";
 			canvas.Invalidate();
 			canvas.Update();
 		}

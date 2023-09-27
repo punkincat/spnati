@@ -140,7 +140,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 		}
 
-		private void lstPoses_SelectedIndexChanged(object sender, System.EventArgs e)
+		private void lstPoses_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			Pose newPose = lstPoses.SelectedItem as Pose;
 			if (newPose == _sourcePose)
@@ -259,7 +259,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 		}
 
-		private void _labelData_LabelChanged(object sender, System.EventArgs e)
+		private void _labelData_LabelChanged(object sender, EventArgs e)
 		{
 			lblDataCaption.Text = _labelData.GetLabel();
 			if (_labelData == _pose)
@@ -392,7 +392,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			tsDuplicate.Enabled = enabled;
 		}
 
-		private void tsAddPose_Click(object sender, System.EventArgs e)
+		private void tsAddPose_Click(object sender, EventArgs e)
 		{
 			Pose pose = new Pose();
 			pose.Id = "new_pose";
@@ -403,7 +403,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			_character.Character.PoseLibrary.Add(pose);
 		}
 
-		private void tsRemovePose_Click(object sender, System.EventArgs e)
+		private void tsRemovePose_Click(object sender, EventArgs e)
 		{
 			if (_pose == null ||
 				MessageBox.Show($"Are you sure you want to permanently delete {_pose}? This operation cannot be undone.",
@@ -448,7 +448,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		}
 
 
-		private void tsCut_Click(object sender, System.EventArgs e)
+		private void tsCut_Click(object sender, EventArgs e)
 		{
 			if (_pose == null) { return; }
 			SavePose();
