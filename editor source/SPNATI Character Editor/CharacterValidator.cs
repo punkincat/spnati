@@ -9,7 +9,7 @@ namespace SPNATI_Character_Editor
 {
 	public static class CharacterValidator
 	{
-		static String[] falsePlurals = { "pants", "shorts", "panties", "boxers", "tights", "leggings", "spats", "glasses", "sunglasses", "shades" };
+		static string[] falsePlurals = { "pants", "shorts", "panties", "boxers", "tights", "leggings", "spats", "glasses", "sunglasses", "shades" };
 
 		/// <summary>
 		/// Validates the character's dialogue and returns a list of warnings (bad images, targets, etc.)
@@ -447,7 +447,7 @@ namespace SPNATI_Character_Editor
 					warnings.Add(new ValidationError(ValidationFilterLevel.TargetedDialogue, string.Format("\"target\" is not allowed for case \"{0}\".", caseTag), context));
 				}
 
-				if (!String.IsNullOrEmpty(condition.Character))
+				if (!string.IsNullOrEmpty(condition.Character))
 				{
 					Character target = CharacterDatabase.Get(condition.Character);
 
@@ -524,15 +524,15 @@ namespace SPNATI_Character_Editor
 					int.TryParse(stageCase.CustomPriority, out caseCustomPriority);
 					bool isPostDialogueCase = !string.IsNullOrEmpty(stageCase.Hidden) && (caseCustomPriority < 0);
 
-					if (!String.IsNullOrEmpty(condition.SayingMarker) && !isPostDialogueCase)
+					if (!string.IsNullOrEmpty(condition.SayingMarker) && !isPostDialogueCase)
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Case, string.Format("Trying to use a Saying Marker condition on Self, which will always fail. {0}", caseLabel), context));
 					}
-					if (!String.IsNullOrEmpty(condition.Saying) && !isPostDialogueCase)
+					if (!string.IsNullOrEmpty(condition.Saying) && !isPostDialogueCase)
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Case, string.Format("Trying to use a Saying Text condition on Self, which will always fail. {0}", caseLabel), context));
 					}
-					if (!String.IsNullOrEmpty(condition.Pose) && !isPostDialogueCase)
+					if (!string.IsNullOrEmpty(condition.Pose) && !isPostDialogueCase)
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Case, string.Format("Trying to use a Pose condition on Self, which will always fail. {0}", caseLabel), context));
 					}
@@ -641,7 +641,7 @@ namespace SPNATI_Character_Editor
 				{
 					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Wardrobe contains a layer of type skip, which is not allowed in default costumes. Remove the layer or replace it with a non-skipped clothing item."));
 				}
-				else if (String.IsNullOrEmpty(c.Name))
+				else if (string.IsNullOrEmpty(c.Name))
 				{
 					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"A clothing layer has no name. Choose a name for the layer."));
 				}
@@ -652,7 +652,7 @@ namespace SPNATI_Character_Editor
 					{
 						pluralGuess = c.Name;
 					}
-					foundGeneric = !String.IsNullOrEmpty(c.GenericName) || foundGeneric;
+					foundGeneric = !string.IsNullOrEmpty(c.GenericName) || foundGeneric;
 
 					if (c.Position == "upper" && c.Type == "major")
 						upper = c.Name;
@@ -669,7 +669,7 @@ namespace SPNATI_Character_Editor
 
 
 
-					if (String.IsNullOrEmpty(c.Position))
+					if (string.IsNullOrEmpty(c.Position))
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" has no position set. Choose a position for the layer."));
 					}
@@ -689,7 +689,7 @@ namespace SPNATI_Character_Editor
 						warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" should be set to plural. Even though it's only one item, it's still a grammatically plural noun (ex. \"Those are some nice {c.Name}\")."));
 					}
 
-					if (!String.IsNullOrEmpty(c.GenericName))
+					if (!string.IsNullOrEmpty(c.GenericName))
 					{
 						bool validCategory = false;
 						bool lowercaseCategory = false;
@@ -781,17 +781,17 @@ namespace SPNATI_Character_Editor
 						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip as its first layer, which is not allowed because it would cause problems in Stage-0 cases such as Selected. Make the first layer a non-skipped clothing item."));
 					}
 
-					if (!String.IsNullOrEmpty(c.Name))
+					if (!string.IsNullOrEmpty(c.Name))
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip with a non-empty name, which may interfere with functions determining character status. Remove names from layers of type skip."));
 					}
 
-					if (!String.IsNullOrEmpty(c.Position))
+					if (!string.IsNullOrEmpty(c.Position))
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip with a non-empty position field, which may interfere with functions determining character status. Remove all metadata from layers of type skip."));
 					}
 
-					if (!String.IsNullOrEmpty(c.GenericName))
+					if (!string.IsNullOrEmpty(c.GenericName))
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip with a non-empty generic name field, which may interfere with functions determining character status. Remove all metadata from layers of type skip."));
 					}
@@ -802,7 +802,7 @@ namespace SPNATI_Character_Editor
 					}
 
 				}
-				else if (String.IsNullOrEmpty(c.Name))
+				else if (string.IsNullOrEmpty(c.Name))
 				{
 					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Alternate costume \"{skin.Name}\" has a non-skipped layer with no name. Choose a name for the layer."));
 				}
@@ -813,7 +813,7 @@ namespace SPNATI_Character_Editor
 					{
 						pluralGuess = c.Name;
 					}
-					foundGeneric = !String.IsNullOrEmpty(c.GenericName) || foundGeneric;
+					foundGeneric = !string.IsNullOrEmpty(c.GenericName) || foundGeneric;
 
 					if (c.Position == "upper" && c.Type == "major")
 						upper = c.Name;
@@ -828,7 +828,7 @@ namespace SPNATI_Character_Editor
 					if (c.Position == "other" && c.Type == "major")
 						otherMajor = c.Name;
 
-					if (String.IsNullOrEmpty(c.Position))
+					if (string.IsNullOrEmpty(c.Position))
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" has no position set. Choose a position for the layer."));
 					}
@@ -848,7 +848,7 @@ namespace SPNATI_Character_Editor
 						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" should be set to plural. Even though it's only one item, it's still a grammatically plural noun (ex. \"Those are some nice {c.Name}\")."));
 					}
 
-					if (!String.IsNullOrEmpty(c.GenericName))
+					if (!string.IsNullOrEmpty(c.GenericName))
 					{
 						bool validCategory = false;
 						bool lowercaseCategory = false;
@@ -1046,16 +1046,21 @@ namespace SPNATI_Character_Editor
 				bool perTarget;
 
 				name = Marker.ExtractConditionPieces(name, out op, out value, out perTarget);
-				if (character.Markers.IsValueCreated && !character.Markers.Value.Contains(name))
+				/*if (character.Markers.IsValueCreated && !character.Markers.Value.Contains(name))
 				{
 					//Count could be 0 for characters who have no editor data, so unless we decide to duplicate MarkerData in CachedCharacter, just ignore it for unloaded characters
 					warnings.Add(new ValidationError(ValidationFilterLevel.Markers, string.Format("{1} has no dialogue that sets marker {2}, so this case will never trigger. {0}", caseLabel, character.Name, name), context));
 				}
 				else
+				{*/
+				if (character.IsFullyLoaded)
 				{
-					if (character.IsFullyLoaded)
+					if (character.Markers.IsValueCreated && !character.Markers.Value.Contains(name))
 					{
-						if (!string.IsNullOrEmpty(stageRange))
+						//Count could be 0 for characters who have no editor data, so unless we decide to duplicate MarkerData in CachedCharacter, just ignore it for unloaded characters
+						warnings.Add(new ValidationError(ValidationFilterLevel.Markers, string.Format("{1} has no dialogue that sets marker {2}, so this case will never trigger. {0}", caseLabel, character.Name, name), context));
+					}
+					else if (!string.IsNullOrEmpty(stageRange))
 						{
 							//verify that a marker can even be set prior to this point
 							bool setsAtAll = false;
@@ -1157,7 +1162,7 @@ namespace SPNATI_Character_Editor
 								if (!used)
 								{
 									// if value is set to a variable, it could be any value
-									foreach (String val in m.Values)
+									foreach (string val in m.Values)
 									{
 										if (val.Contains("~"))
 										{
@@ -1182,7 +1187,6 @@ namespace SPNATI_Character_Editor
 								warnings.Add(new ValidationError(ValidationFilterLevel.Markers, $"{character.Name} has no dialogue that sets marker {name} to {value}, so this case will never trigger. {caseLabel}", context));
 							}
 						}
-					}
 				}
 			}
 		}
