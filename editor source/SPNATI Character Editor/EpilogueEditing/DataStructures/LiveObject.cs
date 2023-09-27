@@ -611,7 +611,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		public abstract void Update(float time, float elapsedTime, bool inPlayback);
 
 		public abstract void Draw(Graphics g, Matrix sceneTransform, List<string> markers, bool inPlayback);
-		public virtual void DrawSelection(Graphics g, Matrix sceneTransform, CanvasState editState, HoverContext hoverContext)
+		public virtual void DrawSelection(Graphics g, Matrix sceneTransform, CanvasState editState, HoverContext hoverContext, bool drawSelectionBoxes)
 		{
 			PointF[] localPts = new PointF[] {
 				new PointF(0,0),
@@ -627,23 +627,26 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				outerPts[i] = boundPts[i];
 			}
 
-			DrawSelectionBox(g, outerPts);
-			DrawHandles(g, outerPts);
-
-			//pivot point
-			if (CanPivot)
+			if (drawSelectionBoxes)
 			{
-				if (editState == CanvasState.MovingPivot || hoverContext == HoverContext.Pivot)
-				{
-					g.MultiplyTransform(UnscaledWorldTransform);
-					g.MultiplyTransform(sceneTransform, MatrixOrder.Append);
-					g.DrawRectangle(_penPivotBox, 0, 0, Width, Height);
-					g.ResetTransform();
-				}
+				DrawSelectionBox(g, outerPts);
+				DrawHandles(g, outerPts);
 
-				PointF pt = localPts[4];
-				g.FillEllipse(Brushes.White, pt.X - 3, pt.Y - 3, 6, 6);
-				g.FillEllipse(Brushes.Black, pt.X - 2, pt.Y - 2, 4, 4);
+				//pivot point
+				if (CanPivot)
+				{
+					if (editState == CanvasState.MovingPivot || hoverContext == HoverContext.Pivot)
+					{
+						g.MultiplyTransform(UnscaledWorldTransform);
+						g.MultiplyTransform(sceneTransform, MatrixOrder.Append);
+						g.DrawRectangle(_penPivotBox, 0, 0, Width, Height);
+						g.ResetTransform();
+					}
+
+					PointF pt = localPts[4];
+					g.FillEllipse(Brushes.White, pt.X - 3, pt.Y - 3, 6, 6);
+					g.FillEllipse(Brushes.Black, pt.X - 2, pt.Y - 2, 4, 4);
+				}
 			}
 		}
 

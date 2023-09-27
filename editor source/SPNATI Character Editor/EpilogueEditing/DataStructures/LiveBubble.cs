@@ -317,7 +317,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 		}
 
-		public override void DrawSelection(Graphics g, Matrix sceneTransform, CanvasState editState, HoverContext hoverContext)
+		public override void DrawSelection(Graphics g, Matrix sceneTransform, CanvasState editState, HoverContext hoverContext, bool drawSelectionBoxes)
 		{
 			LiveSceneSegment segment = Data as LiveSceneSegment;
 			if (segment != null)
@@ -325,18 +325,22 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				g.MultiplyTransform(segment.Camera.WorldTransform);
 				g.MultiplyTransform(sceneTransform, MatrixOrder.Append);
 				RectangleF rect = GetRectangle();
-				DrawSelectionBox(g,
-					new PointF(rect.Left, rect.Top),
-					new PointF(rect.Right, rect.Top),
-					new PointF(rect.Right, rect.Bottom),
-					new PointF(rect.Left, rect.Bottom)
-				);
-				DrawHandles(g,
-					new PointF(rect.Left, rect.Top),
-					new PointF(rect.Left, rect.Bottom));
-				DrawHandles(g,
-					new PointF(rect.Right, rect.Top),
-					new PointF(rect.Right, rect.Bottom));
+
+				if (drawSelectionBoxes)
+				{
+					DrawSelectionBox(g,
+						new PointF(rect.Left, rect.Top),
+						new PointF(rect.Right, rect.Top),
+						new PointF(rect.Right, rect.Bottom),
+						new PointF(rect.Left, rect.Bottom)
+					);
+					DrawHandles(g,
+						new PointF(rect.Left, rect.Top),
+						new PointF(rect.Left, rect.Bottom));
+					DrawHandles(g,
+						new PointF(rect.Right, rect.Top),
+						new PointF(rect.Right, rect.Bottom));
+				}
 
 				string arrowPreview = null;
 				switch (hoverContext)
