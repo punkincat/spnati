@@ -152,6 +152,7 @@ namespace SPNATI_Character_Editor.Activities
             this.splitDialogue.SplitterColor = Desktop.Skinning.SkinnedBackgroundType.PrimaryLight;
             this.splitDialogue.SplitterDistance = 266;
             this.splitDialogue.TabIndex = 16;
+            this.splitDialogue.Panel2.Resize += new System.EventHandler(this.splitDialogue_Panel2_Resize);
             // 
             // treeDialogue
             // 
