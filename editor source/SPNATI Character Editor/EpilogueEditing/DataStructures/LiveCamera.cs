@@ -199,7 +199,6 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 			PointF tl = bounds[0];
 			PointF br = bounds[1];
-			//PointF br = new PointF(bounds[1].X, bounds[1].Y);
 			PointF tr = new PointF(bounds[1].X, bounds[0].Y);
 			PointF bl = new PointF(bounds[0].X, bounds[1].Y);
 
