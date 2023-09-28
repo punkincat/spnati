@@ -181,22 +181,27 @@ var statusIndicators = {
 
 const MAGNET_TAGS = [
     "fire_emblem",
+
     "pokemon",
+
     "ddlc",
     "my_little_pony",
+
     "danganronpa",
     "genshin_impact",
+    "konosuba",
     "persona",
     "rwby_franchise",
     "street_fighter",
+
     "ace_attorney",
     "dragon_ball",
     "katawa_shoujo",
-    "konosuba",
-    "little_witch_academia",
     "monster_prom",
     "one_piece",
     "touhou_project",
+    "yugioh",
+
     "battleborn",
     "clannad",
     "zombieland_saga",
@@ -204,8 +209,8 @@ const MAGNET_TAGS = [
     "jjba",
     "kid_icarus",
     "league_of_legends",
-    "legend_of_dark_witch",
     "legend_of_zelda",
+    "little_witch_academia",
     "marvel",
     "miraculous",
     "hyperdimension_neptunia",
@@ -215,7 +220,7 @@ const MAGNET_TAGS = [
     "teen_titans_franchise",
     "va-11_hall-a",
     "vandread",
-    "yugioh",
+    "xenoblade_chronicles",
 ];
 
 /**********************************************************************
