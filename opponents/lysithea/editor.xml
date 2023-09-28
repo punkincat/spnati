@@ -18,6 +18,10 @@
         <response id="131" opponent="jura" opponentId="1179" />
         <response id="135" opponent="meia" opponentId="1332" />
         <response id="136" opponent="revy" opponentId="541" />
+        <response id="142" opponent="mari" opponentId="2379" />
+        <response id="143" opponent="mari" opponentId="2380" />
+        <response id="145" opponent="jura" opponentId="1183" />
+        <response id="149" opponent="meia" opponentId="1338" />
     </responses>
     <notes>
         <note id="66">Wealth: Lys talks about being impoverished and disadvantaged, even as a noble
@@ -29,6 +33,7 @@ Bake: </note>
 ask_mia_genieS = Djinn / Lysithea's fear of ghosts
 ask_mia_tribeS = Description of the world </note>
         <note id="138">Lysithea's exposures to music are mostly through other nobles. Folk music, no matter how obscure (read: metal) would interest her)</note>
+        <note id="146">Rapiers in Fire Emblem are better against armor and horses. </note>
     </notes>
     <labels>
         <label id="1" label="" folder="Golden Deer - Hilda" sort="0" />
@@ -161,15 +166,30 @@ ask_mia_tribeS = Description of the world </note>
         <label id="129" label="Lysithea Reasoning" folder="" sort="0" />
         <label id="130" label="Lysithea Reasoning" folder="" sort="0" />
         <label id="131" label="" folder="Jura Responses" sort="0" />
-        <label id="132" label="" color="4" folder="Future/Modern Opponents" sort="0" />
-        <label id="133" label="" color="4" folder="Future/Modern Opponents" sort="0" />
-        <label id="134" label="" color="4" folder="Future/Modern Opponents" sort="0" />
-        <label id="135" label="" color="4" folder="Future/Modern Opponents" sort="0" />
+        <label id="132" label="" folder="Future/Modern Opponents" sort="0" />
+        <label id="133" label="" folder="Future/Modern Opponents" sort="0" />
+        <label id="134" label="" folder="Future/Modern Opponents" sort="0" />
+        <label id="135" label="" folder="Future/Modern Opponents" sort="0" />
         <label id="136" label="" folder="Future/Modern Opponents" sort="0" />
         <label id="137" label="" color="4" folder="Future/Modern Opponents" sort="0" />
         <label id="138" label="" color="4" folder="Future/Modern Opponents" sort="0" />
+        <label id="139" label="" folder="Divine and Demonic Opponents" sort="0" />
+        <label id="140" label="" folder="Divine and Demonic Opponents" sort="0" />
+        <label id="141" label="" folder="Divine and Demonic Opponents" sort="0" />
+        <label id="143" label="" folder="Mari O Responses" sort="0" />
+        <label id="142" label="" folder="Mari O Responses" sort="0" />
+        <label id="144" label="" folder="Future/Modern Opponents" sort="0" />
+        <label id="145" label="" color="4" folder="Jura Responses" sort="0" />
+        <label id="146" label="" folder="Future/Modern Opponents" sort="0" />
+        <label id="147" label="" folder="Future/Modern Opponents" sort="0" />
+        <label id="148" label="" folder="Future/Modern Opponents" sort="0" />
+        <label id="150" label="" color="4" folder="Smart Opponents" sort="0" />
+        <label id="151" label="" color="4" folder="Smart Opponents" sort="0" />
+        <label id="152" label="" color="4" folder="Smart Opponents" sort="0" />
+        <label id="153" label="" color="4" folder="Smart Opponents" sort="0" />
+        <label id="154" label="" color="4" folder="" sort="0" />
     </labels>
-    <nextId>138</nextId>
+    <nextId>154</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="ask_adrien_magicS" />
@@ -177,6 +197,10 @@ ask_mia_tribeS = Description of the world </note>
         <marker scope="Public" name="ask_adrien_pressureS" />
         <marker scope="Public" name="ask_adrien_suitS" />
         <marker scope="Public" name="ask_adrien_whyyouS" />
+        <marker scope="Public" name="ask_aqua_aquaS" />
+        <marker scope="Public" name="ask_aqua_faithS" />
+        <marker scope="Public" name="ask_aqua_goddessS" />
+        <marker scope="Public" name="ask_aqua_praiseS" />
         <marker scope="Public" name="ask_bernie_books" />
         <marker scope="Public" name="ask_bernie_booksE" />
         <marker scope="Public" name="ask_bernie_booksI" />
@@ -241,8 +265,11 @@ ask_mia_tribeS = Description of the world </note>
         <marker scope="Public" name="ask_ignatz_knightS" />
         <marker scope="Public" name="ask_ignatz_thisS" />
         <marker scope="Public" name="ask_jura" />
+        <marker scope="Public" name="ask_jura_accessoriesI" />
         <marker scope="Public" name="ask_jura_accessoriesS" />
+        <marker scope="Public" name="ask_jura_bladeI" />
         <marker scope="Public" name="ask_jura_bladeS" />
+        <marker scope="Public" name="ask_jura_partnerI" />
         <marker scope="Public" name="ask_jura_partnerS" />
         <marker scope="Public" name="ask_kaz_demonS" />
         <marker scope="Public" name="ask_kaz_demonsS" />
@@ -262,15 +289,22 @@ ask_mia_tribeS = Description of the world </note>
         <marker scope="Public" name="ask_leonie_crushS" />
         <marker scope="Public" name="ask_leonie_gameS" />
         <marker scope="Public" name="ask_leonie_workoutS" />
+        <marker scope="Public" name="ask_mari_commonS" />
+        <marker scope="Public" name="ask_mari_composureS" />
+        <marker scope="Public" name="ask_mari_goalS" />
         <marker scope="Public" name="ask_marinette_burdenS" />
         <marker scope="Public" name="ask_marinette_guardianS" />
         <marker scope="Public" name="ask_marinette_magicS" />
         <marker scope="Public" name="ask_marinette_pastryS" />
         <marker scope="Public" name="ask_marinette_responsibilityS" />
         <marker scope="Public" name="ask_marinette_suitS" />
+        <marker scope="Public" name="ask_meia_historyE" />
+        <marker scope="Public" name="ask_meia_historyI" />
         <marker scope="Public" name="ask_meia_historyS" />
         <marker scope="Public" name="ask_meia_leadS" />
+        <marker scope="Public" name="ask_meia_menI" />
         <marker scope="Public" name="ask_meia_menS" />
+        <marker scope="Public" name="ask_meia_postS" />
         <marker scope="Public" name="ask_mercy_angelI" />
         <marker scope="Public" name="ask_mercy_angelS" />
         <marker scope="Public" name="ask_mercy_dateI" />
@@ -290,6 +324,9 @@ ask_mia_tribeS = Description of the world </note>
         <marker scope="Public" name="ask_natsuki_looksS" />
         <marker scope="Public" name="ask_natsuki_trickS" />
         <marker scope="Public" name="ask_natsuki_wealthS" />
+        <marker scope="Public" name="ask_noire_bodyS" />
+        <marker scope="Public" name="ask_noire_divinityS" />
+        <marker scope="Public" name="ask_noire_gamesS" />
         <marker scope="Public" name="ask_petra_beachI" />
         <marker scope="Public" name="ask_petra_beachS" />
         <marker scope="Public" name="ask_petra_diplomacyI" />
@@ -319,6 +356,9 @@ ask_mia_tribeS = Description of the world </note>
         <marker scope="Public" name="ask_senko_maturityS" />
         <marker scope="Public" name="ask_senko_romanceS" />
         <marker scope="Public" name="ask_senko_timeS" />
+        <marker scope="Public" name="ask_setogaya_experienceS" />
+        <marker scope="Public" name="ask_setogaya_hapiS" />
+        <marker scope="Public" name="ask_setogaya_schoolS" />
         <marker scope="Public" name="ask_sucrose_confidenceS" />
         <marker scope="Public" name="ask_sucrose_cuteE" />
         <marker scope="Public" name="ask_sucrose_cuteI" />
@@ -347,7 +387,11 @@ ask_mia_tribeS = Description of the world </note>
         <marker scope="Public" name="reply_dunban_focusS" />
         <marker scope="Public" name="reply_dunban_futureS" />
         <marker scope="Public" name="reply_dunban_magicS" />
+        <marker scope="Public" name="reply_jura_seriousI" />
         <marker scope="Public" name="reply_jura_seriousS" />
+        <marker scope="Public" name="reply_mari_defaultS" />
+        <marker scope="Public" name="reply_mari_informalS" />
+        <marker scope="Public" name="reply_meia_strategyI" />
         <marker scope="Public" name="reply_meia_strategyS" />
         <marker scope="Public" name="reply_mia_academyS" />
         <marker scope="Public" name="reply_mia_hobbiesS" />
