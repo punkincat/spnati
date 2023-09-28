@@ -537,7 +537,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			//});
 		}
 
-		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, LiveObject selectedObject, LiveObject selectedPreview, bool inPlayback)
+		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, LiveObject selectedObject, LiveObject selectedPreview, bool inPlayback, bool drawAxes = false)
 		{
 			Scene.Draw(g, sceneTransform, false);
 
@@ -551,7 +551,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 
 			//camera bounds
-			Camera.Draw(g, sceneTransform, markers, inPlayback);
+			Camera.Draw(g, sceneTransform, markers, inPlayback, drawAxes);
 
 			//textboxes
 			g.MultiplyTransform(Camera.WorldTransform);

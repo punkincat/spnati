@@ -16,7 +16,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		public abstract LiveObject GetObjectAtPoint(int x, int y, Matrix sceneTransform, List<string> markers);
 		public abstract void UpdateTime(float time, float elapsedTime, bool inPlayback);
 		public abstract bool UpdateRealTime(float deltaTime, bool inPlayback);
-		public abstract void Draw(Graphics g, Matrix sceneTransform, List<string> markers, LiveObject selectedObject, LiveObject selectedPreview, bool inPlayback);
+		public abstract void Draw(Graphics g, Matrix sceneTransform, List<string> markers, LiveObject selectedObject, LiveObject selectedPreview, bool inPlayback, bool drawAxes = false);
 		public abstract void FitScene(int windowWidth, int windowHeight, ref Point offset, ref float zoom);
 		public abstract Matrix GetSceneTransform(int width, int height, Point offset, float zoom);
 		public abstract int BaseHeight { get; set; }

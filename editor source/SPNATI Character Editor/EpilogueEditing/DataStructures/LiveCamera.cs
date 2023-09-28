@@ -193,12 +193,13 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			return transform;
 		}
 
-		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, bool inPlayback)
+		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, bool inPlayback, bool drawAxes = false)
 		{
 			PointF[] bounds = ToScreenPt(sceneTransform, new PointF(0, 0), new PointF(Width, Height));
 
 			PointF tl = bounds[0];
-			PointF br = new PointF(bounds[1].X, bounds[1].Y);
+			PointF br = bounds[1];
+			//PointF br = new PointF(bounds[1].X, bounds[1].Y);
 			PointF tr = new PointF(bounds[1].X, bounds[0].Y);
 			PointF bl = new PointF(bounds[0].X, bounds[1].Y);
 
@@ -241,6 +242,12 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 
 				g.DrawLine(_penLens, new PointF(br.X, br.Y + halfWidth), new PointF(br.X + CornerSize, br.Y + halfWidth));
 				g.DrawLine(_penLens, new PointF(br.X + halfWidth, br.Y), new PointF(br.X + halfWidth, br.Y + CornerSize));
+			}
+
+			if (drawAxes)
+			{
+				g.DrawLine(Pens.White, new PointF(bounds[0].X, (bounds[0].Y + bounds[1].Y) / 2), new PointF(bounds[1].X, (bounds[0].Y + bounds[1].Y) / 2));
+				g.DrawLine(Pens.White, new PointF((bounds[0].X + bounds[1].X)/2, bounds[0].Y), new PointF((bounds[0].X + bounds[1].X) / 2, bounds[1].Y));
 			}
 		}
 

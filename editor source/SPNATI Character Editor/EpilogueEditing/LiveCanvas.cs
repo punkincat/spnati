@@ -24,6 +24,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		private List<string> _markers = new List<string>();
 		private bool _ignoreMarkers;
 		private bool _drawSelectionBoxes;
+		public bool _drawAxes = false;
 
 		private Point _lastMouse;
 		private Point _canvasOffset = new Point(0, 0);
@@ -325,7 +326,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			{
 				preview = null;
 			}
-			_data.Draw(g, SceneTransform, _markers, _selectionSource, preview, Playing);
+			_data.Draw(g, SceneTransform, _markers, _selectionSource, preview, Playing, _drawAxes);
 
 			//selection and gizmos
 			if (_selectionSource != null && _selectedPreview != null && _selectedPreview.IsVisible && !_selectionSource.Hidden && (_recording || !Playing))
@@ -964,6 +965,30 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			canvas.Invalidate();
 		}
 
+		public void InvalidateCanvas()
+		{
+			canvas.Invalidate();
+		}
+
+		public void OnUpdateSkin(Skin skin)
+		{
+			if (!_backColorCustomized)
+			{
+				if (skin.Group == "Dark")
+				{
+					_backColor.Color = Color.FromArgb(50, 50, 50);
+				}
+				else
+				{
+					_backColor.Color = Color.LightGray;
+				}
+			}
+		}
+
+		private void canvas_Resize(object sender, EventArgs e)
+		{
+			UpdateSceneTransform();
+		}
 
 		private void Canvas_MouseWheel(object sender, MouseEventArgs e)
 		{
@@ -984,6 +1009,11 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 		}
 
+		private void canvas_Click(object sender, EventArgs e)
+		{
+			CanvasClicked?.Invoke(this, e);
+		}
+
 		private void tsHelp_Click(object sender, EventArgs e)
 		{
 			CanvasHelp form = new CanvasHelp();
@@ -993,11 +1023,6 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		private void tsRecord_Click(object sender, EventArgs e)
 		{
 			_recording = tsRecord.Checked;
-		}
-
-		private void canvas_Resize(object sender, EventArgs e)
-		{
-			UpdateSceneTransform();
 		}
 
 		private void tsFilter_Click(object sender, EventArgs e)
@@ -1034,31 +1059,6 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				_backColorCustomized = true;
 				canvas.Invalidate();
 			}
-		}
-
-		public void InvalidateCanvas()
-		{
-			canvas.Invalidate();
-		}
-
-		public void OnUpdateSkin(Skin skin)
-		{
-			if (!_backColorCustomized)
-			{
-				if (skin.Group == "Dark")
-				{
-					_backColor.Color = Color.FromArgb(50, 50, 50);
-				}
-				else
-				{
-					_backColor.Color = Color.LightGray;
-				}
-			}
-		}
-
-		private void canvas_Click(object sender, EventArgs e)
-		{
-			CanvasClicked?.Invoke(this, e);
 		}
 	}
 

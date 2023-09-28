@@ -610,7 +610,10 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		public abstract bool UpdateRealTime(float deltaTime, bool inPlayback);
 		public abstract void Update(float time, float elapsedTime, bool inPlayback);
 
-		public abstract void Draw(Graphics g, Matrix sceneTransform, List<string> markers, bool inPlayback);
+		//public abstract void Draw(Graphics g, Matrix sceneTransform, List<string> markers, bool inPlayback);
+
+		public abstract void Draw(Graphics g, Matrix sceneTransform, List<string> markers, bool inPlayback, bool drawAxes = false);
+
 		public virtual void DrawSelection(Graphics g, Matrix sceneTransform, CanvasState editState, HoverContext hoverContext, bool drawSelectionBoxes)
 		{
 			PointF[] localPts = new PointF[] {
