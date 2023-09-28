@@ -140,6 +140,10 @@ var CANDY_LIST = [
     "mitama/1-writing.png",
     "mitama/2-mischievous.png",
     "mitama/4-shrug.png",
+    "tea_gardner/0-angry.png",             // Highlighted New Character
+    "tea_gardner/1-brave.png",
+    "tea_gardner/2-exhale.png",
+    "tea_gardner/3-happy.png",
     "meia/0-interested.png",               // Highlighted New Character
     "meia/2-pleased.png",
     "meia/2-reminiscing.png",
