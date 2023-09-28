@@ -149,13 +149,13 @@ var CANDY_LIST = [
     "jura/2-interested.png",
     "jura/3-vain.png",
     "mia_golden_sun/0-calm.png",           // Highlighted New Character
-	"mia_golden_sun/0-smug.png",
-	"mia_golden_sun/0-pray.png",
-	"mia_golden_sun/4-praise.png",
-	"aqua_konosuba/0-portrait.png",        // Highlighted New Character
-	"aqua_konosuba/0-thumbs up.png",
-	"aqua_konosuba/1-surprised.png",
-	"aqua_konosuba/2-natures beauty.png",
+    "mia_golden_sun/0-smug.png",
+    "mia_golden_sun/0-pray.png",
+    "mia_golden_sun/4-praise.png",
+    "aqua_konosuba/0-portrait.png",        // Highlighted New Character
+    "aqua_konosuba/0-thumbs up.png",
+    "aqua_konosuba/1-surprised.png",
+    "aqua_konosuba/2-natures beauty.png",
     "wasp/0-start.png",                    // Has Recent Updates
     "wasp/0-flirt.png",
     "wasp/0-excited.png",
