@@ -28,6 +28,7 @@
     <notes>
         <note id="48">Needs phone pose first, but I can't un-accept lines...</note>
         <note id="123">Are the lines regarding Surtr too much? I can change them or take them away if needed.</note>
+        <note id="140">If you think some of these lines should be changed or removed, please let me know!</note>
     </notes>
     <labels>
         <label id="57" label="" folder="Placeholder, delete after writing lines for this stage" sort="0" />
@@ -96,9 +97,7 @@
     <prefixes>
         <prefix>collectible_</prefix>
     </prefixes>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>139</nextId>
+    <nextId>140</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Adventurer1" />
@@ -263,6 +262,14 @@
         <marker scope="Public" name="MarthSmash" />
         <marker scope="Public" name="MarthTip" />
         <marker scope="Public" name="MikuBirthday" />
+        <marker scope="Public" name="MikuCompose" />
+        <marker scope="Public" name="MikuDuet" />
+        <marker scope="Public" name="MikuKart" />
+        <marker scope="Public" name="MikuLeeks" />
+        <marker scope="Public" name="MikuLOSE" />
+        <marker scope="Public" name="MikuMarioParty" />
+        <marker scope="Public" name="MikuRobot" />
+        <marker scope="Public" name="MikuTwintails" />
         <marker scope="Public" name="Military1" />
         <marker scope="Public" name="Military2" />
         <marker scope="Public" name="Military3" />
@@ -279,6 +286,12 @@
         <marker scope="Public" name="Moon1" />
         <marker scope="Public" name="NagatoroGoomba" />
         <marker scope="Public" name="NagatoroPlayer" />
+        <marker scope="Public" name="NagisaBakery" />
+        <marker scope="Public" name="NagisaComparison" />
+        <marker scope="Public" name="NagisaCough" />
+        <marker scope="Public" name="NagisaHair" />
+        <marker scope="Public" name="NagisaInvitation" />
+        <marker scope="Public" name="NagisaSafeHome" />
         <marker scope="Public" name="NoGirlsAllowed" />
         <marker scope="Public" name="NoireColdA" />
         <marker scope="Public" name="NoireColdB" />
@@ -337,11 +350,28 @@
         <marker scope="Public" name="StarfireMatch" />
         <marker scope="Public" name="StarfireWedding" />
         <marker scope="Public" name="STReaction" />
+        <marker scope="Public" name="SweetheartComeback" />
+        <marker scope="Public" name="SweetheartForfeit1" />
+        <marker scope="Public" name="SweetheartForfeit2" />
+        <marker scope="Public" name="SweetheartForfeitStart" />
+        <marker scope="Public" name="SweetheartPractice" />
+        <marker scope="Public" name="SweetheartRoyals" />
+        <marker scope="Public" name="SweetheartStart" />
+        <marker scope="Public" name="SweetheartSubjects" />
         <marker scope="Public" name="TeaAlone" />
         <marker scope="Public" name="TeaFriends" />
         <marker scope="Public" name="TeaFriendship" />
         <marker scope="Public" name="TeaHost" />
         <marker scope="Public" name="TeaKaiba" />
+        <marker scope="Public" name="TomokoBoo" />
+        <marker scope="Public" name="TomokoCrown" />
+        <marker scope="Public" name="TomokoForfeit" />
+        <marker scope="Public" name="TomokoGaming" />
+        <marker scope="Public" name="TomokoGoomba" />
+        <marker scope="Public" name="TomokoHideous" />
+        <marker scope="Public" name="TomokoSleep" />
+        <marker scope="Public" name="TomokoStart" />
+        <marker scope="Public" name="TomokoTrivia" />
         <marker scope="Public" name="TurandotAlliance" />
         <marker scope="Public" name="TurandotJunior" />
         <marker scope="Public" name="TurandotPeachComparison" />
