@@ -320,6 +320,9 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, bool inPlayback, bool drawAxes = false)
 		{
 			if (!IsVisible || Hidden) { return; }
+
+			if (ClipBottom + ClipTop > Image.Height || ClipLeft + ClipRight > Image.Width || ClipRadius * 2 > Image.Height || ClipRadius * 2 > Image.Width) { return; }
+
 			if (HiddenByMarker(markers))
 			{
 				return;
@@ -328,9 +331,16 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			float alpha = WorldAlpha;
 			if (Image != null && alpha > 0)
 			{
+				
+				Rectangle rect = new Rectangle(0, 0, 100, 10000);
+
+
 				g.MultiplyTransform(WorldTransform);
 
 				g.MultiplyTransform(sceneTransform, MatrixOrder.Append);
+
+				
+
 
 				//draw
 				if ((SkewX == 0 || SkewX % 90 != 0) && (SkewY == 0 || SkewY % 90 != 0))
@@ -354,10 +364,33 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 						ImageAttributes ia = new ImageAttributes();
 						ia.SetColorMatrix(cm, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
 
+						if (ClipRadius > 0)
+						{
+
+						}
+						else
+						{
+							g.SetClip(new RectangleF(destPts[0].X, destPts[0].Y, Image.Width, Image.Height));
+							//g.SetClip(new RectangleF(ClipLeft, ClipBottom, Width - ClipRight, Height - ClipTop));
+						}
+
+
+
 						g.DrawImage(Image, destPts, new Rectangle(0, 0, Image.Width, Image.Height), GraphicsUnit.Pixel, ia);
 					}
 					else
 					{
+
+						if (ClipRadius > 0)
+						{
+
+						}
+						else
+						{
+							g.SetClip(new RectangleF(destPts[0].X + ClipLeft, destPts[0].Y + ClipTop, Image.Width - ClipRight - ClipLeft, Image.Height - ClipTop - ClipBottom));
+							//g.SetClip(new RectangleF(ClipLeft, ClipBottom, Width - ClipRight, Height - ClipTop));
+						}
+
 						g.DrawImage(Image, destPts, new Rectangle(0, 0, Image.Width, Image.Height), GraphicsUnit.Pixel);
 					}
 				}
