@@ -112,6 +112,12 @@ namespace SPNATI_Character_Editor.Controls
 							}
 							break;
 						case ContextType.FunctionName:
+							if (lastChar == '(' || lastChar == '~' || lastChar == '.')
+							{
+								AutoComplete(lastChar);
+							}
+							break;
+						case ContextType.SubfunctionName:
 							if (lastChar == '(' || lastChar == '~')
 							{
 								AutoComplete(lastChar);
@@ -145,8 +151,19 @@ namespace SPNATI_Character_Editor.Controls
 					UpdateFunctionList(_lastContext.FunctionName);
 					DisplayTooltip();
 					break;
+				case ContextType.SubfunctionName:
+					UpdateSubfunctionList(_lastContext.SubfunctionName);
+					DisplayTooltip();
+					break;
 				case ContextType.Parameter:
-					UpdateFunctionList(_lastContext.FunctionName);
+					if (string.IsNullOrEmpty(_lastContext.SubfunctionName))
+					{
+						UpdateFunctionList(_lastContext.FunctionName);
+					}
+					else
+					{
+						UpdateSubfunctionList(_lastContext.SubfunctionName);
+					}
 					DisplayTooltip();
 					break;
 			}
@@ -223,6 +240,26 @@ namespace SPNATI_Character_Editor.Controls
 						text = _lastContext.FunctionName;
 						string varName = _lastContext.VariableName;
 						insertion += varName.Length + 2; //2 = starting ~ + function .
+						selectionLength += text.Length; //replace the text to ensure proper case
+						insertionText = value;
+						if (endingChar == '\0')
+						{
+							insertionText += '(';
+							endingChar = '(';
+						}
+						else
+						{
+							insertionText += endingChar;
+							selectionLength++;
+						}
+						InsertSnippet?.Invoke(this, new InsertEventArgs(insertionText, insertion, selectionLength));
+						UpdateIntellisense(Keys.None);
+						break;
+					case ContextType.SubfunctionName:
+						text = _lastContext.SubfunctionName;
+						string vName = _lastContext.VariableName;
+						string fName = _lastContext.FunctionName;
+						insertion += vName.Length + fName.Length + 3; //3 = starting ~ + function . + subfunction .
 						selectionLength += text.Length; //replace the text to ensure proper case
 						insertionText = value;
 						if (endingChar == '\0')
@@ -385,6 +422,36 @@ namespace SPNATI_Character_Editor.Controls
 			}
 		}
 
+		private void UpdateSubfunctionList(string function)
+		{
+			if (_lastContext.Context != ContextType.SubfunctionName && _lastContext.Context != ContextType.Parameter) { return; }
+			lstItems.DataSource = null;
+			Variable variable = VariableDatabase.Get(_lastContext.VariableName);
+			if (variable == null || !variable.HasFunctions())
+			{
+				return;
+			}
+			VariableFunction func = variable.GetFunction(_character, _lastContext.FunctionName);
+			if (func == null || !func.HasSubfunctions())
+			{
+				return;
+			}
+
+			List<string> options = func.GetSubfunctions()
+				.Where(f => string.IsNullOrEmpty(function) || f.Name.ToLower().StartsWith(function.ToLower()))
+				.Select(f => f.Name).ToList();
+
+			if (options.Count > 0)
+			{
+				lstItems.DataSource = options;
+				Display();
+			}
+			else
+			{
+				Hide();
+			}
+		}
+
 		private void DisplayTooltip()
 		{
 			string value = lstItems.SelectedItem?.ToString();
@@ -428,32 +495,85 @@ namespace SPNATI_Character_Editor.Controls
 						lblTooltip.Links.Clear();
 					}
 					break;
+				case ContextType.SubfunctionName:
+					v = VariableDatabase.Get(_lastContext.VariableName);
+					if (v != null)
+					{
+						VariableFunction f = v.GetFunction(_character, _lastContext.FunctionName);
+						if (f != null)
+						{
+							VariableSubfunction subf = f.GetSubfunction(value);
+							if (subf != null)
+							{
+								lblTooltip.Text = subf.Description;
+							}
+							else
+							{
+								lblTooltip.Text = f.Description;
+							}
+						}
+						lblTooltip.Links.Clear();
+					}
+					break;
 				case ContextType.Parameter:
 					v = VariableDatabase.Get(_lastContext.VariableName);
 					if (v != null)
 					{
-						VariableFunction func = v.GetFunction(_character, value);
-						if (func != null)
+						if (_lastContext.SubfunctionName != null)
 						{
-							string description = "";
-							lblTooltip.Text = $"{_lastContext.VariableName}.{_lastContext.FunctionName}(";
-							lblTooltip.Links.Clear();
-							for (int i = 0; i < func.Parameters.Count; i++)
+							VariableFunction f = v.GetFunction(_character, _lastContext.FunctionName);
+							if (f != null)
 							{
-								VariableParameter parameter = func.Parameters[i];
-								int start = lblTooltip.Text.Length;
-								lblTooltip.Text += parameter.Name;
-								if (_lastContext.ParameterIndex == i)
+								VariableSubfunction subf = f.GetSubfunction(value);
+								if (subf != null)
 								{
-									lblTooltip.Links.Add(start, parameter.Name.Length);
-									description = parameter.Description;
-								}
-								if (i < func.Parameters.Count - 1)
-								{
-									lblTooltip.Text += " | ";
+									string description = "";
+									lblTooltip.Text = $"{_lastContext.VariableName}.{_lastContext.FunctionName}.{_lastContext.SubfunctionName}(";
+									lblTooltip.Links.Clear();
+									for (int i = 0; i < subf.Parameters.Count; i++)
+									{
+										VariableParameter parameter = subf.Parameters[i];
+										int start = lblTooltip.Text.Length;
+										lblTooltip.Text += parameter.Name;
+										if (_lastContext.ParameterIndex == i)
+										{
+											lblTooltip.Links.Add(start, parameter.Name.Length);
+											description = parameter.Description;
+										}
+										if (i < subf.Parameters.Count - 1)
+										{
+											lblTooltip.Text += " | ";
+										}
+									}
+									lblTooltip.Text += ") - " + description;
 								}
 							}
-							lblTooltip.Text += ") - " + description;
+						}
+						else
+						{ 
+							VariableFunction func = v.GetFunction(_character, value);
+							if (func != null)
+							{
+								string description = "";
+								lblTooltip.Text = $"{_lastContext.VariableName}.{_lastContext.FunctionName}(";
+								lblTooltip.Links.Clear();
+								for (int i = 0; i < func.Parameters.Count; i++)
+								{
+									VariableParameter parameter = func.Parameters[i];
+									int start = lblTooltip.Text.Length;
+									lblTooltip.Text += parameter.Name;
+									if (_lastContext.ParameterIndex == i)
+									{
+										lblTooltip.Links.Add(start, parameter.Name.Length);
+										description = parameter.Description;
+									}
+									if (i < func.Parameters.Count - 1)
+									{
+										lblTooltip.Text += " | ";
+									}
+								}
+								lblTooltip.Text += ") - " + description;
+							}
 						}
 					}
 					break;

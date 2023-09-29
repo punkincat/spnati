@@ -51,6 +51,7 @@ namespace SPNATI_Character_Editor.Controls
 
 			canvas.UndoManager = _history;
 			canvas.ObjectSelected += Canvas_ObjectSelected;
+			canvas.AddToolBarButton(Properties.Resources.Move, "Toggle axes", true, ToggleAxes);
 			canvas.AddToolBarButton(Properties.Resources.VideoCamera, "Toggle scene preview", true, ToggleCamera);
 			_playButton = canvas.AddToolBarButton(Properties.Resources.Play, "Play scene", true, TogglePlay);
 			canvas.CanvasClicked += Canvas_CanvasClicked;
@@ -110,6 +111,12 @@ namespace SPNATI_Character_Editor.Controls
 		private void Canvas_CanvasClicked(object sender, EventArgs e)
 		{
 			timeline.ResumePlayback();
+		}
+
+		private void ToggleAxes(ToolStripButton btn)
+		{
+			canvas._drawAxes = btn.Checked;
+			canvas.InvalidateCanvas();
 		}
 
 		private void ToggleCamera(ToolStripButton btn)

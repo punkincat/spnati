@@ -463,7 +463,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			return false;
 		}
 
-		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, LiveObject selectedObject, LiveObject selectedPreview, bool inPlayback)
+		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, LiveObject selectedObject, LiveObject selectedPreview, bool inPlayback, bool drawAxes = false)
 		{
 			foreach (LiveSprite sprite in DrawingOrder)
 			{

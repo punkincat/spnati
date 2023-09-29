@@ -848,6 +848,7 @@ namespace SPNATI_Character_Editor.Activities
             this.txtOtherNotes.ForeColor = System.Drawing.Color.Black;
             this.txtOtherNotes.Location = new System.Drawing.Point(98, 28);
             this.txtOtherNotes.Multiline = true;
+            this.txtOtherNotes.MaxLength = 1048575;
             this.txtOtherNotes.Name = "txtOtherNotes";
             this.txtOtherNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtOtherNotes.Size = new System.Drawing.Size(570, 223);

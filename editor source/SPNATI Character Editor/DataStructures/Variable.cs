@@ -1,6 +1,5 @@
 ﻿using Desktop;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace SPNATI_Character_Editor
@@ -120,6 +119,110 @@ namespace SPNATI_Character_Editor
 		[XmlElement("param")]
 		public List<VariableParameter> Parameters = new List<VariableParameter>();
 
+		[XmlElement("subfunction")]
+		public List<VariableSubfunction> Subfunctions = new List<VariableSubfunction>();
+
+		[XmlAttribute("useBackgroundTags")]
+		public bool UseBackgroundTags;
+
+		[XmlAttribute("description")]
+		public string Description;
+
+		public string Key
+		{
+			get { return Name; }
+			set { }
+		}
+
+		public string Group { get { return null; } }
+
+		public override string ToString()
+		{
+			return Name;
+		}
+
+		public string ToLookupString()
+		{
+			if (Label != null)
+			{
+				return $"${Label} [{Name}]";
+			}
+			return Name;
+		}
+
+		public bool HasSubfunctions()
+		{
+			return Subfunctions.Count > 0 || UseBackgroundTags;
+		}
+
+		public VariableSubfunction GetSubfunction(string name)
+		{
+			foreach (VariableSubfunction func in GetSubfunctions())
+			{
+				if (func.Name == name)
+				{
+					return func;
+				}
+			}
+			return null;
+		}
+
+		public IEnumerable<VariableSubfunction> GetSubfunctions()
+		{
+			foreach (VariableSubfunction subf in Subfunctions)
+			{
+				yield return subf;
+			}
+			if (UseBackgroundTags)
+			{
+				foreach (BackgroundTag tag in Definitions.Instance.Get<BackgroundTag>())
+				{
+					if (tag.Name == "viewport")
+					{
+						continue;
+					}
+					bool isBoolean = true;
+					foreach (string val in tag.Values)
+					{
+						if (val != "true" && val != "false")
+						{
+							isBoolean = false;
+						}
+					}
+					if (!isBoolean) { continue; }
+					yield return new VariableSubfunction(tag);
+				}
+			}
+		}
+
+		public int CompareTo(IRecord other)
+		{
+			return Name.CompareTo(other.Name);
+		}
+
+		public VariableFunction() { }
+
+		public VariableFunction(Marker marker)
+		{
+			Name = marker.Name;
+			Description = $"Gets the value currently stored in marker '{Name}'";
+		}
+	}
+
+	public class VariableSubfunction : IRecord
+	{
+		[XmlAttribute("name")]
+		public string Name { get; set; }
+
+		[XmlAttribute("label")]
+		public string Label { get; set; }
+
+		[XmlAttribute("example")]
+		public string Example { get; set; }
+
+		[XmlElement("param")]
+		public List<VariableParameter> Parameters = new List<VariableParameter>();
+
 		[XmlAttribute("description")]
 		public string Description;
 
@@ -150,11 +253,22 @@ namespace SPNATI_Character_Editor
 			return Name.CompareTo(other.Name);
 		}
 
-		public VariableFunction() { }
-		public VariableFunction(Marker marker)
+		public VariableSubfunction() { }
+
+		public VariableSubfunction(BackgroundTag tag)
 		{
-			Name = marker.Name;
-			Description = $"Gets the value currently stored in marker '{Name}'";
+			Name = tag.ToString();
+			VariableParameter param1 = new VariableParameter();
+			param1.Name = "true";
+			param1.Label = "If tag:";
+			param1.Description = "Text if the background has the given tag.";
+			Parameters.Add(param1);
+			VariableParameter param2 = new VariableParameter();
+			param2.Name = "false";
+			param2.Label = "If not tag:";
+			param2.Description = "Text if the background does not have the given tag.";
+			Parameters.Add(param2);
+			Description = tag.Description;
 		}
 	}
 

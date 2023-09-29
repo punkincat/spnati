@@ -22,7 +22,9 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		private LiveData _data;
 		private ICanvasViewport _viewport;
 		private List<string> _markers = new List<string>();
-		private bool _ignoreMarkers = false;
+		private bool _ignoreMarkers;
+		private bool _drawSelectionBoxes;
+		public bool _drawAxes = false;
 
 		private Point _lastMouse;
 		private Point _canvasOffset = new Point(0, 0);
@@ -93,6 +95,8 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			AllowZoom = true;
 			_ignoreMarkers = false;
 			tsFilter.ToolTipText = "Toggle Pose Preview Markers off";
+			_drawSelectionBoxes = true;
+			tsDrawSelectionBoxes.ToolTipText = "Do not draw selection boxes";
 			canvas.MouseWheel += Canvas_MouseWheel;
 			canvas.KeyDown += Canvas_KeyDown;
 			UpdateSceneTransform();
@@ -322,7 +326,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			{
 				preview = null;
 			}
-			_data.Draw(g, SceneTransform, _markers, _selectionSource, preview, Playing);
+			_data.Draw(g, SceneTransform, _markers, _selectionSource, preview, Playing, _drawAxes);
 
 			//selection and gizmos
 			if (_selectionSource != null && _selectedPreview != null && _selectedPreview.IsVisible && !_selectionSource.Hidden && (_recording || !Playing))
@@ -358,7 +362,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				return;
 			}
 
-			selection.DrawSelection(g, SceneTransform, _state, _moveContext);
+			selection.DrawSelection(g, SceneTransform, _state, _moveContext, _drawSelectionBoxes);
 		}
 
 		private void Canvas_KeyDown(object sender, KeyEventArgs e)
@@ -961,70 +965,6 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			canvas.Invalidate();
 		}
 
-
-		private void Canvas_MouseWheel(object sender, MouseEventArgs e)
-		{
-			if (ModifierKeys.HasFlag(Keys.Control))
-			{
-				if (AllowZoom)
-				{
-					((HandledMouseEventArgs)e).Handled = true;
-					if (e.Delta > 0)
-					{
-						UpdateZoomIndex(_zoomIndex + 1);
-					}
-					else if (e.Delta < 0)
-					{
-						UpdateZoomIndex(_zoomIndex - 1);
-					}
-				}
-			}
-		}
-
-		private void tsHelp_Click(object sender, EventArgs e)
-		{
-			CanvasHelp form = new CanvasHelp();
-			form.ShowDialog();
-		}
-
-		private void tsRecord_Click(object sender, EventArgs e)
-		{
-			_recording = tsRecord.Checked;
-		}
-
-		private void canvas_Resize(object sender, EventArgs e)
-		{
-			UpdateSceneTransform();
-		}
-
-		private void tsFilter_Click(object sender, EventArgs e)
-		{
-			_ignoreMarkers = tsFilter.Checked;
-			if (_ignoreMarkers)
-			{
-				tsFilter.ToolTipText = "Toggle Pose Preview Markers on";
-				_markers = new List<string>();
-			}
-			else
-			{
-				tsFilter.ToolTipText = "Toggle Pose Preview Markers off";
-				_markers = CharacterDatabase.GetEditorData(_character).PosePreviewMarkers;
-			}
-			canvas.Invalidate();
-			canvas.Update();
-		}
-
-		private void tsBackColor_Click(object sender, EventArgs e)
-		{
-			colorDialog1.Color = _backColor.Color;
-			if (colorDialog1.ShowDialog() == DialogResult.OK)
-			{
-				_backColor.Color = colorDialog1.Color;
-				_backColorCustomized = true;
-				canvas.Invalidate();
-			}
-		}
-
 		public void InvalidateCanvas()
 		{
 			canvas.Invalidate();
@@ -1045,9 +985,80 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 		}
 
+		private void canvas_Resize(object sender, EventArgs e)
+		{
+			UpdateSceneTransform();
+		}
+
+		private void Canvas_MouseWheel(object sender, MouseEventArgs e)
+		{
+			if (ModifierKeys.HasFlag(Keys.Control))
+			{
+				if (AllowZoom)
+				{
+					((HandledMouseEventArgs)e).Handled = true;
+					if (e.Delta > 0)
+					{
+						UpdateZoomIndex(_zoomIndex + 1);
+					}
+					else if (e.Delta < 0)
+					{
+						UpdateZoomIndex(_zoomIndex - 1);
+					}
+				}
+			}
+		}
+
 		private void canvas_Click(object sender, EventArgs e)
 		{
 			CanvasClicked?.Invoke(this, e);
+		}
+
+		private void tsHelp_Click(object sender, EventArgs e)
+		{
+			CanvasHelp form = new CanvasHelp();
+			form.ShowDialog();
+		}
+
+		private void tsRecord_Click(object sender, EventArgs e)
+		{
+			_recording = tsRecord.Checked;
+		}
+
+		private void tsFilter_Click(object sender, EventArgs e)
+		{
+			_ignoreMarkers = tsFilter.Checked;
+			if (_ignoreMarkers)
+			{
+				tsFilter.ToolTipText = "Toggle Pose Preview Markers on";
+				_markers = new List<string>();
+			}
+			else
+			{
+				tsFilter.ToolTipText = "Toggle Pose Preview Markers off";
+				_markers = CharacterDatabase.GetEditorData(_character).PosePreviewMarkers;
+			}
+			canvas.Invalidate();
+			canvas.Update();
+		}
+
+		private void tsDrawSelectionBoxes_Click(object sender, EventArgs e)
+		{
+			_drawSelectionBoxes = !tsDrawSelectionBoxes.Checked;
+			tsDrawSelectionBoxes.ToolTipText = _drawSelectionBoxes ? "Do not draw selection boxes" : "Draw selection boxes";
+			canvas.Invalidate();
+			canvas.Update();
+		}
+
+		private void tsBackColor_Click(object sender, EventArgs e)
+		{
+			colorDialog1.Color = _backColor.Color;
+			if (colorDialog1.ShowDialog() == DialogResult.OK)
+			{
+				_backColor.Color = colorDialog1.Color;
+				_backColorCustomized = true;
+				canvas.Invalidate();
+			}
 		}
 	}
 

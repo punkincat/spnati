@@ -55,8 +55,9 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
+		[DefaultValue("")]
 		[XmlElement("height")]
-		public string Height
+		public string LegacyHeight
 		{
 			get { return Get<string>(); }
 			set { Set(value); }
@@ -98,8 +99,8 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
-		[XmlElement("scale")]
 		[DefaultValue(100.0f)]
+		[XmlElement("scale")]
 		public float Scale
 		{
 			get { return Get<float>(); }
@@ -116,6 +117,7 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
+		[DefaultValue("")]
 		[XmlElement("default-costume-name")]
 		public string DefaultCostumeName
 		{
@@ -125,11 +127,12 @@ namespace SPNATI_Character_Editor
 
 		[XmlArray("tags")]
 		[XmlArrayItem("tag")]
-		public List<CharacterTag> Tags { get; set; }
+		public List<CharacterTag> LegacyTags { get; set; }
 
 		[XmlElement("alternates")]
 		public List<AlternateSkin> AlternateSkins { get; set; }
 
+		[DefaultValue(false)]
 		[XmlElement("has_collectibles")]
 		public bool HasCollectibles
 		{
@@ -182,6 +185,14 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
+		[DefaultValue(0)]
+		[XmlElement("release")]
+		public int LegacyRelease
+		{
+			get { return Get<int>(); }
+			set { Set(0); }
+		}
+
 		[XmlAnyElement]
 		public List<System.Xml.XmlElement> ExtraXml { get; set; }
 
@@ -224,6 +235,7 @@ namespace SPNATI_Character_Editor
 				AlsoPlaying = e.AlsoPlaying,
 				PlayerStartingLayers = e.PlayerStartingLayers,
 				Hint = e.Hint,
+				EpilogueDescription = e.EpilogueDescription,
 				HasMarkerConditions = !string.IsNullOrWhiteSpace(e.AllMarkers)
 					|| !string.IsNullOrWhiteSpace(e.AnyMarkers)
 					|| !string.IsNullOrWhiteSpace(e.NotMarkers)
@@ -231,7 +243,7 @@ namespace SPNATI_Character_Editor
 					|| !string.IsNullOrWhiteSpace(e.AlsoPlayingAnyMarkers)
 					|| !string.IsNullOrWhiteSpace(e.AlsoPlayingNotMarkers)
 			});
-			Tags = c.Tags;
+			LegacyTags = c.Tags;
 			HasCollectibles = c.Collectibles.Count > 0;
 			int lines, poses;
 			c.GetUniqueLineAndPoseCount(out lines, out poses);
@@ -305,6 +317,9 @@ namespace SPNATI_Character_Editor
 
 		[XmlAttribute("hint")]
 		public string Hint;
+
+		[XmlAttribute("description")]
+		public string EpilogueDescription;
 
 		[XmlText]
 		public string Title;
