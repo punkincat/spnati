@@ -2781,15 +2781,6 @@ function addExtraNumberedBindings (bindings, variableMatches) {
     });
 }
 
-function shuffleArray (array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = getRandomNumber(0, i);
-        var tmp = array[i];
-        array[i] = array[j];
-        array[j] = tmp;
-    }
-}
-
 /*
  * Given an array arr, return an array containing all arr.length!
  * permutations of arr. Not used at the moment, but may be later.

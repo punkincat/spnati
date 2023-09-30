@@ -1116,6 +1116,15 @@ function mergeObjects(a, b){
     return a;
 }
 
+function shuffleArray (array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = getRandomNumber(0, i);
+        var tmp = array[i];
+        array[i] = array[j];
+        array[j] = tmp;
+    }
+}
+
 /************************************************************
  * Changes the first letter in a string to upper case.
  ************************************************************/

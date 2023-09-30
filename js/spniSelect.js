@@ -1730,12 +1730,7 @@ function updateSelectionVisuals () {
         });
 
         /* Shuffle the suggestions before stable sorting them, to add variety. */
-        for (var i = 0; i < suggested_opponents.length - 1; i++) {
-            swapIndex = getRandomNumber(i, suggested_opponents.length);
-            var t = suggested_opponents[i];
-            suggested_opponents[i] = suggested_opponents[swapIndex];
-            suggested_opponents[swapIndex] = t;
-        }
+        shuffleArray(suggested_opponents);
 
         /* Sort opponents, capping each selected character's contribution
          * to the inbound line count for each suggestion at 50 lines.
