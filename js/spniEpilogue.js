@@ -781,11 +781,11 @@ function readProperties(sourceObj, scene) {
         targetObj.iterations = parseInt(targetObj.iterations) || 0;
         targetObj.rate = parseFloat(targetObj.rate, 10) || 0;
         targetObj.count = parseFloat(targetObj.count, 10) || 0;
-        if (targetObj.clipleft) targetObj.clipleft = parseFloat(targetObj.clipleft);
-        if (targetObj.cliptop) targetObj.cliptop = parseFloat(targetObj.cliptop);
-        if (targetObj.clipright) targetObj.clipright = parseFloat(targetObj.clipright);
-        if (targetObj.clipbottom) targetObj.clipbottom = parseFloat(targetObj.clipbottom);
-        if (targetObj.clipradius) targetObj.clipradius = parseFloat(targetObj.clipradius);
+        targetObj.clipleft = parseFloat(targetObj.clipleft, 10);
+        targetObj.cliptop = parseFloat(targetObj.cliptop, 10);
+        targetObj.clipright = parseFloat(targetObj.clipright, 10);
+        targetObj.clipbottom = parseFloat(targetObj.clipbottom, 10);
+        targetObj.clipradius = parseFloat(targetObj.clipradius, 10);
     }
     else {
         // textboxes
@@ -1757,19 +1757,10 @@ SceneView.prototype.drawObject = function (obj) {
     var transform = properties.join(" ");
 
     let clipPath = "none";
-    if (typeof obj.clipleft === "number" && !isNaN(obj.clipleft) && typeof obj.cliptop === "number" && !isNaN(obj.cliptop)) {
-        let clipright = obj.clipright;
-        if (typeof clipright !== "number" || isNaN(clipright)) {
-            clipright = obj.clipleft;
-        }
-
-        let clipbottom = obj.clipbottom;
-        if (typeof clipbottom !== "number" || isNaN(clipbottom)) {
-            clipbottom = obj.cliptop;
-        }
+    if (obj.clipleft + obj.clipright + obj.cliptop + obj.clipbottom + obj.clipradius > 0) {
 
         clipPath = "inset(" + obj.cliptop + "px " + obj.clipright + "px " + obj.clipbottom + "px " + obj.clipleft + "px";
-        if (typeof obj.clipradius === "number" && !isNaN(obj.clipradius)) {
+        if (obj.clipradius > 0) {
             clipPath += " round " + obj.clipradius + "px";
         }
         clipPath += ")";
@@ -1780,9 +1771,10 @@ SceneView.prototype.drawObject = function (obj) {
         "transform-origin": "top left",
         "opacity": obj.alpha / 100,
     });
+
     $(obj.rotElement).css({
         "transform": "rotate(" + obj.rotation + "deg) scale(" + obj.scalex + ", " + obj.scaley + ") skew(" + obj.skewx + "deg, " + obj.skewy + "deg)",
-        "clip-path": clipPath
+        "clip-path": clipPath,
     });
 }
 
@@ -2488,11 +2480,11 @@ function SceneObject(id, element, view, args) {
     this.skewx = args.skewx || 0;
     this.skewy = args.skewy || 0;
     this.rotation = args.rotation || 0;
-    this.clipleft = args.clipleft;
-    this.cliptop = args.cliptop;
-    this.clipright = args.clipright;
-    this.clipbottom = args.clipbottom;
-    this.clipradius = args.clipradius;
+    this.clipleft = args.clipleft || 0;
+    this.cliptop = args.cliptop || 0;
+    this.clipright = args.clipright || 0;
+    this.clipbottom = args.clipbottom || 0;
+    this.clipradius = args.clipradius || 0;
     this.alpha = alpha;
     this.view = view;
     this.layer = args.layer;
