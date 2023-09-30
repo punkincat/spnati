@@ -347,73 +347,76 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 					float skewDistanceY = skewedHeight / 2;
 					PointF[] destPts = new PointF[] { new PointF(-skewDistanceX, -skewDistanceY), new PointF(Width - skewDistanceX, skewDistanceY), new PointF(skewDistanceX, Height - skewDistanceY) };
 
-					GraphicsPath path = new GraphicsPath();
-					if (ClipRadius > 0)
+					if (ClipLeft + ClipRight + ClipTop + ClipBottom + ClipRadius > 0)
 					{
-						float LR = ClipLeft + ClipRadius;
-						float RR = ClipRight + ClipRadius;
-						float TR = ClipTop + ClipRadius;
-						float BR = ClipBottom + ClipRadius;
-						float ratioLR = (float)(1 - 2 * LR / Width);
-						float ratioRR = (float)(1 - 2 * RR / Width);
-						float ratioTR = (float)(1 - 2 * TR / Height);
-						float ratioBR = (float)(1 - 2 * BR / Height);
-						float ratioL = (float)(1 - 2 * ClipLeft / Width);
-						float ratioR = (float)(1 - 2 * ClipRight / Width);
-						float ratioT = (float)(1 - 2 * ClipTop / Height);
-						float ratioB = (float)(1 - 2 * ClipBottom / Height);
-						PointF p1 = new PointF(-skewDistanceX * ratioT + LR, -skewDistanceY * ratioLR + ClipTop);
-						PointF p2 = new PointF(-skewDistanceX * ratioT + Width - RR, skewDistanceY * ratioRR + ClipTop);
-						PointF p3 = new PointF(-skewDistanceX * ratioTR + Width - ClipRight, skewDistanceY * ratioR + TR);
-						PointF p4 = new PointF(skewDistanceX * ratioBR + Width - ClipRight, skewDistanceY * ratioR + Height - BR);
-						PointF p5 = new PointF(skewDistanceX * ratioB + Width - RR, skewDistanceY * ratioRR + Height - ClipBottom);
-						PointF p6 = new PointF(skewDistanceX * ratioB + LR, -skewDistanceY * ratioLR + Height - ClipBottom);
-						PointF p7 = new PointF(skewDistanceX * ratioBR + ClipLeft, -skewDistanceY * ratioL + Height - BR);
-						PointF p8 = new PointF(-skewDistanceX * ratioTR + ClipLeft, -skewDistanceY * ratioL + TR);
+						GraphicsPath path = new GraphicsPath();
+						if (ClipRadius > 0)
+						{
+							float LR = ClipLeft + ClipRadius;
+							float RR = ClipRight + ClipRadius;
+							float TR = ClipTop + ClipRadius;
+							float BR = ClipBottom + ClipRadius;
+							float ratioLR = (float)(1 - 2 * LR / Width);
+							float ratioRR = (float)(1 - 2 * RR / Width);
+							float ratioTR = (float)(1 - 2 * TR / Height);
+							float ratioBR = (float)(1 - 2 * BR / Height);
+							float ratioL = (float)(1 - 2 * ClipLeft / Width);
+							float ratioR = (float)(1 - 2 * ClipRight / Width);
+							float ratioT = (float)(1 - 2 * ClipTop / Height);
+							float ratioB = (float)(1 - 2 * ClipBottom / Height);
+							PointF p1 = new PointF(-skewDistanceX * ratioT + LR, -skewDistanceY * ratioLR + ClipTop);
+							PointF p2 = new PointF(-skewDistanceX * ratioT + Width - RR, skewDistanceY * ratioRR + ClipTop);
+							PointF p3 = new PointF(-skewDistanceX * ratioTR + Width - ClipRight, skewDistanceY * ratioR + TR);
+							PointF p4 = new PointF(skewDistanceX * ratioBR + Width - ClipRight, skewDistanceY * ratioR + Height - BR);
+							PointF p5 = new PointF(skewDistanceX * ratioB + Width - RR, skewDistanceY * ratioRR + Height - ClipBottom);
+							PointF p6 = new PointF(skewDistanceX * ratioB + LR, -skewDistanceY * ratioLR + Height - ClipBottom);
+							PointF p7 = new PointF(skewDistanceX * ratioBR + ClipLeft, -skewDistanceY * ratioL + Height - BR);
+							PointF p8 = new PointF(-skewDistanceX * ratioTR + ClipLeft, -skewDistanceY * ratioL + TR);
 
-						// Approximate arcs with Bézier curves
-						float c = 1 - 0.551915f;
-						float LB = ClipLeft + ClipRadius * c;
-						float RB = ClipRight + ClipRadius * c;
-						float TB = ClipTop + ClipRadius * c;
-						float BB = ClipBottom + ClipRadius * c;
-						float ratioLB = (float)(1 - 2 * LB / Width);
-						float ratioRB = (float)(1 - 2 * RB / Width);
-						float ratioTB = (float)(1 - 2 * TB / Height);
-						float ratioBB = (float)(1 - 2 * BB / Height);
-						PointF pb1 = new PointF(-skewDistanceX * ratioT + LB, -skewDistanceY * ratioLB + ClipTop);
-						PointF pb2 = new PointF(-skewDistanceX * ratioT + Width - RB, skewDistanceY * ratioRB + ClipTop);
-						PointF pb3 = new PointF(-skewDistanceX * ratioTB + Width - ClipRight, skewDistanceY * ratioR + TB);
-						PointF pb4 = new PointF(skewDistanceX * ratioBB + Width - ClipRight, skewDistanceY * ratioR + Height - BB);
-						PointF pb5 = new PointF(skewDistanceX * ratioB + Width - RB, skewDistanceY * ratioRB + Height - ClipBottom);
-						PointF pb6 = new PointF(skewDistanceX * ratioB + LB, -skewDistanceY * ratioLB + Height - ClipBottom);
-						PointF pb7 = new PointF(skewDistanceX * ratioBB + ClipLeft, -skewDistanceY * ratioL + Height - BB);
-						PointF pb8 = new PointF(-skewDistanceX * ratioTB + ClipLeft, -skewDistanceY * ratioL + TB);
-						path.AddLine(p1, p2);
-						path.AddBezier(p2, pb2, pb3, p3);
-						path.AddLine(p3, p4);
-						path.AddBezier(p4, pb4, pb5, p5);
-						path.AddLine(p5, p6);
-						path.AddBezier(p6, pb6, pb7, p7);
-						path.AddLine(p7, p8);
-						path.AddBezier(p8, pb8, pb1, p1);
+							// Approximate arcs with Bézier curves
+							float c = 1 - 0.551915f;
+							float LB = ClipLeft + ClipRadius * c;
+							float RB = ClipRight + ClipRadius * c;
+							float TB = ClipTop + ClipRadius * c;
+							float BB = ClipBottom + ClipRadius * c;
+							float ratioLB = (float)(1 - 2 * LB / Width);
+							float ratioRB = (float)(1 - 2 * RB / Width);
+							float ratioTB = (float)(1 - 2 * TB / Height);
+							float ratioBB = (float)(1 - 2 * BB / Height);
+							PointF pb1 = new PointF(-skewDistanceX * ratioT + LB, -skewDistanceY * ratioLB + ClipTop);
+							PointF pb2 = new PointF(-skewDistanceX * ratioT + Width - RB, skewDistanceY * ratioRB + ClipTop);
+							PointF pb3 = new PointF(-skewDistanceX * ratioTB + Width - ClipRight, skewDistanceY * ratioR + TB);
+							PointF pb4 = new PointF(skewDistanceX * ratioBB + Width - ClipRight, skewDistanceY * ratioR + Height - BB);
+							PointF pb5 = new PointF(skewDistanceX * ratioB + Width - RB, skewDistanceY * ratioRB + Height - ClipBottom);
+							PointF pb6 = new PointF(skewDistanceX * ratioB + LB, -skewDistanceY * ratioLB + Height - ClipBottom);
+							PointF pb7 = new PointF(skewDistanceX * ratioBB + ClipLeft, -skewDistanceY * ratioL + Height - BB);
+							PointF pb8 = new PointF(-skewDistanceX * ratioTB + ClipLeft, -skewDistanceY * ratioL + TB);
+							path.AddLine(p1, p2);
+							path.AddBezier(p2, pb2, pb3, p3);
+							path.AddLine(p3, p4);
+							path.AddBezier(p4, pb4, pb5, p5);
+							path.AddLine(p5, p6);
+							path.AddBezier(p6, pb6, pb7, p7);
+							path.AddLine(p7, p8);
+							path.AddBezier(p8, pb8, pb1, p1);
+						}
+						else
+						{
+							float ratioL = (float)(1 - 2 * ClipLeft / Width);
+							float ratioR = (float)(1 - 2 * ClipRight / Width);
+							float ratioT = (float)(1 - 2 * ClipTop / Height);
+							float ratioB = (float)(1 - 2 * ClipBottom / Height);
+							PointF p1 = new PointF(-skewDistanceX * ratioT + ClipLeft, -skewDistanceY * ratioL + ClipTop);
+							PointF p2 = new PointF(-skewDistanceX * ratioT + Width - ClipRight, skewDistanceY * ratioR + ClipTop);
+							PointF p3 = new PointF(skewDistanceX * ratioB + Width - ClipRight, skewDistanceY * ratioR + Height - ClipBottom);
+							PointF p4 = new PointF(skewDistanceX * ratioB + ClipLeft, -skewDistanceY * ratioL + Height - ClipBottom);
+							path.AddLine(p1, p2);
+							path.AddLine(p2, p3);
+							path.AddLine(p3, p4);
+							path.AddLine(p4, p1);
+						}
+						g.SetClip(path);
 					}
-					else
-					{
-						float ratioL = (float)(1 - 2 * ClipLeft / Width);
-						float ratioR = (float)(1 - 2 * ClipRight / Width);
-						float ratioT = (float)(1 - 2 * ClipTop / Height);
-						float ratioB = (float)(1 - 2 * ClipBottom / Height);
-						PointF p1 = new PointF(-skewDistanceX * ratioT + ClipLeft, -skewDistanceY * ratioL + ClipTop);
-						PointF p2 = new PointF(-skewDistanceX * ratioT + Width - ClipRight, skewDistanceY * ratioR + ClipTop);
-						PointF p3 = new PointF(skewDistanceX * ratioB + Width - ClipRight, skewDistanceY * ratioR + Height - ClipBottom);
-						PointF p4 = new PointF(skewDistanceX * ratioB + ClipLeft, -skewDistanceY * ratioL + Height - ClipBottom);
-						path.AddLine(p1, p2);
-						path.AddLine(p2, p3);
-						path.AddLine(p3, p4);
-						path.AddLine(p4, p1);
-					}
-					g.SetClip(path);
 
 					if (alpha < 100)
 					{

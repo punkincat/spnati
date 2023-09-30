@@ -524,23 +524,23 @@ namespace SPNATI_Character_Editor
 		[XmlAttribute("zoom")]
 		public string Zoom;
 
-		[Float(DisplayName = "Clip Left", Key = "clipleft", GroupOrder = 24, Description = "Clip Left", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[Float(DisplayName = "Clip Left", Key = "clipleft", GroupOrder = 24, Description = "Position of the left side of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
 		[XmlAttribute("clipleft")]
 		public string ClipLeft;
 
-		[Float(DisplayName = "Clip Top", Key = "cliptop", GroupOrder = 25, Description = "Clip Top", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
-		[XmlAttribute("cliptop")]
-		public string ClipTop;
-
-		[Float(DisplayName = "Clip Right", Key = "clipright", GroupOrder = 26, Description = "Clip Right", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[Float(DisplayName = "Clip Right", Key = "clipright", GroupOrder = 25, Description = "Position of the right side of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
 		[XmlAttribute("clipright")]
 		public string ClipRight;
 
-		[Float(DisplayName = "Clip Bottom", Key = "clipbottom", GroupOrder = 27, Description = "Clip Bottom", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[Float(DisplayName = "Clip Top", Key = "cliptop", GroupOrder = 26, Description = "Position of the top side of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[XmlAttribute("cliptop")]
+		public string ClipTop;
+
+		[Float(DisplayName = "Clip Bottom", Key = "clipbottom", GroupOrder = 27, Description = "Position of the bottom side of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
 		[XmlAttribute("clipbottom")]
 		public string ClipBottom;
 
-		[Float(DisplayName = "Clip Radius", Key = "clipradius", GroupOrder = 28, Description = "Clip Radius", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[Float(DisplayName = "Clip Radius", Key = "clipradius", GroupOrder = 28, Description = "Radius value used to round the corners of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
 		[XmlAttribute("clipradius")]
 		public string ClipRadius;
 
