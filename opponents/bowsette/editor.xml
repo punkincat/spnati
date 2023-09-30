@@ -24,6 +24,8 @@
         <response id="81" opponent="noire" opponentId="799" />
         <response id="114" opponent="twilight" opponentId="3" />
         <response id="134" opponent="amalia" opponentId="1" />
+        <response id="141" opponent="caulifla" opponentId="2" />
+        <response id="142" opponent="caulifla" opponentId="4" />
     </responses>
     <notes>
         <note id="48">Needs phone pose first, but I can't un-accept lines...</note>
@@ -97,12 +99,16 @@
     <prefixes>
         <prefix>collectible_</prefix>
     </prefixes>
-    <nextId>140</nextId>
+    <nextId>142</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Adventurer1" />
         <marker scope="Public" name="Adventurer2" />
         <marker scope="Public" name="Adventurer3" />
+        <marker scope="Public" name="AloyBowserOwnBody" />
+        <marker scope="Public" name="AloyForfeit1" />
+        <marker scope="Public" name="AloyForfeit2" />
+        <marker scope="Public" name="AloyTakeNotes" />
         <marker scope="Public" name="AmaliaIntro" />
         <marker scope="Public" name="Animalese" />
         <marker scope="Public" name="AquaCheepCheep" />
@@ -189,8 +195,39 @@
         <marker scope="Public" name="bowsette_strategists" />
         <marker scope="Public" name="bowsette_yang_like_your_style" />
         <marker scope="Public" name="bowsette_yunyun_friendship_offer" />
+        <marker scope="Public" name="BowsetteLostOnce" />
         <marker scope="Public" name="BowsetteTreasureScope" />
+        <marker scope="Public" name="CauiliflaSaiyan2" />
+        <marker scope="Public" name="CauliflaBlonde" />
+        <marker scope="Public" name="CauliflaBlow" />
+        <marker scope="Public" name="CauliflaEnjoyIt" />
+        <marker scope="Public" name="CauliflaGrace" />
+        <marker scope="Public" name="CauliflaHonor" />
+        <marker scope="Public" name="CauliflaObviousAttraction" />
+        <marker scope="Public" name="CauliflaOffer" />
+        <marker scope="Public" name="CauliflaPlayBetter" />
+        <marker scope="Public" name="CauliflaPoweredUp" />
+        <marker scope="Public" name="CauliflaPracticePoker" />
+        <marker scope="Public" name="CauliflaSaiyan" />
+        <marker scope="Public" name="CauliflaSaiyan2" />
+        <marker scope="Public" name="CauliflaStrangersEntertainment" />
+        <marker scope="Public" name="CauliflaStrong" />
+        <marker scope="Public" name="CauliflaTransform" />
+        <marker scope="Public" name="CauliflaTrueValue" />
         <marker scope="Public" name="ClassesTomorrow" />
+        <marker scope="Public" name="ElphabaAlone" />
+        <marker scope="Public" name="ElphabaAttire" />
+        <marker scope="Public" name="ElphabaBean" />
+        <marker scope="Public" name="ElphabaForfeitStart" />
+        <marker scope="Public" name="ElphabaGreen" />
+        <marker scope="Public" name="ElphabaPossession" />
+        <marker scope="Public" name="ElphabaPotion" />
+        <marker scope="Public" name="ElphabaPrincesses" />
+        <marker scope="Public" name="ElphabaRealMagic" />
+        <marker scope="Public" name="ElphabaTrueVillain" />
+        <marker scope="Public" name="ElphabaVillainHonor" />
+        <marker scope="Public" name="ElphabaWitch" />
+        <marker scope="Public" name="ElphabaWouldNotMiss" />
         <marker scope="Public" name="EstelleAge" />
         <marker scope="Public" name="EstelleInvading" />
         <marker scope="Public" name="EstelleJunior" />
@@ -199,6 +236,19 @@
         <marker scope="Public" name="EstelleQueen" />
         <marker scope="Public" name="EstelleWedding" />
         <marker scope="Public" name="FantasyForfeit" />
+        <marker scope="Public" name="GalateaForfeit" />
+        <marker scope="Public" name="GalateaForfeitBegins" />
+        <marker scope="Public" name="GalateaIntro" />
+        <marker scope="Public" name="GalateaJealousy" />
+        <marker scope="Public" name="GalateaPeach" />
+        <marker scope="Public" name="GalateaPrincess" />
+        <marker scope="Public" name="GalateaPurpose" />
+        <marker scope="Public" name="GalateaROCKS" />
+        <marker scope="Public" name="GalateaRocky" />
+        <marker scope="Public" name="GalateaStripPoker" />
+        <marker scope="Public" name="GalateaThrilling" />
+        <marker scope="Public" name="GalateaThwomp" />
+        <marker scope="Public" name="GalateaTrueForm" />
         <marker scope="Public" name="JuraPsychic" />
         <marker scope="Public" name="KomiMeowser" />
         <marker scope="Public" name="KomiSpeak" />
@@ -207,7 +257,9 @@
         <marker scope="Public" name="KumatoraFamily" />
         <marker scope="Public" name="KumatoraFemenine" />
         <marker scope="Public" name="KumatoraPeachComparison" />
+        <marker scope="Public" name="KumatoraPPRegain" />
         <marker scope="Public" name="KumatoraQueen" />
+        <marker scope="Public" name="KumatoraShowtime" />
         <marker scope="Public" name="KumatoraSmash" />
         <marker scope="Public" name="KumatoraTemper" />
         <marker scope="Public" name="KyokoDetective" />
@@ -215,6 +267,18 @@
         <marker scope="Public" name="KyokoLuck" />
         <marker scope="Public" name="KyokoMario" />
         <marker scope="Public" name="KyokoSchool" />
+        <marker scope="Public" name="KyouArmsToGoodUse" />
+        <marker scope="Public" name="KyouArmy" />
+        <marker scope="Public" name="KyouAttitude" />
+        <marker scope="Public" name="KyouBookVengeance" />
+        <marker scope="Public" name="KyouBotan" />
+        <marker scope="Public" name="KyouClassRep" />
+        <marker scope="Public" name="KyouCooking" />
+        <marker scope="Public" name="KyouHair" />
+        <marker scope="Public" name="KyouInspiration" />
+        <marker scope="Public" name="KyouTakeItEasy" />
+        <marker scope="Public" name="KyouThrowing" />
+        <marker scope="Public" name="KyouTooBad" />
         <marker scope="Public" name="LaevateinAlliance" />
         <marker scope="Public" name="LaevateinBouquet" />
         <marker scope="Public" name="LaevateinDaddy" />
@@ -339,6 +403,11 @@
         <marker scope="Public" name="ShamikoMomo" />
         <marker scope="Public" name="ShamikoPlays" />
         <marker scope="Public" name="ShamikoPretending" />
+        <marker scope="Public" name="SPNatI" />
+        <marker scope="Public" name="SPNatI Invitation" />
+        <marker scope="Public" name="SPNATIInvitation2" />
+        <marker scope="Public" name="SPNATIInvitation3" />
+        <marker scope="Public" name="SPNATIInvitation4" />
         <marker scope="Public" name="StarfireBlackfire" />
         <marker scope="Public" name="StarfireCastle" />
         <marker scope="Public" name="StarfireEyes" />
@@ -385,6 +454,21 @@
         <marker scope="Public" name="WPtanMario" />
         <marker scope="Public" name="WPtanMilitary" />
         <marker scope="Public" name="WPtanPeach" />
+        <marker scope="Public" name="YunoComeBack" />
+        <marker scope="Public" name="YunoEvilPrevails" />
+        <marker scope="Public" name="YunoFall" />
+        <marker scope="Public" name="YunoFriends" />
+        <marker scope="Public" name="YunoFriendsForfeit" />
+        <marker scope="Public" name="YunoGirlfriend" />
+        <marker scope="Public" name="YunoHumilliate" />
+        <marker scope="Public" name="YunoInsulting" />
+        <marker scope="Public" name="YunoLoser" />
+        <marker scope="Public" name="YunoPunishment" />
+        <marker scope="Public" name="YunoSavor" />
+        <marker scope="Public" name="YunoShutUp" />
+        <marker scope="Public" name="YunoSide" />
+        <marker scope="Public" name="YunoSquirm" />
+        <marker scope="Public" name="YunoStart" />
     </markers>
     <recipes>
         <recipe key="65bff87f-6768-4cc7-8d96-bf1223df4282">
