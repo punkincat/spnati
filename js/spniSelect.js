@@ -1707,20 +1707,15 @@ function updateSelectionVisuals () {
     /* Update suggestions images. */
     updateDefaultFillView();
 	
-	/* Calculate the number of characters in the testing roster */;
-    var testingRosterSize = loadedOpponents.countTrue(c => c.status === 'testing');
-    var displayPreviews = false;
+    let displayPreviews = (loaded >= 2);
 
-    // If in testing, change the number of characters needed to show a suggested opponents 'quad' slot. Why? Because:
-    // If there are < 10 characters in testing at any given time, the game breaks when trying to show suggested opponents.
-    if (individualSelectTesting) {
-        if (testingRosterSize >= 10) {
-            displayPreviews = loaded >= 2;
-        } else if (testingRosterSize >= 8) {
-            displayPreviews = loaded >= 3;
-        } // Any smaller and we just don't show the suggestion card.
-    } else {
-        displayPreviews = loaded >= 2;
+    if (displayPreviews && individualSelectTesting && filled < 4) {
+        // Check that we have enough testing characters (four times
+        // the number of remaining slots) and delay showing
+        // suggestions, or don't show them at all, otherwise.
+        const testingCharactersRemaining = loadedOpponents.countTrue(c => c.status === "testing")
+              - players.countTrue(p => p.status === "testing");
+        displayPreviews = (testingCharactersRemaining >= 4 * (4 - loaded));
     }
 
     if (displayPreviews) {
