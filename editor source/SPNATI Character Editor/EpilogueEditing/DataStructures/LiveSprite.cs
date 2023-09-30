@@ -1,9 +1,11 @@
-﻿using System;
+﻿using SPNATI_Character_Editor.DataStructures;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Globalization;
+using System.IO;
 
 namespace SPNATI_Character_Editor.EpilogueEditor
 {
@@ -321,7 +323,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		{
 			if (!IsVisible || Hidden) { return; }
 
-			if (ClipBottom + ClipTop > Image.Height || ClipLeft + ClipRight > Image.Width || ClipRadius * 2 > Image.Height || ClipRadius * 2 > Image.Width) { return; }
+			if (ClipBottom + ClipTop + 2 * ClipRadius > Height || ClipLeft + ClipRight + 2 * ClipRadius > Width) { return; }
 
 			if (HiddenByMarker(markers))
 			{
@@ -331,9 +333,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			float alpha = WorldAlpha;
 			if (Image != null && alpha > 0)
 			{
-				
-				Rectangle rect = new Rectangle(0, 0, 100, 10000);
-
+			
 
 				g.MultiplyTransform(WorldTransform);
 
@@ -370,8 +370,27 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 						}
 						else
 						{
-							g.SetClip(new RectangleF(destPts[0].X, destPts[0].Y, Image.Width, Image.Height));
-							//g.SetClip(new RectangleF(ClipLeft, ClipBottom, Width - ClipRight, Height - ClipTop));
+
+							GraphicsPath path = new GraphicsPath();
+							if (ClipRadius > 0)
+							{
+
+							}
+							else
+							{
+								/*
+								PointF p1 = new PointF(destPts[0].X, destPts[0].Y);
+								PointF p2 = new PointF(destPts[0].X + Width, destPts[0].Y);
+								PointF p3 = new PointF(destPts[0].X + skewedWidth * Image.Width/ Width, destPts[0].Y + skewedHeight * Image.Height/ Height);
+								PointF p4 = new PointF(destPts[0].X, destPts[0].Y + skewedHeight * Image.Height/ Height);
+								path.AddLine(p1, p2);
+								path.AddLine(p2, p3);
+								path.AddLine(p3, p4);
+								path.AddLine(p4, p1);*/
+								//g.SetClip(path);
+								//g.SetClip(new RectangleF(destPts[0].X, destPts[0].Y, Image.Width, Image.Height));
+								//g.SetClip(new RectangleF(ClipLeft, ClipBottom, Width - ClipRight, Height - ClipTop));
+							}
 						}
 
 
@@ -380,16 +399,90 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 					}
 					else
 					{
-
+						GraphicsPath path = new GraphicsPath();
 						if (ClipRadius > 0)
 						{
+							float LR = ClipLeft + ClipRadius;
+							float RR = ClipRight + ClipRadius;
+							float TR = ClipTop + ClipRadius;
+							float BR = ClipBottom + ClipRadius;
+							float ratioLR = (float)(1 - 2 * LR / Width);
+							float ratioRR = (float)(1 - 2 * RR / Width);
+							float ratioTR = (float)(1 - 2 * TR / Height);
+							float ratioBR = (float)(1 - 2 * BR/ Height);
+							float ratioL = (float)(1 - 2 * ClipLeft / Width);
+							float ratioR = (float)(1 - 2 * ClipRight / Width);
+							float ratioT = (float)(1 - 2 * ClipTop / Height);
+							float ratioB = (float)(1 - 2 * ClipBottom / Height);
+							PointF p1 = new PointF(-skewDistanceX * ratioT + LR, -skewDistanceY * ratioLR + ClipTop);
+							PointF p2 = new PointF(-skewDistanceX * ratioT + Width - RR, skewDistanceY * ratioRR + ClipTop);
+							PointF p3 = new PointF(-skewDistanceX * ratioTR + Width - ClipRight, skewDistanceY * ratioR + TR);
+							PointF p4 = new PointF(skewDistanceX * ratioBR + Width - ClipRight, skewDistanceY * ratioR + Height - BR);
+							PointF p5 = new PointF(skewDistanceX * ratioB + Width - RR, skewDistanceY * ratioRR + Height - ClipBottom);
+							PointF p6 = new PointF(skewDistanceX * ratioB + LR, -skewDistanceY * ratioLR + Height - ClipBottom);
+							PointF p7 = new PointF(skewDistanceX * ratioBR + ClipLeft, -skewDistanceY * ratioL + Height - BR);
+							PointF p8 = new PointF(-skewDistanceX * ratioTR + ClipLeft, -skewDistanceY * ratioL + TR);
 
-						}
-						else
-						{
-							g.SetClip(new RectangleF(destPts[0].X + ClipLeft, destPts[0].Y + ClipTop, Image.Width - ClipRight - ClipLeft, Image.Height - ClipTop - ClipBottom));
+							float c = 1 - 0.551915f;
+							float LB = ClipLeft + ClipRadius * c;
+							float RB = ClipRight + ClipRadius * c;
+							float TB = ClipTop + ClipRadius * c;
+							float BB = ClipBottom + ClipRadius * c;
+							float ratioLB = (float)(1 - 2 * LB / Width);
+							float ratioRB = (float)(1 - 2 * RB / Width);
+							float ratioTB = (float)(1 - 2 * TB / Height);
+							float ratioBB = (float)(1 - 2 * BB / Height);
+							PointF pb1 = new PointF(-skewDistanceX * ratioT + LB, -skewDistanceY * ratioLB + ClipTop);
+							PointF pb2 = new PointF(-skewDistanceX * ratioT + Width - RB, skewDistanceY * ratioRB + ClipTop);
+							PointF pb3 = new PointF(-skewDistanceX * ratioTB + Width - ClipRight, skewDistanceY * ratioR + TB);
+							PointF pb4 = new PointF(skewDistanceX * ratioBB + Width - ClipRight, skewDistanceY * ratioR + Height - BB);
+							PointF pb5 = new PointF(skewDistanceX * ratioB + Width - RB, skewDistanceY * ratioRB + Height - ClipBottom);
+							PointF pb6 = new PointF(skewDistanceX * ratioB + LB, -skewDistanceY * ratioLB + Height - ClipBottom);
+							PointF pb7 = new PointF(skewDistanceX * ratioBB + ClipLeft, -skewDistanceY * ratioL + Height - BB);
+							PointF pb8 = new PointF(-skewDistanceX * ratioTB + ClipLeft, -skewDistanceY * ratioL + TB);
+							path.AddLine(p1, p2);
+							path.AddBezier(p2, pb2, pb3, p3);
+							path.AddLine(p3, p4);
+							path.AddBezier(p4, pb4, pb5, p5);
+							path.AddLine(p5, p6);
+							path.AddBezier(p6, pb6, pb7, p7);
+							path.AddLine(p7, p8);
+							path.AddBezier(p8, pb8, pb1, p1);
+							g.SetClip(path);
+							}
+							else
+							{
+								/*
+								PointF p1 = new PointF(destPts[0].X + ClipLeft, destPts[0].Y + ClipTop);
+								PointF p2 = new PointF(destPts[0].X + Width - ClipRight, destPts[0].Y + ClipTop);
+								PointF p3 = new PointF(destPts[0].X + Width - ClipRight, destPts[0].Y + Height - ClipBottom);
+								PointF p4 = new PointF(destPts[0].X + ClipLeft, destPts[0].Y + Height - ClipBottom);
+								*/
+								/*
+								PointF p1 = new PointF(-skewDistanceX, -skewDistanceY);
+								PointF p2 = new PointF(-skewDistanceX + Width, skewDistanceY);
+								PointF p3 = new PointF(skewDistanceX + Width, skewDistanceY + Height);
+								PointF p4 = new PointF(skewDistanceX, -skewDistanceY + Height);
+								*/
+
+								float ratioL = (float)(1 - 2 * ClipLeft / Width);
+								float ratioR = (float)(1 - 2 * ClipRight / Width);
+								float ratioT = (float)(1 - 2 * ClipTop / Height);
+								float ratioB = (float)(1 - 2 * ClipBottom / Height);
+								PointF p1 = new PointF(-skewDistanceX * ratioT + ClipLeft, -skewDistanceY * ratioL + ClipTop);
+								PointF p2 = new PointF(-skewDistanceX * ratioT + Width - ClipRight, skewDistanceY * ratioR + ClipTop);
+								PointF p3 = new PointF(skewDistanceX * ratioB + Width - ClipRight, skewDistanceY * ratioR + Height - ClipBottom);
+								PointF p4 = new PointF(skewDistanceX * ratioB + ClipLeft, -skewDistanceY * ratioL + Height - ClipBottom);
+								path.AddLine(p1, p2);
+								path.AddLine(p2, p3);
+								path.AddLine(p3, p4);
+								path.AddLine(p4, p1);
+								g.SetClip(path);
+								//g.SetClip(new RectangleF(destPts[0].X, destPts[0].Y, Image.Width, Image.Height));
+								//g.SetClip(new RectangleF(ClipLeft, ClipBottom, Width - ClipRight, Height - ClipTop));
+							}
+							//g.SetClip(new RectangleF(destPts[0].X + ClipLeft, destPts[0].Y + ClipTop, Image.Width - ClipRight - ClipLeft, Image.Height - ClipTop - ClipBottom));
 							//g.SetClip(new RectangleF(ClipLeft, ClipBottom, Width - ClipRight, Height - ClipTop));
-						}
 
 						g.DrawImage(Image, destPts, new Rectangle(0, 0, Image.Width, Image.Height), GraphicsUnit.Pixel);
 					}
