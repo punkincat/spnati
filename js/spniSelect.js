@@ -1708,22 +1708,20 @@ function updateSelectionVisuals () {
     updateDefaultFillView();
 	
 	/* Calculate the number of characters in the testing roster */;
-    var testingRosterSize = countTestingCharacters(loadedOpponents);
+    var testingRosterSize = loadedOpponents.countTrue(c => c.status === 'testing');
     var displayPreviews = false;
-	
-	// If in testing, change the number of characters needed to show a suggested opponents 'quad' slot. Why? Because:
-	// If there are < 10 characters in testing at any given time, the game breaks when trying to show suggested opponents.
-	if (individualSelectTesting) {
-		if (testingRosterSize >= 10) {
-			displayPreviews = loaded >= 2;
-		} else if (testingRosterSize >= 8) {
-			displayPreviews = loaded >= 3;
-		} // Any smaller and we just don't show the suggestion card.
-	} else {
-		displayPreviews = loaded >= 2;
-	}
-	
-	// console.log("individualSelectTesting : " + individualSelectTesting);
+
+    // If in testing, change the number of characters needed to show a suggested opponents 'quad' slot. Why? Because:
+    // If there are < 10 characters in testing at any given time, the game breaks when trying to show suggested opponents.
+    if (individualSelectTesting) {
+        if (testingRosterSize >= 10) {
+            displayPreviews = loaded >= 2;
+        } else if (testingRosterSize >= 8) {
+            displayPreviews = loaded >= 3;
+        } // Any smaller and we just don't show the suggestion card.
+    } else {
+        displayPreviews = loaded >= 2;
+    }
 
     if (displayPreviews) {
         var suggested_opponents = loadedOpponents.filter(function(opp) {
@@ -1798,18 +1796,6 @@ function updateSelectionVisuals () {
     $selectRandomTableButton.attr('disabled', loaded < filled || loadedOpponents.length == 0);
     $selectRemoveAllButton.attr('disabled', loaded < filled);
     $groupButton.attr('disabled', loaded < filled);
-}
-
-/************************************************************
- * Get the current number of characters on the testing roster
- ************************************************************/
-function countTestingCharacters(loadedOpponents) {
-    return loadedOpponents.reduce(function(count, opponent) {
-        if (opponent.status === 'testing') {
-            return count + 1;
-        }
-        return count;
-    }, 0);
 }
 
 /************************************************************
