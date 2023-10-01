@@ -197,6 +197,8 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		{
 			PointF[] bounds = ToScreenPt(sceneTransform, new PointF(0, 0), new PointF(Width, Height));
 
+			g.ResetClip();
+
 			PointF tl = bounds[0];
 			PointF br = bounds[1];
 			PointF tr = new PointF(bounds[1].X, bounds[0].Y);
