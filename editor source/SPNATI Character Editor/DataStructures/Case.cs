@@ -1408,6 +1408,24 @@ namespace SPNATI_Character_Editor
 				alternate.Tag = Tag;
 				alternate.Stages = Stages;
 				Case alternateResponse = alternate.CreateResponse(speaker, responder);
+				List<TargetCondition> conditionsToRemove = new List<TargetCondition>();
+				foreach (TargetCondition c1 in alternateResponse.Conditions)
+				{
+					foreach (TargetCondition c2 in response.Conditions)
+					{
+						c1.RemoveIntersection(c2);
+					}
+					if (c1.IsAlmostEmpty)
+					{
+						conditionsToRemove.Add(c1);
+					}
+				}
+				
+				foreach (TargetCondition c in conditionsToRemove)
+				{
+					alternateResponse.Conditions.Remove(c);
+				}
+
 				response.AlternativeConditions.Add(alternateResponse);
 			}
 
