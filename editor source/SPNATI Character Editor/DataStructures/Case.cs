@@ -2332,7 +2332,7 @@ namespace SPNATI_Character_Editor
 			{
 				tag = tag.Substring(5);
 			}
-			else if (tag != null && tag.StartsWith("opponent_") && tag != "opponent_selected")
+			else if (tag != null && tag.StartsWith("opponent_") && !tag.EndsWith("selected"))
 			{
 				tag = tag.Substring(9);
 			}
@@ -2386,6 +2386,15 @@ namespace SPNATI_Character_Editor
 				{
 					return "selected";
 				}
+				if (tag == "opponent_deselected")
+				{
+					return null;
+				}
+			}
+
+			if (tag == "opponent_deselected")
+			{
+				return tag;
 			}
 
 			if (tag == "good_hand" || tag == "okay_hand" || tag == "bad_hand")
@@ -2393,10 +2402,6 @@ namespace SPNATI_Character_Editor
 				return "hand";
 			}
 
-			if (tag == "opponent_deselected")
-			{
-				return null;
-			}
 			if (tag == "finishing_masturbating")
 			{
 				return null;
