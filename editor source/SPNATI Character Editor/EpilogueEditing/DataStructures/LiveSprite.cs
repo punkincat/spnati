@@ -333,7 +333,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			float alpha = WorldAlpha;
 			if (Image != null && alpha > 0)
 			{
-			
+
 				g.MultiplyTransform(WorldTransform);
 
 				g.MultiplyTransform(sceneTransform, MatrixOrder.Append);
@@ -346,6 +346,20 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 					float skewedHeight = Width * (float)Math.Tan(Math.PI / 180.0f * SkewY);
 					float skewDistanceY = skewedHeight / 2;
 					PointF[] destPts = new PointF[] { new PointF(-skewDistanceX, -skewDistanceY), new PointF(Width - skewDistanceX, skewDistanceY), new PointF(skewDistanceX, Height - skewDistanceY) };
+
+					if (Parent == null || Parent.ClipLeft + Parent.ClipTop + Parent.ClipRight + Parent.ClipBottom + Parent.ClipRadius == 0)
+					{
+						g.ResetClip();
+						ClipPath = null;
+					}
+					else
+					{
+						ClipPath = Parent.ClipPath;
+						Matrix reverse = LocalTransform.Clone();
+						reverse.Invert();
+						ClipPath.Transform(reverse);
+						g.SetClip(ClipPath);
+					}
 
 					if (ClipLeft + ClipRight + ClipTop + ClipBottom + ClipRadius > 0)
 					{
@@ -415,7 +429,8 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 							path.AddLine(p3, p4);
 							path.AddLine(p4, p1);
 						}
-						g.SetClip(path);
+						ClipPath = path;
+						g.SetClip(path, CombineMode.Intersect);
 					}
 
 					if (alpha < 100)

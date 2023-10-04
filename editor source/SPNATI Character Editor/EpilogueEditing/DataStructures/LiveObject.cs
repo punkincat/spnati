@@ -362,6 +362,8 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 		}
 
+		public GraphicsPath ClipPath;
+
 		public float Alpha = 100;
 
 		private Matrix _localTransform;
