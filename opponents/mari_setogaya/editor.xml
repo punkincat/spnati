@@ -460,6 +460,9 @@
         <response id="2503" opponent="caitlin" opponentId="64" />
         <response id="2506" opponent="caitlin" opponentId="65" />
         <response id="2509" opponent="caitlin" opponentId="66" />
+        <response id="2549" opponent="lysithea" opponentId="140" />
+        <response id="2551" opponent="yumeko" opponentId="5" />
+        <response id="2552" opponent="yumeko" opponentId="6" />
     </responses>
     <notes>
         <note id="412">Yes, Mari is implying that Kazuma is lying just to see her pose naked for him. You are free to have Kazuma defend his case, so to speak.</note>
@@ -2958,11 +2961,11 @@
         <label id="2513" label="" color="1" folder="Targets" sort="780" />
         <label id="2514" label="" color="1" folder="Targets" sort="781" />
         <label id="2515" label="" color="1" folder="Targets" sort="782" />
-        <label id="2516" label="" color="1" folder="Replies" sort="222" />
-        <label id="2517" label="" color="1" folder="Targets" sort="260" />
+        <label id="2516" label="" folder="Replies" sort="222" />
+        <label id="2517" label="" folder="Targets" sort="260" />
         <label id="2518" label="" color="1" folder="Targets" sort="738" />
         <label id="2519" label="" color="1" folder="Targets" sort="739" />
-        <label id="2520" label="" color="1" folder="Targets" sort="765" />
+        <label id="2520" label="" folder="Targets" sort="765" />
         <label id="2521" label="" color="1" folder="Targets" sort="740" />
         <label id="2522" label="" color="1" folder="Targets" sort="741" />
         <label id="2523" label="" color="1" folder="Targets" sort="742" />
@@ -2984,8 +2987,13 @@
         <label id="2546" label="" folder="Cform" sort="0" />
         <label id="2547" label="" folder="Cform" sort="0" />
         <label id="2548" label="" folder="Cform" sort="0" />
+        <label id="2549" label="" color="1" folder="Replies" sort="0" />
+        <label id="2550" label="" color="1" folder="Replies" sort="0" />
+        <label id="2551" label="" color="3" folder="Replies" sort="0" />
+        <label id="2552" label="" color="5" folder="Replies" sort="0" />
+        <label id="2553" label="" color="1" folder="Targets" sort="0" />
     </labels>
-    <nextId>2548</nextId>
+    <nextId>2553</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aaravi_CulturalExchange_replyA" />
@@ -3801,6 +3809,8 @@
         <marker scope="Public" name="Lux_knight_question" />
         <marker scope="Public" name="Lux_mast_go_somewhereReply" />
         <marker scope="Public" name="Lux_Pun_Overload" />
+        <marker scope="Public" name="Lysithea_SelfExperience_reply" />
+        <marker scope="Public" name="Lysithea_SelfMonsters_reply" />
         <marker scope="Public" name="MagSempai_lewdTricks" />
         <marker scope="Public" name="Make_me_lose_already" />
         <marker scope="Public" name="Make_me_lose_already2" />
@@ -4569,6 +4579,9 @@
         <marker scope="Public" name="Yumeko_reply2" />
         <marker scope="Public" name="Yumeko_reply3" />
         <marker scope="Public" name="Yumeko_reply4" />
+        <marker scope="Public" name="Yumeko_reply4_cont" />
+        <marker scope="Public" name="Yumeko_reply4_scare" />
+        <marker scope="Public" name="Yumeko_superRich_cont" />
         <marker scope="Public" name="Yumeko_superRich_question" />
         <marker scope="Public" name="Yumeko_whyHere_reply" />
         <marker scope="Public" name="Yumeko_whyHere_reply2" />
