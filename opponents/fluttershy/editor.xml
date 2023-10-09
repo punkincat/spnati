@@ -349,6 +349,8 @@
         <response id="828" opponent="toph" opponentId="430" />
         <response id="838" opponent="nagisa" opponentId="1254" />
         <response id="895" opponent="rouge" opponentId="635" />
+        <response id="902" opponent="rouge" opponentId="646" />
+        <response id="903" opponent="toph" opponentId="767" />
     </responses>
     <notes>
         <note id="412">I intentionally made Fluttershy ask Oz a question that Fischl herself could reply to. To further solidify her unintentional ignoring of Fischl over Oz.</note>
@@ -501,7 +503,7 @@
         <label id="627" label="" color="1" folder="" sort="0" />
         <label id="629" label="" color="1" folder="" sort="0" />
         <label id="418" label="" color="5" folder="" sort="0" />
-        <label id="892" label="" color="1" folder="" sort="0" />
+        <label id="892" label="" color="6" folder="" sort="0" />
         <label id="440" label="" color="1" folder="" sort="0" />
         <label id="441" label="" color="1" folder="" sort="0" />
         <label id="484" label="" color="1" folder="" sort="0" />
@@ -513,8 +515,7 @@
         <label id="460" label="" color="1" folder="" sort="0" />
         <label id="462" label="" color="1" folder="" sort="0" />
         <label id="470" label="" color="1" folder="" sort="0" />
-        <label id="481" label="" color="6" folder="" sort="0" />
-        <label id="482" label="" color="6" folder="" sort="0" />
+        <label id="903" label="" color="3" folder="" sort="0" />
         <label id="483" label="" color="1" folder="" sort="0" />
         <label id="502" label="" color="1" folder="" sort="0" />
         <label id="501" label="" color="1" folder="" sort="0" />
@@ -530,9 +531,7 @@
         <label id="525" label="" color="1" folder="" sort="0" />
         <label id="630" label="" color="1" folder="" sort="0" />
         <label id="539" label="" color="1" folder="" sort="0" />
-        <label id="548" label="" color="5" folder="" sort="0" />
-        <label id="893" label="" color="1" folder="" sort="0" />
-        <label id="891" label="" color="1" folder="" sort="0" />
+        <label id="893" label="" color="6" folder="" sort="0" />
         <label id="551" label="" color="3" folder="" sort="0" />
         <label id="552" label="" color="5" folder="" sort="0" />
         <label id="553" label="" color="5" folder="" sort="0" />
@@ -590,36 +589,35 @@
         <label id="785" label="" color="5" folder="" sort="0" />
         <label id="786" label="" color="3" folder="" sort="0" />
         <label id="787" label="" color="3" folder="" sort="0" />
-        <label id="835" label="" color="3" folder="" sort="0" />
         <label id="803" label="" color="1" folder="" sort="0" />
         <label id="807" label="" color="1" folder="" sort="0" />
         <label id="811" label="" color="1" folder="" sort="0" />
         <label id="812" label="" color="3" folder="" sort="0" />
-        <label id="897" label="" color="3" folder="Nagisa to left" sort="0" />
+        <label id="897" label="" color="3" folder="Nagisa to left" sort="27" />
         <label id="814" label="" folder="Nagisa to left" sort="5" />
         <label id="815" label="" folder="Nagisa to right" sort="4" />
         <label id="816" label="" folder="Nagisa to right" sort="15" />
-        <label id="834" label="" color="3" folder="" sort="0" />
         <label id="836" label="" folder="Nagisa to right" sort="25" />
         <label id="837" label="" folder="Nagisa to left" sort="20" />
         <label id="838" label="" folder="Nagisa to left" sort="5" />
         <label id="839" label="" folder="Nagisa to left" sort="6" />
-        <label id="898" label="" color="3" folder="Nagisa to left" sort="0" />
-        <label id="887" label="" folder="Nagisa to left" sort="0" />
+        <label id="898" label="" color="3" folder="Nagisa to left" sort="28" />
+        <label id="887" label="" folder="Nagisa to left" sort="16" />
         <label id="888" label="" color="1" folder="Nagisa to left" sort="0" />
-        <label id="889" label="" folder="Nagisa to left" sort="0" />
-        <label id="890" label="" color="3" folder="Nagisa to left" sort="0" />
-        <label id="894" label="" color="1" folder="" sort="0" />
-        <label id="895" label="" color="1" folder="" sort="0" />
+        <label id="889" label="" folder="Nagisa to left" sort="17" />
+        <label id="890" label="" color="3" folder="Nagisa to left" sort="32" />
+        <label id="894" label="" color="6" folder="" sort="0" />
+        <label id="895" label="" color="6" folder="" sort="0" />
         <label id="896" label="" color="1" folder="" sort="0" />
-        <label id="899" label="" color="1" folder="" sort="0" />
-        <label id="900" label="" color="1" folder="" sort="0" />
-        <label id="901" label="" color="1" folder="" sort="0" />
+        <label id="899" label="" color="6" folder="" sort="0" />
+        <label id="900" label="" color="6" folder="" sort="0" />
+        <label id="901" label="" color="6" folder="" sort="0" />
+        <label id="902" label="" color="3" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>Fluttershy_</prefix>
     </prefixes>
-    <nextId>901</nextId>
+    <nextId>903</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="act_confident_self" />
@@ -1563,6 +1561,7 @@
         <marker scope="Public" name="Rouge_bondageTempting" />
         <marker scope="Public" name="Rouge_bondageTempting_reply" />
         <marker scope="Public" name="Rouge_booba" />
+        <marker scope="Public" name="Rouge_boobGrope" />
         <marker scope="Public" name="Rouge_boobGropeInvitation_later_reply" />
         <marker scope="Public" name="Rouge_boobGropeInvitation_now_reply" />
         <marker scope="Public" name="Rouge_boobSizePreference_reply" />
@@ -1803,6 +1802,7 @@
         <marker scope="Public" name="Toph_selfSports_reply" />
         <marker scope="Public" name="Toph_selfSports_reply2" />
         <marker scope="Public" name="Toph_selfSports_reply3" />
+        <marker scope="Public" name="Toph_selfSports_reply4" />
         <marker scope="Public" name="Trixie_after_game_start" />
         <marker scope="Public" name="Trixie_flutters_parents" />
         <marker scope="Public" name="Trixie_game_start" />
