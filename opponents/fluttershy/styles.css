@@ -7,3 +7,13 @@
   /*Smaller than small.*/
   font-size: 70%;
 }
+
+.dialogue .tandemRouge[data-character="fluttershy"] {
+  /*For when Rouge is speaking.*/
+  color: #880088;
+}
+
+.dialogue .tandemFluttershy[data-character="fluttershy"] {
+  /*For when Fluttershy is speaking.*/
+  color: #FF53A9;
+}
