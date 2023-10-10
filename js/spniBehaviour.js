@@ -2387,7 +2387,13 @@ Opponent.prototype.findBehaviour = function(triggers, opp, volatileOnly) {
         return (!state.oneShotId || !this.oneShotStates[state.oneShotId])
             && state.checkUnwanteds(this, opp);
     }.bind(this));
-    
+
+    const weightedAdjustedMin = Math.min(...states.map(s => ((this.repeatLog[s.rawDialogue] || 0) + 0.5) / s.weight));
+    const statesLessPlayed = states.filter(s => (this.repeatLog[s.rawDialogue] || 0) / s.weight <= weightedAdjustedMin);
+    if (statesLessPlayed.length > 0) {
+        states = statesLessPlayed;
+    }
+
     var weightSum = states.reduce(function(sum, state) { return sum + state.weight; }, 0);
     if (weightSum > 0) {
         console.log("Current case priority for player "+this.slot+": "+bestMatchPriority);
