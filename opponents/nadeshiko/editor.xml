@@ -27,11 +27,8 @@
         <case name="Need a Friend?" id="132" priority="Noteworthy" min="0" max="0">
             <description>Nadeshiko offers her friendship to a character with the "lonely" tag.</description>
         </case>
-        <case name="Journalism Tips for a friend" id="137" priority="Prompt" min="0" max="0">
-            <description>If a character with the "Journalist" tag is present, Nadeshiko will mention her friend Rin is planning to do something in the journalism fie</description>
-        </case>
         <case name="Interesting Stories" id="150" priority="Prompt" min="1" max="3">
-            <description>Description about what's interesting happening with the character (i.e. why should others target this?)</description>
+            <description>Nadeshiko asks the table about some interesting stories, as a way to get to know the table better.</description>
         </case>
         <case name="So...Where are We?" id="151" priority="FYI" min="0" max="0">
             <description>Nadeshiko asks how they're all here together, as everyone at the table came from a wide variety of places. </description>
@@ -249,10 +246,10 @@
         <label id="198" label="" color="5" folder="WitchHannah's Sponsorships" sort="18" />
         <label id="199" label="" color="1" folder="WitchHannah's Sponsorships" sort="20" />
         <label id="200" label="" color="6" folder="WitchHannah's Sponsorships" sort="22" />
-        <label id="201" label="" color="1" folder="Karbol Sponsorships" sort="4" />
+        <label id="201" label="" color="1" folder="Karbol Sponsorships" sort="6" />
         <label id="202" label="" color="4" folder="Karbol Sponsorships" sort="2" />
-        <label id="203" label="" color="7" folder="Karbol Sponsorships" sort="10" />
-        <label id="204" label="" color="2" folder="Karbol Sponsorships" sort="6" />
+        <label id="203" label="" color="7" folder="Karbol Sponsorships" sort="24" />
+        <label id="204" label="" color="2" folder="Karbol Sponsorships" sort="8" />
         <label id="205" label="" color="5" folder="WitchHannah's Sponsorships" sort="12" />
         <label id="206" label="" color="1" folder="WitchHannah's Sponsorships" sort="14" />
         <label id="207" label="" color="6" folder="WitchHannah's Sponsorships" sort="16" />
@@ -284,10 +281,17 @@
         <label id="237" label="" folder="MisterSolitare Sponsorships" sort="8" />
         <label id="238" label="" color="3" folder="MisterSolitare Sponsorships" sort="6" />
         <label id="239" label="" color="6" folder="BlueKoin Sponsorships" sort="8" />
-        <label id="240" label="" color="3" folder="Karbol Sponsorships" sort="12" />
-        <label id="241" label="" color="5" folder="Karbol Sponsorships" sort="8" />
+        <label id="240" label="" color="3" folder="Karbol Sponsorships" sort="26" />
+        <label id="241" label="" color="5" folder="Karbol Sponsorships" sort="22" />
+        <label id="137" label="" color="6" folder="Karbol Sponsorships" sort="4" />
+        <label id="242" label="" folder="Karbol Sponsorships" sort="12" />
+        <label id="243" label="" color="7" folder="Karbol Sponsorships" sort="10" />
+        <label id="244" label="" color="3" folder="Karbol Sponsorships" sort="18" />
+        <label id="245" label="" color="4" folder="Karbol Sponsorships" sort="20" />
+        <label id="246" label="" color="1" folder="Karbol Sponsorships" sort="14" />
+        <label id="247" label="" color="6" folder="Karbol Sponsorships" sort="16" />
     </labels>
-    <nextId>241</nextId>
+    <nextId>247</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="9S_Nade_1-1" />
@@ -607,6 +611,7 @@
         <marker scope="Public" name="TooSoon" />
         <marker scope="Public" name="TooSoon_Good" />
         <marker scope="Public" name="Try_Something_New" />
+        <marker scope="Public" name="Vampire_Food" />
         <marker scope="Public" name="Victory" />
         <marker scope="Public" name="WeBothLost" />
         <marker scope="Public" name="WouldYou" />
