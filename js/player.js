@@ -168,10 +168,10 @@ Player.prototype.resetState = function () {
             var position = $(this).attr('position');
             var plural = $(this).attr('plural');
             plural = (plural == 'null' ? null : plural == 'true');
-            var fromStage = Number($(this).attr('fromStage')) || undefined;
+            var fromStage = Number.parseInt($(this).attr('fromStage'), 10) || undefined; // fromStage=0 is the default anyway
             var fromDeal = $(this).attr('fromDeal') === 'true';
-            var pretendLayer = Number($(this).attr('pretendLayer')) || undefined;
-            if (pretendLayer > clothingArr.length || pretendLayer < 0) {
+            var pretendLayer = Number.parseInt($(this).attr('pretendLayer'), 10);
+            if (isNaN(pretendLayer) || pretendLayer > clothingArr.length || pretendLayer < 0) {
                 console.error('Invalid pretend layer');
                 pretendLayer = undefined;
             }
