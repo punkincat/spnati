@@ -567,7 +567,7 @@ function clothing_keyUp(e) {
         && availableSelectors.some(function (selector) { return selector.selected; })) {
         $stripButton.click();
         e.preventDefault();
-    } else if (e.key >= '1' && e.key <= 1 + availableSelectors.length) { // A number key
+    } else if (e.key >= '1' && e.key <= availableSelectors.length) { // A number key
         availableSelectors[e.key - 1].select();
     }
 }
