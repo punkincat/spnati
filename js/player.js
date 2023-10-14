@@ -162,23 +162,7 @@ Player.prototype.resetState = function () {
         /* find and create all of their clothing */
         var clothingArr = [];
         $wardrobe.children('clothing').each(function () {
-            var generic = $(this).attr('generic');
-            var name = $(this).attr('name') || $(this).attr('lowercase');
-            var type = $(this).attr('type');
-            var position = $(this).attr('position');
-            var plural = $(this).attr('plural');
-            plural = (plural == 'null' ? null : plural == 'true');
-            var fromStage = Number.parseInt($(this).attr('fromStage'), 10) || undefined; // fromStage=0 is the default anyway
-            var fromDeal = $(this).attr('fromDeal') === 'true';
-            var pretendLayer = Number.parseInt($(this).attr('pretendLayer'), 10);
-            if (isNaN(pretendLayer) || pretendLayer > clothingArr.length || pretendLayer < 0) {
-                console.error('Invalid pretend layer');
-                pretendLayer = undefined;
-            }
-
-            var newClothing = new Clothing(name, generic, type, position, plural, fromStage, fromDeal, pretendLayer);
-
-            clothingArr.push(newClothing);
+            clothingArr.push(new Clothing($(this)));
         });
 
         this.clothing = clothingArr;

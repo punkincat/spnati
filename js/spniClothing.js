@@ -37,6 +37,26 @@ var STATUS_FINISHED = "finished";
  * Stores information on an article of clothing.
  ************************************************************/
 function Clothing (name, generic, type, position, plural, fromStage, fromDeal, pretendLayer) {
+    if (name instanceof jQuery) {
+        const $xml = name;
+        generic = $xml.attr('generic');
+        name = $xml.attr('name') || $xml.attr('lowercase');
+        type = $xml.attr('type');
+        position = $xml.attr('position');
+        plural = $xml.attr('plural');
+        plural = (plural == 'null' ? null : plural == 'true');
+        fromStage = Number.parseInt($xml.attr('fromStage'), 10) || undefined; // fromStage=0 is the default anyway
+        fromDeal = $xml.attr('fromDeal') === 'true';
+        if ($xml.children('pretend').length) {
+            this.pretendItem = new Clothing($xml.children('pretend').first());
+        } else {
+            pretendLayer = Number.parseInt($xml.attr('pretendLayer'), 10);
+            if (isNaN(pretendLayer) || pretendLayer > clothingArr.length || pretendLayer < 0) {
+                console.error('Invalid pretend layer');
+                pretendLayer = undefined;
+            }
+        }
+    }
     this.name = name;
     this.generic = generic || name;
     this.type = type;
@@ -223,6 +243,9 @@ function getRevealedPosition (player, clothing) {
     if (![IMPORTANT_ARTICLE,  MAJOR_ARTICLE].includes(type)
         || ![UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE].includes(pos)) {
         return null;
+    }
+    if (clothing.reveal !== undefined && !clothing.removed) {
+        return clothing.reveal == "none" ? null : clothing.reveal;
     }
 
     const [hasLower, hasUpper] = [LOWER_ARTICLE, UPPER_ARTICLE].map(pos => player.isCovered(pos, -1));
@@ -430,7 +453,9 @@ function prepareToStripPlayer (player) {
         );
     } else {
         let toBeRemovedClothing = players[player].clothing.at(-1 - players[player].stage);
-        if (toBeRemovedClothing.pretendLayer !== undefined) {
+        if (toBeRemovedClothing.pretendItem !== undefined) {
+            toBeRemovedClothing = toBeRemovedClothing.pretendItem;
+        } else if (toBeRemovedClothing.pretendLayer !== undefined) {
             toBeRemovedClothing = players[player].clothing[toBeRemovedClothing.pretendLayer];
         }
         players[player].removedClothing = toBeRemovedClothing;
