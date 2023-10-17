@@ -3,8 +3,17 @@
     <collectible id="laser_ring" img="opponents/meia/laser-ring1.png" thumbnail="opponents/meia/laser-ring1.png">
         <title>Laser Ring</title>
         <subtitle>A Mejarian's weapon of choice.</subtitle>
-        <text>"My whole life changed the day I was given a laser ring.  Keep yourself safe with it--I'd like to meet you again."</text>
+        <text>"My whole life changed the day I was given a laser ring.  Keep yourself safe with it---I'd like to meet you again."</text>
         <unlock>Win a game against Meia.</unlock>
         <hide-details>true</hide-details>
+    </collectible>
+    <collectible id="suit" status="online" img="opponents/meia/suit.png" thumbnail="opponents/meia/suit.png">
+        <title>Flightsuit</title>
+        <subtitle>Comfortable, practical, and very flattering.</subtitle>
+        <text>Standard-issue among all Magno's Family pilots---pilfered from Mejare imperials.  As Chief Pilot, Meia wears full armor instead, so her suit lacks the shoulder pads.  Too bad you don't get the bust boost.&lt;br&gt;&lt;br&gt;It feels like a second skin---anything you wear beneath would show through.  But despite its tightness, it's both strong and breathable.  There's extra give around the chest and hips.&lt;br&gt;&lt;br&gt;You get the impression Mejare has spent a lot of time on its craftsmanship.</text>
+        <unlock>Take Meia to a place she likes.</unlock>
+        <hide-details>true</hide-details>
+        <wearable>true</wearable>
+        <clothing name="Flightsuit" generic="bodysuit" position="both" type="major" img="opponents/meia/suit.png" />
     </collectible>
 </collectibles>
