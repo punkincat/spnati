@@ -136,6 +136,7 @@
         <response id="604" opponent="nami" opponentId="1474" />
         <response id="610" opponent="perona" opponentId="402" />
         <response id="611" opponent="perona" opponentId="403" />
+        <response id="615" opponent="lysithea" opponentId="126" />
     </responses>
     <notes>
         <note id="22">this can go in whatever direction you want; I just find it funny that the two of them are pious and water-themed</note>
@@ -163,6 +164,11 @@
         <note id="613">just a general icebreaker comment</note>
         <note id="612">pushing further to get to know her; making a connection</note>
         <note id="614">just a general icebreaker comment</note>
+        <note id="615">Note that the marker value is "HOT", so if you wanted to make a specific response to this one, you can check "mia said marker ask_mia_tribeS == HOT"</note>
+        <note id="616">Note that the marker value is "COLD", so if you wanted to make a specific response to this one, you can check "mia said marker ask_mia_tribeS == COLD"</note>
+        <note id="617">Giving you a chance to have Lysithea bring up the overdressed, looking to explore themselves angle in the follow-up</note>
+        <note id="618">Mia is a good healer but she is not well-learned about the intricacies of Psynergy, and can only really parrot what the party learned throughout their journey.</note>
+        <note id="619">Deliberately being ironic here, as both of them improve through fighting</note>
     </notes>
     <labels>
         <label id="2" label="" folder="Targets" sort="2" />
@@ -209,7 +215,7 @@
         <label id="43" label="" folder="Conditional Strip Lines" sort="6" />
         <label id="44" label="" folder="Also Playing Strip Lines" sort="0" />
         <label id="45" label="" folder="Backgrounds" sort="0" />
-        <label id="46" label="" folder="Player Names" sort="2" />
+        <label id="46" label="" folder="Filter - Golden Sun Opponents" sort="2" />
         <label id="47" label="" folder="Backgrounds" sort="13" />
         <label id="48" label="" folder="Backgrounds" sort="12" />
         <label id="49" label="" folder="Backgrounds" sort="14" />
@@ -303,7 +309,7 @@
         <label id="138" label="thong reveal (1st)" folder="Clothing" sort="2" />
         <label id="139" label="thong reveal (2nd)" folder="Clothing" sort="2" />
         <label id="141" label="" folder="April Fools" sort="0" />
-        <label id="142" label="" folder="Prompts" sort="2" />
+        <label id="142" label="" color="3" folder="Prompts" sort="2" />
         <label id="143" label="" folder="Targets" sort="0" />
         <label id="144" label="butt pose (other people with butt poses are here)" folder="Situations" sort="7" />
         <label id="145" label="butt pose (just to show off to the player) (5+ rounds)" folder="Situations" sort="6" />
@@ -769,16 +775,37 @@
         <label id="609" label="" color="1" folder="Targets" sort="0" />
         <label id="610" label="" color="1" folder="Responses" sort="0" />
         <label id="612" label="" folder="Targets" sort="0" />
-        <label id="613" label="" folder="Targets" sort="0" />
-        <label id="614" label="" folder="Targets" sort="0" />
+        <label id="613" label="" color="3" folder="Targets" sort="0" />
+        <label id="614" label="" color="3" folder="Targets" sort="0" />
+        <label id="615" label="" folder="Responses" sort="0" />
+        <label id="611" label="" folder="Responses" sort="0" />
+        <label id="616" label="" folder="Responses" sort="0" />
+        <label id="617" label="" folder="Responses" sort="0" />
+        <label id="618" label="" folder="Responses" sort="0" />
+        <label id="619" label="" folder="Targets" sort="0" />
+        <label id="620" label="" folder="Targets" sort="0" />
+        <label id="621" label="" folder="Halloween Costume" sort="0" />
+        <label id="622" label="" folder="Halloween Costume" sort="0" />
+        <label id="623" label="" folder="Halloween Costume" sort="0" />
+        <label id="624" label="" folder="Halloween Costume" sort="0" />
+        <label id="625" label="" folder="Halloween Costume" sort="0" />
+        <label id="626" label="" folder="Halloween Costume" sort="0" />
+        <label id="627" label="" folder="Halloween Costume" sort="0" />
+        <label id="628" label="" folder="Halloween Costume" sort="0" />
+        <label id="629" label="" folder="Halloween Costume" sort="0" />
+        <label id="630" label="" folder="Halloween Costume" sort="0" />
+        <label id="631" label="" folder="Halloween Costume" sort="0" />
+        <label id="632" label="" folder="Halloween Costume" sort="0" />
+        <label id="633" label="" folder="Halloween Costume" sort="0" />
+        <label id="634" label="Halloween Costume Collectible" folder="Halloween Costume" sort="0" />
+        <label id="635" label="Halloween Costume Collectible" folder="Halloween Costume" sort="0" />
     </labels>
     <prefixes>
         <prefix>zz_</prefix>
     </prefixes>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>614</nextId>
+    <nextId>635</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="a_djinni_was_in_my_cape">Fizz djinni situational marker</marker>
         <marker scope="Public" name="angara_is_isolated" />
         <marker scope="Public" name="aqua_keyblade_revealResp">Reaction to Aqua KH 'keyblade reveal' situation</marker>
@@ -914,8 +941,13 @@
         <marker scope="Public" name="mia_jura_worlds3" />
         <marker scope="Public" name="mia_larachel_staff_Tolbi" />
         <marker scope="Public" name="mia_link_fidget1" />
+        <marker scope="Public" name="mia_lysithea_genieS_resp" />
         <marker scope="Public" name="mia_lysithea_strip0a" />
+        <marker scope="Public" name="mia_lysithea_strip0b" />
         <marker scope="Public" name="mia_lysithea_strip1a" />
+        <marker scope="Public" name="mia_lysithea_strip1b" />
+        <marker scope="Public" name="mia_lysithea_tribeS_resp" />
+        <marker scope="Public" name="mia_lysithea_wateryouwaitingforS_resp" />
         <marker scope="Public" name="mia_mariO_Image1" />
         <marker scope="Public" name="mia_mariS_acc_crazy_suggestResp" />
         <marker scope="Public" name="mia_mariS_eatFizz" />
