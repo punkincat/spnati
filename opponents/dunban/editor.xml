@@ -222,6 +222,14 @@
         <response id="739" opponent="jura" opponentId="983" />
         <response id="741" opponent="jura" opponentId="980" />
         <response id="742" opponent="jura" opponentId="1146" />
+        <response id="747" opponent="lysithea" opponentId="123" />
+        <response id="748" opponent="lysithea" opponentId="124" />
+        <response id="749" opponent="lysithea" opponentId="125" />
+        <response id="752" opponent="lysithea" opponentId="120" />
+        <response id="754" opponent="mitama" opponentId="2537" />
+        <response id="755" opponent="mitama" opponentId="2539" />
+        <response id="756" opponent="mitama" opponentId="2536" />
+        <response id="757" opponent="mitama" opponentId="2538" />
     </responses>
     <notes>
         <note id="10">Will be replaced if Sharla ever gets reworked lol</note>
@@ -273,6 +281,7 @@ c: say that he's been as high as the bionis' head?
         <note id="673">Other lines have him say similar insight, it's a way of showing his battle intelligence</note>
         <note id="737">For 'dunban_lysithea_magicGift1' I am deliberately giving you a chance for her to respond negatively, with "this is from training, not just because I was born with it" etc</note>
         <note id="739">haha funny joke</note>
+        <note id="749">you can respond to both of these with a single line, or use marker checks to respond to the A and/or B variants of this.</note>
     </notes>
     <labels>
         <label id="4" label="" folder="April Fools" sort="0" />
@@ -984,11 +993,11 @@ c: say that he's been as high as the bionis' head?
         <label id="730" label="" folder="Responses" sort="0" />
         <label id="731" label="" folder="Targets" sort="0" />
         <label id="732" label="" folder="Responses" sort="0" />
-        <label id="733" label="" folder="Responses" sort="0" />
-        <label id="734" label="" folder="Responses" sort="0" />
-        <label id="735" label="" folder="Responses" sort="0" />
+        <label id="733" label="" color="3" folder="Responses" sort="0" />
+        <label id="734" label="" color="3" folder="Responses" sort="0" />
+        <label id="735" label="" color="3" folder="Responses" sort="0" />
         <label id="736" label="" folder="Targets" sort="0" />
-        <label id="737" label="" folder="Targets" sort="0" />
+        <label id="737" label="" color="3" folder="Targets" sort="0" />
         <label id="738" label="" color="1" folder="Responses" sort="0" />
         <label id="739" label="" folder="Responses" sort="0" />
         <label id="740" label="" folder="Responses" sort="0" />
@@ -996,8 +1005,21 @@ c: say that he's been as high as the bionis' head?
         <label id="742" label="" folder="Responses" sort="0" />
         <label id="743" label="" folder="Targets" sort="0" />
         <label id="744" label="" folder="Targets" sort="0" />
+        <label id="745" label="" folder="Targets" sort="0" />
+        <label id="746" label="" folder="Targets" sort="0" />
+        <label id="747" label="" folder="Responses" sort="0" />
+        <label id="749" label="" folder="Responses" sort="0" />
+        <label id="748" label="" folder="Responses" sort="0" />
+        <label id="750" label="" folder="Targets" sort="0" />
+        <label id="751" label="" folder="Targets" sort="0" />
+        <label id="752" label="discipline2, said magicGift1" folder="Targets" sort="0" />
+        <label id="753" label="discipline2, not said magicGift1" folder="Targets" sort="0" />
+        <label id="754" label="" folder="Responses" sort="0" />
+        <label id="755" label="" folder="Responses" sort="0" />
+        <label id="757" label="" folder="Responses" sort="0" />
+        <label id="756" label="" folder="Responses" sort="0" />
     </labels>
-    <nextId>744</nextId>
+    <nextId>757</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="20gOffer">Line that plays when Dunban offers a 20g bribe to whoever loses</marker>
@@ -1269,10 +1291,16 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_leon_self0a" />
         <marker scope="Public" name="dunban_leon_self1a" />
         <marker scope="Public" name="dunban_lysithea_discipline1" />
+        <marker scope="Public" name="dunban_lysithea_discipline2" />
         <marker scope="Public" name="dunban_lysithea_future1" />
+        <marker scope="Public" name="dunban_lysithea_future2" />
         <marker scope="Public" name="dunban_lysithea_magicGift1" />
+        <marker scope="Public" name="dunban_lysithea_magicGift2" />
+        <marker scope="Public" name="dunban_lysithea_physicallimits2" />
         <marker scope="Public" name="dunban_lysithea_physicallimitsResp" />
+        <marker scope="Public" name="dunban_lysithea_recognize2" />
         <marker scope="Public" name="dunban_lysithea_recognizeResp" />
+        <marker scope="Public" name="dunban_lysithea_train2" />
         <marker scope="Public" name="dunban_lysithea_trainSResp" />
         <marker scope="Public" name="dunban_lysithea_trainSwordResp" />
         <marker scope="Public" name="dunban_mari_01" />
@@ -1325,6 +1353,10 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_miaGS_powers3" />
         <marker scope="Public" name="dunban_miku_strip0a" />
         <marker scope="Public" name="dunban_mitama_arrival_resp" />
+        <marker scope="Public" name="dunban_mitama_desperateResp" />
+        <marker scope="Public" name="dunban_mitama_healingResp" />
+        <marker scope="Public" name="dunban_mitama_samuraiResp" />
+        <marker scope="Public" name="dunban_mitama_wisdomResp" />
         <marker scope="Public" name="dunban_nadeshiko_outdoors1" />
         <marker scope="Public" name="dunban_nadeshiko_outdoors2" />
         <marker scope="Public" name="dunban_nadia_headroll" />
