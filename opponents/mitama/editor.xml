@@ -2611,8 +2611,26 @@ Karsa also added in the interview:
         <label id="2565" label="Haiku 492-Priestess" folder="Haiku Counter" sort="0" />
         <label id="2566" label="Haiku 492-Diviner" folder="Haiku Counter" sort="0" />
         <label id="2567" label="Haiku 492-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="2568" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="2569" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="2570" label="" folder="Opponent Stripped Targets" sort="0" />
+        <label id="2571" label="" folder="Responses" sort="0" />
+        <label id="2572" label="" folder="Responses" sort="0" />
+        <label id="2573" label="" folder="Responses" sort="0" />
+        <label id="2574" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="2575" label="" folder="Opponent Stripping Targets" sort="0" />
+        <label id="2576" label="" folder="Hand=Any banter" sort="0" />
+        <label id="2577" label="Haiku 493-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="2578" label="Haiku 493-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="2579" label="Haiku 493-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="2580" label="" folder="Responses" sort="0" />
+        <label id="2581" label="" folder="Responses" sort="0" />
+        <label id="2582" label="" folder="Responses" sort="0" />
+        <label id="2583" label="Haiku 494-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="2584" label="Haiku 494-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="2585" label="Haiku 494-Nohr Princess" folder="Haiku Counter" sort="0" />
     </labels>
-    <nextId>2567</nextId>
+    <nextId>2585</nextId>
     <markers>
         <marker scope="Public" name="4mitama_hand1_1" />
         <marker scope="Public" name="4mitama_hand1_2" />
@@ -4503,6 +4521,12 @@ Karsa also added in the interview:
         <marker scope="Public" name="haiku_492_Counter" />
         <marker scope="Public" name="haiku_492_DCounter" />
         <marker scope="Public" name="haiku_492_NCounter" />
+        <marker scope="Public" name="haiku_493_Counter" />
+        <marker scope="Public" name="haiku_493_DCounter" />
+        <marker scope="Public" name="haiku_493_NCounter" />
+        <marker scope="Public" name="haiku_494_Counter" />
+        <marker scope="Public" name="haiku_494_DCounter" />
+        <marker scope="Public" name="haiku_494_NCounter" />
         <marker scope="Public" name="haiku_5" />
         <marker scope="Public" name="haiku_5_Counter" />
         <marker scope="Public" name="haiku_5_DCounter" />
@@ -4772,6 +4796,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="Jura_mitama5s_resp" />
         <marker scope="Public" name="jura_mitama6_resp" />
         <marker scope="Public" name="Jura_mitama67_resp" />
+        <marker scope="Public" name="Jura_mitama67alt_resp" />
         <marker scope="Public" name="jura_mitama6alt_resp" />
         <marker scope="Public" name="Jura_mitama6s_resp" />
         <marker scope="Public" name="Jura_mitama7_resp" />
@@ -4789,9 +4814,12 @@ Karsa also added in the interview:
         <marker scope="Public" name="jura_space" />
         <marker scope="Public" name="jura_space_2" />
         <marker scope="Public" name="Jura_stripped_1" />
+        <marker scope="Public" name="Jura_stripped_2" />
+        <marker scope="Public" name="Jura_stripped_3" />
         <marker scope="Public" name="Jura_stripping_0" />
         <marker scope="Public" name="Jura_stripping_1" />
         <marker scope="Public" name="Jura_stripping_2" />
+        <marker scope="Public" name="Jura_stripping_3" />
         <marker scope="Public" name="jura_stripping0" />
         <marker scope="Public" name="jura_victory" />
         <marker scope="Public" name="kagamine_fbedroom_poster" />
@@ -4835,8 +4863,11 @@ Karsa also added in the interview:
         <marker scope="Public" name="lyralei_pubes_1" />
         <marker scope="Public" name="lyralei_pubes_2" />
         <marker scope="Public" name="lysithea_church_resp" />
+        <marker scope="Public" name="lysithea_churchI_resp" />
         <marker scope="Public" name="lysithea_poems_resp" />
+        <marker scope="Public" name="lysithea_poemsI_resp" />
         <marker scope="Public" name="lysithea_priest_resp" />
+        <marker scope="Public" name="lysithea_priestI_resp" />
         <marker scope="Public" name="magical_scroll" />
         <marker scope="Public" name="magmagrunt_muststrip_0" />
         <marker scope="Public" name="mari_bunnysuit" />
@@ -4861,6 +4892,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="meia_mitama01_resp" />
         <marker scope="Public" name="meia_mitama1_resp" />
         <marker scope="Public" name="Meia_mitama12_resp" />
+        <marker scope="Public" name="meia_mitama12alt_resp" />
         <marker scope="Public" name="meia_mitama1alt_resp" />
         <marker scope="Public" name="Meia_mitama1s_resp" />
         <marker scope="Public" name="meia_mitama2_resp" />
@@ -4880,6 +4912,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="meia_mitama5_resp" />
         <marker scope="Public" name="Meia_mitama56_f_resp" />
         <marker scope="Public" name="Meia_mitama56_resp" />
+        <marker scope="Public" name="meia_mitama56alt_resp" />
         <marker scope="Public" name="meia_mitama5alt_resp" />
         <marker scope="Public" name="Meia_mitama5s_resp" />
         <marker scope="Public" name="meia_mitama5salt_resp" />
@@ -4895,6 +4928,8 @@ Karsa also added in the interview:
         <marker scope="Public" name="meia_muststrip_1" />
         <marker scope="Public" name="meia_pilot_resp" />
         <marker scope="Public" name="meia_revyfight">Also haiku 404.</marker>
+        <marker scope="Public" name="meia_stripping_0" />
+        <marker scope="Public" name="meia_stripping_1" />
         <marker scope="Public" name="mentionsNina" />
         <marker scope="Public" name="mentionsSoleil" />
         <marker scope="Public" name="mia_gs_journey" />
@@ -5125,6 +5160,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="sf_hauntedforest" />
         <marker scope="Public" name="sgwen_enemies" />
         <marker scope="Public" name="sgwen_personas" />
+        <marker scope="Public" name="shaggy_scared" />
         <marker scope="Public" name="snorlax_plushie" />
         <marker scope="Public" name="solarflare_armor_resp" />
         <marker scope="Public" name="solarflare_muststrip0" />
