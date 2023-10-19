@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1697615099057</lastupdate>
+    <lastupdate>1697704537044</lastupdate>
     <enabled>true</enabled>
     <first>Jura</first>
     <last>Basil Elden</last>
@@ -15,8 +15,11 @@
     <epilogue gender="female" img="nirvana.PNG">Slow Down, My Sweetheart</epilogue>
     <layers>6</layers>
     <default-costume-name>Elegant Dress</default-costume-name>
+    <alternates>
+        <costume folder="opponents/reskins/jura_santa/" set="xmas" status="offline" label="Jura">Santa Jura</costume>
+    </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>14450</lines>
-    <poses>427</poses>
+    <lines>14454</lines>
+    <poses>433</poses>
     <z-index>1</z-index>
 </opponent>
