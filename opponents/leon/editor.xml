@@ -481,6 +481,19 @@
         <response id="1314" opponent="noire" opponentId="2693" />
         <response id="1315" opponent="noire" opponentId="2694" />
         <response id="1317" opponent="noire" opponentId="2696" />
+        <response id="1318" opponent="hilda" opponentId="380" />
+        <response id="1319" opponent="hilda" opponentId="802" />
+        <response id="1320" opponent="hilda" opponentId="814" />
+        <response id="1321" opponent="hilda" opponentId="819" />
+        <response id="1322" opponent="adrien" opponentId="896" />
+        <response id="1323" opponent="adrien" opponentId="897" />
+        <response id="1324" opponent="adrien" opponentId="898" />
+        <response id="1333" opponent="adrien" opponentId="899" />
+        <response id="1339" opponent="noire" opponentId="2876" />
+        <response id="1340" opponent="noire" opponentId="2878" />
+        <response id="1341" opponent="noire" opponentId="2879" />
+        <response id="1342" opponent="noire" opponentId="2880" />
+        <response id="1343" opponent="noire" opponentId="2881" />
     </responses>
     <notes>
         <note id="48">Grants the DbD tag. </note>
@@ -1374,10 +1387,23 @@
         <label id="1302" label="" folder="Noire Solo" sort="0" />
         <label id="1303" label="" folder="Noire Solo" sort="0" />
         <label id="1304" label="" folder="Noire Solo" sort="0" />
+        <label id="1327" label="" folder="Hildarien FF" sort="0" />
+        <label id="1328" label="" folder="Hildarien FF" sort="0" />
+        <label id="1329" label="" folder="Hildarien FF" sort="0" />
+        <label id="1330" label="" folder="Hildarien FF" sort="0" />
+        <label id="1331" label="" folder="Hildarien FF" sort="0" />
+        <label id="1332" label="" folder="Hildarien FF" sort="0" />
+        <label id="1333" label="" folder="Hildarien FF" sort="0" />
+        <label id="1334" label="" folder="Hildarien FF" sort="0" />
+        <label id="1335" label="" folder="Hildarien FF" sort="0" />
+        <label id="1336" label="" folder="Hildarien FF" sort="0" />
+        <label id="1337" label="" folder="Hildarien FF" sort="0" />
+        <label id="1338" label="" folder="Noire Solo" sort="0" />
+        <label id="1326" label="" folder="Hildarien FF" sort="0" />
+        <label id="1324" label="" folder="Hildarien FF" sort="0" />
+        <label id="1325" label="" folder="Hildarien FF" sort="0" />
     </labels>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1317</nextId>
+    <nextId>1343</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="aaravi_finished" />
@@ -1706,6 +1732,11 @@
         <marker scope="Public" name="hilda33" />
         <marker scope="Public" name="hilda41" />
         <marker scope="Public" name="hilda42" />
+        <marker scope="Public" name="hilda43" />
+        <marker scope="Public" name="hilda51" />
+        <marker scope="Public" name="hilda61" />
+        <marker scope="Public" name="hildadrien_ff" />
+        <marker scope="Public" name="hildadrien_ff2" />
         <marker scope="Public" name="HiSha" />
         <marker scope="Public" name="ignatz01" />
         <marker scope="Public" name="ignatz02" />
@@ -1999,18 +2030,59 @@
         <marker scope="Public" name="nanoko01a" />
         <marker scope="Public" name="nanoko01b" />
         <marker scope="Public" name="nanoko02" />
+        <marker scope="Public" name="noire_ff1" />
+        <marker scope="Public" name="noire_ff10" />
+        <marker scope="Public" name="noire_ff11" />
+        <marker scope="Public" name="noire_ff12" />
+        <marker scope="Public" name="noire_ff13" />
+        <marker scope="Public" name="noire_ff14" />
+        <marker scope="Public" name="noire_ff15" />
+        <marker scope="Public" name="noire_ff16" />
+        <marker scope="Public" name="noire_ff17" />
+        <marker scope="Public" name="noire_ff18" />
+        <marker scope="Public" name="noire_ff19" />
+        <marker scope="Public" name="noire_ff2" />
+        <marker scope="Public" name="noire_ff20" />
+        <marker scope="Public" name="noire_ff21" />
+        <marker scope="Public" name="noire_ff22" />
+        <marker scope="Public" name="noire_ff23" />
+        <marker scope="Public" name="noire_ff24" />
+        <marker scope="Public" name="noire_ff25" />
+        <marker scope="Public" name="noire_ff26" />
+        <marker scope="Public" name="noire_ff27" />
+        <marker scope="Public" name="noire_ff28" />
+        <marker scope="Public" name="noire_ff29" />
+        <marker scope="Public" name="noire_ff3" />
+        <marker scope="Public" name="noire_ff30" />
+        <marker scope="Public" name="noire_ff31" />
+        <marker scope="Public" name="noire_ff32" />
+        <marker scope="Public" name="noire_ff4" />
+        <marker scope="Public" name="noire_ff5" />
+        <marker scope="Public" name="noire_ff6" />
+        <marker scope="Public" name="noire_ff7" />
+        <marker scope="Public" name="noire_ff8" />
+        <marker scope="Public" name="noire_ff9" />
         <marker scope="Public" name="noire_leon_FF" />
         <marker scope="Public" name="noire01" />
         <marker scope="Public" name="noire02" />
         <marker scope="Public" name="noire03" />
         <marker scope="Public" name="noire11" />
+        <marker scope="Public" name="noire12" />
+        <marker scope="Public" name="noire13" />
         <marker scope="Public" name="noire21" />
         <marker scope="Public" name="noire22" />
         <marker scope="Public" name="noire23" />
         <marker scope="Public" name="noire31" />
         <marker scope="Public" name="noire32" />
         <marker scope="Public" name="noire33" />
+        <marker scope="Public" name="noire41" />
+        <marker scope="Public" name="noire42" />
         <marker scope="Public" name="noire51" />
+        <marker scope="Public" name="noire52" />
+        <marker scope="Public" name="noire53" />
+        <marker scope="Public" name="noire61" />
+        <marker scope="Public" name="noire62" />
+        <marker scope="Public" name="noire62b" />
         <marker scope="Public" name="okino01" />
         <marker scope="Public" name="petra01" />
         <marker scope="Public" name="petra02" />
@@ -2043,6 +2115,7 @@
         <marker scope="Public" name="robin01" />
         <marker scope="Public" name="robin02b" />
         <marker scope="Public" name="robin03" />
+        <marker scope="Public" name="roll_ff" />
         <marker scope="Public" name="roll_hair" />
         <marker scope="Public" name="roll_manyBoys" />
         <marker scope="Public" name="roll_turnon" />
