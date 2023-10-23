@@ -416,6 +416,9 @@
         <response id="1393" opponent="queenie" opponentId="36" />
         <response id="1401" opponent="hilda" opponentId="471" />
         <response id="1402" opponent="hilda" opponentId="472" />
+        <response id="1403" opponent="lysithea" opponentId="28" />
+        <response id="1404" opponent="lysithea" opponentId="77" />
+        <response id="1409" opponent="hilda" opponentId="945" />
     </responses>
     <notes>
         <note id="32">Placeholder lines for emoting </note>
@@ -1332,12 +1335,15 @@
         <label id="1398" label="" folder="New Marinette Targets" sort="0" />
         <label id="1399" label="" folder="New Marinette Targets" sort="0" />
         <label id="1400" label="" folder="New Marinette Targets" sort="0" />
+        <label id="1410" label="" folder="New Marinette Targets" sort="0" />
+        <label id="1411" label="" folder="New Marinette Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>t-</prefix>
     </prefixes>
-    <nextId>1402</nextId>
+    <nextId>1411</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="+" />
         <marker scope="Public" name="4wayReturns" />
         <marker scope="Public" name="adr_mari_dual" />
@@ -1462,6 +1468,7 @@
         <marker scope="Public" name="hilda41" />
         <marker scope="Public" name="hilda42" />
         <marker scope="Public" name="hilda43" />
+        <marker scope="Public" name="hilda44" />
         <marker scope="Public" name="hildaAdrien01" />
         <marker scope="Public" name="hildaAdrien02" />
         <marker scope="Public" name="hildaAdrien12" />
@@ -1519,6 +1526,12 @@
         <marker scope="Public" name="ladybug_queenie_greet" />
         <marker scope="Public" name="lb_akuma" />
         <marker scope="Public" name="lb_heroics" />
+        <marker scope="Public" name="lysi_burdens1" />
+        <marker scope="Public" name="lysi_guardian1" />
+        <marker scope="Public" name="lysi_pastry1" />
+        <marker scope="Public" name="lysi_responsibility1" />
+        <marker scope="Public" name="lysi01" />
+        <marker scope="Public" name="lysi11" />
         <marker scope="Public" name="m_f_a" />
         <marker scope="Public" name="mari_adr_dual" />
         <marker scope="Public" name="mari_bc" />
@@ -1550,6 +1563,7 @@
         <marker scope="Public" name="mari42" />
         <marker scope="Public" name="mari43" />
         <marker scope="Public" name="mari51" />
+        <marker scope="Public" name="mari52" />
         <marker scope="Public" name="maridrien_couple" />
         <marker scope="Public" name="marinette_chatter" />
         <marker scope="Public" name="marinette_fashion">Marinette asks the assembled party about their fashion tastes.</marker>
