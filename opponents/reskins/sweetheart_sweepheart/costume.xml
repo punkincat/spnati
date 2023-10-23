@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>sweetheart_sweepheart</id>
+    <label>Sweetheart</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>bottomless_first</tag>
+        <tag from="0" to="0">clothing_destruction</tag>
+        <tag>halloween_skin</tag>
+        <tag remove="true">high_heels</tag>
+        <tag remove="true">lingerie</tag>
+        <tag>maid_uniform</tag>
+        <tag remove="true">thigh_highs</tag>
+        <tag from="4" to="5">thong</tag>
+    </tags>
+    <layers>7</layers>
+    <folder>opponents/reskins/sweetheart_sweepheart/</folder>
+    <folder stage="7">opponents/sweetheart/</folder>
+    <wardrobe>
+        <clothing name="shirt" generic="shirt" position="upper" type="important" />
+        <clothing name="g-string" generic="underwear" position="lower" type="important" />
+        <clothing name="headdress" generic="headband" position="lower" type="extra" />
+        <clothing name="skirt" generic="skirt" position="lower" type="major" />
+        <clothing name="wristbands" generic="armbands" position="hands" type="extra" plural="true" />
+        <clothing name="slippers" generic="shoes" position="feet" type="minor" plural="true" />
+        <clothing name="maid top" generic="shirt" position="upper" type="major" />
+    </wardrobe>
+
+    <poses>
+        <pose id="0-stripping">
+            <sprite id="stripping" src="reskins/sweetheart_sweepheart/0-stripping.png" x="0" y="0" />
+            <directive type="animation" id="stripping" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/sweetheart_sweepheart/0-stripping.png" />
+                <keyframe time="1.88" src="reskins/sweetheart_sweepheart/0-stripping2.png" />
+                <keyframe time="1.94" src="reskins/sweetheart_sweepheart/0-stripping1.png" />
+            </directive>
+        </pose>
+        <pose id="2-stripped">
+            <sprite id="stripped" src="reskins/sweetheart_sweepheart/2-stripped.png" x="0" y="0" />
+            <sprite id="broom" delay="1.5" src="reskins/sweetheart_sweepheart/broom.png" x="-310" y="226" rotation="0" />
+            <sprite id="snap" delay="1.38" src="reskins/sweetheart_sweepheart/snap.png" x="-319" y="325" scalex="0" scaley="0" rotation="-362" />
+            <directive type="animation" id="stripped" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/sweetheart_sweepheart/2-stripped.png" />
+                <keyframe time="1.5" src="reskins/sweetheart_sweepheart/2-stripped1.png" />
+                <keyframe time="2.88" src="reskins/sweetheart_sweepheart/2-stripped1.png" />
+            </directive>
+            <directive type="animation" id="broom" delay="1.5" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="-310" y="226" rotation="0" />
+                <keyframe time="0.12" x="-468" y="-93" rotation="-208" />
+                <keyframe time="0.25" x="-310" y="-2260" />
+            </directive>
+            <directive type="animation" id="snap" delay="1.38" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="-319" y="325" scalex="0" scaley="0" rotation="-362" />
+                <keyframe time="0.24" x="-319" y="325" scalex="0.3" scaley="0.3" rotation="-362" />
+                <keyframe time="0.62" x="-319" y="325" scalex="0" scaley="0" rotation="-362" />
+            </directive>
+            <directive type="animation" id="snap" delay="1.38" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/sweetheart_sweepheart/snap.png" />
+                <keyframe time="0.24" src="reskins/sweetheart_sweepheart/snap.png" />
+                <keyframe time="0.62" src="reskins/sweetheart_sweepheart/snap.png" />
+            </directive>
+        </pose>
+    </poses>
+</costume>
