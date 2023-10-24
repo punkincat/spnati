@@ -41,10 +41,12 @@
         <label id="34" label="" folder="&quot;Extra&quot; Clothing" sort="2" />
     </labels>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>44</nextId>
+    <nextId>45</nextId>
     <markers>
         <marker scope="Private" name="adv_poseposition" />
         <marker scope="Public" name="killing" />
+        <marker scope="Public" name="self_finished" />
+        <marker scope="Public" name="self_finished2" />
     </markers>
     <recipes>
         <recipe key="6856ac2e-f249-43b7-abaa-e65478c098f3">
@@ -105,6 +107,11 @@
         <recipe key="4a1540d2-2964-4b7f-8402-5043ecb5ede1">
             <cases>
                 <id>36</id>
+            </cases>
+        </recipe>
+        <recipe key="473995a8-c971-400e-a8e4-e274c0fee879">
+            <cases>
+                <id>45</id>
             </cases>
         </recipe>
     </recipes>
