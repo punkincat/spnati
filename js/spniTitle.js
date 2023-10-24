@@ -128,6 +128,10 @@ var CANDY_LIST = [
     "mia_golden_sun/0-smug.png",
     "mia_golden_sun/0-pray.png",
     "mia_golden_sun/4-praise.png",
+    "yumeko/0-delighted.png",              // Highlighted New Character
+    "yumeko/0-devilish.png",
+    "yumeko/3-horny.png",
+    "yumeko/3-scheming.png",
     "caitlin/0-Talking2.png",              // Highlighted New Character
     "caitlin/3-Embarrassed.png",
     "caitlin/3-stripped-.png",
@@ -276,10 +280,6 @@ var CANDY_LIST = [
     "kora/1-cheer.png",
     "kora/2-smorny.png",
     "kora/2-after_butt.png",
-    "elphaba/0-mischievous.png",           // Has Recent Updates
-    "elphaba/2-sarcastic.png",
-    "elphaba/4-amused.png",
-    "elphaba/5-calm.png",
     "roll_caskett/0-wave.png",             // Has Recent Updates
     "roll_caskett/1-smiling.png",
     "roll_caskett/1-wave.png",
@@ -316,6 +316,10 @@ var CANDY_LIST = [
     "ringo_ando/1-glad.png",
     "ringo_ando/2-balanceapple.png",
     "ringo_ando/3-bounceapple.png",
+    "leon/0-idle.png",                     // Has Recent Updates
+    "leon/0-fingerguns.png",
+    "leon/0-grinning.png",
+    "leon/0-snarky.png",
 ];
 
 /* Storage for old candy images in case the characters qualify again */
@@ -524,10 +528,10 @@ var CANDY_LIST = [
     "fina/0-sheepish.png",
     "fina/2-shy.png",
     "fina/3-gazing.png",
-    "leon/0-idle.png",
-    "leon/0-fingerguns.png",
-    "leon/0-grinning.png",
-    "leon/0-snarky.png",
+    "elphaba/0-mischievous.png",
+    "elphaba/2-sarcastic.png",
+    "elphaba/4-amused.png",
+    "elphaba/5-calm.png",
 */
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
