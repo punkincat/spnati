@@ -137,6 +137,9 @@
         <response id="610" opponent="perona" opponentId="402" />
         <response id="611" opponent="perona" opponentId="403" />
         <response id="615" opponent="lysithea" opponentId="126" />
+        <response id="645" opponent="revy" opponentId="551" />
+        <response id="646" opponent="jura" opponentId="1065" />
+        <response id="647" opponent="jura" opponentId="1253" />
     </responses>
     <notes>
         <note id="22">this can go in whatever direction you want; I just find it funny that the two of them are pious and water-themed</note>
@@ -169,6 +172,7 @@
         <note id="617">Giving you a chance to have Lysithea bring up the overdressed, looking to explore themselves angle in the follow-up</note>
         <note id="618">Mia is a good healer but she is not well-learned about the intricacies of Psynergy, and can only really parrot what the party learned throughout their journey.</note>
         <note id="619">Deliberately being ironic here, as both of them improve through fighting</note>
+        <note id="641">djinn is the plural, djinni is singular</note>
     </notes>
     <labels>
         <label id="2" label="" folder="Targets" sort="2" />
@@ -747,8 +751,8 @@
         <label id="581" label="" folder="Filter" sort="0" />
         <label id="582" label="" folder="Targets" sort="0" />
         <label id="583" label="" folder="Responses" sort="0" />
-        <label id="584" label="" color="1" folder="Targets" sort="0" />
-        <label id="585" label="" color="1" folder="Targets" sort="0" />
+        <label id="584" label="" color="3" folder="Targets" sort="0" />
+        <label id="585" label="" color="3" folder="Targets" sort="0" />
         <label id="586" label="" folder="Human" sort="0" />
         <label id="587" label="" folder="Human" sort="0" />
         <label id="588" label="" folder="Human" sort="0" />
@@ -774,7 +778,7 @@
         <label id="608" label="" color="1" folder="Targets" sort="0" />
         <label id="609" label="" color="1" folder="Targets" sort="0" />
         <label id="610" label="" color="1" folder="Responses" sort="0" />
-        <label id="612" label="" folder="Targets" sort="0" />
+        <label id="612" label="" color="3" folder="Targets" sort="0" />
         <label id="613" label="" color="3" folder="Targets" sort="0" />
         <label id="614" label="" color="3" folder="Targets" sort="0" />
         <label id="615" label="" folder="Responses" sort="0" />
@@ -799,12 +803,27 @@
         <label id="633" label="" folder="Halloween Costume" sort="0" />
         <label id="634" label="Halloween Costume Collectible" folder="Halloween Costume" sort="0" />
         <label id="635" label="Halloween Costume Collectible" folder="Halloween Costume" sort="0" />
+        <label id="636" label="" folder="Jenna" sort="0" />
+        <label id="637" label="" folder="Jenna" sort="0" />
+        <label id="638" label="" folder="Jenna" sort="0" />
+        <label id="639" label="thong reveal (1st) (siren)" folder="Clothing" sort="0" />
+        <label id="640" label="All Females are now Chest Visible (Siren)" folder="Conditional Strip Lines" sort="0" />
+        <label id="641" label="Fizz / Mercury Djinn situation (Siren)" folder="Conditional Strip Lines" sort="0" />
+        <label id="642" label="" folder="Jenna" sort="0" />
+        <label id="643" label="" folder="Targets" sort="0" />
+        <label id="644" label="" folder="Jenna" sort="0" />
+        <label id="645" label="" folder="Responses" sort="0" />
+        <label id="646" label="" color="1" folder="Responses" sort="0" />
+        <label id="647" label="" folder="Responses" sort="0" />
+        <label id="648" label="" color="1" folder="Targets" sort="0" />
+        <label id="649" label="" color="1" folder="Targets" sort="0" />
+        <label id="650" label="" folder="Responses" sort="0" />
     </labels>
     <prefixes>
         <prefix>zz_</prefix>
     </prefixes>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>635</nextId>
+    <nextId>650</nextId>
     <markers>
         <marker scope="Public" name="a_djinni_was_in_my_cape">Fizz djinni situational marker</marker>
         <marker scope="Public" name="angara_is_isolated" />
@@ -857,6 +876,7 @@
         <marker scope="Public" name="hugebreasts_scantilyclad_chestwillbe" />
         <marker scope="Public" name="human_post_ff_flirting_butt_pose" />
         <marker scope="Public" name="Imil_invitation" />
+        <marker scope="Public" name="jenna_self_sirencostume" />
         <marker scope="Public" name="jura_mia_gs_babiesResp" />
         <marker scope="Public" name="lucky_medal_fountain">Line mentioning the Lucky Medal Fountain minigame</marker>
         <marker scope="Public" name="mariS_wings_revealResp">Reaction to Mari S's wings reveal</marker>
@@ -926,6 +946,7 @@
         <marker scope="Public" name="Mia_healer_cont" />
         <marker scope="Public" name="mia_is_a_healer" />
         <marker scope="Public" name="mia_is_bicurious" />
+        <marker scope="Public" name="mia_jenna_strip0a" />
         <marker scope="Public" name="mia_joey_question1" />
         <marker scope="Public" name="mia_jura_babiesPrompt">Response to Jura babies prompt</marker>
         <marker scope="Public" name="mia_jura_gs0a" />
@@ -936,6 +957,8 @@
         <marker scope="Public" name="mia_jura_gs2a" />
         <marker scope="Public" name="mia_jura_hair1" />
         <marker scope="Public" name="mia_jura_hair2" />
+        <marker scope="Public" name="mia_jura_self3a" />
+        <marker scope="Public" name="mia_jura_sirenstrip0a" />
         <marker scope="Public" name="mia_jura_worlds1" />
         <marker scope="Public" name="mia_jura_worlds2" />
         <marker scope="Public" name="mia_jura_worlds3" />
@@ -1012,8 +1035,11 @@
         <marker scope="Public" name="mia_shami_magic3" />
         <marker scope="Public" name="mia_shamiko_horns1" />
         <marker scope="Public" name="mia_shamiko_horns2" />
+        <marker scope="Public" name="mia_shamiko_horns3" />
         <marker scope="Public" name="mia_shamiko_magic1" />
         <marker scope="Public" name="mia_shamiko_magic2" />
+        <marker scope="Public" name="mia_shamiko_magic3" />
+        <marker scope="Public" name="mia_shamiko_teach1" />
         <marker scope="Public" name="mia_sly_strip2a" />
         <marker scope="Public" name="mia_sofia_self_0b" />
         <marker scope="Public" name="mia_sofia_self0a" />
