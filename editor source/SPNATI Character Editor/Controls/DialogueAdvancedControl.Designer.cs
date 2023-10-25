@@ -62,6 +62,12 @@
             this.lblFOOperation = new Desktop.Skinning.SkinnedLabel();
             this.lblFOAttribute = new Desktop.Skinning.SkinnedLabel();
             this.groupBoxNickname = new Desktop.Skinning.SkinnedGroupBox();
+            this.lstNick = new Desktop.Skinning.SkinnedListBox();
+            this.tsNick = new System.Windows.Forms.ToolStrip();
+            this.tsNickAdd = new System.Windows.Forms.ToolStripButton();
+            this.tsNickRemove = new System.Windows.Forms.ToolStripButton();
+            this.tsNickMoveUp = new System.Windows.Forms.ToolStripButton();
+            this.tsNickMoveDown = new System.Windows.Forms.ToolStripButton();
             this.lblNickWeight = new Desktop.Skinning.SkinnedLabel();
             this.lblNickOp = new Desktop.Skinning.SkinnedLabel();
             this.valNickWeight = new Desktop.Skinning.SkinnedNumericUpDown();
@@ -78,6 +84,7 @@
             this.groupBoxBubble.SuspendLayout();
             this.groupBoxForfeit.SuspendLayout();
             this.groupBoxNickname.SuspendLayout();
+            this.tsNick.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valNickWeight)).BeginInit();
             this.SuspendLayout();
             // 
@@ -335,7 +342,7 @@
             this.lblWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblWeight.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
             this.lblWeight.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.lblWeight.Location = new System.Drawing.Point(9, 460);
+            this.lblWeight.Location = new System.Drawing.Point(9, 426);
             this.lblWeight.Name = "lblWeight";
             this.lblWeight.Size = new System.Drawing.Size(67, 13);
             this.lblWeight.TabIndex = 2;
@@ -347,7 +354,7 @@
             this.valWeight.DecimalPlaces = 2;
             this.valWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.valWeight.ForeColor = System.Drawing.Color.Black;
-            this.valWeight.Location = new System.Drawing.Point(83, 458);
+            this.valWeight.Location = new System.Drawing.Point(83, 423);
             this.valWeight.Minimum = new decimal(new int[] {
             1,
             0,
@@ -360,7 +367,7 @@
             1,
             0,
             0,
-            196608});
+            0});
             // 
             // groupBoxBubble
             // 
@@ -437,7 +444,7 @@
             this.groupBoxForfeit.Controls.Add(this.lblFOAttribute);
             this.groupBoxForfeit.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
             this.groupBoxForfeit.Image = null;
-            this.groupBoxForfeit.Location = new System.Drawing.Point(3, 366);
+            this.groupBoxForfeit.Location = new System.Drawing.Point(3, 329);
             this.groupBoxForfeit.Name = "groupBoxForfeit";
             this.groupBoxForfeit.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.groupBoxForfeit.ShowIndicatorBar = false;
@@ -579,6 +586,8 @@
             // groupBoxNickname
             // 
             this.groupBoxNickname.BackColor = System.Drawing.Color.White;
+            this.groupBoxNickname.Controls.Add(this.lstNick);
+            this.groupBoxNickname.Controls.Add(this.tsNick);
             this.groupBoxNickname.Controls.Add(this.lblNickWeight);
             this.groupBoxNickname.Controls.Add(this.lblNickOp);
             this.groupBoxNickname.Controls.Add(this.valNickWeight);
@@ -593,10 +602,72 @@
             this.groupBoxNickname.Name = "groupBoxNickname";
             this.groupBoxNickname.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.groupBoxNickname.ShowIndicatorBar = false;
-            this.groupBoxNickname.Size = new System.Drawing.Size(389, 185);
+            this.groupBoxNickname.Size = new System.Drawing.Size(389, 148);
             this.groupBoxNickname.TabIndex = 14;
             this.groupBoxNickname.TabStop = false;
             this.groupBoxNickname.Text = "Nickname Operations";
+            // 
+            // lstNick
+            // 
+            this.lstNick.BackColor = System.Drawing.Color.White;
+            this.lstNick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lstNick.ForeColor = System.Drawing.Color.Black;
+            this.lstNick.FormattingEnabled = true;
+            this.lstNick.Location = new System.Drawing.Point(9, 34);
+            this.lstNick.Name = "lstNick";
+            this.lstNick.Size = new System.Drawing.Size(185, 108);
+            this.lstNick.TabIndex = 10;
+            this.lstNick.SelectedIndexChanged += new System.EventHandler(this.lstNick_SelectedIndexChanged);
+            // 
+            // tsNick
+            // 
+            this.tsNick.Dock = System.Windows.Forms.DockStyle.None;
+            this.tsNick.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsNickAdd,
+            this.tsNickRemove,
+            this.tsNickMoveUp,
+            this.tsNickMoveDown});
+            this.tsNick.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
+            this.tsNick.Location = new System.Drawing.Point(211, 3);
+            this.tsNick.Name = "tsNick";
+            this.tsNick.Size = new System.Drawing.Size(93, 23);
+            this.tsNick.TabIndex = 9;
+            // 
+            // tsNickAdd
+            // 
+            this.tsNickAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsNickAdd.Image = global::SPNATI_Character_Editor.Properties.Resources.Add;
+            this.tsNickAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsNickAdd.Name = "tsNickAdd";
+            this.tsNickAdd.Size = new System.Drawing.Size(23, 20);
+            this.tsNickAdd.Click += new System.EventHandler(this.tsNickAdd_Click);
+            // 
+            // tsNickRemove
+            // 
+            this.tsNickRemove.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsNickRemove.Image = global::SPNATI_Character_Editor.Properties.Resources.Remove;
+            this.tsNickRemove.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsNickRemove.Name = "tsNickRemove";
+            this.tsNickRemove.Size = new System.Drawing.Size(23, 20);
+            this.tsNickRemove.Click += new System.EventHandler(this.tsNickRemove_Click);
+            // 
+            // tsNickMoveUp
+            // 
+            this.tsNickMoveUp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsNickMoveUp.Image = global::SPNATI_Character_Editor.Properties.Resources.UpArrow;
+            this.tsNickMoveUp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsNickMoveUp.Name = "tsNickMoveUp";
+            this.tsNickMoveUp.Size = new System.Drawing.Size(23, 20);
+            this.tsNickMoveUp.Click += new System.EventHandler(this.tsNickMoveUp_Click);
+            // 
+            // tsNickMoveDown
+            // 
+            this.tsNickMoveDown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsNickMoveDown.Image = global::SPNATI_Character_Editor.Properties.Resources.DownArrow;
+            this.tsNickMoveDown.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsNickMoveDown.Name = "tsNickMoveDown";
+            this.tsNickMoveDown.Size = new System.Drawing.Size(23, 20);
+            this.tsNickMoveDown.Click += new System.EventHandler(this.tsNickMoveDown_Click);
             // 
             // lblNickWeight
             // 
@@ -605,7 +676,7 @@
             this.lblNickWeight.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblNickWeight.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
             this.lblNickWeight.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.lblNickWeight.Location = new System.Drawing.Point(211, 159);
+            this.lblNickWeight.Location = new System.Drawing.Point(211, 122);
             this.lblNickWeight.Name = "lblNickWeight";
             this.lblNickWeight.Size = new System.Drawing.Size(95, 13);
             this.lblNickWeight.TabIndex = 7;
@@ -618,37 +689,30 @@
             this.lblNickOp.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblNickOp.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
             this.lblNickOp.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.lblNickOp.Location = new System.Drawing.Point(211, 132);
+            this.lblNickOp.Location = new System.Drawing.Point(211, 89);
             this.lblNickOp.Name = "lblNickOp";
             this.lblNickOp.Size = new System.Drawing.Size(56, 13);
             this.lblNickOp.TabIndex = 6;
             this.lblNickOp.Text = "Operation:";
-            this.toolTip1.SetToolTip(this.lblNickOp, "= sets a nickname as the only one for a given character (weight=1)\n+ adds a new nickname or increases the weight of an existing one\n- decreases a nickname's weight\n: sets a nickname's weight");
+            this.toolTip1.SetToolTip(this.lblNickOp, "= sets a nickname as the only one for a given character (weight=1)\n+ adds a new n" +
+        "ickname or increases the weight of an existing one\n- decreases a nickname\'s weig" +
+        "ht\n: sets a nickname\'s weight");
             // 
             // valNickWeight
             // 
             this.valNickWeight.BackColor = System.Drawing.Color.White;
             this.valNickWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.valNickWeight.ForeColor = System.Drawing.Color.Black;
-            this.valNickWeight.Location = new System.Drawing.Point(323, 156);
-            this.valNickWeight.Name = "valNickWeight";
-            this.valNickWeight.Size = new System.Drawing.Size(60, 20);
-            this.valNickWeight.TabIndex = 5;
+            this.valNickWeight.Location = new System.Drawing.Point(323, 120);
             this.valNickWeight.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.valNickWeight.Minimum = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.valWeight.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.valNickWeight.Name = "valNickWeight";
+            this.valNickWeight.Size = new System.Drawing.Size(60, 20);
+            this.valNickWeight.TabIndex = 5;
+            this.valNickWeight.ValueChanged += new System.EventHandler(this.valNickWeight_ValueChanged);
             // 
             // cboNickOp
             // 
@@ -659,13 +723,14 @@
             this.cboNickOp.FieldType = Desktop.Skinning.SkinnedFieldType.Surface;
             this.cboNickOp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cboNickOp.KeyMember = null;
-            this.cboNickOp.Location = new System.Drawing.Point(284, 129);
+            this.cboNickOp.Location = new System.Drawing.Point(269, 86);
             this.cboNickOp.Name = "cboNickOp";
             this.cboNickOp.SelectedIndex = -1;
             this.cboNickOp.SelectedItem = null;
-            this.cboNickOp.Size = new System.Drawing.Size(99, 21);
+            this.cboNickOp.Size = new System.Drawing.Size(114, 21);
             this.cboNickOp.Sorted = false;
             this.cboNickOp.TabIndex = 4;
+            this.cboNickOp.TextChanged += new System.EventHandler(this.cboNickOp_TextChanged);
             // 
             // lblNickname
             // 
@@ -674,7 +739,7 @@
             this.lblNickname.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblNickname.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
             this.lblNickname.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.lblNickname.Location = new System.Drawing.Point(6, 159);
+            this.lblNickname.Location = new System.Drawing.Point(211, 63);
             this.lblNickname.Name = "lblNickname";
             this.lblNickname.Size = new System.Drawing.Size(58, 13);
             this.lblNickname.TabIndex = 3;
@@ -687,7 +752,7 @@
             this.lblNickChar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblNickChar.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
             this.lblNickChar.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.lblNickChar.Location = new System.Drawing.Point(6, 132);
+            this.lblNickChar.Location = new System.Drawing.Point(211, 37);
             this.lblNickChar.Name = "lblNickChar";
             this.lblNickChar.Size = new System.Drawing.Size(56, 13);
             this.lblNickChar.TabIndex = 2;
@@ -696,7 +761,7 @@
             // recNickChar
             // 
             this.recNickChar.AllowCreate = false;
-            this.recNickChar.Location = new System.Drawing.Point(80, 129);
+            this.recNickChar.Location = new System.Drawing.Point(269, 34);
             this.recNickChar.Name = "recNickChar";
             this.recNickChar.PlaceholderText = null;
             this.recNickChar.Record = null;
@@ -707,15 +772,17 @@
             this.recNickChar.Size = new System.Drawing.Size(114, 20);
             this.recNickChar.TabIndex = 1;
             this.recNickChar.UseAutoComplete = false;
+            this.recNickChar.RecordChanged += new System.EventHandler<Desktop.CommonControls.RecordEventArgs>(this.recNickChar_RecordChanged);
             // 
             // txtNickname
             // 
             this.txtNickname.BackColor = System.Drawing.Color.White;
             this.txtNickname.ForeColor = System.Drawing.Color.Black;
-            this.txtNickname.Location = new System.Drawing.Point(80, 156);
+            this.txtNickname.Location = new System.Drawing.Point(269, 60);
             this.txtNickname.Name = "txtNickname";
             this.txtNickname.Size = new System.Drawing.Size(114, 20);
             this.txtNickname.TabIndex = 0;
+            this.txtNickname.TextChanged += new System.EventHandler(this.txtNickname_TextChanged);
             // 
             // DialogueAdvancedControl
             // 
@@ -729,7 +796,7 @@
             this.Controls.Add(this.groupBoxState);
             this.Controls.Add(this.groupBoxArrow);
             this.Name = "DialogueAdvancedControl";
-            this.Size = new System.Drawing.Size(395, 485);
+            this.Size = new System.Drawing.Size(395, 450);
             this.groupBoxArrow.ResumeLayout(false);
             this.groupBoxArrow.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valLocation)).EndInit();
@@ -742,6 +809,8 @@
             this.groupBoxForfeit.PerformLayout();
             this.groupBoxNickname.ResumeLayout(false);
             this.groupBoxNickname.PerformLayout();
+            this.tsNick.ResumeLayout(false);
+            this.tsNick.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valNickWeight)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -792,5 +861,11 @@
         private Desktop.Skinning.SkinnedNumericUpDown valNickWeight;
         private Desktop.Skinning.SkinnedLabel lblNickWeight;
         private Desktop.Skinning.SkinnedLabel lblNickOp;
+        private System.Windows.Forms.ToolStrip tsNick;
+        private System.Windows.Forms.ToolStripButton tsNickAdd;
+        private System.Windows.Forms.ToolStripButton tsNickRemove;
+        private Desktop.Skinning.SkinnedListBox lstNick;
+        private System.Windows.Forms.ToolStripButton tsNickMoveUp;
+        private System.Windows.Forms.ToolStripButton tsNickMoveDown;
     }
 }

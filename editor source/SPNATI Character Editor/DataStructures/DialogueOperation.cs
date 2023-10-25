@@ -104,6 +104,11 @@ namespace SPNATI_Character_Editor
 			return clone;
 		}
 
+		public override string ToString()
+		{
+			return "" + Character + " -> " + Name;
+		}
+
 		public override int GetHashCode()
 		{
 			int hash = (Character ?? string.Empty).GetHashCode();

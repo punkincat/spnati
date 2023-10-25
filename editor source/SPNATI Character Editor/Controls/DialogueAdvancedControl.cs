@@ -17,6 +17,7 @@ namespace SPNATI_Character_Editor.Controls
 		private Character _character;
 		private DialogueLine _line;
 		private bool _settingData;
+		private NicknameOperation _selectedNickOp;
 
 		public event EventHandler DataUpdated;
 
@@ -114,14 +115,13 @@ namespace SPNATI_Character_Editor.Controls
 			cboNickOp.Text = "";
 			txtNickname.Text = "";
 			valNickWeight.Value = 0;
+			lstNick.Items.Clear();
 			if (line.DialogueOperations != null && line.DialogueOperations.NicknameOps != null)
 			{
 				foreach (NicknameOperation op in line.DialogueOperations.NicknameOps.ToArray())
 				{
-					recNickChar.RecordKey = op.Character;
-					cboNickOp.Text = op.Operator;
-					txtNickname.Text = op.Name;
-					valNickWeight.Value = Math.Max(valNickWeight.Minimum, Math.Min(valNickWeight.Maximum, op.Weight));
+					lstNick.Items.Add(op);
+					if (lstNick.Items.Count > 0) { lstNick.SelectedIndex = 0; }
 				}
 			}
 
@@ -255,18 +255,7 @@ namespace SPNATI_Character_Editor.Controls
 				}
 			}
 
-			NicknameOperation nicknameOp = null;
-			
-			if (!string.IsNullOrEmpty(recNickChar.RecordKey))
-			{
-				nicknameOp = new NicknameOperation();
-				nicknameOp.Character = recNickChar.RecordKey;
-				nicknameOp.Name = txtNickname.Text;
-				nicknameOp.Operator = string.IsNullOrEmpty(cboNickOp.Text) ? "=" : cboNickOp.Text;
-				nicknameOp.Weight = nicknameOp.Operator == "="? 1 : (int)valNickWeight.Value;
-			}
-
-			if (nicknameOp != null)
+			if (lstNick.Items.Count > 0)
 			{
 				if (_line.DialogueOperations == null)
 				{
@@ -274,7 +263,10 @@ namespace SPNATI_Character_Editor.Controls
 				}
 				_line.DialogueOperations.NicknameOps.Clear();
 
-				_line.DialogueOperations.NicknameOps.Add(nicknameOp);
+				foreach (NicknameOperation op in lstNick.Items)
+				{
+					_line.DialogueOperations.NicknameOps.Add(op);
+				}
 			}
 			else if (_line.DialogueOperations != null && _line.DialogueOperations.NicknameOps != null)
 			{
@@ -340,6 +332,121 @@ namespace SPNATI_Character_Editor.Controls
 		private void cboOp_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (!_settingData) DataUpdated?.Invoke(this, e);
+		}
+
+		private void lstNick_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			NicknameOperation nickOp = lstNick.SelectedItem as NicknameOperation;
+			if (nickOp != null)
+			{
+				if (!_settingData)
+				{
+					saveNickOp();
+					if (_selectedNickOp != null && string.IsNullOrEmpty(_selectedNickOp.Character))
+					{
+						_line.DialogueOperations.NicknameOps.Remove(_selectedNickOp);
+						lstNick.Items.Remove(_selectedNickOp);
+					}
+				}
+				_selectedNickOp = nickOp;
+				_settingData = true;
+				recNickChar.RecordKey = nickOp.Character;
+				cboNickOp.Text = nickOp.Operator;
+				txtNickname.Text = nickOp.Name;
+				valNickWeight.Value = Math.Max(valNickWeight.Minimum, Math.Min(valNickWeight.Maximum, nickOp.Weight));
+				_settingData = false;
+			}
+		}
+
+		private void saveNickOp()
+		{
+			if (_selectedNickOp == null) return;
+
+			_selectedNickOp.Character = recNickChar.RecordKey;
+			_selectedNickOp.Name = txtNickname.Text;
+			_selectedNickOp.Operator = string.IsNullOrEmpty(cboNickOp.Text) ? "=" : cboNickOp.Text;
+			_selectedNickOp.Weight = _selectedNickOp.Operator == "=" ? 1 : (int)valNickWeight.Value;
+		}
+
+		private void tsNickAdd_Click(object sender, EventArgs e)
+		{
+			NicknameOperation op = new NicknameOperation();
+			lstNick.Items.Add(op);
+			if (_line.DialogueOperations == null)
+			{
+				_line.DialogueOperations = new DialogueOperations();
+			}
+			_line.DialogueOperations.NicknameOps.Add(op);
+		}
+
+		private void tsNickRemove_Click(object sender, EventArgs e)
+		{
+			if (_selectedNickOp == null) return;
+			_line.DialogueOperations.NicknameOps.Remove(_selectedNickOp);
+			lstNick.Items.Remove(_selectedNickOp);
+			if (lstNick.Items.Count > 0)
+			{
+				lstNick.SelectedIndex = 0;
+			}
+			else
+			{
+				recNickChar.RecordKey = "";
+				cboNickOp.Text = "";
+				txtNickname.Text = "";
+				valNickWeight.Value = 0;
+			}
+		}
+
+		private void tsNickMoveDown_Click(object sender, EventArgs e)
+		{
+			if (lstNick.Items.Count < 2) return;
+			int i = lstNick.SelectedIndex;
+			if (i == lstNick.Items.Count - 1) return;
+			_line.DialogueOperations.NicknameOps.Reverse(i, 2);
+			NicknameOperation op = lstNick.Items[i + 1] as NicknameOperation;
+			lstNick.Items[i + 1] = _selectedNickOp;
+			lstNick.SelectedIndex = i + 1;
+			lstNick.Items[i] = op;
+			lstNick.RefreshListItems();
+		}
+
+		private void tsNickMoveUp_Click(object sender, EventArgs e)
+		{
+			if (lstNick.Items.Count < 2) return;
+			int i = lstNick.SelectedIndex;
+			if (i == 0) return;
+			_line.DialogueOperations.NicknameOps.Reverse(i - 1, 2);
+			NicknameOperation op = lstNick.Items[i - 1] as NicknameOperation;
+			lstNick.Items[i - 1] = _selectedNickOp;
+			lstNick.SelectedIndex = i - 1;
+			lstNick.Items[i] = op;
+			lstNick.RefreshListItems();
+		}
+
+		private void recNickChar_RecordChanged(object sender, Desktop.CommonControls.RecordEventArgs e)
+		{
+			if (_selectedNickOp == null || _settingData) return; 
+			_selectedNickOp.Character = recNickChar.RecordKey;
+			if (!string.IsNullOrEmpty(_selectedNickOp.Character)) lstNick.RefreshListItems();
+		}
+
+		private void txtNickname_TextChanged(object sender, EventArgs e)
+		{
+			if (_selectedNickOp == null || _settingData) return;
+			_selectedNickOp.Name = txtNickname.Text;
+			if (!string.IsNullOrEmpty(_selectedNickOp.Character)) lstNick.RefreshListItems();
+		}
+
+		private void cboNickOp_TextChanged(object sender, EventArgs e)
+		{
+			if (_selectedNickOp == null || _settingData) return;
+			_selectedNickOp.Operator = string.IsNullOrEmpty(cboNickOp.Text) ? "=" : cboNickOp.Text;
+		}
+
+		private void valNickWeight_ValueChanged(object sender, EventArgs e)
+		{
+			if (_selectedNickOp == null || _settingData) return;
+			_selectedNickOp.Weight = _selectedNickOp.Operator == "=" ? 1 : (int)valNickWeight.Value;
 		}
 	}
 
