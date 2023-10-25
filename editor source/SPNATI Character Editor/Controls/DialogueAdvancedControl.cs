@@ -110,6 +110,10 @@ namespace SPNATI_Character_Editor.Controls
 				}
 			}
 
+			recNickChar.RecordKey = "";
+			cboNickOp.Text = "";
+			txtNickname.Text = "";
+			valNickWeight.Value = 0;
 			if (line.DialogueOperations != null && line.DialogueOperations.NicknameOps != null)
 			{
 				foreach (NicknameOperation op in line.DialogueOperations.NicknameOps.ToArray())
@@ -232,14 +236,12 @@ namespace SPNATI_Character_Editor.Controls
 				{
 					_line.DialogueOperations = new DialogueOperations();
 				}
-
 				_line.DialogueOperations.ForfeitOps.Clear();
 
 				if (mainForfeitOp != null)
 				{
 					_line.DialogueOperations.ForfeitOps.Add(mainForfeitOp);
 				}
-
 				if (heavyOp != null)
 				{
 					_line.DialogueOperations.ForfeitOps.Add(heavyOp);
@@ -247,6 +249,36 @@ namespace SPNATI_Character_Editor.Controls
 			} else if (_line.DialogueOperations != null && _line.DialogueOperations.ForfeitOps != null)
 			{
 				_line.DialogueOperations.ForfeitOps.Clear();
+				if (_line.DialogueOperations.IsEmpty())
+				{
+					_line.DialogueOperations = null;
+				}
+			}
+
+			NicknameOperation nicknameOp = null;
+			
+			if (!string.IsNullOrEmpty(recNickChar.RecordKey))
+			{
+				nicknameOp = new NicknameOperation();
+				nicknameOp.Character = recNickChar.RecordKey;
+				nicknameOp.Name = txtNickname.Text;
+				nicknameOp.Operator = string.IsNullOrEmpty(cboNickOp.Text) ? "=" : cboNickOp.Text;
+				nicknameOp.Weight = nicknameOp.Operator == "="? 1 : (int)valNickWeight.Value;
+			}
+
+			if (nicknameOp != null)
+			{
+				if (_line.DialogueOperations == null)
+				{
+					_line.DialogueOperations = new DialogueOperations();
+				}
+				_line.DialogueOperations.NicknameOps.Clear();
+
+				_line.DialogueOperations.NicknameOps.Add(nicknameOp);
+			}
+			else if (_line.DialogueOperations != null && _line.DialogueOperations.NicknameOps != null)
+			{
+				_line.DialogueOperations.NicknameOps.Clear();
 				if (_line.DialogueOperations.IsEmpty())
 				{
 					_line.DialogueOperations = null;

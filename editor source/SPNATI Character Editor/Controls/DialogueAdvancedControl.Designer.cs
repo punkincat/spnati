@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
             this.groupBoxArrow = new Desktop.Skinning.SkinnedGroupBox();
             this.valLocation = new Desktop.Skinning.SkinnedNumericUpDown();
             this.lblArrowLocation = new Desktop.Skinning.SkinnedLabel();
@@ -69,6 +70,7 @@
             this.lblNickChar = new Desktop.Skinning.SkinnedLabel();
             this.recNickChar = new Desktop.CommonControls.RecordField();
             this.txtNickname = new Desktop.Skinning.SkinnedTextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBoxArrow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valLocation)).BeginInit();
             this.groupBoxState.SuspendLayout();
@@ -621,27 +623,32 @@
             this.lblNickOp.Size = new System.Drawing.Size(56, 13);
             this.lblNickOp.TabIndex = 6;
             this.lblNickOp.Text = "Operation:";
+            this.toolTip1.SetToolTip(this.lblNickOp, "= sets a nickname as the only one for a given character (weight=1)\n+ adds a new nickname or increases the weight of an existing one\n- decreases a nickname's weight\n: sets a nickname's weight");
             // 
             // valNickWeight
             // 
             this.valNickWeight.BackColor = System.Drawing.Color.White;
-            this.valNickWeight.DecimalPlaces = 2;
             this.valNickWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.valNickWeight.ForeColor = System.Drawing.Color.Black;
             this.valNickWeight.Location = new System.Drawing.Point(323, 156);
-            this.valNickWeight.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
             this.valNickWeight.Name = "valNickWeight";
             this.valNickWeight.Size = new System.Drawing.Size(60, 20);
             this.valNickWeight.TabIndex = 5;
-            this.valNickWeight.Value = new decimal(new int[] {
+            this.valNickWeight.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.valNickWeight.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.valWeight.Value = new decimal(new int[] {
             1,
             0,
             0,
-            196608});
+            0});
             // 
             // cboNickOp
             // 
@@ -744,7 +751,7 @@
 		#endregion
 
 		private Desktop.Skinning.SkinnedGroupBox groupBoxArrow;
-		private Desktop.Skinning.SkinnedLabel lblArrowLocation;
+        private Desktop.Skinning.SkinnedLabel lblArrowLocation;
 		private Desktop.Skinning.SkinnedComboBox cboDirection;
 		private Desktop.Skinning.SkinnedLabel lblArrowDirection;
 		private Desktop.Skinning.SkinnedNumericUpDown valLocation;
@@ -778,6 +785,7 @@
         private Desktop.Skinning.SkinnedGroupBox groupBoxNickname;
         private Desktop.Skinning.SkinnedTextBox txtNickname;
         private Desktop.CommonControls.RecordField recNickChar;
+        private System.Windows.Forms.ToolTip toolTip1;
         private Desktop.Skinning.SkinnedComboBox cboNickOp;
         private Desktop.Skinning.SkinnedLabel lblNickname;
         private Desktop.Skinning.SkinnedLabel lblNickChar;

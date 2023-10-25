@@ -95,14 +95,14 @@ Nickname operations will clear any per-target `nickname` marker set for the refe
 |-----------|---------|
 | `clear`   | Clear the nickname list for the referenced character, so that this character uses the referenced character's `label` attribute when naming them. |
 | `=`       | Sets the nickname for the referenced character. This clears out previously added nicknames from the list, so that the nickname set here is the only one used for the referenced character. Using this operation with a `name` that resolves to an empty string is equivalent to a `clear` operation. |
-| `>`       | Sets the weight of a given nickname. This is equivalent to removing all preexisting instances of the nickname from the list, then (optionally) re-adding the same nickname. |
+| `:`       | Sets the weight of a given nickname. This is equivalent to removing all preexisting instances of the nickname from the list, then (optionally) re-adding the same nickname. |
 | `+`       | Adds a new nickname for the referenced character, or increases a nickname's weight if already in use. This operation can add a nickname to the list multiple times to adjust how frequently it is used. |
 | `-`       | Removes one or more instances of the given nickname that are currently in use for the referenced character. |
 
 All operations except for `clear` and `=` can optionally specify a `weight` XML attribute to manipulate nickname weights:
 - `+` operations will increase the weight of a nickname by the given amount by adding `weight` instances of a nickname to the list.
 - Conversely, `-` operations will remove `weight` instances of a nickname from the list, thereby decreasing a that nickname's weight (if not removing it entirely from the list of possible nicknames).
-- `>` operations will reset a nickname's weight by removing all instances of the given nickname from the list, then re-adding `weight` new instances of it. This can be used to remove a nickname from use entirely by specifying a weight of `0`.
+- `:` operations will reset a nickname's weight by removing all instances of the given nickname from the list, then re-adding `weight` new instances of it. This can be used to remove a nickname from use entirely by specifying a weight of `0`.
 
 Nickname operations are applied in the order they're listed in the above table, starting with `clear` operations.
 Among other things, this ensures that dialogue can use `clear` or `=` operations to clear out the nickname list _and_ repopulate it with multiple nicknames in a single line, without relying on operations to be ordered correctly in XML.

@@ -745,7 +745,7 @@ NicknameOperation.prototype.apply = function (self, opp) {
      * during nickname substitution.
      *
      * Weight values for `+` and `-` operations have a minimum of 1,
-     * but weight can be 0 for `>` to simply clear all instances of a nickname from the list
+     * but weight can be 0 for `:` to simply clear all instances of a nickname from the list
      * without re-adding it.
      */
 
@@ -753,7 +753,7 @@ NicknameOperation.prototype.apply = function (self, opp) {
         /* "clear" doesn't take a value */
         newNicknames = [];
         if ((this.op == "=") && this.value) newNicknames.push(this.value);
-    } else if ((this.op == ">") && this.value) {
+    } else if ((this.op == ":") && this.value) {
         newNicknames = newNicknames.filter((nickname) => nickname !== this.value);
         for (let i = 0; i < this.weight; i++) newNicknames.push(this.value);
     } else if ((this.op == "+") && this.value) {
@@ -800,7 +800,7 @@ NicknameOperation.prototype.sortKey = function () {
     switch (this.op) {
     case "clear": return 0;
     case "=": return 1;
-    case ">": return 2;
+    case ":": return 2;
     case "+": return 3;
     case "-": return 4;
     default: return 5;
