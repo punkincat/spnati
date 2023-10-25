@@ -18,6 +18,7 @@
         <tag from="0" to="4">thigh_highs</tag>
         <tag>valentines_skin</tag>
     </tags>
+    <layers>7</layers>
     <folder>opponents/reskins/rosa_princess/</folder>
     <wardrobe>
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
@@ -26,7 +27,7 @@
         <clothing name="dress" generic="dress" position="upper" type="major" />
         <clothing name="gloves" generic="shorts" position="hands" type="minor" plural="true" />
         <clothing name="glass slippers" generic="shoes" position="feet" type="minor" plural="true" />
-        <clothing name="tiara" generic="jewelry" position="head" type="extra" plural="true" />
+        <clothing name="tiara" generic="jewelry" position="head" type="extra" />
     </wardrobe>
 
     <poses>
@@ -193,4 +194,5 @@
             <sprite id="Layer4_gloria_special_2" z="2" src="reskins/rosa_princess/Extra/Layer4_gloria_special_3.png" x="0" y="0" />
         </pose>
     </poses>
+
 </costume>
