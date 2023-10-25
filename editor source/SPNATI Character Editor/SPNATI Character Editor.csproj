@@ -1048,7 +1048,7 @@
     <Compile Include="DataStructures\VariableDatabase.cs" />
     <Compile Include="DesktopMessages.cs" />
     <Compile Include="DialogueDatabase.cs" />
-    <Compile Include="DialogueOperation.cs" />
+    <Compile Include="DataStructures\DialogueOperation.cs" />
     <Compile Include="EpilogueEditing\DataStructures\LiveSceneSegment.cs" />
     <Compile Include="EpilogueEditing\Interfaces\IFixedLength.cs" />
     <Compile Include="Forms\AddPoseForm.cs">
@@ -1148,8 +1148,8 @@
     <Compile Include="ImagePipeline\PipelineImporter.cs" />
     <Compile Include="ImagePipeline\PipelineNode.cs" />
     <Compile Include="ImagePipeline\ShaderFunctions.cs" />
-    <Compile Include="MarkerOperation.cs" />
-    <Compile Include="DialogueLine.cs" />
+    <Compile Include="DataStructures\MarkerOperation.cs" />
+    <Compile Include="DataStructures\DialogueLine.cs" />
     <Compile Include="EpilogueEditing\AnimationHelpers.cs" />
     <Compile Include="EpilogueEditing\DataStructures\LiveAnimatedObject.cs" />
     <Compile Include="EpilogueEditing\DataStructures\LiveBubble.cs" />

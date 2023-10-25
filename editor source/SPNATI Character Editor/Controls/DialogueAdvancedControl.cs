@@ -28,6 +28,8 @@ namespace SPNATI_Character_Editor.Controls
 			cboAttr.Items.AddRange(new string[] { "", "timer", "stamina", "redirect-finish" });
 			cboHeavy.Items.AddRange(new string[] { "", "true", "false" });
 			cboOp.Items.AddRange(new string[] { "=", "+", "-", "*", "/", "%" });
+			cboNickOp.Items.AddRange(new string[] { "=", "+", "-", ":" });
+			recNickChar.RecordType = typeof(Character);
 			cboDirection.DataSource = DialogueLine.ArrowDirections;
 			cboFontSize.DataSource = DialogueLine.FontSizes;
 			cboAI.DataSource = DialogueLine.AILevels;
@@ -105,6 +107,17 @@ namespace SPNATI_Character_Editor.Controls
 						txtValue.Text = op.Value;
 						cboOp.Text = op.Operator;
 					}
+				}
+			}
+
+			if (line.DialogueOperations != null && line.DialogueOperations.NicknameOps != null)
+			{
+				foreach (NicknameOperation op in line.DialogueOperations.NicknameOps.ToArray())
+				{
+					recNickChar.RecordKey = op.Character;
+					cboNickOp.Text = op.Operator;
+					txtNickname.Text = op.Name;
+					valNickWeight.Value = Math.Max(valNickWeight.Minimum, Math.Min(valNickWeight.Maximum, op.Weight));
 				}
 			}
 
@@ -192,7 +205,7 @@ namespace SPNATI_Character_Editor.Controls
 
 			ForfeitOperation mainForfeitOp = null;
 			ForfeitOperation heavyOp = null;
-			if (!String.IsNullOrEmpty(cboAttr.Text))
+			if (!string.IsNullOrEmpty(cboAttr.Text))
 			{
 				mainForfeitOp = new ForfeitOperation();
 				mainForfeitOp.Attribute = cboAttr.Text;
@@ -206,7 +219,7 @@ namespace SPNATI_Character_Editor.Controls
 				heavyOp.Attribute = "heavy";
 				heavyOp.Value = "reset";
 			}
-			else if (!String.IsNullOrEmpty(cboHeavy.Text))
+			else if (!string.IsNullOrEmpty(cboHeavy.Text))
 			{
 				heavyOp = new ForfeitOperation();
 				heavyOp.Attribute = "heavy";
@@ -273,21 +286,6 @@ namespace SPNATI_Character_Editor.Controls
 			if (!_settingData) DataUpdated?.Invoke(this, e);
 		}
 
-		private void skinnedGroupBox2_Enter(object sender, EventArgs e)
-		{
-
-		}
-
-		private void skinnedLabel2_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void cboAI_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
-		}
-
 		private void cboAttr_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			string attr = cboAttr.Text;
@@ -310,16 +308,6 @@ namespace SPNATI_Character_Editor.Controls
 		private void cboOp_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (!_settingData) DataUpdated?.Invoke(this, e);
-		}
-
-		private void label5_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void cboHeavy_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			
 		}
 	}
 

@@ -28,63 +28,74 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.groupBox1 = new Desktop.Skinning.SkinnedGroupBox();
+            this.groupBoxArrow = new Desktop.Skinning.SkinnedGroupBox();
             this.valLocation = new Desktop.Skinning.SkinnedNumericUpDown();
-            this.label2 = new Desktop.Skinning.SkinnedLabel();
+            this.lblArrowLocation = new Desktop.Skinning.SkinnedLabel();
             this.cboDirection = new Desktop.Skinning.SkinnedComboBox();
-            this.label1 = new Desktop.Skinning.SkinnedLabel();
-            this.groupBox2 = new Desktop.Skinning.SkinnedGroupBox();
+            this.lblArrowDirection = new Desktop.Skinning.SkinnedLabel();
+            this.groupBoxState = new Desktop.Skinning.SkinnedGroupBox();
             this.chkResetLabel = new Desktop.Skinning.SkinnedCheckBox();
             this.txtLabel = new Desktop.Skinning.SkinnedTextBox();
             this.cboAI = new Desktop.Skinning.SkinnedComboBox();
-            this.label7 = new Desktop.Skinning.SkinnedLabel();
-            this.label6 = new Desktop.Skinning.SkinnedLabel();
+            this.lblStateLabel = new Desktop.Skinning.SkinnedLabel();
+            this.lblStateAI = new Desktop.Skinning.SkinnedLabel();
             this.cboSize = new Desktop.Skinning.SkinnedComboBox();
-            this.label3 = new Desktop.Skinning.SkinnedLabel();
+            this.lblStateSize = new Desktop.Skinning.SkinnedLabel();
             this.cboGender = new Desktop.Skinning.SkinnedComboBox();
-            this.label4 = new Desktop.Skinning.SkinnedLabel();
+            this.lblStateGender = new Desktop.Skinning.SkinnedLabel();
             this.chkResetAI = new Desktop.Skinning.SkinnedCheckBox();
-            this.label5 = new Desktop.Skinning.SkinnedLabel();
+            this.lblWeight = new Desktop.Skinning.SkinnedLabel();
             this.valWeight = new Desktop.Skinning.SkinnedNumericUpDown();
-            this.skinnedGroupBox1 = new Desktop.Skinning.SkinnedGroupBox();
+            this.groupBoxBubble = new Desktop.Skinning.SkinnedGroupBox();
             this.cboFontSize = new Desktop.Skinning.SkinnedComboBox();
-            this.skinnedLabel1 = new Desktop.Skinning.SkinnedLabel();
+            this.lblBubbleTextSize = new Desktop.Skinning.SkinnedLabel();
             this.chkLayer = new Desktop.Skinning.SkinnedCheckBox();
-            this.skinnedGroupBox2 = new Desktop.Skinning.SkinnedGroupBox();
+            this.groupBoxForfeit = new Desktop.Skinning.SkinnedGroupBox();
             this.txtValue = new Desktop.Skinning.SkinnedTextBox();
-            this.skinnedLabel5 = new Desktop.Skinning.SkinnedLabel();
+            this.lblFOHeavy = new Desktop.Skinning.SkinnedLabel();
             this.cboHeavy = new Desktop.Skinning.SkinnedComboBox();
-            this.skinnedLabel4 = new Desktop.Skinning.SkinnedLabel();
+            this.lblFOValue = new Desktop.Skinning.SkinnedLabel();
             this.chkResetHeavy = new Desktop.Skinning.SkinnedCheckBox();
             this.cboOp = new Desktop.Skinning.SkinnedComboBox();
             this.cboAttr = new Desktop.Skinning.SkinnedComboBox();
-            this.skinnedLabel3 = new Desktop.Skinning.SkinnedLabel();
-            this.skinnedLabel2 = new Desktop.Skinning.SkinnedLabel();
-            this.groupBox1.SuspendLayout();
+            this.lblFOOperation = new Desktop.Skinning.SkinnedLabel();
+            this.lblFOAttribute = new Desktop.Skinning.SkinnedLabel();
+            this.groupBoxNickname = new Desktop.Skinning.SkinnedGroupBox();
+            this.lblNickWeight = new Desktop.Skinning.SkinnedLabel();
+            this.lblNickOp = new Desktop.Skinning.SkinnedLabel();
+            this.valNickWeight = new Desktop.Skinning.SkinnedNumericUpDown();
+            this.cboNickOp = new Desktop.Skinning.SkinnedComboBox();
+            this.lblNickname = new Desktop.Skinning.SkinnedLabel();
+            this.lblNickChar = new Desktop.Skinning.SkinnedLabel();
+            this.recNickChar = new Desktop.CommonControls.RecordField();
+            this.txtNickname = new Desktop.Skinning.SkinnedTextBox();
+            this.groupBoxArrow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valLocation)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.groupBoxState.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valWeight)).BeginInit();
-            this.skinnedGroupBox1.SuspendLayout();
-            this.skinnedGroupBox2.SuspendLayout();
+            this.groupBoxBubble.SuspendLayout();
+            this.groupBoxForfeit.SuspendLayout();
+            this.groupBoxNickname.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.valNickWeight)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBoxArrow
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.valLocation);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cboDirection);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
-            this.groupBox1.Image = null;
-            this.groupBox1.Location = new System.Drawing.Point(3, 90);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.groupBox1.ShowIndicatorBar = false;
-            this.groupBox1.Size = new System.Drawing.Size(200, 79);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Arrow";
+            this.groupBoxArrow.BackColor = System.Drawing.Color.White;
+            this.groupBoxArrow.Controls.Add(this.valLocation);
+            this.groupBoxArrow.Controls.Add(this.lblArrowLocation);
+            this.groupBoxArrow.Controls.Add(this.cboDirection);
+            this.groupBoxArrow.Controls.Add(this.lblArrowDirection);
+            this.groupBoxArrow.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
+            this.groupBoxArrow.Image = null;
+            this.groupBoxArrow.Location = new System.Drawing.Point(3, 90);
+            this.groupBoxArrow.Name = "groupBoxArrow";
+            this.groupBoxArrow.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.groupBoxArrow.ShowIndicatorBar = false;
+            this.groupBoxArrow.Size = new System.Drawing.Size(200, 79);
+            this.groupBoxArrow.TabIndex = 0;
+            this.groupBoxArrow.TabStop = false;
+            this.groupBoxArrow.Text = "Arrow";
             // 
             // valLocation
             // 
@@ -107,18 +118,18 @@
             this.valLocation.TabIndex = 11;
             this.valLocation.ValueChanged += new System.EventHandler(this.valLocation_ValueChanged);
             // 
-            // label2
+            // lblArrowLocation
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.label2.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.label2.Location = new System.Drawing.Point(6, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Location (%):";
+            this.lblArrowLocation.AutoSize = true;
+            this.lblArrowLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblArrowLocation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblArrowLocation.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblArrowLocation.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
+            this.lblArrowLocation.Location = new System.Drawing.Point(6, 54);
+            this.lblArrowLocation.Name = "lblArrowLocation";
+            this.lblArrowLocation.Size = new System.Drawing.Size(68, 13);
+            this.lblArrowLocation.TabIndex = 2;
+            this.lblArrowLocation.Text = "Location (%):";
             // 
             // cboDirection
             // 
@@ -138,42 +149,42 @@
             this.cboDirection.Sorted = false;
             this.cboDirection.TabIndex = 10;
             // 
-            // label1
+            // lblArrowDirection
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.label1.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.label1.Location = new System.Drawing.Point(6, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Direction:";
+            this.lblArrowDirection.AutoSize = true;
+            this.lblArrowDirection.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblArrowDirection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblArrowDirection.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblArrowDirection.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
+            this.lblArrowDirection.Location = new System.Drawing.Point(6, 27);
+            this.lblArrowDirection.Name = "lblArrowDirection";
+            this.lblArrowDirection.Size = new System.Drawing.Size(52, 13);
+            this.lblArrowDirection.TabIndex = 0;
+            this.lblArrowDirection.Text = "Direction:";
             // 
-            // groupBox2
+            // groupBoxState
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.chkResetLabel);
-            this.groupBox2.Controls.Add(this.txtLabel);
-            this.groupBox2.Controls.Add(this.cboAI);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.cboSize);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.cboGender);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.chkResetAI);
-            this.groupBox2.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
-            this.groupBox2.Image = null;
-            this.groupBox2.Location = new System.Drawing.Point(3, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.groupBox2.ShowIndicatorBar = false;
-            this.groupBox2.Size = new System.Drawing.Size(389, 78);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Change state";
+            this.groupBoxState.BackColor = System.Drawing.Color.White;
+            this.groupBoxState.Controls.Add(this.chkResetLabel);
+            this.groupBoxState.Controls.Add(this.txtLabel);
+            this.groupBoxState.Controls.Add(this.cboAI);
+            this.groupBoxState.Controls.Add(this.lblStateLabel);
+            this.groupBoxState.Controls.Add(this.lblStateAI);
+            this.groupBoxState.Controls.Add(this.cboSize);
+            this.groupBoxState.Controls.Add(this.lblStateSize);
+            this.groupBoxState.Controls.Add(this.cboGender);
+            this.groupBoxState.Controls.Add(this.lblStateGender);
+            this.groupBoxState.Controls.Add(this.chkResetAI);
+            this.groupBoxState.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
+            this.groupBoxState.Image = null;
+            this.groupBoxState.Location = new System.Drawing.Point(3, 6);
+            this.groupBoxState.Name = "groupBoxState";
+            this.groupBoxState.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.groupBoxState.ShowIndicatorBar = false;
+            this.groupBoxState.Size = new System.Drawing.Size(389, 78);
+            this.groupBoxState.TabIndex = 1;
+            this.groupBoxState.TabStop = false;
+            this.groupBoxState.Text = "Change state";
             // 
             // chkResetLabel
             // 
@@ -214,33 +225,32 @@
             this.cboAI.Size = new System.Drawing.Size(83, 21);
             this.cboAI.Sorted = false;
             this.cboAI.TabIndex = 3;
-            this.cboAI.SelectedIndexChanged += new System.EventHandler(this.cboAI_SelectedIndexChanged);
             // 
-            // label7
+            // lblStateLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label7.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.label7.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.label7.Location = new System.Drawing.Point(172, 54);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Label:";
+            this.lblStateLabel.AutoSize = true;
+            this.lblStateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblStateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblStateLabel.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblStateLabel.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
+            this.lblStateLabel.Location = new System.Drawing.Point(172, 54);
+            this.lblStateLabel.Name = "lblStateLabel";
+            this.lblStateLabel.Size = new System.Drawing.Size(36, 13);
+            this.lblStateLabel.TabIndex = 7;
+            this.lblStateLabel.Text = "Label:";
             // 
-            // label6
+            // lblStateAI
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.label6.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.label6.Location = new System.Drawing.Point(172, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Intelligence:";
+            this.lblStateAI.AutoSize = true;
+            this.lblStateAI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblStateAI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblStateAI.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblStateAI.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
+            this.lblStateAI.Location = new System.Drawing.Point(172, 27);
+            this.lblStateAI.Name = "lblStateAI";
+            this.lblStateAI.Size = new System.Drawing.Size(64, 13);
+            this.lblStateAI.TabIndex = 2;
+            this.lblStateAI.Text = "Intelligence:";
             // 
             // cboSize
             // 
@@ -260,18 +270,18 @@
             this.cboSize.Sorted = false;
             this.cboSize.TabIndex = 6;
             // 
-            // label3
+            // lblStateSize
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.label3.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.label3.Location = new System.Drawing.Point(6, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Size:";
+            this.lblStateSize.AutoSize = true;
+            this.lblStateSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblStateSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblStateSize.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblStateSize.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
+            this.lblStateSize.Location = new System.Drawing.Point(6, 54);
+            this.lblStateSize.Name = "lblStateSize";
+            this.lblStateSize.Size = new System.Drawing.Size(30, 13);
+            this.lblStateSize.TabIndex = 5;
+            this.lblStateSize.Text = "Size:";
             // 
             // cboGender
             // 
@@ -291,18 +301,18 @@
             this.cboGender.Sorted = false;
             this.cboGender.TabIndex = 1;
             // 
-            // label4
+            // lblStateGender
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.label4.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.label4.Location = new System.Drawing.Point(6, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Gender:";
+            this.lblStateGender.AutoSize = true;
+            this.lblStateGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblStateGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblStateGender.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblStateGender.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
+            this.lblStateGender.Location = new System.Drawing.Point(6, 27);
+            this.lblStateGender.Name = "lblStateGender";
+            this.lblStateGender.Size = new System.Drawing.Size(45, 13);
+            this.lblStateGender.TabIndex = 0;
+            this.lblStateGender.Text = "Gender:";
             // 
             // chkResetAI
             // 
@@ -316,19 +326,18 @@
             this.chkResetAI.UseVisualStyleBackColor = true;
             this.chkResetAI.CheckedChanged += new System.EventHandler(this.chkResetAI_CheckedChanged);
             // 
-            // label5
+            // lblWeight
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.label5.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.label5.Location = new System.Drawing.Point(9, 278);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Line Weight:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.lblWeight.AutoSize = true;
+            this.lblWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblWeight.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblWeight.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
+            this.lblWeight.Location = new System.Drawing.Point(9, 460);
+            this.lblWeight.Name = "lblWeight";
+            this.lblWeight.Size = new System.Drawing.Size(67, 13);
+            this.lblWeight.TabIndex = 2;
+            this.lblWeight.Text = "Line Weight:";
             // 
             // valWeight
             // 
@@ -336,7 +345,7 @@
             this.valWeight.DecimalPlaces = 2;
             this.valWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.valWeight.ForeColor = System.Drawing.Color.Black;
-            this.valWeight.Location = new System.Drawing.Point(87, 276);
+            this.valWeight.Location = new System.Drawing.Point(83, 458);
             this.valWeight.Minimum = new decimal(new int[] {
             1,
             0,
@@ -351,22 +360,22 @@
             0,
             196608});
             // 
-            // skinnedGroupBox1
+            // groupBoxBubble
             // 
-            this.skinnedGroupBox1.BackColor = System.Drawing.Color.White;
-            this.skinnedGroupBox1.Controls.Add(this.cboFontSize);
-            this.skinnedGroupBox1.Controls.Add(this.skinnedLabel1);
-            this.skinnedGroupBox1.Controls.Add(this.chkLayer);
-            this.skinnedGroupBox1.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
-            this.skinnedGroupBox1.Image = null;
-            this.skinnedGroupBox1.Location = new System.Drawing.Point(209, 90);
-            this.skinnedGroupBox1.Name = "skinnedGroupBox1";
-            this.skinnedGroupBox1.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.skinnedGroupBox1.ShowIndicatorBar = false;
-            this.skinnedGroupBox1.Size = new System.Drawing.Size(183, 79);
-            this.skinnedGroupBox1.TabIndex = 12;
-            this.skinnedGroupBox1.TabStop = false;
-            this.skinnedGroupBox1.Text = "Speech Bubble";
+            this.groupBoxBubble.BackColor = System.Drawing.Color.White;
+            this.groupBoxBubble.Controls.Add(this.cboFontSize);
+            this.groupBoxBubble.Controls.Add(this.lblBubbleTextSize);
+            this.groupBoxBubble.Controls.Add(this.chkLayer);
+            this.groupBoxBubble.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
+            this.groupBoxBubble.Image = null;
+            this.groupBoxBubble.Location = new System.Drawing.Point(209, 90);
+            this.groupBoxBubble.Name = "groupBoxBubble";
+            this.groupBoxBubble.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.groupBoxBubble.ShowIndicatorBar = false;
+            this.groupBoxBubble.Size = new System.Drawing.Size(183, 79);
+            this.groupBoxBubble.TabIndex = 12;
+            this.groupBoxBubble.TabStop = false;
+            this.groupBoxBubble.Text = "Speech Bubble";
             // 
             // cboFontSize
             // 
@@ -387,18 +396,18 @@
             this.cboFontSize.TabIndex = 12;
             this.cboFontSize.SelectedIndexChanged += new System.EventHandler(this.cboFontSize_SelectedIndexChanged);
             // 
-            // skinnedLabel1
+            // lblBubbleTextSize
             // 
-            this.skinnedLabel1.AutoSize = true;
-            this.skinnedLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.skinnedLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.skinnedLabel1.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.skinnedLabel1.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.skinnedLabel1.Location = new System.Drawing.Point(5, 53);
-            this.skinnedLabel1.Name = "skinnedLabel1";
-            this.skinnedLabel1.Size = new System.Drawing.Size(52, 13);
-            this.skinnedLabel1.TabIndex = 0;
-            this.skinnedLabel1.Text = "Text size:";
+            this.lblBubbleTextSize.AutoSize = true;
+            this.lblBubbleTextSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblBubbleTextSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblBubbleTextSize.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblBubbleTextSize.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
+            this.lblBubbleTextSize.Location = new System.Drawing.Point(5, 53);
+            this.lblBubbleTextSize.Name = "lblBubbleTextSize";
+            this.lblBubbleTextSize.Size = new System.Drawing.Size(52, 13);
+            this.lblBubbleTextSize.TabIndex = 0;
+            this.lblBubbleTextSize.Text = "Text size:";
             // 
             // chkLayer
             // 
@@ -412,29 +421,28 @@
             this.chkLayer.UseVisualStyleBackColor = true;
             this.chkLayer.CheckedChanged += new System.EventHandler(this.chkLayer_CheckedChanged);
             // 
-            // skinnedGroupBox2
+            // groupBoxForfeit
             // 
-            this.skinnedGroupBox2.BackColor = System.Drawing.Color.White;
-            this.skinnedGroupBox2.Controls.Add(this.txtValue);
-            this.skinnedGroupBox2.Controls.Add(this.skinnedLabel5);
-            this.skinnedGroupBox2.Controls.Add(this.cboHeavy);
-            this.skinnedGroupBox2.Controls.Add(this.skinnedLabel4);
-            this.skinnedGroupBox2.Controls.Add(this.chkResetHeavy);
-            this.skinnedGroupBox2.Controls.Add(this.cboOp);
-            this.skinnedGroupBox2.Controls.Add(this.cboAttr);
-            this.skinnedGroupBox2.Controls.Add(this.skinnedLabel3);
-            this.skinnedGroupBox2.Controls.Add(this.skinnedLabel2);
-            this.skinnedGroupBox2.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
-            this.skinnedGroupBox2.Image = null;
-            this.skinnedGroupBox2.Location = new System.Drawing.Point(3, 175);
-            this.skinnedGroupBox2.Name = "skinnedGroupBox2";
-            this.skinnedGroupBox2.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.skinnedGroupBox2.ShowIndicatorBar = false;
-            this.skinnedGroupBox2.Size = new System.Drawing.Size(389, 95);
-            this.skinnedGroupBox2.TabIndex = 13;
-            this.skinnedGroupBox2.TabStop = false;
-            this.skinnedGroupBox2.Text = "Forfeit Operations";
-            this.skinnedGroupBox2.Enter += new System.EventHandler(this.skinnedGroupBox2_Enter);
+            this.groupBoxForfeit.BackColor = System.Drawing.Color.White;
+            this.groupBoxForfeit.Controls.Add(this.txtValue);
+            this.groupBoxForfeit.Controls.Add(this.lblFOHeavy);
+            this.groupBoxForfeit.Controls.Add(this.cboHeavy);
+            this.groupBoxForfeit.Controls.Add(this.lblFOValue);
+            this.groupBoxForfeit.Controls.Add(this.chkResetHeavy);
+            this.groupBoxForfeit.Controls.Add(this.cboOp);
+            this.groupBoxForfeit.Controls.Add(this.cboAttr);
+            this.groupBoxForfeit.Controls.Add(this.lblFOOperation);
+            this.groupBoxForfeit.Controls.Add(this.lblFOAttribute);
+            this.groupBoxForfeit.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
+            this.groupBoxForfeit.Image = null;
+            this.groupBoxForfeit.Location = new System.Drawing.Point(3, 366);
+            this.groupBoxForfeit.Name = "groupBoxForfeit";
+            this.groupBoxForfeit.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.groupBoxForfeit.ShowIndicatorBar = false;
+            this.groupBoxForfeit.Size = new System.Drawing.Size(389, 85);
+            this.groupBoxForfeit.TabIndex = 13;
+            this.groupBoxForfeit.TabStop = false;
+            this.groupBoxForfeit.Text = "Forfeit Operations";
             // 
             // txtValue
             // 
@@ -446,18 +454,18 @@
             this.txtValue.Size = new System.Drawing.Size(80, 20);
             this.txtValue.TabIndex = 19;
             // 
-            // skinnedLabel5
+            // lblFOHeavy
             // 
-            this.skinnedLabel5.AutoSize = true;
-            this.skinnedLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.skinnedLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.skinnedLabel5.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.skinnedLabel5.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.skinnedLabel5.Location = new System.Drawing.Point(172, 59);
-            this.skinnedLabel5.Name = "skinnedLabel5";
-            this.skinnedLabel5.Size = new System.Drawing.Size(41, 13);
-            this.skinnedLabel5.TabIndex = 18;
-            this.skinnedLabel5.Text = "Heavy:";
+            this.lblFOHeavy.AutoSize = true;
+            this.lblFOHeavy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblFOHeavy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblFOHeavy.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblFOHeavy.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
+            this.lblFOHeavy.Location = new System.Drawing.Point(172, 59);
+            this.lblFOHeavy.Name = "lblFOHeavy";
+            this.lblFOHeavy.Size = new System.Drawing.Size(41, 13);
+            this.lblFOHeavy.TabIndex = 18;
+            this.lblFOHeavy.Text = "Heavy:";
             // 
             // cboHeavy
             // 
@@ -476,20 +484,19 @@
             this.cboHeavy.Size = new System.Drawing.Size(84, 21);
             this.cboHeavy.Sorted = false;
             this.cboHeavy.TabIndex = 17;
-            this.cboHeavy.SelectedIndexChanged += new System.EventHandler(this.cboHeavy_SelectedIndexChanged);
             // 
-            // skinnedLabel4
+            // lblFOValue
             // 
-            this.skinnedLabel4.AutoSize = true;
-            this.skinnedLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.skinnedLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.skinnedLabel4.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.skinnedLabel4.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.skinnedLabel4.Location = new System.Drawing.Point(6, 59);
-            this.skinnedLabel4.Name = "skinnedLabel4";
-            this.skinnedLabel4.Size = new System.Drawing.Size(37, 13);
-            this.skinnedLabel4.TabIndex = 16;
-            this.skinnedLabel4.Text = "Value:";
+            this.lblFOValue.AutoSize = true;
+            this.lblFOValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblFOValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblFOValue.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblFOValue.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
+            this.lblFOValue.Location = new System.Drawing.Point(6, 59);
+            this.lblFOValue.Name = "lblFOValue";
+            this.lblFOValue.Size = new System.Drawing.Size(37, 13);
+            this.lblFOValue.TabIndex = 16;
+            this.lblFOValue.Text = "Value:";
             // 
             // chkResetHeavy
             // 
@@ -541,55 +548,194 @@
             this.cboAttr.TabIndex = 13;
             this.cboAttr.SelectedIndexChanged += new System.EventHandler(this.cboAttr_SelectedIndexChanged);
             // 
-            // skinnedLabel3
+            // lblFOOperation
             // 
-            this.skinnedLabel3.AutoSize = true;
-            this.skinnedLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.skinnedLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.skinnedLabel3.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.skinnedLabel3.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.skinnedLabel3.Location = new System.Drawing.Point(172, 35);
-            this.skinnedLabel3.Name = "skinnedLabel3";
-            this.skinnedLabel3.Size = new System.Drawing.Size(56, 13);
-            this.skinnedLabel3.TabIndex = 2;
-            this.skinnedLabel3.Text = "Operation:";
+            this.lblFOOperation.AutoSize = true;
+            this.lblFOOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblFOOperation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblFOOperation.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblFOOperation.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
+            this.lblFOOperation.Location = new System.Drawing.Point(172, 35);
+            this.lblFOOperation.Name = "lblFOOperation";
+            this.lblFOOperation.Size = new System.Drawing.Size(56, 13);
+            this.lblFOOperation.TabIndex = 2;
+            this.lblFOOperation.Text = "Operation:";
             // 
-            // skinnedLabel2
+            // lblFOAttribute
             // 
-            this.skinnedLabel2.AutoSize = true;
-            this.skinnedLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.skinnedLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.skinnedLabel2.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
-            this.skinnedLabel2.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
-            this.skinnedLabel2.Location = new System.Drawing.Point(6, 35);
-            this.skinnedLabel2.Name = "skinnedLabel2";
-            this.skinnedLabel2.Size = new System.Drawing.Size(49, 13);
-            this.skinnedLabel2.TabIndex = 1;
-            this.skinnedLabel2.Text = "Attribute:";
-            this.skinnedLabel2.Click += new System.EventHandler(this.skinnedLabel2_Click);
+            this.lblFOAttribute.AutoSize = true;
+            this.lblFOAttribute.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblFOAttribute.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblFOAttribute.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblFOAttribute.Level = Desktop.Skinning.SkinnedLabelLevel.Label;
+            this.lblFOAttribute.Location = new System.Drawing.Point(6, 35);
+            this.lblFOAttribute.Name = "lblFOAttribute";
+            this.lblFOAttribute.Size = new System.Drawing.Size(49, 13);
+            this.lblFOAttribute.TabIndex = 1;
+            this.lblFOAttribute.Text = "Attribute:";
+            // 
+            // groupBoxNickname
+            // 
+            this.groupBoxNickname.BackColor = System.Drawing.Color.White;
+            this.groupBoxNickname.Controls.Add(this.lblNickWeight);
+            this.groupBoxNickname.Controls.Add(this.lblNickOp);
+            this.groupBoxNickname.Controls.Add(this.valNickWeight);
+            this.groupBoxNickname.Controls.Add(this.cboNickOp);
+            this.groupBoxNickname.Controls.Add(this.lblNickname);
+            this.groupBoxNickname.Controls.Add(this.lblNickChar);
+            this.groupBoxNickname.Controls.Add(this.recNickChar);
+            this.groupBoxNickname.Controls.Add(this.txtNickname);
+            this.groupBoxNickname.Highlight = Desktop.Skinning.SkinnedHighlight.Heading;
+            this.groupBoxNickname.Image = null;
+            this.groupBoxNickname.Location = new System.Drawing.Point(3, 175);
+            this.groupBoxNickname.Name = "groupBoxNickname";
+            this.groupBoxNickname.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.groupBoxNickname.ShowIndicatorBar = false;
+            this.groupBoxNickname.Size = new System.Drawing.Size(389, 185);
+            this.groupBoxNickname.TabIndex = 14;
+            this.groupBoxNickname.TabStop = false;
+            this.groupBoxNickname.Text = "Nickname Operations";
+            // 
+            // lblNickWeight
+            // 
+            this.lblNickWeight.AutoSize = true;
+            this.lblNickWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblNickWeight.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblNickWeight.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblNickWeight.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.lblNickWeight.Location = new System.Drawing.Point(211, 159);
+            this.lblNickWeight.Name = "lblNickWeight";
+            this.lblNickWeight.Size = new System.Drawing.Size(95, 13);
+            this.lblNickWeight.TabIndex = 7;
+            this.lblNickWeight.Text = "Nickname Weight:";
+            // 
+            // lblNickOp
+            // 
+            this.lblNickOp.AutoSize = true;
+            this.lblNickOp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblNickOp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblNickOp.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblNickOp.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.lblNickOp.Location = new System.Drawing.Point(211, 132);
+            this.lblNickOp.Name = "lblNickOp";
+            this.lblNickOp.Size = new System.Drawing.Size(56, 13);
+            this.lblNickOp.TabIndex = 6;
+            this.lblNickOp.Text = "Operation:";
+            // 
+            // valNickWeight
+            // 
+            this.valNickWeight.BackColor = System.Drawing.Color.White;
+            this.valNickWeight.DecimalPlaces = 2;
+            this.valNickWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.valNickWeight.ForeColor = System.Drawing.Color.Black;
+            this.valNickWeight.Location = new System.Drawing.Point(323, 156);
+            this.valNickWeight.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.valNickWeight.Name = "valNickWeight";
+            this.valNickWeight.Size = new System.Drawing.Size(60, 20);
+            this.valNickWeight.TabIndex = 5;
+            this.valNickWeight.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            // 
+            // cboNickOp
+            // 
+            this.cboNickOp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.cboNickOp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.cboNickOp.BackColor = System.Drawing.Color.White;
+            this.cboNickOp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.cboNickOp.FieldType = Desktop.Skinning.SkinnedFieldType.Surface;
+            this.cboNickOp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cboNickOp.KeyMember = null;
+            this.cboNickOp.Location = new System.Drawing.Point(284, 129);
+            this.cboNickOp.Name = "cboNickOp";
+            this.cboNickOp.SelectedIndex = -1;
+            this.cboNickOp.SelectedItem = null;
+            this.cboNickOp.Size = new System.Drawing.Size(99, 21);
+            this.cboNickOp.Sorted = false;
+            this.cboNickOp.TabIndex = 4;
+            // 
+            // lblNickname
+            // 
+            this.lblNickname.AutoSize = true;
+            this.lblNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblNickname.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblNickname.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblNickname.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.lblNickname.Location = new System.Drawing.Point(6, 159);
+            this.lblNickname.Name = "lblNickname";
+            this.lblNickname.Size = new System.Drawing.Size(58, 13);
+            this.lblNickname.TabIndex = 3;
+            this.lblNickname.Text = "Nickname:";
+            // 
+            // lblNickChar
+            // 
+            this.lblNickChar.AutoSize = true;
+            this.lblNickChar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblNickChar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblNickChar.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblNickChar.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.lblNickChar.Location = new System.Drawing.Point(6, 132);
+            this.lblNickChar.Name = "lblNickChar";
+            this.lblNickChar.Size = new System.Drawing.Size(56, 13);
+            this.lblNickChar.TabIndex = 2;
+            this.lblNickChar.Text = "Character:";
+            // 
+            // recNickChar
+            // 
+            this.recNickChar.AllowCreate = false;
+            this.recNickChar.Location = new System.Drawing.Point(80, 129);
+            this.recNickChar.Name = "recNickChar";
+            this.recNickChar.PlaceholderText = null;
+            this.recNickChar.Record = null;
+            this.recNickChar.RecordContext = null;
+            this.recNickChar.RecordFilter = null;
+            this.recNickChar.RecordKey = null;
+            this.recNickChar.RecordType = null;
+            this.recNickChar.Size = new System.Drawing.Size(114, 20);
+            this.recNickChar.TabIndex = 1;
+            this.recNickChar.UseAutoComplete = false;
+            // 
+            // txtNickname
+            // 
+            this.txtNickname.BackColor = System.Drawing.Color.White;
+            this.txtNickname.ForeColor = System.Drawing.Color.Black;
+            this.txtNickname.Location = new System.Drawing.Point(80, 156);
+            this.txtNickname.Name = "txtNickname";
+            this.txtNickname.Size = new System.Drawing.Size(114, 20);
+            this.txtNickname.TabIndex = 0;
             // 
             // DialogueAdvancedControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.skinnedGroupBox2);
-            this.Controls.Add(this.skinnedGroupBox1);
+            this.Controls.Add(this.groupBoxNickname);
+            this.Controls.Add(this.groupBoxForfeit);
+            this.Controls.Add(this.groupBoxBubble);
             this.Controls.Add(this.valWeight);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.lblWeight);
+            this.Controls.Add(this.groupBoxState);
+            this.Controls.Add(this.groupBoxArrow);
             this.Name = "DialogueAdvancedControl";
-            this.Size = new System.Drawing.Size(395, 318);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Size = new System.Drawing.Size(395, 485);
+            this.groupBoxArrow.ResumeLayout(false);
+            this.groupBoxArrow.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valLocation)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBoxState.ResumeLayout(false);
+            this.groupBoxState.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valWeight)).EndInit();
-            this.skinnedGroupBox1.ResumeLayout(false);
-            this.skinnedGroupBox1.PerformLayout();
-            this.skinnedGroupBox2.ResumeLayout(false);
-            this.skinnedGroupBox2.PerformLayout();
+            this.groupBoxBubble.ResumeLayout(false);
+            this.groupBoxBubble.PerformLayout();
+            this.groupBoxForfeit.ResumeLayout(false);
+            this.groupBoxForfeit.PerformLayout();
+            this.groupBoxNickname.ResumeLayout(false);
+            this.groupBoxNickname.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.valNickWeight)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,37 +743,46 @@
 
 		#endregion
 
-		private Desktop.Skinning.SkinnedGroupBox groupBox1;
-		private Desktop.Skinning.SkinnedLabel label2;
+		private Desktop.Skinning.SkinnedGroupBox groupBoxArrow;
+		private Desktop.Skinning.SkinnedLabel lblArrowLocation;
 		private Desktop.Skinning.SkinnedComboBox cboDirection;
-		private Desktop.Skinning.SkinnedLabel label1;
+		private Desktop.Skinning.SkinnedLabel lblArrowDirection;
 		private Desktop.Skinning.SkinnedNumericUpDown valLocation;
-		private Desktop.Skinning.SkinnedGroupBox groupBox2;
-		private Desktop.Skinning.SkinnedLabel label3;
+		private Desktop.Skinning.SkinnedGroupBox groupBoxState;
+		private Desktop.Skinning.SkinnedLabel lblStateSize;
 		private Desktop.Skinning.SkinnedComboBox cboGender;
-		private Desktop.Skinning.SkinnedLabel label4;
-		private Desktop.Skinning.SkinnedLabel label5;
+		private Desktop.Skinning.SkinnedLabel lblStateGender;
+		private Desktop.Skinning.SkinnedLabel lblWeight;
 		private Desktop.Skinning.SkinnedNumericUpDown valWeight;
-		private Desktop.Skinning.SkinnedLabel label6;
+		private Desktop.Skinning.SkinnedLabel lblStateAI;
 		private Desktop.Skinning.SkinnedComboBox cboSize;
 		private Desktop.Skinning.SkinnedTextBox txtLabel;
 		private Desktop.Skinning.SkinnedComboBox cboAI;
-		private Desktop.Skinning.SkinnedLabel label7;
+		private Desktop.Skinning.SkinnedLabel lblStateLabel;
 		private Desktop.Skinning.SkinnedCheckBox chkResetLabel;
 		private Desktop.Skinning.SkinnedCheckBox chkResetAI;
-		private Desktop.Skinning.SkinnedGroupBox skinnedGroupBox1;
+		private Desktop.Skinning.SkinnedGroupBox groupBoxBubble;
 		private Desktop.Skinning.SkinnedCheckBox chkLayer;
         private Desktop.Skinning.SkinnedComboBox cboFontSize;
-        private Desktop.Skinning.SkinnedLabel skinnedLabel1;
-        private Desktop.Skinning.SkinnedGroupBox skinnedGroupBox2;
-        private Desktop.Skinning.SkinnedLabel skinnedLabel2;
+        private Desktop.Skinning.SkinnedLabel lblBubbleTextSize;
+        private Desktop.Skinning.SkinnedGroupBox groupBoxForfeit;
+        private Desktop.Skinning.SkinnedLabel lblFOAttribute;
         private Desktop.Skinning.SkinnedComboBox cboOp;
         private Desktop.Skinning.SkinnedComboBox cboAttr;
-        private Desktop.Skinning.SkinnedLabel skinnedLabel3;
+        private Desktop.Skinning.SkinnedLabel lblFOOperation;
         private Desktop.Skinning.SkinnedTextBox txtValue;
-        private Desktop.Skinning.SkinnedLabel skinnedLabel5;
+        private Desktop.Skinning.SkinnedLabel lblFOHeavy;
         private Desktop.Skinning.SkinnedComboBox cboHeavy;
-        private Desktop.Skinning.SkinnedLabel skinnedLabel4;
+        private Desktop.Skinning.SkinnedLabel lblFOValue;
         private Desktop.Skinning.SkinnedCheckBox chkResetHeavy;
+        private Desktop.Skinning.SkinnedGroupBox groupBoxNickname;
+        private Desktop.Skinning.SkinnedTextBox txtNickname;
+        private Desktop.CommonControls.RecordField recNickChar;
+        private Desktop.Skinning.SkinnedComboBox cboNickOp;
+        private Desktop.Skinning.SkinnedLabel lblNickname;
+        private Desktop.Skinning.SkinnedLabel lblNickChar;
+        private Desktop.Skinning.SkinnedNumericUpDown valNickWeight;
+        private Desktop.Skinning.SkinnedLabel lblNickWeight;
+        private Desktop.Skinning.SkinnedLabel lblNickOp;
     }
 }
