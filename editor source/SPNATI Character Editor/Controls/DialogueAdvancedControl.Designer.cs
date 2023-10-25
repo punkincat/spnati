@@ -676,7 +676,7 @@
             this.lblNickWeight.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblNickWeight.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
             this.lblNickWeight.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.lblNickWeight.Location = new System.Drawing.Point(211, 122);
+            this.lblNickWeight.Location = new System.Drawing.Point(211, 115);
             this.lblNickWeight.Name = "lblNickWeight";
             this.lblNickWeight.Size = new System.Drawing.Size(95, 13);
             this.lblNickWeight.TabIndex = 7;
@@ -703,7 +703,7 @@
             this.valNickWeight.BackColor = System.Drawing.Color.White;
             this.valNickWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.valNickWeight.ForeColor = System.Drawing.Color.Black;
-            this.valNickWeight.Location = new System.Drawing.Point(323, 120);
+            this.valNickWeight.Location = new System.Drawing.Point(323, 113);
             this.valNickWeight.Maximum = new decimal(new int[] {
             9999,
             0,
