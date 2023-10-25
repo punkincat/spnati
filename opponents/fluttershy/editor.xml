@@ -351,6 +351,8 @@
         <response id="895" opponent="rouge" opponentId="635" />
         <response id="902" opponent="rouge" opponentId="646" />
         <response id="903" opponent="toph" opponentId="767" />
+        <response id="904" opponent="solar_flare" opponentId="75" />
+        <response id="908" opponent="jura" opponentId="1246" />
     </responses>
     <notes>
         <note id="412">I intentionally made Fluttershy ask Oz a question that Fischl herself could reply to. To further solidify her unintentional ignoring of Fischl over Oz.</note>
@@ -613,11 +615,17 @@
         <label id="900" label="" color="6" folder="" sort="0" />
         <label id="901" label="" color="6" folder="" sort="0" />
         <label id="902" label="" color="3" folder="" sort="0" />
+        <label id="904" label="" color="1" folder="" sort="0" />
+        <label id="905" label="" color="1" folder="" sort="0" />
+        <label id="906" label="" color="1" folder="" sort="0" />
+        <label id="907" label="" color="1" folder="" sort="0" />
+        <label id="908" label="" color="1" folder="" sort="0" />
+        <label id="909" label="" color="1" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>Fluttershy_</prefix>
     </prefixes>
-    <nextId>903</nextId>
+    <nextId>909</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="act_confident_self" />
@@ -945,7 +953,9 @@
         <marker scope="Public" name="Joey_SelfFavoriteAnimal2WorkWith" />
         <marker scope="Public" name="joke_question" />
         <marker scope="Public" name="Jura_beautiful_appearance" />
+        <marker scope="Public" name="Jura_beautiful_cont" />
         <marker scope="Public" name="Jura_role_in_crew" />
+        <marker scope="Public" name="Jura_skin_color_cont" />
         <marker scope="Public" name="Jura_skin_color_reply" />
         <marker scope="Public" name="Kaz_" />
         <marker scope="Public" name="Kaz__reply" />
@@ -1669,6 +1679,10 @@
         <marker scope="Public" name="SlyCooper_strip2" />
         <marker scope="Public" name="small_things" />
         <marker scope="Public" name="snail_worries" />
+        <marker scope="Public" name="SolarFlare_SelfBeat_reply" />
+        <marker scope="Public" name="SolarFlare_SelfGarden_reply" />
+        <marker scope="Public" name="SolarFlare_SelfSkills_reply" />
+        <marker scope="Public" name="SolarFlare_ZombieApocalypse_reply" />
         <marker scope="Public" name="spaced_out_Rin" />
         <marker scope="Public" name="spider_trivia" />
         <marker scope="Public" name="spider_trivia_continued" />
