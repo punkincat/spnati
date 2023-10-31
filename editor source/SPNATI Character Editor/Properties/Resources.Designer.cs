@@ -19,7 +19,7 @@ namespace SPNATI_Character_Editor.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -256,6 +256,16 @@ namespace SPNATI_Character_Editor.Properties {
         internal static System.Drawing.Bitmap ApplyCheckbox {
             get {
                 object obj = ResourceManager.GetObject("ApplyCheckbox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BaseCode {
+            get {
+                object obj = ResourceManager.GetObject("BaseCode", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -863,6 +873,36 @@ namespace SPNATI_Character_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LineupAll {
+            get {
+                object obj = ResourceManager.GetObject("LineupAll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LineupClothing {
+            get {
+                object obj = ResourceManager.GetObject("LineupClothing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LineupPose {
+            get {
+                object obj = ResourceManager.GetObject("LineupPose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Link {
             get {
                 object obj = ResourceManager.GetObject("Link", resourceCulture);
@@ -1026,6 +1066,16 @@ namespace SPNATI_Character_Editor.Properties {
         internal static System.Drawing.Bitmap PlayOnce {
             get {
                 object obj = ResourceManager.GetObject("PlayOnce", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PoseCode {
+            get {
+                object obj = ResourceManager.GetObject("PoseCode", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1226,6 +1276,16 @@ namespace SPNATI_Character_Editor.Properties {
         internal static System.Drawing.Bitmap SplitKeyframe {
             get {
                 object obj = ResourceManager.GetObject("SplitKeyframe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StageCode {
+            get {
+                object obj = ResourceManager.GetObject("StageCode", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

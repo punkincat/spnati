@@ -2136,24 +2136,6 @@
     <None Include="Hunspellx86.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="Resources\Images\BaseCode.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Images\LineupAll.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Images\LineupClothing.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Images\LineupPose.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Images\PoseCode.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Images\StageCode.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="VersionHistory\v6.8.3.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2627,7 +2609,13 @@
     <None Include="Icons\Sort.png" />
     <None Include="Icons\AddPause.png" />
     <None Include="Icons\SpeechBubble.png" />
-    <Content Include="Icons\EllipsisFilled.png" />
+    <None Include="Icons\EllipsisFilled.png" />	
+	<None Include="Images\BaseCode.png" />
+    <None Include="Images\LineupAll.png" />
+    <None Include="Images\LineupClothing.png" />
+    <None Include="Images\LineupPose.png" />
+    <None Include="Images\PoseCode.png" />
+    <None Include="Images\StageCode.png" />
     <Content Include="Resources\license.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
