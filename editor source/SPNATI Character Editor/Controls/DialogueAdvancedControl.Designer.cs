@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DialogueAdvancedControl));
             this.groupBoxArrow = new Desktop.Skinning.SkinnedGroupBox();
             this.valLocation = new Desktop.Skinning.SkinnedNumericUpDown();
             this.lblArrowLocation = new Desktop.Skinning.SkinnedLabel();
