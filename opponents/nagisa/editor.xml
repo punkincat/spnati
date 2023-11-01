@@ -475,6 +475,8 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <note id="1002">See the note on the other case with the marker nagisa_meia_post-hug_other for more information.</note>
         <note id="1196">can play without previous Estelle line</note>
         <note id="1238">Priority is so high to make sure it plays instead of nagisa_waitress_how_much_you_mean_to_me, which can play in a subsequent round.</note>
+        <note id="1576">This line is intentionally not conditional on Sanako's marker, as Sanako should use this pose even if she's talking to someone else.</note>
+        <note id="1732">This line is intentionally not conditional on Sanako's marker, as Sanako should use this pose even if she's talking to someone else.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Waitress" sort="30" />
@@ -492,7 +494,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="23" label="" folder="Waitress" sort="6" />
         <label id="24" label="" folder="Waitress" sort="8" />
         <label id="25" label="nagisa_sakura_11" folder="Sakura to left" sort="2" />
-        <label id="26" label="nagisa_sakura_01" folder="Sakura to left" sort="0" />
+        <label id="26" label="nagisa_sakura_01" folder="Sakura to left" sort="2" />
         <label id="27" label="nagisa_sakura_02" folder="Sakura to left" sort="4" />
         <label id="28" label="nagisa_sakura_12" folder="Sakura to left" sort="5" />
         <label id="29" label="nagisa_sakura_03" folder="Sakura to left" sort="8" />
@@ -506,7 +508,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="37" label="nagisa_sakura_42" folder="Sakura to left" sort="7" />
         <label id="38" label="nagisa_sakura_43 (Sakura to left)" folder="" sort="0" />
         <label id="39" label="indoors" folder="" sort="0" />
-        <label id="40" label="nagisa_sakura_43 (Sakura to right)" folder="Sakura to right" sort="0" />
+        <label id="40" label="nagisa_sakura_43 (Sakura to right)" folder="Sakura to right" sort="2" />
         <label id="41" label="" folder="Waitress" sort="10" />
         <label id="42" label="" folder="Waitress" sort="12" />
         <label id="43" label="" folder="Waitress" sort="16" />
@@ -541,7 +543,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="97" label="library" folder="" sort="0" />
         <label id="98" label="arcade" folder="" sort="0" />
         <label id="99" label="haunted forest" folder="" sort="0" />
-        <label id="100" label="nagisa_sakura_33" folder="Sakura to left" sort="0" />
+        <label id="100" label="nagisa_sakura_33" folder="Sakura to left" sort="12" />
         <label id="101" label="nagisa_mast" folder="" sort="0" />
         <label id="105" label="beach" folder="" sort="0" />
         <label id="106" label="bedroom prompt" folder="CONVERSATION STARTERS" sort="12" />
@@ -1498,7 +1500,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1094" label="" folder="Spooky to left" sort="2" />
         <label id="1095" label="" folder="Nugi-chan to left" sort="2" />
         <label id="1096" label="" folder="Nugi-chan to left" sort="3" />
-        <label id="1097" label="" folder="Nugi-chan to left" sort="0" />
+        <label id="1097" label="" folder="Nugi-chan to left" sort="2" />
         <label id="1098" label="" folder="Nanoko-chan to left" sort="0" />
         <label id="1099" label="" folder="Y'shtola to left" sort="0" />
         <label id="1100" label="" folder="Mr Raynor to left" sort="0" />
@@ -1642,7 +1644,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="165" label="" folder="Anna to left" sort="3" />
         <label id="1235" label="" folder="Estelle to right" sort="0" />
         <label id="1236" label="" folder="Estelle to right" sort="0" />
-        <label id="1237" label="" folder="Estelle to left" sort="0" />
+        <label id="1237" label="" folder="Estelle to left" sort="2" />
         <label id="1238" label="" folder="Estelle to left" sort="2" />
         <label id="1239" label="" folder="Estelle to left" sort="3" />
         <label id="1240" label="" folder="Meia to right" sort="51" />
@@ -1930,17 +1932,17 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1513" label="" folder="Reimu to left" sort="8" />
         <label id="1514" label="" folder="Miku to right" sort="2" />
         <label id="1515" label="" folder="Miku to right" sort="4" />
-        <label id="1516" label="" folder="Jura to right" sort="3" />
-        <label id="1517" label="" folder="Jura to right" sort="4" />
-        <label id="1518" label="" folder="Jura to right" sort="5" />
-        <label id="1519" label="" folder="Jura to right" sort="7" />
-        <label id="1520" label="" folder="Jura to right" sort="2" />
+        <label id="1516" label="" folder="Jura to right" sort="0" />
+        <label id="1517" label="" folder="Jura to right" sort="0" />
+        <label id="1518" label="" folder="Jura to right" sort="0" />
+        <label id="1519" label="" folder="Jura to right" sort="0" />
+        <label id="1520" label="" folder="Jura to right" sort="0" />
         <label id="1521" label="" folder="Jura to right" sort="0" />
-        <label id="1522" label="" folder="Jura to right" sort="6" />
-        <label id="1523" label="" folder="Jura to right" sort="9" />
-        <label id="1524" label="" folder="Jura to right" sort="8" />
-        <label id="1525" label="" folder="Jura to right" sort="11" />
-        <label id="1526" label="" folder="Jura to right" sort="10" />
+        <label id="1522" label="" folder="Jura to right" sort="0" />
+        <label id="1523" label="" folder="Jura to right" sort="0" />
+        <label id="1524" label="" folder="Jura to right" sort="0" />
+        <label id="1525" label="" folder="Jura to right" sort="0" />
+        <label id="1526" label="" folder="Jura to right" sort="0" />
         <label id="1527" label="" folder="Meia to right" sort="2" />
         <label id="1528" label="" folder="Meia to left" sort="21" />
         <label id="1529" label="" folder="Meia to left" sort="22" />
@@ -1983,14 +1985,14 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1573" label="" folder="Panty to left" sort="2" />
         <label id="1574" label="" folder="Sanako to right" sort="13" />
         <label id="1575" label="" folder="Sanako old line" sort="0" />
-        <label id="1576" label="" folder="Sanako to left" sort="0" />
+        <label id="1576" label="" folder="Sanako to left" sort="32" />
         <label id="1577" label="" folder="Sanako to right" sort="16" />
         <label id="1578" label="" folder="Jura to left" sort="9" />
         <label id="1579" label="" folder="Jura to left" sort="11" />
         <label id="1580" label="" folder="Jura to left" sort="5" />
         <label id="1539" label="" folder="Jura to left" sort="3" />
         <label id="1568" label="" folder="Jura to left" sort="8" />
-        <label id="1582" label="" folder="Jura to left" sort="0" />
+        <label id="1582" label="" folder="Jura to left" sort="6" />
         <label id="1583" label="" folder="Sanako to right" sort="3" />
         <label id="1584" label="" folder="Sanako to right" sort="5" />
         <label id="1585" label="" folder="Sanako to right" sort="7" />
@@ -2003,110 +2005,180 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1592" label="" folder="Yuri to left" sort="3" />
         <label id="1593" label="" folder="Yuri to left" sort="2" />
         <label id="49" label="" folder="Yuri to left" sort="0" />
-        <label id="1594" label="" folder="Yuri to left" sort="0" />
-        <label id="1595" label="" folder="Yuri to left" sort="0" />
-        <label id="1596" label="" folder="Yuri to left" sort="0" />
-        <label id="1597" label="" folder="Yuri to left" sort="0" />
-        <label id="1598" label="" folder="Yuri to left" sort="0" />
+        <label id="1594" label="" folder="Yuri to left" sort="2" />
+        <label id="1595" label="" folder="Yuri to left" sort="4" />
+        <label id="1596" label="" folder="Yuri to left" sort="7" />
+        <label id="1597" label="" folder="Yuri to left" sort="5" />
+        <label id="1598" label="" folder="Yuri to left" sort="8" />
         <label id="1599" label="" folder="Yuri to right" sort="0" />
-        <label id="1600" label="" folder="Yuri to right" sort="0" />
-        <label id="1601" label="" folder="Meia to left" sort="0" />
-        <label id="1602" label="" folder="Jura to left" sort="0" />
-        <label id="1603" label="" folder="Jura to left" sort="0" />
-        <label id="1604" label="" folder="Jura to left" sort="0" />
-        <label id="1605" label="" folder="Jura to left" sort="0" />
-        <label id="1606" label="" folder="Jura to left" sort="0" />
-        <label id="1607" label="" folder="Jura to left" sort="0" />
+        <label id="1600" label="" folder="Yuri to right" sort="2" />
+        <label id="1601" label="" folder="Meia to left" sort="41" />
+        <label id="1602" label="" folder="Jura to left" sort="12" />
+        <label id="1603" label="" folder="Jura to left" sort="7" />
+        <label id="1604" label="" folder="Jura to left" sort="14" />
+        <label id="1605" label="" folder="Jura to left" sort="33" />
+        <label id="1606" label="" folder="Jura to left" sort="30" />
+        <label id="1607" label="" folder="Jura to left" sort="34" />
         <label id="1608" label="" folder="Nugi-chan to left" sort="0" />
-        <label id="1609" label="" folder="Meia to left" sort="0" />
-        <label id="1610" label="" folder="Jura to left" sort="0" />
-        <label id="1611" label="" folder="Jura to left" sort="0" />
+        <label id="1609" label="" folder="Meia to left" sort="58" />
+        <label id="1610" label="" folder="Jura to left" sort="20" />
+        <label id="1611" label="" folder="Jura to left" sort="21" />
         <label id="1612" label="old line" folder="" sort="0" />
-        <label id="1613" label="" folder="Jura to left" sort="0" />
-        <label id="1614" label="" folder="Jura to left" sort="0" />
-        <label id="1615" label="" folder="Jura to left" sort="0" />
-        <label id="1616" label="" folder="Jura to left" sort="0" />
-        <label id="1617" label="" folder="Jura to left" sort="0" />
-        <label id="1618" label="" folder="Jura to left" sort="0" />
-        <label id="1619" label="" folder="Jura to left" sort="0" />
-        <label id="1620" label="" folder="Jura to right" sort="0" />
-        <label id="1621" label="" folder="Sanako to right" sort="0" />
-        <label id="1622" label="" folder="Sanako to right" sort="0" />
-        <label id="1623" label="" folder="Sanako to right" sort="0" />
+        <label id="1613" label="" folder="Jura to left" sort="15" />
+        <label id="1614" label="" folder="Jura to left" sort="8" />
+        <label id="1615" label="" folder="Jura to left" sort="22" />
+        <label id="1616" label="" folder="Jura to left" sort="41" />
+        <label id="1617" label="" folder="Jura to left" sort="36" />
+        <label id="1618" label="" folder="Jura to left" sort="42" />
+        <label id="1619" label="" folder="Jura to left" sort="31" />
+        <label id="1620" label="" folder="Jura to right" sort="12" />
+        <label id="1621" label="" folder="Sanako to right" sort="26" />
+        <label id="1622" label="" folder="Sanako to right" sort="29" />
+        <label id="1623" label="" folder="Sanako to right" sort="35" />
         <label id="1624" label="" folder="Sanako to left" sort="0" />
-        <label id="1625" label="" folder="Sanako to left" sort="0" />
-        <label id="1626" label="" folder="Sanako to left" sort="0" />
-        <label id="1627" label="" folder="Sanako to left" sort="0" />
-        <label id="1628" label="" folder="Sanako to left" sort="0" />
-        <label id="1629" label="" folder="Sanako to left" sort="0" />
-        <label id="1630" label="" folder="Sanako to left" sort="0" />
+        <label id="1625" label="" folder="Sanako to left" sort="6" />
+        <label id="1626" label="" folder="Sanako to left" sort="13" />
+        <label id="1627" label="" folder="Sanako to left" sort="20" />
+        <label id="1628" label="" folder="Sanako to left" sort="7" />
+        <label id="1629" label="" folder="Sanako to left" sort="14" />
+        <label id="1630" label="" folder="Sanako to left" sort="21" />
         <label id="1631" label="" folder="Sakura to right" sort="0" />
         <label id="102" label="" folder="Sakura to left" sort="0" />
         <label id="1633" label="" folder="Jura to right" sort="0" />
-        <label id="1634" label="" folder="Jura to right" sort="0" />
-        <label id="1635" label="" folder="Jura to left" sort="0" />
-        <label id="1636" label="" folder="Jura to left" sort="0" />
-        <label id="1637" label="" folder="Jura to left" sort="0" />
-        <label id="1638" label="" folder="Jura to left" sort="0" />
-        <label id="1639" label="" folder="Jura to left" sort="0" />
-        <label id="1640" label="" folder="Jura to left" sort="0" />
+        <label id="1634" label="" folder="Jura to right" sort="15" />
+        <label id="1635" label="" folder="Jura to left" sort="23" />
+        <label id="1636" label="" folder="Jura to left" sort="16" />
+        <label id="1637" label="" folder="Jura to left" sort="9" />
+        <label id="1638" label="" folder="Jura to left" sort="43" />
+        <label id="1639" label="" folder="Jura to left" sort="37" />
+        <label id="1640" label="" folder="Jura to left" sort="32" />
         <label id="1642" label="" folder="Noire to left" sort="0" />
-        <label id="1643" label="" folder="Jura to right" sort="0" />
+        <label id="1643" label="" folder="Jura to right" sort="5" />
         <label id="1644" label="" folder="Jura to left" sort="0" />
-        <label id="1645" label="" folder="Jura to right" sort="0" />
-        <label id="1646" label="" folder="Jura to left" sort="0" />
-        <label id="1647" label="" folder="Jura to left" sort="0" />
-        <label id="1648" label="" folder="Jura to left" sort="0" />
-        <label id="1649" label="" folder="Jura to left" sort="0" />
-        <label id="1650" label="" folder="Jura to left" sort="0" />
+        <label id="1645" label="" folder="Jura to right" sort="18" />
+        <label id="1646" label="" folder="Jura to left" sort="24" />
+        <label id="1647" label="" folder="Jura to left" sort="17" />
+        <label id="1648" label="" folder="Jura to left" sort="10" />
+        <label id="1649" label="" folder="Jura to left" sort="44" />
+        <label id="1650" label="" folder="Jura to left" sort="38" />
         <label id="1651" label="" folder="Nico Robin to right" sort="0" />
-        <label id="1652" label="" folder="Nico Robin to right" sort="0" />
+        <label id="1652" label="" folder="Nico Robin to right" sort="3" />
         <label id="1653" label="" folder="Yunyun to right" sort="0" />
-        <label id="1654" label="with guys" folder="Jura to right" sort="0" />
-        <label id="1655" label="without guys" folder="Jura to right" sort="0" />
-        <label id="1656" label="" folder="Jura to right" sort="0" />
-        <label id="1657" label="" folder="Jura to left" sort="0" />
-        <label id="1658" label="" folder="Jura to left" sort="0" />
-        <label id="1659" label="" folder="Jura to left" sort="0" />
-        <label id="1660" label="" folder="Jura to right" sort="0" />
-        <label id="1661" label="" folder="Jura to left" sort="0" />
-        <label id="1662" label="" folder="Yumeko to right" sort="0" />
-        <label id="1663" label="" folder="Yumeko to right" sort="0" />
-        <label id="1664" label="" folder="Nico Robin to right" sort="0" />
-        <label id="1665" label="" folder="Nico Robin to right" sort="0" />
-        <label id="1666" label="" folder="Jura to right" sort="0" />
-        <label id="1667" label="" folder="Jura to right" sort="0" />
-        <label id="1670" label="" folder="Jura to right" sort="0" />
-        <label id="1671" label="" folder="Jura to right" sort="0" />
-        <label id="1672" label="" folder="Jura to right" sort="0" />
-        <label id="1673" label="" folder="Jura to right" sort="0" />
-        <label id="1674" label="" folder="Shamiko to right" sort="0" />
+        <label id="1654" label="with guys" folder="Jura to right" sort="9" />
+        <label id="1655" label="without guys" folder="Jura to right" sort="8" />
+        <label id="1656" label="" folder="Jura to right" sort="2" />
+        <label id="1657" label="" folder="Jura to left" sort="25" />
+        <label id="1658" label="" folder="Jura to left" sort="18" />
+        <label id="1659" label="" folder="Jura to left" sort="45" />
+        <label id="1660" label="" folder="Jura to right" sort="13" />
+        <label id="1661" label="" folder="Jura to left" sort="26" />
+        <label id="1662" label="" folder="Yumeko to right" sort="4" />
+        <label id="1663" label="" folder="Yumeko to right" sort="2" />
+        <label id="1664" label="" folder="Nico Robin to right" sort="2" />
+        <label id="1665" label="" folder="Nico Robin to right" sort="4" />
+        <label id="1666" label="" folder="Jura to right" sort="6" />
+        <label id="1667" label="" folder="Jura to right" sort="16" />
+        <label id="1670" label="" folder="Jura to right" sort="10" />
+        <label id="1671" label="" folder="Jura to right" sort="3" />
+        <label id="1672" label="" folder="Jura to right" sort="19" />
+        <label id="1673" label="" folder="Jura to right" sort="14" />
+        <label id="1674" label="" folder="Shamiko to right" sort="2" />
         <label id="1675" label="" folder="Shamiko to right" sort="0" />
-        <label id="1676" label="" folder="Sanako to left" sort="0" />
-        <label id="1677" label="" folder="Sanako to left" sort="0" />
-        <label id="1678" label="" folder="Sanako to left" sort="0" />
-        <label id="1679" label="" folder="Sanako to right" sort="0" />
-        <label id="1680" label="" folder="Sanako to right" sort="0" />
-        <label id="1681" label="" folder="Sanako to right" sort="0" />
-        <label id="1682" label="" folder="Jura to right" sort="0" />
-        <label id="1683" label="" folder="Jura to right" sort="0" />
+        <label id="1676" label="" folder="Sanako to left" sort="8" />
+        <label id="1677" label="" folder="Sanako to left" sort="15" />
+        <label id="1678" label="" folder="Sanako to left" sort="22" />
+        <label id="1679" label="" folder="Sanako to right" sort="4" />
+        <label id="1680" label="" folder="Sanako to right" sort="11" />
+        <label id="1681" label="" folder="Sanako to right" sort="18" />
+        <label id="1682" label="" folder="Jura to right" sort="7" />
+        <label id="1683" label="" folder="Jura to right" sort="17" />
         <label id="1684" label="" folder="Natsuki to right" sort="0" />
-        <label id="1685" label="" folder="Natsuki to right" sort="0" />
-        <label id="1686" label="" folder="Natsuki to right" sort="0" />
-        <label id="1687" label="" folder="Meia to left" sort="0" />
-        <label id="1688" label="" folder="Sanako to right" sort="0" />
-        <label id="1689" label="" folder="Sanako to right" sort="0" />
-        <label id="1690" label="" folder="Sanako to right" sort="0" />
-        <label id="1691" label="" folder="Jura to right" sort="0" />
-        <label id="1692" label="" folder="Jura to right" sort="0" />
-        <label id="1693" label="" folder="Jura to right" sort="0" />
+        <label id="1685" label="" folder="Natsuki to right" sort="2" />
+        <label id="1686" label="" folder="Natsuki to right" sort="3" />
+        <label id="1687" label="" folder="Meia to left" sort="7" />
+        <label id="1688" label="" folder="Sanako to right" sort="5" />
+        <label id="1689" label="" folder="Sanako to right" sort="12" />
+        <label id="1690" label="" folder="Sanako to right" sort="19" />
+        <label id="1691" label="" folder="Jura to right" sort="20" />
+        <label id="1692" label="" folder="Jura to right" sort="11" />
+        <label id="1693" label="" folder="Jura to right" sort="4" />
+        <label id="1694" label="" folder="Sanako to right" sort="6" />
+        <label id="1695" label="" folder="Sanako to right" sort="7" />
+        <label id="1696" label="" folder="Sanako to right" sort="8" />
+        <label id="1697" label="" folder="Sanako to right" sort="0" />
+        <label id="1698" label="" folder="Sanako to right" sort="13" />
+        <label id="1699" label="" folder="Sanako to right" sort="14" />
+        <label id="1700" label="" folder="Sanako to right" sort="15" />
+        <label id="1701" label="" folder="Sanako to right" sort="0" />
+        <label id="1702" label="" folder="Sanako to right" sort="20" />
+        <label id="1703" label="" folder="Sanako to right" sort="21" />
+        <label id="1704" label="" folder="Sanako to right" sort="22" />
+        <label id="1705" label="" folder="Sanako to right" sort="40" />
+        <label id="1706" label="" folder="Sanako to right" sort="41" />
+        <label id="1707" label="" folder="Sanako to right" sort="42" />
+        <label id="1708" label="" folder="Sanako to right" sort="27" />
+        <label id="1709" label="" folder="Sanako to right" sort="33" />
+        <label id="1710" label="" folder="Sanako to right" sort="39" />
+        <label id="1711" label="" folder="Sanako to right" sort="28" />
+        <label id="1712" label="" folder="Sanako to right" sort="34" />
+        <label id="1713" label="" folder="Sanako to left" sort="0" />
+        <label id="1714" label="" folder="Sanako to left" sort="9" />
+        <label id="1715" label="" folder="Sanako to left" sort="10" />
+        <label id="1716" label="" folder="Sanako to left" sort="11" />
+        <label id="1717" label="" folder="Sanako to left" sort="16" />
+        <label id="1718" label="" folder="Sanako to left" sort="17" />
+        <label id="1719" label="" folder="Sanako to left" sort="18" />
+        <label id="1720" label="" folder="Sanako to left" sort="23" />
+        <label id="1721" label="" folder="Sanako to left" sort="24" />
+        <label id="1722" label="" folder="Sanako to left" sort="25" />
+        <label id="1723" label="" folder="Sanako to left" sort="44" />
+        <label id="1724" label="" folder="Sanako to left" sort="45" />
+        <label id="1725" label="" folder="Sanako to left" sort="46" />
+        <label id="1726" label="" folder="Sanako to left" sort="26" />
+        <label id="1727" label="" folder="Sanako to left" sort="27" />
+        <label id="1728" label="" folder="Sanako to left" sort="28" />
+        <label id="1729" label="" folder="Sanako to left" sort="29" />
+        <label id="1730" label="" folder="Sanako to left" sort="30" />
+        <label id="1731" label="" folder="Sanako to left" sort="31" />
+        <label id="1732" label="" folder="Sanako to left" sort="33" />
+        <label id="1733" label="" folder="Sanako to left" sort="34" />
+        <label id="1734" label="" folder="Sanako to left" sort="35" />
+        <label id="1735" label="" folder="Sanako to left" sort="36" />
+        <label id="1736" label="" folder="Sanako to left" sort="37" />
+        <label id="1737" label="" folder="Sanako to left" sort="38" />
+        <label id="1738" label="" folder="Sanako to left" sort="39" />
+        <label id="1739" label="" folder="Sanako to right" sort="0" />
+        <label id="1740" label="" folder="Sanako to left" sort="40" />
+        <label id="1741" label="" folder="Sanako to left" sort="0" />
+        <label id="1742" label="" folder="Sanako to left" sort="41" />
+        <label id="1743" label="" folder="Sanako to left" sort="42" />
+        <label id="1744" label="" folder="Sanako to left" sort="43" />
+        <label id="1745" label="" folder="Jura to right" sort="0" />
+        <label id="1746" label="" folder="Jura to right" sort="0" />
+        <label id="1747" label="" folder="Jura to right" sort="0" />
+        <label id="1748" label="" folder="Jura to right" sort="0" />
+        <label id="1749" label="" folder="Jura to right" sort="0" />
+        <label id="1750" label="" folder="Jura to right" sort="0" />
+        <label id="1751" label="" folder="Jura to right" sort="0" />
+        <label id="1752" label="" folder="Jura to right" sort="0" />
+        <label id="1753" label="" folder="Jura to right" sort="0" />
+        <label id="1754" label="" folder="Jura to right" sort="0" />
+        <label id="1755" label="" folder="Jura to right" sort="0" />
+        <label id="1756" label="" folder="Jura to right" sort="0" />
+        <label id="1757" label="" folder="Jura to right" sort="0" />
+        <label id="1758" label="" folder="Jura to right" sort="0" />
+        <label id="1759" label="with guys" folder="Jura to right" sort="0" />
+        <label id="1760" label="" folder="Jura to right" sort="0" />
+        <label id="1761" label="with guys" folder="Jura to right" sort="0" />
+        <label id="1762" label="without guys" folder="Jura to right" sort="0" />
+        <label id="1763" label="without guys" folder="Jura to right" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1693</nextId>
+    <nextId>1763</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="EstelleNagisaReply1" />
@@ -3047,13 +3119,29 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_jura_nj_n11" />
         <marker scope="Public" name="nagisa_jura_nj_n12" />
         <marker scope="Public" name="nagisa_jura_nj_n13" />
+        <marker scope="Public" name="nagisa_jura_nj_n13_f" />
+        <marker scope="Public" name="nagisa_jura_nj_n14_f" />
+        <marker scope="Public" name="nagisa_jura_nj_n14_m" />
+        <marker scope="Public" name="nagisa_jura_nj_n15_f" />
+        <marker scope="Public" name="nagisa_jura_nj_n15_m" />
+        <marker scope="Public" name="nagisa_jura_nj_n16" />
+        <marker scope="Public" name="nagisa_jura_nj_n17" />
+        <marker scope="Public" name="nagisa_jura_nj_n18" />
+        <marker scope="Public" name="nagisa_jura_nj_n19_f" />
+        <marker scope="Public" name="nagisa_jura_nj_n19_m" />
         <marker scope="Public" name="nagisa_jura_nj_n2" />
+        <marker scope="Public" name="nagisa_jura_nj_n20_f" />
+        <marker scope="Public" name="nagisa_jura_nj_n20_m" />
+        <marker scope="Public" name="nagisa_jura_nj_n21_f" />
+        <marker scope="Public" name="nagisa_jura_nj_n21_m" />
         <marker scope="Public" name="nagisa_jura_nj_n3_no_peeping" />
         <marker scope="Public" name="nagisa_jura_nj_n3_unusual" />
         <marker scope="Public" name="nagisa_jura_nj_n4" />
         <marker scope="Public" name="nagisa_jura_nj_n5" />
         <marker scope="Public" name="nagisa_jura_nj_n6" />
         <marker scope="Public" name="nagisa_jura_nj_n7" />
+        <marker scope="Public" name="nagisa_jura_nj_n8" />
+        <marker scope="Public" name="nagisa_jura_nj_n9" />
         <marker scope="Public" name="nagisa_jura_seduction" />
         <marker scope="Public" name="nagisa_jura_seems_grown_up" />
         <marker scope="Public" name="nagisa_jura_so_brave" />
@@ -3853,7 +3941,18 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_sanako_ns_n10" />
         <marker scope="Public" name="nagisa_sanako_ns_n11" />
         <marker scope="Public" name="nagisa_sanako_ns_n12" />
+        <marker scope="Public" name="nagisa_sanako_ns_n13" />
+        <marker scope="Public" name="nagisa_sanako_ns_n14" />
+        <marker scope="Public" name="nagisa_sanako_ns_n15" />
+        <marker scope="Public" name="nagisa_sanako_ns_n16" />
+        <marker scope="Public" name="nagisa_sanako_ns_n17" />
+        <marker scope="Public" name="nagisa_sanako_ns_n18" />
+        <marker scope="Public" name="nagisa_sanako_ns_n19" />
         <marker scope="Public" name="nagisa_sanako_ns_n2" />
+        <marker scope="Public" name="nagisa_sanako_ns_n20" />
+        <marker scope="Public" name="nagisa_sanako_ns_n21" />
+        <marker scope="Public" name="nagisa_sanako_ns_n22" />
+        <marker scope="Public" name="nagisa_sanako_ns_n23" />
         <marker scope="Public" name="nagisa_sanako_ns_n3" />
         <marker scope="Public" name="nagisa_sanako_ns_n4" />
         <marker scope="Public" name="nagisa_sanako_ns_n5" />
@@ -3866,6 +3965,11 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_sanako_ns_s10" />
         <marker scope="Public" name="nagisa_sanako_ns_s11" />
         <marker scope="Public" name="nagisa_sanako_ns_s12" />
+        <marker scope="Public" name="nagisa_sanako_ns_s13" />
+        <marker scope="Public" name="nagisa_sanako_ns_s14" />
+        <marker scope="Public" name="nagisa_sanako_ns_s15" />
+        <marker scope="Public" name="nagisa_sanako_ns_s16" />
+        <marker scope="Public" name="nagisa_sanako_ns_s17" />
         <marker scope="Public" name="nagisa_sanako_ns_s2" />
         <marker scope="Public" name="nagisa_sanako_ns_s3" />
         <marker scope="Public" name="nagisa_sanako_ns_s4" />
@@ -3879,10 +3983,21 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_sanako_selected" />
         <marker scope="Public" name="nagisa_sanako_should_introduce" />
         <marker scope="Public" name="nagisa_sanako_sn_n1" />
+        <marker scope="Public" name="nagisa_sanako_sn_n10" />
+        <marker scope="Public" name="nagisa_sanako_sn_n11" />
+        <marker scope="Public" name="nagisa_sanako_sn_n12" />
         <marker scope="Public" name="nagisa_sanako_sn_n13" />
         <marker scope="Public" name="nagisa_sanako_sn_n14" />
         <marker scope="Public" name="nagisa_sanako_sn_n15" />
+        <marker scope="Public" name="nagisa_sanako_sn_n16" />
+        <marker scope="Public" name="nagisa_sanako_sn_n17" />
+        <marker scope="Public" name="nagisa_sanako_sn_n18" />
+        <marker scope="Public" name="nagisa_sanako_sn_n19" />
         <marker scope="Public" name="nagisa_sanako_sn_n2" />
+        <marker scope="Public" name="nagisa_sanako_sn_n20" />
+        <marker scope="Public" name="nagisa_sanako_sn_n21" />
+        <marker scope="Public" name="nagisa_sanako_sn_n22" />
+        <marker scope="Public" name="nagisa_sanako_sn_n23" />
         <marker scope="Public" name="nagisa_sanako_sn_n3" />
         <marker scope="Public" name="nagisa_sanako_sn_n4" />
         <marker scope="Public" name="nagisa_sanako_sn_n5" />
@@ -3890,6 +4005,23 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_sanako_sn_n7" />
         <marker scope="Public" name="nagisa_sanako_sn_n8" />
         <marker scope="Public" name="nagisa_sanako_sn_n9" />
+        <marker scope="Public" name="nagisa_sanako_sn_s1" />
+        <marker scope="Public" name="nagisa_sanako_sn_s10" />
+        <marker scope="Public" name="nagisa_sanako_sn_s11" />
+        <marker scope="Public" name="nagisa_sanako_sn_s12" />
+        <marker scope="Public" name="nagisa_sanako_sn_s13" />
+        <marker scope="Public" name="nagisa_sanako_sn_s14" />
+        <marker scope="Public" name="nagisa_sanako_sn_s15" />
+        <marker scope="Public" name="nagisa_sanako_sn_s16" />
+        <marker scope="Public" name="nagisa_sanako_sn_s17" />
+        <marker scope="Public" name="nagisa_sanako_sn_s2" />
+        <marker scope="Public" name="nagisa_sanako_sn_s3" />
+        <marker scope="Public" name="nagisa_sanako_sn_s4" />
+        <marker scope="Public" name="nagisa_sanako_sn_s5" />
+        <marker scope="Public" name="nagisa_sanako_sn_s6" />
+        <marker scope="Public" name="nagisa_sanako_sn_s7" />
+        <marker scope="Public" name="nagisa_sanako_sn_s8" />
+        <marker scope="Public" name="nagisa_sanako_sn_s9" />
         <marker scope="Public" name="nagisa_sanako_sorry_for_winning" />
         <marker scope="Public" name="nagisa_sanako_uniform_cute" />
         <marker scope="Public" name="nagisa_sanako_weird" />
@@ -4073,6 +4205,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="naigsa_meia_insecure" />
         <marker scope="Public" name="nickname" />
         <marker scope="Public" name="sanako_nagisa_ns_s10" />
+        <marker scope="Public" name="sanako_nagisa_ns_s11" />
         <marker scope="Public" name="sanako_nagisa_ns_s4" />
         <marker scope="Public" name="sanako_nagisa_ns_s5" />
         <marker scope="Public" name="sanako_nagisa_ns_s7" />
