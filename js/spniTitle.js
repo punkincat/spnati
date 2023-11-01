@@ -176,10 +176,6 @@ var CANDY_LIST = [
     "reskins/cagliostro_alchemist_reborn/0-Excited.png",
     "cagliostro/3-Smug.png",
     "cagliostro/3-Grin.png",
-    "dark_magician_girl/0-calm.png",       // Has Recent Updates
-    "dark_magician_girl/0-flirty.png",
-    "dark_magician_girl/0-happy.png",
-    "dark_magician_girl/0-interested.png",
     "yunyun/0-Happy.png",                  // Has Recent Updates
     "yunyun/3-Shy.png",
     "yunyun/4-Posing2.png",
@@ -320,6 +316,10 @@ var CANDY_LIST = [
     "leon/0-fingerguns.png",
     "leon/0-grinning.png",
     "leon/0-snarky.png",
+    "beatrix/0-curtsy.png",                // Has Recent Updates
+    "beatrix/0-happy.png",
+    "beatrix/0-interested.png",
+    "beatrix/0-oops.png",
 ];
 
 /* Storage for old candy images in case the characters qualify again */
@@ -492,10 +492,6 @@ var CANDY_LIST = [
     "rarity_eg/0-brelaxed.png",
     "rarity_eg/0-cinterested.png",
     "rarity_eg/4-ahappy.png",
-    "beatrix/0-curtsy.png",
-    "beatrix/0-happy.png",
-    "beatrix/0-interested.png",
-    "beatrix/0-oops.png",
     "spooky/0-innocent.png",
     "spooky/1-distracted.png",
     "spooky/2-annoyed.png",
@@ -532,6 +528,10 @@ var CANDY_LIST = [
     "elphaba/2-sarcastic.png",
     "elphaba/4-amused.png",
     "elphaba/5-calm.png",
+    "dark_magician_girl/0-calm.png",
+    "dark_magician_girl/0-flirty.png",
+    "dark_magician_girl/0-happy.png",
+    "dark_magician_girl/0-interested.png",
 */
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
