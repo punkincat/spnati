@@ -20,7 +20,7 @@ namespace SPNATI_Character_Editor.Controls
 		private DialogueLine _line;
 		private bool _settingData;
 		private NicknameOperation _selectedNickOp;
-		Dictionary<string, string> _nickOps = new Dictionary<string, string>();
+		private Dictionary<string, string> _nickOps = new Dictionary<string, string>();
 
 		public event EventHandler DataUpdated;
 
