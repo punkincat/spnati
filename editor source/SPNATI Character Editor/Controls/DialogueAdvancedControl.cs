@@ -1,6 +1,8 @@
 ﻿using Desktop.Skinning;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SPNATI_Character_Editor.Controls
@@ -18,6 +20,7 @@ namespace SPNATI_Character_Editor.Controls
 		private DialogueLine _line;
 		private bool _settingData;
 		private NicknameOperation _selectedNickOp;
+		Dictionary<string, string> _nickOps = new Dictionary<string, string>();
 
 		public event EventHandler DataUpdated;
 
@@ -29,7 +32,11 @@ namespace SPNATI_Character_Editor.Controls
 			cboAttr.Items.AddRange(new string[] { "", "timer", "stamina", "redirect-finish" });
 			cboHeavy.Items.AddRange(new string[] { "", "true", "false" });
 			cboOp.Items.AddRange(new string[] { "=", "+", "-", "*", "/", "%" });
-			cboNickOp.Items.AddRange(new string[] { "=", "+", "-", ":" });
+			_nickOps.Add("=", "Reset To");
+			_nickOps.Add("+", "Add/Increase Weight");
+			_nickOps.Add("-", "Decrease Weight");
+			_nickOps.Add(":", "Set Weight");
+			cboNickOp.Items.AddRange(_nickOps.Values);
 			recNickChar.RecordType = typeof(Character);
 			cboDirection.DataSource = DialogueLine.ArrowDirections;
 			cboFontSize.DataSource = DialogueLine.FontSizes;
@@ -114,7 +121,7 @@ namespace SPNATI_Character_Editor.Controls
 			recNickChar.RecordKey = "";
 			cboNickOp.Text = "";
 			txtNickname.Text = "";
-			valNickWeight.Value = 0;
+			valNickWeight.Value = 1;
 			lstNick.Items.Clear();
 			if (line.DialogueOperations != null && line.DialogueOperations.NicknameOps != null)
 			{
@@ -351,9 +358,9 @@ namespace SPNATI_Character_Editor.Controls
 				_selectedNickOp = nickOp;
 				_settingData = true;
 				recNickChar.RecordKey = nickOp.Character;
-				cboNickOp.Text = nickOp.Operator;
+				cboNickOp.Text = string.IsNullOrEmpty(nickOp.Operator) ? _nickOps["="] : _nickOps[nickOp.Operator];
 				txtNickname.Text = nickOp.Name;
-				valNickWeight.Value = Math.Max(valNickWeight.Minimum, Math.Min(valNickWeight.Maximum, nickOp.Weight));
+				valNickWeight.Value = cboNickOp.Text == _nickOps["="] ? 1 : Math.Max(valNickWeight.Minimum, Math.Min(valNickWeight.Maximum, nickOp.Weight));
 				_settingData = false;
 			}
 		}
@@ -364,7 +371,7 @@ namespace SPNATI_Character_Editor.Controls
 
 			_selectedNickOp.Character = recNickChar.RecordKey;
 			_selectedNickOp.Name = txtNickname.Text;
-			_selectedNickOp.Operator = string.IsNullOrEmpty(cboNickOp.Text) ? "=" : cboNickOp.Text;
+			_selectedNickOp.Operator = string.IsNullOrEmpty(cboNickOp.Text) ? "=" : _nickOps.FirstOrDefault(x => x.Value == cboNickOp.Text).Key;
 			_selectedNickOp.Weight = _selectedNickOp.Operator == "=" ? 1 : (int)valNickWeight.Value;
 		}
 
@@ -440,13 +447,17 @@ namespace SPNATI_Character_Editor.Controls
 		private void cboNickOp_TextChanged(object sender, EventArgs e)
 		{
 			if (_selectedNickOp == null || _settingData) return;
-			_selectedNickOp.Operator = string.IsNullOrEmpty(cboNickOp.Text) ? "=" : cboNickOp.Text;
+			_selectedNickOp.Operator = string.IsNullOrEmpty(cboNickOp.Text) ? "=" : _nickOps.FirstOrDefault(x => x.Value == cboNickOp.Text).Key;
+			if (_selectedNickOp.Operator == "=" && valNickWeight.Value != 1)
+			{
+				valNickWeight.Value = 1;
+			}
 		}
 
 		private void valNickWeight_ValueChanged(object sender, EventArgs e)
 		{
 			if (_selectedNickOp == null || _settingData) return;
-			_selectedNickOp.Weight = _selectedNickOp.Operator == "=" ? 1 : (int)valNickWeight.Value;
+			_selectedNickOp.Weight = cboNickOp.Text == _nickOps["="] ? 1 : (int)valNickWeight.Value;
 		}
 	}
 

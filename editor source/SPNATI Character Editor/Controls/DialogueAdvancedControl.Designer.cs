@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DialogueAdvancedControl));
             this.groupBoxArrow = new Desktop.Skinning.SkinnedGroupBox();
             this.valLocation = new Desktop.Skinning.SkinnedNumericUpDown();
             this.lblArrowLocation = new Desktop.Skinning.SkinnedLabel();
@@ -689,14 +690,12 @@
             this.lblNickOp.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblNickOp.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
             this.lblNickOp.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.lblNickOp.Location = new System.Drawing.Point(211, 89);
+            this.lblNickOp.Location = new System.Drawing.Point(211, 63);
             this.lblNickOp.Name = "lblNickOp";
             this.lblNickOp.Size = new System.Drawing.Size(56, 13);
             this.lblNickOp.TabIndex = 6;
             this.lblNickOp.Text = "Operation:";
-            this.toolTip1.SetToolTip(this.lblNickOp, "= sets a nickname as the only one for a given character (weight=1)\n+ adds a new n" +
-        "ickname or increases the weight of an existing one\n- decreases a nickname\'s weig" +
-        "ht\n: sets a nickname\'s weight");
+            this.toolTip1.SetToolTip(this.lblNickOp, "Set as the only nickname for the given character (Weight=1);\nAdd a new nickname or increase weight of an existing one;\nDecrease a nickname's weight;\nSet a nickname's weight to a new value.");
             // 
             // valNickWeight
             // 
@@ -723,7 +722,7 @@
             this.cboNickOp.FieldType = Desktop.Skinning.SkinnedFieldType.Surface;
             this.cboNickOp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cboNickOp.KeyMember = null;
-            this.cboNickOp.Location = new System.Drawing.Point(269, 86);
+            this.cboNickOp.Location = new System.Drawing.Point(269, 60);
             this.cboNickOp.Name = "cboNickOp";
             this.cboNickOp.SelectedIndex = -1;
             this.cboNickOp.SelectedItem = null;
@@ -739,7 +738,7 @@
             this.lblNickname.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblNickname.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
             this.lblNickname.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.lblNickname.Location = new System.Drawing.Point(211, 63);
+            this.lblNickname.Location = new System.Drawing.Point(211, 90);
             this.lblNickname.Name = "lblNickname";
             this.lblNickname.Size = new System.Drawing.Size(58, 13);
             this.lblNickname.TabIndex = 3;
@@ -778,7 +777,7 @@
             // 
             this.txtNickname.BackColor = System.Drawing.Color.White;
             this.txtNickname.ForeColor = System.Drawing.Color.Black;
-            this.txtNickname.Location = new System.Drawing.Point(269, 60);
+            this.txtNickname.Location = new System.Drawing.Point(269, 87);
             this.txtNickname.Name = "txtNickname";
             this.txtNickname.Size = new System.Drawing.Size(114, 20);
             this.txtNickname.TabIndex = 0;
