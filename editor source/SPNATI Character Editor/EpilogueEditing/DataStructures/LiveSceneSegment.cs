@@ -841,15 +841,41 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			throw new NotSupportedException();
 		}
 
+		public bool IdPreviouslyUsed(string id)
+		{
+			if (PreviousSegment == null)
+			{
+				return false;
+			}
+			else if(PreviousSegment.IdPreviouslyUsed(id))
+			{
+				return true;
+			}
+			else
+			{
+				return PreviousSegment.Tracks.Find(s => s.Id == id) != null;
+			}
+		}
+
 		public string GetUniqueId(string id)
 		{
 			int suffix = 0;
 			string prefix = id;
-			while (Tracks.Find(s => s.Id == id) != null)
+			bool first = true;
+			do
 			{
-				suffix++;
-				id = prefix + suffix;
-			}
+				if (!first)
+				{
+					suffix++;
+					id = prefix + suffix;
+				}
+				while (Tracks.Find(s => s.Id == id) != null)
+				{
+					suffix++;
+					id = prefix + suffix;
+				}
+				first = false;
+			} while (IdPreviouslyUsed(id));
 
 			return id;
 		}
