@@ -635,5 +635,10 @@
                 <keyframe time="1" x="-115" y="543" scalex="0.6" scaley="0.6" rotation="-43" />
             </directive>
         </pose>
+        <pose id="8-zcarbvictory">
+            <sprite id="victory" z="1" src="reskins/arle_classic_style/8-victory.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="-264" y="939" scalex="-1" scaley="1" />
+            <sprite id="zzcarbhappy" z="2" src="arle/8-zzcarbhappy.png" x="-219" y="945" />
+        </pose>
     </poses>
 </costume>
