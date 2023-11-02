@@ -135,11 +135,10 @@ namespace SPNATI_Character_Editor.Controls
 			List<PoseMapping> existingPoses = new List<PoseMapping>();
 			for (int i = 0; i < selectedStages.Count; i++)
 			{
-				foreach (PoseMapping pose in _character.Character.PoseLibrary.GetPoses(selectedStages[i]))
+				foreach (PoseMapping pose in _character.Character.PoseLibrary.GetPoses(selectedStages[i], true))
 				{
-					if (!pose.Key.StartsWith("set:"))
-						if (!poses.Contains(pose))
-							poses.Add(pose);
+					if (!poses.Contains(pose))
+						poses.Add(pose);
 				}
 			}
 			foreach (PoseMapping image in poses)

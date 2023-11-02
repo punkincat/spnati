@@ -38,7 +38,7 @@ namespace SPNATI_Character_Editor
 		/// </summary>
 		/// <param name="stage"></param>
 		/// <returns></returns>
-		public List<PoseMapping> GetPoses(int stage)
+		public List<PoseMapping> GetPoses(int stage, bool poseSet = false)
 		{
 			List<PoseMapping> list = new List<PoseMapping>();
 			CharacterEditorData editorData = CharacterDatabase.GetEditorData(_character);
@@ -47,14 +47,14 @@ namespace SPNATI_Character_Editor
 			{
 				foreach (PoseMapping pose in Poses)
 				{
-					if (!Filter(pose, editorData) && pose.ContainsStage(stage))
+					if (!Filter(pose, editorData, poseSet) && pose.ContainsStage(stage))
 					{
 						list.Add(pose);
 					}
 				}
 				if (!editorData.HidePrefixlessImages && stage >= 0)
 				{
-					list.AddRange(GetPoses(-1));
+					list.AddRange(GetPoses(-1, poseSet));
 				}
 			}
 			else
@@ -102,9 +102,13 @@ namespace SPNATI_Character_Editor
 			return list;
 		}
 
-		private bool Filter(PoseMapping pose, CharacterEditorData editorData)
+		private bool Filter(PoseMapping pose, CharacterEditorData editorData, bool poseSet)
 		{
 			string key = pose.Key;
+			if (poseSet)
+			{
+				return key.StartsWith("set:");
+			}
 			if (editorData.OnlyCustomPoses && !key.StartsWith("custom:") && !key.StartsWith("set:"))
 			{
 				return true;
