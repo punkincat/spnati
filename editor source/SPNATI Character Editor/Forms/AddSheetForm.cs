@@ -18,9 +18,14 @@ namespace SPNATI_Character_Editor.Forms
 			}
 		}
 
-		public AddSheetForm(string name)
+		public AddSheetForm(string name, bool rename = false)
 		{
 			InitializeComponent();
+			if (rename)
+			{
+				Text = "Rename Sheet " + name;
+				cmdCreate.Text = "Rename";
+			}
 			txtName.Text = name;
 		}
 
