@@ -917,9 +917,9 @@ namespace SPNATI_Character_Editor
 							{
 								usedStages.Add(stage);
 								string imgToAdd = img.Image.Replace("#", stage.ToString());
-								if (imgToAdd.Contains("custom:") && !imgToAdd.Contains(stage.ToString()))
+								if ((imgToAdd.Contains("custom:") || (imgToAdd.Contains("set:"))) && !imgToAdd.Contains(stage.ToString()))
 								{
-									// it's a cross-stage custom pose
+									// it's a cross-stage custom pose/pose set
 									imgToAdd += " CROSS " + stage;
 								}
 
@@ -940,7 +940,7 @@ namespace SPNATI_Character_Editor
 								}
 							}
 						}
-						else if (line.Image.Contains("custom:"))
+						else if (line.Image.Contains("custom:") || line.Image.Contains("set:"))
 						{
 							foreach (int stage in theCase.Stages)
 							{
@@ -950,7 +950,7 @@ namespace SPNATI_Character_Editor
 
 									if (!imgToAdd.Contains(stage.ToString()))
 									{
-										// it's a cross-stage custom pose
+										// it's a cross-stage custom pose/pose set
 										imgToAdd += " CROSS " + stage;
 									}
 
