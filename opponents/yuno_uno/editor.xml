@@ -280,6 +280,13 @@
         <response id="1081" opponent="meia" opponentId="1223" />
         <response id="1082" opponent="meia" opponentId="1224" />
         <response id="1086" opponent="meia" opponentId="1081" />
+        <response id="1099" opponent="jura" opponentId="1025" />
+        <response id="1100" opponent="beatrix" opponentId="110" />
+        <response id="1101" opponent="jura" opponentId="901" />
+        <response id="1102" opponent="jura" opponentId="900" />
+        <response id="1103" opponent="jura" opponentId="1019" />
+        <response id="1104" opponent="jura" opponentId="1023" />
+        <response id="1105" opponent="jura" opponentId="1020" />
     </responses>
     <notes>
         <note id="29">The Greek Visionary is a character like Ishizu or Shadi from Yu-gi-oh. Roll with it.</note>
@@ -1152,8 +1159,8 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="834" label="" folder="Background" sort="0" />
         <label id="835" label="" folder="Targets" sort="181" />
         <label id="836" label="" folder="Targets" sort="182" />
-        <label id="837" label="" folder="Targets" sort="37" />
-        <label id="838" label="" folder="Targets" sort="38" />
+        <label id="837" label="" color="3" folder="Targets" sort="37" />
+        <label id="838" label="" color="3" folder="Targets" sort="38" />
         <label id="839" label="" folder="Butt Reactions" sort="3" />
         <label id="840" label="" folder="Aqua (KH)" sort="0" />
         <label id="617" label="" folder="Targets" sort="114" />
@@ -1203,12 +1210,12 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="885" label="" folder="Responses" sort="74" />
         <label id="886" label="" folder="Responses" sort="75" />
         <label id="887" label="" folder="Butt Reactions" sort="7" />
-        <label id="888" label="" folder="Responses" sort="76" />
-        <label id="889" label="" folder="Responses" sort="70" />
-        <label id="890" label="" folder="Responses" sort="71" />
-        <label id="891" label="" folder="Responses" sort="89" />
-        <label id="893" label="" folder="Responses" sort="64" />
-        <label id="892" label="" folder="Responses" sort="63" />
+        <label id="888" label="" color="3" folder="Responses" sort="76" />
+        <label id="889" label="" color="3" folder="Responses" sort="70" />
+        <label id="890" label="" color="3" folder="Responses" sort="71" />
+        <label id="891" label="" color="4" folder="Responses" sort="89" />
+        <label id="893" label="" color="3" folder="Responses" sort="64" />
+        <label id="892" label="" color="3" folder="Responses" sort="63" />
         <label id="894" label="" folder="Responses" sort="59" />
         <label id="895" label="" folder="Responses" sort="82" />
         <label id="896" label="" folder="Responses" sort="92" />
@@ -1409,11 +1416,29 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="1092" label="" color="1" folder="Targets" sort="0" />
         <label id="1093" label="" folder="Targets" sort="0" />
         <label id="1094" label="" folder="Targets" sort="0" />
+        <label id="1095" label="" folder="Responses" sort="0" />
+        <label id="1096" label="" folder="Targets" sort="0" />
+        <label id="1097" label="" folder="Targets" sort="0" />
+        <label id="1098" label="" folder="Targets" sort="0" />
+        <label id="1099" label="" color="4" folder="Responses" sort="0" />
+        <label id="1101" label="" color="1" folder="Responses" sort="0" />
+        <label id="1102" label="" color="4" folder="Responses" sort="0" />
+        <label id="1103" label="" color="4" folder="Responses" sort="0" />
+        <label id="1104" label="" color="4" folder="Responses" sort="0" />
+        <label id="1105" label="" color="4" folder="Responses" sort="0" />
+        <label id="1106" label="" folder="Targets" sort="0" />
+        <label id="1107" label="" folder="Targets" sort="0" />
+        <label id="1108" label="" color="1" folder="Targets" sort="0" />
+        <label id="1109" label="" folder="Targets" sort="0" />
+        <label id="1110" label="" folder="Tag Filtered" sort="0" />
+        <label id="1111" label="" folder="Tag Filtered" sort="0" />
+        <label id="1112" label="" folder="Target Tags" sort="0" />
+        <label id="1113" label="" folder="Target Tags" sort="0" />
     </labels>
     <prefixes>
         <prefix>yuno_collectible</prefix>
     </prefixes>
-    <nextId>1094</nextId>
+    <nextId>1113</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="10rounds_gaku_skill_level" />
@@ -1443,6 +1468,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="ayumi_on_a_break" />
         <marker scope="Public" name="ayumi_on_a_break2" />
         <marker scope="Public" name="bad_straight_logic" />
+        <marker scope="Public" name="beatrix_buttReact" />
         <marker scope="Public" name="bernie_butt_reaction" />
         <marker scope="Public" name="bernie_butt_reaction2" />
         <marker scope="Public" name="big_succ_start" />
@@ -1831,6 +1857,10 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_barbara_prayeroffer1" />
         <marker scope="Public" name="yuno_barbara_prayerResp" />
         <marker scope="Public" name="yuno_barbara_strip1a" />
+        <marker scope="Public" name="yuno_beatrix_arthritis1" />
+        <marker scope="Public" name="yuno_beatrix_fightPits1" />
+        <marker scope="Public" name="yuno_beatrix_legs1" />
+        <marker scope="Public" name="yuno_beatrix_needles1" />
         <marker scope="Public" name="Yuno_Bending_1" />
         <marker scope="Public" name="yuno_binah_books1" />
         <marker scope="Public" name="yuno_binah_pillar_reactionA" />
@@ -1909,7 +1939,9 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_elphaba_strip5a" />
         <marker scope="Public" name="yuno_estelle_focusPromptResp" />
         <marker scope="Public" name="yuno_felix_bisexual1" />
+        <marker scope="Public" name="yuno_felix_bisexual2" />
         <marker scope="Public" name="yuno_felix_cosplay1" />
+        <marker scope="Public" name="yuno_felix_cosplay2" />
         <marker scope="Public" name="yuno_felix_self0a" />
         <marker scope="Public" name="yuno_fina_continue1Resp" />
         <marker scope="Public" name="yuno_fina_homeworldsResp" />
@@ -1952,18 +1984,25 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_joey_cards1Resp" />
         <marker scope="Public" name="yuno_joey_pie1" />
         <marker scope="Public" name="yuno_jolyne_standReveal" />
+        <marker scope="Public" name="yuno_jura_hand3Resp" />
         <marker scope="Public" name="yuno_jura_self0a" />
         <marker scope="Public" name="yuno_jura_self0b" />
+        <marker scope="Public" name="yuno_jura_self0c" />
         <marker scope="Public" name="yuno_jura_self1a" />
         <marker scope="Public" name="yuno_jura_self1b" />
+        <marker scope="Public" name="yuno_jura_self1c" />
         <marker scope="Public" name="yuno_jura_self2a" />
         <marker scope="Public" name="yuno_jura_self2b" />
         <marker scope="Public" name="yuno_jura_self2c" />
         <marker scope="Public" name="yuno_jura_self3a" />
         <marker scope="Public" name="yuno_jura_self3b" />
+        <marker scope="Public" name="yuno_jura_self3c" />
+        <marker scope="Public" name="yuno_jura_selfCostumeParty0a" />
+        <marker scope="Public" name="yuno_jura_selfSummer0a" />
         <marker scope="Public" name="yuno_kamina_hype0" />
         <marker scope="Public" name="yuno_kaz_strip0a" />
         <marker scope="Public" name="yuno_kaz_strip1a" />
+        <marker scope="Public" name="yuno_kazuma_LN" />
         <marker scope="Public" name="yuno_kirigiri_arousedVisible" />
         <marker scope="Public" name="yuno_Kora_bladePower1" />
         <marker scope="Public" name="yuno_kora_bladePower2" />
