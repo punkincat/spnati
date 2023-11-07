@@ -36,7 +36,7 @@ var STATUS_FINISHED = "finished";
 /************************************************************
  * Stores information on an article of clothing.
  ************************************************************/
-function Clothing (name, generic, type, position, plural, fromStage, fromDeal, pretendLayer) {
+function Clothing (name, generic, type, position, plural, fromStage, fromDeal, strippingLayer) {
     if (name instanceof jQuery) {
         const $xml = name;
         generic = $xml.attr('generic');
@@ -47,13 +47,13 @@ function Clothing (name, generic, type, position, plural, fromStage, fromDeal, p
         plural = (plural == 'null' ? null : plural == 'true');
         fromStage = Number.parseInt($xml.attr('fromStage'), 10) || undefined; // fromStage=0 is the default anyway
         fromDeal = $xml.attr('fromDeal') === 'true';
-        if ($xml.children('pretend').length) {
-            this.pretendItem = new Clothing($xml.children('pretend').first());
+        if ($xml.children('stripping').length) {
+            this.strippingItem = new Clothing($xml.children('stripping').first());
         } else {
-            pretendLayer = Number.parseInt($xml.attr('pretendLayer'), 10);
-            if (isNaN(pretendLayer) || pretendLayer > clothingArr.length || pretendLayer < 0) {
-                console.error('Invalid pretend layer');
-                pretendLayer = undefined;
+            strippingLayer = Number.parseInt($xml.attr('strippingLayer'), 10);
+            if (isNaN(strippingLayer) || strippingLayer > clothingArr.length || strippingLayer < 0) {
+                console.error('Invalid stripping layer');
+                strippingLayer = undefined;
             }
         }
     }
@@ -64,7 +64,7 @@ function Clothing (name, generic, type, position, plural, fromStage, fromDeal, p
     this.plural = (plural === undefined ? false : plural);
     this.fromStage = fromStage;
     this.fromDeal = fromDeal;
-    this.pretendLayer = pretendLayer;
+    this.strippingLayer = strippingLayer;
     this.removed = false;
 }
 
@@ -453,10 +453,10 @@ function prepareToStripPlayer (player) {
         );
     } else {
         let toBeRemovedClothing = players[player].clothing.at(-1 - players[player].stage);
-        if (toBeRemovedClothing.pretendItem !== undefined) {
-            toBeRemovedClothing = toBeRemovedClothing.pretendItem;
-        } else if (toBeRemovedClothing.pretendLayer !== undefined) {
-            toBeRemovedClothing = players[player].clothing[toBeRemovedClothing.pretendLayer];
+        if (toBeRemovedClothing.strippingItem !== undefined) {
+            toBeRemovedClothing = toBeRemovedClothing.strippingItem;
+        } else if (toBeRemovedClothing.strippingLayer !== undefined) {
+            toBeRemovedClothing = players[player].clothing[toBeRemovedClothing.strippingLayer];
         }
         players[player].removedClothing = toBeRemovedClothing;
         const dialogueTrigger = getClothingTrigger(players[player], toBeRemovedClothing, false);
