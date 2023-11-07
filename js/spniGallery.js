@@ -128,7 +128,7 @@ function Collectible(xmlElem, player) {
     if (clothingElems.length > 0) {
         var $elem = clothingElems[0];
         var generic = $elem.attr('generic');
-        var name = $elem.attr('name') || $elem.attr('lowercase');
+        var name = $elem.attr('name');
         var type = $elem.attr('type');
         var position = $elem.attr('position');
         var plural = $elem.attr('plural');

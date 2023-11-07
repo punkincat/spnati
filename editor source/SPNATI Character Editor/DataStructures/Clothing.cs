@@ -6,76 +6,103 @@ using System.Collections.Generic;
 
 namespace SPNATI_Character_Editor
 {
-	/// <summary>
-	/// Data for a single layer of clothing
-	/// </summary>
 	[Serializable]
-	public class Clothing
+	public class ClothingLayer
 	{
-		public const int MaxLayers = 8;
-		public const int ExtraStages = 3;
-
 		[XmlAttribute("name")]
 		public string Name;
 
 		[XmlAttribute("generic")]
 		public string GenericName;
 
-		/// <summary>
-		/// Deprecated
-		/// </summary>
-		[XmlAttribute("lowercase")]
-		public string LowercaseName;
-
 		[XmlAttribute("position")]
 		public string Position;
 
-		/// <summary>
-		/// Deprecated
-		/// </summary>
-		[XmlAttribute("formalName")]
-		public string FormalName;
-
-		/// <summary>
-		/// Deprecated
-		/// </summary>
-		[XmlAttribute("proper-name")]
-		public string ProperName;
-
 		[XmlAttribute("type")]
 		public string Type;
-
-		// only used for <clothing> elements within collectibles
-		[XmlAttribute("img")]
-		public string CollectibleImage;
 
 		[XmlAttribute("plural")]
 		[DefaultValue(false)]
 		public bool Plural;
 
+		[XmlAttribute("reveal")]
+		[DefaultValue("")]
+		public string Reveal;
+
+		public ClothingLayer()
+		{
+			Position = "";
+			Type = "major";
+			GenericName = "";
+			Name = "";
+			Plural = false;
+		}
+
+		public ClothingLayer Clone()
+		{
+			ClothingLayer copy = new ClothingLayer()
+			{
+				Position = Position,
+				Type = Type,
+				Name = Name,
+				GenericName = GenericName,
+				Plural = Plural,
+			};
+			return copy;
+		}
+	}
+
+	/// <summary>
+	/// Data for a single layer of clothing
+	/// </summary>
+	[Serializable]
+	public class Clothing : ClothingLayer
+	{
+		public const int MaxLayers = 8;
+		public const int ExtraStages = 3;
+
+		// only used for <clothing> elements within collectibles
+		[XmlAttribute("img")]
+		public string CollectibleImage;
+
+		[XmlAttribute("fromDeal")]
+		[DefaultValue(false)]
+		public bool FromDeal;
+
+		[XmlAttribute("fromStage")]
+		[DefaultValue("")]
+		public string FromStage;
+
+		[XmlAttribute("strippingLayer")]
+		[DefaultValue("")]
+		public string StrippingLayer;
+
+		[XmlElement("stripping")]
+		[DefaultValue(null)]
+		public ClothingLayer Stripping;
+
 		public Clothing()
 		{
 			Position = "";
 			Type = "major";
-			GenericName = "item";
-			Name = "new item";
+			GenericName = "";
+			Name = "";
 			CollectibleImage = null;
 			Plural = false;
+			Reveal = "";
+			FromDeal = false;
+			FromStage = "";
+			StrippingLayer = "";
+			Stripping = null;
 		}
 
 		public void OnAfterDeserialize()
 		{
-			if (string.IsNullOrEmpty(Name) || Name == "new item")
-			{
-				Name = LowercaseName;
-				LowercaseName = null;
-			}
-			if (string.IsNullOrEmpty(GenericName) || GenericName == "item")
-			{
-				GenericName = FormalName ?? ProperName;
-				FormalName = null;
-				ProperName = null;
-			}
+		}
+
+		public bool HasAdv()
+		{
+			return (!string.IsNullOrEmpty(Reveal) || !string.IsNullOrEmpty(FromStage) || !string.IsNullOrEmpty(StrippingLayer) || Stripping != null);
 		}
 
 		public Clothing Copy()
@@ -84,13 +111,11 @@ namespace SPNATI_Character_Editor
 			{
 				Position = Position,
 				Type = Type,
-				FormalName = FormalName,
-				LowercaseName = LowercaseName,
-				ProperName = ProperName,
 				Name = Name,
 				GenericName = GenericName,
 				CollectibleImage = CollectibleImage,
 				Plural = Plural,
+				Stripping = Stripping,
 			};
 			return copy;
 		}
