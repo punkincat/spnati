@@ -49,7 +49,7 @@ function Clothing (name, generic, type, position, plural, fromStage, fromDeal, s
         fromDeal = $xml.attr('fromDeal') === 'true';
         if ($xml.children('stripping').length) {
             this.strippingItem = new Clothing($xml.children('stripping').first());
-        } else {
+        } else if ($xml.attr('strippingLayer') !== undefined) {
             strippingLayer = Number.parseInt($xml.attr('strippingLayer'), 10);
             if (isNaN(strippingLayer) || strippingLayer > clothingArr.length || strippingLayer < 0) {
                 console.error('Invalid stripping layer');
