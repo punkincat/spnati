@@ -220,56 +220,7 @@ namespace SPNATI_Character_Editor.Controls
 
 		public void RefreshImage()
 		{
-			Destroy();
-
-			UpdateSceneTransform();
-			tmrTick.Stop();
-			if (_currentPose != null)
-			{
-				PoseReference poseRef = _currentPose.GetPose(_currentStage);
-				if (poseRef != null)
-				{
-					if (poseRef.Pose == null)
-					{
-						string file = Path.Combine(_character.Skin.GetDirectory(), poseRef.FileName);
-						if (!File.Exists(file))
-						{
-							file = Path.Combine(_character.GetDirectory(), poseRef.FileName);
-						}
-						_reference = ImageCache.Get(file);
-						_imageReference = _reference?.Image;
-						if (ImageAnimator.CanAnimate(_imageReference))
-						{
-							_animating = true;
-							ImageAnimator.Animate(_imageReference, OnFrameChanged);
-						}
-					}
-					else
-					{
-						Pose p = _character.Skin.CustomPoses.Find(cp => cp.Id == poseRef.Pose.Id);
-						if (p == null)
-						{
-							p = poseRef.Pose;
-						}
-						Pose = new LivePose(_character, p, _currentStage);
-						if (AutoPlayback)
-						{
-							_time = 0;
-							_lastTick = DateTime.Now;
-							tmrTick.Enabled = true;
-						}
-					}
-				}
-				else
-				{
-					_imageReference = null;
-				}
-			}
-			else
-			{
-				_imageReference = null;
-			}
-			canvas.Invalidate();
+			SetImage(_currentPose, _currentStage, true);
 		}
 
 		public void SetImage(Image image, bool disposeImage = true)
@@ -286,9 +237,9 @@ namespace SPNATI_Character_Editor.Controls
 			canvas.Invalidate();
 		}
 
-		public void SetImage(PoseMapping pose, int stage)
+		public void SetImage(PoseMapping pose, int stage, bool refresh = false)
 		{
-			if (_currentPose == pose && _currentStage == stage && _imageReference != null)
+			if (_currentPose == pose && _currentStage == stage && _imageReference != null && !refresh)
 			{
 				return;
 			}
@@ -296,8 +247,11 @@ namespace SPNATI_Character_Editor.Controls
 
 			UpdateSceneTransform();
 			tmrTick.Stop();
-			_currentPose = pose;
-			_currentStage = stage;
+			if (!refresh)
+			{
+				_currentPose = pose;
+				_currentStage = stage;
+			}
 			if (pose != null)
 			{
 				PoseReference poseRef = pose.GetPose(stage);
@@ -320,7 +274,18 @@ namespace SPNATI_Character_Editor.Controls
 					}
 					else
 					{
-						Pose p = _character.Skin.CustomPoses.Find(cp => cp.Id == poseRef.Pose.Id);
+						bool useDefault = false;
+						if (_character.Skin.GetDirectory() != _character.GetDirectory())
+						{
+							foreach (StageSpecificValue stageInfo in (_character.Skin as Costume).Folders)
+							{
+								if (stageInfo.Stage != 0 && stageInfo.Stage <= stage)
+								{
+									useDefault = true;
+								}
+							}
+						}
+						Pose p = useDefault? _character.CustomPoses.Find(cp => cp.Id == poseRef.Pose.Id) : _character.Skin.CustomPoses.Find(cp => cp.Id == poseRef.Pose.Id);
 						if (p == null)
 						{
 							p = poseRef.Pose;
