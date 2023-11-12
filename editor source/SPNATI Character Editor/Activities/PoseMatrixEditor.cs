@@ -2059,6 +2059,51 @@ namespace SPNATI_Character_Editor.Activities
 		{
 			CheckmarkSelectedCells();
 		}
+
+		private void tsLeft_Click(object sender, EventArgs e)
+		{
+			int index = tabControl.SelectedIndex;
+			if (index < 1)
+			{
+				return;
+			}
+			_matrix.Sheets.Move(index, index - 1);
+			tabControl.TabPages.Clear();
+			foreach (PoseSheet sheet in _matrix.Sheets)
+			{
+				AddTab(sheet);
+			}
+			tabControl.SelectTab(index - 1);
+		}
+
+		private void tsRight_Click(object sender, EventArgs e)
+		{
+			int index = tabControl.SelectedIndex;
+			if (index > tabControl.TabCount - 2)
+			{
+				return;
+			}
+			_matrix.Sheets.Move(index, index + 1);
+			tabControl.TabPages.Clear();
+			foreach (PoseSheet sheet in _matrix.Sheets)
+			{
+				AddTab(sheet);
+			}
+			tabControl.SelectTab(index + 1);
+		}
+
+		private void tsRename_Click(object sender, EventArgs e)
+		{
+			if (_sheet != null)
+			{
+				AddSheetForm form = new AddSheetForm(_sheet.Name, true);
+				if (form.ShowDialog() == DialogResult.OK)
+				{
+					if (_sheet.Name != form.SheetName)
+						_sheet.Name = form.SheetName;
+				}
+			}
+		}
 	}
 
 	public class CellClipboardData
