@@ -409,6 +409,50 @@ namespace SPNATI_Character_Editor
 				ValidateCollectible(character, collectible, warnings, unusedImages, usedCollectibles);
 			}
 
+			if (!Listing.Instance.IsCharacterReleased(character.FolderName))
+			{
+				warnings.Add(new ValidationError(ValidationFilterLevel.Settings, "Characters that are not on the main roster are not allowed to have custom settings."));
+			}
+			else
+			{
+				CharacterHistory history = CharacterHistory.Get(character, false);
+				LineWork current = history.Current;
+				int maxSettings = TestRequirements.Instance.GetAllowedSettings(current.TotalLines);
+				int currentSettings = 0;
+				foreach (CharacterSettingsGroup group in character.Behavior.CharacterSettingsGroups)
+				{
+					currentSettings += group.CharacterSettings.Count - 1;
+				}
+				if (currentSettings > maxSettings)
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Settings, "Character has more custom settings than allowed for this line count."));
+				}
+			}
+			
+			List<string> characterSettingMarkers = new List<string>();
+			foreach (CharacterSettingsGroup group in character.Behavior.CharacterSettingsGroups)
+			{
+				if (group.CharacterSettings.Count == 1)
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Settings, string.Format("Character settings group {0} has only one setting value.", group.ToString())));
+				}
+				if (string.IsNullOrEmpty(group.Marker))
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Settings, string.Format("Character settings group {0} sets no marker.", group.ToString())));
+				}
+				else
+				{
+					if (characterSettingMarkers.Contains(group.Marker))
+					{
+						warnings.Add(new ValidationError(ValidationFilterLevel.Settings, string.Format("Multiple settings groups set the same marker {0}.", group.Marker)));
+					}
+					else
+					{
+						characterSettingMarkers.Add(group.Marker);
+					}
+				}
+			}
+
 			if (unusedImages.Count > 0)
 			{
 				warnings.Add(new ValidationError(ValidationFilterLevel.MissingImages, string.Format("The following images are never used: {0}", string.Join(", ", unusedImages))));
@@ -1701,5 +1745,6 @@ namespace SPNATI_Character_Editor
 		Epilogue = 1 << 9,
 		Reskins = 1 << 10,
 		Collectibles = 1 << 11,
+		Settings = 1 << 12,
 	}
 }

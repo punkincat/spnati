@@ -272,6 +272,12 @@
     <Compile Include="Controls\CharacterFolderDialog.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\CharacterSettingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CharacterSettingControl.Designer.cs">
+      <DependentUpon>CharacterSettingControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CodeReplaceBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -787,6 +793,7 @@
     <Compile Include="DataStructures\CaseLabel.cs" />
     <Compile Include="DataStructures\CaseNote.cs" />
     <Compile Include="DataStructures\CharacterHistory.cs" />
+    <Compile Include="DataStructures\CharacterSetting.cs" />
     <Compile Include="DataStructures\CharacterTagList.cs" />
     <Compile Include="DataStructures\ChecklistTask.cs" />
     <Compile Include="DataStructures\Choice.cs" />
@@ -1575,6 +1582,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CharacterFolderDialog.resx">
       <DependentUpon>CharacterFolderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CharacterSettingControl.resx">
+      <DependentUpon>CharacterSettingControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CodeReplaceBar.resx">
       <DependentUpon>CodeReplaceBar.cs</DependentUpon>

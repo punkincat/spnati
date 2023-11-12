@@ -58,6 +58,12 @@ namespace SPNATI_Character_Editor
 		[XmlElement("collectibleLines")]
 		public int LinesPerCollectible;
 
+		[XmlElement("firstSettingLines")]
+		public int FirstSetting;
+
+		[XmlElement("settingLines")]
+		public int LinesPerSetting;
+
 		public int GetAllowedCollectibles(int lineCount)
 		{
 			if (lineCount < 1)
@@ -65,6 +71,15 @@ namespace SPNATI_Character_Editor
 				return 1;
 			}
 			return (lineCount - 1) / LinesPerCollectible + 2;
+		}
+
+		public int GetAllowedSettings(int lineCount)
+		{
+			if (lineCount < FirstSetting)
+			{
+				return 0;
+			}
+			return (lineCount - FirstSetting) / LinesPerSetting + 2; 
 		}
 	}
 }

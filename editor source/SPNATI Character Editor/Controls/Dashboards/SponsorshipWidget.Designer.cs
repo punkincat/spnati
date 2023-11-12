@@ -36,6 +36,7 @@
             this.barTargets = new Desktop.CommonControls.RadialGauge();
             this.barLines = new Desktop.CommonControls.RadialGauge();
             this.barCollectibles = new Desktop.CommonControls.RadialGauge();
+            this.barSettings = new Desktop.CommonControls.RadialGauge();
             this.grpRequirements.SuspendLayout();
             this.tableRequirements.SuspendLayout();
             this.SuspendLayout();
@@ -61,16 +62,18 @@
             this.tableRequirements.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableRequirements.ColumnCount = 3;
-            this.tableRequirements.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableRequirements.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableRequirements.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
-            this.tableRequirements.Controls.Add(this.barSize, 1, 1);
+            this.tableRequirements.ColumnCount = 4;
+            this.tableRequirements.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableRequirements.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableRequirements.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableRequirements.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableRequirements.Controls.Add(this.barSize, 0, 1);
             this.tableRequirements.Controls.Add(this.barUnique, 2, 0);
-            this.tableRequirements.Controls.Add(this.barFilters, 0, 1);
+            this.tableRequirements.Controls.Add(this.barFilters, 3, 0);
             this.tableRequirements.Controls.Add(this.barTargets, 1, 0);
             this.tableRequirements.Controls.Add(this.barLines, 0, 0);
-            this.tableRequirements.Controls.Add(this.barCollectibles, 2, 1);
+            this.tableRequirements.Controls.Add(this.barCollectibles, 1, 1);
+            this.tableRequirements.Controls.Add(this.barSettings, 2, 1);
             this.tableRequirements.Location = new System.Drawing.Point(6, 25);
             this.tableRequirements.Name = "tableRequirements";
             this.tableRequirements.RowCount = 2;
@@ -87,7 +90,7 @@
             this.barSize.Dock = System.Windows.Forms.DockStyle.Fill;
             this.barSize.HighlightOverCapacity = false;
             this.barSize.InvertCapacityColors = false;
-            this.barSize.Location = new System.Drawing.Point(161, 154);
+            this.barSize.Location = new System.Drawing.Point(3, 154);
             this.barSize.Maximum = new decimal(new int[] {
             100,
             0,
@@ -100,7 +103,7 @@
             0});
             this.barSize.Name = "barSize";
             this.barSize.ShowPercentage = false;
-            this.barSize.Size = new System.Drawing.Size(152, 146);
+            this.barSize.Size = new System.Drawing.Size(112, 146);
             this.barSize.TabIndex = 4;
             this.barSize.Unit = "mb";
             this.barSize.Value = new decimal(new int[] {
@@ -116,7 +119,7 @@
             this.barUnique.Dock = System.Windows.Forms.DockStyle.Fill;
             this.barUnique.HighlightOverCapacity = false;
             this.barUnique.InvertCapacityColors = true;
-            this.barUnique.Location = new System.Drawing.Point(319, 3);
+            this.barUnique.Location = new System.Drawing.Point(239, 3);
             this.barUnique.Maximum = new decimal(new int[] {
             100,
             0,
@@ -129,7 +132,7 @@
             0});
             this.barUnique.Name = "barUnique";
             this.barUnique.ShowPercentage = false;
-            this.barUnique.Size = new System.Drawing.Size(153, 145);
+            this.barUnique.Size = new System.Drawing.Size(112, 145);
             this.barUnique.TabIndex = 3;
             this.barUnique.Unit = "characters";
             this.barUnique.Value = new decimal(new int[] {
@@ -145,7 +148,7 @@
             this.barFilters.Dock = System.Windows.Forms.DockStyle.Fill;
             this.barFilters.HighlightOverCapacity = false;
             this.barFilters.InvertCapacityColors = true;
-            this.barFilters.Location = new System.Drawing.Point(3, 154);
+            this.barFilters.Location = new System.Drawing.Point(357, 3);
             this.barFilters.Maximum = new decimal(new int[] {
             100,
             0,
@@ -158,7 +161,7 @@
             0});
             this.barFilters.Name = "barFilters";
             this.barFilters.ShowPercentage = false;
-            this.barFilters.Size = new System.Drawing.Size(152, 146);
+            this.barFilters.Size = new System.Drawing.Size(115, 145);
             this.barFilters.TabIndex = 2;
             this.barFilters.Unit = "lines";
             this.barFilters.Value = new decimal(new int[] {
@@ -174,7 +177,7 @@
             this.barTargets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.barTargets.HighlightOverCapacity = false;
             this.barTargets.InvertCapacityColors = true;
-            this.barTargets.Location = new System.Drawing.Point(161, 3);
+            this.barTargets.Location = new System.Drawing.Point(121, 3);
             this.barTargets.Maximum = new decimal(new int[] {
             100,
             0,
@@ -187,7 +190,7 @@
             0});
             this.barTargets.Name = "barTargets";
             this.barTargets.ShowPercentage = false;
-            this.barTargets.Size = new System.Drawing.Size(152, 145);
+            this.barTargets.Size = new System.Drawing.Size(112, 145);
             this.barTargets.TabIndex = 1;
             this.barTargets.Unit = "lines";
             this.barTargets.Value = new decimal(new int[] {
@@ -216,7 +219,7 @@
             0});
             this.barLines.Name = "barLines";
             this.barLines.ShowPercentage = false;
-            this.barLines.Size = new System.Drawing.Size(152, 145);
+            this.barLines.Size = new System.Drawing.Size(112, 145);
             this.barLines.TabIndex = 0;
             this.barLines.Unit = "lines";
             this.barLines.Value = new decimal(new int[] {
@@ -230,9 +233,11 @@
             this.barCollectibles.CapacityMode = true;
             this.barCollectibles.Caption = "Allowed Collectibles";
             this.barCollectibles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.barCollectibles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.barCollectibles.HighlightOverCapacity = true;
             this.barCollectibles.InvertCapacityColors = false;
-            this.barCollectibles.Location = new System.Drawing.Point(319, 154);
+            this.barCollectibles.Location = new System.Drawing.Point(120, 153);
+            this.barCollectibles.Margin = new System.Windows.Forms.Padding(2);
             this.barCollectibles.Maximum = new decimal(new int[] {
             100,
             0,
@@ -245,10 +250,39 @@
             0});
             this.barCollectibles.Name = "barCollectibles";
             this.barCollectibles.ShowPercentage = false;
-            this.barCollectibles.Size = new System.Drawing.Size(153, 146);
+            this.barCollectibles.Size = new System.Drawing.Size(114, 148);
             this.barCollectibles.TabIndex = 0;
             this.barCollectibles.Unit = "collectibles";
             this.barCollectibles.Value = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            // 
+            // barSettings
+            // 
+            this.barSettings.CapacityMode = true;
+            this.barSettings.Caption = "Allowed Settings";
+            this.barSettings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.barSettings.HighlightOverCapacity = true;
+            this.barSettings.InvertCapacityColors = false;
+            this.barSettings.Location = new System.Drawing.Point(239, 154);
+            this.barSettings.Maximum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.barSettings.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.barSettings.Name = "barSettings";
+            this.barSettings.ShowPercentage = false;
+            this.barSettings.Size = new System.Drawing.Size(112, 146);
+            this.barSettings.TabIndex = 3;
+            this.barSettings.Unit = "settings";
+            this.barSettings.Value = new decimal(new int[] {
             0,
             0,
             0,
@@ -277,5 +311,6 @@
 		private Desktop.CommonControls.RadialGauge barTargets;
 		private Desktop.CommonControls.RadialGauge barLines;
 		private Desktop.CommonControls.RadialGauge barCollectibles;
-	}
+        private Desktop.CommonControls.RadialGauge barSettings;
+    }
 }
