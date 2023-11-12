@@ -429,7 +429,7 @@ function loadEpilogueData(player) {
     return epilogues;
 }
 
-var animatedProperties = ["x", "y", "rotation", "scalex", "scaley", "skewx", "skewy", "alpha", "src", "zoom", "color", "rate"];
+var animatedProperties = ["x", "y", "rotation", "scalex", "scaley", "skewx", "skewy", "alpha", "src", "zoom", "color", "rate", "clipleft", "clipright", "cliptop", "clipbottom", "clipradius"];
 
 function addDirectiveToScene(scene, directive) {
     switch (directive.type) {
@@ -783,6 +783,11 @@ function readProperties(sourceObj, scene) {
         targetObj.iterations = parseInt(targetObj.iterations) || 0;
         targetObj.rate = parseFloat(targetObj.rate, 10) || 0;
         targetObj.count = parseFloat(targetObj.count, 10) || 0;
+        targetObj.clipleft = parseFloat(targetObj.clipleft, 10);
+        targetObj.cliptop = parseFloat(targetObj.cliptop, 10);
+        targetObj.clipright = parseFloat(targetObj.clipright, 10);
+        targetObj.clipbottom = parseFloat(targetObj.clipbottom, 10);
+        targetObj.clipradius = parseFloat(targetObj.clipradius, 10);
     }
     else {
         // textboxes
@@ -1771,13 +1776,25 @@ SceneView.prototype.drawObject = function (obj) {
     }
     var transform = properties.join(" ");
 
+    let clipPath = "none";
+    if (obj.clipleft + obj.clipright + obj.cliptop + obj.clipbottom + obj.clipradius > 0) {
+
+        clipPath = "inset(" + obj.cliptop + "px " + obj.clipright + "px " + obj.clipbottom + "px " + obj.clipleft + "px";
+        if (obj.clipradius > 0) {
+            clipPath += " round " + obj.clipradius + "px";
+        }
+        clipPath += ")";
+    }
+
     $(obj.element).css({
         "transform": transform,
         "transform-origin": "top left",
         "opacity": obj.alpha / 100,
     });
+
     $(obj.rotElement).css({
         "transform": "rotate(" + obj.rotation + "deg) scale(" + obj.scalex + ", " + obj.scaley + ") skew(" + obj.skewx + "deg, " + obj.skewy + "deg)",
+        "clip-path": clipPath,
     });
 }
 
@@ -2183,6 +2200,11 @@ SceneView.prototype.moveSprite = function (directive, context) {
         context.skewy = sprite.skewy;
         context.alpha = sprite.alpha;
         context.src = sprite.src;
+        context.cliptop = sprite.cliptop;
+        context.clipleft = sprite.clipleft;
+        context.clipbottom = sprite.clipbottom;
+        context.clipright = sprite.clipright;
+        context.clipradius = sprite.clipradius;
     context.rate = sprite.rate;
         frames.unshift(context);
         context.anim = this.addAnimation(new Animation(directive.id, frames, this.updateObject.bind(this), directive.loop, directive.ease, directive.clamp, directive.iterations));
@@ -2218,6 +2240,21 @@ SceneView.prototype.returnSprite = function (directive, context) {
         }
         if (typeof context.src !== "undefined") {
             sprite.setImage(context.src);
+        }
+        if (typeof context.cliptop !== "undefined") {
+            sprite.cliptop = context.cliptop;
+        }
+        if (typeof context.clipleft !== "undefined") {
+            sprite.clipleft = context.clipleft;
+        }
+        if (typeof context.clipbottom !== "undefined") {
+            sprite.clipbottom = context.clipbottom;
+        }
+        if (typeof context.clipright !== "undefined") {
+            sprite.clipright = context.clipright;
+        }
+        if (typeof context.clipradius !== "undefined") {
+            sprite.clipradius = context.clipradius;
         }
         this.removeAnimation(context.anim);
         this.draw();
@@ -2454,7 +2491,7 @@ function SceneObject(id, element, view, args) {
         alpha = 100;
     }
 
-    this.tweenableProperties = ["x", "y", "rotation", "scalex", "scaley", "alpha", "skewx", "skewy"];
+    this.tweenableProperties = ["x", "y", "rotation", "scalex", "scaley", "alpha", "skewx", "skewy", "clipleft", "clipright", "cliptop", "clipbottom", "clipradius"];
     this.id = id;
     this.x = args.x || 0;
     this.y = args.y || 0;
@@ -2463,6 +2500,11 @@ function SceneObject(id, element, view, args) {
     this.skewx = args.skewx || 0;
     this.skewy = args.skewy || 0;
     this.rotation = args.rotation || 0;
+    this.clipleft = args.clipleft || 0;
+    this.cliptop = args.cliptop || 0;
+    this.clipright = args.clipright || 0;
+    this.clipbottom = args.clipbottom || 0;
+    this.clipradius = args.clipradius || 0;
     this.alpha = alpha;
     this.view = view;
     this.layer = args.layer;
@@ -2532,6 +2574,10 @@ function SceneObject(id, element, view, args) {
             position: "absolute",
             left: 0,
             top: 0,
+            width: this.width,
+            height: this.height,
+        });
+        $(pivot).css({
             width: this.width,
             height: this.height,
         });

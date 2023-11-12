@@ -302,6 +302,68 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 		}
 
+		private float _clipLeft = 0;
+		public float ClipLeft
+		{
+			get { return _clipLeft; }
+			set
+			{
+				value = (float)Math.Round(value, 2);
+				_clipLeft = value;
+				InvalidateTransform();
+			}
+		}
+
+		private float _clipTop = 0;
+		public float ClipTop
+		{
+			get { return _clipTop; }
+			set
+			{
+				value = (float)Math.Round(value, 2);
+				_clipTop = value;
+				InvalidateTransform();
+			}
+		}
+
+		private float _clipRight = 0;
+		public float ClipRight
+		{
+			get { return _clipRight; }
+			set
+			{
+				value = (float)Math.Round(value, 2);
+				_clipRight = value;
+				InvalidateTransform();
+			}
+		}
+
+		private float _clipBottom = 0;
+		public float ClipBottom
+		{
+			get { return _clipBottom; }
+			set
+			{
+				value = (float)Math.Round(value, 2);
+				_clipBottom = value;
+				InvalidateTransform();
+			}
+		}
+
+		private float _clipRadius = 0;
+		public float ClipRadius
+		{
+			get { return _clipRadius; }
+			set
+			{
+				value = (float)Math.Round(value, 2);
+				_clipRadius = value;
+				InvalidateTransform();
+			}
+		}
+
+		public GraphicsPath ClipPath;
+
 		public float Alpha = 100;
 
 		private Matrix _localTransform;

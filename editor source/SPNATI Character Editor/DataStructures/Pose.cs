@@ -134,6 +134,26 @@ namespace SPNATI_Character_Editor
 					{
 						sprite.SkewY = initialFrame.SkewY.Value.ToString(CultureInfo.InvariantCulture);
 					}
+					if (initialFrame.ClipLeft.HasValue)
+					{
+						sprite.ClipLeft = initialFrame.ClipLeft.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipTop.HasValue)
+					{
+						sprite.ClipTop = initialFrame.ClipTop.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipRight.HasValue)
+					{
+						sprite.ClipRight = initialFrame.ClipRight.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipBottom.HasValue)
+					{
+						sprite.ClipBottom = initialFrame.ClipBottom.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipRadius.HasValue)
+					{
+						sprite.ClipRadius = initialFrame.ClipRadius.Value.ToString(CultureInfo.InvariantCulture);
+					}
 					if (initialFrame.Rotation.HasValue)
 					{
 						sprite.Rotation = initialFrame.Rotation.Value.ToString(CultureInfo.InvariantCulture);
@@ -277,6 +297,21 @@ namespace SPNATI_Character_Editor
 					break;
 				case "SkewY":
 					frame.SkewY = kf.SkewY.Value.ToString(CultureInfo.InvariantCulture);
+					break;
+				case "ClipLeft":
+					frame.ClipLeft = kf.ClipLeft.Value.ToString(CultureInfo.InvariantCulture);
+					break;
+				case "ClipTop":
+					frame.ClipTop = kf.ClipTop.Value.ToString(CultureInfo.InvariantCulture);
+					break;
+				case "ClipRight":
+					frame.ClipRight = kf.ClipRight.Value.ToString(CultureInfo.InvariantCulture);
+					break;
+				case "ClipBottom":
+					frame.ClipBottom = kf.ClipBottom.Value.ToString(CultureInfo.InvariantCulture);
+					break;
+				case "ClipRadius":
+					frame.ClipRadius = kf.ClipRadius.Value.ToString(CultureInfo.InvariantCulture);
 					break;
 			}
 		}

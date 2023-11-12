@@ -1,9 +1,11 @@
-﻿using System;
+﻿using SPNATI_Character_Editor.DataStructures;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Globalization;
+using System.IO;
 
 namespace SPNATI_Character_Editor.EpilogueEditor
 {
@@ -250,6 +252,31 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 				AddValue<float>(time, "SkewY", kf.SkewY, addBreak);
 				properties.Add("SkewY");
 			}
+			if (!string.IsNullOrEmpty(kf.ClipLeft))
+			{
+				AddValue<float>(time, "ClipLeft", kf.ClipLeft, addBreak);
+				properties.Add("ClipLeft");
+			}
+			if (!string.IsNullOrEmpty(kf.ClipTop))
+			{
+				AddValue<float>(time, "ClipTop", kf.ClipTop, addBreak);
+				properties.Add("ClipTop");
+			}
+			if (!string.IsNullOrEmpty(kf.ClipRight))
+			{
+				AddValue<float>(time, "ClipRight", kf.ClipRight, addBreak);
+				properties.Add("ClipRight");
+			}
+			if (!string.IsNullOrEmpty(kf.ClipBottom))
+			{
+				AddValue<float>(time, "ClipBottom", kf.ClipBottom, addBreak);
+				properties.Add("ClipBottom");
+			}
+			if (!string.IsNullOrEmpty(kf.ClipRadius))
+			{
+				AddValue<float>(time, "ClipRadius", kf.ClipRadius, addBreak);
+				properties.Add("ClipRadius");
+			}
 		}
 
 		protected override void OnUpdate(float time, float offset, string easeOverride, string interpolationOverride, bool? looped, bool inPlayback)
@@ -265,6 +292,11 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			Rotation = GetPropertyValue("Rotation", time, offset, 0.0f, easeOverride, interpolationOverride, looped);
 			SkewX = GetPropertyValue("SkewX", time, offset, 0f, easeOverride, interpolationOverride, looped);
 			SkewY = GetPropertyValue("SkewY", time, offset, 0f, easeOverride, interpolationOverride, looped);
+			ClipLeft = GetPropertyValue("ClipLeft", time, offset, 0f, easeOverride, interpolationOverride, looped);
+			ClipTop = GetPropertyValue("ClipTop", time, offset, 0f, easeOverride, interpolationOverride, looped);
+			ClipRight = GetPropertyValue("ClipRight", time, offset, 0f, easeOverride, interpolationOverride, looped);
+			ClipBottom = GetPropertyValue("ClipBottom", time, offset, 0f, easeOverride, interpolationOverride, looped);
+			ClipRadius = GetPropertyValue("ClipRadius", time, offset, 0f, easeOverride, interpolationOverride, looped);
 		}
 
 		private void UpdateImage()
@@ -290,6 +322,9 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, bool inPlayback, bool drawAxes = false)
 		{
 			if (!IsVisible || Hidden) { return; }
+
+			if (ClipBottom + ClipTop + 2 * ClipRadius > Height || ClipLeft + ClipRight + 2 * ClipRadius > Width) { return; }
+
 			if (HiddenByMarker(markers))
 			{
 				return;
@@ -298,6 +333,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			float alpha = WorldAlpha;
 			if (Image != null && alpha > 0)
 			{
+
 				g.MultiplyTransform(WorldTransform);
 
 				g.MultiplyTransform(sceneTransform, MatrixOrder.Append);
@@ -310,6 +346,92 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 					float skewedHeight = Width * (float)Math.Tan(Math.PI / 180.0f * SkewY);
 					float skewDistanceY = skewedHeight / 2;
 					PointF[] destPts = new PointF[] { new PointF(-skewDistanceX, -skewDistanceY), new PointF(Width - skewDistanceX, skewDistanceY), new PointF(skewDistanceX, Height - skewDistanceY) };
+
+					if (Parent == null || Parent.ClipLeft + Parent.ClipTop + Parent.ClipRight + Parent.ClipBottom + Parent.ClipRadius == 0)
+					{
+						g.ResetClip();
+						ClipPath = null;
+					}
+					else
+					{
+						ClipPath = Parent.ClipPath;
+						Matrix reverse = LocalTransform.Clone();
+						reverse.Invert();
+						ClipPath.Transform(reverse);
+						g.SetClip(ClipPath);
+					}
+
+					if (ClipLeft + ClipRight + ClipTop + ClipBottom + ClipRadius > 0)
+					{
+						GraphicsPath path = new GraphicsPath();
+						if (ClipRadius > 0)
+						{
+							float LR = ClipLeft + ClipRadius;
+							float RR = ClipRight + ClipRadius;
+							float TR = ClipTop + ClipRadius;
+							float BR = ClipBottom + ClipRadius;
+							float ratioLR = (float)(1 - 2 * LR / Width);
+							float ratioRR = (float)(1 - 2 * RR / Width);
+							float ratioTR = (float)(1 - 2 * TR / Height);
+							float ratioBR = (float)(1 - 2 * BR / Height);
+							float ratioL = (float)(1 - 2 * ClipLeft / Width);
+							float ratioR = (float)(1 - 2 * ClipRight / Width);
+							float ratioT = (float)(1 - 2 * ClipTop / Height);
+							float ratioB = (float)(1 - 2 * ClipBottom / Height);
+							PointF p1 = new PointF(-skewDistanceX * ratioT + LR, -skewDistanceY * ratioLR + ClipTop);
+							PointF p2 = new PointF(-skewDistanceX * ratioT + Width - RR, skewDistanceY * ratioRR + ClipTop);
+							PointF p3 = new PointF(-skewDistanceX * ratioTR + Width - ClipRight, skewDistanceY * ratioR + TR);
+							PointF p4 = new PointF(skewDistanceX * ratioBR + Width - ClipRight, skewDistanceY * ratioR + Height - BR);
+							PointF p5 = new PointF(skewDistanceX * ratioB + Width - RR, skewDistanceY * ratioRR + Height - ClipBottom);
+							PointF p6 = new PointF(skewDistanceX * ratioB + LR, -skewDistanceY * ratioLR + Height - ClipBottom);
+							PointF p7 = new PointF(skewDistanceX * ratioBR + ClipLeft, -skewDistanceY * ratioL + Height - BR);
+							PointF p8 = new PointF(-skewDistanceX * ratioTR + ClipLeft, -skewDistanceY * ratioL + TR);
+
+							// Approximate arcs with Bézier curves
+							float c = 1 - 0.551915f;
+							float LB = ClipLeft + ClipRadius * c;
+							float RB = ClipRight + ClipRadius * c;
+							float TB = ClipTop + ClipRadius * c;
+							float BB = ClipBottom + ClipRadius * c;
+							float ratioLB = (float)(1 - 2 * LB / Width);
+							float ratioRB = (float)(1 - 2 * RB / Width);
+							float ratioTB = (float)(1 - 2 * TB / Height);
+							float ratioBB = (float)(1 - 2 * BB / Height);
+							PointF pb1 = new PointF(-skewDistanceX * ratioT + LB, -skewDistanceY * ratioLB + ClipTop);
+							PointF pb2 = new PointF(-skewDistanceX * ratioT + Width - RB, skewDistanceY * ratioRB + ClipTop);
+							PointF pb3 = new PointF(-skewDistanceX * ratioTB + Width - ClipRight, skewDistanceY * ratioR + TB);
+							PointF pb4 = new PointF(skewDistanceX * ratioBB + Width - ClipRight, skewDistanceY * ratioR + Height - BB);
+							PointF pb5 = new PointF(skewDistanceX * ratioB + Width - RB, skewDistanceY * ratioRB + Height - ClipBottom);
+							PointF pb6 = new PointF(skewDistanceX * ratioB + LB, -skewDistanceY * ratioLB + Height - ClipBottom);
+							PointF pb7 = new PointF(skewDistanceX * ratioBB + ClipLeft, -skewDistanceY * ratioL + Height - BB);
+							PointF pb8 = new PointF(-skewDistanceX * ratioTB + ClipLeft, -skewDistanceY * ratioL + TB);
+							path.AddLine(p1, p2);
+							path.AddBezier(p2, pb2, pb3, p3);
+							path.AddLine(p3, p4);
+							path.AddBezier(p4, pb4, pb5, p5);
+							path.AddLine(p5, p6);
+							path.AddBezier(p6, pb6, pb7, p7);
+							path.AddLine(p7, p8);
+							path.AddBezier(p8, pb8, pb1, p1);
+						}
+						else
+						{
+							float ratioL = (float)(1 - 2 * ClipLeft / Width);
+							float ratioR = (float)(1 - 2 * ClipRight / Width);
+							float ratioT = (float)(1 - 2 * ClipTop / Height);
+							float ratioB = (float)(1 - 2 * ClipBottom / Height);
+							PointF p1 = new PointF(-skewDistanceX * ratioT + ClipLeft, -skewDistanceY * ratioL + ClipTop);
+							PointF p2 = new PointF(-skewDistanceX * ratioT + Width - ClipRight, skewDistanceY * ratioR + ClipTop);
+							PointF p3 = new PointF(skewDistanceX * ratioB + Width - ClipRight, skewDistanceY * ratioR + Height - ClipBottom);
+							PointF p4 = new PointF(skewDistanceX * ratioB + ClipLeft, -skewDistanceY * ratioL + Height - ClipBottom);
+							path.AddLine(p1, p2);
+							path.AddLine(p2, p3);
+							path.AddLine(p3, p4);
+							path.AddLine(p4, p1);
+						}
+						ClipPath = path;
+						g.SetClip(path, CombineMode.Intersect);
+					}
 
 					if (alpha < 100)
 					{
@@ -401,6 +523,26 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 					if (initialFrame.Alpha.HasValue)
 					{
 						sprite.Alpha = initialFrame.Alpha.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipLeft.HasValue)
+					{
+						sprite.ClipLeft = initialFrame.ClipLeft.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipTop.HasValue)
+					{
+						sprite.ClipTop = initialFrame.ClipTop.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipRight.HasValue)
+					{
+						sprite.ClipRight = initialFrame.ClipRight.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipBottom.HasValue)
+					{
+						sprite.ClipBottom = initialFrame.ClipBottom.Value.ToString(CultureInfo.InvariantCulture);
+					}
+					if (initialFrame.ClipRadius.HasValue)
+					{
+						sprite.ClipRadius = initialFrame.ClipRadius.Value.ToString(CultureInfo.InvariantCulture);
 					}
 
 					UpdateHistory(initialFrame);

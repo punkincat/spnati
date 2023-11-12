@@ -242,7 +242,7 @@ namespace SPNATI_Character_Editor
 					|| !string.IsNullOrWhiteSpace(e.AlsoPlayingAllMarkers)
 					|| !string.IsNullOrWhiteSpace(e.AlsoPlayingAnyMarkers)
 					|| !string.IsNullOrWhiteSpace(e.AlsoPlayingNotMarkers)
-			}) ;
+			});
 			LegacyTags = c.Tags;
 			HasCollectibles = c.Collectibles.Count > 0;
 			int lines, poses;

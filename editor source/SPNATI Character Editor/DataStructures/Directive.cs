@@ -524,6 +524,26 @@ namespace SPNATI_Character_Editor
 		[XmlAttribute("zoom")]
 		public string Zoom;
 
+		[Float(DisplayName = "Clip Left", Key = "clipleft", GroupOrder = 24, Description = "Position of the left side of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[XmlAttribute("clipleft")]
+		public string ClipLeft;
+
+		[Float(DisplayName = "Clip Right", Key = "clipright", GroupOrder = 25, Description = "Position of the right side of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[XmlAttribute("clipright")]
+		public string ClipRight;
+
+		[Float(DisplayName = "Clip Top", Key = "cliptop", GroupOrder = 26, Description = "Position of the top side of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[XmlAttribute("cliptop")]
+		public string ClipTop;
+
+		[Float(DisplayName = "Clip Bottom", Key = "clipbottom", GroupOrder = 27, Description = "Position of the bottom side of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[XmlAttribute("clipbottom")]
+		public string ClipBottom;
+
+		[Float(DisplayName = "Clip Radius", Key = "clipradius", GroupOrder = 28, Description = "Radius value used to round the corners of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		[XmlAttribute("clipradius")]
+		public string ClipRadius;
+
 		[XmlIgnore]
 		public Dictionary<string, object> Properties = new Dictionary<string, object>();
 
@@ -538,7 +558,8 @@ namespace SPNATI_Character_Editor
 		{
 			return !string.IsNullOrEmpty(X) || !string.IsNullOrEmpty(Y) || !string.IsNullOrEmpty(Scale) || !string.IsNullOrEmpty(ScaleX) || !string.IsNullOrEmpty(ScaleY)
 				 || !string.IsNullOrEmpty(Color) || !string.IsNullOrEmpty(Alpha) || !string.IsNullOrEmpty(Rotation) || !string.IsNullOrEmpty(Zoom) || !string.IsNullOrEmpty(Src)
-				 || !string.IsNullOrEmpty(SkewX) || !string.IsNullOrEmpty(SkewY);
+				 || !string.IsNullOrEmpty(SkewX) || !string.IsNullOrEmpty(SkewY) || !string.IsNullOrEmpty(ClipLeft) || !string.IsNullOrEmpty(ClipTop) || !string.IsNullOrEmpty(ClipRight)
+				 || !string.IsNullOrEmpty(ClipBottom) || !string.IsNullOrEmpty(ClipRadius);
 		}
 
 		public Keyframe() { }
@@ -564,6 +585,11 @@ namespace SPNATI_Character_Editor
 			Rotation = src.Rotation;
 			Zoom = src.Zoom;
 			Src = src.Src;
+			ClipLeft = src.ClipLeft;
+			ClipTop = src.ClipTop;
+			ClipRight = src.ClipRight;
+			ClipBottom = src.ClipBottom;
+			ClipRadius = src.ClipRadius;
 
 			src.Time = null;
 			src.X = null;
@@ -578,6 +604,11 @@ namespace SPNATI_Character_Editor
 			src.SkewX = null;
 			src.SkewY = null;
 			src.Src = null;
+			src.ClipLeft = null;
+			src.ClipTop = null;
+			src.ClipRight = null;
+			src.ClipBottom = null;
+			src.ClipRadius = null;
 
 			Properties = src.Properties;
 			src.Properties = new Dictionary<string, object>();
@@ -681,6 +712,26 @@ namespace SPNATI_Character_Editor
 			if (!string.IsNullOrEmpty(Src))
 			{
 				sb.Append($" Src:{Src}");
+			}
+			if (!string.IsNullOrEmpty(ClipLeft))
+			{
+				sb.Append($" ClipLeft:{ClipLeft}");
+			}
+			if (!string.IsNullOrEmpty(ClipTop))
+			{
+				sb.Append($" ClipTop:{ClipTop}");
+			}
+			if (!string.IsNullOrEmpty(ClipRight))
+			{
+				sb.Append($" ClipRight:{ClipRight}");
+			}
+			if (!string.IsNullOrEmpty(ClipBottom))
+			{
+				sb.Append($" ClipBottom:{ClipBottom}");
+			}
+			if (!string.IsNullOrEmpty(ClipRadius))
+			{
+				sb.Append($" ClipRadius:{ClipRadius}");
 			}
 			return sb.ToString();
 		}
