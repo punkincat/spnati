@@ -1,6 +1,8 @@
 ﻿using Desktop.Skinning;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SPNATI_Character_Editor.Controls
@@ -17,6 +19,8 @@ namespace SPNATI_Character_Editor.Controls
 		private Character _character;
 		private DialogueLine _line;
 		private bool _settingData;
+		private NicknameOperation _selectedNickOp;
+		private Dictionary<string, string> _nickOps = new Dictionary<string, string>();
 
 		public event EventHandler DataUpdated;
 
@@ -28,6 +32,12 @@ namespace SPNATI_Character_Editor.Controls
 			cboAttr.Items.AddRange(new string[] { "", "timer", "stamina", "redirect-finish" });
 			cboHeavy.Items.AddRange(new string[] { "", "true", "false" });
 			cboOp.Items.AddRange(new string[] { "=", "+", "-", "*", "/", "%" });
+			_nickOps.Add("=", "Reset To");
+			_nickOps.Add("+", "Add/Increase Weight");
+			_nickOps.Add("-", "Decrease Weight");
+			_nickOps.Add(":", "Set Weight");
+			cboNickOp.Items.AddRange(_nickOps.Values);
+			recNickChar.RecordType = typeof(Character);
 			cboDirection.DataSource = DialogueLine.ArrowDirections;
 			cboFontSize.DataSource = DialogueLine.FontSizes;
 			cboAI.DataSource = DialogueLine.AILevels;
@@ -105,6 +115,20 @@ namespace SPNATI_Character_Editor.Controls
 						txtValue.Text = op.Value;
 						cboOp.Text = op.Operator;
 					}
+				}
+			}
+
+			recNickChar.RecordKey = "";
+			cboNickOp.Text = "";
+			txtNickname.Text = "";
+			valNickWeight.Value = 1;
+			lstNick.Items.Clear();
+			if (line.DialogueOperations != null && line.DialogueOperations.NicknameOps != null)
+			{
+				foreach (NicknameOperation op in line.DialogueOperations.NicknameOps.ToArray())
+				{
+					lstNick.Items.Add(op);
+					if (lstNick.Items.Count > 0) { lstNick.SelectedIndex = 0; }
 				}
 			}
 
@@ -192,7 +216,7 @@ namespace SPNATI_Character_Editor.Controls
 
 			ForfeitOperation mainForfeitOp = null;
 			ForfeitOperation heavyOp = null;
-			if (!String.IsNullOrEmpty(cboAttr.Text))
+			if (!string.IsNullOrEmpty(cboAttr.Text))
 			{
 				mainForfeitOp = new ForfeitOperation();
 				mainForfeitOp.Attribute = cboAttr.Text;
@@ -206,7 +230,7 @@ namespace SPNATI_Character_Editor.Controls
 				heavyOp.Attribute = "heavy";
 				heavyOp.Value = "reset";
 			}
-			else if (!String.IsNullOrEmpty(cboHeavy.Text))
+			else if (!string.IsNullOrEmpty(cboHeavy.Text))
 			{
 				heavyOp = new ForfeitOperation();
 				heavyOp.Attribute = "heavy";
@@ -219,14 +243,12 @@ namespace SPNATI_Character_Editor.Controls
 				{
 					_line.DialogueOperations = new DialogueOperations();
 				}
-
 				_line.DialogueOperations.ForfeitOps.Clear();
 
 				if (mainForfeitOp != null)
 				{
 					_line.DialogueOperations.ForfeitOps.Add(mainForfeitOp);
 				}
-
 				if (heavyOp != null)
 				{
 					_line.DialogueOperations.ForfeitOps.Add(heavyOp);
@@ -234,6 +256,28 @@ namespace SPNATI_Character_Editor.Controls
 			} else if (_line.DialogueOperations != null && _line.DialogueOperations.ForfeitOps != null)
 			{
 				_line.DialogueOperations.ForfeitOps.Clear();
+				if (_line.DialogueOperations.IsEmpty())
+				{
+					_line.DialogueOperations = null;
+				}
+			}
+
+			if (lstNick.Items.Count > 0)
+			{
+				if (_line.DialogueOperations == null)
+				{
+					_line.DialogueOperations = new DialogueOperations();
+				}
+				_line.DialogueOperations.NicknameOps.Clear();
+
+				foreach (NicknameOperation op in lstNick.Items)
+				{
+					_line.DialogueOperations.NicknameOps.Add(op);
+				}
+			}
+			else if (_line.DialogueOperations != null && _line.DialogueOperations.NicknameOps != null)
+			{
+				_line.DialogueOperations.NicknameOps.Clear();
 				if (_line.DialogueOperations.IsEmpty())
 				{
 					_line.DialogueOperations = null;
@@ -273,21 +317,6 @@ namespace SPNATI_Character_Editor.Controls
 			if (!_settingData) DataUpdated?.Invoke(this, e);
 		}
 
-		private void skinnedGroupBox2_Enter(object sender, EventArgs e)
-		{
-
-		}
-
-		private void skinnedLabel2_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void cboAI_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
-		}
-
 		private void cboAttr_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			string attr = cboAttr.Text;
@@ -312,14 +341,123 @@ namespace SPNATI_Character_Editor.Controls
 			if (!_settingData) DataUpdated?.Invoke(this, e);
 		}
 
-		private void label5_Click(object sender, EventArgs e)
+		private void lstNick_SelectedIndexChanged(object sender, EventArgs e)
 		{
-
+			NicknameOperation nickOp = lstNick.SelectedItem as NicknameOperation;
+			if (nickOp != null)
+			{
+				if (!_settingData)
+				{
+					saveNickOp();
+					if (_selectedNickOp != null && string.IsNullOrEmpty(_selectedNickOp.Character))
+					{
+						_line.DialogueOperations.NicknameOps.Remove(_selectedNickOp);
+						lstNick.Items.Remove(_selectedNickOp);
+					}
+				}
+				_selectedNickOp = nickOp;
+				_settingData = true;
+				recNickChar.RecordKey = nickOp.Character;
+				cboNickOp.Text = string.IsNullOrEmpty(nickOp.Operator) ? _nickOps["="] : _nickOps[nickOp.Operator];
+				txtNickname.Text = nickOp.Name;
+				valNickWeight.Value = cboNickOp.Text == _nickOps["="] ? 1 : Math.Max(valNickWeight.Minimum, Math.Min(valNickWeight.Maximum, nickOp.Weight));
+				_settingData = false;
+			}
 		}
 
-		private void cboHeavy_SelectedIndexChanged(object sender, EventArgs e)
+		private void saveNickOp()
 		{
-			
+			if (_selectedNickOp == null) return;
+
+			_selectedNickOp.Character = recNickChar.RecordKey;
+			_selectedNickOp.Name = txtNickname.Text;
+			_selectedNickOp.Operator = string.IsNullOrEmpty(cboNickOp.Text) ? "=" : _nickOps.FirstOrDefault(x => x.Value == cboNickOp.Text).Key;
+			_selectedNickOp.Weight = _selectedNickOp.Operator == "=" ? 1 : (int)valNickWeight.Value;
+		}
+
+		private void tsNickAdd_Click(object sender, EventArgs e)
+		{
+			NicknameOperation op = new NicknameOperation();
+			lstNick.Items.Add(op);
+			if (_line.DialogueOperations == null)
+			{
+				_line.DialogueOperations = new DialogueOperations();
+			}
+			_line.DialogueOperations.NicknameOps.Add(op);
+		}
+
+		private void tsNickRemove_Click(object sender, EventArgs e)
+		{
+			if (_selectedNickOp == null) return;
+			_line.DialogueOperations.NicknameOps.Remove(_selectedNickOp);
+			lstNick.Items.Remove(_selectedNickOp);
+			if (lstNick.Items.Count > 0)
+			{
+				lstNick.SelectedIndex = 0;
+			}
+			else
+			{
+				recNickChar.RecordKey = "";
+				cboNickOp.Text = "";
+				txtNickname.Text = "";
+				valNickWeight.Value = 0;
+			}
+		}
+
+		private void tsNickMoveDown_Click(object sender, EventArgs e)
+		{
+			if (lstNick.Items.Count < 2) return;
+			int i = lstNick.SelectedIndex;
+			if (i == lstNick.Items.Count - 1) return;
+			_line.DialogueOperations.NicknameOps.Reverse(i, 2);
+			NicknameOperation op = lstNick.Items[i + 1] as NicknameOperation;
+			lstNick.Items[i + 1] = _selectedNickOp;
+			lstNick.SelectedIndex = i + 1;
+			lstNick.Items[i] = op;
+			lstNick.RefreshListItems();
+		}
+
+		private void tsNickMoveUp_Click(object sender, EventArgs e)
+		{
+			if (lstNick.Items.Count < 2) return;
+			int i = lstNick.SelectedIndex;
+			if (i == 0) return;
+			_line.DialogueOperations.NicknameOps.Reverse(i - 1, 2);
+			NicknameOperation op = lstNick.Items[i - 1] as NicknameOperation;
+			lstNick.Items[i - 1] = _selectedNickOp;
+			lstNick.SelectedIndex = i - 1;
+			lstNick.Items[i] = op;
+			lstNick.RefreshListItems();
+		}
+
+		private void recNickChar_RecordChanged(object sender, Desktop.CommonControls.RecordEventArgs e)
+		{
+			if (_selectedNickOp == null || _settingData) return; 
+			_selectedNickOp.Character = recNickChar.RecordKey;
+			if (!string.IsNullOrEmpty(_selectedNickOp.Character)) lstNick.RefreshListItems();
+		}
+
+		private void txtNickname_TextChanged(object sender, EventArgs e)
+		{
+			if (_selectedNickOp == null || _settingData) return;
+			_selectedNickOp.Name = txtNickname.Text;
+			if (!string.IsNullOrEmpty(_selectedNickOp.Character)) lstNick.RefreshListItems();
+		}
+
+		private void cboNickOp_TextChanged(object sender, EventArgs e)
+		{
+			if (_selectedNickOp == null || _settingData) return;
+			_selectedNickOp.Operator = string.IsNullOrEmpty(cboNickOp.Text) ? "=" : _nickOps.FirstOrDefault(x => x.Value == cboNickOp.Text).Key;
+			if (_selectedNickOp.Operator == "=" && valNickWeight.Value != 1)
+			{
+				valNickWeight.Value = 1;
+			}
+		}
+
+		private void valNickWeight_ValueChanged(object sender, EventArgs e)
+		{
+			if (_selectedNickOp == null || _settingData) return;
+			_selectedNickOp.Weight = cboNickOp.Text == _nickOps["="] ? 1 : (int)valNickWeight.Value;
 		}
 	}
 
