@@ -163,7 +163,7 @@ Player.prototype.resetState = function () {
         var clothingArr = [];
         $wardrobe.children('clothing').each(function () {
             var generic = $(this).attr('generic');
-            var name = $(this).attr('name') || $(this).attr('lowercase');
+            var name = $(this).attr('name');
             var type = $(this).attr('type');
             var position = $(this).attr('position');
             var plural = $(this).attr('plural');
