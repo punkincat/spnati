@@ -1,0 +1,16 @@
+.dialogue .loud[data-character="nonon"] {
+  /*nani sore*/
+  font-size: 110%;
+  font-weight: 700;
+}
+
+.dialogue .quiet[data-character="nonon"] {
+  /**/
+  font-size: 80%;
+}
+
+.dialogue .thought[data-character="nonon"] {
+  /*think*/
+  font-style: italic;
+  color: #525252;
+}
