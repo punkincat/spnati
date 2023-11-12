@@ -564,7 +564,7 @@ function parseEpilogue(player, rawEpilogue) {
         var scene;
         $epilogue.children("scene").each(function (index, rawScene) {
             var $scene = $(rawScene);
-            if ($scene.attr("marker") && !checkMarker($scene.attr("marker"), player)){
+            if ($scene.attr("marker") && !checkMarkers($scene.attr("marker"), player)){
             }
             else if ($scene.attr("transition")) {
                 if (scenes.length === 0) {
@@ -622,7 +622,7 @@ function parseEpilogue(player, rawEpilogue) {
                         directive.time = totalTime;
                     }
 
-                    if (directive.marker && !checkMarker(directive.marker, player)) {
+                    if (directive.marker && !checkMarkers(directive.marker, player)) {
                         directive.type = "skip";
                     }
                     addDirectiveToScene(scene, directive);
