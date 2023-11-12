@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls.PropertyControls;
 using Desktop.DataStructures;
 using Newtonsoft.Json;
@@ -32,6 +32,29 @@ namespace SPNATI_Character_Editor
 		/// Tag to condition on
 		/// </summary>
 		public string FilterTag
+		{
+			get { return Get<string>(); }
+			set { Set(value); }
+		}
+
+		[DefaultValue("")]
+		[RecordSelect(DisplayName = "Not Tag", GroupName = "Metadata", GroupOrder = 11, Description = "Character does not have the given tag", RecordType = typeof(Tag), UseAutoComplete = true)]
+		[XmlAttribute("filterOut")]
+		[JsonProperty("filterOut")]
+		public string FilterNotTag
+		{
+			get { return Get<string>(); }
+			set { Set(value); }
+		}
+
+		[DefaultValue("")]
+		[TagAdv(DisplayName = "Tags (Advanced)", GroupName = "Metadata", GroupOrder = 12, Description = "Character has the given combination of tags")]
+		[XmlAttribute("filterAdv")]
+		[JsonProperty("filterAdv")]
+		/// <summary>
+		/// Tags combination to condition on
+		/// </summary>
+		public string FilterTagAdv
 		{
 			get { return Get<string>(); }
 			set { Set(value); }
@@ -219,6 +242,7 @@ namespace SPNATI_Character_Editor
 			new KeyValuePair<string, string>("lost_all", "Lost all layers"),
 			new KeyValuePair<string, string>("alive", "Still in the game"),
 			new KeyValuePair<string, string>("masturbating", "Masturbating"),
+			new KeyValuePair<string, string>("heavy_masturbating", "Masturbating (heavy)"),
 			new KeyValuePair<string, string>("finished", "Finished masturbating")
 		};
 
@@ -236,6 +260,7 @@ namespace SPNATI_Character_Editor
 			new KeyValuePair<string, string>("lost_all", "Lost all layers"),
 			new KeyValuePair<string, string>("alive", "Still in the game"),
 			new KeyValuePair<string, string>("masturbating", "Forfeiting"),
+			new KeyValuePair<string, string>("heavy_masturbating", "Forfeiting (heavy)"),
 			new KeyValuePair<string, string>("finished", "Finished forfeit")
 		};
 
@@ -246,6 +271,16 @@ namespace SPNATI_Character_Editor
 		public TargetCondition(string tag, string gender, string status, string count)
 		{
 			FilterTag = tag;
+			Gender = gender;
+			Status = status;
+			Count = count;
+		}
+
+		public TargetCondition(string tag, string nottag, string tagAdv, string gender, string status, string count)
+		{
+			FilterTag = tag;
+			FilterNotTag = nottag;
+			FilterTagAdv = tagAdv;
 			Gender = gender;
 			Status = status;
 			Count = count;
@@ -312,6 +347,12 @@ namespace SPNATI_Character_Editor
 							case "pose":
 								Pose = value;
 								break;
+							case "nottag":
+								FilterNotTag = value;
+								break;
+							case "tagAdv":
+								FilterTagAdv = value;
+								break;
 						}
 					}
 				}
@@ -341,6 +382,8 @@ namespace SPNATI_Character_Editor
 				return false;
 			}
 			return FilterTag == other.FilterTag &&
+				FilterNotTag == other.FilterNotTag &&
+				FilterTagAdv == other.FilterTagAdv &&
 				(Count ?? "") == (other.Count ?? "") &&
 				Status == other.Status &&
 				Gender == other.Gender &&
@@ -364,6 +407,8 @@ namespace SPNATI_Character_Editor
 		public override int GetHashCode()
 		{
 			int hash = (FilterTag ?? string.Empty).GetHashCode();
+			hash = (hash * 397) ^ (FilterNotTag ?? string.Empty).GetHashCode();
+			hash = (hash * 397) ^ (FilterTagAdv ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (Gender ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (Status ?? string.Empty).GetHashCode();
 			hash = (hash * 397) ^ (Count ?? string.Empty).GetHashCode();
@@ -389,6 +434,8 @@ namespace SPNATI_Character_Editor
 		{
 			if (FilterTag == "")
 				FilterTag = null;
+			if (FilterNotTag == "")
+				FilterNotTag = null;
 			if (Gender == "")
 				Gender = null;
 			if (Status == "")
@@ -416,6 +463,14 @@ namespace SPNATI_Character_Editor
 			if (!string.IsNullOrEmpty(FilterTag))
 			{
 				parts.Add(FilterTag);
+			}
+			if (!string.IsNullOrEmpty(FilterNotTag))
+			{
+				parts.Add("nottag;"+ FilterNotTag);
+			}
+			if (!string.IsNullOrEmpty(FilterTagAdv))
+			{
+				parts.Add("tagAdv;" + FilterTagAdv);
 			}
 			if (!string.IsNullOrEmpty(Role))
 			{
@@ -579,7 +634,11 @@ namespace SPNATI_Character_Editor
 				}
 				if (!string.IsNullOrEmpty(Gender))
 				{
-					str += " " + Gender + (FilterTag != null ? "" : "s");
+					str += " " + Gender + ((FilterTag != null || FilterNotTag != null) ? "" : "s");
+				}
+				if (!string.IsNullOrEmpty(FilterTagAdv))
+				{
+					str += $" tagAdv: {FilterTagAdv}";
 				}
 				if (!string.IsNullOrEmpty(Stage))
 				{
@@ -604,6 +663,10 @@ namespace SPNATI_Character_Editor
 				if (FilterTag != null)
 				{
 					str += " " + FilterTag;
+				}
+				if (FilterNotTag != null)
+				{
+					str += $" not {FilterNotTag}";
 				}
 				if (!string.IsNullOrEmpty(ConsecutiveLosses))
 				{
@@ -654,6 +717,14 @@ namespace SPNATI_Character_Editor
 				{
 					priority += 0;
 				}
+				if (!string.IsNullOrEmpty(FilterNotTag))
+				{
+					priority += 0;
+				}
+				if (!string.IsNullOrEmpty(FilterTagAdv))
+				{
+					priority += 0;
+				}
 				if (!string.IsNullOrEmpty(Status))
 				{
 					priority += 20;
@@ -682,6 +753,14 @@ namespace SPNATI_Character_Editor
 					priority += 300;
 				}
 				if (!string.IsNullOrEmpty(FilterTag))
+				{
+					priority += 150;
+				}
+				if (!string.IsNullOrEmpty(FilterNotTag))
+				{
+					priority += 150;
+				}
+				if (!string.IsNullOrEmpty(FilterTagAdv))
 				{
 					priority += 150;
 				}
@@ -725,6 +804,14 @@ namespace SPNATI_Character_Editor
 					priority += 100;
 				}
 				if (!string.IsNullOrEmpty(FilterTag))
+				{
+					priority += 10;
+				}
+				if (!string.IsNullOrEmpty(FilterNotTag))
+				{
+					priority += 10;
+				}
+				if (!string.IsNullOrEmpty(FilterTagAdv))
 				{
 					priority += 10;
 				}
@@ -822,6 +909,8 @@ namespace SPNATI_Character_Editor
 					!string.IsNullOrEmpty(StartingLayers) ||
 					!string.IsNullOrEmpty(Gender) ||
 					!string.IsNullOrEmpty(FilterTag) ||
+					!string.IsNullOrEmpty(FilterNotTag) ||
+					!string.IsNullOrEmpty(FilterTagAdv) ||
 					!string.IsNullOrEmpty(Pose);
 			}
 		}
@@ -851,6 +940,8 @@ namespace SPNATI_Character_Editor
 			StartingLayers = null;
 			Gender = null;
 			FilterTag = null;
+			FilterNotTag = null;
+			FilterTagAdv = null;
 			Pose = null;
 		}
 	}

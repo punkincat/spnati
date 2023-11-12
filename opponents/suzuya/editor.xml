@@ -1,0 +1,613 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+    <owner>suzuya</owner>
+    <height>5'7"</height>
+    <age />
+    <pronunciation />
+    <othernotes>Neither a robot nor a school girl.</othernotes>
+    <noteworthy>
+        <case name="Hand=OkayPrompts" id="68" priority="Prompt" min="0" max="7">
+            <description>A handful of conversational prompts, each has it's own tag.</description>
+        </case>
+        <case name="EarlyShoeStrip" id="167" priority="Noteworthy" min="0" max="0">
+            <description>Suzuya strips off her shoes before taking off her jacket</description>
+        </case>
+        <case name="DoubleStrip" id="168" priority="Noteworthy" min="4" max="4">
+            <description>Suzuya takes off her ribbon and panties at the same time</description>
+        </case>
+        <case name="BraRemoval" id="169" priority="Noteworthy" min="4" max="4">
+            <description>Suzuya takes off her bra from underneath her shirt</description>
+        </case>
+    </noteworthy>
+    <reviewed>true</reviewed>
+    <responses>
+        <response id="19" opponent="arash" opponentId="162" />
+        <response id="22" opponent="arash" opponentId="42" />
+        <response id="23" opponent="wikipe-tan" opponentId="176" />
+        <response id="25" opponent="kumatora" opponentId="170" />
+        <response id="26" opponent="pyrrha" opponentId="116" />
+        <response id="130" opponent="mari" opponentId="790" />
+        <response id="133" opponent="erufuda" opponentId="76" />
+        <response id="200" opponent="florina" opponentId="4" />
+        <response id="210" opponent="nami" opponentId="11" />
+        <response id="223" opponent="queenie" opponentId="27" />
+        <response id="224" opponent="queenie" opponentId="43" />
+        <response id="225" opponent="queenie" opponentId="44" />
+        <response id="229" opponent="kyoko_kirigiri" opponentId="1234" />
+        <response id="230" opponent="kyoko_kirigiri" opponentId="1236" />
+        <response id="232" opponent="kyoko_kirigiri" opponentId="1238" />
+        <response id="240" opponent="komi-san" opponentId="1" />
+        <response id="249" opponent="cagliostro" opponentId="142" />
+        <response id="256" opponent="adrien" opponentId="488" />
+        <response id="272" opponent="cagliostro" opponentId="2" />
+        <response id="286" opponent="miko" opponentId="12" />
+        <response id="287" opponent="ringo_ando" opponentId="308" />
+        <response id="288" opponent="sucrose" opponentId="133" />
+        <response id="303" opponent="nagamimi" opponentId="77" />
+    </responses>
+    <notes>
+        <note id="281">whether you react to the question or the nickname is fine here</note>
+        <note id="290">dummied out until responses are written</note>
+        <note id="297">whether you react to the question or the nickname is fine here</note>
+        <note id="310">cute route</note>
+        <note id="312">flashy route</note>
+        <note id="314">cool route</note>
+        <note id="262">cute -&gt; nonorin || cool -&gt; nowatsun || flashy -&gt; nowanowa
+It's selected at random, but all the follow-up lines are based on whatever marker is set initially (they're all currently dummied out)</note>
+        <note id="315">cool route for the cool skin</note>
+        <note id="263">cute route</note>
+        <note id="311">cool route, default skin</note>
+        <note id="313">flashy route</note>
+    </notes>
+    <labels>
+        <label id="1" label="" folder="filtered_category" sort="0" />
+        <label id="2" label="" folder="filtered_category" sort="0" />
+        <label id="3" label="" folder="filtered_name" sort="0" />
+        <label id="4" label="" folder="filtered" sort="0" />
+        <label id="5" label="" folder="filtered" sort="0" />
+        <label id="6" label="" folder="filtered_name" sort="0" />
+        <label id="7" label="" folder="filtered" sort="0" />
+        <label id="8" label="" folder="filtered_name" sort="0" />
+        <label id="9" label="" folder="filtered_name" sort="0" />
+        <label id="10" label="" folder="filtered" sort="0" />
+        <label id="11" label="" folder="filtered_name" sort="0" />
+        <label id="12" label="" folder="filtered" sort="0" />
+        <label id="13" label="" folder="filtered_name" sort="0" />
+        <label id="14" label="" folder="filtered" sort="0" />
+        <label id="15" label="" folder="filtered_name" sort="0" />
+        <label id="16" label="" folder="filtered" sort="0" />
+        <label id="17" label="" folder="filtered_name" sort="0" />
+        <label id="18" label="" folder="filtered" sort="0" />
+        <label id="24" label="" folder="prompts" sort="0" />
+        <label id="19" label="" folder="prompt_responses" sort="4" />
+        <label id="25" label="" folder="prompt_responses" sort="5" />
+        <label id="23" label="" folder="prompt_responses" sort="8" />
+        <label id="22" label="" folder="prompt_responses" sort="7" />
+        <label id="28" label="" folder="prompt_responses" sort="2" />
+        <label id="26" label="" folder="prompt_responses" sort="3" />
+        <label id="27" label="" folder="prompt_responses" sort="0" />
+        <label id="29" label="play_once" folder="" sort="0" />
+        <label id="30" label="" folder="background" sort="0" />
+        <label id="31" label="" folder="background" sort="0" />
+        <label id="32" label="" folder="background" sort="2" />
+        <label id="33" label="" folder="background" sort="0" />
+        <label id="34" label="" folder="background" sort="3" />
+        <label id="35" label="" folder="filtered_name" sort="0" />
+        <label id="36" label="" folder="filtered" sort="0" />
+        <label id="37" label="" folder="filtered_name" sort="0" />
+        <label id="38" label="" folder="filtered_name" sort="2" />
+        <label id="39" label="" folder="filtered_name" sort="3" />
+        <label id="40" label="" folder="filtered_name" sort="4" />
+        <label id="41" label="" folder="filtered_name" sort="5" />
+        <label id="42" label="" folder="filtered_name" sort="6" />
+        <label id="43" label="" folder="filtered_name" sort="7" />
+        <label id="44" label="" folder="filtered_name" sort="8" />
+        <label id="45" label="" folder="filtered_name" sort="9" />
+        <label id="46" label="" folder="filtered_name" sort="10" />
+        <label id="47" label="" folder="filtered_name" sort="11" />
+        <label id="48" label="" folder="filtered_name" sort="12" />
+        <label id="49" label="" folder="filtered_name" sort="13" />
+        <label id="50" label="" folder="filtered_name" sort="14" />
+        <label id="51" label="" folder="filtered_name" sort="15" />
+        <label id="52" label="" folder="filtered_name" sort="16" />
+        <label id="53" label="" folder="filtered_name" sort="0" />
+        <label id="54" label="" folder="filtered_name" sort="17" />
+        <label id="55" label="" folder="filtered_name" sort="18" />
+        <label id="56" label="" folder="filtered_name" sort="19" />
+        <label id="57" label="" folder="filtered_name" sort="20" />
+        <label id="58" label="" folder="filtered_name" sort="21" />
+        <label id="59" label="" folder="filtered_name" sort="22" />
+        <label id="60" label="" folder="filtered_name" sort="23" />
+        <label id="61" label="" folder="filtered_name" sort="24" />
+        <label id="62" label="" folder="filtered_name" sort="25" />
+        <label id="63" label="" folder="filtered_name" sort="26" />
+        <label id="64" label="" folder="filtered_name" sort="27" />
+        <label id="65" label="" folder="filtered_name" sort="28" />
+        <label id="66" label="" folder="background" sort="4" />
+        <label id="67" label="" folder="background" sort="5" />
+        <label id="68" label="" folder="prompts" sort="0" />
+        <label id="69" label="play_once" folder="" sort="0" />
+        <label id="70" label="" folder="Gloves" sort="0" />
+        <label id="71" label="" folder="Gloves" sort="2" />
+        <label id="72" label="" folder="Gloves" sort="3" />
+        <label id="73" label="" folder="Gloves" sort="4" />
+        <label id="74" label="" folder="filter minor" sort="10" />
+        <label id="75" label="" folder="filter minor" sort="33" />
+        <label id="76" label="" folder="filter minor" sort="11" />
+        <label id="77" label="" folder="filter minor" sort="34" />
+        <label id="78" label="" folder="filter minor" sort="12" />
+        <label id="79" label="" folder="filter minor" sort="35" />
+        <label id="80" label="" folder="filter accessory" sort="7" />
+        <label id="81" label="" folder="filter accessory" sort="10" />
+        <label id="82" label="" folder="unisex acces" sort="0" />
+        <label id="83" label="" folder="filter accessory" sort="11" />
+        <label id="88" label="" folder="filter minor" sort="13" />
+        <label id="89" label="" folder="filter minor" sort="36" />
+        <label id="90" label="" folder="filter accessory" sort="12" />
+        <label id="91" label="" folder="filtered" sort="0" />
+        <label id="92" label="" folder="filtered" sort="2" />
+        <label id="144" label="" folder="filter accessory" sort="2" />
+        <label id="94" label="" folder="filtered" sort="3" />
+        <label id="95" label="" folder="filtered" sort="4" />
+        <label id="98" label="" folder="unisex acces" sort="0" />
+        <label id="99" label="" folder="filter accessory" sort="13" />
+        <label id="100" label="functionally minor generics" color="2" folder="unisex minor" sort="2" />
+        <label id="101" label="" color="0" folder="unisex minor" sort="6" />
+        <label id="102" label="" folder="filter minor" sort="14" />
+        <label id="103" label="" folder="filter minor" sort="37" />
+        <label id="133" label="" folder="prompt_responses" sort="6" />
+        <label id="105" label="" folder="filter minor" sort="57" />
+        <label id="106" label="" folder="filter minor" sort="15" />
+        <label id="107" label="" folder="filter minor" sort="0" />
+        <label id="108" label="" folder="filter minor" sort="38" />
+        <label id="109" label="" folder="filter minor" sort="0" />
+        <label id="110" label="" folder="filter minor" sort="7" />
+        <label id="111" label="" folder="filter minor" sort="16" />
+        <label id="112" label="" folder="filter minor" sort="39" />
+        <label id="113" label="" folder="filter minor" sort="17" />
+        <label id="114" label="" folder="filter minor" sort="40" />
+        <label id="115" label="" folder="filter minor" sort="2" />
+        <label id="116" label="" folder="filter minor" sort="6" />
+        <label id="117" label="" folder="filter minor" sort="3" />
+        <label id="118" label="" folder="filter minor" sort="41" />
+        <label id="119" label="" folder="filter minor" sort="18" />
+        <label id="120" label="" folder="filter minor" sort="42" />
+        <label id="121" label="" folder="filter accessory" sort="14" />
+        <label id="122" label="" folder="filter minor" sort="19" />
+        <label id="123" label="" folder="filter minor" sort="43" />
+        <label id="124" label="" folder="filter minor" sort="20" />
+        <label id="125" label="" folder="filter minor" sort="44" />
+        <label id="126" label="" folder="filter minor" sort="21" />
+        <label id="127" label="" folder="filter minor" sort="45" />
+        <label id="128" label="" folder="filter minor" sort="22" />
+        <label id="129" label="" folder="filter minor" sort="46" />
+        <label id="131" label="" folder="filter accessory" sort="8" />
+        <label id="132" label="" folder="filter accessory" sort="15" />
+        <label id="134" label="" folder="socks" sort="0" />
+        <label id="135" label="" folder="socks" sort="2" />
+        <label id="136" label="" folder="socks" sort="3" />
+        <label id="137" label="" folder="socks" sort="4" />
+        <label id="138" label="" folder="socks" sort="5" />
+        <label id="139" label="" folder="socks" sort="6" />
+        <label id="142" label="" folder="filter accessory" sort="6" />
+        <label id="86" label="" folder="filter accessory" sort="5" />
+        <label id="85" label="" folder="filter accessory" sort="4" />
+        <label id="84" label="" folder="filter accessory" sort="3" />
+        <label id="145" label="" folder="filter accessory" sort="0" />
+        <label id="146" label="" folder="filter minor" sort="4" />
+        <label id="147" label="" folder="filter minor" sort="5" />
+        <label id="148" label="" folder="filter minor" sort="8" />
+        <label id="149" label="" folder="filter minor" sort="9" />
+        <label id="151" label="" folder="target_zoe" sort="0" />
+        <label id="96" label="" folder="unisex acces" sort="2" />
+        <label id="97" label="" folder="unisex acces" sort="3" />
+        <label id="152" label="" folder="unisex minor" sort="5" />
+        <label id="153" label="" folder="unisex minor" sort="4" />
+        <label id="150" label="" folder="unisex minor" sort="7" />
+        <label id="141" label="" folder="filter minor" sort="23" />
+        <label id="104" label="" folder="unisex minor" sort="0" />
+        <label id="140" label="" folder="unisex minor" sort="3" />
+        <label id="154" label="" folder="unisex major" sort="2" />
+        <label id="93" label="" folder="unisex major" sort="0" />
+        <label id="155" label="" folder="filter accessory" sort="9" />
+        <label id="156" label="" folder="filter minor" sort="24" />
+        <label id="157" label="" folder="filter minor" sort="47" />
+        <label id="158" label="" folder="bra" sort="0" />
+        <label id="159" label="" folder="bra" sort="0" />
+        <label id="160" label="" folder="bra" sort="2" />
+        <label id="161" label="" folder="panties" sort="2" />
+        <label id="162" label="" folder="panties" sort="0" />
+        <label id="163" label="" folder="target_9S" sort="0" />
+        <label id="164" label="" folder="target_9S" sort="2" />
+        <label id="165" label="" folder="target_9S" sort="3" />
+        <label id="166" label="matchmaker - male" color="1" folder="unisex major" sort="3" />
+        <label id="170" label="" folder="bra" sort="3" />
+        <label id="171" label="" folder="bra" sort="4" />
+        <label id="172" label="" folder="bra" sort="5" />
+        <label id="173" label="" color="0" folder="unisex minor" sort="0" />
+        <label id="174" label="" folder="filter minor" sort="25" />
+        <label id="175" label="" folder="filter minor" sort="48" />
+        <label id="176" label="" folder="filter minor" sort="26" />
+        <label id="177" label="" folder="filter minor" sort="49" />
+        <label id="178" label="" folder="filter minor" sort="27" />
+        <label id="179" label="" folder="filter minor" sort="50" />
+        <label id="180" label="" folder="filter minor" sort="0" />
+        <label id="181" label="" folder="filter minor" sort="51" />
+        <label id="182" label="" folder="filter minor" sort="28" />
+        <label id="183" label="" folder="filter minor" sort="52" />
+        <label id="184" label="" folder="filter minor" sort="29" />
+        <label id="185" label="" folder="filter minor" sort="53" />
+        <label id="186" label="" folder="filter minor" sort="30" />
+        <label id="187" label="" folder="filter minor" sort="54" />
+        <label id="188" label="" folder="filter minor" sort="31" />
+        <label id="189" label="" folder="filter minor" sort="55" />
+        <label id="190" label="" folder="filter minor" sort="32" />
+        <label id="191" label="" folder="filter minor" sort="56" />
+        <label id="192" label="" folder="filter minor" sort="0" />
+        <label id="193" label="" folder="panties" sort="3" />
+        <label id="194" label="" folder="panties" sort="4" />
+        <label id="195" label="" folder="panties" sort="5" />
+        <label id="196" label="matchmaker - male" color="1" folder="unisex major" sort="4" />
+        <label id="197" label="matchmaker - male" color="1" folder="" sort="0" />
+        <label id="198" label="matchmaker - female" color="1" folder="" sort="0" />
+        <label id="199" label="" folder="target_9S" sort="4" />
+        <label id="205" label="" folder="forfeit" sort="7" />
+        <label id="204" label="" folder="forfeit" sort="6" />
+        <label id="203" label="" folder="forfeit" sort="4" />
+        <label id="202" label="" folder="forfeit" sort="3" />
+        <label id="206" label="" folder="forfeit" sort="5" />
+        <label id="207" label="" folder="forfeit" sort="8" />
+        <label id="208" label="" folder="forfeit" sort="2" />
+        <label id="209" label="" folder="forfeit" sort="0" />
+        <label id="211" label="" folder="target_felix" sort="0" />
+        <label id="200" label="" folder="target_florina" sort="0" />
+        <label id="212" label="" folder="target_felix" sort="2" />
+        <label id="201" label="" folder="target_florina" sort="2" />
+        <label id="213" label="" folder="target_nami" sort="2" />
+        <label id="210" label="" folder="target_nami" sort="2" />
+        <label id="214" label="" folder="target_shimakaze" sort="0" />
+        <label id="215" label="" folder="target_shimakaze" sort="2" />
+        <label id="216" label="" folder="target_shimakaze" sort="3" />
+        <label id="217" label="" folder="target_jura" sort="0" />
+        <label id="218" label="" folder="target_meia" sort="0" />
+        <label id="219" label="" folder="target_revy" sort="0" />
+        <label id="220" label="" folder="target_jura" sort="2" />
+        <label id="221" label="" folder="target_meia" sort="2" />
+        <label id="222" label="" folder="target_meia" sort="3" />
+        <label id="223" label="" folder="target_queenie" sort="0" />
+        <label id="225" label="" folder="target_queenie" sort="3" />
+        <label id="224" label="" folder="target_queenie" sort="2" />
+        <label id="226" label="" folder="target_dunban" sort="2" />
+        <label id="227" label="" folder="target_dunban" sort="3" />
+        <label id="228" label="" folder="target_dunban" sort="0" />
+        <label id="229" label="" folder="target_kyoko_kirigiri" sort="4" />
+        <label id="230" label="" folder="target_kyoko_kirigiri" sort="7" />
+        <label id="231" label="" folder="target_kyoko_kirigiri" sort="9" />
+        <label id="233" label="" folder="target_kyoko_kirigiri" sort="2" />
+        <label id="234" label="" folder="target_kyoko_kirigiri" sort="0" />
+        <label id="235" label="" folder="target_kyoko_kirigiri" sort="0" />
+        <label id="236" label="" folder="target_kyoko_kirigiri" sort="5" />
+        <label id="237" label="" folder="target_kyoko_kirigiri" sort="6" />
+        <label id="238" label="" folder="target_kyoko_kirigiri" sort="0" />
+        <label id="239" label="" folder="target_kyoko_kirigiri" sort="8" />
+        <label id="240" label="" folder="target_komi" sort="2" />
+        <label id="242" label="" folder="target_komi" sort="0" />
+        <label id="243" label="" folder="target_komi" sort="4" />
+        <label id="244" label="" folder="target_komi" sort="6" />
+        <label id="245" label="" folder="target_komi" sort="5" />
+        <label id="241" label="" folder="target_komi" sort="3" />
+        <label id="246" label="" folder="target_yuna" sort="0" />
+        <label id="247" label="" folder="target_yuna" sort="2" />
+        <label id="248" label="" folder="target_yuna" sort="3" />
+        <label id="232" label="" folder="target_kyoko_kirigiri" sort="0" />
+        <label id="130" label="" folder="target_mari" sort="0" />
+        <label id="249" label="" folder="target_cagliostro" sort="2" />
+        <label id="250" label="" folder="target_adrien" sort="2" />
+        <label id="251" label="" folder="target_adrien" sort="4" />
+        <label id="252" label="" folder="target_adrien" sort="8" />
+        <label id="253" label="" folder="target_adrien" sort="3" />
+        <label id="254" label="" folder="target_adrien" sort="5" />
+        <label id="255" label="" folder="target_adrien" sort="9" />
+        <label id="256" label="" folder="target_adrien" sort="0" />
+        <label id="257" label="" folder="target_cagliostro" sort="4" />
+        <label id="258" label="" folder="target_cagliostro" sort="6" />
+        <label id="259" label="" folder="target_cagliostro" sort="9" />
+        <label id="260" label="" folder="target_adrien" sort="6" />
+        <label id="261" label="" folder="target_adrien" sort="7" />
+        <label id="262" label="" folder="target_noire" sort="0" />
+        <label id="263" label="" folder="target_noire" sort="2" />
+        <label id="264" label="" folder="target_cagliostro" sort="5" />
+        <label id="265" label="" folder="target_cagliostro" sort="7" />
+        <label id="266" label="" folder="target_cagliostro" sort="10" />
+        <label id="267" label="" folder="target_cagliostro" sort="8" />
+        <label id="268" label="" folder="target_cagliostro" sort="11" />
+        <label id="269" label="" folder="target_cagliostro" sort="0" />
+        <label id="270" label="" folder="target_cagliostro" sort="0" />
+        <label id="271" label="" folder="target_cagliostro" sort="3" />
+        <label id="272" label="" folder="prompt_responses" sort="4" />
+        <label id="273" label="" folder="target_elesa" sort="0" />
+        <label id="274" label="" folder="target_elesa" sort="0" />
+        <label id="275" label="" folder="target_elesa" sort="2" />
+        <label id="276" label="" folder="target_elesa" sort="3" />
+        <label id="277" label="" folder="target_senko" sort="0" />
+        <label id="278" label="" folder="target_senko" sort="2" />
+        <label id="279" label="" folder="target_senko" sort="3" />
+        <label id="281" label="" folder="target_elphaba" sort="0" />
+        <label id="282" label="" folder="target_roll" sort="0" />
+        <label id="283" label="" folder="target_nagamimi" sort="3" />
+        <label id="284" label="" folder="target_nagamimi" sort="2" />
+        <label id="285" label="" folder="target_nagamimi" sort="0" />
+        <label id="288" label="" folder="prompt_responses" sort="7" />
+        <label id="286" label="" folder="prompt_responses" sort="5" />
+        <label id="289" label="" folder="target_hutao" sort="0" />
+        <label id="290" label="" folder="target_hutao" sort="0" />
+        <label id="291" label="" folder="target_hutao" sort="0" />
+        <label id="292" label="" folder="target_hutao" sort="0" />
+        <label id="293" label="" folder="target_hutao" sort="0" />
+        <label id="294" label="" folder="target_hutao" sort="0" />
+        <label id="295" label="" folder="target_hutao" sort="0" />
+        <label id="296" label="" folder="target_hutao" sort="0" />
+        <label id="297" label="" folder="target_elphaba" sort="0" />
+        <label id="298" label="" folder="target_stocking" sort="0" />
+        <label id="299" label="" folder="target_stocking" sort="0" />
+        <label id="300" label="" folder="target_stocking" sort="0" />
+        <label id="301" label="" folder="target_stocking" sort="0" />
+        <label id="302" label="" folder="target_stocking" sort="0" />
+        <label id="303" label="" folder="prompt_responses" sort="0" />
+        <label id="304" label="" folder="target_cheryl" sort="0" />
+        <label id="305" label="" folder="target_hilda" sort="0" />
+        <label id="306" label="" folder="target_hilda" sort="0" />
+        <label id="307" label="" folder="target_hilda" sort="0" />
+        <label id="308" label="" folder="target_hilda" sort="0" />
+        <label id="309" label="" folder="target_hilda" sort="0" />
+        <label id="310" label="" folder="target_noire" sort="0" />
+        <label id="311" label="" folder="target_noire" sort="0" />
+        <label id="312" label="" folder="target_noire" sort="0" />
+        <label id="313" label="" folder="target_noire" sort="0" />
+        <label id="314" label="" folder="target_noire" sort="0" />
+        <label id="315" label="" folder="target_noire" sort="0" />
+        <label id="280" label="" folder="target_elphaba" sort="0" />
+        <label id="316" label="" folder="target_hutao" sort="0" />
+        <label id="317" label="" folder="target_hutao" sort="0" />
+        <label id="318" label="" folder="target_hutao" sort="0" />
+        <label id="319" label="" folder="target_hutao" sort="0" />
+        <label id="320" label="" folder="target_hutao" sort="0" />
+        <label id="321" label="" folder="target_hutao" sort="0" />
+        <label id="322" label="" folder="target_cheryl" sort="0" />
+        <label id="323" label="" folder="target_cheryl" sort="0" />
+        <label id="324" label="" folder="target_elphaba" sort="0" />
+        <label id="325" label="" folder="target_cheryl" sort="0" />
+        <label id="326" label="" folder="target_cheryl" sort="0" />
+        <label id="327" label="" folder="target_cheryl" sort="0" />
+        <label id="328" label="" folder="target_cheryl" sort="0" />
+        <label id="329" label="" folder="target_cheryl" sort="0" />
+        <label id="330" label="" folder="target_jura" sort="0" />
+        <label id="331" label="" folder="target_jura" sort="0" />
+        <label id="332" label="" folder="target_hutao" sort="0" />
+        <label id="333" label="" folder="target_kaz" sort="0" />
+        <label id="334" label="" folder="target_kaz" sort="0" />
+        <label id="335" label="" folder="target_meia" sort="0" />
+        <label id="336" label="" folder="target_meia" sort="0" />
+        <label id="337" label="" folder="target_panty" sort="0" />
+        <label id="338" label="" folder="target_panty" sort="0" />
+        <label id="339" label="" folder="target_revy" sort="0" />
+    </labels>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>339</nextId>
+    <markers>
+        <marker scope="Public" name="__9s_nickname" />
+        <marker scope="Public" name="__elphaba_nickname" />
+        <marker scope="Public" name="__noire_nickname" />
+        <marker scope="Public" name="0muststrip_overdressed" />
+        <marker scope="Public" name="9s00" />
+        <marker scope="Public" name="9s01" />
+        <marker scope="Public" name="acc_broke" />
+        <marker scope="Public" name="acc_haircare" />
+        <marker scope="Public" name="acc_heels" />
+        <marker scope="Public" name="acc_nails" />
+        <marker scope="Public" name="acc_shoes" />
+        <marker scope="Public" name="acc_small" />
+        <marker scope="Public" name="acc_time" />
+        <marker scope="Public" name="adrien" />
+        <marker scope="Public" name="adrien00" />
+        <marker scope="Public" name="adrien01" />
+        <marker scope="Public" name="adrien02" />
+        <marker scope="Public" name="adrien10" />
+        <marker scope="Public" name="adrien11" />
+        <marker scope="Public" name="adrien12" />
+        <marker scope="Public" name="adrien32" />
+        <marker scope="Public" name="adrien41" />
+        <marker scope="Public" name="adrien42" />
+        <marker scope="Public" name="all_or_nothing" />
+        <marker scope="Public" name="aqua_suzuya_bra_removed" />
+        <marker scope="Public" name="arash_smalltalk-cooking" />
+        <marker scope="Public" name="cagli00" />
+        <marker scope="Public" name="cagli01" />
+        <marker scope="Public" name="cagli02" />
+        <marker scope="Public" name="cagli10" />
+        <marker scope="Public" name="cagli11" />
+        <marker scope="Public" name="cagli12" />
+        <marker scope="Public" name="cagli21" />
+        <marker scope="Public" name="cagli22" />
+        <marker scope="Public" name="cheryl_cheryl01" />
+        <marker scope="Public" name="cheryl_cheryl02" />
+        <marker scope="Public" name="cheryl_cheryl11" />
+        <marker scope="Public" name="cheryl_cheryl21" />
+        <marker scope="Public" name="cheryl_cheryl23" />
+        <marker scope="Public" name="cheryl00" />
+        <marker scope="Public" name="cheryl01" />
+        <marker scope="Public" name="cheryl02" />
+        <marker scope="Public" name="dunban_suzuya_0a" />
+        <marker scope="Public" name="dunban_suzuya_strip0a" />
+        <marker scope="Public" name="dunban_suzuya_strip1a" />
+        <marker scope="Public" name="elesa00" />
+        <marker scope="Public" name="elesa01" />
+        <marker scope="Public" name="elesa02" />
+        <marker scope="Public" name="elphaba_00" />
+        <marker scope="Public" name="elphaba_01" />
+        <marker scope="Public" name="elphaba_suzuya_curious" />
+        <marker scope="Public" name="ephaba_00" />
+        <marker scope="Public" name="eru_ask_favourite_food" />
+        <marker scope="Public" name="first_forfeit" />
+        <marker scope="Public" name="hilda12" />
+        <marker scope="Public" name="hilda42" />
+        <marker scope="Public" name="hilda51" />
+        <marker scope="Public" name="hilda52" />
+        <marker scope="Public" name="hilda62" />
+        <marker scope="Public" name="hutao_00" />
+        <marker scope="Public" name="hutao_01" />
+        <marker scope="Public" name="hutao_02" />
+        <marker scope="Public" name="hutao_10" />
+        <marker scope="Public" name="hutao_11" />
+        <marker scope="Public" name="hutao_12" />
+        <marker scope="Public" name="hutao_20" />
+        <marker scope="Public" name="hutao_21" />
+        <marker scope="Public" name="hutao_tao01" />
+        <marker scope="Public" name="hutao_tao11" />
+        <marker scope="Public" name="hutao_tao12" />
+        <marker scope="Public" name="hutao_tao21" />
+        <marker scope="Public" name="hutao_tao22" />
+        <marker scope="Public" name="hutao_tao23" />
+        <marker scope="Public" name="jura_suzuya0" />
+        <marker scope="Public" name="jura_suzuya01" />
+        <marker scope="Public" name="jura00" />
+        <marker scope="Public" name="jura01" />
+        <marker scope="Public" name="kirigiri_suzuya_zodiac2AB" />
+        <marker scope="Public" name="kkirigiri00" />
+        <marker scope="Public" name="kkirigiri01" />
+        <marker scope="Public" name="kkirigiri01c" />
+        <marker scope="Public" name="kkirigiri01h" />
+        <marker scope="Public" name="kkirigiri01n" />
+        <marker scope="Public" name="kkirigiri02" />
+        <marker scope="Public" name="komi_jacket_off" />
+        <marker scope="Public" name="meia_suzuya0" />
+        <marker scope="Public" name="meia_suzuya01" />
+        <marker scope="Public" name="meia00" />
+        <marker scope="Public" name="meia01" />
+        <marker scope="Public" name="meia02" />
+        <marker scope="Public" name="minor_fire" />
+        <marker scope="Public" name="minor_first" />
+        <marker scope="Public" name="minor_outfitswap" />
+        <marker scope="Public" name="minor_socks" />
+        <marker scope="Public" name="monika_suzuya_hairContrast" />
+        <marker scope="Public" name="nagamimi_00" />
+        <marker scope="Public" name="nagamimi_question_fashion" />
+        <marker scope="Public" name="nami_pirate" />
+        <marker scope="Public" name="noire00" />
+        <marker scope="Public" name="noire00cool" />
+        <marker scope="Public" name="noire00cute" />
+        <marker scope="Public" name="noire00flashy" />
+        <marker scope="Public" name="noire01" />
+        <marker scope="Public" name="noire02" />
+        <marker scope="Public" name="panty_suzuya_ps_10" />
+        <marker scope="Public" name="placeholder" />
+        <marker scope="Public" name="q_miko_desires" />
+        <marker scope="Public" name="queenie01" />
+        <marker scope="Public" name="revy_suzuya0" />
+        <marker scope="Public" name="revy_suzuya01" />
+        <marker scope="Public" name="roll_00" />
+        <marker scope="Public" name="selected_alley1" />
+        <marker scope="Public" name="selected_bath1" />
+        <marker scope="Public" name="selected_beach1" />
+        <marker scope="Public" name="selected_classroom1" />
+        <marker scope="Public" name="selected_hot1" />
+        <marker scope="Public" name="selected_inventory1" />
+        <marker scope="Public" name="selected_paris1" />
+        <marker scope="Public" name="selected_roof1" />
+        <marker scope="Public" name="selected_tiki1" />
+        <marker scope="Public" name="selected_water1" />
+        <marker scope="Public" name="selection_3m" />
+        <marker scope="Public" name="senko00" />
+        <marker scope="Public" name="senko01" />
+        <marker scope="Public" name="senko02" />
+        <marker scope="Public" name="stocking00" />
+        <marker scope="Public" name="stocking01" />
+        <marker scope="Public" name="stocking10" />
+        <marker scope="Public" name="stocking11" />
+        <marker scope="Public" name="stocking12" />
+        <marker scope="Public" name="stripping_atudent" />
+        <marker scope="Public" name="stripping_dark" />
+        <marker scope="Public" name="stripping_fancy" />
+        <marker scope="Public" name="stripping_fashionable" />
+        <marker scope="Public" name="stripping_fighter" />
+        <marker scope="Public" name="stripping_gloves1" />
+        <marker scope="Public" name="stripping_gloves2" />
+        <marker scope="Public" name="stripping_gloves3" />
+        <marker scope="Public" name="stripping_idol" />
+        <marker scope="Public" name="stripping_kneesocks" />
+        <marker scope="Public" name="stripping_lonely" />
+        <marker scope="Public" name="stripping_magic" />
+        <marker scope="Public" name="stripping_maid" />
+        <marker scope="Public" name="stripping_makeup" />
+        <marker scope="Public" name="stripping_mature" />
+        <marker scope="Public" name="stripping_minor_gen" />
+        <marker scope="Public" name="stripping_model" />
+        <marker scope="Public" name="stripping_outside" />
+        <marker scope="Public" name="stripping_outside2" />
+        <marker scope="Public" name="stripping_quiet" />
+        <marker scope="Public" name="stripping_robot" />
+        <marker scope="Public" name="stripping_royal" />
+        <marker scope="Public" name="stripping_scanty" />
+        <marker scope="Public" name="stripping_schooluniform" />
+        <marker scope="Public" name="stripping_short" />
+        <marker scope="Public" name="stripping_shy" />
+        <marker scope="Public" name="stripping_socks" />
+        <marker scope="Public" name="stripping_stockings" />
+        <marker scope="Public" name="stripping_student" />
+        <marker scope="Public" name="stripping_tall" />
+        <marker scope="Public" name="stripping_tattoo" />
+        <marker scope="Public" name="stripping_water" />
+        <marker scope="Public" name="stripping_wealthy" />
+        <marker scope="Public" name="stripping_weapon" />
+        <marker scope="Public" name="stripping_winged" />
+        <marker scope="Public" name="sucrose_flowers" />
+        <marker scope="Public" name="suzuya_elphaba_curious" />
+        <marker scope="Public" name="suzuya_jacket_off" />
+        <marker scope="Public" name="suzuya_prompt_bloodtypes" />
+        <marker scope="Public" name="suzuya_prompt_datespots" />
+        <marker scope="Public" name="suzuya_prompt_horoscopes" />
+        <marker scope="Public" name="suzuya_prompt_imagechange" />
+        <marker scope="Public" name="suzuya_prompt_praise" />
+        <marker scope="Public" name="suzuya_prompt_wannabuy" />
+        <marker scope="Public" name="swapping_close" />
+        <marker scope="Public" name="temp_hot" />
+        <marker scope="Public" name="yuna00" />
+        <marker scope="Public" name="yuna01" />
+        <marker scope="Public" name="yuna02" />
+        <marker scope="Public" name="zoe00" />
+    </markers>
+    <pendingLines>
+        <line>Okay, Suzuya's going next! This time... let's go with the skirt!</line>
+        <line>This is one of my favourite pairs of panties. They look super good on me, right?</line>
+        <line>Aww, go on, you can agree with me. Girls like me live off of praise, y'know?</line>
+        <line>Ugh, &lt;i&gt;nasty&lt;/&gt;? That's, like, understatement of the &lt;i&gt;century&lt;/i&gt;. Abyssals are all creepy, and slimy, and wriggly, and su~per disgusting! -&gt; Raynor Mili/Future Prompt 1</line>
+        <line>Pfft, a battlecruiser? Aren't they like, crusty old battleships? Even a heavy cruiser like Suzuya could beat up something like that. -&gt; Raynor Mili/Future Prompt 2</line>
+        <line>----</line>
+        <line>Now's your chance to show off a little. I think ~female~'s &lt;i&gt;really&lt;/i&gt; interested too...</line>
+        <line>-----</line>
+        <line>(Hey, ~Player~. Are you going for the other guys too? Like, that's cool, but just so you know that makes us rivals, heh.)</line>
+        <line>-----</line>
+        <line>Would it have been weird if I asked my sister to come play strip poker? She works so hard to look good, but she's too embarassed to show it off...</line>
+        <line>Now that everyone's getting into it, I gotta ask-- we've all gotta have something that &lt;i&gt;really&lt;/i&gt; gets us going, right? Anyone wanna share?</line>
+        <line>So, just between us girls... what's the worst thing we've done for a quick buck?</line>
+        <line>Hey, I wanna know: do you girls prefer a guy with a nice thick wallet or a nice thick... well, &lt;i&gt;y'know&lt;/i&gt;...</line>
+        <line>-----</line>
+        <line>Off! With! Your! ~Clothes~!</line>
+        <line>I have a feeling anticipation isn't the only thing rising in here.</line>
+        <line>-----</line>
+        <line>So, ~male~, would you rather have ~female~ lose as well or would you rather join me down here?</line>
+        <line>-----</line>
+        <line>Target: Thigh-highs; Naked Accessories, tandem-forfeits</line>
+        <line>do your generics my dude</line>
+        <line>----targets----</line>
+        <line>Nagatoro: mischevious onee-san, gotta target the swimsuit</line>
+        <line>Bobobo: literally everything I guess?</line>
+        <line>Rouge: bat tats</line>
+        <line>Hilda: Got that same energy going on.</line>
+        <line>Leon+Hilda piggybacking: Can't you two just FUCK already?</line>
+        <line>PA-15: What the heck are you wearing WeirdChamp</line>
+        <line>PA-15 -&gt; Suzuya: So you're the adventurous type too, huh?</line>
+        <line>---- </line>
+    </pendingLines>
+</metadata>

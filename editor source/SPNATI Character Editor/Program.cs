@@ -76,7 +76,7 @@ namespace SPNATI_Character_Editor
 				date = date.Replace("AM", "");
 				date = date.Replace("PM", "");
 				date = date.Replace(" ", "");
-				string dir = Path.Combine(Config.AppDataDirectory, date);
+				string dir = Path.Combine(Config.ConfigDirectory, date);
 				Directory.CreateDirectory(dir);
 
 				string crashLog = Path.Combine(dir, "crash.txt");
@@ -92,7 +92,7 @@ namespace SPNATI_Character_Editor
 
 				ErrorLog.LogError(stack);
 
-				string zip = Path.Combine(Config.AppDataDirectory, "crashdetails.zip");
+				string zip = Path.Combine(Config.ConfigDirectory, "crashdetails.zip");
 				ZipFile.CreateFromDirectory(dir, Path.Combine(dir, zip));
 				File.Move(zip, Path.Combine(dir, "crashdetails.zip"));
 

@@ -210,7 +210,7 @@ namespace SPNATI_Character_Editor.Controls
 			int x = e.X / CellSize;
 			int y = (e.Y - _headerHeight) / CellSize;
 			Point oldPt = _highlightedCell;
-			if (x >= 0 && x < _layerCount && y == 0 && IsStageEnabled(x))
+			if (x >= 0 && x < _layerCount && y == 0 && (IsStageEnabled(x) || _stages[x]))
 			{
 				_highlightedCell.X = x;
 				_highlightedCell.Y = y;
@@ -259,7 +259,7 @@ namespace SPNATI_Character_Editor.Controls
 			}
 			else if (x >= 0 && x < _layerCount && y == 0)
 			{
-				if (!IsStageEnabled(x)) { return; }
+				if (!IsStageEnabled(x) && !_stages[x]) { return; }
 				if (e.Button == MouseButtons.Left)
 				{
 					ToggleStage(x);

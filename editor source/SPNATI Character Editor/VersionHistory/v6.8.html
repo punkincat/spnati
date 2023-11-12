@@ -1,0 +1,49 @@
+<h3>Metadata</h3>
+<ul>
+    <li>Adds the option to add a name to the default costume.</li>
+</ul>
+
+<h3>Dialogue</h3>
+<ul>
+    <li>Adds "Not Tag" and "Tags (Advanced)" dialogue conditions.</li>
+    <li>Adds a Reference Skin dropdown for stage conditions. This allows the user to choose which costume's clothing the Stage dropdowns show the names of, for easy reference when targeting alt costumes. <b>Important: This doesn't do anything to the line itself. If you want a costume condition, you still need to add a Player: Costume test or a costume Tag filter.</b></li>
+    <li>Adds the "@" operator for markers, which checks if a marker is in a given range.</li>
+    <li>Adds a "Refresh Images" button, which refreshes the pose dropdown. Use this after adding new poses - previously this required restarting the CE entirely.</li>
+</ul>
+
+<h3>Costumes</h3>
+<ul>
+    <li>Allows costumes to skip layers by selecting the new clothing type "skip". Please consult more experienced users before trying to do this!</li>
+</ul>
+
+<h3>Pipelines</h3>
+<ul>
+    <li>Adds Arithmetic, Compare, Concatenate, and Substring nodes for advanced operations.</li>
+    <li>Adds a row output to the Cell node which can be used as input for a Cell Reference or one of the above.</li>
+</ul>
+
+<h3>Configuration</h3>
+<ul>
+    <li>Adds the option to only show custom poses in the pose dropdown, useful for certain characters.</li>
+    <li>Adds the option to show custom poses in the Dialogue tab's image preview as if certain markers were set.</li>
+</ul>
+
+<h3>Settings</h3>
+<ul>
+    <li>Adds the option to auto-open multiple characters or costumes.</li>
+</ul>
+
+<h3>Miscellaneous</h3>
+<ul>
+    <li>Adds support for KKL v105.5.</li>
+    <li>Optimizes performance for importing multiple poses at once via the Pose Matrix.</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+<ul>
+    <li>Allows invalid stages to be deselected, if they were somehow selected.</li>
+    <li>Custom pose assets stored in subfolders now count towards the file size total.</li>
+    <li>Cross-stage custom poses are now counted correctly in the pose count.</li>
+    <li>Opponent Stripping cases now correctly use the "Losing X" grammar for stage conditions instead of "Lost X".</li>
+    <li>Adding layers to the Wardrobe no longer generates placeholder generic lines, if the "Ensure cases have generic lines" option is switched off.</li>
+</ul>

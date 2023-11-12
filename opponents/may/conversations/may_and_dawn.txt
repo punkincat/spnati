@@ -1,0 +1,373 @@
+* = a line not yet implemented
+
+If May to left and Dawn to right:
+
+MAY MUST STRIP BAG:
+May [may_dawn_fighting_solo]: Aha, you got me fair and square! I'm not so used to fighting my battles solo, you know.
+Dawn [DawnMaySolo01]*: Don't worry! It's a game of chance, not skill and determination like real battles are. That being said, I'll assume you're more of a contest kind of gal rather than a battling one?
+
+MAY STRIPPING BAG (accessory):
+May [may_dawn_coordinator]*: Yep! I'm a coordinator! What gave me away? Or am I just that famous now? Haha, I wish.
+Dawn [DawnMaySolo02]*: Your peppy attitude, your cute smile, the way you present yourself. Yup! You're a Cute Contest specialist, I can just tell!
+
+MAY STRIPPED BAG (accessory):
+May [may_dawn_good_start]*: I can tell I'm going to like you, Dawn!
+Dawn [DawnMaySolo03]*: I try to get along with everyone, especially people who love Pokémon as much as I do!
+
+
+MAY MUST STRIP SHOES:
+May [may_dawn_determined_to_win]: Okay. I'll go again if it'll make you happy. Gee, everyone seems pretty determined to win, don't they?
+ OR [may_dawn_determined_to_win]: Okay. I'll go again if it'll make you happy. Gee, everyone seems pretty determined to win, don't they? Well, <i>almost</i> everyone. -- variation for if Moon is playing, but uses the same marker
+Dawn [DawnMaySolo04]*: What can you expect from fellow trainers like ~player~ and I? Hope you're prepared to lose to us some more! Hehe.
+
+MAY STRIPPING SHOES (minor):
+May [may_dawn_competitive_spirit]*: Oh, ~player~ is a trainer too? <i>Interesting.</i> Ahaha, that explains it. There's some competitive spirit here!
+Dawn [DawnMaySolo05]*: Oh yeah, ~player.ifMale(him|her)~ and I go <i>waay</i> back. I showed ~player.ifMale(him|her)~ how to catch Pokémon when they were just starting out. From there, ~player.ifMale(he|she)~ took off!
+
+MAY STRIPPED SHOES (minor):
+May [may_dawn_rising_star]*: That's so neat! You're a rising star, ~player~. I'd better keep my eye on you.
+Dawn [DawnMaySolo06]*: ~player.ifMale(He|She)~ would probably qualify to be an Ace Trainer, actually. But I should stop gushing about ~player~, we're all here to win!
+  OR [DawnMaySolo06]*: ~player.ifMale(He|She)~ would probably qualify to be an Ace Trainer, actually. But I should stop gushing about ~player~, I might be a bit of a distraction to ~player.ifMale(him|her)~... -- variation for if Dawn is naked, forfeiting, or post-forfeit. Same marker.
+
+
+MAY MUST STRIP BRACELET: (conditional on previous case)
+May [may_dawn_player_silent]*: Now that I know that ~player~ is a trainer too, it all makes sense. Silence as a strategy. I think it's working. Dawn, you're ~player.ifMale(his|her)~ friend, right? What's going on in that head of ~player.ifMale(his|hers)~?
+Dawn []*: ??
+
+MAY STRIPPING BRACELET (accessory):
+May []*: ??
+Dawn []*: ??
+
+MAY STRIPPED BRACELET (accessory):
+May []*: ??
+Dawn []*: ??
+
+
+MAY MUST STRIP SHORTS:
+May []*: ??
+Dawn []*: ??
+
+MAY STRIPPING SHORTS (major):
+May []*: ??
+Dawn []*: ??
+MAY STRIPPED SHORTS (major):
+May []*: ??
+Dawn []*: ??
+
+
+MAY MUST STRIP SHIRT:
+May []*: ??
+Dawn []*: ??
+
+MAY STRIPPING SHIRT (major):
+May []*: ??
+Dawn []*: ??
+
+MAY STRIPPED SHIRT (major)
+May []*: ??
+Dawn []*: ??
+
+
+MAY MUST STRIP BRA:
+May []*: ??
+Dawn []*: ??
+
+MAY STRIPPING BRA (revealing chest):
+May []*: ??
+Dawn []*: ??
+
+MAY STRIPPED BRA (revealed chest):
+May []*: ??
+Dawn []*: ??
+
+
+MAY MUST STRIP SPATS:
+May []*: ??
+Dawn []*: ??
+
+MAY STRIPPING SPATS (revealing crotch):
+May []*: ??
+Dawn []*: ??
+
+MAY STRIPPED SPATS (revealed crotch):
+May []*: ??
+Dawn []*: ??
+
+---
+
+DAWN MUST STRIP BOOTS AND SOCKS:
+May [may_dawn_nice_hat]: Hey, nice to meet you if I didn't say that earlier! I like your hat. I love meeting other Pokemon fans!
+Dawn [DawnMayNiceHat01]*: Thanks! Though Pokémon fan is a bit of an understatment. I'm working towards becoming a Pokémon professor. I'm still an assistant for now, but I'm working towards my credentials to become one!
+
+DAWN STRIPPING BOOTS AND SOCKS (minor):
+May [may_dawn_professor]*: Oooh! A professor in the making! Are you studying anything in particular, or just a bit of everything?
+Dawn [DawnMayNiceHat02]*: I want to study as much as I can, but right now I just have specializations in Pokémon evolution. Once I do have my credentials, I kinda want to branch out into healthcare and well being for Pokémon.
+
+DAWN STRIPPED BOOTS AND SOCKS (minor):
+May [may_dawn_field_research]*: That's so cool. If you need anyone to do some field research, let me know. I love helping out.
+Dawn [DawnMayNiceHat03]*: If you happen to be in the area, I may take you up on that offer. It would be fantastic to get another perspective, especially from a coordinator.
+
+
+DAWN MUST STRIP HAT:
+May [may_dawn_celebrities]*: Hey, Dawn, have you ever met anyone famous through your research? Friends with any celebrities? I want all the details!
+Dawn [DawnMayCelebrities01]*: Hmm... Well, does Professor Rowan count? Hehe. But to answer your question; I've only really met with gym leaders from the Sinnoh Pokémon League. Though there was that time I met Jasmine from the Johto region.
+
+DAWN STRIPPING HAT (accessory):
+May [may_dawn_jasmine]*: Not bad, not bad. Jasmine's the gym leader of Olivine City, right? I don't think we've met. You should introduce us someday. Maybe I'll introduce you to some of my friends too!
+Dawn [DawnMayCelebrities02]*: Well it's not like I'm super close freinds with her, but if the opportunity presents itself, I'll gladly introduce you. I'd hope you do the same with your friends.
+
+DAWN STRIPPED HAT (accessory):
+May [may_dawn_party]*: We could have a big party! Wait, but let's not get ahead of ourselves. I have to focus on to~background.time~'s game.
+Dawn [DawnMayCelebrities03]*: Hehe, trainers and contest coordinators are hardly any different from each other. We all have that determined spark that drives us. Don't expect me to let up now!
+
+
+DAWN MUST STRIP SCARF:
+May []*: ?? -- Comment: I will think of a line for this next round!
+Dawn []*: ??
+
+DAWN STRIPPING SCARF (accessory):
+May []*: ??
+Dawn []*: ??
+
+DAWN STRIPPED SCARF (accessory):
+May []*: ??
+Dawn []*: ??
+
+
+DAWN MUST STRIP SHIRT:
+May []*: ??
+Dawn []*: ??
+
+DAWN STRIPPING SHIRT (major):
+May []*: ??
+Dawn []*: ??
+
+DAWN STRIPPED SHIRT (major):
+May []*: ??
+Dawn []*: ??
+
+
+DAWN MUST STRIP SKIRT:
+May []*: ??
+Dawn []*: ??
+
+DAWN STRIPPING SKIRT (major):
+May []*: ??
+Dawn []*: ??
+
+DAWN STRIPPED SKIRT (major):
+May []*: ??
+Dawn []*: ??
+
+
+DAWN MUST STRIP UNDERSHIRT:
+May []*: ??
+Dawn []*: ??
+
+DAWN STRIPPING UNDERSHIRT (revealing chest):
+May []*: ??
+Dawn []*: ??
+
+DAWN STRIPPED UNDERSHIRT (revealed chest):
+May []*: ??
+Dawn []*: ??
+
+
+DAWN MUST STRIP PANTIES:
+May []*: ??
+Dawn []*: ??
+
+DAWN STRIPPING PANTIES (revealing crotch):
+May []*: ??
+Dawn []*: ??
+
+DAWN STRIPPED PANTIES (revealed crotch):
+May []*: ??
+Dawn []*: ??
+
+---
+DUE TO POSITION DETECTION, CONVERSATIONS ABOVE AND BELOW THIS LINE WON'T PLAY IN THE SAME GAME.
+---
+
+If Dawn to left and May to right:
+
+MAY MUST STRIP BAG:
+Dawn [DawnMayResearch01]: Ah, you're a Pokémon coordinator right, May? I did coordinating and contests when I was younger, but I gave that up so that I can pursue a career in Pokémon research. -- Note: Please set this line to only play if the target is on the right.
+May [may_dawn_professional]: Yeah, that's me! Nice to meet a fellow Pokémon professional. So which of my Pokémon did you come here to research?
+
+MAY STRIPPING BAG (accessory):
+Dawn [DawnMayResearch02]*: Aha, I'm just here to play some strip poker just like you are. Besides, I specialize in Pokémon evolution. More so researching why some Pokémon evolve and others don't. And the energy released when evolution does occur!
+May [may_dawn_study_focus]*: Oh, awesome! That's a really cool focus. Any details you can share before your research is published?
+
+MAY STRIPPED BAG (accessory):
+Dawn [DawnMayResearch03]*: Hmm... Nothing that isn't publically available, but I do have an interesting tid bit I can share. It would seem that some Pokémon from ancient times actually <i>lost</i> their ability to evolve! Can you believe that?
+May [may_dawn_how_mysterious]*: Whoa, really? I wonder what caused that. How mysterious!
+
+
+MAY MUST STRIP SHOES:
+Dawn [DawnMayStar01]: So I gotta ask, who was your star Pokémon in contests? My Bidoof was a real cutie on the stage! He still is actually. -- Note: Please set this line to only play if the target is on the right.
+May [may_dawn_star_pokemon]: My Blaziken has probably won me the most ribbons, but don't underestimate my Beautifly! We can have a bit of fun with them after the game if you like.
+
+MAY STRIPPING SHOES (minor):
+Dawn [DawnMayStar02]*: If it's a battle you're looking for, I would be happy to oblige! Unless there was something else you had in mind when you said "fun"? -- Note: Dawn is an awkward flirt, she understood May's statement. She just wanted to tease.
+May [may_dawn_just_a_battle]*: Uh, haha, yeah... I just meant a battle. Let's play it by ear. If you're feeling like some action later, I'm always down for it.
+
+MAY STRIPPED SHOES (minor):
+Dawn [DawnMayStar03]*: Hehe, alright. I'm sure there'll be enough time for me to have a battle after this. Just know I won't make it easy.
+May [may_dawn_on_top]*: I don't go down easy either! But no matter who comes out on top, I'm sure we'll have fun!
+
+
+MAY MUST STRIP BRACELET:
+Dawn [DawnMayBeaches01]: So May, I know Hoenn is a lot warmer than Sinnoh is so I gotta ask. What are the beaches like over there? Where do you think would be a great place to visit for me?
+May [may_dawn_beaches]*: The beaches are <i>so</i> nice! Depending on how long you're staying, Dewford Town is fun and it has some hot surfers too. I'm going broke buying so many swimsuits each month!
+
+MAY STRIPPING BRACELET (accessory):
+Dawn [DawnMayBeaches02]*: Dressing to impress while on the beach can easily break your bank. But how often do you turn heads when you show up with a new swimsuit?
+May [may_dawn_turning_heads]*: All the time! When I'm wearing a new two-piece, the ~player.ifMale(boys|beachgoers)~ just can't look away. I'm hoping it'll turn into some first dates if I find the right look.
+
+MAY STRIPPED BRACELET (accessory):
+Dawn []*: ??
+May []*: ??
+
+
+MAY MUST STRIP SHORTS:
+Dawn []*: ??
+May []*: ??
+
+MAY STRIPPING SHORTS (major):
+Dawn []*: ??
+May []*: ??
+MAY STRIPPED SHORTS (major):
+Dawn []*: ??
+May []*: ??
+
+
+MAY MUST STRIP SHIRT:
+Dawn []*: ??
+May []*: ??
+
+MAY STRIPPING SHIRT (major):
+Dawn []*: ??
+May []*: ??
+
+MAY STRIPPED SHIRT (major)
+Dawn []*: ??
+May []*: ??
+
+
+MAY MUST STRIP BRA:
+Dawn []*: ??
+May []*: ??
+
+MAY STRIPPING BRA (revealing chest):
+Dawn []*: ??
+May []*: ??
+
+MAY STRIPPED BRA (revealed chest):
+Dawn []*: ??
+May []*: ??
+
+
+MAY MUST STRIP SPATS:
+Dawn []*: ??
+May []*: ??
+
+MAY STRIPPING SPATS (revealing crotch):
+Dawn []*: ??
+May []*: ??
+
+MAY STRIPPED SPATS (revealed crotch):
+Dawn []*: ??
+May []*: ??
+
+---
+
+DAWN MUST STRIP BOOTS AND SOCKS:
+Dawn [DawnMayNewBoots01]*: Crud. Well, if it's any consolation, these boots have gotten me across forests and mountains alike. I should consider getting new ones, the soles on these ones are almost completely worn out.
+May [may_dawn_bicycle]*: Good walking shoes are so hard to find! The cute ones never last, do they? Have you considered saving up for a bicycle, Dawn? I used to ride one all the time when I was younger.
+
+DAWN STRIPPING BOOTS AND SOCKS (minor):
+Dawn [DawnMayNewBoots02]*: I had a bicycle when I was younger, but now it's a little old and I'm frankly too big for it now. Plus, bikes also tend to not work so great in the snow.
+May [may_dawn_bike_shorts]*: Oh, right. The snow. That's a shame, because I think you'd look pretty cute in bike shorts, Dawn.
+
+DAWN STRIPPED BOOTS AND SOCKS (minor):
+Dawn []*: ??
+May []*: ??
+
+
+DAWN MUST STRIP HAT:
+Dawn []*: ??
+May []*: ??
+
+DAWN STRIPPING HAT (accessory):
+Dawn []*: ??
+May []*: ??
+
+CYTHANIA STRIPPED HAT (accessory):
+Dawn []*: ??
+May []*: ??
+
+
+DAWN MUST STRIP SCARF:
+Dawn []*: ??
+May []*: ??
+
+DAWN STRIPPING SCARF (accessory):
+Dawn []*: ??
+May []*: ??
+
+DAWN STRIPPED SCARF (accessory):
+Dawn []*: ??
+May []*: ??
+
+
+DAWN MUST STRIP SHIRT:
+Dawn []*: ??
+May []*: ??
+
+DAWN STRIPPING SHIRT (major):
+Dawn []*: ??
+May []*: ??
+
+DAWN STRIPPED SHIRT (major):
+Dawn []*: ??
+May []*: ??
+
+
+DAWN MUST STRIP SKIRT:
+Dawn []*: ??
+May []*: ??
+
+DAWN STRIPPING SKIRT (major):
+Dawn []*: ??
+May []*: ??
+
+DAWN STRIPPED SKIRT (major):
+Dawn []*: ??
+May []*: ??
+
+
+DAWN MUST STRIP UNDERSHIRT:
+Dawn []*: ??
+May []*: ??
+
+DAWN STRIPPING UNDERSHIRT (revealing chest):
+Dawn []*: ??
+May []*: ??
+
+DAWN STRIPPED UNDERSHIRT (revealed chest):
+Dawn []*: ??
+May []*: ??
+
+
+DAWN MUST STRIP PANTIES:
+Dawn []*: ??
+May []*: ??
+
+DAWN STRIPPING PANTIES (revealing crotch):
+Dawn []*: ??
+May []*: ??
+
+DAWN STRIPPED PANTIES (revealed crotch):
+Dawn []*: ??
+May []*: ??

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1660473376252</lastupdate>
+    <lastupdate>1699604190892</lastupdate>
     <enabled>true</enabled>
     <first>Jura</first>
     <last>Basil Elden</last>
@@ -9,12 +9,17 @@
     <gender>female</gender>
     <from>Vandread</from>
     <writer>spnanon</writer>
-    <artist>spnanon, Vortex00 (Epilogue Backgrounds)</artist>
-    <description>A Dread-piloting space pirate from Mejare, the planet of all women.  Considers herself the most beautiful one of all.</description>
+    <artist>spnanon, Hologic, Vortex00 (Epilogue Backgrounds)</artist>
+    <description>Second-in-command Dread fighter pilot on the team that defends the starship &lt;i&gt;Nirvana,&lt;/i&gt; crewed by pirates from the all-female colony of Mejare.  Even at her young age, Jura represents her homeworld's highest standards of beauty---and vanity.</description>
     <epilogue gender="male" img="Image138.png">Crossbreeding</epilogue>
     <epilogue gender="female" img="nirvana.PNG">Slow Down, My Sweetheart</epilogue>
     <layers>6</layers>
+    <default-costume-name>Elegant Dress</default-costume-name>
+    <alternates>
+        <costume folder="opponents/reskins/jura_santa/" set="xmas" status="unlisted" label="Jura">Santa Jura</costume>
+    </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>11652</lines>
-    <poses>245</poses>
+    <lines>14526</lines>
+    <poses>434</poses>
+    <z-index>1</z-index>
 </opponent>

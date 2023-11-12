@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using Desktop.Skinning;
 using SPNATI_Character_Editor.DataStructures;
@@ -329,7 +329,7 @@ namespace SPNATI_Character_Editor.Controls
 							return true;
 						}
 					}
-					return workingCase.Filter == key;
+					return false;
 				});
 			}
 			lstDialogue.ExpandAll();
@@ -620,6 +620,7 @@ namespace SPNATI_Character_Editor.Controls
 
 		private void tsRefresh_Click(object sender, EventArgs e)
 		{
+			Shell.Instance.ActiveWorkspace.SendMessage(WorkspaceMessages.SaveCaseNotes);
 			int currentStage = _selectedNode?.Stage?.Id ?? -1;
 			Case currentCase = _selectedNode?.Case;
 			_view?.Sort();
@@ -655,9 +656,9 @@ namespace SPNATI_Character_Editor.Controls
 			_view.MoveItem(e.Source, e.Target, e.Before);
 		}
 
-    }
+	}
 
-    public class CaseSelectionEventArgs : EventArgs
+	public class CaseSelectionEventArgs : EventArgs
 	{
 		public Stage Stage;
 		public Case Case;

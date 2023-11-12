@@ -8,4 +8,13 @@
         <hide-details>true</hide-details>
         <counter>1</counter>
     </collectible>
+    <collectible id="new_collectible" img="opponents/ribbon_girl/xSparkies.png" thumbnail="opponents/ribbon_girl/xSparkies.png">
+        <title>Sparkies</title>
+        <subtitle>These gloves are electric!</subtitle>
+        <text>Great for exploiting gaps in your opponent's defenses, these seem to be one of the most popular ARMS with fans and are Ribbon Girl's signature weapon. A charged punch with one of these will leave an opponent's arms disabled, making them unable to attack or block and greatly reducing their mobility.</text>
+        <unlock>Play a game with Ribbon Girl.</unlock>
+        <hide-details>true</hide-details>
+        <wearable>true</wearable>
+        <clothing name="gloves" generic="gloves" position="hands" type="extra" img="opponents/ribbon_girl/xSparkies.png" plural="true" />
+    </collectible>
 </collectibles>

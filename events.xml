@@ -194,23 +194,30 @@
         -->
 
         <!-- Put all costumes into the same group, but place new costumes higher -->
-        <character highlight="summer" partition="1" sort="2">barbara</character>
-        <character highlight="summer" partition="1" sort="2">senko</character>
-        <character highlight="summer" partition="1" sort="2">wiifitfemale</character>
-        <character highlight="summer" partition="1" sort="2">critical_darling</character>
-        <character highlight="summer" partition="1" sort="2">yuno_uno</character>
-        <character highlight="summer" partition="1" sort="2">dark_magician_girl</character>
-        <character highlight="summer" partition="1" sort="2">cagliostro</character>
-        <character highlight="summer" partition="1" sort="2">mari</character>
+        <character highlight="summer" partition="1" sort="2">nagatoro</character>
         <character highlight="summer" partition="1" sort="2">mari_setogaya</character>
-        <character highlight="summer" partition="1" sort="2">gloria</character>
+        <character highlight="summer" partition="1" sort="2">polly</character>
+        <character highlight="summer" partition="1" sort="2">hilda</character>
+        <character highlight="summer" partition="1" sort="2">rosa</character>
+        <character highlight="summer" partition="1" sort="2">fluttershy</character>
+        <character highlight="summer" partition="1" sort="2">aqua_kh</character>
+        <character highlight="summer" partition="1" sort="2">yunyun</character>
+        <character highlight="summer" partition="1" sort="2">petra</character>
+        <character highlight="summer" partition="1" sort="2">dawn</character>
+        <character highlight="summer" partition="1" sort="2">wasp</character>
+        <character highlight="summer" partition="1" sort="2">aella</character>
+        <character highlight="summer" partition="1" sort="2">maria</character>
+        <character highlight="summer" partition="1" sort="2">roll_caskett</character>
+        <character highlight="summer" partition="1" sort="2">mitama</character>
+        <character highlight="summer" partition="1" sort="2">sweetheart</character>
+        <character highlight="summer" partition="1" sort="2">aqua_konosuba</character>
 
         <costumes highlight="summer" partition="1" sort="1">summer</costumes>
 
         <character highlight="summer">nami</character>
+        <character highlight="summer">aqua_grunt</character>
         <character highlight="summer">misty_hgss</character>
         <character highlight="summer">shimakaze</character>
-        <character highlight="summer">aqua_grunt</character>
         <character highlight="summer">mom_alola</character>
 
         <!--
@@ -229,10 +236,6 @@
             <path>reskins/barbara_summertime_sparkle/0-surprised.png</path>
             <path>reskins/barbara_summertime_sparkle/0-sheepish.png</path>
             <path>reskins/barbara_summertime_sparkle/0-happy.png</path>
-            <path>reskins/cagliostro_alchemist_waters_edge/0-Cutesy.png</path>
-            <path>reskins/cagliostro_alchemist_waters_edge/0-Excited.png</path>
-            <path>reskins/cagliostro_alchemist_waters_edge/3-Smug.png</path>
-            <path>reskins/cagliostro_alchemist_waters_edge/3-Grin.png</path>
             <path>reskins/chara_dreemurr_summer/0-devious.png</path>
             <path>reskins/chara_dreemurr_summer/0-happy.png</path>
             <path>reskins/chara_dreemurr_summer/0-rigid.png</path>
@@ -249,7 +252,7 @@
             <path>reskins/gloria_beachside/0-flirty.png</path>
             <path>reskins/gloria_beachside/0-neutral.png</path>
             <path>reskins/gloria_beachside/0-smug.png</path>
-            <path>reskins/ignatz_sunshiny_assassin/0-determination.png</path>
+            <path>reskins/ignatz_sunshiny_assassin/0-flustered.png</path>
             <path>reskins/ignatz_sunshiny_assassin/0-friendly.png</path>
             <path>reskins/ignatz_sunshiny_assassin/0-stripping+.png</path>
             <path>reskins/ignatz_sunshiny_assassin/0-fearthedeer.png</path>
@@ -277,12 +280,6 @@
             <path>reskins/pyrrha_summer_maiden/1-stripped.png</path>
             <path>reskins/pyrrha_summer_maiden/3-stripping.png</path>
             <path>reskins/pyrrha_summer_maiden/4-encourage.png</path>
-            <!--
-            <path>reskins/summertime_ryuji/0-cocky.png</path>
-            <path>reskins/summertime_ryuji/1-cheerful.png</path>
-            <path>reskins/summertime_ryuji/2-startled.png</path>
-            <path>reskins/summertime_ryuji/3-awkward.png</path>
-            -->
             <path>reskins/senko_beach/0-interested.png</path>
             <path>reskins/senko_beach/0-araara.png</path>
             <path>reskins/senko_beach/2-hug.png</path>
@@ -327,16 +324,64 @@
             <path>reskins/summertime_sayaka/1-calm.png</path>
             <path>reskins/summertime_sayaka/2-bored.png</path>
             <path>reskins/summertime_sayaka/3-awkward.png</path>
-            <path>reskins/mari_setogaya_summer_succubus/0-nice.png</path>
+            <path>reskins/mari_setogaya_sunny_day_vampire/0-grin.png</path>
+            <path>reskins/mari_setogaya_sunny_day_vampire/3-after.png</path>
             <path>reskins/mari_setogaya_summer_succubus/2-after.png</path>
-            <path>reskins/mari_setogaya_summer_succubus/3-silly.png</path>
             <path>reskins/mari_setogaya_summer_succubus/4-love.png</path>
+            <path>reskins/aqua_kh_summer/0-giggling.png</path>
+            <path>reskins/aqua_kh_summer/0-happy.png</path>
+            <path>reskins/aqua_kh_summer/2-keyblade_stance.png</path>
+            <path>reskins/aqua_kh_summer/2-turned_on.png</path>
+            <path>reskins/rosa_summer/0-bun_touching.png</path>
+            <path>reskins/rosa_summer/0-portrait.png</path>
+            <path>reskins/rosa_summer/2-stripped.png</path>
+            <path>reskins/rosa_summer/2-thinking.png</path>			
+            <path>reskins/hilda_sundrenched_nobility/0-conversational</path>
+            <path>reskins/hilda_sundrenched_nobility/0-relaxed.png</path>
+            <path>reskins/hilda_sundrenched_nobility/2-smug.png</path>
+            <path>reskins/hilda_sundrenched_nobility/3-flirty.png</path>	
+            <path>reskins/fluttershy_summer-shy/0-kind2.png</path>
+            <path>reskins/fluttershy_summer-shy/0-flirty.png</path>
+            <path>reskins/fluttershy_summer-shy/0-amused.png</path>
+            <path>reskins/fluttershy_summer-shy/0-flattered.png</path>
+            <path>reskins/wasp_summer/0-start.png</path>
+            <path>reskins/wasp_summer/0-flirt.png</path>
+            <path>reskins/wasp_summer/0-excited.png</path>
+            <path>reskins/wasp_summer/0-tease.png</path>
+            <path>reskins/yunyun_summer_of_friends/0-Happy.png</path>
+            <path>reskins/yunyun_summer_of_friends/3-Shy.png</path>
+            <path>reskins/yunyun_summer_of_friends/4-Posing2.png</path>
+            <path>reskins/yunyun_summer_of_friends/5-Facade.png</path>
+            <path>reskins/petra_summer/0-select.png</path>
+            <path>reskins/petra_summer/0-happy.png</path>
+            <path>reskins/petra_summer/2-horny.png</path>
+            <path>reskins/petra_summer/2-wink.png</path>
+            <path>reskins/nagatoro_beach_day/3-pose.png</path>
+            <path>reskins/nagatoro_beach_day/3-annoyed.png</path>
+            <path>reskins/nagatoro_beach_day/0-mean.png</path>
+            <path>reskins/nagatoro_beach_day/0-glee.png</path>
+            <path>reskins/polly_fckin_hot/0-Neutral.png</path>
+            <path>reskins/polly_fckin_hot/0-Flirty.png</path>
+            <path>reskins/polly_fckin_hot/0-Excited.png</path>
+            <path>reskins/polly_fckin_hot/0-Partying.png</path>
             <!--
             <path>reskins/monika_stirring_mermaid/0-writing-tip.png</path>
             <path>reskins/monika_stirring_mermaid/1-interested.png</path>
             <path>reskins/monika_stirring_mermaid/2-happy.png</path>
             <path>reskins/monika_stirring_mermaid/3-shy-happy.png</path>
             -->
+            <!--
+            <path>reskins/summertime_ryuji/0-cocky.png</path>
+            <path>reskins/summertime_ryuji/1-cheerful.png</path>
+            <path>reskins/summertime_ryuji/2-startled.png</path>
+            <path>reskins/summertime_ryuji/3-awkward.png</path>
+            -->
+            <!--
+            <path>reskins/cagliostro_alchemist_waters_edge/0-Cutesy.png</path>
+            <path>reskins/cagliostro_alchemist_waters_edge/0-Excited.png</path>
+            <path>reskins/cagliostro_alchemist_waters_edge/3-Smug.png</path>
+            <path>reskins/cagliostro_alchemist_waters_edge/3-Grin.png</path>
+			-->
         </candy>
 
         <!--
@@ -394,15 +439,10 @@
         <background>paris rooftop</background>
 
         <!-- Put all costumes into the same group, but place new costumes higher -->
-        <character highlight="valentines" partition="1" sort="2">kumatora</character>
-        <character highlight="valentines" partition="1" sort="2">hu_tao</character>
-        <character highlight="valentines" partition="1" sort="2">rosa</character>
-        <character highlight="valentines" partition="1" sort="2">magma_grunt</character>
-        <character highlight="valentines" partition="1" sort="2">takatoshi</character>
-        <character highlight="valentines" partition="1" sort="2">kyou</character>
-        <character highlight="valentines" partition="1" sort="2">estelle</character>
-        <character highlight="valentines" partition="1" sort="2">yshtola</character>
-        <character highlight="valentines" partition="1" sort="2">mari</character>
+        <character highlight="valentines" partition="1" sort="2">mari_setogaya</character>
+        <character highlight="valentines" partition="1" sort="2">gloria</character>
+        <character highlight="valentines" partition="1" sort="2">cagliostro</character>
+        <character highlight="valentines" partition="1" sort="2">anatoly</character>
 
         <costumes highlight="valentines" partition="1" sort="1">valentines</costumes>
 
@@ -460,12 +500,8 @@
     <event id="easter">
         <name>Easter</name>
 
-        <!-- The April Fool's event is always the first week of April, and we want to keep these event separate where possible because of how different they are. -->
+        <!-- The April Fool's event is the first three days of April, and we want to keep these event separate where possible because of how different they are. -->
         <dates>
-            <date>
-                <from year="2022" month="4" day="15" /> <!-- Good Friday in 2022 is April 15 -->
-                <to year="2022" month="4" day="28" />
-            </date>
             <date>
                 <from year="2023" month="4" day="7" /> <!-- Good Friday in 2023 is April 7 -->
                 <to year="2023" month="4" day="20" />
@@ -482,12 +518,36 @@
                 <from year="2026" month="4" day="5" /> <!-- Good Friday in 2026 is April 3, so these dates are deferred by two days. -->
                 <to year="2026" month="4" day="18" />
             </date>
+            <date>
+                <from year="2027" month="3" day="17" /> <!-- Good Friday in 2027 is March 26, so these dates are mostly early. -->
+                <to year="2027" month="3" day="30" />
+            </date>
+            <date>
+                <from year="2028" month="4" day="14" /> <!-- Good Friday in 2028 is April 14 -->
+                <to year="2028" month="4" day="27" />
+            </date>
+            <date>
+                <from year="2029" month="3" day="17" /> <!-- Good Friday in 2029 is March 30, so these dates are mostly early. -->
+                <to year="2029" month="3" day="30" />
+            </date>
+            <date>
+                <from year="2030" month="4" day="19" /> <!-- Good Friday in 2030 is April 19 -->
+                <to year="2030" month="5" day="2" />
+            </date>
+            <date>
+                <from year="2031" month="4" day="11" /> <!-- Good Friday in 2031 is April 11 -->
+                <to year="2031" month="4" day="24" />
+            </date>
+            <date>
+                <from year="2032" month="3" day="17" /> <!-- Good Friday in 2032 is March 26 again, so these dates are mostly early. -->
+                <to year="2032" month="3" day="30" />
+            </date>
         </dates>
 
         <background>garden</background>
 
         <!-- Put all costumes into the same group, but place new costumes higher -->
-        <character highlight="easter" partition="1" sort="2">mari</character>
+        <character highlight="easter" partition="1" sort="2">mari_setogaya</character>
 
         <costumes highlight="easter" partition="1" sort="1">easter</costumes>
 
@@ -534,16 +594,23 @@
         <name>Halloween</name>
 
         <dates>
-            <!-- 13 days, leading up to the 31st. Spooky. -->
             <date>
                 <from month="10" day="19" />
-                <to month="10" day="31" />
+                <to month="11" day="1" />
             </date>
         </dates>
 
         <background>haunted forest</background>
 
-        <costumes highlight="halloween">halloween</costumes>
+        <!-- Put all costumes into the same group, but place new costumes higher -->
+        <character highlight="halloween" partition="1" sort="3">kumatora</character>
+        <character highlight="halloween" partition="1" sort="3">mitama</character>
+        <character highlight="halloween" partition="1" sort="3">critical_darling</character>
+        <character highlight="halloween" partition="1" sort="3">mia_golden_sun</character>
+        <character highlight="halloween" partition="1" sort="2">caitlin</character>
+        <character highlight="halloween" partition="1" sort="2">sweetheart</character>
+
+        <costumes highlight="halloween" partition="1" sort="1">halloween</costumes>
 
         <character highlight="halloween">polly</character>
         <character highlight="halloween">perona</character>
@@ -552,10 +619,6 @@
         <character highlight="halloween">azami</character>
 
         <candy>
-            <path>reskins/aoba_little_devil/0-happy.png</path>
-            <path>reskins/aoba_little_devil/0-confused.png</path>
-            <path>reskins/aoba_little_devil/0-flustered.png</path>
-            <path>reskins/aoba_little_devil/0-greeting.png</path>
             <path>reskins/chara_dreemurr_halloween/0-demonangry.png</path>
             <path>reskins/chara_dreemurr_halloween/0-snark.png</path>
             <path>reskins/chara_dreemurr_halloween/0-anger.png</path>
@@ -608,14 +671,10 @@
             <path>reskins/witchs_costume/1-pushing.png</path>
             <path>reskins/witchs_costume/2-interested.png</path>
             <path>reskins/witchs_costume/3-happy.png</path>
-            <path>reskins/wikipe-tan_halloween/0-educate.png</path>
-            <path>reskins/wikipe-tan_halloween/0-excited.png</path>
-            <path>reskins/wikipe-tan_halloween/1-aa-stripped.png</path>
-            <path>reskins/wikipe-tan_halloween/2-flirt.png</path>
-            <path>reskins/yuna_love_rock/0-YunaSmug.png</path>
-            <path>reskins/yuna_love_rock/0-YunaSurprised.png</path>
-            <path>reskins/yuna_love_rock/0-MegumiStripping.png</path>
-            <path>reskins/yuna_love_rock/0-SachiCalm.png</path>
+            <path>reskins/wikipe-tan_majokko/0-educate.png</path>
+            <path>reskins/wikipe-tan_majokko/0-excited.png</path>
+            <path>reskins/wikipe-tan_majokko/1-aa-stripped.png</path>
+            <path>reskins/wikipe-tan_majokko/2-flirt.png</path>
             <path>reskins/yunyun_trick_or_friends/0-Happy.png</path>
             <path>reskins/yunyun_trick_or_friends/1-Excited.png</path>
             <path>reskins/yunyun_trick_or_friends/2-Posing2.png</path>
@@ -635,10 +694,13 @@
         <background>holiday lodge</background>
 
         <!-- Put all costumes into the same group, but place new costumes higher -->
-        <character highlight="xmas" partition="1" sort="2">jim</character>
-        <character highlight="xmas" partition="1" sort="2">noelle</character>
-        <character highlight="xmas" partition="1" sort="2">rosa</character>
-        <character highlight="xmas" partition="1" sort="2">hatsune_miku</character>
+        <character highlight="xmas" partition="1" sort="2">mari_setogaya</character>
+        <character highlight="xmas" partition="1" sort="2">barbara</character>
+        <character highlight="xmas" partition="1" sort="2">gloria</character>
+        <character highlight="xmas" partition="1" sort="2">cagliostro</character>
+        <character highlight="xmas" partition="1" sort="2">yshtola</character>
+        <character highlight="xmas" partition="1" sort="2">critical_darling</character>
+        <character highlight="xmas" partition="1" sort="2">dwight</character>
 
         <costumes highlight="xmas" partition="1" sort="1">xmas</costumes>
 
@@ -687,31 +749,21 @@
             </date>
         </dates>
 
+        <background>da invuntry</background>
+
         <!-- Put AF costumes and AF characters into the same group, but place AF-only characters before costumes -->
         <!-- Also, put this year's new characters/costumes first -->
-        <character highlight="april_fools" partition="1" sort="8">bella_goth</character>
-        <character highlight="april_fools" partition="1" sort="7">derpette</character>
-        <character highlight="april_fools" partition="1" sort="7">derpina</character>
-        <character highlight="april_fools" partition="1" sort="6">dreamcatcher</character>
-        <character highlight="april_fools" partition="1" sort="6">fernando</character>
-        <character highlight="april_fools" partition="1" sort="6">frisk_and_friends</character>
-        <character highlight="april_fools" partition="1" sort="6">gruntilda</character>
-        <character highlight="april_fools" partition="1" sort="6">natasha</character>
-        <character highlight="april_fools" partition="1" sort="6">sandy_cheeks</character>
-        <character highlight="april_fools" partition="1" sort="6">sannytess</character>
-        <character highlight="april_fools" partition="1" sort="6">trifle</character>
-        <character highlight="april_fools" partition="1" sort="6">wario</character>
-        <character highlight="april_fools" partition="1" sort="5">mileena</character>
-        <character highlight="april_fools" partition="1" sort="4">rogue_x-men</character>
-        <character highlight="april_fools" partition="1" sort="3">wikipe-tan</character>
-        <character highlight="april_fools" partition="1" sort="3">magma_grunt</character>
-        <character highlight="april_fools" partition="1" sort="3">aoba</character>
-        <character highlight="april_fools" partition="1" sort="3">kool-aid</character>
+        <character highlight="april_fools" partition="1" sort="4">giygas</character>
+        <character highlight="april_fools" partition="1" sort="4">kekko_kamen</character>
+        <character highlight="april_fools" partition="1" sort="4">toru_hagakure</character>
+        <character highlight="april_fools" partition="1" sort="3">bobobo</character>
+        <character highlight="april_fools" partition="1" sort="3">sannytess</character>
         <tag highlight="april_fools" partition="1" sort="2">april_fools</tag>
         <costumes highlight="april_fools" partition="1" sort="1">april_fools</costumes>
 
         <!-- This works exactly like <include-status> in (prod-)config.xml. -->
         <include-status>event</include-status>
+        <include-status>event-background</include-status>
     </event>
 
     <!--
@@ -743,14 +795,14 @@
 
         <dates>
             <date>
-                <from year="2022" month="8" day="9" />
-                <to year="2022" month="8" day="15" />
+                <from year="2023" month="10" day="1" />
+                <to year="2023" month="10" day="7" />
             </date>
         </dates>
 
         <resort>
             <season>auto</season>
-            <poll>https://forms.gle/RohHeMeuv6GSDZqS8</poll>
+            <poll>https://forms.gle/7ysB1YoUjGSdfn6x5</poll>
             <min-characters>40</min-characters>
         </resort>
     </event>
@@ -783,20 +835,20 @@
     -->
 
 
-    <event id="feedback-jul-2022" consistent-timezone="true">
-        <name>General Feedback Poll (July 2022)</name>
+    <event id="feedback-jul-2023" consistent-timezone="true">
+        <name>Character Feedback Poll (July 2023)</name>
 
         <dates>
             <date>
-                <from year="2022" month="7" day="6" />
-                <to year="2022" month="8" day="15" />
+                <from year="2023" month="7" day="1" />
+                <to year="2023" month="9" day="16" />
             </date>
         </dates>
 
         <announcement>
-            <header>General Feedback Poll (July 2022)</header>
+            <header>Character Feedback Poll (July 2023)</header>
             <announce-body>
-                <p>A SPNatI General Feedback Poll is now live!</p>
+                <p>A SPNatI Character Feedback Poll is now live!</p>
                 <p>
                     We know that many people play this game without interacting with us on the
                     /r/spnati subreddit or on either Discord server. So think of this as a way to
@@ -809,7 +861,7 @@
 
                 <a class="bordered smooth-button green event-announcement-link"
                     target="_blank" rel="noreferrer"
-                    href="https://reddit.com/r/spnati/comments/vt825s/spnati_general_feedback_poll_july_2022/">Feedback Poll</a>
+                    href="https://www.reddit.com/r/spnati/comments/14oa167/spnati_character_feedback_poll_summer_2023/">Feedback Poll</a>
             </announce-body>
             <min-characters>40</min-characters>
         </announcement>

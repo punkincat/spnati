@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collectibles>
+    <collectible id="curry_noodles" status="online" img="opponents/nadeshiko/attachments/cuporamen.png" thumbnail="opponents/nadeshiko/attachments/cuporamenicon.png">
+        <title>Curry Noodles</title>
+        <subtitle>A perfect meal for a cold winter's night!</subtitle>
+        <text>Out of the kindness of her heart, Nadeshiko has gifted you a tasty cup of ramen noodles, on the bottom of the cup, there's a note: 
+
+"I was given a cup of these very noodles when I met Rin for the first time, so I decided to pay the favor onto you! All you need to do is boil some water, pour it in the cup, and the 2-3 minutes later, you'll have tasty ramen, ready to go! I hope you enjoy them!" -Nadeshiko</text>
+        <unlock>See Nadeshiko eat (and finish) a cup of curry noodles. </unlock>
+    </collectible>
+    <collectible id="nadeshiko_number" status="online" img="opponents/nadeshiko/attachments/phonenumber.png" thumbnail="opponents/nadeshiko/attachments/phonenumber.png">
+        <title>Nadeshiko's Number</title>
+        <subtitle>Be sure to call her later!</subtitle>
+        <text>As you prepare to walk out of the Inventory tonight, Nadeshiko stops you. In her hand is a small slip of paper, which she then hands off to you. Written on it is her phone number, a photograph, and a note. She gives you a warm smile as you head home.</text>
+        <unlock>Beat Nadeshiko in a game.</unlock>
+    </collectible>
+    <collectible id="Skillet" status="online" img="opponents/nadeshiko/attachments/skillet.png" thumbnail="opponents/nadeshiko/attachments/skillet.png">
+        <title>Skillet</title>
+        <subtitle>Perfect for cooking in the great outdoors!</subtitle>
+        <text>Working for an outdoors store has it's benefits. After your last game with her, she decided to pick one up for you (thanks to an employee discount), as a way to share the love of the outdoors, and outdoor cooking with you. "I already prepared it for cooking too, so whenever you want to use it, it's ready to go!"</text>
+        <unlock>Win 2 games against Nadeshiko.</unlock>
+        <counter>2</counter>
+    </collectible>
+    <collectible id="nadeshiko_scarf" status="online" img="opponents/nadeshiko/attachments/NadeshikoScarf.png" thumbnail="opponents/nadeshiko/attachments/ScarfThumbnail.png">
+        <title>Nadeshiko's Scarf</title>
+        <subtitle>The perfect camping accesory!</subtitle>
+        <unlock>Hear all of Nadeshiko's "Camping Tips."</unlock>
+        <hide-details>true</hide-details>
+        <counter>18</counter>
+        <wearable>true</wearable>
+        <clothing name="scarf" generic="scarf" position="neck" type="extra" img="opponents/nadeshiko/attachments/ScarfThumbnail.png" />
+    </collectible>
+</collectibles>

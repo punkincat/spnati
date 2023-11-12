@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using System;
 
 namespace SPNATI_Character_Editor.Activities
@@ -21,13 +21,11 @@ namespace SPNATI_Character_Editor.Activities
 
 		protected override void OnInitialize()
 		{
-			tabs.TabPages.Remove(tabGameImport);
 			_character = Record as Character;
 		}
 
 		protected override void OnFirstActivate()
 		{
-			lineImportControl1.SetCharacter(_character);
 			scratchPadControl1.SetCharacter(_character);
 			int startIndex = Config.GetInt("importtab");
 			tabs.SelectedIndex = Math.Min(startIndex, tabs.TabPages.Count - 1);
@@ -40,11 +38,7 @@ namespace SPNATI_Character_Editor.Activities
 
 		public override void Save()
 		{
-			if (tabs.SelectedTab == tabGameImport)
-			{
-				lineImportControl1.Save();
-			}
-			else if (tabs.SelectedTab == tabScratchPad)
+			if (tabs.SelectedTab == tabScratchPad)
 			{
 				scratchPadControl1.Save();
 			}

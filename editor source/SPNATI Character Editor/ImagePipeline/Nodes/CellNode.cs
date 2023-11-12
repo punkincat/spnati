@@ -33,7 +33,8 @@ namespace ImagePipeline
 		{
 			return new PortDefinition[] {
 				new PortDefinition(PortType.Bitmap, "image"),
-				new PortDefinition(PortType.String, "key")
+				new PortDefinition(PortType.String, "key"),
+				new PortDefinition(PortType.String, "row")
 			};
 		}
 
@@ -47,16 +48,17 @@ namespace ImagePipeline
 			PoseEntry cell = args.Context.Cell;
 			if (cell == null)
 			{
-				return new PipelineResult(null, null);
+				return new PipelineResult(null, null, null);
 			}
 
 			PoseMatrix matrix = cell.Stage.Sheet.Matrix;
 			FileStatus status = matrix.GetStatus(cell, "raw-");
+			string row = cell.Stage.Stage.ToString();
 
 			if (args.Context.Settings.CellOverride != null)
 			{
 				string overrideKey = args.Context.Settings.CellOverrideKey ?? cell.Key;
-				return new PipelineResult(new DirectBitmap(args.Context.Settings.CellOverride.Bitmap), overrideKey);
+				return new PipelineResult(new DirectBitmap(args.Context.Settings.CellOverride.Bitmap), overrideKey, row);
 			}
 
 			bool cached = args.Context.Settings.Cache.ContainsKey("CellGenerated");
@@ -68,7 +70,7 @@ namespace ImagePipeline
 				string path = matrix.GetFilePath(cell, "raw-");
 				DirectBitmap bmp = new DirectBitmap(path);
 				args.Context.Settings.Cache["CellGenerated"] = true;
-				return new PipelineResult(bmp, cell.Key);
+				return new PipelineResult(bmp, cell.Key, row);
 			}
 			else
 			{
@@ -76,10 +78,10 @@ namespace ImagePipeline
 				Bitmap bmp = await PipelineImporter.ImportAndCropImage(cell, true, "raw-") as Bitmap;
 				if (bmp == null)
 				{
-					return new PipelineResult(null, null);
+					return new PipelineResult(null, null, null);
 				}
 				args.Context.Settings.Cache["CellGenerated"] = true;
-				return new PipelineResult(new DirectBitmap(bmp), cell.Key);
+				return new PipelineResult(new DirectBitmap(bmp), cell.Key, row);
 			}
 		}
 	}

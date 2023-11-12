@@ -117,11 +117,6 @@ var $indivSelectionCardContainer = $('#individual-select-screen .selection-cards
  *****                  Select Screen Variables                   *****
  **********************************************************************/
 
-/* hidden variables */
-var mainSelectHidden = false;
-var singleSelectHidden = false;
-var groupSelectHidden = false;
-
 /* opponent listing file */
 var metaFiles = ["meta.xml", "tags.xml"];
 
@@ -150,7 +145,7 @@ var sortingOptionsMap = {
     target: sortOpponentsByMostTargeted(50, Infinity),
     oldest: sortOpponentsByMultipleFields(["release", "-listingIndex"]),
     newest: sortOpponentsByMultipleFields(["-release", "listingIndex"]),
-    featured: sortOpponentsByMultipleFields(["-event_partition", "-event_sort_order", "listingIndex"]),
+    featured: sortOpponentsByMultipleFields(["-effectiveScore"]),
 };
 var groupCreditsShown = false;
 
@@ -183,6 +178,50 @@ var statusIndicators = {
         tooltip: "This opponent is only available in the official version of the game during the April Fool's Day event."
     }
 }
+
+const MAGNET_TAGS = [
+    "fire_emblem",
+
+    "pokemon",
+
+    "ddlc",
+    "my_little_pony",
+
+    "danganronpa",
+    "genshin_impact",
+    "konosuba",
+    "persona",
+    "rwby_franchise",
+    "street_fighter",
+
+    "ace_attorney",
+    "dragon_ball",
+    "katawa_shoujo",
+    "monster_prom",
+    "one_piece",
+    "touhou_project",
+    "yugioh",
+
+    "battleborn",
+    "clannad",
+    "zombieland_saga",
+    "huniepop",
+    "jjba",
+    "kid_icarus",
+    "league_of_legends",
+    "legend_of_zelda",
+    "little_witch_academia",
+    "marvel",
+    "miraculous",
+    "hyperdimension_neptunia",
+    "panty_and_stocking",
+    "sonic_franchise",
+    "tales_of",
+    "teen_titans_franchise",
+    "va-11_hall-a",
+    "vandread",
+    "xenoblade_chronicles",
+];
 
 /**********************************************************************
  *****               Opponent & Group Specification               *****
@@ -245,9 +284,11 @@ function loadListingFile () {
     var loadProgress = [];
     var opponentGroupMap = {};
     var opponentMap = {};
-    var tagSet = {};
-    var sourceSet = {};
-    var creatorSet = {};
+    const tagSet = new Set();
+    const sourceSet = new Set();
+    const sourcePrefixCounts = new Map();
+    const creatorSet = new Set();
+    const wordRE = /(?:\p{Letter}|[-0-9'])+/ug;
 
     loadProgress = listingFiles.map(function () {
         return { current: 0, total: 0 };
@@ -258,18 +299,22 @@ function loadListingFile () {
 
         if (opp.id in opponentMap) {
             loadedOpponents[opp.listingIndex = opponentMap[opp.id]] = opp;
-            opp.searchTags.forEach(function(tag) {
-                tagSet[tag] = true;
-            });
-            sourceSet[opp.source] = true;
+            opp.searchTags.forEach(tagSet.add.bind(tagSet));
+
+            sourceSet.add(opp.source);
+
+            /* Count the number of instances of progressively longer prefixes of the (adding a word at a time).
+               These counts are processed after all opponents have been loaded */
+            var sourceMatch;
+            while (sourceMatch = wordRE.exec(opp.source)) {
+                if (/^(?:the|my|original)$/i.test(sourceMatch[0])) continue;
+                const prefix = opp.source.substring(0, wordRE.lastIndex);
+                sourcePrefixCounts.set(prefix, (sourcePrefixCounts.get(prefix) ?? 0) + 1);
+            }
             
-            splitCreatorField(opp.artist).forEach(function (creator) {
-                creatorSet[creator] = true;
-            });
+            splitCreatorField(opp.artist).forEach(creatorSet.add.bind(creatorSet));
             
-            splitCreatorField(opp.writer).forEach(function (creator) {
-                creatorSet[creator] = true;
-            });
+            splitCreatorField(opp.writer).forEach(creatorSet.add.bind(creatorSet));
             
             var disp = new OpponentSelectionCard(opp);
             opp.selectionCard = disp;
@@ -336,6 +381,8 @@ function loadListingFile () {
             loadedGroups.push(newGroup);
         });
 
+        var unsortedScore = -1;
+
         return Promise.all($xml.find('>individuals>opponent').map(function () {
             var oppStatus = $(this).attr('status');
             var id = $(this).text();
@@ -348,12 +395,21 @@ function loadListingFile () {
                 releaseNumber = Number(releaseNumber);
             }
             var highlightStatus = $(this).attr('highlight');
+            var rosterScore = $(this).attr('score');
+            var addedDate = $(this).attr('addedDate');
+
+            // Keep the unsorted characters in order
+            if (rosterScore === undefined) {
+                rosterScore = unsortedScore;
+                unsortedScore -= 1;
+            }
+
 
             if (available[id] && !(id in opponentMap)) {
                 loadProgress[fileIdx].total++;
                 opponentMap[id] = oppDefaultIndex++;
 
-                return loadOpponentMeta(id, oppStatus, releaseNumber, highlightStatus)
+                return loadOpponentMeta(id, oppStatus, rosterScore, addedDate, releaseNumber, highlightStatus)
                     .then(onComplete).then(function () {
                         loadProgress[fileIdx].current++;
                         var progress = loadProgress.reduce(function (acc, val) {
@@ -381,17 +437,47 @@ function loadListingFile () {
         return Promise.all(files.map(listingProcessor));
     }).then(function () {
         loadedOpponents = loadedOpponents.filter(Boolean); // Remove any empty slots should an opponent fail to load
+
+        randomizeRosterOrder();
             
-        $tagList.append(Object.keys(TAG_ALIASES).concat(Object.keys(tagSet)).sort().map(function(tag) {
+        $tagList.append(Object.keys(TAG_ALIASES).concat(Array.from(tagSet)).sort().map(function(tag) {
             return new Option(tag);
         }));
-        $sourceList.append(Object.keys(sourceSet).sort().map(function(source) {
+        $sourceList.append(Array.from(sourceSet).sort().map(function(source) {
             return new Option(source);
         }));
-        $creatorList.append(Object.keys(creatorSet).sort().map(function(source) {
+        $creatorList.append(Array.from(creatorSet).sort().map(function(source) {
             return new Option(source);
         }));
-        loadedOpponents.forEach(function(p) { p.selectionCard.updateEpilogueBadge() });
+
+        loadedOpponents.forEach(function(p) {
+            p.selectionCard.updateEpilogueBadge()
+
+            /* Now, for each character, build the progressively longer prefixes again and look
+               for the points where the number of characters sharing that prefix decreases. 
+               Store those indices on the character, to be used when showing their details display. */
+            p.sourcePrefixLengths = [];
+            var sourceMatch, prevPrefixLen, prevPrefixCount;
+            while (sourceMatch = wordRE.exec(p.source)) {
+                const prefix = p.source.substring(0, wordRE.lastIndex);
+                if (sourcePrefixCounts.has(prefix)) { // Skip prefixes that were skipped earlier
+                    const curPrefixCount = sourcePrefixCounts.get(prefix);
+                    if (prevPrefixCount !== undefined && curPrefixCount < prevPrefixCount) {
+                        /* If adding this word decreases the number of matches, we want to 
+                           push a split point at the end of the *previous* word. */
+                        p.sourcePrefixLengths.push(prevPrefixLen);
+                    }
+                    prevPrefixLen = wordRE.lastIndex;
+                    prevPrefixCount = curPrefixCount;
+                }
+            }
+            if (prevPrefixCount > 1) {
+                /* Push the longest prefix length, which might not be the entire source field
+                   if it ends in non-word characters or excluded words, if there is more than 
+                   one match. */
+                p.sourcePrefixLengths.push(prevPrefixLen);
+            }
+        });
         /* Determine the time of the nth most recently updated character on testing, so we
            can show at least n characters. (.sort() sorts in place, but .filter() makes a copy. */
         TESTING_NTH_MOST_RECENT_UPDATE = (loadedOpponents.filter(p => p.status == "testing")
@@ -405,14 +491,14 @@ function loadListingFile () {
 /***************************************************************
  * Loads and parses the meta and tags XML files of an opponent.
  ***************************************************************/
-function loadOpponentMeta (id, status, releaseNumber, highlightStatus) {
+function loadOpponentMeta (id, status, rosterScore, addedDate, releaseNumber, highlightStatus) {
     /* grab and parse the opponent meta file */
     console.log("Loading metadata for \""+id+"\"");
 
     return Promise.all(metaFiles.map(function (filename) {
         return metadataIndex.getFile("opponents/" + id + "/" + filename);
     })).then(function(files) {
-        return new Opponent(id, files, status, releaseNumber, highlightStatus);
+        return new Opponent(id, files, status, rosterScore, addedDate, releaseNumber, highlightStatus);
     }).catch(function(err) {
         console.error("Failed reading \""+id+"\":");
         captureError(err);
@@ -452,10 +538,61 @@ function getCostumeOption(alt_costume, selected_costume) {
                           selected: alt_costume.folder == selected_costume, data: alt_costume});
 }
 
-function fillCostumeSelector($selector, costumes, selected_costume) {
+function fillCostumeSelector($selector, defaultname, costumes, selected_costume) {
+    var defaultn = '\u{1f455} ' + defaultname;
+    if (defaultname == '') {
+        defaultn = '\u{1f455} Default Costume';
+    }
+	
+	costumes.sort(function(c1, c2) {
+		var a = 0, b = 0;
+		
+        if (c1.status != "online") {
+            a -= 100;
+        }
+		
+        if (c2.status != "online") {
+            b -= 100;
+        }
+        
+        if (c1.set == "valentines") {
+            a--;
+        } else if (c1.set == "april_fools") {
+            a -= 2;
+        } else if (c1.set == "easter") {
+            a -= 3;
+        } else if (c1.set == "summer") {
+            a -= 4;
+        } else if (c1.set == "halloween") {
+            a -= 5;
+        } else if (c1.set == "xmas") {
+            a -= 6;
+        } else if (c1.set == "sleepover") {
+            a -= 7;
+        }
+		
+        if (c2.set == "valentines") {
+            b--;
+        } else if (c2.set == "april_fools") {
+            b -= 2;
+        } else if (c2.set == "easter") {
+            b -= 3;
+        } else if (c2.set == "summer") {
+            b -= 4;
+        } else if (c2.set == "halloween") {
+            b -= 5;
+        } else if (c2.set == "xmas") {
+            b -= 6;
+        } else if (c2.set == "sleepover") {
+            b -= 7;
+        }
+			
+		return b - a;
+	});
+
     $selector.empty().append($('<option>', {
         val: '',
-        text: 'Default Costume'
+        text: defaultn,
     }), costumes.map(function(c) {
         var emoji = '\u{1f455} ';
         
@@ -471,12 +608,12 @@ function fillCostumeSelector($selector, costumes, selected_costume) {
             emoji = '\u{1f430} ';
         } else if (c.set == "summer") {
             emoji = '\u{2600}\u{fe0f} ';
-        } else if (c.set == "oktoberfest") {
-            emoji = '\u{1f37a} ';
         } else if (c.set == "halloween") {
             emoji = '\u{1f383} ';
         } else if (c.set == "xmas") {
             emoji = '\u{1f384} ';
+        } else if (c.set == "sleepover") {
+            emoji = '\u{1f6cf}\u{fe0f} ';
         }
         
         return $('<option>', {
@@ -601,7 +738,7 @@ function updateGroupSelectScreen (ignore_bg) {
             */
             $groupCostumeSelectors[i].hide();
             if (opponent.alternate_costumes.length > 0) {
-                fillCostumeSelector($groupCostumeSelectors[i], opponent.alternate_costumes,
+                fillCostumeSelector($groupCostumeSelectors[i], opponent.default_costume_name, opponent.alternate_costumes,
                                     opponent.selected_costume).show();
             } else {
                 $groupCostumeSelectors[i].empty();
@@ -610,8 +747,8 @@ function updateGroupSelectScreen (ignore_bg) {
             updateStatusIcon($groupStatuses[i], opponent);
 
             $groupLayers[i].attr({
-                src: "img/layers" + opponent.layers + ".png",
-                alt: opponent.layers + ' layers',
+                src: "img/layers" + opponent.selectLayers + ".png",
+                alt: opponent.selectLayers + ' layers',
             }).show();
             updateGenderIcon($groupGenders[i], opponent);
 
@@ -649,7 +786,7 @@ function updateGroupSelectScreen (ignore_bg) {
 /* A filter predicate encompassing the filter options on the individual select
  * screen.
  */
-function filterOpponent(opp, name, source, creator, tag) {
+function filterOpponent(opp, name, source, creator, tags) {
     name = name.simplifyDiacritics();
     source = source.simplifyDiacritics();
     creator = creator.simplifyDiacritics();
@@ -668,8 +805,18 @@ function filterOpponent(opp, name, source, creator, tag) {
     }
 
     // filter by tag
-    if (tag && !(opp.searchTags && opp.searchTags.indexOf(tag) >= 0)) {
-        return false;
+    if(tags) {
+        for(let i = 0; i < tags.length; i++) {
+            let tag = tags[i];
+            const exclude = tag.startsWith("-");
+            if(exclude) {
+                tag = tag.substring(1);
+            }
+            const oppHasTag = opp.searchTags && opp.searchTags.indexOf(tag) >= 0;
+            if (exclude === oppHasTag) {
+                return false;
+            }
+        }
     }
     
     // filter by creator
@@ -686,6 +833,21 @@ function filterOpponent(opp, name, source, creator, tag) {
     return true;
 }
 
+/**
+ * Takes a list of string and a tag list and returns a list of all possible matching tags from the list
+ */
+function matchTags(workingTags, tagList) {
+    const tags = [];
+    workingTags.forEach(workingTag => {
+        tagList.forEach(tag => {
+            if(workingTag === tag || workingTag === "-" + tag) {
+                tags.push(workingTag);
+            }
+        });
+    });
+    return tags;
+}
+
 /************************************************************
  * Filters the list of selectable opponents based on those
  * already selected and performs search logic.
@@ -694,11 +856,12 @@ function updateIndividualSelectFilters() {
     var name = $searchName.val().toLowerCase();
     var source = $searchSource.val().toLowerCase();
     var creator = $searchCreator.val().toLowerCase();
-    var tag = canonicalizeTag($searchTag.val());
+    var workingTags = $searchTag.val().split(",").map(x => canonicalizeTag(x));
+    var tags = matchTags(workingTags, $tagList.children().toArray().map(x => x.value));
 
     // Array.prototype.filter automatically skips empty slots
     loadedOpponents.forEach(function (opp) {
-        opp.selectionCard.setFiltered(!filterOpponent(opp, name, source, creator, tag));
+        opp.selectionCard.setFiltered(!filterOpponent(opp, name, source, creator, tags));
     });
     updateIndividualSelectVisibility(false);
 }
@@ -715,6 +878,12 @@ function updateIndividualSelectSort() {
         loadedOpponents.sort(sortingOptionsMap[sortingMode]);
     } else {
         loadedOpponents.sort(sortOpponentsByMultipleFields(sortingMode.split(/\s+/)));
+    }
+
+    if (sortingMode === "featured") {
+        /* Apply specific rules for featured sort order. */
+        loadedOpponents = applyFeaturedSortRules(loadedOpponents);
+        if (eventSortingActive) loadedOpponents.sort(sortOpponentsByMultipleFields(["-event_partition", "-event_sort_order"]));
     }
     
     var testingFirst = individualSelectTesting && (sortingMode === "featured" || sortingMode === "-lastUpdated");
@@ -884,6 +1053,13 @@ function showIndividualSelectionScreen() {
     screenTransition($selectScreen, $individualSelectScreen);
 }
 
+function individualSelectScreen_keyUp(e) {
+    if (e.key == "Backspace" && !$(document.activeElement).is('input, select, textarea')) {
+        backFromIndividualSelect();
+    }
+}
+$individualSelectScreen.data('keyhandler', individualSelectScreen_keyUp);
+
 function toggleIndividualSelectView() {
     individualSelectTesting = !individualSelectTesting;
 
@@ -923,7 +1099,8 @@ function updateSelectableGroups() {
     var groupname = $groupSearchGroupName.val().toLowerCase();
     var name = $groupSearchName.val().toLowerCase();
     var source = $groupSearchSource.val().toLowerCase();
-    var tag = canonicalizeTag($groupSearchTag.val());
+    var workingTags = $groupSearchTag.val().split(",").map(x => canonicalizeTag(x));
+    var tags = matchTags(workingTags, $tagList.children().toArray().map(x => x.value));
 
     // reset filters
     selectableGroups = loadedGroups.filter(function(group) {
@@ -941,9 +1118,23 @@ function updateSelectableGroups() {
             return opp.source.toLowerCase().indexOf(source) >= 0;
         })) return false;
 
-        if (tag && !group.opponents.some(function(opp) {
-            return opp.searchTags && opp.searchTags.indexOf(canonicalizeTag(tag)) >= 0;
-        })) return false;
+        if (tags) {
+            for(let i = 0; i < tags.length; i++) {
+                let tag = tags[i];
+                const exclude = tag.startsWith("-");
+                if(exclude) {
+                    tag = tag.substring(1);
+                }
+                
+                const groupHasTag = group.opponents.some(function(opp) {
+                    return opp.searchTags && opp.searchTags.indexOf(tag) >= 0;
+                });
+
+                if(exclude === groupHasTag) {
+                    return false;
+                }
+            }
+        }
 
         if ((chosenGroupGender == 2 || chosenGroupGender == 3)
             && !group.opponents.every(function(opp) {
@@ -963,7 +1154,7 @@ function updateSelectableGroups() {
  * Common function to selectGroup and clickedRandomGroupButton
  * to load the members of a group (preset table)
  ************************************************************/
-function loadGroup (chosenGroup) {
+function loadGroup (chosenGroup, isRandom) {
     if (!chosenGroup) return;
 
     clickedRemoveAllButton(false);
@@ -1005,7 +1196,11 @@ function loadGroup (chosenGroup) {
                 level: 'info'
             });
 
-            member.loadBehaviour(i);
+            member.loadBehaviour(i, false, {
+                "source": "group",
+                "group": chosenGroup.title,
+                "random": isRandom
+            });
             players[i] = member;
         }
     }
@@ -1029,7 +1224,7 @@ function clickedRandomGroupButton () {
         if (costume) {
             var costumeFolder = (costume.toLowerCase() == "default") ? '' : "opponents/reskins/" + costume + "/";
             
-            fillCostumeSelector($groupCostumeSelectors[i], chosenGroup.opponents[i].alternate_costumes, costumeFolder);
+            fillCostumeSelector($groupCostumeSelectors[i], chosenGroup.opponents[i].default_costume_name, chosenGroup.opponents[i].alternate_costumes, costumeFolder);
         } else {
             $groupCostumeSelectors[i].empty();
         }
@@ -1039,19 +1234,21 @@ function clickedRandomGroupButton () {
         'class': 'bordered toast',
         'text': chosenGroup.title,
     }).on('animationend', function() { $(this).remove(); }));
-    loadGroup(chosenGroup);
+    loadGroup(chosenGroup, true);
 }
 
 /************************************************************
  * The player clicked on the all random button.
  ************************************************************/
-function clickedRandomFillButton (predicate) {
+function clickedRandomFillButton (randomMode, predicate) {
     /* compose a copy of the loaded opponents list */
     var loadedOpponentsCopy = loadedOpponents.filter(function(opp) {
         // Filter out characters that can't be selected via the regular view
         return (opp.selectionCard.isVisible(individualSelectTesting, true) && 
                 (!predicate || predicate(opp)));
     });
+
+    var curTable = players.filter((p, idx) => !!p && (idx > 0)).map((p) => p.id);
 
     /* select random opponents */
     for (var i = 1; i < players.length; i++) {
@@ -1068,7 +1265,11 @@ function clickedRandomFillButton (predicate) {
 
             /* load opponent */
             players[i] = loadedOpponentsCopy[randomOpponent];
-            players[i].loadBehaviour(i);
+            players[i].loadBehaviour(i, false, {
+                "source": "random",
+                "table": curTable,
+                "mode": randomMode
+            });
 
             /* remove random opponent from copy list */
             loadedOpponentsCopy.splice(randomOpponent, 1);
@@ -1276,6 +1477,21 @@ function clickedRemoveAllButton (alsoRemoveSuggestions)
     updateSelectionVisuals();
 }
 
+
+/************************************************************
+ * Adds hotkey functionality to the main selection screen.
+ ************************************************************/
+function mainSelectScreen_keyUp(e) {
+    if (e.key == "Backspace" && $('.modal:visible').length == 0) {
+        backSelectScreen();
+    }
+    else if (e.key.toLowerCase() == 't' && $('.modal:visible').length == 0) {
+        hideSelectionTable();
+    }
+}
+
+$selectScreen.data('keyhandler', mainSelectScreen_keyUp);
+
 /************************************************************
  * The player clicked on a change stats card button on the
  * group select screen.
@@ -1306,7 +1522,7 @@ function selectGroup () {
         'level': 'info'
     });
 
-    loadGroup(selectableGroups[groupPage]);
+    loadGroup(selectableGroups[groupPage], false);
 
     Sentry.setTag("screen", "select-main");
 
@@ -1352,36 +1568,50 @@ function changeGroupPage (skip, page) {
  * Adds hotkey functionality to the group selection screen.
  ************************************************************/
 
-
 function groupSelectScreen_keyUp(e)
 {
     console.log(e)
-    if ($('#group-select-screen').is(':visible')
-        && !$groupButton.prop('disabled')) {
-        if (e.keyCode == 37) { // left arrow
-            changeGroupPage(false, -1);
-        }
-        else if (e.keyCode == 39) { // right arrow
-            changeGroupPage(false, 1);
-        }
-        else if (e.keyCode == 13) { // enter key
-            selectGroup();
-        }
+    if (e.key == "ArrowLeft" && !$groupButton.prop('disabled') && !$(document.activeElement).is('input, select')) {
+        changeGroupPage(false, -1);
+    }
+    else if (e.key == "ArrowRight" && !$groupButton.prop('disabled') && !$(document.activeElement).is('input, select')) {
+        changeGroupPage(false, 1);
+    }
+    else if (e.key == "Enter" && !$(document.activeElement).is('input, select, .focus-indicators-enabled button')) { // enter key
+        selectGroup();
+    }
+    else if (e.key == "Enter" && $(document.activeElement).is('#group-page-indicator')) {
+        changeGroupPage(true, 0)
+    }
+    else if (e.key == "Backspace" && !$(document.activeElement).is('input, select') && $('.modal:visible').length == 0) {
+        backFromGroupSelect();
+    }
+    else if (e.key.toLowerCase() == 't' && $('.modal:visible').length == 0) {
+        hideGroupSelectionTable();
     }
 }
 $groupSelectScreen.data('keyhandler', groupSelectScreen_keyUp);
 
 /************************************************************
- * The player clicked on the back button on the individual or
- * group select screen.
+ * The player clicked on the back button on the individual 
+ * select screen.
  ************************************************************/
-function backToSelect () {
+function backFromIndividualSelect () {
+    /* switch screens */
+    Sentry.setTag("screen", "select-main");
+    screenTransition($individualSelectScreen, $selectScreen);
+}
+
+/************************************************************
+ * The player clicked on the back button on the group
+ * select screen.
+ ************************************************************/
+function backFromGroupSelect () {
     /* switch screens */
     Sentry.setTag("screen", "select-main");
 
     if (useGroupBackgrounds) optionsBackground.activateBackground();
 
-    screenTransition($individualSelectScreen, $selectScreen);
     screenTransition($groupSelectScreen, $selectScreen);
 }
 
@@ -1476,20 +1706,26 @@ function updateSelectionVisuals () {
 
     /* Update suggestions images. */
     updateDefaultFillView();
+	
+    let displayPreviews = (loaded >= 2);
 
-    if (loaded >= 2) {
+    if (displayPreviews && individualSelectTesting && filled < 4) {
+        // Check that we have enough testing characters (four times
+        // the number of remaining slots) and delay showing
+        // suggestions, or don't show them at all, otherwise.
+        const testingCharactersRemaining = loadedOpponents.countTrue(c => c.status === "testing")
+              - players.countTrue(p => p.status === "testing");
+        displayPreviews = (testingCharactersRemaining >= 4 * (4 - loaded));
+    }
+
+    if (displayPreviews) {
         var suggested_opponents = loadedOpponents.filter(function(opp) {
             if (individualSelectTesting && opp.status !== "testing") return false;
             return opp.selectionCard.isVisible(individualSelectTesting, true);
         });
 
         /* Shuffle the suggestions before stable sorting them, to add variety. */
-        for (var i = 0; i < suggested_opponents.length - 1; i++) {
-            swapIndex = getRandomNumber(i, suggested_opponents.length);
-            var t = suggested_opponents[i];
-            suggested_opponents[i] = suggested_opponents[swapIndex];
-            suggested_opponents[swapIndex] = t;
-        }
+        shuffleArray(suggested_opponents);
 
         /* Sort opponents, capping each selected character's contribution
          * to the inbound line count for each suggestion at 50 lines.
@@ -1556,39 +1792,15 @@ function updateSelectionVisuals () {
  * Hides the table on the single selection screen.
  ************************************************************/
 function hideSelectionTable() {
-    mainSelectHidden = !mainSelectHidden;
-    if (mainSelectHidden) {
-        $selectTable.hide();
-    }
-    else {
-        $selectTable.show();
-    }
-}
-
-/************************************************************
- * Hides the table on the single selection screen.
- ************************************************************/
-function hideSingleSelectionTable() {
-    singleSelectHidden = !singleSelectHidden;
-    if (singleSelectHidden) {
-        $individualSelectTable.hide();
-    }
-    else {
-        $individualSelectTable.show();
-    }
+    $selectTable.fadeToggle(100);
 }
 
 /************************************************************
  * Hides the table on the single group screen.
  ************************************************************/
 function hideGroupSelectionTable() {
-    groupSelectHidden = !groupSelectHidden;
-    if (groupSelectHidden) {
-        $groupSelectTable.hide();
-    }
-    else {
-        $groupSelectTable.show();
-    }
+    $('#group-hide-button').fadeToggle(100);
+    $groupSelectTable.fadeToggle(100);
 }
 
 function openSearchModal() {

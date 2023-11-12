@@ -12,7 +12,7 @@
     </collectible>
     <collectible id="collectible_princess" img="opponents/rosa/9-collect.png" thumbnail="opponents/rosa/8-collect.png">
         <title>Princess Rosa Picture</title>
-        <subtitle>Inspired by Rosa's outfit in the movie ''Mystery Doors of the Magical Land.''</subtitle>
+        <subtitle>Outfit inspired by Rosa's outfit in the movie ''Mystery Doors of the Magical Land.''</subtitle>
         <text>The joint power of hair buns and drills is extremely taxing on the soul. Only a few chosen can harness such a combination without instantly falling into madness. Luckily, Rosa can, which is pretty nice, cuz she looks cute imo. You can admire this look all you want thanks to this handy photograph, given for beating Rosa alongside other members of the Pokémon franchise.</text>
         <unlock>Win a game against Rosa and three other Pokémon characters. (Or finish a game with her valentines event costume.)</unlock>
         <hide-details>true</hide-details>
@@ -20,10 +20,19 @@
     </collectible>
     <collectible id="collectible_scientist" img="opponents/rosa/7-collect.png" thumbnail="opponents/rosa/6-collect.png">
         <title>Scientist Rosa Picture</title>
-        <subtitle>Inspired by Rosa's scientist outfit from Pokéstar Studios.</subtitle>
+        <subtitle>Outfit inspired by Rosa's scientist outfit from Pokéstar Studios.</subtitle>
         <text>"The time machine malfunctioned again? Dang, that's the fifth time this month. At least, it seems that the only things that vanish are my clothes... so let's just call it a happy little incident." You can admire this look all you want thanks to this handy photograph you got for beating Rosa with a handicap.</text>
-        <unlock>Win a game against Rosa while starting with five layers or fewer. (Or finish a game with her scientist costume.)</unlock>
+        <unlock>Win a game against Rosa while starting with five layers or fewer. (Or finish a game with her halloween event costume.)</unlock>
         <hide-details>true</hide-details>
+        <counter>1</counter>
+    </collectible>
+    <collectible id="collectible_rosa_summer" img="opponents/rosa/summerCollectible_Alt.png" thumbnail="opponents/rosa/summer_collect.png">
+        <title>Summer Rosa Picture</title>
+        <subtitle>Outfit inspired by fanart by @aliceyawnin</subtitle>
+        <text>The illustrated swimsuit magazines Rosa had in mind would never expose quite as much skin as this, but all the same you can admire Rosa's subtle tan all you like, thanks to this picture you were given for checking out other characters and their swimwear.</text>
+        <unlock>Win a game against Rosa and at least 2 other characters that are (or rather, were) wearing swimwear. (Or finish a game with her summer event costume.)</unlock>
+        <hide-details>true</hide-details>
+        <counter>1</counter>
     </collectible>
     <collectible id="rosa_hat" img="opponents/rosa/7-hatOnly.png" thumbnail="opponents/rosa/0-hatCollectible.png">
         <title>Rosa's Hat</title>

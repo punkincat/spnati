@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.Providers;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,8 @@ namespace SPNATI_Character_Editor
 			"v3.7", "v3.7.1", "v3.8", "v3.8.1", "v3.8.2", "v4.0b", "v4.0.1b", "v4.0.2b", "v4.0.3b", "v4.0", "v4.1", "v4.2", "v4.2.1", "v4.3", "v4.4b", "v5.0b", "v5.0",
 			"v5.1", "v5.1.1", "v5.2", "v5.2.1", "v5.2.2", "v5.2.3", "v5.2.4", "v5.2.5", "v5.2.6", "v5.2.7", "v5.2.8", "v5.3", "v5.4", "v5.5", "v5.6", "v5.6.1", "v5.7",
 			"v5.7.1", "v5.7.2", "v5.7.3" , "v5.8", "v5.8.1", "v5.9", "v6.0b", "v6.0", "v6.0.1", "v6.0.2", "v6.1", "v6.2", "v6.2.1", "v6.3", "v6.3.1", "v6.3.2", "v6.3.3",
-			"v6.4", "v6.5", "v6.5.1", "v6.5.2", "v6.6", "v6.6.1", "v6.6.2", "v6.7", "v6.7.1", "v6.7.2", "v6.7.3", "v6.7.4", "v6.7.5", "v6.7.6", "v6.7.7" };
+			"v6.4", "v6.5", "v6.5.1", "v6.5.2", "v6.6", "v6.6.1", "v6.6.2", "v6.7", "v6.7.1", "v6.7.2", "v6.7.3", "v6.7.4", "v6.7.5", "v6.7.6", "v6.7.7", "v6.7.8", "v6.7.9",
+			"v6.7.9.1", "v6.7.9.2", "v6.8", "v6.8.1", "v6.8.2", "v6.8.3"};
 
 		/// <summary>
 		/// Current Version
@@ -127,23 +128,38 @@ namespace SPNATI_Character_Editor
 		{
 			//3.0 and up use config.ini. Older versions use settings.ini. Using different filenames to allow side-by-side installs since the structure was changed
 
-			string filename = Path.Combine(AppDataDirectory, "config.ini");
+			string filename = Path.Combine(ExecutableDirectory, "SPNATI\\config.ini");
+			bool read = false;
 			if (File.Exists(filename))
 			{
 				ReadSettings(filename);
+				if (ConfigPath == "CEFolder")
+				{
+					read = true;
+				}
 			}
-			else
+
+			if (!read)
 			{
-				filename = Path.Combine(AppDataDirectory, "settings.ini");
+				filename = Path.Combine(AppDataDirectory, "config.ini");
 				if (File.Exists(filename))
 				{
-					ReadLegacySettings(filename);
+					ReadSettings(filename);
+					ConfigPath = "appdata";
 				}
 				else
-                {
-					// default settings
-					Set("autosave", 10);
-                }
+				{
+					filename = Path.Combine(AppDataDirectory, "settings.ini");
+					if (File.Exists(filename))
+					{
+						ReadLegacySettings(filename);
+					}
+					else
+					{
+						// default settings
+						Set("autosave", 10);
+					}
+				}
 			}
 		}
 
@@ -178,9 +194,17 @@ namespace SPNATI_Character_Editor
 			catch { }
 		}
 
-		public static void Save()
+		public static void Save(string dir = "")
 		{
-			string dataDir = AppDataDirectory;
+			string dataDir;
+			if (!string.IsNullOrEmpty(dir))
+			{
+				dataDir = dir;
+			}
+			else
+			{
+				dataDir = ConfigDirectory;
+			}
 			string filename = Path.Combine(dataDir, "config.ini");
 			if (!Directory.Exists(dataDir))
 			{
@@ -251,6 +275,21 @@ namespace SPNATI_Character_Editor
 			get { return GetString(Settings.GameDirectory); }
 		}
 
+		public static string ConfigDirectory
+		{
+			get
+			{
+				if (ConfigPath == "CEFolder")
+				{
+					return Path.Combine(ExecutableDirectory, "SPNATI");
+				}
+				else
+				{
+					return AppDataDirectory;
+				}
+			}
+		}
+
 		/// <summary>
 		/// Gets where SPNATI is located
 		/// </summary>
@@ -315,7 +354,7 @@ namespace SPNATI_Character_Editor
 		{
 			if (character == null || string.IsNullOrEmpty(character.FolderName))
 				return "";
-			return Path.Combine(AppDataDirectory, character.FolderName);
+			return Path.Combine(ConfigDirectory, character.FolderName);
 		}
 
 		/// <summary>
@@ -328,6 +367,12 @@ namespace SPNATI_Character_Editor
 			if (GetString(Settings.GameDirectory) == null || folder == null)
 				return "";
 			return Path.Combine(GetString(Settings.GameDirectory), "opponents", folder);
+		}
+
+		public static string ConfigPath
+		{
+			get { return GetString("configPath"); }
+			set { Set("configPath", value); }
 		}
 
 		/// <summary>
@@ -428,33 +473,6 @@ namespace SPNATI_Character_Editor
 		{
 			get { return !GetBoolean(Settings.DisableIntellisense); }
 			set { Set(Settings.DisableIntellisense, !value); }
-		}
-
-		/// <summary>
-		/// Whether prefixless images are available in dialogue
-		/// </summary>
-		public static bool UsePrefixlessImages
-		{
-			get { return !GetBoolean(Settings.HideNoPrefix); }
-			set { Set(Settings.HideNoPrefix, !value); }
-		}
-
-		/// <summary>
-		/// Filter of prefixes to hide from dialogue poses
-		/// </summary>
-		public static string PrefixFilter
-		{
-			get { return GetString(Settings.PrefixFilter); }
-			set { Set(Settings.PrefixFilter, value); }
-		}
-
-		/// <summary>
-		/// Load other character info up front in banter wizard
-		/// </summary>
-		public static bool AutoLoadBanterWizard
-		{
-			get { return GetBoolean("autoloadbanter"); }
-			set { Set("autoloadbanter", value); }
 		}
 
 		/// <summary>
@@ -749,10 +767,10 @@ namespace SPNATI_Character_Editor
 			return false;
 		}
 
-		public static bool UseFullResponses
+		public static string DefaultResponder
 		{
-			get { return GetBoolean("fullresponse"); }
-			set { Set("fullresponse", value); }
+			get { return GetString("defaultResponder"); }
+			set { Set("defaultResponder", value); }
 		}
 	}
 
@@ -772,8 +790,6 @@ namespace SPNATI_Character_Editor
 		public static readonly string UserName = "username";
 		public static readonly string AutoSaveInterval = "autosave";
 		public static readonly string DisableIntellisense = "nointellisense";
-		public static readonly string HideNoPrefix = "hidenoprefix";
-		public static readonly string PrefixFilter = "prefixfilter";
 		public static readonly string HideImages = "safemode";
 		public static readonly string HidePreviewText = "hidepreviewtext";
 		public static readonly string DisablePreviewFormatting = "notextboxformatting";

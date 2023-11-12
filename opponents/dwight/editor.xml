@@ -1,0 +1,614 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+    <owner>dwight</owner>
+    <height>5'9</height>
+    <age>23</age>
+    <pronunciation />
+    <othernotes>Things to talk about:&lt;br&gt;+ Dwight has had practically every job under the sun. He was a pizza boy, gas station attendant, mall elf, party magician... just to name a few. Anything related to work or shitty jobs/bosses.&lt;br&gt;+ He loves junk food and sweets, especially pizza. He's not very good with rich food or eccentric cooking, and can barely cook himself.&lt;br&gt;+ Dwight has horrible self esteem and commonly belittles and talks bad about himself, finding himself to be pathetic and a moron.&lt;br&gt;+ Despite his dorky and nerdy appearance, Dwight is not "traditionally" smart. He barely graduated High School and flunked out of community college. &lt;br&gt;+ When he was younger, he had a bit of a phase with alternative music. Being bullied will do that to you. He was a big fan of classic emo music, and might have some stuff to share about the fashion.&lt;br&gt;+ Shared experiences of not being able to fit in with others/bullying&lt;br&gt;+ Horror movies, particularly slashers. He's encountered practically all the iconic ones, and before being taken was a big consumer of horror films. &lt;br&gt;+ General 2010's American "culture". Dwight is a pretty average guy, he enjoyed most of what was popular.&lt;br&gt;+ Leadership and caring for others. Dwight is always happy to hear new ideas on how he can continue to keep his friends morale high.&lt;br&gt;+ Dwight is twitchy, and insanely paranoid. He can't stand still and is always fiddling with something to try and settle his nerves. &lt;br&gt;+ His situation (especially with his jumpy mannerisms) can lead to a pretty big assumption that he's just insane and seeing shit, rather than actually being killed in The Fog. If you want to question if he's just lost his mind, go for it! I won't be offended.&lt;br&gt;&lt;br&gt;Sexual targeting:&lt;br&gt;+ Dwight is openly bisexual.&lt;br&gt;+ He is so used to being berated and hated by strangers that any affection is enough for him to become a blushing mess. &lt;br&gt;+ He's sexually submissive, and very eager to please. I wouldn't go far enough to say masochistic or something, but if you want a guy to step on, he's a pretty good choice.&lt;br&gt;+ Pegging. Go for it, man.&lt;br&gt;&lt;br&gt;Character summary:&lt;br&gt;Dwight is the "nervous leader" of the group of survivors in Dead By Daylight. His role as leader is very unexpected since they are in such a terrible and tense situation of being hunted for sport. It's due to a life of bullying that he's learned how to hide and keep his head down, and now he is finally given a chance to prove himself and actually have friends. Approach him however you'd like, but he definitely is an awkward guy who is very cautious of new people. He is more openly sweet and less skittish at tables with other survivors.</othernotes>
+    <noteworthy>
+        <case name="PizzaWhat!" id="1" priority="Prompt" min="0" max="7">
+            <description>Dwight asks what people at the table like on their pizzas. </description>
+        </case>
+        <case name="Nervous Habits" id="3" priority="Prompt" min="0" max="0">
+            <description>Dwight asks if anyone else has a nervous habit they'd like to break. His is chewing on his nails.</description>
+        </case>
+        <case name="Happy Trail" id="10" priority="FYI" min="4" max="4">
+            <description>When Dwight removes his shirt, he reveals a very prominent happy trail.</description>
+        </case>
+    </noteworthy>
+    <reviewed>true</reviewed>
+    <responses>
+        <response id="4" opponent="ms.fortune" opponentId="24" />
+        <response id="5" opponent="takatoshi" opponentId="162" />
+        <response id="6" opponent="cagliostro" opponentId="2" />
+        <response id="11" opponent="mari_setogaya" opponentId="35" />
+        <response id="12" opponent="sannytess" opponentId="5" />
+        <response id="13" opponent="sannytess" opponentId="6" />
+        <response id="16" opponent="anatoly" opponentId="1" />
+        <response id="17" opponent="anatoly" opponentId="7" />
+        <response id="18" opponent="anatoly" opponentId="15" />
+        <response id="19" opponent="ignatz" opponentId="133" />
+        <response id="20" opponent="steve" opponentId="3" />
+        <response id="21" opponent="steve" opponentId="4" />
+        <response id="47" opponent="cheryl" opponentId="268" />
+        <response id="48" opponent="cheryl" opponentId="269" />
+        <response id="49" opponent="cheryl" opponentId="266" />
+        <response id="50" opponent="cheryl" opponentId="267" />
+        <response id="51" opponent="noelle" opponentId="40" />
+        <response id="53" opponent="steve" opponentId="24" />
+        <response id="54" opponent="steve" opponentId="29" />
+        <response id="55" opponent="steve" opponentId="28" />
+        <response id="56" opponent="steve" opponentId="23" />
+        <response id="57" opponent="steve" opponentId="22" />
+        <response id="58" opponent="cheryl" opponentId="331" />
+        <response id="59" opponent="cheryl" opponentId="332" />
+        <response id="60" opponent="cheryl" opponentId="330" />
+        <response id="85" opponent="barbara" opponentId="462" />
+        <response id="87" opponent="binah" opponentId="1" />
+        <response id="149" opponent="bobobo" opponentId="1" />
+        <response id="150" opponent="bobobo" opponentId="236" />
+        <response id="151" opponent="bobobo" opponentId="93" />
+        <response id="152" opponent="bobobo" opponentId="43" />
+        <response id="153" opponent="bobobo" opponentId="237" />
+        <response id="154" opponent="cheryl" opponentId="535" />
+        <response id="210" opponent="cheryl" opponentId="735" />
+        <response id="211" opponent="cheryl" opponentId="736" />
+        <response id="257" opponent="steve" opponentId="45" />
+        <response id="258" opponent="steve" opponentId="46" />
+        <response id="261" opponent="steve" opponentId="47" />
+        <response id="262" opponent="steve" opponentId="48" />
+        <response id="263" opponent="steve" opponentId="49" />
+        <response id="266" opponent="mari_setogaya" opponentId="1835" />
+        <response id="267" opponent="mari_setogaya" opponentId="2002" />
+        <response id="268" opponent="maria" opponentId="21" />
+        <response id="269" opponent="maria" opponentId="22" />
+        <response id="270" opponent="maria" opponentId="23" />
+        <response id="271" opponent="dunban" opponentId="508" />
+        <response id="272" opponent="dunban" opponentId="503" />
+        <response id="273" opponent="dunban" opponentId="504" />
+        <response id="274" opponent="dunban" opponentId="506" />
+        <response id="304" opponent="aqua_kh" opponentId="67" />
+    </responses>
+    <notes>
+        <note id="8">Billy - Billy is the killer from Black Christmas. Unlike Ghostface, he made obscene and sexual phone calls while he stalked and killed girls living in a sorority house.                                                                                                                                                                   Ghostface - Killer from the Scream films. Stalks for days and kills brutally, called with the question of "What's your favorite scary movie?" and horror movie trivia.                                                                                                                                                                                      Both are known for horribly psychologically torturing their victims before they die.</note>
+        <note id="9">Billy - Billy is the killer from Black Christmas. Unlike Ghostface, he made obscene and sexual phone calls while he stalked and killed girls living in a sorority house.
+Ghostface - Killer from the Scream films. Stalks for days and kills brutally, called with the question of "What's your favorite scary movie?" and horror movie trivia.</note>
+        <note id="14">this isnt supposed to be that she actually did do smth, he just thinks he saw her doing something in the corner of his eye and is freaked the fuck out</note>
+        <note id="15">taking anger out *jaw drop</note>
+        <note id="23">this guys ass is crazy!!!!!!</note>
+        <note id="28">i know nemesis was with jill he is just silly</note>
+        <note id="52">oeuf means egg </note>
+        <note id="260">https://www.youtube.com/watch?v=tktcOUi-x-A</note>
+        <note id="267">army of darkness is the third film in the evil dead franchise</note>
+        <note id="275">lmk if this is too surface level, and i can change it!</note>
+        <note id="276">u can be mean in response, dont worry. if this setup doesnt work also, just lmk</note>
+    </notes>
+    <labels>
+        <label id="8" label="Stalker Prompt" folder="" sort="0" />
+        <label id="9" label="Stalker Prompt" folder="" sort="0" />
+        <label id="23" label="Ass" color="3" folder="" sort="0" />
+        <label id="3" label="Nervous Habits" folder="" sort="0" />
+        <label id="30" label="" folder="Background" sort="0" />
+        <label id="1" label="Pizza Toppings" folder="" sort="0" />
+        <label id="31" label="British Joke" folder="" sort="0" />
+        <label id="32" label="End of David" folder="" sort="0" />
+        <label id="33" label="Boys Night" folder="" sort="0" />
+        <label id="34" label="" folder="Steve Targets" sort="9" />
+        <label id="35" label="" folder="Steve Targets" sort="10" />
+        <label id="36" label="" folder="Steve Targets" sort="8" />
+        <label id="37" label="" folder="DBD Targets" sort="7" />
+        <label id="38" label="" folder="Susie" sort="0" />
+        <label id="39" label="" folder="Character Targets" sort="0" />
+        <label id="40" label="" folder="Character Targets" sort="2" />
+        <label id="41" label="" folder="DBD Tag Targets" sort="0" />
+        <label id="42" label="" folder="DBD Targets" sort="0" />
+        <label id="43" label="" folder="DBD Targets" sort="11" />
+        <label id="20" label="" folder="Steve Targets" sort="5" />
+        <label id="21" label="" folder="Steve Targets" sort="4" />
+        <label id="22" label="" folder="Steve Targets" sort="6" />
+        <label id="44" label="" folder="Leon Targets" sort="2" />
+        <label id="28" label="" folder="Leon Targets" sort="3" />
+        <label id="45" label="" folder="Character Targets" sort="4" />
+        <label id="46" label="" folder="Character Targets" sort="3" />
+        <label id="61" label="Dwelf" folder="" sort="0" />
+        <label id="62" label="Dwelf" folder="" sort="0" />
+        <label id="63" label="" folder="Dwelf" sort="3" />
+        <label id="64" label="" folder="Dwelf" sort="2" />
+        <label id="65" label="" folder="Dwelf" sort="10" />
+        <label id="66" label="" folder="Dwelf" sort="0" />
+        <label id="67" label="" folder="Dwelf" sort="4" />
+        <label id="68" label="" folder="Dwelf" sort="5" />
+        <label id="69" label="" folder="Dwelf" sort="6" />
+        <label id="70" label="" folder="Dwelf" sort="7" />
+        <label id="71" label="" folder="Dwelf" sort="8" />
+        <label id="72" label="" folder="Dwelf" sort="9" />
+        <label id="73" label="" folder="Dwelf" sort="11" />
+        <label id="74" label="" folder="Dwelf" sort="12" />
+        <label id="75" label="" folder="Dwelf" sort="13" />
+        <label id="76" label="" folder="Dwelf" sort="14" />
+        <label id="77" label="" folder="Dwelf" sort="15" />
+        <label id="78" label="" folder="Dwelf" sort="16" />
+        <label id="79" label="" folder="Dwelf" sort="17" />
+        <label id="80" label="" folder="Dwelf" sort="0" />
+        <label id="82" label="" folder="SEX!!!!" sort="0" />
+        <label id="83" label="" folder="SEX!!!!" sort="0" />
+        <label id="84" label="" folder="SEX!!!!" sort="0" />
+        <label id="88" label="" folder="SEX!!!!" sort="0" />
+        <label id="89" label="Glasses" folder="" sort="0" />
+        <label id="90" label="" folder="Leon Targets" sort="0" />
+        <label id="91" label="" folder="Leon Targets" sort="0" />
+        <label id="93" label="Glasses Last" folder="" sort="0" />
+        <label id="94" label="" folder="Character Replies" sort="0" />
+        <label id="95" label="" folder="Character Replies" sort="0" />
+        <label id="96" label="" folder="Character Replies" sort="0" />
+        <label id="18" label="" folder="Situation" sort="0" />
+        <label id="16" label="" folder="Situation" sort="0" />
+        <label id="17" label="" folder="Situation" sort="0" />
+        <label id="97" label="" folder="Character Targets" sort="0" />
+        <label id="98" label="" folder="Character Targets" sort="0" />
+        <label id="85" label="" folder="Character Replies" sort="0" />
+        <label id="99" label="" folder="Character Replies" sort="0" />
+        <label id="100" label="" folder="Character Replies" sort="0" />
+        <label id="87" label="" folder="Character Targets" sort="0" />
+        <label id="101" label="" folder="Character Targets" sort="0" />
+        <label id="102" label="" folder="Character Targets" sort="0" />
+        <label id="103" label="" folder="Character Targets" sort="0" />
+        <label id="104" label="" folder="Character Targets" sort="0" />
+        <label id="105" label="" folder="Cheryl Replies" sort="0" />
+        <label id="49" label="" folder="Cheryl Replies" sort="0" />
+        <label id="47" label="" folder="Cheryl Replies" sort="0" />
+        <label id="106" label="" folder="Cheryl Replies" sort="0" />
+        <label id="50" label="" folder="Cheryl Replies" sort="0" />
+        <label id="48" label="" folder="Cheryl Replies" sort="0" />
+        <label id="60" label="" folder="Cheryl Replies" sort="0" />
+        <label id="59" label="" folder="Cheryl Replies" sort="0" />
+        <label id="58" label="" folder="Cheryl Replies" sort="0" />
+        <label id="107" label="" folder="Cheryl Replies" sort="0" />
+        <label id="108" label="" folder="Cheryl Targets" sort="0" />
+        <label id="109" label="" folder="Cheryl Targets" sort="0" />
+        <label id="110" label="" folder="Cheryl Targets" sort="0" />
+        <label id="111" label="" folder="Cheryl Targets" sort="0" />
+        <label id="112" label="" folder="Cheryl Targets" sort="0" />
+        <label id="113" label="" folder="Character Targets" sort="0" />
+        <label id="114" label="" folder="Character Targets" sort="0" />
+        <label id="115" label="" folder="Character Targets" sort="0" />
+        <label id="116" label="" folder="Character Replies" sort="0" />
+        <label id="117" label="" folder="Character Replies" sort="0" />
+        <label id="118" label="" folder="Character Replies" sort="0" />
+        <label id="119" label="" folder="Character Targets" sort="0" />
+        <label id="120" label="" folder="Character Targets" sort="0" />
+        <label id="121" label="" folder="Character Replies" sort="0" />
+        <label id="122" label="" folder="Character Replies" sort="0" />
+        <label id="123" label="" folder="Character Replies" sort="0" />
+        <label id="124" label="" folder="Character Targets" sort="0" />
+        <label id="125" label="" folder="Character Targets" sort="0" />
+        <label id="19" label="" folder="Situation" sort="0" />
+        <label id="126" label="" folder="Character Replies" sort="0" />
+        <label id="127" label="" folder="Leon Replies" sort="0" />
+        <label id="128" label="" folder="Leon Replies" sort="0" />
+        <label id="129" label="" folder="Leon Replies" sort="0" />
+        <label id="130" label="" folder="Leon Targets" sort="0" />
+        <label id="131" label="" folder="Leon Targets" sort="0" />
+        <label id="132" label="" folder="Character Replies" sort="0" />
+        <label id="133" label="" folder="Character Replies" sort="0" />
+        <label id="134" label="" folder="Character Replies" sort="0" />
+        <label id="135" label="" folder="Character Targets" sort="0" />
+        <label id="136" label="" folder="Character Targets" sort="0" />
+        <label id="11" label="" folder="Situation" sort="0" />
+        <label id="137" label="" folder="Character Replies" sort="0" />
+        <label id="4" label="" folder="Situation" sort="0" />
+        <label id="138" label="" folder="Character Replies" sort="0" />
+        <label id="139" label="" folder="Character Replies" sort="0" />
+        <label id="140" label="" folder="Character Replies" sort="0" />
+        <label id="141" label="" folder="Character Replies" sort="0" />
+        <label id="81" label="" folder="Character Replies" sort="0" />
+        <label id="142" label="" folder="Character Replies" sort="0" />
+        <label id="143" label="" folder="Character Targets" sort="0" />
+        <label id="144" label="" folder="Character Replies" sort="0" />
+        <label id="145" label="" folder="Character Replies" sort="0" />
+        <label id="146" label="" folder="Character Targets" sort="0" />
+        <label id="147" label="" folder="Character Targets" sort="0" />
+        <label id="148" label="" folder="Character Replies" sort="0" />
+        <label id="155" label="" folder="Character Targets" sort="0" />
+        <label id="156" label="" folder="Character Targets" sort="0" />
+        <label id="157" label="" folder="Character Targets" sort="0" />
+        <label id="158" label="" folder="Cheryl Replies" sort="0" />
+        <label id="159" label="" folder="Cheryl Targets" sort="0" />
+        <label id="160" label="" folder="Character Targets" sort="0" />
+        <label id="161" label="" folder="Tag Targets" sort="0" />
+        <label id="162" label="" folder="Tag Targets" sort="0" />
+        <label id="163" label="" folder="Tag Targets" sort="0" />
+        <label id="164" label="" folder="Tag Targets" sort="0" />
+        <label id="165" label="" folder="Tag Targets" sort="0" />
+        <label id="166" label="" folder="Tag Targets" sort="0" />
+        <label id="167" label="" folder="Tag Targets" sort="0" />
+        <label id="168" label="" folder="Tag Targets" sort="0" />
+        <label id="169" label="" folder="Tag Targets" sort="0" />
+        <label id="170" label="" folder="Tag Targets" sort="0" />
+        <label id="171" label="" folder="Tag Targets" sort="0" />
+        <label id="172" label="" folder="Tag Targets" sort="0" />
+        <label id="173" label="" folder="Tag Targets" sort="0" />
+        <label id="174" label="" folder="Tag Targets" sort="0" />
+        <label id="175" label="" folder="Tag Targets" sort="0" />
+        <label id="176" label="" folder="Tag Targets" sort="0" />
+        <label id="177" label="" folder="Tag Targets" sort="0" />
+        <label id="178" label="" folder="Character Targets" sort="0" />
+        <label id="179" label="" folder="Character Targets" sort="0" />
+        <label id="180" label="" folder="Character Targets" sort="0" />
+        <label id="181" label="" folder="Character Targets" sort="0" />
+        <label id="182" label="" folder="Character Targets" sort="0" />
+        <label id="183" label="" folder="Character Targets" sort="0" />
+        <label id="184" label="" folder="Character Targets" sort="0" />
+        <label id="185" label="" folder="Character Targets" sort="0" />
+        <label id="186" label="" folder="Character Targets" sort="0" />
+        <label id="187" label="" folder="Character Targets" sort="0" />
+        <label id="188" label="" folder="Character Targets" sort="0" />
+        <label id="189" label="" folder="Character Targets" sort="0" />
+        <label id="190" label="" folder="Character Targets" sort="0" />
+        <label id="191" label="" folder="Character Targets" sort="0" />
+        <label id="192" label="" folder="Character Targets" sort="0" />
+        <label id="193" label="" folder="Character Targets" sort="0" />
+        <label id="194" label="" folder="Character Targets" sort="0" />
+        <label id="195" label="" folder="Character Targets" sort="0" />
+        <label id="196" label="" folder="Character Targets" sort="0" />
+        <label id="197" label="" folder="Character Targets" sort="0" />
+        <label id="198" label="" folder="Character Targets" sort="0" />
+        <label id="199" label="" folder="Character Targets" sort="0" />
+        <label id="200" label="" folder="Character Targets" sort="0" />
+        <label id="201" label="" folder="Character Targets" sort="0" />
+        <label id="202" label="" folder="Character Targets" sort="0" />
+        <label id="203" label="" folder="Character Targets" sort="0" />
+        <label id="204" label="" folder="Character Targets" sort="0" />
+        <label id="205" label="" folder="Character Targets" sort="0" />
+        <label id="206" label="" folder="Character Targets" sort="0" />
+        <label id="207" label="" folder="Character Targets" sort="0" />
+        <label id="208" label="" folder="Male Survivors" sort="0" />
+        <label id="209" label="" folder="Female Survivors" sort="0" />
+        <label id="211" label="Start" folder="Male Survivors" sort="0" />
+        <label id="210" label="Start" folder="Female Survivors" sort="0" />
+        <label id="212" label="" folder="Female Survivors" sort="0" />
+        <label id="213" label="" folder="Female Survivors" sort="0" />
+        <label id="214" label="" folder="Female Survivors" sort="0" />
+        <label id="215" label="" folder="Female Survivors" sort="0" />
+        <label id="216" label="" folder="Female Survivors" sort="0" />
+        <label id="217" label="" folder="Female Survivors" sort="0" />
+        <label id="218" label="" folder="Female Survivors" sort="0" />
+        <label id="219" label="" folder="Female Survivors" sort="0" />
+        <label id="220" label="" folder="Female Survivors" sort="0" />
+        <label id="221" label="" folder="Female Survivors" sort="0" />
+        <label id="222" label="" folder="Female Survivors" sort="0" />
+        <label id="223" label="" folder="Female Survivors" sort="0" />
+        <label id="224" label="" folder="Female Survivors" sort="0" />
+        <label id="225" label="" folder="Female Survivors" sort="0" />
+        <label id="226" label="" folder="Female Survivors" sort="0" />
+        <label id="227" label="" folder="Female Survivors" sort="0" />
+        <label id="228" label="" folder="Female Survivors" sort="0" />
+        <label id="229" label="" folder="Female Survivors" sort="0" />
+        <label id="230" label="" folder="Female Survivors" sort="0" />
+        <label id="231" label="" folder="Female Survivors" sort="0" />
+        <label id="232" label="" folder="Female Survivors" sort="0" />
+        <label id="233" label="" folder="Female Survivors" sort="0" />
+        <label id="234" label="" folder="Male Survivors" sort="0" />
+        <label id="235" label="" folder="Male Survivors" sort="0" />
+        <label id="236" label="" folder="Male Survivors" sort="0" />
+        <label id="237" label="" folder="Male Survivors" sort="0" />
+        <label id="238" label="" folder="Male Survivors" sort="0" />
+        <label id="239" label="" folder="Male Survivors" sort="0" />
+        <label id="240" label="" folder="Male Survivors" sort="0" />
+        <label id="241" label="" folder="Male Survivors" sort="0" />
+        <label id="242" label="" folder="Male Survivors" sort="0" />
+        <label id="243" label="" folder="Male Survivors" sort="0" />
+        <label id="244" label="" folder="Male Survivors" sort="0" />
+        <label id="245" label="" folder="Male Survivors" sort="0" />
+        <label id="246" label="" folder="Male Survivors" sort="0" />
+        <label id="247" label="" folder="Male Survivors" sort="0" />
+        <label id="248" label="" folder="Male Survivors" sort="0" />
+        <label id="249" label="" folder="Male Survivors" sort="0" />
+        <label id="250" label="" folder="Male Survivors" sort="0" />
+        <label id="251" label="" folder="Male Survivors" sort="0" />
+        <label id="252" label="" folder="Character Targets" sort="0" />
+        <label id="253" label="" folder="Steve Replies" sort="0" />
+        <label id="55" label="" folder="Steve Replies" sort="0" />
+        <label id="53" label="" folder="Steve Replies" sort="0" />
+        <label id="57" label="" folder="Steve Targets" sort="0" />
+        <label id="56" label="" folder="Steve Targets" sort="0" />
+        <label id="54" label="" folder="Steve Targets" sort="0" />
+        <label id="254" label="" folder="Steve Replies" sort="0" />
+        <label id="255" label="" folder="Steve Replies" sort="0" />
+        <label id="256" label="" folder="Steve Replies" sort="0" />
+        <label id="259" label="" folder="Character Targets" sort="0" />
+        <label id="260" label="" folder="Character Targets" sort="0" />
+        <label id="257" label="" folder="Steve Replies" sort="0" />
+        <label id="258" label="" folder="Steve Replies" sort="0" />
+        <label id="264" label="" folder="Steve Targets" sort="0" />
+        <label id="265" label="" folder="Steve Targets" sort="0" />
+        <label id="277" label="" folder="Character Replies" sort="0" />
+        <label id="278" label="" folder="Character Targets" sort="0" />
+        <label id="275" label="" folder="Character Targets" sort="0" />
+        <label id="279" label="" folder="Character Targets" sort="0" />
+        <label id="280" label="" folder="Character Targets" sort="0" />
+        <label id="281" label="" folder="Character Targets" sort="0" />
+        <label id="276" label="" folder="Character Targets" sort="0" />
+        <label id="282" label="" folder="Character Targets" sort="0" />
+        <label id="283" label="" folder="SEX!!!!" sort="0" />
+        <label id="284" label="" folder="SEX!!!!" sort="0" />
+        <label id="285" label="" folder="Character Targets" sort="0" />
+        <label id="286" label="" folder="Character Targets" sort="0" />
+        <label id="287" label="" folder="Character Targets" sort="0" />
+        <label id="288" label="" folder="Character Replies" sort="0" />
+        <label id="151" label="" folder="Character Targets" sort="0" />
+        <label id="150" label="" folder="Situation" sort="0" />
+        <label id="152" label="" folder="Character Targets" sort="0" />
+        <label id="149" label="" folder="Character Targets" sort="0" />
+        <label id="153" label="" folder="Character Targets" sort="0" />
+        <label id="289" label="" folder="Character Replies" sort="0" />
+        <label id="290" label="" folder="Character Replies" sort="0" />
+        <label id="291" label="" folder="Character Targets" sort="0" />
+        <label id="292" label="" folder="Character Targets" sort="0" />
+        <label id="293" label="" folder="Character Targets" sort="0" />
+        <label id="294" label="" folder="Character Targets" sort="0" />
+        <label id="274" label="" folder="Character Targets" sort="0" />
+        <label id="272" label="" folder="Character Replies" sort="0" />
+        <label id="273" label="" folder="Character Replies" sort="0" />
+        <label id="271" label="" folder="Character Targets" sort="0" />
+        <label id="267" label="" folder="Character Replies" sort="0" />
+        <label id="266" label="" folder="Character Targets" sort="0" />
+        <label id="268" label="" folder="Character Targets" sort="0" />
+        <label id="269" label="" folder="Character Targets" sort="0" />
+        <label id="270" label="" folder="Character Targets" sort="0" />
+        <label id="295" label="" folder="Character Replies" sort="0" />
+        <label id="296" label="" folder="Character Replies" sort="0" />
+        <label id="297" label="" folder="Character Targets" sort="0" />
+        <label id="298" label="" folder="Character Targets" sort="0" />
+        <label id="299" label="" folder="Character Targets" sort="0" />
+        <label id="300" label="" folder="Steve Replies" sort="0" />
+        <label id="301" label="" folder="Steve Replies" sort="0" />
+        <label id="302" label="" folder="Steve Replies" sort="0" />
+        <label id="262" label="" folder="Steve Targets" sort="0" />
+        <label id="263" label="" folder="Steve Targets" sort="0" />
+        <label id="261" label="" folder="Steve Targets" sort="0" />
+        <label id="303" label="" folder="Steve Targets" sort="0" />
+        <label id="304" label="" folder="Situation" sort="0" />
+        <label id="305" label="" folder="Character Targets" sort="0" />
+        <label id="306" label="" folder="Character Targets" sort="0" />
+        <label id="307" label="" folder="Character Targets" sort="0" />
+        <label id="308" label="Pizza Dwight" folder="" sort="0" />
+        <label id="309" label="" folder="Pizza Dwight" sort="0" />
+        <label id="310" label="" folder="Pizza Dwight" sort="0" />
+        <label id="311" label="" folder="Pizza Dwight" sort="0" />
+        <label id="312" label="" folder="Pizza Dwight" sort="0" />
+        <label id="313" label="" folder="Pizza Dwight" sort="0" />
+        <label id="314" label="" folder="Pizza Dwight" sort="0" />
+        <label id="315" label="" folder="Pizza Dwight" sort="0" />
+        <label id="316" label="" folder="Pizza Dwight" sort="0" />
+        <label id="317" label="" folder="Pizza Dwight" sort="0" />
+        <label id="318" label="" folder="Pizza Dwight" sort="0" />
+        <label id="319" label="" folder="Pizza Dwight" sort="0" />
+        <label id="320" label="" folder="Pizza Dwight" sort="0" />
+        <label id="321" label="" folder="Pizza Dwight" sort="0" />
+        <label id="322" label="" folder="Pizza Dwight" sort="0" />
+        <label id="323" label="" folder="Pizza Dwight" sort="0" />
+        <label id="324" label="" folder="Pizza Dwight" sort="0" />
+        <label id="325" label="" folder="Pizza Dwight" sort="0" />
+        <label id="326" label="" folder="Pizza Dwight" sort="0" />
+        <label id="327" label="Pizza Dwight" folder="" sort="0" />
+    </labels>
+    <nextId>327</nextId>
+    <markers>
+        <marker scope="Public" name="" />
+        <marker scope="Public" name="aloy_replyas0" />
+        <marker scope="Public" name="aloy_replyms0" />
+        <marker scope="Public" name="aloy_replys0" />
+        <marker scope="Public" name="anatoly_as0" />
+        <marker scope="Public" name="anatoly_as1" />
+        <marker scope="Public" name="anatoly_as2" />
+        <marker scope="Public" name="anatoly_as3" />
+        <marker scope="Public" name="anatoly_ms0" />
+        <marker scope="Public" name="anatoly_ms1" />
+        <marker scope="Public" name="anatoly_ms2" />
+        <marker scope="Public" name="anatoly_ms3" />
+        <marker scope="Public" name="anatoly_replyms0" />
+        <marker scope="Public" name="anatoly_s0" />
+        <marker scope="Public" name="anatoly_s1" />
+        <marker scope="Public" name="anatoly_s2" />
+        <marker scope="Public" name="anatoly_s3" />
+        <marker scope="Public" name="aqua_ms0" />
+        <marker scope="Public" name="aqua_ms1" />
+        <marker scope="Public" name="aqua_ms2" />
+        <marker scope="Public" name="barbara_replyms0" />
+        <marker scope="Public" name="barbara_replys0" />
+        <marker scope="Public" name="bigass" />
+        <marker scope="Public" name="binah_dm" />
+        <marker scope="Public" name="binah_ms0" />
+        <marker scope="Public" name="binah_ms1" />
+        <marker scope="Public" name="binah_s1" />
+        <marker scope="Public" name="binah_start" />
+        <marker scope="Public" name="bobobo_as3" />
+        <marker scope="Public" name="bobobo_as4" />
+        <marker scope="Public" name="bobobo_s0" />
+        <marker scope="Public" name="bobobo_s4" />
+        <marker scope="Public" name="boysnight" />
+        <marker scope="Public" name="british" />
+        <marker scope="Public" name="cag_replyms0" />
+        <marker scope="Public" name="cag_replyms2" />
+        <marker scope="Public" name="cd_ms0" />
+        <marker scope="Public" name="cd_ms1" />
+        <marker scope="Public" name="cd_ms2" />
+        <marker scope="Public" name="cheerleading" />
+        <marker scope="Public" name="cheryl_idle" />
+        <marker scope="Public" name="cheryl_ms0" />
+        <marker scope="Public" name="cheryl_ms1" />
+        <marker scope="Public" name="cheryl_ms2" />
+        <marker scope="Public" name="cheryl_ms3" />
+        <marker scope="Public" name="cheryl_replyms0" />
+        <marker scope="Public" name="cheryl_replyms1" />
+        <marker scope="Public" name="cheryl_replyms2" />
+        <marker scope="Public" name="cheryl_replyms3" />
+        <marker scope="Public" name="cheryl_replys0" />
+        <marker scope="Public" name="cheryl_replys1" />
+        <marker scope="Public" name="cheryl_replys2" />
+        <marker scope="Public" name="cheryl_s0" />
+        <marker scope="Public" name="cheryl_s1" />
+        <marker scope="Public" name="cheryl_s2" />
+        <marker scope="Public" name="cheryl_s3" />
+        <marker scope="Public" name="cherylreply_s3" />
+        <marker scope="Public" name="david1" />
+        <marker scope="Public" name="david2" />
+        <marker scope="Public" name="dunban_as2" />
+        <marker scope="Public" name="dunban_chest" />
+        <marker scope="Public" name="dunban_crotch" />
+        <marker scope="Public" name="dunban_ms" />
+        <marker scope="Public" name="dunban_ms0" />
+        <marker scope="Public" name="dunban_ms1" />
+        <marker scope="Public" name="dunban_ms2" />
+        <marker scope="Public" name="dunban_ms4" />
+        <marker scope="Public" name="dunban_ms6" />
+        <marker scope="Public" name="dunban_replyms0" />
+        <marker scope="Public" name="dunban_replyms2" />
+        <marker scope="Public" name="dunban_replys0" />
+        <marker scope="Public" name="dunban_replys2" />
+        <marker scope="Public" name="dunban_s0" />
+        <marker scope="Public" name="dunban_s1" />
+        <marker scope="Public" name="eichi_ms0" />
+        <marker scope="Public" name="eichi_replyas0" />
+        <marker scope="Public" name="eichi_replyms0" />
+        <marker scope="Public" name="eichi_replys0" />
+        <marker scope="Public" name="eichi_s0" />
+        <marker scope="Public" name="entity" />
+        <marker scope="Public" name="entity2" />
+        <marker scope="Public" name="entitycont" />
+        <marker scope="Public" name="felix_ms0" />
+        <marker scope="Public" name="felix_ms1" />
+        <marker scope="Public" name="felix_ms2" />
+        <marker scope="Public" name="felix_ms3" />
+        <marker scope="Public" name="felix_replyms0" />
+        <marker scope="Public" name="felix_s0" />
+        <marker scope="Public" name="felix_s1" />
+        <marker scope="Public" name="felix_s2" />
+        <marker scope="Public" name="fell" />
+        <marker scope="Public" name="friends" />
+        <marker scope="Public" name="humiliated" />
+        <marker scope="Public" name="jim_ms0" />
+        <marker scope="Public" name="jim_ms1" />
+        <marker scope="Public" name="jim_s0" />
+        <marker scope="Public" name="jim_s1" />
+        <marker scope="Public" name="jura_replyms0" />
+        <marker scope="Public" name="kyoko_ms0" />
+        <marker scope="Public" name="kyoko_ms1" />
+        <marker scope="Public" name="kyoko_s0" />
+        <marker scope="Public" name="leon_ms0" />
+        <marker scope="Public" name="leon_ms1" />
+        <marker scope="Public" name="leon_ms2" />
+        <marker scope="Public" name="leon_ms3" />
+        <marker scope="Public" name="leon_replyms0" />
+        <marker scope="Public" name="leon_replyms1" />
+        <marker scope="Public" name="leon_replys0" />
+        <marker scope="Public" name="leon_s0" />
+        <marker scope="Public" name="leon_s1" />
+        <marker scope="Public" name="mari_replyas1" />
+        <marker scope="Public" name="mari_replys1" />
+        <marker scope="Public" name="maria_ms0" />
+        <marker scope="Public" name="maria_ms1" />
+        <marker scope="Public" name="maria_ms2" />
+        <marker scope="Public" name="maria_s0" />
+        <marker scope="Public" name="maria_s1" />
+        <marker scope="Public" name="maria_s2" />
+        <marker scope="Public" name="maris_as0" />
+        <marker scope="Public" name="maris_ms0" />
+        <marker scope="Public" name="maris_replyms0" />
+        <marker scope="Public" name="maris_replyms1" />
+        <marker scope="Public" name="maris_s0" />
+        <marker scope="Public" name="meia_replyms0" />
+        <marker scope="Public" name="miku_ms0" />
+        <marker scope="Public" name="miku_s0" />
+        <marker scope="Public" name="nagatoro_replyas0" />
+        <marker scope="Public" name="nagatoro_replyms0" />
+        <marker scope="Public" name="nagatoro_replyms1" />
+        <marker scope="Public" name="nagatoro_replys1" />
+        <marker scope="Public" name="nami_replyms0" />
+        <marker scope="Public" name="nervoushabits" />
+        <marker scope="Public" name="okino_as1" />
+        <marker scope="Public" name="okino_as2" />
+        <marker scope="Public" name="okino_forfeitreplya" />
+        <marker scope="Public" name="okino_ms1" />
+        <marker scope="Public" name="okino_ms2" />
+        <marker scope="Public" name="okino_replyas0" />
+        <marker scope="Public" name="okino_replyms0" />
+        <marker scope="Public" name="okino_replys0" />
+        <marker scope="Public" name="okino_s1" />
+        <marker scope="Public" name="okino_s2" />
+        <marker scope="Public" name="pizzaporn" />
+        <marker scope="Public" name="pizzatoppings" />
+        <marker scope="Public" name="revy_replyms0" />
+        <marker scope="Public" name="roll_as0" />
+        <marker scope="Public" name="roll_ms0" />
+        <marker scope="Public" name="roll_ms1" />
+        <marker scope="Public" name="roll_ms2" />
+        <marker scope="Public" name="roll_s0" />
+        <marker scope="Public" name="roll_s1" />
+        <marker scope="Public" name="roll_s2" />
+        <marker scope="Public" name="scoopsahoy_ms0" />
+        <marker scope="Public" name="sly_ms0" />
+        <marker scope="Public" name="sly_ms1" />
+        <marker scope="Public" name="sly_ms2" />
+        <marker scope="Public" name="sly_s0" />
+        <marker scope="Public" name="stalkerprompt" />
+        <marker scope="Public" name="steve_chestreveal" />
+        <marker scope="Public" name="steve_ms0" />
+        <marker scope="Public" name="steve_ms1" />
+        <marker scope="Public" name="steve_ms2" />
+        <marker scope="Public" name="steve_ms3" />
+        <marker scope="Public" name="steve_replyas2" />
+        <marker scope="Public" name="steve_replyms0" />
+        <marker scope="Public" name="steve_replyms1" />
+        <marker scope="Public" name="steve_replyms2" />
+        <marker scope="Public" name="steve_replyms3" />
+        <marker scope="Public" name="steve_replyms4" />
+        <marker scope="Public" name="steve_replyms5" />
+        <marker scope="Public" name="steve_replys0" />
+        <marker scope="Public" name="steve_replys1" />
+        <marker scope="Public" name="steve_replys2" />
+        <marker scope="Public" name="steve_s0" />
+        <marker scope="Public" name="steve_s1" />
+        <marker scope="Public" name="steve_s2" />
+        <marker scope="Public" name="survivortable" />
+        <marker scope="Public" name="susie_lost" />
+        <marker scope="Public" name="susie_sorry" />
+        <marker scope="Public" name="yuno_ms0" />
+        <marker scope="Public" name="yuno_ms1" />
+        <marker scope="Public" name="yuno_s0" />
+        <marker scope="Public" name="yuno_s1" />
+    </markers>
+    <recipes>
+        <recipe key="1ac2b058-5e06-4321-9ea7-d6bc3098748e">
+            <cases>
+                <id>24</id>
+            </cases>
+        </recipe>
+        <recipe key="93fb1799-f582-4f08-a53c-49d5e56f6278">
+            <cases>
+                <id>25</id>
+            </cases>
+        </recipe>
+        <recipe key="670e7368-4059-4a56-8171-65d18d43ebff">
+            <cases>
+                <id>26</id>
+            </cases>
+        </recipe>
+        <recipe key="352366df-ef02-4874-a2eb-0fdc4c210fbd">
+            <cases>
+                <id>29</id>
+            </cases>
+        </recipe>
+        <recipe key="3f8ada94-88ef-4fdd-8448-2a2705e15029">
+            <cases>
+                <id>89</id>
+            </cases>
+        </recipe>
+        <recipe key="eb570363-dbe2-45bb-ac47-916fc820de42">
+            <cases>
+                <id>92</id>
+            </cases>
+        </recipe>
+    </recipes>
+</metadata>

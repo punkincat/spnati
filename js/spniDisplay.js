@@ -3,6 +3,178 @@
  as well as code related to displaying tables for selection and the main game.
  ********************************************************************************/
 
+ /**
+  * 
+  * @param {Player} player
+  * @param {string} id 
+  * @param {PoseSetEntry[]} entries
+  */
+function PoseSet(player, id, entries) {
+    this.player = player;
+    this.id = id;
+    this.entries = entries;
+    this.curEntry = null;
+}
+
+/**
+ * Clear mutable state within this PoseSet.
+ */
+PoseSet.prototype.clearState = function () {
+    this.curEntry = null;
+}
+
+/**
+ * Select an entry from this set.
+ * 
+ * Successive calls to this method will return the same entry
+ * unless clearState() is called.
+ * 
+ * @param {Player} self 
+ * @returns {PoseSetEntry}
+ */
+PoseSet.prototype.selectEntry = function (self) {
+    if (this.curEntry !== null) {
+        return this.curEntry;
+    }
+
+    var chosenState = self.chosenState;
+    var opp = self.currentTarget;
+    var bindings = {};
+    if (chosenState.parentCase && chosenState.parentCase.variableBindings) {
+        bindings = chosenState.parentCase.variableBindings;
+    }
+
+    /** 
+     * Filter to selectable entries and reduce to a list of only the highest-priority ones.
+     * @type {PoseSetEntry[]}
+     */
+    var options = this.entries.filter(
+        (entry) => entry.isSelectable(self, opp, bindings)
+    ).reduce((acc, entry) => {
+        if (acc.length == 0 || entry.priority > acc[0].priority) {
+            return [entry];
+        } else if (entry.priority == acc[0].priority) {
+            acc.push(entry);
+            return acc;
+        } else {
+            return acc;
+        }
+    }, []);
+
+    console.log(options);
+
+    if (options.length > 0) {
+        let weightSum = options.reduce((acc, entry) => acc + entry.weight, 0);
+        let rnd = Math.random() * weightSum;
+        let x = 0;
+        for (let i = 0; i < options.length; i++) {
+            x += options[i].weight;
+            if (x > rnd) {
+                this.curEntry = options[i];
+                return options[i];
+            }
+        }
+        /* shouldn't get here */
+    }
+}
+
+/**
+ * Get all possible image file paths that could be used by the poses from this set
+ * for a given stage, including ones transitively used by custom poses referenced
+ * by this set.
+ * 
+ * @param {number} stage 
+ * @returns {string[]}
+ */
+PoseSet.prototype.getUsedImages = function (stage) {
+    return this.entries.flatMap((entry) => {
+        if (entry.validForStage(stage)) {
+            let resolved = this.player.resolvePoseName(entry.image);
+            if (resolved instanceof PoseSet) {
+                /* Shouldn't happen. */
+                return [];
+            } else if (resolved instanceof PoseDefinition) {
+                return resolved.getUsedImages(stage);
+            } else {
+                return [resolved];
+            }
+        } else {
+            return [];
+        }
+    })
+}
+
+/**
+ * 
+ * @param {Player} player
+ * @param {JQuery} $xml 
+ * @returns {PoseSet}
+ */
+PoseSet.parseXML = function (player, $xml) {
+    return new PoseSet(
+        player,
+        $xml.attr("id"),
+        $xml.children("pose").map((idx, elem) => PoseSetEntry.parseXML(elem)).get()
+    );
+}
+
+/**
+ * 
+ * @param {string} image 
+ * @param {Object<string, string>} attrs 
+ * @param {VariableTest[]} tests 
+ */
+function PoseSetEntry(image, attrs, tests) {
+    this.image = image;
+    this.tests = tests;
+    this.stages = attrs["stage"];
+    this.location = attrs["location"];
+    this.direction = attrs["direction"];
+    this.dialogue_layering = attrs["dialogue-layer"];
+    this.priority = parseInt(attrs["priority"], 10) || 0;
+    this.weight = parseFloat(attrs["weight"]) || 1;
+    if (this.weight < 0) this.weight = 0;
+}
+
+/**
+ * 
+ * @param {Element} xml The XML element from which data should be loaded. Note that this should be a raw Element, *not* a jQuery object.
+ * @returns {PoseSetEntry}
+ */
+PoseSetEntry.parseXML = function (xml) {
+    var attrs = {};
+    for (var i = 0; i < xml.attributes.length; i++) {
+        attrs[xml.attributes[i].name] = xml.attributes[i].value;
+    }
+
+    var $xml = $(xml);
+    return new PoseSetEntry(
+        $xml.attr("img"),
+        attrs,
+        $xml.find("tests>test").map((idx, elem) => VariableTest.parseXML($(elem))).get()
+    );
+}
+
+/**
+ * 
+ * @param {string} stage 
+ * @returns {boolean}
+ */
+PoseSetEntry.prototype.validForStage = function (stage) {
+    return checkStage(stage, this.stages);
+}
+
+/**
+ * 
+ * @param {Player} self 
+ * @param {Player} opp 
+ * @param {*} bindings 
+ * @returns {boolean}
+ */
+PoseSetEntry.prototype.isSelectable = function (self, opp, bindings) {
+    return this.validForStage(self.stage) && this.tests.every((test) => test.evaluate(self, opp, bindings));
+}
+
 /* NOTE: These are basically the same as epilogue engine sprites.
  * There's a _lot_ of common code here that can probably be merged.
  */
@@ -276,7 +448,7 @@ function Pose(poseDef, display, onLoadCallback) {
     this.container = container;
     
     poseDef.sprites.forEach(function (def) {
-        if (def.marker && !checkMarker(def.marker, this.player)) {
+        if (def.marker && !checkMarkers(def.marker, this.player)) {
             return;
         }
         var sprite = new PoseSprite(def.id, def.src, this.onSpriteLoaded.bind(this), this, def);
@@ -293,7 +465,7 @@ function Pose(poseDef, display, onLoadCallback) {
     }
     
     poseDef.animations.forEach(function (def) {
-        if (def.marker && !checkMarker(def.marker, this.player)) {
+        if (def.marker && !checkMarkers(def.marker, this.player)) {
           return;
         }
         var target = this.sprites[def.id];
@@ -302,10 +474,23 @@ function Pose(poseDef, display, onLoadCallback) {
         var anim = new PoseAnimation(target, this, def);
         this.animations.push(anim);
     }.bind(this));
+
+    /* Make sure to fire onLoadCallback for "empty" poses.
+     * However, we need to make sure to schedule it to fire *after* we return from this constructor,
+     * since the callback might try to access this pose using an as-of-yet unbound variable.
+     */
+    if (poseDef.sprites.length === 0) {
+        this.loaded = true;
+        if (onLoadCallback) setTimeout(onLoadCallback, 0);
+    }
 }
 
 Pose.prototype.getHeightScaleFactor = function() {
     return this.display.imageAreaHeight / this.baseHeight;
+}
+
+Pose.prototype.cancel = function () {
+    this.onLoadComplete = null;
 }
 
 Pose.prototype.onSpriteLoaded = function(sprite) {
@@ -621,7 +806,7 @@ function calculateDialogueStylingAttributes (player) {
         /* Remove custom: prefix and stage prefixes, if present
          * Then remove file extensions, if present
          */
-        attrs["data-pose"] = player.chosenState.image.replace(/^(?:custom\:\s*)?(?:\#\-)?/i, "").replace(/\.(?:jpe?g|png|gif)$/i, "");
+        attrs["data-pose"] = player.chosenState.image.replace(/^(?:(?:custom|set)\:\s*)?(?:\#\-)?/i, "").replace(/\.(?:jpe?g|png|gif)$/i, "");
     }
 
     return attrs;
@@ -672,12 +857,24 @@ OpponentDisplay.prototype.clearSimplePose = function () {
 }
 
 OpponentDisplay.prototype.clearPose = function () {
+    if (this.queuedPose) {
+        this.queuedPose.cancel();
+    }
+    this.queuedPose = null;
     this.clearCustomPose();
     this.clearSimplePose();
     this.pose = null;
 }
 
 OpponentDisplay.prototype.drawPose = function (pose) {
+    /* If a previous custom pose is currently loading but hasn't finished yet,
+     * cancel it to make sure it doesn't overwrite this newer pose.
+     */
+    if (this.queuedPose && this.queuedPose !== pose) {
+        this.queuedPose.cancel();
+    }
+    this.queuedPose = null;
+
     if (typeof(pose) === 'string') {
         // clear out previously shown custom poses if necessary
         if (this.pose instanceof Pose) {
@@ -688,6 +885,7 @@ OpponentDisplay.prototype.drawPose = function (pose) {
         if(pose.loaded) {
             pose.draw();
         } else {
+            this.queuedPose = pose;
             pose.onLoadComplete = () => this.drawPose(pose);
             return;
         }
@@ -783,22 +981,21 @@ OpponentDisplay.prototype.updateText = function (player) {
     this.dialogue.empty().append(displayElems);
 }
 
-OpponentDisplay.prototype.updateImage = function(player) {
-    var chosenState = player.chosenState;
-    
-    if (!chosenState.image) {
+OpponentDisplay.prototype.updateImage = function(player, image) {
+    if (!image || image instanceof PoseSet) {
+        /* The only way we can get a PoseSet here as input is if we selected a
+         * pose set entry in .update() that itself resolved to another pose set.
+         *
+         * Hypothetically, we could instead select an entry from this set and
+         * resolve it recursively, but it's probably better that we don't for
+         * the sake of simplicity.
+         */
         this.clearPose();
-    } else if (chosenState.image.startsWith('custom:')) {
-        var key = chosenState.image.split(':', 2)[1].replace('#', player.stage);
-        var poseDef = player.poses[key];
-        if (poseDef) {
-            const pose = new Pose(poseDef, this, () => { this.drawPose(pose) });
-            this.drawPose(pose);
-        } else {
-            this.clearPose();
-        }
+    } else if (image instanceof PoseDefinition) {
+        const pose = new Pose(image, this, () => { this.drawPose(pose) });
+        this.drawPose(pose);
     } else {
-        this.drawPose(player.folder + chosenState.image.replace('#', player.stage));
+        this.drawPose(image);
         this.simpleImage.one('load', this.rescaleSimplePose.bind(this, player.scale));
     }
 }
@@ -819,9 +1016,31 @@ OpponentDisplay.prototype.update = function(player) {
     this.updateBubbleAttributes(player);
 
     var chosenState = player.chosenState;
-    
+    var arrowDirection = chosenState.direction;
+    var arrowLocation = chosenState.location;
+    var dialogue_layering = chosenState.dialogue_layering || player.dialogue_layering;
+    var resolvedImage = player.resolvePoseName(player.chosenState.image);
+
+    if (resolvedImage instanceof PoseSet) {
+        /* Only select a new image if this state is being displayed for the first time.
+         * This ensures that mere refreshes of the display without any changes in dialogue
+         * (e.g. on the select screen) don't cause pose changes.
+         */
+        if (!chosenState.displayed) {
+            resolvedImage.clearState();
+        }
+
+        let entry = resolvedImage.selectEntry(player);
+        if (entry) {
+            arrowDirection = chosenState.direction || entry.direction;
+            arrowLocation = chosenState.location || entry.location;
+            dialogue_layering =  chosenState.dialogue_layering || entry.dialogue_layering || player.dialogue_layering;
+            resolvedImage = player.resolvePoseName(entry.image);
+        }
+    }
+
     /* update image */
-    this.updateImage(player);
+    this.updateImage(player, resolvedImage);
 
     /* update dialogue */
     this.updateText(player);
@@ -835,15 +1054,17 @@ OpponentDisplay.prototype.update = function(player) {
     } else {
         this.bubble.show();
         this.bubble.removeClass('arrow-down arrow-left arrow-right arrow-up');
-        if (chosenState.direction != 'none') this.bubble.addClass('arrow-'+chosenState.direction);
-        bubbleArrowOffsetRules[this.slot-1][0].style.left = chosenState.location;
-        bubbleArrowOffsetRules[this.slot-1][1].style.top = chosenState.location;
+        if (arrowDirection != 'none') this.bubble.addClass('arrow-'+arrowDirection);
+        bubbleArrowOffsetRules[this.slot-1][0].style.left = arrowLocation;
+        bubbleArrowOffsetRules[this.slot-1][1].style.top = arrowLocation;
         /* Configure z-indices */
         this.imageArea.css('z-index', player.z_index);
-        this.bubble.removeClass('over under').addClass(chosenState.dialogue_layering || player.dialogue_layering);
+        this.bubble.removeClass('over under').addClass(dialogue_layering);
         this.dialogue.removeClass('small smaller');
         if (chosenState.fontSize != "normal") this.dialogue.addClass(chosenState.fontSize || player.fontSize);
     }
+
+    chosenState.displayed = true;
 }
 
 OpponentDisplay.prototype.loop = function (timestamp) {
@@ -992,11 +1213,16 @@ MainSelectScreenDisplay.prototype.updateTargetSuggestionDisplay = function (quad
         'src': opponent.selection_image,
         'alt': opponent.label,
         'data-original-title': tooltip || null
+    }).one('load', function() {
+        img_elem.css("transform", opponent.scale != 100 || img_elem[0].naturalHeight > 1400 ?
+                     "translate(-50%) scale(" + (Math.max(1.0, img_elem[0].naturalHeight / 1400) * opponent.scale) + "%)" : "");
     }).show();
     label_elem.text(opponent.label);
 }
 
 MainSelectScreenDisplay.prototype.targetSuggestionSelected = function (quad) {
+    var curTable = players.filter((p, idx) => !!p && (idx > 0)).map((p) => p.id);
+
     players[this.slot] = this.targetSuggestions[quad];
 
     Sentry.addBreadcrumb({
@@ -1005,7 +1231,11 @@ MainSelectScreenDisplay.prototype.targetSuggestionSelected = function (quad) {
         level: 'info'
     });
 
-    players[this.slot].loadBehaviour(this.slot, true);
+    players[this.slot].loadBehaviour(this.slot, true, {
+        "source": "targeted-suggestions",
+        "table": curTable
+    });
+
     updateSelectionVisuals();
 }
 
@@ -1046,8 +1276,8 @@ MainSelectScreenDisplay.prototype.displaySingleSuggestion = function () {
     }
     //this.prefillSuggestionBadges.costume.toggle(player.alternate_costumes.length > 0);
     this.layerIcon.attr({
-        src: "img/layers" + player.layers + ".png",
-        alt: player.layers + " layers",
+        src: "img/layers" + player.selectLayers + ".png",
+        alt: player.selectLayers + " layers",
     }).show() ;
     updateGenderIcon(this.genderIcon, player);
     this.statusIcon.hide();
@@ -1062,7 +1292,11 @@ MainSelectScreenDisplay.prototype.onSingleSuggestionSelected = function () {
         level: 'info'
     });
 
-    players[this.slot].loadBehaviour(this.slot, true);
+    var curTable = players.filter((p, idx) => !!p && (idx > 0)).map((p) => p.id);
+    players[this.slot].loadBehaviour(this.slot, true, {
+        "source": "prefill",
+        "table": curTable,
+    });
     updateSelectionVisuals();
 }
 
@@ -1153,8 +1387,8 @@ MainSelectScreenDisplay.prototype.update = function (player) {
     //this.badges.costume.toggle(player.alternate_costumes.length > 0);
     //updateStatusIcon(this.statusIcon, player);
     this.layerIcon.attr({
-        src: "img/layers" + player.layers + ".png",
-        alt: player.layers + " layers",
+        src: "img/layers" + player.selectLayers + ".png",
+        alt: player.selectLayers + " layers",
     }).show() ;
     updateGenderIcon(this.genderIcon, player);
 
@@ -1187,7 +1421,7 @@ MainSelectScreenDisplay.prototype.update = function (player) {
 
         this.altCostumeSelector.hide();
         if (player.alternate_costumes.length > 0) {
-            fillCostumeSelector(this.altCostumeSelector, player.alternate_costumes, player.selected_costume)
+            fillCostumeSelector(this.altCostumeSelector, player.default_costume_name, player.alternate_costumes, player.selected_costume)
                 .show();
         }
     }
@@ -1230,6 +1464,7 @@ function OpponentSelectionCard (opponent) {
     this.opponent = opponent;
     
     this.mainElem = createElementWithClass('div', 'selection-card');
+    this.mainElem.tabIndex = 0;
 
     if (opponent.highlightStatus)
         this.mainElem.dataset.highlight = opponent.highlightStatus;
@@ -1283,6 +1518,12 @@ function OpponentSelectionCard (opponent) {
     this.update();
 
     this.mainElem.addEventListener('click', this.handleClick.bind(this));
+    this.mainElem.addEventListener('keydown', function(ev) {
+        if (ev.target == this.mainElem && (ev.key == ' ' || ev.key == 'Enter') && !ev.repeat) {
+            this.handleClick();
+            ev.preventDefault();
+        }
+    }.bind(this));
 }
 
 OpponentSelectionCard.prototype = Object.create(OpponentDisplay.prototype);
@@ -1292,16 +1533,33 @@ OpponentSelectionCard.prototype.update = function () {
     updateStatusIcon(this.statusIcon, this.opponent);
 
     this.layerIcon.attr({
-        src: "img/layers" + this.opponent.layers + ".png",
-        alt: this.opponent.layers + " layers",
+        src: "img/layers" + this.opponent.selectLayers + ".png",
+        alt: this.opponent.selectLayers + " layers",
     }).show() ;
     updateGenderIcon(this.genderIcon, this.opponent);
 
-    this.simpleImage.one('load', OpponentDisplay.prototype.rescaleSimplePose.bind(this, this.opponent.scale));
+    this.simpleImage.one('load', OpponentSelectionCard.prototype.rescaleSimplePose.bind(this, this.opponent.scale));
     this.simpleImage.attr('src', this.opponent.selection_image).show();
+
+    var xfrmProps = this.opponent.selection_image_adjustment;
+
+    this.imageArea.css(
+        "transform", "translate(" + xfrmProps.x + "%, " + xfrmProps.y + "%) scale(" + (xfrmProps.scale / 100.0) + ")"
+    );
     
     this.label.text(this.opponent.selectLabel);
     this.source.text(this.opponent.source);
+}
+
+OpponentSelectionCard.prototype.rescaleSimplePose = function (base_scale) {
+    /* Required to properly scale oddly-sized simple poses. */
+    var nh = this.simpleImage[0].naturalHeight;
+    if (nh <= 1400) {
+        this.simpleImage.css("max-height", base_scale+"%");
+    } else {
+        var sf = nh / 1400;
+        this.simpleImage.css("max-height", "calc("+base_scale+"% * "+sf+")");
+    }
 }
 
 OpponentSelectionCard.prototype.updateEpilogueBadge = function () {
@@ -1402,6 +1660,8 @@ OpponentDetailsDisplay = function () {
     this.linecountLabel = $("#individual-select-screen .opponent-linecount");
     this.posecountLabel = $("#individual-select-screen .opponent-posecount");
     this.lastUpdateLabel = $("#individual-select-screen .opponent-lastupdate");
+    this.addedLabelField = $("#individual-select-screen .opponent-added-field");
+    this.addedLabel = $("#individual-select-screen .opponent-added");
     this.costumeSelector = $("#individual-select-screen .alt-costume-dropdown");
     this.simpleImage = $("#individual-select-screen .opponent-details-simple-image");
     this.imageArea = $("#individual-select-screen .opponent-details-image-area");
@@ -1419,7 +1679,10 @@ OpponentDetailsDisplay = function () {
     this.showMoreButton.click(function () {
         this.mainView.toggleClass('show-more');
     }.bind(this));
-    
+    this.mainView.on('click', '.opponent-details-value>a', function(ev) {
+        $(ev.target).data('search-field').val($(ev.target).data('search-text') || ev.target.innerText).trigger('input');
+    });
+
     this.epiloguesView.hide();
     this.collectiblesView.hide();
     
@@ -1444,8 +1707,38 @@ OpponentDetailsDisplay.prototype.handleSelected = function (ev) {
     });
     Sentry.setTag("screen", "select-main");
 
+    var searchName = $searchName.val().toLowerCase() || null;
+    var searchSource = $searchSource.val().toLowerCase() || null;
+    var searchCreator = $searchCreator.val().toLowerCase() || null;
+    var workingTags = $searchTag.val().split(",").map(x => canonicalizeTag(x));
+    var searchTags = matchTags(workingTags, $tagList.children().toArray().map(x => x.value));
+    var searchGender = null;
+    
+    if (chosenGender == 2) {
+        searchGender = "male";
+    } else if (chosenGender == 3) {
+        searchGender = "female";
+    }
+
+    var curTable = players.filter((p, idx) => !!p && (idx > 0)).map((p) => p.id);
+    var sortedPos = loadedOpponents.findIndex((p) => p.id === this.opponent.id);
+
     players[selectedSlot] = this.opponent;
-    players[selectedSlot].loadBehaviour(selectedSlot, true);
+    players[selectedSlot].loadBehaviour(selectedSlot, true, {
+        "source": "indiv-select",
+        "sort": sortingMode,
+        "testing": individualSelectTesting,
+        "table": curTable,
+        "favorite": this.opponent.favorite,
+        "position": sortedPos,
+        "filter": {
+            "name": searchName,
+            "source": searchSource,
+            "creator": searchCreator,
+            "tags": searchTags,
+            "gender": searchGender
+        }
+    });
     updateSelectionVisuals();
     screenTransition($individualSelectScreen, $selectScreen);
     
@@ -1483,17 +1776,20 @@ OpponentDetailsDisplay.prototype.clear = function () {
     this.artistLabel.empty();
     this.descriptionLabel.empty();
     this.lastUpdateLabel.empty();
+    this.addedLabel.empty();
     
     this.simpleImage.attr('src', null);
     this.selectButton.prop('disabled', true);
     this.epiloguesField.removeClass('has-epilogues');
     this.collectiblesField.removeClass('has-collectibles');
+    this.addedLabelField.removeClass('has-added-date');
     this.costumeSelector.hide();
+
     
     this.displayContainer.hide();
 }
 
-OpponentDetailsDisplay.prototype.createEpilogueCard = function (title, gender, unlockHint) {
+OpponentDetailsDisplay.prototype.createEpilogueCard = function (title, gender, unlockHint, description) {
     // Add the opponent-epilogue-* classes for future extensibility and also
     // to minimize disruptions with caching
     var container = createElementWithClass('div', 'bordered opponent-subview-card opponent-epilogue-card');
@@ -1514,6 +1810,14 @@ OpponentDetailsDisplay.prototype.createEpilogueCard = function (title, gender, u
         var unlockHintValue = unlockHintElem.appendChild(createElementWithClass('div', 'opponent-subview-value opponent-epilogue-value'));
         $(unlockHintLabel).text("To Unlock");
         $(unlockHintValue).html(unlockHint);
+    }
+
+    if (description) {
+        var descriptionElem = container.appendChild(createElementWithClass('div', 'bordered left-cap opponent-subview-row opponent-epilogue-row opponent-epilogue-description'));
+        var descriptionLabel = descriptionElem.appendChild(createElementWithClass('div', 'left-cap opponent-subview-label opponent-epilogue-label'));
+        var descriptionValue = descriptionElem.appendChild(createElementWithClass('div', 'opponent-subview-value opponent-epilogue-value'));
+        $(descriptionLabel).text("Info");
+        $(descriptionValue).html(description);
     }
     
     return container;
@@ -1570,7 +1874,7 @@ OpponentDetailsDisplay.prototype.updateEpiloguesView = function () {
         }
         
         return this.createEpilogueCard(
-            (offlineIndicator + group[0].text()), genderText, group[0].attr('hint')
+            (offlineIndicator + group[0].text()), genderText, group[0].attr('hint'), group[0].attr('description')
         );
     }.bind(this));
     
@@ -1644,10 +1948,29 @@ OpponentDetailsDisplay.prototype.update = function (opponent) {
     this.opponent = opponent;
     
     this.displayContainer.show();
-    this.nameLabel.html(opponent.first + " " + opponent.last);
-    this.sourceLabel.html(opponent.source);
-    this.writerLabel.html(opponent.writer);
-    this.artistLabel.html(opponent.artist);
+    this.nameLabel.text(opponent.first + " " + opponent.last);
+    this.sourceLabel.empty();
+    let lastPrefixLen = 0;
+    for (let x of opponent.sourcePrefixLengths) {
+        this.sourceLabel.append($('<a>', { href: '#', text: opponent.source.substring(lastPrefixLen, x) })
+                                .data({'search-field': $searchSource,
+                                       'search-text': opponent.source.substring(0, x)}));
+        lastPrefixLen = x;
+    }
+    if (lastPrefixLen < opponent.source.length) {
+        this.sourceLabel.append(new Text(opponent.source.substring(lastPrefixLen)));
+    }
+    [[this.writerLabel, opponent.writer], [this.artistLabel, opponent.artist]].forEach(function ([label, data]) {
+        const interesting = splitCreatorField(data).filter(s => loadedOpponents.countTrue(opp => filterOpponent(opp, '', '', s)) > 1);
+        if (interesting.length) {
+            const re = new RegExp('(' + interesting.map(escapeRegExp).join('|') + ')');
+            label.empty().append(data.split(re).map(function(part, ix) {
+                return (ix % 2) ? $('<a>', { href: '#', text: part }).data('search-field', $searchCreator) : part;
+            }));
+        } else {
+            label.text(data);
+        }
+    });
     if (this.opponent.lastUpdated) {
         var timeStyle = Date.now() - this.opponent.lastUpdated > TESTING_MAX_AGE ? undefined : 'short';
         this.lastUpdateLabel.text(new Intl.DateTimeFormat([], { dateStyle: 'short', timeStyle: timeStyle })
@@ -1656,6 +1979,21 @@ OpponentDetailsDisplay.prototype.update = function (opponent) {
     } else {
         this.lastUpdateLabel.text('Unknown');
     }
+
+    if (this.opponent.addedDate) {
+        this.addedLabelField.addClass('has-added-date');
+        var timeStyle = undefined;
+
+        // I hate this, but we have to manually parse the date to force it to use the local timezone
+        var dateParts = opponent.addedDate.split("-");
+        theDate = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
+
+        this.addedLabel.text(new Intl.DateTimeFormat([], { dateStyle: 'short', timeStyle: timeStyle })
+                                  .format(theDate) + " (" + fuzzyTimeAgo(theDate) + ")");
+    } else {
+        this.addedLabelField.removeClass('has-added-date');
+    }
+
     this.descriptionLabel.html(opponent.description);
 
     this.simpleImage.one('load', this.rescaleSimplePose.bind(this, opponent.scale));
@@ -1741,7 +2079,7 @@ OpponentDetailsDisplay.prototype.update = function (opponent) {
     }
 
     if (opponent.alternate_costumes.length > 0) {
-        fillCostumeSelector(this.costumeSelector, opponent.alternate_costumes, opponent.selected_costume)
+        fillCostumeSelector(this.costumeSelector, opponent.default_costume_name, opponent.alternate_costumes, opponent.selected_costume)
             .show().prop('disabled', false);
     } else {
         this.costumeSelector.hide();

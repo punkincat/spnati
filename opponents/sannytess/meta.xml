@@ -1,19 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1661820738483</lastupdate>
+    <lastupdate>1692658495696</lastupdate>
     <enabled>false</enabled>
     <first>Sanny</first>
     <last />
     <label>"Sanny" &amp; "Tess"</label>
     <pic>0-neutral.png</pic>
     <gender>female</gender>
-    <height>5'4</height>
     <from>Wikipedia</from>
     <writer>onboro</writer>
     <artist>onboro</artist>
     <description>A duo of girls nicknamed "Sanny" and "Tess". Not much is known about them, but you can find them on a certain article and on the WikiCommons.</description>
     <layers>6</layers>
+    <default-costume-name />
+    <alternates>
+        <costume folder="opponents/reskins/sannytess_nostalgia/" img="0-neutral.png" set="april_fools" status="online" label="Sanny" layers="6">Nostalgia-banned.svg</costume>
+    </alternates>
     <has_collectibles>false</has_collectibles>
-    <lines>615</lines>
-    <poses>70</poses>
+    <lines>670</lines>
+    <poses>232</poses>
 </opponent>

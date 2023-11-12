@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collectibles>
+    <collectible id="pizzawhat" status="online" img="opponents/dwight/collectible2.png" thumbnail="opponents/dwight/shirt.png">
+        <title>First Job T-Shirt</title>
+        <subtitle>Did someone order an extra sausage pizza?</subtitle>
+        <text>Standard issue PizzaWhat! employee shirt. Now you too can live out your days as a struggling pizza boy living paycheck to paycheck! Hooray work!</text>
+        <unlock>Have Dwight lose a game in his "Special Delivery" costume.</unlock>
+        <hide-details>true</hide-details>
+        <wearable>true</wearable>
+        <clothing name="PizzaWhat shirt" generic="shirt" position="upper" type="major" img="opponents/dwight/shirt.png" />
+    </collectible>
+    <collectible id="tie" status="online" img="opponents/dwight/collectible.png" thumbnail="opponents/dwight/tie.png">
+        <title>Standard Tie</title>
+        <subtitle>A ratty tie fit for a pointless life of office work.</subtitle>
+        <text>A standard tie Dwight found at a thrift shop, as he couldn't afford anything better. &lt;br&gt;Pictured is Dwight's attempt at modeling. Maybe stick to generators, Dwight...</text>
+        <unlock>Have Dwight lose a game.</unlock>
+        <hide-details>true</hide-details>
+        <wearable>true</wearable>
+        <clothing name="tie" generic="tie" position="neck" type="extra" img="opponents/dwight/tie.png" />
+    </collectible>
+</collectibles>

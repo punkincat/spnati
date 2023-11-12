@@ -32,7 +32,7 @@ namespace SPNATI_Character_Editor
 			}
 			else
 			{
-				dir = Path.Combine(Config.AppDataDirectory, "Recipes");
+				dir = Path.Combine(Config.ConfigDirectory, "Recipes");
 				if (!Directory.Exists(dir))
 				{
 					Directory.CreateDirectory(dir);
@@ -140,7 +140,7 @@ namespace SPNATI_Character_Editor
 			dir = Path.Combine(Config.SpnatiDirectory, "tools/character_editor/recipes");
 			LoadRecipes(dir, true);
 
-			dir = Path.Combine(Config.AppDataDirectory, "Recipes");
+			dir = Path.Combine(Config.ConfigDirectory, "Recipes");
 			LoadRecipes(dir, false);
 		}
 

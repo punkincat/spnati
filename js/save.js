@@ -666,6 +666,24 @@ Save.prototype.setPersistentMarker = function (player, name, value) {
 }
 
 /**
+ * Get the values of all persistent markers stored for a player.
+ * 
+ * @param {Player} player
+ * @returns {{[name: string]: string | number}}
+ */
+Save.prototype.getAllPersistentMarkers = function (player) {
+    var markers = {};
+    var keyPrefix = 'marker.' + player.id + '.';
+
+    for (let key of Object.keys(this.storageCache).filter((key) => key.startsWith(keyPrefix))) {
+        let name = key.substring(keyPrefix.length);
+        markers[name] = this.getItem(key, true);
+    }
+
+    return markers;
+}
+
+/**
  * Gets the set of played characters for resort modal tracking.
  * @returns {string[]}
  */
@@ -761,6 +779,20 @@ Save.prototype.setSavedSortMode = function (testing, value) {
     } else {
         return this.setItem("mainSortMode", value);
     }
+}
+
+/**
+ * 
+ * @returns {number}
+ */
+Save.prototype.getRosterOrderingSeed = function () {
+    var seed = parseInt(this.getItem("rosterOrderSeed"), 10);
+    if (!seed) {
+        seed = getRandomNumber(1, 0xFFFFFFFF);
+        this.setItem("rosterOrderSeed", seed);
+    }
+
+    return seed;
 }
 
 /**

@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>reimu</owner>
+    <height>158 cm</height>
+    <age>20</age>
+    <pronunciation>hakɯɽeː ɽeːmɯ</pronunciation>
+    <othernotes>**About Reimu Hakurei:**&lt;br&gt; - Reimu is the shrine maiden of Hakurei Shrine in the land of Gensokyo, a hidden realm in Japan that serves as the last enclave for *youkai* and other mystical creatures. Youkai live off humans’ fear of them, but have been slowly going extinct due to “the unknown” being replaced by modern scientific explanations. She’s in charge of maintaining the magic Great Hakurei Barrier that repels the mundane and keeps Gensokyo apart from the Outside World.&lt;br&gt;&lt;br&gt; - Reimu also is tasked with keeping the peace and balance of power within Gensokyo, resolving “incidents” that threaten the land. She does this by exterminating youkai, her most important duty. However to Reimu, “exterminating” youkai means beating them up (usually when they do something naughty), then inviting them over for tea and booze. Of course, she often ends up fighting other humans, gods, ghosts, or hermits in her battles as well.&lt;br&gt;&lt;br&gt; - Reimu herself is lazy, carefree, and honest to a fault. Unlike most humans, she gets along fine with youkai, as she treats everyone— human, youkai, god, and hermit— alike. Unfortunately, the rumors of her shrine being a haven for youkai (as well as Reimu’s own laziness) have caused the human villagers to stay away from it. As such the shrine gets few visitors and fewer donators, leaving Reimu eternally broke.&lt;br&gt;&lt;br&gt; - Reimu has preternatural luck, but only when she *isn’t trying*. She’s hyper-competent, but only at youkai extermination. So long as she goes with the flow and focuses on her shrine maiden duties, she can’t be beat. However, if she’s overconfident or has impure motives (such as with her poorly thought out get-rich-quick schemes), she’s destined to fail. This can be seen in SPNatI, as she starts out with bad AI and *gets better* as she stops trying.&lt;br&gt;&lt;br&gt; - Gensokyo was sealed off around 1885, and effectively serves as a time capsule of that era. On top of that, Reimu’s also a priestess from rural Japan. As a result, her knowledge of sex and sexuality is more than a little outdated. At any rate, Reimu doesn’t really understand the (modern) Outside World.&lt;br&gt;&lt;br&gt; - Reimu is at the inventory looking for someone to marry her and take care of her, partially so she can be lazy without worrying about money, and partially because she wants to be loved. That person should be devoted to her and her alone, and have a good personality. Expect that to go as well as the time she tried to turn the shrine into the amusement park HakureiLand. Don’t feel bad about your character rejecting her (she still has the player, after all). She at least hangs out with the more libertine youkai enough that she doesn’t mind openly courting both men and women— after all, she treats everyone the same.&lt;br&gt;&lt;br&gt; - Reimu has two prompt markers! `Reimu_GetRichQuick` has her ask the table for some ideas for ~~scams~~ get rich quick schemes she can run. `Reimu_SpouseQualities` has her ask your character what would make them a good wife or husband.&lt;br&gt;&lt;br&gt; - Reimu likes saké.&lt;br&gt;&lt;br&gt; - Boy howdy does Reimu like saké.&lt;br&gt;&lt;br&gt; - Reimu’s probably, like… twenty? Because you have to be twenty to drink alcohol like saké in Japan, and Reimu does this a lot. However Touhou explicitly runs on “Comic Strip Time”, meaning Reimu has been twenty for the last two decades, and will continue to be twenty for the foreseeable future.</othernotes>
     <noteworthy>
         <case name="Reimu: Get Rich Quick" id="1" priority="Prompt" min="0" max="7">
             <description>Reimu asks for advice for get rich quick schemes.</description>
@@ -12,6 +16,7 @@
             <description>Reimu asks the others at the table what would make them good choices to be a husband or wife.</description>
         </case>
     </noteworthy>
+    <reviewed>true</reviewed>
     <responses>
         <response id="2" opponent="meia" opponentId="9" />
         <response id="24" opponent="meia" opponentId="5" />
@@ -118,324 +123,494 @@
         <response id="368" opponent="marinette" opponentId="1202" />
         <response id="369" opponent="marinette" opponentId="1204" />
         <response id="370" opponent="marinette" opponentId="1203" />
+        <response id="372" opponent="mari" opponentId="1994" />
+        <response id="373" opponent="marinette" opponentId="1253" />
+        <response id="374" opponent="marinette" opponentId="1254" />
+        <response id="375" opponent="marinette" opponentId="1255" />
+        <response id="376" opponent="marinette" opponentId="1256" />
+        <response id="377" opponent="marinette" opponentId="1257" />
+        <response id="378" opponent="marinette" opponentId="1258" />
+        <response id="379" opponent="leon" opponentId="1085" />
+        <response id="380" opponent="leon" opponentId="1084" />
+        <response id="381" opponent="leon" opponentId="1082" />
+        <response id="382" opponent="leon" opponentId="1083" />
+        <response id="384" opponent="leon" opponentId="1127" />
+        <response id="385" opponent="leon" opponentId="1126" />
+        <response id="386" opponent="nami" opponentId="1214" />
+        <response id="387" opponent="marinette" opponentId="1335" />
+        <response id="388" opponent="marinette" opponentId="1336" />
+        <response id="389" opponent="marinette" opponentId="1337" />
+        <response id="390" opponent="leon" opponentId="1128" />
+        <response id="391" opponent="leon" opponentId="1129" />
+        <response id="392" opponent="leon" opponentId="1130" />
+        <response id="393" opponent="mitama" opponentId="3" />
+        <response id="394" opponent="barbara" opponentId="429" />
+        <response id="395" opponent="leon" opponentId="1150" />
+        <response id="396" opponent="leon" opponentId="1151" />
+        <response id="397" opponent="mitama" opponentId="767" />
+        <response id="398" opponent="mitama" opponentId="780" />
+        <response id="399" opponent="mitama" opponentId="779" />
+        <response id="400" opponent="nami" opponentId="1247" />
+        <response id="401" opponent="kyouko_toshinou" opponentId="108" />
+        <response id="402" opponent="erufuda" opponentId="643" />
+        <response id="403" opponent="erufuda" opponentId="644" />
+        <response id="405" opponent="erufuda" opponentId="645" />
+        <response id="409" opponent="mitama" opponentId="1121" />
+        <response id="410" opponent="nami" opponentId="1324" />
+        <response id="411" opponent="meia" opponentId="673" />
+        <response id="412" opponent="jura" opponentId="457" />
+        <response id="413" opponent="jura" opponentId="459" />
+        <response id="414" opponent="jura" opponentId="458" />
+        <response id="415" opponent="jura" opponentId="454" />
+        <response id="416" opponent="mitama" opponentId="1131" />
+        <response id="417" opponent="mitama" opponentId="1132" />
+        <response id="418" opponent="jura" opponentId="498" />
+        <response id="419" opponent="erufuda" opponentId="716" />
+        <response id="420" opponent="erufuda" opponentId="718" />
+        <response id="421" opponent="erufuda" opponentId="717" />
+        <response id="422" opponent="erufuda" opponentId="719" />
+        <response id="423" opponent="erufuda" opponentId="720" />
+        <response id="424" opponent="mitama" opponentId="1206" />
+        <response id="425" opponent="mitama" opponentId="1202" />
+        <response id="426" opponent="mitama" opponentId="1203" />
+        <response id="428" opponent="monika" opponentId="1339" />
+        <response id="429" opponent="yumeko" opponentId="1" />
+        <response id="430" opponent="mitama" opponentId="2186" />
+        <response id="431" opponent="mitama" opponentId="2187" />
+        <response id="432" opponent="mitama" opponentId="2213" />
+        <response id="433" opponent="nami" opponentId="1391" />
+        <response id="434" opponent="kyoko_kirigiri" opponentId="1468" />
+        <response id="524" opponent="nagisa" opponentId="149" />
+        <response id="525" opponent="nagisa" opponentId="60" />
+        <response id="526" opponent="nagisa" opponentId="164" />
+        <response id="527" opponent="nami" opponentId="1420" />
+        <response id="528" opponent="mitama" opponentId="2414" />
+        <response id="529" opponent="nadeshiko" opponentId="9" />
+        <response id="530" opponent="nadeshiko" opponentId="151" />
+        <response id="531" opponent="nadeshiko" opponentId="92" />
+        <response id="532" opponent="nadeshiko" opponentId="150" />
+        <response id="533" opponent="shamiko" opponentId="30" />
+        <response id="535" opponent="aqua_konosuba" opponentId="1232" />
+        <response id="536" opponent="lysithea" opponentId="275" />
+        <response id="540" opponent="kyoko_kirigiri" opponentId="1542" />
+        <response id="541" opponent="kyoko_kirigiri" opponentId="1543" />
     </responses>
     <notes>
         <note id="99">Note: This is a blatent lie</note>
         <note id="153">I want them to smooch by the end</note>
         <note id="295">Canonically speaking, Reimu is bad at explaining this sort of thing in a way normal people understand. Don't expect further questions to yield better answers.</note>
         <note id="311">At some point in the future I'm going to have Reimu ask about Monika's relationship with The Player, since obviously she seems to know them. Then maybe we can make a joint epilogue where both of them obliterate my dick?</note>
+        <note id="371">The implication here is that Reimu is annoyed Marisa won' reciprocate her affection by settling down with her.</note>
+        <note id="374">Don't fuck with the youkai of flowers</note>
+        <note id="383">Basically, Reimu is annoyed that Aru-chan is breaking kayfabe</note>
     </notes>
     <labels>
         <label id="4" label="" folder="M Player Fantasy" sort="0" />
-        <label id="6" label="" folder="M Player Fantasy" sort="0" />
+        <label id="6" label="" folder="M Player Fantasy" sort="2" />
         <label id="7" label="" folder="M Player Fantasy" sort="0" />
-        <label id="8" label="" folder="M Player Fantasy" sort="0" />
-        <label id="9" label="" folder="M Player Fantasy" sort="0" />
-        <label id="10" label="" folder="M Player Fantasy" sort="0" />
-        <label id="11" label="" folder="M Player Fantasy" sort="0" />
-        <label id="12" label="" folder="M Player Fantasy" sort="0" />
-        <label id="13" label="" folder="M Player Fantasy" sort="0" />
-        <label id="14" label="" folder="M Player Fantasy" sort="0" />
+        <label id="8" label="" folder="M Player Fantasy" sort="3" />
+        <label id="9" label="" folder="M Player Fantasy" sort="4" />
+        <label id="10" label="" folder="M Player Fantasy" sort="5" />
+        <label id="11" label="" folder="M Player Fantasy" sort="6" />
+        <label id="12" label="" folder="M Player Fantasy" sort="7" />
+        <label id="13" label="" folder="M Player Fantasy" sort="8" />
+        <label id="14" label="" folder="M Player Fantasy" sort="9" />
         <label id="15" label="" folder="F Player Fantasy" sort="0" />
-        <label id="16" label="" folder="F Player Fantasy" sort="0" />
-        <label id="17" label="" folder="F Player Fantasy" sort="0" />
-        <label id="18" label="" folder="F Player Fantasy" sort="0" />
-        <label id="19" label="" folder="F Player Fantasy" sort="0" />
-        <label id="20" label="" folder="F Player Fantasy" sort="0" />
-        <label id="21" label="" folder="F Player Fantasy" sort="0" />
-        <label id="22" label="" folder="F Player Fantasy" sort="0" />
-        <label id="23" label="" folder="F Player Fantasy" sort="0" />
+        <label id="16" label="" folder="F Player Fantasy" sort="2" />
+        <label id="17" label="" folder="F Player Fantasy" sort="3" />
+        <label id="18" label="" folder="F Player Fantasy" sort="4" />
+        <label id="19" label="" folder="F Player Fantasy" sort="5" />
+        <label id="20" label="" folder="F Player Fantasy" sort="6" />
+        <label id="21" label="" folder="F Player Fantasy" sort="7" />
+        <label id="22" label="" folder="F Player Fantasy" sort="8" />
+        <label id="23" label="" folder="F Player Fantasy" sort="9" />
         <label id="2" label="" folder="Prompt Responses" sort="0" />
-        <label id="26" label="" folder="Prompt Responses" sort="0" />
-        <label id="24" label="" folder="Prompt Responses" sort="0" />
-        <label id="27" label="" folder="Prompt Responses" sort="0" />
-        <label id="25" label="" folder="Prompt Responses" sort="0" />
-        <label id="1" label="" folder="Prompt Questions" sort="0" />
-        <label id="28" label="" folder="Prompt Responses" sort="0" />
-        <label id="29" label="" folder="Prompt Responses" sort="0" />
-        <label id="30" label="" folder="Prompt Responses" sort="0" />
-        <label id="31" label="" folder="Prompt Responses" sort="0" />
-        <label id="32" label="" folder="Prompt Responses" sort="0" />
-        <label id="33" label="" folder="Tag Targets" sort="0" />
-        <label id="34" label="" folder="Tag Targets" sort="0" />
-        <label id="35" label="" folder="Tag Targets" sort="0" />
-        <label id="36" label="" folder="Tag Targets" sort="0" />
-        <label id="37" label="" folder="Tag Targets" sort="0" />
-        <label id="38" label="" folder="Tag Targets" sort="0" />
-        <label id="39" label="" folder="Tag Targets" sort="0" />
-        <label id="40" label="" folder="Tag Targets" sort="0" />
-        <label id="41" label="" folder="Tag Targets" sort="0" />
-        <label id="42" label="" folder="Tag Targets" sort="0" />
-        <label id="43" label="" folder="Tag Targets" sort="0" />
-        <label id="44" label="" folder="Tag Targets" sort="0" />
-        <label id="45" label="" folder="Tag Targets" sort="0" />
-        <label id="47" label="" folder="Player Targets" sort="0" />
-        <label id="48" label="" folder="Player Targets" sort="0" />
-        <label id="49" label="" folder="Player Targets" sort="0" />
-        <label id="50" label="" folder="Player Targets" sort="0" />
-        <label id="51" label="" folder="Player Targets" sort="0" />
-        <label id="54" label="" folder="Player Targets" sort="0" />
-        <label id="53" label="" folder="Player Targets" sort="0" />
-        <label id="55" label="" folder="Player Targets" sort="0" />
-        <label id="56" label="" folder="Player Targets" sort="0" />
-        <label id="57" label="" folder="Player Targets" sort="0" />
-        <label id="58" label="" folder="Player Targets" sort="0" />
-        <label id="59" label="" folder="Player Targets" sort="0" />
-        <label id="60" label="" folder="Player Targets" sort="0" />
-        <label id="61" label="" folder="Player Targets" sort="0" />
-        <label id="62" label="" folder="Player Targets" sort="0" />
-        <label id="63" label="" folder="Player Targets" sort="0" />
-        <label id="64" label="" folder="Player Targets" sort="0" />
-        <label id="65" label="" folder="Player Targets" sort="0" />
-        <label id="66" label="" folder="Player Targets" sort="0" />
-        <label id="67" label="" folder="Player Targets" sort="0" />
-        <label id="68" label="" folder="Player Targets" sort="0" />
-        <label id="69" label="" folder="Player Targets" sort="0" />
-        <label id="70" label="" folder="Player Targets" sort="0" />
-        <label id="71" label="" folder="Player Targets" sort="0" />
-        <label id="72" label="" folder="Player Targets" sort="0" />
-        <label id="73" label="" folder="Player Targets" sort="0" />
-        <label id="74" label="" folder="Player Targets" sort="0" />
-        <label id="75" label="" folder="Player Targets" sort="0" />
-        <label id="76" label="" folder="Player Targets" sort="0" />
-        <label id="77" label="" folder="Player Targets" sort="0" />
-        <label id="78" label="" folder="Player Targets" sort="0" />
-        <label id="79" label="" folder="Player Targets" sort="0" />
-        <label id="80" label="" folder="Player Targets" sort="0" />
-        <label id="81" label="" folder="Player Targets" sort="0" />
-        <label id="82" label="" folder="Player Targets" sort="0" />
-        <label id="83" label="" folder="Player Targets" sort="0" />
-        <label id="84" label="" folder="Player Targets" sort="0" />
-        <label id="85" label="" folder="Player Targets" sort="0" />
-        <label id="86" label="" folder="Player Targets" sort="0" />
-        <label id="87" label="" folder="Player Targets" sort="0" />
-        <label id="88" label="" folder="Player Targets" sort="0" />
-        <label id="46" label="" folder="Prompt Responses" sort="0" />
+        <label id="26" label="" folder="Prompt Responses" sort="5" />
+        <label id="24" label="" folder="Prompt Responses" sort="4" />
+        <label id="27" label="" folder="Prompt Responses" sort="8" />
+        <label id="25" label="" folder="Prompt Responses" sort="7" />
+        <label id="1" label="" folder="Prompt Questions" sort="2" />
+        <label id="28" label="" folder="Prompt Responses" sort="6" />
+        <label id="29" label="" folder="Prompt Responses" sort="2" />
+        <label id="30" label="" folder="Prompt Responses" sort="10" />
+        <label id="31" label="" folder="Prompt Responses" sort="11" />
+        <label id="32" label="" folder="Prompt Responses" sort="12" />
+        <label id="33" label="" folder="Tag Targets" sort="14" />
+        <label id="34" label="" folder="Tag Targets" sort="8" />
+        <label id="35" label="" folder="Tag Targets" sort="11" />
+        <label id="36" label="" folder="Tag Targets" sort="15" />
+        <label id="37" label="" folder="Tag Targets" sort="16" />
+        <label id="38" label="" folder="Tag Targets" sort="18" />
+        <label id="39" label="" folder="Tag Targets" sort="9" />
+        <label id="40" label="" folder="Tag Targets" sort="10" />
+        <label id="41" label="" folder="Tag Targets" sort="19" />
+        <label id="42" label="" folder="Tag Targets" sort="17" />
+        <label id="43" label="" folder="Tag Targets" sort="13" />
+        <label id="44" label="" folder="Tag Targets" sort="12" />
+        <label id="45" label="" folder="Tag Targets" sort="20" />
+        <label id="47" label="" folder="Player Targets" sort="2" />
+        <label id="48" label="" folder="Player Targets" sort="3" />
+        <label id="49" label="" folder="Player Targets" sort="5" />
+        <label id="50" label="" folder="Player Targets" sort="4" />
+        <label id="51" label="" folder="Player Targets" sort="6" />
+        <label id="54" label="" folder="Player Targets" sort="25" />
+        <label id="53" label="" folder="Player Targets" sort="7" />
+        <label id="55" label="" folder="Player Targets" sort="26" />
+        <label id="56" label="" folder="Player Targets" sort="28" />
+        <label id="57" label="" folder="Player Targets" sort="27" />
+        <label id="58" label="" folder="Player Targets" sort="29" />
+        <label id="59" label="" folder="Player Targets" sort="62" />
+        <label id="60" label="" folder="Player Targets" sort="61" />
+        <label id="61" label="" folder="Player Targets" sort="47" />
+        <label id="62" label="" folder="Player Targets" sort="48" />
+        <label id="63" label="" folder="Player Targets" sort="46" />
+        <label id="64" label="" folder="Player Targets" sort="60" />
+        <label id="65" label="" folder="Player Targets" sort="58" />
+        <label id="66" label="" folder="Player Targets" sort="63" />
+        <label id="67" label="" folder="Player Targets" sort="59" />
+        <label id="68" label="" folder="Player Targets" sort="72" />
+        <label id="69" label="" folder="Player Targets" sort="71" />
+        <label id="70" label="" folder="Player Targets" sort="69" />
+        <label id="71" label="" folder="Player Targets" sort="70" />
+        <label id="72" label="" folder="Player Targets" sort="73" />
+        <label id="73" label="" folder="Player Targets" sort="64" />
+        <label id="74" label="" folder="Player Targets" sort="13" />
+        <label id="75" label="" folder="Player Targets" sort="12" />
+        <label id="76" label="" folder="Player Targets" sort="10" />
+        <label id="77" label="" folder="Player Targets" sort="9" />
+        <label id="78" label="" folder="Player Targets" sort="11" />
+        <label id="79" label="" folder="Player Targets" sort="44" />
+        <label id="80" label="" folder="Player Targets" sort="43" />
+        <label id="81" label="" folder="Player Targets" sort="42" />
+        <label id="82" label="" folder="Player Targets" sort="45" />
+        <label id="83" label="" folder="Player Targets" sort="41" />
+        <label id="84" label="" folder="Player Targets" sort="56" />
+        <label id="85" label="" folder="Player Targets" sort="55" />
+        <label id="86" label="" folder="Player Targets" sort="53" />
+        <label id="87" label="" folder="Player Targets" sort="54" />
+        <label id="88" label="" folder="Player Targets" sort="57" />
+        <label id="46" label="" folder="Prompt Responses" sort="13" />
         <label id="89" label="" folder="Prompt Questions" sort="0" />
-        <label id="90" label="" folder="Tag Targets" sort="0" />
-        <label id="91" label="" folder="Tag Targets" sort="0" />
-        <label id="92" label="" folder="Tag Targets" sort="0" />
-        <label id="93" label="" folder="Tag Targets" sort="0" />
+        <label id="90" label="" folder="Tag Targets" sort="21" />
+        <label id="91" label="" folder="Tag Targets" sort="22" />
+        <label id="92" label="" folder="Tag Targets" sort="23" />
+        <label id="93" label="" folder="Tag Targets" sort="24" />
         <label id="94" label="" folder="GetRichQuick Responses" sort="0" />
         <label id="95" label="" folder="Spouse Responses" sort="0" />
-        <label id="96" label="" folder="GetRichQuick Responses" sort="0" />
-        <label id="97" label="" folder="Spouse Responses" sort="0" />
-        <label id="98" label="" folder="Prompt Responses" sort="0" />
-        <label id="99" label="" folder="Prompt Responses" sort="0" />
-        <label id="115" label="" folder="Spouse Responses" sort="0" />
-        <label id="116" label="" folder="GetRichQuick Responses" sort="0" />
-        <label id="112" label="" folder="Prompt Responses" sort="0" />
-        <label id="111" label="" folder="Prompt Responses" sort="0" />
-        <label id="113" label="" folder="Prompt Responses" sort="0" />
-        <label id="114" label="" folder="Prompt Responses" sort="0" />
-        <label id="107" label="" folder="Prompt Responses" sort="0" />
-        <label id="105" label="" folder="Prompt Responses" sort="0" />
-        <label id="103" label="" folder="Prompt Responses" sort="0" />
-        <label id="106" label="" folder="Prompt Responses" sort="0" />
-        <label id="104" label="" folder="Prompt Responses" sort="0" />
-        <label id="102" label="" folder="Prompt Responses" sort="0" />
-        <label id="108" label="" folder="Prompt Responses" sort="0" />
-        <label id="109" label="" folder="Prompt Responses" sort="0" />
-        <label id="100" label="" folder="Prompt Responses" sort="0" />
-        <label id="117" label="" folder="Prompt Responses" sort="0" />
-        <label id="118" label="" folder="Prompt Responses" sort="0" />
-        <label id="119" label="" folder="Prompt Responses" sort="0" />
-        <label id="120" label="" folder="Prompt Responses" sort="0" />
-        <label id="121" label="" folder="Prompt Responses" sort="0" />
-        <label id="122" label="" folder="Prompt Responses" sort="0" />
-        <label id="123" label="" folder="Prompt Responses" sort="0" />
-        <label id="124" label="" folder="Prompt Responses" sort="0" />
-        <label id="125" label="" folder="Prompt Responses" sort="0" />
-        <label id="127" label="" folder="Spouse Responses" sort="0" />
-        <label id="131" label="" folder="Prompt Responses" sort="0" />
-        <label id="128" label="" folder="Prompt Responses" sort="0" />
-        <label id="129" label="" folder="Prompt Responses" sort="0" />
-        <label id="130" label="" folder="Prompt Responses" sort="0" />
-        <label id="132" label="" folder="Prompt Responses" sort="0" />
-        <label id="133" label="" folder="GetRichQuick Responses" sort="0" />
-        <label id="134" label="" folder="Spouse Responses" sort="0" />
-        <label id="147" label="" folder="GetRichQuick Responses" sort="0" />
-        <label id="165" label="" folder="Tag Targets" sort="0" />
-        <label id="166" label="" folder="Tag Targets" sort="0" />
-        <label id="167" label="" folder="Tag Targets" sort="0" />
-        <label id="168" label="" folder="Tag Targets" sort="0" />
-        <label id="169" label="" folder="Tag Targets" sort="0" />
-        <label id="170" label="" folder="Tag Targets" sort="0" />
-        <label id="171" label="" folder="Tag Targets" sort="0" />
-        <label id="172" label="" folder="Tag Targets" sort="0" />
-        <label id="173" label="" folder="Tag Targets" sort="0" />
-        <label id="174" label="" folder="Tag Targets" sort="0" />
-        <label id="175" label="" folder="Tag Targets" sort="0" />
-        <label id="176" label="" folder="Tag Targets" sort="0" />
-        <label id="177" label="" folder="Tag Targets" sort="0" />
-        <label id="178" label="" folder="Tag Targets" sort="0" />
-        <label id="179" label="" folder="Tag Targets" sort="0" />
-        <label id="180" label="" folder="Tag Targets" sort="0" />
-        <label id="181" label="" folder="Tag Targets" sort="0" />
-        <label id="182" label="" folder="Tag Targets" sort="0" />
-        <label id="183" label="" folder="Tag Targets" sort="0" />
-        <label id="184" label="" folder="Tag Targets" sort="0" />
-        <label id="185" label="" folder="Tag Targets" sort="0" />
-        <label id="186" label="" folder="Tag Targets" sort="0" />
-        <label id="187" label="" folder="Tag Targets" sort="0" />
-        <label id="188" label="" folder="Tag Targets" sort="0" />
-        <label id="189" label="" folder="Tag Targets" sort="0" />
-        <label id="190" label="" folder="Tag Targets" sort="0" />
-        <label id="191" label="" folder="Tag Targets" sort="0" />
-        <label id="192" label="" folder="Tag Targets" sort="0" />
-        <label id="193" label="" folder="Tag Targets" sort="0" />
-        <label id="194" label="" folder="Tag Targets" sort="0" />
-        <label id="195" label="" folder="Tag Targets" sort="0" />
-        <label id="196" label="" folder="Tag Targets" sort="0" />
-        <label id="197" label="" folder="Tag Targets" sort="0" />
-        <label id="198" label="" folder="Tag Targets" sort="0" />
-        <label id="199" label="" folder="Tag Targets" sort="0" />
-        <label id="200" label="" folder="Tag Targets" sort="0" />
-        <label id="201" label="" folder="Tag Targets" sort="0" />
-        <label id="202" label="" folder="Tag Targets" sort="0" />
-        <label id="203" label="" folder="Tag Targets" sort="0" />
-        <label id="204" label="" folder="Tag Targets" sort="0" />
-        <label id="205" label="" folder="Tag Targets" sort="0" />
-        <label id="206" label="" folder="Tag Targets" sort="0" />
-        <label id="207" label="" folder="Tag Targets" sort="0" />
-        <label id="208" label="" folder="Tag Targets" sort="0" />
-        <label id="209" label="" folder="Tag Targets" sort="0" />
-        <label id="210" label="" folder="Tag Targets" sort="0" />
-        <label id="211" label="" folder="Tag Targets" sort="0" />
-        <label id="212" label="" folder="Tag Targets" sort="0" />
-        <label id="213" label="" folder="Tag Targets" sort="0" />
-        <label id="214" label="" folder="Tag Targets" sort="0" />
-        <label id="215" label="" folder="Tag Targets" sort="0" />
-        <label id="216" label="" folder="Tag Targets" sort="0" />
-        <label id="217" label="" folder="Tag Targets" sort="0" />
-        <label id="218" label="" folder="Tag Targets" sort="0" />
-        <label id="219" label="" folder="Tag Targets" sort="0" />
-        <label id="220" label="" folder="Tag Targets" sort="0" />
-        <label id="221" label="" folder="Tag Targets" sort="0" />
-        <label id="222" label="" folder="Tag Targets" sort="0" />
-        <label id="223" label="" folder="Tag Targets" sort="0" />
-        <label id="224" label="" folder="Tag Targets" sort="0" />
-        <label id="225" label="" folder="Tag Targets" sort="0" />
-        <label id="226" label="" folder="Tag Targets" sort="0" />
-        <label id="227" label="" folder="Tag Targets" sort="0" />
-        <label id="228" label="" folder="Tag Targets" sort="0" />
-        <label id="229" label="" folder="Tag Targets" sort="0" />
-        <label id="230" label="" folder="Tag Targets" sort="0" />
-        <label id="231" label="" folder="Tag Targets" sort="0" />
-        <label id="232" label="" folder="Tag Targets" sort="0" />
-        <label id="233" label="" folder="Tag Targets" sort="0" />
-        <label id="234" label="" folder="Tag Targets" sort="0" />
-        <label id="235" label="" folder="Tag Targets" sort="0" />
-        <label id="236" label="" folder="Tag Targets" sort="0" />
-        <label id="237" label="" folder="Tag Targets" sort="0" />
-        <label id="238" label="" folder="Tag Targets" sort="0" />
-        <label id="239" label="" folder="Tag Targets" sort="0" />
-        <label id="240" label="" folder="Tag Targets" sort="0" />
-        <label id="241" label="" folder="Tag Targets" sort="0" />
-        <label id="242" label="" folder="Tag Targets" sort="0" />
-        <label id="243" label="" folder="Tag Targets" sort="0" />
-        <label id="244" label="" folder="Tag Targets" sort="0" />
-        <label id="245" label="" folder="Tag Targets" sort="0" />
-        <label id="246" label="" folder="Tag Targets" sort="0" />
-        <label id="247" label="" folder="Tag Targets" sort="0" />
-        <label id="248" label="" folder="Tag Targets" sort="0" />
-        <label id="249" label="" folder="Tag Targets" sort="0" />
-        <label id="250" label="" folder="Tag Targets" sort="0" />
-        <label id="251" label="" folder="Tag Targets" sort="0" />
-        <label id="252" label="" folder="Tag Targets" sort="0" />
-        <label id="253" label="" folder="Tag Targets" sort="0" />
-        <label id="254" label="" folder="Tag Targets" sort="0" />
-        <label id="255" label="" folder="Tag Targets" sort="0" />
-        <label id="256" label="" folder="Tag Targets" sort="0" />
-        <label id="257" label="" folder="Tag Targets" sort="0" />
-        <label id="258" label="" folder="Tag Targets" sort="0" />
-        <label id="259" label="" folder="Tag Targets" sort="0" />
-        <label id="260" label="" folder="Tag Targets" sort="0" />
-        <label id="261" label="" folder="Tag Targets" sort="0" />
-        <label id="262" label="" folder="Tag Targets" sort="0" />
-        <label id="263" label="" folder="Tag Targets" sort="0" />
-        <label id="264" label="" folder="Tag Targets" sort="0" />
-        <label id="265" label="" folder="Tag Targets" sort="0" />
-        <label id="266" label="" folder="Tag Targets" sort="0" />
-        <label id="267" label="" folder="Tag Targets" sort="0" />
-        <label id="268" label="" folder="Tag Targets" sort="0" />
-        <label id="269" label="" folder="Tag Targets" sort="0" />
-        <label id="270" label="" folder="Tag Targets" sort="0" />
-        <label id="271" label="" folder="Tag Targets" sort="0" />
-        <label id="272" label="" folder="Tag Targets" sort="0" />
-        <label id="273" label="" folder="Tag Targets" sort="0" />
+        <label id="96" label="" folder="GetRichQuick Responses" sort="2" />
+        <label id="97" label="" folder="Spouse Responses" sort="2" />
+        <label id="98" label="" folder="Prompt Responses" sort="14" />
+        <label id="99" label="" folder="Prompt Responses" sort="15" />
+        <label id="115" label="" folder="Spouse Responses" sort="3" />
+        <label id="116" label="" folder="GetRichQuick Responses" sort="3" />
+        <label id="112" label="" folder="Prompt Responses" sort="26" />
+        <label id="111" label="" folder="Prompt Responses" sort="25" />
+        <label id="113" label="" folder="Prompt Responses" sort="27" />
+        <label id="114" label="" folder="Prompt Responses" sort="28" />
+        <label id="107" label="" folder="Prompt Responses" sort="22" />
+        <label id="105" label="" folder="Prompt Responses" sort="20" />
+        <label id="103" label="" folder="Prompt Responses" sort="18" />
+        <label id="106" label="" folder="Prompt Responses" sort="21" />
+        <label id="104" label="" folder="Prompt Responses" sort="19" />
+        <label id="102" label="" folder="Prompt Responses" sort="17" />
+        <label id="108" label="" folder="Prompt Responses" sort="23" />
+        <label id="109" label="" folder="Prompt Responses" sort="24" />
+        <label id="100" label="" folder="Prompt Responses" sort="16" />
+        <label id="117" label="" folder="Prompt Responses" sort="29" />
+        <label id="118" label="" folder="Prompt Responses" sort="30" />
+        <label id="119" label="" folder="Prompt Responses" sort="31" />
+        <label id="120" label="" folder="Prompt Responses" sort="32" />
+        <label id="121" label="" folder="Prompt Responses" sort="33" />
+        <label id="122" label="" folder="Prompt Responses" sort="34" />
+        <label id="123" label="" folder="Prompt Responses" sort="35" />
+        <label id="124" label="" folder="Prompt Responses" sort="36" />
+        <label id="125" label="" folder="Prompt Responses" sort="37" />
+        <label id="127" label="" folder="Spouse Responses" sort="4" />
+        <label id="131" label="" folder="Prompt Responses" sort="41" />
+        <label id="128" label="" folder="Prompt Responses" sort="38" />
+        <label id="129" label="" folder="Prompt Responses" sort="39" />
+        <label id="130" label="" folder="Prompt Responses" sort="40" />
+        <label id="132" label="" folder="Prompt Responses" sort="42" />
+        <label id="133" label="" folder="GetRichQuick Responses" sort="4" />
+        <label id="134" label="" folder="Spouse Responses" sort="5" />
+        <label id="147" label="" folder="GetRichQuick Responses" sort="5" />
+        <label id="165" label="" folder="Tag Targets" sort="128" />
+        <label id="166" label="" folder="Tag Targets" sort="25" />
+        <label id="167" label="" folder="Tag Targets" sort="26" />
+        <label id="168" label="" folder="Tag Targets" sort="27" />
+        <label id="169" label="" folder="Tag Targets" sort="28" />
+        <label id="170" label="" folder="Tag Targets" sort="29" />
+        <label id="171" label="" folder="Tag Targets" sort="30" />
+        <label id="172" label="" folder="Tag Targets" sort="31" />
+        <label id="173" label="" folder="Tag Targets" sort="32" />
+        <label id="174" label="" folder="Tag Targets" sort="33" />
+        <label id="175" label="" folder="Tag Targets" sort="34" />
+        <label id="176" label="" folder="Tag Targets" sort="35" />
+        <label id="177" label="" folder="Tag Targets" sort="36" />
+        <label id="178" label="" folder="Tag Targets" sort="37" />
+        <label id="179" label="" folder="Tag Targets" sort="38" />
+        <label id="180" label="" folder="Tag Targets" sort="39" />
+        <label id="181" label="" folder="Tag Targets" sort="40" />
+        <label id="182" label="" folder="Tag Targets" sort="41" />
+        <label id="183" label="" folder="Tag Targets" sort="42" />
+        <label id="184" label="" folder="Tag Targets" sort="43" />
+        <label id="185" label="" folder="Tag Targets" sort="44" />
+        <label id="186" label="" folder="Tag Targets" sort="45" />
+        <label id="187" label="" folder="Tag Targets" sort="46" />
+        <label id="188" label="" folder="Tag Targets" sort="47" />
+        <label id="189" label="" folder="Tag Targets" sort="48" />
+        <label id="190" label="" folder="Tag Targets" sort="49" />
+        <label id="191" label="" folder="Tag Targets" sort="50" />
+        <label id="192" label="" folder="Tag Targets" sort="51" />
+        <label id="193" label="" folder="Tag Targets" sort="52" />
+        <label id="194" label="" folder="Tag Targets" sort="53" />
+        <label id="195" label="" folder="Tag Targets" sort="54" />
+        <label id="196" label="" folder="Tag Targets" sort="55" />
+        <label id="197" label="" folder="Tag Targets" sort="56" />
+        <label id="198" label="" folder="Tag Targets" sort="57" />
+        <label id="199" label="" folder="Tag Targets" sort="58" />
+        <label id="200" label="" folder="Tag Targets" sort="59" />
+        <label id="201" label="" folder="Tag Targets" sort="60" />
+        <label id="202" label="" folder="Tag Targets" sort="61" />
+        <label id="203" label="" folder="Tag Targets" sort="62" />
+        <label id="204" label="" folder="Tag Targets" sort="63" />
+        <label id="205" label="" folder="Tag Targets" sort="64" />
+        <label id="206" label="" folder="Tag Targets" sort="65" />
+        <label id="207" label="" folder="Tag Targets" sort="66" />
+        <label id="208" label="" folder="Tag Targets" sort="67" />
+        <label id="209" label="" folder="Tag Targets" sort="68" />
+        <label id="210" label="" folder="Tag Targets" sort="69" />
+        <label id="211" label="" folder="Tag Targets" sort="70" />
+        <label id="212" label="" folder="Tag Targets" sort="71" />
+        <label id="213" label="" folder="Tag Targets" sort="72" />
+        <label id="214" label="" folder="Tag Targets" sort="73" />
+        <label id="215" label="" folder="Tag Targets" sort="74" />
+        <label id="216" label="" folder="Tag Targets" sort="75" />
+        <label id="217" label="" folder="Tag Targets" sort="76" />
+        <label id="218" label="" folder="Tag Targets" sort="77" />
+        <label id="219" label="" folder="Tag Targets" sort="78" />
+        <label id="220" label="" folder="Tag Targets" sort="79" />
+        <label id="221" label="" folder="Tag Targets" sort="80" />
+        <label id="222" label="" folder="Tag Targets" sort="81" />
+        <label id="223" label="" folder="Tag Targets" sort="82" />
+        <label id="224" label="" folder="Tag Targets" sort="83" />
+        <label id="225" label="" folder="Tag Targets" sort="84" />
+        <label id="226" label="" folder="Tag Targets" sort="85" />
+        <label id="227" label="" folder="Tag Targets" sort="86" />
+        <label id="228" label="" folder="Tag Targets" sort="87" />
+        <label id="229" label="" folder="Tag Targets" sort="88" />
+        <label id="230" label="" folder="Tag Targets" sort="89" />
+        <label id="231" label="" folder="Tag Targets" sort="90" />
+        <label id="232" label="" folder="Tag Targets" sort="91" />
+        <label id="233" label="" folder="Tag Targets" sort="92" />
+        <label id="234" label="" folder="Tag Targets" sort="93" />
+        <label id="235" label="" folder="Tag Targets" sort="94" />
+        <label id="236" label="" folder="Tag Targets" sort="95" />
+        <label id="237" label="" folder="Tag Targets" sort="96" />
+        <label id="238" label="" folder="Tag Targets" sort="97" />
+        <label id="239" label="" folder="Tag Targets" sort="98" />
+        <label id="240" label="" folder="Tag Targets" sort="99" />
+        <label id="241" label="" folder="Tag Targets" sort="100" />
+        <label id="242" label="" folder="Tag Targets" sort="101" />
+        <label id="243" label="" folder="Tag Targets" sort="102" />
+        <label id="244" label="" folder="Tag Targets" sort="103" />
+        <label id="245" label="" folder="Tag Targets" sort="104" />
+        <label id="246" label="" folder="Tag Targets" sort="105" />
+        <label id="247" label="" folder="Tag Targets" sort="106" />
+        <label id="248" label="" folder="Tag Targets" sort="107" />
+        <label id="249" label="" folder="Tag Targets" sort="108" />
+        <label id="250" label="" folder="Tag Targets" sort="109" />
+        <label id="251" label="" folder="Tag Targets" sort="110" />
+        <label id="252" label="" folder="Tag Targets" sort="111" />
+        <label id="253" label="" folder="Tag Targets" sort="112" />
+        <label id="254" label="" folder="Tag Targets" sort="113" />
+        <label id="255" label="" folder="Tag Targets" sort="114" />
+        <label id="256" label="" folder="Tag Targets" sort="115" />
+        <label id="257" label="" folder="Tag Targets" sort="116" />
+        <label id="258" label="" folder="Tag Targets" sort="117" />
+        <label id="259" label="" folder="Tag Targets" sort="118" />
+        <label id="260" label="" folder="Tag Targets" sort="119" />
+        <label id="261" label="" folder="Tag Targets" sort="120" />
+        <label id="262" label="" folder="Tag Targets" sort="121" />
+        <label id="263" label="" folder="Tag Targets" sort="122" />
+        <label id="264" label="" folder="Tag Targets" sort="123" />
+        <label id="265" label="" folder="Tag Targets" sort="124" />
+        <label id="266" label="" folder="Tag Targets" sort="125" />
+        <label id="267" label="" folder="Tag Targets" sort="126" />
+        <label id="268" label="" folder="Tag Targets" sort="127" />
+        <label id="269" label="" folder="Tag Targets" sort="129" />
+        <label id="270" label="" folder="Tag Targets" sort="130" />
+        <label id="271" label="" folder="Tag Targets" sort="131" />
+        <label id="272" label="" folder="Tag Targets" sort="4" />
+        <label id="273" label="" folder="Tag Targets" sort="5" />
         <label id="274" label="" folder="Tag Targets" sort="0" />
-        <label id="275" label="" folder="Tag Targets" sort="0" />
-        <label id="276" label="" folder="Tag Targets" sort="0" />
-        <label id="277" label="" folder="Tag Targets" sort="0" />
-        <label id="278" label="" folder="Tag Targets" sort="0" />
+        <label id="275" label="" folder="Tag Targets" sort="6" />
+        <label id="276" label="" folder="Tag Targets" sort="7" />
+        <label id="277" label="" folder="Tag Targets" sort="2" />
+        <label id="278" label="" folder="Tag Targets" sort="3" />
         <label id="279" label="" folder="Losing In A Row" sort="0" />
-        <label id="280" label="" folder="Losing In A Row" sort="0" />
-        <label id="281" label="" folder="Losing In A Row" sort="0" />
-        <label id="282" label="" folder="Losing In A Row" sort="0" />
-        <label id="283" label="" folder="Losing In A Row" sort="0" />
-        <label id="284" label="" folder="Backgrounds" sort="0" />
-        <label id="285" label="" folder="Backgrounds" sort="0" />
-        <label id="286" label="" folder="Backgrounds" sort="0" />
-        <label id="287" label="" folder="Backgrounds" sort="0" />
-        <label id="288" label="" folder="Backgrounds" sort="0" />
-        <label id="289" label="" folder="Backgrounds" sort="0" />
+        <label id="280" label="" folder="Losing In A Row" sort="2" />
+        <label id="281" label="" folder="Losing In A Row" sort="3" />
+        <label id="282" label="" folder="Losing In A Row" sort="4" />
+        <label id="283" label="" folder="Losing In A Row" sort="5" />
+        <label id="284" label="" folder="Backgrounds" sort="2" />
+        <label id="285" label="" folder="Backgrounds" sort="3" />
+        <label id="286" label="" folder="Backgrounds" sort="4" />
+        <label id="287" label="" folder="Backgrounds" sort="5" />
+        <label id="288" label="" folder="Backgrounds" sort="6" />
+        <label id="289" label="" folder="Backgrounds" sort="7" />
         <label id="290" label="" folder="Backgrounds" sort="0" />
-        <label id="291" label="" folder="Backgrounds" sort="0" />
-        <label id="292" label="" folder="Backgrounds" sort="0" />
-        <label id="297" label="" folder="Spouse Responses" sort="0" />
-        <label id="301" label="" folder="Prompt Responses" sort="0" />
-        <label id="300" label="" folder="Prompt Responses" sort="0" />
-        <label id="138" label="" folder="Prompt Responses" sort="0" />
-        <label id="299" label="" folder="Prompt Responses" sort="0" />
-        <label id="298" label="" folder="Prompt Responses" sort="0" />
-        <label id="137" label="" folder="Prompt Responses" sort="0" />
-        <label id="143" label="" folder="Prompt Responses" sort="0" />
-        <label id="157" label="" folder="Prompt Responses" sort="0" />
-        <label id="159" label="" folder="Prompt Responses" sort="0" />
-        <label id="156" label="" folder="Prompt Responses" sort="0" />
-        <label id="155" label="" folder="Prompt Responses" sort="0" />
-        <label id="158" label="" folder="Prompt Responses" sort="0" />
-        <label id="160" label="" folder="Prompt Responses" sort="0" />
-        <label id="304" label="" folder="Prompt Responses" sort="0" />
-        <label id="303" label="" folder="Prompt Responses" sort="0" />
-        <label id="305" label="" folder="Prompt Responses" sort="0" />
-        <label id="312" label="" folder="Player Targets" sort="0" />
-        <label id="313" label="" folder="Player Targets" sort="0" />
-        <label id="314" label="" folder="Player Targets" sort="0" />
-        <label id="315" label="" folder="Player Targets" sort="0" />
-        <label id="316" label="" folder="Player Targets" sort="0" />
-        <label id="317" label="" folder="Player Targets" sort="0" />
+        <label id="291" label="" folder="Backgrounds" sort="8" />
+        <label id="292" label="" folder="Backgrounds" sort="9" />
+        <label id="297" label="" folder="Spouse Responses" sort="6" />
+        <label id="301" label="" folder="Prompt Responses" sort="54" />
+        <label id="300" label="" folder="Prompt Responses" sort="53" />
+        <label id="138" label="" folder="Prompt Responses" sort="9" />
+        <label id="299" label="" folder="Prompt Responses" sort="52" />
+        <label id="298" label="" folder="Prompt Responses" sort="51" />
+        <label id="137" label="" folder="Prompt Responses" sort="43" />
+        <label id="143" label="" folder="Prompt Responses" sort="44" />
+        <label id="157" label="" folder="Prompt Responses" sort="47" />
+        <label id="159" label="" folder="Prompt Responses" sort="49" />
+        <label id="156" label="" folder="Prompt Responses" sort="46" />
+        <label id="155" label="" folder="Prompt Responses" sort="45" />
+        <label id="158" label="" folder="Prompt Responses" sort="48" />
+        <label id="160" label="" folder="Prompt Responses" sort="50" />
+        <label id="304" label="" folder="Prompt Responses" sort="56" />
+        <label id="303" label="" folder="Prompt Responses" sort="55" />
+        <label id="305" label="" folder="Prompt Responses" sort="57" />
+        <label id="312" label="" folder="Player Targets" sort="65" />
+        <label id="313" label="" folder="Player Targets" sort="66" />
+        <label id="314" label="" folder="Player Targets" sort="51" />
+        <label id="315" label="" folder="Player Targets" sort="52" />
+        <label id="316" label="" folder="Player Targets" sort="67" />
+        <label id="317" label="" folder="Player Targets" sort="68" />
         <label id="318" label="" folder="Player Targets" sort="0" />
-        <label id="319" label="" folder="Player Targets" sort="0" />
-        <label id="320" label="" folder="Player Targets" sort="0" />
-        <label id="321" label="" folder="Player Targets" sort="0" />
-        <label id="322" label="" folder="Player Targets" sort="0" />
-        <label id="323" label="" folder="Player Targets" sort="0" />
-        <label id="324" label="" folder="Player Targets" sort="0" />
-        <label id="325" label="" folder="Player Targets" sort="0" />
-        <label id="326" label="" folder="Player Targets" sort="0" />
-        <label id="327" label="" folder="Player Targets" sort="0" />
-        <label id="328" label="" folder="Player Targets" sort="0" />
-        <label id="329" label="" folder="Player Targets" sort="0" />
-        <label id="330" label="" folder="Player Targets" sort="0" />
-        <label id="331" label="" folder="Player Targets" sort="0" />
-        <label id="332" label="" folder="Player Targets" sort="0" />
-        <label id="333" label="" folder="Player Targets" sort="0" />
-        <label id="334" label="" folder="Player Targets" sort="0" />
-        <label id="335" label="" folder="Player Targets" sort="0" />
-        <label id="336" label="" folder="Player Targets" sort="0" />
-        <label id="337" label="" folder="Player Targets" sort="0" />
-        <label id="338" label="" folder="Player Targets" sort="0" />
-        <label id="339" label="" folder="Player Targets" sort="0" />
-        <label id="340" label="" folder="Player Targets" sort="0" />
-        <label id="341" label="" folder="Player Targets" sort="0" />
-        <label id="342" label="" folder="Player Targets" sort="0" />
-        <label id="343" label="" folder="Player Targets" sort="0" />
-        <label id="344" label="" folder="Player Targets" sort="0" />
-        <label id="345" label="" folder="Player Targets" sort="0" />
+        <label id="319" label="" folder="Player Targets" sort="24" />
+        <label id="320" label="" folder="Player Targets" sort="8" />
+        <label id="321" label="" folder="Player Targets" sort="40" />
+        <label id="322" label="" folder="Player Targets" sort="49" />
+        <label id="323" label="" folder="Player Targets" sort="50" />
+        <label id="324" label="" folder="Player Targets" sort="30" />
+        <label id="325" label="" folder="Player Targets" sort="31" />
+        <label id="326" label="" folder="Player Targets" sort="32" />
+        <label id="327" label="" folder="Player Targets" sort="33" />
+        <label id="328" label="" folder="Player Targets" sort="34" />
+        <label id="329" label="" folder="Player Targets" sort="35" />
+        <label id="330" label="" folder="Player Targets" sort="36" />
+        <label id="331" label="" folder="Player Targets" sort="37" />
+        <label id="332" label="" folder="Player Targets" sort="38" />
+        <label id="333" label="" folder="Player Targets" sort="39" />
+        <label id="334" label="" folder="Player Targets" sort="14" />
+        <label id="335" label="" folder="Player Targets" sort="15" />
+        <label id="336" label="" folder="Player Targets" sort="16" />
+        <label id="337" label="" folder="Player Targets" sort="17" />
+        <label id="338" label="" folder="Player Targets" sort="18" />
+        <label id="339" label="" folder="Player Targets" sort="19" />
+        <label id="340" label="" folder="Player Targets" sort="20" />
+        <label id="341" label="" folder="Player Targets" sort="21" />
+        <label id="342" label="" folder="Player Targets" sort="22" />
+        <label id="343" label="" folder="Player Targets" sort="23" />
+        <label id="344" label="" folder="Player Targets" sort="74" />
+        <label id="345" label="" folder="Player Targets" sort="75" />
+        <label id="407" label="" folder="GetRichQuick Responses" sort="6" />
+        <label id="401" label="" folder="Prompt Responses" sort="3" />
+        <label id="348" label="" folder="Prompt Responses" sort="58" />
+        <label id="349" label="" folder="Prompt Responses" sort="59" />
+        <label id="350" label="" folder="Prompt Responses" sort="60" />
+        <label id="393" label="" folder="Prompt Responses" sort="61" />
+        <label id="408" label="" folder="Spouse Responses" sort="7" />
+        <label id="435" label="" folder="Nagisa to left" sort="0" />
+        <label id="436" label="" folder="Nagisa to left" sort="0" />
+        <label id="437" label="" folder="Nagisa to left" sort="0" />
+        <label id="438" label="" folder="Nagisa to left" sort="0" />
+        <label id="439" label="" folder="Nagisa to left" sort="0" />
+        <label id="440" label="" folder="Nagisa to left" sort="0" />
+        <label id="441" label="" folder="Nagisa to left" sort="0" />
+        <label id="442" label="" folder="Nagisa to right" sort="0" />
+        <label id="443" label="" folder="Nagisa to right" sort="0" />
+        <label id="444" label="" folder="Nagisa to right" sort="0" />
+        <label id="445" label="" folder="Nagisa to right" sort="0" />
+        <label id="446" label="" folder="Nagisa to right" sort="0" />
+        <label id="447" label="" folder="Nagisa to right" sort="0" />
+        <label id="448" label="" folder="Nagisa to right" sort="0" />
+        <label id="449" label="" folder="Nagisa to right" sort="0" />
+        <label id="450" label="" folder="Nagisa to left" sort="0" />
+        <label id="451" label="" folder="Nagisa to left" sort="0" />
+        <label id="452" label="" folder="Nagisa to left" sort="0" />
+        <label id="453" label="" folder="Nagisa to left" sort="0" />
+        <label id="454" label="" folder="Nagisa to left" sort="0" />
+        <label id="455" label="" folder="Nagisa to left" sort="0" />
+        <label id="456" label="" folder="Nagisa to left" sort="0" />
+        <label id="457" label="" folder="Nagisa to right" sort="0" />
+        <label id="458" label="" folder="Nagisa to right" sort="0" />
+        <label id="459" label="" folder="Nagisa to right" sort="0" />
+        <label id="460" label="" folder="Nagisa to right" sort="0" />
+        <label id="461" label="" folder="Nagisa to right" sort="0" />
+        <label id="462" label="" folder="Nagisa to right" sort="0" />
+        <label id="463" label="" folder="Nagisa to right" sort="0" />
+        <label id="464" label="" folder="Nagisa to left" sort="0" />
+        <label id="465" label="" folder="Nagisa to left" sort="0" />
+        <label id="466" label="" folder="Nagisa to left" sort="0" />
+        <label id="467" label="" folder="Nagisa to left" sort="0" />
+        <label id="468" label="" folder="Nagisa to left" sort="0" />
+        <label id="469" label="" folder="Nagisa to left" sort="0" />
+        <label id="470" label="" folder="Nagisa to left" sort="0" />
+        <label id="471" label="" folder="Nagisa to left" sort="0" />
+        <label id="472" label="" folder="Nagisa to right" sort="0" />
+        <label id="473" label="" folder="Nagisa to right" sort="0" />
+        <label id="474" label="" folder="Nagisa to right" sort="0" />
+        <label id="475" label="" folder="Nagisa to right" sort="0" />
+        <label id="476" label="" folder="Nagisa to right" sort="0" />
+        <label id="477" label="" folder="Nagisa to right" sort="0" />
+        <label id="478" label="" folder="Nagisa to right" sort="0" />
+        <label id="479" label="" folder="Nagisa to right" sort="0" />
+        <label id="480" label="" folder="Nagisa to left" sort="0" />
+        <label id="481" label="" folder="Nagisa to left" sort="0" />
+        <label id="482" label="" folder="Nagisa to left" sort="0" />
+        <label id="483" label="" folder="Nagisa to left" sort="0" />
+        <label id="484" label="" folder="Nagisa to left" sort="0" />
+        <label id="485" label="" folder="Nagisa to left" sort="0" />
+        <label id="486" label="" folder="Nagisa to left" sort="0" />
+        <label id="487" label="" folder="Nagisa to right" sort="0" />
+        <label id="488" label="" folder="Nagisa to right" sort="0" />
+        <label id="489" label="" folder="Nagisa to right" sort="0" />
+        <label id="490" label="" folder="Nagisa to right" sort="0" />
+        <label id="491" label="" folder="Nagisa to right" sort="0" />
+        <label id="492" label="" folder="Nagisa to right" sort="0" />
+        <label id="493" label="" folder="Nagisa to right" sort="0" />
+        <label id="494" label="" folder="Nagisa to left" sort="0" />
+        <label id="495" label="" folder="Nagisa to left" sort="0" />
+        <label id="496" label="" folder="Nagisa to left" sort="0" />
+        <label id="497" label="" folder="Nagisa to left" sort="0" />
+        <label id="498" label="" folder="Nagisa to left" sort="0" />
+        <label id="499" label="" folder="Nagisa to left" sort="0" />
+        <label id="500" label="" folder="Nagisa to left" sort="0" />
+        <label id="501" label="" folder="Nagisa to right" sort="0" />
+        <label id="502" label="" folder="Nagisa to right" sort="0" />
+        <label id="503" label="" folder="Nagisa to right" sort="0" />
+        <label id="504" label="" folder="Nagisa to right" sort="0" />
+        <label id="505" label="" folder="Nagisa to right" sort="0" />
+        <label id="506" label="" folder="Nagisa to right" sort="0" />
+        <label id="507" label="" folder="Nagisa to right" sort="0" />
+        <label id="508" label="" folder="Nagisa to left" sort="0" />
+        <label id="509" label="" folder="Nagisa to left" sort="0" />
+        <label id="510" label="" folder="Nagisa to left" sort="0" />
+        <label id="511" label="" folder="Nagisa to left" sort="0" />
+        <label id="512" label="" folder="Nagisa to left" sort="0" />
+        <label id="513" label="" folder="Nagisa to left" sort="0" />
+        <label id="514" label="" folder="Nagisa to left" sort="0" />
+        <label id="515" label="" folder="Nagisa to left" sort="0" />
+        <label id="516" label="" folder="Nagisa to right" sort="0" />
+        <label id="517" label="" folder="Nagisa to right" sort="0" />
+        <label id="518" label="" folder="Nagisa to right" sort="0" />
+        <label id="519" label="" folder="Nagisa to right" sort="0" />
+        <label id="520" label="" folder="Nagisa to right" sort="0" />
+        <label id="521" label="" folder="Nagisa to right" sort="0" />
+        <label id="522" label="" folder="Nagisa to right" sort="0" />
+        <label id="523" label="" folder="Nagisa to right" sort="0" />
     </labels>
-    <nextId>370</nextId>
+    <nextId>541</nextId>
     <markers>
         <marker scope="Public" name="AimeeArmband1" />
         <marker scope="Public" name="AimeeCowboyOutfit1" />
@@ -452,17 +627,37 @@
         <marker scope="Public" name="AimeePanties3" />
         <marker scope="Public" name="AimeeStartMast" />
         <marker scope="Public" name="AimeeTopSkirt1" />
+        <marker scope="Public" name="AquaBoots1" />
+        <marker scope="Public" name="AquaKonosubaBoots2" />
+        <marker scope="Public" name="AquaKonosubaShoes1_resp" />
+        <marker scope="Public" name="ArueshalaeArmor1" />
+        <marker scope="Public" name="ArueshalaeArmor2" />
+        <marker scope="Public" name="ArueshalaeArmor3" />
         <marker scope="Public" name="ArueshalaeBoots1" />
+        <marker scope="Public" name="ArueshalaeBoots2" />
+        <marker scope="Public" name="ArueshalaeBoots3" />
+        <marker scope="Public" name="ArueshalaeShirt1_resp" />
+        <marker scope="Public" name="ArueshalaeShirt2resp" />
+        <marker scope="Public" name="ArueshalaeShirt3_resp" />
         <marker scope="Public" name="ArueshalaeShoes1_resp" />
         <marker scope="Public" name="ArueshalaeShoes2_resp" />
         <marker scope="Public" name="ArueshalaeShoes3_resp" />
+        <marker scope="Public" name="ArueshalaeSkirt1_resp" />
+        <marker scope="Public" name="ArueshalaeSkirt2_resp" />
+        <marker scope="Public" name="ArueshalaeSocks1_resp" />
+        <marker scope="Public" name="ArueshalaeSocks2_resp" />
+        <marker scope="Public" name="ArueshalaeUndershirt1" />
+        <marker scope="Public" name="ArueshalaeUndershirt2" />
+        <marker scope="Public" name="ArueshalaeUndershirt3" />
         <marker scope="Public" name="BarbaraBothLost" />
         <marker scope="Public" name="BarbaraCollar1" />
         <marker scope="Public" name="BarbaraCollar2" />
+        <marker scope="Public" name="BarbaraCollar3" />
         <marker scope="Public" name="BarbaraHat1" />
         <marker scope="Public" name="BarbaraHat2" />
         <marker scope="Public" name="BarbaraHat3" />
         <marker scope="Public" name="BarbaraMustMast" />
+        <marker scope="Public" name="BarbaraShirt1_resp" />
         <marker scope="Public" name="BarbaraShoes1" />
         <marker scope="Public" name="BarbaraShoes1_resp" />
         <marker scope="Public" name="BarbaraShoes2" />
@@ -471,6 +666,7 @@
         <marker scope="Public" name="BarbaraShoes3_resp" />
         <marker scope="Public" name="BarbaraSocks1_resp" />
         <marker scope="Public" name="BarbaraSocks2_resp" />
+        <marker scope="Public" name="BarbaraSocks3_resp" />
         <marker scope="Public" name="BarbaraWon" />
         <marker scope="Public" name="Buttpose01" />
         <marker scope="Public" name="Buttpose02" />
@@ -503,6 +699,22 @@
         <marker scope="Public" name="EmiLegs2" />
         <marker scope="Public" name="EmiLegs3" />
         <marker scope="Public" name="EmiRace_resp" />
+        <marker scope="Public" name="ErufudaGetRich_resp" />
+        <marker scope="Public" name="ErufudaJacket1" />
+        <marker scope="Public" name="ErufudaJacket2" />
+        <marker scope="Public" name="ErufudaShirt1a_resp" />
+        <marker scope="Public" name="ErufudaShirt1b_resp" />
+        <marker scope="Public" name="ErufudaShirt2a_resp" />
+        <marker scope="Public" name="ErufudaShirt2b_resp" />
+        <marker scope="Public" name="ErufudaShoes1_resp" />
+        <marker scope="Public" name="ErufudaShoes2_resp" />
+        <marker scope="Public" name="ErufudaSocks1a_resp" />
+        <marker scope="Public" name="ErufudaSocks1b_resp" />
+        <marker scope="Public" name="ErufudaSocks2a_resp" />
+        <marker scope="Public" name="ErufudaSocks2b_resp" />
+        <marker scope="Public" name="ErufudaSpouse_resp" />
+        <marker scope="Public" name="FelixShoes1" />
+        <marker scope="Public" name="FelixShoes2" />
         <marker scope="Public" name="FinaBoots1" />
         <marker scope="Public" name="FinaBoots2" />
         <marker scope="Public" name="FinaBoots3" />
@@ -644,12 +856,33 @@
         <marker scope="Public" name="JimShoes3_resp" />
         <marker scope="Public" name="JimSocks1_resp" />
         <marker scope="Public" name="JuraBabies_resp" />
+        <marker scope="Public" name="JuraBoots1" />
         <marker scope="Public" name="JuraRapier1" />
         <marker scope="Public" name="JuraRapier2" />
+        <marker scope="Public" name="JuraRapier3" />
         <marker scope="Public" name="JuraSeduction_resp" />
         <marker scope="Public" name="JuraSeductionF_resp" />
         <marker scope="Public" name="JuraSelected" />
         <marker scope="Public" name="JuraShoes1_resp" />
+        <marker scope="Public" name="JuraShoes2_resp" />
+        <marker scope="Public" name="JuraShoes3_resp" />
+        <marker scope="Public" name="KagamineRinshoes1_resp" />
+        <marker scope="Public" name="KagamineRinSleeves1" />
+        <marker scope="Public" name="KazBlazer1" />
+        <marker scope="Public" name="KazBlazer2" />
+        <marker scope="Public" name="KazBlazer3" />
+        <marker scope="Public" name="KazShirt1_resp" />
+        <marker scope="Public" name="KazShirt2_resp" />
+        <marker scope="Public" name="KazShirt3_resp" />
+        <marker scope="Public" name="KazShoes1" />
+        <marker scope="Public" name="KazShoes1_resp" />
+        <marker scope="Public" name="KazShoes2" />
+        <marker scope="Public" name="KazShoes2_resp" />
+        <marker scope="Public" name="KazShoes3" />
+        <marker scope="Public" name="KazShoes3_resp" />
+        <marker scope="Public" name="KazSocks1_resp" />
+        <marker scope="Public" name="KazSocks2_resp" />
+        <marker scope="Public" name="KazSocks3_resp" />
         <marker scope="Public" name="KoraGossip_resp" />
         <marker scope="Public" name="KoraLightningBolts1" />
         <marker scope="Public" name="KoraLightningBolts2" />
@@ -662,6 +895,19 @@
         <marker scope="Public" name="KumatoraFriend_resp" />
         <marker scope="Public" name="KumatoraNickname_resp" />
         <marker scope="Public" name="KumatoraShoes1_resp" />
+        <marker scope="Public" name="KyokoKirigiriBoots1" />
+        <marker scope="Public" name="KyokoKirigiriJacket1" />
+        <marker scope="Public" name="KyokoKirigiriJacket2" />
+        <marker scope="Public" name="KyokoKirigiriJacket3" />
+        <marker scope="Public" name="KyokoKirigiriShoes1_resp" />
+        <marker scope="Public" name="KyokoKirigiriShoes2_resp" />
+        <marker scope="Public" name="KyokoKirigiriShoes3_resp" />
+        <marker scope="Public" name="KyokoKirigiriTie1" />
+        <marker scope="Public" name="KyokoKirigiriTie2" />
+        <marker scope="Public" name="KyokoKirigiriTie3" />
+        <marker scope="Public" name="KyoukoToshinouSexyPose_resp" />
+        <marker scope="Public" name="KyoukoToshinouShoes1" />
+        <marker scope="Public" name="KyoukoToshinouShoes2" />
         <marker scope="Public" name="LArachelShawl1" />
         <marker scope="Public" name="LArachelShawl2" />
         <marker scope="Public" name="LArachelShawl3" />
@@ -679,6 +925,8 @@
         <marker scope="Public" name="LeonieJacket3" />
         <marker scope="Public" name="LeonieMercQ_resp" />
         <marker scope="Public" name="LeonieTitle_resp" />
+        <marker scope="Public" name="LeonSarashi1_resp" />
+        <marker scope="Public" name="LeonSarashi2_resp" />
         <marker scope="Public" name="LeonShirt1_resp" />
         <marker scope="Public" name="LeonShirt2_resp" />
         <marker scope="Public" name="LeonShirt3_resp" />
@@ -687,7 +935,14 @@
         <marker scope="Public" name="LeonShoes2" />
         <marker scope="Public" name="LeonShoes2_resp" />
         <marker scope="Public" name="LeonShoes3" />
+        <marker scope="Public" name="LeonShoes3_resp" />
+        <marker scope="Public" name="LeonSkirt1_resp" />
+        <marker scope="Public" name="LeonSkirt2_resp" />
+        <marker scope="Public" name="LeonSleeves1_resp" />
+        <marker scope="Public" name="LeonSleeves2_resp" />
+        <marker scope="Public" name="LeonSleeves3_resp" />
         <marker scope="Public" name="LeonSocks1_resp" />
+        <marker scope="Public" name="LeonSocks3_resp" />
         <marker scope="Public" name="LuxBracers1" />
         <marker scope="Public" name="LuxBracers2" />
         <marker scope="Public" name="LuxJapanIonia_resp" />
@@ -695,30 +950,57 @@
         <marker scope="Public" name="LuxShoes2_resp" />
         <marker scope="Public" name="LuxSocks1_resp" />
         <marker scope="Public" name="LuxSocks2_resp" />
+        <marker scope="Public" name="LysitheaExpiriences1_resp" />
+        <marker scope="Public" name="LysitheaJobs1_resp" />
+        <marker scope="Public" name="LysitheaNecklace1" />
+        <marker scope="Public" name="LysitheaNecklace2" />
+        <marker scope="Public" name="LysitheaSpells1_resp" />
+        <marker scope="Public" name="LysitheaZenis1_resp" />
+        <marker scope="Public" name="MagicalSempaiSocks1" />
         <marker scope="Public" name="MariNecktie1" />
         <marker scope="Public" name="MariNecktie2" />
         <marker scope="Public" name="MariNecktie3A" />
         <marker scope="Public" name="MariNecktie3B" />
+        <marker scope="Public" name="MarinetteBodysuit1" />
+        <marker scope="Public" name="MarinetteBodysuit2" />
+        <marker scope="Public" name="MarinetteBodysuit3" />
+        <marker scope="Public" name="MarinetteJacket1" />
+        <marker scope="Public" name="MarinetteJacket1Adrien" />
         <marker scope="Public" name="MarinetteShirt1_resp" />
         <marker scope="Public" name="MarinetteShirt2_resp" />
+        <marker scope="Public" name="MarinetteShirt3_resp" />
+        <marker scope="Public" name="MarinetteShoes1" />
         <marker scope="Public" name="MarinetteShoes1_resp" />
+        <marker scope="Public" name="MarinetteShoes2_resp" />
+        <marker scope="Public" name="MarinetteShoes3_resp" />
         <marker scope="Public" name="MarinetteSkirt1_resp" />
+        <marker scope="Public" name="MarinetteSkirt2_resp" />
         <marker scope="Public" name="MarinetteSkirt3_resp" />
+        <marker scope="Public" name="MarinetteSleeves1_resp" />
+        <marker scope="Public" name="MarinetteSleeves2_resp" />
+        <marker scope="Public" name="MarinetteSleeves3_resp" />
         <marker scope="Public" name="MarinetteSocks1_resp" />
+        <marker scope="Public" name="MarinetteSocks2_resp" />
+        <marker scope="Public" name="MarinetteSocks3_resp" />
         <marker scope="Public" name="MarinetteYoyo1" />
         <marker scope="Public" name="MarinetteYoyo2" />
         <marker scope="Public" name="MarinetteYoyo3" />
         <marker scope="Public" name="MariSelected_resp" />
         <marker scope="Public" name="MariShoes1" />
         <marker scope="Public" name="MariShoes1_resp" />
+        <marker scope="Public" name="MariShoes2" />
         <marker scope="Public" name="MariShoes2A_resp" />
         <marker scope="Public" name="MariShoes2B_resp" />
         <marker scope="Public" name="MariShoes3A_resp" />
         <marker scope="Public" name="MariShoes3B_resp" />
         <marker scope="Public" name="MariSocks1_resp" />
+        <marker scope="Public" name="MariSocks2_resp" />
+        <marker scope="Public" name="MaryShoes1_resp" />
         <marker scope="Public" name="MeiaArmor1" />
         <marker scope="Public" name="MeiaArmor2" />
         <marker scope="Public" name="MeiaArmor3" />
+        <marker scope="Public" name="MeiaBodysuit1" />
+        <marker scope="Public" name="MeiaBodysuit2" />
         <marker scope="Public" name="MeiaBothLost" />
         <marker scope="Public" name="MeiaEyepiece1" />
         <marker scope="Public" name="MeiaEyepiece2" />
@@ -729,6 +1011,7 @@
         <marker scope="Public" name="MeiaPilotRecruit2_resp" />
         <marker scope="Public" name="MeiaShirt1_resp" />
         <marker scope="Public" name="MeiaShirt2_resp" />
+        <marker scope="Public" name="MeiaShirt3_resp" />
         <marker scope="Public" name="MeiaShoes1_resp" />
         <marker scope="Public" name="MeiaShoes2_resp" />
         <marker scope="Public" name="MeiaShoes3_resp" />
@@ -743,21 +1026,48 @@
         <marker scope="Public" name="MikoAdornments1" />
         <marker scope="Public" name="MikoAdornments2" />
         <marker scope="Public" name="MikoAdornments3" />
+        <marker scope="Public" name="MikoAnal_resp" />
         <marker scope="Public" name="MikoBelts1" />
         <marker scope="Public" name="MikoBelts2" />
         <marker scope="Public" name="MikoBelts3" />
+        <marker scope="Public" name="MikoBisexual_resp" />
+        <marker scope="Public" name="MikoBloomers1_resp" />
+        <marker scope="Public" name="MikoBloomers2_resp" />
+        <marker scope="Public" name="MikoBloomers3_resp" />
+        <marker scope="Public" name="MikoBreasts" />
         <marker scope="Public" name="MikoCape1" />
         <marker scope="Public" name="MikoCape2" />
         <marker scope="Public" name="MikoCape3" />
+        <marker scope="Public" name="MikoDildo_resp" />
+        <marker scope="Public" name="MikoExperience_resp" />
+        <marker scope="Public" name="MikoFinished" />
+        <marker scope="Public" name="MikoFinished_resp" />
+        <marker scope="Public" name="MikoFlaunt_resp" />
+        <marker scope="Public" name="MikoFundoshi1" />
+        <marker scope="Public" name="MikoFundoshi2" />
+        <marker scope="Public" name="MikoFundoshi3" />
+        <marker scope="Public" name="MikoFuta" />
         <marker scope="Public" name="MikoGameStart" />
         <marker scope="Public" name="MikoGameStart_resp" />
         <marker scope="Public" name="MikoHeadphones1" />
         <marker scope="Public" name="MikoHeadphones2" />
         <marker scope="Public" name="MikoHeadphones3" />
+        <marker scope="Public" name="MikoMen" />
+        <marker scope="Public" name="MikoMustMast" />
+        <marker scope="Public" name="MikoMustMast_resp" />
+        <marker scope="Public" name="MikoOral_resp" />
+        <marker scope="Public" name="MikoPartnerMoney_resp" />
+        <marker scope="Public" name="MikoPeace_resp" />
+        <marker scope="Public" name="MikoRich" />
+        <marker scope="Public" name="MikoSarashi1" />
         <marker scope="Public" name="MikoSarashi1_resp" />
+        <marker scope="Public" name="MikoSarashi2" />
         <marker scope="Public" name="MikoSarashi2_resp" />
+        <marker scope="Public" name="MikoSarashi3" />
         <marker scope="Public" name="MikoSarashi3_resp" />
+        <marker scope="Public" name="MikoSeiga" />
         <marker scope="Public" name="MikoSelected" />
+        <marker scope="Public" name="MikoSex" />
         <marker scope="Public" name="MikoShirt1" />
         <marker scope="Public" name="MikoShirt1_resp" />
         <marker scope="Public" name="MikoShirt2" />
@@ -767,8 +1077,11 @@
         <marker scope="Public" name="MikoShoes1_resp" />
         <marker scope="Public" name="MikoShoes2_resp" />
         <marker scope="Public" name="MikoShoes3_resp" />
+        <marker scope="Public" name="MikoSkirt1" />
         <marker scope="Public" name="MikoSkirt1_resp" />
+        <marker scope="Public" name="MikoSkirt2" />
         <marker scope="Public" name="MikoSkirt2_resp" />
+        <marker scope="Public" name="MikoSkirt3" />
         <marker scope="Public" name="MikoSkirt3_resp" />
         <marker scope="Public" name="MikoSleeves1_resp" />
         <marker scope="Public" name="MikoSleeves2_resp" />
@@ -776,9 +1089,40 @@
         <marker scope="Public" name="MikoSocks1_resp" />
         <marker scope="Public" name="MikoSocks2_resp" />
         <marker scope="Public" name="MikoSocks3_resp" />
+        <marker scope="Public" name="MikoStartMast" />
+        <marker scope="Public" name="MikoStartMast_resp" />
+        <marker scope="Public" name="MikoTojikoBody" />
+        <marker scope="Public" name="MikoTojikoOrgy" />
+        <marker scope="Public" name="MikoTojikoRumors" />
+        <marker scope="Public" name="MikoTraining_resp" />
         <marker scope="Public" name="MikuSpouseQualities_resp" />
         <marker scope="Public" name="MikuTie1" />
         <marker scope="Public" name="MikuTie2" />
+        <marker scope="Public" name="MitamaArmor1" />
+        <marker scope="Public" name="MitamaArmor2" />
+        <marker scope="Public" name="MitamaArmor3" />
+        <marker scope="Public" name="MitamaArrival_resp" />
+        <marker scope="Public" name="MitamaCapelet1" />
+        <marker scope="Public" name="MitamaCapelet2" />
+        <marker scope="Public" name="MitamaCapelet3" />
+        <marker scope="Public" name="MitamaDress1" />
+        <marker scope="Public" name="MitamaDress2" />
+        <marker scope="Public" name="MitamaSandals1" />
+        <marker scope="Public" name="MitamaSandals2" />
+        <marker scope="Public" name="MitamaSandals3" />
+        <marker scope="Public" name="MitamaShirt1_resp" />
+        <marker scope="Public" name="MitamaShirt2_resp" />
+        <marker scope="Public" name="MitamaShirt3_resp" />
+        <marker scope="Public" name="MitamaShirt3a_resp" />
+        <marker scope="Public" name="MitamaShirt3b_resp" />
+        <marker scope="Public" name="MitamaShoes1_resp" />
+        <marker scope="Public" name="MitamaShoes2_resp" />
+        <marker scope="Public" name="MitamaShoes3_resp" />
+        <marker scope="Public" name="MitamaSkirt1_resp" />
+        <marker scope="Public" name="MitamaSkirt2_resp" />
+        <marker scope="Public" name="MitamaSocks1_resp" />
+        <marker scope="Public" name="MitamaSocks2_resp" />
+        <marker scope="Public" name="MitamaSocks3_resp" />
         <marker scope="Public" name="MonikaBothLost" />
         <marker scope="Public" name="MonikaMustMast" />
         <marker scope="Public" name="MonikaPlayerWon" />
@@ -786,6 +1130,10 @@
         <marker scope="Public" name="MonikaShoes1_resp" />
         <marker scope="Public" name="MonikaShoes2" />
         <marker scope="Public" name="MonikaShoes2_resp" />
+        <marker scope="Public" name="MonikaShoes3_resp" />
+        <marker scope="Public" name="MonikaShoes3Duel" />
+        <marker scope="Public" name="MonikaShoes3Erase" />
+        <marker scope="Public" name="MonikaShoes3Speech" />
         <marker scope="Public" name="MonikaWon" />
         <marker scope="Public" name="MoonShoes1_resp" />
         <marker scope="Private" name="MPlayerFantasy1" />
@@ -801,6 +1149,16 @@
         <marker scope="Public" name="MyriamHand1_resp" />
         <marker scope="Public" name="MyriamHand2_resp" />
         <marker scope="Public" name="MyriamTie1" />
+        <marker scope="Public" name="NadeshikoCook_resp" />
+        <marker scope="Public" name="NadeshikoPartner_resp" />
+        <marker scope="Public" name="NadeshikoStoryPrompt_LOLK_resp" />
+        <marker scope="Public" name="NadeshikoStoryPrompt_SA_resp" />
+        <marker scope="Public" name="NadeshikoStoryPrompt_sake_resp" />
+        <marker scope="Public" name="NadeshikoStoryPrompt_TD_resp" />
+        <marker scope="Public" name="NadeshikoStoryPrompt_WAHH_resp" />
+        <marker scope="Public" name="NadeshikoStoryPrompt_WBAWC_resp" />
+        <marker scope="Public" name="NadeshikoVestAndGloves1" />
+        <marker scope="Public" name="NadeshikoWhereAreWe_resp" />
         <marker scope="Public" name="NagamimiCravat1" />
         <marker scope="Public" name="NagamimiDragons_resp" />
         <marker scope="Public" name="NagamimiDrinks_resp" />
@@ -808,6 +1166,98 @@
         <marker scope="Public" name="NagamimiHomeworld_resp" />
         <marker scope="Public" name="NagamimiJob_resp" />
         <marker scope="Public" name="NagamimiSkills_resp" />
+        <marker scope="Public" name="nagisa_reimu_rn_r8" />
+        <marker scope="Public" name="NagisaAfterJacketLovemaking" />
+        <marker scope="Public" name="NagisaAfterJacketYoukai_resp" />
+        <marker scope="Public" name="NagisaBloomers1A_resp" />
+        <marker scope="Public" name="NagisaBloomers1B_resp" />
+        <marker scope="Public" name="NagisaBloomers2A_resp" />
+        <marker scope="Public" name="NagisaBloomers2B_resp" />
+        <marker scope="Public" name="NagisaBloomers3A_resp" />
+        <marker scope="Public" name="NagisaBloomers3B_resp" />
+        <marker scope="Public" name="NagisaBra1A" />
+        <marker scope="Public" name="NagisaBra1B" />
+        <marker scope="Public" name="NagisaBra2A" />
+        <marker scope="Public" name="NagisaBra2B" />
+        <marker scope="Public" name="NagisaBra3A" />
+        <marker scope="Public" name="NagisaBra3B" />
+        <marker scope="Public" name="NagisaChristmas_resp" />
+        <marker scope="Public" name="NagisaFood_resp" />
+        <marker scope="Public" name="NagisaJacket1A" />
+        <marker scope="Public" name="NagisaJacket1B" />
+        <marker scope="Public" name="NagisaJacket2A" />
+        <marker scope="Public" name="NagisaJacket2B" />
+        <marker scope="Public" name="NagisaJacket3A" />
+        <marker scope="Public" name="NagisaJacket3B" />
+        <marker scope="Public" name="NagisaOnlyChild_resp" />
+        <marker scope="Public" name="NagisaPanties1A" />
+        <marker scope="Public" name="NagisaPanties1B" />
+        <marker scope="Public" name="NagisaPanties2A" />
+        <marker scope="Public" name="NagisaPanties2B" />
+        <marker scope="Public" name="NagisaPanties3A" />
+        <marker scope="Public" name="NagisaPanties3B" />
+        <marker scope="Public" name="NagisaSake_resp" />
+        <marker scope="Public" name="NagisaSarashi1A_resp" />
+        <marker scope="Public" name="NagisaSarashi1B_resp" />
+        <marker scope="Public" name="NagisaSarashi2A_resp" />
+        <marker scope="Public" name="NagisaSarashi2B_resp" />
+        <marker scope="Public" name="NagisaSarashi3A_resp" />
+        <marker scope="Public" name="NagisaSarashi3B_resp" />
+        <marker scope="Public" name="NagisaShirt1A" />
+        <marker scope="Public" name="NagisaShirt1A_resp" />
+        <marker scope="Public" name="NagisaShirt1B" />
+        <marker scope="Public" name="NagisaShirt1B_resp" />
+        <marker scope="Public" name="NagisaShirt2A" />
+        <marker scope="Public" name="NagisaShirt2A_resp" />
+        <marker scope="Public" name="NagisaShirt2B" />
+        <marker scope="Public" name="NagisaShirt2B_resp" />
+        <marker scope="Public" name="NagisaShirt3A" />
+        <marker scope="Public" name="NagisaShirt3A_resp" />
+        <marker scope="Public" name="NagisaShirt3B" />
+        <marker scope="Public" name="NagisaShirt3B_resp" />
+        <marker scope="Public" name="NagisaShoes1A" />
+        <marker scope="Public" name="NagisaShoes1A_resp" />
+        <marker scope="Public" name="NagisaShoes1B" />
+        <marker scope="Public" name="NagisaShoes1B_resp" />
+        <marker scope="Public" name="NagisaShoes2A" />
+        <marker scope="Public" name="NagisaShoes2A_resp" />
+        <marker scope="Public" name="NagisaShoes2B" />
+        <marker scope="Public" name="NagisaShoes2B_resp" />
+        <marker scope="Public" name="NagisaShoes3A" />
+        <marker scope="Public" name="NagisaShoes3A_resp" />
+        <marker scope="Public" name="NagisaShoes3B" />
+        <marker scope="Public" name="NagisaShoes3B_resp" />
+        <marker scope="Public" name="NagisaSkirt1A" />
+        <marker scope="Public" name="NagisaSkirt1A_resp" />
+        <marker scope="Public" name="NagisaSkirt1B" />
+        <marker scope="Public" name="NagisaSkirt1B_resp" />
+        <marker scope="Public" name="NagisaSkirt2A" />
+        <marker scope="Public" name="NagisaSkirt2A_resp" />
+        <marker scope="Public" name="NagisaSkirt2B" />
+        <marker scope="Public" name="NagisaSkirt2B_resp" />
+        <marker scope="Public" name="NagisaSkirt3A" />
+        <marker scope="Public" name="NagisaSkirt3A_resp" />
+        <marker scope="Public" name="NagisaSkirt3B" />
+        <marker scope="Public" name="NagisaSkirt3B_resp" />
+        <marker scope="Public" name="NagisaSleeves1A_resp" />
+        <marker scope="Public" name="NagisaSleeves1B_resp" />
+        <marker scope="Public" name="NagisaSleeves2A_resp" />
+        <marker scope="Public" name="NagisaSleeves2B_resp" />
+        <marker scope="Public" name="NagisaSleeves3A_resp" />
+        <marker scope="Public" name="NagisaSleeves3B_resp" />
+        <marker scope="Public" name="NagisaSocks1A" />
+        <marker scope="Public" name="NagisaSocks1A_resp" />
+        <marker scope="Public" name="NagisaSocks1B" />
+        <marker scope="Public" name="NagisaSocks1B_resp" />
+        <marker scope="Public" name="NagisaSocks2A" />
+        <marker scope="Public" name="NagisaSocks2A_resp" />
+        <marker scope="Public" name="NagisaSocks2B" />
+        <marker scope="Public" name="NagisaSocks2B_resp" />
+        <marker scope="Public" name="NagisaSocks3A" />
+        <marker scope="Public" name="NagisaSocks3A_resp" />
+        <marker scope="Public" name="NagisaSocks3B" />
+        <marker scope="Public" name="NagisaSocks3B_resp" />
+        <marker scope="Public" name="NagisaSocks3B_resp_classroom" />
         <marker scope="Public" name="NamiBelt1" />
         <marker scope="Public" name="NamiBelt2" />
         <marker scope="Public" name="NamiBelt3" />
@@ -820,9 +1270,23 @@
         <marker scope="Public" name="NamiDangerousPlace_resp" />
         <marker scope="Public" name="NamiDreams_resp" />
         <marker scope="Public" name="NamiGetRichQuick_resp" />
+        <marker scope="Public" name="NamiJeans1" />
+        <marker scope="Public" name="NamiJeans2A" />
+        <marker scope="Public" name="NamiJeans2B" />
+        <marker scope="Public" name="NamiJeans3A" />
+        <marker scope="Public" name="NamiJeans3B" />
+        <marker scope="Public" name="NamiSandals1" />
+        <marker scope="Public" name="NamiSandals2" />
+        <marker scope="Public" name="NamiSandals2B" />
+        <marker scope="Public" name="NamiSandals3" />
+        <marker scope="Public" name="NamiShirt1_resp" />
+        <marker scope="Public" name="NamiShirt2_resp" />
         <marker scope="Public" name="NamiShoes1_resp" />
         <marker scope="Public" name="NamiShoes2_resp" />
         <marker scope="Public" name="NamiShoes3_resp" />
+        <marker scope="Public" name="NamiSocks1_resp" />
+        <marker scope="Public" name="NamiSocks2_resp" />
+        <marker scope="Public" name="NamiSocks3_resp" />
         <marker scope="Public" name="NamiSpouse_resp" />
         <marker scope="Public" name="NoelleArmor1" />
         <marker scope="Public" name="NoelleArmor2" />
@@ -909,11 +1373,22 @@
         <marker scope="Public" name="SayoriBlazer1" />
         <marker scope="Public" name="SayoriBlazer2" />
         <marker scope="Public" name="SayoriPanties3" />
+        <marker scope="Public" name="ShamikoNickname_resp" />
+        <marker scope="Public" name="ShamikoShoes1" />
+        <marker scope="Public" name="ShamikoShoes2" />
         <marker scope="Public" name="StockingAuction_resp" />
         <marker scope="Public" name="StockingMarisa_resp" />
         <marker scope="Public" name="StockingShoes1" />
         <marker scope="Public" name="StockingYoukai_resp" />
         <marker scope="Public" name="SumirekoLigma" />
+        <marker scope="Public" name="SuzuyaBlazer1" />
+        <marker scope="Public" name="SuzuyaBloodtypes_resp" />
+        <marker scope="Public" name="SuzuyaDatespots_resp" />
+        <marker scope="Public" name="SuzuyaHoroscopes_resp" />
+        <marker scope="Public" name="SuzuyaImageChange_resp" />
+        <marker scope="Public" name="SuzuyaPraise_resp" />
+        <marker scope="Public" name="SuzuyaWannaBuy_resp" />
+        <marker scope="Public" name="SweetheartDress1" />
         <marker scope="Public" name="SyrenneBath_resp" />
         <marker scope="Public" name="SyrenneDye_resp" />
         <marker scope="Public" name="SyrenneGetRichQuick_resp" />
@@ -937,6 +1412,8 @@
         <marker scope="Public" name="TomokoShoes2_resp" />
         <marker scope="Public" name="TomokoTie1" />
         <marker scope="Public" name="TomokoTie2" />
+        <marker scope="Public" name="TophBracelet1" />
+        <marker scope="Public" name="TophBracelet2" />
         <marker scope="Public" name="TrixieHat1" />
         <marker scope="Public" name="TrixieHat2" />
         <marker scope="Public" name="TurandotShoes1" />
@@ -948,6 +1425,11 @@
         <marker scope="Public" name="YoukaiDesire1">Talking about how youkai are beings of desire.</marker>
         <marker scope="Public" name="YoukaiDesire2" />
         <marker scope="Public" name="YoukaiExplanation">You may think Reimu's a bad guy for wanting to exterminate youkai, but that's all a facade. She secretly cares for the youkai of Gensokyo.</marker>
+        <marker scope="Public" name="YumekoBlazer1" />
+        <marker scope="Public" name="YumekoNewGame_resp" />
+        <marker scope="Public" name="YumekoShoes1" />
+        <marker scope="Public" name="YumekoShoes2" />
+        <marker scope="Public" name="YumekoShoes3" />
         <marker scope="Public" name="YunaVest1" />
         <marker scope="Public" name="YunoAwakening_resp" />
         <marker scope="Public" name="YunoCompressionGlove_resp" />

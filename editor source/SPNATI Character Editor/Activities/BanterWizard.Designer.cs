@@ -1,4 +1,4 @@
-﻿namespace SPNATI_Character_Editor.Activities
+namespace SPNATI_Character_Editor.Activities
 {
 	partial class BanterWizard
 	{
@@ -33,15 +33,30 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.cmdFilter = new Desktop.Skinning.SkinnedButton();
+            this.chkOneCharacter = new Desktop.Skinning.SkinnedCheckBox();
+            this.recOneCharacter = new Desktop.CommonControls.RecordField();
+            this.lblCharacterFiltering = new Desktop.Skinning.SkinnedLabel();
+            this.chkCharacterFiltering = new Desktop.Skinning.SkinnedCheckedListBox();
+            this.cmdApplyFilters = new Desktop.Skinning.SkinnedButton();
+            this.lblShowTargetedLines = new Desktop.Skinning.SkinnedLabel();
+            this.chkColorFilter = new Desktop.Skinning.SkinnedCheckBox();
+            this.cmdColorFilter = new System.Windows.Forms.Button();
+            this.chkLineFiltering = new Desktop.Skinning.SkinnedCheckedListBox();
+            this.cmdLoadBanter = new Desktop.Skinning.SkinnedButton();
+            this.cmdUpdateBanter = new Desktop.Skinning.SkinnedButton();
+            this.cmdSaveBanter = new Desktop.Skinning.SkinnedButton();
             this.lstCharacters = new Desktop.Skinning.SkinnedListBox();
             this.lblCharacters = new Desktop.Skinning.SkinnedLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.grpLines = new Desktop.Skinning.SkinnedGroupBox();
+            this.cmdColorCode = new System.Windows.Forms.Button();
             this.gridLines = new Desktop.Skinning.SkinnedDataGridView();
+            this.ColColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNewness = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColStage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColJump = new Desktop.Skinning.SkinnedDataGridViewButtonColumn();
             this.lblNoMatches = new Desktop.Skinning.SkinnedLabel();
             this.cmdCreateResponse = new Desktop.Skinning.SkinnedButton();
             this.lblCaseInfo = new Desktop.Skinning.SkinnedLabel();
@@ -59,7 +74,7 @@
             this.skinnedLabel2 = new Desktop.Skinning.SkinnedLabel();
             this.panelLoad = new Desktop.Skinning.SkinnedPanel();
             this.lblProgress = new Desktop.Skinning.SkinnedLabel();
-            this.progress = new Desktop.Skinning.SkinnedProgressBar();
+            this.progressBar = new Desktop.Skinning.SkinnedProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -88,7 +103,18 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.cmdFilter);
+            this.splitContainer1.Panel1.Controls.Add(this.chkOneCharacter);
+            this.splitContainer1.Panel1.Controls.Add(this.recOneCharacter);
+            this.splitContainer1.Panel1.Controls.Add(this.lblCharacterFiltering);
+            this.splitContainer1.Panel1.Controls.Add(this.chkCharacterFiltering);
+            this.splitContainer1.Panel1.Controls.Add(this.cmdApplyFilters);
+            this.splitContainer1.Panel1.Controls.Add(this.lblShowTargetedLines);
+            this.splitContainer1.Panel1.Controls.Add(this.chkColorFilter);
+            this.splitContainer1.Panel1.Controls.Add(this.cmdColorFilter);
+            this.splitContainer1.Panel1.Controls.Add(this.chkLineFiltering);
+            this.splitContainer1.Panel1.Controls.Add(this.cmdLoadBanter);
+            this.splitContainer1.Panel1.Controls.Add(this.cmdUpdateBanter);
+            this.splitContainer1.Panel1.Controls.Add(this.cmdSaveBanter);
             this.splitContainer1.Panel1.Controls.Add(this.lstCharacters);
             this.splitContainer1.Panel1.Controls.Add(this.lblCharacters);
             // 
@@ -100,21 +126,185 @@
             this.splitContainer1.SplitterDistance = 206;
             this.splitContainer1.TabIndex = 1;
             // 
-            // cmdFilter
+            // chkOneCharacter
             // 
-            this.cmdFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.chkOneCharacter.AutoSize = true;
+            this.chkOneCharacter.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.chkOneCharacter.Location = new System.Drawing.Point(12, 523);
+            this.chkOneCharacter.Name = "chkOneCharacter";
+            this.chkOneCharacter.Size = new System.Drawing.Size(71, 17);
+            this.chkOneCharacter.TabIndex = 17;
+            this.chkOneCharacter.Text = "Filter to:";
+            this.chkOneCharacter.UseVisualStyleBackColor = true;
+            this.chkOneCharacter.CheckedChanged += new System.EventHandler(this.chkOneCharacter_CheckedChanged);
+            // 
+            // recOneCharacter
+            // 
+            this.recOneCharacter.AllowCreate = false;
+            this.recOneCharacter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdFilter.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
-            this.cmdFilter.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
-            this.cmdFilter.Flat = false;
-            this.cmdFilter.Location = new System.Drawing.Point(12, 25);
-            this.cmdFilter.Name = "cmdFilter";
-            this.cmdFilter.Size = new System.Drawing.Size(184, 23);
-            this.cmdFilter.TabIndex = 5;
-            this.cmdFilter.Text = "Filter Targets";
-            this.toolTip1.SetToolTip(this.cmdFilter, "Only display characters who actually target yours. Very slow!");
-            this.cmdFilter.UseVisualStyleBackColor = true;
-            this.cmdFilter.Click += new System.EventHandler(this.cmdFilter_Click);
+            this.recOneCharacter.Location = new System.Drawing.Point(89, 520);
+            this.recOneCharacter.Name = "recOneCharacter";
+            this.recOneCharacter.PlaceholderText = null;
+            this.recOneCharacter.Record = null;
+            this.recOneCharacter.RecordContext = null;
+            this.recOneCharacter.RecordFilter = null;
+            this.recOneCharacter.RecordKey = null;
+            this.recOneCharacter.RecordType = null;
+            this.recOneCharacter.Size = new System.Drawing.Size(107, 20);
+            this.recOneCharacter.TabIndex = 16;
+            this.recOneCharacter.UseAutoComplete = false;
+            this.recOneCharacter.RecordChanged += new System.EventHandler<Desktop.CommonControls.RecordEventArgs>(this.recOneCharacter_RecordChanged);
+            // 
+            // lblCharacterFiltering
+            // 
+            this.lblCharacterFiltering.AutoSize = true;
+            this.lblCharacterFiltering.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblCharacterFiltering.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblCharacterFiltering.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblCharacterFiltering.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.lblCharacterFiltering.Location = new System.Drawing.Point(12, 388);
+            this.lblCharacterFiltering.Name = "lblCharacterFiltering";
+            this.lblCharacterFiltering.Size = new System.Drawing.Size(92, 13);
+            this.lblCharacterFiltering.TabIndex = 15;
+            this.lblCharacterFiltering.Text = "Character filtering:";
+            // 
+            // chkCharacterFiltering
+            // 
+            this.chkCharacterFiltering.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkCharacterFiltering.BackColor = System.Drawing.Color.White;
+            this.chkCharacterFiltering.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.chkCharacterFiltering.ForeColor = System.Drawing.Color.Black;
+            this.chkCharacterFiltering.FormattingEnabled = true;
+            this.chkCharacterFiltering.Items.AddRange(new object[] {
+            "Main Roster",
+            "Testing",
+            "Offline",
+            "Incomplete",
+            "Event",
+            "Duplicate",
+            "Unlisted"});
+            this.chkCharacterFiltering.Location = new System.Drawing.Point(12, 405);
+            this.chkCharacterFiltering.Name = "chkCharacterFiltering";
+            this.chkCharacterFiltering.Size = new System.Drawing.Size(184, 109);
+            this.chkCharacterFiltering.TabIndex = 14;
+            this.chkCharacterFiltering.SelectedIndexChanged += new System.EventHandler(this.chkCharacterFiltering_SelectedIndexChanged);
+            // 
+            // cmdApplyFilters
+            // 
+            this.cmdApplyFilters.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdApplyFilters.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.cmdApplyFilters.Flat = false;
+            this.cmdApplyFilters.Location = new System.Drawing.Point(12, 546);
+            this.cmdApplyFilters.Name = "cmdApplyFilters";
+            this.cmdApplyFilters.Size = new System.Drawing.Size(141, 23);
+            this.cmdApplyFilters.TabIndex = 13;
+            this.cmdApplyFilters.Text = "Apply filters";
+            this.cmdApplyFilters.UseVisualStyleBackColor = true;
+            this.cmdApplyFilters.Click += new System.EventHandler(this.cmdApplyFilters_Click);
+            // 
+            // lblShowTargetedLines
+            // 
+            this.lblShowTargetedLines.AutoSize = true;
+            this.lblShowTargetedLines.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblShowTargetedLines.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblShowTargetedLines.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblShowTargetedLines.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.lblShowTargetedLines.Location = new System.Drawing.Point(9, 277);
+            this.lblShowTargetedLines.Name = "lblShowTargetedLines";
+            this.lblShowTargetedLines.Size = new System.Drawing.Size(103, 13);
+            this.lblShowTargetedLines.TabIndex = 12;
+            this.lblShowTargetedLines.Text = "Show targeted lines:";
+            // 
+            // chkColorFilter
+            // 
+            this.chkColorFilter.AutoSize = true;
+            this.chkColorFilter.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.chkColorFilter.Location = new System.Drawing.Point(12, 366);
+            this.chkColorFilter.Name = "chkColorFilter";
+            this.chkColorFilter.Size = new System.Drawing.Size(90, 17);
+            this.chkColorFilter.TabIndex = 11;
+            this.chkColorFilter.Text = "Filter to Color:";
+            this.chkColorFilter.UseVisualStyleBackColor = true;
+            this.chkColorFilter.CheckedChanged += new System.EventHandler(this.chkColorFilter_CheckedChanged);
+            // 
+            // cmdColorFilter
+            // 
+            this.cmdColorFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdColorFilter.Location = new System.Drawing.Point(108, 362);
+            this.cmdColorFilter.Name = "cmdColorFilter";
+            this.cmdColorFilter.Size = new System.Drawing.Size(88, 23);
+            this.cmdColorFilter.TabIndex = 10;
+            this.cmdColorFilter.UseVisualStyleBackColor = true;
+            this.cmdColorFilter.Click += new System.EventHandler(this.cmdColorFilter_Click);
+            // 
+            // chkLineFiltering
+            // 
+            this.chkLineFiltering.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkLineFiltering.BackColor = System.Drawing.Color.White;
+            this.chkLineFiltering.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.chkLineFiltering.ForeColor = System.Drawing.Color.Black;
+            this.chkLineFiltering.FormattingEnabled = true;
+            this.chkLineFiltering.Items.AddRange(new object[] {
+            "New",
+            "modified Text",
+            "modified Conditions",
+            "Old"});
+            this.chkLineFiltering.Location = new System.Drawing.Point(12, 293);
+            this.chkLineFiltering.Name = "chkLineFiltering";
+            this.chkLineFiltering.Size = new System.Drawing.Size(184, 64);
+            this.chkLineFiltering.TabIndex = 9;
+            this.chkLineFiltering.SelectedIndexChanged += new System.EventHandler(this.chkLineFiltering_SelectedIndexChanged);
+            // 
+            // cmdLoadBanter
+            // 
+            this.cmdLoadBanter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdLoadBanter.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdLoadBanter.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
+            this.cmdLoadBanter.Flat = false;
+            this.cmdLoadBanter.Location = new System.Drawing.Point(12, 585);
+            this.cmdLoadBanter.Name = "cmdLoadBanter";
+            this.cmdLoadBanter.Size = new System.Drawing.Size(141, 23);
+            this.cmdLoadBanter.TabIndex = 8;
+            this.cmdLoadBanter.Text = "Load";
+            this.toolTip1.SetToolTip(this.cmdLoadBanter, "Load banter data from a file.\nNote: This will not load characters whose data you " +
+        "have never generated/updated and saved.");
+            this.cmdLoadBanter.UseVisualStyleBackColor = true;
+            this.cmdLoadBanter.Click += new System.EventHandler(this.cmdLoadBanter_Click);
+            // 
+            // cmdUpdateBanter
+            // 
+            this.cmdUpdateBanter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdUpdateBanter.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdUpdateBanter.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
+            this.cmdUpdateBanter.Flat = false;
+            this.cmdUpdateBanter.Location = new System.Drawing.Point(12, 615);
+            this.cmdUpdateBanter.Name = "cmdUpdateBanter";
+            this.cmdUpdateBanter.Size = new System.Drawing.Size(141, 23);
+            this.cmdUpdateBanter.TabIndex = 7;
+            this.cmdUpdateBanter.Text = "Generate";
+            this.toolTip1.SetToolTip(this.cmdUpdateBanter, "Generate banter data. This may take a long time.");
+            this.cmdUpdateBanter.UseVisualStyleBackColor = true;
+            this.cmdUpdateBanter.Click += new System.EventHandler(this.cmdUpdateBanter_Click);
+            // 
+            // cmdSaveBanter
+            // 
+            this.cmdSaveBanter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdSaveBanter.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdSaveBanter.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.cmdSaveBanter.Flat = false;
+            this.cmdSaveBanter.Location = new System.Drawing.Point(12, 645);
+            this.cmdSaveBanter.Name = "cmdSaveBanter";
+            this.cmdSaveBanter.Size = new System.Drawing.Size(141, 23);
+            this.cmdSaveBanter.TabIndex = 6;
+            this.cmdSaveBanter.Text = "Save all";
+            this.toolTip1.SetToolTip(this.cmdSaveBanter, "Save banter data to a file.\nBanter data are also saved when you save the characte" +
+        "r.");
+            this.cmdSaveBanter.UseVisualStyleBackColor = true;
+            this.cmdSaveBanter.Click += new System.EventHandler(this.cmdSaveBanter_Click);
             // 
             // lstCharacters
             // 
@@ -124,9 +314,9 @@
             this.lstCharacters.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lstCharacters.ForeColor = System.Drawing.Color.Black;
             this.lstCharacters.FormattingEnabled = true;
-            this.lstCharacters.Location = new System.Drawing.Point(12, 51);
+            this.lstCharacters.Location = new System.Drawing.Point(12, 30);
             this.lstCharacters.Name = "lstCharacters";
-            this.lstCharacters.Size = new System.Drawing.Size(184, 303);
+            this.lstCharacters.Size = new System.Drawing.Size(184, 238);
             this.lstCharacters.TabIndex = 1;
             this.lstCharacters.SelectedIndexChanged += new System.EventHandler(this.lstCharacters_SelectedIndexChanged);
             // 
@@ -165,6 +355,7 @@
             // grpLines
             // 
             this.grpLines.BackColor = System.Drawing.Color.White;
+            this.grpLines.Controls.Add(this.cmdColorCode);
             this.grpLines.Controls.Add(this.gridLines);
             this.grpLines.Controls.Add(this.lblNoMatches);
             this.grpLines.Controls.Add(this.cmdCreateResponse);
@@ -179,6 +370,17 @@
             this.grpLines.TabIndex = 5;
             this.grpLines.TabStop = false;
             this.grpLines.Text = "Lines";
+            // 
+            // cmdColorCode
+            // 
+            this.cmdColorCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdColorCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdColorCode.Location = new System.Drawing.Point(10, 243);
+            this.cmdColorCode.Name = "cmdColorCode";
+            this.cmdColorCode.Size = new System.Drawing.Size(75, 23);
+            this.cmdColorCode.TabIndex = 5;
+            this.cmdColorCode.UseVisualStyleBackColor = true;
+            this.cmdColorCode.Click += new System.EventHandler(this.cmdColorCode_Click);
             // 
             // gridLines
             // 
@@ -199,9 +401,12 @@
             this.gridLines.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridLines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridLines.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColColor,
+            this.ColNewness,
             this.ColText,
             this.ColStage,
-            this.ColCase});
+            this.ColCase,
+            this.ColJump});
             this.gridLines.Data = null;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -229,7 +434,27 @@
             this.gridLines.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridLines.Size = new System.Drawing.Size(939, 212);
             this.gridLines.TabIndex = 0;
+            this.gridLines.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLines_CellContentClick);
             this.gridLines.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLines_CellEnter);
+            this.gridLines.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.gridLines_CellPainting);
+            // 
+            // ColColor
+            // 
+            this.ColColor.HeaderText = "";
+            this.ColColor.Name = "ColColor";
+            this.ColColor.ReadOnly = true;
+            this.ColColor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColColor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColColor.ToolTipText = "Color selector";
+            this.ColColor.Width = 20;
+            // 
+            // ColNewness
+            // 
+            this.ColNewness.HeaderText = "";
+            this.ColNewness.Name = "ColNewness";
+            this.ColNewness.ReadOnly = true;
+            this.ColNewness.ToolTipText = "(N)ew, modified (T)ext, modified (C)onditions, modified (B)oth";
+            this.ColNewness.Width = 20;
             // 
             // ColText
             // 
@@ -252,6 +477,16 @@
             this.ColCase.ReadOnly = true;
             this.ColCase.Width = 150;
             // 
+            // ColJump
+            // 
+            this.ColJump.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.ColJump.Flat = false;
+            this.ColJump.HeaderText = "";
+            this.ColJump.Name = "ColJump";
+            this.ColJump.ReadOnly = true;
+            this.ColJump.ToolTipText = "Jump to the Dialogue tab";
+            this.ColJump.Width = 21;
+            // 
             // lblNoMatches
             // 
             this.lblNoMatches.AutoSize = true;
@@ -272,11 +507,13 @@
             this.cmdCreateResponse.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.cmdCreateResponse.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
             this.cmdCreateResponse.Flat = false;
-            this.cmdCreateResponse.Location = new System.Drawing.Point(804, 243);
+            this.cmdCreateResponse.Location = new System.Drawing.Point(803, 243);
             this.cmdCreateResponse.Name = "cmdCreateResponse";
             this.cmdCreateResponse.Size = new System.Drawing.Size(141, 23);
             this.cmdCreateResponse.TabIndex = 0;
             this.cmdCreateResponse.Text = "Create Response";
+            this.toolTip1.SetToolTip(this.cmdCreateResponse, "Responding via this button is possible but not recommended.\nUsually, it is better" +
+        " to use the arrow buttons above and respond from the Dialogue tab.");
             this.cmdCreateResponse.UseVisualStyleBackColor = true;
             this.cmdCreateResponse.Click += new System.EventHandler(this.cmdCreateResponse_Click);
             // 
@@ -308,7 +545,7 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.grpResponse);
             this.splitContainer3.Size = new System.Drawing.Size(951, 398);
-            this.splitContainer3.SplitterDistance = 440;
+            this.splitContainer3.SplitterDistance = 438;
             this.splitContainer3.TabIndex = 6;
             // 
             // grpBaseLine
@@ -323,7 +560,7 @@
             this.grpBaseLine.Name = "grpBaseLine";
             this.grpBaseLine.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.grpBaseLine.ShowIndicatorBar = false;
-            this.grpBaseLine.Size = new System.Drawing.Size(440, 398);
+            this.grpBaseLine.Size = new System.Drawing.Size(438, 398);
             this.grpBaseLine.TabIndex = 8;
             this.grpBaseLine.TabStop = false;
             this.grpBaseLine.Text = "Response";
@@ -340,7 +577,7 @@
             this.lstBasicLines.IntegralHeight = false;
             this.lstBasicLines.Location = new System.Drawing.Point(6, 52);
             this.lstBasicLines.Name = "lstBasicLines";
-            this.lstBasicLines.Size = new System.Drawing.Size(427, 342);
+            this.lstBasicLines.Size = new System.Drawing.Size(425, 342);
             this.lstBasicLines.TabIndex = 7;
             // 
             // skinnedLabel1
@@ -353,7 +590,7 @@
             this.skinnedLabel1.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
             this.skinnedLabel1.Location = new System.Drawing.Point(7, 23);
             this.skinnedLabel1.Name = "skinnedLabel1";
-            this.skinnedLabel1.Size = new System.Drawing.Size(426, 35);
+            this.skinnedLabel1.Size = new System.Drawing.Size(424, 35);
             this.skinnedLabel1.TabIndex = 8;
             this.skinnedLabel1.Text = "Disclaimer: These are estimates. Actual results in game may vary depending on the" +
     " game state.";
@@ -366,7 +603,7 @@
             this.lblBasicText.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblBasicText.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
             this.lblBasicText.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
-            this.lblBasicText.Location = new System.Drawing.Point(174, 0);
+            this.lblBasicText.Location = new System.Drawing.Point(172, 0);
             this.lblBasicText.Name = "lblBasicText";
             this.lblBasicText.Size = new System.Drawing.Size(0, 13);
             this.lblBasicText.TabIndex = 6;
@@ -387,7 +624,7 @@
             this.grpResponse.Name = "grpResponse";
             this.grpResponse.PanelType = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.grpResponse.ShowIndicatorBar = false;
-            this.grpResponse.Size = new System.Drawing.Size(507, 398);
+            this.grpResponse.Size = new System.Drawing.Size(509, 398);
             this.grpResponse.TabIndex = 6;
             this.grpResponse.TabStop = false;
             this.grpResponse.Text = "Write Response";
@@ -399,7 +636,7 @@
             this.cmdDiscard.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
             this.cmdDiscard.Flat = true;
             this.cmdDiscard.ForeColor = System.Drawing.Color.Blue;
-            this.cmdDiscard.Location = new System.Drawing.Point(359, 369);
+            this.cmdDiscard.Location = new System.Drawing.Point(361, 369);
             this.cmdDiscard.Name = "cmdDiscard";
             this.cmdDiscard.Size = new System.Drawing.Size(141, 23);
             this.cmdDiscard.TabIndex = 13;
@@ -413,7 +650,7 @@
             this.cmdAccept.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.cmdAccept.FieldType = Desktop.Skinning.SkinnedFieldType.Secondary;
             this.cmdAccept.Flat = false;
-            this.cmdAccept.Location = new System.Drawing.Point(212, 369);
+            this.cmdAccept.Location = new System.Drawing.Point(214, 369);
             this.cmdAccept.Name = "cmdAccept";
             this.cmdAccept.Size = new System.Drawing.Size(141, 23);
             this.cmdAccept.TabIndex = 12;
@@ -427,7 +664,7 @@
             this.cmdJump.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
             this.cmdJump.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
             this.cmdJump.Flat = false;
-            this.cmdJump.Location = new System.Drawing.Point(65, 369);
+            this.cmdJump.Location = new System.Drawing.Point(67, 369);
             this.cmdJump.Name = "cmdJump";
             this.cmdJump.Size = new System.Drawing.Size(141, 23);
             this.cmdJump.TabIndex = 11;
@@ -443,7 +680,7 @@
             this.gridResponse.Location = new System.Drawing.Point(9, 52);
             this.gridResponse.Name = "gridResponse";
             this.gridResponse.ReadOnly = false;
-            this.gridResponse.Size = new System.Drawing.Size(492, 311);
+            this.gridResponse.Size = new System.Drawing.Size(494, 311);
             this.gridResponse.TabIndex = 0;
             this.gridResponse.HighlightRow += new System.EventHandler<int>(this.gridResponse_HighlightRow);
             // 
@@ -454,7 +691,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ctlResponse.Location = new System.Drawing.Point(9, 52);
             this.ctlResponse.Name = "ctlResponse";
-            this.ctlResponse.Size = new System.Drawing.Size(492, 311);
+            this.ctlResponse.Size = new System.Drawing.Size(494, 311);
             this.ctlResponse.TabIndex = 10;
             this.ctlResponse.HighlightRow += new System.EventHandler<int>(this.gridResponse_HighlightRow);
             // 
@@ -468,7 +705,7 @@
             this.skinnedLabel2.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
             this.skinnedLabel2.Location = new System.Drawing.Point(6, 23);
             this.skinnedLabel2.Name = "skinnedLabel2";
-            this.skinnedLabel2.Size = new System.Drawing.Size(495, 26);
+            this.skinnedLabel2.Size = new System.Drawing.Size(497, 26);
             this.skinnedLabel2.TabIndex = 9;
             this.skinnedLabel2.Text = "These play at the same time as the selected line above, so be careful not to over" +
     "write the line that is giving context to what the opponent is saying!";
@@ -476,7 +713,7 @@
             // panelLoad
             // 
             this.panelLoad.Controls.Add(this.lblProgress);
-            this.panelLoad.Controls.Add(this.progress);
+            this.panelLoad.Controls.Add(this.progressBar);
             this.panelLoad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLoad.Location = new System.Drawing.Point(0, 0);
             this.panelLoad.Name = "panelLoad";
@@ -496,16 +733,15 @@
             this.lblProgress.Name = "lblProgress";
             this.lblProgress.Size = new System.Drawing.Size(784, 23);
             this.lblProgress.TabIndex = 1;
-            this.lblProgress.Text = "Scanning ...";
             this.lblProgress.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // progress
+            // progressBar
             // 
-            this.progress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.progress.Location = new System.Drawing.Point(80, 322);
-            this.progress.Name = "progress";
-            this.progress.Size = new System.Drawing.Size(784, 23);
-            this.progress.TabIndex = 0;
+            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar.Location = new System.Drawing.Point(80, 322);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(784, 23);
+            this.progressBar.TabIndex = 0;
             // 
             // BanterWizard
             // 
@@ -544,31 +780,46 @@
 		private System.Windows.Forms.SplitContainer splitContainer1;
 		private Desktop.Skinning.SkinnedListBox lstCharacters;
 		private Desktop.Skinning.SkinnedLabel lblCharacters;
-		private System.Windows.Forms.SplitContainer splitContainer2;
-		private Desktop.Skinning.SkinnedLabel lblCaseInfo;
-		private Desktop.Skinning.SkinnedButton cmdCreateResponse;
-		private Desktop.Skinning.SkinnedDataGridView gridLines;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ColText;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ColStage;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ColCase;
-		private System.Windows.Forms.SplitContainer splitContainer3;
-		private Desktop.Skinning.SkinnedLabel lblBasicText;
-		private Desktop.Skinning.SkinnedListBox lstBasicLines;
-		private Desktop.Skinning.SkinnedLabel lblNoMatches;
-		private Desktop.Skinning.SkinnedButton cmdFilter;
 		private System.Windows.Forms.ToolTip toolTip1;
-		private Desktop.Skinning.SkinnedGroupBox grpLines;
-		private Desktop.Skinning.SkinnedGroupBox grpBaseLine;
-		private Desktop.Skinning.SkinnedLabel skinnedLabel1;
-		private Desktop.Skinning.SkinnedGroupBox grpResponse;
-		private Desktop.Skinning.SkinnedLabel skinnedLabel2;
-		private Controls.CaseControl ctlResponse;
-		private Desktop.Skinning.SkinnedButton cmdDiscard;
-		private Desktop.Skinning.SkinnedButton cmdAccept;
-		private Desktop.Skinning.SkinnedButton cmdJump;
-		private Controls.DialogueGrid gridResponse;
 		private Desktop.Skinning.SkinnedPanel panelLoad;
-		private Desktop.Skinning.SkinnedProgressBar progress;
+		private Desktop.Skinning.SkinnedProgressBar progressBar;
 		private Desktop.Skinning.SkinnedLabel lblProgress;
-	}
+        private Desktop.Skinning.SkinnedButton cmdUpdateBanter;
+        private Desktop.Skinning.SkinnedButton cmdSaveBanter;
+        private Desktop.Skinning.SkinnedButton cmdLoadBanter;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private Desktop.Skinning.SkinnedGroupBox grpLines;
+        private System.Windows.Forms.Button cmdColorCode;
+        private Desktop.Skinning.SkinnedDataGridView gridLines;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColColor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNewness;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColText;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColStage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCase;
+        private Desktop.Skinning.SkinnedDataGridViewButtonColumn ColJump;
+        private Desktop.Skinning.SkinnedLabel lblNoMatches;
+        private Desktop.Skinning.SkinnedButton cmdCreateResponse;
+        private Desktop.Skinning.SkinnedLabel lblCaseInfo;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private Desktop.Skinning.SkinnedGroupBox grpBaseLine;
+        private Desktop.Skinning.SkinnedListBox lstBasicLines;
+        private Desktop.Skinning.SkinnedLabel skinnedLabel1;
+        private Desktop.Skinning.SkinnedLabel lblBasicText;
+        private Desktop.Skinning.SkinnedGroupBox grpResponse;
+        private Desktop.Skinning.SkinnedButton cmdDiscard;
+        private Desktop.Skinning.SkinnedButton cmdAccept;
+        private Desktop.Skinning.SkinnedButton cmdJump;
+        private Controls.DialogueGrid gridResponse;
+        private Controls.CaseControl ctlResponse;
+        private Desktop.Skinning.SkinnedLabel skinnedLabel2;
+        private Desktop.Skinning.SkinnedLabel lblShowTargetedLines;
+        private Desktop.Skinning.SkinnedCheckBox chkColorFilter;
+        private System.Windows.Forms.Button cmdColorFilter;
+        private Desktop.Skinning.SkinnedCheckedListBox chkLineFiltering;
+        private Desktop.Skinning.SkinnedButton cmdApplyFilters;
+        private Desktop.Skinning.SkinnedLabel lblCharacterFiltering;
+        private Desktop.Skinning.SkinnedCheckedListBox chkCharacterFiltering;
+        private Desktop.Skinning.SkinnedCheckBox chkOneCharacter;
+        private Desktop.CommonControls.RecordField recOneCharacter;
+    }
 }

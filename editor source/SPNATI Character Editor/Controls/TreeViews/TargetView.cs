@@ -206,14 +206,19 @@ namespace SPNATI_Character_Editor.Controls
 				}
 				if (!string.IsNullOrEmpty(target))
 				{
+					TargetCondition cond = new TargetCondition();
+
 					if (def.HasTarget)
 					{
-						theCase.Target = target;
+						cond.Role = "target";
 					}
 					else
 					{
-						theCase.AlsoPlaying = target;
+						cond.Role = "opp";
 					}
+
+					cond.Character = target;
+					theCase.Conditions.Add(cond);
 				}
 			}
 		}
@@ -272,7 +277,10 @@ namespace SPNATI_Character_Editor.Controls
 					}
 					else
 					{
-						c.AlsoPlaying = groupTarget;
+						TargetCondition cond = new TargetCondition();
+						cond.Role = "other";
+						cond.Character = groupTarget;
+						c.Conditions.Add(cond);
 					}
 				}
 				return c;
@@ -288,21 +296,7 @@ namespace SPNATI_Character_Editor.Controls
 		/// <param name="target"></param>
 		private void CopyTarget(Case source, Case dest, string target)
 		{
-			if (source.Target == target)
-			{
-				dest.Target = target;
-				dest.TargetStage = source.TargetStage;
-			}
-			if (source.AlsoPlaying == target)
-			{
-				dest.AlsoPlaying = target;
-				dest.AlsoPlayingStage = source.AlsoPlayingStage;
-			}
 			string id = CharacterDatabase.GetId(target);
-			if (source.Filter == id)
-			{
-				dest.Filter = id;
-			}
 			foreach (TargetCondition cond in source.Conditions)
 			{
 				if (cond.Character == target)

@@ -3,16 +3,17 @@
   <group label="Hair Color">
     <tag display="Black" description="The character has dark hair">black_hair</tag>
     <tag display="Blonde" description="The character has yellow or blonde hair">blonde</tag>
+    <tag display="Blue" paired="exotic_hair" description="The character has blue, aqua, or cyan hair">blue_hair</tag>
     <tag display="Brown" description="The character has brown hair">brunette</tag>
-    <tag display="Orange" description="The character has orange hair, whether natural or dyed">ginger</tag>
+    <tag display="Ginger / Orange" description="The character has orange hair, whether natural or dyed">ginger</tag>
+    <tag display="Gray" description="The character has gray hair">gray_hair</tag>
+    <tag display="Green" paired="exotic_hair" description="The character has green hair">green_hair</tag>
+    <tag display="Pink" paired="exotic_hair" description="The character has pink hair">pink_hair</tag>
+    <tag display="Purple" paired="exotic_hair" description="The character has purple hair">purple_hair</tag>
     <tag display="Red" description="The character has red hair">red_hair</tag>
     <tag display="White" description="The character has white hair">white_hair</tag>
-    <tag display="Gray" description="The character has gray hair">gray_hair</tag>
-    <tag display="Blue" paired="exotic_hair" description="The character has blue, aqua, or cyan hair">blue_hair</tag>
-    <tag display="Pink" paired="exotic_hair" description="The character has pink hair">pink_hair</tag>
-    <tag display="Green" paired="exotic_hair" description="The character has green hair">green_hair</tag>
-    <tag display="Purple" paired="exotic_hair" description="The character has purple hair">purple_hair</tag>
-    <tag display="Exotic" description="The character has multi-colored hair or a non-natural color">exotic_hair</tag>
+    <tag display="Multicolored" paired="exotic_hair" description="The character has hair of more than one color">multicolored_hair</tag>
+    <tag display="Exotic" description="The character has hair of non-natural color/s">exotic_hair</tag>
   </group>
   <group label="Hair Length">
     <tag display="Bald" description="Little or no hair on the head">bald</tag>
@@ -22,46 +23,49 @@
     <tag display="Very Long" paired="long_hair" description="Hair reaches the thighs or beyond">very_long_hair</tag>
   </group>
   <group label="Hair Style" multiselect="true">
-    <tag display="Antenna/Ahoge" description="The character has antenna-like hair poking out">ahoge</tag>
+    <tag display="Antenna / Ahoge" description="The character has antenna-like hair poking out">ahoge</tag>
     <tag display="Drills" description="Anime-style drill hair">drill_hair</tag>
     <tag display="Messy" description="Hair is notably untidy or wild">messy_hair</tag>
     <tag display="Ponytail" description="Hair is up in a ponytail">ponytail</tag>
     <tag display="Twintails" description="Hair is fashioned into two tails anywhere on the head">twintails</tag>
   </group>
   <group label="Eye Color">
-    <tag display="Dark/Black/Brown" description="Brown, black, or dark gray eyes">dark_eyes</tag>
+    <tag display="Amber / Orange / Yellow" paired="exotic_eyes" description="Yellow or orange eyes">amber_eyes</tag>
     <tag display="Blue" description="Blue eyes">blue_eyes</tag>
-    <tag display="Pale/White/Gray" description="White or medium-light eyes">pale_eyes</tag>
+    <tag display="Brown" description="Brown eyes">brown_eyes</tag>
+    <tag display="Dark / Black / Dark Gray" description="Black or dark gray eyes">dark_eyes</tag>
     <tag display="Green" description="Green eyes">green_eyes</tag>
-    <tag display="Pink/Purple" paired="exotic_eyes" description="Purple or pink eyes or somewhere in between">violet_eyes</tag>
+    <tag display="Pale / White / Light Gray" description="White or light gray eyes">pale_eyes</tag>
+    <tag display="Pink" paired="exotic_eyes" description="Pink eyes">pink_eyes</tag>
+    <tag display="Purple" paired="exotic_eyes" description="Violet or purple eyes">violet_eyes</tag>
     <tag display="Red" paired="exotic_eyes" description="Red eyes">red_eyes</tag>
-    <tag display="Amber/Orange/Yellow" paired="exotic_eyes" description="Yellow or orange eyes">amber_eyes</tag>
     <tag display="Differently-colored" paired="exotic_eyes" description="Eyes are different colors">heterochromia</tag>
     <tag display="Black Sclera" paired="exotic_eyes" description="The sclera (whites of the eyes) are black">black_sclera</tag>
     <tag display="Exotic" description="The character has unusually-colored eyes, or heterochromia">exotic_eyes</tag>
   </group>
   <group label="Skin Tone">
-    <tag display="Brown" description="Notably dark skin">dark-skinned</tag>
+    <tag display="Pale" description="Notably pale skin">pale-skinned</tag>
     <tag display="Fair" description="Light skin suggesting Caucasian or East-Asian ethnicity">fair-skinned</tag>
     <tag display="Olive" description="Between fair-skinned and dark-skinned">olive-skinned</tag>
-    <tag display="Pale" description="Notably pale skin">pale-skinned</tag>
+    <tag display="Dark" description="Notably dark skin">dark-skinned</tag>
     <tag display="Unusual" description="Unnatural skin tone">unusual_skin</tag>
   </group>
   <group label="Physical Build" multiselect="true">
     <tag display="Skinny" description="Notably skinnier than an average build">skinny</tag>
     <tag display="Athletic" description="Traditionally athletic, thin but defined muscles">athletic</tag>
     <tag display="Muscular" paired="athletic" description="Built with overt musculature and distinct abs">muscular</tag>
-    <tag display="Fat/Chubby" description="Has pronounced body fat. Anywhere from a little extra, or beer belly, or larger">chubby</tag>
+    <tag display="Fat / Chubby" description="Has pronounced body fat. Anywhere from a little extra, or beer belly, or larger">chubby</tag>
     <tag display="Curvy" gender="female" description="Curvier build, with wide, well-defined hips/thighs">curvy</tag>
     <tag display="Short" description="Character is notably shorter than average">short</tag>
     <tag display="Tall" description="Character is notably taller than average">tall</tag>
+    <tag display="Twink" gender="male" description="Character is male, young, and of a slim build, often short, and with relatively little body hair and no facial hair">twink</tag>
     <tag display="Big Butt" description="Notably large derrière. Note: this tag requires a butt pose to be applied">big_butt</tag>
   </group>
   <group label="Pubic Hair">
-    <tag display="Shaved" description="No pubic hair">shaved</tag>
-    <tag display="Trimmed" paired="pubic_hair" description="Character's pubic hair is trimmed or styled to some degree">trimmed</tag>
-    <tag display="Hairy" paired="pubic_hair" description="Character has a large amount of pubic hair">hairy</tag>
     <tag display="Any Pubic Hair" description="Character has any amount of pubic hair">pubic_hair</tag>
+    <tag display="Hairy" paired="pubic_hair" description="Character has a large amount of pubic hair">hairy</tag>
+    <tag display="Trimmed" paired="pubic_hair" description="Character's pubic hair is trimmed or styled to some degree">trimmed</tag>
+    <tag display="Shaved" description="No pubic hair">shaved</tag>
     <tag display="Heart-shaped Pubic Hair" paired="pubic_hair,trimmed" description="Pubic hair is styled into a heart shape">heart_pubes</tag>
     <tag display="Landing Strip" paired="pubic_hair,trimmed" description="Pubic hair is styled into a narrow landing strip style">landing_strip</tag>
   </group>
@@ -87,45 +91,48 @@
     <tag display="Angel" paired="supernatural" description="Character is an angel">angel</tag>
     <tag display="Cat Person" description="Character is a catgirl/catboy">catfolk</tag>
     <tag display="Cyborg" description="Character has both organic and artificial body parts, discounting simple artificial limbs">cyborg</tag>
+    <tag display="Deity" paired="supernatural" description="Character is a god or goddess of some sort">deity</tag>
     <tag display="Demon" description="Character is a demon, whether Judeo-Christian, an Eldritch horror, or a succubus">demon</tag>
     <tag display="Elf" description="Character is an elf, or visually resembles one (Hylians, etc.)">elf</tag>
-    <tag display="Fairy" paired="spirit" description="Character is a fairy">fairy</tag>
+    <tag display="Fairy" description="Character is a fairy">fairy</tag>
     <tag display="Fox Person" description="Character is a fox person, kitsune, kumiho or similar">foxfolk</tag>
-    <tag display="Furry" description="Character is an anthropomorphic furry animal">furry</tag>
+    <tag display="Furry" paired="non-human" description="Character is an anthropomorphic furry animal">furry</tag>
     <tag display="Ghost" paired="spirit,undead,supernatural" description="Character is a ghost of some sort">ghost</tag>
     <tag display="Monster" description="Character is of a classic monster species, i.e. vampires, succubi, lamias, harpies, etc.">monster</tag>
-    <tag display="Undead" paired="monster" description="Character was once living but died and is now animated by some other force">undead</tag>
     <tag display="Non-Human" description="Character is visibly non-human">non-human</tag>
     <tag display="Robot" description="Character is visibly a robot or a synthetic human">robot</tag>
-    <tag display="Supernatural" description="Character is of an otherworldly, paranormal, or religious origin, such as an angel, ghost, fairy, or genie">supernatural</tag>
-    <tag display="Deity" paired="supernatural" description="Character is a god or goddess of some sort">deity</tag>
     <tag display="Spirit" paired="supernatural" description="Character is spectral or has a non-mortal essence">spirit</tag>
     <tag display="Succubus" description="Character is a succubus or mentions being one">succubus</tag>
+    <tag display="Supernatural" description="Character is of an otherworldly, paranormal, or religious origin, such as an angel, ghost, fairy, or genie">supernatural</tag>
+    <tag display="Undead" paired="monster" description="Character was once living but died and is now animated by some other force">undead</tag>
     <tag display="Vampire" description="Character is a vampire">vampire</tag>
   </group>
   <group label="Non-Human Features" multiselect="true">
     <tag display="Animal Ears" description="Character has visible animal ears">animal_ears</tag>
+    <tag display="Horned" description="Character has visible horns or antlers">horned</tag>
+    <tag display="Pointy Ears" description="Character has pointy ears">pointy_ears</tag>
     <tag display="Tail" description="Character has a visible tail">tail</tag>
     <tag display="Winged" description="Character has visible wings">winged</tag>
-    <tag display="Horned" description="Character has visible horns">horned</tag>
-    <tag display="Pointy Ears" description="Character has pointy ears">pointy_ears</tag>
   </group>
   <group label="Body Quirks" multiselect="true">
     <tag display="Beard" description="Has a beard of any sort">beard</tag>
+    <tag display="Freckles" description="Visible freckles on either face or body">freckles</tag>
+    <tag display="Hairy Chest" description="Has chest hair">hairy_chest</tag>
     <tag display="Moustache" description="Has a moustache, but no beard">moustache</tag>
     <tag display="Pierced Nipples" description="Nipples are pierced">pierced_nipples</tag>
+    <tag display="Prosthetic Arm" description="One or both of the character's arms are mechanical prosthetics">prosthetic_arm</tag>
     <tag display="Scarred" description="Visible scar(s)">scarred</tag>
-    <tag display="Tattoo" description="Visible tattoo(s)">tattoo</tag>
-    <tag display="Freckles" description="Visible freckles on either face or body">freckles</tag>
     <tag display="Tanned" description="Character is normally fair or pale-skinned, but currently has a tan.">tanned</tag>
     <tag display="Tanlines" description="Tan lines are visible">tan_lines</tag>
-    <tag display="Prosthetic Arm" description="One or both of the character's arms are mechanical prosthetics">prosthetic_arm</tag>
+    <tag display="Tattoo" description="Visible tattoo(s)">tattoo</tag>
   </group>
-  <group label="Weapons">
+  <group label="Weapons/Held items">
     <tag display="Weapon" description="Character carries a weapon of some sort">weapon</tag>
     <tag display="Blade" paired="weapon" description="Character is carrying a sword, knife, or other bladed weapon">blade</tag>
+    <tag display="Bow" paired="weapon" description="Character is carrying a bow or crossbow">bow</tag>
     <tag display="Gun" paired="weapon" description="Character is carrying a firearm">gun</tag>
-    <tag display="Wand" paired="weapon" description="Character carries a rod, staff, or other magical implement">wand</tag>
+    <tag display="Staff" paired="weapon" description="Character carries a magical rod or staff">staff</tag>
+    <tag display="Wand" description="Character carries a magic wand">wand</tag>
   </group>
   <group label="Clothing Items" multiselect="true">
     <tag display="Armor" description="Wearing some form of armor">armor</tag>
@@ -136,6 +143,7 @@
     <tag display="Crown" description="Wearing a crown, circlet, or diadem">crown</tag>
     <tag display="Eyepatch" description="Wearing an eyepatch">eyepatch</tag>
     <tag display="Fake Animal Ears" description="Wearing artificial animal ears">fake_animal_ears</tag>
+    <tag display="Fake Horns" description="Wearing artificial horns or antlers">fake_horns</tag>
     <tag display="Fake Tail" description="Wearing an artificial tail">fake_tail</tag>
     <tag display="Glasses" description="Wearing glasses, but not sunglasses">glasses</tag>
     <tag display="Goggles" description="Wearing goggles">goggles</tag>
@@ -148,9 +156,12 @@
     <tag display="Lingerie" description="Wearing notably fancy lingerie, likely with frills, lace, garters, etc.">lingerie</tag>
     <tag display="Makeup" description="Visibly wearing makeup">makeup</tag>
     <tag display="Masked" description="Character's face is partially or completely covered by a mask">masked</tag>
-    <tag display="No Bra" gender="female" description="Character did not wear a bra to the game">no_bra</tag>
-    <tag display="No Lower Underwear" description="Character did not wear lower underwear (e.g. panties, boxers) to the game">no_underwear</tag>
+    <tag display="Onesie" paired="sleepwear" description="Wearing a hooded onesie">onesie</tag>
     <tag display="Pantyhose" description="Wearing pantyhose">pantyhose</tag>
+    <tag display="Pasties (Nipples)" description="Wearing pasties, stickers, or band-aids on the nipples">nipple_pasties</tag>
+    <tag display="Pasty (Crotch)" description="Wearing a pasty, sticker, or band-aid on the crotch">crotch_pasty</tag>
+    <tag display="Santa Hat" paired="hat" description="Wearing a Santa hat">santa_hat</tag>
+    <tag display="Shimapan / Striped Panties" description="Wearing horizontally-striped panties">shimapan</tag>
     <tag display="Spats" description="Wearing tight spandex/lycra bicycle shorts">spats</tag>
     <tag display="Sunglasses" description="Wearing sunglasses">sunglasses</tag>
     <tag display="Sweater" description="Wearing a sweater. Hoodies and cardigans do not count.">sweater</tag>
@@ -160,29 +171,41 @@
   </group>
     <group label="Outfits" multiselect="true">
     <tag display="Formal Attire" description="Wearing eveningwear like a suit or fine dress. Not a school uniform. Apply for all stages.">formal_attire</tag>
+    <tag display="Goth / Punk / Emo" description="Character dresses in a gothic/punk/emo manner, or has a stereotypical goth/punk/emo personality">goth</tag>
+    <tag display="Gothic Lolita" description="The character dresses in a gothic lolita style">gothic_lolita</tag>
     <tag display="Maid Uniform" description="Wearing a maid uniform. Apply for all stages.">maid_uniform</tag>
+    <tag display="No Bra" gender="female" description="Character did not wear a bra to the game">no_bra</tag>
+    <tag display="No Lower Underwear" description="Character did not wear lower underwear (e.g. panties, boxers) to the game">no_underwear</tag>
     <tag display="School Uniform" description="Wearing a school uniform of some sort. Apply for all stages.">school_uniform</tag>
     <tag display="Skimpy Clothing" description="Character started the game with revealing or minimal clothing">scantily-clad</tag>
+    <tag display="Sleepwear" description="Wearing pyjamas, a nightdress, or a onesie">sleepwear</tag>
   </group>
   <group label="Personality" multiselect="true">
     <tag display="Aggressive" description="Character is outright hostile and may regularly make threats of harm to the other players">aggressive</tag>
+    <tag display="Boob Envy" gender="female" description="Character is jealous of women with larger breasts than her and is insecure about her own chest">boob_envy</tag>
     <tag display="Cheerful" description="Character is naturally happy and optimistic and just tries to have fun with the game">cheerful</tag>
     <tag display="Chuunibyou" description="Character is an example of the chuunibyou character archetype, with a penchant for heavy theatrics, and claiming they have magical powers that they likely don't actually have.">chuunibyou</tag>
     <tag display="Confident" description="Character has little issue with their own nudity, may be proud of their body, and is unlikely to get embarrassed">confident</tag>
     <tag display="Creepy" description="Character has a creepy or unnerving appearance or personality">creepy</tag>
-    <tag display="Ditzy" description="Character is absent-minded, an airhead, or otherwise unaware of normal social behavior">ditzy</tag>
+    <tag display="Ditzy" description="Character is absent-minded, or otherwise unaware of normal social behavior">ditzy</tag>
+    <tag display="Dominant" description="Character is sexually dominant">dominant</tag>
+    <tag display="Dumb" description="Character is noticeably unintelligent">dumb</tag>
+    <tag display="Embarrassed Nude (F)" gender="female" description="Female that has a particularly adverse reaction to being naked">enf</tag>
+    <tag display="Embarrassed Nude (M)" gender="male" description="Male that has a particularly adverse reaction to being naked">enm</tag>
     <tag display="Exhibitionist" description="Character actively wants to be seen naked and masturbating, and wants all eyes on them">exhibitionist</tag>
     <tag display="Fancy" description="Character gives off an air of wealth and/or nobility">fancy</tag>
     <tag display="Fashionable" description="Character is well-dress and always dresses for the occasion">fashionable</tag>
     <tag display="Gloomy" description="Character is generally mournful and pessimistic">gloomy</tag>
+    <tag display="Greedy" description="Character is overly-preoccupied with money or other material wealth">greedy</tag>
     <tag display="Indifferent" description="Character seems relatively neutral or uncaring about the game's nudity, or it might take a lot to get a reaction out of them">indifferent</tag>
     <tag display="Innocent" description="Character is naive or unknowledgeable about sexual matters">innocent</tag>
     <tag display="Insane" description="Character is clearly not of sound mind">insane</tag>
     <tag display="Kind" description="Character is friendly and supportive to other characters">kind</tag>
     <tag display="Lonely" description="Character has few, if any friends, but wants them. Maybe they're playing SPNatI to make some">lonely</tag>
     <tag display="Mean" description="Character makes mean, rude, or harsh comments about other players">mean</tag>
-    <tag display="Moe/Adorable" description="Character has a conventially cute/adorable appearance and personality">moe</tag>
+    <tag display="Moe / Adorable" description="Character has a conventially cute/adorable appearance and personality">moe</tag>
     <tag display="Nerdy" description="Character has nerdy hobbies and/or interests">nerdy</tag>
+    <tag display="Penis Envy" gender="male" description="Character is jealous of men with a larger penis than him and is insecure about his penis size">penis_envy</tag>
     <tag display="Perverted" description="Character has a fixation on sex, makes especially lewd comments, and is likely pretty kinky">perverted</tag>
     <tag display="Quiet" description="Character doesn't talk much, and their sentences are usually brief">quiet</tag>
     <tag display="Sarcastic" description="Character is sarcastic">sarcastic</tag>
@@ -193,24 +216,20 @@
     <tag display="Silent" description="Character does not speak at all">silent</tag>
     <tag display="Slutty" description="Character is extremely sexually open, feels no shame, and will regularly make obscene advances/suggestions to other characters">slutty</tag>
     <tag display="Smart" description="Character is highly knowledgeable or intelligent">smart</tag>
-    <tag display="Tomboy" description="Character is female but partakes in traditionally masculine pursuits and dresses as such.">tomboy</tag>
+    <tag display="Submissive" description="Character is sexually submissive">submissive</tag>
+    <tag display="Tomboy" description="Character is female but partakes in traditionally masculine pursuits and may dress as such.">tomboy</tag>
     <tag display="Tsundere" description="Character starts out rude or hostile but opens up over the course of the game">tsundere</tag>
+    <tag display="Vain" description="Character has excessive pride in their looks">vain</tag>
     <tag display="Witty" description="Character is always ready to crack a joke">witty</tag>
     <tag display="Yandere" description="Character is in murderously obsessive love with the player or another character">yandere</tag>
-    <tag display="Boob Envy" gender="female" description="Character is jealous of women with larger breasts than her and is insecure about her own chest">boob_envy</tag>
-    <tag display="Penis Envy" gender="male" description="Character is jealous of men with a larger penis than him and is insecure about his penis size">penis_envy</tag>
-    <tag display="Embarrassed Nude (F)" gender="female" description="Female that has a particularly adverse reaction to being naked">enf</tag>
-    <tag display="Embarrassed Nude (M)" gender="male" description="Male that has a particularly adverse reaction to being naked">enm</tag>
-    <tag display="Sexually Dominant" description="Character is sexually dominant">dominant</tag>
-    <tag display="Sexually Submissive" description="Character is sexually submissive">submissive</tag>
   </group>
   <group label="Sexual Orientation">
     <tag display="Straight" description="Character is attracted to the opposite sex">straight</tag>
+    <tag display="Bi-curious" description="Character is predominantly attracted to the opposite sex, but is curious about the same sex, or is a straight character that opens up to same sex characters late in the game">bi-curious</tag>
+    <tag display="Bisexual" description="Character is attracted to both sexes">bisexual</tag>
+    <tag display="Reverse Bi-curious" description="Character is predominantly attracted to the same sex, but is curious about the opposite sex, or is a gay/lesbian character that opens up to opposite sex characters late in the game">reverse_bi-curious</tag>
     <tag display="Gay" gender="male" description="Male character is attracted to other males">gay</tag>
     <tag display="Lesbian" gender="female" description="Female character is attracted to other females">lesbian</tag>
-    <tag display="Bisexual" description="Character is attracted to both sexes">bisexual</tag>
-    <tag display="Bi-curious" description="Character is predominantly attracted to the opposite sex, but is curious about the same sex, or is a straight character that opens up to same sex characters late in the game">bi-curious</tag>
-    <tag display="Reverse Bi-curious" description="Character is predominantly attracted to the same sex, but is curious about the opposite sex, or is a gay/lesbian character that opens up to opposite sex characters late in the game">reverse_bi-curious</tag>
   </group>
   <group label="Relationship Status">
     <tag display="Single" description="Not currently in a romantic/sexual relationship">single</tag>
@@ -218,23 +237,15 @@
   </group>
   <group label="Other Traits" multiselect="true">
     <tag display="Androgynous" description="Character could pass for either gender">androgynous</tag>
-    <tag display="Breaks the Fourth Wall" description="Character often talks directly to the person playing the game, or is aware that they are in a game">breaks_fourth_wall</tag>
-    <tag display="Dressed as Opposite Sex" description="Character is dressed like what is traditionally associated with the opposite sex">crossdresser</tag>
-    <tag display="Drunk" description="Character drinks over the course of the game">drunk</tag>
-    <tag display="Has a Camera" description="Character has a camera that they use during the game">uses_camera</tag>
-    <tag display="Has Food" description="Character has food with them, that they eat during the game">has_food</tag>
+    <tag display="Hero" description="Character is a hero in their source material and fights for good">hero</tag>
+    <tag display="Magical" description="Character is capable of using magic">magic</tag>
     <tag display="Mature" description="Character is middle-aged, or approaching middle age, and can no longer be called a young adult. Appropriate age range is mid-30s to the 50s.">mature</tag>
     <tag display="Parent" description="Character is a parent, whether biological or adoptive">parent</tag>
-    <tag display="Flies" description="Character visibly flies, hovers, or floats during the game">flies</tag>
-    <tag display="Magical" description="Character is capable of using magic">magic</tag>
+    <tag display="Poor" description="Character is notably impoverished">poor</tag>
     <tag display="Psychic" description="Character has psychic abilities of some sort">psychic</tag>
     <tag display="Virtual" description="Character is a digital avatar, hologram, or AI">virtual</tag>
-    <tag display="Hero" description="Character is a hero in their source material and fights for good">hero</tag>
     <tag display="Villain" description="Character is a villain in their source material">villain</tag>
     <tag display="Wealthy" description="Character is notably rich">wealthy</tag>
-    <tag display="Poor" description="Character is notably impoverished">poor</tag>
-    <tag display="Goth/Punk/Emo" description="Character dresses in a gothic/punk/emo manner, or has a stereotypical goth/punk/emo personality">goth</tag>
-    <tag display="Gothic Lolita" description="The character dresses in a gothic lolita style">gothic_lolita</tag>
   </group>
   <group label="Nationality/Ethnicity" multiselect="true">
     <tag display="African" description="Of African origin or ethnicity">african</tag>
@@ -262,22 +273,23 @@
     <tag display="Swiss" paired="european" description="Of Swiss origin or ethnicity">swiss</tag>
     <tag display="Mixed Heritage" description="Of mixed ethnicity or nationality">mixed_heritage</tag>
   </group>
-    <group label="Occupation" multiselect="true">
+    <group label="Occupations/Hobbies" multiselect="true">
     <tag display="Adventurer" description="Goes on adventures around their world, likely in a traditional RPG/Fantasy sense">adventurer</tag>
     <tag display="Alchemist" description="The character is an alchemist, focusing on magical science">alchemist</tag>
     <tag display="Archaeologist" description="The character is an archaeologist">archaeologist</tag>
     <tag display="Artist" description="Is an artist of a traditional medium, such as painting or sculpting">artist</tag>
-    <tag display="Athlete" description="Is an athlete, wherher professionally or as a hobby">athlete</tag>
+    <tag display="Athlete" description="Is an athlete, whether professionally or as a hobby">athlete</tag>
+    <tag display="Bookworm" description="Character reads a lot as a hobby">bookworm</tag>
     <tag display="Bounty Hunter" description="Works as a bounty hunter">bounty_hunter</tag>
     <tag display="Celebrity" description="Famous enough that other characters could plausibily already know about them">celebrity</tag>
     <tag display="Chef" description="The character cooks or bakes, professionally or as a hobby">chef</tag>
     <tag display="Cleric" description="The character is a member of religious clergy, perhaps with RPG healer cleric aspects">cleric</tag>
     <tag display="Clown" description="A clown as an occupation">clown</tag>
-    <tag display="Coder/Hacker/Programmer" description="Works with computer software, whether professionally, or as a hobby">coder</tag>
+    <tag display="Coder / Hacker / Programmer" description="Works with computer software, whether professionally, or as a hobby">coder</tag>
     <tag display="Criminal" description="Regularly engages in criminal activity">criminal</tag>
     <tag display="Delinquent" description="The character is young and involved in petty crime">delinquent</tag>
     <tag display="Detective" description="Works as a detective">detective</tag>
-    <tag display="Fighter" description="Regularly takes part in close-quarters combat">fighter</tag>
+    <tag display="Fighter" description="Regularly takes part in combat">fighter</tag>
     <tag display="Gamer" description="Plays video games as a career or hobby">gamer</tag>
     <tag display="Idol" paired="singer" description="Works as a Japanese-style idol">idol</tag>
     <tag display="Knight" description="The character has been officially named as a knight">knight</tag>
@@ -285,7 +297,7 @@
     <tag display="Journalist" description="A news reporter, or perhaps might want to interview other characters">journalist</tag>
     <tag display="Magical Girl" description="A magical girl in the Mahou Shoujo genre">magical_girl</tag>
     <tag display="Mech Pilot" description="Regularly pilots a mech of some sort">mech_pilot</tag>
-    <tag display="Mechanic/Engineer" description="Partakes in the invention, construction or maintenance of vehicles or machinery">mechanic</tag>
+    <tag display="Mechanic / Engineer" description="Partakes in the invention, construction or maintenance of vehicles or machinery">mechanic</tag>
     <tag display="Medic" description="Either a doctor or a combat medic">medic</tag>
     <tag display="Military" description="From a military background or belongs to a military organization">military</tag>
     <tag display="Model" description="Works, or has worked, as a fashion/glamour model">model</tag>
@@ -307,28 +319,126 @@
     <tag display="Teacher" description="Works as a teacher or instructor at a school, college, or university">teacher</tag>
     <tag display="Thief" description="The character is a professional thief, of the cat burglar, petty thief or RPG thief varieties">thief</tag>
     <tag display="Witch" description="A witch">witch</tag>
+    <tag display="Wizard" description="A wizard">wizard</tag>
+    <tag display="Writer" description="A professional author or hobby writer">writer</tag>
   </group>
-  <group label="Stripping/Forfeit/Gameplay Tags, Priority Targets" multiselect="true">
-    <tag display="Has a Butt Pose" description="Character has at least one pose showing their rear">butt_pose</tag>
-    <tag display="Blind" description="Character is completely blind, and doesn't have magically or technologically-replaced vision. Non-sight replacement senses such as echolocation are acceptable.">blind</tag>
-    <tag display="Cheater" description="Character uses underhanded means to gain an advantage in the game">cheater</tag>
-    <tag display="Throws the game" description="Character intentionally loses the game">throws_game</tag>
-    <tag display="Has Companion Present" description="Character has one or more companions present during the game, that are be visible to other players">has_companion</tag>
+  <group label="Stripping/Nudity Gimmicks" multiselect="true">
     <tag display="Assisted Stripping" description="Someone other than the character removes the character's clothing">assisted_strip</tag>
+    <tag display="Breasts Larger when Clothed" gender="female" description="The character's breasts appear significantly larger when clothed than when revealed">breasts_larger_clothed</tag>
+    <tag display="Breasts Smaller when Clothed" gender="female" description="The character's breasts appear significantly smaller when clothed than when revealed">breasts_smaller_clothed</tag>
     <tag display="Clothing Destroyed when Stripping" description="Character's clothes are destroyed over the course of the game">clothing_destruction</tag>
     <tag display="Clothing Vanished when Stripping" description="Character uses magic to disappear their clothes instead of stripping">vanishes_clothes</tag>
     <tag display="Shows Crotch Before Chest" description="Character reveals their crotch before their chest">bottomless_first</tag>
-    <tag display="Pubic Hair Slip" description="Character's pubic hair is visible prior to the crotch reveal due to skimpy or sheer clothing">pubic_hair_peek</tag>
+    <tag display="Replaces Clothes Post-Forfeit" description="Character puts a major item of clothing back on after the forfeit to cover up">clothed_post-forfeit</tag>
     <tag display="Covers Self With Object" description="Character uses objects to cover their chest or crotch with, after the last layer of actual clothing covering them has already been removed">covers_with_object</tag>
-    <tag display="Multi-person Forfeit" description="Character masturbates with a partner">tandem</tag>
+    <tag display="Pubic Hair Slip" description="Character's pubic hair is visible prior to the crotch reveal due to skimpy or sheer clothing">pubic_hair_peek</tag>
+    <tag display="Visible Penis Bulge" gender="male" description="Character has a visible penis bulge while clothed. Tag for all applicable stages.">visible_bulge</tag>
+    <tag display="Grower" gender="male" description="The character's penis is so much bigger when erect as to warrant a change in size tag. Apply starting in the stage where both states of the character's penis have been seen.">grower</tag>
+    <tag display="No Genitals" description="The character does not possess genitalia. Should only be applicable to April Fool's characters.">no_genitals</tag>
+  </group>
+  <group label="Forfeit Gimmicks" multiselect="true">
+    <tag display="Aided During Forfeit" description="Pleasured by another character during forfeit">tandem</tag>
+    <tag display="Aids Another's Forfeit" description="Pleasures another character during their forfeit">tandem_giver</tag>
+    <tag display="Multi-person Forfeit (F / F)" gender="female" description="Character is female and sexually interacts with a female partner during either's forfeit">tandem_ff</tag>
+    <tag display="Multi-person Forfeit (M / F)" description="Character sexually interacts with a partner of the opposite gender during either's forfeit">tandem_mf</tag>
+    <tag display="Multi-person Forfeit (M / M)" gender="male" description="Character is male and sexually interacts with a male partner during either's forfeit">tandem_mm</tag>
+    <tag display="Intercourse During Forfeit" paired="tandem" description="The character has vaginal or anal intercourse with another person during their forfeit">intercourse_forfeit</tag>
     <tag display="Restrained During Forfeit" description="Character masturbates using bondage equipment">bondage_forfeit</tag>
-    <tag display="Tentacle/Vine Forfeit" description="Character masturbates with tentacles or vines">tentacle_forfeit</tag>
+    <tag display="Tentacle / Vine Forfeit" description="Character masturbates with tentacles or vines">tentacle_forfeit</tag>
     <tag display="Uses Toy for Forfeit" description="Character uses a sex toy to masturbate">uses_toy</tag>
     <tag display="Sits in Chair During Forfeit" description="Character sits in a chair when masturbating">chair_forfeit</tag>
+    <tag display="Sits on Cushion During Forfeit" description="Character sits on a cushion when masturbating">cushion_forfeit</tag>
     <tag display="Stands During Forfeit" description="Character is standing in a majority of their forfeit images">standing_forfeit</tag>
     <tag display="Kneels During Forfeit" description="Character is kneeling in a majority of their forfeit images">kneeling_forfeit</tag>
+    <tag display="Flies/Floats During Forfeit" description="Character is flying or floating in the air in a majority of their forfeit images">flying_forfeit</tag>
     <tag display="Does Not Masturbate" description="Character does not masturbate or be masturbated during their forfeit. Should not be applicable to non-April Fool's characters.">joke_forfeit</tag>
-    <tag display="No Genitals" description="The character does not possess genitalia. Should only be applicable to April Fool's characters.">no_genitals</tag>
+  </group>
+  <group label="Other Gimmicks" multiselect="true">
+    <tag display="Breaks the Fourth Wall" description="Character often talks directly to the person playing the game, or is aware that they are in a game">breaks_fourth_wall</tag>
+    <tag display="Blind" description="Character is completely blind, and doesn't have magically or technologically-replaced vision. Non-sight replacement senses such as echolocation are acceptable.">blind</tag>
+    <tag display="Butt Pose" description="Character has at least one pose showing their rear">butt_pose</tag>
+    <tag display="Cheater" description="Character uses underhanded means to gain an advantage in the game">cheater</tag>
+    <tag display="Crossdressing" description="Character is dressed in a manner traditionally associated with the opposite sex">crossdresser</tag>
+    <tag display="Drinks Alcohol" description="Character drinks alcohol over the course of the game">drunk</tag>
+    <tag display="Flies" description="Character visibly flies, hovers, or floats during the game">flies</tag>
+    <tag display="Has Companion Present" description="Character has one or more companions present during the game, that are be visible to other players. Talking animals should be tagged with the has_pet tag as well.">has_companion</tag>
+    <tag display="Has Pet Present" description="Character has one or more pets present during the game, that are be visible to other players. Talking animals should be tagged with the has_companion tag as well.">has_pet</tag>
+    <tag display="Has Food" description="Character has food with them, that they eat during the game">has_food</tag>
+    <tag display="Throws the game" description="Character intentionally loses the game">throws_game</tag>
+    <tag display="Uses a Camera" description="Character has a camera that they use during the game">uses_camera</tag>
+  </group>
+  <group label="Holiday Event Designation" multiselect="true">
+    <tag display="April Fool's Character" description="Character is exclusive to April Fool's Day events">april_fools</tag>
+    <tag display="April Fool's Alt Skin" description="Alt skin is exclusive to April Fool's Day events">april_fools_skin</tag>
+    <tag display="Christmas Alt Skin" description="Alt skin is exclusive to Christmas events">christmas_skin</tag>
+    <tag display="Easter Alt Skin" description="Alt skin is exclusive to Easter events">easter_skin</tag>
+    <tag display="Halloween Alt Skin" description="Alt skin is exclusive to Halloween events">halloween_skin</tag>
+    <tag display="Summer Alt Skin" description="Alt skin is exclusive to Summer events">summer_skin</tag>
+    <tag display="Valentine's Day Alt Skin" description="Alt skin is exclusive to Valentine's Day events">valentines_skin</tag>
+  </group>
+  <group label="Source Medium" multiselect="true">
+    <tag display="Anime" description="Originates from Japanese animation">anime</tag>
+    <tag display="Book" description="Originates from western literature, not including comics or graphic novels">book</tag>
+    <tag display="Cartoon" description="Originates from Western animation">cartoon</tag>
+    <tag display="Comic" description="Originates from Western comic books or graphic novels">comic</tag>
+    <tag display="Gacha Game" paired="video_game" description="Originates from a game based on gacha mechanics">gacha_game</tag>
+    <tag display="Hentai" description="Originates from a hentai game, anime or manga">hentai</tag>
+    <tag display="Internet Meme" description="Originates from an Internet meme">internet_meme</tag>
+    <tag display="Light Novel" description="Originates from Japanese light novels">light_novel</tag>
+    <tag display="Manga" description="Originates from a Japanese comic or graphic novel">manga</tag>
+    <tag display="Movie" description="Originates from a film or movie">movie</tag>
+    <tag display="Tabletop / Traditional Game" description="Originates from a tabletop game, such as role-playing games or card games">tabletop_game</tag>
+    <tag display="Theater / Stage Production" description="Originates from a play or stage production">theater</tag>
+    <tag display="TV Series" description="Originates from a live-action TV show">tv_show</tag>
+    <tag display="Video Game" description="Originates from a video game">video_game</tag>
+    <tag display="Visual Novel" description="Originates from a visual novel">visual_novel</tag>
+    <tag display="Web Animation" description="Originates from an independently-produced web-original animation">web_animation</tag>
+    <tag display="Webcomic" description="Originates from a webcomic">webcomic</tag>
+    <tag display="Website" description="Originates from a website (ex. a site mascot)">website</tag>
+  </group>
+  <group label="Genre" multiselect="true">
+    <tag display="Fantasy" description="From a fantasy setting">fantasy</tag>
+    <tag display="Future" description="From a futuristic setting">future</tag>
+    <tag display="Post-Apocalyptic" description="From a post-apocalyptic setting">post-apocalyptic</tag>
+    <tag display="Horror"  description="From a horror genre">horror</tag>
+    <tag display="Science Fiction" description="From a science fiction setting">sci-fi</tag>
+    <tag display="Space" description="Character lives in space">space</tag>
+  </group>
+  <group label="Universe / Organization" multiselect="true">
+    <tag display="Justice League (DC)" description="Member of the Justice League">justice_league</tag>
+    <tag display="Teen Titans (DC)" description="Member of the Team Titans">teen_titans</tag>
+    <tag display="Ashen Wolves (FE3H)" description="Belongs to the Ashen Wolves house in Fire Emblem: Three Houses">ashen_wolves</tag>
+    <tag display="Black Eagles (FE3H)" description="Belongs to the Black Eagles house in Fire Emblem: Three Houses">black_eagles</tag>
+    <tag display="Blue Lions (FE3H)" description="Belongs to the Blue Lions house in Fire Emblem: Three Houses">blue_lions</tag>
+    <tag display="Golden Deer (FE3H)" description="Belongs to the Golden Deer house in Fire Emblem: Three Houses">golden_deer</tag>
+    <tag display="Church of Seiros (FE3H)" description="Belongs to the Church of Seiros in Fire Emblem: Three Houses">church_of_seiros</tag>
+    <tag display="Inazuma (Genshin Impact)" description="Hails from the nation of Inazuma in Genshin Impact">inazuma</tag>
+    <tag display="Liyue (Genshin Impact)" description="Hails from the nation of Liyue in Genshin Impact">liyue</tag>
+    <tag display="Mondstadt (Genshin Impact)" description="Hails from the nation of Mondstadt in Genshin Impact">mondstadt</tag>
+    <tag display="Honnouji Academy (Kill la Kill)" description="Student at Honnouji Academy in Kill la Kill">honnouji_academy</tag>
+    <tag display="Luna Nova Academy (LWA)" description="Student at Luna Nova Academy in Little Witch Academia">luna_nova_academy</tag>
+    <tag display="Avengers (Marvel)" description="Member of the Avengers">avengers</tag>
+    <tag display="X-Men (Marvel)" description="Member of the X-Men">x-men</tag>
+    <tag display="UA Academy (My Hero Academia)" description="Student at UA High in My Hero Academia">ua_academy</tag>
+    <tag display="Straw Hat Pirates (One Piece)" description="Member of the Straw Hat Pirates in One Piece">straw_hat_pirates</tag>
+    <tag display="Overwatch (Overwatch)" description="Member of Overwatch in the game of the same name">overwatch</tag>
+    <tag display="Phantom Thieves (Persona 5)" description="A member of Persona 5's Phantom Thieves">phantom_thieves</tag>
+    <tag display="Gym Leader (Pokémon)" description="The character is a Gym Leader in the Pokémon franchise">gym_leader</tag>
+    <tag display="Kanto (Pokémon)" description="From Pokémon's Kanto region">kanto</tag>
+    <tag display="Johto (Pokémon)" description="From Pokémon's Johto region">johto</tag>
+    <tag display="Hoenn (Pokémon)" description="From Pokémon's Hoenn region">hoenn</tag>
+    <tag display="Sinnoh (Pokémon)" description="From Pokémon's Sinnoh region">sinnoh</tag>
+    <tag display="Unova (Pokémon)" description="From Pokémon's Unova region">unova</tag>
+    <tag display="Kalos (Pokémon)" description="From Pokémon's Kalos region">kalos</tag>
+    <tag display="Alola (Pokémon)" description="From Pokémon's Alola region">alola</tag>
+    <tag display="Galar (Pokémon)" description="From Pokémon's Galar region">galar</tag>
+    <tag display="Hisui (Pokémon)" description="From Pokémon's Hisui region">hisui</tag>
+    <tag display="Paldea (Pokémon)" description="From Pokémon's Paldea region">paldea</tag>
+    <tag display="Team CFVY (RWBY)" description="Member of Team CFVY in RWBY">cfvy</tag>
+    <tag display="Team JNPR (RWBY)" description="Member of team JNPR in RWBY">jnpr</tag>
+    <tag display="Team RWBY (RWBY)" description="Member of team RWBY in RWBY">rwby</tag>
+    <tag display="Mystery Inc. (Scooby Doo)" description="A member of the Scooby Doo gang">mystery_inc</tag>
+    <tag display="Starfleet (Star Trek)" description="Belongs to the Starfleet organization in Star Trek">starfleet</tag>
   </group>
   <group label="Source Material" multiselect="true">
     <tag display=".hack" paired="video_game" description="From the .hack game series">dot_hack</tag>
@@ -337,7 +447,8 @@
     <tag display="A Certain Magical Index" paired="anime,light_novel,future,sci-fi" description="From the A Certain Magical Index franchise">index_franchise</tag>
     <tag display="Ace Attorney" paired="capcom,video_game,visual_novel" description="From the Ace Attorney game series">ace_attorney</tag>
     <tag display="Adventure Time" paired="cartoon" description="From the Adventure Time franchise">adventure_time</tag>
-    <tag display="Alice: Madness Returns" paired="video_game" description="From American McGee's Alice game">alice_madness_returns</tag>
+    <tag display="Alice: Madness Returns" paired="video_game,fantasy" description="From American McGee's Alice game">alice_madness_returns</tag>
+    <tag display="Arakawa Under the Bridge" paired="manga,anime" description="From the manga/anime series Arakawa Under the Bridge">arakawa_under_the_bridge</tag>
     <tag display="ARMS" paired="nintendo,video_game" description="From the video game ARMS">arms_franchise</tag>
     <tag display="Attack on Titan" paired="anime,manga,fantasy" description="From the Attack on Titan series">attack_on_titan</tag>
     <tag display="Avatar: The Last Airbender" paired="cartoon,fantasy,atla_franchise" description="From the series Avatar: The Last Airbender">avatar_the_last_airbender</tag>
@@ -371,7 +482,7 @@
     <tag display="Daria" paired="cartoon" description="From the animated series Daria">daria_franchise</tag>
     <tag display="Darkstalkers" paired="video_game,capcom" description="From the Darkstalkers game series">darkstalkers</tag>
     <tag display="DC Comics" paired="comic" description="Part of the DC Comics franchise">dc_comics</tag>
-    <tag display="Dead by Daylight" paired="video_game,horror" description="From the Dead by Daylight video game">dead_by_daylight</tag>
+    <tag display="Dead by Daylight" paired="horror" description="From the Dead by Daylight video game">dead_by_daylight</tag>
     <tag display="Dead or Alive" paired="video_game" description="From the Dead or Alive game franchise">dead_or_alive</tag>
     <tag display="Disney" description="From a Disney property, but not Marvel or Star Wars">disney</tag>
     <tag display="Doki Doki Literature Club" paired="visual_novel" description="From the VN Doki Doki Literature Club">ddlc</tag>
@@ -383,6 +494,7 @@
     <tag display="Elf-san wa Yaserarenai" paired="manga" description="From the manga Elf-san wa Yaserarenai">elf-san_wa_yaserarenai</tag>
     <tag display="Embla Academy" paired="visual_novel" description="From Embla Academy, based on Fire Emblem Fates">embla_academy</tag>
     <tag display="Emergence" paired="hentai,manga" description="From the hentai manga Emergence">emergence</tag>
+    <tag display="Ensemble Stars" paired="video_game,gacha_game" description="From the mobile game Ensemble Stars!!">ensemble_stars</tag>
     <tag display="Etrian Odyssey" paired="video_game" description="From the Etrian Odyssey games">etrian_odyssey</tag>
     <tag display="Evangelion" paired="anime,future,sci-fi" description="From the anime franchise Evangelion">evangelion</tag>
     <tag display="Evenicle" paired="hentai,video_game,fantasy" description="From the H-game series Evenicle">evenicle</tag>
@@ -410,14 +522,16 @@
     <tag display="Frozen" paired="disney,movie,cartoon,fantasy" description="From Disney's Frozen">frozen</tag>
     <tag display="Fullmetal Alchemist" paired="anime,manga,fantasy" description="From the Fullmetal Alchemist anime/manga series">fullmetal_alchemist</tag>
     <tag display="Futurama" paired="cartoon,sci-fi,future" description="From the animated series Futurama">futurama</tag>
+    <tag display="Ganbare Goemon/Mystical Ninja" paired="video_game,fantasy" description="From the Ganbare Goemon (AKA Mystical Ninja) series of games">ganbare_goemon</tag>
     <tag display="Garfield" paired="comic,cartoon" description="From the Garfield series of comics and cartoons">garfield_franchise</tag>
     <tag display="Genshin Impact" paired="video_game,gacha_game" description="From the game Genshin Impact">genshin_impact</tag>
     <tag display="Girls' Frontline" paired="video_game,sci-fi,post-apocalyptic,gacha_game" description="From the Girls' Frontline game series">girls_frontline</tag>
+    <tag display="Golden Sun" paired="video_game,fantasy,nintendo" description="From the Golden Sun game series">golden_sun</tag>
     <tag display="Granblue Fantasy" paired="video_game,fantasy,gacha_game" description="From the game Granblue Fantasy">granblue_fantasy</tag>
     <tag display="Gundam" paired="anime,sci-fi,future" description="From the Gundam anime franchise">gundam</tag>
     <tag display="Harry Potter" paired="fantasy" description="From the Harry Potter universe">harry_potter_franchise</tag>
     <tag display="Hazbin Hotel" paired="cartoon" description="From the Hazbin Hotel cartoon series">hazbin_hotel</tag>
-    <tag display="Homestuck" paired="comic" description="From the webcomic Homestuck">homestuck</tag>
+    <tag display="Homestuck" paired="webcomic" description="From the webcomic Homestuck">homestuck</tag>
     <tag display="Horizon" paired="video_game,future,post-apocalyptic,sci-fi" description="From the Horizon video game series">horizon_franchise</tag>
     <tag display="Hotel Transylvania" paired="cartoon,movie" description="From the movie series Hotel Transylvania">hotel_transylvania</tag>
     <tag display="HuniePop" paired="video_game" description="From the HuniePop game series">huniepop</tag>
@@ -427,13 +541,16 @@
     <tag display="Itadaki Seieki" paired="manga,anime,hentai" description="From the hentai manga/anime Itadaki Seieki">itadaki_seieki</tag>
     <tag display="Jojo's Bizarre Adventure" paired="anime,manga" description="From the anime/manga Jojo's Bizarre Adventure">jjba</tag>
     <tag display="K-On!" paired="manga,anime," description="From the manga K-On!, or its anime adaptation">k-on</tag>
+    <tag display="Kakegurui" paired="anime,manga" description="From the manga Kakegurui, or its anaime adaptation">kakegurui</tag>
     <tag display="Kantai Collection" paired="video_game,gacha_game" description="From the Kantai Collection franchise">kantai_collection</tag>
-    <tag display="Katawa Shoujo" paired="visual_novel" description="From VN Katawa Shoujo">katawa_shoujo</tag>
+    <tag display="Katawa Shoujo" paired="visual_novel" description="From the VN Katawa Shoujo">katawa_shoujo</tag>
+    <tag display="Kekko Kamen" paired="manga,anime,movie" description="From the manga Kekko Kamen, or its adaptations">kekko_kamen_franchise</tag>
     <tag display="Khonjin house" paired="web_animation" description="From the web animation series Khonjin House">khonjin_house</tag>
     <tag display="Kid Icarus" paired="nintendo,video_game" description="From the Kid Icarus game series">kid_icarus</tag>
     <tag display="Kill la Kill" paired="anime,sci-fi,studio_trigger" description="From the anime Kill la Kill">kill_la_kill</tag>
     <tag display="Kim Possible" paired="cartoon" description="From the animated series Kim Possible">kim_possible_franchise</tag>
     <tag display="Kindred Spirits on the Roof" paired="visual_novel" description="From the visual novel Kindred Spirits on the Roof">kindred_spirits</tag>
+    <tag display="Kingdom Hearts" paired="video_game,fantasy,sci-fi" description="From the Kingdom Hearts game series">kingdom_hearts</tag>
     <tag display="Komi-san wa Komyushou Desu" paired="manga" description="From the manga Komi-san wa Komyushou Desu">komi-san_wa_komyushou_desu</tag>
     <tag display="KonoSuba" paired="anime,light_novel,fantasy" description="From the KonoSuba anime/light novel series">konosuba</tag>
     <tag display="The Last Story" paired="video_game,fantasy" description="From the game The Last Story">the_last_story</tag>
@@ -443,11 +560,14 @@
     <tag display="Legend of Korra" paired="cartoon,fantasy,atla_franchise" description="From the animated series Legend of Korra">legend_of_korra</tag>
     <tag display="Legend of Zelda" paired="nintendo,video_game,fantasy" description="From the Legend of Zelda game franchise">legend_of_zelda</tag>
     <tag display="Little Witch Academia" paired="anime,fantasy,studio_trigger" description="From the anime Little Witch Academia">little_witch_academia</tag>
+    <tag display="Lobotomy Corporation" paired="future,video_game,sci-fi" description="From the game Lobotomy Corporation">lobotomy_corporation</tag>
     <tag display="Looney Tunes" paired="cartoon" description="From the Looney Tunes cartoon series">looney_tunes</tag>   
     <tag display="Lord of the Rings" paired="book,movie,fantasy" description="From the Lord of the Rings franchise">lotr</tag>
     <tag display="Love Live" paired="anime" description="From the Love Live anime series">love_live</tag>
     <tag display="Mabinogi" paired="fantasy,video_game" description="From the MMO Mabinogi">mabinogi</tag>
+    <tag display="Machikado Mazoku" paired="anime,manga" description="From the manga Machikado Mazoku, or its anime adaptation">machikado_mazoku</tag>
     <tag display="Madness Combat" paired="web_animation" description="From the Madness Combat web animation series">madness_combat</tag>
+    <tag display="Magical Sempai" paired="manga,anime" description="From the Magical Sempai series">magical_sempai_franchise</tag>
     <tag display="Mahou Shoujo Madoka Magica" paired="anime" description="From the anime Puella Magi Madoka Magica">madoka_magica</tag>
     <tag display="Manhunt" paired="video_game,horror" description="From the Manhunt video game series">manhunt</tag>
     <tag display="Marvel Comics" paired="comic" description="From a comic book series owned by Marvel">marvel</tag>
@@ -470,18 +590,18 @@
     <tag display="Neo Yokio" paired="cartoon,sci-fi,fantasy" description="From the animated series Neo Yokio">neo_yokio</tag>
     <tag display="Night in the Woods" paired="video_game" description="From the video game Night in the Woods">night_in_the_woods</tag>
     <tag display="Nintendo" paired="video_game" description="From a video game franchise owned by Nintendo">nintendo</tag>
-    <tag display="Nonary Games" paired="video_game" description="From the Nonary series of video games, also known as Zero Escape">nonary_games</tag>
     <tag display="Nyan~ Neko Sugar Girls" paired="web_animation" description="From the web series Nyan~ Neko Sugar Girls">nyan_neko_sugar_girls</tag>
     <tag display="OMORI" paired="video_game" description="From the game OMORI">omori</tag>
     <tag display="One Piece" paired="manga,anime,fantasy" description="From the One Piece anime/manga series">one_piece</tag>
     <tag display="Original Character" description="An original creation not from an established work">original_character</tag>
     <tag display="Overwatch" paired="video_game,future,sci-fi" description="From the Overwatch video game franchise">overwatch_franchise</tag>
     <tag display="Paladins" paired="video_game" description="From the Paladins video game series">paladins</tag>
-    <tag display="Panty and Stocking" paired="anime,fantasy" description="From the Panty and Stocking with Garterbelt anime series">panty_and_stocking</tag>
+    <tag display="Panty and Stocking" paired="anime" description="From the Panty and Stocking with Garterbelt anime series">panty_and_stocking</tag>
     <tag display="Pathfinder" paired="tabletop_game,fantasy" description="From the tabletop RPG Pathfinder">pathfinder</tag>
     <tag display="Persona Series" paired="video_game" description="From the Persona series of video games">persona</tag>
     <tag display="Persona 4" paired="persona,video_game,anime" description="From the video game Persona 4">persona_4</tag>
-    <tag display="Persona 5" paired="persona,video_game,anime,sci-fi" description="From the video game Persona 5">persona_5</tag>
+    <tag display="Persona 5" paired="persona,video_game,anime" description="From the video game Persona 5">persona_5</tag>
+    <tag display="Plants vs. Zombies" paired="video_game" description="From the Plants vs. Zombies game series">plants_vs_zombies</tag>
     <tag display="Pleasure Island" paired="web_animation" description="From the web animation series Pleasure Island">pleasure_island</tag>
     <tag display="Pokémon" paired="nintendo" description="From the Pokémon franchise">pokemon</tag>
     <tag display="Portal" paired="valve,video_game" description="From the Portal game series">portal</tag>
@@ -489,8 +609,11 @@
     <tag display="Power Rangers" paired="tv_show" description="From the Power Rangers franchise">power_rangers</tag>
     <tag display="Punch-Out!!" paired="video_game,nintendo" description="From the Punch-Out!! game series">punch_out</tag>
     <tag display="Puyo Puyo" paired="video_game,fantasy" description="From the Puyo Puyo game series">puyo_puyo</tag>
+    <tag display="Rage Comics" paired="internet_meme" description="From the rage comic memes">rage_comics</tag>
+    <tag display="Re:Zero" paired="anime,light_novel,fantasy" description="From the Re:Zero anime/light novel">re_zero</tag>
     <tag display="Resident Evil" paired="video_game,horror,capcom" description="From the Resident Evil series">resident_evil</tag>
     <tag display="Rosario to Vampire" paired="anime,manga" description="From the anime/manga Rosario to Vampire">rosario_to_vampire</tag>
+    <tag display="Rune Factory" paired="video_game,fantasy" description="From the Rune Factory game series">rune_factory</tag>
     <tag display="RWBY Franchise" paired="cartoon,fantasy" description="From the animated series RWBY">rwby_franchise</tag>
     <tag display="Sayonara, Zetsubou-Sensei" paired="anime,manga" description="From the Sayonara, Zetsubou-Sensei manga/anime">sayonara_zetsubou-sensei</tag>
     <tag display="Scooby Doo" paired="cartoon" description="From the Scooby Doo cartoons">scooby_doo</tag>
@@ -499,23 +622,24 @@
     <tag display="She-Ra and the Princesses of Power" paired="cartoon,fantasy,sci-fi" description="From She-Ra and the Princesses of Power">she-ra_and_the_princesses_of_power</tag>
     <tag display="Shrek" paired="cartoon,movie,fantasy" description="From the Shrek series of animated films">shrek_franchise</tag>
     <tag display="Skylanders" paired="video_game" description="From the Skylanders video game series">skylanders</tag>
+    <tag display="Silent Hill" paired="video_game,horror" description="From the Silent Hill games">silent_hill</tag>
     <tag display="The Simpsons" paired="cartoon" description="From the animated series The Simpsons">simpsons</tag>
     <tag display="The Sims" paired="video_game" description="From the The Sims series of video games">the_sims</tag>
     <tag display="Skies of Arcadia" paired="video_game,fantasy" description="From the game Skies of Arcadia">skies_of_arcadia</tag>
     <tag display="Skullgirls" paired="video_game" description="From the game Skullgirls">skullgirls</tag>
     <tag display="Sly Cooper" paired="video_game" description="From the Sly Cooper series of video games">sly_cooper_franchise</tag>
-    <tag display="Smash Bros." paired="video_game" description="Has appeared as a playable fighter in the Smash Bros. series">smash_bros</tag>
     <tag display="SNK" paired="video_game" description="From the SNK series of video games">snk</tag>
     <tag display="Sonic the Hedgehog" paired="video_game" description="From the Sonic the Hedgehog franchise">sonic_franchise</tag>
     <tag display="Spongebob Squarepants" paired="cartoon" description="From the Spongebob Squarepants series">spongebob_franchise</tag>
     <tag display="Spooky's Jump Scare Mansion" paired="video_game,horror" description="From the game Spooky's House of Jumpscares">spookys_mansion</tag>
     <tag display="Starcraft" paired="video_game,sci-fi,future,space" description="From the Starcraft game series">starcraft</tag>
     <tag display="Star Trek" paired="tv_show,sci-fi,future,space" description="From the Star Trek franchise">star_trek</tag>
-    <tag display="Star Wars" paired="movie,sci-fi,space" description="From the Star Wars franchise">star_wars</tag>
+    <tag display="Star Wars" paired="sci-fi,space" description="From the Star Wars franchise">star_wars</tag>
     <tag display="Stardew Valley" paired="video_game" description="From the game Stardew Valley">stardew_valley</tag>
     <tag display="StarForce-One" paired="book" description="From the novel Starforce-one">starforce-one</tag>
     <tag display="Steins;Gate" paired="anime,visual_novel,sci-fi" description="From the Steins;Gate visual novel, or its anime adaptation">steins_gate</tag>
     <tag display="Steven Universe" paired="cartoon" description="From the animated series Steven Universe">steven_universe</tag>
+    <tag display="Stranger Things" paired="tv_show,horror" description="From the Stranger Things TV series">stranger_things</tag>
     <tag display="Street Fighter" paired="video_game" description="From the Street Fighter series of video games">street_fighter</tag>
     <tag display="Studio Trigger" paired="anime" description="From an anime series by Studio Trigger">studio_trigger</tag>
     <tag display="Super Mario" paired="nintendo,video_game" description="From the Mario video game franchise">super_mario</tag>
@@ -537,93 +661,32 @@
     <tag display="VA-11 HALL-A" paired="video_game,visual_novel,sci-fi,future" description="From the visual novel/game VA-11 HALL-A">va-11_hall-a</tag>
     <tag display="Vandread" paired="anime,space,sci-fi,future" description="From the anime Vandread">vandread</tag>
     <tag display="Valve" paired="video_game" description="From a game series owned by Valve">valve</tag>
-    <tag display="Vocaloid" paired="video_game" description="From the Vocaloid franchise">vocaloid</tag>
+    <tag display="Vocaloid" description="From the Vocaloid franchise">vocaloid</tag>
     <tag display="Wakfu" paired="cartoon,fantasy" description="From the Wakfu series">wakfu</tag>
     <tag display="WarioWare" paired="video_game,nintendo" description="From the WarioWare series of video games">warioware</tag>
     <tag display="WataMote" paired="manga" description="From the anime/manga WataMote">watamote</tag>
+    <tag display="Wicked: the Musical" paired="theater" description="From the stage musical Wicked">wicked_the_musical</tag>
     <tag display="Wii Fit" paired="nintendo,video_game" description="From the video game Wii Fit">wii_fit</tag>
     <tag display="Wikipedia" paired="website" description="The character is a Wikipedia mascot, or from a Wikipedia-original example image">wikipedia</tag>
     <tag display="The Witcher" paired="video_game,fantasy" description="From The Witcher series of video games">the_witcher</tag>
     <tag display="World Trigger" paired="anime,manga,sci-fi" description="From the anime/manga World Trigger">world_trigger</tag>
-    <tag display="Xenoblade Chronicles Series" paired="video_game" description="From the Xenoblade Chronicles series">xenoblade_chronicles</tag>
-    <tag display="Xenoblade Chronicles" paired="video_game,xenoblade_chronicles" description="From the first Xenoblade Chronicles game">xenoblade_chronicles_1</tag>
-    <tag display="Xenoblade Chronicles 2" paired="video_game,xenoblade_chronicles" description="From Xenoblade Chronicles 2">xenoblade_chronicles_2</tag>
-    <tag display="Xenoblade Chronicles 3" paired="video_game,xenoblade_chronicles" description="From Xenoblade Chronicles 3">xenoblade_chronicles_3</tag>
-    <tag display="Xenoblade Chronicles X" paired="video_game,xenoblade_chronicles" description="From Xenoblade Chronicles X">xenoblade_chronicles_x</tag>
+    <tag display="Xenoblade Chronicles Series" paired="video_game,nintendo" description="From the Xenoblade Chronicles series">xenoblade_chronicles</tag>
+    <tag display="Xenoblade Chronicles" paired="video_game,nintendo,xenoblade_chronicles" description="From the first Xenoblade Chronicles game">xenoblade_chronicles_1</tag>
+    <tag display="Xenoblade Chronicles 2" paired="video_game,nintendo,xenoblade_chronicles" description="From Xenoblade Chronicles 2">xenoblade_chronicles_2</tag>
+    <tag display="Xenoblade Chronicles 3" paired="video_game,nintendo,xenoblade_chronicles" description="From Xenoblade Chronicles 3">xenoblade_chronicles_3</tag>
+    <tag display="Xenoblade Chronicles X" paired="video_game,nintendo,xenoblade_chronicles" description="From Xenoblade Chronicles X">xenoblade_chronicles_x</tag>
     <tag display="Yandere Simulator" paired="video_game" description="From the video game Yandere Simulator">yandere_simulator</tag>
     <tag display="Yu-Gi-Oh!" paired="anime" description="From the anime Yi-Gi-Oh!">yugioh</tag>
+    <tag display="Yuru Camp" paired="anime,manga" description="From the manga Yuru Camp, and/or its anime adaptation">yuru_camp</tag>
+    <tag display="Yuru Yuri" paired="anime,manga" description="From the manga Yuru Yuri, and/or its anime adaptation">yuru_yuri</tag>
+    <tag display="Zero Escape" paired="video_game" description="From the Zero Escape game series">zero_escape</tag>
     <tag display="Zombie Land Saga" paired="anime" description="From the anime Zombie Land Saga">zombieland_saga</tag>
   </group>
-  <group label="Universe/Organization" multiselect="true">
-    <tag display="Justice League (DC)" description="Member of the Justice League">justice_league</tag>
-    <tag display="Teen Titans (DC)" description="Member of the Team Titans">teen_titans</tag>
-    <tag display="Ashen Wolves (Fire Emblem: Three Houses)" description="Belongs to the Ashen Wolves house in Fire Emblem: Three Houses">ashen_wolves</tag>
-    <tag display="Black Eagles (Fire Emblem: Three Houses)" description="Belongs to the Black Eagles house in Fire Emblem: Three Houses">black_eagles</tag>
-    <tag display="Blue Lions (Fire Emblem: Three Houses)" description="Belongs to the Blue Lions house in Fire Emblem: Three Houses">blue_lions</tag>
-    <tag display="Golden Deer (Fire Emblem: Three Houses)" description="Belongs to the Golden Deer house in Fire Emblem: Three Houses">golden_deer</tag>
-    <tag display="Church of Seiros (Fire Emblem: Three Houses)" description="Belongs to the Church of Seiros in Fire Emblem: Three Houses">church_of_seiros</tag>
-    <tag display="Inazuma (Genshin Impact)" description="Hails from the nation of Inazuma in Genshin Impact">inazuma</tag>
-    <tag display="Liyue (Genshin Impact)" description="Hails from the nation of Liyue in Genshin Impact">liyue</tag>
-    <tag display="Mondstadt (Genshin Impact)" description="Hails from the nation of Mondstadt in Genshin Impact">mondstadt</tag>
-    <tag display="Honnouji Academy (Kill la Kill)" description="Student at Honnouji Academy in Kill la Kill">honnouji_academy</tag>
-    <tag display="Luna Nova Academy (Little Witch Academia)" description="Student at Luna Nova Academy in Little Witch Academia">luna_nova_academy</tag>
-    <tag display="Avengers (Marvel)" description="Member of the Avengers">avengers</tag>
-    <tag display="X-Men (Marvel)" description="Member of the X-Men">x-men</tag>
-    <tag display="UA Academy (My Hero Academia)" description="Student at UA High in My Hero Academia">ua_academy</tag>
-    <tag display="Overwatch (Overwatch)" description="Member of Overwatch in the game of the same name">overwatch</tag>
-    <tag display="Phantom Thieves (Persona 5)" description="A member of Persona 5's Phantom Thieves">phantom_thieves</tag>
-    <tag display="Gym Leader (Pokémon)" description="The character is a Gym Leader in the Pokémon franchise">gym_leader</tag>
-    <tag display="Kanto (Pokémon)" description="From Pokémon's Kanto region">kanto</tag>
-    <tag display="Johto (Pokémon)" description="From Pokémon's Johto region">johto</tag>
-    <tag display="Hoenn (Pokémon)" description="From Pokémon's Hoenn region">hoenn</tag>
-    <tag display="Sinnoh (Pokémon)" description="From Pokémon's Sinnoh region">sinnoh</tag>
-    <tag display="Unova (Pokémon)" description="From Pokémon's Unova region">unova</tag>
-    <tag display="Kalos (Pokémon)" description="From Pokémon's Kalos region">kalos</tag>
-    <tag display="Alola (Pokémon)" description="From Pokémon's Alola region">alola</tag>
-    <tag display="Galar (Pokémon)" description="From Pokémon's Galar region">galar</tag>
-    <tag display="Hisui (Pokémon)" description="From Pokémon's Hisui region">hisui</tag>
-    <tag display="Paldea (Pokémon)" description="From Pokémon's Paldea region">paldea</tag>
-    <tag display="Team CFVY (RWBY)" description="Member of Team CFVY in RWBY">cfvy</tag>
-    <tag display="Team JNPR (RWBY)" description="Member of team JNPR in RWBY">jnpr</tag>
-    <tag display="Team RWBY (RWBY)" description="Member of team RWBY in RWBY">rwby</tag>
-    <tag display="Mystery Inc. (Scooby Doo)" description="A member of the Scooby Doo gang">mystery_inc</tag>
-    <tag display="Starfleet (Star Trek)" description="Belongs to the Starfleet organization in Star Trek">starfleet</tag>
-  </group>
-  <group label="Source Medium" multiselect="true">
-    <tag display="Anime" description="Originates from Japanese animation">anime</tag>
-    <tag display="Book" description="Originates from western literature, not including comics or graphic novels">book</tag>
-    <tag display="Cartoon" description="Originates from Western animation">cartoon</tag>
-    <tag display="Comic" description="Originates from Western comic books or graphic novels">comic</tag>
-    <tag display="Gacha Game" paired="video_game" description="Originates from a game based on gacha mechanics">gacha_game</tag>
-    <tag display="Hentai" description="Originates from a hentai game, anime or manga">hentai</tag>
-    <tag display="Internet Meme" description="Originates from an Internet meme">internet_meme</tag>
-    <tag display="Light Novel" description="Originates from Japanese light novels">light_novel</tag>
-    <tag display="Manga" description="Originates from a Japanese comic or graphic novel">manga</tag>
-    <tag display="Movie" description="Originates from a film or movie">movie</tag>
-    <tag display="Tabletop/Traditional Game" description="Originates from a tabletop game, such as role-playing games or card games">tabletop_game</tag>
-    <tag display="TV Series" description="Originates from a live-action TV show">tv_show</tag>
-    <tag display="Video Game" description="Originates from a video game">video_game</tag>
-    <tag display="Visual Novel" description="Originates from a visual novel">visual_novel</tag>
-    <tag display="Web Animation" description="Originates from an independently-produced web-original animation">web_animation</tag>
-    <tag display="Webcomic" description="Originates from a webcomic">webcomic</tag>
-    <tag display="Website" description="Originates from a website (ex. a site mascot)">website</tag>
-  </group>
-  <group label="Genre" multiselect="true">
-    <tag display="Fantasy" description="From a fantasy setting">fantasy</tag>
-    <tag display="Future" description="From a futuristic setting">future</tag>
-    <tag display="Post-Apocalyptic" description="From a post-apocalyptic setting">post-apocalyptic</tag>
-    <tag display="Horror"  description="From a horror genre">horror</tag>
-    <tag display="Science Fiction" description="From a science fiction setting">sci-fi</tag>
-    <tag display="Space" description="Character lives in space">space</tag>
-  </group>
-  <group label="Holiday Event Designation" multiselect="true">
-    <tag display="April Fool's Character" description="Character is exclusive to April Fool's Day events">april_fools</tag>
-    <tag display="April Fool's Alt Skin" description="Alt skin is exclusive to April Fool's Day events">april_fools_skin</tag>
-    <tag display="Christmas Alt Skin" description="Alt skin is exclusive to Christmas events">christmas_skin</tag>
-    <tag display="Easter Alt Skin" description="Alt skin is exclusive to Easter events">easter_skin</tag>
-    <tag display="Halloween Alt Skin" description="Alt skin is exclusive to Halloween events">halloween_skin</tag>
-    <tag display="Summer Alt Skin" description="Alt skin is exclusive to Summer events">summer_skin</tag>
-    <tag display="Valentine's Day Alt Skin" description="Alt skin is exclusive to Valentine's Day events">valentines_skin</tag>
+  <group label="Crossover Appearances" multiselect="true">
+    <tag display="Dead by Daylight" paired="dead_by_daylight" description="Character is not originally from Dead by Daylight, but made a playable crossover appearance in the game">dead_by_daylight_crossover</tag>
+    <tag display="Girls' Frontline" description="Character is not originally from Girls' Frontline, but made a noteworthy crossover appearance in the game">girls_frontline_crossover</tag>
+    <tag display="Granblue Fantasy" description="Character is not originally from Granblue Fantasy, but made a noteworthy crossover appearance in the game">granblue_fantasy_crossover</tag>
+    <tag display="Smash Bros." paired="video_game" description="Has appeared as a playable fighter in the Smash Bros. series">smash_bros</tag>
   </group>
   <group hidden="true">
     <tag display="Human" description="Character is the human player">human</tag>

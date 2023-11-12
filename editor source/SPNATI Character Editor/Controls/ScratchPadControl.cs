@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -72,6 +72,10 @@ namespace SPNATI_Character_Editor.Controls
 
 		private void cmdImport_Click(object sender, EventArgs e)
 		{
+			if (String.IsNullOrEmpty(txtLines.Text))
+			{
+				return;
+			}
 			List<string> lines = GetLines();
 			importCtl.SetLines(lines);
 			importCtl.Visible = true;

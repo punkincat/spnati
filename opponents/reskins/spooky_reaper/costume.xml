@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>spooky_reaper</id>
+    <label>Spooky</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag from="0" to="1">hood</tag>
+        <tag from="2" to="6">long_hair</tag>
+    </tags>
+    <layers>4</layers>
+    <folder>opponents/reskins/spooky_reaper/</folder>
+    <folder stage="2">opponents/spooky/</folder>
+    <wardrobe>
+        <clothing name="panties" position="lower" type="important" plural="true" />
+        <clothing name="bra" generic="bra" position="upper" type="important" />
+        <clothing name="robe" generic="robe" position="both" type="major" />
+        <clothing name="knife" position="held" type="extra" />
+    </wardrobe>
+
+</costume>

@@ -112,6 +112,7 @@ $ioModal = $('#io-modal');
 $extrasModal = $('#extras-modal');
 $resortModal = $('#resort-modal');
 $eventAnnouncementModal = $('#event-announcement-modal');
+$characterDebugModal = $("#character-debug-modal");
 
 /* Screen State */
 $previousScreen = null;
@@ -164,9 +165,6 @@ function initialSetup () {
     tableOpacity = 1;
     $gameTable.css({opacity:1});
 
-    /* Load title screen info first, since that's fast and synchronous */
-    selectTitleCandy();
-
     /* Attempt to detect broken images as caused by running SPNATI from an invalid archive. */
     detectBrokenOffline();
 
@@ -199,6 +197,7 @@ function initialSetup () {
         save.load();
         return loadVersionInfo();
     }).then(metadataIndex.loadIndex.bind(metadataIndex)).then(loadSelectScreen).then(loadAllCollectibles).then(function () {
+        selectTitleCandy();
         setupTitleClothing();
         finishStartupLoading();
 
@@ -213,7 +212,7 @@ function initialSetup () {
 
     /* show the title screen */
     $titleScreen.show();
-    $('#warning-start-button').focus();
+    $('.warning-container').focus();
     autoResizeFont();
     /* set up future resizing */
     window.onresize = autoResizeFont;
@@ -237,16 +236,19 @@ function initialSetup () {
         bubbleArrowOffsetRules.push(pair);
     }
     $(document).keydown(function(ev) {
-        if (ev.keyCode == 9) {  // Tab
+        if (ev.key == "Tab") {  // Tab
             $("body").addClass('focus-indicators-enabled');
         }
     });
     $(document).keyup(function(ev) {
-        if ((ev.key == 'f' || (ev.key == 'F' && !ev.shiftKey))
+        if (ev?.key?.toLowerCase() == 'f' && !ev.shiftKey
             && !$(document.activeElement).is('input, select, textarea')) {
             toggleFullscreen();
-        } else if (ev.keyCode == 112) { // F1
+        } else if (ev.key == "F1") {
             showHelpModal();
+            ev.preventDefault();
+        } else if (ev.key == "Escape") {
+            $("body").removeClass('focus-indicators-enabled');
         }
     });
     $(document).mousedown(function(ev) {
@@ -525,7 +527,6 @@ function enterTitleScreen() {
     $warningContainer.hide();
     $titleContainer.show();
     $('.title-candy').show();
-    $('#title-start-button').focus();
     Sentry.setTag("screen", "title");
 }
 
@@ -1115,6 +1116,15 @@ function mergeObjects(a, b){
     return a;
 }
 
+function shuffleArray (array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = getRandomNumber(0, i);
+        var tmp = array[i];
+        array[i] = array[j];
+        array[j] = tmp;
+    }
+}
+
 /************************************************************
  * Changes the first letter in a string to upper case.
  ************************************************************/
@@ -1187,6 +1197,12 @@ if (!Array.prototype.flat) {
 if (!Array.prototype.flatMap) {
     Array.prototype.flatMap = function (callbackFn, thisArg) {
         return this.map(callbackFn, thisArg).flat(1);
+    }
+}
+
+if (!Array.prototype.at) {
+    Array.prototype.at = function (idx) {
+        return (idx >= 0) ? this[idx] : this[this.length + idx];
     }
 }
 
@@ -1331,10 +1347,21 @@ function autoResizeFont ()
     activeBackground.update();
 }
 
+$('button[tabindex], input[tabindex], select[tabindex]').each(function() {
+    $(this).data('tabindex', $(this).attr('tabindex'));
+});
+
 $('.modal').on('show.bs.modal', function() {
-    $('.screen:visible').find('button, input').attr('tabIndex', -1);
+    $('.screen:visible').find('button, input, select').attr('tabindex', -1);
+    $(document.activeElement).blur();
 });
 
 $('.modal').on('hidden.bs.modal', function() {
-    $('.screen:visible').find('button, input').removeAttr('tabIndex');
+    $('.screen:visible').find('button, input, select').each(function() {
+        if ($(this).data('tabindex')) {
+            $(this).attr('tabindex', $(this).data('tabindex'));
+        } else {
+            $(this).removeAttr('tabindex');
+        }
+    });
 });

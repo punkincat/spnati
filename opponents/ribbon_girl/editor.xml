@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>ribbon_girl</owner>
+    <height>5'6"</height>
+    <age />
+    <pronunciation />
+    <othernotes>Ribbon Girl is a famous pop star and competitor in the super-powered fighting league known as the "ARMS League." Her most well-known ability - one which she shares with other ARMS League competitors - is to turn her arms into stretchy coils. She can also perform midair jumps and instantly drop to the ground. Ribbon Girl's mask makes it possible to control her powers; without it, her arms would coil and uncoil uncontrollably.&lt;br&gt;&lt;br&gt;ARMS League competitors all fight using glove-like weapons called "Arms," which they can channel energy into to power up with elemental effects like fire and wind. Ribbon Girl has shown up at the Inventory with her signature Arms, the "Sparkies," which are electric element.&lt;br&gt;&lt;br&gt;ARMS (the game) does not have particularly fleshed-out lore, so there's a lot left unanswered, like what fighters' real names are or what their relationships are with each other. There's even some conflicting canon presented by the canceled ARMS comic, such as fighters' unusual hairstyles being wigs, despite promotional art depicting it as being their actual hair.</othernotes>
     <noteworthy>
         <case name="Game Start" id="38" priority="Noteworthy" min="0" max="0">
             <description>Ribbon Girl calls attention to her unusual arms. She may also meantion how her mask regulates her powers.</description>
@@ -20,11 +24,11 @@
         <case name="Noodles" id="91" priority="Prompt" min="0" max="8">
             <description>Ribbon Girl mentions that she's getting hungry and asks if anyone wants to join her for some ramen after the game.</description>
         </case>
-        <case name="Power Talk 2" id="98" priority="FYI" min="1" max="1">
-            <description>If Ribbon Girl is still in stage 1 after one round, she will continue her talk about the ARMS Ability.</description>
-        </case>
         <case name="Celebrity Nudity" id="146" priority="FYI" min="7" max="7">
             <description>After removing her bra, Ribbon Girl will muse about celebrity nudity, and how it shouldn't be that big of a deal for pop stars to expose themselves.</description>
+        </case>
+        <case name="Custom Arm" id="342" priority="Prompt" min="0" max="10">
+            <description>Ribbon Girl asks what kind of new Arm others would like to see get made.</description>
         </case>
     </noteworthy>
     <responses>
@@ -115,9 +119,6 @@
         <label id="16" label="" folder="Player Wager" sort="4" />
         <label id="17" label="" color="4" folder="" sort="0" />
         <label id="18" label="" color="4" folder="" sort="0" />
-        <label id="19" label="" color="4" folder="" sort="0" />
-        <label id="20" label="" color="4" folder="" sort="0" />
-        <label id="21" label="" color="4" folder="" sort="0" />
         <label id="22" label="" color="4" folder="" sort="0" />
         <label id="23" label="" color="4" folder="" sort="0" />
         <label id="24" label="" color="4" folder="" sort="0" />
@@ -128,7 +129,6 @@
         <label id="29" label="" color="4" folder="" sort="0" />
         <label id="30" label="" color="4" folder="" sort="0" />
         <label id="31" label="" color="4" folder="" sort="0" />
-        <label id="33" label="" color="4" folder="" sort="0" />
         <label id="37" label="" folder="Player Wager" sort="2" />
         <label id="39" label="" color="4" folder="" sort="0" />
         <label id="40" label="" color="4" folder="" sort="0" />
@@ -181,28 +181,108 @@
         <label id="155" label="" color="1" folder="" sort="0" />
         <label id="164" label="" folder="Backgrounds" sort="0" />
         <label id="165" label="" folder="Backgrounds" sort="4" />
-        <label id="166" label="" folder="Backgrounds" sort="0" />
-        <label id="167" label="" folder="Backgrounds" sort="0" />
-        <label id="168" label="" folder="Backgrounds" sort="0" />
-        <label id="169" label="" folder="Backgrounds" sort="0" />
-        <label id="170" label="" folder="Backgrounds" sort="0" />
-        <label id="171" label="" folder="Backgrounds" sort="0" />
+        <label id="166" label="" folder="Backgrounds" sort="15" />
+        <label id="167" label="" folder="Backgrounds" sort="16" />
+        <label id="168" label="" folder="Backgrounds" sort="14" />
+        <label id="169" label="" folder="Backgrounds" sort="17" />
+        <label id="170" label="" folder="Backgrounds" sort="12" />
+        <label id="171" label="" folder="Backgrounds" sort="13" />
         <label id="172" label="" color="1" folder="" sort="0" />
-        <label id="174" label="" color="1" folder="" sort="0" />
+        <label id="177" label="" color="1" folder="" sort="0" />
         <label id="175" label="" color="1" folder="" sort="0" />
+        <label id="70" label="Arm Power Talk Back-Up Start" folder="Noteworthy Things" sort="2" />
+        <label id="98" label="Arm Power Talk" folder="Noteworthy Things" sort="3" />
+        <label id="146" label="Celebrity Nudity" folder="Noteworthy Things" sort="2" />
+        <label id="91" label="" folder="Prompts" sort="0" />
+        <label id="178" label="Arms Talk Trigger" color="0" folder="Noteworthy Things" sort="4" />
+        <label id="179" label="Other Arms" color="0" folder="Noteworthy Things" sort="5" />
+        <label id="180" label="Misc. Things" color="4" folder="Noteworthy Things" sort="7" />
+        <label id="181" label="Prince / Princess Filter" folder="" sort="0" />
+        <label id="182" label="Mask Explaination" folder="Noteworthy Things" sort="0" />
+        <label id="184" label="" folder="Noteworthy Things" sort="0" />
+        <label id="185" label="Misc. Things - Late Game" color="4" folder="Noteworthy Things" sort="8" />
+        <label id="186" label="Mask Talk - Late Game" color="0" folder="Noteworthy Things" sort="9" />
+        <label id="187" label="Energy Channeling Talk" folder="Noteworthy Things" sort="10" />
+        <label id="188" label="Nude Talk" folder="Noteworthy Things" sort="11" />
+        <label id="189" label="" color="1" folder="" sort="0" />
+        <label id="190" label="Masturbating Opponent" folder="" sort="0" />
+        <label id="191" label="Masturbating Opponent" folder="" sort="0" />
+        <label id="192" label="Masturbating Opponent" folder="" sort="0" />
+        <label id="193" label="Wrist Ribbons" folder="Noteworthy Things" sort="12" />
+        <label id="197" label="" folder="Duplicate Cases" sort="2" />
+        <label id="196" label="" folder="Duplicate Cases" sort="0" />
+        <label id="198" label="" folder="Duplicate Cases" sort="3" />
+        <label id="199" label="" folder="Duplicate Cases" sort="4" />
+        <label id="200" label="" folder="Duplicate Cases" sort="5" />
+        <label id="210" label="Removing Accessory" folder="Duplicate Cases" sort="8" />
+        <label id="211" label="Removing Accessory - Exposed" folder="Duplicate Cases" sort="6" />
+        <label id="212" label="Removing Accessory" folder="Duplicate Cases" sort="9" />
+        <label id="213" label="Removing Accessory" folder="Duplicate Cases" sort="10" />
+        <label id="214" label="Removing Accessory" folder="Duplicate Cases" sort="11" />
+        <label id="215" label="Removing Accessory - Exposed" folder="Duplicate Cases" sort="7" />
+        <label id="218" label="Removed Accessory" folder="Duplicate Cases" sort="18" />
+        <label id="219" label="Removed Accessory - Exposed" folder="Duplicate Cases" sort="17" />
+        <label id="220" label="Removed Accessory" folder="Duplicate Cases" sort="19" />
+        <label id="221" label="Removed Accessory - Exposed" folder="Duplicate Cases" sort="16" />
+        <label id="216" label="Removed Accessory" folder="Duplicate Cases" sort="20" />
+        <label id="217" label="Removed Accessory" folder="Duplicate Cases" sort="21" />
+        <label id="223" label="" color="1" folder="" sort="0" />
+        <label id="232" label="" color="1" folder="" sort="0" />
+        <label id="240" label="Removing Minor" folder="Duplicate Cases" sort="13" />
+        <label id="239" label="Removing Minor" folder="Duplicate Cases" sort="12" />
+        <label id="241" label="Removing Minor" folder="Duplicate Cases" sort="14" />
+        <label id="242" label="Removing Minor" folder="Duplicate Cases" sort="15" />
+        <label id="243" label="Removed Minor" folder="Duplicate Cases" sort="22" />
+        <label id="244" label="Removed Minor" folder="Duplicate Cases" sort="23" />
+        <label id="245" label="Removed Minor" folder="Duplicate Cases" sort="24" />
+        <label id="246" label="Removed Minor" folder="Duplicate Cases" sort="25" />
+        <label id="340" label="" color="1" folder="Duplicate Cases" sort="34" />
+        <label id="341" label="" folder="Prompts" sort="0" />
+        <label id="275" label="" color="1" folder="" sort="0" />
+        <label id="287" label="" color="5" folder="" sort="0" />
+        <label id="288" label="" color="4" folder="" sort="0" />
+        <label id="289" label="" color="4" folder="" sort="0" />
+        <label id="302" label="Masturbating Opponent" folder="" sort="0" />
+        <label id="304" label="" color="1" folder="" sort="0" />
+        <label id="342" label="" folder="Prompts" sort="2" />
+        <label id="311" label="Removing Major" folder="Duplicate Cases" sort="26" />
+        <label id="312" label="Removing Major" folder="Duplicate Cases" sort="27" />
+        <label id="313" label="Removing Major" folder="Duplicate Cases" sort="28" />
+        <label id="314" label="Removing Major" folder="Duplicate Cases" sort="19" />
+        <label id="315" label="Removed Major" folder="Duplicate Cases" sort="30" />
+        <label id="316" label="Removed Major" folder="Duplicate Cases" sort="31" />
+        <label id="317" label="Removed Major" folder="Duplicate Cases" sort="32" />
+        <label id="318" label="Removed Major" folder="Duplicate Cases" sort="33" />
+        <label id="330" label="" folder="Duplicate Cases" sort="34" />
+        <label id="331" label="" folder="Duplicate Cases" sort="35" />
+        <label id="332" label="" folder="Duplicate Cases" sort="36" />
+        <label id="333" label="" folder="Duplicate Cases" sort="37" />
+        <label id="334" label="" color="1" folder="" sort="0" />
+        <label id="343" label="" folder="Prompts" sort="3" />
     </labels>
-    <nextId>176</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>343</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="1v1" />
+        <marker scope="Public" name="9S_Blind1" />
+        <marker scope="Public" name="9S_CuteEyes" />
+        <marker scope="Public" name="9S_NoNipples" />
         <marker scope="Public" name="AellaChargeArms" />
+        <marker scope="Public" name="AllArmsTalk" />
         <marker scope="Public" name="AmyArms" />
         <marker scope="Public" name="AmyTalk1" />
         <marker scope="Public" name="ArmPowerTalk">Ribbon Girl explains what's up with her arms.</marker>
         <marker scope="Public" name="ArmPowerTalk2">Ribbon Girl explains more of her powers.</marker>
+        <marker scope="Public" name="ARMSLeagueExplain" />
         <marker scope="Public" name="BBNoGuard" />
+        <marker scope="Public" name="BillyBrand" />
+        <marker scope="Public" name="BirdArmNest" />
+        <marker scope="Public" name="BlorbBounce" />
         <marker scope="Public" name="CelebrityNudity" />
         <marker scope="Public" name="ChazzCards" />
+        <marker scope="Public" name="CrazyARMSMinigames" />
         <marker scope="Public" name="CynthiaARMluminati" />
         <marker scope="Public" name="CynthiaARMluminati2" />
         <marker scope="Public" name="CynthiaARMluminati3" />
@@ -218,6 +298,7 @@
         <marker scope="Public" name="CynthiaRuins2" />
         <marker scope="Public" name="CynthiaRuins3" />
         <marker scope="Public" name="CynthiaRumors" />
+        <marker scope="Public" name="DoMoreSexualStuff" />
         <marker scope="Public" name="ExhibitionPictures" />
         <marker scope="Public" name="ExhibitionShow" />
         <marker scope="Public" name="Fingers">Ribbon Girl states that her fingers can't stretch.</marker>
@@ -226,34 +307,50 @@
         <marker scope="Public" name="GalateaTuringByte" />
         <marker scope="Public" name="GalateaTuringHelix" />
         <marker scope="Public" name="GalateaTuringSpring" />
+        <marker scope="Public" name="GetYourCamerasReady" />
         <marker scope="Public" name="GlovesGrow" />
+        <marker scope="Public" name="GrabNet" />
+        <marker scope="Public" name="HoldingACharge" />
         <marker scope="Public" name="Holiday_Presents" />
         <marker scope="Public" name="Holiday_Ribbon" />
         <marker scope="Public" name="Holiday_Rusty" />
         <marker scope="Public" name="Holiday_Unwrap" />
         <marker scope="Public" name="HowDidIDo">Ribbon Girl asked "How did I do?" when finished masturbating.</marker>
+        <marker scope="Public" name="HPJuice" />
+        <marker scope="Public" name="Intro" />
+        <marker scope="Public" name="JigglyHelix" />
         <marker scope="Public" name="JolyneStand" />
         <marker scope="Public" name="JuraRedClaw" />
         <marker scope="Public" name="JuraSprings" />
+        <marker scope="Public" name="KidCobraPowersFromBirth" />
+        <marker scope="Public" name="LolaPopInflateTrick" />
         <marker scope="Public" name="MandatoryChestGuard">Ribbon Girl mentions that chest guards are effectively mandatory in the ARMS League .</marker>
         <marker scope="Public" name="MaryBlind" />
         <marker scope="Public" name="MaryDucks" />
         <marker scope="Public" name="MaryFetishes" />
         <marker scope="Public" name="MaryFetishes2" />
         <marker scope="Public" name="MaryMFK" />
+        <marker scope="Public" name="MaskExplaination" />
         <marker scope="Public" name="MaskPowers">Ribbon Girl explains that her mask lets her control her powers.</marker>
         <marker scope="Public" name="MechaNoGuard" />
+        <marker scope="Public" name="MegatonsTooSlow" />
         <marker scope="Public" name="MeguminPowerRegulation" />
         <marker scope="Public" name="Nagisa_Food" />
         <marker scope="Public" name="Nagisa_Scar" />
+        <marker scope="Public" name="NakedFloating" />
         <marker scope="Public" name="name_stated" />
+        <marker scope="Public" name="NaughtyArms" />
+        <marker scope="Public" name="NaughtyStretchyArms" />
         <marker scope="Public" name="nickname" />
+        <marker scope="Public" name="NinjarasBuffs" />
         <marker scope="Public" name="NoFumbling">Ribbon Girl says that she hopes you weren't expecting her to leave her gloves on and fumble taking things off.</marker>
         <marker scope="Public" name="NoGuard" />
+        <marker scope="Public" name="NonPokerStrip" />
         <marker scope="Public" name="Noodles">Ribbon Girl mentions that she's getting hungry and asks if anyone wants to join her for some ramen after the game.</marker>
         <marker scope="Public" name="NotAHero">Ribbon Girl clarifies that she's not a super hero.</marker>
         <marker scope="Public" name="NotHiding">Ribbon Girl clarifies that she's not trying to hide her identity.</marker>
         <marker scope="Public" name="NudeGloveLook">Ribbon Girl mentions how her arms give her a "nude with gloves" look.</marker>
+        <marker scope="Public" name="NudeWorkoutWithRG" />
         <marker scope="Public" name="OtherGloveArms">Ribbon Girl talks about Arms similar to her Sparkies.</marker>
         <marker scope="Public" name="OtherSignatureArms">Ribbon Girl talks about her other signature Arms.</marker>
         <marker scope="Public" name="Overdressed" />
@@ -263,6 +360,7 @@
         <marker scope="Public" name="PA15Touch" />
         <marker scope="Public" name="Perona_Butt" />
         <marker scope="Public" name="Perona_Dolls1" />
+        <marker scope="Public" name="Perona_Dolls2" />
         <marker scope="Public" name="Perona_Finished" />
         <marker scope="Public" name="Perona_Ghosts" />
         <marker scope="Public" name="Perona1" />
@@ -270,21 +368,31 @@
         <marker scope="Public" name="PlayerIsOut" />
         <marker scope="Public" name="PlayerWager">Ribbon Girl makes a bet with the human player.</marker>
         <marker scope="Public" name="PlayerWager2" />
+        <marker scope="Public" name="PoisonArms" />
+        <marker scope="Public" name="PoleDancing" />
         <marker scope="Public" name="Polly_Arms1" />
         <marker scope="Public" name="Polly_BoobPrank1" />
         <marker scope="Public" name="Polly_BoobPrank2" />
         <marker scope="Public" name="Polly1" />
         <marker scope="Public" name="PowerBoots">Ribbon Girl explains that her boots are not the source of her air-jumping ability.</marker>
         <marker scope="Public" name="PowerShoes" />
+        <marker scope="Public" name="Prompt_Competitive" />
+        <marker scope="Public" name="Prompt_CustomArms" />
+        <marker scope="Public" name="RealRibbonHair" />
         <marker scope="Public" name="RibbonHair">Ribbon Girl mentions that her hair is made of ribbons.</marker>
+        <marker scope="Public" name="RobotKnockout" />
         <marker scope="Public" name="ShamirLookingForSomeone" />
         <marker scope="Public" name="ShantaeDeerDance" />
         <marker scope="Public" name="ShantaeMonkeyDance" />
         <marker scope="Public" name="SmithBrand" />
         <marker scope="Public" name="SparkiesTalk">Ribbon Girl talks about her Sparkies.</marker>
         <marker scope="Public" name="SpringMansLuckyShorts" />
+        <marker scope="Public" name="SpringMansToasters" />
+        <marker scope="Public" name="SpringStadiumSprings" />
         <marker scope="Public" name="Stella" />
         <marker scope="Public" name="StellaARMS" />
+        <marker scope="Public" name="Stripped1" />
+        <marker scope="Public" name="StripVBall" />
         <marker scope="Public" name="Supernova" />
         <marker scope="Public" name="Supernova1" />
         <marker scope="Public" name="Supernova2" />
@@ -294,9 +402,13 @@
         <marker scope="Public" name="SurprisedAtHands">Ribbon Girl pretends to be surprised by her own hands, poking fun at a common misconception about ARMS fighters.</marker>
         <marker scope="Public" name="SwimwearARMS" />
         <marker scope="Public" name="ThankYouErufuda" />
+        <marker scope="Public" name="TiredOfTheMask" />
         <marker scope="Public" name="TwilightIsPony" />
         <marker scope="Public" name="TwintelleHair" />
+        <marker scope="Public" name="TwintellesConfidence" />
+        <marker scope="Public" name="UnsanctionedArms" />
         <marker scope="Public" name="WagerStart">Ribbon Girl's wager with the player officially starts.</marker>
+        <marker scope="Public" name="WristRibbons" />
         <marker scope="Public" name="ZLS1" />
         <marker scope="Public" name="ZLS2" />
     </markers>

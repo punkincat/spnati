@@ -7,11 +7,11 @@
         <unlock>Lose a game against Don Patch.</unlock>
         <hide-details>true</hide-details>
     </collectible>
-    <collectible id="streets" status="offline" img="opponents/bobobo/STREETS.png" thumbnail="opponents/bobobo/STREETS.png">
+    <collectible id="streets" img="opponents/bobobo/STREETS.png" thumbnail="opponents/bobobo/STREETS.png">
         <title>Streets Sign</title>
         <subtitle>You got the achievement, but you still don't know where that voice is coming from.</subtitle>
         <text>Just an ordinary street sign. You don't know where Bobobo got it, why he threw it at you like that, or where that voice was coming from? You'll likely never forget you time in the streets.</text>
-        <unlock>Play on the streets with three characters from Street Fighter.</unlock>
+        <unlock>Play outside with at least one Fighter character.</unlock>
         <hide-details>true</hide-details>
     </collectible>
     <collectible id="dengakumanplushie" img="opponents/bobobo/accent-dengakuman.png" thumbnail="opponents/bobobo/accent-dengakuman.png">
@@ -19,6 +19,13 @@
         <subtitle>A plush doll that looks just like Dengakuman!</subtitle>
         <text>Dengakuman is a former hair hunter, leader of fearsome Z-Block Headquarters. Z-Block was supposed to be the weakest of the Block Bases, but due to an accounting error they became the strongest. Now he's on Bobobo's side, and despite being an inaffectual fighter played a vital role in one fight...</text>
         <unlock>Beat Bobobo in a game.</unlock>
+        <hide-details>true</hide-details>
+    </collectible>
+    <collectible id="slifer_the_executive_producer" img="opponents/bobobo/accent-yugiandslifer.png" thumbnail="opponents/bobobo/accent-slifer.png">
+        <title>Slifer the Sky Dragon</title>
+        <subtitle>The Duel Monsters card "Slifer the Sky Dragon."</subtitle>
+        <text>Yugi left this behind when he showed up during the game. He really ought to be more careful with his possessions. Speaking of which, you misplaced one of the playing cards in the deck. Better slip this in there and hope nobody notices...</text>
+        <hidden>true</hidden>
         <hide-details>true</hide-details>
     </collectible>
 </collectibles>

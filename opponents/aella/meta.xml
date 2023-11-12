@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1658092106723</lastupdate>
+    <lastupdate>1689777508237</lastupdate>
     <enabled>true</enabled>
     <first>Aella</first>
     <last />
@@ -12,12 +12,14 @@
     <artist>BlueKoin</artist>
     <description>Smart, strong, and very enthusiastic about the art of war, Aella is a strategist who grew up confined in her house by her father.</description>
     <layers>6</layers>
+    <default-costume-name>Eager Adventurer</default-costume-name>
     <alternates>
-        <costume folder="opponents/reskins/festival_aella/" img="0-portrait.png" set="valentines" label="Aella">Festival Aella</costume>
-        <costume folder="opponents/reskins/mama_shotgun_aella/" img="0-portrait.png" set="april_fools" label="Aella">Mama Shotgun</costume>
-        <costume folder="opponents/reskins/new_year_aella/" img="0-happy.png" set="easter" label="Aella">Off-World New Year</costume>
+        <costume folder="opponents/reskins/festival_aella/" img="0-portrait.png" set="valentines" label="Aella" layers="6">Festival Aella</costume>
+        <costume folder="opponents/reskins/mama_shotgun_aella/" img="0-portrait.png" set="april_fools" label="Aella" layers="6">Mama Shotgun</costume>
+        <costume folder="opponents/reskins/new_year_aella/" img="0-happy.png" set="easter" label="Aella" layers="6">Off-World New Year</costume>
+        <costume folder="opponents/reskins/aella_swimsuit/" img="0-portrait.png" set="summer" label="Aella" layers="5">Swimsuit Aella</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>3014</lines>
+    <lines>3071</lines>
     <poses>161</poses>
 </opponent>

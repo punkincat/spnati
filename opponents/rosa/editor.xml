@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>rosa</owner>
-    <height>5'6''</height>
-    <age />
+    <height>5'2''</height>
+    <age>21</age>
     <pronunciation />
-    <othernotes />
+    <othernotes>pokemon she has: serperior, amoonguss, ferrothorn, hydregion</othernotes>
     <noteworthy>
         <case name="Present offer" id="40" priority="Noteworthy" min="9" max="9">
             <description>Rosa offers a present to the people at the table, as an incentive for winning.</description>
@@ -17,6 +17,12 @@
         </case>
         <case name="Huddle for Warmth" id="234" priority="FYI" min="6" max="9">
             <description>On a cold background, Rosa may offer a target who just stripped a major article to huddle together for warmth.</description>
+        </case>
+        <case name="Quantum Mechanics Can Do Anything" id="686" priority="Noteworthy" min="2" max="2">
+            <description>In her halloween/timegate costume, Rosa's clothes vanish due to quantum mechanics or something, from stages 2 to 5 (check her sprites with her costume selected to see the animation)</description>
+        </case>
+        <case name="Rosa eating out Gloria" id="677" priority="Noteworthy" min="8" max="8">
+            <description>If Gloria is naked, masturbating (but not heavily), or is finished, and Rosa is maturbating, Rosa may eat Gloria out for a few rounds.</description>
         </case>
     </noteworthy>
     <reviewed>true</reviewed>
@@ -134,6 +140,28 @@
         <response id="673" opponent="dorothy" opponentId="110" />
         <response id="674" opponent="dorothy" opponentId="111" />
         <response id="675" opponent="dorothy" opponentId="112" />
+        <response id="678" opponent="gloria" opponentId="564" />
+        <response id="681" opponent="dunban" opponentId="2" />
+        <response id="683" opponent="nagatoro" opponentId="37" />
+        <response id="714" opponent="meia" opponentId="308" />
+        <response id="717" opponent="jura" opponentId="60" />
+        <response id="718" opponent="jura" opponentId="145" />
+        <response id="720" opponent="caitlin" opponentId="68" />
+        <response id="721" opponent="caitlin" opponentId="65" />
+        <response id="722" opponent="caitlin" opponentId="64" />
+        <response id="723" opponent="caitlin" opponentId="50" />
+        <response id="727" opponent="nagatoro" opponentId="1586" />
+        <response id="728" opponent="nagatoro" opponentId="426" />
+        <response id="729" opponent="nagatoro" opponentId="427" />
+        <response id="731" opponent="aqua_kh" opponentId="51" />
+        <response id="733" opponent="nagatoro" opponentId="742" />
+        <response id="735" opponent="nagatoro" opponentId="474" />
+        <response id="741" opponent="yuno_uno" opponentId="175" />
+        <response id="742" opponent="yuno_uno" opponentId="734" />
+        <response id="743" opponent="yuno_uno" opponentId="735" />
+        <response id="768" opponent="sweetheart" opponentId="43" />
+        <response id="774" opponent="caitlin" opponentId="262" />
+        <response id="775" opponent="caitlin" opponentId="263" />
     </responses>
     <notes>
         <note id="2">Rosa mentions that she doesn't remember the rules for Poker.</note>
@@ -149,6 +177,7 @@
         <note id="228">beartic is a polar bear pokemon; leon doesnt have to know this. rosa is trying to flirt with him</note>
         <note id="573">something about her tails getting pampered at a hair salon?</note>
         <note id="572">something about good clothes or food stalls?</note>
+        <note id="739">thinking of funny banter like "no a detective doesnt make the arrests" or even snarky "nobody here is sexy enough for it to be a crime" or however you want to take it!</note>
     </notes>
     <labels>
         <label id="26" label="TM 11" folder="" sort="0" />
@@ -285,15 +314,15 @@
         <label id="129" label="" folder="Targets" sort="5" />
         <label id="128" label="" folder="Targets" sort="4" />
         <label id="205" label="" folder="Targets" sort="3" />
-        <label id="206" label="" folder="Saltmine Sponsorship" sort="6" />
-        <label id="207" label="" folder="Saltmine Sponsorship" sort="16" />
+        <label id="206" label="" folder="Targets" sort="6" />
+        <label id="207" label="" folder="Targets" sort="16" />
         <label id="208" label="glasses (4-6)" folder="Human Target" sort="15" />
         <label id="209" label="glasses (7-8)" folder="Human Target" sort="16" />
         <label id="210" label="glasses (1-3)" folder="Human Target" sort="17" />
         <label id="211" label="glasses (0)" folder="Human Target" sort="18" />
         <label id="212" label="final round" folder="Human Target" sort="2" />
         <label id="213" label="Generic Starters" folder="Join Avenue Lines" sort="4" />
-        <label id="214" label="Damp Mulch" folder="Join Avenue Lines" sort="0" />
+        <label id="214" label="Damp Mulch" folder="Join Avenue Lines" sort="2" />
         <label id="215" label="Antiques" folder="Join Avenue Lines" sort="2" />
         <label id="216" label="Pharmacy" folder="Join Avenue Lines" sort="3" />
         <label id="217" label="5+ round asked date" folder="" sort="0" />
@@ -314,7 +343,7 @@
         <label id="231" label="juniper reference" folder="" sort="0" />
         <label id="232" label="" folder="Clothing" sort="2" />
         <label id="233" label="" folder="Clothing" sort="0" />
-        <label id="117" label="" folder="Targets" sort="0" />
+        <label id="117" label="" folder="Targets" sort="9" />
         <label id="127" label="" folder="Targets" sort="2" />
         <label id="234" label="Huddle Offer" folder="Background" sort="0" />
         <label id="241" label="" folder="Misty" sort="8" />
@@ -405,7 +434,7 @@
         <label id="327" label="" folder="Cynthia" sort="33" />
         <label id="328" label="" folder="Cynthia" sort="34" />
         <label id="331" label="Best gift ever gotten" folder="Nord Interactions" sort="0" />
-        <label id="334" label="" folder="Cynthia" sort="0" />
+        <label id="334" label="" folder="Cynthia" sort="3" />
         <label id="335" label="" folder="Cynthia" sort="3" />
         <label id="336" label="" folder="Cynthia" sort="4" />
         <label id="337" label="" folder="Cynthia" sort="10" />
@@ -428,8 +457,8 @@
         <label id="354" label="" folder="Office Star Outfit" sort="4" />
         <label id="355" label="" folder="Office Star Outfit" sort="0" />
         <label id="356" label="" folder="Office Star Outfit" sort="7" />
-        <label id="357" label="office star" folder="" sort="0" />
-        <label id="358" label="holiday" folder="" sort="0" />
+        <label id="357" label="office star" folder="Office Star Outfit" sort="12" />
+        <label id="358" label="holiday" folder="Holiday" sort="0" />
         <label id="359" label="" folder="Office Star Outfit" sort="8" />
         <label id="360" label="" folder="Office Star Outfit" sort="5" />
         <label id="361" label="" folder="Office Star Outfit" sort="6" />
@@ -561,192 +590,351 @@
         <label id="464" label="" folder="Leon" sort="23" />
         <label id="463" label="" folder="Leon" sort="26" />
         <label id="488" label="" folder="Cynthia" sort="62" />
-        <label id="489" label="" folder="Leon" sort="0" />
+        <label id="489" label="" folder="Leon" sort="27" />
         <label id="490" label="" folder="Trixie" sort="0" />
-        <label id="491" label="" folder="Trixie" sort="0" />
-        <label id="492" label="" folder="Trixie" sort="0" />
-        <label id="493" label="" folder="Trixie" sort="0" />
-        <label id="494" label="" folder="Trixie" sort="0" />
-        <label id="495" label="" folder="Trixie" sort="0" />
-        <label id="496" label="" folder="Trixie" sort="0" />
-        <label id="497" label="" folder="Trixie" sort="0" />
-        <label id="498" label="" folder="Trixie" sort="0" />
-        <label id="499" label="" folder="Trixie" sort="0" />
-        <label id="500" label="" folder="Trixie" sort="0" />
-        <label id="501" label="" folder="Trixie" sort="0" />
-        <label id="502" label="" folder="Trixie" sort="0" />
-        <label id="503" label="" folder="Trixie" sort="0" />
-        <label id="504" label="" folder="Trixie" sort="0" />
-        <label id="505" label="" folder="Trixie" sort="0" />
-        <label id="506" label="" folder="Trixie" sort="0" />
-        <label id="507" label="" folder="Trixie" sort="0" />
-        <label id="508" label="" folder="Trixie" sort="0" />
-        <label id="509" label="" folder="Dawn" sort="0" />
-        <label id="510" label="" folder="Dawn" sort="0" />
-        <label id="511" label="" folder="Dawn" sort="0" />
-        <label id="174" label="" folder="Dawn" sort="0" />
+        <label id="491" label="" folder="Trixie" sort="10" />
+        <label id="492" label="" folder="Trixie" sort="13" />
+        <label id="493" label="" folder="Trixie" sort="14" />
+        <label id="494" label="" folder="Trixie" sort="15" />
+        <label id="495" label="" folder="Trixie" sort="16" />
+        <label id="496" label="" folder="Trixie" sort="17" />
+        <label id="497" label="" folder="Trixie" sort="18" />
+        <label id="498" label="" folder="Trixie" sort="19" />
+        <label id="499" label="" folder="Trixie" sort="20" />
+        <label id="500" label="" folder="Trixie" sort="21" />
+        <label id="501" label="" folder="Trixie" sort="22" />
+        <label id="502" label="" folder="Trixie" sort="23" />
+        <label id="503" label="" folder="Trixie" sort="24" />
+        <label id="504" label="" folder="Trixie" sort="25" />
+        <label id="505" label="" folder="Trixie" sort="26" />
+        <label id="506" label="" folder="Trixie" sort="27" />
+        <label id="507" label="" folder="Trixie" sort="28" />
+        <label id="508" label="" folder="Trixie" sort="29" />
+        <label id="509" label="" folder="Dawn" sort="8" />
+        <label id="510" label="" folder="Dawn" sort="9" />
+        <label id="511" label="" folder="Dawn" sort="10" />
+        <label id="174" label="" folder="Dawn" sort="14" />
         <label id="512" label="" folder="Dawn" sort="0" />
-        <label id="513" label="" folder="Dawn" sort="0" />
-        <label id="514" label="" folder="Dawn" sort="0" />
-        <label id="515" label="" folder="Dawn" sort="0" />
+        <label id="513" label="" folder="Dawn" sort="12" />
+        <label id="514" label="" folder="Dawn" sort="11" />
+        <label id="515" label="" folder="Dawn" sort="13" />
         <label id="516" label="" folder="Dawn" sort="0" />
         <label id="517" label="" folder="Dawn" sort="0" />
-        <label id="518" label="" folder="Dawn" sort="0" />
-        <label id="519" label="" folder="Dawn" sort="0" />
-        <label id="523" label="" folder="Dawn" sort="0" />
-        <label id="524" label="" folder="Dawn" sort="0" />
-        <label id="525" label="" folder="Dawn" sort="0" />
-        <label id="526" label="" folder="Mari S" sort="0" />
+        <label id="518" label="" folder="Dawn" sort="3" />
+        <label id="519" label="" folder="Dawn" sort="5" />
+        <label id="523" label="" folder="Dawn" sort="2" />
+        <label id="524" label="" folder="Dawn" sort="4" />
+        <label id="525" label="" folder="Dawn" sort="6" />
+        <label id="526" label="" folder="Mari S" sort="2" />
         <label id="527" label="" folder="Mari S" sort="0" />
-        <label id="528" label="" folder="Mari S" sort="0" />
-        <label id="529" label="" folder="Cagliostro" sort="0" />
-        <label id="530" label="" folder="Cagliostro" sort="0" />
+        <label id="528" label="" folder="Mari S" sort="6" />
+        <label id="529" label="" folder="Cagliostro" sort="2" />
+        <label id="530" label="" folder="Cagliostro" sort="3" />
         <label id="531" label="" folder="Moon (Left of me)" sort="0" />
-        <label id="532" label="" folder="Moon (Left of me)" sort="0" />
-        <label id="533" label="" folder="Moon (Left of me)" sort="0" />
-        <label id="534" label="" folder="Moon (Left of me)" sort="0" />
-        <label id="48" label="" folder="Moon (Left of me)" sort="0" />
-        <label id="535" label="" folder="Moon (Left of me)" sort="0" />
+        <label id="532" label="" folder="Moon (Left of me)" sort="3" />
+        <label id="533" label="" folder="Moon (Left of me)" sort="5" />
+        <label id="534" label="" folder="Moon (Left of me)" sort="2" />
+        <label id="48" label="" folder="Moon (Left of me)" sort="4" />
+        <label id="535" label="" folder="Moon (Left of me)" sort="6" />
         <label id="536" label="" folder="Moon (Right of me)" sort="0" />
         <label id="537" label="" folder="Cagliostro" sort="0" />
-        <label id="538" label="" folder="Mari S" sort="0" />
-        <label id="539" label="" folder="Situations" sort="0" />
-        <label id="540" label="" folder="Dawn" sort="0" />
-        <label id="541" label="" folder="Mari S" sort="0" />
-        <label id="542" label="" folder="Mari S" sort="0" />
-        <label id="543" label="" folder="A Targets" sort="0" />
+        <label id="538" label="" folder="Mari S" sort="3" />
+        <label id="539" label="" folder="Situations" sort="6" />
+        <label id="540" label="" folder="Dawn" sort="7" />
+        <label id="541" label="" folder="Mari S" sort="7" />
+        <label id="542" label="" folder="Mari S" sort="8" />
+        <label id="543" label="" folder="A Targets" sort="4" />
         <label id="544" label="" folder="Easter Outfit" sort="0" />
-        <label id="545" label="" folder="Easter Outfit" sort="0" />
-        <label id="546" label="" folder="Easter Outfit" sort="0" />
-        <label id="547" label="" folder="Easter Outfit" sort="0" />
-        <label id="548" label="" folder="Easter Outfit" sort="0" />
-        <label id="549" label="" folder="Easter Outfit" sort="0" />
-        <label id="550" label="" folder="Easter Outfit" sort="0" />
-        <label id="551" label="" folder="A Targets" sort="0" />
-        <label id="552" label="" folder="Easter Outfit" sort="0" />
-        <label id="553" label="" folder="Male Targets" sort="0" />
-        <label id="554" label="" folder="Male Targets" sort="0" />
-        <label id="555" label="" folder="Male Targets" sort="0" />
-        <label id="556" label="" folder="Targets" sort="0" />
-        <label id="557" label="" folder="Situations" sort="0" />
-        <label id="558" label="Paska Situation" folder="Targets" sort="0" />
-        <label id="559" label="" folder="Targets" sort="0" />
-        <label id="560" label="" folder="Mari S" sort="0" />
-        <label id="561" label="" folder="Mari S" sort="0" />
-        <label id="562" label="" folder="Mari S" sort="0" />
-        <label id="563" label="" folder="Responses" sort="0" />
-        <label id="564" label="" folder="Responses" sort="0" />
-        <label id="565" label="" folder="Responses" sort="0" />
-        <label id="566" label="" folder="Responses" sort="0" />
-        <label id="567" label="" folder="Responses" sort="0" />
-        <label id="568" label="" folder="Targets" sort="0" />
-        <label id="569" label="" folder="Targets" sort="0" />
-        <label id="570" label="" folder="Targets" sort="0" />
-        <label id="571" label="" folder="Targets" sort="0" />
-        <label id="572" label="" folder="J Targets" sort="0" />
-        <label id="573" label="" folder="A Targets" sort="0" />
-        <label id="575" label="" folder="A Targets" sort="0" />
-        <label id="576" label="" folder="J Targets" sort="0" />
-        <label id="577" label="" folder="A Targets" sort="0" />
-        <label id="578" label="" folder="A Targets" sort="0" />
-        <label id="579" label="" folder="Targets" sort="0" />
-        <label id="580" label="" folder="Targets" sort="0" />
+        <label id="545" label="" folder="Easter Outfit" sort="2" />
+        <label id="546" label="" folder="Easter Outfit" sort="3" />
+        <label id="547" label="" folder="Easter Outfit" sort="4" />
+        <label id="548" label="" folder="Easter Outfit" sort="5" />
+        <label id="549" label="" folder="Easter Outfit" sort="6" />
+        <label id="550" label="" folder="Easter Outfit" sort="7" />
+        <label id="551" label="" folder="A Targets" sort="16" />
+        <label id="552" label="" folder="Easter Outfit" sort="8" />
+        <label id="553" label="" folder="Male Targets" sort="8" />
+        <label id="554" label="" folder="Male Targets" sort="13" />
+        <label id="555" label="" folder="Male Targets" sort="12" />
+        <label id="556" label="" folder="Targets" sort="46" />
+        <label id="557" label="" folder="Situations" sort="5" />
+        <label id="558" label="Paska Situation" folder="Targets" sort="8" />
+        <label id="559" label="" folder="Targets" sort="20" />
+        <label id="560" label="" folder="Mari S" sort="4" />
+        <label id="561" label="" folder="Mari S" sort="9" />
+        <label id="562" label="" folder="Mari S" sort="5" />
+        <label id="563" label="" folder="Responses" sort="2" />
+        <label id="564" label="" folder="Responses" sort="3" />
+        <label id="565" label="" folder="Responses" sort="4" />
+        <label id="566" label="" folder="Responses" sort="5" />
+        <label id="567" label="" folder="Responses" sort="6" />
+        <label id="568" label="" folder="Targets" sort="22" />
+        <label id="569" label="" folder="Targets" sort="15" />
+        <label id="570" label="" folder="Targets" sort="3" />
+        <label id="571" label="" folder="Targets" sort="30" />
+        <label id="572" label="" folder="J Targets" sort="2" />
+        <label id="573" label="" folder="A Targets" sort="5" />
+        <label id="575" label="" folder="A Targets" sort="17" />
+        <label id="576" label="" folder="J Targets" sort="3" />
+        <label id="577" label="" folder="A Targets" sort="18" />
+        <label id="578" label="" folder="A Targets" sort="15" />
+        <label id="579" label="" folder="Targets" sort="4" />
+        <label id="580" label="" folder="Targets" sort="5" />
         <label id="581" label="" folder="Targets" sort="0" />
-        <label id="582" label="" folder="Targets" sort="0" />
+        <label id="582" label="" folder="Targets" sort="6" />
         <label id="583" label="" folder="Responses" sort="0" />
-        <label id="584" label="" folder="Hilbert" sort="0" />
+        <label id="584" label="" folder="Hilbert" sort="2" />
         <label id="585" label="" folder="Hilbert" sort="0" />
-        <label id="586" label="" folder="A Targets" sort="0" />
-        <label id="587" label="" folder="Gloria" sort="0" />
-        <label id="588" label="" folder="Gloria" sort="0" />
-        <label id="589" label="bunny" folder="Costume Lines" sort="0" />
-        <label id="590" label="" folder="Gloria" sort="0" />
-        <label id="591" label="" folder="Gloria" sort="0" />
+        <label id="586" label="" folder="A Targets" sort="19" />
+        <label id="587" label="" folder="Gloria" sort="12" />
+        <label id="588" label="" folder="Gloria" sort="13" />
+        <label id="589" label="bunny" folder="Bunny Buns" sort="0" />
+        <label id="590" label="" folder="Gloria" sort="18" />
+        <label id="591" label="" folder="Gloria" sort="20" />
         <label id="592" label="" folder="Gloria" sort="0" />
         <label id="593" label="" folder="Situations" sort="0" />
-        <label id="596" label="" folder="Gloria" sort="0" />
-        <label id="597" label="" folder="Targets" sort="0" />
-        <label id="598" label="" folder="Targets" sort="0" />
-        <label id="599" label="" folder="Targets" sort="0" />
+        <label id="596" label="" folder="Gloria" sort="3" />
+        <label id="597" label="" folder="Targets" sort="36" />
+        <label id="598" label="" folder="Targets" sort="7" />
+        <label id="599" label="" folder="Targets" sort="2" />
         <label id="600" label="" folder="Targets" sort="0" />
-        <label id="601" label="" folder="Targets" sort="0" />
-        <label id="602" label="" color="4" folder="Responses" sort="0" />
+        <label id="601" label="" folder="Targets" sort="11" />
+        <label id="602" label="" color="4" folder="Responses" sort="7" />
         <label id="603" label="" folder="Responses" sort="0" />
-        <label id="604" label="" folder="Responses" sort="0" />
-        <label id="605" label="" folder="Responses" sort="0" />
-        <label id="606" label="" folder="Responses" sort="0" />
-        <label id="607" label="" folder="Responses" sort="0" />
-        <label id="608" label="" folder="Responses" sort="0" />
-        <label id="609" label="" folder="Responses" sort="0" />
-        <label id="610" label="" folder="Responses" sort="0" />
-        <label id="611" label="" folder="Responses" sort="0" />
-        <label id="612" label="" folder="Responses" sort="0" />
-        <label id="613" label="" folder="Responses" sort="0" />
-        <label id="614" label="" folder="Responses" sort="0" />
-        <label id="615" label="" folder="Responses" sort="0" />
-        <label id="616" label="" folder="Responses" sort="0" />
-        <label id="617" label="" folder="Responses" sort="0" />
-        <label id="618" label="" folder="Responses" sort="0" />
-        <label id="619" label="" folder="Responses" sort="0" />
-        <label id="620" label="" folder="Responses" sort="0" />
-        <label id="621" label="" folder="Responses" sort="0" />
-        <label id="622" label="" folder="Responses" sort="0" />
-        <label id="623" label="" folder="Responses" sort="0" />
-        <label id="624" label="" folder="Responses" sort="0" />
-        <label id="625" label="" folder="Targets" sort="0" />
+        <label id="604" label="" folder="Responses" sort="20" />
+        <label id="605" label="" folder="Responses" sort="21" />
+        <label id="606" label="" folder="Responses" sort="23" />
+        <label id="607" label="" folder="Responses" sort="24" />
+        <label id="608" label="" folder="Responses" sort="25" />
+        <label id="609" label="" folder="Responses" sort="26" />
+        <label id="610" label="" folder="Responses" sort="28" />
+        <label id="611" label="" folder="Responses" sort="35" />
+        <label id="612" label="" folder="Responses" sort="36" />
+        <label id="613" label="" folder="Responses" sort="38" />
+        <label id="614" label="" folder="Responses" sort="39" />
+        <label id="615" label="" folder="Responses" sort="40" />
+        <label id="616" label="" folder="Responses" sort="41" />
+        <label id="617" label="" folder="Responses" sort="46" />
+        <label id="618" label="" folder="Responses" sort="47" />
+        <label id="619" label="" folder="Responses" sort="48" />
+        <label id="620" label="" folder="Responses" sort="49" />
+        <label id="621" label="" folder="Responses" sort="50" />
+        <label id="622" label="" folder="Responses" sort="51" />
+        <label id="623" label="" folder="Responses" sort="52" />
+        <label id="624" label="" folder="Responses" sort="15" />
+        <label id="625" label="" folder="Targets" sort="16" />
         <label id="626" label="" folder="Targets" sort="0" />
-        <label id="627" label="" folder="Targets" sort="0" />
-        <label id="628" label="" folder="Targets" sort="0" />
-        <label id="629" label="" folder="Targets" sort="0" />
-        <label id="630" label="" folder="Targets" sort="0" />
-        <label id="631" label="" folder="Targets" sort="0" />
-        <label id="632" label="" folder="Targets" sort="0" />
-        <label id="633" label="" folder="Targets" sort="0" />
-        <label id="634" label="" folder="Targets" sort="0" />
-        <label id="635" label="" folder="Targets" sort="0" />
-        <label id="636" label="" folder="Targets" sort="0" />
-        <label id="637" label="" folder="Targets" sort="0" />
-        <label id="638" label="Timegate" folder="Costume" sort="0" />
-        <label id="639" label="" folder="Gloria" sort="0" />
-        <label id="640" label="" folder="Gloria" sort="0" />
-        <label id="641" label="" folder="Gloria" sort="0" />
-        <label id="643" label="" folder="Gloria" sort="0" />
-        <label id="644" label="" folder="Gloria" sort="0" />
-        <label id="645" label="" folder="Gloria" sort="0" />
-        <label id="642" label="" folder="Gloria" sort="0" />
-        <label id="646" label="" folder="Gloria" sort="0" />
-        <label id="647" label="" folder="Gloria" sort="0" />
-        <label id="648" label="" folder="Gloria" sort="0" />
-        <label id="649" label="" folder="Gloria" sort="0" />
-        <label id="650" label="" folder="Gloria" sort="0" />
-        <label id="651" label="" folder="Gloria" sort="0" />
-        <label id="652" label="" folder="Gloria" sort="0" />
-        <label id="653" label="" folder="Gloria" sort="0" />
+        <label id="627" label="" folder="Targets" sort="17" />
+        <label id="628" label="" folder="Targets" sort="21" />
+        <label id="629" label="" folder="Targets" sort="25" />
+        <label id="630" label="" folder="Targets" sort="37" />
+        <label id="631" label="" folder="Targets" sort="18" />
+        <label id="632" label="" folder="Targets" sort="26" />
+        <label id="633" label="" folder="Targets" sort="27" />
+        <label id="634" label="" folder="Targets" sort="33" />
+        <label id="635" label="" folder="Targets" sort="34" />
+        <label id="636" label="" folder="Targets" sort="28" />
+        <label id="637" label="" folder="Targets" sort="35" />
+        <label id="638" label="Timegate" folder="Costume" sort="4" />
+        <label id="639" label="" folder="Gloria" sort="22" />
+        <label id="640" label="" folder="Gloria" sort="16" />
+        <label id="641" label="" folder="Gloria" sort="17" />
+        <label id="643" label="" folder="Gloria" sort="9" />
+        <label id="644" label="" folder="Gloria" sort="5" />
+        <label id="645" label="" folder="Gloria" sort="7" />
+        <label id="642" label="" folder="Gloria" sort="4" />
+        <label id="646" label="" folder="Gloria" sort="10" />
+        <label id="647" label="" folder="Gloria" sort="8" />
+        <label id="648" label="" folder="Gloria" sort="6" />
+        <label id="649" label="" folder="Gloria" sort="11" />
+        <label id="650" label="" folder="Gloria" sort="14" />
+        <label id="651" label="" folder="Gloria" sort="15" />
+        <label id="652" label="" folder="Gloria" sort="19" />
+        <label id="653" label="" folder="Gloria" sort="21" />
         <label id="654" label="" folder="Gloria" sort="0" />
-        <label id="655" label="" folder="Gloria" sort="0" />
-        <label id="656" label="" folder="Situations" sort="0" />
-        <label id="657" label="" folder="Responses" sort="0" />
-        <label id="658" label="" folder="Responses" sort="0" />
-        <label id="659" label="" folder="Responses" sort="0" />
+        <label id="655" label="" folder="Gloria" sort="2" />
+        <label id="656" label="" folder="Situations" sort="4" />
+        <label id="657" label="" folder="Responses" sort="22" />
+        <label id="658" label="" folder="Responses" sort="17" />
+        <label id="659" label="" folder="Responses" sort="33" />
         <label id="660" label="" folder="Epilogue follow-up" sort="0" />
-        <label id="663" label="" folder="Mari S" sort="0" />
-        <label id="664" label="" folder="Mari S" sort="0" />
-        <label id="665" label="" color="6" folder="Situations" sort="0" />
-        <label id="666" label="" color="6" folder="Situations" sort="0" />
-        <label id="667" label="" folder="Responses" sort="0" />
-        <label id="669" label="" folder="Responses" sort="0" />
-        <label id="671" label="" folder="Responses" sort="0" />
-        <label id="672" label="" folder="Responses" sort="0" />
-        <label id="673" label="" folder="Responses" sort="0" />
-        <label id="670" label="" folder="Responses" sort="0" />
-        <label id="668" label="" folder="Responses" sort="0" />
-        <label id="674" label="" folder="Responses" sort="0" />
-        <label id="675" label="" folder="Responses" sort="0" />
+        <label id="663" label="" folder="Mari S" sort="10" />
+        <label id="664" label="" folder="Mari S" sort="11" />
+        <label id="665" label="" color="6" folder="Situations" sort="3" />
+        <label id="666" label="" color="6" folder="Situations" sort="2" />
+        <label id="667" label="" folder="Responses" sort="8" />
+        <label id="669" label="" folder="Responses" sort="43" />
+        <label id="671" label="" folder="Responses" sort="31" />
+        <label id="672" label="" folder="Responses" sort="44" />
+        <label id="673" label="" folder="Responses" sort="10" />
+        <label id="670" label="" folder="Responses" sort="9" />
+        <label id="668" label="" folder="Responses" sort="30" />
+        <label id="674" label="" folder="Responses" sort="32" />
+        <label id="675" label="" folder="Responses" sort="45" />
+        <label id="676" label="" folder="Male Targets" sort="10" />
+        <label id="677" label="cunnilingus squence" folder="Gloria" sort="25" />
+        <label id="678" label="cunnilingus" folder="Gloria" sort="24" />
+        <label id="679" label="" folder="Gloria" sort="23" />
+        <label id="680" label="" folder="Male Targets" sort="11" />
+        <label id="682" label="" folder="Targets" sort="38" />
+        <label id="683" label="" folder="Situations" sort="8" />
+        <label id="684" label="" folder="Timegate" sort="11" />
+        <label id="685" label="" folder="Timegate" sort="12" />
+        <label id="686" label="" folder="Timegate" sort="13" />
+        <label id="687" label="" folder="Timegate" sort="14" />
+        <label id="688" label="" folder="Timegate" sort="15" />
+        <label id="689" label="" folder="Timegate" sort="16" />
+        <label id="690" label="" folder="Timegate" sort="17" />
+        <label id="691" label="" folder="Timegate" sort="24" />
+        <label id="692" label="" folder="Timegate" sort="23" />
+        <label id="693" label="" folder="Timegate" sort="20" />
+        <label id="694" label="" folder="Timegate" sort="21" />
+        <label id="695" label="" folder="Timegate" sort="22" />
+        <label id="696" label="" folder="Timegate" sort="19" />
+        <label id="697" label="" folder="Timegate" sort="25" />
+        <label id="698" label="" folder="Timegate" sort="27" />
+        <label id="699" label="" folder="Timegate" sort="28" />
+        <label id="700" label="" folder="Timegate" sort="29" />
+        <label id="701" label="" folder="Timegate" sort="30" />
+        <label id="702" label="" folder="Timegate" sort="7" />
+        <label id="703" label="" folder="Timegate" sort="8" />
+        <label id="704" label="" folder="Timegate" sort="3" />
+        <label id="705" label="" folder="Timegate" sort="9" />
+        <label id="706" label="" folder="Timegate" sort="4" />
+        <label id="707" label="" folder="Timegate" sort="5" />
+        <label id="708" label="" folder="Timegate" sort="6" />
+        <label id="709" label="" folder="Timegate" sort="32" />
+        <label id="710" label="" folder="Timegate" sort="31" />
+        <label id="711" label="" folder="Timegate" sort="0" />
+        <label id="712" label="" folder="Timegate" sort="2" />
+        <label id="713" label="" folder="Timegate" sort="26" />
+        <label id="714" label="" folder="Responses" sort="34" />
+        <label id="715" label="" folder="Responses" sort="42" />
+        <label id="716" label="" folder="Responses" sort="16" />
+        <label id="717" label="" folder="Responses" sort="29" />
+        <label id="718" label="" folder="Responses" sort="11" />
+        <label id="719" label="" folder="Caitlin" sort="0" />
+        <label id="722" label="" folder="Targets" sort="44" />
+        <label id="522" label="" folder="Targets" sort="40" />
+        <label id="118" label="" folder="Targets" sort="42" />
+        <label id="285" label="" folder="Targets" sort="43" />
+        <label id="30" label="" folder="Targets" sort="41" />
+        <label id="724" label="" folder="Targets" sort="24" />
+        <label id="725" label="" folder="Targets" sort="29" />
+        <label id="726" label="" folder="Targets" sort="32" />
+        <label id="727" label="" folder="Responses" sort="12" />
+        <label id="728" label="" folder="Responses" sort="13" />
+        <label id="729" label="" folder="Responses" sort="14" />
+        <label id="730" label="" folder="Situations" sort="9" />
+        <label id="731" label="" folder="Targets" sort="13" />
+        <label id="20" label="" folder="Targets" sort="12" />
+        <label id="732" label="" folder="Situations" sort="7" />
+        <label id="734" label="" folder="Situations" sort="10" />
+        <label id="735" label="" folder="Targets" sort="31" />
+        <label id="266" label="" folder="Responses" sort="19" />
+        <label id="265" label="" folder="Responses" sort="18" />
+        <label id="736" label="" folder="Responses" sort="27" />
+        <label id="738" label="" folder="Responses" sort="37" />
+        <label id="739" label="" folder="Targets" sort="19" />
+        <label id="741" label="" folder="Targets" sort="39" />
+        <label id="742" label="" folder="Timegate" sort="10" />
+        <label id="743" label="" folder="Timegate" sort="18" />
+        <label id="733" label="" folder="Targets" sort="0" />
+        <label id="744" label="cunnilingus (valentines variant)" folder="Gloria" sort="0" />
+        <label id="745" label="" folder="Targets" sort="0" />
+        <label id="746" label="" folder="Summer Costume" sort="0" />
+        <label id="747" label="" folder="Summer Costume" sort="0" />
+        <label id="748" label="Summer" folder="Costume" sort="0" />
+        <label id="749" label="Summer (Cold BG)" folder="Costume" sort="0" />
+        <label id="750" label="" folder="Summer Costume" sort="0" />
+        <label id="751" label="" folder="Summer Costume" sort="0" />
+        <label id="752" label="" folder="Summer Costume" sort="0" />
+        <label id="753" label="" folder="Summer Costume" sort="0" />
+        <label id="754" label="" folder="Summer Costume" sort="0" />
+        <label id="755" label="" folder="Summer Costume" sort="0" />
+        <label id="756" label="" folder="Summer Costume" sort="0" />
+        <label id="757" label="" folder="Summer Costume" sort="0" />
+        <label id="758" label="" folder="Summer Costume" sort="0" />
+        <label id="759" label="" folder="Summer Costume" sort="0" />
+        <label id="760" label="" folder="Summer Costume" sort="0" />
+        <label id="761" label="" folder="Summer Costume" sort="0" />
+        <label id="762" label="Swimsuit (2+ Swimsuit opponents)" folder="" sort="0" />
+        <label id="763" label="Swimsuit (Swimsuit outfit)" folder="" sort="0" />
+        <label id="764" label="" folder="Summer Costume" sort="0" />
+        <label id="765" label="" folder="Collectible Game Logic" sort="0" />
+        <label id="766" label="" folder="Summer Costume" sort="0" />
+        <label id="767" label="" folder="Event" sort="0" />
+        <label id="768" label="" folder="Sweetheart" sort="0" />
+        <label id="769" label="" folder="Sweetheart" sort="0" />
+        <label id="770" label="" folder="Sweetheart" sort="0" />
+        <label id="771" label="" folder="Sweetheart" sort="0" />
+        <label id="772" label="" folder="Sweetheart" sort="0" />
+        <label id="773" label="" folder="Sweetheart" sort="0" />
+        <label id="774" label="" folder="Caitlin" sort="0" />
+        <label id="775" label="" folder="Caitlin" sort="0" />
+        <label id="776" label="" folder="Dawn" sort="0" />
+        <label id="723" label="" folder="Caitlin" sort="0" />
+        <label id="720" label="" folder="Caitlin" sort="0" />
+        <label id="777" label="" folder="Caitlin" sort="0" />
+        <label id="778" label="" folder="Caitlin" sort="0" />
+        <label id="779" label="" folder="Caitlin" sort="0" />
+        <label id="780" label="" folder="Caitlin" sort="0" />
+        <label id="781" label="" folder="Caitlin" sort="0" />
+        <label id="782" label="" folder="Caitlin" sort="0" />
+        <label id="783" label="" folder="Caitlin" sort="0" />
+        <label id="784" label="" folder="Caitlin" sort="0" />
+        <label id="785" label="" folder="Caitlin" sort="0" />
+        <label id="786" label="" folder="Caitlin" sort="0" />
+        <label id="787" label="" folder="Caitlin" sort="0" />
+        <label id="788" label="" folder="Caitlin" sort="0" />
+        <label id="789" label="" folder="Caitlin" sort="0" />
+        <label id="790" label="" folder="Caitlin" sort="0" />
+        <label id="791" label="" folder="Caitlin" sort="0" />
+        <label id="792" label="" folder="Caitlin" sort="0" />
+        <label id="793" label="" folder="Caitlin" sort="0" />
+        <label id="794" label="" folder="Caitlin" sort="0" />
+        <label id="795" label="" folder="Caitlin" sort="0" />
+        <label id="796" label="" folder="Caitlin" sort="0" />
+        <label id="797" label="" folder="Caitlin" sort="0" />
+        <label id="798" label="" folder="Caitlin" sort="0" />
+        <label id="799" label="" folder="Caitlin" sort="0" />
+        <label id="800" label="" folder="Caitlin" sort="0" />
+        <label id="801" label="" folder="Caitlin" sort="0" />
+        <label id="802" label="" folder="Caitlin" sort="0" />
+        <label id="803" label="" folder="Caitlin" sort="0" />
+        <label id="804" label="" folder="Caitlin" sort="0" />
+        <label id="805" label="" folder="Caitlin" sort="0" />
+        <label id="806" label="" folder="Caitlin" sort="0" />
+        <label id="807" label="" folder="Caitlin" sort="0" />
+        <label id="808" label="" folder="Caitlin" sort="0" />
+        <label id="809" label="" folder="Caitlin" sort="0" />
+        <label id="810" label="" folder="Caitlin" sort="0" />
+        <label id="811" label="" folder="Caitlin" sort="0" />
+        <label id="812" label="" folder="Caitlin" sort="0" />
+        <label id="813" label="" folder="Caitlin" sort="0" />
+        <label id="814" label="" folder="Caitlin" sort="0" />
+        <label id="815" label="" folder="Caitlin" sort="0" />
+        <label id="816" label="" folder="Caitlin" sort="0" />
+        <label id="817" label="(target stage: 5, Elesa also playing)" folder="Caitlin" sort="0" />
+        <label id="818" label="" folder="Caitlin" sort="0" />
+        <label id="819" label="" folder="Caitlin" sort="0" />
+        <label id="820" label="" folder="Caitlin" sort="0" />
+        <label id="821" label="" folder="Caitlin" sort="0" />
+        <label id="822" label="" folder="Caitlin" sort="0" />
+        <label id="823" label="" folder="Caitlin" sort="0" />
+        <label id="824" label="" folder="Caitlin" sort="0" />
+        <label id="825" label="" folder="Caitlin" sort="0" />
+        <label id="826" label="" folder="Caitlin" sort="0" />
+        <label id="827" label="" folder="Caitlin" sort="0" />
+        <label id="828" label="" folder="Caitlin" sort="0" />
+        <label id="829" label="" folder="Caitlin" sort="0" />
+        <label id="830" label="" folder="Caitlin" sort="0" />
+        <label id="831" label="" folder="Caitlin" sort="0" />
     </labels>
     <prefixes>
         <prefix>fire</prefix>
     </prefixes>
-    <nextId>675</nextId>
+    <nextId>831</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="aaravi_avenue" />
@@ -814,6 +1002,12 @@
         <marker scope="Public" name="boob_insecurity" />
         <marker scope="Public" name="bowsette_stripped_3" />
         <marker scope="Public" name="bowsette_stripping_2" />
+        <marker scope="Public" name="cait_beans" />
+        <marker scope="Public" name="cait_stuff_is_floating" />
+        <marker scope="Public" name="cait_thankthedealer_selfIsNude" />
+        <marker scope="Public" name="caitlin_startmast_elitefour" />
+        <marker scope="Public" name="caitlin_UndellaGame" />
+        <marker scope="Public" name="caitlin_UnovanLuck" />
         <marker scope="Public" name="cake_flavor" />
         <marker scope="Public" name="cake_flavor_finish" />
         <marker scope="Public" name="catch_a_cold" />
@@ -825,6 +1019,7 @@
         <marker scope="Public" name="chell_fat">Response to Wheatley's comment about Chell being fat.</marker>
         <marker scope="Public" name="chell_handegg">Response to Wheatley's football prompt.</marker>
         <marker scope="Public" name="chell_wardrobeEquity" />
+        <marker scope="Public" name="collectible_tm11_unlocked" />
         <marker scope="Public" name="colress_stage0_lost">Rosa recognizes Colress as a scientist that worked for Team Plasma. She also has a line for when he is stripping off his first item of clothing.</marker>
         <marker scope="Public" name="colress_stage0_stripping" />
         <marker scope="Public" name="colress_ultrawormhole">Answer to Colress's Ultra Wormhole prompt.</marker>
@@ -896,6 +1091,7 @@
         <marker scope="Public" name="gameover_hat_and_scientist" />
         <marker scope="Public" name="gameover_princess" />
         <marker scope="Public" name="gameover_scientist" />
+        <marker scope="Public" name="gamestart_caitlin" />
         <marker scope="Public" name="gamestart_hilbert" />
         <marker scope="Public" name="getting_started" />
         <marker scope="Public" name="ghost_clothes">Rosa wonders about the nature of a ghost's garments.</marker>
@@ -936,6 +1132,7 @@
         <marker scope="Public" name="joinavenue_pharmacy2" />
         <marker scope="Public" name="jotaro_avenue0" />
         <marker scope="Public" name="jura_rosa0_answer">Answer to Jura's line when Rosa loses for the first time</marker>
+        <marker scope="Public" name="jura_rosa01_answer" />
         <marker scope="Public" name="ladybug_stripped_1" />
         <marker scope="Public" name="leon_boots1" />
         <marker scope="Public" name="leon_boots2" />
@@ -974,6 +1171,7 @@
         <marker scope="Public" name="meatball_hair" />
         <marker scope="Public" name="meia_rosa0_answer" />
         <marker scope="Public" name="meia_rosa01_answer" />
+        <marker scope="Public" name="meia_rosa01_final" />
         <marker scope="Public" name="miko_desires">Answer to Miko's prompt about desires. Is a simple life the key to happiness?</marker>
         <marker scope="Public" name="misaka_powers">Rosa wants to know how Misaka's electric powers work.</marker>
         <marker scope="Public" name="misaka_powers2" />
@@ -989,6 +1187,7 @@
         <marker scope="Public" name="moon_stripped2" />
         <marker scope="Public" name="moon_stripping0" />
         <marker scope="Public" name="moon_stripping1" />
+        <marker scope="Public" name="n_and_hilbert" />
         <marker scope="Private" name="N_left">N has left the game, because you are a bad person.</marker>
         <marker scope="Public" name="nagisa_butt">Response to Nagisa's prompt about her butt.</marker>
         <marker scope="Public" name="nagisa_floor">Response to Nagisa's prompt about the floor being sticky.</marker>
@@ -1066,6 +1265,60 @@
         <marker scope="Public" name="rosa_cag_StoryOneResp" />
         <marker scope="Public" name="rosa_cag_strip0a" />
         <marker scope="Public" name="rosa_cagStoryOne" />
+        <marker scope="Public" name="rosa_cait_self0a" />
+        <marker scope="Public" name="rosa_cait_self0b_dinner" />
+        <marker scope="Public" name="rosa_cait_self0b_tease" />
+        <marker scope="Public" name="rosa_cait_self0c_dinner" />
+        <marker scope="Public" name="rosa_cait_self0c_tease" />
+        <marker scope="Public" name="rosa_cait_self1a" />
+        <marker scope="Public" name="rosa_cait_strip2b" />
+        <marker scope="Public" name="rosa_caitlin_3b_date" />
+        <marker scope="Public" name="rosa_caitlin_3b_time" />
+        <marker scope="Public" name="rosa_caitlin_3c_date" />
+        <marker scope="Public" name="rosa_caitlin_3c_time" />
+        <marker scope="Public" name="rosa_caitlin_self1b_gym" />
+        <marker scope="Public" name="rosa_caitlin_self1b_hydreigon" />
+        <marker scope="Public" name="rosa_caitlin_self1c_gym" />
+        <marker scope="Public" name="rosa_caitlin_self1c_iris" />
+        <marker scope="Public" name="rosa_caitlin_self1c_playdate" />
+        <marker scope="Public" name="rosa_caitlin_self2a" />
+        <marker scope="Public" name="rosa_caitlin_self2b" />
+        <marker scope="Public" name="rosa_caitlin_self2b_selfie" />
+        <marker scope="Public" name="rosa_caitlin_self2c_selfie" />
+        <marker scope="Public" name="rosa_caitlin_self2c_studios" />
+        <marker scope="Public" name="rosa_caitlin_self3a" />
+        <marker scope="Public" name="rosa_caitlin_self3b" />
+        <marker scope="Public" name="rosa_caitlin_self3c" />
+        <marker scope="Public" name="rosa_caitlin_self4a" />
+        <marker scope="Public" name="rosa_caitlin_self4a_sleep" />
+        <marker scope="Public" name="rosa_caitlin_self4b_sleep" />
+        <marker scope="Public" name="rosa_caitlin_self4b_thighs" />
+        <marker scope="Public" name="rosa_caitlin_self4c_bed" />
+        <marker scope="Public" name="rosa_caitlin_self4c_thighs" />
+        <marker scope="Public" name="rosa_caitlin_self5a" />
+        <marker scope="Public" name="rosa_caitlin_self5b" />
+        <marker scope="Public" name="rosa_caitlin_self5c" />
+        <marker scope="Public" name="rosa_caitlin_self6a" />
+        <marker scope="Public" name="rosa_caitlin_self6b" />
+        <marker scope="Public" name="rosa_caitlin_self6c" />
+        <marker scope="Public" name="rosa_caitlin_strip0a" />
+        <marker scope="Public" name="rosa_caitlin_strip0b" />
+        <marker scope="Public" name="rosa_caitlin_strip0c" />
+        <marker scope="Public" name="rosa_caitlin_strip0d" />
+        <marker scope="Public" name="rosa_caitlin_strip1a" />
+        <marker scope="Public" name="rosa_caitlin_strip1b" />
+        <marker scope="Public" name="rosa_caitlin_strip1c" />
+        <marker scope="Public" name="rosa_caitlin_strip2a" />
+        <marker scope="Public" name="rosa_caitlin_strip2b" />
+        <marker scope="Public" name="rosa_caitlin_strip2c" />
+        <marker scope="Public" name="rosa_caitlin_strip3a" />
+        <marker scope="Public" name="rosa_caitlin_strip4a" />
+        <marker scope="Public" name="rosa_caitlin_strip4b" />
+        <marker scope="Public" name="rosa_caitlin_strip4c" />
+        <marker scope="Public" name="rosa_caitlin_strip4d" />
+        <marker scope="Public" name="rosa_caitlin_strip5a" />
+        <marker scope="Public" name="rosa_caitlin_strip5b" />
+        <marker scope="Public" name="rosa_caitlin_strip5c" />
         <marker scope="Public" name="rosa_chara_creepyeyes" />
         <marker scope="Public" name="rosa_charlie_avenueHotel" />
         <marker scope="Public" name="rosa_charlie_happyhotel" />
@@ -1109,6 +1362,7 @@
         <marker scope="Public" name="rosa_dawn_strip0c" />
         <marker scope="Public" name="rosa_dawn_strip1a" />
         <marker scope="Public" name="rosa_dawn_strip1b" />
+        <marker scope="Public" name="rosa_dawn_summerGameStart" />
         <marker scope="Public" name="rosa_dorothy_self0a" />
         <marker scope="Public" name="rosa_dorothy_self0b" />
         <marker scope="Public" name="rosa_dorothy_self0c" />
@@ -1121,6 +1375,7 @@
         <marker scope="Public" name="rosa_DressSense_a" />
         <marker scope="Public" name="rosa_DressSense_b" />
         <marker scope="Public" name="rosa_DressSense_c" />
+        <marker scope="Public" name="rosa_eating_gloria" />
         <marker scope="Public" name="rosa_epilogue_seen" />
         <marker scope="Public" name="rosa_erufuda_fries" />
         <marker scope="Public" name="rosa_fina_end1answerResp" />
@@ -1140,6 +1395,8 @@
         <marker scope="Public" name="rosa_gloria_confidence1" />
         <marker scope="Public" name="rosa_gloria_confidence3" />
         <marker scope="Public" name="rosa_gloria_crotchvis" />
+        <marker scope="Public" name="rosa_gloria_cunning_accept" />
+        <marker scope="Public" name="rosa_gloria_cunning_end" />
         <marker scope="Public" name="rosa_gloria_famous1" />
         <marker scope="Public" name="rosa_gloria_food0" />
         <marker scope="Public" name="rosa_gloria_food1" />
@@ -1165,6 +1422,11 @@
         <marker scope="Public" name="rosa_introductions_c" />
         <marker scope="Public" name="rosa_jin_strip0a" />
         <marker scope="Public" name="rosa_jura_avenue01" />
+        <marker scope="Public" name="rosa_jura_jynxR1" />
+        <marker scope="Public" name="rosa_kirigiri_detective1" />
+        <marker scope="Public" name="rosa_kirigiri_detective2" />
+        <marker scope="Public" name="rosa_kirigiri_hairstyles" />
+        <marker scope="Public" name="rosa_kirigiri_santaHatStory_resp" />
         <marker scope="Public" name="rosa_kumatora_attraction1" />
         <marker scope="Public" name="rosa_kumatora_attraction2" />
         <marker scope="Public" name="rosa_kumatora_attraction3" />
@@ -1214,6 +1476,7 @@
         <marker scope="Public" name="rosa_may_strip0" />
         <marker scope="Public" name="rosa_may_strip1" />
         <marker scope="Public" name="rosa_meia_self4a" />
+        <marker scope="Public" name="rosa_meia_self4b" />
         <marker scope="Public" name="rosa_mg_autograph_offer" />
         <marker scope="Public" name="rosa_mg_mustmast" />
         <marker scope="Public" name="rosa_mg_self2a" />
@@ -1246,6 +1509,13 @@
         <marker scope="Public" name="rosa_muscle" />
         <marker scope="Public" name="rosa_N_strip0a" />
         <marker scope="Public" name="rosa_nagamimi_stabThreat" />
+        <marker scope="Public" name="rosa_nagatoro_nekoTail1" />
+        <marker scope="Public" name="rosa_nagatoro_self0a" />
+        <marker scope="Public" name="rosa_nagatoro_self1a" />
+        <marker scope="Public" name="rosa_nagatoro_self2a" />
+        <marker scope="Public" name="rosa_nagatoro_strip1a" />
+        <marker scope="Public" name="rosa_nagatoro_strip2a" />
+        <marker scope="Public" name="rosa_nagatoro_tailAnyHand" />
         <marker scope="Public" name="rosa_nami_01_friendlyResp" />
         <marker scope="Public" name="rosa_nami_01_teamResp" />
         <marker scope="Public" name="rosa_nami_attraction1" />
@@ -1257,6 +1527,7 @@
         <marker scope="Public" name="rosa_olly_bratrickResp" />
         <marker scope="Public" name="rosa_pit_0a_resp" />
         <marker scope="Public" name="rosa_pit_strip0a" />
+        <marker scope="Public" name="Rosa_react_Nagatoro_NotAVirginDenial" />
         <marker scope="Public" name="rosa_rita_TechPromptResp" />
         <marker scope="Public" name="rosa_robin_OPGang1" />
         <marker scope="Public" name="rosa_rouge_scope1" />
@@ -1274,6 +1545,9 @@
         <marker scope="Public" name="rosa_supernova_0a" />
         <marker scope="Public" name="rosa_supernova_0b" />
         <marker scope="Public" name="rosa_supernova_1a" />
+        <marker scope="Public" name="rosa_sweetheart_donuthole" />
+        <marker scope="Public" name="rosa_sweetheart_s0a" />
+        <marker scope="Public" name="rosa_sweetheart_s0a_princess" />
         <marker scope="Public" name="rosa_trifle_foodOfferingResp" />
         <marker scope="Public" name="rosa_trixie_2a" />
         <marker scope="Public" name="rosa_trixie_attraction1" />
@@ -1351,6 +1625,7 @@
         <marker scope="Public" name="self_strip_office_3c" />
         <marker scope="Public" name="self_strip_office_4b" />
         <marker scope="Public" name="self_strip_office_5c" />
+        <marker scope="Public" name="self_timegate_select2" />
         <marker scope="Public" name="serperior_moves" />
         <marker scope="Public" name="shantae_panpour" />
         <marker scope="Public" name="shantae_pansage" />
@@ -1361,6 +1636,8 @@
         <marker scope="Public" name="stripped_butt" />
         <marker scope="Public" name="succubus_filter">Filtered line to those with the succubus tag; Rosa is unsure about the word ''succubus''.</marker>
         <marker scope="Public" name="swimming_anyone?" />
+        <marker scope="Public" name="swimsuitCounter" />
+        <marker scope="Public" name="swimsuitCounterPerCharacter" />
         <marker scope="Public" name="taiyaki_girl_" />
         <marker scope="Public" name="taiyaki_girl_loss_0" />
         <marker scope="Public" name="taiyaki_girl_stripped_1" />
@@ -1369,6 +1646,13 @@
         <marker scope="Public" name="takatoshi_pan_3">Rosa's various musings about Takatoshi's food. They are meant to play in a row, and they (should) trigger a more direct question from Rosa.</marker>
         <marker scope="Public" name="takatoshi_pan_target">This is the more direct question to Takatoshi.</marker>
         <marker scope="Public" name="talk_about_pokemon_too_much" />
+        <marker scope="Public" name="timegate_stripping0" />
+        <marker scope="Public" name="timegate_stripping1" />
+        <marker scope="Public" name="timegate_stripping2" />
+        <marker scope="Public" name="timegate_stripping3" />
+        <marker scope="Public" name="timegate_stripping4" />
+        <marker scope="Public" name="timegate_stripping5" />
+        <marker scope="Public" name="timegate_stripping6" />
         <marker scope="Public" name="trixie_ff" />
         <marker scope="Public" name="trixie_ff_finishing" />
         <marker scope="Public" name="trixie_ff_start" />

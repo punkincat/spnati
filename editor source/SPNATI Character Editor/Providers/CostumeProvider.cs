@@ -59,15 +59,15 @@ namespace SPNATI_Character_Editor.Providers
 			}
 
 			if (key.Contains(" "))
-            {
+			{
 				key = key.Replace(" ", "_");
 				key = key.Replace("__", "_"); // why does this happen
 				skin.Id = key;
 				wasRenamed = true;
-            }
+			}
 
 			if (wasRenamed)
-            {
+			{
 				MessageBox.Show($"This outfit has been renamed to {key}.");
 			}
 

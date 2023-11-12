@@ -1,4 +1,4 @@
-﻿using SPNATI_Character_Editor.Controls;
+using SPNATI_Character_Editor.Controls;
 
 namespace SPNATI_Character_Editor.Activities
 {
@@ -37,8 +37,9 @@ namespace SPNATI_Character_Editor.Activities
             this.cmdCallOut = new Desktop.Skinning.SkinnedButton();
             this.cmdAddRecipe = new Desktop.Skinning.SkinnedButton();
             this.splitDialogue = new Desktop.Skinning.SkinnedSplitContainer();
-            this.panelCase = new System.Windows.Forms.Panel();
             this.treeDialogue = new SPNATI_Character_Editor.Controls.DialogueTree();
+            this.panelCase = new System.Windows.Forms.Panel();
+            this.cmdRefreshImages = new Desktop.Skinning.SkinnedButton();
             this.caseControl = new SPNATI_Character_Editor.Controls.CaseControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitDialogue)).BeginInit();
             this.splitDialogue.Panel1.SuspendLayout();
@@ -117,22 +118,6 @@ namespace SPNATI_Character_Editor.Activities
             this.splitDialogue.SplitterDistance = 266;
             this.splitDialogue.TabIndex = 16;
             // 
-            // panelCase
-            // 
-            this.panelCase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelCase.BackColor = System.Drawing.SystemColors.Control;
-            this.panelCase.Controls.Add(this.cmdAddRecipe);
-            this.panelCase.Controls.Add(this.cmdMakeResponse);
-            this.panelCase.Controls.Add(this.cmdCallOut);
-            this.panelCase.Controls.Add(this.caseControl);
-            this.panelCase.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelCase.Location = new System.Drawing.Point(3, 0);
-            this.panelCase.Name = "panelCase";
-            this.panelCase.Size = new System.Drawing.Size(697, 668);
-            this.panelCase.TabIndex = 28;
-            // 
             // treeDialogue
             // 
             this.treeDialogue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -146,6 +131,38 @@ namespace SPNATI_Character_Editor.Activities
             this.treeDialogue.SelectedNodeChanging += new System.EventHandler<SPNATI_Character_Editor.Controls.CaseSelectionEventArgs>(this.tree_SelectedNodeChanging);
             this.treeDialogue.SelectedNodeChanged += new System.EventHandler<SPNATI_Character_Editor.Controls.CaseSelectionEventArgs>(this.tree_SelectedCaseChanged);
             this.treeDialogue.CreatingCase += new System.EventHandler<SPNATI_Character_Editor.Controls.CaseCreationEventArgs>(this.tree_CreatingCase);
+            // 
+            // panelCase
+            // 
+            this.panelCase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelCase.BackColor = System.Drawing.SystemColors.Control;
+            this.panelCase.Controls.Add(this.cmdRefreshImages);
+            this.panelCase.Controls.Add(this.cmdAddRecipe);
+            this.panelCase.Controls.Add(this.cmdMakeResponse);
+            this.panelCase.Controls.Add(this.cmdCallOut);
+            this.panelCase.Controls.Add(this.caseControl);
+            this.panelCase.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panelCase.Location = new System.Drawing.Point(3, 0);
+            this.panelCase.Name = "panelCase";
+            this.panelCase.Size = new System.Drawing.Size(697, 668);
+            this.panelCase.TabIndex = 28;
+            // 
+            // cmdRefreshImages
+            // 
+            this.cmdRefreshImages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdRefreshImages.Background = Desktop.Skinning.SkinnedBackgroundType.Surface;
+            this.cmdRefreshImages.FieldType = Desktop.Skinning.SkinnedFieldType.Primary;
+            this.cmdRefreshImages.Flat = false;
+            this.cmdRefreshImages.Location = new System.Drawing.Point(242, 2);
+            this.cmdRefreshImages.Name = "cmdRefreshImages";
+            this.cmdRefreshImages.Size = new System.Drawing.Size(120, 23);
+            this.cmdRefreshImages.TabIndex = 48;
+            this.cmdRefreshImages.Text = "refresh images";
+            this.cmdRefreshImages.UseVisualStyleBackColor = true;
+            this.cmdRefreshImages.Click += new System.EventHandler(this.cmdRefreshImages_Click);
+            this.toolTip1.SetToolTip(this.cmdRefreshImages, "Refreshes the image list");
             // 
             // caseControl
             // 
@@ -183,5 +200,6 @@ namespace SPNATI_Character_Editor.Activities
 		private Controls.DialogueTree treeDialogue;
 		private CaseControl caseControl;
 		private Desktop.Skinning.SkinnedButton cmdAddRecipe;
-	}
+        private Desktop.Skinning.SkinnedButton cmdRefreshImages;
+    }
 }

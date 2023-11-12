@@ -13,6 +13,19 @@ May []*: ??
 Y'shtola []*: ??
 
 
+MAY MUST STRIP NECKLACE IN SUMMER OUTFIT / Y'SHTOLA IN SUMMER OUTFIT:
+May [may_summer_1 (costume line)]: If I'm going to lose, I'm going to lose in style.
+Y'shtola [May_Summer_s0_1a]: If that is what you desire, I do believe it can be arranged, May. I may be on vacation, but I'm willing to put in the work for your sake.
+
+MAY STRIPPING NECKLACE (accessory) IN SUMMER OUTFIT / Y'SHTOLA IN SUMMER OUTFIT:
+May [may_yshtola_summer_2]: It's not my <i>first</i> choice for how this plays out, Y'shtola. But believe me, I know how to put on a show!
+Y'shtola [May_Summer_s0_1b]: Well, aren't you eager? Does this mean I can simply take my leisure from here on out?
+
+MAY STRIPPED NECKLACE (accessory) IN SUMMER OUTFIT / Y'SHTOLA IN SUMMER OUTFIT:
+May [may_yshtola_summer_3]: Yeah, let your guard down. That's what vacations are for, right?
+Y'shtola [May_Summer_s0_1c]: Relaxing is not a strong suit of mine, but I will have to do my utmost, I suppose.
+
+
 MAY MUST STRIP SHOES:
 May []*: ??
 Y'shtola []*: ??
@@ -50,6 +63,20 @@ Y'shtola []*: ??
 MAY STRIPPED BANDANA (accessory):
 May []*: ??
 Y'shtola []*: ??
+
+
+MAY MUST STRIP VEIL IN SUMMER OUTFIT / Y'SHTOLA IN SUMMER OUTFIT:
+May []*: ??
+Y'shtola []*: ??
+
+MAY STRIPPING VEIL (accessory)IN SUMMER OUTFIT / Y'SHTOLA IN SUMMER OUTFIT:
+May [may_summer_11 (costume line)]: Do I get a free kiss if I lift the veil?
+Y'shtola [May_Summer_s3_2]: Ah, that begs the question of who is going to bestow it upon you or rather who you'd <i>like</i> to do so. -- please set this to play only if May is to the left
+
+MAY STRIPPED VEIL (accessory) IN SUMMER OUTFIT / Y'SHTOLA IN SUMMER OUTFIT:
+May [may_summer_12 (costume line)]: I hope my wedding ~background.time~ is this much fun.
+Y'shtola [May_Summer_s3_3] daytime: With your enthusiasm, May, I don't see how it wouldn't be. -- please set this to play only if May is to the left
+Y'shtola [May_Summer_s3_3] nighttime: Oh my! Feeling quite brazen this night, aren't we, May? -- please set this to play only if May is to the left
 
 
 MAY MUST STRIP SHORTS:
@@ -119,15 +146,15 @@ Y'shtola []*: ??
 
 
 Y'SHTOLA MUST STRIP CUFFS IN BUNNY OUTFIT:
-May [may_yshtola_bunny_ears]*: I just can't work it out, Y'shtola. How are you getting the ears on your costume to move so naturally?
-Y'shtola []*: ??
+May [may_yshtola_bunny_ears]: I just can't work it out, Y'shtola. How are you getting the ears on your costume to move so naturally?
+Y'shtola [may_resp0_easter1]: The easiest way to explain it is to say that they are not really part of my costume. -- please set this to play only if May is to the left
 
 Y'SHTOLA STRIPPING CUFFS IN BUNNY OUTFIT (accessory):
-May []*: ??
-Y'shtola []*: ??
+May [may_yshtola_bunny_ears_2]: I don't really get it, but that's okay. I won't pry.
+Y'shtola [may_resp0_easter2]: You needn't worry; I would invite any questions you might have. As you can see, I am more ears than usual today.
 
 Y'SHTOLA STRIPPED CUFFS IN BUNNY OUTFIT (accessory):
-May []*: ??
+May [may_yshtola_bunny_ears_3]: Oh, now I understand. You're like a pro cosplayer or a method actress or something! That's so cool!
 Y'shtola []*: ??
 
 
@@ -434,6 +461,3 @@ May []*: ??
 Y'SHTOLA STRIPPED BRA (revealed chest):
 Y'shtola []*: ??
 May []*: ??
-
-
-Note: Y'shtola also has some bidirectional lines to May when they're both in summer costumes.

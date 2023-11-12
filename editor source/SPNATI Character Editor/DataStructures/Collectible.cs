@@ -125,16 +125,16 @@ namespace SPNATI_Character_Editor.DataStructures
 			set
 			{
 				if (value)
-                {
+				{
 					if (clothing == null)
 					{
 						clothing = new Clothing();
 					}
-                }
+				}
 				else
-                {
+				{
 					clothing = null;
-                }
+				}
 			}
 		}
 

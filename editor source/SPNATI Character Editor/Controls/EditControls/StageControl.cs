@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using Desktop.Skinning;
 using System;
@@ -16,12 +16,29 @@ namespace SPNATI_Character_Editor
 		private string _alternateProperty;
 		private MemberInfo _alternateMember;
 		private string _skinVariable;
+		private Costume _costumeSelected;
 
 		public StageControl()
 		{
 			InitializeComponent();
 			cboFrom.KeyMember = "Id";
 			cboTo.KeyMember = "Id";
+			recRefCostume.RecordType = typeof(Costume);
+			recRefCostume.RecordFilter = FilterRefCostume;
+		}
+
+		private bool FilterRefCostume(IRecord record)
+		{
+
+			string key = _sourceMember.GetValue(Data)?.ToString();
+			Character character = CharacterDatabase.Get(key);
+
+			if (character == null)
+			{
+				return false;
+			}
+			Costume costume = record as Costume;
+			return costume.Character == character || costume.Key == "default";
 		}
 
 		protected override void OnSetParameters(EditControlAttribute parameters)
@@ -154,7 +171,7 @@ namespace SPNATI_Character_Editor
 			{
 				removing = tag.Contains("removing_");
 				removed = tag.Contains("removed_");
-				lookForward = removing;
+				lookForward = removing || tag == "opponent_stripping";
 				if (removing || removed)
 				{
 					int index = tag.LastIndexOf('_');
@@ -170,7 +187,7 @@ namespace SPNATI_Character_Editor
 				{
 					removing = tag.Contains("will_be_visible");
 					removed = tag.Contains("is_visible");
-					lookForward = removing;
+					lookForward = removing || tag == "opponent_stripping";
 					if (removing || removed)
 					{
 						filterType = "important";
@@ -246,6 +263,21 @@ namespace SPNATI_Character_Editor
 				}
 			}
 
+			if (_costumeSelected != null)
+			{
+				key = _costumeSelected.Id;
+				if (key == "default")
+				{
+					return character;
+				}
+
+				Costume costume = CharacterDatabase.GetSkin("opponents/reskins/" + key + "/");
+				if (costume != null)
+				{
+					return costume;
+				}
+			}
+
 			Case theCase = Data as Case;
 			if (theCase == null)
 			{
@@ -273,7 +305,16 @@ namespace SPNATI_Character_Editor
 			}
 			else if (_skinVariable == "~_.costume~")
 			{
-				string other = theCase.AlsoPlaying;
+				string other = "";
+				
+				foreach (TargetCondition cond in theCase.Conditions)
+				{
+					if (cond.Role != "self" && cond.Role != "target" && cond.Character != null)
+					{
+						other = cond.Character;
+					}
+				}
+
 				if (!string.IsNullOrEmpty(other))
 				{
 					key = CharacterDatabase.GetId(other);
@@ -353,6 +394,12 @@ namespace SPNATI_Character_Editor
 		private void cboTo_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			Save();
+		}
+
+		private void recRefCostume_RecordChanged(object sender, RecordEventArgs e)
+		{
+			_costumeSelected = recRefCostume.Record as Costume;
+			FillItems();
 		}
 	}
 

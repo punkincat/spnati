@@ -10,6 +10,7 @@
 
 var SELECTED = "selected";
 var OPPONENT_SELECTED = "opponent_selected";
+var OPPONENT_DESELECTED = "opponent_deselected";
 var SETTINGS_CHANGED = "settings_changed";
 var GAME_START = "game_start";
 
@@ -148,7 +149,7 @@ var TAG_ALIASES = {
     'mlp':   'my_little_pony',
     'tengen_toppa_gurren_lagann': 'ttgl',
     // Other aliases
-    'redhead': 'ginger',
+    'redhead': 'red_hair',
     'sword':   'blade',
 };
 
@@ -162,6 +163,11 @@ var TAG_IMPLICATIONS = {
     'green_hair': ['exotic_hair'],
     'pink_hair': ['exotic_hair'],
     'purple_hair': ['exotic_hair'],
+    'violet_eyes': ['exotic_eyes'],
+    'pink_eyes': ['exotic_eyes'],
+    'red_eyes': ['exotic_eyes'],
+    'amber_eyes': ['exotic_eyes'],
+    'heterochromia': ['exotic_eyes'],
     'hairy': ['pubic_hair'],
     'trimmed': ['pubic_hair'],
 };
@@ -830,6 +836,7 @@ function State($xml_or_state, parentCase) {
 
     var $xml = $xml_or_state;
 
+    this.displayed = false;
     this.parentCase = parentCase;
     this.id = $xml.attr('dev-id') || null;
     this.image = $xml.attr('img');
@@ -1151,7 +1158,7 @@ function expandNicknames (self, target) {
     return target.label.escapeHTML();
 }
 
-function expandClothingVariable(clothing, fn, args, self, target, bindings) {
+function expandClothingVariable(clothing, fn, args, self, target, bindings, isRemoved) {
     if (fn == 'ifplural' && args) {
         args = args.split('|');
         return expandDialogue(args[clothing.plural ? 0 : clothing.plural === null && args.length > 2 ? 2 : 1], self, target, bindings);
@@ -1180,6 +1187,19 @@ function expandClothingVariable(clothing, fn, args, self, target, bindings) {
         return clothing[fn];
     } else if (fn === "id") {
         return clothing.id || "";
+    } else if (fn === "reveals") {
+        if (!isRemoved) return "none";
+
+        var revealedPos = getRevealedPosition(target || self, clothing);
+        if (revealedPos == FULL_ARTICLE) {
+            return "both";
+        } else if (revealedPos == UPPER_ARTICLE) {
+            return "chest";
+        } else if (revealedPos == LOWER_ARTICLE) {
+            return "crotch";
+        } else {
+            return "none";
+        }
     } else if (fn === undefined && args === undefined) {
         return clothing.name;
     }
@@ -1205,6 +1225,26 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
         return Math.abs(player.slot - other.slot);
     case 'slot':
         return player.slot;
+    case 'compatible':
+    case 'attracted':
+        if (player.hasTag("bisexual")) return true;
+        var other = (!args ? self : findVariablePlayer(args, self, target, bindings));
+        if (player.hasTag('straight')) {
+            return player.gender !== other.gender;
+        }
+        if (player.gender == eGender.MALE && player.hasTag('gay')) {
+            return other.gender === eGender.MALE;
+        }
+        if (player.gender == eGender.FEMALE && player.hasTag('lesbian')) {
+            return other.gender === eGender.FEMALE;
+        }
+        if (player.hasTag('bi-curious')) {
+            return fn == 'compatible' || player.gender !== other.gender
+        }
+        if (player.hasTag('reverse_bi-curious')) {
+            return fn == 'compatible' || player.gender === other.gender
+        }
+        return undefined;
     case 'collectible':
         var collectibleID = split_fn[1];
         if (collectibleID) {
@@ -1246,8 +1286,26 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
         return player.size;
     case 'gender':
         return player.gender;
+    case 'intelligence':
+        return player.intelligence;
+    case 'tostutter':
+        var n = Math.min(Math.max((parseInt(args, 10) || 1), 1), 10);
+        var name = expandNicknames(self, player);
+        var ret = name;
+        for (var i = 0; i < n; i++) {
+            ret = name[0] + "-" + ret;
+        }
+        return ret;
     case 'ifmale':
         return args.split('|')[(player.gender == 'male' ? 0 : 1)];
+    case 'subj':
+        return player.gender == 'male' ? 'he' : 'she';
+    case 'obj':
+        return player.gender == 'male' ? 'him' : 'her';
+    case 'poss':
+        return player.gender == 'male' ? 'his' : 'her';
+    case 'poss2':
+        return player.gender == 'male' ? 'his' : 'hers';
     case 'place':
         if (player.out) return players.countTrue() + 1 - player.outOrder;
         return 1 + players.countTrue(function(p) { return p.countLayers() > player.countLayers(); });
@@ -1282,14 +1340,25 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
         } else if (split_fn[1] == 'noart' || split_fn[1] === undefined) {
             return player.hand.describe(split_fn[1] == undefined);
         }
+        throw new Error('Incorrect use of .hand');
+    case 'cards':
+        var n = player.hand.tradeIns.countTrue();
+        if (split_fn.length == 1) {
+            return String(n);
+        } else if (split_fn[1].toLowerCase() == 'ifplural') {
+            return expandDialogue(args.split('|')[n == 1 ? 1 : 0], player, target, bindings);
+        } else if (split_fn[1].toLowerCase() == 'text' && args === undefined) {
+            return [ 'zero', 'one', 'two', 'three', 'four', 'five' ][n];
+        }
+        throw new Error('Incorrect use of .cards');
     case 'wearing':
         {
             var types = [], positions = [], names = [];
-            args.split('|').forEach(function(keyword) {
+            (args ? args.split('|') : []).forEach(function(keyword) {
                 if ([IMPORTANT_ARTICLE, MAJOR_ARTICLE, MINOR_ARTICLE, EXTRA_ARTICLE].indexOf(keyword) >= 0) {
                     types.push(keyword);
                 } else if ([UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE, OTHER_ARTICLE,
-                            'arms', 'feet', 'hands', 'head', 'legs', 'neck', 'waist'].indexOf(keyword) >= 0) {
+                            'arms', 'feet', 'hands', 'head', 'legs', 'neck', 'waist', 'held'].indexOf(keyword) >= 0) {
                     positions.push(keyword);
                 } else {
                     names.push(keyword);
@@ -1364,7 +1433,7 @@ function expandDialogue (dialogue, self, target, bindings) {
                 break;
             case 'clothing':
                 var clothing = (target||self).removedClothing;
-                substitution = expandClothingVariable(clothing, fn, args, self, target, bindings);
+                substitution = expandClothingVariable(clothing, fn, args, self, target, bindings, true);
                 break;
             case 'revealed':
                 target = target || self;
@@ -1377,20 +1446,14 @@ function expandDialogue (dialogue, self, target, bindings) {
                                               ? [UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE]
                                               : [clothing.position, FULL_ARTICLE]);
                     if (revealedClothing.length) {
-                        substitution = expandClothingVariable(revealedClothing[getRandomNumber(0, revealedClothing.length)],
-                                                              fn, args, self, target, bindings);
+                        const revealedIndex = (self.slot + target.slot + currentRound) % revealedClothing.length; // Generates a pseudorandom number which will be consistent per-round
+                        substitution = expandClothingVariable(revealedClothing[revealedIndex],
+                                                              fn, args, self, target, bindings, false);
                     }
                 }
                 break;
             case 'cards': /* determine how many cards are being swapped */
-                var n = self.hand.tradeIns.countTrue();
-                if (fn == 'ifplural') {
-                    substitution = expandDialogue(args.split('|')[n == 1 ? 1 : 0], self, target, bindings);
-                } else if (fn == 'text' && args === undefined) {
-                    substitution = [ 'zero', 'one', 'two', 'three', 'four', 'five' ][n];
-                } else if (fn === undefined) {
-                    substitution = String(n);
-                }
+                substitution = expandPlayerVariable(['cards'].concat(fn_parts), args, self, self, target, bindings);
                 break;
             case 'collectible':
                 fn = fn_parts[0];
@@ -1435,13 +1498,28 @@ function expandDialogue (dialogue, self, target, bindings) {
                 }
                 break;
             case 'background':
-                if (fn == undefined) {
+                if (fn == undefined || fn === 'id') {
                     substitution = activeBackground.id;
                 } else if (fn === 'tag') {
                     var bg_tag = fixupTagFormatting(fn_parts[1]);
                     substitution = !!activeBackground.tags && (activeBackground.tags.indexOf(bg_tag) >= 0);
+                } else if (fn === 'preposition') {
+                    substitution = activeBackground.metadata[fn] || 'in';
+                } else if (fn === 'term') {
+                    substitution = activeBackground.metadata.term || activeBackground.id;
                 } else if (fn == 'time' && !('time' in activeBackground.metadata) && args === undefined) {
                     substitution = localDayOrNight;
+                } else if (fn == 'adverb') {
+                    substitution = activeBackground.metadata.surface == 'roof' ? 'up'
+                        : activeBackground.metadata.location == 'outdoors' ? 'out' : 'in';
+                } else if (fn == 'if' && fn_parts.length == 2) {
+                    let bg_tag = fixupTagFormatting(fn_parts[1]), val;
+                    if ((bg_tag == 'day' || bg_tag == 'night') && !('time' in activeBackground.metadata)) {
+                        val = localDayOrNight == bg_tag;
+                    } else {
+                        val = activeBackground.tags && (activeBackground.tags.includes(bg_tag));
+                    }
+                    substitution = expandDialogue(args.split('|')[val ? 0 : 1]);
                 } else if (args === undefined) {
                     substitution = activeBackground.metadata[fn] || '';
                 }
@@ -1604,6 +1682,7 @@ function normalizeConditionText (str) {
 
 function normalizeImageName(img) {
     if (img.startsWith('custom:')) img = img.substring(7);
+    if (img.startsWith('set:')) img = img.substring(4);
     return img.toLowerCase().replace(/\.(?:png|jpg|jpeg|gif)/gi, '').replace(/(?:\#|\d+)\-/gi, '');
 }
 
@@ -1666,6 +1745,10 @@ function inInterval (value, interval) {
     return !interval || interval.contains(value);
 }
 
+function notInInterval (value, interval) {
+	return !interval || !interval.contains(value);
+}
+
 /************************************************************
  * Special function to check stage conditions, which can contain a
  * space-separated list of intervals.
@@ -1685,6 +1768,8 @@ function evalOperator (val, op, cmpVal) {
     case '<=': return val <= cmpVal;
     case '!=': return val != cmpVal;
     case '!!': return !!val;
+    case '!@': return notInInterval(val, cmpVal);
+    case '@': return inInterval(val, cmpVal); 
     default:
     case '=':
     case '==':
@@ -1702,7 +1787,7 @@ function evalOperator (val, op, cmpVal) {
  * the current state marker.
  ************************************************************/
 function checkMarker(predicate, self, target, currentOnly) {
-    var match = predicate.match(/^([\w\-]+)(\*?)(\s*((?:\>|\<|\=|\!)\=?)\s*(.+))?\s*$/);
+    var match = predicate.match(/^([\w\-\+]+)(\*?)(\s*(\<\=|\>\=|\<|\>|\=\=|!\=|\=|!\@|\@)?\s*(.+))?\s*$/);
     
     var name;
     var perTarget;
@@ -1722,7 +1807,11 @@ function checkMarker(predicate, self, target, currentOnly) {
         if (match[3]) {
             op = match[4];
             cmpVal = expandDialogue(match[5], self, target);
-            if (!isNaN(parseInt(cmpVal, 10))) {
+            if (op == '@' || op == '!@')
+            {
+                cmpVal = parseInterval(cmpVal);
+            }
+            else if (!isNaN(parseInt(cmpVal, 10))) {
                 cmpVal = parseInt(cmpVal, 10);
             }
         } else {
@@ -1748,6 +1837,9 @@ function checkMarker(predicate, self, target, currentOnly) {
     return evalOperator(val, op, cmpVal);
 }
 
+function checkMarkers(predicate, self, target, currentOnly) {
+    return predicate.split('\|').some(subs => subs.split('&').every(expr => checkMarker(expr, self, target, currentOnly)));
+}
 
 function checkSaidText(predicate, player) {
     var match = predicate.match(/^(.+)##\s*((?:\>|\<|\=|\!)\=?)\s*(\d+)\s*$/);
@@ -1787,6 +1879,8 @@ function Condition($xml) {
     this.variable = normalizeBindingName($xml.attr('var'));
     this.id     = $xml.attr('character');
     this.tag    = $xml.attr('filter');
+    this.nottag = $xml.attr('filterOut');
+    this.tagAdv = $xml.attr('filterAdv');
     this.stage  = parseInterval($xml.attr('stage'));
     this.layers = parseInterval($xml.attr('layers'));
     this.startingLayers = parseInterval($xml.attr('startingLayers'));
@@ -1804,18 +1898,20 @@ function Condition($xml) {
     this.priority = 0;
 
     if (this.role == "self") {
-        this.priority = (this.tag ? 0 : 0) + (this.status ? 20 : 0)
-            + (this.consecutiveLosses ? 60 : 0) + (this.timeInStage ? 8 : 0)
+        this.priority = (this.tag ? 0 : 0) + (this.nottag ? 0 : 0) + (this.tagAdv ? 0 : 0)
+            + (this.status ? 20 : 0) + (this.consecutiveLosses ? 60 : 0) + (this.timeInStage ? 8 : 0)
             + (this.hand ? 20 : 0) + (this.gender ? 5 : 0)
     } else if (this.role == "target") {
-        this.priority = (this.id ? 300 : 0) + (this.tag ? 150 : 0)
+        this.priority = (this.id ? 300 : 0)
+            + (this.tag ? 150 : 0) + (this.nottag ? 150 : 0) + (this.tagAdv ? 150 : 0)
             + (this.stage ? 80 : 0) + (this.status ? 70 : 0)
             + (this.layers ? 40 : 0) + (this.startingLayers ? 40 : 0)
             + (this.consecutiveLosses ? 60 : 0) + (this.timeInStage ? 25 : 0)
             + (this.hand ? 30 : 0) + (this.gender ? 5 : 0)
     } else {
         this.priority = (this.role == "winner" ? 1.5 : 1) *
-            ((this.id ? 100 : 0) + (this.tag ? 10 : 0)
+            ((this.id ? 100 : 0)
+             + (this.tag ? 10 : 0) + (this.nottag ? 10 : 0) + (this.tagAdv ? 10 : 0)
              + (this.stage ? 40 : 0) + (this.status ? 5 : 0)
              + (this.layers ? 20 : 0) + (this.startingLayers ? 20 : 0)
              + (this.consecutiveLosses ? 30 : 0) + (this.timeInStage ? 15 : 0)
@@ -1887,38 +1983,7 @@ VariableTest.prototype.evaluate = function (self, opp, bindings) {
 function Case($xml, trigger) {
     this.trigger =                  trigger;
     this.stage =                    $xml.attr('stage');
-    this.target =                   $xml.attr("target");
-    this.filter =                   $xml.attr("filter");
-    this.targetStage =              parseInterval($xml.attr("targetStage"));
-    this.targetLayers =             parseInterval($xml.attr("targetLayers"));
-    this.targetStartingLayers =     parseInterval($xml.attr("targetStartingLayers"));
-    this.targetStatus =             $xml.attr("targetStatus");
-    this.targetTimeInStage =        parseInterval($xml.attr("targetTimeInStage"));
-    this.targetSaidMarker =         $xml.attr("targetSaidMarker");
-    this.targetNotSaidMarker =      $xml.attr("targetNotSaidMarker");
-    this.targetSayingMarker =       $xml.attr("targetSayingMarker");
-    this.targetSaying =             $xml.attr("targetSaying");
-    this.oppHand =                  $xml.attr("oppHand");
-    this.hasHand =                  $xml.attr("hasHand");
-    this.alsoPlaying =              $xml.attr("alsoPlaying");
-    this.alsoPlayingStage =         parseInterval($xml.attr("alsoPlayingStage"));
-    this.alsoPlayingHand =          $xml.attr("alsoPlayingHand");
-    this.alsoPlayingTimeInStage =   parseInterval($xml.attr("alsoPlayingTimeInStage"));
-    this.alsoPlayingSaidMarker =    $xml.attr("alsoPlayingSaidMarker");
-    this.alsoPlayingNotSaidMarker = $xml.attr("alsoPlayingNotSaidMarker");
-    this.alsoPlayingSayingMarker =  $xml.attr("alsoPlayingSayingMarker");
-    this.alsoPlayingSaying =        $xml.attr("alsoPlayingSaying");
-    this.totalMales =               parseInterval($xml.attr("totalMales"));
-    this.totalFemales =             parseInterval($xml.attr("totalFemales"));
-    this.timeInStage =              parseInterval($xml.attr("timeInStage"));
-    this.consecutiveLosses =        parseInterval($xml.attr("consecutiveLosses"));
-    this.totalAlive =               parseInterval($xml.attr("totalAlive"));
-    this.totalExposed =             parseInterval($xml.attr("totalExposed"));
-    this.totalNaked =               parseInterval($xml.attr("totalNaked"));
-    this.totalMasturbating =        parseInterval($xml.attr("totalMasturbating"));
-    this.totalFinished =            parseInterval($xml.attr("totalFinished"));
     this.totalRounds =              parseInterval($xml.attr("totalRounds"));
-    this.saidMarker =               $xml.attr("saidMarker");
     this.notSaidMarker =            $xml.attr("notSaidMarker");
     this.customPriority =           parseInt($xml.attr("priority"), 10);
     this.hidden =                   $xml.attr("hidden");
@@ -1958,15 +2023,16 @@ function Case($xml, trigger) {
         this.customPriority = undefined;
     }
 
-    var hasTarget = !!this.target || this.counters.some(function (ctr) {
+    var targetCondition = this.counters.find(function (ctr) {
         return (ctr.role == "target") && (isNaN(ctr.count.max) || (ctr.count.max === null) || (ctr.count.max > 0)) && ctr.id;
     });
 
+    var targetID = targetCondition ? targetCondition.id : this.target;
     var hasTargetStage = !!this.targetStage || this.counters.some(function (ctr) {
         return (ctr.role == "target") && (isNaN(ctr.count.max) || (ctr.count.max === null) || (ctr.count.max > 0)) && ctr.stage;
     });
 
-    if (hasTarget && hasTargetStage) {
+    if (targetID && hasTargetStage && (targetID != "human")) { // Generalize to lost/stripping/stripped
         if (this.trigger == MALE_MUST_STRIP || this.trigger == FEMALE_MUST_STRIP) {
             this.trigger = OPPONENT_LOST;
         } else if (CONVERT_STRIP_CASES.indexOf(this.trigger) >= 0) {
@@ -1975,6 +2041,14 @@ function Case($xml, trigger) {
             this.trigger = OPPONENT_STRIPPED;
         }
     }
+	
+	if (targetID && (targetID != "human")) { // Generalize crotch/chest reveal lines
+		if (this.trigger == MALE_SMALL_CROTCH_IS_VISIBLE || this.trigger == MALE_MEDIUM_CROTCH_IS_VISIBLE || this.trigger == MALE_LARGE_CROTCH_IS_VISIBLE || this.trigger == FEMALE_CROTCH_IS_VISIBLE) {
+			this.trigger = OPPONENT_CROTCH_IS_VISIBLE;
+		} else if (this.trigger == FEMALE_SMALL_CHEST_IS_VISIBLE || this.trigger == FEMALE_MEDIUM_CHEST_IS_VISIBLE || this.trigger == FEMALE_LARGE_CHEST_IS_VISIBLE || this.trigger == MALE_CHEST_IS_VISIBLE) {
+			this.trigger = OPPONENT_CHEST_IS_VISIBLE;
+		}
+	}
     
     // Calculate case priority ahead of time.
     if (this.hidden) {
@@ -1984,42 +2058,8 @@ function Case($xml, trigger) {
         this.priority = this.customPriority;
     } else {
         this.priority = 0;
-        if (this.target)                   this.priority += 300;
-        if (this.filter)                   this.priority += 150;
-        if (this.targetStage)              this.priority += 80;
-        if (this.targetLayers)             this.priority += 40;
-        if (this.targetStartingLayers)     this.priority += 40;
-        if (this.targetStatus)             this.priority += 70;
-        if (this.targetSaidMarker)         this.priority += 1;
-        if (this.targetSayingMarker)       this.priority += 1;
-        if (this.targetSaying)             this.priority += 1;
-        if (this.targetNotSaidMarker)      this.priority += 1;
-        if (this.consecutiveLosses)        this.priority += 60;
-        if (this.oppHand)                  this.priority += 30;
-        if (this.targetTimeInStage)        this.priority += 25;
-        if (this.hasHand)                  this.priority += 20;
-
-        if (this.alsoPlaying)              this.priority += 100;
-        if (this.alsoPlayingStage)         this.priority += 40;
-        if (this.alsoPlayingTimeInStage)   this.priority += 15;
-        if (this.alsoPlayingHand)          this.priority += 5;
-        if (this.alsoPlayingSaidMarker)    this.priority += 1;
-        if (this.alsoPlayingNotSaidMarker) this.priority += 1;
-        if (this.alsoPlayingSayingMarker)  this.priority += 1;
-        if (this.alsoPlayingSaying)        this.priority += 1;
-
         if (this.totalRounds)              this.priority += 10;
-        if (this.timeInStage)              this.priority += 8;
-        if (this.totalMales)               this.priority += 5;
-        if (this.totalFemales)             this.priority += 5;
-        if (this.saidMarker)               this.priority += 1;
         if (this.notSaidMarker)            this.priority += 1;
-
-        if (this.totalAlive)               this.priority += 2 + this.totalAlive.max;
-        if (this.totalExposed)             this.priority += 4 + this.totalExposed.max;
-        if (this.totalNaked)               this.priority += 5 + this.totalNaked.max;
-        if (this.totalMasturbating)        this.priority += 5 + this.totalMasturbating.max;
-        if (this.totalFinished)            this.priority += 5 + this.totalFinished.max;
 
         this.counters.forEach(function (c) { this.priority += c.priority; }, this);
 
@@ -2034,11 +2074,9 @@ function Case($xml, trigger) {
         this.priority += (tests.length * 50);
     }
 
-    this.isVolatile = this.targetSayingMarker || this.targetSaying
-        || this.alsoPlayingSayingMarker || this.alsoPlayingSaying
-        || this.counters.some(function(c) {
-            return c.sayingMarker || c.saying || c.pose;
-        });
+    this.isVolatile = this.counters.some(function(c) {
+        return c.sayingMarker || c.saying || c.pose;
+    });
 }
 
 /**
@@ -2112,21 +2150,7 @@ Case.prototype.toJSON = function () {
     return ser;
 }
 
-Case.prototype.getAlsoPlaying = function (opp) {
-    if (!this.alsoPlaying) return null;
-    
-    var ap = null;
-    
-    players.forEach(function (p) {
-        if (!ap && p !== opp && p.id === this.alsoPlaying) {
-            ap = p;
-        }
-    }.bind(this));
-    
-    return ap;
-}
-
-Case.prototype.checkConditions = function (self, opp) {
+Case.prototype.checkConditions = function (self, opp, postDialogue) {
     var volatileDependencies = new Set();
     
     // one-time use
@@ -2148,166 +2172,6 @@ Case.prototype.checkConditions = function (self, opp) {
             return false; // failed "stage" requirement
         }
     }
-    
-    // target
-    if (this.target) {
-        if (!opp || this.target !== opp.id) {
-            return false; // failed "target" requirement
-        }
-    }
-    
-    // filter
-    if (this.filter) {
-        if (!opp || !opp.hasTag(this.filter)) {
-            return false; // failed "filter" requirement
-        }
-    }
-
-    // targetStage
-    if (this.targetStage) {
-        if (!opp || !inInterval(opp.stage, this.targetStage)) {
-            return false; // failed "targetStage" requirement
-        }
-    }
-    
-    // targetLayers
-    if (this.targetLayers) {
-        if (!opp || !inInterval(opp.countLayers(), this.targetLayers)) {
-            return false; 
-        }
-    }
-    
-    // targetStatus
-    if (this.targetStatus) {
-        if (!opp || !opp.checkStatus(this.targetStatus)) {
-            return false;
-        }
-    }
-
-    // targetStartingLayers
-    if (this.targetStartingLayers) {
-        if (!opp || !inInterval(opp.startingLayers, this.targetStartingLayers)) {
-            return false;
-        }
-    }
-
-    // targetSaidMarker
-    if (this.targetSaidMarker) {
-        if (!opp || !checkMarker(this.targetSaidMarker, opp, null)) {
-            return false;
-        }
-    }
-    
-    // targetNotSaidMarker
-    if (this.targetNotSaidMarker) {
-        if (!opp || checkMarker(this.targetNotSaidMarker, opp, null)) {
-            return false;
-        }
-    }
-
-    if (this.targetSayingMarker) {
-        if (!opp || !checkMarker(this.targetSayingMarker, opp, null, true)) {
-            return false;
-        }
-        volatileDependencies.add(opp);
-    }
-    if (this.targetSaying) {
-        if (!opp || !opp.chosenState || opp.updatePending) return false;
-        if (normalizeConditionText(opp.chosenState.rawDialogue).indexOf(normalizeConditionText(this.targetSaying)) < 0) return false;
-        volatileDependencies.add(opp);
-    }
-    
-
-    // consecutiveLosses
-    if (this.consecutiveLosses) {
-        if (opp) { // if there's a target, look at their losses
-            if (!inInterval(opp.consecutiveLosses, this.consecutiveLosses)) {
-                return false; // failed "consecutiveLosses" requirement
-            }
-        }
-        else { // else look at your own losses
-            if (!inInterval(self.consecutiveLosses, this.consecutiveLosses)) {
-                return false;
-            }
-        }
-    }
-
-    // oppHand
-    if (this.oppHand) {
-        if (!opp || !opp.hand || opp.hand.strength !== handStrengthFromString(this.oppHand)) {
-            return false;
-        }
-    }
-
-    // targetTimeInStage
-    if (this.targetTimeInStage) {
-        if (!opp || !inInterval(opp.timeInStage == -1 ? 0 //allow post-strip time to count as 0
-                                : opp.timeInStage, this.targetTimeInStage)) {
-            return false; // failed "targetTimeInStage" requirement
-        }
-    }
-
-    // hasHand
-    if (this.hasHand) {
-        if (!self.hand || self.hand.strength !== handStrengthFromString(this.hasHand)) {
-            return false;
-        }
-    }
-
-    // alsoPlaying, alsoPlayingStage, alsoPlayingTimeInStage, alsoPlayingHand (priority = 100, 40, 15, 5)
-    if (this.alsoPlaying) {
-        var ap = this.getAlsoPlaying(opp);
-        
-        if (!ap) {
-            return false; // failed "alsoPlaying" requirement
-        } else {
-            if (this.alsoPlayingStage) {
-                if (!inInterval(ap.stage, this.alsoPlayingStage)) {
-                    return false;        // failed "alsoPlayingStage" requirement
-                }
-            }
-                    
-            if (this.alsoPlayingTimeInStage) {
-                if (!inInterval(ap.timeInStage, this.alsoPlayingTimeInStage)) {
-                    return false;        // failed "alsoPlayingTimeInStage" requirement
-                }
-            }
-                    
-            if (this.alsoPlayingHand) {
-                if (!ap.hand || ap.hand.strength !== handStrengthFromString(this.alsoPlayingHand))
-                {
-                    return false;        // failed "alsoPlayingHand" requirement
-                }
-            }
-                    
-            // marker checks have very low priority as they're mainly intended to be used with other target types
-            if (this.alsoPlayingSaidMarker) {
-                if (!checkMarker(this.alsoPlayingSaidMarker, ap, opp)) {
-                    return false;
-                }
-            }
-                    
-            if (this.alsoPlayingNotSaidMarker) {
-                // Negated marker condition - false if it matches
-                if (checkMarker(this.alsoPlayingNotSaidMarker, ap, opp)) {
-                    return false;
-                }
-            }
-
-            if (this.alsoPlayingSayingMarker) {
-                if (!checkMarker(this.alsoPlayingSayingMarker, ap, opp, true)) {
-                    return false;
-                }
-                volatileDependencies.add(ap);
-            }
-            if (this.alsoPlayingSaying) {
-                if (ap.updatePending || !ap.chosenState || normalizeConditionText(ap.chosenState.rawDialogue).indexOf(normalizeConditionText(this.alsoPlayingSaying)) < 0) {
-                    return false;
-                }
-                volatileDependencies.add(ap);
-            }
-        }
-    }
 
     // totalRounds
     if (this.totalRounds) {
@@ -2316,78 +2180,7 @@ Case.prototype.checkConditions = function (self, opp) {
         }
     }
 
-    // timeInStage
-    if (this.timeInStage) {
-        if (!inInterval(self.timeInStage == -1 ? 0 //allow post-strip time to count as 0
-                       : self.timeInStage, this.timeInStage)) {
-                           return false; // failed "timeInStage" requirement
-        }
-    }
-
-    // totalMales
-    if (this.totalMales) {
-        var count = players.countTrue(function(p) {
-            return p && p.gender === eGender.MALE;
-        });
-        
-        if (!inInterval(count, this.totalMales)) {
-            return false; // failed "totalMales" requirement
-        }
-    }
-
-    // totalFemales
-    if (this.totalFemales) {
-        var count = players.countTrue(function(p) {
-            return p && p.gender === eGender.FEMALE;
-        });
-        
-        if (!inInterval(count, this.totalFemales)) {
-            return false; // failed "totalFemales" requirement
-        }
-    }
-
-    // totalAlive
-    if (this.totalAlive) {
-        if (!inInterval(getNumPlayersInStage(STATUS_ALIVE), this.totalAlive)) {
-            return false; // failed "totalAlive" requirement
-        }
-    }
-
-    // totalExposed
-    if (this.totalExposed) {
-        if (!inInterval(getNumPlayersInStage(STATUS_EXPOSED), this.totalExposed)) {
-            return false; // failed "totalExposed" requirement
-        }
-    }
-
-    // totalNaked
-    if (this.totalNaked) {
-        if (!inInterval(getNumPlayersInStage(STATUS_NAKED), this.totalNaked)) {
-            return false; // failed "totalNaked" requirement
-        }
-    }
-
-    // totalMasturbating
-    if (this.totalMasturbating) {
-        if (!inInterval(getNumPlayersInStage(STATUS_MASTURBATING), this.totalMasturbating)) {
-            return false; // failed "totalMasturbating" requirement
-        }
-    }
-
-    // totalFinished
-    if (this.totalFinished) {
-        if (!inInterval(getNumPlayersInStage(STATUS_FINISHED), this.totalFinished)) {
-            return false; // failed "totalFinished" requirement
-        }
-    }
-
     // self marker checks
-    if (this.saidMarker) {
-        if (!checkMarker(this.saidMarker, self, opp)) {
-            return false;
-        }
-    }
-    
     if (this.notSaidMarker) {
         if (checkMarker(this.notSaidMarker, self, opp)) {
             return false;
@@ -2409,9 +2202,11 @@ Case.prototype.checkConditions = function (self, opp) {
                 && (ctr.id === undefined || p.id == ctr.id)
                 && (ctr.stage === undefined || inInterval(p.stage, ctr.stage))
                 && (ctr.tag === undefined || p.hasTag(ctr.tag))
+                && (ctr.nottag === undefined || !p.hasTag(ctr.nottag))
+                && (ctr.tagAdv === undefined || p.hasTags(ctr.tagAdv))
                 && (ctr.gender === undefined || p.gender == ctr.gender)
                 && (ctr.status === undefined || p.checkStatus(ctr.status))
-                && (ctr.layers === undefined || inInterval(p.clothing.length, ctr.layers))
+                && (ctr.layers === undefined || inInterval(p.countLayers(), ctr.layers))
                 && (ctr.startingLayers === undefined || inInterval(p.startingLayers, ctr.startingLayers))
                 && (ctr.timeInStage === undefined || inInterval(p.timeInStage, ctr.timeInStage))
                 && (ctr.hand === undefined || (p.hand && p.hand.strength === handStrengthFromString(ctr.hand)))
@@ -2424,8 +2219,8 @@ Case.prototype.checkConditions = function (self, opp) {
         if (ctr.sayingMarker !== undefined || ctr.saying !== undefined || ctr.pose !== undefined) matches = matches.filter(function(p) {
             if (ctr.sayingMarker !== undefined) {
                 // The human player can't talk, and using
-                // saying/sayingMarker/pose on self would be circular.
-                if (p == self || p == humanPlayer) return false;
+                // saying/sayingMarker/pose on self would be circular (unless we're evaluating post-dialogue cases).
+                if ((p == self && !postDialogue) || p == humanPlayer) return false;
                 if (checkMarker(ctr.sayingMarker, p, opp, true)) {
                     volatileDependencies.add(p);
                 } else {
@@ -2440,7 +2235,7 @@ Case.prototype.checkConditions = function (self, opp) {
                 }
             }
             if (ctr.saying !== undefined) {
-                if (p == self || p == humanPlayer) return false;
+                if ((p == self && !postDialogue) || p == humanPlayer) return false;
                 if (!p.updatePending && p.chosenState && normalizeConditionText(p.chosenState.rawDialogue).indexOf(normalizeConditionText(ctr.saying)) >= 0) {
                     volatileDependencies.add(p);
                 } else {
@@ -2451,7 +2246,7 @@ Case.prototype.checkConditions = function (self, opp) {
                 }
             }
             if (ctr.pose !== undefined) {
-                if (p == self || p == humanPlayer) return false;
+                if ((p == self && !postDialogue) || p == humanPlayer) return false;
                 if (!p.updatePending && p.chosenState && poseNameMatches(ctr.pose, p.chosenState.image)) {
                     volatileDependencies.add(p);
                 } else {
@@ -2548,7 +2343,7 @@ function addTriggers(triggers, newTriggers) {
 Opponent.prototype.findBehaviour = function(triggers, opp, volatileOnly) {
     /* get the AI stage */
     var stageNum = this.stage;
-    var bestMatchPriority = 0;
+    var bestMatchPriority = -10000;
     if (volatileOnly && this.chosenState && this.chosenState.parentCase) {
         bestMatchPriority = this.chosenState.parentCase.priority + 1;
     }
@@ -2561,14 +2356,14 @@ Opponent.prototype.findBehaviour = function(triggers, opp, volatileOnly) {
         });
     }, this);
 
+    /* Evaluate pre-dialogue hidden cases if we're not doing a reaction pass. */
+    if (!volatileOnly) this.evaluateHiddenCases(triggers, opp, false);
+
     /* quick check to see if the trigger exists */
     if (cases.length <= 0) {
         console.log("Warning: couldn't find " + triggers + " dialogue for player " + this.slot + " at stage " + stageNum);
         return false;
     }
-
-    /* Evaluate pre-dialogue hidden cases if we're not doing a reaction pass. */
-    if (!volatileOnly) this.evaluateHiddenCases(triggers, opp, false);
 
     /* Find the best match, as well as potential volatile matches. */
     var bestMatch = [];
@@ -2578,7 +2373,7 @@ Opponent.prototype.findBehaviour = function(triggers, opp, volatileOnly) {
 
         if ((curCase.priority >= bestMatchPriority) &&
             (!volatileOnly || curCase.isVolatile) &&
-            curCase.checkConditions(this, opp))
+            curCase.checkConditions(this, opp, false))
         {
             if (curCase.priority > bestMatchPriority) {
                 /* Cleanup all mutable state on previous best-match cases. */
@@ -2597,7 +2392,13 @@ Opponent.prototype.findBehaviour = function(triggers, opp, volatileOnly) {
         return (!state.oneShotId || !this.oneShotStates[state.oneShotId])
             && state.checkUnwanteds(this, opp);
     }.bind(this));
-    
+
+    const weightedAdjustedMin = Math.min(...states.map(s => ((this.repeatLog[s.rawDialogue] || 0) + 0.5) / s.weight));
+    const statesLessPlayed = states.filter(s => (this.repeatLog[s.rawDialogue] || 0) / s.weight <= weightedAdjustedMin);
+    if (statesLessPlayed.length > 0) {
+        states = statesLessPlayed;
+    }
+
     var weightSum = states.reduce(function(sum, state) { return sum + state.weight; }, 0);
     if (weightSum > 0) {
         console.log("Current case priority for player "+this.slot+": "+bestMatchPriority);
@@ -2660,7 +2461,7 @@ Opponent.prototype.evaluateHiddenCases = function (triggers, opp, postDialogue) 
     hiddenGroups.forEach(function (group) {
         console.log("[" + this.id + "] Evaluating " + group.length + (postDialogue ? " post" : " pre") + "-dialogue hidden cases at priority " + group[0].priority);
         group.filter(function (curCase) {
-            return curCase.checkConditions(this, opp);
+            return curCase.checkConditions(this, opp, postDialogue);
         }, this).forEach(function (matchedCase) {
             this.applyHiddenStates(matchedCase, opp);
             matchedCase.cleanupMutableState();
@@ -2700,7 +2501,7 @@ Opponent.prototype.clearChosenState = function () {
  ************************************************************/
 Opponent.prototype.updateBehaviour = function(triggers, opp) {
     /* determine if the AI is dialogue locked */
-    if (this.out && this.forfeit[1] == CANNOT_SPEAK && triggers !== DEALING_CARDS) {
+    if (this.out && this.forfeit[1] == CANNOT_SPEAK && triggers !== DEALING_CARDS && triggers !== OPPONENT_FINISHING_MASTURBATING) {
         /* their is restricted to this only */
         triggers = [this.forfeit[0]];
     }
@@ -2809,13 +2610,16 @@ Opponent.prototype.commitBehaviourUpdate = function () {
     this.applyState(this.chosenState, this.currentTarget);
     
     this.stateCommitted = true;
-    updateGameVisual(this.slot);
+    if (this.clothing.at(-1)?.type != "skip") {
+        updateGameVisual(this.slot);
+    }
 }
 
 /************************************************************
  * Applies markers and other operations from a state
  ************************************************************/
 Opponent.prototype.applyState = function(state, opp) {
+    state.displayed = false;
     state.applyMarkers(this, opp);
     state.applyCollectible(this);
     state.applyOneShot(this);
@@ -2844,6 +2648,15 @@ Opponent.prototype.applyHiddenStates = function (chosenCase, opp) {
         this.applyState(c, opp);
         /* Yes, this may apply the case-level oneShot multiple times,
          * but that's no real problem. */
+
+        const s1 = c.rawDialogue.indexOf('<script>');
+        const s2 = c.rawDialogue.indexOf('<\/script>');        
+        if (s1 != -1 && s2 != -1) 
+        {
+            var wrapperSpan = document.createElement('span');
+            wrapperSpan.innerHTML = expandDialogue(c.rawDialogue.substring(s1, s2 + 9), this, opp);
+            gameDisplays[this.slot - 1].dialogue.append(wrapperSpan);
+        }
     }, this);
 }
 
@@ -2977,15 +2790,6 @@ function addExtraNumberedBindings (bindings, variableMatches) {
             bindings[variable + (i + 2)] = match;
         });
     });
-}
-
-function shuffleArray (array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = getRandomNumber(0, i);
-        var tmp = array[i];
-        array[i] = array[j];
-        array[j] = tmp;
-    }
 }
 
 /*

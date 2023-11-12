@@ -1,8 +1,9 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.Skinning;
 using SPNATI_Character_Editor.Controls.Reference;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SPNATI_Character_Editor.Activities
@@ -12,6 +13,8 @@ namespace SPNATI_Character_Editor.Activities
 	public partial class CharacterPreview : Activity
 	{
 		private Character _character;
+
+		private List<string> _posePreviewMarkers = new List<string>();
 
 		public CharacterPreview()
 		{
@@ -38,9 +41,13 @@ namespace SPNATI_Character_Editor.Activities
 				lblSkin.Visible = false;
 				cboSkin.Visible = false;
 			}
+
+			_posePreviewMarkers = CharacterDatabase.GetEditorData(_character).PosePreviewMarkers;
 			SubscribeWorkspace<DialogueLine>(WorkspaceMessages.PreviewLine, UpdatePreview);
 			SubscribeWorkspace<UpdateImageArgs>(WorkspaceMessages.UpdatePreviewImage, UpdatePreviewImage);
 			SubscribeWorkspace<List<string>>(WorkspaceMessages.UpdateMarkers, UpdateMarkers);
+			SubscribeWorkspace<Character>(WorkspaceMessages.PreviewCharacterChanged, RepopulateSkinCombo);
+			Workspace.SendMessage(WorkspaceMessages.UpdateMarkers, Enumerable.Empty<string>());
 			UpdateLineCount();
 		}
 
@@ -78,6 +85,38 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
+		private void RepopulateSkinCombo(Character character)
+		{
+			if (character == null) { return; }
+			if (character == _character) { return; }
+
+			_character = character;
+
+			cboSkin.Items.Clear();
+			cboSkin.Items.Add("- Default - ");
+			foreach (AlternateSkin alt in _character.Metadata.AlternateSkins)
+			{
+				foreach (SkinLink link in alt.Skins)
+				{
+					cboSkin.Items.Add(link);
+				}
+			}
+			cboSkin.Sorted = true;
+			cboSkin.Visible = cboSkin.Items.Count > 1;
+			lblSkin.Visible = cboSkin.Visible;
+
+			cboSkin.SelectedIndex = 0;
+
+			if (character.Behavior.UniqueLines == 0)
+			{
+				character.PrepareForEdit();
+			}
+			
+			lblLinesOfDialogue.Text = $"Unique lines: {character.Behavior.UniqueLines.ToString()}";
+
+		}
+
+
 		private void WorkingCasesChanged(object sender, Case e)
 		{
 			UpdateLineCount();
@@ -90,13 +129,21 @@ namespace SPNATI_Character_Editor.Activities
 
 		private void UpdateMarkers(List<string> markers)
 		{
+			if (markers == null || markers.Count == 0)
+			{
+				markers = _posePreviewMarkers;
+			}
+			else
+			{
+				markers.AddRange(_posePreviewMarkers);
+			}
 			picPortrait.SetMarkers(markers);
 		}
 
 		private void UpdatePreviewImage(UpdateImageArgs data)
 		{
 			if (data == null)
-            {
+			{
 				picPortrait.RefreshImage();
 			}
 			else if (data.Image != null)

@@ -1,10 +1,11 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.Skinning;
 using TinifyAPI;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using Desktop.CommonControls;
 
 namespace SPNATI_Character_Editor
 {
@@ -20,8 +21,6 @@ namespace SPNATI_Character_Editor
 			txtUserName.Text = Config.UserName;
 			valAutoSave.Value = Config.AutoSaveInterval;
 			chkIntellisense.Checked = Config.UseIntellisense;
-			chkHidePrefixlessImages.Checked = Config.UsePrefixlessImages;
-			txtFilter.Text = Config.PrefixFilter;
 			chkAutoBackup.Checked = Config.BackupEnabled;
 			chkInitialAdd.Checked = Config.AutoOpenConditions;
 			chkDefaults.Checked = !Config.SuppressDefaults;
@@ -50,11 +49,10 @@ namespace SPNATI_Character_Editor
 			chkWarnIncomplete.Checked = Config.WarnAboutIncompleteStatus;
 			chkSafeMode.Checked = Config.SafeMode;
 			chkLegacyPoses.Checked = Config.ShowLegacyPoseTabs;
-			chkFullResponse.Checked = Config.UseFullResponses;
-
-			recAutoOpen.RecordType = typeof(Character);
-			recAutoOpen.RecordFilter = CharacterDatabase.FilterHuman;
-			recAutoOpen.RecordKey = Config.GetString(Settings.AutoOpenCharacter);
+			txtAutoOpen.Text = Config.GetString(Settings.AutoOpenCharacter);
+			recResponder.RecordType = typeof(Character);
+			recResponder.RecordFilter = ResponderFilter;
+			recResponder.Record = CharacterDatabase.GetById(Config.DefaultResponder);
 
 			HashSet<string> pauses = Config.AutoPauseDirectives;
 			foreach (DirectiveDefinition def in Definitions.Instance.Get<DirectiveDefinition>())
@@ -78,6 +76,47 @@ namespace SPNATI_Character_Editor
 			{
 				chkStatuses.Items.Add(status, statusFilters.Contains(status));
 			}
+
+			_initialized = false;
+			ConfigLocation[] locations = new ConfigLocation[] {
+				new ConfigLocation("appdata", "%APPDATA% (default and recommended)"),
+				new ConfigLocation("CEFolder", "the CE's folder"),
+			};
+
+			foreach (ConfigLocation loc in locations)
+			{
+				cboLocation.Items.Add(loc);
+			}
+
+			string path = Config.ConfigPath;
+			if (path == "")
+			{
+				cboLocation.SelectedIndex = 0;
+			}
+			else
+			{
+				foreach (ConfigLocation loc in locations)
+				{
+					if (loc.Key == path)
+					{
+						cboLocation.SelectedItem = loc;
+						break;
+					}
+				}
+			}
+			_initialized = true;
+		}
+
+		private bool _initialized;
+
+		private bool ResponderFilter(IRecord record)
+		{
+			Character character = record as Character;
+			if (character.FolderName == "human")
+			{
+				return false;
+			}
+			return true;
 		}
 
 		private void cmdBrowse_Click(object sender, EventArgs e)
@@ -136,11 +175,10 @@ namespace SPNATI_Character_Editor
 				return;
 			}
 			Config.Set(Settings.GameDirectory, dir);
+			Config.ConfigPath = (cboLocation.SelectedItem as ConfigLocation).Key;
 			Config.AutoSaveInterval = (int)valAutoSave.Value;
 			Config.UserName = txtUserName.Text;
 			Config.UseIntellisense = chkIntellisense.Checked;
-			Config.UsePrefixlessImages = chkHidePrefixlessImages.Checked;
-			Config.PrefixFilter = txtFilter.Text;
 			Config.BackupEnabled = chkAutoBackup.Checked;
 			Config.AutoOpenConditions = chkInitialAdd.Checked;
 			Config.KisekaeDirectory = txtKisekae.Text;
@@ -159,15 +197,22 @@ namespace SPNATI_Character_Editor
 			Config.StartOnDashboard = chkStartDashboard.Checked;
 			Config.EnableDashboardSpellCheck = chkChecklistSpell.Checked;
 			Config.EnableDashboardValidation = chkChecklistValidation.Checked;
-			Config.Set(Settings.AutoOpenCharacter, recAutoOpen.RecordKey);
+			Config.Set(Settings.AutoOpenCharacter, txtAutoOpen.Text);
 			Config.MaxFranchisePartners = (int)valFranchise.Value;
 			Config.AutoPopulateStageImages = chkAutoFill.Checked;
 			Config.WarnAboutIncompleteStatus = chkWarnIncomplete.Checked;
+			if (recResponder.Record != null)
+			{
+				Config.DefaultResponder = CharacterDatabase.GetId(recResponder.Record as Character);
+			}
+			else
+			{
+				Config.DefaultResponder = "";
+			}
 
 			bool oldSafeMode = Config.SafeMode;
 			Config.SafeMode = chkSafeMode.Checked;
 			Config.ShowLegacyPoseTabs = chkLegacyPoses.Checked;
-			Config.UseFullResponses = chkFullResponse.Checked;
 
 			HashSet<string> pauses = new HashSet<string>();
 			foreach (string item in lstPauses.CheckedItems)
@@ -201,10 +246,6 @@ namespace SPNATI_Character_Editor
 			Close();
 		}
 
-		private void chkHideImages_CheckedChanged(object sender, EventArgs e)
-		{
-			txtFilter.Enabled = chkHidePrefixlessImages.Checked;
-		}
 
 		private void cmdBrowseKisekae_Click(object sender, EventArgs e)
 		{
@@ -312,5 +353,47 @@ namespace SPNATI_Character_Editor
 		{
 			chkHideImages.Checked = !chkSafeMode.Checked;
 		}
+
+		private void recResponder_RecordChanged(object sender, RecordEventArgs e)
+		{
+			if (recResponder.Record != null)
+			{
+				Config.DefaultResponder = CharacterDatabase.GetId(recResponder.Record as Character);
+			}
+			else
+			{
+				Config.DefaultResponder = "";
+			}
+		}
+		private void cboLocation_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (_initialized)
+			{
+				string path = Config.ConfigDirectory;
+				Config.ConfigPath = (cboLocation.SelectedItem as ConfigLocation).Key;
+				Config.Save(path);  // saves the new location to the old config file
+				Config.Save(); // saves the new config file
+				MessageBox.Show("The location of the config.ini file and the backups has been changed.\nIt is recommended to quit the CE, copy or move the SPNATI folder to the newly selected location, and restart the CE.");
+			}
+		}
+
+		private class ConfigLocation
+		{
+			public string Key;
+			public string Description;
+
+			public ConfigLocation (string key, string description)
+			{
+				Key = key;
+				Description = description;
+			}
+
+			public override string ToString()
+			{
+				return Description;
+			}
+		}
+
+
 	}
 }

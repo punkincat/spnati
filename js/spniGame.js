@@ -50,6 +50,14 @@ $cardButtons = [$("#player-0-card-1"),
                 $("#player-0-card-3"),
                 $("#player-0-card-4"),
                 $("#player-0-card-5")];
+$characterDebugButtons =   [$("#character-debug-button-1"),
+                            $("#character-debug-button-2"),
+                            $("#character-debug-button-3"),
+                            $("#character-debug-button-4")];                          
+$devSelectButtons =    [$("#dev-select-button-1"),
+                        $("#dev-select-button-2"),
+                        $("#dev-select-button-3"),
+                        $("#dev-select-button-4")];                
 $debugButtons = [$("#debug-button-0"),
                  $("#debug-button-1"),
                  $("#debug-button-2"),
@@ -96,7 +104,7 @@ var DEBUG = false;
 var eGamePhase = {
     DEAL:      [ "Deal", function() { startDealPhase(); }, true ],
     AITURN:    [ "Next", function() { continueDealPhase(); } ],
-    EXCHANGE:  [ "Exchange", function() { completeExchangePhase(); }, true ],
+    EXCHANGE:  [ undefined, function() { completeExchangePhase(); }, true ],
     REVEAL:    [ "Reveal", function() { completeRevealPhase(); }, true ],
     PRESTRIP:  [ "Continue", function() { completeContinuePhase(); }, false ],
     STRIP:     [ "Strip", function() { completeStripPhase(); }, false ],
@@ -270,7 +278,6 @@ function makeAIDecision () {
  ************************************************************/
 function reactToNewAICards () {
     /* update behaviour */
-    players[currentTurn].hand.determine();
     if (players[currentTurn].hand.strength == HIGH_CARD) {
         players[currentTurn].singleBehaviourUpdate([BAD_HAND, ANY_HAND]);
     } else if (players[currentTurn].hand.strength == PAIR) {
@@ -475,13 +482,13 @@ function continueDealPhase () {
  ************************************************************/
 function completeExchangePhase () {
     detectCheat();
-    /* exchange the player's chosen cards */
-    exchangeCards(HUMAN_PLAYER);
-    
     /* disable player cards */
     for (var i = 0; i < $cardButtons.length; i++) {
        $cardButtons[i].attr('disabled', true);
     }
+    /* exchange the player's chosen cards */
+    exchangeCards(HUMAN_PLAYER);
+
     $gameLabels[HUMAN_PLAYER].removeClass("current");
     allowProgression(eGamePhase.REVEAL);
 }
@@ -497,7 +504,6 @@ function completeRevealPhase () {
     /* reveal everyone's hand */
     for (var i = 0; i < players.length; i++) {
         if (players[i] && !players[i].out) {
-            players[i].hand.determine();
             players[i].hand.sort();
             showHand(i);
             
@@ -709,6 +715,14 @@ function selectCard (card) {
     } else {
         fillCard(HUMAN_PLAYER, card);
     }
+    updateMainButtonExchangeLabel();
+}
+
+function updateMainButtonExchangeLabel() {
+    if (gamePhase === eGamePhase.EXCHANGE) {
+        const n = humanPlayer.hand.tradeIns.countTrue();
+        $mainButton.html(n == 0 ? 'Keep all' : 'Swap ' + n);
+    }
 }
 
 function getGamePhaseString(phase) {
@@ -733,6 +747,8 @@ function allowProgression (nextPhase) {
         $mainButton.html("Cum!");
     } else if (nextPhase[0]) {
         $mainButton.html(nextPhase[0]);
+    } else if (nextPhase === eGamePhase.EXCHANGE) {
+        updateMainButtonExchangeLabel();
     } else if (nextPhase === eGamePhase.END_LOOP) { // Special case
         /* someone is still forfeiting */
         var dots = '.'.repeat(endWaitDisplay);
@@ -761,6 +777,9 @@ function allowProgression (nextPhase) {
     }
     timeoutID = autoForfeitTimeoutID = undefined;
     $mainButton.attr('disabled', false);
+    if (!$(document.activeElement).is(':input')) {
+        $mainButton.focus();
+    }
 }
 
 /************************************************************
@@ -769,6 +788,12 @@ function allowProgression (nextPhase) {
 function advanceGame () {    
     /* disable the button to prevent double clicking */
     $mainButton.attr('disabled', actualMainButtonState = true);
+    if ($(document.activeElement).attr('disabled')) {
+        /* It appears that in Firefox, if the active element gets
+         * disabled, it can stop keyboard events from being emitted
+         * altogether. So remove that focus. */
+        $(document.activeElement).blur();
+    }
     autoForfeitTimeoutID = undefined;
     
     /* lower the timers of everyone who is forfeiting */
@@ -830,6 +855,7 @@ function RollbackPoint (logPlayers) {
         data.stage = p.stage;
         data.folder = p.folder;
         data.poses = p.poses;
+        data.poseSets = p.poseSets;
         data.timeInStage = p.timeInStage;
         data.ticksInStage = p.ticksInStage;
         data.markers = {};
@@ -893,6 +919,7 @@ RollbackPoint.prototype.load = function () {
         loadPlayer.stage = p.stage;
         loadPlayer.folder = p.folder;
         loadPlayer.poses = p.poses;
+        loadPlayer.poseSets = p.poseSets;
         loadPlayer.timeInStage = p.timeInStage;
         loadPlayer.ticksInStage = p.ticksInStage;
         loadPlayer.markers = p.markers;
@@ -1033,31 +1060,19 @@ function game_keyUp(e)
 {
     console.log(e);
     if ($('.modal:visible').length == 0 && $('#game-screen .dialogue-edit:visible').length == 0) {
-        if (e.keyCode == 32 && !$mainButton.prop('disabled')) { // Space
+        if (e.key == ' ' && !$mainButton.prop('disabled')
+            && !($('body').hasClass('focus-indicators-enabled') && $(document.activeElement).is('button:visible:enabled, input:visible:enabled'))) {
             e.preventDefault();
             advanceGame();
         }
-        else if (e.keyCode == 49 && !$cardButtons[0].prop('disabled')) { // 1
-            selectCard(0);
+        else if (e.key >= '1' && e.key <= '5' && !$cardButtons[e.key - 1].prop('disabled')) {
+            selectCard(e.key - 1);
         }
-        else if (e.keyCode == 50 && !$cardButtons[1].prop('disabled')) { // 2
-            selectCard(1);
-        }
-        else if (e.keyCode == 51 && !$cardButtons[2].prop('disabled')) { // 3
-            selectCard(2);
-        }
-        else if (e.keyCode == 52 && !$cardButtons[3].prop('disabled')) { // 4
-            selectCard(3);
-        }
-        else if (e.keyCode == 53 && !$cardButtons[4].prop('disabled')) { // 5
-            selectCard(4);
-        }
-        else if (e.keyCode == 81 && DEBUG) { // Q
+        else if (e.key.toLowerCase() == 'q' && DEBUG) {
             showDebug = !showDebug;
             updateDebugState(showDebug);
-            setDevSelectorVisibility(showDebug);
         }
-        else if (e.keyCode == 84) { // T
+        else if (e.key.toLowerCase() == 't') {
             toggleTableVisibility();
         }
     }
@@ -1079,15 +1094,31 @@ function selectDebug(player)
 function updateDebugState(show)
 {
     if (!show) {
-        for (var i = 0; i < $debugButtons.length; i++) {
-            $debugButtons[i].hide();
-        }
+        $('.character-debug-button').hide();
+        $('.dev-select-button').hide();
+        $('.debug-button').hide();
     }
     else {
+        $('.character-debug-button').show();
+        $('.dev-select-button').show();
+        $('.debug-button').show();
+
         for (var i = 0; i < $debugButtons.length; i++) {
-            if (players[i] && !players[i].out) {
-                $debugButtons[i].show();
+            if (!players[i] || players[i].out)
+            {
+                $debugButtons[i].hide();              
+            }
+            else
+            {
                 $debugButtons[i].removeClass("active");
+            }
+        }
+
+        for (var i = 0; i < $devSelectButtons.length; i++) {
+            if (!players[i + 1])
+            {
+                $devSelectButtons[i].hide();                
+                $characterDebugButtons[i].hide();
             }
         }
 

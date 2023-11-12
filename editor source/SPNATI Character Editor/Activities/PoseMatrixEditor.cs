@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls.PropertyControls;
 using Desktop.DataStructures;
 using Desktop.Skinning;
@@ -235,20 +235,42 @@ namespace SPNATI_Character_Editor.Activities
 				}
 			}
 
+			PoseStage s1 = _sheet.Stages[0];
+			bool found;
 			foreach (PoseStage stage in _sheet.Stages)
 			{
 				//create new columns as necessary
 				foreach (PoseEntry pose in stage.Poses)
 				{
+					found = false;
 					if (!string.IsNullOrEmpty(pose.Key) && !_columns.ContainsKey(pose.Key))
 					{
 						AddColumn(pose.Key);
 					}
+
+					if (!string.IsNullOrEmpty(pose.Key))
+					{
+						foreach (PoseEntry pose1 in s1.Poses)
+						{
+							if (pose1.Key == pose.Key)
+							{
+								found = true;
+							}
+						}
+						if (found == false)
+						{
+							PoseEntry cell = new PoseEntry();
+							cell.Key = pose.Key;
+							cell.Stage = s1;
+							s1.Poses.Add(cell);
+						}
+					}
+
 				}
 
 				// create dummy column to prevent crash
 				if (_columns.Count == 0)
-                {
+				{
 					AddColumn("calm");
 				}
 
@@ -808,6 +830,26 @@ namespace SPNATI_Character_Editor.Activities
 			Enabled = true;
 			ShowPreview(_currentPose);
 			UpdateCell(null, _currentPose);
+
+			string dir = Path.Combine(_character.GetBackupDirectory(), "images");
+			if (!Directory.Exists(dir))
+			{
+				Directory.CreateDirectory(dir);
+			}
+			string img;
+
+			if (_currentPose.Stage.Name == null)
+			{
+				//stage dependent sheet
+				img = _currentPose.Stage.Stage + "-" + _currentPose.ToString() + ".png";
+			}
+			else 
+			{
+				//stage independent sheet
+				img = _currentPose.Stage.Name + "_" + _currentPose.ToString() + ".png";
+			}
+
+			File.Delete(Path.Combine(dir, img));
 		}
 
 		private void cmdCrop_Click(object sender, EventArgs e)
@@ -1125,6 +1167,35 @@ namespace SPNATI_Character_Editor.Activities
 		}
 
 		/// <summary>
+		/// Gives checkmark on selected cells
+		/// </summary>
+		private void CheckmarkSelectedCells()
+		{
+			DataGridViewCell cell;
+			bool usingWardrobe = false;
+			foreach (DataGridViewCell cell2 in grid.SelectedCells)
+			{
+				PoseStage stage = _sheet.Stages[cell2.RowIndex];
+				usingWardrobe = usingWardrobe || !string.IsNullOrEmpty(stage.Code);
+				if (usingWardrobe && string.IsNullOrEmpty(stage.Code))
+				{
+					continue;
+				}
+				PoseEntry pose = cell2.Tag as PoseEntry;
+				if (pose != null)
+				{
+					if (_cells.TryGetValue(pose, out cell))
+					{
+						pose.LastUpdate = 0;
+						UpdateCell(cell, pose);
+					}
+				}	
+			}
+
+		}
+
+
+		/// <summary>
 		/// Imports all poses, replacing existing images
 		/// </summary>
 		private void ImportAllPoses()
@@ -1185,6 +1256,11 @@ namespace SPNATI_Character_Editor.Activities
 		/// <param name="list"></param>
 		private void ImportPosesAsync(List<PoseEntry> list)
 		{
+			// Sort by stage to try and minimize parts that change between successive requests.
+			list.Sort(delegate (PoseEntry a, PoseEntry b) {
+				return a.Stage.Stage - b.Stage.Stage;
+			});
+
 			//find all unrecognized props and assign them all up front
 			List<KisekaeCode> codes = new List<KisekaeCode>();
 			foreach (PoseEntry pose in list)
@@ -1373,6 +1449,7 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				return;
 			}
+			BuildGrid();
 			_sheet.SortColumns();
 			BuildGrid();
 		}
@@ -1732,11 +1809,30 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				return;
 			}
-			cell.Tag = null;
-			_cells.Remove(pose);
-			PoseStage stage = _sheet.Stages[cell.RowIndex];
-			stage.RemoveCell(pose.Key);
-			cell.Value = EmptyImage;
+			if (cell.RowIndex != 0)
+			{
+				cell.Tag = null;
+				_cells.Remove(pose);
+				PoseStage stage = _sheet.Stages[cell.RowIndex];
+				stage.RemoveCell(pose.Key);
+				cell.Value = EmptyImage;
+			}
+			else
+			{
+				PoseEntry p2;
+				foreach (PoseEntry p1 in _sheet.Stages[0].Poses)
+				{
+					if (p1.Key == pose.Key)
+					{
+						p2 = p1;
+						p2.Code = null;
+						p2.Crop = new Rect(0, 0, 600, 1400);
+						p2.ExtraMetadata.Clear();
+						p2.LastUpdate = 0;					
+					}
+				}
+			}
+
 		}
 
 		private void tsAddMain_Click(object sender, EventArgs e)
@@ -1956,6 +2052,11 @@ namespace SPNATI_Character_Editor.Activities
 					editor.Dispose();
 				}
 			}
+		}
+
+		private void tsCheckCell_Click(object sender, EventArgs e)
+		{
+			CheckmarkSelectedCells();
 		}
 	}
 

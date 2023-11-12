@@ -24,7 +24,7 @@ python3 deploy-scripts/copy_backgrounds.py .public/
 # tar may be the easiest way to copy an arbitrary
 # list of files, keeping the directory structure.
 # Include *.js and *.css to accommodate Monika.
-find `python opponents/list_opponents.py` -regextype egrep -iregex '.*\.(png|gif|jpe?g|xml|js|css|[ot]tf|woff2?)' | tar -cT - | tar -C .public -x
+find `python3 opponents/list_opponents.py` -regextype egrep -iregex '.*\.(png|gif|jpe?g|xml|js|css|[ot]tf|woff2?)' | tar -cT - | tar -C .public -x
 
 # Copy alternate costume files for deployment.
 python3 deploy-scripts/copy_alternate_costumes.py .public/ ./ all
@@ -39,5 +39,5 @@ python3 deploy-scripts/cache_bust.py .public/
 
 python3 opponents/fill_linecount_metadata.py .public/opponents
 python3 deploy-scripts/fill_update_timestamps.py .public/opponents opponents
-python opponents/gzip_dialogue.py .public/opponents/*/behaviour.xml
-python opponents/analyze_image_space.py .public/opponents
+python3 opponents/gzip_dialogue.py .public/opponents/*/behaviour.xml
+python3 opponents/analyze_image_space.py .public/opponents

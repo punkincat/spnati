@@ -44,7 +44,11 @@ namespace KisekaeImporter
 		public override string ToString()
 		{
 			string id = Id;
-			if (Index >= 0)
+			if (Index >= 99)
+			{
+				id = "x" + Id + Index.ToString();
+			}
+			else if (Index >= 0)
 			{
 				if (id == "u")
 				{
@@ -58,7 +62,21 @@ namespace KisekaeImporter
 			}
 			if (_pieces.Count > 0 && _pieces[0] == "")
 				return id;
-			return id + string.Join(".", _pieces);
+
+			string data = string.Join(".", _pieces);
+			if (data.Length == 0)
+			{
+				return id;
+			}
+
+			if (Index >= 99)
+			{
+				return id + "." + data;
+			}
+			else
+			{
+				return id + data;
+			}
 		}
 
 		/// <summary>

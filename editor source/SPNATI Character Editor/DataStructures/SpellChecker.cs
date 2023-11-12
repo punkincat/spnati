@@ -1,4 +1,4 @@
-﻿using NHunspell;
+using NHunspell;
 using System.Collections.Generic;
 using System.IO;
 
@@ -37,7 +37,7 @@ namespace SPNATI_Character_Editor
 
 		private string GetUserDictionaryPath()
 		{
-			return Path.Combine(Config.AppDataDirectory, "user_dict.txt");
+			return Path.Combine(Config.ConfigDirectory, "user_dict.txt");
 		}
 
 		private void LoadDictionary(string path, bool isUserDictionary)
@@ -50,6 +50,7 @@ namespace SPNATI_Character_Editor
 					if (isUserDictionary)
 					{
 						_userWords.Add(word);
+						_ignoredWords.Add(word);
 					}
 				}
 			}

@@ -6,16 +6,23 @@
         <tag>alternative_skin</tag>
         <tag remove="true">armor</tag>
         <tag remove="true">bodysuit</tag>
+        <tag from="0" to="3">bow</tag>
+        <tag remove="true">breasts_larger_clothed</tag>
+        <tag remove="true">cheater</tag>
         <tag from="0" to="0">eyepatch</tag>
+        <tag remove="true">has_companion</tag>
         <tag from="0" to="2">hat</tag>
         <tag from="0" to="4">high_heels</tag>
         <tag remove="true">jewelry</tag>
+        <tag>large_breasts</tag>
         <tag from="0" to="4">lingerie</tag>
         <tag>scantily-clad</tag>
+        <tag remove="true">small_breasts</tag>
         <tag from="0" to="4">thigh_highs</tag>
         <tag>valentines_skin</tag>
         <tag from="0" to="3">weapon</tag>
     </tags>
+    <layers>5</layers>
     <folder>opponents/reskins/meia_cupid/</folder>
     <folder stage="6">opponents/meia/</folder>
     <wardrobe>
@@ -28,7 +35,7 @@
 
     <poses>
         <pose id="2-raining">
-            <sprite id="rained" src="meia/2-bored.png" x="0" y="0" />
+            <sprite id="rained" src="reskins/meia_cupid/2-bored.png" x="0" y="0" />
             <sprite id="cloud" src="meia/15-cloud.png" x="16" y="-40" scalex="1" scaley="0.55" />
             <sprite id="drop1" src="meia/15-drop.png" x="-225" y="389" scalex="0.3" scaley="0.5" rotation="4" />
             <sprite id="drop2" src="meia/15-drop.png" x="97" y="929" scalex="0.3" scaley="0.5" rotation="4" />
@@ -52,7 +59,7 @@
             </directive>
         </pose>
         <pose id="4-raining">
-            <sprite id="rained" src="meia/4-bored.png" x="0" y="0" />
+            <sprite id="rained" src="reskins/meia_cupid/4-bored.png" x="0" y="0" />
             <sprite id="cloud" src="meia/15-cloud.png" x="16" y="-40" scalex="1" scaley="0.55" />
             <sprite id="drop1" src="meia/15-drop.png" x="-225" y="389" scalex="0.3" scaley="0.5" rotation="4" />
             <sprite id="drop2" src="meia/15-drop.png" x="97" y="929" scalex="0.3" scaley="0.5" rotation="4" />
@@ -76,7 +83,7 @@
             </directive>
         </pose>
         <pose id="3-raining">
-            <sprite id="rained" src="meia/3-bored.png" x="0" y="0" />
+            <sprite id="rained" src="reskins/meia_cupid/3-bored.png" x="0" y="0" />
             <sprite id="cloud" src="meia/15-cloud.png" x="16" y="-40" scalex="1" scaley="0.55" />
             <sprite id="drop1" src="meia/15-drop.png" x="-225" y="389" scalex="0.3" scaley="0.5" rotation="4" />
             <sprite id="drop2" src="meia/15-drop.png" x="97" y="929" scalex="0.3" scaley="0.5" rotation="4" />
@@ -124,7 +131,7 @@
             </directive>
         </pose>
         <pose id="1-raining">
-            <sprite id="rained" src="meia/1-bored.png" x="0" y="0" />
+            <sprite id="rained" src="reskins/meia_cupid/1-bored.png" x="0" y="0" />
             <sprite id="cloud" src="meia/15-cloud.png" x="16" y="-40" scalex="1" scaley="0.55" />
             <sprite id="drop1" src="meia/15-drop.png" x="-225" y="389" scalex="0.3" scaley="0.5" rotation="4" />
             <sprite id="drop2" src="meia/15-drop.png" x="97" y="929" scalex="0.3" scaley="0.5" rotation="4" />
@@ -148,7 +155,7 @@
             </directive>
         </pose>
         <pose id="0-raining">
-            <sprite id="rained" src="meia/0-bored.png" x="0" y="0" />
+            <sprite id="rained" src="reskins/meia_cupid/0-bored.png" x="0" y="0" />
             <sprite id="cloud" src="meia/15-cloud.png" x="16" y="-40" scalex="1" scaley="0.55" />
             <sprite id="drop1" src="meia/15-drop.png" x="-225" y="389" scalex="0.3" scaley="0.5" rotation="4" />
             <sprite id="drop2" src="meia/15-drop.png" x="97" y="929" scalex="0.3" scaley="0.5" rotation="4" />
@@ -170,6 +177,36 @@
                 <keyframe time="1" x="117" y="162" />
                 <keyframe time="1.2" x="-97" y="929" />
             </directive>
+        </pose>
+        <pose id="0-hug">
+            <sprite id="y_butt_2" z="1" src="reskins/meia_cupid/7-y_butt_2.png" x="18" y="0" rotation="0" />
+            <sprite id="hug" src="reskins/meia_cupid/0-hug.png" x="0" y="0" />
+            <sprite id="hugarm01" z="2" src="reskins/meia_cupid/hugarm01.png" x="6" y="0" />
+        </pose>
+        <pose id="1-hug">
+            <sprite id="y_butt_2" z="1" src="reskins/meia_cupid/7-y_butt_2.png" x="18" y="0" rotation="0" />
+            <sprite id="hug" src="reskins/meia_cupid/1-hug.png" x="-2" y="2" />
+            <sprite id="hugarm01" z="2" src="reskins/meia_cupid/hugarm01.png" x="6" y="0" />
+        </pose>
+        <pose id="2-hug">
+            <sprite id="y_butt_2" z="1" src="reskins/meia_cupid/7-y_butt_2.png" x="18" y="0" rotation="0" />
+            <sprite id="hug" src="reskins/meia_cupid/2-hug.png" x="2" y="2" />
+            <sprite id="hugarm234567" z="2" src="reskins/meia_cupid/hugarm234567.png" x="6" y="0" />
+        </pose>
+        <pose id="3-hug">
+            <sprite id="y_butt_2" z="1" src="reskins/meia_cupid/7-y_butt_2.png" x="18" y="0" rotation="0" />
+            <sprite id="hug" src="reskins/meia_cupid/3-hug.png" x="2" y="0" />
+            <sprite id="hugarm234567" z="2" src="reskins/meia_cupid/hugarm234567.png" x="6" y="0" />
+        </pose>
+        <pose id="4-hug">
+            <sprite id="y_butt_2" z="1" src="reskins/meia_cupid/7-y_butt_2.png" x="18" y="0" rotation="0" />
+            <sprite id="hug" src="reskins/meia_cupid/4-hug.png" x="2" y="0" />
+            <sprite id="hugarm234567" z="2" src="reskins/meia_cupid/hugarm234567.png" x="6" y="0" />
+        </pose>
+        <pose id="5-hug">
+            <sprite id="y_butt_2" z="1" src="reskins/meia_cupid/7-y_butt_2.png" x="18" y="0" rotation="0" />
+            <sprite id="hug" src="reskins/meia_cupid/5-hug.png" x="2" y="0" />
+            <sprite id="hugarm234567" z="2" src="reskins/meia_cupid/hugarm234567.png" x="6" y="0" />
         </pose>
     </poses>
 </costume>

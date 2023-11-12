@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>rosa_summer</id>
+    <label>Rosa</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag from="0" to="2">jewelry</tag>
+        <tag remove="true">pantyhose</tag>
+        <tag remove="true">pubic_hair</tag>
+        <tag>scantily-clad</tag>
+        <tag>shaved</tag>
+        <tag from="0" to="6">shimapan</tag>
+        <tag>summer_skin</tag>
+        <tag from="0" to="3">sunglasses</tag>
+        <tag from="0" to="6">swimwear</tag>
+        <tag from="6" to="9">tan_lines</tag>
+        <tag>tanned</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/rosa_summer/</folder>
+    <wardrobe>
+        <clothing name="bikini bottom" generic="swimsuit" position="lower" type="major" />
+        <clothing name="bikini top" generic="swimsuit" position="upper" type="major" />
+        <clothing position="" type="skip" />
+        <clothing name="sunglasses" generic="glasses" position="head" type="extra" plural="true" />
+        <clothing name="necklace" generic="jewelry" position="neck" type="extra" />
+        <clothing name="sandals" position="feet" type="minor" plural="true" />
+        <clothing name="accessories" generic="hat" position="head" type="extra" plural="true" />
+    </wardrobe>
+
+    <poses>
+        <pose id="1-treasure_scope">
+            <sprite id="pondering" z="1" src="reskins/rosa_summer/1-thinking.png" x="0" y="0" alpha="100" />
+            <sprite id="TreasureScope_XRay" z="1" src="reskins/rosa_summer/1-xrayscope.png" x="0" y="0" alpha="0" />
+            <sprite id="Rouge_TreasureScope_Lens" z="100" src="rouge/Rouge_TreasureScope_Lens.png" x="250" y="395" scaley="0.95" alpha="0" />
+            <directive type="animation" id="pondering" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="2" alpha="100" />
+                <keyframe time="2.5" alpha="100" />
+            </directive>
+            <directive type="animation" id="TreasureScope_XRay" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="2" alpha="0" />
+                <keyframe time="2.5" alpha="100" />
+                <keyframe time="3" alpha="100" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_Lens" ease="ease-out" interpolation="linear">
+                <keyframe time="0" x="250" alpha="0" />
+                <keyframe time="1" x="250" alpha="0" />
+                <keyframe time="2" x="0" alpha="100" />
+                <keyframe time="3" x="0" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_Lens" ease="smooth" interpolation="linear">
+                <keyframe time="0" y="395" scaley="0.95" />
+                <keyframe time="1" y="395" />
+                <keyframe time="2" y="395" />
+                <keyframe time="3" y="395" />
+            </directive>
+        </pose>
+        <pose id="8-gloria_cunnilingus_1">
+            <sprite id="Layer1_gloria_special_1" z="2" src="rosa/extra/Layer1_gloria_special_1.png" x="0" y="0" />
+            <sprite id="Layer2_gloria_special_1" z="1" src="rosa/extra/Layer2_gloria_special_1.png" x="0" y="0" />
+            <sprite id="Layer3_gloria_special_1" src="rosa/extra/Layer3_gloria_special_1.png" x="0" y="0" />
+        </pose>
+        <pose id="8-gloria_cunnilingus_2">
+            <sprite id="Layer1_gloria_special_1" z="2" src="rosa/extra/Layer1_gloria_special_2.png" x="0" y="0" />
+            <sprite id="Layer2_gloria_special_1" z="1" src="rosa/extra/Layer2_gloria_special_2.png" x="0" y="0" />
+            <sprite id="Layer3_gloria_special_1" src="rosa/extra/Layer3_gloria_special_2.png" x="0" y="0" />
+            <sprite id="Layer4_gloria_special_2" z="2" src="rosa/extra/Layer4_gloria_special_2.png" x="0" y="0" />
+        </pose>
+        <pose id="8-gloria_cunnilingus_3">
+            <sprite id="Layer1_gloria_special_1" z="2" src="rosa/extra/Layer1_gloria_special_3.png" x="0" y="0" />
+            <sprite id="Layer2_gloria_special_1" z="1" src="rosa/extra/Layer2_gloria_special_3.png" x="0" y="0" />
+            <sprite id="Layer3_gloria_special_1" src="rosa/extra/Layer3_gloria_special_3.png" x="0" y="0" />
+            <sprite id="Layer4_gloria_special_2" z="2" src="rosa/extra/Layer4_gloria_special_3.png" x="0" y="0" />
+        </pose>
+        <pose id="0-treasure_scope">
+            <sprite id="pondering" z="1" src="reskins/rosa_summer/0-thinking.png" x="0" y="0" alpha="100" />
+            <sprite id="TreasureScope_XRay" z="1" src="reskins/rosa_summer/0-xrayscope.png" x="0" y="0" alpha="0" />
+            <sprite id="Rouge_TreasureScope_Lens" z="100" src="rouge/Rouge_TreasureScope_Lens.png" x="250" y="395" scaley="0.95" alpha="0" />
+            <directive type="animation" id="pondering" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="2" alpha="100" />
+                <keyframe time="2.5" alpha="100" />
+            </directive>
+            <directive type="animation" id="TreasureScope_XRay" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="2" alpha="0" />
+                <keyframe time="2.5" alpha="100" />
+                <keyframe time="3" alpha="100" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_Lens" ease="ease-out" interpolation="linear">
+                <keyframe time="0" x="250" alpha="0" />
+                <keyframe time="1" x="250" alpha="0" />
+                <keyframe time="2" x="0" alpha="100" />
+                <keyframe time="3" x="0" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_Lens" ease="smooth" interpolation="linear">
+                <keyframe time="0" y="395" scaley="0.95" />
+                <keyframe time="1" y="395" />
+                <keyframe time="2" y="395" />
+                <keyframe time="3" y="395" />
+            </directive>
+        </pose>
+        <pose id="2-treasure_scope">
+            <sprite id="pondering" z="1" src="reskins/rosa_summer/2-thinking.png" x="0" y="0" alpha="100" />
+            <sprite id="TreasureScope_XRay" z="1" src="reskins/rosa_summer/2-xrayscope.png" x="0" y="0" alpha="0" />
+            <sprite id="Rouge_TreasureScope_Lens" z="100" src="rouge/Rouge_TreasureScope_Lens.png" x="250" y="395" scaley="0.95" alpha="0" />
+            <directive type="animation" id="pondering" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="2" alpha="100" />
+                <keyframe time="2.5" alpha="100" />
+            </directive>
+            <directive type="animation" id="TreasureScope_XRay" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="2" alpha="0" />
+                <keyframe time="2.5" alpha="100" />
+                <keyframe time="3" alpha="100" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_Lens" ease="ease-out" interpolation="linear">
+                <keyframe time="0" x="250" alpha="0" />
+                <keyframe time="1" x="250" alpha="0" />
+                <keyframe time="2" x="0" alpha="100" />
+                <keyframe time="3" x="0" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_Lens" ease="smooth" interpolation="linear">
+                <keyframe time="0" y="395" scaley="0.95" />
+                <keyframe time="1" y="395" />
+                <keyframe time="2" y="395" />
+                <keyframe time="3" y="395" />
+            </directive>
+        </pose>
+        <pose id="3-treasure_scope">
+            <sprite id="pondering" z="1" src="reskins/rosa_summer/3-thinking.png" x="0" y="0" alpha="100" />
+            <sprite id="TreasureScope_XRay" z="1" src="reskins/rosa_summer/3-xrayscope.png" x="0" y="0" alpha="0" />
+            <sprite id="Rouge_TreasureScope_Lens" z="100" src="rouge/Rouge_TreasureScope_Lens.png" x="250" y="395" scaley="0.95" alpha="0" />
+            <directive type="animation" id="pondering" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="2" alpha="100" />
+                <keyframe time="2.5" alpha="100" />
+            </directive>
+            <directive type="animation" id="TreasureScope_XRay" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="2" alpha="0" />
+                <keyframe time="2.5" alpha="100" />
+                <keyframe time="3" alpha="100" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_Lens" ease="ease-out" interpolation="linear">
+                <keyframe time="0" x="250" alpha="0" />
+                <keyframe time="1" x="250" alpha="0" />
+                <keyframe time="2" x="0" alpha="100" />
+                <keyframe time="3" x="0" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_Lens" ease="smooth" interpolation="linear">
+                <keyframe time="0" y="395" scaley="0.95" />
+                <keyframe time="1" y="395" />
+                <keyframe time="2" y="395" />
+                <keyframe time="3" y="395" />
+            </directive>
+        </pose>
+    </poses>
+
+</costume>

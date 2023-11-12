@@ -191,7 +191,7 @@ namespace SPNATI_Character_Editor
 		{
 			stale = false;
 			string folderName = Path.GetFileName(path);
-			string cachePath = Path.Combine(Config.AppDataDirectory, folderName, "cached.xml");
+			string cachePath = Path.Combine(Config.ConfigDirectory, folderName, "cached.xml");
 			CachedCharacter cachedCharacter = null;
 			if (File.Exists(cachePath))
 			{
@@ -261,7 +261,7 @@ namespace SPNATI_Character_Editor
 		{
 			CachedCharacter c = new CachedCharacter(character);
 
-			string outputDir = Path.Combine(Config.AppDataDirectory, character.FolderName);
+			string outputDir = Path.Combine(Config.ConfigDirectory, character.FolderName);
 			if (!Directory.Exists(outputDir))
 			{
 				Directory.CreateDirectory(outputDir);

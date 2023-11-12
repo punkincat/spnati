@@ -12,6 +12,9 @@
         <case name="Targeting Gloria" id="183" priority="FYI" min="0" max="0">
             <description>Gloria has a very heavy scottish accent. She's an outdoorsy type, likes camping and curry, cares about her friends, and loves a good drink.</description>
         </case>
+        <case name="Panties before Dress" id="631" priority="Noteworthy" min="3" max="3">
+            <description>In Gloria's valentines day costume, she slips her panties off before she takes her dress off, and puts them on display in her apron's pocket.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -141,6 +144,43 @@
         <response id="540" opponent="mari_setogaya" opponentId="1451" />
         <response id="541" opponent="mari_setogaya" opponentId="1458" />
         <response id="542" opponent="mari_setogaya" opponentId="1459" />
+        <response id="566" opponent="rosa" opponentId="679" />
+        <response id="570" opponent="rosa" opponentId="686" />
+        <response id="571" opponent="okino" opponentId="42" />
+        <response id="572" opponent="okino" opponentId="128" />
+        <response id="573" opponent="steve" opponentId="3" />
+        <response id="595" opponent="kyoko_kirigiri" opponentId="258" />
+        <response id="604" opponent="dunban" opponentId="2" />
+        <response id="605" opponent="dunban" opponentId="399" />
+        <response id="608" opponent="toph" opponentId="127" />
+        <response id="609" opponent="toph" opponentId="283" />
+        <response id="611" opponent="aqua_kh" opponentId="67" />
+        <response id="612" opponent="kyouko_toshinou" opponentId="91" />
+        <response id="613" opponent="kyouko_toshinou" opponentId="108" />
+        <response id="619" opponent="nagatoro" opponentId="1015" />
+        <response id="652" opponent="mia_golden_sun" opponentId="251" />
+        <response id="653" opponent="mia_golden_sun" opponentId="252" />
+        <response id="654" opponent="mia_golden_sun" opponentId="253" />
+        <response id="655" opponent="mia_golden_sun" opponentId="255" />
+        <response id="656" opponent="mia_golden_sun" opponentId="254" />
+        <response id="657" opponent="mia_golden_sun" opponentId="256" />
+        <response id="658" opponent="mia_golden_sun" opponentId="257" />
+        <response id="665" opponent="mia_golden_sun" opponentId="114" />
+        <response id="666" opponent="toph" opponentId="308" />
+        <response id="667" opponent="toph" opponentId="307" />
+        <response id="670" opponent="revy" opponentId="426" />
+        <response id="671" opponent="revy" opponentId="427" />
+        <response id="672" opponent="revy" opponentId="424" />
+        <response id="673" opponent="revy" opponentId="423" />
+        <response id="675" opponent="meia" opponentId="1026" />
+        <response id="676" opponent="meia" opponentId="1024" />
+        <response id="677" opponent="meia" opponentId="1023" />
+        <response id="678" opponent="meia" opponentId="1025" />
+        <response id="679" opponent="meia" opponentId="626" />
+        <response id="680" opponent="meia" opponentId="627" />
+        <response id="681" opponent="jura" opponentId="390" />
+        <response id="682" opponent="nadeshiko" opponentId="92" />
+        <response id="689" opponent="felix" opponentId="734" />
     </responses>
     <notes>
         <note id="10">expay shaer = exp share</note>
@@ -184,6 +224,14 @@ Rosa's costume index
 3 Princess
 4 Holiday
 5 Scientist</note>
+        <note id="559">this line plays when rosa is eating out gloria</note>
+        <note id="562">this line plays when rosa is eating out gloria</note>
+        <note id="597">Shelving this line idea until there's a better way to check for this.</note>
+        <note id="610">P.E. = physical education</note>
+        <note id="648">this line plays when rosa is eating out gloria</note>
+        <note id="667">There is an entire 'Curry dex' of these that I can pull from, lol https://www.serebii.net/swordshield/currydex.shtml</note>
+        <note id="668">this line plays when rosa is eating out gloria</note>
+        <note id="690">"you seem like a woman who plans out her entire evening, down to the number of alcoholic drinks she will have to get slightly drunk. am I correct?"</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Situations" sort="9" />
@@ -203,7 +251,7 @@ Rosa's costume index
         <label id="16" label="" folder="Human Targets" sort="2" />
         <label id="17" label="" folder="Flirting" sort="2" />
         <label id="18" label="" folder="Gay M Tag" sort="0" />
-        <label id="19" label="" folder="Targets" sort="0" />
+        <label id="19" label="" folder="Targets" sort="2" />
         <label id="20" label="" folder="Tag Targets" sort="6" />
         <label id="21" label="" folder="Wario" sort="0" />
         <label id="22" label="" folder="Targets" sort="2" />
@@ -221,14 +269,14 @@ Rosa's costume index
         <label id="35" label="" folder="Targets" sort="16" />
         <label id="36" label="" folder="Targets" sort="17" />
         <label id="37" label="" folder="Targets" sort="39" />
-        <label id="38" label="" folder="Backgrounds" sort="0" />
+        <label id="38" label="" folder="Backgrounds" sort="31" />
         <label id="39" label="" folder="Human Targets" sort="0" />
         <label id="40" label="" folder="Tag Targets" sort="2" />
         <label id="41" label="" folder="Tag Targets" sort="5" />
         <label id="42" label="" folder="Backgrounds" sort="2" />
         <label id="43" label="" folder="Consec Losses" sort="2" />
         <label id="45" label="" folder="zorc" sort="0" />
-        <label id="46" label="Can I flirt? Yes" folder="Game Logic" sort="0" />
+        <label id="46" label="Can I flirt? Yes" folder="Game Logic" sort="3" />
         <label id="47" label="Can I flirt? No" folder="Game Logic" sort="2" />
         <label id="48" label="" folder="Flirting" sort="5" />
         <label id="49" label="" folder="Flirting" sort="6" />
@@ -279,7 +327,7 @@ Rosa's costume index
         <label id="94" label="butt" folder="" sort="0" />
         <label id="95" label="self pierced_nipples" folder="" sort="0" />
         <label id="96" label="" folder="Flirting" sort="4" />
-        <label id="98" label="" folder="Prompt Responses" sort="0" />
+        <label id="98" label="" folder="Prompt Responses" sort="2" />
         <label id="99" label="" folder="Loss Variants" sort="0" />
         <label id="100" label="" folder="Loss Variants" sort="2" />
         <label id="101" label="" folder="Loss Variants" sort="3" />
@@ -293,7 +341,7 @@ Rosa's costume index
         <label id="109" label="" folder="Loss Variants" sort="4" />
         <label id="110" label="" folder="Loss Variants" sort="5" />
         <label id="111" label="" folder="Loss Variants" sort="6" />
-        <label id="112" label="" folder="Situations" sort="0" />
+        <label id="112" label="" folder="Situations" sort="8" />
         <label id="113" label="" folder="Targets" sort="34" />
         <label id="114" label="" folder="Clothing" sort="0" />
         <label id="115" label="" folder="Human names" sort="5" />
@@ -346,7 +394,7 @@ Rosa's costume index
         <label id="169" label="" folder="Responses" sort="18" />
         <label id="170" label="" folder="Responses" sort="19" />
         <label id="171" label="" folder="Responses" sort="40" />
-        <label id="172" label="Mari - Curry Chatter" folder="Responses" sort="0" />
+        <label id="172" label="Mari - Curry Chatter" folder="Responses" sort="2" />
         <label id="173" label="Mari - Curry Chatter" folder="Responses" sort="3" />
         <label id="174" label="Mari - Drink Chatter" folder="Responses" sort="2" />
         <label id="175" label="Mari - Drink Chatter" folder="Responses" sort="4" />
@@ -412,7 +460,7 @@ Rosa's costume index
         <label id="233" label="" folder="Responses" sort="24" />
         <label id="234" label="make her finish slower" folder="Game Logic" sort="5" />
         <label id="236" label="" folder="Human names" sort="7" />
-        <label id="237" label="" folder="Human names" sort="0" />
+        <label id="237" label="" folder="Human names" sort="3" />
         <label id="156" label="" folder="Situations" sort="63" />
         <label id="238" label="" folder="Targets" sort="56" />
         <label id="239" label="" folder="Flirting" sort="9" />
@@ -520,225 +568,365 @@ Rosa's costume index
         <label id="349" label="" folder="Situations" sort="37" />
         <label id="350" label="" folder="Situations" sort="33" />
         <label id="352" label="" folder="Tag Filters" sort="5" />
-        <label id="353" label="" folder="Tag Filters" sort="0" />
-        <label id="354" label="" folder="Targets" sort="0" />
-        <label id="355" label="" folder="Responses" sort="0" />
-        <label id="356" label="" folder="Responses" sort="0" />
-        <label id="357" label="" folder="Situations" sort="0" />
-        <label id="358" label="" folder="Situations" sort="0" />
-        <label id="359" label="" folder="Situations" sort="0" />
-        <label id="365" label="" folder="Situations" sort="0" />
-        <label id="366" label="" folder="Situations" sort="0" />
-        <label id="360" label="" folder="Situations" sort="0" />
-        <label id="362" label="" folder="Situations" sort="0" />
-        <label id="361" label="" folder="Situations" sort="0" />
-        <label id="364" label="" folder="Situations" sort="0" />
-        <label id="363" label="" folder="Situations" sort="0" />
-        <label id="367" label="" folder="Situations" sort="0" />
-        <label id="368" label="" folder="Hand Types" sort="0" />
-        <label id="369" label="" folder="Human names" sort="0" />
+        <label id="353" label="" folder="Tag Filters" sort="6" />
+        <label id="354" label="" folder="Targets" sort="91" />
+        <label id="355" label="" folder="Responses" sort="36" />
+        <label id="356" label="" folder="Responses" sort="68" />
+        <label id="357" label="" folder="Situations" sort="74" />
+        <label id="358" label="" folder="Situations" sort="81" />
+        <label id="359" label="" folder="Situations" sort="82" />
+        <label id="365" label="" folder="Situations" sort="80" />
+        <label id="366" label="" folder="Situations" sort="69" />
+        <label id="360" label="" folder="Situations" sort="68" />
+        <label id="362" label="" folder="Situations" sort="65" />
+        <label id="361" label="" folder="Situations" sort="64" />
+        <label id="364" label="" folder="Situations" sort="59" />
+        <label id="363" label="" folder="Situations" sort="60" />
+        <label id="367" label="" folder="Situations" sort="6" />
+        <label id="368" label="" folder="Hand Types" sort="4" />
+        <label id="369" label="" folder="Human names" sort="11" />
         <label id="370" label="" folder="Human names" sort="0" />
-        <label id="371" label="" folder="Targets" sort="0" />
-        <label id="372" label="" folder="Targets" sort="0" />
-        <label id="373" label="" folder="Clothing" sort="0" />
-        <label id="374" label="" folder="Situations" sort="0" />
-        <label id="376" label="" folder="Situations" sort="0" />
-        <label id="377" label="" folder="Situations" sort="0" />
-        <label id="378" label="" folder="Situations" sort="0" />
-        <label id="381" label="" folder="Situations" sort="0" />
-        <label id="382" label="" folder="Situations" sort="0" />
-        <label id="375" label="" folder="Situations" sort="0" />
-        <label id="379" label="" folder="Situations" sort="0" />
-        <label id="384" label="" folder="Situations" sort="0" />
-        <label id="380" label="" folder="Situations" sort="0" />
-        <label id="321" label="" folder="Responses" sort="0" />
-        <label id="386" label="" folder="Human names" sort="0" />
-        <label id="387" label="" folder="Responses" sort="0" />
+        <label id="371" label="" folder="Targets" sort="61" />
+        <label id="372" label="" folder="Targets" sort="101" />
+        <label id="373" label="" folder="Clothing" sort="7" />
+        <label id="374" label="" folder="Situations" sort="12" />
+        <label id="376" label="" folder="Situations" sort="85" />
+        <label id="377" label="" folder="Situations" sort="84" />
+        <label id="378" label="" folder="Situations" sort="86" />
+        <label id="381" label="" folder="Situations" sort="19" />
+        <label id="382" label="" folder="Situations" sort="20" />
+        <label id="375" label="" folder="Situations" sort="14" />
+        <label id="379" label="" folder="Situations" sort="17" />
+        <label id="384" label="" folder="Situations" sort="24" />
+        <label id="380" label="" folder="Situations" sort="5" />
+        <label id="321" label="" folder="Responses" sort="44" />
+        <label id="386" label="" folder="Human names" sort="2" />
+        <label id="387" label="" folder="Responses" sort="37" />
         <label id="388" label="" folder="Backgrounds" sort="0" />
-        <label id="389" label="" folder="Backgrounds" sort="0" />
-        <label id="390" label="" folder="Backgrounds" sort="0" />
-        <label id="391" label="" folder="Backgrounds" sort="0" />
-        <label id="392" label="" folder="Backgrounds" sort="0" />
-        <label id="393" label="" folder="Backgrounds" sort="0" />
-        <label id="394" label="" folder="Backgrounds" sort="0" />
-        <label id="395" label="" folder="Backgrounds" sort="0" />
-        <label id="396" label="" folder="Backgrounds" sort="0" />
-        <label id="397" label="" folder="Backgrounds" sort="0" />
-        <label id="398" label="" folder="Backgrounds" sort="0" />
-        <label id="399" label="" folder="Backgrounds" sort="0" />
-        <label id="400" label="" folder="Backgrounds" sort="0" />
-        <label id="401" label="" folder="Backgrounds" sort="0" />
-        <label id="402" label="" folder="Backgrounds" sort="0" />
-        <label id="403" label="" folder="Backgrounds" sort="0" />
-        <label id="404" label="" folder="Backgrounds" sort="0" />
-        <label id="405" label="" folder="Backgrounds" sort="0" />
-        <label id="406" label="" folder="Backgrounds" sort="0" />
-        <label id="407" label="" folder="Backgrounds" sort="0" />
-        <label id="408" label="" folder="Backgrounds" sort="0" />
-        <label id="409" label="" folder="Backgrounds" sort="0" />
-        <label id="410" label="" folder="Backgrounds" sort="0" />
-        <label id="411" label="" folder="Backgrounds" sort="0" />
-        <label id="412" label="" folder="Backgrounds" sort="0" />
-        <label id="413" label="" folder="Backgrounds" sort="0" />
-        <label id="414" label="" folder="Backgrounds" sort="0" />
-        <label id="415" label="" folder="Backgrounds" sort="0" />
-        <label id="416" label="" folder="Backgrounds" sort="0" />
+        <label id="389" label="" folder="Backgrounds" sort="2" />
+        <label id="390" label="" folder="Backgrounds" sort="3" />
+        <label id="391" label="" folder="Backgrounds" sort="4" />
+        <label id="392" label="" folder="Backgrounds" sort="5" />
+        <label id="393" label="" folder="Backgrounds" sort="6" />
+        <label id="394" label="" folder="Backgrounds" sort="7" />
+        <label id="395" label="" folder="Backgrounds" sort="8" />
+        <label id="396" label="" folder="Backgrounds" sort="9" />
+        <label id="397" label="" folder="Backgrounds" sort="10" />
+        <label id="398" label="" folder="Backgrounds" sort="11" />
+        <label id="399" label="" folder="Backgrounds" sort="12" />
+        <label id="400" label="" folder="Backgrounds" sort="13" />
+        <label id="401" label="" folder="Backgrounds" sort="14" />
+        <label id="402" label="" folder="Backgrounds" sort="15" />
+        <label id="403" label="" folder="Backgrounds" sort="16" />
+        <label id="404" label="" folder="Backgrounds" sort="17" />
+        <label id="405" label="" folder="Backgrounds" sort="18" />
+        <label id="406" label="" folder="Backgrounds" sort="19" />
+        <label id="407" label="" folder="Backgrounds" sort="20" />
+        <label id="408" label="" folder="Backgrounds" sort="21" />
+        <label id="409" label="" folder="Backgrounds" sort="22" />
+        <label id="410" label="" folder="Backgrounds" sort="23" />
+        <label id="411" label="" folder="Backgrounds" sort="24" />
+        <label id="412" label="" folder="Backgrounds" sort="25" />
+        <label id="413" label="" folder="Backgrounds" sort="26" />
+        <label id="414" label="" folder="Backgrounds" sort="27" />
+        <label id="415" label="" folder="Backgrounds" sort="28" />
+        <label id="416" label="" folder="Backgrounds" sort="29" />
         <label id="417" label="" folder="Backgrounds" sort="0" />
-        <label id="418" label="" folder="Backgrounds" sort="0" />
-        <label id="419" label="" folder="Tag Targets" sort="0" />
-        <label id="420" label="" folder="Responses" sort="0" />
-        <label id="421" label="" folder="Tag Targets" sort="0" />
-        <label id="422" label="" folder="Tag Targets" sort="0" />
+        <label id="418" label="" folder="Backgrounds" sort="30" />
+        <label id="419" label="" folder="Tag Targets" sort="15" />
+        <label id="420" label="" folder="Responses" sort="65" />
+        <label id="421" label="" folder="Tag Targets" sort="8" />
+        <label id="422" label="" folder="Tag Targets" sort="9" />
         <label id="423" label="" folder="Responses" sort="0" />
-        <label id="424" label="" folder="Beachside" sort="0" />
-        <label id="425" label="" folder="Situations" sort="0" />
-        <label id="426" label="" folder="Situations" sort="0" />
-        <label id="427" label="" folder="Targets" sort="0" />
-        <label id="346" label="" folder="Targets" sort="0" />
-        <label id="428" label="" folder="Targets" sort="0" />
-        <label id="429" label="" folder="Responses" sort="0" />
-        <label id="430" label="" folder="Responses" sort="0" />
-        <label id="433" label="" folder="Responses" sort="0" />
-        <label id="435" label="" folder="Responses" sort="0" />
-        <label id="436" label="" folder="Responses" sort="0" />
-        <label id="437" label="" folder="Targets" sort="0" />
+        <label id="424" label="" folder="Beachside" sort="7" />
+        <label id="425" label="" folder="Situations" sort="37" />
+        <label id="426" label="" folder="Situations" sort="15" />
+        <label id="427" label="" folder="Targets" sort="82" />
+        <label id="346" label="" folder="Targets" sort="79" />
+        <label id="428" label="" folder="Targets" sort="109" />
+        <label id="429" label="" folder="Responses" sort="18" />
+        <label id="430" label="" folder="Responses" sort="38" />
+        <label id="433" label="" folder="Responses" sort="39" />
+        <label id="435" label="" folder="Responses" sort="40" />
+        <label id="436" label="" folder="Responses" sort="6" />
+        <label id="437" label="" folder="Targets" sort="103" />
         <label id="432" label="" folder="Targets" sort="0" />
-        <label id="431" label="" folder="Situations" sort="0" />
-        <label id="438" label="" folder="Situations" sort="0" />
-        <label id="440" label="" folder="Situations" sort="0" />
-        <label id="441" label="" folder="Situations" sort="0" />
-        <label id="443" label="" folder="Situations" sort="0" />
-        <label id="442" label="" folder="Situations" sort="0" />
-        <label id="444" label="" folder="Tag Filters" sort="0" />
+        <label id="431" label="" folder="Situations" sort="27" />
+        <label id="438" label="" folder="Situations" sort="16" />
+        <label id="440" label="" folder="Situations" sort="10" />
+        <label id="441" label="" folder="Situations" sort="73" />
+        <label id="443" label="" folder="Situations" sort="28" />
+        <label id="442" label="" folder="Situations" sort="11" />
+        <label id="444" label="" folder="Tag Filters" sort="4" />
         <label id="445" label="" folder="Clothing" sort="0" />
-        <label id="446" label="" folder="Clothing" sort="0" />
-        <label id="447" label="" folder="Situations" sort="0" />
-        <label id="448" label="" folder="Situations" sort="0" />
-        <label id="449" label="" folder="Situations" sort="0" />
-        <label id="450" label="" folder="Situations" sort="0" />
-        <label id="451" label="" folder="Targets" sort="0" />
-        <label id="452" label="" folder="Targets" sort="0" />
+        <label id="446" label="" folder="Clothing" sort="8" />
+        <label id="447" label="" folder="Situations" sort="72" />
+        <label id="448" label="" folder="Situations" sort="7" />
+        <label id="449" label="" folder="Situations" sort="41" />
+        <label id="450" label="" folder="Situations" sort="42" />
+        <label id="451" label="" folder="Targets" sort="105" />
+        <label id="452" label="" folder="Targets" sort="106" />
         <label id="453" label="generic line" folder="Marnie Reference" sort="0" />
-        <label id="455" label="" folder="Clothing" sort="0" />
-        <label id="457" label="" folder="Situations" sort="0" />
-        <label id="456" label="" folder="Situations" sort="0" />
-        <label id="434" label="" folder="Situations" sort="0" />
-        <label id="458" label="" folder="Responses" sort="0" />
-        <label id="459" label="" folder="Responses" sort="0" />
-        <label id="460" label="" folder="Responses" sort="0" />
-        <label id="461" label="" folder="Rosa" sort="0" />
+        <label id="455" label="" folder="Clothing" sort="3" />
+        <label id="457" label="" folder="Situations" sort="50" />
+        <label id="456" label="" folder="Situations" sort="45" />
+        <label id="434" label="" folder="Situations" sort="44" />
+        <label id="458" label="" folder="Responses" sort="53" />
+        <label id="459" label="" folder="Responses" sort="54" />
+        <label id="460" label="" folder="Responses" sort="55" />
+        <label id="461" label="" folder="Rosa" sort="22" />
         <label id="462" label="" folder="Game Logic" sort="0" />
-        <label id="463" label="" folder="Game Logic" sort="0" />
+        <label id="463" label="" folder="Game Logic" sort="2" />
         <label id="464" label="" folder="Situations" sort="0" />
         <label id="465" label="" folder="Rosa" sort="0" />
-        <label id="466" label="" folder="Rosa" sort="0" />
-        <label id="467" label="" folder="Rosa" sort="0" />
-        <label id="468" label="" folder="Rosa" sort="0" />
-        <label id="469" label="" folder="Rosa" sort="0" />
-        <label id="470" label="" folder="Rosa" sort="0" />
-        <label id="471" label="" folder="Rosa" sort="0" />
-        <label id="472" label="" folder="Rosa" sort="0" />
-        <label id="473" label="" folder="Rosa" sort="0" />
-        <label id="474" label="" folder="Rosa" sort="0" />
-        <label id="475" label="" folder="Rosa" sort="0" />
+        <label id="466" label="" folder="Rosa" sort="6" />
+        <label id="467" label="" folder="Rosa" sort="7" />
+        <label id="468" label="" folder="Rosa" sort="8" />
+        <label id="469" label="" folder="Rosa" sort="9" />
+        <label id="470" label="" folder="Rosa" sort="13" />
+        <label id="471" label="" folder="Rosa" sort="14" />
+        <label id="472" label="" folder="Rosa" sort="15" />
+        <label id="473" label="" folder="Rosa" sort="10" />
+        <label id="474" label="" folder="Rosa" sort="12" />
+        <label id="475" label="" folder="Rosa" sort="18" />
         <label id="476" label="" folder="Rosa" sort="0" />
         <label id="477" label="" folder="Rosa" sort="0" />
-        <label id="478" label="" folder="Rosa" sort="0" />
-        <label id="479" label="" folder="Rosa" sort="0" />
-        <label id="480" label="Imminent Mutual" folder="Rosa" sort="0" />
-        <label id="482" label="" folder="Rosa" sort="0" />
+        <label id="478" label="" folder="Rosa" sort="11" />
+        <label id="479" label="" folder="Rosa" sort="20" />
+        <label id="480" label="Imminent Mutual" folder="Rosa" sort="19" />
+        <label id="482" label="" folder="Rosa" sort="4" />
         <label id="481" label="" folder="Rosa" sort="0" />
-        <label id="484" label="" folder="Situations" sort="0" />
-        <label id="485" label="" folder="Situations" sort="0" />
-        <label id="486" label="" folder="Backgrounds" sort="0" />
-        <label id="483" label="" folder="Rosa" sort="0" />
+        <label id="484" label="" folder="Situations" sort="56" />
+        <label id="485" label="" folder="Situations" sort="67" />
+        <label id="486" label="" folder="Backgrounds" sort="33" />
+        <label id="483" label="" folder="Rosa" sort="5" />
         <label id="487" label="" folder="Prompt Responses" sort="0" />
-        <label id="488" label="" folder="Responses" sort="0" />
-        <label id="489" label="" folder="Responses" sort="0" />
-        <label id="490" label="" folder="Responses" sort="0" />
-        <label id="491" label="" folder="Responses" sort="0" />
-        <label id="492" label="" folder="Punk Style" sort="0" />
-        <label id="493" label="" folder="Punk Style" sort="0" />
-        <label id="494" label="" folder="Punk Style" sort="0" />
-        <label id="495" label="" folder="Punk Style" sort="0" />
-        <label id="496" label="" folder="Punk Style" sort="0" />
-        <label id="497" label="" folder="Punk Style" sort="0" />
+        <label id="488" label="" folder="Responses" sort="61" />
+        <label id="489" label="" folder="Responses" sort="62" />
+        <label id="490" label="" folder="Responses" sort="63" />
+        <label id="491" label="" folder="Responses" sort="64" />
+        <label id="492" label="" folder="Punk Style" sort="7" />
+        <label id="493" label="" folder="Punk Style" sort="8" />
+        <label id="494" label="" folder="Punk Style" sort="11" />
+        <label id="495" label="" folder="Punk Style" sort="9" />
+        <label id="496" label="" folder="Punk Style" sort="12" />
+        <label id="497" label="" folder="Punk Style" sort="10" />
         <label id="498" label="" folder="Punk Style" sort="0" />
-        <label id="499" label="" folder="Punk Style" sort="0" />
-        <label id="500" label="" folder="Punk Style" sort="0" />
-        <label id="501" label="" folder="Punk Style" sort="0" />
-        <label id="502" label="" folder="Punk Style" sort="0" />
-        <label id="503" label="" folder="Punk Style" sort="0" />
-        <label id="504" label="" folder="Clothing" sort="0" />
-        <label id="505" label="" folder="Situations" sort="0" />
+        <label id="499" label="" folder="Punk Style" sort="2" />
+        <label id="500" label="" folder="Punk Style" sort="3" />
+        <label id="501" label="" folder="Punk Style" sort="4" />
+        <label id="502" label="" folder="Punk Style" sort="5" />
+        <label id="503" label="" folder="Punk Style" sort="6" />
+        <label id="504" label="" folder="Clothing" sort="4" />
+        <label id="505" label="" folder="Situations" sort="13" />
         <label id="506" label="" folder="Tags - Occupation" sort="0" />
         <label id="507" label="" folder="Tags - Occupation" sort="0" />
-        <label id="508" label="" folder="Tags - Occupation" sort="0" />
+        <label id="508" label="" folder="Tags - Occupation" sort="2" />
         <label id="509" label="" folder="Tags - Occupation" sort="0" />
-        <label id="510" label="" folder="Tags - Occupation" sort="0" />
-        <label id="511" label="" folder="Tags - Occupation" sort="0" />
-        <label id="512" label="" folder="Tags - Occupation" sort="0" />
+        <label id="510" label="" folder="Tags - Occupation" sort="3" />
+        <label id="511" label="" folder="Tags - Occupation" sort="4" />
+        <label id="512" label="" folder="Tags - Occupation" sort="5" />
         <label id="513" label="" folder="Tags - Occupation" sort="0" />
         <label id="514" label="" folder="Tags - Occupation" sort="0" />
-        <label id="515" label="" folder="Tags - Occupation" sort="0" />
-        <label id="516" label="" folder="Tags - Occupation" sort="0" />
-        <label id="517" label="" folder="Tags - Occupation" sort="0" />
-        <label id="518" label="" folder="Tag Targets" sort="0" />
-        <label id="519" label="" folder="Tag Targets" sort="0" />
-        <label id="520" label="" folder="Tags - Occupation" sort="0" />
-        <label id="521" label="" folder="Responses" sort="0" />
+        <label id="515" label="" folder="Tags - Occupation" sort="6" />
+        <label id="516" label="" folder="Tags - Occupation" sort="7" />
+        <label id="517" label="" folder="Tags - Occupation" sort="8" />
+        <label id="518" label="" folder="Tag Targets" sort="4" />
+        <label id="519" label="" folder="Tag Targets" sort="5" />
+        <label id="520" label="" folder="Tags - Occupation" sort="9" />
+        <label id="521" label="" folder="Responses" sort="7" />
         <label id="522" label="" folder="Responses" sort="0" />
-        <label id="523" label="" folder="Storm Sponsorship" sort="0" />
-        <label id="524" label="" folder="Tag Targets" sort="0" />
-        <label id="525" label="" folder="Situations" sort="0" />
-        <label id="526" label="" folder="Consec Losses" sort="0" />
-        <label id="528" label="" folder="Situations" sort="0" />
-        <label id="527" label="" folder="Situations" sort="0" />
+        <label id="523" label="" folder="S**** Sponsorship" sort="0" />
+        <label id="524" label="" folder="Tag Targets" sort="21" />
+        <label id="525" label="" folder="Situations" sort="66" />
+        <label id="526" label="" folder="Consec Losses" sort="2" />
+        <label id="528" label="" folder="Situations" sort="29" />
+        <label id="527" label="" folder="Situations" sort="57" />
         <label id="529" label="" folder="Storm Sponsorship" sort="0" />
-        <label id="530" label="" folder="Storm Sponsorship" sort="0" />
-        <label id="531" label="" folder="Situations" sort="0" />
-        <label id="532" label="" folder="Situations" sort="0" />
-        <label id="538" label="" folder="Situations" sort="0" />
+        <label id="530" label="" folder="S**** Sponsorship" sort="2" />
+        <label id="531" label="" folder="Situations" sort="18" />
+        <label id="532" label="" folder="Situations" sort="79" />
+        <label id="538" label="" folder="Situations" sort="2" />
         <label id="536" label="" folder="Situations" sort="0" />
-        <label id="535" label="" folder="Situations" sort="0" />
-        <label id="537" label="" folder="Situations" sort="0" />
-        <label id="540" label="" folder="Responses" sort="0" />
-        <label id="541" label="" folder="Responses" sort="0" />
-        <label id="542" label="" folder="Responses" sort="0" />
-        <label id="543" label="" folder="Storm Sponsorship" sort="0" />
-        <label id="544" label="demoman tf2" folder="Tag Targets" sort="0" />
-        <label id="545" label="" folder="Tag Targets" sort="0" />
-        <label id="546" label="" folder="Tag Targets" sort="0" />
-        <label id="547" label="" folder="Tag Targets" sort="0" />
-        <label id="548" label="" folder="Tag Targets" sort="0" />
-        <label id="549" label="" folder="Tag Targets" sort="0" />
-        <label id="550" label="" folder="Targets" sort="0" />
-        <label id="551" label="" folder="Targets" sort="0" />
-        <label id="552" label="" folder="Targets" sort="0" />
-        <label id="344" label="" folder="Targets" sort="0" />
-        <label id="345" label="" folder="Targets" sort="0" />
-        <label id="138" label="" folder="Tag Filters" sort="0" />
-        <label id="553" label="" folder="Tag Targets" sort="0" />
-        <label id="554" label="" folder="Targets" sort="0" />
+        <label id="535" label="" folder="Situations" sort="3" />
+        <label id="537" label="" folder="Situations" sort="4" />
+        <label id="540" label="" folder="Responses" sort="69" />
+        <label id="541" label="" folder="Responses" sort="70" />
+        <label id="542" label="" folder="Responses" sort="71" />
+        <label id="543" label="" folder="S**** Sponsorship" sort="3" />
+        <label id="544" label="demoman tf2" folder="Tag Targets" sort="18" />
+        <label id="545" label="" folder="Tag Targets" sort="28" />
+        <label id="546" label="" folder="Tag Targets" sort="33" />
+        <label id="547" label="" folder="Tag Targets" sort="32" />
+        <label id="548" label="" folder="Tag Targets" sort="29" />
+        <label id="549" label="" folder="Tag Targets" sort="30" />
+        <label id="550" label="" folder="Targets" sort="62" />
+        <label id="551" label="" folder="Targets" sort="63" />
+        <label id="552" label="" folder="Targets" sort="64" />
+        <label id="344" label="" folder="Targets" sort="98" />
+        <label id="345" label="" folder="Targets" sort="99" />
+        <label id="138" label="" folder="Tag Filters" sort="5" />
+        <label id="553" label="" folder="Tag Targets" sort="6" />
+        <label id="554" label="" folder="Targets" sort="73" />
         <label id="555" label="" folder="Targets" sort="0" />
         <label id="556" label="" folder="Targets" sort="0" />
         <label id="557" label="" folder="Targets" sort="0" />
         <label id="558" label="" folder="Targets" sort="0" />
+        <label id="559" label="" folder="Rosa" sort="26" />
+        <label id="560" label="" folder="Flirting" sort="0" />
+        <label id="561" label="" folder="Rosa" sort="0" />
+        <label id="562" label="" folder="Rosa" sort="0" />
+        <label id="563" label="" folder="Rosa" sort="0" />
+        <label id="564" label="" folder="Rosa" sort="16" />
+        <label id="565" label="cunnilingus (valentines variant)" folder="Rosa" sort="17" />
+        <label id="567" label="" folder="Rosa" sort="24" />
+        <label id="566" label="" folder="Rosa" sort="23" />
+        <label id="568" label="" folder="Rosa" sort="25" />
+        <label id="569" label="" folder="Rosa" sort="21" />
+        <label id="571" label="" folder="Targets" sort="93" />
+        <label id="385" label="" folder="Targets" sort="92" />
+        <label id="574" label="" folder="Targets" sort="23" />
+        <label id="575" label="" folder="Targets" sort="0" />
+        <label id="573" label="" folder="Targets" sort="71" />
+        <label id="576" label="" folder="Responses" sort="0" />
+        <label id="572" label="" folder="Responses" sort="9" />
+        <label id="577" label="" folder="Christmas" sort="0" />
+        <label id="578" label="" folder="Christmas" sort="2" />
+        <label id="579" label="" folder="Christmas" sort="3" />
+        <label id="580" label="" folder="Christmas" sort="4" />
+        <label id="581" label="" folder="Christmas" sort="5" />
+        <label id="582" label="" folder="Christmas" sort="6" />
+        <label id="583" label="" folder="Christmas" sort="9" />
+        <label id="584" label="" folder="Christmas" sort="10" />
+        <label id="585" label="" folder="Christmas" sort="11" />
+        <label id="586" label="" folder="Christmas" sort="7" />
+        <label id="587" label="" folder="Christmas" sort="12" />
+        <label id="588" label="" folder="Christmas" sort="13" />
+        <label id="589" label="" folder="Christmas" sort="8" />
+        <label id="590" label="" folder="Christmas" sort="14" />
+        <label id="591" label="" folder="Tag Filters" sort="8" />
+        <label id="592" label="" folder="Events" sort="0" />
+        <label id="593" label="" folder="Targets" sort="66" />
+        <label id="594" label="" folder="Targets" sort="24" />
+        <label id="596" label="" folder="Targets" sort="67" />
+        <label id="597" label="" folder="Situations" sort="36" />
+        <label id="598" label="" folder="Targets" sort="105" />
+        <label id="599" label="" folder="Targets" sort="106" />
+        <label id="600" label="" folder="Targets" sort="115" />
+        <label id="601" label="" folder="Targets" sort="116" />
+        <label id="602" label="" folder="Targets" sort="117" />
+        <label id="603" label="" folder="Targets" sort="118" />
+        <label id="595" label="" folder="Prompt Responses" sort="3" />
+        <label id="604" label="" folder="Situations" sort="90" />
+        <label id="605" label="" folder="Prompt Responses" sort="2" />
+        <label id="606" label="" folder="Responses" sort="85" />
+        <label id="607" label="" folder="Targets" sort="103" />
+        <label id="608" label="" folder="Responses" sort="43" />
+        <label id="609" label="" folder="Responses" sort="44" />
+        <label id="610" label="" color="3" folder="Targets" sort="26" />
+        <label id="612" label="" folder="Targets" sort="72" />
+        <label id="611" label="" folder="Targets" sort="73" />
+        <label id="613" label="" folder="Situations" sort="39" />
+        <label id="614" label="" folder="Situations" sort="0" />
+        <label id="615" label="" folder="Situations" sort="0" />
+        <label id="616" label="" folder="Situations" sort="0" />
+        <label id="617" label="" folder="Responses" sort="45" />
+        <label id="618" label="" folder="Responses" sort="46" />
+        <label id="619" label="" folder="Situations" sort="47" />
+        <label id="620" label="" folder="Targets" sort="68" />
+        <label id="621" label="" folder="Targets" sort="98" />
+        <label id="622" label="" folder="Valentine Costume" sort="3" />
+        <label id="623" label="" folder="Valentine Costume" sort="0" />
+        <label id="624" label="" folder="Valentine Costume" sort="4" />
+        <label id="625" label="" folder="Valentine Costume" sort="5" />
+        <label id="626" label="" folder="Valentine Costume" sort="6" />
+        <label id="627" label="" folder="Valentine Costume" sort="7" />
+        <label id="628" label="" folder="Valentine Costume" sort="8" />
+        <label id="629" label="" folder="Valentine Costume" sort="9" />
+        <label id="630" label="" folder="Valentine Costume" sort="10" />
+        <label id="631" label="" folder="Valentine Costume" sort="11" />
+        <label id="632" label="" folder="Valentine Costume" sort="12" />
+        <label id="633" label="" folder="Valentine Costume" sort="13" />
+        <label id="634" label="" folder="Valentine Costume" sort="14" />
+        <label id="635" label="" folder="Valentine Costume" sort="0" />
+        <label id="636" label="" folder="Valentine Costume" sort="2" />
+        <label id="637" label="" folder="Events" sort="4" />
+        <label id="638" label="" folder="Events" sort="2" />
+        <label id="639" label="" folder="Events" sort="3" />
+        <label id="640" label="human male flirt" folder="Valentine Costume" sort="15" />
+        <label id="641" label="human female flirt" folder="Valentine Costume" sort="16" />
+        <label id="642" label="" folder="Targets" sort="111" />
+        <label id="643" label="" folder="Valentine Costume" sort="0" />
+        <label id="644" label="" folder="Valentine Costume" sort="0" />
+        <label id="645" label="" folder="Rosa" sort="0" />
+        <label id="646" label="cunnilingus (valentines variant)" folder="Rosa" sort="0" />
+        <label id="647" label="" folder="Targets" sort="0" />
+        <label id="648" label="" folder="Rosa" sort="0" />
+        <label id="649" label="" folder="Rosa" sort="0" />
+        <label id="650" label="" folder="Rosa" sort="0" />
+        <label id="651" label="" folder="Events" sort="0" />
+        <label id="652" label="" folder="Responses" sort="0" />
+        <label id="653" label="" folder="Responses" sort="0" />
+        <label id="654" label="" folder="Responses" sort="0" />
+        <label id="655" label="" folder="Responses" sort="0" />
+        <label id="657" label="" folder="Responses" sort="0" />
+        <label id="658" label="" folder="Responses" sort="0" />
+        <label id="656" label="" folder="Responses" sort="0" />
+        <label id="659" label="" folder="Targets" sort="0" />
+        <label id="660" label="" folder="Targets" sort="0" />
+        <label id="661" label="" folder="Targets" sort="0" />
+        <label id="662" label="" folder="Targets" sort="0" />
+        <label id="663" label="" folder="Targets" sort="0" />
+        <label id="664" label="" folder="Targets" sort="0" />
+        <label id="665" label="" folder="Targets" sort="0" />
+        <label id="666" label="" folder="Responses" sort="0" />
+        <label id="667" label="" folder="Responses" sort="0" />
+        <label id="668" label="" folder="Rosa" sort="0" />
+        <label id="669" label="Rosa-Gloria redundancy case" folder="Rosa" sort="0" />
+        <label id="670" label="" folder="Responses" sort="0" />
+        <label id="671" label="" folder="Responses" sort="0" />
+        <label id="672" label="" folder="Responses" sort="0" />
+        <label id="673" label="" folder="Responses" sort="0" />
+        <label id="674" label="" folder="Targets" sort="0" />
+        <label id="675" label="" folder="Responses" sort="0" />
+        <label id="676" label="" folder="Responses" sort="0" />
+        <label id="677" label="" folder="Responses" sort="0" />
+        <label id="678" label="" folder="Responses" sort="0" />
+        <label id="679" label="" folder="Responses" sort="0" />
+        <label id="680" label="" folder="Responses" sort="0" />
+        <label id="681" label="" folder="Responses" sort="0" />
+        <label id="682" label="" folder="Nadeshiko" sort="0" />
+        <label id="683" label="" folder="Nadeshiko" sort="0" />
+        <label id="684" label="" folder="Nadeshiko" sort="0" />
+        <label id="685" label="" folder="Nadeshiko" sort="0" />
+        <label id="686" label="" folder="Nadeshiko" sort="0" />
+        <label id="687" label="" folder="Nadeshiko" sort="0" />
+        <label id="688" label="" folder="Nadeshiko" sort="0" />
+        <label id="689" label="" folder="Situations" sort="0" />
+        <label id="690" label="" folder="Targets" sort="0" />
+        <label id="691" label="" folder="Nadeshiko" sort="0" />
+        <label id="692" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>558</nextId>
+    <nextId>692</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="__human_nickname" />
         <marker scope="Public" name="accent_murder" />
+        <marker scope="Public" name="ag_near_climax" />
+        <marker scope="Public" name="ag_started_remark" />
         <marker scope="Public" name="alola_relax" />
         <marker scope="Public" name="butt_pose" />
+        <marker scope="Public" name="check_for_bumps" />
         <marker scope="Public" name="countdown_end" />
         <marker scope="Public" name="cuppa_tea_order" />
         <marker scope="Public" name="debug_mode_comment" />
         <marker scope="Public" name="dexit_means_dexit" />
         <marker scope="Public" name="expay_share" />
+        <marker scope="Public" name="felixCleanUpResp" />
         <marker scope="Public" name="foorball_jeer_singer" />
+        <marker scope="Public" name="football_jeer_singer" />
         <marker scope="Public" name="gloria_9s_strip0a" />
+        <marker scope="Public" name="gloria_adora_swordGirls1" />
         <marker scope="Public" name="gloria_adrien_strip0a" />
         <marker scope="Public" name="gloria_ag_strip0a" />
         <marker scope="Public" name="gloria_ag_strip3a" />
@@ -752,9 +940,14 @@ Rosa's costume index
         <marker scope="Public" name="gloria_anatoly_paskaleaves" />
         <marker scope="Public" name="gloria_anatoly_strip0a" />
         <marker scope="Public" name="gloria_anatoly_strip0b" />
+        <marker scope="Public" name="gloria_aqua_keyblade_reveal" />
         <marker scope="Public" name="gloria_basil_strip0a" />
         <marker scope="Public" name="gloria_basil_strip1a" />
         <marker scope="Public" name="gloria_bella_ishkneeoobatay" />
+        <marker scope="Public" name="gloria_binah_thesaurus1" />
+        <marker scope="Public" name="gloria_binah_thesaurus2" />
+        <marker scope="Public" name="gloria_binah_thesaurus3" />
+        <marker scope="Public" name="gloria_bionis_view_1_Resp" />
         <marker scope="Public" name="gloria_blake_remnantExpoResp" />
         <marker scope="Public" name="gloria_cag_alchemy1" />
         <marker scope="Public" name="gloria_cag_collar_firstReact" />
@@ -766,6 +959,7 @@ Rosa's costume index
         <marker scope="Public" name="gloria_CD_punk1" />
         <marker scope="Public" name="gloria_CD_punk2" />
         <marker scope="Public" name="gloria_CD_self0c" />
+        <marker scope="Public" name="gloria_chie_PE_1" />
         <marker scope="Public" name="gloria_chihiro_GReveal" />
         <marker scope="Public" name="gloria_colress_strip0a" />
         <marker scope="Public" name="gloria_cynthia_strip0a" />
@@ -773,6 +967,7 @@ Rosa's costume index
         <marker scope="Public" name="gloria_dawn_startFF" />
         <marker scope="Public" name="gloria_dawn_strip0a" />
         <marker scope="Public" name="gloria_dawnsBack" />
+        <marker scope="Public" name="gloria_dunban_scarexplain3" />
         <marker scope="Public" name="gloria_dust_strip0a" />
         <marker scope="Public" name="gloria_erufuda_deepFriedMarsBars" />
         <marker scope="Public" name="gloria_erufuda_dressResp" />
@@ -809,14 +1004,23 @@ Rosa's costume index
         <marker scope="Public" name="gloria_idle_sly_excited" />
         <marker scope="Public" name="gloria_ignatz_lostGlasses" />
         <marker scope="Public" name="gloria_ignatz_strip0a" />
+        <marker scope="Public" name="gloria_jin_facesitting" />
         <marker scope="Public" name="gloria_joey_chestreveal" />
         <marker scope="Public" name="gloria_jura_babies" />
         <marker scope="Public" name="gloria_jura_seduction1" />
         <marker scope="Public" name="gloria_jura_self0a" />
         <marker scope="Public" name="gloria_jura_self1a" />
+        <marker scope="Public" name="gloria_jura_self2a" />
         <marker scope="Public" name="gloria_jura_strip0a" />
         <marker scope="Public" name="gloria_jura_strip1b" />
         <marker scope="Public" name="gloria_kamina_strip0a" />
+        <marker scope="Public" name="gloria_kirigiri_strip0a" />
+        <marker scope="Public" name="gloria_kirigiri_strip0aAB" />
+        <marker scope="Public" name="gloria_kirigiri_strip0b" />
+        <marker scope="Public" name="gloria_kirigiri_strip0bAA" />
+        <marker scope="Public" name="gloria_kirigiri_strip0bAC" />
+        <marker scope="Public" name="gloria_kirigiri_strip1a" />
+        <marker scope="Public" name="gloria_kirigiri_strip1b" />
         <marker scope="Public" name="gloria_kora_strip0a" />
         <marker scope="Public" name="gloria_kuma_parental_guidance" />
         <marker scope="Public" name="gloria_kumatora_food_curry" />
@@ -861,13 +1065,27 @@ Rosa's costume index
         <marker scope="Public" name="gloria_mariS_self0c" />
         <marker scope="Public" name="gloria_mariS_wingReveal" />
         <marker scope="Public" name="gloria_may_strip0a" />
+        <marker scope="Public" name="gloria_meia_bs0" />
+        <marker scope="Public" name="gloria_meia_ca0" />
+        <marker scope="Public" name="gloria_meia_cv0" />
         <marker scope="Public" name="gloria_meia_energyCrisis" />
         <marker scope="Public" name="gloria_meia_energyCrisis2" />
         <marker scope="Public" name="gloria_meia_headpieceFashion" />
+        <marker scope="Public" name="gloria_meia_ps0" />
         <marker scope="Public" name="gloria_meia_self0a" />
         <marker scope="Public" name="gloria_meia_self1a" />
+        <marker scope="Public" name="gloria_meia_self2a" />
+        <marker scope="Public" name="gloria_meia_self3a" />
         <marker scope="Public" name="gloria_mg_slugmaResp" />
         <marker scope="Public" name="gloria_mg_strip0a" />
+        <marker scope="Public" name="gloria_mg_vday_bothCostumed" />
+        <marker scope="Public" name="gloria_mg_vday_selfNot" />
+        <marker scope="Public" name="gloria_miaGS_fizz1" />
+        <marker scope="Public" name="gloria_miaGS_fizz2" />
+        <marker scope="Public" name="gloria_miaGS_fizz3" />
+        <marker scope="Public" name="gloria_miaGS_summons1" />
+        <marker scope="Public" name="gloria_miaGS_summons2" />
+        <marker scope="Public" name="gloria_miaGS_summons3" />
         <marker scope="Public" name="gloria_miki_handy" />
         <marker scope="Public" name="gloria_miko_self0a" />
         <marker scope="Public" name="gloria_miko_self0b" />
@@ -880,6 +1098,14 @@ Rosa's costume index
         <marker scope="Public" name="gloria_monika_deleteblazer2" />
         <marker scope="Public" name="gloria_moon&amp;mom0" />
         <marker scope="Public" name="gloria_moon_strip0a" />
+        <marker scope="Public" name="gloria_nadeshiko_curry1" />
+        <marker scope="Public" name="gloria_nadeshiko_pokemon1" />
+        <marker scope="Public" name="gloria_nadeshiko_woods1" />
+        <marker scope="Public" name="gloria_nagatoro_curry1" />
+        <marker scope="Public" name="gloria_nagatoro_favMon1" />
+        <marker scope="Public" name="gloria_nagatoro_first_chest_rev1" />
+        <marker scope="Public" name="gloria_nagatoro_playerplan1" />
+        <marker scope="Public" name="gloria_nagatoro_playerplan2" />
         <marker scope="Public" name="gloria_nami_pirateInquire1" />
         <marker scope="Public" name="gloria_nami_pirateReact" />
         <marker scope="Public" name="gloria_nami_self0" />
@@ -893,11 +1119,18 @@ Rosa's costume index
         <marker scope="Public" name="gloria_noire_RoleExplResp" />
         <marker scope="Public" name="gloria_noire_strip0a" />
         <marker scope="Public" name="gloria_noireAndPlayer_Resp" />
+        <marker scope="Public" name="gloria_okino_pining_resp" />
+        <marker scope="Public" name="gloria_okino_pining2" />
         <marker scope="Public" name="gloria_petra_booty" />
         <marker scope="Public" name="gloria_petra_speechResp" />
         <marker scope="Public" name="gloria_polly_fadein" />
         <marker scope="Public" name="gloria_raynor_strip0a" />
+        <marker scope="Public" name="gloria_revy_bs0" />
+        <marker scope="Public" name="gloria_revy_ca0" />
+        <marker scope="Public" name="gloria_revy_cv0" />
+        <marker scope="Public" name="gloria_revy_ps0" />
         <marker scope="Public" name="gloria_revy_self0a" />
+        <marker scope="Public" name="gloria_revy_strip0a" />
         <marker scope="Public" name="gloria_rosa" />
         <marker scope="Public" name="gloria_rosa_arseAResp" />
         <marker scope="Public" name="gloria_rosa_bedroomantics1" />
@@ -906,7 +1139,13 @@ Rosa's costume index
         <marker scope="Public" name="gloria_rosa_confidence1" />
         <marker scope="Public" name="gloria_rosa_confidence2" />
         <marker scope="Public" name="gloria_rosa_confidence3" />
+        <marker scope="Public" name="gloria_rosa_cunnilingus" />
+        <marker scope="Public" name="gloria_rosa_cunnilingus1" />
+        <marker scope="Public" name="gloria_rosa_cunning_end" />
+        <marker scope="Public" name="gloria_rosa_cunning_offer" />
+        <marker scope="Public" name="gloria_rosa_cunning_offer=true" />
         <marker scope="Public" name="gloria_rosa_ending" />
+        <marker scope="Public" name="gloria_rosa_epilogue_seen" />
         <marker scope="Public" name="gloria_rosa_erufuda_fries" />
         <marker scope="Public" name="gloria_rosa_famous1" />
         <marker scope="Public" name="gloria_rosa_famous2" />
@@ -931,6 +1170,7 @@ Rosa's costume index
         <marker scope="Public" name="gloria_sly_strip1b" />
         <marker scope="Public" name="gloria_sly_strip2a" />
         <marker scope="Public" name="gloria_sly_thiefLore1" />
+        <marker scope="Public" name="gloria_steve01" />
         <marker scope="Public" name="gloria_sucrose_self02" />
         <marker scope="Public" name="gloria_sucrose_self12" />
         <marker scope="Public" name="gloria_sucrose_self21" />
@@ -938,6 +1178,10 @@ Rosa's costume index
         <marker scope="Public" name="gloria_susie_strip0a" />
         <marker scope="Public" name="gloria_susie_strip1a" />
         <marker scope="Public" name="gloria_takatoshi_strip0a" />
+        <marker scope="Public" name="gloria_toph_animals1Resp" />
+        <marker scope="Public" name="gloria_toph_animals2Resp" />
+        <marker scope="Public" name="gloria_toph_food1Resp" />
+        <marker scope="Public" name="gloria_toph_food2Resp" />
         <marker scope="Public" name="gloria_trifle_gigantamix0" />
         <marker scope="Public" name="gloria_trixie_0Resp" />
         <marker scope="Public" name="gloria_trixie_biggeststolen" />
@@ -970,17 +1214,32 @@ Rosa's costume index
         <marker scope="Public" name="humanstrip_igGlasses" />
         <marker scope="Public" name="idle_no_men" />
         <marker scope="Public" name="kanto_curry" />
+        <marker scope="Public" name="kyoko_pokeTrainers2Resp" />
+        <marker scope="Public" name="kyoko_pokeTrainersResp" />
+        <marker scope="Public" name="kyouko_sexypose" />
         <marker scope="Public" name="lad_fell_down" />
         <marker scope="Public" name="lucky_egg" />
         <marker scope="Public" name="make_a_curry" />
         <marker scope="Public" name="male_counting_down" />
         <marker scope="Public" name="masturbation_warning" />
         <marker scope="Public" name="meia_juraForfeit" />
+        <marker scope="Public" name="miaGS_fizz_reveal" />
+        <marker scope="Public" name="miaGS_gloria_gay1" />
+        <marker scope="Public" name="miaGS_gloria_gay2" />
+        <marker scope="Public" name="miaGS_gloria_gay3" />
+        <marker scope="Public" name="miaGS_gloria_gayCont1" />
+        <marker scope="Public" name="miaGS_gloria_gayCont2" />
+        <marker scope="Public" name="miaGS_gloria_gayCont3" />
         <marker scope="Public" name="microwave_meal" />
+        <marker scope="Public" name="nadeshiko_startFF" />
+        <marker scope="Public" name="nadeshikoCookResp" />
+        <marker scope="Public" name="NadeshikoGloriaExpertCamper" />
+        <marker scope="Public" name="NadeshikoGloriaExpertCamperResp" />
         <marker scope="Public" name="new_chippy" />
         <marker scope="Public" name="nickname" />
         <marker scope="Public" name="nobody_intae_women" />
         <marker scope="Public" name="non_smoker" />
+        <marker scope="Public" name="okino_reveal" />
         <marker scope="Public" name="our relationship is a bit more" />
         <marker scope="Public" name="pierced" />
         <marker scope="Public" name="pierced_nips_advice" />
@@ -1003,8 +1262,10 @@ Rosa's costume index
         <marker scope="Public" name="say_about_me_maw" />
         <marker scope="Public" name="stage_6_butt_6rounds" />
         <marker scope="Public" name="stage_8_butt_6rounds" />
+        <marker scope="Public" name="steve_chesthair" />
         <marker scope="Public" name="string_of_f_bombs" />
         <marker scope="Public" name="strip_poker_warning" />
+        <marker scope="Public" name="stripped_3_fizz" />
         <marker scope="Public" name="stripped_6_butt" />
         <marker scope="Public" name="stripped_6_butt_after" />
         <marker scope="Public" name="tea_dex" />

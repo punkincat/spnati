@@ -6,9 +6,13 @@
             <description>Must-target; Nayru is visibly lifted into the air by a dark spirit</description>
         </case>
     </noteworthy>
-    <nextId>1</nextId>
+    <notes>
+        <note id="2">This case was hidden due to no longer making sense after changes were made to the targeted character. If you're rewriting this character, feel free to delete it.</note>
+        <note id="3">This case was hidden due to no longer making sense after changes were made to the targeted character. If you're rewriting this character, feel free to delete it.</note>
+        <note id="4">This case was hidden due to no longer making sense after changes were made to the targeted character. If you're rewriting this character, feel free to delete it.</note>
+    </notes>
+    <nextId>4</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="9s_goron">Veran has attempted to goad 9S by likening him to a "stunted goron".</marker>
         <marker scope="Public" name="9s_upgrade">Veran comments on being an upgrade to Nayru</marker>
         <marker scope="Public" name="armorlose">Nayru asks an armored opponent to discard the armor. No need for everyone to be asked this individually.</marker>
@@ -81,7 +85,7 @@
         <marker scope="Public" name="pit_intro">Intro for Pit, sans Palutena</marker>
         <marker scope="Public" name="pit_pal" />
         <marker scope="Public" name="poss_draw">The first instance of drawing/swapping after the possession. Veran's first real line.</marker>
-        <marker scope="Private" name="poss_hand">The first hand while possessed. Prevents spam.</marker>
+        <marker scope="Public" name="poss_hand">The first hand while possessed. Prevents spam.</marker>
         <marker scope="Public" name="possess">prevents most null-possess markers down the road; set upon possession to allow for future case work</marker>
         <marker scope="Public" name="pretense">Nayru makes a comment during an early must_masturbate phase about how oracles are above such debasement.</marker>
         <marker scope="Public" name="rain" />

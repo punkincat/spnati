@@ -1,0 +1,156 @@
+.dialogue .mia[data-character="aqua_kh"] {
+    color: #086975;
+}
+
+.dark-mode .dialogue .mia[data-character="aqua_kh"] {
+    color: #78d8d3;
+}
+
+@font-face {
+    font-family: 'KHBBS';
+    src: url('epilogue/DFPW5_EUR.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ComicHearts';
+    src: url('epilogue/ComicHearts.woff') format("woff"),
+         url('epilogue/ComicHearts.woff2') format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.dialogue .example[data-character="aqua_kh"] {
+  /*This is an example style.*/
+  color: blue;
+}
+
+.dialogue .khtitle[data-character="aqua_kh"] {
+    color: black;
+    font-family: "KHBBS", "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 100%;
+    line-height: 0;
+}
+
+.dialogue-bubble[data-character="aqua_kh"][data-dialogue-styles~="no-bubble"] {
+    background: none;
+    color: white;
+    text-shadow: -2px -2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, 2px 2px 0 #000, 0 0 5px #000;
+    border: none;
+    font-family: "ComicHearts", "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 108%;
+    text-align: left;
+}
+
+.dialogue-bubble[data-character="aqua_kh"][data-dialogue-styles~="no-bubble"]::before {
+    content: none;
+}
+
+.dialogue-bubble[data-character="aqua_kh"][data-dialogue-styles~="epi-text"] {
+    background-image: linear-gradient(180deg, #FFB349, #FBBC64);
+    box-shadow: -6px -6px 0 #F8B75A, -6px 6px 0 #D29052, 6px -6px 0 #E09E54, 6px 6px 0 #E09E54;
+    border: none;
+    font-size: 105%;
+    text-align: left;
+	color: black;
+    opacity: 100%;
+    border-radius: 1.05rem;
+    min-height: 7rem;
+    justify-content: flex-start;
+}
+
+.dialogue-bubble[data-character="aqua_kh"][data-dialogue-styles~="epi-text"]::before {
+    background-image: linear-gradient(180deg, #FFB349, #FBBC64);
+    box-shadow: -6px -6px 0 #F8B75A, -6px 6px 0 #D29052, 6px -6px 0 #E09E54, 6px 6px 0 #E09E54;
+    opacity: 100%;
+    border-radius: 1px;
+    border-color: #E09E54;
+}
+
+.dialogue-bubble.arrow-left[data-character="aqua_kh"][data-dialogue-styles~="epi-text"]::before {
+    transform: translateY(-1rem) scaleY(0.6) rotate(135deg);
+}
+
+.dialogue-bubble.arrow-right[data-character="aqua_kh"][data-dialogue-styles~="epi-text"]::before {
+    transform: translateY(-1rem) scaleY(0.6) rotate(-45deg);
+}
+
+@keyframes aqua_kh-epilogue-bubble-fadein-nomove {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1.00;
+    }
+}
+
+.dialogue-bubble[data-character="aqua_kh"][data-dialogue-styles~="fadein-nomove"] {
+    animation-duration: 0.5s;
+    animation-name: aqua_kh-epilogue-bubble-fadein-nomove;
+}
+
+.dialogue-bubble[data-character="aqua_kh"][data-dialogue-styles~="slow"] {
+    animation-duration: 1.0s;
+}
+
+.dialogue-bubble[data-character="aqua_kh"][data-dialogue-styles~="slower"] {
+    animation-duration: 1.5s;
+}
+
+@keyframes aqua_kh-epilogue-sfx-right-1 {
+    from {
+        transform: rotate(7.5deg);
+        opacity: 1;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    60% {
+        transform: translate(2rem, -5rem) rotate(12.5deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(2rem, -5rem) rotate(12.5deg);
+        opacity: 0;
+    }
+}
+
+.dialogue-bubble[data-character="aqua_kh"][data-dialogue-styles~="sfx-right-1"] {
+    animation-duration: 2.25s;
+    animation-name: aqua_kh-epilogue-sfx-right-1;
+    animation-iteration-count: infinite;
+    font-size: 5.5rem;
+}
+
+@keyframes aqua_kh-epilogue-sfx-left-1 {
+    from {
+        transform: rotate(-7.5deg);
+        opacity: 1;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    60% {
+        transform: translate(-2rem, -5rem) rotate(-12.5deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-2rem, -5rem) rotate(-12.5deg);
+        opacity: 0;
+    }
+}
+
+.dialogue-bubble[data-character="aqua_kh"][data-dialogue-styles~="sfx-left-1"] {
+    animation-duration: 2.25s;
+    animation-name: aqua_kh-epilogue-sfx-left-1;
+    animation-iteration-count: infinite;
+    font-size: 5.5rem;
+}

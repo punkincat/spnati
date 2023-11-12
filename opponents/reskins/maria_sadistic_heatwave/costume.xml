@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>maria_sadistic_heatwave</id>
+    <label>Maria</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag from="0" to="0">blade</tag>
+        <tag remove="true">high_heels</tag>
+        <tag remove="true">lingerie</tag>
+        <tag remove="true">no_bra</tag>
+        <tag from="0" to="4">pubic_hair_peek</tag>
+        <tag>scantily-clad</tag>
+        <tag>summer_skin</tag>
+        <tag from="0" to="2">sunglasses</tag>
+        <tag from="0" to="4">swimwear</tag>
+        <tag from="0" to="0">weapon</tag>
+    </tags>
+    <layers>5</layers>
+    <folder>opponents/reskins/maria_sadistic_heatwave/</folder>
+    <folder stage="5">opponents/maria/</folder>
+    <wardrobe>
+        <clothing name="bottom" generic="swimsuit" position="lower" type="major" />
+        <clothing name="top" generic="swimsuit" position="upper" type="major" />
+        <clothing name="shades" position="head" type="extra" plural="true" />
+        <clothing name="sandals" generic="shoes" position="feet" type="minor" plural="true" />
+        <clothing name="knives" generic="weapon" position="legs" type="extra" plural="true" />
+    </wardrobe>
+
+</costume>

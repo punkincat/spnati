@@ -84,7 +84,7 @@ function Player (id) {
  * targetStartingLayers etc. adccording to wardrobe.
  *******************************************************************/
 Player.prototype.initClothingStatus = function () {
-    this.startingLayers = this.clothing.length;
+    this.startingLayers = this.countLayers();
     this.exposed = { upper: true, lower: true };
     for (var position in this.exposed) {
         if (this.clothing.some(function(c) {
@@ -119,6 +119,9 @@ Player.prototype.resetState = function () {
     this.saidDialogue = {};
     this.hand = null;
 
+    /** @type {{[tag: string]: {present: boolean, stage: number}}} */
+    this.tagModifications = {};
+
     if (this.xml !== null) {
         /* Initialize reaction handling state. */
         this.currentTarget = null;
@@ -145,6 +148,8 @@ Player.prototype.resetState = function () {
          */
         this.gender = appearance.gender;
         this.size = appearance.size;
+
+        this.stamina = Number(this.xml.children('timer').text());
 
         /* Clear the repeat log between games. */
         this.repeatLog = {};
@@ -259,25 +264,86 @@ Player.prototype.stageChangeUpdate = function () {
 }
 
 Player.prototype.addTag = function(tag) {
-    if (tag) this.baseTags.push(canonicalizeTag(tag));
+    if (tag) {
+        this.tagModifications[tag] = {present: true, stage: this.stage};
+        this.baseTags.push(canonicalizeTag(tag));
+    }
 }
 
 Player.prototype.removeTag = function(tag) {
     tag = canonicalizeTag(tag);
 
-    this.baseTags = this.baseTags.filter(function (t) {
-        if (typeof(t) === 'string') { return t !== tag };
-        if (!t.tag) return false;
-        return t.tag !== tag;
-    });
+    if (this.hasTag(tag)) {
+        this.tagModifications[tag] = {present: false, stage: this.stage};
+        this.baseTags = this.baseTags.filter(function (t) {
+            if (typeof(t) === 'string') { return t !== tag };
+            if (!t.tag) return false;
+            return t.tag !== tag;
+        });
+    }
 }
 
 Player.prototype.hasTag = function(tag) {
+    if (tag && tag[0] == "!") {
+        return !this.hasTag(tag.substring(1));
+    }
+
     return tag && this.tags && this.tags.indexOf(canonicalizeTag(tag)) >= 0;
 };
 
+
+Player.prototype.hasTags = function(tagAdv) {
+    var match = tagAdv.match(/^([^\&\|]*)(\&?)([^\&\|]*)(\|?)([^\&\|]*)(\&?)([^\&\|]*)\s*/);
+
+    if (!match)
+    {
+        return false;
+    }
+
+    var firstPart;
+
+    if (match[1] && match[3])
+    {
+        firstPart = this.hasTag(match[1]) && this.hasTag(match[3]);
+    }
+    else if (match[1])
+    {
+        firstPart = this.hasTag(match[1]);
+    }
+    else if (match[3])
+    {
+        firstPart = this.hasTag(match[3]);
+    }
+    else
+    {
+        firstPart = false;
+    }
+
+    if (firstPart){
+        return true;
+    }
+
+    if (match[5] && match[7])
+    {
+        return this.hasTag(match[5]) && this.hasTag(match[7]);
+    }
+    else if (match[5])
+    {
+        return this.hasTag(match[5]);
+    }
+    else if (match[7])
+    {
+        return this.hasTag(match[7]);
+    }
+    else
+    {
+        return false;
+    }
+
+}
+
 Player.prototype.countLayers = function() {
-    return this.clothing.length;
+    return this.clothing.countTrue(c => c.type != "skip");
 };
 
 Player.prototype.checkStatus = function(status) {
@@ -306,9 +372,11 @@ Player.prototype.checkStatus = function(status) {
     case STATUS_ALIVE:
         return !this.out;
     case STATUS_LOST_ALL:
-        return this.clothing.length == 0;
+        return this.countLayers() == 0;
     case STATUS_MASTURBATING:
         return this.out && !this.finished;
+    case STATUS_HEAVY_MASTURBATING:
+        return this.out && !this.finished && this.forfeit[0] === PLAYER_HEAVY_MASTURBATING;
     case STATUS_FINISHED:
         return this.finished;
     }
@@ -433,6 +501,38 @@ Player.prototype.inboundLinesFromSelected = function (filterStatus, cap) {
 }
 
 /**
+ * Given a pose name, resolve it to either a custom pose,
+ * a pose set, or an image file path.
+ * 
+ * If this function returns a string, it is a full image file path
+ * that is ready to be used as e.g. the `src` attribute for an `<img>` element.
+ * 
+ * @param {string} image 
+ * @param {number?} stage
+ * @returns {string | PoseDefinition | PoseSet}
+ */
+Player.prototype.resolvePoseName = function (image, stage) {
+    if (!image) {
+        return null;
+    }
+
+    if (stage === null || stage === undefined) {
+        stage = this.stage;
+    }
+
+    image = image.replace("#", stage);
+    if (image.startsWith("custom:") && this.poses) {
+        let key = image.substring(7);
+        return this.poses[key];
+    } else if (image.startsWith("set:") && this.poseSets) {
+        let key = image.substring(4);
+        return this.poseSets[key];
+    } else {
+        return getActualSpriteSrc(image, this, stage);
+    }
+}
+
+/**
  * Subclass of Player for AI-controlled players.
  *
  * @constructor
@@ -440,10 +540,12 @@ Player.prototype.inboundLinesFromSelected = function (filterStatus, cap) {
  * @param {string} id
  * @param {jQuery} $metaXml
  * @param {string} status
+ * @param {number} [rosterScore]
+ * @param {string} [addedDate]
  * @param {number} [releaseNumber]
  * @param {string} [highlightStatus]
  */
-function Opponent (id, metaFiles, status, releaseNumber, highlightStatus) {
+function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber, highlightStatus) {
     Player.call(this, id);
 
     this.id = id;
@@ -464,7 +566,9 @@ function Opponent (id, metaFiles, status, releaseNumber, highlightStatus) {
     this.label = this.selectLabel = this.metaLabel = $metaXml.children('label').text();
     this.gender = this.selectGender = this.metaGender = $metaXml.children('gender').text();
 
-    this.image = $metaXml.children('pic').text();
+    var picElem = $metaXml.children('pic');
+
+    this.image = picElem.text();
     this.height = $metaXml.children('height').text();
     this.source = $metaXml.children('from').text();
     this.artist = $metaXml.children('artist').text();
@@ -472,7 +576,8 @@ function Opponent (id, metaFiles, status, releaseNumber, highlightStatus) {
     this.description = fixupDialogue($metaXml.children('description').html());
     this.has_collectibles = $metaXml.children('has_collectibles').text() === "true";
     this.collectibles = null;
-    this.layers = parseInt($metaXml.children('layers').text(), 10);
+    this.layers = this.selectLayers = this.metaLayers = parseInt($metaXml.children('layers').text(), 10);
+    this.default_costume_name = $metaXml.children('default-costume-name').text();
     this.scale = Number($metaXml.children('scale').text()) || 100.0;
     this.release = releaseNumber;
     this.uniqueLineCount = parseInt($metaXml.children('lines').text(), 10) || undefined;
@@ -482,6 +587,24 @@ function Opponent (id, metaFiles, status, releaseNumber, highlightStatus) {
     this.fontSize = $metaXml.children('font-size').text();
     if (!['small', 'smaller'].includes(this.fontSize)) this.fontSize = undefined;
     this.lastUpdated = parseInt($metaXml.children('lastupdate').text(), 10) || 0;
+
+    /* For sorting purposes. 
+     * Simplifies diacritics (to solve the Pokemon problem), removes punctuation,
+     * removes some basic stop words (and, the, a, an), and also removes
+     * parentheticals.
+     */
+    this.normalizedSource = (this.source || "")
+        .simplifyDiacritics()
+        .replace(/\([^\)]+\)|\[[^\]]+\]|and\s|the\s|an?\s|[^a-zA-Z0-9]/gm, '');
+
+    this.normalizedSelectLabel = (this.selectLabel || "")
+        .simplifyDiacritics()
+        .replace(/[^a-zA-Z0-9]/gm, '');
+
+    this.rosterScore = rosterScore;
+    this.effectiveScore = -Infinity;
+
+    this.addedDate = addedDate;
 
     this.endings = null;
     if (EPILOGUES_ENABLED) {
@@ -502,6 +625,7 @@ function Opponent (id, metaFiles, status, releaseNumber, highlightStatus) {
     this.alt_costume = null;
     this.default_costume = null;
     this.poses = {};
+    this.poseSets = {};
     this.imageCache = {};
     this.labelOverridden = this.intelligenceOverridden = false;
     this.pendingCollectiblePopups = [];
@@ -510,6 +634,7 @@ function Opponent (id, metaFiles, status, releaseNumber, highlightStatus) {
 
     this.loaded = false;
     this.loadProgress = undefined;
+    this.selectInfo = null;
 
     /* originalTags stores tags that will be later used in resetState to build the
      * opponent's true tags list. It does not store implied tags.
@@ -525,6 +650,11 @@ function Opponent (id, metaFiles, status, releaseNumber, highlightStatus) {
         }
     }).get();
     this.searchTags = this.expandTagsList(this.originalTags.map(obj => obj.tag));
+	
+    this.magnetismTag = undefined;
+    this.searchTags.forEach((tag) => {
+        if (MAGNET_TAGS.indexOf(tag) >= 0) this.magnetismTag = tag;
+    });
 
     this.cases = new Map();
 
@@ -533,6 +663,11 @@ function Opponent (id, metaFiles, status, releaseNumber, highlightStatus) {
 
     this.alternate_costumes = [];
     this.selection_image = this.folder + this.image;
+    this.selection_image_adjustment = {
+        x: (Number(picElem.attr("x")) || 0), /* negative values move to the left, positive to the right */
+        y: (-Number(picElem.attr("y")) || 0), /* negative values move down, positive moves up */
+        scale: Number(picElem.attr("scale")) || 100.0,
+    };
 
     this.favorite = save.isCharacterFavorited(this);
 
@@ -600,6 +735,7 @@ function Opponent (id, metaFiles, status, releaseNumber, highlightStatus) {
                 'label': $(elem).attr('label') || this.selectLabel,
                 'set': set,
                 'status': status,
+                'layers': parseInt($(elem).attr('layers'), 10) || this.selectLayers,
             };
 
             if (set && DEFAULT_COSTUME_SETS.has(set)) {
@@ -705,10 +841,13 @@ Opponent.prototype.onSelected = function(individual) {
     updateSelectionVisuals();
 }
 
+/**
+ * Load this character's stylesheet normally (using a <link> element), if not already loaded.
+ */
 Opponent.prototype.loadStylesheet = function () {
-    // check for duplicate <link> elements:
+    /* check for duplicate <link> elements and hot-reloaded stylesheets: */
     if (this.stylesheet) {
-        if ($('link[href=\"'+this.stylesheet+'\"]').length === 0) {
+        if ($('link[href=\"'+this.stylesheet+'\"]').length === 0 && !this.liveStyleElem) {
             console.log("Loading stylesheet: "+this.stylesheet);
 
             var link_elem = $('<link />', {
@@ -719,6 +858,53 @@ Opponent.prototype.loadStylesheet = function () {
 
             $('head').append(link_elem);
         }
+    }
+}
+
+/**
+ * Reload a character's stylesheet from the origin.
+ * This is used when hot-reloading epilogues for debugging purposes.
+ * 
+ * Unlike the regular `loadStylesheet` method, this loads the contents of the character's
+ * stylesheet as an injected `<style>` element to circumvent caching and force a complete
+ * reload of all styling rules contained within the sheet.
+ * 
+ * Returns a promise that resolves when the new stylesheet has been fetched and injected into the page.
+ * 
+ * @returns {Promise<void>}
+ */
+Opponent.prototype.hotReloadStylesheet = function () {
+    this.unloadStylesheet();
+
+    if (!this.stylesheet) {
+        return immediatePromise();
+    }
+
+    return fetch(this.stylesheet, { method: "GET" }).then((resp) => {
+        if (resp.status < 200 || resp.status > 299) {
+            throw new Error("Fetching " + url + " failed with error " + resp.status + ": " + resp.statusText);
+        } else {
+            return resp.text();
+        }
+    }).then((styleContents) => {
+        this.liveStyleElem = document.createElement("style");
+        this.liveStyleElem.innerHTML = styleContents;
+        $("head").append(this.liveStyleElem);
+    });
+}
+
+/**
+ * Unloads this character's stylesheet from the page.
+ */
+Opponent.prototype.unloadStylesheet = function () {
+    if (this.stylesheet) {
+        /* Remove the <link> to this opponent's stylesheet. */
+        $('link[href=\"'+this.stylesheet+'\"]').remove();
+    }
+
+    if (this.liveStyleElem) {
+        $(this.liveStyleElem).remove();
+        this.liveStyleElem = null;
     }
 }
 
@@ -777,8 +963,10 @@ Opponent.prototype.updateFolder = function () {
 
     if (this.folder == this.base_folder) {
         this.poses = this.default_costume.poses;
+        this.poseSets = this.default_costume.poseSets;
     } else if (this.alt_costume) {
         this.poses = this.alt_costume.poses;
+        this.poseSets = this.alt_costume.poseSets;
     }
 }
 
@@ -828,12 +1016,22 @@ Opponent.prototype.selectAlternateCostume = function (costumeDesc) {
         this.selection_image = this.base_folder + this.image;
         this.selectLabel = this.metaLabel;
         this.selectGender = this.metaGender;
+        this.selectLayers = this.metaLayers;
     } else {
         this.selected_costume = costumeDesc.folder;
         this.selection_image = costumeDesc.folder + costumeDesc.image;
         this.selectLabel = costumeDesc.label;
         this.selectGender = costumeDesc.gender;
+        this.selectLayers = costumeDesc.layers;
     }
+
+    /* For sorting purposes. 
+     * Simplifies diacritics and removes punctuation.
+     */
+    this.normalizedSelectLabel = (this.selectLabel || "")
+        .simplifyDiacritics()
+        .replace(/[^a-zA-Z0-9]/gm, '');
+    
 
     if (this.selectionCard)
         this.selectionCard.update();
@@ -876,6 +1074,7 @@ Opponent.prototype.loadAlternateCostume = function () {
             wardrobe: $xml.children('wardrobe'),
             gender: $xml.children('gender').text() || this.selectGender,
             size: $xml.children('size').text() || this.default_costume.size,
+            layers: parseInt($xml.children('layers').text(), 10) || this.selectLayers,
         };
 
         var poses = $xml.children('poses');
@@ -886,7 +1085,18 @@ Opponent.prototype.loadAlternateCostume = function () {
             poseDefs[def.id] = def;
         }.bind(this));
 
+        var setElems = $xml.children('pose-sets');
+        var poseSets = {};
+        Object.assign(poseSets, this.default_costume.poseSets);
+        $(setElems).children("set").each(
+            (i, elem) => {
+                let parsed = PoseSet.parseXML(this, $(elem));
+                poseSets[parsed.id] = parsed;
+            }
+        );
+
         this.alt_costume.poses = poseDefs;
+        this.alt_costume.poseSets = poseSets;
 
         var costumeTags = this.default_costume.tags.slice();
         var tagMods = $xml.children('tags');
@@ -978,6 +1188,7 @@ Opponent.prototype.getAllEpilogueStatus = function () {
             requiredCharacters: null,
             characterIsMissing: false,
             hint: undefined,
+            description: undefined,
         };
 
         summary.unlocked = save.hasEnding(this.id, $elem.text());
@@ -1007,6 +1218,7 @@ Opponent.prototype.getAllEpilogueStatus = function () {
         }
 
         summary.hint = $elem.attr('hint');
+        summary.description = $elem.attr('description');
         summary.extraConditions = $elem.attr('markers') == 'true';
         summary.score = (summary.wrongGender ? 4 : 0)
             + (summary.characterIsMissing ? 2 : 0)
@@ -1110,12 +1322,11 @@ Opponent.prototype.unloadOpponent = function () {
         level: 'info'
     });
 
-    if (this.stylesheet) {
-        /* Remove the <link> to this opponent's stylesheet. */
-        $('link[href=\"'+this.stylesheet+'\"]').remove();
-    }
+    this.unloadStylesheet();
+    updateAllBehaviours(this.slot, null, [[OPPONENT_DESELECTED]]);
 
     this.slot = undefined;
+    this.selectInfo = null;
 }
 
 Opponent.prototype.fetchBehavior = function() {
@@ -1143,8 +1354,10 @@ Opponent.prototype.fetchBehavior = function() {
  * @returns {Promise<void>} A Promise that resolves after all loading is complete.
  * This includes calls to loadAlternateCostume() and onSelected().
  */
-Opponent.prototype.loadBehaviour = function (slot, individual) {
+Opponent.prototype.loadBehaviour = function (slot, individual, selectInfo) {
     this.slot = slot;
+    this.selectInfo = selectInfo;
+
     if (this.isLoaded()) {
         var p = null;
         
@@ -1182,7 +1395,6 @@ Opponent.prototype.loadBehaviour = function (slot, individual) {
             });
 
             this.xml = $xml;
-            this.stamina = Number($xml.children('timer').text());
             this.intelligences = $xml.children('intelligence');
 
             this.settings = $xml.find("behaviour>settings").map(function (index, elem) {
@@ -1206,7 +1418,17 @@ Opponent.prototype.loadBehaviour = function (slot, individual) {
                 poseDefs[def.id] = def;
             }.bind(this));
 
+            var setElems = $xml.children('pose-sets');
+            var poseSets = {};
+            $(setElems).children("set").each(
+                (i, elem) => {
+                    let parsed = PoseSet.parseXML(this, $(elem));
+                    poseSets[parsed.id] = parsed;
+                }
+            );
+
             this.default_costume.poses = poseDefs;
+            this.default_costume.poseSets = poseSets;
 
             /* Load forward-declarations for persistent markers. */
             $xml.find('persistent-markers>marker').each(function (i, elem) {
@@ -1278,13 +1500,19 @@ Opponent.prototype.recordTargetedCase = function (caseObj) {
 
     if (caseObj.target) entities.add(caseObj.target);
     if (caseObj.alsoPlaying) entities.add(caseObj.alsoPlaying);
-    if (caseObj.filter) entities.add(caseObj.filter);
+    if (caseObj.filter && caseObj.filter[0] !== "!") entities.add(caseObj.filter);
 
     caseObj.counters.forEach(function (ctr) {
         /* Conditions checking if a character/tag is not at the table don't count as targeted. */
-        if (ctr.count.max === 0) return;
-        if (ctr.id) entities.add(ctr.id);
-        if (ctr.tag) entities.add(ctr.tag);
+        if (ctr.id && ctr.count.max !== 0) entities.add(ctr.id);
+        if (ctr.tag) {
+            if (ctr.tag[0] !== "!" && ctr.count.max !== 0) {
+                entities.add(ctr.tag);
+            } else if (ctr.tag[0] === "!" && ctr.count.max === 0) {
+                /* (filter="!tag" and count: 0) implies checking if everyone has the given tag */
+                entities.add(ctr.tag.substring(1));
+            }
+        }
     });
 
     var lines = new Set();
@@ -1358,7 +1586,7 @@ Opponent.prototype.loadXMLTriggers = function () {
             }
 
             this.loadProgress = loadItemsCompleted / loadItemsTotal;
-            mainSelectDisplays[this.slot - 1].updateLoadPercentage(this);
+            mainSelectDisplays[this.slot - 1]?.updateLoadPercentage(this);
 
             setTimeout(process.bind(this), 10);
         }
@@ -1372,8 +1600,6 @@ Player.prototype.getImagesForStage = function (stage) {
 
     var poseSet = {};
     var imageSet = {};
-    var folder = this.folders ? this.getByStage(this.folders, stage === -1 ? 0 : stage) : this.folder;
-    var advPoses = this.poses;
     
     function processCase (c) {
         /* Skip cases requiring characters that aren't present. */
@@ -1417,16 +1643,17 @@ Player.prototype.getImagesForStage = function (stage) {
     /* Finally, transform the set of collected pose names into a
      * set of image file paths.
      */
-    Object.keys(poseSet).forEach(function (poseName) {
-        if (poseName.startsWith('custom:')) {
-            var actualStage = (stage > -1) ? stage : 0;
-            var key = poseName.split(':', 2)[1].replace('#', actualStage);
-            var pose = advPoses[key];
-            if (pose) pose.getUsedImages(actualStage).forEach(function (img) {
-                imageSet[img.replace('#', actualStage)] = true;
+    Object.keys(poseSet).forEach((poseName) => {
+        var actualStage = (stage > -1) ? stage : 0;
+        var resolved = this.resolvePoseName(poseName, actualStage);
+
+        if (!resolved) return;
+        if (resolved instanceof PoseSet || resolved instanceof PoseDefinition) {
+            resolved.getUsedImages(actualStage).forEach((img) => {
+                imageSet[img] = true;
             });
         } else {
-            imageSet[folder + poseName] = true;
+            imageSet[resolved] = true;
         }
     });
 
@@ -1508,6 +1735,184 @@ CharacterSettingsGroup.prototype.getAvailable = function () {
     return this.settings.filter((setting) => setting.isAvailable());
 }
 
+Player.prototype.populateDebugMarkers = function () {
+    /** @type {{[baseName: string]: {[oppId: string]: string | number}}} */
+    var resolvedMarkers = {};
+    var rawPersistentMarkers = save.getAllPersistentMarkers(this);
+    var unresolvedNames = new Set();
+
+    for (let key of Object.keys(this.markers ?? {})) {
+        unresolvedNames.add(key);
+    }
+
+    for (let key of Object.keys(rawPersistentMarkers)) {
+        unresolvedNames.add(key);
+    }
+
+    /* Match longer IDs before shorter ones, to account for opponents with IDs that are prefixes of each other.
+     * Also make sure to check for markers targeted towards the human player.
+     */
+    let allPlayers = loadedOpponents.slice();
+    allPlayers.push(players[0]);
+
+    for (let opp of allPlayers.sort((a, b) => b.id.length - a.id.length)) {
+        let markerPrefix = "__" + opp.id + "_";
+        let matchingMarkers = Array.from(unresolvedNames.entries()).map((entry) => entry[0]).filter((name) => name.startsWith(markerPrefix));
+
+        for (let name of matchingMarkers) {
+            let baseName = name.substring(markerPrefix.length);
+            let value = this.persistentMarkers[baseName] ? rawPersistentMarkers[name] : this.markers[name];
+            value ??= this.markers[name];
+
+            if (!resolvedMarkers[baseName]) resolvedMarkers[baseName] = {};
+            resolvedMarkers[baseName][opp.id] = value;
+
+            unresolvedNames.delete(name);
+        }
+    }
+
+    /* All remaining unresolved names are probably non-targeted markers. */
+    for (let name of unresolvedNames) {
+        let value = this.persistentMarkers[name] ? rawPersistentMarkers[name] : this.markers[name];
+        value ??= this.markers[name];
+
+        if (!resolvedMarkers[name]) resolvedMarkers[name] = {};
+        resolvedMarkers[name][""] = value;
+    }
+
+
+    var foundPersistentMarkers = false;
+    var foundRegularMarkers = false;
+
+    $("#debug-marker-listing-persistent").empty();
+    $("#debug-marker-listing-regular").empty();
+
+    /* Sort entries by base name. */
+    for (let basePair of Object.entries(resolvedMarkers).sort(
+        (a, b) => a[0] > b[0]
+    )) {
+        let baseName = basePair[0];
+
+        for (let idPair of Object.entries(basePair[1])) {
+            let container = $('<div>', {"class": "debug-marker-entry"});
+            container.append($('<span>', {"class": "debug-marker-basename", "text": baseName}));
+            
+            if (idPair[0] !== "") {
+                container.append($('<span>', {
+                    "class": "debug-marker-target-id",
+                    "text": idPair[0]
+                }));
+            }
+
+            if (idPair[1] === "") {
+                container.append($('<span>', {
+                    "class": "debug-marker-value empty-value",
+                    "text": "~blank~"
+                }));
+            } else if (!isNaN(parseInt(idPair[1], 10))) {
+                container.append($('<span>', {
+                    "class": "debug-marker-value",
+                    "text": idPair[1].toString()
+                }));
+            } else {
+                container.append($('<span>', {
+                    "class": "debug-marker-value",
+                    "text": '\"' + idPair[1].toString() + '\"'
+                }));
+            }
+
+            if (this.persistentMarkers[baseName]) {
+                $("#debug-marker-listing-persistent").append(container);
+                foundPersistentMarkers = true;
+            } else {
+                $("#debug-marker-listing-regular").append(container);
+                foundRegularMarkers = true;
+            }
+        }
+    }
+
+    if (foundPersistentMarkers) {
+        $("#debug-marker-column-persistent").show();
+    } else {
+        $("#debug-marker-column-persistent").hide();
+    }
+
+    if (foundRegularMarkers) {
+        $("#debug-marker-column-regular").show();
+    } else {
+        $("#debug-marker-column-regular").hide();
+    }
+
+    var statusIndicator = $("#debug-marker-header .debug-info-header-status");
+    var header = $("#debug-marker-header");
+    var container = $("#debug-marker-container");
+    
+    if (foundPersistentMarkers || foundRegularMarkers) {
+        container.show();
+        header.show();
+
+        let collapsed = false;
+        header.on("click", function () {
+            collapsed = !collapsed;
+            if (collapsed) {
+                statusIndicator.removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+                container.slideUp();
+            } else {
+                statusIndicator.removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+                container.slideDown();
+            }
+        })
+    } else {
+        container.hide();
+        header.hide();
+        header.off("click");
+    }
+}
+
+Player.prototype.populateDebugTags = function () {
+    $("#debug-tag-listing").empty();
+
+    for (let tag of this.tags) {
+        if (tag === this.id) continue;
+        if (this.alt_costume && tag === this.alt_costume.id) continue;
+
+        var entry = $('<div>', {"class": "debug-tag-entry"});
+        entry.append($('<span>', {"class": "debug-tag-name", "text": tag}));
+        
+        if (this.tagModifications[tag] && this.tagModifications[tag].present) {
+            entry.append($('<span>', {"class": "debug-tag-modified-stage", "text": "added in stage " + this.tagModifications[tag].stage}))
+                .prependTo("#debug-tag-listing");
+        } else {
+            entry.appendTo("#debug-tag-listing");
+        }
+    }
+
+    for (let tag of Object.keys(this.tagModifications)) {
+        if (!this.tagModifications[tag].present && !this.tags.includes(tag)) {
+            $('<div>', {"class": "debug-tag-entry"})
+                .append($('<span>', {"class": "debug-tag-name debug-tag-removed", "text": tag}))
+                .append($('<span>', {"class": "debug-tag-modified-stage", "text": "removed in stage " + this.tagModifications[tag].stage}))
+                .prependTo("#debug-tag-listing");
+        }
+    }
+
+    var statusIndicator = $("#debug-tag-header .debug-info-header-status");
+    var header = $("#debug-tag-header");
+    var container = $("#debug-tag-container");
+    
+    let collapsed = false;
+    header.on("click", function () {
+        collapsed = !collapsed;
+        if (collapsed) {
+            statusIndicator.removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+            container.slideUp();
+        } else {
+            statusIndicator.removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+            container.slideDown();
+        }
+    });
+}
+
 /**
  * 
  * @param {Player} player
@@ -1538,4 +1943,258 @@ CharacterSetting.parseXML = function (player, $xml) {
 
 CharacterSetting.prototype.isAvailable = function () {
     return this.tests.every((test) => test.evaluate(this.player, null, null));
+}
+
+/**
+ * 
+ * @param {Condition} condition
+ * @returns {string} 
+ */
+function formatConditionInfo(condition) {
+    let attributes = {
+        id: "character",
+        tag: "tag",
+        nottag: "not tag",
+        tagAdv: "tagAdv",
+        stage: "stage",
+        layers: "layers",
+        startingLayers: "starting layers",
+        gender: "gender",
+        status: "status",
+        timeInStage: "time in stage",
+        hand: "has hand",
+        consecutiveLosses: "consecutive losses",
+        saidMarker: "said marker",
+        sayingMarker: "saying marker",
+        notSaidMarker: "not said marker",
+        saying: "saying text",
+        said: "said text",
+        pose: "pose",
+        count: "count"
+    };
+
+    let attributeElems = Object.entries(attributes).filter(
+        (pair) => condition[pair[0]] !== undefined && condition[pair[0]] !== null
+    ).map(
+        (pair) => {
+            var value = condition[pair[0]];
+            var formattedValue = "";
+            if (value instanceof Interval) {
+                let hasMin = value.min !== null && !isNaN(value.min);
+                let hasMax = value.max !== null && !isNaN(value.max);
+                if (hasMin && hasMax) {
+                    formattedValue = value.toString();
+                } else if (!hasMin && hasMax) {
+                    formattedValue = "<= " + value.max;
+                } else if (hasMin && !hasMax) {
+                    formattedValue = value.min + "+";
+                } else {
+                    formattedValue = "any";
+                }
+            } else {
+                formattedValue = value.toString();
+            }
+
+            return $("<span>", {"class": "debug-case-condition-attribute"}).append(
+                $("<span>", {"class": "debug-case-condition-type", "text": pair[1]}),
+                $("<span>", {"class": "debug-case-condition-value", "text": formattedValue})
+            );
+        }
+    );
+
+    var role = condition.role ?? "any";
+    attributeElems.splice(0, 0, $("<span>", {"class": "debug-case-condition-role", "text": role.initCap()}));
+
+    return attributeElems;
+}
+
+function createDebugSectionRow(header, value) {
+    return $(
+        "<div>", {"class": "debug-section-row"}
+    ).append(
+        $("<div>", {"class": "debug-section-header", "text": header}),
+        $("<div>", {"class": "debug-section-value"}).append(value)
+    );
+}
+
+Player.prototype.populateDebugCaseInfo = function () {
+    if (!this.chosenState || !this.chosenState.parentCase) {
+        $("#debug-case-info-container").hide();
+        return;
+    }
+
+    var chosenCase = this.chosenState.parentCase;
+    var caseTypeDisplay = [
+        $("<span>", {"class": "debug-case-type", "text": chosenCase.trigger}),
+        ", priority ",
+        $("<span>", {
+            "class": "debug-case-priority",
+            "text": ((chosenCase.customPriority !== undefined) ? "*" : "") + chosenCase.priority.toString()
+        })
+    ];
+
+    var caseStageDisplay = $(
+        "<span>",
+        {"class": "debug-case-stage", "text": chosenCase.stage.toString()}
+    )
+
+    var listing = $("#debug-case-info-listing");
+    listing.empty().append(
+        createDebugSectionRow("Type", caseTypeDisplay),
+        createDebugSectionRow("Stages", caseStageDisplay),
+        chosenCase.counters.map(
+            (condition) => createDebugSectionRow("Condition", formatConditionInfo(condition))
+        )
+    );
+
+    for (let test of chosenCase.tests) {
+        let cmp = test.cmp || "==";
+        let value = test.value || "";
+        
+        if (!isNaN(parseInt(value, 10))) {
+            value = parseInt(value, 10).toString();
+        } else {
+            value = '\"' + value + '\"';
+        }
+
+        listing.append(
+            createDebugSectionRow("Test", $("<span>", {"class": "debug-case-test", "text": test.expr + " " + cmp + " " + value}))
+        );
+    }
+
+    var setsMarkers = this.chosenState.markers.map(
+        (marker) => {
+            let formatted = marker.name;
+            if (marker.perTarget) formatted += "*";
+            
+            if (marker.op == "=") {
+                formatted += " = ";
+            } else {
+                formatted += " " + marker.op + "= ";
+            }
+
+            formatted += marker.rhs;
+            return formatted;
+        }
+    ).join(", ");
+
+    if (setsMarkers) {
+        createDebugSectionRow("Sets Markers", $(
+            "<span>",
+            {"class": "debug-case-markers", "text": setsMarkers}
+        )).appendTo(listing);
+    }
+
+    var formattedPose = this.chosenState.image ? (
+        this.chosenState.image.replace(/\.(?:jpe?g|png|gif)$/i, "").replace("#", this.stage)
+    ) : "<none>";
+
+    createDebugSectionRow("Pose", $(
+        "<span>",
+        {"class": "debug-case-pose", "text": formattedPose}
+    )).appendTo(listing);
+
+    var header = $("#debug-case-info-header");
+    var container = $("#debug-case-info-container");
+    var statusIndicator = $("#debug-case-info-header .debug-info-header-status");
+    
+    let collapsed = false;
+    header.on("click", function () {
+        collapsed = !collapsed;
+        if (collapsed) {
+            statusIndicator.removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+            container.slideUp();
+        } else {
+            statusIndicator.removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+            container.slideDown();
+        }
+    }).show();
+    container.show();
+}
+
+Player.prototype.populateDebugStatusInfo = function () {
+    /* Statuses not listed here can be easily inferred. */
+    var clothingStatusNames = {
+        "mostly_clothed": "lost only accessories",
+        "decent": "still covered by major articles",
+        "chest_visible": "chest visible",
+        "crotch_visible": "crotch visible",
+        "topless": "topless (not naked)",
+        "bottomless": "bottomless (not naked)",
+        "naked": "naked (fully exposed)",
+    };
+
+    var stageName = "";
+    if (this.stage == 0) {
+        stageName = "Fully Clothed";
+    } else if (this.finished) {
+        stageName = "Finished";
+    } else if (this.out) {
+        stageName = "Masturbating";
+    } else {
+        stageName = "Lost " + this.removedClothing.name.initCap();
+    }
+
+    var applicableStatusFlags = Object.entries(clothingStatusNames).filter(
+        (pair) => this.checkStatus(pair[0])
+    ).map(
+        (pair) => pair[1]
+    ).join(", ");
+
+    var listing = $("#debug-character-status-listing");
+    listing.empty().append(
+        createDebugSectionRow("Stage", this.stage + " (" + stageName + ")"),
+        createDebugSectionRow("Time in Stage", this.timeInStage + " (" + this.ticksInStage + " ticks)"),
+        createDebugSectionRow("AI", this.intelligence.initCap()),
+        createDebugSectionRow("Biggest Lead", this.biggestLead)
+    );
+
+    if (applicableStatusFlags) {
+        createDebugSectionRow("Clothing Status", applicableStatusFlags.initCap()).appendTo(listing);
+    }
+
+    if (this.out) {
+        createDebugSectionRow("Out Order", this.outOrder).appendTo(listing);
+        
+        if (this.finishingTarget && this.finishingTarget !== this) {
+            createDebugSectionRow("Finish Redirect Target", this.finishingTarget.id + " (slot " + this.finishingTarget.slot + ")").appendTo(listing);
+        }
+    }
+
+    if (this.out && !this.finished) {
+        createDebugSectionRow(
+            "Timer", this.timer + (this.forfeit[0] === PLAYER_HEAVY_MASTURBATING ? " (heavy)" : "")
+        ).appendTo(listing);
+    } else if (!this.out) {
+        createDebugSectionRow("Stamina", this.stamina).appendTo(listing);
+        createDebugSectionRow("Consec. Losses", this.consecutiveLosses).appendTo(listing);
+    }
+
+    var header = $("#debug-character-status-header");
+    var container = $("#debug-character-status-container");
+    var statusIndicator = $("#debug-character-status-header .debug-info-header-status");
+    
+    let collapsed = false;
+    header.on("click", function () {
+        collapsed = !collapsed;
+        if (collapsed) {
+            statusIndicator.removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+            container.slideUp();
+        } else {
+            statusIndicator.removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+            container.slideDown();
+        }
+    }).show();
+    container.show();
+}
+
+Player.prototype.showDebugModal = function() {
+    $("#debug-info-current-character").text(this.id.replace(/_/g, ' ').initCap());
+
+    this.populateDebugStatusInfo();
+    this.populateDebugCaseInfo();
+    this.populateDebugMarkers();
+    this.populateDebugTags();
+
+    $characterDebugModal.modal("show");
 }

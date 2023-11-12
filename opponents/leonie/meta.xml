@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1661226224734</lastupdate>
+    <lastupdate>1697515971827</lastupdate>
     <enabled>false</enabled>
     <first>Leonie</first>
     <last>Pinelli</last>
@@ -13,12 +13,14 @@
     <description>Leonie is a student of the Officers Academy who hails from the Leicester Alliance, and is thus a member of the Golden Deer house. She is a hunter's daughter from the village of Sauin, and wishes to become a mercenary like Jeralt, the 'Blade Breaker'. Competitive and emotionally honest, Leonie doesn't hold back.</description>
     <epilogue status="unlisted" gender="male" img="epilogue/Field Afternoon.png" hint="Finish a game against Leonie as a male player">Training Session</epilogue>
     <layers>7</layers>
+    <default-costume-name>Academy Uniform</default-costume-name>
     <alternates>
         <costume folder="opponents/reskins/leonie_war_outfit/" img="0-calm.png" status="online" label="Leonie">War Outfit</costume>
+        <costume folder="opponents/reskins/leonie_maid/" img="0-calm.png" status="unlisted" label="Leonie">Maid Uniform</costume>
         <costume folder="opponents/reskins/leonie_relentless_rays/" img="0-calm.png" set="summer" label="Leonie">Relentless Rays</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>2263</lines>
-    <poses>183</poses>
+    <lines>2313</lines>
+    <poses>222</poses>
     <age />
 </opponent>

@@ -5,12 +5,15 @@ var SPECIAL_CASE_NAMES = {
     "9s": "9S",
     "ae86": "AE86",
     "alice_mgq": "Alice (MGQ)",
+    "aqua_kh": "Aqua (KH)",
+    "aqua_konosuba": "Aqua (KonoSuba)",
     "d.va": "D.Va",
     "frisk_and_friends": "Frisk",
     "hatsune_miku": "Miku",
     "hk416": "HK416",
     "kool-aid": "Kool-Aid Man",
     "larachel": "L'Arachel",
+    "mia_golden_sun": "Mia (Golden Sun)",
     "miki_miura": "Miki",
     "mom_alola": "Mom (Alola)",
     "ms.fortune": "Ms. Fortune",
@@ -25,21 +28,34 @@ var SPECIAL_CASE_NAMES = {
     "sandy_cheeks": "Sandy",
     "sannytess": "Sanny & Tess",
     "scm": "Suction Cup Man",
+    "tea_gardner": "Téa",
+    "toru_hagakure": "Toru",
     "uravity": "Ochako", // nmasp, wtf?
     "wiifitfemale": "Wii Fit Trainer",
     "yshtola": "Y'shtola",
     "yuna_ffx": "Yuna (FFX)",
     "yuno_uno": "Yuno",
-        
+
+    // disambiguation
+    "alice": "Alice Liddell",
+    "amy": "Amy (DDLC)",
+    "annie": "Annie Edison",
+    "mia": "Mia Fey",
+    "mari": "Mari (OMORI)",
+    "penny": "Penny (Stardew Valley)",
+    "roll": "Roll Light",
+    "saki": "Saki Yoshida",
+
     // classic opponents
     "amy_rose_classic": "Amy Rose",
     "dawn_classic": "Dawn",
-    "penny_classic": "Penny",
+    "kyoko": "Kyoko Kirigiri",
+    "penny_classic": "Penny (Stardew Valley)",
     "ryuko_classic": "Ryuko",
     "shantae_classic": "Shantae",
     "sheena_classic": "Sheena",
     "velma_classic": "Velma",
-    
+
     // newer opponents
     "asuna_yuuki": "Asuna",
     "blake_belladonna": "Blake",

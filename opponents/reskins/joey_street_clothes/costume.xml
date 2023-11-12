@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>joey_street_clothes</id>
+    <label>Joey</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>black_hair</tag>
+        <tag remove="true">blue_hair</tag>
+        <tag remove="true">bottomless_first</tag>
+        <tag remove="true">clown</tag>
+        <tag remove="true">exotic_hair</tag>
+        <tag remove="true">hat</tag>
+        <tag remove="true">makeup</tag>
+        <tag>pubic_hair</tag>
+        <tag remove="true">shaved</tag>
+        <tag remove="true">shimapan</tag>
+        <tag>trimmed</tag>
+        <tag remove="true">uses_toy</tag>
+    </tags>
+    <folder>opponents/reskins/joey_street_clothes/</folder>
+    <wardrobe>
+        <clothing name="panties" position="lower" type="important" plural="true" />
+        <clothing name="bra" generic="bra" position="upper" type="important" />
+        <clothing name="pants" generic="pants" position="lower" type="major" plural="true" />
+        <clothing name="shirt" generic="shirt" position="upper" type="major" />
+        <clothing name="shoes" generic="shoes" position="feet" type="extra" plural="true" />
+        <clothing name="sweater" generic="sweater" position="upper" type="minor" />
+    </wardrobe>
+
+</costume>

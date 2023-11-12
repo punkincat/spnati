@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -381,6 +381,12 @@
     <Compile Include="Controls\EditControls\RectControl.Designer.cs">
       <DependentUpon>RectControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\EditControls\TagAdvControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EditControls\TagAdvControl.Designer.cs">
+      <DependentUpon>TagAdvControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\EditControls\VariableControls\BackgroundTagControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -518,12 +524,6 @@
     </Compile>
     <Compile Include="Controls\IntervalSlider.Designer.cs">
       <DependentUpon>IntervalSlider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\LineImportControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\LineImportControl.Designer.cs">
-      <DependentUpon>LineImportControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\LiveEpilogueEditor.cs">
       <SubType>UserControl</SubType>
@@ -806,6 +806,7 @@
     <Compile Include="DataSlicers\OneShotSlicer.cs" />
     <Compile Include="DataSlicers\StageSlicer.cs" />
     <Compile Include="DataStructures\BackgroundDatabase.cs" />
+    <Compile Include="DataStructures\Banter.cs" />
     <Compile Include="DataStructures\BindableTag.cs" />
     <Compile Include="DataStructures\BindableTagList.cs" />
     <Compile Include="DataStructures\CardDecks.cs" />
@@ -1146,6 +1147,10 @@
     <Compile Include="ImagePipeline\Nodes\CellNode.cs" />
     <Compile Include="ImagePipeline\Nodes\CellReferenceNode.cs" />
     <Compile Include="ImagePipeline\Nodes\ChannelMixerNode.cs" />
+    <Compile Include="ImagePipeline\Nodes\ArithmeticNode.cs" />
+    <Compile Include="ImagePipeline\Nodes\SubstringNode.cs" />
+    <Compile Include="ImagePipeline\Nodes\CompareNode.cs" />
+    <Compile Include="ImagePipeline\Nodes\ConcatenateNode.cs" />
     <Compile Include="ImagePipeline\Nodes\ColorMaskNode.cs" />
     <Compile Include="ImagePipeline\Nodes\ColorNode.cs" />
     <Compile Include="ImagePipeline\Nodes\CommentNode.cs" />
@@ -1658,6 +1663,9 @@
     <EmbeddedResource Include="Controls\EditControls\RectControl.resx">
       <DependentUpon>RectControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditControls\TagAdvControl.resx">
+      <DependentUpon>TagAdvControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\EditControls\VariableControls\BackgroundTagControl.resx">
       <DependentUpon>BackgroundTagControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -1754,9 +1762,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\KeyboardDataGridView.resx">
       <DependentUpon>KeyboardDataGridView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\LineImportControl.resx">
-      <DependentUpon>LineImportControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\LiveEpilogueEditor.resx">
       <DependentUpon>LiveEpilogueEditor.cs</DependentUpon>
@@ -2195,6 +2200,30 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\StageCode.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VersionHistory\v6.8.3.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VersionHistory\v6.8.2.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VersionHistory\v6.8.1.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VersionHistory\v6.8.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VersionHistory\v6.7.9.2.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VersionHistory\v6.7.9.1.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VersionHistory\v6.7.9.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VersionHistory\v6.7.8.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="VersionHistory\v6.7.7.html">

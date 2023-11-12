@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>yshtola_forgiven_scion</id>
+    <label>Y'shtola</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag from="1" to="10">amber_eyes</tag>
+        <tag remove="true">animal_ears</tag>
+        <tag from="1" to="10">black_sclera</tag>
+        <tag from="1" to="3">clothing_destruction</tag>
+        <tag from="5" to="10">clothing_destruction</tag>
+        <tag>confident</tag>
+        <tag>creepy</tag>
+        <tag remove="true">enf</tag>
+        <tag from="1" to="10">exotic_eyes</tag>
+        <tag remove="true">fancy</tag>
+        <tag>furry</tag>
+        <tag>halloween_skin</tag>
+        <tag remove="true">jewelry</tag>
+        <tag>monster</tag>
+        <tag>no_bra</tag>
+        <tag remove="true">olive-skinned</tag>
+        <tag remove="true">pale_eyes</tag>
+        <tag from="2" to="6">thong</tag>
+        <tag>unusual_skin</tag>
+    </tags>
+    <folder>opponents/reskins/yshtola_forgiven_scion/</folder>
+    <wardrobe>
+        <clothing name="shreds" position="upper" type="important" plural="true" />
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="collar" generic="collar" position="neck" type="minor" />
+        <clothing name="diadem" generic="hair decoration" position="head" type="extra" />
+        <clothing name="manacles" position="feet" type="extra" plural="true" />
+        <clothing name="shackles" position="arms" type="extra" plural="true" />
+        <clothing name="robe" position="both" type="major" />
+        <clothing name="blindfold" generic="wrappings" position="head" type="minor" />
+    </wardrobe>
+
+</costume>

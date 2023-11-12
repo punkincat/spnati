@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using System;
 using System.Text.RegularExpressions;
@@ -11,7 +11,7 @@ namespace SPNATI_Character_Editor
 		public MarkerConditionControl()
 		{
 			InitializeComponent();
-			cboOperator.DataSource = ExpressionTest.Operators;
+			cboOperator.DataSource = ExpressionTest.OperatorsWithRange;
 			recField.RecordType = typeof(Marker);
 		}
 
@@ -91,7 +91,7 @@ namespace SPNATI_Character_Editor
 		private void ApplyValue(string dataValue)
 		{
 			dataValue = dataValue ?? "";
-			string pattern = @"^([-\w\.]+)(\*?)(\s*(\<|\>|\<\=|\>\=|\<\=|\=\=|!\=?)\s*([-\w]+|~[-\w]+~))?$";
+			string pattern = @"^([-\w\.]+)(\*?)(\s*(\<|\>|\<\=|\>\=|\=\=|!\=|\=|!\@|\@)?\s*([-\w]+|~[-\w]+~))?$";
 			Regex regex = new Regex(pattern);
 			Match match = regex.Match(dataValue);
 			if (match.Success)

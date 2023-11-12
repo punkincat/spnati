@@ -10,6 +10,42 @@ namespace KisekaeImporter
 			get { return GetSubCode<KisekaeBodyShape>("ca"); }
 			set { SetSubCode("ca", value); }
 		}
+		[KisekaeSubCode("cc")]
+		public KisekaeArmSize ArmSize
+		{
+			get { return GetSubCode<KisekaeArmSize>("cc"); }
+			set { SetSubCode("cc", value); }
+		}
+		[KisekaeSubCode("cd")]
+		public KisekaeHandSize HandSize
+		{
+			get { return GetSubCode<KisekaeHandSize>("cd"); }
+			set { SetSubCode("cd", value); }
+		}
+		[KisekaeSubCode("ce")]
+		public KisekaeUpperArmSize UpperArmSize
+		{
+			get { return GetSubCode<KisekaeUpperArmSize>("ce"); }
+			set { SetSubCode("ce", value); }
+		}
+		[KisekaeSubCode("cf")]
+		public KisekaeThighSize ThighSize
+		{
+			get { return GetSubCode<KisekaeThighSize>("cf"); }
+			set { SetSubCode("cf", value); }
+		}
+		[KisekaeSubCode("cg")]
+		public KisekaeLegSize LegSize
+		{
+			get { return GetSubCode<KisekaeLegSize>("cg"); }
+			set { SetSubCode("cg", value); }
+		}
+		[KisekaeSubCode("ch")]
+		public KisekaeFootSize FootSize
+		{
+			get { return GetSubCode<KisekaeFootSize>("ch"); }
+			set { SetSubCode("ch", value); }
+		}
 		[KisekaeSubCode("da")]
 		public KisekaeSkin Skin
 		{

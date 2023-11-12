@@ -50,47 +50,6 @@ namespace SPNATI_Character_Editor.Charts.Builders
 							targets.Add(target);
 						}
 					}
-
-					if (!string.IsNullOrEmpty(stageCase.Target))
-					{
-						if (!targets.Contains(stageCase.Target) && CharacterDatabase.Exists(stageCase.Target))
-						{
-							Tuple<int, int> current;
-							if (!targetMap.TryGetValue(stageCase.Target, out current))
-								current = new Tuple<int, int>(0, 0);
-							targetMap[stageCase.Target] = new Tuple<int, int>(current.Item1 + 1, current.Item2);
-							targets.Add(stageCase.Target);
-						}
-					}
-					else if (!string.IsNullOrEmpty(stageCase.Filter))
-					{
-						HashSet<Character> taggedCharacters;
-						if (tagMap.TryGetValue(stageCase.Filter.ToLower(), out taggedCharacters))
-						{
-							foreach (Character character in taggedCharacters)
-							{
-								if (!tagTargets.Contains(character.FolderName))
-								{
-									Tuple<int, int> current;
-									if (!targetMap.TryGetValue(character.FolderName, out current))
-										current = new Tuple<int, int>(0, 0);
-									targetMap[character.FolderName] = new Tuple<int, int>(current.Item1, current.Item2 + 1);
-									tagTargets.Add(character.FolderName);
-								}
-							}
-						}
-					}
-					if (!string.IsNullOrEmpty(stageCase.AlsoPlaying) && CharacterDatabase.Exists(stageCase.AlsoPlaying))
-					{
-						if (!targets.Contains(stageCase.AlsoPlaying))
-						{
-							Tuple<int, int> current;
-							if (!targetMap.TryGetValue(stageCase.AlsoPlaying, out current))
-								current = new Tuple<int, int>(0, 0);
-							targetMap[stageCase.AlsoPlaying] = new Tuple<int, int>(current.Item1 + 1, current.Item2);
-							targets.Add(stageCase.AlsoPlaying);
-						}
-					}
 				}
 			}
 

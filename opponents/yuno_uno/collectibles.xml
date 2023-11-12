@@ -11,8 +11,16 @@
     <collectible id="yuno_deck" status="online" img="img/cards/yunoLastCard/deckback.jpg" thumbnail="img/cards/yunoLastCard/deckback.jpg">
         <title>Yuno's Deck Style</title>
         <subtitle>A game of colors and numbers!</subtitle>
-        <text>A deck of poker cards that use colors instead of suits. Unlocks the "Last Card" deck style.</text>
+        <text>A deck of poker cards that use colors instead of suits. Unlocks the "Last Card" deck style, accessible through the Card Decks menu in the Collectibles screen.</text>
         <unlock>Finish a game against Yuno Katsugo.</unlock>
+        <counter>1</counter>
+    </collectible>
+    <collectible id="yuno_mariS_collectible" img="opponents/yuno_uno/setogaya/bubbles_calm.png" thumbnail="opponents/yuno_uno/setogaya/setogaya_collectible.jpg">
+        <title>Yuno's Lucky Seven</title>
+        <subtitle>The best head you could ask for</subtitle>
+        <text>When a redhead succubus asks you if you wanna get your dick sucked, you should probably give it a go. Looks like Yuno left this card behind after the fact.</text>
+        <unlock>To see a special dual forfeit interaction, play against Yuno and Mari Setogaya - putting them next to each other - and get lucky enough to see her offer to give him... the big succ.</unlock>
+        <hide-details>true</hide-details>
         <counter>1</counter>
     </collectible>
 </collectibles>

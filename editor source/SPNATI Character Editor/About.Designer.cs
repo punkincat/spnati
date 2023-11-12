@@ -32,6 +32,7 @@
             this.lblVersion = new Desktop.Skinning.SkinnedLabel();
             this.skinnedPanel1 = new Desktop.Skinning.SkinnedPanel();
             this.lblAuthors = new Desktop.Skinning.SkinnedLabel();
+            this.lblAuthors2 = new Desktop.Skinning.SkinnedLabel();
             this.skinnedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             // 
             this.skinnedPanel1.Controls.Add(this.cmdOK);
             this.skinnedPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.skinnedPanel1.Location = new System.Drawing.Point(0, 85);
+            this.skinnedPanel1.Location = new System.Drawing.Point(0, 106);
             this.skinnedPanel1.Name = "skinnedPanel1";
             this.skinnedPanel1.PanelType = Desktop.Skinning.SkinnedBackgroundType.PrimaryDark;
             this.skinnedPanel1.Size = new System.Drawing.Size(284, 30);
@@ -82,17 +83,31 @@
             this.lblAuthors.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
             this.lblAuthors.Location = new System.Drawing.Point(14, 61);
             this.lblAuthors.Name = "lblAuthors";
-            this.lblAuthors.Size = new System.Drawing.Size(217, 13);
+            this.lblAuthors.Size = new System.Drawing.Size(219, 13);
             this.lblAuthors.TabIndex = 3;
-            this.lblAuthors.Text = "by spnati_edit, ReformCopyright, and Kobrad";
+            this.lblAuthors.Text = "by spnati_edit, Kobrad, FarawayVision, Erion,";
+            // 
+            // lblAuthors2
+            // 
+            this.lblAuthors2.AutoSize = true;
+            this.lblAuthors2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblAuthors2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblAuthors2.Highlight = Desktop.Skinning.SkinnedHighlight.Normal;
+            this.lblAuthors2.Level = Desktop.Skinning.SkinnedLabelLevel.Normal;
+            this.lblAuthors2.Location = new System.Drawing.Point(13, 76);
+            this.lblAuthors2.Name = "lblAuthors2";
+            this.lblAuthors2.Size = new System.Drawing.Size(206, 13);
+            this.lblAuthors2.TabIndex = 4;
+            this.lblAuthors2.Text = "MyMainAccIsANord, and ReformCopyright";
             // 
             // About
             // 
             this.AcceptButton = this.cmdOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 115);
+            this.ClientSize = new System.Drawing.Size(284, 136);
             this.ControlBox = false;
+            this.Controls.Add(this.lblAuthors2);
             this.Controls.Add(this.lblAuthors);
             this.Controls.Add(this.skinnedPanel1);
             this.Controls.Add(this.lblVersion);
@@ -113,5 +128,6 @@
 		private Desktop.Skinning.SkinnedLabel lblVersion;
 		private Desktop.Skinning.SkinnedPanel skinnedPanel1;
         private Desktop.Skinning.SkinnedLabel lblAuthors;
+        private Desktop.Skinning.SkinnedLabel lblAuthors2;
     }
 }

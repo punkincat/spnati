@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using System;
 using System.Collections.Generic;
@@ -37,6 +37,12 @@ namespace SPNATI_Character_Editor
 
 		private bool FilterPrivateMarkers(IRecord record)
 		{
+			TargetCondition condition = Data as TargetCondition;
+			if (condition != null && condition.Role == "self")
+			{
+				return true;
+			}
+
 			Marker marker = record as Marker;
 			return marker.Scope == MarkerScope.Public;
 		}

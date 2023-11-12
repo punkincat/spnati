@@ -15,7 +15,7 @@ namespace SPNATI_Character_Editor
 {
 	public class KisekaeOnlineConverter : IKisekaeConverter
 	{
-		private ImageImporter _importer = new ImageImporter(false);
+		private ImageImporter _importer;
 		private Timer _timer;
 		private HttpClient _httpClient = new HttpClient();
 		private Dictionary<int, Image> _rawCache = new Dictionary<int, Image>();
@@ -25,6 +25,15 @@ namespace SPNATI_Character_Editor
 			_timer = new Timer(10000);
 			_timer.Elapsed += _timer_Elapsed;
 			_timer.Start();
+			if (Config.ConfigPath == "CEFolder")
+			{
+				_importer = new ImageImporter(false, Config.ConfigDirectory);
+			}
+			else
+			{
+				_importer = new ImageImporter(false);
+			}
+
 		}
 
 		public void WarmUp()

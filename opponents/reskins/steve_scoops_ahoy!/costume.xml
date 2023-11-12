@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>steve_scoops_ahoy!</id>
+    <label>Steve</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag from="0" to="2">hat</tag>
+        <tag remove="true">sunglasses</tag>
+        <tag from="4" to="5">visible_bulge</tag>
+    </tags>
+    <folder>opponents/reskins/steve_scoops_ahoy!/</folder>
+    <folder stage="5">opponents/steve/</folder>
+    <wardrobe>
+        <clothing name="underwear" generic="underwear" position="lower" type="important" />
+        <clothing name="shirt" generic="shirt" position="upper" type="major" />
+        <clothing name="shorts" generic="pants" position="lower" type="major" plural="true" />
+        <clothing name="hat" generic="hat" position="head" type="extra" plural="true" />
+        <clothing name="sailor shirt" generic="shirt" position="upper" type="minor" />
+        <clothing name="shoes" generic="shoes" position="feet" type="extra" plural="true" />
+    </wardrobe>
+
+</costume>

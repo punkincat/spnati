@@ -37,7 +37,6 @@ body {
     background-color: #050505;
     font-size: 1.4em;
     font-family: 'Open Sans', "Trebuchet MS", Helvetica, sans-serif;
-    background-image: url("../img/backgrounds/inventory.png");
     background-size: contain;
     /* Sensible initial value */
     background-position: center center;
@@ -52,7 +51,7 @@ input,
 textarea,
 select {
     pointer-events: auto;
-    touch-action: none;
+    touch-action: pan-y;
 }
 
 button>* {
@@ -154,6 +153,10 @@ h6,
     padding: 0.6rem 1.2rem;
 }
 
+input[type=search]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+}
+
 /************************************************************
  * Global style classes.
  ************************************************************/
@@ -238,6 +241,93 @@ h6,
 .hide-table-button {
     z-index: 1000;
 }
+
+/**************************************************
+ * Background / foreground positioning.
+ **************************************************/
+
+.bg-image-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.bg-image {
+    position: absolute;
+    height: 75vw;
+    max-height: 100vh;
+    width: calc((100% - 133.33vh) / 2);
+    background-repeat: repeat-x;
+}
+
+.bg-image.center {
+    width: 100vw;
+    max-width: 133.33vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-position-x: center;
+}
+
+.bg-image.left {
+    left: 0;
+    background-position-x: right;
+}
+
+.bg-image.right {
+    right: 0;
+    background-position-x: left;
+}
+
+.bg-image.whole {
+    max-height: none;
+    max-width: none;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+}
+
+/* Default background image prior to loading backgrounds.xml */
+#bg-back .whole {
+    background-image: url("../img/backgrounds/inventory.png");
+}
+
+/* Hide left- and right-anchored background layers on narrow screens. */
+@media (max-aspect-ratio: 3/2) {
+    .bg-image.left, .bg-image.right {
+        display: none;
+    }
+}
+
+/* From bottom to top:
+ * - Background layers
+ * - Screens with characters (title screen, game screen, main select screen, group select screen)
+ * - Foreground layers
+ * - Other screens
+ * - Modals
+ */
+
+.screen-container, .wide-screen-container, #epilogue-screen {
+    z-index: 3;
+}
+
+#title-screen, #main-select-screen, #group-select-screen, #game-screen {
+    z-index: 1;
+}
+
+#bg-back {
+    z-index: 0;
+}
+
+#bg-front {
+    z-index: 2;
+}
+
 
 /**************************************************
  * Positions
@@ -1155,14 +1245,6 @@ ul.dropdown-menu>li {
  * Classes for Developer Mode.
  ************************************************************/
 
-#game-dev-export-button {
-    display: none;
-}
-
-.dev-mode #game-dev-export-button {
-    display: inline-flex;
-}
-
 .dev-select-button {
     position: absolute;
     right: 20%;
@@ -1260,12 +1342,6 @@ ul.dropdown-menu>li {
     text-align: left;
 }
 
-#export-edit-log {
-    font-family: monospace;
-    font-size: 1.45rem;
-    cursor: text;
-}
-
 .screen .dialogue-bubble.under {
     z-index: -1000;
 }
@@ -1313,6 +1389,137 @@ ul.dropdown-menu>li {
 .dev-mode .edit-options-row {
     display: flex;
 }
+
+/************************************************************
+ * Classes for the character debug info modal.
+ ************************************************************/
+
+.character-debug-button {
+    position: absolute;
+    left: 0;
+}
+
+#character-debug-modal .modal-body-container {
+    overflow-y: auto;
+    max-height: 49rem;
+}
+
+.debug-info-container {
+    display: flex;
+}
+
+.debug-info-column {
+    flex: 1;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.debug-info-header:first-child {
+    margin-top: 0;
+}
+
+.debug-info-header>a {
+    color: black;
+    transform: translateX(-1.5rem);
+    display: inline-block;
+}
+
+.debug-info-header-status {
+    font-size: 2.5rem;
+    float: left;
+}
+
+.debug-section-row {
+    display: flex;
+    font-size: 1.2em;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.debug-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14rem;
+    flex: none;
+}
+
+.debug-case-type, .debug-case-priority, .debug-case-stage, .debug-case-test, .debug-case-condition-value, .debug-case-markers, .debug-case-pose {
+    font-family: monospace;
+}
+
+.debug-case-condition-attribute:not(:nth-child(2))::before {
+    content: ",";
+}
+
+.debug-case-condition-value::before, .debug-case-condition-type::before {
+    content: " ";
+}
+
+.debug-marker-listing {
+    text-align: left;
+}
+
+.debug-marker-basename, .debug-marker-target-id, .debug-marker-value, .debug-tag-name {
+    font-family: monospace;
+    display: inline-block;
+}
+
+.debug-marker-target-id::before {
+    content: "[";
+}
+
+.debug-marker-target-id::after {
+    content: "]";
+}
+
+.debug-marker-value {
+    padding-left: 0.6rem;
+}
+
+.debug-marker-value::before {
+    content: "= ";
+}
+
+.debug-marker-value.empty-value {
+    font-style: italic;
+}
+
+.debug-marker-value.empty-value::before {
+    font-style: normal;
+}
+
+#debug-tag-listing {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.debug-tag-entry {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding-bottom: 0.75rem;
+}
+
+.debug-tag-removed {
+    text-decoration: line-through;
+}
+
+.debug-tag-modified-stage {
+    font-style: italic;
+    padding-left: 0.6rem;
+}
+
+.debug-tag-modified-stage::before {
+    content: "(";
+}
+
+.debug-tag-modified-stage::after {
+    content: ")";
+}
+
 
 /************************************************************
  * Classes for opponent images.
@@ -1368,10 +1575,15 @@ ul.dropdown-menu>li {
     color: #F0F0F0;
     text-align: center;
     text-shadow:
-        -0.1rem -0.1rem 0 #000,
-        0.1rem -0.1rem 0 #000,
-        -0.1rem 0.1rem 0 #000,
-        0.1rem 0.1rem 0 #000;
+        black -0.1rem 0 0,
+        black 0.1rem 0 0,
+        black 0 -0.1rem 0,
+        black 0 0.1rem 0,
+        black 0.07rem 0.07rem 0,
+        black -0.07rem 0.07rem 0,
+        black -0.07rem -0.07rem 0,
+        black 0.07rem -0.07rem 0;
+    filter: drop-shadow(black 0.1rem 0.1rem 0.25rem);
 }
 
 .warning-start-text, .warning-info-text, .warning-confirm-text {
@@ -1454,10 +1666,15 @@ ul.dropdown-menu>li {
 #warning-load-container {
     font-size: 4rem;
     text-shadow:
-        -0.1rem -0.1rem 0 #000,
-        0.1rem -0.1rem 0 #000,
-        -0.1rem 0.1rem 0 #000,
-        0.1rem 0.1rem 0 #000;
+        black -0.1rem 0 0,
+        black 0.1rem 0 0,
+        black 0 -0.1rem 0,
+        black 0 0.1rem 0,
+        black 0.07rem 0.07rem 0,
+        black -0.07rem 0.07rem 0,
+        black -0.07rem -0.07rem 0,
+        black 0.07rem -0.07rem 0;
+    filter: drop-shadow(black 0.1rem 0.1rem 0.25rem);
 }
 
 .game-load-label {
@@ -1481,16 +1698,29 @@ ul.dropdown-menu>li {
 }
 
 .title-content-button {
-    background: #F0F0F0;
-    opacity: 0.4;
+    background: rgba(240, 240, 240, 0.95);
+    opacity: 0.8;
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    filter: contrast(0.8) brightness(0.95);
 }
 
-.title-content-button :hover {
-    background: #FFFFFF;
+.title-content-button:hover,
+.focus-indicators-enabled .title-content-button:focus {
+    opacity: 0.87;
+    filter: contrast(0.95);
 }
 
-.title-content-button :active {
-    background: #F0F0F0;
+.title-content-button.selected {
+    opacity: 1;
+    background-color: white;
+    filter: none;
+}
+
+.title-content-button:active {
+    opacity: 0.93;
+    filter: none;
 }
 
 /* Main title screen blocks: */
@@ -1502,28 +1732,25 @@ ul.dropdown-menu>li {
 
 .title-gender-size-container {
     width: 80%;
-    height: 10.92%;
     display: flex;
+    gap: 0.4rem;
 }
 
 .title-size-block {
-    width: 60%;
+    width: 54%;
     margin-left: auto;
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    gap: 0.2rem;
 }
 
 #title-wardrobe-block {
     width: 90%;
-    margin-top: 2.5%;
+    margin-top: 1.5%;
 }
 
 /* Name / Gender / Size block elements: */
-
-.title-gender-button {
-    width: 16.875%;
-}
 
 .title-label {
     padding: 0;
@@ -1533,10 +1760,15 @@ ul.dropdown-menu>li {
     font-size: 160%;
     color: #DD3333;
     text-shadow:
-        -0.1rem -0.1rem 0 #000,
-        0.1rem -0.1rem 0 #000,
-        -0.1rem 0.1rem 0 #000,
-        0.1rem 0.1rem 0 #000;
+        black -0.2rem 0 0,
+        black 0.2rem 0 0,
+        black 0 -0.2rem 0,
+        black 0 0.2rem 0,
+        black 0.14rem 0.14rem 0,
+        black -0.14rem 0.14rem 0,
+        black -0.14rem -0.14rem 0,
+        black 0.14rem -0.14rem 0;
+    filter: drop-shadow(black 0.1rem 0.1rem 0.4rem);
 }
 
 #player-name-field {
@@ -1547,61 +1779,28 @@ ul.dropdown-menu>li {
     background: rgba(240, 240, 240, 1);
 }
 
-#female-gender-button {
-    margin-left: 1%;
-}
-
-#main-title-container.male #male-gender-button {
-    opacity: 1;
-}
-
-#main-title-container.female #female-gender-button {
-    opacity: 1;
-}
-
-.title-gender-image {
-    display: block;
-    width: 6rem;
-    height: 6rem;
-    margin: 0.5rem auto;
-    background-color: white;
-}
-
-#main-title-container.male #female-size-container {
-    display: none;
-}
-
+#main-title-container.male #female-size-container,
 #main-title-container.female #male-size-container {
     display: none;
-}
-
-.small>.title-small-button {
-    opacity: 1;
-}
-
-.medium>.title-medium-button {
-    opacity: 1;
-}
-
-.large>.title-large-button {
-    opacity: 1;
-}
-
-.title-size-button {
-    width: 30%;
 }
 
 /* Title clothing block elements: */
 
 #title-clothing-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.1rem 0.5rem;
-    
-    width: 47rem;
+    display: grid;
+    grid-template-columns: repeat(6, max-content);
+    row-gap: 0.3rem;
+    column-gap: 0.6rem;
+    padding-right: 2.0rem;
     height: 23rem;
+    width: max-content;
     overflow-y: auto;
-    margin-left: 0.1rem;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+}
+
+.player-clothing-select {
+    scroll-snap-align: start;
 }
 
 .custom-clothing-img {
@@ -1613,48 +1812,40 @@ ul.dropdown-menu>li {
     object-fit: contain;
 }
 
-#title-clothing-container .player-clothing-select {
-    width: 7rem;
-    height: 7rem;
-    opacity: 0.6;
-    background: repeating-linear-gradient(-45deg, #333 0px, #333 5px, #888 6px, #888 11px, #333 12px);
+#title-clothing-container .player-clothing-select.locked {
+    background: repeating-linear-gradient(-45deg, #333 0, #333 0.5rem, #888 0.6rem, #888 1.1rem, #333 1.2rem);
 }
 
-#title-clothing-container .player-clothing-select.available {
-    opacity: 0.6;
-    background: white;
+#main-title-container.female .title-content-button.selected {
+  border-color: rgb(239, 131, 152);
 }
-
-#title-clothing-container .player-clothing-select.selected {
-    opacity: 1;
+#main-title-container.male .title-content-button.selected {
+  border-color: rgb(123, 161, 228);
 }
-
-#title-clothing-container .player-clothing-select.available:hover {
-    opacity: 0.8;
-}
-
-#title-clothing-container .player-clothing-select.selected:hover {
-    opacity: 1;
-}
-
 #title-clothing-container .clothing-separator {
     border-top: 0.2rem solid gray;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    width: 99%;
+    width: 100%;
+    grid-column: 1 / span 6;
 }
 
 #title-warning-label {
     height: 2rem;
-    color: red;
+    color: #F0F0F0;
     text-align: center;
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
     text-shadow:
-        -0.1rem -0.1rem 0 #000,
-        0.1rem -0.1rem 0 #000,
-        -0.1rem 0.1rem 0 #000,
-        0.1rem 0.1rem 0 #000;
+        black -0.1rem 0 0,
+        black 0.1rem 0 0,
+        black 0 -0.1rem 0,
+        black 0 0.1rem 0,
+        black 0.07rem 0.07rem 0,
+        black -0.07rem 0.07rem 0,
+        black -0.07rem -0.07rem 0,
+        black 0.07rem -0.07rem 0;
+    filter: drop-shadow(black 0.1rem 0.1rem 0.25rem);
 }
 
 .title-clothing-button {
@@ -1896,11 +2087,13 @@ ul.dropdown-menu>li {
 }
 
 #left-title-candy {
-    left: 0;
+    left: 8em;
+    transform-origin: bottom left;
 }
 
 #right-title-candy {
-    right: 0;
+    right: 8em;
+    transform-origin: bottom right;
 }
 
 .title-candy {
@@ -2086,6 +2279,7 @@ ul.dropdown-menu>li {
     text-align: center;
     background: var(--dialogue-background-color);
     color: var(--dialogue-text-color);
+    z-index: 1;
 }
 
 .opponent-suggestion-row {
@@ -2103,11 +2297,13 @@ ul.dropdown-menu>li {
 
 .opponent-suggestion-image {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 0 50%;
     width: auto;
     height: 100%;
     opacity: 0.6;
-
+    transform: translate(-50%);
+    transform-origin: bottom;
+    pointer-events: none;
 }
 
 .opponent-suggestion-label {
@@ -2250,16 +2446,19 @@ ul.dropdown-menu>li {
 
     overflow-y: scroll;
     overflow-x: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-auto-rows: min-content;
+    scroll-snap-type: y proximity;
 }
 
 .selection-card {
     vertical-align: top;
     display: inline-block;
 
-    width: 19.5%;
-    height: 44%;
-
-    margin: 0.5% 0.25%;
+    height: 21.65rem;
+    margin: 0.4rem 0.4rem 0 0;
     background-color: rgba(51, 51, 51, 0.65);
 
     border: 0.2rem solid #111111;
@@ -2267,6 +2466,9 @@ ul.dropdown-menu>li {
 
     position: relative;
     cursor: pointer;
+
+    scroll-snap-align: start;
+    scroll-margin-top: 0.4rem;
 }
 
 /*
@@ -2287,12 +2489,12 @@ ul.dropdown-menu>li {
 
 .selection-card-image-area {
     position: absolute;
-    top: -1.5%;
+    top: -7%;
     left: 0;
     right: 0;
 
     display: inline;
-    height: 135%;
+    height: 180%;
     width: auto;
 
     margin: 0 auto;
@@ -2300,7 +2502,8 @@ ul.dropdown-menu>li {
 
 .selection-card-image-area>* {
     width: auto;
-    height: 100%;
+    height: auto;
+    max-height: 100%;
 
     position: absolute;
     right: 50%;
@@ -2312,7 +2515,7 @@ ul.dropdown-menu>li {
     position: absolute;
 
     right: 0;
-    left: 70%;
+    left: 75%;
     top: 0;
     bottom: 25%;
 
@@ -2349,7 +2552,7 @@ ul.dropdown-menu>li {
 
     left: 0;
     top: 0;
-    width: 40%;
+    width: 35%;
 
     padding: 2% 2.5%;
 
@@ -2414,10 +2617,10 @@ ul.dropdown-menu>li {
 
 .selection-card-footer {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 70%;
+    bottom: 1%;
+    left: 1%;
+    right: 1%;
+    /* top: 70%; */
 
     display: flex;
     flex-direction: column;
@@ -2435,18 +2638,18 @@ ul.dropdown-menu>li {
     transition-duration: 0.5s;
 
     text-align: center;
-    padding: 2%;
+    padding: 1% 2%;
 }
 
 .selection-card-footer .selection-card-name {
     /*font-size: 110%;*/
-    font-size: 2.1rem;
+    font-size: 1.6rem;
 }
 
 .selection-card-footer .selection-card-source {
     margin-top: 1%;
     /*font-size: 65%;*/
-    font-size: 1.25rem;
+    font-size: 1.1rem;
 }
 
 .selection-card:hover,
@@ -2529,7 +2732,8 @@ ul.dropdown-menu>li {
 .card-separator {
     border-top: 0.2rem solid gray;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+    grid-column: 1 / -1;
     width: 99%;
 }
 
@@ -2599,6 +2803,7 @@ ul.dropdown-menu>li {
     margin: 0;
 
     flex: 2;
+    min-width: 0;
 }
 
 .column-component {
@@ -2757,6 +2962,10 @@ ul.dropdown-menu>li {
     right: 0;
     bottom: 0.5%;
     top: 92.5%;
+}
+
+.opponent-details-simple-image {
+    bottom: 0px;
 }
 
 .opponent-select-button>button {
@@ -2952,6 +3161,14 @@ ul.dropdown-menu>li {
     display: none;
 }
 
+.opponent-added-field:not(.has-added-date) {
+    display: none;
+}
+
+.opponent-added-field .has-added-date {
+    display: flex;
+}
+
 /* Modifications on non-widescreen devices
    Note: The threshold here must match autoResizeFont(). */
 @media (max-aspect-ratio: 3/2) {
@@ -2960,9 +3177,8 @@ ul.dropdown-menu>li {
         max-width: 133.33vh;
     }
 
-    .selection-card {
-        width: 24.5%;
-        height: 38.4%;
+    .selection-cards-container {
+	grid-template-columns: repeat(4, 25%);
     }
 
     .selection-cards-container,
@@ -3570,6 +3786,10 @@ ul.dropdown-menu>li {
     background-color: white;
 }
 
+.large-card-image.tradein {
+    opacity: 0.4;
+}
+
 .large-card-image+.large-card-image {
     margin-left: 0.4rem;
 }
@@ -3709,7 +3929,7 @@ ul.dropdown-menu>li {
     white-space: nowrap;
 }
 
-.ui-minimal .player-card-area {
+.ui-minimal #player-game-card-area {
     background: none;
     left: 57%;
     bottom: 1%;
@@ -3718,19 +3938,14 @@ ul.dropdown-menu>li {
     justify-content: center;
     align-items: flex-end;
 
-    opacity: 0.50;
     transition-property: opacity;
     transition-delay: 1s;
     transition-duration: 0.5s;
-}
 
-.ui-minimal .player-card-area:hover,
-.ui-minimal .player-card-area:active,
-.ui-minimal.prompt-exchange .player-card-area {
-    opacity: 1.0;
-    transition-property: opacity;
-    transition-delay: 0s;
-    transition-duration: 0.25s;
+    transform-style: preserve-3d;
+    transform-origin: 35% bottom; /* Intentionally not using bottom center because the cards are to the right. */
+    transform: perspective(20em);
+    pointer-events: none;
 }
 
 .ui-minimal .large-card-image {
@@ -3739,23 +3954,43 @@ ul.dropdown-menu>li {
     margin: 0 0.1rem;
     border-width: 0.15rem;
     border-radius: 0.4rem;
-
-    transition-property: width, height, margin, border-radius, border-width;
-    transition-duration: 0.5s;
-    transition-delay: 1s;
 }
 
-.ui-minimal .player-card-area:hover .large-card-image,
-.ui-minimal .player-card-area:active .large-card-image,
-.ui-minimal.prompt-exchange .player-card-area .large-card-image {
+.ui-minimal #player-game-card-area .large-card-image
+{
+    filter: none;
+    opacity: 0.5;
+    transition-property: width, height, margin, border-radius, border-width, opacity;
+    transition-duration: 0.5s;
+    transition-delay: 1s;
+    transform-origin: bottom;
+}
+
+.ui-minimal #player-game-card-area .large-card-image:not([disabled]) {
+    /* Make sure that cards are animated without delay when (de)selecting them using the keyboard.
+       Note that we don't want transform and filter to be transitioned when the player hitss Swap and
+       the replacement cards are to be animated.
+       Unfortunately we need to repeat the other properties as well. */
+    transition-property: width, height, margin, border-radius, border-width, opacity, transform, filter;
+    transition-duration:  0.5s,   0.5s,   0.5s,          0.5s,         0.5s,    0.5s,     0.25s,  0.25s;
+    transition-delay:       1s,     1s,     1s,            1s,           1s,      1s,        0s,     0s;
+}
+
+.ui-minimal #player-game-card-area:hover .large-card-image,
+.ui-minimal.prompt-exchange #player-game-card-area .large-card-image {
     height: 10rem;
     width: calc(10rem * (5 / 7));
     border-radius: 0.65rem;
     border-width: 0.2rem;
     margin: 0 0.2rem;
-
+    opacity: 1.0;
+    /* Quicker animation when hovering over the cards and when it becomes the player's turn. */
     transition-duration: 0.25s;
     transition-delay: 0s;
+}
+.ui-minimal #player-game-card-area .large-card-image.tradein {
+    filter: opacity(0.75) contrast(0.75);
+    transform: translateY(-25%) translateZ(-0.5em);
 }
 
 #player-game-clothing-area-minimal {
@@ -4055,6 +4290,14 @@ ul.dropdown-menu>li {
 
 .epilogue-entry button:hover {
     background: #DDDDDD;
+}
+
+.epilogue-entry .epilogue-description {
+    font-style: italic;
+}
+
+.epilogue-entry .epilogue-description::before {
+    content: "Info: ";
 }
 
 .epilogue-entry.unlocked button::after {
@@ -4680,7 +4923,8 @@ ul.dropdown-menu>li {
  ************************************************************/
 
 .debug-button,
-.dev-select-button {
+.dev-select-button,
+.character-debug-button {
     position: absolute;
     width: 3em;
     height: 2em;
@@ -4688,7 +4932,8 @@ ul.dropdown-menu>li {
 }
 
 .opponent-area .debug-button,
-.opponent-area .dev-select-button {
+.opponent-area .dev-select-button,
+.opponent-area .character-debug-button {
     top: -2.25em;
 }
 
@@ -4799,9 +5044,25 @@ ul.dropdown-menu>li {
 
 .focus-indicators-enabled a:focus,
 .focus-indicators-enabled input[type=image]:focus,
-.focus-indicators-enabled button:focus {
-    outline: 1px dotted #fff;
-    outline-offset: -1px;
+.focus-indicators-enabled select:focus,
+.focus-indicators-enabled button:focus,
+.focus-indicators-enabled .selection-card:focus
+{
+    outline: 0.18rem dotted white;
+}
+.focus-indicators-enabled select:focus:not(.nav),
+.focus-indicators-enabled input[type=image]:not(.locked):focus,
+.focus-indicators-enabled button.title-content-button:not(.locked):focus,
+.focus-indicators-enabled button.player-clothing-select:not(.locked):focus
+{
+    outline-color: black;
+}
+.focus-indicators-enabled input[type=image]:focus,
+.focus-indicators-enabled button:focus,
+.focus-indicators-enabled select:focus,
+.focus-indicators-enabled .selection-card:focus
+{
+    outline-offset: -0.4rem;
 }
 :focus {
     outline: none;
@@ -4812,5 +5073,5 @@ ul.dropdown-menu>li {
  ************************************************************/
 .sprite
 {
-    vertical-align: top; //overrides bootstrap
+    vertical-align: top; /*overrides bootstrap*/
 }

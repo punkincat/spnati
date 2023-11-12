@@ -12,9 +12,6 @@
         <case name="Meat Question" id="30" priority="Prompt" min="0" max="7">
             <description>Feeling hungry, Chie orders meat for delivery. She asks the other players how they like it prepared.</description>
         </case>
-        <case name="Trumpet Player" id="68" priority="Prompt" min="0" max="2">
-            <description>Chie comments on how she played trumpet before and inquires a duet with another musician.</description>
-        </case>
         <case name="Seeing FE characters" id="70" priority="FYI" min="0" max="0">
             <description>Chie sees a Fire Emblem character at the table and asks about their world.</description>
         </case>
@@ -23,6 +20,21 @@
         </case>
         <case name="Seeing ghost" id="73" priority="FYI" min="0" max="2">
             <description>Chie was scared of seeing the ghost in the beginning, so then apologizes for her freak out.</description>
+        </case>
+        <case name="Teddie on Switch" id="101" priority="Prompt" min="0" max="9">
+            <description>This is a reference to Joker (and Mona) in Smash Bros. Chie doesn't know Mona yet so she mistakens him for Teddie.</description>
+        </case>
+        <case name="Working out" id="135" priority="Prompt" min="0" max="0">
+            <description>Chie asks if the character works out. She offers to draw up a routine for them.</description>
+        </case>
+        <case name="Fighter greeting" id="136" priority="Prompt" min="0" max="0">
+            <description>Chie notices there's another fighter in the room and suggests a sparring match.</description>
+        </case>
+        <case name="Rocky reference" id="150" priority="Prompt" min="0" max="0">
+            <description>If there's an American character, Chie will comment about a movie about a drunk boxer, clearly a Rocky reference.</description>
+        </case>
+        <case name="Seeing student" id="182" priority="FYI" min="0" max="2">
+            <description>Chie recalls her time in school where she wasn't exactly the smartest.</description>
         </case>
     </noteworthy>
     <reviewed>true</reviewed>
@@ -47,7 +59,6 @@
         <response id="69" opponent="leonie" opponentId="79" />
         <response id="74" opponent="polly" opponentId="38" />
         <response id="75" opponent="polly" opponentId="39" />
-        <response id="76" opponent="shantae" opponentId="10" />
         <response id="77" opponent="kumatora" opponentId="208" />
         <response id="78" opponent="lucy" opponentId="27" />
         <response id="82" opponent="megumin" opponentId="36" />
@@ -63,32 +74,168 @@
         <response id="93" opponent="mari_setogaya" opponentId="1" />
         <response id="95" opponent="yusuke" opponentId="210" />
         <response id="96" opponent="yusuke" opponentId="213" />
-        <response id="97" opponent="yusuke" opponentId="212" />
         <response id="98" opponent="yusuke" opponentId="211" />
+        <response id="100" opponent="aoba" opponentId="83" />
+        <response id="101" opponent="aoba" opponentId="127" />
+        <response id="102" opponent="aoba" opponentId="147" />
+        <response id="114" opponent="shantae" opponentId="10" />
+        <response id="115" opponent="lucy" opponentId="28" />
+        <response id="116" opponent="lucy" opponentId="600" />
+        <response id="117" opponent="lucy" opponentId="563" />
+        <response id="118" opponent="lucy" opponentId="32" />
+        <response id="119" opponent="lucy" opponentId="30" />
+        <response id="120" opponent="lucy" opponentId="670" />
+        <response id="122" opponent="moon" opponentId="186" />
+        <response id="123" opponent="mari_setogaya" opponentId="16" />
+        <response id="124" opponent="aoba" opponentId="82" />
+        <response id="145" opponent="chihiro" opponentId="2" />
+        <response id="147" opponent="nami" opponentId="53" />
+        <response id="148" opponent="nami" opponentId="622" />
+        <response id="149" opponent="nico_robin" opponentId="306" />
+        <response id="151" opponent="aaravi" opponentId="89" />
+        <response id="152" opponent="gwen" opponentId="120" />
+        <response id="153" opponent="gwen" opponentId="118" />
+        <response id="154" opponent="ignatz" opponentId="133" />
+        <response id="155" opponent="mari_setogaya" opponentId="1256" />
+        <response id="156" opponent="amalia" opponentId="1" />
+        <response id="157" opponent="chazz" opponentId="9" />
+        <response id="158" opponent="sakura" opponentId="2" />
+        <response id="163" opponent="raven" opponentId="8" />
+        <response id="164" opponent="mercy" opponentId="142" />
+        <response id="165" opponent="zone-tan" opponentId="7" />
+        <response id="166" opponent="dawn" opponentId="133" />
+        <response id="167" opponent="dawn" opponentId="120" />
+        <response id="168" opponent="mari" opponentId="790" />
+        <response id="169" opponent="mari" opponentId="791" />
+        <response id="170" opponent="futaba" opponentId="10" />
+        <response id="171" opponent="futaba" opponentId="23" />
+        <response id="172" opponent="ayano" opponentId="84" />
+        <response id="173" opponent="chazz" opponentId="22" />
+        <response id="174" opponent="mari_setogaya" opponentId="56" />
+        <response id="175" opponent="chazz" opponentId="10" />
+        <response id="176" opponent="aoba" opponentId="196" />
+        <response id="177" opponent="aella" opponentId="335" />
+        <response id="178" opponent="hatsune_miku" opponentId="492" />
+        <response id="179" opponent="hatsune_miku" opponentId="538" />
+        <response id="183" opponent="rainbow_mika" opponentId="7" />
+        <response id="184" opponent="may" opponentId="5" />
+        <response id="185" opponent="leonie" opponentId="45" />
+        <response id="186" opponent="pit" opponentId="118" />
+        <response id="187" opponent="mercy" opponentId="143" />
+        <response id="188" opponent="binah" opponentId="1" />
+        <response id="189" opponent="amy" opponentId="259" />
+        <response id="190" opponent="nagatoro" opponentId="987" />
+        <response id="194" opponent="nagatoro" opponentId="263" />
+        <response id="199" opponent="lucy" opponentId="29" />
+        <response id="207" opponent="mulan" opponentId="33" />
+        <response id="208" opponent="magma_grunt" opponentId="1" />
+        <response id="210" opponent="hatsune_miku" opponentId="614" />
+        <response id="211" opponent="aoba" opponentId="210" />
+        <response id="217" opponent="leonie" opponentId="15" />
+        <response id="218" opponent="mari_setogaya" opponentId="55" />
+        <response id="219" opponent="aoba" opponentId="85" />
+        <response id="220" opponent="chun-li" opponentId="3" />
+        <response id="221" opponent="chun-li" opponentId="2" />
     </responses>
     <labels>
         <label id="43" label="" folder="Neo Featherman Replies" sort="0" />
         <label id="63" label="" folder="Chie Meat Replies" sort="0" />
         <label id="30" label="" folder="Chie Meat Replies" sort="0" />
-        <label id="32" label="" folder="Chie Meat Replies" sort="0" />
+        <label id="32" label="" folder="Chie Meat Replies" sort="3" />
         <label id="67" label="" folder="Street Fighter Replies" sort="0" />
-        <label id="79" label="" folder="Chie Meat Replies" sort="0" />
+        <label id="79" label="" folder="Chie Meat Replies" sort="4" />
         <label id="80" label="" folder="Chie Meat Replies" sort="0" />
-        <label id="81" label="" folder="Chie Meat Replies" sort="0" />
+        <label id="81" label="" folder="Chie Meat Replies" sort="5" />
+        <label id="103" label="" folder="Haru" sort="5" />
+        <label id="104" label="" folder="Ryuji" sort="2" />
+        <label id="121" label="" folder="Futaba" sort="4" />
+        <label id="106" label="" folder="Haru" sort="3" />
+        <label id="107" label="" folder="Haru" sort="4" />
+        <label id="22" label="" folder="Futaba" sort="3" />
+        <label id="108" label="" folder="Leonie" sort="3" />
+        <label id="109" label="" folder="Futaba" sort="0" />
+        <label id="58" label="" folder="Haru" sort="0" />
+        <label id="110" label="" folder="Ryuji" sort="0" />
+        <label id="25" label="" folder="Leonie" sort="0" />
+        <label id="111" label="" folder="Leonie" sort="2" />
+        <label id="112" label="" folder="Haru" sort="2" />
+        <label id="113" label="" folder="Futaba" sort="2" />
+        <label id="125" label="" folder="Background Comments" sort="2" />
+        <label id="126" label="" folder="Background Comments" sort="3" />
+        <label id="127" label="" folder="Background Comments" sort="4" />
+        <label id="128" label="" folder="Background Comments" sort="5" />
+        <label id="129" label="" folder="Background Comments" sort="6" />
+        <label id="130" label="" folder="Background Comments" sort="7" />
+        <label id="131" label="" folder="Background Comments" sort="8" />
+        <label id="132" label="" folder="Background Comments" sort="0" />
+        <label id="133" label="" folder="Background Comments" sort="9" />
+        <label id="137" label="" folder="Hand Reactions" sort="0" />
+        <label id="138" label="" folder="Hand Reactions" sort="5" />
+        <label id="139" label="" folder="Hand Reactions" sort="0" />
+        <label id="140" label="" folder="Hand Reactions" sort="6" />
+        <label id="141" label="" folder="Hand Reactions" sort="0" />
+        <label id="142" label="" folder="Hand Reactions" sort="2" />
+        <label id="143" label="" folder="Hand Reactions" sort="0" />
+        <label id="144" label="" folder="Hand Reactions" sort="3" />
+        <label id="159" label="" folder="Chie Meat Replies" sort="2" />
+        <label id="160" label="" folder="Hand Reactions" sort="7" />
+        <label id="161" label="" folder="Hand Reactions" sort="8" />
+        <label id="162" label="" folder="Hand Reactions" sort="4" />
+        <label id="191" label="" folder="Nagatoro" sort="0" />
+        <label id="88" label="" folder="Nagatoro" sort="3" />
+        <label id="192" label="" folder="Nagatoro" sort="0" />
+        <label id="193" label="" folder="Nagatoro" sort="8" />
+        <label id="195" label="" folder="Nagatoro" sort="9" />
+        <label id="196" label="" folder="Nagatoro" sort="0" />
+        <label id="194" label="" folder="Nagatoro" sort="4" />
+        <label id="197" label="" folder="Nagatoro" sort="0" />
+        <label id="198" label="" folder="Nagatoro" sort="2" />
+        <label id="90" label="" folder="Nagatoro" sort="7" />
+        <label id="61" label="" folder="Futaba" sort="0" />
+        <label id="94" label="" folder="Futaba" sort="0" />
+        <label id="54" label="" folder="Futaba" sort="0" />
+        <label id="201" label="" folder="Futaba" sort="0" />
+        <label id="202" label="" folder="Miku" sort="0" />
+        <label id="203" label="" folder="Miku" sort="0" />
+        <label id="204" label="" folder="Miku" sort="0" />
+        <label id="205" label="" folder="Futaba" sort="0" />
+        <label id="206" label="" folder="Nagatoro" sort="0" />
+        <label id="212" label="" folder="Nagatoro" sort="0" />
+        <label id="213" label="" folder="Futaba" sort="0" />
+        <label id="214" label="" folder="Haru" sort="0" />
+        <label id="185" label="" folder="Leonie" sort="0" />
+        <label id="222" label="" folder="Haru" sort="0" />
+        <label id="223" label="" folder="Haru" sort="0" />
+        <label id="224" label="" folder="Futaba" sort="0" />
     </labels>
-    <nextId>99</nextId>
+    <nextId>224</nextId>
     <markers>
+        <marker scope="Public" name="1v1" />
+        <marker scope="Public" name="A_Yun" />
         <marker scope="Public" name="bras" />
         <marker scope="Public" name="camp_story" />
         <marker scope="Public" name="chariot_fight" />
         <marker scope="Public" name="chie_aimee_strip" />
+        <marker scope="Public" name="chie_aoba_under" />
         <marker scope="Public" name="chie_ask_sayaka" />
         <marker scope="Public" name="chie_brock_strip" />
         <marker scope="Public" name="chie_chun_1" />
         <marker scope="Public" name="chie_cop_1" />
         <marker scope="Public" name="chie_encourage1" />
         <marker scope="Public" name="chie_futab_1" />
+        <marker scope="Public" name="chie_futab_finished" />
+        <marker scope="Public" name="chie_futab_friends" />
+        <marker scope="Public" name="chie_futab_gamer" />
+        <marker scope="Public" name="chie_futab_jack" />
+        <marker scope="Public" name="chie_futab_loss" />
         <marker scope="Public" name="chie_futab_nude1" />
+        <marker scope="Public" name="chie_futab_nude2" />
+        <marker scope="Public" name="chie_futab_playful" />
+        <marker scope="Public" name="chie_futab_strip1" />
+        <marker scope="Public" name="chie_futab_strip2" />
+        <marker scope="Public" name="chie_futab_strip3" />
+        <marker scope="Public" name="chie_futab_strip4" />
+        <marker scope="Public" name="chie_futab_tvs" />
         <marker scope="Public" name="chie_futab_visor1" />
         <marker scope="Public" name="chie_futab_visor2" />
         <marker scope="Public" name="chie_futaba_strip" />
@@ -102,27 +249,58 @@
         <marker scope="Public" name="chie_haru_initial" />
         <marker scope="Public" name="chie_haru_start" />
         <marker scope="Public" name="chie_haru_strip" />
+        <marker scope="Public" name="chie_kyoko1" />
         <marker scope="Public" name="chie_leonie_abs" />
+        <marker scope="Public" name="chie_leonie_boots" />
+        <marker scope="Public" name="chie_leonie_dork" />
         <marker scope="Public" name="chie_leonie_idle" />
         <marker scope="Public" name="chie_leonie_idle1" />
         <marker scope="Public" name="chie_leonie_idle2" />
+        <marker scope="Public" name="chie_leonie_start" />
         <marker scope="Public" name="chie_leonie_strip1" />
         <marker scope="Public" name="chie_leonie_strip2" />
         <marker scope="Public" name="chie_leonie_strip3" />
         <marker scope="Public" name="chie_leonie_twins" />
         <marker scope="Public" name="chie_leonie1" />
+        <marker scope="Public" name="chie_lover_boys" />
+        <marker scope="Public" name="chie_lover_naoto" />
+        <marker scope="Public" name="chie_lover_rise" />
+        <marker scope="Public" name="chie_lover_yukiko" />
         <marker scope="Public" name="chie_meat" />
+        <marker scope="Public" name="chie_mika_loss" />
         <marker scope="Public" name="chie_mika_strip1" />
         <marker scope="Public" name="chie_mika_strip2" />
+        <marker scope="Public" name="Chie_Miku2" />
+        <marker scope="Public" name="chie_miles1" />
+        <marker scope="Public" name="chie_miles2" />
         <marker scope="Public" name="chie_moon_strip" />
         <marker scope="Public" name="chie_musician" />
         <marker scope="Public" name="chie_naga" />
+        <marker scope="Public" name="chie_naga_01" />
+        <marker scope="Public" name="chie_naga_180" />
+        <marker scope="Public" name="chie_naga_after" />
+        <marker scope="Public" name="chie_naga_finished" />
+        <marker scope="Public" name="chie_naga_funny" />
         <marker scope="Public" name="chie_naga_hand" />
+        <marker scope="Public" name="chie_naga_intro" />
+        <marker scope="Public" name="chie_naga_loss" />
+        <marker scope="Public" name="chie_naga_nude" />
+        <marker scope="Public" name="chie_naga_pecs" />
+        <marker scope="Public" name="chie_naga_problem" />
+        <marker scope="Public" name="chie_naga_start" />
         <marker scope="Public" name="chie_naga_strip" />
+        <marker scope="Public" name="chie_naga_strip1" />
+        <marker scope="Public" name="chie_naga_strip2" />
+        <marker scope="Public" name="chie_naga_strip2a" />
+        <marker scope="Public" name="chie_naga_strip3" />
+        <marker scope="Public" name="chie_naga_strip4" />
+        <marker scope="Public" name="chie_naga_swim" />
         <marker scope="Public" name="chie_polly_end" />
         <marker scope="Public" name="chie_polly_strip1" />
         <marker scope="Public" name="chie_pt" />
+        <marker scope="Public" name="chie_ryuji_end" />
         <marker scope="Public" name="chie_ryuji_jack" />
+        <marker scope="Public" name="chie_ryuji_loss" />
         <marker scope="Public" name="chie_ryuji_moon1" />
         <marker scope="Public" name="chie_ryuji_moon2" />
         <marker scope="Public" name="chie_ryuji_shoes" />
@@ -130,27 +308,75 @@
         <marker scope="Public" name="chie_ryuji_strip2" />
         <marker scope="Public" name="chie_ryuji_track" />
         <marker scope="Public" name="chie_saki" />
+        <marker scope="Public" name="chie_saya_finish" />
+        <marker scope="Public" name="chie_sayaka_nude1" />
         <marker scope="Public" name="chie_sayaka1" />
         <marker scope="Public" name="chie_sayaka2" />
+        <marker scope="Public" name="chie_switch" />
         <marker scope="Public" name="chie_velma_hand" />
+        <marker scope="Public" name="chie_yuno_loss" />
         <marker scope="Public" name="chie_yusuke_strip" />
         <marker scope="Public" name="chie_yusuke1" />
+        <marker scope="Public" name="ChieAoba1" />
+        <marker scope="Public" name="ChieAoba2" />
+        <marker scope="Public" name="ChieAobaBow" />
+        <marker scope="Public" name="ChieAobaStrip" />
+        <marker scope="Public" name="ChieFutabArcade" />
+        <marker scope="Public" name="ChieFutabGreet" />
+        <marker scope="Public" name="ChieFutabStrip1" />
         <marker scope="Public" name="ChieFutabStrip1a" />
+        <marker scope="Public" name="ChieFutabStrip1t" />
+        <marker scope="Public" name="ChieFutabStrip2" />
+        <marker scope="Public" name="ChieFutabStrip3" />
+        <marker scope="Public" name="ChieFutabStrip4" />
+        <marker scope="Public" name="ChieFutabVisor1" />
+        <marker scope="Public" name="ChieHaruEnd" />
         <marker scope="Public" name="ChieHaruInitial" />
         <marker scope="Public" name="ChieLeonie" />
+        <marker scope="Public" name="ChieLeonieAbs" />
         <marker scope="Public" name="ChieLeonieBoots" />
         <marker scope="Public" name="ChieLeonieStrip2" />
         <marker scope="Public" name="ChieLeonieTwins" />
+        <marker scope="Public" name="ChieLucySkirt" />
+        <marker scope="Public" name="ChieLucySkirt1" />
+        <marker scope="Public" name="ChieLucySkirt2" />
+        <marker scope="Public" name="ChieMuscle" />
+        <marker scope="Public" name="ChieNaga" />
+        <marker scope="Public" name="ChieNaga180" />
+        <marker scope="Public" name="ChieNagaAfter" />
+        <marker scope="Public" name="ChieNagaFinished" />
+        <marker scope="Public" name="ChieNagaFunny" />
+        <marker scope="Public" name="ChieNagaHand" />
+        <marker scope="Public" name="ChieNagaPecs" />
+        <marker scope="Public" name="ChieNagaStart" />
+        <marker scope="Public" name="ChieNagaStrip" />
+        <marker scope="Public" name="ChieNagaStrip0" />
+        <marker scope="Public" name="ChieNagaStrip1" />
+        <marker scope="Public" name="ChieNagaStrip2" />
+        <marker scope="Public" name="ChieNagaStrip2a" />
+        <marker scope="Public" name="ChieNagaStrip3" />
+        <marker scope="Public" name="ChieNagaSwim" />
+        <marker scope="Public" name="ChieRocky" />
+        <marker scope="Public" name="ChieRyujiEnd" />
         <marker scope="Public" name="ChieRyujiTrack" />
         <marker scope="Public" name="ChieRyujiTrackA" />
         <marker scope="Public" name="ChieShoes1" />
+        <marker scope="Public" name="ChieSwitch" />
+        <marker scope="Public" name="ChieUSA" />
         <marker scope="Public" name="meat_bun" />
+        <marker scope="Public" name="miku_rise" />
+        <marker scope="Public" name="miku_school" />
         <marker scope="Public" name="neo_feather_theme" />
         <marker scope="Public" name="one_man_only" />
+        <marker scope="Public" name="SpotMiku" />
         <marker scope="Public" name="spotted_FE" />
         <marker scope="Public" name="spotted_ghost" />
+        <marker scope="Public" name="spotted_idol" />
         <marker scope="Public" name="spotted_musician" />
         <marker scope="Public" name="spotted_persona" />
+        <marker scope="Public" name="spotted_student" />
+        <marker scope="Public" name="spotted_student1" />
+        <marker scope="Public" name="spotted_student2" />
         <marker scope="Public" name="steak_question" />
         <marker scope="Public" name="street_fighter_prompt" />
     </markers>

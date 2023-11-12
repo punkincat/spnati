@@ -12,3 +12,17 @@
   /*When Leonie is speaking in a dual FF case*/
   color: #FF8040;
 }
+
+.dialogue-bubble[data-character="petra"][data-dialogue-styles~="no-bubble"] {
+    background: none;
+    color: white;
+    text-shadow: -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000, 0 0 3px #000, 0 0 2px #000;
+    border: none;
+    font-family: "Open Sans", "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 180%;
+    text-align: left;
+}
+
+.dialogue-bubble[data-character="petra"][data-dialogue-styles~="no-bubble"]::before {
+    content: none;
+}

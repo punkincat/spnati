@@ -1,0 +1,14 @@
+.dialogue .smaller[data-character="aqua_konosuba"] {
+  /*Smaller than small.*/
+  font-size: 70%;
+}
+
+.dialogue .aqua[data-character="aqua_konosuba"] {
+  /*Aqua is speaking.*/
+  color: #0080FF;
+}
+
+.dialogue .yumeko[data-character="aqua_konosuba"] {
+  /*Yumeko is speaking.*/
+  color: #B30000;
+}

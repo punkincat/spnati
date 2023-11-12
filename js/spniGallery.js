@@ -23,6 +23,7 @@ $galleryStartButton = $('#gallery-start-ending-button');
 $selectedEndingPreview = $('#selected-ending-previev');
 $selectedEndingLabels = [$('#selected-ending-title'), $('#selected-ending-character'), $('#selected-ending-gender')];
 $selectedEndingHint = [$('#selected-ending-hint-container'), $('#selected-ending-hint')];
+$selectedEndingDesc = [$('#selected-ending-description-container'), $('#selected-ending-description')];
 
 /**********************************************************************
  *****          Collectibles Gallery Screen UI Elements           *****
@@ -79,6 +80,7 @@ function GEnding(player, ending){
     this.rawTitle = $(ending).html()
     this.title = offlineIndicator + $(ending).html();
     this.unlockHint = $(ending).attr('hint');
+	this.description = $(ending).attr('description');
     this.unlocked = function() { return EPILOGUES_UNLOCKED || save.hasEnding(player.id, this.rawTitle); };
 }
 
@@ -601,6 +603,13 @@ function selectEnding(i) {
         $selectedEndingHint[0].hide();
     }
 
+    if (ending.description) {
+        $selectedEndingDesc[0].show();
+        $selectedEndingDesc[1].html(ending.description);
+    } else {
+        $selectedEndingDesc[0].hide();
+    }
+
     if (ending.unlocked()) {
         $galleryStartButton.attr('disabled', false);
         $selectedEndingLabels[0].html(ending.title);
@@ -954,22 +963,22 @@ CardDeckGroup.prototype.disableAll = function () {
 function CardDeckDisplay (imageSet) {
     this.imageSet = imageSet;
 
-    var suits = {"spade": [], "diamo": [], "heart": [], "clubs": []};
+    var suits = [[], [], [], []];
     imageSet.includedFrontCards.forEach(function (c) {
         suits[c.suit].push(c);
     });
 
     /** @type {Array<CardDeckGroup>} */
     this.groups = [];
-    Object.entries(suits).forEach(function (kv) {
-        if (kv[1].length === 0) return;
+    suits.forEach(function (suit, idx) {
+        if (suit.length === 0) return;
 
-        kv[1].sort(function (a, b) {
+        suit.sort(function (a, b) {
             return a.rank - b.rank;
         });
 
         this.groups.push(new CardDeckGroup(
-            this, cardSuitToString(kv[0]), imageSet, kv[1], false
+            this, cardSuitToString(idx), imageSet, suit, false
         ));
     }.bind(this));
 

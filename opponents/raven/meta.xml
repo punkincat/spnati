@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1574716560000</lastupdate>
+    <lastupdate>1699483870689</lastupdate>
     <enabled>true</enabled>
     <first>Raven</first>
     <last>Roth</last>
     <label>Raven</label>
     <pic>0-start.png</pic>
     <gender>female</gender>
-    <height>5'4"</height>
     <from>Teen Titans</from>
     <writer>Patisdom &amp; mefatguy90</writer>
     <artist>Patisdom &amp; mefatguy90</artist>
@@ -15,10 +14,11 @@
     <epilogue gender="male" img="epithumbnail.png">A Starry Night</epilogue>
     <epilogue gender="female" img="epithumbnail.png">A Starry Night</epilogue>
     <layers>5</layers>
+    <default-costume-name />
     <alternates>
-        <costume folder="opponents/reskins/white_raven/" img="0-start.png" set="halloween" label="Raven">White Raven</costume>
+        <costume folder="opponents/reskins/white_raven/" img="0-start.png" set="halloween" label="Raven" layers="5">White Raven</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
     <lines>1021</lines>
-    <poses>103</poses>
+    <poses>109</poses>
 </opponent>

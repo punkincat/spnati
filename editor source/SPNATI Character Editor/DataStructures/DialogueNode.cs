@@ -152,14 +152,6 @@ namespace SPNATI_Character_Editor
 		{
 			get
 			{
-				if (!string.IsNullOrEmpty(Case.Target))
-				{
-					return GetCharacterName(Case.Target);
-				}
-				if (!string.IsNullOrEmpty(Case.AlsoPlaying))
-				{
-					return GetCharacterName(Case.AlsoPlaying);
-				}
 				foreach (string target in Case.GetTargets())
 				{
 					return GetCharacterName(target);

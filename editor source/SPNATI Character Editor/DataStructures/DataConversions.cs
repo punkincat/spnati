@@ -57,6 +57,11 @@ namespace SPNATI_Character_Editor
 			{
 				Convert6_7(character);
 			}
+			if (Config.VersionPredates(version, "v6.8.2"))
+			{
+				Convert5_8(character);
+				Convert6_7(character);
+			}
 		}
 
 		private static void Convert3_2(Character character)
@@ -325,27 +330,27 @@ namespace SPNATI_Character_Editor
 		{
 			if (workingCase == null || !workingCase.HasLegacyConditions()) { return; }
 			int priority = workingCase.GetPriority();
-			if (!string.IsNullOrEmpty(workingCase.Target) ||
-				!string.IsNullOrEmpty(workingCase.TargetStage) ||
-				!string.IsNullOrEmpty(workingCase.Filter) ||
-				!string.IsNullOrEmpty(workingCase.TargetHand) ||
-				!string.IsNullOrEmpty(workingCase.TargetLayers) ||
-				!string.IsNullOrEmpty(workingCase.TargetStatus) ||
-				!string.IsNullOrEmpty(workingCase.TargetSaidMarker) ||
-				!string.IsNullOrEmpty(workingCase.TargetNotSaidMarker) ||
-				!string.IsNullOrEmpty(workingCase.TargetSayingMarker) ||
-				!string.IsNullOrEmpty(workingCase.TargetSaying) ||
-				!string.IsNullOrEmpty(workingCase.TargetStartingLayers) ||
-				!string.IsNullOrEmpty(workingCase.TargetTimeInStage))
+			if (!string.IsNullOrEmpty(workingCase.LegacyTarget) ||
+				!string.IsNullOrEmpty(workingCase.LegacyTargetStage) ||
+				!string.IsNullOrEmpty(workingCase.LegacyFilter) ||
+				!string.IsNullOrEmpty(workingCase.LegacyTargetHand) ||
+				!string.IsNullOrEmpty(workingCase.LegacyTargetLayers) ||
+				!string.IsNullOrEmpty(workingCase.LegacyTargetStatus) ||
+				!string.IsNullOrEmpty(workingCase.LegacyTargetSaidMarker) ||
+				!string.IsNullOrEmpty(workingCase.LegacyTargetNotSaidMarker) ||
+				!string.IsNullOrEmpty(workingCase.LegacyTargetSayingMarker) ||
+				!string.IsNullOrEmpty(workingCase.LegacyTargetSaying) ||
+				!string.IsNullOrEmpty(workingCase.LegacyTargetStartingLayers) ||
+				!string.IsNullOrEmpty(workingCase.LegacyTargetTimeInStage))
 			{
-				TargetCondition cond = GetCondition(workingCase, "target", workingCase.Target);
+				TargetCondition cond = GetCondition(workingCase, "target", workingCase.LegacyTarget);
 
-				if (!string.IsNullOrEmpty(workingCase.Target))
+				if (!string.IsNullOrEmpty(workingCase.LegacyTarget))
 				{
-					cond.Character = workingCase.Target;
-					workingCase.Target = null;
+					cond.Character = workingCase.LegacyTarget;
+					workingCase.LegacyTarget = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.Filter))
+				if (!string.IsNullOrEmpty(workingCase.LegacyFilter))
 				{
 					if (!string.IsNullOrEmpty(cond.FilterTag))
 					{
@@ -354,213 +359,213 @@ namespace SPNATI_Character_Editor
 						cond.Role = "target";
 						workingCase.Conditions.Add(cond);
 					}
-					cond.FilterTag = workingCase.Filter;
-					workingCase.Filter = null;
+					cond.FilterTag = workingCase.LegacyFilter;
+					workingCase.LegacyFilter = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.TargetStage))
+				if (!string.IsNullOrEmpty(workingCase.LegacyTargetStage))
 				{
-					cond.Stage = workingCase.TargetStage;
-					workingCase.TargetStage = null;
+					cond.Stage = workingCase.LegacyTargetStage;
+					workingCase.LegacyTargetStage = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.TargetHand))
+				if (!string.IsNullOrEmpty(workingCase.LegacyTargetHand))
 				{
-					cond.Hand = workingCase.TargetHand;
-					workingCase.TargetHand = null;
+					cond.Hand = workingCase.LegacyTargetHand;
+					workingCase.LegacyTargetHand = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.TargetLayers))
+				if (!string.IsNullOrEmpty(workingCase.LegacyTargetLayers))
 				{
-					cond.Layers = workingCase.TargetLayers;
-					workingCase.TargetLayers = null;
+					cond.Layers = workingCase.LegacyTargetLayers;
+					workingCase.LegacyTargetLayers = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.TargetStatus))
+				if (!string.IsNullOrEmpty(workingCase.LegacyTargetStatus))
 				{
-					cond.Status = workingCase.TargetStatus;
-					workingCase.TargetStatus = null;
+					cond.Status = workingCase.LegacyTargetStatus;
+					workingCase.LegacyTargetStatus = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.TargetSaidMarker))
+				if (!string.IsNullOrEmpty(workingCase.LegacyTargetSaidMarker))
 				{
-					cond.SaidMarker = workingCase.TargetSaidMarker;
-					workingCase.TargetSaidMarker = null;
+					cond.SaidMarker = workingCase.LegacyTargetSaidMarker;
+					workingCase.LegacyTargetSaidMarker = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.TargetNotSaidMarker))
+				if (!string.IsNullOrEmpty(workingCase.LegacyTargetNotSaidMarker))
 				{
-					cond.NotSaidMarker = workingCase.TargetNotSaidMarker;
-					workingCase.TargetNotSaidMarker = null;
+					cond.NotSaidMarker = workingCase.LegacyTargetNotSaidMarker;
+					workingCase.LegacyTargetNotSaidMarker = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.TargetSayingMarker))
+				if (!string.IsNullOrEmpty(workingCase.LegacyTargetSayingMarker))
 				{
-					cond.SayingMarker = workingCase.TargetSayingMarker;
-					workingCase.TargetSayingMarker = null;
+					cond.SayingMarker = workingCase.LegacyTargetSayingMarker;
+					workingCase.LegacyTargetSayingMarker = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.TargetSaying))
+				if (!string.IsNullOrEmpty(workingCase.LegacyTargetSaying))
 				{
-					cond.Saying = workingCase.TargetSaying;
-					workingCase.TargetSaying = null;
+					cond.Saying = workingCase.LegacyTargetSaying;
+					workingCase.LegacyTargetSaying = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.TargetStartingLayers))
+				if (!string.IsNullOrEmpty(workingCase.LegacyTargetStartingLayers))
 				{
-					cond.StartingLayers = workingCase.TargetStartingLayers;
-					workingCase.TargetStartingLayers = null;
+					cond.StartingLayers = workingCase.LegacyTargetStartingLayers;
+					workingCase.LegacyTargetStartingLayers = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.TargetTimeInStage))
+				if (!string.IsNullOrEmpty(workingCase.LegacyTargetTimeInStage))
 				{
-					cond.TimeInStage = workingCase.TargetTimeInStage;
-					workingCase.TargetTimeInStage = null;
+					cond.TimeInStage = workingCase.LegacyTargetTimeInStage;
+					workingCase.LegacyTargetTimeInStage = null;
 				}
 			}
-			if (!string.IsNullOrEmpty(workingCase.ConsecutiveLosses))
+			if (!string.IsNullOrEmpty(workingCase.LegacyConsecutiveLosses))
 			{
 				TriggerDefinition trigger = TriggerDatabase.GetTrigger(workingCase.Tag);
 				if (trigger != null && trigger.HasTarget)
 				{
 					TargetCondition cond = GetCondition(workingCase, "target", null);
-					cond.ConsecutiveLosses = workingCase.ConsecutiveLosses;
-					workingCase.ConsecutiveLosses = null;
+					cond.ConsecutiveLosses = workingCase.LegacyConsecutiveLosses;
+					workingCase.LegacyConsecutiveLosses = null;
 				}
 				else
 				{
 					TargetCondition cond = GetCondition(workingCase, "self", null);
-					cond.ConsecutiveLosses = workingCase.ConsecutiveLosses;
-					workingCase.ConsecutiveLosses = null;
+					cond.ConsecutiveLosses = workingCase.LegacyConsecutiveLosses;
+					workingCase.LegacyConsecutiveLosses = null;
 				}
 			}
 
-			if (!string.IsNullOrEmpty(workingCase.HasHand) ||
-				!string.IsNullOrEmpty(workingCase.SaidMarker) ||
-				!string.IsNullOrEmpty(workingCase.NotSaidMarker) ||
-				!string.IsNullOrEmpty(workingCase.TimeInStage))
+			if (!string.IsNullOrEmpty(workingCase.LegacyHasHand) ||
+				!string.IsNullOrEmpty(workingCase.LegacySaidMarker) ||
+				!string.IsNullOrEmpty(workingCase.LegacyNotSaidMarker) ||
+				!string.IsNullOrEmpty(workingCase.LegacyTimeInStage))
 			{
 				TargetCondition cond = GetCondition(workingCase, "self", null);
-				if (!string.IsNullOrEmpty(workingCase.HasHand))
+				if (!string.IsNullOrEmpty(workingCase.LegacyHasHand))
 				{
-					cond.Hand = workingCase.HasHand;
-					workingCase.HasHand = null;
+					cond.Hand = workingCase.LegacyHasHand;
+					workingCase.LegacyHasHand = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.SaidMarker))
+				if (!string.IsNullOrEmpty(workingCase.LegacySaidMarker))
 				{
-					cond.SaidMarker = workingCase.SaidMarker;
-					workingCase.SaidMarker = null;
+					cond.SaidMarker = workingCase.LegacySaidMarker;
+					workingCase.LegacySaidMarker = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.NotSaidMarker))
+				if (!string.IsNullOrEmpty(workingCase.LegacyNotSaidMarker))
 				{
-					cond.NotSaidMarker = workingCase.NotSaidMarker;
-					workingCase.NotSaidMarker = null;
+					cond.NotSaidMarker = workingCase.LegacyNotSaidMarker;
+					workingCase.LegacyNotSaidMarker = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.TimeInStage))
+				if (!string.IsNullOrEmpty(workingCase.LegacyTimeInStage))
 				{
-					cond.TimeInStage = workingCase.TimeInStage;
-					workingCase.TimeInStage = null;
+					cond.TimeInStage = workingCase.LegacyTimeInStage;
+					workingCase.LegacyTimeInStage = null;
 				}
 			}
 
-			if (!string.IsNullOrEmpty(workingCase.AlsoPlaying) ||
-				!string.IsNullOrEmpty(workingCase.AlsoPlayingStage) ||
-				!string.IsNullOrEmpty(workingCase.AlsoPlayingHand) ||
-				!string.IsNullOrEmpty(workingCase.AlsoPlayingSaidMarker) ||
-				!string.IsNullOrEmpty(workingCase.AlsoPlayingNotSaidMarker) ||
-				!string.IsNullOrEmpty(workingCase.AlsoPlayingSayingMarker) ||
-				!string.IsNullOrEmpty(workingCase.AlsoPlayingSaying) ||
-				!string.IsNullOrEmpty(workingCase.AlsoPlayingTimeInStage))
+			if (!string.IsNullOrEmpty(workingCase.LegacyAlsoPlaying) ||
+				!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingStage) ||
+				!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingHand) ||
+				!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingSaidMarker) ||
+				!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingNotSaidMarker) ||
+				!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingSayingMarker) ||
+				!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingSaying) ||
+				!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingTimeInStage))
 			{
-				TargetCondition cond = GetCondition(workingCase, "other", workingCase.AlsoPlaying);
+				TargetCondition cond = GetCondition(workingCase, "other", workingCase.LegacyAlsoPlaying);
 
-				if (!string.IsNullOrEmpty(workingCase.AlsoPlaying))
+				if (!string.IsNullOrEmpty(workingCase.LegacyAlsoPlaying))
 				{
-					cond.Character = workingCase.AlsoPlaying;
-					workingCase.AlsoPlaying = null;
+					cond.Character = workingCase.LegacyAlsoPlaying;
+					workingCase.LegacyAlsoPlaying = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.AlsoPlayingStage))
+				if (!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingStage))
 				{
-					cond.Stage = workingCase.AlsoPlayingStage;
-					workingCase.AlsoPlayingStage = null;
+					cond.Stage = workingCase.LegacyAlsoPlayingStage;
+					workingCase.LegacyAlsoPlayingStage = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.AlsoPlayingHand))
+				if (!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingHand))
 				{
-					cond.Hand = workingCase.AlsoPlayingHand;
-					workingCase.AlsoPlayingHand = null;
+					cond.Hand = workingCase.LegacyAlsoPlayingHand;
+					workingCase.LegacyAlsoPlayingHand = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.AlsoPlayingSaidMarker))
+				if (!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingSaidMarker))
 				{
-					cond.SaidMarker = workingCase.AlsoPlayingSaidMarker;
-					workingCase.AlsoPlayingSaidMarker = null;
+					cond.SaidMarker = workingCase.LegacyAlsoPlayingSaidMarker;
+					workingCase.LegacyAlsoPlayingSaidMarker = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.AlsoPlayingNotSaidMarker))
+				if (!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingNotSaidMarker))
 				{
-					cond.NotSaidMarker = workingCase.AlsoPlayingNotSaidMarker;
-					workingCase.AlsoPlayingNotSaidMarker = null;
+					cond.NotSaidMarker = workingCase.LegacyAlsoPlayingNotSaidMarker;
+					workingCase.LegacyAlsoPlayingNotSaidMarker = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.AlsoPlayingSayingMarker))
+				if (!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingSayingMarker))
 				{
-					cond.SayingMarker = workingCase.AlsoPlayingSayingMarker;
-					workingCase.AlsoPlayingSayingMarker = null;
+					cond.SayingMarker = workingCase.LegacyAlsoPlayingSayingMarker;
+					workingCase.LegacyAlsoPlayingSayingMarker = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.AlsoPlayingSaying))
+				if (!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingSaying))
 				{
-					cond.Saying = workingCase.AlsoPlayingSaying;
-					workingCase.AlsoPlayingSaying = null;
+					cond.Saying = workingCase.LegacyAlsoPlayingSaying;
+					workingCase.LegacyAlsoPlayingSaying = null;
 				}
-				if (!string.IsNullOrEmpty(workingCase.AlsoPlayingTimeInStage))
+				if (!string.IsNullOrEmpty(workingCase.LegacyAlsoPlayingTimeInStage))
 				{
-					cond.TimeInStage = workingCase.AlsoPlayingTimeInStage;
-					workingCase.AlsoPlayingTimeInStage = null;
+					cond.TimeInStage = workingCase.LegacyAlsoPlayingTimeInStage;
+					workingCase.LegacyAlsoPlayingTimeInStage = null;
 				}
 			}
 
-			if (!string.IsNullOrEmpty(workingCase.TotalFemales))
+			if (!string.IsNullOrEmpty(workingCase.LegacyTotalFemales))
 			{
 				TargetCondition filter = new TargetCondition();
 				filter.Gender = "female";
-				filter.Count = workingCase.TotalFemales;
+				filter.Count = workingCase.LegacyTotalFemales;
 				workingCase.Conditions.Add(filter);
-				workingCase.TotalFemales = null;
+				workingCase.LegacyTotalFemales = null;
 			}
-			if (!string.IsNullOrEmpty(workingCase.TotalMales))
+			if (!string.IsNullOrEmpty(workingCase.LegacyTotalMales))
 			{
 				TargetCondition filter = new TargetCondition();
 				filter.Gender = "male";
-				filter.Count = workingCase.TotalMales;
+				filter.Count = workingCase.LegacyTotalMales;
 				workingCase.Conditions.Add(filter);
-				workingCase.TotalMales = null;
+				workingCase.LegacyTotalMales = null;
 			}
-			if (!string.IsNullOrEmpty(workingCase.TotalExposed))
+			if (!string.IsNullOrEmpty(workingCase.LegacyTotalExposed))
 			{
 				TargetCondition filter = new TargetCondition();
 				filter.Status = "exposed";
-				filter.Count = workingCase.TotalExposed;
+				filter.Count = workingCase.LegacyTotalExposed;
 				workingCase.Conditions.Add(filter);
-				workingCase.TotalExposed = null;
+				workingCase.LegacyTotalExposed = null;
 			}
-			if (!string.IsNullOrEmpty(workingCase.TotalNaked))
+			if (!string.IsNullOrEmpty(workingCase.LegacyTotalNaked))
 			{
 				TargetCondition filter = new TargetCondition();
 				filter.Status = "naked";
-				filter.Count = workingCase.TotalNaked;
+				filter.Count = workingCase.LegacyTotalNaked;
 				workingCase.Conditions.Add(filter);
-				workingCase.TotalNaked = null;
+				workingCase.LegacyTotalNaked = null;
 			}
-			if (!string.IsNullOrEmpty(workingCase.TotalMasturbating))
+			if (!string.IsNullOrEmpty(workingCase.LegacyTotalMasturbating))
 			{
 				TargetCondition filter = new TargetCondition();
 				filter.Status = "masturbating";
-				filter.Count = workingCase.TotalMasturbating;
+				filter.Count = workingCase.LegacyTotalMasturbating;
 				workingCase.Conditions.Add(filter);
-				workingCase.TotalMasturbating = null;
+				workingCase.LegacyTotalMasturbating = null;
 			}
-			if (!string.IsNullOrEmpty(workingCase.TotalFinished))
+			if (!string.IsNullOrEmpty(workingCase.LegacyTotalFinished))
 			{
 				TargetCondition filter = new TargetCondition();
 				filter.Status = "finished";
-				filter.Count = workingCase.TotalFinished;
+				filter.Count = workingCase.LegacyTotalFinished;
 				workingCase.Conditions.Add(filter);
-				workingCase.TotalFinished = null;
+				workingCase.LegacyTotalFinished = null;
 			}
-			if (!string.IsNullOrEmpty(workingCase.TotalPlaying))
+			if (!string.IsNullOrEmpty(workingCase.LegacyTotalPlaying))
 			{
 				TargetCondition filter = new TargetCondition();
 				filter.Status = "alive";
-				filter.Count = workingCase.TotalPlaying;
+				filter.Count = workingCase.LegacyTotalPlaying;
 				workingCase.Conditions.Add(filter);
-				workingCase.TotalPlaying = null;
+				workingCase.LegacyTotalPlaying = null;
 			}
 		}
 
@@ -668,7 +673,7 @@ namespace SPNATI_Character_Editor
 			}
 
 			if (character.Styles != null)
-            {
+			{
 				foreach (StyleRule rule in character.Styles.Rules)
 				{
 					foreach (StyleAttribute att in rule.Attributes)

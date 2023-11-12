@@ -1,0 +1,757 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+    <owner>caitlin</owner>
+    <height />
+    <age />
+    <pronunciation />
+    <othernotes />
+    <noteworthy>
+        <case name="Dealer Appreciation " id="50" priority="Prompt" min="0" max="4">
+            <description>Caitlin rallies the table to thank the dealer for their hard work. If you want to be nice or be smug, do it here!</description>
+        </case>
+        <case name="Hat Trick" id="63" priority="Noteworthy" min="1" max="1">
+            <description>For the first time in the game, Caitlin shows off her psychic powers.</description>
+        </case>
+        <case name="Chair Float" id="64" priority="FYI" min="6" max="6">
+            <description>Caitlin floats a big ol chair over to her for comfort, showing she can levitate large objects with ease.</description>
+        </case>
+        <case name="Losing Control " id="65" priority="Noteworthy" min="7" max="7">
+            <description>As Caitlin gets deeper into her forfeit, pillows start to float around her without her noticing. (They will remain there for the rest of her heavy cases.) </description>
+        </case>
+        <case name="Chair YEET" id="66" priority="FYI" min="8" max="8">
+            <description>Caitlin chucks her chair away with little regard. Oh yeah, also she has her robe on again.</description>
+        </case>
+        <case name="Beans!" id="68" priority="Prompt" min="3" max="3">
+            <description>As per community request, this is now situation. Blurt out your character's favorite (or least favorite) food.</description>
+        </case>
+        <case name="Grimsley Gossip" id="173" priority="FYI" min="3" max="8">
+            <description>Caitlin gossips about her least favorite colleague, Grimsley. Different lines will have different markers. </description>
+        </case>
+        <case name="Marshal Gossip" id="171" priority="FYI" min="3" max="8">
+            <description>Caitlin gossips about the colleague she understands least, Marshal. Different lines will have different markers. </description>
+        </case>
+        <case name="Shauntal Gossip" id="170" priority="FYI" min="3" max="8">
+            <description>Caitlin gossips about her favorite colleague, Shauntal. Different lines will have different markers. </description>
+        </case>
+    </noteworthy>
+    <responses>
+        <response id="20" opponent="shantae" opponentId="10" />
+        <response id="21" opponent="saki_zls" opponentId="3" />
+        <response id="22" opponent="saki_zls" opponentId="2" />
+        <response id="24" opponent="saki_zls" opponentId="1" />
+        <response id="25" opponent="sakura" opponentId="2" />
+        <response id="26" opponent="yusuke" opponentId="211" />
+        <response id="27" opponent="yusuke" opponentId="210" />
+        <response id="28" opponent="lucina" opponentId="669" />
+        <response id="29" opponent="lucina" opponentId="668" />
+        <response id="30" opponent="takatoshi" opponentId="16" />
+        <response id="31" opponent="hilda" opponentId="148" />
+        <response id="34" opponent="moon" opponentId="186" />
+        <response id="35" opponent="moon" opponentId="51" />
+        <response id="36" opponent="moon" opponentId="50" />
+        <response id="37" opponent="fluttershy" opponentId="18" />
+        <response id="38" opponent="perona" opponentId="69" />
+        <response id="39" opponent="perona" opponentId="15" />
+        <response id="40" opponent="rosa" opponentId="234" />
+        <response id="41" opponent="rosa" opponentId="43" />
+        <response id="42" opponent="rouge" opponentId="6" />
+        <response id="43" opponent="rouge" opponentId="5" />
+        <response id="44" opponent="rouge" opponentId="8" />
+        <response id="45" opponent="rouge" opponentId="7" />
+        <response id="47" opponent="fluttershy" opponentId="19" />
+        <response id="48" opponent="fluttershy" opponentId="23" />
+        <response id="49" opponent="emi" opponentId="2" />
+        <response id="54" opponent="twisted_fate" opponentId="174" />
+        <response id="55" opponent="mari_setogaya" opponentId="150" />
+        <response id="56" opponent="streaming-chan" opponentId="27" />
+        <response id="57" opponent="nico_robin" opponentId="304" />
+        <response id="58" opponent="nico_robin" opponentId="305" />
+        <response id="59" opponent="nico_robin" opponentId="306" />
+        <response id="60" opponent="kyou" opponentId="115" />
+        <response id="61" opponent="reimu" opponentId="1" />
+        <response id="62" opponent="nagatoro" opponentId="2" />
+        <response id="69" opponent="meia" opponentId="336" />
+        <response id="70" opponent="meia" opponentId="339" />
+        <response id="71" opponent="jura" opponentId="123" />
+        <response id="75" opponent="hu_tao" opponentId="1268" />
+        <response id="76" opponent="hu_tao" opponentId="1269" />
+        <response id="121" opponent="hu_tao" opponentId="1271" />
+        <response id="148" opponent="nami" opponentId="1191" />
+        <response id="149" opponent="nami" opponentId="1190" />
+        <response id="150" opponent="nami" opponentId="15" />
+        <response id="151" opponent="nami" opponentId="11" />
+        <response id="152" opponent="nami" opponentId="624" />
+        <response id="153" opponent="nami" opponentId="623" />
+        <response id="154" opponent="nami" opponentId="53" />
+        <response id="155" opponent="nami" opponentId="13" />
+        <response id="156" opponent="nami" opponentId="52" />
+        <response id="169" opponent="nico_robin" opponentId="572" />
+        <response id="174" opponent="mitama" opponentId="350" />
+        <response id="175" opponent="cheryl" opponentId="38" />
+        <response id="176" opponent="cheryl" opponentId="73" />
+        <response id="177" opponent="cheryl" opponentId="75" />
+        <response id="178" opponent="cheryl" opponentId="74" />
+        <response id="179" opponent="nico_robin" opponentId="571" />
+        <response id="183" opponent="chihiro" opponentId="2" />
+        <response id="184" opponent="marinette" opponentId="438" />
+        <response id="185" opponent="caulifla" opponentId="2" />
+        <response id="186" opponent="caulifla" opponentId="4" />
+        <response id="187" opponent="caulifla" opponentId="3" />
+        <response id="188" opponent="chihiro" opponentId="1" />
+        <response id="190" opponent="hu_tao" opponentId="1300" />
+        <response id="191" opponent="hu_tao" opponentId="1298" />
+        <response id="192" opponent="hu_tao" opponentId="1299" />
+        <response id="193" opponent="hu_tao" opponentId="1303" />
+        <response id="194" opponent="hu_tao" opponentId="1301" />
+        <response id="195" opponent="hu_tao" opponentId="1302" />
+        <response id="196" opponent="hu_tao" opponentId="1304" />
+        <response id="197" opponent="hu_tao" opponentId="1305" />
+        <response id="198" opponent="hu_tao" opponentId="1306" />
+        <response id="199" opponent="hu_tao" opponentId="1307" />
+        <response id="200" opponent="hu_tao" opponentId="1308" />
+        <response id="201" opponent="hu_tao" opponentId="1309" />
+        <response id="202" opponent="hu_tao" opponentId="1312" />
+        <response id="203" opponent="hu_tao" opponentId="1311" />
+        <response id="204" opponent="hu_tao" opponentId="1310" />
+        <response id="205" opponent="hu_tao" opponentId="1313" />
+        <response id="206" opponent="hu_tao" opponentId="1314" />
+        <response id="207" opponent="hu_tao" opponentId="1315" />
+        <response id="238" opponent="hu_tao" opponentId="1294" />
+        <response id="240" opponent="hu_tao" opponentId="1295" />
+        <response id="243" opponent="hu_tao" opponentId="1297" />
+        <response id="244" opponent="hu_tao" opponentId="1296" />
+        <response id="256" opponent="elesa" opponentId="3" />
+        <response id="257" opponent="elesa" opponentId="8" />
+        <response id="258" opponent="elesa" opponentId="9" />
+        <response id="266" opponent="laevatein" opponentId="13" />
+    </responses>
+    <notes>
+        <note id="72">Please feel free to have a field day with this one. </note>
+        <note id="74">Tags here are temporary</note>
+        <note id="77">I just had a thought, it could be funny if Hu Tao began thinking of the logistics of fitting Caitlin in a coffin. Doesn't have to come up in this target, but wanted to write the idea down. </note>
+        <note id="121">Am not actually salty here, I just like it when Caitlin gets peeved. </note>
+    </notes>
+    <labels>
+        <label id="78" label="" folder="Midnight_Ball" sort="0" />
+        <label id="79" label="" folder="Midnight_Ball" sort="0" />
+        <label id="80" label="" folder="Midnight_Ball" sort="0" />
+        <label id="81" label="" folder="Midnight_Ball" sort="0" />
+        <label id="82" label="" folder="Midnight_Ball" sort="0" />
+        <label id="83" label="" folder="Midnight_Ball" sort="0" />
+        <label id="84" label="" folder="Midnight_Ball" sort="0" />
+        <label id="85" label="" folder="Midnight_Ball" sort="0" />
+        <label id="86" label="" folder="Midnight_Ball" sort="0" />
+        <label id="87" label="" folder="Midnight_Ball" sort="0" />
+        <label id="88" label="" folder="Midnight_Ball" sort="0" />
+        <label id="89" label="" folder="Midnight_Ball" sort="0" />
+        <label id="90" label="" folder="Midnight_Ball" sort="0" />
+        <label id="91" label="" folder="Midnight_Ball" sort="0" />
+        <label id="92" label="" folder="Midnight_Ball" sort="0" />
+        <label id="93" label="" folder="Midnight_Ball" sort="0" />
+        <label id="94" label="" folder="Midnight_Ball" sort="0" />
+        <label id="95" label="" folder="Midnight_Ball" sort="0" />
+        <label id="96" label="" folder="Midnight_Ball" sort="0" />
+        <label id="97" label="" folder="Midnight_Ball" sort="0" />
+        <label id="98" label="" folder="Midnight_Ball" sort="0" />
+        <label id="99" label="" folder="Midnight_Ball" sort="0" />
+        <label id="100" label="" folder="Midnight_Ball" sort="0" />
+        <label id="101" label="" folder="Midnight_Ball" sort="0" />
+        <label id="102" label="" folder="Midnight_Ball" sort="0" />
+        <label id="103" label="" folder="Midnight_Ball" sort="0" />
+        <label id="104" label="" folder="Midnight_Ball" sort="0" />
+        <label id="105" label="" folder="Midnight_Ball" sort="0" />
+        <label id="106" label="" folder="Midnight_Ball" sort="0" />
+        <label id="107" label="" folder="Midnight_Ball" sort="0" />
+        <label id="108" label="" folder="Midnight_Ball" sort="0" />
+        <label id="109" label="" folder="Midnight_Ball" sort="0" />
+        <label id="110" label="" folder="Midnight_Ball" sort="0" />
+        <label id="112" label="" folder="Midnight_Ball" sort="0" />
+        <label id="113" label="" folder="Midnight_Ball" sort="0" />
+        <label id="114" label="" folder="Midnight_Ball" sort="0" />
+        <label id="115" label="" folder="Midnight_Ball" sort="0" />
+        <label id="116" label="" folder="Midnight_Ball" sort="0" />
+        <label id="117" label="" folder="Hu Tao" sort="0" />
+        <label id="118" label="" folder="Hu Tao" sort="0" />
+        <label id="77" label="" folder="Hu Tao" sort="0" />
+        <label id="119" label="" folder="Hu Tao" sort="0" />
+        <label id="120" label="" folder="Hu Tao" sort="0" />
+        <label id="122" label="" folder="Hu Tao" sort="0" />
+        <label id="123" label="" folder="Hu Tao" sort="0" />
+        <label id="124" label="" folder="Hu Tao" sort="0" />
+        <label id="125" label="" folder="Hu Tao" sort="0" />
+        <label id="126" label="" folder="Hu Tao" sort="0" />
+        <label id="127" label="" folder="Hu Tao" sort="0" />
+        <label id="128" label="" folder="Hu Tao" sort="0" />
+        <label id="76" label="" folder="Hu Tao" sort="0" />
+        <label id="75" label="" folder="Hu Tao" sort="0" />
+        <label id="121" label="" folder="Hu Tao" sort="0" />
+        <label id="129" label="" folder="Leon" sort="0" />
+        <label id="130" label="" folder="Leon" sort="0" />
+        <label id="131" label="" folder="Leon" sort="0" />
+        <label id="132" label="" folder="Leon" sort="0" />
+        <label id="133" label="" folder="Leon" sort="0" />
+        <label id="134" label="" folder="Leon" sort="0" />
+        <label id="135" label="" folder="Leon" sort="0" />
+        <label id="74" label="" folder="Leon" sort="0" />
+        <label id="136" label="" folder="Leon" sort="0" />
+        <label id="137" label="" folder="Leon" sort="0" />
+        <label id="138" label="" folder="Leon" sort="0" />
+        <label id="139" label="" folder="Leon" sort="0" />
+        <label id="140" label="" folder="Leon" sort="0" />
+        <label id="141" label="" folder="Leon" sort="0" />
+        <label id="142" label="" folder="Leon" sort="0" />
+        <label id="143" label="" folder="Leon" sort="0" />
+        <label id="144" label="" folder="Leon" sort="0" />
+        <label id="145" label="" folder="Leon" sort="0" />
+        <label id="146" label="" folder="Leon" sort="0" />
+        <label id="147" label="" folder="Leon" sort="0" />
+        <label id="158" label="" folder="Nami's Pirates" sort="0" />
+        <label id="159" label="" folder="Nami's Pirates" sort="0" />
+        <label id="160" label="" folder="Nami's Pirates" sort="0" />
+        <label id="161" label="" folder="Nami's Pirates" sort="0" />
+        <label id="162" label="" folder="Nami's Pirates" sort="0" />
+        <label id="163" label="" folder="Nami's Pirates" sort="0" />
+        <label id="164" label="" folder="Nami's Pirates" sort="0" />
+        <label id="165" label="" folder="Nami's Pirates" sort="0" />
+        <label id="166" label="" folder="Nami's Pirates" sort="0" />
+        <label id="167" label="" folder="Nami's Pirates" sort="0" />
+        <label id="168" label="" folder="Nami's Pirates" sort="0" />
+        <label id="170" label="" folder="Gossip" sort="0" />
+        <label id="171" label="" folder="Gossip" sort="0" />
+        <label id="172" label="" folder="Gossip" sort="0" />
+        <label id="173" label="" folder="Gossip" sort="0" />
+        <label id="180" label="" folder="Leon" sort="0" />
+        <label id="181" label="" folder="Hu Tao" sort="0" />
+        <label id="182" label="" folder="Hu Tao" sort="0" />
+        <label id="189" label="" folder="Hu Tao" sort="0" />
+        <label id="190" label="" folder="Leon/Tao" sort="0" />
+        <label id="191" label="" folder="Leon/Tao" sort="0" />
+        <label id="192" label="" folder="Leon/Tao" sort="0" />
+        <label id="193" label="" folder="Leon/Tao" sort="0" />
+        <label id="194" label="" folder="Leon/Tao" sort="0" />
+        <label id="195" label="" folder="Leon/Tao" sort="0" />
+        <label id="196" label="" folder="Leon/Tao" sort="0" />
+        <label id="197" label="" folder="Leon/Tao" sort="0" />
+        <label id="199" label="" folder="Leon/Tao" sort="0" />
+        <label id="200" label="" folder="Leon/Tao" sort="0" />
+        <label id="201" label="" folder="Leon/Tao" sort="0" />
+        <label id="202" label="" folder="Leon/Tao" sort="0" />
+        <label id="203" label="" folder="Leon/Tao" sort="0" />
+        <label id="204" label="" folder="Leon/Tao" sort="0" />
+        <label id="205" label="" folder="Leon/Tao" sort="0" />
+        <label id="206" label="" folder="Leon/Tao" sort="0" />
+        <label id="207" label="" folder="Leon/Tao" sort="0" />
+        <label id="208" label="" folder="Natsuki" sort="0" />
+        <label id="209" label="" folder="Natsuki" sort="0" />
+        <label id="72" label="" folder="Natsuki" sort="0" />
+        <label id="210" label="" folder="Natsuki" sort="0" />
+        <label id="73" label="" folder="Natsuki" sort="0" />
+        <label id="211" label="" folder="Natsuki" sort="0" />
+        <label id="212" label="" folder="Natsuki" sort="0" />
+        <label id="213" label="" folder="Natsuki" sort="0" />
+        <label id="214" label="" folder="Natsuki" sort="0" />
+        <label id="215" label="" folder="Natsuki" sort="0" />
+        <label id="216" label="" folder="Natsuki" sort="0" />
+        <label id="217" label="" folder="Natsuki" sort="0" />
+        <label id="218" label="" folder="Natsuki" sort="0" />
+        <label id="219" label="" folder="Natsuki" sort="0" />
+        <label id="220" label="" folder="Natsuki" sort="0" />
+        <label id="221" label="" folder="Natsuki" sort="0" />
+        <label id="222" label="" folder="Natsuki" sort="0" />
+        <label id="223" label="" folder="Aqua Grunt" sort="0" />
+        <label id="224" label="" folder="Aqua Grunt" sort="0" />
+        <label id="225" label="" folder="Aqua Grunt" sort="0" />
+        <label id="226" label="" folder="Aqua Grunt" sort="0" />
+        <label id="227" label="" folder="Aqua Grunt" sort="0" />
+        <label id="228" label="" folder="Aqua Grunt" sort="0" />
+        <label id="229" label="" folder="Aqua Grunt" sort="0" />
+        <label id="230" label="" folder="Aqua Grunt" sort="0" />
+        <label id="231" label="" folder="Aqua Grunt" sort="0" />
+        <label id="232" label="" folder="Aqua Grunt" sort="0" />
+        <label id="233" label="" folder="Aqua Grunt" sort="0" />
+        <label id="234" label="" folder="Aqua Grunt" sort="0" />
+        <label id="235" label="" folder="Aqua Grunt" sort="0" />
+        <label id="236" label="" folder="Leon" sort="0" />
+        <label id="237" label="" folder="Leon" sort="0" />
+        <label id="238" label="" folder="Hu Tao" sort="0" />
+        <label id="239" label="" folder="Hu Tao" sort="0" />
+        <label id="240" label="" folder="Hu Tao" sort="0" />
+        <label id="241" label="" folder="Hu Tao" sort="0" />
+        <label id="242" label="" folder="Hu Tao" sort="0" />
+        <label id="243" label="" folder="Hu Tao" sort="0" />
+        <label id="244" label="" folder="Hu Tao" sort="0" />
+        <label id="245" label="" folder="Hu Tao" sort="0" />
+        <label id="198" label="" folder="Leon/Tao" sort="0" />
+        <label id="246" label="" folder="Personality Tags" sort="0" />
+        <label id="247" label="" folder="Personality Tags" sort="0" />
+        <label id="248" label="" folder="Personality Tags" sort="0" />
+        <label id="249" label="" folder="Personality Tags" sort="0" />
+        <label id="250" label="" folder="Personality Tags" sort="0" />
+        <label id="251" label="" folder="Personality Tags" sort="0" />
+        <label id="252" label="" folder="Personality Tags" sort="0" />
+        <label id="253" label="" folder="Elesa" sort="0" />
+        <label id="254" label="" folder="Elesa" sort="0" />
+        <label id="255" label="" folder="Elesa" sort="0" />
+        <label id="259" label="" folder="Personality Tags" sort="0" />
+        <label id="260" label="" folder="Personality Tags" sort="0" />
+        <label id="261" label="" folder="Unova Friends" sort="0" />
+        <label id="262" label="" folder="Unova Friends" sort="0" />
+        <label id="263" label="" folder="Unova Friends" sort="0" />
+        <label id="264" label="" folder="Unova Friends" sort="0" />
+        <label id="265" label="" folder="Unova Friends" sort="0" />
+        <label id="268" label="" folder="Rosa" sort="0" />
+        <label id="269" label="" folder="Rosa" sort="0" />
+        <label id="270" label="" folder="Rosa" sort="0" />
+        <label id="271" label="" folder="Rosa" sort="0" />
+        <label id="272" label="" folder="Rosa" sort="0" />
+        <label id="273" label="" folder="Rosa" sort="0" />
+        <label id="274" label="" folder="Rosa" sort="0" />
+        <label id="275" label="" folder="Rosa" sort="0" />
+        <label id="276" label="" folder="Rosa" sort="0" />
+        <label id="277" label="" folder="Rosa" sort="0" />
+        <label id="278" label="" folder="Rosa" sort="0" />
+        <label id="279" label="" folder="Rosa" sort="0" />
+        <label id="280" label="" folder="Rosa" sort="0" />
+        <label id="281" label="" folder="Rosa" sort="0" />
+        <label id="282" label="" folder="Rosa" sort="0" />
+        <label id="283" label="" folder="Rosa" sort="0" />
+        <label id="284" label="" folder="Cynthia" sort="0" />
+        <label id="285" label="" folder="Cynthia" sort="0" />
+        <label id="286" label="" folder="Cynthia" sort="0" />
+        <label id="287" label="" folder="Cynthia" sort="0" />
+        <label id="288" label="" folder="Cynthia" sort="0" />
+        <label id="289" label="" folder="Cynthia" sort="0" />
+        <label id="290" label="" folder="Cynthia" sort="0" />
+        <label id="291" label="" folder="Cynthia" sort="0" />
+        <label id="292" label="" folder="Cynthia" sort="0" />
+        <label id="293" label="" folder="Midnight_Ball" sort="0" />
+        <label id="294" label="" folder="Rosa" sort="0" />
+        <label id="295" label="" folder="Rosa" sort="0" />
+        <label id="296" label="" folder="Rosa" sort="0" />
+        <label id="297" label="" folder="Rosa" sort="0" />
+        <label id="298" label="" folder="Rosa" sort="0" />
+        <label id="299" label="" folder="Rosa" sort="0" />
+        <label id="300" label="" folder="Rosa" sort="0" />
+        <label id="301" label="" folder="Rosa" sort="0" />
+        <label id="302" label="" folder="Rosa" sort="0" />
+        <label id="303" label="" folder="Rosa" sort="0" />
+        <label id="304" label="" folder="Rosa" sort="0" />
+        <label id="305" label="" folder="Rosa" sort="0" />
+        <label id="306" label="" folder="Rosa" sort="0" />
+        <label id="307" label="" folder="Rosa" sort="0" />
+        <label id="308" label="" folder="Rosa" sort="0" />
+        <label id="309" label="" folder="Rosa" sort="0" />
+        <label id="310" label="" folder="Rosa" sort="0" />
+        <label id="311" label="" folder="Rosa" sort="0" />
+        <label id="312" label="" folder="Rosa" sort="0" />
+        <label id="313" label="" folder="Rosa" sort="0" />
+    </labels>
+    <nextId>313</nextId>
+    <markers>
+        <marker scope="Public" name="" />
+        <marker scope="Public" name="binah_caitlin_experiments1R" />
+        <marker scope="Public" name="Breastscare" />
+        <marker scope="Public" name="cait_childfriendsR" />
+        <marker scope="Public" name="cait_elitefourR" />
+        <marker scope="Public" name="cait_prestfightersR1" />
+        <marker scope="Public" name="cait_prestfightersR2" />
+        <marker scope="Public" name="caitGreetR" />
+        <marker scope="Public" name="Caitlin_AquaG_0A" />
+        <marker scope="Public" name="Caitlin_AquaG_0B" />
+        <marker scope="Public" name="Caitlin_AquaG_0C" />
+        <marker scope="Public" name="Caitlin_AquaG_1A" />
+        <marker scope="Public" name="Caitlin_AquaG_1B" />
+        <marker scope="Public" name="Caitlin_AquaG_1C" />
+        <marker scope="Public" name="Caitlin_AquaG_2A" />
+        <marker scope="Public" name="Caitlin_AquaG_2B" />
+        <marker scope="Public" name="Caitlin_AquaG_2C" />
+        <marker scope="Public" name="Caitlin_AquaG_3A" />
+        <marker scope="Public" name="Caitlin_AquaG_3B" />
+        <marker scope="Public" name="Caitlin_AquaG_3C" />
+        <marker scope="Public" name="Caitlin_Beans" />
+        <marker scope="Public" name="Caitlin_CaitlinGossip" />
+        <marker scope="Public" name="caitlin_capBR" />
+        <marker scope="Public" name="caitlin_capCR" />
+        <marker scope="Public" name="Caitlin_ChairYEET" />
+        <marker scope="Public" name="Caitlin_ChildhoodFriends" />
+        <marker scope="Public" name="Caitlin_ChildhoodSpooks" />
+        <marker scope="Public" name="Caitlin_Daydream" />
+        <marker scope="Public" name="Caitlin_DMG_1A" />
+        <marker scope="Public" name="Caitlin_DMG_1B" />
+        <marker scope="Public" name="Caitlin_Elesa_0B" />
+        <marker scope="Public" name="Caitlin_Elesa0A" />
+        <marker scope="Public" name="Caitlin_Elesa0C" />
+        <marker scope="Public" name="Caitlin_ExhibitionCastle" />
+        <marker scope="Public" name="Caitlin_ExhibitionCastle2" />
+        <marker scope="Public" name="Caitlin_Fakeout" />
+        <marker scope="Public" name="Caitlin_GossipCheck_1" />
+        <marker scope="Public" name="Caitlin_GossipCheck_2" />
+        <marker scope="Public" name="Caitlin_GossipCheck_Caitlin" />
+        <marker scope="Public" name="Caitlin_GossipCheck_Grimsley" />
+        <marker scope="Public" name="Caitlin_GossipCheck_Grimsly" />
+        <marker scope="Public" name="Caitlin_GossipCheck_Marshal" />
+        <marker scope="Public" name="Caitlin_GossipCheck_Shauntal" />
+        <marker scope="Public" name="Caitlin_GrimsleyGossipCheating" />
+        <marker scope="Public" name="Caitlin_GrimsleyGossipSocks" />
+        <marker scope="Public" name="Caitlin_GrimsleyGossipTip" />
+        <marker scope="Public" name="caitlin_hairR" />
+        <marker scope="Public" name="Caitlin_HeavyStart" />
+        <marker scope="Public" name="Caitlin_Hilbert_0A" />
+        <marker scope="Public" name="Caitlin_HotspringSteam" />
+        <marker scope="Public" name="Caitlin_Kumatora_0A" />
+        <marker scope="Public" name="Caitlin_Leon_0A" />
+        <marker scope="Public" name="Caitlin_Leon_0B" />
+        <marker scope="Public" name="Caitlin_Leon_0C" />
+        <marker scope="Public" name="Caitlin_Leon_1A" />
+        <marker scope="Public" name="Caitlin_Leon_1C" />
+        <marker scope="Public" name="Caitlin_Leon_2A" />
+        <marker scope="Public" name="Caitlin_Leon_2C" />
+        <marker scope="Public" name="Caitlin_Leon_3A" />
+        <marker scope="Public" name="Caitlin_Leon_3C" />
+        <marker scope="Public" name="Caitlin_Leon_4A" />
+        <marker scope="Public" name="Caitlin_LewdTeaTime" />
+        <marker scope="Public" name="Caitlin_MarshalGossip" />
+        <marker scope="Public" name="Caitlin_MarshalGossipCliff" />
+        <marker scope="Public" name="Caitlin_MarshalGossipSparring" />
+        <marker scope="Public" name="Caitlin_MarshalGossipWall" />
+        <marker scope="Public" name="Caitlin_Mitama0A" />
+        <marker scope="Public" name="Caitlin_Mitama0B" />
+        <marker scope="Public" name="Caitlin_MunnaStory" />
+        <marker scope="Public" name="Caitlin_Nami_0A" />
+        <marker scope="Public" name="Caitlin_Natsuki_1A" />
+        <marker scope="Public" name="Caitlin_Natsuki_1B" />
+        <marker scope="Public" name="Caitlin_Natsuki_1C" />
+        <marker scope="Public" name="Caitlin_Natsuki_2A" />
+        <marker scope="Public" name="Caitlin_Natsuki_2B" />
+        <marker scope="Public" name="Caitlin_Natsuki_2C" />
+        <marker scope="Public" name="Caitlin_Natsuki_3A" />
+        <marker scope="Public" name="Caitlin_Natsuki_3B" />
+        <marker scope="Public" name="Caitlin_Natsuki_3C" />
+        <marker scope="Public" name="Caitlin_Natsuki_42R" />
+        <marker scope="Public" name="Caitlin_Natsuki_4A" />
+        <marker scope="Public" name="Caitlin_Natsuki_4B" />
+        <marker scope="Public" name="Caitlin_Natsuki_4C" />
+        <marker scope="Public" name="Caitlin_Natsuki_5A" />
+        <marker scope="Public" name="Caitlin_Natsuki_5B" />
+        <marker scope="Public" name="Caitlin_Natsuki_5C" />
+        <marker scope="Public" name="Caitlin_Natsuki_7C" />
+        <marker scope="Public" name="Caitlin_Perona_0A" />
+        <marker scope="Public" name="Caitlin_Perona_0B" />
+        <marker scope="Public" name="Caitlin_Pressure" />
+        <marker scope="Public" name="Caitlin_remember" />
+        <marker scope="Public" name="Caitlin_Ringo_0A" />
+        <marker scope="Public" name="Caitlin_Rosa_0A" />
+        <marker scope="Public" name="Caitlin_Rosa_0BDinner" />
+        <marker scope="Public" name="Caitlin_Rosa_0BTease" />
+        <marker scope="Public" name="Caitlin_Rosa_0CDinner" />
+        <marker scope="Public" name="Caitlin_Rosa_0CTease" />
+        <marker scope="Public" name="Caitlin_Rosa_1A" />
+        <marker scope="Public" name="Caitlin_Rosa_1BGym" />
+        <marker scope="Public" name="Caitlin_Rosa_1BHydreigon" />
+        <marker scope="Public" name="Caitlin_Rosa_1CGym" />
+        <marker scope="Public" name="Caitlin_Rosa_1CIris" />
+        <marker scope="Public" name="Caitlin_Rosa_1CPlaydate" />
+        <marker scope="Public" name="Caitlin_Rosa_2A" />
+        <marker scope="Public" name="Caitlin_Rosa_2B" />
+        <marker scope="Public" name="Caitlin_Rosa_2CSelfie" />
+        <marker scope="Public" name="Caitlin_Rosa_2CStudios" />
+        <marker scope="Public" name="Caitlin_Rosa_3A" />
+        <marker scope="Public" name="Caitlin_Rosa_3B" />
+        <marker scope="Public" name="Caitlin_Rosa_3C" />
+        <marker scope="Public" name="Caitlin_Rosa_4A_Sleep" />
+        <marker scope="Public" name="Caitlin_Rosa_4A_Thighs" />
+        <marker scope="Public" name="Caitlin_Rosa_4ASleep" />
+        <marker scope="Public" name="Caitlin_Rosa_4B_Sleep" />
+        <marker scope="Public" name="Caitlin_Rosa_4B_Thighs" />
+        <marker scope="Public" name="Caitlin_Rosa_4C_Sleep" />
+        <marker scope="Public" name="Caitlin_Rosa_4C_Thighs" />
+        <marker scope="Public" name="Caitlin_Rosa_5A" />
+        <marker scope="Public" name="Caitlin_Rosa_5B" />
+        <marker scope="Public" name="Caitlin_Rosa_5C" />
+        <marker scope="Public" name="Caitlin_Rosa_6A" />
+        <marker scope="Public" name="Caitlin_Rosa_6B" />
+        <marker scope="Public" name="Caitlin_Rosa_6C" />
+        <marker scope="Public" name="Caitlin_Rosa_Hug_SetupA" />
+        <marker scope="Public" name="Caitlin_ShauntalGossipFear" />
+        <marker scope="Public" name="Caitlin_ShauntalGossipReading" />
+        <marker scope="Public" name="Caitlin_ShauntalGossipRomance" />
+        <marker scope="Public" name="caitlin_shawlAR" />
+        <marker scope="Public" name="caitlin_shawlBR" />
+        <marker scope="Public" name="Caitlin_Spooky_Handholding" />
+        <marker scope="Public" name="Caitlin_Tao_0A" />
+        <marker scope="Public" name="Caitlin_Tao_0B" />
+        <marker scope="Public" name="Caitlin_Tao_0C" />
+        <marker scope="Public" name="Caitlin_Tao_1A" />
+        <marker scope="Public" name="Caitlin_Tao_1B" />
+        <marker scope="Public" name="Caitlin_UnderstandTarget" />
+        <marker scope="Public" name="caitlin0R" />
+        <marker scope="Public" name="caitlin12_powerR" />
+        <marker scope="Public" name="caitlin2R1" />
+        <marker scope="Public" name="caitlin2R2" />
+        <marker scope="Public" name="caitlin2s_powerR" />
+        <marker scope="Public" name="CaitlinCastleFlashback" />
+        <marker scope="Public" name="CaitlinComposure" />
+        <marker scope="Public" name="CaitlinLikesHair" />
+        <marker scope="Public" name="CaitlinLikesWeight" />
+        <marker scope="Public" name="CaitlinMewDream" />
+        <marker scope="Public" name="CaitlinOutbid" />
+        <marker scope="Public" name="CaitlinSpook_Backfire" />
+        <marker scope="Public" name="CaitlinTeamPlasmaKing" />
+        <marker scope="Public" name="Casteliacone" />
+        <marker scope="Public" name="Cheater_Intro" />
+        <marker scope="Public" name="ClothingDestructionA" />
+        <marker scope="Public" name="Crotchscare" />
+        <marker scope="Public" name="Cynthia_ChoiceScarf" />
+        <marker scope="Public" name="Cynthia_ChoiceScarf2" />
+        <marker scope="Public" name="CynthiaCrush" />
+        <marker scope="Public" name="dangerous_places_sinnoh" />
+        <marker scope="Public" name="dangerous_places_unova" />
+        <marker scope="Public" name="DarachStory" />
+        <marker scope="Public" name="DarkMagicianHat" />
+        <marker scope="Public" name="DarkMagicianHat2" />
+        <marker scope="Public" name="dunban_cait_Mindread01R" />
+        <marker scope="Public" name="dunban_caitlin_hair3sour" />
+        <marker scope="Public" name="dunban_caitlin_hair3sweet" />
+        <marker scope="Public" name="dunban_caitlin_hairR1" />
+        <marker scope="Public" name="dunban_caitlin_hairR2" />
+        <marker scope="Public" name="dunban_caitlin_hairR2 " />
+        <marker scope="Public" name="dunban_caitlin_mindread1RA" />
+        <marker scope="Public" name="dunban_caitlin_mindread1RB" />
+        <marker scope="Public" name="dunban_caitlin_mindread1RC" />
+        <marker scope="Public" name="dunban_caitlin_mindread2RA" />
+        <marker scope="Public" name="dunban_caitlin_mindread2RB" />
+        <marker scope="Public" name="dunban_caitlin_mindread2RC" />
+        <marker scope="Public" name="dunban_caitlin_mindread3RA" />
+        <marker scope="Public" name="dunban_caitlin_mindread3RB" />
+        <marker scope="Public" name="dunban_caitlin_mindread3RC" />
+        <marker scope="Public" name="dunban_caitlin_mindread4RA" />
+        <marker scope="Public" name="dunban_caitlin_mindread4RB" />
+        <marker scope="Public" name="dunban_caitlin_mindread4RC" />
+        <marker scope="Public" name="Elesa_Caitlin0AR" />
+        <marker scope="Public" name="Elesa_Caitlin0BR" />
+        <marker scope="Public" name="Elesa_Caitlin0CR" />
+        <marker scope="Public" name="Elesa_Caitlin1AR" />
+        <marker scope="Public" name="Elesa_Caitlin1BR" />
+        <marker scope="Public" name="Elesa_Caitlin1CR" />
+        <marker scope="Public" name="Elesa_Caitlin2AR" />
+        <marker scope="Public" name="Elesa_Caitlin2BR" />
+        <marker scope="Public" name="Emi_Legs" />
+        <marker scope="Public" name="EnfChest" />
+        <marker scope="Public" name="EnfChestReveal" />
+        <marker scope="Public" name="exhibition1" />
+        <marker scope="Public" name="finished" />
+        <marker scope="Public" name="FlamableHair" />
+        <marker scope="Public" name="Heartpubes" />
+        <marker scope="Public" name="Heartpubes2" />
+        <marker scope="Public" name="HeartpubesWorry" />
+        <marker scope="Public" name="HotSpring_DazedLoss" />
+        <marker scope="Public" name="HotSpring_DazedTie" />
+        <marker scope="Public" name="HotSpring_DazedWin" />
+        <marker scope="Public" name="Jura0RA" />
+        <marker scope="Public" name="Leon/TaoR0B" />
+        <marker scope="Public" name="Leon_Caitlin_0B" />
+        <marker scope="Public" name="Leon_Caitlin_1B" />
+        <marker scope="Public" name="Leon_Caitlin_2B" />
+        <marker scope="Public" name="Leon_Caitlin_3B" />
+        <marker scope="Public" name="Leon_Caitlin_4B" />
+        <marker scope="Public" name="leon01R" />
+        <marker scope="Public" name="leon02R" />
+        <marker scope="Public" name="leon03R" />
+        <marker scope="Public" name="leon11R" />
+        <marker scope="Public" name="leon12R" />
+        <marker scope="Public" name="leon13R" />
+        <marker scope="Public" name="leon21R" />
+        <marker scope="Public" name="leon22R" />
+        <marker scope="Public" name="leon23R" />
+        <marker scope="Public" name="leon31R" />
+        <marker scope="Public" name="leon32R" />
+        <marker scope="Public" name="leon33R" />
+        <marker scope="Public" name="leon41" />
+        <marker scope="Public" name="leon42R" />
+        <marker scope="Public" name="leon43R" />
+        <marker scope="Public" name="leon51R" />
+        <marker scope="Public" name="leon52R" />
+        <marker scope="Public" name="leon53R" />
+        <marker scope="Public" name="LeonTaoR0A" />
+        <marker scope="Public" name="LeonTaoR0C" />
+        <marker scope="Public" name="LeonTaoR1A" />
+        <marker scope="Public" name="LeonTaoR1B" />
+        <marker scope="Public" name="LeonTaoR1C" />
+        <marker scope="Public" name="LeonTaoR2A" />
+        <marker scope="Public" name="LeonTaoR2B" />
+        <marker scope="Public" name="LeonTaoR2C" />
+        <marker scope="Public" name="LeonTaoR3A" />
+        <marker scope="Public" name="LeonTaoR3B" />
+        <marker scope="Public" name="LeonTaoR3C" />
+        <marker scope="Public" name="LeonTaoR4A" />
+        <marker scope="Public" name="LeonTaoR4B" />
+        <marker scope="Public" name="LeonTaoR4C" />
+        <marker scope="Public" name="LeonTaoR5A" />
+        <marker scope="Public" name="LeonTaoR5B" />
+        <marker scope="Public" name="LeonTaoR5C" />
+        <marker scope="Public" name="MaidBullyA" />
+        <marker scope="Public" name="MaidbullyB" />
+        <marker scope="Public" name="MaidbullyC" />
+        <marker scope="Public" name="MeiaR0A" />
+        <marker scope="Public" name="MeiaR2A" />
+        <marker scope="Public" name="MeiaRA2" />
+        <marker scope="Public" name="Mitama_caitlin_sleepR" />
+        <marker scope="Public" name="Natsuki_Caitlin42R" />
+        <marker scope="Public" name="natsuki01R" />
+        <marker scope="Public" name="natsuki02R" />
+        <marker scope="Public" name="natsuki03R" />
+        <marker scope="Public" name="natsuki11R" />
+        <marker scope="Public" name="natsuki12R" />
+        <marker scope="Public" name="natsuki13" />
+        <marker scope="Public" name="natsuki13R" />
+        <marker scope="Public" name="natsuki21R" />
+        <marker scope="Public" name="natsuki22R" />
+        <marker scope="Public" name="natsuki23R" />
+        <marker scope="Public" name="natsuki31R" />
+        <marker scope="Public" name="natsuki32R" />
+        <marker scope="Public" name="natsuki33R" />
+        <marker scope="Public" name="natsuki41R" />
+        <marker scope="Public" name="natsuki51R" />
+        <marker scope="Public" name="Natsuki53R" />
+        <marker scope="Public" name="NimbassaNostalgia" />
+        <marker scope="Public" name="Perona_Bad_Intro" />
+        <marker scope="Public" name="Perona_caitlin0R" />
+        <marker scope="Public" name="Robin_caitlin0R" />
+        <marker scope="Public" name="Robin_Caitlin1R" />
+        <marker scope="Public" name="Rosa_cait_self0a" />
+        <marker scope="Public" name="rosa_cait_self0b_dinner" />
+        <marker scope="Public" name="Rosa_cait_self1a" />
+        <marker scope="Public" name="Rosa_Caitlin_0AR" />
+        <marker scope="Public" name="Rosa_Caitlin_0BR" />
+        <marker scope="Public" name="Rosa_Caitlin_0CR" />
+        <marker scope="Public" name="Rosa_Caitlin_1AR" />
+        <marker scope="Public" name="Rosa_Caitlin_1BR" />
+        <marker scope="Public" name="Rosa_Caitlin_1CR" />
+        <marker scope="Public" name="Rosa_Caitlin_2AR" />
+        <marker scope="Public" name="Rosa_Caitlin_2BR" />
+        <marker scope="Public" name="Rosa_Caitlin_2CR" />
+        <marker scope="Public" name="Rosa_Caitlin_3AR" />
+        <marker scope="Public" name="Rosa_Caitlin_3BDateR" />
+        <marker scope="Public" name="Rosa_Caitlin_3BTimeR" />
+        <marker scope="Public" name="Rosa_Caitlin_3CDateR" />
+        <marker scope="Public" name="Rosa_Caitlin_3CTimeR" />
+        <marker scope="Public" name="Rosa_Caitlin_4AR" />
+        <marker scope="Public" name="Rosa_Caitlin_4BR" />
+        <marker scope="Public" name="Rosa_Caitlin_5AR" />
+        <marker scope="Public" name="Rosa_Caitlin_5BR" />
+        <marker scope="Public" name="Rosa_Caitlin_5CR" />
+        <marker scope="Public" name="SaltyIntro" />
+        <marker scope="Public" name="SaltyStrip0" />
+        <marker scope="Public" name="Shantae_Aipom" />
+        <marker scope="Public" name="tao01R" />
+        <marker scope="Public" name="tao02R" />
+        <marker scope="Public" name="tao03R" />
+        <marker scope="Public" name="tao11R" />
+        <marker scope="Public" name="tao12R" />
+        <marker scope="Public" name="tao13" />
+        <marker scope="Public" name="tao21R" />
+        <marker scope="Public" name="Tao21R" />
+        <marker scope="Public" name="tao22R" />
+        <marker scope="Public" name="tao23R" />
+        <marker scope="Public" name="tao31R" />
+        <marker scope="Public" name="tao32R" />
+        <marker scope="Public" name="tao33R" />
+        <marker scope="Public" name="tao41R" />
+        <marker scope="Public" name="tao42R" />
+        <marker scope="Public" name="tao43R" />
+        <marker scope="Public" name="tao51R" />
+        <marker scope="Public" name="tao52R" />
+        <marker scope="Public" name="tao53R" />
+        <marker scope="Public" name="Thank_The_Dealer" />
+        <marker scope="Public" name="UndellaGame" />
+        <marker scope="Public" name="UnovaDream1" />
+        <marker scope="Public" name="UnovaDream2" />
+        <marker scope="Public" name="UnovaDream3" />
+        <marker scope="Public" name="UnovanCrush" />
+        <marker scope="Public" name="UnovanLuck" />
+        <marker scope="Public" name="UnovaNostalgia" />
+        <marker scope="Public" name="YandereFear" />
+    </markers>
+    <recipes>
+        <recipe key="352366df-ef02-4874-a2eb-0fdc4c210fbd">
+            <cases>
+                <id>1</id>
+            </cases>
+        </recipe>
+        <recipe key="b90f559d-7557-4180-989e-63b583b9a82d">
+            <cases>
+                <id>3</id>
+            </cases>
+        </recipe>
+        <recipe key="15f3a04f-8e03-40e0-b426-dcba8b4f5b3b">
+            <cases>
+                <id>4</id>
+            </cases>
+        </recipe>
+        <recipe key="40a78c86-ea36-42da-b84b-039a1e3c2a9c">
+            <cases>
+                <id>15</id>
+            </cases>
+        </recipe>
+        <recipe key="44f6dcbe-238b-469a-9901-2573547fb72e">
+            <cases>
+                <id>7</id>
+            </cases>
+        </recipe>
+        <recipe key="5fee06f1-d467-44e0-a256-1d46c2d934a5">
+            <cases>
+                <id>8</id>
+            </cases>
+        </recipe>
+        <recipe key="95241bd5-5ee1-4979-ae3c-aad1384050d9">
+            <cases>
+                <id>9</id>
+            </cases>
+        </recipe>
+        <recipe key="93fb1799-f582-4f08-a53c-49d5e56f6278">
+            <cases>
+                <id>10</id>
+            </cases>
+        </recipe>
+        <recipe key="6032096d-cc73-49c3-9df2-45d9f10eb1b0">
+            <cases>
+                <id>11</id>
+            </cases>
+        </recipe>
+        <recipe key="9181b912-d7db-4c2a-8f23-c2ddea3aa7ee">
+            <cases>
+                <id>12</id>
+            </cases>
+        </recipe>
+        <recipe key="2c668cca-3598-4732-b937-c61a20f69cdb">
+            <cases>
+                <id>13</id>
+            </cases>
+        </recipe>
+        <recipe key="8338b475-6f72-461a-9cb7-4510428e1297">
+            <cases>
+                <id>14</id>
+            </cases>
+        </recipe>
+        <recipe key="841c009f-617e-47e1-b1dd-214ba5892e88">
+            <cases>
+                <id>16</id>
+            </cases>
+        </recipe>
+        <recipe key="ab63638e-fcc5-44e9-b020-a677785bb36f">
+            <cases>
+                <id>17</id>
+            </cases>
+        </recipe>
+        <recipe key="dba5778a-dbed-4079-9052-d204275d6f93">
+            <cases>
+                <id>18</id>
+            </cases>
+        </recipe>
+        <recipe key="082c4ea5-a24f-4d24-b4d8-e70d7c411312">
+            <cases>
+                <id>51</id>
+            </cases>
+        </recipe>
+    </recipes>
+</metadata>

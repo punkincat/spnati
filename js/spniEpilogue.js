@@ -513,6 +513,7 @@ function parseEpilogue(player, rawEpilogue) {
     var title = $epilogue.children("title").html().trim();
     var status = $epilogue.attr("status") || 'online';
     var gender = $epilogue.attr("gender") || 'any';
+    var description = $epilogue.attr("description") || '';
     var allowSceneSkip = $epilogue.attr("allowSceneSkip") == 'true';
 
     var markers = [];
@@ -550,6 +551,7 @@ function parseEpilogue(player, rawEpilogue) {
         scenes: [],
         markers: markers,
         allowSceneSkip: allowSceneSkip,
+        description: description,
     };
     var scenes = epilogue.scenes;
 
@@ -842,14 +844,32 @@ function addEpilogueEntry(epilogue) {
     }
 
     var epilogueTitle = nameStr + ": " + offlineIndicator + epilogue.title;
+    var epilogueDescription = "" + epilogue.description;
     var idName = 'epilogue-option-' + num;
     var clickAction = "selectEpilogue(" + num + ")";
     var unlocked = save.hasEnding(player.id, epilogue.title) ? " unlocked" : "";
 
-    var htmlStr = '<li id="' + idName + '" class="epilogue-entry' + unlocked + '"><button onclick="' + clickAction + '">' + epilogueTitle + '</button></li>';
+    var entryElem = createElementWithClass('li', 'epilogue-entry ' + unlocked);
+    entryElem.id = idName;
 
-    $epilogueList.append(htmlStr);
-    epilogueSelections.push($('#' + idName));
+    var btnElem = document.createElement("button");
+    btnElem.addEventListener("click", function (ev) {
+        selectEpilogue(num);
+    });
+    btnElem.innerText = epilogueTitle;
+    
+    entryElem.appendChild(btnElem);
+    
+    if (epilogueDescription) {
+        var descElem = createElementWithClass("span", "epilogue-description");
+        descElem.innerText = epilogueDescription;
+    
+        entryElem.appendChild(document.createElement("br"));
+        entryElem.appendChild(descElem);
+    }
+
+    $epilogueList.append(entryElem);
+    epilogueSelections.push($(entryElem));
 }
 
 /************************************************************
@@ -1112,10 +1132,11 @@ function hotReloadEpilogue () {
     var player = epiloguePlayer.epilogue.player;
     var fromGallery = epiloguePlayer.fromGallery;
 
+    /* Fetch new behaviour.xml contents *before* reloading the stylesheet. */
     player.fetchBehavior()
-    /* Success callback.
-     * 'this' is bound to the Opponent object.
-     */
+        .then(($xml) => {
+            return player.hotReloadStylesheet().then(() => $xml);
+        })
         .then(function($xml) {
             var endingElem = null;
 
@@ -1199,7 +1220,10 @@ EpiloguePlayer.prototype.load = function () {
         for (var j = 0; j < scene.directives.length; j++) {
             var directive = scene.directives[j];
             if (directive.src) {
-                directive.src = directive.src.charAt(0) === '/' ? directive.src.substring(1) : this.epilogue.player.base_folder + directive.src;
+                if (!directive.src.startsWith("opponents/"))
+                {
+                    directive.src = directive.src.charAt(0) === '/' ? directive.src.substring(1) : this.epilogue.player.base_folder + directive.src;
+                }
                 this.fetchImage(directive.src);
             }
             
@@ -1207,7 +1231,10 @@ EpiloguePlayer.prototype.load = function () {
                 for (var k = 0; k < directive.keyframes.length; k++) {
                     var keyframe = directive.keyframes[k];
                     if (keyframe.src && keyframe !== directive) {
-                        keyframe.src = keyframe.src.charAt(0) === '/' ? keyframe.src.substring(1) : this.epilogue.player.base_folder + keyframe.src;
+                        if (!keyframe.src.startsWith("opponents/"))
+                        {
+                            keyframe.src = keyframe.src.charAt(0) === '/' ? keyframe.src.substring(1) : this.epilogue.player.base_folder + keyframe.src;
+                        }                        
                         this.fetchImage(keyframe.src);
                     }
                 }
@@ -1999,6 +2026,7 @@ SceneView.prototype.applyTextDirective = function (directive, box) {
     var content = expandDialogue(directive.text, null, humanPlayer);
     var playerID = this.epiloguePlayer.epilogue.player.id;
 
+    var uniqueClasses = [];
     var displayElems = parseStyleSpecifiers(content).map(function (comp) {
         /* {'text': 'foo', 'classes': 'cls1 cls2 cls3'} --> <span class="cls1 cls2 cls3">foo</span> */
 
@@ -2006,6 +2034,12 @@ SceneView.prototype.applyTextDirective = function (directive, box) {
         wrapperSpan.innerHTML = fixupDialogue(comp.text);
         wrapperSpan.className = comp.classes;
         wrapperSpan.setAttribute('data-character', playerID);
+        
+        comp.classes.split(/\s+/).forEach(function (cls) {
+            if (cls.length > 0 && uniqueClasses.indexOf(cls) < 0) {
+                uniqueClasses.push(cls);
+            }
+        });
 
         return wrapperSpan;
     });
@@ -2013,6 +2047,29 @@ SceneView.prototype.applyTextDirective = function (directive, box) {
 
     box.removeClass('arrow-down arrow-left arrow-right arrow-up').addClass(directive.arrow);
     box.attr('style', directive.css);
+
+    box.attr({
+        "data-character": playerID,
+        "data-directive-id": directive.id,
+        "data-epilogue": this.epiloguePlayer.epilogue.title,
+        "data-epilogue-gender": this.epiloguePlayer.epilogue.gender
+    });
+
+    if (uniqueClasses.length > 0) {
+        box.attr("data-dialogue-styles", uniqueClasses.sort().join(" "));
+    } else {
+        box[0].removeAttribute("data-dialogue-styles");
+    }
+
+    var sceneIdx = this.epiloguePlayer.sceneIndex;
+    var curScene = this.epiloguePlayer.epilogue.scenes[sceneIdx];
+    
+    box.attr("data-scene-index", sceneIdx);
+    if (curScene && curScene.name) {
+        box.attr("data-scene", curScene.name);
+    } else {
+        box[0].removeAttribute("data-scene");
+    }
 
     //use css to position the box
     box.css('left', directive.x);
@@ -3232,17 +3289,18 @@ $('#epilogue-container').click(function(ev) {
 
 function epilogue_keyUp(ev) {
     if (epiloguePlayer && epiloguePlayer.loaded && $('.modal:visible').length == 0) {
-        switch (ev.keyCode) {
-        case 81:
+        switch (ev.key) {
+        case 'q':
+        case 'Q':
             if (DEBUG) {
                 $epilogueButtons.toggleClass('debug-active');
             }
             break;
-        case 37:
+        case 'ArrowLeft':
             moveEpilogueBack(); break;
-        case 32:
+        case ' ':
             moveEpilogueForward(true); break;
-        case 39:
+        case 'ArrowRight':
             moveEpilogueForward(); break;
         }
         ev.preventDefault();

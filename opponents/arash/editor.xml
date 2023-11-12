@@ -2,7 +2,7 @@
 <metadata>
     <owner>arash</owner>
     <noteworthy>
-        <case name="Arash Gamethrowing Announcement" id="1" priority="MustTarget" min="8" max="8">
+        <case name="Arash Gamethrowing Announcement" id="1" priority="Noteworthy" min="8" max="8">
             <description>Arash declares that he's too horny to keep playing seriously and he's going to start throwing the game so he can get to masturbating sooner.</description>
         </case>
         <case name="Arash Mysterious Fan" id="2" priority="Noteworthy" min="5" max="5">
@@ -32,7 +32,7 @@
         <case name="Don't You Worry Child" id="126" priority="FYI" min="0" max="8">
             <description>Arash mentions his favorite song. If the "sing" marker is set, he actually starts singing it.</description>
         </case>
-        <case name="Arash Gamethrowing 2" id="128" priority="MustTarget" min="8" max="8">
+        <case name="Arash Gamethrowing 2" id="128" priority="Noteworthy" min="8" max="8">
             <description>Alternate case for Arash Gamethrowing Announcement.</description>
         </case>
         <case name="Names" id="137" priority="Prompt" min="0" max="7">
@@ -303,8 +303,9 @@
         <note id="140">For anyone interested, here's my source for Arash's prayers: http://www.avesta.org/kanga/ka_english_kanga_epub.pdf</note>
         <note id="234">This is a sorting dialogue to help thin out the small talk questions.</note>
         <note id="235">Another sorting case</note>
+        <note id="242">This case was hidden due to no longer making sense after changes were made to the targeted character. If you're rewriting this character, feel free to delete it.</note>
     </notes>
-    <nextId>241</nextId>
+    <nextId>242</nextId>
     <markers>
         <marker scope="Public" name="9sdry">Arash is concerned about 9s seeming to have come dry.</marker>
         <marker scope="Public" name="aellagoahead">Arash tells Aella he doesn't mind if she watches him.</marker>
@@ -436,7 +437,7 @@
         <marker scope="Public" name="seduced">Arash is feeling flustered by the advances of a character with the "seductive" tag.</marker>
         <marker scope="Public" name="seimessyhair">Arash tells Sei about his perpetually messy hair.</marker>
         <marker scope="Private" name="serenity">Arash is thinking about Serenity.</marker>
-        <marker scope="Private" name="servant">Arash has mentioned being a Servant.</marker>
+        <marker scope="Public" name="servant">Arash has mentioned being a Servant.</marker>
         <marker scope="Public" name="servantexplain">Arash explains what Servants are.</marker>
         <marker scope="Public" name="shimisteady">Arash offers to steady Shimikaze while she gets her balance.</marker>
         <marker scope="Public" name="sing">Arash has a few lines where he starts singing - they're marked with this.</marker>

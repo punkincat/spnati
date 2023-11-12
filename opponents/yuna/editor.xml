@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>yuna</owner>
+    <height>5'3"</height>
+    <age>18</age>
+    <pronunciation>YOU-nuh TOE-me</pronunciation>
+    <othernotes />
     <noteworthy>
         <case name="Cooking Ideas" id="26" priority="Prompt" min="0" max="6">
             <description>Yuna will ask a question about various character's favorite foods. </description>
@@ -8,6 +12,14 @@
     </noteworthy>
     <responses>
         <response id="2" opponent="jim" opponentId="11" />
+        <response id="38" opponent="suzuya" opponentId="246" />
+        <response id="39" opponent="suzuya" opponentId="247" />
+        <response id="40" opponent="suzuya" opponentId="248" />
+        <response id="41" opponent="steve" opponentId="61" />
+        <response id="43" opponent="aqua_kh" opponentId="599" />
+        <response id="44" opponent="aqua_kh" opponentId="600" />
+        <response id="45" opponent="aqua_kh" opponentId="601" />
+        <response id="46" opponent="elphaba" opponentId="77" />
     </responses>
     <notes>
         <note id="3">NB: Due to the nature of the fact that I can't tag three separate clothing items, automatic tagging will assume that your character will only be able to see Yuna, and not Megumi or Sachi-san. Keep this in mind as you write targets.
@@ -37,6 +49,18 @@ Megumi and Sachi are both taking off their ribbons. Use this information to targ
         <label id="21" label="" folder="Sachi Scans" sort="5" />
         <label id="22" label="" folder="Sachi Scans" sort="2" />
         <label id="23" label="" folder="Sachi Scans" sort="3" />
+        <label id="27" label="" folder="Yuritopia" sort="0" />
+        <label id="28" label="" folder="Yuritopia" sort="0" />
+        <label id="29" label="" folder="Yuritopia" sort="0" />
+        <label id="30" label="" folder="Yuritopia" sort="0" />
+        <label id="31" label="" folder="Yuritopia" sort="0" />
+        <label id="32" label="" folder="Yuritopia" sort="0" />
+        <label id="33" label="" folder="Yuritopia" sort="0" />
+        <label id="34" label="" folder="Yuritopia" sort="0" />
+        <label id="35" label="" folder="Yuritopia" sort="0" />
+        <label id="36" label="" folder="Yuritopia" sort="0" />
+        <label id="37" label="" folder="Sachi Scans" sort="0" />
+        <label id="42" label="" folder="Sachi Scans" sort="0" />
     </labels>
     <prefixes>
         <prefix>#-Sachi</prefix>
@@ -44,16 +68,25 @@ Megumi and Sachi are both taking off their ribbons. Use this information to targ
         <prefix>ex-</prefix>
         <prefix>#-Yuna</prefix>
     </prefixes>
-    <nextId>26</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>46</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="2re_yuna_ghostPoem" />
         <marker scope="Public" name="AmyResponse 0" />
         <marker scope="Public" name="AmyResponse0" />
+        <marker scope="Public" name="AquaShirt1Reply" />
+        <marker scope="Public" name="AquaShoes1Reply" />
+        <marker scope="Public" name="AquaVest1Reply" />
         <marker scope="Public" name="Bobobo 0-0" />
         <marker scope="Public" name="Bobobo 0-2" />
         <marker scope="Public" name="Close_win" />
         <marker scope="Public" name="Cooking_Trophy" />
+        <marker scope="Public" name="ElphabaVest1Reply" />
         <marker scope="Public" name="Favorite_Food" />
+        <marker scope="Public" name="FelixShoes1" />
+        <marker scope="Public" name="FelixSocks1" />
         <marker scope="Public" name="First_time_loss" />
         <marker scope="Public" name="Golden_Eagle_Leonie00" />
         <marker scope="Public" name="Golden_Eagle_Petra01" />
@@ -65,6 +98,8 @@ Megumi and Sachi are both taking off their ribbons. Use this information to targ
         <marker scope="Public" name="Jura_present" />
         <marker scope="Public" name="Jura_yuna0-r" />
         <marker scope="Public" name="jura0" />
+        <marker scope="Public" name="KiriTsukuyo" />
+        <marker scope="Public" name="KyoukoShoes1" />
         <marker scope="Public" name="Leonie_no_Petra" />
         <marker scope="Public" name="Mari00" />
         <marker scope="Public" name="Mari01" />
@@ -81,6 +116,8 @@ Megumi and Sachi are both taking off their ribbons. Use this information to targ
         <marker scope="Public" name="meia0" />
         <marker scope="Public" name="meia01" />
         <marker scope="Public" name="meia02" />
+        <marker scope="Public" name="NagamimiCravat1" />
+        <marker scope="Public" name="NagamimiVest1" />
         <marker scope="Public" name="New_Powers" />
         <marker scope="Public" name="Operation_Golden_Eagle" />
         <marker scope="Public" name="Petra_no_Leonie" />
@@ -118,13 +155,20 @@ Megumi and Sachi are both taking off their ribbons. Use this information to targ
         <marker scope="Public" name="Sachi_Meg_Notices_Human">Sachi notices that the Human Player can indeed see them. This will be noticed on subsequent games.</marker>
         <marker scope="Public" name="Sachi_Notices_Human" />
         <marker scope="Public" name="Sachi_Scan">Sachi will do an emotion scan on various female characters during hand exchanges. This will give hints as to any "special interaction" that the two of them could have.</marker>
+        <marker scope="Public" name="SeinaMiki" />
         <marker scope="Public" name="Sly00" />
         <marker scope="Public" name="Sly01" />
         <marker scope="Public" name="Sly02" />
         <marker scope="Public" name="Spirit_Awkward_Questions" />
         <marker scope="Public" name="Spirit_Awkward_Questions_dick" />
+        <marker scope="Public" name="SteveShoes1Reply" />
+        <marker scope="Public" name="SteveShoes2Reply" />
+        <marker scope="Public" name="SteveShoes3Reply" />
         <marker scope="Public" name="sucrose11-r" />
         <marker scope="Public" name="sucrose53-r" />
+        <marker scope="Public" name="SuzuyaVest1Reply" />
+        <marker scope="Public" name="SuzuyaVest2Reply" />
+        <marker scope="Public" name="SuzuyaVest3Reply" />
         <marker scope="Public" name="takatoshi0" />
         <marker scope="Public" name="takatoshi01" />
         <marker scope="Public" name="takatoshi02" />
@@ -132,12 +176,19 @@ Megumi and Sachi are both taking off their ribbons. Use this information to targ
         <marker scope="Public" name="Takatoshi1" />
         <marker scope="Public" name="Tomoko_Megumin_Present" />
         <marker scope="Public" name="Tomomeg_Noticed" />
+        <marker scope="Public" name="UmiSasa" />
         <marker scope="Public" name="Wheatley0" />
+        <marker scope="Public" name="YoukaAki" />
         <marker scope="Public" name="Yuna" />
         <marker scope="Public" name="Yuna_Bossmode" />
         <marker scope="Public" name="Yuna_table_males">Plays the first table Yuna has with other men.</marker>
         <marker scope="Public" name="YunaShoes1-r" />
         <marker scope="Public" name="YunaVest1-r" />
+        <marker scope="Public" name="YuritopiaKiriTsukuyo" />
+        <marker scope="Public" name="YuritopiaMatsuriMiyu" />
+        <marker scope="Public" name="YuritopiaSeinaMiki" />
+        <marker scope="Public" name="YuritopiaUmiSasa" />
+        <marker scope="Public" name="YuritopiaYoukaAki" />
     </markers>
     <recipes>
         <recipe key="93fb1799-f582-4f08-a53c-49d5e56f6278">

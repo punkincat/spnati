@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.Messaging;
 using Desktop.Skinning;
 using SPNATI_Character_Editor.EpilogueEditor;
@@ -63,7 +63,6 @@ namespace SPNATI_Character_Editor.Controls
 			}
 
 			_textBorder = new Pen(Color.Black, TextBorder);
-			UpdateFont();
 		}
 
 		public void SetCharacter(ISkin character)
@@ -145,7 +144,7 @@ namespace SPNATI_Character_Editor.Controls
 			availableHeight = (int)(availableHeight * (_character == null ? 1 : (_character.Character.Metadata.Scale / 100)));
 			float screenScale = availableHeight / (Pose == null ? 1400.0f : Pose.BaseHeight);
 			SceneTransform.Scale(screenScale, screenScale, MatrixOrder.Append); // scale to display
-			SceneTransform.Translate(canvas.Width * 0.5f, screenHeight - availableHeight, MatrixOrder.Append); // center horizontally
+			SceneTransform.Translate(canvas.Width * 0.5f, screenHeight - availableHeight + ScreenMargin, MatrixOrder.Append); // center horizontally
 		}
 
 		public void Destroy()
@@ -214,7 +213,7 @@ namespace SPNATI_Character_Editor.Controls
 		}
 
 		public void RefreshImage()
-        {
+		{
 			Destroy();
 
 			UpdateSceneTransform();

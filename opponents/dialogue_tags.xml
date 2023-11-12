@@ -9,7 +9,11 @@
     <defaultImage>happy</defaultImage>
     <defaultText>This is what the character says after another character has been (individually) selected</defaultText>
   </trigger>
-  <trigger tag="game_start" start="0" end="0" label="Game start" oncePerStage="true" description="When the game starts" group="0" order="2" color="1">
+  <trigger tag="opponent_deselected" optional="true" start="0" end="0" hasTarget="true" label="Opponent Deselected" description="When another character is removed from the selection screen" group="0" order="2" color="1">
+    <defaultImage>calm</defaultImage>
+    <defaultText>This is what the character says after another character has been (individually) deselected</defaultText>
+  </trigger>
+  <trigger tag="game_start" start="0" end="0" label="Game start" oncePerStage="true" description="When the game starts" group="0" order="3" color="1">
     <defaultImage>happy</defaultImage>
     <defaultText>This is what the character says when the game starts</defaultText>
   </trigger>
@@ -180,7 +184,7 @@
       <string>female_must_strip</string>
     </bulk>
     <defaultImage>interested</defaultImage>
-    <defaultText>What they say to a male NPC who has lost a round</defaultText>
+    <defaultText>What they say to a male character who has lost a round</defaultText>
     <generic>opponent_lost</generic>
   </trigger>
   <trigger tag="female_human_must_strip" optional="true" start="0" end="10" label="Must Strip (Player, Female)" hasTarget="true" description="The human female player has lost a round and must remove something" group="3" order="2" color="4" safeLabel="Lost Hand (Player, Female)">
@@ -205,7 +209,7 @@
       <string>male_must_strip</string>
     </bulk>
     <defaultImage>interested</defaultImage>
-    <defaultText>What they say to a female NPC who has lost a round</defaultText>
+    <defaultText>What they say to a female character who has lost a round</defaultText>
     <generic>opponent_lost</generic>
   </trigger>
   <trigger tag="tie" start="0" end="10" label="Absolute tie" hasTarget="false" optional="true" description="Two (or more) players are tied for the worst hand" group="3" order="4" color="4">

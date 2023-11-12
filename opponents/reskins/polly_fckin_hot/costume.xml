@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>polly_fckin_hot</id>
+    <label>Polly</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>scantily-clad</tag>
+        <tag>summer_skin</tag>
+        <tag from="2" to="4">swimwear</tag>
+    </tags>
+    <layers>5</layers>
+    <folder>opponents/reskins/polly_fckin_hot/</folder>
+    <wardrobe>
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="bra" generic="bra" position="upper" type="important" />
+        <clothing name="shorts" generic="shorts" position="lower" type="major" plural="true" />
+        <clothing name="shirt" generic="shirt" position="upper" type="major" />
+        <clothing name="accessories" position="other" type="minor" plural="true" />
+    </wardrobe>
+
+    <poses>
+        <pose id="0-Blank">
+            <sprite id="Sad" src="0-Angry.png" x="0" y="0" alpha="1" />
+            <directive type="animation" id="Sad" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="1" />
+                <keyframe time="1" x="0" y="0" alpha="0" />
+            </directive>
+            <directive type="animation" id="Sad" ease="linear" interpolation="none">
+                <keyframe time="0" src="0-Angry.png" />
+                <keyframe time="1" src="7-Sad.png" />
+            </directive>
+        </pose>
+        <pose id="0-TeasingYuno">
+            <sprite id="Thinking" z="1" src="reskins/polly_fckin_hot/0-Thinking.png" x="0" y="0" />
+            <sprite id="Neutral" src="reskins/polly_fckin_hot/0-Neutral.png" x="0" y="-21" alpha="0" />
+            <directive type="animation" id="Neutral" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="-21" alpha="0" />
+                <keyframe time="1" y="-21" />
+                <keyframe time="2" x="100" />
+                <keyframe time="3" x="200" />
+                <keyframe time="4" x="200" />
+            </directive>
+            <directive type="animation" id="Neutral" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/0-Neutral.png" />
+                <keyframe time="3" src="reskins/polly_fckin_hot/0-Partying.png" />
+                <keyframe time="4" src="reskins/polly_fckin_hot/0-Partying.png" />
+            </directive>
+            <directive type="animation" id="Neutral" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="25" />
+                <keyframe time="2" alpha="50" />
+            </directive>
+        </pose>
+        <pose id="1-TeasingYuno">
+            <sprite id="Thinking" z="1" src="reskins/polly_fckin_hot/1-Thinking.png" x="0" y="0" />
+            <sprite id="Neutral" src="reskins/polly_fckin_hot/0-Neutral.png" x="0" y="-21" alpha="0" />
+            <directive type="animation" id="Neutral" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="-21" alpha="0" />
+                <keyframe time="1" y="-21" />
+                <keyframe time="2" x="100" />
+                <keyframe time="3" x="200" />
+                <keyframe time="4" x="200" />
+            </directive>
+            <directive type="animation" id="Neutral" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/0-Neutral.png" />
+                <keyframe time="3" src="reskins/polly_fckin_hot/0-Partying.png" />
+                <keyframe time="4" src="reskins/polly_fckin_hot/0-Partying.png" />
+            </directive>
+            <directive type="animation" id="Neutral" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="25" />
+                <keyframe time="2" alpha="50" />
+            </directive>
+        </pose>
+        <pose id="2-TeasingYuno">
+            <sprite id="Thinking" z="1" src="reskins/polly_fckin_hot/2-Thinking.png" x="0" y="0" />
+            <sprite id="Neutral" src="reskins/polly_fckin_hot/0-Neutral.png" x="0" y="-21" alpha="0" />
+            <directive type="animation" id="Neutral" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="-21" alpha="0" />
+                <keyframe time="1" y="-21" />
+                <keyframe time="2" x="100" />
+                <keyframe time="3" x="200" />
+                <keyframe time="4" x="200" />
+            </directive>
+            <directive type="animation" id="Neutral" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/0-Neutral.png" />
+                <keyframe time="3" src="reskins/polly_fckin_hot/0-Partying.png" />
+                <keyframe time="4" src="reskins/polly_fckin_hot/0-Partying.png" />
+            </directive>
+            <directive type="animation" id="Neutral" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="25" />
+                <keyframe time="2" alpha="50" />
+            </directive>
+        </pose>
+        <pose id="3-TeasingYuno">
+            <sprite id="Thinking" z="1" src="reskins/polly_fckin_hot/3-Thinking.png" x="0" y="0" />
+            <sprite id="Neutral" src="reskins/polly_fckin_hot/0-Neutral.png" x="0" y="-21" alpha="0" />
+            <directive type="animation" id="Neutral" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="-21" alpha="0" />
+                <keyframe time="1" y="-21" />
+                <keyframe time="2" x="100" />
+                <keyframe time="3" x="200" />
+                <keyframe time="4" x="200" />
+            </directive>
+            <directive type="animation" id="Neutral" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/0-Neutral.png" />
+                <keyframe time="3" src="reskins/polly_fckin_hot/0-Partying.png" />
+                <keyframe time="4" src="reskins/polly_fckin_hot/0-Partying.png" />
+            </directive>
+            <directive type="animation" id="Neutral" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="25" />
+                <keyframe time="2" alpha="50" />
+            </directive>
+        </pose>
+        <pose id="4-TeasingYuno">
+            <sprite id="Thinking" z="1" src="reskins/polly_fckin_hot/4-Thinking.png" x="0" y="0" />
+            <sprite id="Neutral" src="reskins/polly_fckin_hot/0-Neutral.png" x="0" y="-21" alpha="0" />
+            <directive type="animation" id="Neutral" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="-21" alpha="0" />
+                <keyframe time="1" y="-21" />
+                <keyframe time="2" x="100" />
+                <keyframe time="3" x="200" />
+                <keyframe time="4" x="200" />
+            </directive>
+            <directive type="animation" id="Neutral" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/0-Neutral.png" />
+                <keyframe time="3" src="reskins/polly_fckin_hot/0-Partying.png" />
+                <keyframe time="4" src="reskins/polly_fckin_hot/0-Partying.png" />
+            </directive>
+            <directive type="animation" id="Neutral" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="25" />
+                <keyframe time="2" alpha="50" />
+            </directive>
+        </pose>
+        <pose id="5-TeasingYuno">
+            <sprite id="Thinking" z="1" src="reskins/polly_fckin_hot/5-Thinking.png" x="0" y="0" />
+            <sprite id="Neutral" src="reskins/polly_fckin_hot/0-Neutral.png" x="0" y="-21" alpha="0" />
+            <directive type="animation" id="Neutral" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="-21" alpha="0" />
+                <keyframe time="1" y="-21" />
+                <keyframe time="2" x="100" />
+                <keyframe time="3" x="200" />
+                <keyframe time="4" x="200" />
+            </directive>
+            <directive type="animation" id="Neutral" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/0-Neutral.png" />
+                <keyframe time="3" src="reskins/polly_fckin_hot/0-Partying.png" />
+                <keyframe time="4" src="reskins/polly_fckin_hot/0-Partying.png" />
+            </directive>
+            <directive type="animation" id="Neutral" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="25" />
+                <keyframe time="2" alpha="50" />
+            </directive>
+        </pose>
+        <pose id="6-TeasingYuno">
+            <sprite id="Thinking" z="1" src="reskins/polly_fckin_hot/6-Thinking.png" x="0" y="0" />
+            <sprite id="Neutral" src="reskins/polly_fckin_hot/0-Neutral.png" x="0" y="-21" alpha="0" />
+            <directive type="animation" id="Neutral" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="-21" alpha="0" />
+                <keyframe time="1" y="-21" />
+                <keyframe time="2" x="100" />
+                <keyframe time="3" x="200" />
+                <keyframe time="4" x="200" />
+            </directive>
+            <directive type="animation" id="Neutral" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/0-Neutral.png" />
+                <keyframe time="3" src="reskins/polly_fckin_hot/0-Partying.png" />
+                <keyframe time="4" src="reskins/polly_fckin_hot/0-Partying.png" />
+            </directive>
+            <directive type="animation" id="Neutral" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="25" />
+                <keyframe time="2" alpha="50" />
+            </directive>
+        </pose>
+        <pose id="7-Back_From_Partying" baseHeight="1395">
+            <sprite id="Angry" src="reskins/polly_fckin_hot/7-Angry.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="Angry" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="1" alpha="100" />
+            </directive>
+            <directive type="animation" id="Angry" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" />
+            </directive>
+            <directive type="animation" id="Angry" delay="1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/7-Angry.png" />
+            </directive>
+        </pose>
+        <pose id="7-Back_From_Possession" baseHeight="1395">
+            <sprite id="Angry" src="reskins/polly_fckin_hot/7-Horny.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="Angry" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="1" x="0" y="0" alpha="100" />
+            </directive>
+            <directive type="animation" id="Angry" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/7-Horny.png" />
+                <keyframe time="1" src="reskins/polly_fckin_hot/7-Horny.png" />
+            </directive>
+        </pose>
+        <pose id="7-Blank">
+            <sprite id="Sad" src="reskins/polly_fckin_hot/7-Sad.png" x="0" y="0" alpha="1" />
+            <directive type="animation" id="Sad" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="1" />
+                <keyframe time="1" x="0" y="0" alpha="0" />
+            </directive>
+            <directive type="animation" id="Sad" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/7-Sad.png" />
+                <keyframe time="1" src="reskins/polly_fckin_hot/7-Sad.png" />
+            </directive>
+        </pose>
+        <pose id="7-Going_Partying" baseHeight="1395">
+            <sprite id="Partying" src="reskins/polly_fckin_hot/7-Partying.png" x="0" y="0" alpha="100" />
+            <directive type="animation" id="Partying" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="1" x="0" y="0" alpha="0" />
+            </directive>
+            <directive type="animation" id="Partying" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/7-Partying.png" />
+                <keyframe time="1" src="reskins/polly_fckin_hot/7-Partying.png" />
+            </directive>
+        </pose>
+        <pose id="7-Possession_Enter" baseHeight="1395">
+            <sprite id="Partying" src="reskins/polly_fckin_hot/7-Flirty.png" x="0" y="0" scalex="1" scaley="1" alpha="100" />
+            <sprite id="Partying(copy)" src="reskins/polly_fckin_hot/7-Flirty.png" x="0" y="0" scalex="0.9" scaley="0.9" alpha="100" />
+            <sprite id="Partying(copy)1" src="reskins/polly_fckin_hot/7-Flirty.png" x="0" y="0" scalex="0.8" scaley="0.8" alpha="100" />
+            <directive type="animation" id="Partying" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" scalex="1" scaley="1" alpha="100" />
+                <keyframe time="0.75" scaley="0.25" />
+                <keyframe time="0.88" x="-3" y="0" scalex="0" scaley="0" alpha="0" />
+            </directive>
+            <directive type="animation" id="Partying" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/7-Flirty.png" />
+                <keyframe time="0.88" src="reskins/polly_fckin_hot/7-Partying.png" />
+            </directive>
+            <directive type="animation" id="Partying(copy)" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" scalex="0.9" scaley="0.9" alpha="100" />
+                <keyframe time="0.56" scaley="0.25" />
+                <keyframe time="1" x="0" y="0" scalex="0" scaley="0" alpha="0" />
+            </directive>
+            <directive type="animation" id="Partying(copy)" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/7-Flirty.png" />
+                <keyframe time="1" src="reskins/polly_fckin_hot/7-Partying.png" />
+            </directive>
+            <directive type="animation" id="Partying(copy)1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" scalex="0.8" scaley="0.8" alpha="100" />
+                <keyframe time="0.38" scaley="0.25" />
+                <keyframe time="1" x="0" y="0" scalex="0" scaley="0" alpha="0" />
+            </directive>
+            <directive type="animation" id="Partying(copy)1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/7-Flirty.png" />
+                <keyframe time="1" src="reskins/polly_fckin_hot/7-Partying.png" />
+            </directive>
+        </pose>
+        <pose id="Fading In" baseHeight="1395">
+            <sprite id="Stripped" src="reskins/polly_fckin_hot/4-Stripped.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="Stripped" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.3" x="0" y="0" alpha="100" />
+            </directive>
+            <directive type="animation" id="Stripped" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/4-Stripped.png" />
+                <keyframe time="0.3" src="reskins/polly_fckin_hot/4-Stripped.png" />
+            </directive>
+        </pose>
+        <pose id="Fading Out" baseHeight="1395">
+            <sprite id="Surprised" src="reskins/polly_fckin_hot/3-Surprised.png" x="0" y="0" alpha="100" />
+            <directive type="animation" id="Surprised" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" alpha="100" />
+                <keyframe time="2.5" x="0" alpha="0" />
+            </directive>
+            <directive type="animation" id="Surprised" ease="smooth" interpolation="spline">
+                <keyframe time="0" y="0" />
+                <keyframe time="2.5" y="0" />
+            </directive>
+            <directive type="animation" id="Surprised" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/3-Surprised.png" />
+                <keyframe time="2.5" src="reskins/polly_fckin_hot/3-Surprised.png" />
+            </directive>
+        </pose>
+        <pose id="let_me_be_clear_done">
+            <sprite id="Angry" src="reskins/polly_fckin_hot/0-Angry.png" x="0" y="0" alpha="99" />
+            <directive type="animation" id="Angry" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="99" />
+                <keyframe time="1.88" x="0" y="0" alpha="0" />
+            </directive>
+            <directive type="animation" id="Angry" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/0-Angry.png" />
+                <keyframe time="1.88" src="reskins/polly_fckin_hot/0-Angry.png" />
+            </directive>
+        </pose>
+        <pose id="Polly_in_a_box" baseHeight="1395">
+            <sprite id="Polly Trap" src="reskins/polly_fckin_hot/Polly Trap.png" x="88" y="1066" scalex="0.71" scaley="0.71" pivotx="12%" pivoty="12%" />
+        </pose>
+        <pose id="Scaring">
+            <sprite id="Flirty" src="reskins/polly_fckin_hot/0-Flirty.png" x="0" y="0" alpha="100" />
+            <sprite id="Manic" delay="1" src="reskins/polly_fckin_hot/0-Excited.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="Flirty" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="0.88" alpha="0" />
+                <keyframe time="1" alpha="0" />
+            </directive>
+            <directive type="animation" id="Manic" delay="1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.12" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="Setting Up Trap">
+            <sprite id="Finishing" src="reskins/polly_fckin_hot/6-Finishing.png" x="0" y="0" />
+            <sprite id="Polly Trap" src="reskins/polly_fckin_hot/Polly Trap.png" x="0" y="-800" scalex="0.71" scaley="0.71" rotation="-21" />
+            <directive type="animation" id="Polly Trap" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="-800" scalex="0.71" scaley="0.71" rotation="-21" />
+                <keyframe time="1.31" rotation="-21" />
+                <keyframe time="1.56" rotation="-21" />
+                <keyframe time="1.62" rotation="-21" />
+                <keyframe time="1.69" rotation="6" />
+                <keyframe time="1.81" y="1000" rotation="-18" />
+                <keyframe time="1.88" rotation="15" />
+                <keyframe time="1.94" rotation="12" />
+                <keyframe time="2" x="0" y="1000" scalex="0.71" scaley="0.71" rotation="0" />
+            </directive>
+            <directive type="animation" id="Polly Trap" delay="2" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="1000" scalex="0.71" scaley="0.71" skewx="0" />
+            </directive>
+            <directive type="animation" id="Polly Trap" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/Polly Trap.png" />
+                <keyframe time="2" src="Polly Trap.png" />
+            </directive>
+            <directive type="animation" id="Polly Trap" delay="2" ease="linear" interpolation="none">
+                <keyframe time="0" src="Polly Trap.png" />
+            </directive>
+        </pose>
+        <pose id="there_done">
+            <sprite id="Winky" src="reskins/polly_fckin_hot/0-Winky.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="Winky" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="1" x="0" y="0" alpha="100" />
+            </directive>
+            <directive type="animation" id="Winky" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/polly_fckin_hot/0-Winky.png" />
+                <keyframe time="1" src="reskins/polly_fckin_hot/0-Winky.png" />
+            </directive>
+        </pose>
+        <pose id="Trapped" baseHeight="1395">
+            <sprite id="Surprised" src="reskins/polly_fckin_hot/7-Surprised.png" x="0" y="0" scalex="1" scaley="1" skewx="0" alpha="100" rotation="0" />
+            <sprite id="Polly Trap" src="reskins/polly_fckin_hot/Polly Trap.png" x="0" y="1000" scalex="0.71" scaley="0.71" />
+            <directive type="animation" id="Surprised" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" scalex="1" scaley="1" skewx="0" alpha="100" rotation="0" />
+                <keyframe time="1.06" scalex="0.6" scaley="0.6" />
+                <keyframe time="1.25" scaley="0.3" />
+                <keyframe time="1.5" scaley="0.25" />
+                <keyframe time="1.62" scaley="0.25" />
+                <keyframe time="1.81" scalex="0" scaley="0.17" />
+                <keyframe time="2" y="600" scalex="-0.1" scaley="0.5" skewx="-12" alpha="0" rotation="0" />
+            </directive>
+            <directive type="animation" id="Surprised" delay="2" ease="smooth" interpolation="linear">
+                <keyframe time="0" skewy="0" />
+            </directive>
+        </pose>
+    </poses>
+</costume>

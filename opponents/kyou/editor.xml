@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>kyou</owner>
+    <height>160 cm (5'3")</height>
+    <age />
+    <pronunciation />
+    <othernotes>Personality:&lt;br&gt;Kyou is a bold girl who can be aggressively direct, but she is also decisive and reliable. She also likes joking with people, even somewhat indecently at times and will enjoy when others try and banter with her. She is kind and caring towards more timid characters, often taking on a "big sister" role. However, she is quick to anger with people who will challenge or get snarky with her and will often retaliate in the same manner. She enjoys teasing those close to her, but does it in a friendly manner and is never outright rude to people that she considers friends.&lt;br&gt;&lt;br&gt;Targetable qualities:&lt;br&gt;- Kyou has a twin sister named Ryou who is the polar opposite of Kyou. Ryou is very shy, and as a result Kyou often is highly protective of her. This leads Kyou to taking on the older, responsible sibling role when around others who are shy like her sister.&lt;br&gt;- Kyou has a baby boar named Botan that she has raised since it was a baby. She is overly protective of him and will quickly defend him if she feels someone is mistreating him.&lt;br&gt;- Kyou is an excellent cook, despite people often assuming that her sister would be the better cook. She makes bento for herself, her sister and sometimes her friends. She is most proud of her pork cutlet, believing it to be the best item she cooks.&lt;br&gt;- Kyou is very athletic often competing in various sports and performing extremely well, even in sports she has little experience with. She is naturally drawn to competition and will take on any challenge from anyone.&lt;br&gt;- Kyou is the Class Representative in her class and is a natural born leader, especially to others who look up to her. Although she should be a model student as the class rep, she often disregards the rules and does what she wants.&lt;br&gt;- Kyou wishes to become a kindergarten teacher as she enjoys looking after kids and being a role model for people. However, troublemakers make her question her decision sometimes as she feels exhausted after dealing with them.&lt;br&gt;- Kyou rides a motorized bike but has only just learned how to drive it so she is not very experienced with it. She often crashes into her friend but blames it on her lack of experience rather than doing it as a joke.</othernotes>
     <noteworthy>
         <case name="KyouBadHand4+LoseStreak" id="61" priority="FYI" min="2" max="6">
             <description>Kyou is very upset about her continued losing streak and is threatening physical violence against the dealer.</description>
@@ -461,11 +465,11 @@
         <label id="452" label="" folder="Petra" sort="0" />
         <label id="453" label="" folder="Petra" sort="2" />
         <label id="454" label="" folder="Petra" sort="3" />
-        <label id="455" label="" color="0" folder="Noire" sort="8" />
-        <label id="456" label="" color="0" folder="Noire" sort="7" />
-        <label id="457" label="" color="0" folder="Noire" sort="12" />
-        <label id="458" label="" color="0" folder="Noire" sort="13" />
-        <label id="459" label="" color="0" folder="Noire" sort="11" />
+        <label id="455" label="" folder="Noire" sort="8" />
+        <label id="456" label="" folder="Noire" sort="7" />
+        <label id="457" label="" folder="Noire" sort="12" />
+        <label id="458" label="" folder="Noire" sort="13" />
+        <label id="459" label="" folder="Noire" sort="11" />
         <label id="460" label="" color="0" folder="Estelle" sort="6" />
         <label id="461" label="" color="0" folder="Estelle" sort="2" />
         <label id="462" label="" color="0" folder="Estelle" sort="3" />
@@ -485,7 +489,7 @@
         <label id="476" label="" color="0" folder="Fina" sort="0" />
         <label id="477" label="" folder="Cynthia" sort="0" />
         <label id="478" label="" color="5" folder="Cynthia" sort="0" />
-        <label id="479" label="" color="0" folder="Kaz" sort="0" />
+        <label id="479" label="" folder="Kaz" sort="0" />
         <label id="480" label="" color="0" folder="Kaz" sort="0" />
         <label id="481" label="" color="0" folder="Estelle" sort="0" />
         <label id="482" label="" color="0" folder="Estelle" sort="0" />
@@ -632,6 +636,7 @@
         <marker scope="Public" name="kyou_barbara_s" />
         <marker scope="Public" name="kyou_barbara_s01" />
         <marker scope="Public" name="kyou_beach" />
+        <marker scope="Public" name="kyou_bento_awarded" />
         <marker scope="Public" name="kyou_bento_unlock" />
         <marker scope="Public" name="kyou_bento_unlock1" />
         <marker scope="Public" name="kyou_bento_unlock2" />

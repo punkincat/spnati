@@ -27,7 +27,7 @@ namespace SPNATI_Character_Editor.Forms
 			date = date.Replace("AM", "");
 			date = date.Replace("PM", "");
 			date = date.Replace(" ", "");
-			string dir = Path.Combine(Config.AppDataDirectory, date);
+			string dir = Path.Combine(Config.ConfigDirectory, date);
 			Directory.CreateDirectory(dir);
 
 			string crashLog = Path.Combine(dir, "report.txt");
@@ -41,7 +41,7 @@ namespace SPNATI_Character_Editor.Forms
 				count++;
 			}
 
-			string zip = Path.Combine(Config.AppDataDirectory, "details.zip");
+			string zip = Path.Combine(Config.ConfigDirectory, "details.zip");
 			ZipFile.CreateFromDirectory(dir, Path.Combine(dir, zip));
 			File.Move(zip, Path.Combine(dir, "details.zip"));
 

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>mari_setogaya_succu-bunny</id>
+    <label>Mari</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>animal_ears</tag>
+        <tag from="0" to="0">choker</tag>
+        <tag from="0" to="5">crotch_pasty</tag>
+        <tag>easter_skin</tag>
+        <tag from="0" to="1">high_heels</tag>
+        <tag from="0" to="4">nipple_pasties</tag>
+        <tag>no_bra</tag>
+        <tag>no_underwear</tag>
+        <tag from="0" to="2">pantyhose</tag>
+        <tag remove="true">pointy_ears</tag>
+        <tag>scantily-clad</tag>
+        <tag remove="true">school_uniform</tag>
+        <tag remove="true">shimapan</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/mari_setogaya_succu-bunny/</folder>
+    <wardrobe>
+        <clothing name="pastie" position="lower" type="important" />
+        <clothing name="pasties" position="upper" type="important" plural="true" />
+        <clothing name="sleeves" generic="sleeves" position="arms" type="minor" plural="true" />
+        <clothing name="stockings" generic="leggings" position="legs" type="minor" plural="true" />
+        <clothing name="heels" generic="shoes" position="feet" type="minor" plural="true" />
+        <clothing name="collar" generic="collar" position="neck" type="extra" />
+    </wardrobe>
+
+    <poses>
+        <pose id="4-Ctransform">
+            <sprite id="4-Ctransform" src="reskins/mari_setogaya_succu-bunny/Transform1.png" x="0" y="0" />
+            <directive type="animation" id="4-Ctransform" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_succu-bunny/Transform1.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_succu-bunny/Transform2C.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_succu-bunny/Transform3C.png" />
+            </directive>
+        </pose>
+        <pose id="4-Ntransform">
+            <sprite id="4-Ntransform" src="reskins/mari_setogaya_succu-bunny/Transform1.png" x="0" y="0" />
+            <directive type="animation" id="4-Ntransform" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_succu-bunny/Transform1.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_succu-bunny/Transform2N.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_succu-bunny/Transform3N.png" />
+            </directive>
+        </pose>
+        <pose id="6-Npaws">
+            <sprite id="6-Npaws" src="reskins/mari_setogaya_succu-bunny/Npaws1.png" x="0" y="0" />
+            <directive type="animation" id="6-Npaws" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_succu-bunny/Npaws1.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_succu-bunny/Npaws2.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_succu-bunny/Npaws3.png" />
+                <keyframe time="1.2" src="reskins/mari_setogaya_succu-bunny/Npaws4.png" />
+            </directive>
+        </pose>
+        <pose id="8-Cfinished">
+            <sprite id="8-Cfinished" src="reskins/mari_setogaya_succu-bunny/Detransform1C.png" x="0" y="0" />
+            <directive type="animation" id="8-Cfinished" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_succu-bunny/Detransform1C.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_succu-bunny/Detransform2C.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_succu-bunny/Detransform3C.png" />
+                <keyframe time="1.2" src="reskins/mari_setogaya_succu-bunny/Detransform4C.png" />
+            </directive>
+        </pose>
+        <pose id="8-Nfinished">
+            <sprite id="8-Nfinished" src="reskins/mari_setogaya_succu-bunny/Detransform1N.png" x="0" y="0" />
+            <directive type="animation" id="8-Nfinished" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_succu-bunny/Detransform1N.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_succu-bunny/Detransform2N.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_succu-bunny/Detransform3N.png" />
+                <keyframe time="1.2" src="reskins/mari_setogaya_succu-bunny/Detransform4N.png" />
+            </directive>
+        </pose>
+    </poses>
+</costume>

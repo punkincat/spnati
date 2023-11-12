@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collectibles>
+    <collectible id="anti-zombie_gardening_kit" status="online" img="opponents/solar_flare/Resources/Contents.png" thumbnail="opponents/solar_flare/Resources/Gift.png">
+        <title>Bloom &amp; Doom's Anti-Zombie Gardening Kit</title>
+        <subtitle>All you need to set up your zombie-repellent lawn!</subtitle>
+        <text>A starter kit for your own homegrown lawn defense against the zombie hordes. It has a couple of seeds, useful information, a L.E.A.F. signal device to call for help, and a QR code to acquire more plants.</text>
+        <unlock>Finish a game with Solar Flare.</unlock>
+    </collectible>
+    <collectible id="fireproof_goggles" status="online" img="opponents/solar_flare/Resources/Goggles.png" thumbnail="opponents/solar_flare/Resources/Goggles.png">
+        <title>Fireproof Goggles</title>
+        <text>Solar Flare uses her own to avoid getting her own eyes burned by her fire powers, and as an homage to a certain Cambion as well. You, on the other hand, can use yours to protect yourself from fire, water, high winds, dirt, zombie bites... or to stall another turn on a strip poker game.</text>
+        <unlock>Beat Solar Flare during the day in an outdoors place.</unlock>
+        <wearable>true</wearable>
+        <clothing name="fireproof goggles" generic="glasses" position="head" type="extra" img="opponents/solar_flare/Resources/Goggles.png" plural="true" />
+    </collectible>
+</collectibles>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1661999149718</lastupdate>
+    <lastupdate>1697970247550</lastupdate>
     <enabled>false</enabled>
     <first>Hilda</first>
     <last>Valentine Goneril</last>
@@ -9,15 +9,17 @@
     <gender>female</gender>
     <from>Fire Emblem: Three Houses</from>
     <writer>ClockworkVoyeur</writer>
-    <artist>Halo (model), ClockworkVoyeur (posing)</artist>
+    <artist>Halo (model &amp; posing), ClockworkVoyeur (posing &amp; costumes)</artist>
     <description>A loyal member of the Golden Deer house, Hilda is a formidable warrior, wielding the axe Freikugel against her enemies - at least, when she's not slacking off and downplaying her own abilities to get others to do her work for her.</description>
     <layers>8</layers>
+    <default-costume-name>Garreg Mach Uniform</default-costume-name>
     <alternates>
-        <costume folder="opponents/reskins/hilda_war_outfit/" status="unlisted" label="Hilda">(WIP) War Outfit</costume>
-        <costume folder="opponents/reskins/hilda_holiday_layabout/" status="unlisted" label="Hilda">(WIP) Holiday Layabout</costume>
-        <costume folder="opponents/reskins/hilda_sundrenched_nobility/" set="summer" status="unlisted" label="Hilda">(WIP) Sun-Drenched Nobility</costume>
+        <costume folder="opponents/reskins/hilda_war_outfit/" img="0-conversational.png" status="online" label="Hilda">War Outfit</costume>
+        <costume folder="opponents/reskins/hilda_holiday_layabout/" img="0-conversational.png" set="xmas" status="unlisted" label="Hilda" layers="6">(WIP) Holiday Layabout</costume>
+        <costume folder="opponents/reskins/hilda_sundrenched_nobility/" img="0-conversational.png" set="summer" status="online" label="Hilda" layers="6">Sun-Drenched Nobility</costume>
+        <costume folder="opponents/reskins/hilda_halloween_hegemon/" img="0-conversational.png" set="halloween" status="unlisted" label="Hilda" layers="6">Corrupted Crest</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>2774</lines>
-    <poses>179</poses>
+    <lines>3240</lines>
+    <poses>238</poses>
 </opponent>

@@ -1,0 +1,52 @@
+.dialogue-bubble[data-character="giygas"][data-dialogue-styles~="eb"]::before {
+ /*Arrow for Earthbound text window.*/
+ /*I tried to use this as a shortcut for actually choosing no speech arrow in the CE, but it didn’t work out.*/
+  direction: none;
+}
+
+.dialogue-bubble[data-character="giygas"][data-dialogue-styles~="eb"] {
+  /*EarthBound-style text window.*/ 
+  background: black;
+  border: 2px solid white;
+  border-radius: 1;
+}
+
+.dialogue .eb[data-character="giygas"] {
+  /*EarthBound-style text.*/
+  color: White;
+}
+
+.dialogue-bubble[data-character="giygas"][data-dialogue-styles~="gy"]::before {
+  /*Arrow for dialogue bubble for Giygas text.*/
+  /* I played around and tried to get this to work, but in the end it just didn’t. Either some border pixels would cut into the speech bubble itself or there couldn’t be any at all. */
+  background: #290B27;
+  border: 0px solid #FFB19A;
+}
+
+.dialogue-bubble[data-character="giygas"][data-dialogue-styles~="gy"] {
+  /*Stage 1-5 Giygas speech bubble, in the style of EarthBound text windows when a party member has fainted.*/ 
+  background: #290B27;
+  border: 2px solid #FFB19A;
+  border-radius: 1;
+}
+
+.dialogue .gy[data-character="giygas"] {
+  /*Text style in Giygas speech bubble.*/
+  color: #FFB19A;
+}
+
+.dialogue .win[data-character="giygas"] {
+  /*“YOU WON!” text.*/
+  color: #7050F8;
+  font-family: serif;
+  font-size: 1.4em;
+  font-weight: 1000;
+  direction: none;
+}
+
+.dialogue .haiku[data-character="giygas"] {
+  /*Mitama’s haiku style.*/
+  color: #FF8080;
+  font-style: italic;
+  direction: none;
+}

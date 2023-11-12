@@ -1,0 +1,1198 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+    <owner>mia_golden_sun</owner>
+    <height>5'5" (165 cm)</height>
+    <age>20</age>
+    <pronunciation>mee - uh</pronunciation>
+    <othernotes>&lt;br&gt;&lt;br&gt;LORE &amp; GAME INFO&lt;br&gt;- Mia uses Psynergy. In a meta sense, Psynergy is a JRPG magic system that uses four elements, and is based on the power of the mind (made distinct from another source of power, Chi, which is 'the power of the body'). &lt;br&gt;- Psynergy is based on four elements; Venus (Earth), Mars (Fire), Jupiter (Wind) and Mercury (Water).&lt;br&gt;- People who can use Psynergy are called Adepts. Mia is a Mercury Adept.&lt;br&gt;- Mercury is associated with some of the strongest healing magic in the series, and Mia was originally acting as a faith healer in her town of Imil. Renowned for her great power even at a young age, she had two apprentices of her own.&lt;br&gt;- Psynergy is treated like psychic powers/PSI - only other Adepts can see Psynergy being used, non-Adepts can only see the effects (e.g. a boulder being moved, water appearing out of nowhere). For the sake of targeted interactions in SPNATI, this limitation can be ignored.&lt;br&gt;- She is written as if three years have passed since Alchemy returned to Weyard (the ending of Golden Sun: The Lost Age). She is mentioned in Dark Dawn, which is set decades after TLA, but is not seen.&lt;br&gt;&lt;br&gt;Random Trivia&lt;br&gt;- Mia is one of only two female party members in the series who can equip maces. After all, what is a mace if not just a very heavy staff?</othernotes>
+    <noteworthy>
+        <case name="Swimwear-Underwear" id="1" priority="Noteworthy" min="4" max="4">
+            <description>(saying the marker 'swimsuit') Mia is wearing a swimsuit under her dress, which she explains is actually an 'undergarment' for her clan (who are descended from Water elemental Adepts aka mages)</description>
+        </case>
+        <case name="Swimsuit Top-down" id="5" priority="FYI" min="5" max="5">
+            <description>(saying the marker 'swimsuit_top') Mia only 'takes off' the top half of her one-piece swimsuit. (Target the marker for this in case future costumes change the clothing.)</description>
+        </case>
+        <case name="Setting Down A Towel" id="51" priority="FYI" min="6" max="6">
+            <description>Mia will set down a towel for herself to sit on during her masturbation sequence. She has specific comments about the floor type depending on the background.</description>
+        </case>
+        <case name="Mercury Djinn" id="114" priority="Noteworthy" min="3" max="3">
+            <description>If she is saying the marker stripped_3_fizz, then a small creature which Mia referrs to as "Fizz" has just appeared from behind her cape, and will hover around her for a few turns.</description>
+        </case>
+        <case name="Mia heals Dunban" id="596" priority="Noteworthy" min="0" max="6">
+            <description>Mia uses her 'Ply' Psynergy in order to ease the pain of Dunban's right arm.</description>
+        </case>
+    </noteworthy>
+    <reviewed>true</reviewed>
+    <responses>
+        <response id="6" opponent="barbara" opponentId="17" />
+        <response id="9" opponent="sannytess" opponentId="6" />
+        <response id="28" opponent="nami" opponentId="13" />
+        <response id="29" opponent="amalia" opponentId="1" />
+        <response id="30" opponent="brock" opponentId="2" />
+        <response id="32" opponent="aqua_kh" opponentId="51" />
+        <response id="135" opponent="caulifla" opponentId="4" />
+        <response id="136" opponent="aqua_konosuba" opponentId="16" />
+        <response id="137" opponent="fina" opponentId="107" />
+        <response id="142" opponent="jura" opponentId="33" />
+        <response id="151" opponent="aqua_kh" opponentId="67" />
+        <response id="152" opponent="mari_setogaya" opponentId="35" />
+        <response id="164" opponent="samus_aran" opponentId="1" />
+        <response id="191" opponent="turandot" opponentId="131" />
+        <response id="200" opponent="noire" opponentId="1071" />
+        <response id="201" opponent="aqua_kh" opponentId="841" />
+        <response id="202" opponent="aqua_kh" opponentId="842" />
+        <response id="208" opponent="sweetheart" opponentId="43" />
+        <response id="238" opponent="jura" opponentId="683" />
+        <response id="239" opponent="meia" opponentId="876" />
+        <response id="241" opponent="revy" opponentId="289" />
+        <response id="249" opponent="chihiro" opponentId="213" />
+        <response id="250" opponent="chihiro" opponentId="1" />
+        <response id="258" opponent="gloria" opponentId="659" />
+        <response id="259" opponent="gloria" opponentId="660" />
+        <response id="260" opponent="gloria" opponentId="661" />
+        <response id="261" opponent="gloria" opponentId="662" />
+        <response id="262" opponent="gloria" opponentId="663" />
+        <response id="263" opponent="gloria" opponentId="664" />
+        <response id="264" opponent="dunban" opponentId="576" />
+        <response id="265" opponent="dunban" opponentId="577" />
+        <response id="266" opponent="dunban" opponentId="578" />
+        <response id="267" opponent="dunban" opponentId="401" />
+        <response id="268" opponent="gwen" opponentId="1" />
+        <response id="269" opponent="ms.fortune" opponentId="24" />
+        <response id="274" opponent="aqua_konosuba" opponentId="521" />
+        <response id="275" opponent="aqua_konosuba" opponentId="522" />
+        <response id="276" opponent="aqua_konosuba" opponentId="523" />
+        <response id="277" opponent="aqua_konosuba" opponentId="524" />
+        <response id="278" opponent="aqua_konosuba" opponentId="526" />
+        <response id="291" opponent="nagatoro" opponentId="2247" />
+        <response id="298" opponent="mari" opponentId="2377" />
+        <response id="299" opponent="wasp" opponentId="139" />
+        <response id="304" opponent="mari_setogaya" opponentId="2365" />
+        <response id="305" opponent="mari_setogaya" opponentId="2364" />
+        <response id="308" opponent="mari_setogaya" opponentId="2383" />
+        <response id="320" opponent="aqua_kh" opponentId="994" />
+        <response id="321" opponent="aqua_kh" opponentId="998" />
+        <response id="322" opponent="aqua_kh" opponentId="999" />
+        <response id="323" opponent="aqua_kh" opponentId="997" />
+        <response id="328" opponent="binah" opponentId="1" />
+        <response id="329" opponent="joey" opponentId="39" />
+        <response id="330" opponent="wikipe-tan" opponentId="175" />
+        <response id="336" opponent="shamiko" opponentId="30" />
+        <response id="338" opponent="shamiko" opponentId="37" />
+        <response id="342" opponent="aoba" opponentId="118" />
+        <response id="343" opponent="sweetheart" opponentId="65" />
+        <response id="344" opponent="caitlin" opponentId="65" />
+        <response id="375" opponent="fluttershy" opponentId="421" />
+        <response id="376" opponent="fluttershy" opponentId="20" />
+        <response id="379" opponent="nagatoro" opponentId="2264" />
+        <response id="384" opponent="queenie" opponentId="28" />
+        <response id="403" opponent="fluttershy" opponentId="827" />
+        <response id="404" opponent="yuno_uno" opponentId="1004" />
+        <response id="425" opponent="hanako" opponentId="463" />
+        <response id="428" opponent="nadeshiko" opponentId="9" />
+        <response id="440" opponent="steve" opponentId="1" />
+        <response id="452" opponent="jura" opponentId="974" />
+        <response id="453" opponent="jura" opponentId="975" />
+        <response id="455" opponent="jura" opponentId="971" />
+        <response id="466" opponent="toph" opponentId="2" />
+        <response id="472" opponent="toph" opponentId="6" />
+        <response id="473" opponent="meia" opponentId="1187" />
+        <response id="474" opponent="meia" opponentId="1189" />
+        <response id="475" opponent="meia" opponentId="1190" />
+        <response id="485" opponent="jura" opponentId="1007" />
+        <response id="486" opponent="jura" opponentId="1006" />
+        <response id="488" opponent="aqua_konosuba" opponentId="544" />
+        <response id="489" opponent="aqua_konosuba" opponentId="545" />
+        <response id="490" opponent="aqua_konosuba" opponentId="546" />
+        <response id="493" opponent="aqua_konosuba" opponentId="547" />
+        <response id="494" opponent="aqua_konosuba" opponentId="548" />
+        <response id="0" opponent="yuno_uno" opponentId="775" />
+        <response id="495" opponent="yuno_uno" opponentId="12" />
+        <response id="496" opponent="yuno_uno" opponentId="175" />
+        <response id="497" opponent="sly_cooper" opponentId="1" />
+        <response id="498" opponent="fluttershy" opponentId="181" />
+        <response id="499" opponent="fluttershy" opponentId="843" />
+        <response id="504" opponent="nami" opponentId="1433" />
+        <response id="508" opponent="gloria" opponentId="119" />
+        <response id="514" opponent="nayru" opponentId="1" />
+        <response id="539" opponent="chara_dreemurr" opponentId="664" />
+        <response id="551" opponent="magma_grunt" opponentId="174" />
+        <response id="552" opponent="magma_grunt" opponentId="175" />
+        <response id="553" opponent="magma_grunt" opponentId="171" />
+        <response id="554" opponent="magma_grunt" opponentId="173" />
+        <response id="555" opponent="magma_grunt" opponentId="2" />
+        <response id="557" opponent="aqua_grunt" opponentId="102" />
+        <response id="558" opponent="aqua_grunt" opponentId="156" />
+        <response id="561" opponent="caulifla" opponentId="2" />
+        <response id="563" opponent="polly" opponentId="39" />
+        <response id="564" opponent="polly" opponentId="38" />
+        <response id="566" opponent="meia" opponentId="1210" />
+        <response id="567" opponent="meia" opponentId="1275" />
+        <response id="568" opponent="meia" opponentId="1208" />
+        <response id="569" opponent="meia" opponentId="1206" />
+        <response id="570" opponent="meia" opponentId="1209" />
+        <response id="597" opponent="dunban" opponentId="726" />
+        <response id="602" opponent="nami" opponentId="1472" />
+        <response id="604" opponent="nami" opponentId="1474" />
+        <response id="610" opponent="perona" opponentId="402" />
+        <response id="611" opponent="perona" opponentId="403" />
+        <response id="615" opponent="lysithea" opponentId="126" />
+        <response id="645" opponent="revy" opponentId="551" />
+        <response id="646" opponent="jura" opponentId="1065" />
+        <response id="647" opponent="jura" opponentId="1253" />
+    </responses>
+    <notes>
+        <note id="22">this can go in whatever direction you want; I just find it funny that the two of them are pious and water-themed</note>
+        <note id="114">djinn is the plural, djinni is singular</note>
+        <note id="123">Fizz comes back if Mia is the only one who doesnt have to masturbate.</note>
+        <note id="124">Fizz, a mercury Djinni, appears to keep Mia company if she's the only one who doesnt have to masturbate. This case plays if he didn't appear earlier.</note>
+        <note id="125">Fizz comes back if Mia is the only one who doesnt have to masturbate.</note>
+        <note id="180">Angelic Ankh: An Artifact that increases base Attack by 83. Its Unleash effect, Life Leech, is an attack that adds 29 damage points, is based on the Mercury element, and may add all damage done by the attack to the user's own HP meter. It is sold as an artifact in the weapon vendor at Tolbi in Golden Sun and at the weapon vendor at Apojii Islands in The Lost Age. Its buy value is 6400 coins and its sell value is 4800. </note>
+        <note id="234">technically I made this up entirely, but Mind Read is something that a party member can do (and they are a Jupiter adept) and I'm rolling with, Mia probably met other adepts after Golden Sun 2.</note>
+        <note id="235">This is related to a situation she can have where a mercury djinni called Fizz pops out</note>
+        <note id="277">she can also elaborate on the Summon system that involve combining djinn together after spending their power</note>
+        <note id="278">I'll make Fizz leave in this case. You can comment on it, or we can continue the beachwear discussion</note>
+        <note id="285">"The Anemos (from Ancient Greek: ἄνεμος ánemos = wind) were a legendary tribe of Jupiter Adepts. They were well known for amazing Psynergy powers, such as being able to see the future as well as the ability to fly. This tribe of Wind Adepts is said to have raised its ancient city into the sky, where its underside is still visible as the moon. All modern Wind Adepts are thought to be descended from the Anemos. "</note>
+        <note id="347">technically I made this up entirely, but Mind Read is something that a party member can do (and they are a Jupiter adept) and I'm rolling with, Mia probably met other adepts after Golden Sun 2.</note>
+        <note id="348">technically I made this up entirely, but Mind Read is something that a party member can do (and they are a Jupiter adept) and I'm rolling with, Mia probably met other adepts after Golden Sun 2.</note>
+        <note id="369">djinn is the plural, djinni is singular</note>
+        <note id="380">I'm expecting a simple response like "No!" or "Completely incorrect!" lol</note>
+        <note id="400">This may be a little wordy, but I think it fits. She's basically saying she healed it using her water magic.</note>
+        <note id="403">Notes partially for myself: Mia comes equipped with Fizz when you get her as a party member and you can't actually 'miss' getting him. Because the Djinn were released at the start of the game, they wouldn't have actually known each other for very long by the time you recruit her.</note>
+        <note id="424">Went with Mia thinking she's got the hang of it, then immediately misunderstanding again</note>
+        <note id="439">chance for steve to confuse/fascinate mia with the idea of food brands and having literally millions of options for food</note>
+        <note id="438">can be broad, vague, or specific as you like. I can work with anything. maybe narrowing it down to indiana and hawkis would work well for follow up ideas. the concept of a nation so large it has 50 states, and those states have hundreds of towns each, is mind boggling to Mia. you could even work in some cold war era propoganda lol</note>
+        <note id="491">"but wouldnt you know" in the sense of the continuing sentence "wouldnt you know it, lighting it was key to saving the world from a slow demise anyway"</note>
+        <note id="608">if too weak or hard to reply to, let me know</note>
+        <note id="613">just a general icebreaker comment</note>
+        <note id="612">pushing further to get to know her; making a connection</note>
+        <note id="614">just a general icebreaker comment</note>
+        <note id="615">Note that the marker value is "HOT", so if you wanted to make a specific response to this one, you can check "mia said marker ask_mia_tribeS == HOT"</note>
+        <note id="616">Note that the marker value is "COLD", so if you wanted to make a specific response to this one, you can check "mia said marker ask_mia_tribeS == COLD"</note>
+        <note id="617">Giving you a chance to have Lysithea bring up the overdressed, looking to explore themselves angle in the follow-up</note>
+        <note id="618">Mia is a good healer but she is not well-learned about the intricacies of Psynergy, and can only really parrot what the party learned throughout their journey.</note>
+        <note id="619">Deliberately being ironic here, as both of them improve through fighting</note>
+        <note id="641">djinn is the plural, djinni is singular</note>
+    </notes>
+    <labels>
+        <label id="2" label="" folder="Targets" sort="2" />
+        <label id="3" label="" folder="Backgrounds" sort="5" />
+        <label id="6" label="" folder="Prompts" sort="0" />
+        <label id="7" label="" folder="Events" sort="0" />
+        <label id="8" label="" folder="Filter" sort="0" />
+        <label id="10" label="" folder="Backgrounds" sort="2" />
+        <label id="11" label="" folder="Human" sort="0" />
+        <label id="12" label="" folder="Human" sort="2" />
+        <label id="13" label="" folder="Human" sort="3" />
+        <label id="14" label="" folder="Human" sort="4" />
+        <label id="15" label="" folder="Human" sort="7" />
+        <label id="16" label="" folder="Human" sort="8" />
+        <label id="17" label="" folder="Human" sort="9" />
+        <label id="18" label="" folder="Human" sort="10" />
+        <label id="19" label="" folder="Human" sort="5" />
+        <label id="20" label="" folder="Human" sort="12" />
+        <label id="21" label="" folder="Human" sort="11" />
+        <label id="22" label="" folder="Targets" sort="4" />
+        <label id="23" label="" folder="Player Names" sort="0" />
+        <label id="24" label="" folder="Backgrounds" sort="4" />
+        <label id="25" label="Psynergy: Cooling self" folder="Backgrounds" sort="6" />
+        <label id="26" label="" folder="TEST CASES" sort="0" />
+        <label id="27" label="" folder="Lore" sort="2" />
+        <label id="28" label="" folder="Situations" sort="25" />
+        <label id="29" label="" folder="Situations" sort="3" />
+        <label id="30" label="" folder="Situations" sort="15" />
+        <label id="31" label="" folder="Targets" sort="25" />
+        <label id="32" label="" folder="Aqua (KH)" sort="12" />
+        <label id="9" label="" folder="Targets" sort="13" />
+        <label id="33" label="" folder="Player Names" sort="0" />
+        <label id="34" label="" folder="Targets" sort="23" />
+        <label id="35" label="" folder="Tag Filters" sort="5" />
+        <label id="36" label="" folder="Default Strip Lines" sort="6" />
+        <label id="37" label="" folder="Default Strip Lines" sort="0" />
+        <label id="38" label="" folder="Default Strip Lines" sort="2" />
+        <label id="39" label="" folder="Default Strip Lines" sort="3" />
+        <label id="1" label="" folder="Default Strip Lines" sort="4" />
+        <label id="40" label="" folder="Default Strip Lines" sort="5" />
+        <label id="5" label="" folder="Conditional Strip Lines" sort="5" />
+        <label id="41" label="All Females are now Chest Visible" folder="Conditional Strip Lines" sort="4" />
+        <label id="42" label="" folder="Conditional Strip Lines" sort="9" />
+        <label id="43" label="" folder="Conditional Strip Lines" sort="6" />
+        <label id="44" label="" folder="Also Playing Strip Lines" sort="0" />
+        <label id="45" label="" folder="Backgrounds" sort="0" />
+        <label id="46" label="" folder="Filter - Golden Sun Opponents" sort="2" />
+        <label id="47" label="" folder="Backgrounds" sort="13" />
+        <label id="48" label="" folder="Backgrounds" sort="12" />
+        <label id="49" label="" folder="Backgrounds" sort="14" />
+        <label id="50" label="" folder="Backgrounds" sort="15" />
+        <label id="140" label="" folder="Logic" sort="0" />
+        <label id="52" label="" folder="Backgrounds" sort="0" />
+        <label id="53" label="" folder="Backgrounds" sort="0" />
+        <label id="54" label="" folder="Backgrounds" sort="0" />
+        <label id="55" label="" folder="Logic" sort="5" />
+        <label id="56" label="" folder="Logic" sort="7" />
+        <label id="57" label="" folder="Default Strip Lines" sort="0" />
+        <label id="58" label="disable mouth" folder="Logic" sort="8" />
+        <label id="59" label="" folder="Generic" sort="4" />
+        <label id="60" label="" folder="Generic" sort="5" />
+        <label id="61" label="" folder="Generic" sort="6" />
+        <label id="62" label="" folder="Generic" sort="7" />
+        <label id="63" label="" folder="Generic" sort="8" />
+        <label id="64" label="" folder="Cards" sort="0" />
+        <label id="65" label="" folder="Cards" sort="2" />
+        <label id="66" label="" folder="Generic" sort="9" />
+        <label id="67" label="" folder="Generic" sort="2" />
+        <label id="68" label="" folder="Generic" sort="0" />
+        <label id="69" label="" folder="Generic" sort="3" />
+        <label id="70" label="" folder="Generic" sort="13" />
+        <label id="71" label="" folder="Generic" sort="14" />
+        <label id="72" label="" folder="Generic" sort="15" />
+        <label id="73" label="" folder="Generic" sort="16" />
+        <label id="74" label="" folder="Generic" sort="17" />
+        <label id="75" label="" folder="Generic" sort="18" />
+        <label id="76" label="" folder="Consecutive Losses (Self)" sort="0" />
+        <label id="77" label="" folder="Consecutive Losses (Self)" sort="0" />
+        <label id="78" label="" folder="Consecutive Losses (Self)" sort="0" />
+        <label id="79" label="" folder="Consecutive Losses (Self)" sort="0" />
+        <label id="80" label="" folder="Consecutive Losses (Self)" sort="0" />
+        <label id="81" label="" folder="Consecutive Losses (Self)" sort="0" />
+        <label id="82" label="" folder="Consecutive Losses (Self)" sort="0" />
+        <label id="83" label="" folder="Consecutive Losses (Self)" sort="0" />
+        <label id="84" label="" folder="Consecutive Losses (Self)" sort="12" />
+        <label id="85" label="" folder="Consecutive Losses (Self)" sort="8" />
+        <label id="86" label="" folder="Consecutive Losses (Self)" sort="9" />
+        <label id="87" label="" folder="Consecutive Losses (Self)" sort="10" />
+        <label id="88" label="" folder="Consecutive Losses (Self)" sort="11" />
+        <label id="89" label="" folder="Consecutive Losses (Self)" sort="0" />
+        <label id="90" label="" folder="Consecutive Losses (Self)" sort="4" />
+        <label id="91" label="" folder="Consecutive Losses (Self)" sort="5" />
+        <label id="92" label="" folder="Consecutive Losses (Self)" sort="6" />
+        <label id="93" label="" folder="Consecutive Losses (Self)" sort="7" />
+        <label id="94" label="" folder="Consecutive Losses (Self)" sort="0" />
+        <label id="95" label="" folder="Consecutive Losses (Self)" sort="0" />
+        <label id="96" label="" folder="Consecutive Losses (Self)" sort="0" />
+        <label id="97" label="" folder="Consecutive Losses (Self)" sort="2" />
+        <label id="98" label="" folder="Consecutive Losses (Self)" sort="3" />
+        <label id="99" label="Mia In Lead by 2+" folder="Head 2 Head" sort="5" />
+        <label id="100" label="Mia In Lead by 1" folder="Head 2 Head" sort="6" />
+        <label id="101" label="Even Layer Count" folder="Head 2 Head" sort="7" />
+        <label id="102" label="Opponent is in the lead" folder="Head 2 Head" sort="8" />
+        <label id="103" label="Even Layer Count" folder="Head 2 Head" sort="0" />
+        <label id="104" label="Opponent is in the lead" folder="Head 2 Head" sort="2" />
+        <label id="105" label="Mia In Lead by 1" folder="Head 2 Head" sort="3" />
+        <label id="106" label="Mia In Lead by 2+" folder="Head 2 Head" sort="4" />
+        <label id="107" label="Even Layer Count" folder="Head 2 Head" sort="9" />
+        <label id="108" label="Opponent is in the lead" folder="Head 2 Head" sort="10" />
+        <label id="109" label="Mia In Lead by 1" folder="Head 2 Head" sort="11" />
+        <label id="110" label="Mia In Lead by 2+" folder="Head 2 Head" sort="12" />
+        <label id="112" label="" folder="TEST CASES" sort="2" />
+        <label id="113" label="" folder="Situations" sort="4" />
+        <label id="114" label="Fizz / Mercury Djinn situation" folder="Conditional Strip Lines" sort="8" />
+        <label id="115" label="Fizz / Mercury Djinn situation W/ other Golden Sun characters" folder="Conditional Strip Lines" sort="7" />
+        <label id="116" label="Fizz goes away" folder="Conditional Strip Lines" sort="3" />
+        <label id="117" label="Fizz goes away (2 losses in row)" folder="Conditional Strip Lines" sort="2" />
+        <label id="118" label="Fizz goes away (3 losses in row)" folder="Conditional Strip Lines" sort="0" />
+        <label id="119" label="" folder="Lore" sort="0" />
+        <label id="120" label="not seen fizz, he was in her cape" folder="Conditional" sort="5" />
+        <label id="121" label="" folder="Backgrounds" sort="9" />
+        <label id="122" label="disable mouth" folder="Logic" sort="0" />
+        <label id="123" label="Fizz Returns (Butt Pose)" folder="Situations" sort="22" />
+        <label id="124" label="Fizz Appears (Butt Pose)" folder="Situations" sort="23" />
+        <label id="125" label="Fizz Returns (Butt Pose)" folder="Situations" sort="0" />
+        <label id="127" label="" folder="Situations" sort="29" />
+        <label id="126" label="" folder="Situations" sort="28" />
+        <label id="128" label="" folder="Generic" sort="19" />
+        <label id="129" label="" folder="Conditional" sort="31" />
+        <label id="130" label="" folder="Conditional" sort="32" />
+        <label id="131" label="" folder="Conditional" sort="33" />
+        <label id="132" label="" folder="Backgrounds" sort="0" />
+        <label id="133" label="" folder="Lore" sort="0" />
+        <label id="134" label="" folder="Generic Follow-ups" sort="0" />
+        <label id="137" label="" folder="Situations" sort="0" />
+        <label id="136" label="" color="6" folder="Situations" sort="19" />
+        <label id="135" label="" folder="Situations" sort="13" />
+        <label id="138" label="thong reveal (1st)" folder="Clothing" sort="2" />
+        <label id="139" label="thong reveal (2nd)" folder="Clothing" sort="2" />
+        <label id="141" label="" folder="April Fools" sort="0" />
+        <label id="142" label="" color="3" folder="Prompts" sort="2" />
+        <label id="143" label="" folder="Targets" sort="0" />
+        <label id="144" label="butt pose (other people with butt poses are here)" folder="Situations" sort="7" />
+        <label id="145" label="butt pose (just to show off to the player) (5+ rounds)" folder="Situations" sort="6" />
+        <label id="146" label="" folder="Conditional" sort="12" />
+        <label id="147" label="" folder="Conditional" sort="13" />
+        <label id="148" label="" folder="Generic" sort="11" />
+        <label id="149" label="" folder="Situations" sort="30" />
+        <label id="150" label="" folder="Backgrounds" sort="16" />
+        <label id="151" label="" folder="Situations" sort="9" />
+        <label id="152" label="" folder="Situations" sort="11" />
+        <label id="153" label="" folder="Targets" sort="10" />
+        <label id="155" label="" folder="Conditional" sort="26" />
+        <label id="156" label="" folder="Conditional" sort="28" />
+        <label id="157" label="" folder="Conditional" sort="29" />
+        <label id="158" label="" folder="Conditional" sort="30" />
+        <label id="159" label="" folder="Filter" sort="2" />
+        <label id="160" label="" folder="Conditional" sort="27" />
+        <label id="161" label="" folder="Filter" sort="13" />
+        <label id="162" label="" folder="Filter" sort="14" />
+        <label id="163" label="" folder="Filter" sort="15" />
+        <label id="164" label="" folder="Situations" sort="12" />
+        <label id="154" label="" folder="Prompts" sort="3" />
+        <label id="165" label="" folder="Tag Filters" sort="3" />
+        <label id="166" label="" folder="Filter" sort="3" />
+        <label id="167" label="" folder="Filter" sort="6" />
+        <label id="168" label="" folder="Filter" sort="7" />
+        <label id="169" label="" folder="Filter" sort="8" />
+        <label id="170" label="" folder="Backgrounds" sort="8" />
+        <label id="171" label="" folder="Human" sort="6" />
+        <label id="172" label="0 Rounds" folder="Conditional" sort="22" />
+        <label id="173" label="0 Rounds, Target already exposed" folder="Conditional" sort="20" />
+        <label id="174" label="0 Rounds, Target already exposed" folder="Conditional" sort="21" />
+        <label id="175" label="" folder="Conditional" sort="3" />
+        <label id="176" label="" folder="Conditional" sort="4" />
+        <label id="177" label="" folder="Conditional" sort="6" />
+        <label id="178" label="Generic Target MustStrip 1st Time" folder="Conditional" sort="17" />
+        <label id="179" label="" folder="Conditional" sort="0" />
+        <label id="180" label="" folder="Targets" sort="9" />
+        <label id="181" label="Self TimeInStage 7+" folder="Conditional" sort="23" />
+        <label id="182" label="Self TimeInStage (Hot BG)" folder="Conditional" sort="18" />
+        <label id="183" label="" folder="Generic" sort="12" />
+        <label id="184" label="" folder="Generic" sort="10" />
+        <label id="185" label="" folder="Filter" sort="5" />
+        <label id="186" label="" folder="Filter" sort="9" />
+        <label id="187" label="butt pose (the game is going on forever and it's just girls present)" folder="Situations" sort="5" />
+        <label id="188" label="Target must mast, everyone else still decent" folder="Situations" sort="18" />
+        <label id="189" label="" folder="Conditional" sort="24" />
+        <label id="190" label="It's HOT" folder="Backgrounds" sort="7" />
+        <label id="191" label="" folder="Targets" sort="24" />
+        <label id="192" label="" folder="Conditional Strip Lines" sort="0" />
+        <label id="193" label="" folder="Conditional" sort="0" />
+        <label id="194" label="" folder="Logic" sort="0" />
+        <label id="195" label="" folder="Logic" sort="2" />
+        <label id="196" label="" folder="Conditional" sort="0" />
+        <label id="197" label="" folder="Conditional" sort="36" />
+        <label id="198" label="" folder="Conditional" sort="35" />
+        <label id="199" label="" folder="Conditional" sort="34" />
+        <label id="200" label="" folder="Situations" sort="8" />
+        <label id="202" label="" folder="Aqua (KH)" sort="2" />
+        <label id="201" label="" folder="Aqua (KH)" sort="5" />
+        <label id="203" label="" folder="Situations" sort="17" />
+        <label id="204" label="" folder="Situations" sort="24" />
+        <label id="205" label="" folder="Backgrounds" sort="11" />
+        <label id="206" label="" folder="Situations" sort="26" />
+        <label id="207" label="" folder="Situations" sort="27" />
+        <label id="208" label="" folder="Situations" sort="10" />
+        <label id="209" label="" folder="Filter" sort="4" />
+        <label id="210" label="" folder="Situations" sort="16" />
+        <label id="211" label="" folder="Filter" sort="11" />
+        <label id="212" label="" folder="Conditional" sort="9" />
+        <label id="213" label="" folder="Conditional" sort="8" />
+        <label id="214" label="" folder="Conditional" sort="11" />
+        <label id="215" label="" folder="Conditional" sort="10" />
+        <label id="216" label="" folder="Filter" sort="17" />
+        <label id="217" label="" folder="Conditional" sort="7" />
+        <label id="218" label="" folder="Targets" sort="20" />
+        <label id="219" label="" folder="Conditional" sort="0" />
+        <label id="220" label="" folder="Backgrounds" sort="3" />
+        <label id="221" label="" color="3" folder="Targets" sort="5" />
+        <label id="222" label="" folder="Conditional" sort="0" />
+        <label id="223" label="" folder="Conditional" sort="2" />
+        <label id="224" label="" folder="Filter" sort="10" />
+        <label id="226" label="" folder="Targets" sort="10" />
+        <label id="227" label="" folder="Filter" sort="12" />
+        <label id="228" label="" folder="Forfeit - Other Female" sort="0" />
+        <label id="111" label="" folder="Conditional" sort="16" />
+        <label id="229" label="duplicated fallback case" color="4" folder="" sort="0" />
+        <label id="230" label="1 opponent out" folder="Conditional" sort="37" />
+        <label id="231" label="2-4 opponents out" folder="Conditional" sort="38" />
+        <label id="232" label="" folder="Filter" sort="16" />
+        <label id="233" label="0 - sight 1" folder="Targets" sort="6" />
+        <label id="234" label="0 - sight 2" folder="Targets" sort="17" />
+        <label id="235" label="1 - fizz 1" folder="Targets" sort="3" />
+        <label id="236" label="1 - djinn 1" folder="Targets" sort="7" />
+        <label id="237" label="" folder="Tag Filters" sort="2" />
+        <label id="238" label="" folder="Responses" sort="3" />
+        <label id="239" label="" folder="Responses" sort="10" />
+        <label id="240" label="" folder="Responses" sort="2" />
+        <label id="241" label="" folder="Responses" sort="4" />
+        <label id="242" label="Disable the Towel" folder="Logic" sort="3" />
+        <label id="243" label="DISABLED Towel" folder="Backgrounds" sort="10" />
+        <label id="225" label="Towel already enabled" folder="" sort="0" />
+        <label id="244" label="Disable the Towel" folder="Logic" sort="4" />
+        <label id="245" label="" folder="Conditional" sort="14" />
+        <label id="246" label="" folder="Conditional" sort="15" />
+        <label id="247" label="Disable the Towel" folder="Logic" sort="6" />
+        <label id="248" label="" folder="Targets" sort="8" />
+        <label id="249" label="" folder="Situations" sort="20" />
+        <label id="250" label="" folder="Situations" sort="21" />
+        <label id="251" label="" folder="Targets" sort="16" />
+        <label id="252" label="" folder="Targets" sort="18" />
+        <label id="253" label="" folder="Targets" sort="21" />
+        <label id="254" label="" folder="Targets" sort="14" />
+        <label id="255" label="" folder="Targets" sort="15" />
+        <label id="256" label="" folder="Targets" sort="19" />
+        <label id="257" label="" folder="Targets" sort="22" />
+        <label id="258" label="" folder="Responses" sort="5" />
+        <label id="259" label="" folder="Responses" sort="8" />
+        <label id="260" label="" folder="Responses" sort="11" />
+        <label id="261" label="" folder="Responses" sort="6" />
+        <label id="262" label="" folder="Responses" sort="9" />
+        <label id="263" label="" folder="Responses" sort="12" />
+        <label id="266" label="" folder="Responses" sort="13" />
+        <label id="265" label="" folder="Responses" sort="10" />
+        <label id="264" label="" folder="Responses" sort="7" />
+        <label id="267" label="" folder="Situations" sort="2" />
+        <label id="268" label="" folder="Situations" sort="14" />
+        <label id="270" label="" folder="Conditional" sort="25" />
+        <label id="271" label="" folder="Targets" sort="11" />
+        <label id="272" label="" folder="Responses" sort="2" />
+        <label id="273" label="" folder="Responses" sort="0" />
+        <label id="274" label="" color="3" folder="Aqua Konosuba" sort="2" />
+        <label id="275" label="" color="3" folder="Aqua Konosuba" sort="3" />
+        <label id="276" label="" color="3" folder="Aqua Konosuba" sort="4" />
+        <label id="277" label="" color="3" folder="Aqua Konosuba" sort="0" />
+        <label id="278" label="" color="3" folder="Aqua Konosuba" sort="5" />
+        <label id="279" label="" color="3" folder="Targets" sort="57" />
+        <label id="280" label="Rouge present" folder="Treasure Scope" sort="0" />
+        <label id="281" label="Rouge NOT present" folder="Treasure Scope" sort="2" />
+        <label id="282" label="" folder="Treasure Scope" sort="3" />
+        <label id="283" label="" folder="Aqua (KH)" sort="14" />
+        <label id="284" label="" folder="Human" sort="9" />
+        <label id="285" label="" folder="Targets" sort="17" />
+        <label id="286" label="" folder="Targets" sort="18" />
+        <label id="287" label="" folder="Targets" sort="19" />
+        <label id="288" label="" folder="Targets" sort="5" />
+        <label id="289" label="" folder="Targets" sort="69" />
+        <label id="290" label="" folder="Targets" sort="89" />
+        <label id="291" label="" color="3" folder="Responses" sort="25" />
+        <label id="292" label="Opponent is in the lead (butt pose!)" folder="Head 2 Head" sort="13" />
+        <label id="293" label="" folder="Conditional" sort="18" />
+        <label id="294" label="" folder="Targets" sort="42" />
+        <label id="295" label="" folder="Targets" sort="70" />
+        <label id="296" label="" folder="Yumeko" sort="0" />
+        <label id="297" label="" folder="Yumeko" sort="2" />
+        <label id="298" label="" folder="Responses" sort="20" />
+        <label id="299" label="" folder="Situations" sort="35" />
+        <label id="300" label="" folder="Wasp" sort="0" />
+        <label id="301" label="" folder="Wasp" sort="2" />
+        <label id="302" label="" folder="Filter" sort="12" />
+        <label id="303" label="" folder="Filter" sort="19" />
+        <label id="304" label="" folder="Responses" sort="7" />
+        <label id="305" label="" folder="Responses" sort="17" />
+        <label id="306" label="" color="3" folder="Targets" sort="20" />
+        <label id="307" label="" color="1" folder="Targets" sort="58" />
+        <label id="308" label="" folder="Responses" sort="42" />
+        <label id="309" label="" folder="Human" sort="8" />
+        <label id="310" label="" folder="Human" sort="0" />
+        <label id="311" label="" folder="Aqua (KH)" sort="13" />
+        <label id="312" label="" folder="Targets" sort="0" />
+        <label id="313" label="" folder="Aqua (KH)" sort="15" />
+        <label id="314" label="" folder="Aqua (KH)" sort="16" />
+        <label id="315" label="" folder="Targets" sort="0" />
+        <label id="316" label="" folder="Aqua (KH)" sort="0" />
+        <label id="317" label="" folder="Aqua (KH)" sort="2" />
+        <label id="318" label="" folder="Aqua (KH)" sort="3" />
+        <label id="319" label="" folder="Aqua (KH)" sort="4" />
+        <label id="320" label="" folder="Aqua (KH)" sort="7" />
+        <label id="321" label="" folder="Aqua (KH)" sort="11" />
+        <label id="322" label="" folder="Aqua (KH)" sort="6" />
+        <label id="323" label="" folder="Aqua (KH)" sort="10" />
+        <label id="324" label="" folder="Aqua (KH)" sort="9" />
+        <label id="325" label="" folder="Aqua (KH)" sort="17" />
+        <label id="326" label="" color="3" folder="Targets" sort="21" />
+        <label id="327" label="" color="3" folder="Targets" sort="22" />
+        <label id="328" label="" folder="Situations" sort="39" />
+        <label id="329" label="" folder="Prompts" sort="7" />
+        <label id="330" label="" folder="Prompts" sort="9" />
+        <label id="331" label="" folder="Targets" sort="23" />
+        <label id="332" label="" folder="Targets" sort="54" />
+        <label id="333" label="" folder="Targets" sort="80" />
+        <label id="334" label="" folder="Yumeko" sort="3" />
+        <label id="335" label="" folder="Responses" sort="21" />
+        <label id="336" label="" folder="Prompts" sort="5" />
+        <label id="337" label="" folder="Prompts" sort="6" />
+        <label id="338" label="" folder="Situations" sort="26" />
+        <label id="339" label="" folder="Situations" sort="28" />
+        <label id="340" label="" folder="Targets" sort="43" />
+        <label id="341" label="" folder="Targets" sort="44" />
+        <label id="343" label="" folder="Situations" sort="36" />
+        <label id="344" label="" folder="Situations" sort="40" />
+        <label id="345" label="" folder="Targets" sort="0" />
+        <label id="346" label="0/1 - sight 3" folder="Targets" sort="90" />
+        <label id="347" label="1 - fizz 2" folder="Targets" sort="71" />
+        <label id="348" label="1 - djinn 2" folder="Targets" sort="72" />
+        <label id="349" label="1/2 - fizz 3" folder="Targets" sort="91" />
+        <label id="350" label="1/2 - djinn 3" folder="Targets" sort="92" />
+        <label id="351" label="" folder="Responses" sort="22" />
+        <label id="352" label="" folder="Responses" sort="47" />
+        <label id="354" label="" folder="Responses" sort="56" />
+        <label id="355" label="" folder="Responses" sort="4" />
+        <label id="356" label="" folder="Responses" sort="23" />
+        <label id="357" label="" folder="Responses" sort="48" />
+        <label id="358" label="" folder="Responses" sort="35" />
+        <label id="359" label="" folder="Responses" sort="57" />
+        <label id="360" label="" folder="Responses" sort="5" />
+        <label id="361" label="" folder="Responses" sort="24" />
+        <label id="362" label="" folder="Targets" sort="45" />
+        <label id="363" label="" folder="Targets" sort="93" />
+        <label id="364" label="" folder="Targets" sort="79" />
+        <label id="365" label="" folder="Targets" sort="33" />
+        <label id="366" label="" folder="Targets" sort="34" />
+        <label id="367" label="" folder="Targets" sort="46" />
+        <label id="368" label="" folder="Responses" sort="49" />
+        <label id="369" label="Fizz / Mercury Djinn situation" folder="Responses" sort="61" />
+        <label id="370" label="" color="3" folder="Targets" sort="47" />
+        <label id="371" label="" folder="Targets" sort="48" />
+        <label id="372" label="" folder="Targets" sort="73" />
+        <label id="373" label="stage 1 'allies' (MLP friends present)" color="3" folder="Targets" sort="37" />
+        <label id="374" label="stage 1 'allies'" color="3" folder="Targets" sort="49" />
+        <label id="375" label="" folder="Situations" sort="15" />
+        <label id="376" label="" folder="Prompts" sort="2" />
+        <label id="377" label="" folder="Prompts" sort="3" />
+        <label id="378" label="" folder="Situations" sort="2" />
+        <label id="379" label="" color="3" folder="Responses" sort="39" />
+        <label id="380" label="" folder="Targets" sort="0" />
+        <label id="381" label="" color="3" folder="Responses" sort="26" />
+        <label id="382" label="" folder="Player Names" sort="2" />
+        <label id="383" label="" folder="Player Names" sort="3" />
+        <label id="384" label="" folder="Queenie" sort="2" />
+        <label id="385" label="" folder="Queenie" sort="6" />
+        <label id="386" label="" folder="Queenie" sort="8" />
+        <label id="387" label="" folder="Queenie" sort="13" />
+        <label id="388" label="" folder="Queenie" sort="7" />
+        <label id="389" label="" folder="Queenie" sort="0" />
+        <label id="390" label="" folder="Queenie" sort="0" />
+        <label id="391" label="" folder="Queenie" sort="0" />
+        <label id="392" label="" folder="Queenie" sort="0" />
+        <label id="393" label="" folder="Queenie" sort="0" />
+        <label id="394" label="" folder="Queenie" sort="0" />
+        <label id="395" label="" folder="Queenie" sort="0" />
+        <label id="396" label="" folder="Queenie" sort="0" />
+        <label id="397" label="" folder="Queenie" sort="9" />
+        <label id="398" label="" folder="Queenie" sort="14" />
+        <label id="399" label="" folder="Targets" sort="83" />
+        <label id="400" label="" color="3" folder="Targets" sort="59" />
+        <label id="401" label="stage 1 'allies' (MLP friends present)" folder="Targets" sort="55" />
+        <label id="402" label="stage 1 'allies'" folder="Targets" sort="60" />
+        <label id="403" label="" folder="Responses" sort="18" />
+        <label id="404" label="" color="6" folder="Targets" sort="102" />
+        <label id="405" label="" folder="Tag Filters" sort="0" />
+        <label id="406" label="" folder="Tag Filters" sort="3" />
+        <label id="407" label="" folder="Tag Filters" sort="4" />
+        <label id="408" label="" folder="Queenie" sort="3" />
+        <label id="409" label="" folder="Queenie" sort="10" />
+        <label id="410" label="" folder="Queenie" sort="15" />
+        <label id="411" label="" folder="Queenie" sort="4" />
+        <label id="412" label="" folder="Tag Filters" sort="2" />
+        <label id="413" label="" folder="Situations" sort="16" />
+        <label id="414" label="" folder="Queenie" sort="11" />
+        <label id="415" label="" folder="Queenie" sort="16" />
+        <label id="416" label="" folder="Queenie" sort="0" />
+        <label id="417" label="" folder="Queenie" sort="5" />
+        <label id="418" label="" folder="Queenie" sort="12" />
+        <label id="419" label="" folder="Queenie" sort="17" />
+        <label id="420" label="" folder="Targets" sort="104" />
+        <label id="421" label="" folder="Targets" sort="105" />
+        <label id="422" label="" folder="Targets" sort="106" />
+        <label id="423" label="" color="3" folder="Targets" sort="24" />
+        <label id="424" label="" color="3" folder="Targets" sort="82" />
+        <label id="425" label="" folder="Targets" sort="28" />
+        <label id="426" label="" folder="Situations" sort="34" />
+        <label id="427" label="" folder="Events" sort="2" />
+        <label id="428" label="" folder="Targets" sort="4" />
+        <label id="429" label="" folder="Targets" sort="25" />
+        <label id="430" label="2 - journeys 1" folder="Targets" sort="50" />
+        <label id="431" label="2 - journeys 2" folder="Targets" sort="74" />
+        <label id="432" label="2/3 - journeys 3" folder="Targets" sort="94" />
+        <label id="433" label="3 - library 1" folder="Targets" sort="51" />
+        <label id="434" label="3 - library 2" folder="Targets" sort="75" />
+        <label id="435" label="3/4 - library 3" folder="Targets" sort="95" />
+        <label id="436" label="" folder="Responses" sort="6" />
+        <label id="437" label="" folder="Targets" sort="0" />
+        <label id="438" label="" folder="Targets" sort="6" />
+        <label id="439" label="" folder="Targets" sort="7" />
+        <label id="440" label="" folder="Targets" sort="2" />
+        <label id="441" label="" folder="Conditional" sort="7" />
+        <label id="442" label="" folder="Conditional" sort="8" />
+        <label id="443" label="" folder="Conditional" sort="9" />
+        <label id="444" label="4 - love life 1" folder="Targets" sort="52" />
+        <label id="445" label="4 - love life 2" folder="Targets" sort="76" />
+        <label id="446" label="4/5 - love life 3" folder="Targets" sort="96" />
+        <label id="447" label="5 - bedroom bending 1" folder="Targets" sort="53" />
+        <label id="448" label="5 - bedroom bending 2" folder="Targets" sort="77" />
+        <label id="449" label="5/6 - bedroom bending 3 (water)" folder="Targets" sort="97" />
+        <label id="450" label="5/6 - bedroom bending 3 (earth)" folder="Targets" sort="98" />
+        <label id="451" label="" folder="Targets" sort="61" />
+        <label id="452" label="" folder="Responses" sort="3" />
+        <label id="453" label="" folder="Responses" sort="9" />
+        <label id="454" label="" folder="Responses" sort="8" />
+        <label id="455" label="" folder="Responses" sort="36" />
+        <label id="456" label="" folder="Human" sort="7" />
+        <label id="457" label="" folder="Responses" sort="27" />
+        <label id="458" label="" folder="Responses" sort="50" />
+        <label id="459" label="" folder="Responses" sort="58" />
+        <label id="460" label="" folder="Responses" sort="28" />
+        <label id="461" label="" folder="Responses" sort="51" />
+        <label id="462" label="" folder="Responses" sort="59" />
+        <label id="463" label="" folder="Responses" sort="29" />
+        <label id="464" label="" folder="Responses" sort="52" />
+        <label id="465" label="" folder="Responses" sort="60" />
+        <label id="467" label="" folder="Conditional" sort="41" />
+        <label id="468" label="" folder="Conditional" sort="42" />
+        <label id="469" label="" folder="Conditional" sort="36" />
+        <label id="470" label="" folder="Conditional" sort="37" />
+        <label id="471" label="" folder="Conditional" sort="24" />
+        <label id="472" label="" folder="Targets" sort="3" />
+        <label id="466" label="" folder="Targets" sort="108" />
+        <label id="473" label="" folder="Responses" sort="37" />
+        <label id="474" label="" folder="Responses" sort="14" />
+        <label id="475" label="" folder="Responses" sort="30" />
+        <label id="476" label="" folder="Targets" sort="62" />
+        <label id="477" label="" folder="Targets" sort="63" />
+        <label id="478" label="" folder="Clothing" sort="0" />
+        <label id="479" label="" folder="Conditional" sort="21" />
+        <label id="480" label="" folder="Targets" sort="84" />
+        <label id="481" label="stage 1 'allies'" folder="Targets" sort="99" />
+        <label id="483" label="stage 1 'allies' (MLP friends present)" folder="Targets" sort="81" />
+        <label id="484" label="" folder="Targets" sort="85" />
+        <label id="485" label="" folder="Responses" sort="31" />
+        <label id="486" label="" folder="Responses" sort="38" />
+        <label id="487" label="" folder="Targets" sort="86" />
+        <label id="488" label="" folder="Aqua Konosuba" sort="6" />
+        <label id="489" label="" folder="Aqua Konosuba" sort="7" />
+        <label id="492" label="" folder="Targets" sort="0" />
+        <label id="490" label="" folder="Aqua Konosuba" sort="8" />
+        <label id="491" label="" folder="Aqua Konosuba" sort="9" />
+        <label id="493" label="" folder="Aqua Konosuba" sort="10" />
+        <label id="494" label="" folder="Aqua Konosuba" sort="11" />
+        <label id="495" label="" folder="Situations" sort="9" />
+        <label id="496" label="" folder="Situations" sort="22" />
+        <label id="497" label="" folder="Situations" sort="6" />
+        <label id="498" label="" folder="Situations" sort="3" />
+        <label id="499" label="" folder="Responses" sort="44" />
+        <label id="500" label="" folder="Targets" sort="8" />
+        <label id="502" label="" folder="Targets" sort="9" />
+        <label id="503" label="" folder="Tag Filters" sort="8" />
+        <label id="504" label="" color="3" folder="Responses" sort="32" />
+        <label id="505" label="" color="3" folder="Targets" sort="64" />
+        <label id="506" label="" color="3" folder="Targets" sort="65" />
+        <label id="507" label="" folder="Responses" sort="43" />
+        <label id="508" label="" folder="Situations" sort="4" />
+        <label id="509" label="" folder="Responses" sort="45" />
+        <label id="510" label="" color="3" folder="Targets" sort="56" />
+        <label id="511" label="" color="1" folder="Targets" sort="100" />
+        <label id="512" label="" folder="Responses" sort="33" />
+        <label id="513" label="" folder="Targets" sort="27" />
+        <label id="514" label="" folder="Targets" sort="13" />
+        <label id="515" label="" folder="Targets" sort="29" />
+        <label id="516" label="" folder="Responses" sort="34" />
+        <label id="517" label="weyard is flat (6+ rounds)" folder="Lore - WitchHannah Sponsorship" sort="0" />
+        <label id="518" label="weyard technology (3+ rounds)" folder="Lore - WitchHannah Sponsorship" sort="2" />
+        <label id="519" label="psynergy (6+ rounds)" folder="Lore - WitchHannah Sponsorship" sort="3" />
+        <label id="520" label="angara (3+ rounds, most still decent)" folder="Lore - WitchHannah Sponsorship" sort="4" />
+        <label id="521" label="Mia bi-curious (female opp is indecent)" folder="Mia Herself - WitchHannah Sponsorship" sort="0" />
+        <label id="522" label="Mia is a healer (3+ Rounds)" folder="Mia Herself - WitchHannah Sponsorship" sort="2" />
+        <label id="523" label="Mia, hero of vale? (6+ Rounds, said mia_saved_the_world)" folder="Mia Herself - WitchHannah Sponsorship" sort="3" />
+        <label id="524" label="Mia saved the world (3+ Rounds)" folder="Mia Herself - WitchHannah Sponsorship" sort="4" />
+        <label id="525" label="Water in a fight (3+ Rounds)" folder="Mia Herself - WitchHannah Sponsorship" sort="5" />
+        <label id="526" label="" folder="Filter - Golden Sun Opponents" sort="0" />
+        <label id="527" label="" folder="Filter - Golden Sun Opponents" sort="2" />
+        <label id="528" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="529" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="530" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="531" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="532" label="" folder="SoulHeart Sponsorship" sort="5" />
+        <label id="533" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="534" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="535" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="536" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="537" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="538" label="" folder="Insiduani Sponsorship" sort="0" />
+        <label id="539" label="" folder="Targets" sort="109" />
+        <label id="540" label="" folder="Targets" sort="110" />
+        <label id="541" label="" folder="Filter" sort="20" />
+        <label id="542" label="" folder="Filter" sort="21" />
+        <label id="543" label="" folder="Filter" sort="22" />
+        <label id="544" label="" folder="Logic" sort="0" />
+        <label id="545" label="" folder="Filter" sort="23" />
+        <label id="546" label="" folder="Player Names" sort="0" />
+        <label id="547" label="" folder="Filter" sort="24" />
+        <label id="548" label="" folder="Filter" sort="25" />
+        <label id="549" label="" folder="Filter" sort="27" />
+        <label id="550" label="" folder="Filter" sort="26" />
+        <label id="551" label="" folder="Targets" sort="111" />
+        <label id="552" label="" folder="Targets" sort="112" />
+        <label id="554" label="" folder="Targets" sort="114" />
+        <label id="553" label="" folder="Targets" sort="113" />
+        <label id="555" label="" folder="Targets" sort="115" />
+        <label id="556" label="" folder="Targets" sort="116" />
+        <label id="559" label="" folder="Targets" sort="119" />
+        <label id="558" label="" folder="Targets" sort="118" />
+        <label id="557" label="" folder="Targets" sort="117" />
+        <label id="560" label="" folder="Insiduani Sponsorship" sort="2" />
+        <label id="561" label="" folder="Targets" sort="120" />
+        <label id="562" label="" folder="Filter" sort="28" />
+        <label id="565" label="" folder="Targets" sort="121" />
+        <label id="566" label="" color="1" folder="Responses" sort="0" />
+        <label id="567" label="" color="1" folder="Responses" sort="0" />
+        <label id="568" label="" color="1" folder="Responses" sort="0" />
+        <label id="569" label="" folder="Responses" sort="0" />
+        <label id="570" label="" color="1" folder="Responses" sort="0" />
+        <label id="571" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="572" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="573" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="574" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="575" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="576" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="577" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="563" label="" folder="Targets" sort="0" />
+        <label id="564" label="" folder="Targets" sort="0" />
+        <label id="578" label="" folder="Filter" sort="0" />
+        <label id="579" label="" folder="SoulHeart Sponsorship" sort="0" />
+        <label id="580" label="" folder="Filter" sort="0" />
+        <label id="581" label="" folder="Filter" sort="0" />
+        <label id="582" label="" folder="Targets" sort="0" />
+        <label id="583" label="" folder="Responses" sort="0" />
+        <label id="584" label="" color="3" folder="Targets" sort="0" />
+        <label id="585" label="" color="3" folder="Targets" sort="0" />
+        <label id="586" label="" folder="Human" sort="0" />
+        <label id="587" label="" folder="Human" sort="0" />
+        <label id="588" label="" folder="Human" sort="0" />
+        <label id="589" label="" folder="Human" sort="0" />
+        <label id="590" label="" folder="Human" sort="0" />
+        <label id="591" label="" folder="Human" sort="0" />
+        <label id="592" label="" folder="Epilogue" sort="0" />
+        <label id="593" label="" folder="Epilogue" sort="0" />
+        <label id="594" label="" folder="Epilogue" sort="0" />
+        <label id="595" label="" folder="Epilogue" sort="0" />
+        <label id="596" label="" folder="Situations" sort="0" />
+        <label id="597" label="" folder="Situations" sort="0" />
+        <label id="598" label="" folder="Targets" sort="0" />
+        <label id="599" label="" folder="Targets" sort="0" />
+        <label id="600" label="" folder="Targets" sort="0" />
+        <label id="601" label="" folder="Targets" sort="0" />
+        <label id="602" label="" color="1" folder="Responses" sort="0" />
+        <label id="603" label="" color="1" folder="Targets" sort="0" />
+        <label id="604" label="" color="1" folder="Targets" sort="0" />
+        <label id="605" label="" color="1" folder="Targets" sort="0" />
+        <label id="606" label="" color="1" folder="Responses" sort="0" />
+        <label id="607" label="" color="1" folder="Targets" sort="0" />
+        <label id="608" label="" color="1" folder="Targets" sort="0" />
+        <label id="609" label="" color="1" folder="Targets" sort="0" />
+        <label id="610" label="" color="1" folder="Responses" sort="0" />
+        <label id="612" label="" color="3" folder="Targets" sort="0" />
+        <label id="613" label="" color="3" folder="Targets" sort="0" />
+        <label id="614" label="" color="3" folder="Targets" sort="0" />
+        <label id="615" label="" folder="Responses" sort="0" />
+        <label id="611" label="" folder="Responses" sort="0" />
+        <label id="616" label="" folder="Responses" sort="0" />
+        <label id="617" label="" folder="Responses" sort="0" />
+        <label id="618" label="" folder="Responses" sort="0" />
+        <label id="619" label="" folder="Targets" sort="0" />
+        <label id="620" label="" folder="Targets" sort="0" />
+        <label id="621" label="" folder="Halloween Costume" sort="0" />
+        <label id="622" label="" folder="Halloween Costume" sort="0" />
+        <label id="623" label="" folder="Halloween Costume" sort="0" />
+        <label id="624" label="" folder="Halloween Costume" sort="0" />
+        <label id="625" label="" folder="Halloween Costume" sort="0" />
+        <label id="626" label="" folder="Halloween Costume" sort="0" />
+        <label id="627" label="" folder="Halloween Costume" sort="0" />
+        <label id="628" label="" folder="Halloween Costume" sort="0" />
+        <label id="629" label="" folder="Halloween Costume" sort="0" />
+        <label id="630" label="" folder="Halloween Costume" sort="0" />
+        <label id="631" label="" folder="Halloween Costume" sort="0" />
+        <label id="632" label="" folder="Halloween Costume" sort="0" />
+        <label id="633" label="" folder="Halloween Costume" sort="0" />
+        <label id="634" label="Halloween Costume Collectible" folder="Halloween Costume" sort="0" />
+        <label id="635" label="Halloween Costume Collectible" folder="Halloween Costume" sort="0" />
+        <label id="636" label="" folder="Jenna" sort="0" />
+        <label id="637" label="" folder="Jenna" sort="0" />
+        <label id="638" label="" folder="Jenna" sort="0" />
+        <label id="639" label="thong reveal (1st) (siren)" folder="Clothing" sort="0" />
+        <label id="640" label="All Females are now Chest Visible (Siren)" folder="Conditional Strip Lines" sort="0" />
+        <label id="641" label="Fizz / Mercury Djinn situation (Siren)" folder="Conditional Strip Lines" sort="0" />
+        <label id="642" label="" folder="Jenna" sort="0" />
+        <label id="643" label="" folder="Targets" sort="0" />
+        <label id="644" label="" folder="Jenna" sort="0" />
+        <label id="645" label="" folder="Responses" sort="0" />
+        <label id="646" label="" color="1" folder="Responses" sort="0" />
+        <label id="647" label="" folder="Responses" sort="0" />
+        <label id="648" label="" color="1" folder="Targets" sort="0" />
+        <label id="649" label="" color="1" folder="Targets" sort="0" />
+        <label id="650" label="" folder="Responses" sort="0" />
+    </labels>
+    <prefixes>
+        <prefix>zz_</prefix>
+    </prefixes>
+    <onlyCustomPoses>true</onlyCustomPoses>
+    <nextId>650</nextId>
+    <markers>
+        <marker scope="Public" name="a_djinni_was_in_my_cape">Fizz djinni situational marker</marker>
+        <marker scope="Public" name="angara_is_isolated" />
+        <marker scope="Public" name="aqua_keyblade_revealResp">Reaction to Aqua KH 'keyblade reveal' situation</marker>
+        <marker scope="Public" name="aqua_miaGS_clan1" />
+        <marker scope="Public" name="aqua_miaGS_clan2" />
+        <marker scope="Public" name="aquagrunt_magmagrunt_STUPID" />
+        <marker scope="Public" name="aquakh_mia_hug1" />
+        <marker scope="Public" name="aquaKS_blessing_react">Reaction to Aqua 'blessing' situation</marker>
+        <marker scope="Public" name="barbara_praying_reaction">Reaction to Barbara 'praying' situation</marker>
+        <marker scope="Public" name="breasts_smaller_clothed" />
+        <marker scope="Public" name="butt_pose">Showing off an butt pose</marker>
+        <marker scope="Public" name="butt_pose_girls_30rounds" />
+        <marker scope="Private" name="butt_pose_internal1">Internal use marker for tracking if a butt pose has been used in the hand line already</marker>
+        <marker scope="Public" name="caulifua_SSJ">Reaction to Caulifla 'super saiyan' situation</marker>
+        <marker scope="Public" name="chihiro_alter_ego" />
+        <marker scope="Public" name="chihiro_is_a_guy" />
+        <marker scope="Public" name="climax_player_name" />
+        <marker scope="Public" name="crossbone_isle_chill" />
+        <marker scope="Public" name="css_enable-custom-box" />
+        <marker scope="Public" name="djinn_lore_1">Talking about djinn</marker>
+        <marker scope="Public" name="djinnToggle">If set to 1, a Mercury Djinni will appear.</marker>
+        <marker scope="Public" name="dunban_bionis_view_3" />
+        <marker scope="Public" name="dunban_miaGS_powers1" />
+        <marker scope="Public" name="dunban_miaGS_powers2" />
+        <marker scope="Public" name="dunban_miaGS_powers3" />
+        <marker scope="Public" name="dunban_start_ff" />
+        <marker scope="Public" name="epilogue_playerskintone">0 = pale (default), 1 = fair, 2 = olive, 3 = dark</marker>
+        <marker scope="Public" name="fizz_butt_pose_appearance">Fizz appears during this butt pose.</marker>
+        <marker scope="Public" name="fizz_goes_away">note: Fizz died on the way back to his home planet</marker>
+        <marker scope="Public" name="fluttershy_butt1" />
+        <marker scope="Public" name="fluttershy_reasonforComing_resp" />
+        <marker scope="Public" name="fluttershy_reasonforComing_resp_HOT" />
+        <marker scope="Public" name="fluttershy_snailworries" />
+        <marker scope="Public" name="foobar" />
+        <marker scope="Public" name="fried_fish" />
+        <marker scope="Public" name="game_tickets">Line mentioning the item 'Game Tickets'</marker>
+        <marker scope="Public" name="gameover_haunted_forest">Game is over, background is haunted forest</marker>
+        <marker scope="Public" name="gamestart_morrigan" />
+        <marker scope="Public" name="giygas_ply">Using Ply series psynergy against Giygas.</marker>
+        <marker scope="Public" name="giygas_wish">Using Wish series psynergy against Giygas.</marker>
+        <marker scope="Public" name="gloria_miaGS_fizz1" />
+        <marker scope="Public" name="gloria_miaGS_fizz2" />
+        <marker scope="Public" name="gloria_miaGS_fizz3" />
+        <marker scope="Public" name="gloria_miaGS_summons1" />
+        <marker scope="Public" name="gloria_miaGS_summons2" />
+        <marker scope="Public" name="gloria_miaGS_summons3" />
+        <marker scope="Public" name="hanako_shirt_off" />
+        <marker scope="Public" name="hero_of_vale" />
+        <marker scope="Public" name="hugebreasts_scantilyclad_chestwillbe" />
+        <marker scope="Public" name="human_post_ff_flirting_butt_pose" />
+        <marker scope="Public" name="Imil_invitation" />
+        <marker scope="Public" name="jenna_self_sirencostume" />
+        <marker scope="Public" name="jura_mia_gs_babiesResp" />
+        <marker scope="Public" name="lucky_medal_fountain">Line mentioning the Lucky Medal Fountain minigame</marker>
+        <marker scope="Public" name="mariS_wings_revealResp">Reaction to Mari S's wings reveal</marker>
+        <marker scope="Public" name="meia_jura_fashion1" />
+        <marker scope="Public" name="meia_jura_hair1" />
+        <marker scope="Public" name="meia_jura_worlds1" />
+        <marker scope="Public" name="mg_butt" />
+        <marker scope="Public" name="mia_9s_pod1" />
+        <marker scope="Public" name="mia_aquakh_hug1" />
+        <marker scope="Public" name="mia_aquakh_hug2" />
+        <marker scope="Public" name="mia_aquakh_hug3" />
+        <marker scope="Public" name="mia_aquakh_hug4" />
+        <marker scope="Public" name="mia_aquakh_lewdhug1" />
+        <marker scope="Public" name="mia_aquakh_lewdhug2" />
+        <marker scope="Public" name="mia_aquakh_lewdhug3" />
+        <marker scope="Public" name="mia_aquakh_lewdhug4" />
+        <marker scope="Public" name="mia_aquakh_swimsuit1" />
+        <marker scope="Public" name="mia_aquakh_swimsuit2" />
+        <marker scope="Public" name="mia_aquakh_swimsuit3" />
+        <marker scope="Public" name="mia_aquaKHSquared1" />
+        <marker scope="Public" name="mia_aquaKS_beachwear_cont" />
+        <marker scope="Public" name="mia_aquaKS_beachwearQuestion" />
+        <marker scope="Public" name="mia_aquaKS_Djinn_cont" />
+        <marker scope="Public" name="mia_aquaKS_djinnQuestion" />
+        <marker scope="Public" name="mia_aquaKS_goddess1" />
+        <marker scope="Public" name="mia_aquaKS_goddess2" />
+        <marker scope="Public" name="mia_aquaKS_goddess3" />
+        <marker scope="Public" name="mia_aquaKS_HealerContResp" />
+        <marker scope="Public" name="mia_aquaKS_HealerQuestion" />
+        <marker scope="Public" name="mia_aquaKS_MercuryClanCont" />
+        <marker scope="Public" name="mia_aquaKS_MercuryClanContB" />
+        <marker scope="Public" name="mia_aquaKS_mercuryClanQuestion" />
+        <marker scope="Public" name="mia_aquaKS_psynergyCont" />
+        <marker scope="Public" name="mia_aquaKS_psynergyQuestion" />
+        <marker scope="Public" name="mia_aquaSquared1" />
+        <marker scope="Public" name="Mia_BarbaraDailyPrayer_Resp">Interaction with Barbara</marker>
+        <marker scope="Public" name="mia_bowsette_0a" />
+        <marker scope="Public" name="mia_bowsette_0b" />
+        <marker scope="Public" name="mia_bowsette_0c" />
+        <marker scope="Public" name="mia_bowsette_strip0a" />
+        <marker scope="Public" name="mia_cag_founderOfAlchemy1" />
+        <marker scope="Public" name="mia_caitlin_heavystart" />
+        <marker scope="Public" name="mia_caitlin_PSIpowers1" />
+        <marker scope="Public" name="mia_caitlin_PSIpowers2" />
+        <marker scope="Public" name="mia_caitlin_PSIpowers3" />
+        <marker scope="Public" name="mia_dream_epilogue_seen" />
+        <marker scope="Public" name="mia_dunban_scar_reveal">Interaction with Dunban</marker>
+        <marker scope="Public" name="mia_dunban_strip4a" />
+        <marker scope="Public" name="mia_dunban_strip4b" />
+        <marker scope="Public" name="mia_dunban_worlds1" />
+        <marker scope="Public" name="mia_dunban_worlds2" />
+        <marker scope="Public" name="mia_dunban_worlds3" />
+        <marker scope="Public" name="mia_fluttershy_allies1" />
+        <marker scope="Public" name="mia_fluttershy_allies1_MLP" />
+        <marker scope="Public" name="mia_fluttershy_allies2" />
+        <marker scope="Public" name="mia_fluttershy_allies2_MLP" />
+        <marker scope="Public" name="mia_fluttershy_allies3" />
+        <marker scope="Public" name="mia_fluttershy_allies3_MLP" />
+        <marker scope="Public" name="mia_fluttershy_alliesB2" />
+        <marker scope="Public" name="mia_fluttershy_animals1" />
+        <marker scope="Public" name="mia_fluttershy_animals2" />
+        <marker scope="Public" name="mia_fluttershy_animals3" />
+        <marker scope="Public" name="mia_fluttershy_meeting_cont" />
+        <marker scope="Public" name="mia_fluttershy_meeting_question_Resp" />
+        <marker scope="Public" name="mia_heal_dunban_arm" />
+        <marker scope="Public" name="mia_heal_dunban_arm2" />
+        <marker scope="Public" name="Mia_healer_cont" />
+        <marker scope="Public" name="mia_is_a_healer" />
+        <marker scope="Public" name="mia_is_bicurious" />
+        <marker scope="Public" name="mia_jenna_strip0a" />
+        <marker scope="Public" name="mia_joey_question1" />
+        <marker scope="Public" name="mia_jura_babiesPrompt">Response to Jura babies prompt</marker>
+        <marker scope="Public" name="mia_jura_gs0a" />
+        <marker scope="Public" name="mia_jura_gs0b" />
+        <marker scope="Public" name="mia_jura_gs1" />
+        <marker scope="Public" name="mia_jura_gs1b" />
+        <marker scope="Public" name="mia_jura_gs2" />
+        <marker scope="Public" name="mia_jura_gs2a" />
+        <marker scope="Public" name="mia_jura_hair1" />
+        <marker scope="Public" name="mia_jura_hair2" />
+        <marker scope="Public" name="mia_jura_self3a" />
+        <marker scope="Public" name="mia_jura_sirenstrip0a" />
+        <marker scope="Public" name="mia_jura_worlds1" />
+        <marker scope="Public" name="mia_jura_worlds2" />
+        <marker scope="Public" name="mia_jura_worlds3" />
+        <marker scope="Public" name="mia_larachel_staff_Tolbi" />
+        <marker scope="Public" name="mia_link_fidget1" />
+        <marker scope="Public" name="mia_lysithea_genieS_resp" />
+        <marker scope="Public" name="mia_lysithea_strip0a" />
+        <marker scope="Public" name="mia_lysithea_strip0b" />
+        <marker scope="Public" name="mia_lysithea_strip1a" />
+        <marker scope="Public" name="mia_lysithea_strip1b" />
+        <marker scope="Public" name="mia_lysithea_tribeS_resp" />
+        <marker scope="Public" name="mia_lysithea_wateryouwaitingforS_resp" />
+        <marker scope="Public" name="mia_mariO_Image1" />
+        <marker scope="Public" name="mia_mariS_acc_crazy_suggestResp" />
+        <marker scope="Public" name="mia_mariS_eatFizz" />
+        <marker scope="Public" name="mia_mariS_fizzEatCont" />
+        <marker scope="Public" name="mia_mariS_fizzEatQuestion" />
+        <marker scope="Public" name="mia_meia_anemos1" />
+        <marker scope="Public" name="mia_meia_anemos2" />
+        <marker scope="Public" name="mia_meia_anemos3" />
+        <marker scope="Public" name="mia_meia_gs0a" />
+        <marker scope="Public" name="mia_meia_gs0b" />
+        <marker scope="Public" name="mia_meia_gs0c" />
+        <marker scope="Public" name="mia_meia_gs1a" />
+        <marker scope="Public" name="mia_meia_gs1b" />
+        <marker scope="Public" name="mia_meia_gs2a" />
+        <marker scope="Public" name="mia_meia_gs2b" />
+        <marker scope="Public" name="mia_meia_self3a" />
+        <marker scope="Public" name="mia_meia_self4a" />
+        <marker scope="Public" name="mia_nadeshiko_foodResp" />
+        <marker scope="Public" name="mia_nadeshiko_strip0a" />
+        <marker scope="Public" name="mia_nadeshiko_strip0b" />
+        <marker scope="Public" name="mia_nagatoro_self0a" />
+        <marker scope="Public" name="mia_nagatoro_self0b" />
+        <marker scope="Public" name="mia_nami_flatworld1" />
+        <marker scope="Public" name="mia_nami_flatworld2" />
+        <marker scope="Public" name="mia_nami_flatworld3_gravity" />
+        <marker scope="Public" name="mia_nami_flatworld3_seasons" />
+        <marker scope="Public" name="mia_nami_s0a" />
+        <marker scope="Public" name="mia_nami_s0b" />
+        <marker scope="Public" name="mia_nami_s0c" />
+        <marker scope="Public" name="mia_nami_self0a" />
+        <marker scope="Public" name="mia_nami_self0b" />
+        <marker scope="Public" name="mia_nicorobin_arch1" />
+        <marker scope="Public" name="mia_nicorobin_injuries1" />
+        <marker scope="Public" name="mia_nicorobin_self0a" />
+        <marker scope="Public" name="mia_perona_self0a" />
+        <marker scope="Public" name="mia_perona_self3a" />
+        <marker scope="Public" name="mia_queenie_mustmast" />
+        <marker scope="Public" name="mia_queenie_startmast" />
+        <marker scope="Public" name="mia_queenie_strip0a" />
+        <marker scope="Public" name="mia_queenie_strip0b" />
+        <marker scope="Public" name="mia_queenie_strip0c" />
+        <marker scope="Public" name="mia_queenie_strip1a" />
+        <marker scope="Public" name="mia_queenie_strip1b" />
+        <marker scope="Public" name="mia_queenie_strip1c" />
+        <marker scope="Public" name="mia_queenie_strip2a" />
+        <marker scope="Public" name="mia_queenie_strip2b" />
+        <marker scope="Public" name="mia_queenie_strip2c" />
+        <marker scope="Public" name="mia_queenie_strip3a" />
+        <marker scope="Public" name="mia_queenie_strip3b" />
+        <marker scope="Public" name="mia_queenie_strip3c" />
+        <marker scope="Public" name="mia_queenie_strip3d" />
+        <marker scope="Public" name="mia_queenie_strip4a" />
+        <marker scope="Public" name="mia_queenie_strip4b" />
+        <marker scope="Public" name="mia_queenie_strip4c" />
+        <marker scope="Public" name="mia_revy_gs0a" />
+        <marker scope="Public" name="mia_samus_armor1" />
+        <marker scope="Public" name="mia_samus_armor2" />
+        <marker scope="Public" name="mia_samus_armor3" />
+        <marker scope="Public" name="mia_saved_the_world" />
+        <marker scope="Public" name="mia_shami_magic1" />
+        <marker scope="Public" name="mia_shami_magic2" />
+        <marker scope="Public" name="mia_shami_magic3" />
+        <marker scope="Public" name="mia_shamiko_horns1" />
+        <marker scope="Public" name="mia_shamiko_horns2" />
+        <marker scope="Public" name="mia_shamiko_horns3" />
+        <marker scope="Public" name="mia_shamiko_magic1" />
+        <marker scope="Public" name="mia_shamiko_magic2" />
+        <marker scope="Public" name="mia_shamiko_magic3" />
+        <marker scope="Public" name="mia_shamiko_teach1" />
+        <marker scope="Public" name="mia_sly_strip2a" />
+        <marker scope="Public" name="mia_sofia_self_0b" />
+        <marker scope="Public" name="mia_sofia_self0a" />
+        <marker scope="Public" name="mia_sofia_speech1" />
+        <marker scope="Public" name="mia_sofia_speech2" />
+        <marker scope="Public" name="mia_sofia_speech3" />
+        <marker scope="Public" name="mia_sofia_strip0a" />
+        <marker scope="Public" name="mia_sofia_strip0b" />
+        <marker scope="Public" name="mia_solarflare_ColdOutdoor1" />
+        <marker scope="Public" name="mia_solarflare_HotOutdoor1" />
+        <marker scope="Public" name="mia_steve_america1" />
+        <marker scope="Public" name="mia_steve_food1" />
+        <marker scope="Public" name="mia_sweetheart_selflove" />
+        <marker scope="Public" name="mia_toph_bedroombending1" />
+        <marker scope="Public" name="mia_toph_bedroombending2" />
+        <marker scope="Public" name="mia_toph_bedroombending3_earth" />
+        <marker scope="Public" name="mia_toph_bedroombending3_water" />
+        <marker scope="Public" name="mia_toph_bending1_resp" />
+        <marker scope="Public" name="mia_toph_bending2_resp" />
+        <marker scope="Public" name="mia_toph_bending3_resp" />
+        <marker scope="Public" name="mia_toph_bending4_resp" />
+        <marker scope="Public" name="mia_toph_fizzOrigins_1" />
+        <marker scope="Public" name="mia_toph_fizzOrigins_2" />
+        <marker scope="Public" name="mia_toph_fizzOrigins_3" />
+        <marker scope="Public" name="mia_toph_healer1_resp" />
+        <marker scope="Public" name="mia_toph_healer2_resp" />
+        <marker scope="Public" name="mia_toph_healer3_resp" />
+        <marker scope="Public" name="mia_toph_healer4_resp" />
+        <marker scope="Public" name="mia_toph_hometown_1" />
+        <marker scope="Public" name="mia_toph_hometown_2" />
+        <marker scope="Public" name="mia_toph_hometown_3" />
+        <marker scope="Public" name="mia_toph_journeys1" />
+        <marker scope="Public" name="mia_toph_journeys2" />
+        <marker scope="Public" name="mia_toph_journeys3" />
+        <marker scope="Public" name="mia_toph_kinks_1" />
+        <marker scope="Public" name="mia_toph_kinks_2" />
+        <marker scope="Public" name="mia_toph_kinks_3" />
+        <marker scope="Public" name="mia_toph_library1" />
+        <marker scope="Public" name="mia_toph_library2" />
+        <marker scope="Public" name="mia_toph_library3" />
+        <marker scope="Public" name="mia_toph_library4" />
+        <marker scope="Public" name="mia_toph_lovelife1" />
+        <marker scope="Public" name="mia_toph_lovelife2" />
+        <marker scope="Public" name="mia_toph_lovelife3" />
+        <marker scope="Public" name="mia_toph_treatment1" />
+        <marker scope="Public" name="mia_toph_treatment2" />
+        <marker scope="Public" name="mia_toph_treatment3" />
+        <marker scope="Public" name="mia_wasp_team1" />
+        <marker scope="Public" name="mia_wasp_team2" />
+        <marker scope="Public" name="mia_wikipe_blueHair" />
+        <marker scope="Public" name="mia_yumeko_risk1" />
+        <marker scope="Public" name="mia_yumeko_risk2" />
+        <marker scope="Public" name="mia_yumeko_risk3" />
+        <marker scope="Public" name="mia_yunyun_hometown1" />
+        <marker scope="Public" name="mia_yunyun_hometown2" />
+        <marker scope="Public" name="mia_yunyun_hometown3" />
+        <marker scope="Public" name="miaGS_barbara_waterPowers1">Interaction with Barbara</marker>
+        <marker scope="Public" name="miaGS_gloria_gay1" />
+        <marker scope="Public" name="miaGS_gloria_gay2" />
+        <marker scope="Public" name="miaGS_gloria_gay3" />
+        <marker scope="Public" name="miaGS_gloria_gayCont1" />
+        <marker scope="Public" name="miaGS_gloria_gayCont2" />
+        <marker scope="Public" name="miaGS_gloria_gayCont3" />
+        <marker scope="Public" name="miaGS_toph_djinn1" />
+        <marker scope="Public" name="miaGS_toph_djinn1_Fizz" />
+        <marker scope="Public" name="miaGS_toph_djinn2" />
+        <marker scope="Public" name="miaGS_toph_djinn2_Fizz" />
+        <marker scope="Public" name="miaGS_toph_djinn3" />
+        <marker scope="Public" name="miaGS_toph_djinn3_Fizz" />
+        <marker scope="Public" name="miaGS_toph_sight1" />
+        <marker scope="Public" name="miaGS_toph_sight2" />
+        <marker scope="Public" name="miaGS_toph_sight3" />
+        <marker scope="Private" name="mouthdisable">Disables custom mouths. Internal use only.</marker>
+        <marker scope="Public" name="multiple_thigh_highs" />
+        <marker scope="Public" name="nadeshiko_partnerPref_RespA" />
+        <marker scope="Public" name="nadeshiko_partnerPref_RespB" />
+        <marker scope="Public" name="nickname" />
+        <marker scope="Public" name="noire_coolgirl_bandaids" />
+        <marker scope="Public" name="non_adepts_and_psynergy" />
+        <marker scope="Public" name="opp_revealed_thong1">Targets the first thong reveal of the game</marker>
+        <marker scope="Public" name="opp_revealed_thong2">Targets the second thong reveal of the game</marker>
+        <marker scope="Public" name="other_swimsuit_reveal">Another person has revealed a swimsuit as an 'underwear' kind of stage.</marker>
+        <marker scope="Public" name="player_o_count" />
+        <marker scope="Public" name="player_o_count2" />
+        <marker scope="Public" name="player_o_count3" />
+        <marker scope="Public" name="ply_explained_to_mia" />
+        <marker scope="Public" name="polly_return" />
+        <marker scope="Public" name="psynergy">Mia is making use of her Psynergy (magic)</marker>
+        <marker scope="Public" name="queenie_intro_resp" />
+        <marker scope="Public" name="rouge_treasurescope_1" />
+        <marker scope="Public" name="saved_the_world_shame" />
+        <marker scope="Public" name="self_and_target_7high">Herself and the target both only have 7 high</marker>
+        <marker scope="Public" name="self_finished">Internal marker. Used to track if she has finished.</marker>
+        <marker scope="Public" name="self_finished2">Internal marker. Used to track if she has finished.</marker>
+        <marker scope="Public" name="senko_modern_amenitiesResp">Response to Senko modern amenities prompt</marker>
+        <marker scope="Public" name="shami_postTransform" />
+        <marker scope="Public" name="shami_transform" />
+        <marker scope="Public" name="shamiNickname" />
+        <marker scope="Public" name="sly_cantswim" />
+        <marker scope="Public" name="spiderwomanmask" />
+        <marker scope="Public" name="steve_SongPrompt" />
+        <marker scope="Public" name="stocking_noEatFizz" />
+        <marker scope="Public" name="stripped_3_fizz">Fizz djinni situational marker</marker>
+        <marker scope="Public" name="sweetheart_whats_a_donut" />
+        <marker scope="Public" name="swimsuit">Mia has taken off her swimsuit entirely.</marker>
+        <marker scope="Public" name="swimsuit_top">Mia has taken down the top half of her swimsuit to expose her chest.</marker>
+        <marker scope="Public" name="target_chubbybigpp" />
+        <marker scope="Public" name="target_said_player_name" />
+        <marker scope="Public" name="targets_that_said_player_name" />
+        <marker scope="Public" name="throwing_shade_at_polly" />
+        <marker scope="Public" name="toph_bracelet_demo" />
+        <marker scope="Public" name="toph_hair_down" />
+        <marker scope="Public" name="towel_disable" />
+        <marker scope="Public" name="towel_enable">If set to 1, Mia has set down a towel that will remain for her forfeit/post-forfeit stages.</marker>
+        <marker scope="Public" name="treasurescope_1" />
+        <marker scope="Public" name="treasurescope_followup1" />
+        <marker scope="Public" name="turandot_mercury_retrograde_resp" />
+        <marker scope="Public" name="undead_sanctum" />
+        <marker scope="Public" name="wasp_shrunk" />
+        <marker scope="Public" name="water_in_a_fight" />
+        <marker scope="Public" name="weyard_is_flat" />
+        <marker scope="Public" name="weyard_is_medieval" />
+        <marker scope="Public" name="yuno_distraction" />
+        <marker scope="Public" name="yuno_erection" />
+        <marker scope="Public" name="yuno_injuryA" />
+        <marker scope="Public" name="yuno_injuryB" />
+        <marker scope="Public" name="yuno_yuneko_selfstartmast" />
+    </markers>
+    <recipes>
+        <recipe key="b63879f6-9012-4054-b380-378a485ac1fa">
+            <cases>
+                <id>111</id>
+            </cases>
+        </recipe>
+        <recipe key="4212731b-ae25-4c76-96dc-de77dc94a993">
+            <cases>
+                <id>270</id>
+            </cases>
+        </recipe>
+        <recipe key="0f13d31c-7318-4c11-8fcb-4c91fa28b3a3">
+            <cases>
+                <id>293</id>
+            </cases>
+        </recipe>
+        <recipe key="86776250-8f3f-46d3-a128-71f013e0e49b">
+            <cases>
+                <id>478</id>
+            </cases>
+        </recipe>
+        <recipe key="dba5778a-dbed-4079-9052-d204275d6f93">
+            <cases>
+                <id>479</id>
+            </cases>
+        </recipe>
+    </recipes>
+</metadata>

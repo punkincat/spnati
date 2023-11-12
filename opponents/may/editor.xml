@@ -2,9 +2,9 @@
 <metadata>
     <owner>may</owner>
     <height>5'5"</height>
-    <age />
+    <age>18-19</age>
     <pronunciation>May</pronunciation>
-    <othernotes />
+    <othernotes>May's interests include Pokémon Contests (non-battle pageants), fashion, and food.</othernotes>
     <noteworthy>
         <case name="Live around here?" id="5" priority="Prompt" min="1" max="4">
             <description>Do you live around here? (Your answer might depend on the background.)</description>
@@ -237,6 +237,22 @@
         <response id="375" opponent="mari" opponentId="1892" />
         <response id="376" opponent="mari" opponentId="1872" />
         <response id="377" opponent="barbara" opponentId="337" />
+        <response id="383" opponent="kumatora" opponentId="169" />
+        <response id="385" opponent="kumatora" opponentId="170" />
+        <response id="390" opponent="dawn" opponentId="92" />
+        <response id="391" opponent="dawn" opponentId="93" />
+        <response id="401" opponent="nagatoro" opponentId="224" />
+        <response id="411" opponent="nagatoro" opponentId="1054" />
+        <response id="420" opponent="senko" opponentId="140" />
+        <response id="422" opponent="senko" opponentId="15" />
+        <response id="425" opponent="senko" opponentId="406" />
+        <response id="435" opponent="monika" opponentId="1141" />
+        <response id="445" opponent="aqua_kh" opponentId="67" />
+        <response id="447" opponent="tea_gardner" opponentId="106" />
+        <response id="448" opponent="tea_gardner" opponentId="142" />
+        <response id="450" opponent="erufuda" opponentId="76" />
+        <response id="451" opponent="erufuda" opponentId="119" />
+        <response id="454" opponent="tea_gardner" opponentId="205" />
     </responses>
     <notes>
         <note id="192">Lower priority than costume lines</note>
@@ -262,8 +278,8 @@
         <label id="130" label="" folder="Hopping Bunny" sort="18" />
         <label id="131" label="" folder="Hopping Bunny" sort="19" />
         <label id="132" label="" folder="Hopping Bunny" sort="20" />
-        <label id="133" label="" folder="Hopping Bunny" sort="2" />
-        <label id="135" label="" folder="Hopping Bunny" sort="3" />
+        <label id="133" label="easter costumes" folder="Hopping Bunny" sort="2" />
+        <label id="135" label="no costume" folder="Hopping Bunny" sort="3" />
         <label id="136" label="" folder="Hopping Bunny" sort="0" />
         <label id="137" label="" folder="Hopping Bunny" sort="24" />
         <label id="138" label="" folder="Hopping Bunny" sort="25" />
@@ -472,17 +488,108 @@
         <label id="370" label="" folder="Cynthia to right" sort="22" />
         <label id="371" label="" folder="Cynthia to right" sort="31" />
         <label id="368" label="" folder="Cynthia to right" sort="30" />
-        <label id="372" label="" folder="Hopping Bunny" sort="0" />
+        <label id="372" label="" folder="Hopping Bunny" sort="7" />
         <label id="373" label="" folder="Cagliostro to right" sort="0" />
         <label id="374" label="" folder="Y'shtola to right" sort="0" />
         <label id="375" label="" folder="Mari to left" sort="0" />
-        <label id="376" label="" folder="Mari to left" sort="0" />
+        <label id="376" label="" folder="Mari to left" sort="2" />
         <label id="377" label="" folder="Barbara to left" sort="0" />
+        <label id="378" label="" folder="Y'shtola to right" sort="2" />
+        <label id="379" label="" folder="Sunset Secret" sort="14" />
+        <label id="380" label="" folder="Sunset Secret" sort="23" />
+        <label id="381" label="" folder="Kumatora to left" sort="2" />
+        <label id="382" label="" folder="Kumatora to left" sort="3" />
+        <label id="383" label="" folder="Kumatora to left" sort="0" />
+        <label id="384" label="" folder="Kumatora to left or right" sort="0" />
+        <label id="385" label="" folder="Kumatora to left" sort="4" />
+        <label id="386" label="" folder="Dawn to right" sort="2" />
+        <label id="387" label="" folder="Dawn to right" sort="3" />
+        <label id="388" label="" folder="Dawn to right" sort="0" />
+        <label id="389" label="" folder="Dawn to right" sort="4" />
+        <label id="390" label="" folder="Dawn to left" sort="0" />
+        <label id="391" label="" folder="Dawn to left" sort="2" />
+        <label id="392" label="paris rooftop" folder="" sort="0" />
+        <label id="393" label="" folder="Tea to right" sort="0" />
+        <label id="394" label="" folder="Tea to right" sort="2" />
+        <label id="141" label="" folder="Critical Darling to left" sort="0" />
+        <label id="142" label="" folder="Critical Darling to left" sort="2" />
+        <label id="395" label="" folder="Tea to right" sort="0" />
+        <label id="396" label="" folder="Y'shtola to right" sort="0" />
+        <label id="397" label="grass" folder="" sort="0" />
+        <label id="398" label="" folder="Nagatoro to right" sort="0" />
+        <label id="399" label="" folder="Nagatoro to right" sort="0" />
+        <label id="400" label="" folder="Nagatoro to left or right" sort="0" />
+        <label id="401" label="" folder="Nagatoro to left" sort="0" />
+        <label id="402" label="" folder="Tea to left" sort="0" />
+        <label id="403" label="" folder="Tea to left" sort="0" />
+        <label id="404" label="" folder="Tea to left" sort="0" />
+        <label id="405" label="" folder="Tea to left" sort="0" />
+        <label id="406" label="" folder="Tea to left" sort="0" />
+        <label id="407" label="" folder="Critical Darling to left" sort="0" />
+        <label id="408" label="" folder="Critical Darling to left" sort="0" />
+        <label id="409" label="" folder="Tea to right" sort="0" />
+        <label id="410" label="" folder="Mary to left" sort="0" />
+        <label id="411" label="" folder="Nagatoro to left" sort="0" />
+        <label id="197" label="" folder="Nugi-chan to left" sort="0" />
+        <label id="196" label="" folder="Nugi-chan to right" sort="0" />
+        <label id="172" label="" folder="Wikipe-tan to left" sort="0" />
+        <label id="193" label="" folder="Wikipe-tan to left" sort="0" />
+        <label id="230" label="" folder="Bobobo to right" sort="0" />
+        <label id="412" label="" folder="Bobobo to right" sort="0" />
+        <label id="413" label="" folder="Bobobo to left" sort="0" />
+        <label id="414" label="" folder="Bobobo to left" sort="0" />
+        <label id="415" label="" folder="Bobobo to left" sort="0" />
+        <label id="416" label="" folder="Bobobo to left" sort="0" />
+        <label id="417" label="" folder="Bobobo to left" sort="0" />
+        <label id="418" label="" folder="Aster to left" sort="0" />
+        <label id="419" label="" folder="Misty to left" sort="0" />
+        <label id="77" label="" folder="Pyrrha to left" sort="0" />
+        <label id="420" label="" folder="Senko to left" sort="0" />
+        <label id="421" label="" folder="Senko to left" sort="0" />
+        <label id="41" label="" folder="Nagisa to left" sort="0" />
+        <label id="422" label="" folder="Senko to left" sort="0" />
+        <label id="423" label="" folder="Senko to left" sort="0" />
+        <label id="424" label="" folder="Senko to left" sort="0" />
+        <label id="425" label="beach" folder="Senko to left" sort="0" />
+        <label id="426" label="summer costume" folder="" sort="0" />
+        <label id="427" label="easter costume on Jan 1" folder="" sort="0" />
+        <label id="428" label="easter costume" folder="" sort="0" />
+        <label id="429" label="easter costume" folder="" sort="0" />
+        <label id="430" label="easter costume" folder="" sort="0" />
+        <label id="431" label="easter costume" folder="" sort="0" />
+        <label id="134" label="easter costume" folder="" sort="0" />
+        <label id="432" label="easter costume" folder="" sort="0" />
+        <label id="198" label="" folder="Leonie to left" sort="0" />
+        <label id="199" label="" folder="Leonie to left" sort="0" />
+        <label id="433" label="shorts" folder="" sort="0" />
+        <label id="434" label="shorts" folder="" sort="0" />
+        <label id="437" label="" folder="Tea to right" sort="0" />
+        <label id="438" label="" folder="Tea to right" sort="0" />
+        <label id="439" label="" folder="Meia to left" sort="0" />
+        <label id="440" label="" folder="Meia to left" sort="0" />
+        <label id="441" label="" folder="Meia to left" sort="0" />
+        <label id="442" label="" folder="Meia to left Sunset Secret" sort="0" />
+        <label id="443" label="valentine's costume" folder="" sort="0" />
+        <label id="444" label="" folder="Aqua KH to right" sort="0" />
+        <label id="446" label="" folder="Tea to right" sort="0" />
+        <label id="447" label="" folder="Tea to right" sort="0" />
+        <label id="448" label="" folder="Tea to left" sort="0" />
+        <label id="449" label="outdoors hot" folder="" sort="0" />
+        <label id="450" label="" folder="Erufuda to left" sort="0" />
+        <label id="451" label="" folder="Erufuda to left" sort="0" />
+        <label id="452" label="" folder="Tea to right" sort="0" />
+        <label id="453" label="" folder="Tea to right" sort="0" />
+        <label id="454" label="" folder="Tea to left" sort="0" />
+        <label id="455" label="beach" folder="" sort="0" />
+        <label id="456" label="beach" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
+        <prefix>x-</prefix>
     </prefixes>
-    <nextId>377</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>456</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrienSkitty" />
@@ -563,10 +670,20 @@
         <marker scope="Public" name="may_aella_happy_new_year_on_jan_1" />
         <marker scope="Public" name="may_aimee_dont_shoot_anyone" />
         <marker scope="Public" name="may_amycontests" />
+        <marker scope="Public" name="may_aquakh_keyblade_reveal" />
+        <marker scope="Public" name="may_aquakh_ma_a1" />
         <marker scope="Public" name="may_arash_pokeblocks" />
         <marker scope="Public" name="may_aster_pokemon_arent_people" />
         <marker scope="Public" name="may_barbara_daring" />
         <marker scope="Public" name="may_beach_sunscreen" />
+        <marker scope="Public" name="may_beach_volleyball" />
+        <marker scope="Public" name="may_bobobo_bm_b2" />
+        <marker scope="Public" name="may_bobobo_bm_b3" />
+        <marker scope="Public" name="may_bobobo_bm_m1" />
+        <marker scope="Public" name="may_bobobo_bm_m4" />
+        <marker scope="Public" name="may_bobobo_bm_m7" />
+        <marker scope="Public" name="may_bobobo_mb_b2" />
+        <marker scope="Public" name="may_bobobo_mb_b3" />
         <marker scope="Public" name="may_bunny_chansey" />
         <marker scope="Public" name="may_bunny_continued_theme" />
         <marker scope="Public" name="may_bunny_cute_design" />
@@ -581,7 +698,6 @@
         <marker scope="Public" name="may_bunny_made_shoes" />
         <marker scope="Public" name="may_bunny_party_dress" />
         <marker scope="Public" name="may_bunny_pretty_brooch" />
-        <marker scope="Public" name="may_bunny_sheena_" />
         <marker scope="Public" name="may_bunny_sheena_smaller" />
         <marker scope="Public" name="may_bunny_special_reward" />
         <marker scope="Public" name="may_bunny_thinking_cleavage" />
@@ -596,23 +712,37 @@
         <marker scope="Public" name="may_chara_belt_budget" />
         <marker scope="Public" name="may_chara_belt_why" />
         <marker scope="Public" name="may_clothing_ditto" />
+        <marker scope="Public" name="may_cushion_comfy" />
+        <marker scope="Public" name="may_cushion_pokedollars" />
         <marker scope="Public" name="may_cynthia_creation_theories" />
         <marker scope="Public" name="may_cynthia_explore_ruins" />
         <marker scope="Public" name="may_cynthia_historical_figures" />
         <marker scope="Public" name="may_cynthiaverity_response" />
         <marker scope="Public" name="may_darling_contests" />
         <marker scope="Public" name="may_darling_contests2" />
+        <marker scope="Public" name="may_dawn_determined_to_win" />
+        <marker scope="Public" name="may_dawn_fighting_solo" />
+        <marker scope="Public" name="may_dawn_nice_hat" />
+        <marker scope="Public" name="may_dawn_professional" />
+        <marker scope="Public" name="may_dawn_star_pokemon" />
         <marker scope="Public" name="may_dont_forget_your_underwear" />
         <marker scope="Public" name="may_emi_frills" />
+        <marker scope="Public" name="may_erufuda_favorite_food" />
+        <marker scope="Public" name="may_erufuda_holiday_weight" />
         <marker scope="Public" name="may_fashion_magazines" />
         <marker scope="Public" name="may_florina_flowers" />
         <marker scope="Public" name="may_fly" />
         <marker scope="Public" name="may_futaba_revy_very_best" />
-        <marker scope="Public" name="may_j" />
+        <marker scope="Public" name="may_huge_breasts_bouncing" />
         <marker scope="Public" name="may_joey_question4" />
         <marker scope="Public" name="may_joining_mg" />
         <marker scope="Public" name="may_jolyne_panties_reminder" />
         <marker scope="Public" name="may_jura_babies" />
+        <marker scope="Public" name="may_kumatora_booty" />
+        <marker scope="Public" name="may_kumatora_favfoods" />
+        <marker scope="Public" name="may_kumatora_flirt_activate" />
+        <marker scope="Public" name="may_kumatora_ropesnake_explain" />
+        <marker scope="Public" name="may_kumatora_soot_dumplings" />
         <marker scope="Public" name="may_laevatein_scared_me" />
         <marker scope="Public" name="may_laevatein_watch_out" />
         <marker scope="Public" name="may_last_round_kiss_suggestion" />
@@ -637,30 +767,45 @@
         <marker scope="Public" name="may_lose5" />
         <marker scope="Public" name="may_lose6" />
         <marker scope="Public" name="may_lose7" />
+        <marker scope="Public" name="may_lunchtime_yet" />
         <marker scope="Public" name="may_lux_love_to_but_bad_timing" />
         <marker scope="Public" name="may_lux_worst_timing" />
         <marker scope="Public" name="may_mari_beach_poker" />
         <marker scope="Public" name="may_mari_swimsuit" />
+        <marker scope="Public" name="may_mary_pokemon_go" />
         <marker scope="Public" name="may_may_dont_get_my_stuff_wet" />
+        <marker scope="Public" name="may_meia_selected_cupid" />
+        <marker scope="Public" name="may_meia_ss_tropical" />
         <marker scope="Public" name="may_misty_azumarill" />
         <marker scope="Public" name="may_misty_backside" />
         <marker scope="Public" name="may_misty_does_this_often" />
         <marker scope="Public" name="may_misty_double_dating" />
         <marker scope="Public" name="may_misty_no_romance" />
         <marker scope="Public" name="may_misty_unlucky_in_love" />
+        <marker scope="Public" name="may_monika_blazer_vanished" />
+        <marker scope="Public" name="may_monika_blazer_vanishing" />
         <marker scope="Public" name="may_moonlight" />
         <marker scope="Public" name="may_n1" />
+        <marker scope="Public" name="may_nagatoro_anything_player_says" />
+        <marker scope="Public" name="may_nagatoro_mn_m1" />
+        <marker scope="Public" name="may_nagatoro_mn_n1" />
+        <marker scope="Public" name="may_nagatoro_tease00" />
+        <marker scope="Public" name="may_nagatory_deny_hearing" />
         <marker scope="Public" name="may_nami_dream" />
         <marker scope="Public" name="may_nami_stealing" />
         <marker scope="Public" name="may_needs_a_foot_massage" />
         <marker scope="Public" name="may_neptune_friend_told_me" />
         <marker scope="Public" name="may_nicest_legs" />
+        <marker scope="Public" name="may_no_falling_in_love_with_me" />
         <marker scope="Public" name="may_nugi-chan_de-trayed" />
         <marker scope="Public" name="may_nugi-chan_summer_looking_out_for_boss" />
         <marker scope="Public" name="may_nugi-chan_summer_suggests_playing" />
         <marker scope="Public" name="may_opponent_scantily_claw" />
+        <marker scope="Public" name="may_paris_moonlight" />
+        <marker scope="Public" name="may_paris_romantic_dinner" />
         <marker scope="Public" name="may_pinkie_balloons" />
         <marker scope="Public" name="may_pinkie_pink_theme" />
+        <marker scope="Public" name="may_pkmn_no_pockets" />
         <marker scope="Public" name="may_pokeblock" />
         <marker scope="Public" name="May_Pokemon0A_resp" />
         <marker scope="Public" name="may_prompt_contest" />
@@ -686,18 +831,24 @@
         <marker scope="Public" name="may_romantic_guru" />
         <marker scope="Public" name="may_rouge_scope" />
         <marker scope="Public" name="may_routes" />
-        <marker scope="Public" name="may_saki_dri" />
         <marker scope="Public" name="may_saki_drowned" />
-        <marker scope="Public" name="may_sakura_" />
         <marker scope="Public" name="may_sakura_headless" />
         <marker scope="Public" name="may_sakura_scared_me" />
         <marker scope="Public" name="may_sakura_still_alive" />
+        <marker scope="Public" name="may_senko_beach_tan" />
+        <marker scope="Public" name="may_senko_meal" />
+        <marker scope="Public" name="may_senko_pampering_1" />
+        <marker scope="Public" name="may_senko_pampering_2_3" />
+        <marker scope="Public" name="may_senko_tail_fluffing" />
         <marker scope="Public" name="may_shaves" />
+        <marker scope="Public" name="may_sheena_summer_queen" />
         <marker scope="Public" name="may_shimakaze_translation_tool" />
+        <marker scope="Public" name="may_sleepover_reminder" />
         <marker scope="Public" name="may_snacks" />
         <marker scope="Public" name="may_sock_on_doorknob" />
         <marker scope="Public" name="may_spats_comfy" />
         <marker scope="Public" name="may_spooky_fears" />
+        <marker scope="Public" name="may_stretchy_pants" />
         <marker scope="Public" name="may_summer_1" />
         <marker scope="Public" name="may_summer_10" />
         <marker scope="Public" name="may_summer_11" />
@@ -728,16 +879,36 @@
         <marker scope="Public" name="may_summer_heating_up" />
         <marker scope="Public" name="may_summer_hot_enough" />
         <marker scope="Public" name="may_swimsuit" />
+        <marker scope="Public" name="may_tandem_special_friend" />
+        <marker scope="Public" name="may_tandem_tean" />
+        <marker scope="Public" name="may_tea_end_friend" />
+        <marker scope="Public" name="may_tea_level_playing_field" />
+        <marker scope="Public" name="may_tea_mt_m1" />
+        <marker scope="Public" name="may_tea_mt_m1]" />
+        <marker scope="Public" name="may_tea_mt_m2" />
+        <marker scope="Public" name="may_tea_mt_m3" />
+        <marker scope="Public" name="may_tea_mt_t1" />
+        <marker scope="Public" name="may_tea_mt_t2" />
+        <marker scope="Public" name="may_tea_mt_t3" />
+        <marker scope="Public" name="may_tea_mt_t4" />
+        <marker scope="Public" name="may_tea_rival_win" />
+        <marker scope="Public" name="may_tea_romantic_guru_2" />
+        <marker scope="Public" name="may_tea_tm_m18" />
         <marker scope="Public" name="may_tharja_jura_bad_side" />
         <marker scope="Public" name="may_tharja_jura_mean_spell" />
         <marker scope="Public" name="may_tiki_alola" />
         <marker scope="Public" name="may_tiki_bar_warm" />
         <marker scope="Public" name="may_tiki_drinks" />
+        <marker scope="Public" name="may_tummy_time" />
         <marker scope="Public" name="may_two_mistys" />
         <marker scope="Public" name="may_wikipe-tan_cbt" />
         <marker scope="Public" name="may_wikipe-tan_cbt2" />
         <marker scope="Public" name="may_wikipe-tan_not_donating" />
         <marker scope="Public" name="may_yshtola_bunny_ears" />
+        <marker scope="Public" name="may_yshtola_bunny_ears_2" />
+        <marker scope="Public" name="may_yshtola_bunny_ears_3" />
+        <marker scope="Public" name="may_yshtola_summer_2" />
+        <marker scope="Public" name="may_yshtola_summer_3" />
         <marker scope="Public" name="may1s_resp" />
         <marker scope="Public" name="MayBi1_resp" />
         <marker scope="Public" name="MayBi2_resp" />

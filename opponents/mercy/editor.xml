@@ -171,12 +171,17 @@
         <response id="0" opponent="orendi" opponentId="23" />
         <response id="0" opponent="sakura" opponentId="4" />
         <response id="0" opponent="twisted_fate" opponentId="569" />
+        <response id="0" opponent="nico_robin" opponentId="306" />
+        <response id="0" opponent="nico_robin" opponentId="305" />
+        <response id="0" opponent="nico_robin" opponentId="304" />
     </responses>
     <notes>
         <note id="191">Fun fact: Swiss Miss is not a brand we get in (at least my region of) Australia! Mercy's confusion mirrors my own, before I googled what it was.</note>
         <note id="192">Fun fact: Mercy speaks Swiss German, which is more than close enough to German German to know that Mondstadt translates literally to "Moon City". Feel free to have Fischl confused by her association of Mondstadt and the moon, or just brush past it</note>
         <note id="193">Is this out of character for Mercy? Yes. I'm playing up her rivalry with Battleborn. If questioned, she will not understand why she feels so compelled to sling insults at Beatrix</note>
         <note id="194">Whoops, this one was meant to have a different marker. I've kept the old one, but added the right one, too</note>
+        <note id="197">Metaphors are fun</note>
+        <note id="198">Just found the answer to this in Monster Roadtrip - the Human and Monster realms exist seperately, and the Human realm rejects the non-mundane. So when a human dies, they can become a ghost, but once they're a ghost, they'll be pushed out of the Human realm and into the Monster realm instead. That's what happened to Polly</note>
     </notes>
     <labels>
         <label id="45" label="" folder="Player Names" sort="2" />
@@ -286,9 +291,8 @@
         <prefix>Collectible</prefix>
         <prefix>Mercy</prefix>
     </prefixes>
-    <nextId>196</nextId>
+    <nextId>198</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="AaraviObviousRole" />
         <marker scope="Public" name="AaraviObviousRole2" />
         <marker scope="Public" name="AaraviObviousRole3" />
@@ -316,16 +320,21 @@
         <marker scope="Public" name="AdrienGoOn" />
         <marker scope="Public" name="AdrienKeepTalking" />
         <marker scope="Public" name="AdrienModelling" />
+        <marker scope="Public" name="AdrienModelling2" />
         <marker scope="Public" name="AdrienModelling3" />
-        <marker scope="Public" name="AdrienOverWatching" />
         <marker scope="Public" name="AdrienOverWatchingYou" />
+        <marker scope="Public" name="AdrienOverWatchingYou2" />
         <marker scope="Public" name="AdrienPostFinish" />
         <marker scope="Public" name="AdrienTransformation" />
         <marker scope="Public" name="AdrienWhereLadybug" />
+        <marker scope="Public" name="AdrienWhereLadybug2" />
         <marker scope="Public" name="AhriMagic" />
+        <marker scope="Public" name="AloyHunting" />
         <marker scope="Public" name="AloyRobotFoes" />
         <marker scope="Public" name="AloyRobotFoes2" />
+        <marker scope="Public" name="AloyRobotFoes3" />
         <marker scope="Public" name="AloyUnity" />
+        <marker scope="Public" name="AloyUnity2" />
         <marker scope="Public" name="AmyHarmonyWorry" />
         <marker scope="Public" name="AmyREarsAndMoreEars" />
         <marker scope="Public" name="AmyREggman" />
@@ -443,19 +452,42 @@
         <marker scope="Public" name="CynthiaWorkDetails2" />
         <marker scope="Public" name="CynthiaWorkDetails3" />
         <marker scope="Public" name="CynthiaWorldOnEdge" />
+        <marker scope="Public" name="DarknessHeroism" />
         <marker scope="Public" name="DomSubSwitchPrompt" />
         <marker scope="Public" name="DorothyAnatomy" />
+        <marker scope="Public" name="DorothyAnatomy2" />
+        <marker scope="Public" name="DorothyAnatomy3" />
         <marker scope="Public" name="DorothyCyberSex" />
         <marker scope="Public" name="DorothyCyberSex2" />
         <marker scope="Public" name="DorothyCyberSex3" />
         <marker scope="Public" name="DorothyCyberSex4" />
         <marker scope="Public" name="DorothyLilimCreation" />
+        <marker scope="Public" name="DorothyLilimCreation2" />
+        <marker scope="Public" name="DorothyLilimCreation3a" />
+        <marker scope="Public" name="DorothyLilimCreation3b" />
+        <marker scope="Public" name="DorothyLilimCreation3c" />
+        <marker scope="Public" name="DorothyLilimSex" />
         <marker scope="Public" name="DorothyOmnicSex" />
+        <marker scope="Public" name="DorothyOmnicSex2" />
+        <marker scope="Public" name="DorothyRecreation" />
         <marker scope="Public" name="DorothyTourism" />
+        <marker scope="Public" name="DorothyTourism2a" />
+        <marker scope="Public" name="DorothyTourism2b" />
+        <marker scope="Public" name="DorothyTourism2c" />
+        <marker scope="Public" name="DorothyTourism2d" />
         <marker scope="Public" name="DorothyWhySexWork" />
+        <marker scope="Public" name="DorothyWhySexWork2" />
+        <marker scope="Public" name="DorothyWhySexWork3" />
         <marker scope="Public" name="DoubleMercy" />
+        <marker scope="Public" name="DunbanArm" />
+        <marker scope="Public" name="DunbanArm2" />
+        <marker scope="Public" name="DunbanArm3" />
+        <marker scope="Public" name="DunbanSword" />
         <marker scope="Public" name="EarlyGameStrip" />
+        <marker scope="Public" name="EichiGoodSchoolboy" />
+        <marker scope="Public" name="EichiSchoolGraduate" />
         <marker scope="Public" name="EichiSinging" />
+        <marker scope="Public" name="EichiSinging2" />
         <marker scope="Public" name="EmiLegs" />
         <marker scope="Public" name="EmiNotReallyShoes" />
         <marker scope="Public" name="FateAllThoseCards" />
@@ -601,6 +633,8 @@
         <marker scope="Public" name="kazuma_girl_methods" />
         <marker scope="Public" name="kazuma_luck_potion" />
         <marker scope="Public" name="kazuma_luck_potion_effects" />
+        <marker scope="Public" name="KoraBodyLines" />
+        <marker scope="Public" name="KoraGossipFilms" />
         <marker scope="Public" name="LeonieArcheryInjuries" />
         <marker scope="Public" name="LeonieBladeBreakerII" />
         <marker scope="Public" name="LeonieBrigitte" />
@@ -631,8 +665,15 @@
         <marker scope="Public" name="MarinetteBalance" />
         <marker scope="Public" name="MarinetteBalance2" />
         <marker scope="Public" name="MarinetteBalance3" />
+        <marker scope="Public" name="MarinetteOpenRelationship" />
+        <marker scope="Public" name="MarinetteOverwatchMagic" />
+        <marker scope="Public" name="MarinetteOverwatchMagic2" />
         <marker scope="Public" name="MarinetteReputation" />
         <marker scope="Public" name="MarinetteReputation2" />
+        <marker scope="Public" name="MarinetteReputation3" />
+        <marker scope="Public" name="MarinetteTransform" />
+        <marker scope="Public" name="MarinetteTransform2" />
+        <marker scope="Public" name="MarinetteTransform3" />
         <marker scope="Public" name="MarinetteWhereCatNoir" />
         <marker scope="Public" name="MarinetteWhereCatNoir2" />
         <marker scope="Public" name="MarinetteWhereCatNoir3" />
@@ -840,6 +881,10 @@
         <marker scope="Public" name="NamiWing" />
         <marker scope="Public" name="NamiWingEngineering" />
         <marker scope="Public" name="NewExcitementPrompt" />
+        <marker scope="Public" name="NicoRArchaeology" />
+        <marker scope="Public" name="NicoRDoctor" />
+        <marker scope="Public" name="NicoRFlowerDemonstration" />
+        <marker scope="Public" name="NicoRPlaceOfOrigin" />
         <marker scope="Public" name="NoMurderPlease" />
         <marker scope="Public" name="OmnicRights1" />
         <marker scope="Public" name="OmnicRights2" />
@@ -918,6 +963,10 @@
         <marker scope="Public" name="SenkoTechniques2" />
         <marker scope="Public" name="SheIsGonnaBeMercy" />
         <marker scope="Public" name="ShortCurvy" />
+        <marker scope="Public" name="SnTAnomalies" />
+        <marker scope="Public" name="SnTBuildup" />
+        <marker scope="Public" name="SnTGimmick" />
+        <marker scope="Public" name="SnTReveal" />
         <marker scope="Public" name="SpacePiratesA" />
         <marker scope="Public" name="SpacePiratesB" />
         <marker scope="Public" name="StellaAnOpenMind" />
@@ -969,6 +1018,8 @@
         <marker scope="Public" name="TheirTearsAreWhatSheLivesFor" />
         <marker scope="Public" name="ToySlut" />
         <marker scope="Public" name="ToySlutB" />
+        <marker scope="Public" name="TrixieDungeonEichenvalde" />
+        <marker scope="Public" name="TrixieQuestionnaire" />
         <marker scope="Public" name="UndeadMustMasturbate" />
         <marker scope="Public" name="UnwieldyWings" />
         <marker scope="Public" name="WeaponArmory" />

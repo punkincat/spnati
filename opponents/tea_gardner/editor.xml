@@ -1,0 +1,763 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+    <owner>tea_gardner</owner>
+    <height>5' 5"</height>
+    <age />
+    <pronunciation>Tay-AH</pronunciation>
+    <othernotes />
+    <noteworthy>
+        <case name="Vision of Friend" id="20" priority="Noteworthy" min="5" max="5">
+            <description>Feeling doubtful, Tea notices the friendship circle drawn on her arm, and remembers her friends' encouragement.</description>
+        </case>
+        <case name="Tea Abroad" id="21" priority="Prompt" min="0" max="0">
+            <description>Tea talks about how she came back from studying abroad.</description>
+        </case>
+        <case name="Tea's Last Stand" id="25" priority="FYI" min="6" max="6">
+            <description>Now without her clothes, she announces this to be her last stand.</description>
+        </case>
+        <case name="Hang of it" id="26" priority="FYI" min="3" max="3">
+            <description>Tea starts to get the hang of the game.</description>
+        </case>
+        <case name="Mai Valentine" id="43" priority="Prompt" min="1" max="1">
+            <description>Tea askes if any of the other YGO characters know of Mai, who saw her naked one time.</description>
+        </case>
+        <case name="Pokemon cards" id="47" priority="Prompt" min="8" max="8">
+            <description>Prompt for Pokemon characters about a card game.</description>
+        </case>
+        <case name="Poolside End" id="87" priority="Prompt" min="3" max="6">
+            <description>The game ends and Tea invites the others into the pool.</description>
+        </case>
+        <case name="Rule 1" id="85" priority="FYI" min="2" max="2">
+            <description>If there's a vouyer background, Tea will announce to the onlookers that she's ready to give them a show.</description>
+        </case>
+        <case name="See Persona" id="162" priority="Noteworthy" min="2" max="2">
+            <description>Tea asks a Persona character if they understand the shadow world.</description>
+        </case>
+        <case name="Trap Card Bluff" id="291" priority="Noteworthy" min="0" max="2">
+            <description>Tea will try a bluff to throw the other players off. Problem is she's still wired to Duel Monsters terms.</description>
+        </case>
+    </noteworthy>
+    <reviewed>true</reviewed>
+    <responses>
+        <response id="2" opponent="aoba" opponentId="147" />
+        <response id="9" opponent="brock" opponentId="2" />
+        <response id="10" opponent="brock" opponentId="9" />
+        <response id="12" opponent="aoba" opponentId="208" />
+        <response id="13" opponent="may" opponentId="128" />
+        <response id="14" opponent="hatsune_miku" opponentId="649" />
+        <response id="16" opponent="rosa" opponentId="40" />
+        <response id="17" opponent="chihiro" opponentId="1" />
+        <response id="18" opponent="dawn" opponentId="405" />
+        <response id="19" opponent="mari_setogaya" opponentId="2" />
+        <response id="22" opponent="chazz" opponentId="22" />
+        <response id="24" opponent="chazz" opponentId="10" />
+        <response id="29" opponent="dawn" opponentId="133" />
+        <response id="30" opponent="yuelia" opponentId="6" />
+        <response id="31" opponent="chihiro" opponentId="2" />
+        <response id="32" opponent="yuelia" opponentId="1" />
+        <response id="33" opponent="aoba" opponentId="81" />
+        <response id="34" opponent="aoba" opponentId="118" />
+        <response id="35" opponent="moon" opponentId="50" />
+        <response id="36" opponent="magma_grunt" opponentId="171" />
+        <response id="38" opponent="aoba" opponentId="210" />
+        <response id="39" opponent="shantae" opponentId="7" />
+        <response id="40" opponent="rin_kagamine" opponentId="2" />
+        <response id="41" opponent="sayaka" opponentId="29" />
+        <response id="42" opponent="kyouko_toshinou" opponentId="144" />
+        <response id="44" opponent="uravity" opponentId="1" />
+        <response id="48" opponent="nagatoro" opponentId="2" />
+        <response id="50" opponent="may" opponentId="177" />
+        <response id="55" opponent="futaba" opponentId="55" />
+        <response id="56" opponent="yuno_uno" opponentId="775" />
+        <response id="57" opponent="cynthia" opponentId="568" />
+        <response id="58" opponent="cynthia" opponentId="570" />
+        <response id="59" opponent="cynthia" opponentId="121" />
+        <response id="60" opponent="cynthia" opponentId="139" />
+        <response id="61" opponent="marinette" opponentId="114" />
+        <response id="62" opponent="marinette" opponentId="438" />
+        <response id="63" opponent="nagatoro" opponentId="10" />
+        <response id="65" opponent="kyouko_toshinou" opponentId="91" />
+        <response id="66" opponent="marinette" opponentId="1363" />
+        <response id="67" opponent="lucy" opponentId="670" />
+        <response id="68" opponent="lucy" opponentId="601" />
+        <response id="69" opponent="lucy" opponentId="600" />
+        <response id="70" opponent="lucy" opponentId="216" />
+        <response id="71" opponent="lucy" opponentId="652" />
+        <response id="72" opponent="lucy" opponentId="27" />
+        <response id="73" opponent="lucy" opponentId="28" />
+        <response id="74" opponent="lucy" opponentId="30" />
+        <response id="75" opponent="lucy" opponentId="620" />
+        <response id="76" opponent="lucy" opponentId="29" />
+        <response id="77" opponent="brock" opponentId="1" />
+        <response id="79" opponent="sakura" opponentId="4" />
+        <response id="80" opponent="sakura" opponentId="5" />
+        <response id="81" opponent="sakura" opponentId="2" />
+        <response id="88" opponent="gwen" opponentId="3" />
+        <response id="89" opponent="gwen" opponentId="1" />
+        <response id="90" opponent="gwen" opponentId="118" />
+        <response id="91" opponent="rainbow_dash" opponentId="53" />
+        <response id="92" opponent="steve" opponentId="3" />
+        <response id="93" opponent="steve" opponentId="4" />
+        <response id="94" opponent="kyoko_kirigiri" opponentId="586" />
+        <response id="95" opponent="critical_darling" opponentId="28" />
+        <response id="96" opponent="mari_setogaya" opponentId="1256" />
+        <response id="97" opponent="aqua_grunt" opponentId="102" />
+        <response id="98" opponent="rosa" opponentId="234" />
+        <response id="99" opponent="nagatoro" opponentId="1603" />
+        <response id="100" opponent="nagatoro" opponentId="1015" />
+        <response id="101" opponent="nagatoro" opponentId="742" />
+        <response id="102" opponent="sakura" opponentId="3" />
+        <response id="103" opponent="aqua_kh" opponentId="67" />
+        <response id="104" opponent="lucy" opponentId="563" />
+        <response id="105" opponent="dawn" opponentId="120" />
+        <response id="107" opponent="aoba" opponentId="82" />
+        <response id="108" opponent="nami" opponentId="12" />
+        <response id="109" opponent="adrien" opponentId="489" />
+        <response id="110" opponent="kyoko_kirigiri" opponentId="103" />
+        <response id="111" opponent="yuno_uno" opponentId="167" />
+        <response id="112" opponent="sakura" opponentId="14" />
+        <response id="113" opponent="kora" opponentId="38" />
+        <response id="114" opponent="petra" opponentId="11" />
+        <response id="117" opponent="chazz" opponentId="8" />
+        <response id="118" opponent="mercy" opponentId="170" />
+        <response id="119" opponent="mari_setogaya" opponentId="1254" />
+        <response id="120" opponent="bernadetta" opponentId="4" />
+        <response id="121" opponent="kyu" opponentId="1" />
+        <response id="122" opponent="samus_aran" opponentId="1" />
+        <response id="123" opponent="darkness" opponentId="260" />
+        <response id="124" opponent="bernadetta" opponentId="43" />
+        <response id="125" opponent="petra" opponentId="142" />
+        <response id="126" opponent="aella" opponentId="335" />
+        <response id="127" opponent="aella" opponentId="1" />
+        <response id="128" opponent="aella" opponentId="269" />
+        <response id="129" opponent="aella" opponentId="2" />
+        <response id="130" opponent="aella" opponentId="264" />
+        <response id="158" opponent="moon" opponentId="186" />
+        <response id="159" opponent="moon" opponentId="51" />
+        <response id="163" opponent="elizabeth" opponentId="1" />
+        <response id="164" opponent="streaming-chan" opponentId="5" />
+        <response id="165" opponent="magical_sempai" opponentId="20" />
+        <response id="166" opponent="magical_sempai" opponentId="6" />
+        <response id="167" opponent="magical_sempai" opponentId="19" />
+        <response id="168" opponent="magical_sempai" opponentId="14" />
+        <response id="169" opponent="magical_sempai" opponentId="21" />
+        <response id="173" opponent="kyoko_kirigiri" opponentId="496" />
+        <response id="174" opponent="hilda" opponentId="149" />
+        <response id="176" opponent="queenie" opponentId="43" />
+        <response id="177" opponent="may" opponentId="228" />
+        <response id="178" opponent="hatsune_miku" opponentId="613" />
+        <response id="179" opponent="lux" opponentId="59" />
+        <response id="181" opponent="misty_hgss" opponentId="3" />
+        <response id="199" opponent="fluttershy" opponentId="18" />
+        <response id="226" opponent="shantae" opponentId="10" />
+        <response id="227" opponent="mari_setogaya" opponentId="56" />
+        <response id="228" opponent="dust" opponentId="41" />
+        <response id="229" opponent="wikipe-tan" opponentId="562" />
+        <response id="230" opponent="dark_magician_girl" opponentId="6" />
+        <response id="231" opponent="laevatein" opponentId="12" />
+        <response id="237" opponent="fluttershy" opponentId="20" />
+        <response id="238" opponent="aoba" opponentId="127" />
+        <response id="239" opponent="aoba" opponentId="197" />
+        <response id="240" opponent="kyoko_kirigiri" opponentId="711" />
+        <response id="270" opponent="meia" opponentId="695" />
+        <response id="271" opponent="revy" opponentId="188" />
+        <response id="274" opponent="revy" opponentId="3" />
+        <response id="275" opponent="revy" opponentId="12" />
+        <response id="293" opponent="sofia" opponentId="1" />
+        <response id="298" opponent="barbara" opponentId="17" />
+        <response id="299" opponent="barbara" opponentId="10" />
+        <response id="306" opponent="lotte" opponentId="1" />
+        <response id="344" opponent="nadeshiko" opponentId="150" />
+    </responses>
+    <notes>
+        <note id="277">For WitchHanna sponsorship</note>
+        <note id="310">For Nord Sponsorship</note>
+        <note id="311">For Nord Sponsorship</note>
+        <note id="312">For Nord Sponsorship</note>
+        <note id="313">For Nord Sponsorship</note>
+        <note id="319">For Nord sponsorship.</note>
+        <note id="320">For Nord sponsorship.</note>
+    </notes>
+    <labels>
+        <label id="1" label="" folder="Friends Marker" sort="0" />
+        <label id="3" label="" folder="Backgrounds" sort="7" />
+        <label id="4" label="" folder="Backgrounds" sort="8" />
+        <label id="5" label="" folder="Backgrounds" sort="9" />
+        <label id="6" label="" folder="Backgrounds" sort="0" />
+        <label id="7" label="" folder="Backgrounds" sort="2" />
+        <label id="8" label="" folder="Backgrounds" sort="10" />
+        <label id="49" label="" folder="Backgrounds" sort="3" />
+        <label id="51" label="" folder="Backgrounds" sort="4" />
+        <label id="52" label="" folder="Backgrounds" sort="5" />
+        <label id="53" label="" folder="Backgrounds" sort="6" />
+        <label id="82" label="" folder="Backgrounds" sort="0" />
+        <label id="83" label="" folder="Backgrounds" sort="12" />
+        <label id="84" label="" folder="Backgrounds" sort="13" />
+        <label id="85" label="" folder="Backgrounds" sort="11" />
+        <label id="86" label="" folder="Backgrounds" sort="14" />
+        <label id="87" label="" folder="Backgrounds" sort="15" />
+        <label id="42" label="" folder="Target: Kyouko" sort="0" />
+        <label id="133" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="134" label="" folder="Target: Kyouko" sort="5" />
+        <label id="135" label="" folder="May to Left" sort="2" />
+        <label id="151" label="" folder="Target: Dark Magician Girl" sort="7" />
+        <label id="137" label="" folder="Target: Dark Magician Girl" sort="3" />
+        <label id="138" label="" folder="Target: Dark Magician Girl" sort="2" />
+        <label id="139" label="" folder="Target: Dark Magician Girl" sort="4" />
+        <label id="140" label="" folder="Target: Dark Magician Girl" sort="4" />
+        <label id="141" label="" folder="May to Left" sort="2" />
+        <label id="142" label="" folder="Target: May" sort="4" />
+        <label id="143" label="" folder="Target: May" sort="2" />
+        <label id="144" label="" folder="May to Left" sort="0" />
+        <label id="13" label="" folder="Target: May" sort="2" />
+        <label id="145" label="" folder="Target: Kyouko" sort="8" />
+        <label id="146" label="" folder="Target: Kyouko" sort="7" />
+        <label id="147" label="" folder="Target: Kyouko" sort="9" />
+        <label id="148" label="" folder="Target: Kyouko" sort="2" />
+        <label id="149" label="" folder="Target: Kyouko" sort="3" />
+        <label id="150" label="" folder="Target: Kyouko" sort="4" />
+        <label id="152" label="" folder="Target: Dark Magician Girl" sort="5" />
+        <label id="153" label="" folder="Target: Dark Magician Girl" sort="6" />
+        <label id="154" label="" folder="Target: Dark Magician Girl" sort="8" />
+        <label id="155" label="" folder="Backgrounds" sort="2" />
+        <label id="156" label="" folder="Backgrounds" sort="3" />
+        <label id="157" label="" folder="Backgrounds" sort="4" />
+        <label id="161" label="" folder="Backgrounds" sort="15" />
+        <label id="170" label="" folder="Target: Sempai" sort="0" />
+        <label id="171" label="" folder="Target: Sempai" sort="2" />
+        <label id="169" label="" folder="Target: Sempai" sort="3" />
+        <label id="172" label="" folder="Target: Sempai" sort="4" />
+        <label id="166" label="" folder="Target: Sempai" sort="5" />
+        <label id="168" label="" folder="Target: Sempai" sort="6" />
+        <label id="180" label="" folder="Target: Dark Magician Girl" sort="9" />
+        <label id="182" label="" folder="Filters" sort="2" />
+        <label id="183" label="" folder="Filters" sort="6" />
+        <label id="184" label="" folder="Target: Kyoko" sort="0" />
+        <label id="185" label="" folder="Target: Kyoko" sort="6" />
+        <label id="100" label="" folder="Target: Nagatoro" sort="0" />
+        <label id="186" label="" folder="Target: Chazz" sort="0" />
+        <label id="187" label="" folder="Target: Chazz" sort="2" />
+        <label id="188" label="" folder="Target: Stage0" sort="7" />
+        <label id="189" label="" folder="Target: Stage0" sort="2" />
+        <label id="190" label="" folder="Target: Stage0" sort="8" />
+        <label id="191" label="" folder="Target: Stage0" sort="4" />
+        <label id="192" label="" folder="Target: Stage0" sort="0" />
+        <label id="193" label="" folder="Target: Stage0" sort="3" />
+        <label id="194" label="" folder="Target: Stage0" sort="5" />
+        <label id="195" label="" folder="Filters" sort="2" />
+        <label id="196" label="" folder="Filters" sort="4" />
+        <label id="197" label="" folder="Filters" sort="5" />
+        <label id="198" label="" folder="Situations" sort="7" />
+        <label id="200" label="" folder="Target: Stage0" sort="6" />
+        <label id="201" label="" folder="Filters" sort="3" />
+        <label id="202" label="" folder="May to Right" sort="0" />
+        <label id="203" label="" folder="May to Right" sort="2" />
+        <label id="204" label="" folder="Target: May" sort="3" />
+        <label id="33" label="" folder="Responses" sort="3" />
+        <label id="107" label="" folder="Responses" sort="4" />
+        <label id="61" label="" folder="Responses" sort="5" />
+        <label id="11" label="" folder="Responses" sort="0" />
+        <label id="29" label="" folder="Situations" sort="0" />
+        <label id="10" label="" folder="Responses" sort="2" />
+        <label id="207" label="" folder="Filters" sort="7" />
+        <label id="208" label="" folder="Filters" sort="0" />
+        <label id="209" label="" folder="Target: Stage0" sort="10" />
+        <label id="210" label="" folder="Target: Stage0" sort="11" />
+        <label id="136" label="" folder="Responses" sort="6" />
+        <label id="211" label="" folder="Responses" sort="8" />
+        <label id="212" label="" folder="Responses" sort="7" />
+        <label id="213" label="" folder="Responses" sort="9" />
+        <label id="214" label="" folder="Responses" sort="11" />
+        <label id="215" label="" folder="Responses" sort="10" />
+        <label id="217" label="" folder="Target: May" sort="0" />
+        <label id="50" label="" folder="Target: May" sort="3" />
+        <label id="218" label="" folder="Target: May" sort="7" />
+        <label id="219" label="" folder="Target: Nagatoro" sort="0" />
+        <label id="220" label="" folder="Target: Nagatoro" sort="0" />
+        <label id="221" label="" folder="Target: Nagatoro" sort="0" />
+        <label id="222" label="" folder="Target: Nagatoro" sort="0" />
+        <label id="223" label="" folder="Situations" sort="0" />
+        <label id="224" label="" folder="Backgrounds" sort="0" />
+        <label id="225" label="" folder="Backgrounds" sort="0" />
+        <label id="232" label="Gloves" folder="" sort="0" />
+        <label id="233" label="" folder="Filters" sort="0" />
+        <label id="234" label="" folder="Filters" sort="0" />
+        <label id="235" label="" folder="Filters" sort="0" />
+        <label id="236" label="" folder="Filters" sort="0" />
+        <label id="241" label="" folder="Backgrounds" sort="0" />
+        <label id="242" label="" folder="Backgrounds" sort="0" />
+        <label id="243" label="" folder="Backgrounds" sort="0" />
+        <label id="244" label="" folder="Backgrounds" sort="0" />
+        <label id="245" label="" folder="Filters" sort="0" />
+        <label id="246" label="" folder="Filters" sort="0" />
+        <label id="247" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="248" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="249" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="250" label="Villain" folder="" sort="0" />
+        <label id="251" label="Villain w/DMG" folder="" sort="0" />
+        <label id="252" label="" folder="Filters" sort="0" />
+        <label id="253" label="" folder="Filters" sort="0" />
+        <label id="254" label="Double Dark" folder="" sort="0" />
+        <label id="255" label="" folder="Filters" sort="0" />
+        <label id="256" label="YGO Minor" folder="" sort="0" />
+        <label id="257" label="YGO Extra" folder="" sort="0" />
+        <label id="258" label="YGO Major" folder="" sort="0" />
+        <label id="259" label="" folder="Situations" sort="0" />
+        <label id="260" label="" folder="Filters" sort="0" />
+        <label id="162" label="" folder="Followups" sort="0" />
+        <label id="261" label="" color="5" folder="Followups" sort="0" />
+        <label id="262" label="" color="5" folder="Followups" sort="0" />
+        <label id="263" label="" color="5" folder="Followups" sort="0" />
+        <label id="264" label="" color="3" folder="Followups" sort="0" />
+        <label id="265" label="" color="5" folder="Followups" sort="0" />
+        <label id="266" label="" color="5" folder="Followups" sort="0" />
+        <label id="267" label="" color="2" folder="Followups" sort="0" />
+        <label id="268" label="" folder="Responses" sort="0" />
+        <label id="269" label="" folder="Responses" sort="0" />
+        <label id="272" label="" folder="May to Left" sort="0" />
+        <label id="273" label="" folder="May to Left" sort="0" />
+        <label id="276" label="" folder="Responses" sort="0" />
+        <label id="278" label="" folder="Filters" sort="0" />
+        <label id="279" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="280" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="281" label="" folder="Target: Dark Magician Girl" sort="0" />
+        <label id="282" label="6B" folder="Target: Kyoko" sort="0" />
+        <label id="283" label="" folder="Target: Kyoko" sort="0" />
+        <label id="284" label="" folder="Target: Kyoko" sort="0" />
+        <label id="285" label="" folder="Target: Kyoko" sort="0" />
+        <label id="286" label="" folder="Target: Kyoko" sort="0" />
+        <label id="287" label="6C" folder="Target: Kyoko" sort="0" />
+        <label id="288" label="6D" folder="Target: Kyoko" sort="0" />
+        <label id="289" label="idol" folder="" sort="0" />
+        <label id="290" label="" folder="Responses" sort="0" />
+        <label id="291" label="Bluff" folder="" sort="0" />
+        <label id="292" label="" folder="Target: Kyouko" sort="0" />
+        <label id="294" label="" color="2" folder="" sort="0" />
+        <label id="295" label="" folder="May to Left" sort="0" />
+        <label id="176" label="" folder="Target: Stage0" sort="0" />
+        <label id="32" label="" folder="Target: Stage0" sort="0" />
+        <label id="296" label="" folder="Target: Stage0" sort="0" />
+        <label id="297" label="" folder="Target: Stage0" sort="0" />
+        <label id="300" label="" folder="Target: Stage0" sort="0" />
+        <label id="301" label="" folder="Responses" sort="0" />
+        <label id="302" label="" folder="Responses" sort="0" />
+        <label id="303" label="" folder="Target: Stage0" sort="0" />
+        <label id="304" label="" color="6" folder="Target: Stage0" sort="0" />
+        <label id="305" label="" folder="Target: Stage0" sort="0" />
+        <label id="308" label="" folder="Filters" sort="0" />
+        <label id="309" label="YGO Minor" folder="" sort="0" />
+        <label id="310" label="Nord" color="6" folder="" sort="0" />
+        <label id="311" label="Nord" color="6" folder="" sort="0" />
+        <label id="312" label="Nord" color="6" folder="" sort="0" />
+        <label id="313" label="Nord (Follow Up)" color="6" folder="" sort="0" />
+        <label id="314" label="" folder="Situations" sort="0" />
+        <label id="315" label="" folder="Filters" sort="0" />
+        <label id="316" label="" folder="Filters" sort="0" />
+        <label id="317" label="" folder="Filters" sort="0" />
+        <label id="318" label="" folder="Target: Stage0" sort="0" />
+        <label id="319" label="Nord" color="5" folder="" sort="0" />
+        <label id="320" label="Nord" color="5" folder="" sort="0" />
+        <label id="321" label="" folder="Backgrounds" sort="0" />
+        <label id="322" label="" folder="Target: Stage0" sort="0" />
+        <label id="323" label="" color="6" folder="Target: Stage0" sort="0" />
+        <label id="324" label="" folder="Filters" sort="0" />
+        <label id="325" label="" folder="Situations" sort="0" />
+        <label id="326" label="DMG Collectable" color="3" folder="" sort="0" />
+        <label id="327" label="" folder="Situations" sort="0" />
+        <label id="328" label="" folder="Tables" sort="0" />
+        <label id="329" label="" folder="Tables" sort="0" />
+        <label id="330" label="" folder="Tables" sort="0" />
+        <label id="331" label="" folder="Tables" sort="0" />
+        <label id="332" label="" folder="Filters" sort="0" />
+        <label id="333" label="" folder="Filters" sort="0" />
+        <label id="334" label="" color="6" folder="Responses" sort="0" />
+        <label id="335" label="" folder="Target: Stage0" sort="0" />
+        <label id="336" label="" folder="Responses" sort="0" />
+        <label id="337" label="" folder="Responses" sort="0" />
+        <label id="338" label="" color="2" folder="Target: Stage0" sort="0" />
+        <label id="339" label="" folder="Responses" sort="0" />
+        <label id="343" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="347" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="348" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="349" label="" color="6" folder="Responses" sort="0" />
+        <label id="350" label="" color="6" folder="Responses" sort="0" />
+        <label id="352" label="" color="2" folder="" sort="0" />
+        <label id="351" label="" color="6" folder="" sort="0" />
+        <label id="353" label="" folder="Target: Stage0" sort="0" />
+        <label id="354" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="355" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="356" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="358" label="" folder="Responses" sort="0" />
+        <label id="360" label="" folder="Target: Stage0" sort="0" />
+        <label id="361" label="" folder="Target: Stage0" sort="0" />
+        <label id="362" label="Host" folder="Target: Bowsette" sort="0" />
+        <label id="363" label="Alone" folder="Target: Bowsette" sort="0" />
+        <label id="364" label="Friendship" folder="Target: Bowsette" sort="0" />
+        <label id="365" label="Friends" folder="Target: Bowsette" sort="0" />
+        <label id="366" label="Friends (DMG)" folder="Target: Bowsette" sort="0" />
+        <label id="367" label="Kaiba" folder="Target: Bowsette" sort="0" />
+        <label id="369" label="" folder="Target: Bowsette" sort="0" />
+        <label id="371" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="372" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="373" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="374" label="" color="6" folder="Target: Stage0" sort="0" />
+    </labels>
+    <prefixes>
+        <prefix>card</prefix>
+    </prefixes>
+    <nextId>374</nextId>
+    <markers>
+        <marker scope="Public" name="" />
+        <marker scope="Public" name="blue_disk" />
+        <marker scope="Public" name="chiakiVideoGames" />
+        <marker scope="Public" name="kyoko_reply6a" />
+        <marker scope="Public" name="kyoko_reply6b" />
+        <marker scope="Public" name="kyoko_reply6c" />
+        <marker scope="Public" name="kyouko_tea_cardgame" />
+        <marker scope="Public" name="kyouko_tea_cardgame0" />
+        <marker scope="Public" name="may_tea_losebra" />
+        <marker scope="Public" name="may_tea_strip0" />
+        <marker scope="Public" name="may_tea_strip1" />
+        <marker scope="Public" name="may_tea_strip2" />
+        <marker scope="Public" name="tea_4cards_reply1" />
+        <marker scope="Public" name="tea_abroad" />
+        <marker scope="Public" name="tea_adapt" />
+        <marker scope="Public" name="tea_adv_dk" />
+        <marker scope="Public" name="tea_adv_egypt" />
+        <marker scope="Public" name="tea_aella_stall" />
+        <marker scope="Public" name="tea_airhockey1" />
+        <marker scope="Public" name="tea_airhockey2" />
+        <marker scope="Public" name="tea_airhockey3" />
+        <marker scope="Public" name="tea_ancient_civilizations" />
+        <marker scope="Public" name="tea_ancientruins" />
+        <marker scope="Public" name="tea_aobra" />
+        <marker scope="Public" name="tea_aqua_freetime1a" />
+        <marker scope="Public" name="tea_aqua_freetime1b" />
+        <marker scope="Public" name="tea_aqua_freetime2" />
+        <marker scope="Public" name="tea_aqua_freetime3" />
+        <marker scope="Public" name="tea_aqua_miku" />
+        <marker scope="Public" name="tea_attack_points" />
+        <marker scope="Public" name="tea_barbara_prayer" />
+        <marker scope="Public" name="tea_barbara_sing" />
+        <marker scope="Public" name="tea_bernie_breasts" />
+        <marker scope="Public" name="tea_bluff" />
+        <marker scope="Public" name="tea_bowser_alone1" />
+        <marker scope="Public" name="tea_bowser_dmg1" />
+        <marker scope="Public" name="tea_bowser_friends1" />
+        <marker scope="Public" name="tea_bowser_friendship1" />
+        <marker scope="Public" name="tea_bowser_host1" />
+        <marker scope="Public" name="tea_bowser_kaiba1" />
+        <marker scope="Public" name="tea_bowser_reply1" />
+        <marker scope="Public" name="tea_bowser_reply1b" />
+        <marker scope="Public" name="tea_bowsette_pigeon1" />
+        <marker scope="Public" name="tea_card_pocket" />
+        <marker scope="Public" name="tea_catastrophe" />
+        <marker scope="Public" name="tea_chazz_cheat" />
+        <marker scope="Public" name="tea_chazz_dmg1" />
+        <marker scope="Public" name="tea_chazz_strip0a" />
+        <marker scope="Public" name="tea_chazz_strip1" />
+        <marker scope="Public" name="tea_chazz_strip2" />
+        <marker scope="Public" name="tea_chazz_strip2a" />
+        <marker scope="Public" name="tea_ChazzAss" />
+        <marker scope="Public" name="tea_cheater" />
+        <marker scope="Public" name="tea_chiaki_strip1a" />
+        <marker scope="Public" name="tea_chiaki_strip1b" />
+        <marker scope="Public" name="tea_chiaki1" />
+        <marker scope="Public" name="tea_clutch_ua" />
+        <marker scope="Public" name="tea_clutcht_ua" />
+        <marker scope="Public" name="tea_consolewar" />
+        <marker scope="Public" name="tea_consolewarQ" />
+        <marker scope="Public" name="tea_cynthia_mana" />
+        <marker scope="Public" name="tea_cynthia_millenium" />
+        <marker scope="Public" name="tea_cynthia_puzzle" />
+        <marker scope="Public" name="tea_cynthia_rod" />
+        <marker scope="Public" name="tea_cynthia_strip0" />
+        <marker scope="Public" name="tea_dark2" />
+        <marker scope="Public" name="tea_dash_respond" />
+        <marker scope="Public" name="tea_deckmaster" />
+        <marker scope="Public" name="tea_deckmaster_DMG1" />
+        <marker scope="Public" name="tea_dmg_attraction" />
+        <marker scope="Public" name="tea_dmg_attraction2a" />
+        <marker scope="Public" name="tea_dmg_attraction2b" />
+        <marker scope="Public" name="tea_dmg_dance" />
+        <marker scope="Public" name="tea_dmg_danceA" />
+        <marker scope="Public" name="tea_dmg_danceB" />
+        <marker scope="Public" name="tea_dmg_end" />
+        <marker scope="Public" name="tea_dmg_entertained" />
+        <marker scope="Public" name="tea_dmg_finish" />
+        <marker scope="Public" name="tea_dmg_finishA" />
+        <marker scope="Public" name="tea_dmg_horny" />
+        <marker scope="Public" name="tea_dmg_horny2" />
+        <marker scope="Public" name="tea_dmg_jinzo" />
+        <marker scope="Public" name="tea_dmg_largeD" />
+        <marker scope="Public" name="tea_dmg_mast" />
+        <marker scope="Public" name="tea_dmg_nickname" />
+        <marker scope="Public" name="tea_dmg_penguin" />
+        <marker scope="Public" name="tea_dmg_small" />
+        <marker scope="Public" name="tea_dmg_smash" />
+        <marker scope="Public" name="tea_dmg_strip1" />
+        <marker scope="Public" name="tea_dmg_strip3" />
+        <marker scope="Public" name="tea_dmg_villain" />
+        <marker scope="Public" name="tea_dmg_waterA" />
+        <marker scope="Public" name="tea_dmg_waterB" />
+        <marker scope="Public" name="tea_dmg_yugi" />
+        <marker scope="Public" name="tea_dng_timewizard" />
+        <marker scope="Public" name="tea_dungeon" />
+        <marker scope="Public" name="tea_easy" />
+        <marker scope="Public" name="tea_elph_dmg" />
+        <marker scope="Public" name="tea_elph_dmg2" />
+        <marker scope="Public" name="tea_elph_reply1" />
+        <marker scope="Public" name="tea_elph_reply2" />
+        <marker scope="Public" name="tea_elph_reply2a" />
+        <marker scope="Public" name="tea_elph_reply2b" />
+        <marker scope="Public" name="tea_elph_reply2c" />
+        <marker scope="Public" name="tea_elph_strip0a" />
+        <marker scope="Public" name="tea_exodia" />
+        <marker scope="Public" name="tea_fairy" />
+        <marker scope="Public" name="tea_fashionA" />
+        <marker scope="Public" name="tea_fashionB" />
+        <marker scope="Public" name="tea_fashionC" />
+        <marker scope="Public" name="tea_female_table" />
+        <marker scope="Public" name="tea_fin_ddr" />
+        <marker scope="Public" name="tea_finish_yugi" />
+        <marker scope="Public" name="tea_flutter_reason" />
+        <marker scope="Public" name="tea_fluttershy_poker" />
+        <marker scope="Public" name="tea_futab_chazz" />
+        <marker scope="Public" name="tea_futab_start" />
+        <marker scope="Public" name="tea_fwb" />
+        <marker scope="Public" name="tea_gwen_kaiba" />
+        <marker scope="Public" name="tea_gwen_mai" />
+        <marker scope="Public" name="tea_gwen_marik" />
+        <marker scope="Public" name="tea_gwen_pegasus" />
+        <marker scope="Public" name="tea_gwen_rex" />
+        <marker scope="Public" name="tea_gwen_think" />
+        <marker scope="Public" name="tea_gwen_weevil" />
+        <marker scope="Public" name="tea_gwen_weevill" />
+        <marker scope="Public" name="tea_hands" />
+        <marker scope="Public" name="tea_jura_dk1" />
+        <marker scope="Public" name="tea_jura_dmg1" />
+        <marker scope="Public" name="tea_jura_pigeon1" />
+        <marker scope="Public" name="tea_jura_reply1" />
+        <marker scope="Public" name="tea_jura_reply2" />
+        <marker scope="Public" name="tea_keyblade" />
+        <marker scope="Public" name="tea_kirigiri_strip1" />
+        <marker scope="Public" name="tea_kirigiri_strip2" />
+        <marker scope="Public" name="tea_kirigiri_strip3" />
+        <marker scope="Public" name="tea_kyoko_christmas" />
+        <marker scope="Public" name="tea_kyoko_wager" />
+        <marker scope="Public" name="tea_kyoko_wager2" />
+        <marker scope="Public" name="tea_kyouko_mast" />
+        <marker scope="Public" name="tea_kyouko_ribbon" />
+        <marker scope="Public" name="tea_kyouko_start" />
+        <marker scope="Public" name="tea_kyouko_strip0" />
+        <marker scope="Public" name="tea_kyouko_strip0a" />
+        <marker scope="Public" name="tea_kyouko_strip1" />
+        <marker scope="Public" name="tea_kyouko_strip1a" />
+        <marker scope="Public" name="tea_kyouko_strip1b" />
+        <marker scope="Public" name="tea_kyu_pigeon0" />
+        <marker scope="Public" name="tea_kyu_strip0" />
+        <marker scope="Public" name="tea_ladybug_dual" />
+        <marker scope="Public" name="tea_laev_afterstrip5" />
+        <marker scope="Public" name="tea_lose_1" />
+        <marker scope="Public" name="tea_lose_2" />
+        <marker scope="Public" name="tea_lose_3" />
+        <marker scope="Public" name="tea_lotte_" />
+        <marker scope="Public" name="tea_lotte_end" />
+        <marker scope="Public" name="tea_lotte_fanfic" />
+        <marker scope="Public" name="tea_lotte_firstlossC" />
+        <marker scope="Public" name="tea_lotte_shy_girl" />
+        <marker scope="Public" name="tea_lotte_shygirl" />
+        <marker scope="Public" name="tea_lotte_strip0" />
+        <marker scope="Public" name="tea_lucy_boobs" />
+        <marker scope="Public" name="tea_lucy_butt" />
+        <marker scope="Public" name="tea_lucy_expert" />
+        <marker scope="Public" name="tea_lucy_strip1" />
+        <marker scope="Public" name="tea_lucy_virgo1" />
+        <marker scope="Public" name="tea_lucy_virgo2" />
+        <marker scope="Public" name="tea_lucy_virgo3" />
+        <marker scope="Public" name="tea_lysithea_strip0" />
+        <marker scope="Public" name="tea_magicalgirl_wiki" />
+        <marker scope="Public" name="tea_male_table" />
+        <marker scope="Public" name="tea_mari_chubby" />
+        <marker scope="Public" name="tea_mari_guys" />
+        <marker scope="Public" name="tea_mast_reply1" />
+        <marker scope="Public" name="tea_may_" />
+        <marker scope="Public" name="tea_may_avenge" />
+        <marker scope="Public" name="tea_may_boobs" />
+        <marker scope="Public" name="tea_may_cheer" />
+        <marker scope="Public" name="tea_may_contest" />
+        <marker scope="Public" name="tea_may_cover" />
+        <marker scope="Public" name="tea_may_dance" />
+        <marker scope="Public" name="tea_may_end" />
+        <marker scope="Public" name="tea_may_finish" />
+        <marker scope="Public" name="tea_may_finish1a" />
+        <marker scope="Public" name="tea_may_finish1b" />
+        <marker scope="Public" name="tea_may_finish1c" />
+        <marker scope="Public" name="tea_may_firststrike" />
+        <marker scope="Public" name="tea_may_here1a" />
+        <marker scope="Public" name="tea_may_here1b" />
+        <marker scope="Public" name="tea_may_heroD" />
+        <marker scope="Public" name="tea_may_love" />
+        <marker scope="Public" name="tea_may_openup" />
+        <marker scope="Public" name="tea_may_rabbit" />
+        <marker scope="Public" name="tea_may_rival" />
+        <marker scope="Public" name="tea_may_romance1" />
+        <marker scope="Public" name="tea_may_s0a" />
+        <marker scope="Public" name="tea_may_s0b" />
+        <marker scope="Public" name="tea_may_self_out" />
+        <marker scope="Public" name="tea_may_sleepover" />
+        <marker scope="Public" name="tea_may_startmast" />
+        <marker scope="Public" name="tea_may_strip" />
+        <marker scope="Public" name="tea_may_strip0a" />
+        <marker scope="Public" name="tea_may_strip0b" />
+        <marker scope="Public" name="tea_may_strip1" />
+        <marker scope="Public" name="tea_may_strip2" />
+        <marker scope="Public" name="tea_may_swimsuit" />
+        <marker scope="Public" name="tea_meia_dk1" />
+        <marker scope="Public" name="tea_meia_reply1" />
+        <marker scope="Public" name="tea_meia_reply1a" />
+        <marker scope="Public" name="tea_meia_reply2a" />
+        <marker scope="Public" name="tea_meia_reply2b" />
+        <marker scope="Public" name="tea_miku_strip" />
+        <marker scope="Public" name="tea_miku_strip1" />
+        <marker scope="Public" name="tea_mirrorforce" />
+        <marker scope="Public" name="tea_misty_noguys" />
+        <marker scope="Public" name="tea_monkey" />
+        <marker scope="Public" name="tea_moon_" />
+        <marker scope="Public" name="tea_moon_end" />
+        <marker scope="Public" name="tea_moon_finish" />
+        <marker scope="Public" name="tea_nade_curry" />
+        <marker scope="Public" name="tea_nade_lake" />
+        <marker scope="Public" name="tea_nade_reply1" />
+        <marker scope="Public" name="tea_nade_reply1a" />
+        <marker scope="Public" name="tea_nade_reply2" />
+        <marker scope="Public" name="tea_nade_reply2a" />
+        <marker scope="Public" name="tea_nade_spot" />
+        <marker scope="Public" name="tea_nade_story" />
+        <marker scope="Public" name="tea_nade_strip1" />
+        <marker scope="Public" name="tea_nade_strip1a" />
+        <marker scope="Public" name="tea_nade_strip1b" />
+        <marker scope="Public" name="tea_nade_strip1c" />
+        <marker scope="Public" name="tea_nadeshiko_strip0" />
+        <marker scope="Public" name="tea_naga_acc0" />
+        <marker scope="Public" name="tea_naga_butt" />
+        <marker scope="Public" name="tea_naga_strip1" />
+        <marker scope="Public" name="tea_naga_strip1a" />
+        <marker scope="Public" name="tea_naga_strip3" />
+        <marker scope="Public" name="tea_naga_stripped1" />
+        <marker scope="Public" name="tea_nagatoro_finish" />
+        <marker scope="Public" name="tea_nagatoro_reply1" />
+        <marker scope="Public" name="tea_nagatoro_reply1a" />
+        <marker scope="Public" name="tea_nagatoro_reply1b" />
+        <marker scope="Public" name="tea_nagatoro_reply2a" />
+        <marker scope="Public" name="tea_nagatoro_reply2b" />
+        <marker scope="Public" name="tea_nagatoro_taunt" />
+        <marker scope="Public" name="tea_nagisa_replt1" />
+        <marker scope="Public" name="tea_nagisa_reply1" />
+        <marker scope="Public" name="tea_nami_dmg1" />
+        <marker scope="Public" name="tea_nami_reply1" />
+        <marker scope="Public" name="tea_nami_reply1a" />
+        <marker scope="Public" name="tea_nico_pigeon1" />
+        <marker scope="Public" name="tea_nico_pigeon2" />
+        <marker scope="Public" name="tea_nico_reply1" />
+        <marker scope="Public" name="tea_ojamas" />
+        <marker scope="Public" name="tea_oneliner_detective" />
+        <marker scope="Public" name="tea_othergames" />
+        <marker scope="Public" name="tea_perona_pigeon0" />
+        <marker scope="Public" name="tea_persona_shadow" />
+        <marker scope="Public" name="tea_petra_birthday" />
+        <marker scope="Public" name="tea_playlewd" />
+        <marker scope="Public" name="tea_poke_table" />
+        <marker scope="Public" name="tea_pokemon" />
+        <marker scope="Public" name="tea_pool_end" />
+        <marker scope="Public" name="tea_popipo" />
+        <marker scope="Public" name="tea_probability" />
+        <marker scope="Public" name="tea_prompt_idol1" />
+        <marker scope="Public" name="tea_prompt_wealthy1" />
+        <marker scope="Public" name="tea_queenie_start" />
+        <marker scope="Public" name="tea_reply_aelia1" />
+        <marker scope="Public" name="tea_revy_butt" />
+        <marker scope="Public" name="tea_revy_dk1" />
+        <marker scope="Public" name="tea_revy_reply1" />
+        <marker scope="Public" name="tea_roll_reply1" />
+        <marker scope="Public" name="tea_rosa_huddle" />
+        <marker scope="Public" name="tea_royalflush" />
+        <marker scope="Public" name="tea_rule1" />
+        <marker scope="Public" name="tea_sakura_disguise" />
+        <marker scope="Public" name="tea_sakura_head" />
+        <marker scope="Public" name="tea_samus_armor" />
+        <marker scope="Public" name="tea_saved" />
+        <marker scope="Public" name="tea_sayaka_familiar1" />
+        <marker scope="Public" name="tea_sayaka_familiar2" />
+        <marker scope="Public" name="tea_seeNerdy" />
+        <marker scope="Public" name="tea_seePokemon" />
+        <marker scope="Public" name="tea_self_" />
+        <marker scope="Public" name="tea_self_ready" />
+        <marker scope="Public" name="tea_self_shadow" />
+        <marker scope="Public" name="tea_sempai_hatfall" />
+        <marker scope="Public" name="tea_sempai_hats" />
+        <marker scope="Public" name="tea_sempai_magic" />
+        <marker scope="Public" name="tea_sempai_panties1a" />
+        <marker scope="Public" name="tea_sempai_panties1b" />
+        <marker scope="Public" name="tea_shantae_end" />
+        <marker scope="Public" name="tea_shantae_round3" />
+        <marker scope="Public" name="tea_shantae_start" />
+        <marker scope="Public" name="tea_sleight" />
+        <marker scope="Public" name="tea_sleight_lead" />
+        <marker scope="Public" name="tea_sleight2" />
+        <marker scope="Public" name="tea_small_apology" />
+        <marker scope="Public" name="tea_sofia_malelost" />
+        <marker scope="Public" name="tea_sofia_reply1a" />
+        <marker scope="Public" name="tea_sofia_reply1b" />
+        <marker scope="Public" name="tea_sofia_start" />
+        <marker scope="Public" name="tea_sofia_strip1a" />
+        <marker scope="Public" name="tea_sofia_strip1b" />
+        <marker scope="Public" name="tea_sofia_strip1c" />
+        <marker scope="Public" name="tea_SpiritExplain" />
+        <marker scope="Public" name="tea_spot_armor" />
+        <marker scope="Public" name="tea_spot_cheater" />
+        <marker scope="Public" name="tea_spot_confident1" />
+        <marker scope="Public" name="tea_spot_hunie" />
+        <marker scope="Public" name="tea_spot_pokemon" />
+        <marker scope="Public" name="tea_spot_ua" />
+        <marker scope="Public" name="tea_spot_ua_alt" />
+        <marker scope="Public" name="tea_spot_villain" />
+        <marker scope="Public" name="tea_start_mast" />
+        <marker scope="Public" name="tea_start_playerchest" />
+        <marker scope="Public" name="tea_stream_reply1" />
+        <marker scope="Public" name="tea_strip_mai" />
+        <marker scope="Public" name="tea_strip_vision" />
+        <marker scope="Public" name="tea_tribute" />
+        <marker scope="Public" name="tea_v_bisexual" />
+        <marker scope="Public" name="tea_v_chazz" />
+        <marker scope="Public" name="tea_v_cheater" />
+        <marker scope="Public" name="tea_v_chihiro" />
+        <marker scope="Public" name="tea_v_dmg" />
+        <marker scope="Public" name="tea_v_idol" />
+        <marker scope="Public" name="tea_v_lucy" />
+        <marker scope="Public" name="tea_v_miku_arcade" />
+        <marker scope="Public" name="tea_v_pokemon" />
+        <marker scope="Public" name="tea_v_spirit" />
+        <marker scope="Public" name="tea_v_steve" />
+        <marker scope="Public" name="tea_v_yuru" />
+        <marker scope="Public" name="tea_v_zombie" />
+        <marker scope="Public" name="tea_vocaloid_table" />
+        <marker scope="Public" name="tea_waterproof" />
+        <marker scope="Public" name="tea_whyquit_reply" />
+        <marker scope="Public" name="tea_winging" />
+        <marker scope="Public" name="tea_yae_reply1a" />
+        <marker scope="Public" name="tea_yae_reply1b" />
+        <marker scope="Public" name="tea_yae_strip1a" />
+        <marker scope="Public" name="tea_yae_strip1b" />
+        <marker scope="Public" name="tea_yae_strip1c" />
+        <marker scope="Public" name="tea_yuno_ayumi" />
+        <marker scope="Public" name="tea_yuno_earworm" />
+        <marker scope="Public" name="tea_yuno_strip1" />
+        <marker scope="Public" name="tea_yuno_strip1a" />
+        <marker scope="Public" name="tea_yuno_strip1b" />
+        <marker scope="Public" name="tea_yuno_strip2" />
+        <marker scope="Public" name="tea_zodiac" />
+        <marker scope="Public" name="yea" />
+        <marker scope="Public" name="yuno_resp1" />
+    </markers>
+</metadata>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>yunyun_wakey_wakey</id>
+    <label>Yunyun</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag from="6" to="6">lingerie</tag>
+        <tag from="6" to="6">pubic_hair_peek</tag>
+        <tag>sleepwear</tag>
+        <tag remove="true">thigh_highs</tag>
+    </tags>
+    <layers>5</layers>
+    <folder>opponents/reskins/yunyun_wakey_wakey/</folder>
+    <wardrobe>
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="top" generic="shirt" position="upper" type="major" />
+        <clothing name="shorts" generic="shorts" position="lower" type="major" plural="true" />
+        <clothing name="sleeves" generic="sleeves" position="arms" type="minor" plural="true" />
+        <clothing position="" type="skip" />
+        <clothing position="" type="skip" />
+        <clothing name="slippers" generic="shoes" position="feet" type="extra" plural="true" />
+    </wardrobe>
+</costume>

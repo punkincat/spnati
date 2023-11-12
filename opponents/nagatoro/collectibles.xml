@@ -6,7 +6,7 @@
         <text>Nagatoro gave you this fashionable choker as a consolation prize after she won. She said it would look great on you, It even has your name on it.</text>
         <unlock>Lose a game to Nagatoro where she does not reveal her chest.</unlock>
         <wearable>true</wearable>
-        <clothing name="Choker from Nagatoro-san" generic="collar" position="neck" type="extra" img="opponents/nagatoro/collar.png" />
+        <clothing name="collar" generic="collar" position="neck" type="extra" img="opponents/nagatoro/collar.png" />
     </collectible>
     <collectible id="nagatoro_ticket" status="online" img="opponents/nagatoro/ticket.png" thumbnail="opponents/nagatoro/ticket.png">
         <title>"Do Anything You Say" Ticket</title>
@@ -21,5 +21,18 @@ You can redeem it to make her do anything you say! Maybe it will come in handy o
         <text>Nagatoro gave you her handkerchief to wipe yourself off with after you both lost.
 She didn't say you could keep it, but she might not want it back now...</text>
         <unlock>Lose a game against Nagatoro where she at least shows her chest to you.</unlock>
+    </collectible>
+    <collectible id="nagatoro_selfie" status="online" img="opponents/nagatoro/selfie.png" thumbnail="opponents/nagatoro/selfie_thumb.png">
+        <title>Selfie from Nagatoro-san</title>
+        <subtitle>Don't open it in public!</subtitle>
+        <text>Nagatoro felt bad for you, and wanted to give you some "inspiration" for later.</text>
+        <unlock>Win against Nagatoro when she's wearing her school uniform or nekotoro costume while already having unlocked the "Do Anything You Say" ticket.</unlock>
+    </collectible>
+    <collectible id="nagatoro_choco" status="online" img="opponents/nagatoro/valentines.png" thumbnail="opponents/nagatoro/box.png">
+        <title>Chocolate from Nagatoro-san</title>
+        <subtitle>She doesn't like you or anything, dummy.</subtitle>
+        <text>Nagatoro gave you some romantic honmei choco on Valentine's day. They are handcrafted and very tasty. It probably doesn't mean anything, though.</text>
+        <unlock>Play against Nagatoro during the Valentine's Day event.</unlock>
+        <hidden>true</hidden>
     </collectible>
 </collectibles>

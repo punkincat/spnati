@@ -20,6 +20,12 @@
 
 <body onload="initialSetup()">
 
+    <div id="bg-back" class="bg-image-container">
+        <div class="bg-image whole"></div>
+    </div>
+    
+    <div id="bg-front" class="bg-image-container"></div>
+
     <!-- Warning / Title Screen -->
     <div id="title-screen" class="screen-container" hidden>
         <div class="screen">
@@ -30,7 +36,7 @@
 
             <!-- Content -->
             <div id="initial-warning">
-                <div class="warning-container">
+                <div class="warning-container" tabindex="1" onKeyUp="if (arguments[0].key = ' ' && this.scrollTop + this.clientHeight == this.scrollHeight && $('#warning-start-container').is(':visible')) enterTitleScreen();">
                     <div class="warning-start-text">
                         <p>This game contains material that is only suitable for adults.<br /><b style="color:#DD3333">If
                                 you are under the age of 18, please leave now.</b></p>
@@ -97,42 +103,40 @@
                 <!-- Player Name -->
                 <div id="title-name-block">
                     <div class="title-label">Who are you?</div>
-                    <input type="text" class='bordered' id='player-name-field' />
+                    <input type="text" class='bordered' id='player-name-field' onKeyDown="if (arguments[0].key == 'Enter') validateTitleScreen();"/>
                 </div>
 
                 <div class="title-gender-size-container">
                     <!-- Player Gender -->
-                    <input type='image' id='male-gender-button'
-                        class='bordered title-content-button title-gender-button' src='img/male.svg' alt="Male"
-                        onclick='changePlayerGender("male")'>
-                    <input type='image' id='female-gender-button'
-                        class='bordered title-content-button title-gender-button' src='img/female.svg' alt="Female"
-                        onclick='changePlayerGender("female")'>
+                    <input type='image' data-gender="male" src='img/male.svg' alt="Male"
+                        class='bordered title-content-button title-gender-button'>
+                    <input type='image' data-gender="female" src='img/female.svg' alt="Female"
+                        class='bordered title-content-button title-gender-button'>
 
                     <!-- Player Male Size -->
-                    <div id='male-size-container' class='title-size-block medium'>
-                        <input type='image' id="small-junk-button"
+                    <div id='male-size-container' class='title-size-block'>
+                        <input type='image' data-size="small"
                             class='bordered title-small-button title-content-button title-size-button'
-                            src='img/male_small.png' alt="Small penis" onclick='changePlayerSize("small")'>
-                        <input type='image' id="medium-junk-button"
+                            src='img/male_small.png' alt="Small penis">
+                        <input type='image' data-size="medium"
                             class='bordered title-medium-button title-content-button title-size-button'
-                            src='img/male_medium.png' alt="Medium penis" onclick='changePlayerSize("medium")'>
-                        <input type='image' id="large-junk-button"
+                            src='img/male_medium.png' alt="Medium penis">
+                        <input type='image' data-size="large"
                             class='bordered title-large-button title-content-button title-size-button'
-                            src='img/male_large.png' alt="Large penis" onclick='changePlayerSize("large")'>
+                            src='img/male_large.png' alt="Large penis">
                     </div>
 
                     <!-- Player Female Size -->
-                    <div id='female-size-container' class='title-size-block medium'>
-                        <input type='image' id="small-boobs-button"
+                    <div id='female-size-container' class='title-size-block'>
+                        <input type='image' data-size="small"
                             class='bordered title-small-button title-content-button title-size-button'
-                            src='img/female_small.png' alt="Small breasts" onclick='changePlayerSize("small")'>
-                        <input type='image' id="medium-boobs-button"
+                            src='img/female_small.png' alt="Small breasts">
+                        <input type='image' data-size="medium"
                             class='bordered title-medium-button title-content-button title-size-button'
-                            src='img/female_medium.png' alt="Medium breasts" onclick='changePlayerSize("medium")'>
-                        <input type='image' id="large-boobs-button"
+                            src='img/female_medium.png' alt="Medium breasts">
+                        <input type='image' data-size="large"
                             class='bordered title-large-button title-content-button title-size-button'
-                            src='img/female_large.png' alt="Large breasts" onclick='changePlayerSize("large")'>
+                            src='img/female_large.png' alt="Large breasts">
                     </div>
                 </div>
 
@@ -456,14 +460,6 @@
                 </div>
             </div>
 
-            <!-- Hide Button -->
-            <button class='bordered hide-table-button' onclick="hideSelectionTable()">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-            </button>
-            <button class='bordered table-bug-report-button' onclick="showBugReportModal()">
-                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-            </button>
-
             <div id="select-table" class="select-table">
 
                 <!-- Opponent Selections -->
@@ -532,12 +528,12 @@
                     <div class="select-random-container">
                         <button id='select-random-female-button'
                                 class='bordered select-quadrant-button smooth-button blue'
-                                onclick="clickedRandomFillButton(function chooseFemale(player) {return player.gender.toLowerCase() === 'female';})">
+                                onclick="clickedRandomFillButton('female', function chooseFemale(player) {return player.gender.toLowerCase() === 'female';})">
                             Random Females
                         </button>
                         <button id='select-random-male-button'
                                 class='bordered select-quadrant-button smooth-button blue'
-                                onclick="clickedRandomFillButton(function chooseMale(player) {return player.gender.toLowerCase() === 'male';})">
+                                onclick="clickedRandomFillButton('male', function chooseMale(player) {return player.gender.toLowerCase() === 'male';})">
                             Random Males
                         </button>
                         <button id='select-random-group-button'
@@ -547,7 +543,7 @@
                         </button>
                         <button id='select-random-button'
                                 class='bordered select-quadrant-button  smooth-button blue'
-                                onclick="clickedRandomFillButton()">
+                                onclick="clickedRandomFillButton('any')">
                             Random Fill
                         </button>
                     </div>
@@ -560,37 +556,21 @@
                 </div>
             </div>
 
+            <!-- Hide Button -->
+            <button class='bordered hide-table-button' onclick="hideSelectionTable()">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            </button>
+            <button class='bordered table-bug-report-button' onclick="showBugReportModal()">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+            </button>
         </div>
     </div>
 
     <div id="individual-select-screen" class="wide-screen-container" hidden>
         <div class="screen">
-            <div class="selection-cards-container">
-                <!--
-    (example opponent card element)
-      <div class="selection-card">
-        <div class="selection-card-image-clip">
-          <div class="selection-card-image-area">
-            <img class="opponent-card-image-simple" src="opponents/sayori/0-calm.png">
-          </div>
-        </div>
-
-        <img class="epilogue-badge-icon" src="img/epilogue_icon.png"/>
-        <div class="selection-card-sidebar">
-          <img class="layer-icon" src="img/badge-testing.png"/>
-          <img class="status-icon" src="img/badge-testing.png"/>
-          <img class="gender-icon" src="img/female.svg"/>
-        </div>
-        <div class="selection-card-footer">
-          <div class="selection-card-label selection-card-name">Sayori</div>
-          <div class="selection-card-label selection-card-source">Doki Doki Literature Club!</div>
-        </div>
-      </div>
-      -->
-            </div>
             <div class="bordered selection-options-row">
                 <button type="button" class="bordered smooth-button red select-back-btn"
-                    onclick="backToSelect()">Back</button>
+                    onclick="backFromIndividualSelect()">Back</button>
                 <div id="gender-sort-column" class="column-component">
                     <div class="gender-component">
                         <nav>
@@ -614,8 +594,11 @@
                             <li><a href="#" data-value="oldest">Oldest</a></li>
                             <li><a href="#" data-value="-layers">Most Layers</a></li>
                             <li><a href="#" data-value="layers">Fewest Layers</a></li>
-                            <li><a href="#" data-value="label">Name (A-Z)</a></li>
-                            <li><a href="#" data-value="-label">Name (Z-A)</a></li>
+                            <li><a href="#" data-value="-uniqueLineCount">Unique Line Count</a></li>
+                            <li><a href="#" data-value="normalizedSelectLabel">Name (A-Z)</a></li>
+                            <li><a href="#" data-value="-normalizedSelectLabel">Name (Z-A)</a></li>
+                            <li><a href="#" data-value="normalizedSource selectLabel">Source (A-Z)</a></li>
+                            <li><a href="#" data-value="-normalizedSource -selectLabel">Source (Z-A)</a></li>
                             <li><a href="#" data-value="target">Talked to by selected</a></li>
                         </ul>
                     </div>
@@ -623,27 +606,51 @@
                 <div id="name-creator-column" class="column-component">
                     <div class="option-component creator-component">
                         <label for="search-creator">Search Creator:</label>
-                        <input list='creatorList' type="text" id="search-creator"
+                        <input list='creatorList' type="search" id="search-creator"
                             class='bordered wide-textbox sort-filter-field' placeholder="Search by Creator" />
                     </div>
                     <div class="option-component name-component">
                         <label for="search-name">Search Name: </label>
-                        <input type="text" id="search-name" class='bordered wide-textbox sort-filter-field'
+                        <input type="search" id="search-name" class='bordered wide-textbox sort-filter-field'
                             placeholder="Name" />
                     </div>
                 </div>
                 <div id="source-tag-column" class="column-component">
                     <div class="option-component source-component">
                         <label for="search-source">Search Source: </label>
-                        <input list='sourceList' type="text" id="search-source"
+                        <input list='sourceList' type="search" id="search-source"
                             class='bordered wide-textbox sort-filter-field' placeholder="Search by Source" />
                     </div>
                     <div class="option-component tag-component">
                         <label for="search-tag">Search Tag: </label>
-                        <input list='tagList' type="text" id="search-tag"
-                            class='bordered wide-textbox sort-filter-field' placeholder="Search by Tag" />
+                        <input list='tagList' type="email" id="search-tag"
+                            class='bordered wide-textbox sort-filter-field' placeholder="Search by Tag" multiple />
                     </div>
                 </div>
+            </div>
+
+            <div class="selection-cards-container">
+                <!--
+    (example opponent card element)
+      <div class="selection-card">
+        <div class="selection-card-image-clip">
+          <div class="selection-card-image-area">
+            <img class="opponent-card-image-simple" src="opponents/sayori/0-calm.png">
+          </div>
+        </div>
+
+        <img class="epilogue-badge-icon" src="img/epilogue_icon.png"/>
+        <div class="selection-card-sidebar">
+          <img class="layer-icon" src="img/badge-testing.png"/>
+          <img class="status-icon" src="img/badge-testing.png"/>
+          <img class="gender-icon" src="img/female.svg"/>
+        </div>
+        <div class="selection-card-footer">
+          <div class="selection-card-label selection-card-name">Sayori</div>
+          <div class="selection-card-label selection-card-source">Doki Doki Literature Club!</div>
+        </div>
+      </div>
+      -->
             </div>
 
             <div class="opponent-details-container">
@@ -695,6 +702,10 @@
                         <div class="bordered left-cap extra-details-row opponent-details-field opponent-lastupdate-field">
                             <div class="opponent-details-label left-cap">Last update</div>
                             <div class="opponent-details-value opponent-lastupdate"></div>
+			</div>
+                            <div class="bordered left-cap extra-details-row opponent-details-field opponent-added-field">
+                                <div class="opponent-details-label left-cap">Added</div>
+                                <div class="opponent-details-value opponent-added"></div>
 			</div>
                         <div class="bordered opponent-details-field extra-details-row opponent-details-description">
                         </div>
@@ -948,7 +959,7 @@
                 <img id="group-gender-4" class="gender-icon" src="img/female.svg" alt="Female" hidden />
             </div>
 
-            <button id="group-hide-button" class="bordered hide-table-button" onclick="hideGroupSelectionTable()">
+            <button id="group-hide-button" class="bordered hide-table-button" onclick="hideGroupSelectionTable()" style="display: none;">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
             </button>
 
@@ -967,7 +978,7 @@
                 <!-- Opponent Selections -->
                 <div id="group-select-area" class="bordered opponent-area">
                     <div class="group-dock-button-row">
-                        <button id="group-hide-button" class="bordered hide-table-button"
+                        <button class="bordered hide-table-button"
                             onclick="hideGroupSelectionTable()">
                             <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                         </button>
@@ -992,7 +1003,7 @@
                     <!-- Buttons -->
                     <button id='group-back-button'
                         class='bordered main-select-button select-back-button smooth-button red'
-                        onclick="backToSelect()">
+                        onclick="backFromGroupSelect()">
                         Back
                     </button>
 
@@ -1258,8 +1269,8 @@
                                             <h4 class="modal-title modal-left">Tag Filter</h4>
                                         </td>
                                         <td>
-                                            <input list="tagList" type="text" id="group-search-tag"
-                                                class='bordered wide-textbox' />
+                                            <input list="tagList" type="email" id="group-search-tag"
+                                                class='bordered wide-textbox' multiple />
                                         </td>
                                     </tr>
                                 </table>
@@ -2459,6 +2470,15 @@
                                     <h4 class="faq-question">Can you add multiplayer?</h4>
                                     <p class="faq-answer">No. SPNatI is meant to be a single-player experience.</p>
                                 </div>
+                                 <div class="faq-question-container">
+                                    <h4 class="faq-question">Can you add trans/nonbinary support?  (e.g. selecting pronouns)</h4>
+                                    <p class="faq-answer">Unfortunately, SPNatI is hardcoded to link sex and gender, and has been since its earliest versions.  This means that years of content, and hundreds of characters, are now written and structured with this link in mind and would require substantial revision.  You're free to suggest solutions, but people have tried to no avail.
+                                    </p>
+                                </div>
+                                 <div class="faq-question-container">
+                                    <h4 class="faq-question">The game is cheating!  It's rigged to make me lose at the end.</h4>
+                                    <p class="faq-answer">No, it isn't.  What's happening is that there are fewer opponents remaining, so it's more likely that you have the worst hand in the group.  Besides, winning doesn't do much, anyway.</p>
+                                </div>
                                 <div class="faq-question-container">
                                     <h4 class="faq-question">What happened to the Swimsuit Edition?</h4>
                                     <div class="faq-answer">
@@ -2823,7 +2843,7 @@
                                                 </ul>
                                             </td>
                                             <td class="setting-description">
-                                                <h4 class="modal-title modal-left">Offline Characters</h4>
+                                                <h4 class="modal-title modal-left">🕸️ Offline Characters</h4>
                                                 <h5 class="modal-left">These characters no longer meet the standards of the main game,<br />but are still fully complete.</h5>
                                             </td>
                                         </tr>
@@ -2836,7 +2856,7 @@
                                                 </ul>
                                             </td>
                                             <td class="setting-description">
-                                                <h4 class="modal-title modal-left">Incomplete Characters</h4>
+                                                <h4 class="modal-title modal-left">🔧 Incomplete Characters</h4>
                                                 <h5 class="modal-left">These characters were never finished or added to the main game,<br />so they may be of lower quality or simply not work properly.</h5>
                                             </td>
                                         </tr>
@@ -2849,7 +2869,7 @@
                                                 </ul>
                                             </td>
                                             <td class="setting-description">
-                                                <h4 class="modal-title modal-left">April Fool's Day Characters</h4>
+                                                <h4 class="modal-title modal-left">🃏 April Fool's Day Characters</h4>
                                                 <h5 class="modal-left">These are joke characters only available in the main game<br />during the week of April Fool's Day.</h5>
                                             </td>
                                         </tr>
@@ -2862,7 +2882,7 @@
                                                 </ul>
                                             </td>
                                             <td class="setting-description">
-                                                <h4 class="modal-title modal-left">Duplicate Characters</h4>
+                                                <h4 class="modal-title modal-left">👥 Duplicate Characters</h4>
                                                 <h5 class="modal-left">These are usually older versions of characters that have been replaced.</h5>
                                             </td>
                                         </tr>
@@ -2930,28 +2950,65 @@
     </div>
     <!-- End of Extra Characters Modal -->
 
-
-    <!-- DevMode Export Modal -->
-    <div id="dev-export-modal" class="modal table-modal fade" role="dialog">
+    <!-- Character Debug Modal -->
+    <div id="character-debug-modal" class="modal table-modal fade" role="dialog">
         <div class="modal-table-container">
             <div class="modal-cell-container">
-                <div class="bordered modal-dialog wide-modal-dialog">
+                <div class="bordered modal-dialog very-wide-modal-dialog">
                     <div class="bordered modal-dialog-surface">
                         <!-- Start of Modal Content -->
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title text-center">Export Dev Mode Edits</h4>
-                                <h5 class='text-center'>This code will allow you to import any edits you've made to your
-                                    character's dialogue into the Character Editor.</h5>
+                                <h4 class="modal-title text-center">Character Debug Info: <span id="debug-info-current-character"></span></h4>
                             </div>
                             <div class="modal-body">
-                                <form>
-                                    <textarea class="form-control" id='export-edit-log' rows="15" readonly></textarea>
-                                </form>
-                                <div class="modal-body-container" style="padding-top:4%;">
-                                    <button class="bordered smooth-button modal-button"
-                                        data-dismiss="modal">Close</button>
+                                <div class="modal-body-container">
+                                    <h3 id="debug-character-status-header" class="text-center debug-info-header">
+                                        <a role="button">Status</a>
+                                        <span class="glyphicon glyphicon-chevron-down debug-info-header-status"></span>
+                                    </h3>
+                                    <div id="debug-character-status-container" class="debug-info-container">
+                                        <div class="debug-info-column">
+                                            <div id="debug-character-status-listing"></div>
+                                        </div>
+                                    </div>
+                                    <h3 id="debug-case-info-header" class="text-center debug-info-header">
+                                        <a role="button">Current Case</a>
+                                        <span class="glyphicon glyphicon-chevron-down debug-info-header-status"></span>
+                                    </h3>
+                                    <div id="debug-case-info-container" class="debug-info-container">
+                                        <div class="debug-info-column">
+                                            <div id="debug-case-info-listing"></div>
+                                        </div>
+                                    </div>
+                                    <h3 id="debug-marker-header" class="text-center debug-info-header">
+                                        <a role="button">Markers</a>
+                                        <span class="glyphicon glyphicon-chevron-down debug-info-header-status"></span>
+                                    </h3>
+                                    <div id="debug-marker-container" class="debug-info-container">
+                                        <div class="debug-info-column" id="debug-marker-column-persistent">
+                                            <h5 class="text-center">Persistent Markers</h5>
+                                            <div class="debug-marker-listing" id="debug-marker-listing-persistent"></div>
+                                        </div>
+                                        <div class="debug-info-column" id="debug-marker-column-regular">
+                                            <h5 class="text-center">Regular Markers</h5>
+                                            <div class="debug-marker-listing" id="debug-marker-listing-regular"></div>
+                                        </div>
+                                    </div>
+                                    <h3 id="debug-tag-header" class="text-center debug-info-header">
+                                        <a role="button">Current Tags</a>
+                                        <span class="glyphicon glyphicon-chevron-down debug-info-header-status"></span>
+                                    </h3>
+                                    <div id="debug-tag-container" class="debug-info-container">
+                                        <div class="debug-info-column" id="debug-tag-column">
+                                            <div id="debug-tag-listing"></div>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="bordered smooth-button modal-button"
+                                    data-dismiss="modal">Close</button>
                             </div>
                         </div>
                         <!-- End of Modal Content -->
@@ -2960,7 +3017,7 @@
             </div>
         </div>
     </div>
-    <!-- End of DevMode Export Modal -->
+    <!-- End of Character Debug Modal -->
 
     <!-- Game Screen -->
     <div id="game-screen" class="screen-container ui-minimal" hidden>
@@ -2977,9 +3034,6 @@
                             class="glyphicon glyphicon-remove"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-entry-button edit-preview"><span
                             class="glyphicon glyphicon-eye-open"></span></button>
-                    <button type="button"
-                        class="bordered smooth-button dialogue-init-button dialogue-respond-button"><span
-                            class="glyphicon glyphicon-comment"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-init-button dialogue-edit-button"><span
                             class="glyphicon glyphicon-pencil"></span></button>
                     <button type="button"
@@ -3001,9 +3055,6 @@
                             class="glyphicon glyphicon-remove"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-entry-button edit-preview"><span
                             class="glyphicon glyphicon-eye-open"></span></button>
-                    <button type="button"
-                        class="bordered smooth-button dialogue-init-button dialogue-respond-button"><span
-                            class="glyphicon glyphicon-comment"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-init-button dialogue-edit-button"><span
                             class="glyphicon glyphicon-pencil"></span></button>
                     <button type="button"
@@ -3025,9 +3076,6 @@
                             class="glyphicon glyphicon-remove"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-entry-button edit-preview"><span
                             class="glyphicon glyphicon-eye-open"></span></button>
-                    <button type="button"
-                        class="bordered smooth-button dialogue-init-button dialogue-respond-button"><span
-                            class="glyphicon glyphicon-comment"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-init-button dialogue-edit-button"><span
                             class="glyphicon glyphicon-pencil"></span></button>
                     <button type="button"
@@ -3049,9 +3097,6 @@
                             class="glyphicon glyphicon-remove"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-entry-button edit-preview"><span
                             class="glyphicon glyphicon-eye-open"></span></button>
-                    <button type="button"
-                        class="bordered smooth-button dialogue-init-button dialogue-respond-button"><span
-                            class="glyphicon glyphicon-comment"></span></button>
                     <button type="button" class="bordered smooth-button dialogue-init-button dialogue-edit-button"><span
                             class="glyphicon glyphicon-pencil"></span></button>
                     <button type="button"
@@ -3100,10 +3145,10 @@
             </div>
 
             <!-- Hide and bug report buttons -->
-            <button class='bordered hide-table-button' onclick="toggleTableVisibility()">
+            <button class='bordered hide-table-button' onclick="toggleTableVisibility()" tabindex="3">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
             </button>
-            <button class='bordered table-bug-report-button' onclick="showBugReportModal()">
+            <button class='bordered table-bug-report-button' onclick="showBugReportModal()" tabindex="4">
                 <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
             </button>
 
@@ -3121,13 +3166,6 @@
                         <img id="player-1-card-4" class="bordered small-card-image" src="img/blank.png" alt="">
                         <img id="player-1-card-5" class="bordered small-card-image" src="img/blank.png" alt="">
                     </div>
-                    <button id="dev-select-button-1" class="bordered dev-select-button" onclick="setDevModeTarget(1)"
-                        hidden>
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    </button>
-                    <button id="debug-button-1" class="bordered debug-button" onclick="selectDebug(1)" hidden>
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </button>
                 </div>
                 <div id="game-opponent-area-2" class="optional-bordered halfLeft opponent-area" data-toggle="tooltip"
                     data-placement="top">
@@ -3139,13 +3177,6 @@
                         <img id="player-2-card-4" class="bordered small-card-image" src="img/blank.png" alt="">
                         <img id="player-2-card-5" class="bordered small-card-image" src="img/blank.png" alt="">
                     </div>
-                    <button id="dev-select-button-2" class="bordered dev-select-button" onclick="setDevModeTarget(2)"
-                        hidden>
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    </button>
-                    <button id="debug-button-2" class="bordered debug-button" onclick="selectDebug(2)" hidden>
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </button>
                 </div>
                 <div id="game-opponent-area-3" class="optional-bordered halfRight opponent-area" data-toggle="tooltip"
                     data-placement="top">
@@ -3157,13 +3188,6 @@
                         <img id="player-3-card-4" class="bordered small-card-image" src="img/blank.png" alt="">
                         <img id="player-3-card-5" class="bordered small-card-image" src="img/blank.png" alt="">
                     </div>
-                    <button id="dev-select-button-3" class="bordered dev-select-button" onclick="setDevModeTarget(3)"
-                        hidden>
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    </button>
-                    <button id="debug-button-3" class="bordered debug-button" onclick="selectDebug(3)" hidden>
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </button>
                 </div>
                 <div id="game-opponent-area-4" class="optional-bordered right opponent-area" data-toggle="tooltip"
                     data-placement="top">
@@ -3175,13 +3199,6 @@
                         <img id="player-4-card-4" class="bordered small-card-image" src="img/blank.png" alt="">
                         <img id="player-4-card-5" class="bordered small-card-image" src="img/blank.png" alt="">
                     </div>
-                    <button id="dev-select-button-4" class="bordered dev-select-button" onclick="setDevModeTarget(4)"
-                        hidden>
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    </button>
-                    <button id="debug-button-4" class="bordered debug-button" onclick="selectDebug(4)" hidden>
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </button>
                 </div>
 
                 <!-- Player Clothing and Label -->
@@ -3275,8 +3292,66 @@
             </div>
 
             <div id="game-hidden-area" class="centred-deck-area">
-                <img id="deck" class="bordered dock-card" src="img/unknown.jpg" alt="Deck">
+                <img id="deck" class="bordered dock-card" src="img/cards/default/unknown.svg" alt="Deck">
                 <div id="player-countdown" class="bordered" hidden>1</div>
+
+                <!-- Opponent Areas -->
+                <div id="game-hidden-opponent-area-1" class="optional-bordered left opponent-area" data-toggle="tooltip"
+                    data-placement="top">
+                    <button id="character-debug-button-1" class="bordered character-debug-button" onclick="players[1].showDebugModal()"
+                        hidden>
+                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                    </button>
+                    <button id="dev-select-button-1" class="bordered dev-select-button" onclick="setDevModeTarget(1)"
+                        hidden>
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                    <button id="debug-button-1" class="bordered debug-button" onclick="selectDebug(1)" hidden>
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div id="game-hidden-opponent-area-2" class="optional-bordered halfLeft opponent-area" data-toggle="tooltip"
+                    data-placement="top">
+                    <button id="character-debug-button-2" class="bordered character-debug-button" onclick="players[2].showDebugModal()"
+                        hidden>
+                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                    </button>
+                    <button id="dev-select-button-2" class="bordered dev-select-button" onclick="setDevModeTarget(2)"
+                        hidden>
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                    <button id="debug-button-2" class="bordered debug-button" onclick="selectDebug(2)" hidden>
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div id="game-hidden-opponent-area-3" class="optional-bordered halfRight opponent-area" data-toggle="tooltip"
+                    data-placement="top">
+                    <button id="character-debug-button-3" class="bordered character-debug-button" onclick="players[3].showDebugModal()"
+                        hidden>
+                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                    </button>
+                    <button id="dev-select-button-3" class="bordered dev-select-button" onclick="setDevModeTarget(3)"
+                        hidden>
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                    <button id="debug-button-3" class="bordered debug-button" onclick="selectDebug(3)" hidden>
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div id="game-hidden-opponent-area-4" class="optional-bordered right opponent-area" data-toggle="tooltip"
+                    data-placement="top">
+                    <button id="character-debug-button-4" class="bordered character-debug-button" onclick="players[4].showDebugModal()"
+                        hidden>
+                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                    </button>
+                    <button id="dev-select-button-4" class="bordered dev-select-button" onclick="setDevModeTarget(4)"
+                        hidden>
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                    <button id="debug-button-4" class="bordered debug-button" onclick="selectDebug(4)" hidden>
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
 
                 <!-- Option Buttons -->
                 <button id="debug-button-0" class="bordered debug-button" onclick="selectDebug(0)" hidden>
@@ -3286,43 +3361,38 @@
                 <div class="btn-group dropup game-menu-dropup" data-toggle="tooltip" data-placement="right"
                     title="Game Menu" onclick="$(this).tooltip('hide')">
                     <button type="button" class="bordered smooth-button red dropdown-toggle menu-dropdown-button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="1"><span
                             class="glyphicon glyphicon-th-list" aria-hidden="true"></span></button>
                     <ul class="dropdown-menu">
-                        <li><button id="game-dev-export-button" class="dropdown-button-item bordered smooth-button red"
-                                onclick="showDevExportModal()">
-                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                <span class="game-menu-label">Export Dialogue Edits</span>
-                            </button></li>
                         <li><button id="game-faq-button" class="dropdown-button-item bordered smooth-button red"
-                                onclick="showHelpModal()">
+                                onclick="showHelpModal()" tabindex="1">
                                 <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
                                 <span class="game-menu-label">Help and FAQ</span>
                             </button></li>
                         <li><button id="game-feedback-button" class="dropdown-button-item bordered smooth-button red"
-                                onclick="showFeedbackReportModal()">
+                                onclick="showFeedbackReportModal()" tabindex="1">
                                 <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                                 <span class="game-menu-label">Character Feedback</span>
                             </button></li>
                         <li><button id="game-log-button" class="dropdown-button-item bordered smooth-button red"
-                                onclick="showLogModal()">
+                                onclick="showLogModal()" tabindex="1">
                                 <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                                 <span class="game-menu-label">Dialogue Log</span>
                             </button></li>
                         <li><button id="game-home-button" class="dropdown-button-item bordered smooth-button red"
-                                onclick="showRestartModal()">
+                                onclick="showRestartModal()" tabindex="1">
                                 <!-- doEpilogueModal -->
                                 <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                                 <span class="game-menu-label">Return to Title</span>
                             </button>
                         <li>
                         <li><button id="game-settings-button" class="dropdown-button-item bordered smooth-button red"
-                                onclick="showOptionsModal()">
+                                onclick="showOptionsModal()" tabindex="1">
                                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                                 <span class="game-menu-label">Options</span>
                             </button></li>
                         <li><button id="game-fullscreen-button" class="dropdown-button-item bordered smooth-button red"
-                                onclick="toggleFullscreen()">
+                                onclick="toggleFullscreen()" tabindex="1">
                                 <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
                                 <span class="game-menu-label">Toggle full screen mode</span>
                             </button></li>
@@ -3330,7 +3400,7 @@
                 </div>
 
                 <!-- Main Game Button -->
-                <button id="main-game-button" class="bordered smooth-button red" onclick="advanceGame()">Deal</button>
+                <button id="main-game-button" class="bordered smooth-button red" onclick="advanceGame()" tabindex="5">Deal</button>
 
                 <!-- Minimal UI Player name label -->
                 <div id="player-name-label-minimal" class="game-name-label-0 bordered name-label">Player</div>
@@ -3443,6 +3513,7 @@
     <script src="js/table.js"></script>
     <script src="js/save.js"></script>
     <script src="js/event.js"></script>
+    <script src="js/rosterRandomize.js"></script>
 
     <!-- My JavaScript -->
     <script src="js/spniCore.js"></script>

@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>ignatz</owner>
+    <height>5'3"</height>
+    <age>18</age>
+    <pronunciation>Igg-not-s</pronunciation>
+    <othernotes />
     <noteworthy>
         <case name="Offered Portrait" id="133" priority="Noteworthy" min="4" max="4">
             <description>As thanks for players patience, Ignatz offers to paint them.</description>
@@ -22,6 +26,9 @@
         </case>
         <case name="Hug" id="661" priority="Noteworthy" min="3" max="3">
             <description>Fluttershy will hug Ignatz from behind after exchanging dialogue in the vest stripping stages.</description>
+        </case>
+        <case name="Duel Forfeit" id="916" priority="Noteworthy" min="6" max="6">
+            <description>Takatoshi and Ignatz will have a shared forfeit after this marker.</description>
         </case>
     </noteworthy>
     <reviewed>true</reviewed>
@@ -142,7 +149,6 @@
         <response id="563" opponent="monika" opponentId="1141" />
         <response id="565" opponent="fluttershy" opponentId="18" />
         <response id="566" opponent="nami" opponentId="12" />
-        <response id="568" opponent="mercy" opponentId="170" />
         <response id="574" opponent="polly" opponentId="445" />
         <response id="575" opponent="polly" opponentId="444" />
         <response id="582" opponent="lux" opponentId="15" />
@@ -212,7 +218,6 @@
         <response id="886" opponent="misaka" opponentId="144" />
         <response id="887" opponent="misaka" opponentId="67" />
         <response id="892" opponent="misaka" opponentId="167" />
-        <response id="914" opponent="yuno_uno" opponentId="143" />
     </responses>
     <notes>
         <note id="3">beginning of ignatz fleeing, jotaro later picks him up</note>
@@ -1007,11 +1012,27 @@
         <label id="922" label="April Fools" folder="" sort="0" />
         <label id="923" label="April Fools" folder="" sort="0" />
         <label id="924" label="" folder="Takatoshi Targets" sort="0" />
+        <label id="925" label="" folder="Character Targets" sort="0" />
+        <label id="926" label="" folder="Character Targets" sort="0" />
+        <label id="927" label="" folder="Character Targets" sort="0" />
+        <label id="928" label="" folder="Character Targets" sort="0" />
     </labels>
-    <nextId>924</nextId>
+    <nextId>928</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="amyig_ms1" />
+        <marker scope="Public" name="anatoly_reply" />
+        <marker scope="Public" name="anatoly_replyas1" />
+        <marker scope="Public" name="anatoly_replyas2" />
+        <marker scope="Public" name="anatoly_replyas3" />
+        <marker scope="Public" name="anatoly_replyms0" />
+        <marker scope="Public" name="anatoly_replyms1" />
+        <marker scope="Public" name="anatoly_replyms2" />
+        <marker scope="Public" name="anatoly_replyms3" />
+        <marker scope="Public" name="anatoly_replys0" />
+        <marker scope="Public" name="anatoly_replys1" />
+        <marker scope="Public" name="anatoly_replys2" />
+        <marker scope="Public" name="anatoly_replys3" />
         <marker scope="Public" name="animaltalkreply" />
         <marker scope="Public" name="aobaig_ms1" />
         <marker scope="Public" name="artpun" />

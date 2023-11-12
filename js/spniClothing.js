@@ -31,6 +31,7 @@ var STATUS_NAKED = "naked";
 var STATUS_LOST_ALL = "lost_all";
 var STATUS_ALIVE = "alive";
 var STATUS_MASTURBATING = "masturbating";
+var STATUS_HEAVY_MASTURBATING = "heavy_masturbating";
 var STATUS_FINISHED = "finished";
 
 /************************************************************
@@ -141,27 +142,35 @@ PlayerClothing.prototype.isAvailable = function () {
 }
 
 /**
- * Create a basic HTML <input> element for this clothing.
- * @returns {HTMLInputElement}
+ * Create an HTML <button> element for this clothing.
+ * @returns {HTMLButtonElement}
  */
 PlayerClothing.prototype.createSelectionElement = function () {
-    var title = this.name.initCap();
-    if (this.collectible && this.collectible.player) {
-        title += " (from " + this.collectible.player.metaLabel + ")";
-    }
-
     var img = document.createElement("img");
     img.setAttribute("src", this.image);
-    img.setAttribute("alt", title);
+    img.setAttribute("alt", this.name.initCap());
     img.className = "custom-clothing-img";
 
     var elem = document.createElement("button");
-    elem.setAttribute("title", title);
     elem.className = "bordered player-clothing-select";
     elem.appendChild(img);
 
     return elem;
 }
+
+PlayerClothing.prototype.tooltip = function () {
+    if (!this.collectible) return this.name.initCap();
+
+    if (this.isAvailable()) {
+        let tooltip = this.collectible.title;
+        if (this.collectible.player && tooltip.indexOf(this.collectible.player.metaLabel) < 0) {
+            tooltip += " - from " + this.collectible.player.metaLabel;
+        }
+        return tooltip;
+    } else {
+        return "To unlock: " + this.collectible.unlock_hint;
+    }
+};
 
 /**
  * Get whether this clothing has been selected for the current player gender.
@@ -197,126 +206,147 @@ var clothingStripSelectors = [];
  *****                      Strip Functions                       *****
  **********************************************************************/
 
+ /**
+  * Calculate the position a removed article of clothing reveals, if any.
+  *
+  * This is either FULL_ARTICLE, LOWER_ARTICLE, UPPER_ARTICLE, or null.
+  *
+  * @param {Player} player
+  * @param {Clothing} clothing
+  * @returns {string?} The revealed position, if any.
+  */
+function getRevealedPosition (player, clothing) {
+    var type = clothing.type;
+    var pos = clothing.position;
+
+    /* Reveals only happen for important and major articles... */
+    if (type == IMPORTANT_ARTICLE || type == MAJOR_ARTICLE) {
+        var hasLower = player.clothing.some(function(c) {
+            return ([LOWER_ARTICLE, FULL_ARTICLE].indexOf(c.position) >= 0) && (c !== clothing) && ([IMPORTANT_ARTICLE, MAJOR_ARTICLE].indexOf(c.type) >= 0);
+        });
+
+        var hasUpper = player.clothing.some(function(c) {
+            return ([UPPER_ARTICLE, FULL_ARTICLE].indexOf(c.position) >= 0) && (c !== clothing) && ([IMPORTANT_ARTICLE, MAJOR_ARTICLE].indexOf(c.type) >= 0);
+        });
+
+        if (pos == FULL_ARTICLE) {
+            if (!hasLower && !hasUpper) {
+                /* Article exposes both at once.
+                 * We can actually return early in this case:
+                 * we'd do the same thing for both major and important articles anyways.
+                 */
+                return FULL_ARTICLE;
+            } else if (!hasLower && hasUpper) {
+                /* Article only exposes crotch. */
+                pos = LOWER_ARTICLE;
+            } else if (hasLower && !hasUpper) {
+                /* Article only exposes chest. */
+                pos = UPPER_ARTICLE;
+            } else {
+                /* Article doesn't actually reveal anything.
+                 * For major items, we can just return null early.
+                 * For important items, we'd end up returning FULL_ARTICLE anyways, no matter what.
+                 */
+                return (type == IMPORTANT_ARTICLE) ? FULL_ARTICLE : null;
+            }
+        }
+
+        /* pos cannot be FULL_ARTICLE at this point. */
+
+        if (
+            (type == MAJOR_ARTICLE) && (
+                ([UPPER_ARTICLE, LOWER_ARTICLE].indexOf(pos) < 0) ||
+                ((pos == UPPER_ARTICLE) && hasUpper) ||
+                ((pos == LOWER_ARTICLE) && hasLower)
+            )
+        ) {
+            /* There is another article left covering this part of the body. */
+            return null;
+        }
+
+        return pos;
+    } else {
+        return null;
+    }
+}
+
  /************************************************************
  * Fetches the appropriate dialogue trigger for the provided
  * article of clothing, based on whether the article is going
  * to be removed or has been removed. Written to prevent duplication.
  ************************************************************/
 function getClothingTrigger (player, clothing, removed) {
+    var revealPos = getRevealedPosition(player, clothing);
     var type = clothing.type;
-    var pos = clothing.position;
     var gender = player.gender;
     var size = player.size;
 
-    /* starting with important articles */
-    if (type == IMPORTANT_ARTICLE || type == MAJOR_ARTICLE) {
-        if (pos == FULL_ARTICLE) {
-            if (!player.clothing.some(function(c) {
-                return c.position == LOWER_ARTICLE && c !== clothing && [IMPORTANT_ARTICLE, MAJOR_ARTICLE].indexOf(c.type) >= 0;
-            })) {
-                // If removing this article exposes the crotch,
-                // pretend that it's an lower body article, even if it
-                // also exposes the chest (which is not a good idea).
-                pos = LOWER_ARTICLE;
-            } else {
-                // Otherwise treat it as a upper body article, whether
-                // it exposes the chest or not (it doesn't matter,
-                // except for with an important article).
-                pos = UPPER_ARTICLE;
-            }
-        }
-        if (type == MAJOR_ARTICLE
-            && ([UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE].indexOf(pos) < 0 || player.clothing.some(function(c) {
-                return (c.position == pos || c.position == FULL_ARTICLE)
-                    && c !== clothing && (c.type == IMPORTANT_ARTICLE || c.type == MAJOR_ARTICLE);
-            }))) { // There is another article left covering this part of the body
-            if (gender == eGender.MALE) {
-                if (removed) {
-                    return [MALE_REMOVED_MAJOR];
-                } else {
-                    return [MALE_REMOVING_MAJOR];
-                }
-            } else if (gender == eGender.FEMALE) {
-                if (removed) {
-                    return [FEMALE_REMOVED_MAJOR];
-                } else {
-                    return [FEMALE_REMOVING_MAJOR];
-                }
-            }
-        } else if (pos == UPPER_ARTICLE) {
-            if (gender == eGender.MALE) {
-                if (removed) {
-                    return [MALE_CHEST_IS_VISIBLE, OPPONENT_CHEST_IS_VISIBLE];
-                } else {
-                    return [MALE_CHEST_WILL_BE_VISIBLE, OPPONENT_CHEST_WILL_BE_VISIBLE];
-                }
-            } else if (gender == eGender.FEMALE) {
-                if (removed) {
-                    if (size == eSize.LARGE) {
-                        return [FEMALE_LARGE_CHEST_IS_VISIBLE, FEMALE_CHEST_IS_VISIBLE, OPPONENT_CHEST_IS_VISIBLE];
-                    } else if (size == eSize.SMALL) {
-                        return [FEMALE_SMALL_CHEST_IS_VISIBLE, FEMALE_CHEST_IS_VISIBLE, OPPONENT_CHEST_IS_VISIBLE];
-                    } else {
-                        return [FEMALE_MEDIUM_CHEST_IS_VISIBLE, FEMALE_CHEST_IS_VISIBLE, OPPONENT_CHEST_IS_VISIBLE];
-                    }
-                } else {
-                    return [FEMALE_CHEST_WILL_BE_VISIBLE, OPPONENT_CHEST_WILL_BE_VISIBLE];
-                }
-            }
-        } else if (pos == LOWER_ARTICLE) {
-            if (gender == eGender.MALE) {
-                if (removed) {
-                    if (size == eSize.LARGE) {
-                        return [MALE_LARGE_CROTCH_IS_VISIBLE, MALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
-                    } else if (size == eSize.SMALL) {
-                        return [MALE_SMALL_CROTCH_IS_VISIBLE, MALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
-                    } else {
-                        return [MALE_MEDIUM_CROTCH_IS_VISIBLE, MALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
-                    }
-                } else {
-                    return [MALE_CROTCH_WILL_BE_VISIBLE, OPPONENT_CROTCH_WILL_BE_VISIBLE];
-                }
-            } else if (gender == eGender.FEMALE) {
-                if (removed) {
-                    return [FEMALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
-                } else {
-                    return [FEMALE_CROTCH_WILL_BE_VISIBLE, OPPONENT_CROTCH_WILL_BE_VISIBLE];
-                }
-            }
-        }
-    }
-    /* next minor articles */
-    else if (type == MINOR_ARTICLE) {
+    if (revealPos == UPPER_ARTICLE) {
         if (gender == eGender.MALE) {
             if (removed) {
-                return [MALE_REMOVED_MINOR];
+                return [MALE_CHEST_IS_VISIBLE, OPPONENT_CHEST_IS_VISIBLE];
             } else {
-                return [MALE_REMOVING_MINOR];
+                return [MALE_CHEST_WILL_BE_VISIBLE, OPPONENT_CHEST_WILL_BE_VISIBLE];
             }
         } else if (gender == eGender.FEMALE) {
             if (removed) {
-                return [FEMALE_REMOVED_MINOR];
+                if (size == eSize.LARGE) {
+                    return [FEMALE_LARGE_CHEST_IS_VISIBLE, FEMALE_CHEST_IS_VISIBLE, OPPONENT_CHEST_IS_VISIBLE];
+                } else if (size == eSize.SMALL) {
+                    return [FEMALE_SMALL_CHEST_IS_VISIBLE, FEMALE_CHEST_IS_VISIBLE, OPPONENT_CHEST_IS_VISIBLE];
+                } else {
+                    return [FEMALE_MEDIUM_CHEST_IS_VISIBLE, FEMALE_CHEST_IS_VISIBLE, OPPONENT_CHEST_IS_VISIBLE];
+                }
             } else {
-                return [FEMALE_REMOVING_MINOR];
+                return [FEMALE_CHEST_WILL_BE_VISIBLE, OPPONENT_CHEST_WILL_BE_VISIBLE];
             }
         }
-    }
-    /* next accessories */
-    else {
+    } else if ((revealPos == LOWER_ARTICLE) || (revealPos == FULL_ARTICLE)) {
+        /* Treat full-article reveals as being crotch reveals for the purposes of case triggering. */
         if (gender == eGender.MALE) {
             if (removed) {
-                return [MALE_REMOVED_ACCESSORY];
+                if (size == eSize.LARGE) {
+                    return [MALE_LARGE_CROTCH_IS_VISIBLE, MALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
+                } else if (size == eSize.SMALL) {
+                    return [MALE_SMALL_CROTCH_IS_VISIBLE, MALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
+                } else {
+                    return [MALE_MEDIUM_CROTCH_IS_VISIBLE, MALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
+                }
             } else {
-                return [MALE_REMOVING_ACCESSORY];
+                return [MALE_CROTCH_WILL_BE_VISIBLE, OPPONENT_CROTCH_WILL_BE_VISIBLE];
             }
         } else if (gender == eGender.FEMALE) {
             if (removed) {
-                return [FEMALE_REMOVED_ACCESSORY];
+                return [FEMALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
             } else {
-                return [FEMALE_REMOVING_ACCESSORY];
+                return [FEMALE_CROTCH_WILL_BE_VISIBLE, OPPONENT_CROTCH_WILL_BE_VISIBLE];
+            }
+        }
+    } else {
+        if (type == MAJOR_ARTICLE) {
+            if (gender == eGender.MALE) {
+                return removed ? [MALE_REMOVED_MAJOR] : [MALE_REMOVING_MAJOR];
+            } else if (gender == eGender.FEMALE) {
+                return removed ? [FEMALE_REMOVED_MAJOR] : [FEMALE_REMOVING_MAJOR];
+            }
+        } else if (type == MINOR_ARTICLE) {
+            if (gender == eGender.MALE) {
+                return removed ? [MALE_REMOVED_MINOR] : [MALE_REMOVING_MINOR];
+            } else if (gender == eGender.FEMALE) {
+                return removed ? [FEMALE_REMOVED_MINOR] : [FEMALE_REMOVING_MINOR];
+            }
+        } else if (type == EXTRA_ARTICLE) {
+            if (gender == eGender.MALE) {
+                return removed ? [MALE_REMOVED_ACCESSORY] : [MALE_REMOVING_ACCESSORY];
+            } else if (gender == eGender.FEMALE) {
+                return removed ? [FEMALE_REMOVED_ACCESSORY] : [FEMALE_REMOVING_ACCESSORY];
             }
         }
     }
+
+    /* Shouldn't get here... */
+    console.error("Could not determine strip triggers for player ", player, " and clothing ", clothing);
+    return [];
 }
 
 /************************************************************
@@ -441,12 +471,14 @@ function prepareToStripPlayer (player) {
 /**
  * @param {PlayerClothing} clothing 
  */
- function StripClothingSelectionIcon (clothing) {
+function StripClothingSelectionIcon (clothing) {
     this.clothing = clothing;
     this.elem = clothing.createSelectionElement();
     this.selected = false;
 
-    $(this.elem).on("click", this.select.bind(this)).addClass("player-strip-selector");
+    $(this.elem).on("click", this.select.bind(this)).addClass("player-strip-selector").tooltip({
+        title: this.clothing.tooltip(),
+    });
 }
 
 StripClothingSelectionIcon.prototype.canSelect = function () {
@@ -488,6 +520,15 @@ function setupStrippingModal () {
     }));
 }
 
+$stripModal.on('hidden.bs.modal', function () {
+    if (gamePhase === eGamePhase.STRIP) {
+        console.error("Possible softlock: player strip modal hidden with game phase still at STRIP");
+
+        Sentry.captureException(new Error("Possible softlock: player strip modal hidden with phase still at STRIP"));
+
+        allowProgression();
+    }
+});
 
 /************************************************************
  * Sets up and displays the stripping modal, so that the human
@@ -500,24 +541,15 @@ function showStrippingModal () {
         selector.selected = false;
         selector.update();
     }.bind(this));
+    $stripClothing.on('show.bs.tooltip', function(ev) {
+        $stripClothing.find('.player-strip-selector').not(ev.target).tooltip('hide');
+    });
 
     /* disable the strip button */
     $stripButton.attr('disabled', true);
 
     /* display the stripping modal */
     $stripModal.modal({show: true, keyboard: false, backdrop: 'static'});
-    $stripModal.one('shown.bs.modal', function() {
-        $stripClothing.find('input').last().focus();
-    });
-    $stripModal.on('hidden.bs.modal', function () {
-        if (gamePhase === eGamePhase.STRIP) {
-            console.error("Possible softlock: player strip modal hidden with game phase still at STRIP");
-            
-            Sentry.captureException(new Error("Possible softlock: player strip modal hidden with phase still at STRIP"));
-
-            allowProgression();
-        }
-    });
 
     $(document).keyup(clothing_keyUp);
 }
@@ -530,12 +562,13 @@ function clothing_keyUp(e) {
         return selector.canSelect();
     });
 
-    if (e.keyCode == 32 && !$stripButton.prop('disabled')  // Space
+    if (e.key == ' ' && !$stripButton.prop('disabled')  // Space
+        && !($('body').hasClass('focus-indicators-enabled') && $(document.activeElement).is('button:not(.selected)'))
         && availableSelectors.some(function (selector) { return selector.selected; })) {
         $stripButton.click();
         e.preventDefault();
-    } else if (e.keyCode >= 49 && e.keyCode < 49 + availableSelectors.length) { // A number key
-        availableSelectors[e.keyCode - 49].select();
+    } else if (e.key >= '1' && e.key <= availableSelectors.length) { // A number key
+        availableSelectors[e.key - 1].select();
     }
 }
 
@@ -617,8 +650,7 @@ function closeStrippingModal () {
     updateAllBehaviours(HUMAN_PLAYER, null, [dialogueTrigger]);
 
     /* allow progression */
-    $('#stripping-modal').modal('hide');
-    $stripModal.off("hidden.bs.modal");
+    $stripModal.modal('hide');
     $(document).off('keyup', clothing_keyUp);
     endRound();
 }
@@ -656,6 +688,17 @@ function stripAIPlayer (player) {
     /* update behaviour */
     dialogueTrigger.push(OPPONENT_STRIPPED);
     updateAllBehaviours(player, PLAYER_STRIPPED, [dialogueTrigger]);
+
+    if (players[player].clothing.at(-1)?.type == "skip") {
+        while (players[player].clothing.at(-1)?.type == "skip") {
+            players[player].clothing.pop();
+            players[player].stage++;
+            players[player].stageChangeUpdate();
+        }
+        updateGameVisual(player);
+    }
+
+   
 }
 
 /************************************************************

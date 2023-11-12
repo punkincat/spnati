@@ -23,4 +23,12 @@ https://wikimediafoundation.org/support/</text>
         <wearable>true</wearable>
         <clothing name="Witch Hat" generic="hat" position="head" type="extra" img="opponents/wikipe-tan/witch_hat.png" />
     </collectible>
+    <collectible id="maid_dress" status="online" img="opponents/wikipe-tan/maid_dress.png" thumbnail="opponents/wikipe-tan/maid_dress.png">
+        <title>Maid Dress</title>
+        <subtitle>I don't care what gender you are, put on the maid outfit.</subtitle>
+        <text>Spare maid outfit from Wikipe-tan, without the puzzle pieces.</text>
+        <unlock>Finish a game where Wikipe-tan wins.</unlock>
+        <wearable>true</wearable>
+        <clothing name="maid dress" generic="dress" position="both" type="major" img="opponents/wikipe-tan/maid_dress.png" />
+    </collectible>
 </collectibles>

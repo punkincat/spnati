@@ -99,6 +99,9 @@
         <case name="She's not used to this." id="211" priority="Noteworthy" min="0" max="0">
             <description>Aoba gets more nervous when she has to strip while playing againts any males because she's not used to it.</description>
         </case>
+        <case name="Aobaverse" id="213" priority="Noteworthy" min="0" max="10">
+            <description>Aoba makes a slight comment about interacting with other worlds.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -346,8 +349,12 @@
         <response id="207" opponent="nico_robin" opponentId="305" />
         <response id="209" opponent="neptune" opponentId="38" />
         <response id="0" opponent="starfire" opponentId="157" />
+        <response id="214" opponent="jin" opponentId="20" />
     </responses>
-    <nextId>212</nextId>
+    <notes>
+        <note id="215">I'll be setting this line to be able to play when Aoba's been off the roster for an extended period.</note>
+    </notes>
+    <nextId>215</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aoba" />
@@ -359,9 +366,14 @@
         <marker scope="Public" name="Aoba_Artist-question" />
         <marker scope="Public" name="Aoba_bad_feel" />
         <marker scope="Public" name="Aoba_Birthday" />
+        <marker scope="Public" name="Aoba_Chie-Hajime" />
+        <marker scope="Public" name="Aoba_Chie-Remake" />
         <marker scope="Public" name="Aoba_Cow_Joke" />
         <marker scope="Public" name="Aoba_cum" />
         <marker scope="Public" name="Aoba_dignity1" />
+        <marker scope="Public" name="Aoba_Dunban-games" />
+        <marker scope="Public" name="Aoba_Dunban-games2" />
+        <marker scope="Public" name="Aoba_Dunban-games3" />
         <marker scope="Public" name="Aoba_fails" />
         <marker scope="Public" name="Aoba_fails-2" />
         <marker scope="Public" name="Aoba_Fina-warned" />
@@ -382,6 +394,7 @@
         <marker scope="Public" name="aoba_musician_question" />
         <marker scope="Public" name="Aoba_Nep-bath" />
         <marker scope="Public" name="Aoba_Nervous" />
+        <marker scope="Public" name="Aoba_Okino-young" />
         <marker scope="Public" name="Aoba_oof" />
         <marker scope="Public" name="Aoba_Petra-Language" />
         <marker scope="Public" name="Aoba_Q&amp;A_Cats" />
@@ -390,7 +403,11 @@
         <marker scope="Public" name="Aoba_Q&amp;A_games" />
         <marker scope="Public" name="Aoba_Q&amp;A_weather" />
         <marker scope="Public" name="Aoba_QnA_France" />
+        <marker scope="Public" name="Aoba_raynor-accident" />
+        <marker scope="Public" name="Aoba_raynor-accident2" />
         <marker scope="Public" name="Aoba_Raynor-work" />
+        <marker scope="Public" name="Aoba_Raynor-work2" />
+        <marker scope="Public" name="Aoba_Raynor-work3" />
         <marker scope="Public" name="Aoba_Rosa-Job" />
         <marker scope="Public" name="Aoba_Saki-work" />
         <marker scope="Public" name="Aoba_survives" />
@@ -427,6 +444,7 @@
         <marker scope="Public" name="Aoba-Catria_hair" />
         <marker scope="Public" name="Aoba-Colress_computers" />
         <marker scope="Public" name="Aoba-Dawn_return" />
+        <marker scope="Public" name="Aoba-defeattaste" />
         <marker scope="Public" name="AobaDevilishSide" />
         <marker scope="Public" name="AobaExpensive1" />
         <marker scope="Public" name="Aoba-Fate_fate" />
@@ -448,6 +466,7 @@
         <marker scope="Public" name="Aoba-Ignatz_glasses1" />
         <marker scope="Public" name="Aoba-Ignatz_paiting1" />
         <marker scope="Public" name="Aoba-Intoductions" />
+        <marker scope="Public" name="Aoba-Jin_cum" />
         <marker scope="Public" name="Aoba-Kora_bright" />
         <marker scope="Public" name="Aoba-Kumatora_intro" />
         <marker scope="Public" name="Aoba-Kumatora_intro2-1" />
@@ -474,11 +493,13 @@
         <marker scope="Public" name="Aoba-Player_attractive" />
         <marker scope="Public" name="Aoba-Player_attractive2" />
         <marker scope="Public" name="Aoba-Playstation-Xbox" />
+        <marker scope="Public" name="Aoba-Raynor_lap" />
         <marker scope="Public" name="Aoba-Raynor_scare" />
         <marker scope="Public" name="Aoba-Raynor_scare2" />
         <marker scope="Public" name="Aoba-Raynor_scare3" />
         <marker scope="Public" name="Aoba-Raynor_stare" />
         <marker scope="Public" name="Aoba-Raynor_trip" />
+        <marker scope="Public" name="Aoba-reveal" />
         <marker scope="Public" name="Aoba-Rosa_SO" />
         <marker scope="Public" name="aoba's_challenge" />
         <marker scope="Public" name="Aoba's-600th-Line!" />
@@ -500,10 +521,12 @@
         <marker scope="Public" name="Aoba-Short&amp;Small_Question" />
         <marker scope="Public" name="AobaSnacks1" />
         <marker scope="Public" name="Aoba's-pissed" />
+        <marker scope="Public" name="Aoba-Stocking_garter" />
         <marker scope="Public" name="Aoba-Streaming_partner" />
         <marker scope="Public" name="Aoba-Tomoko_job1" />
         <marker scope="Public" name="Aoba-Trixie_greet" />
         <marker scope="Public" name="AobaUnderstands" />
+        <marker scope="Public" name="Aoba-Universe" />
         <marker scope="Public" name="AobaWinded" />
         <marker scope="Public" name="AobaWinded2" />
         <marker scope="Public" name="Aoba-Wunwear" />

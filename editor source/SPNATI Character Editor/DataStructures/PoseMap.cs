@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,7 +8,7 @@ namespace SPNATI_Character_Editor
 {
 	public class PoseMap
 	{
-		private bool _initialized;
+		public bool initialized;
 		private Character _character;
 
 		private static readonly Regex _regex = new Regex(@"(\d+)-(.*)");
@@ -19,10 +19,10 @@ namespace SPNATI_Character_Editor
 		{
 			get
 			{
-				if (!_initialized)
+				if (!initialized)
 				{
 					Initialize();
-					_initialized = true;
+					initialized = true;
 				}
 				return _poses;
 			}
@@ -41,38 +41,96 @@ namespace SPNATI_Character_Editor
 		public List<PoseMapping> GetPoses(int stage)
 		{
 			List<PoseMapping> list = new List<PoseMapping>();
-			foreach (PoseMapping pose in Poses)
+			CharacterEditorData editorData = CharacterDatabase.GetEditorData(_character);
+
+			if (editorData != null)
 			{
-				if (!Filter(pose) && pose.ContainsStage(stage))
+				foreach (PoseMapping pose in Poses)
 				{
-					list.Add(pose);
+					if (!Filter(pose, editorData) && pose.ContainsStage(stage))
+					{
+						list.Add(pose);
+					}
+				}
+				if (!editorData.HidePrefixlessImages && stage >= 0)
+				{
+					list.AddRange(GetPoses(-1));
 				}
 			}
-			if (Config.UsePrefixlessImages && stage >= 0)
+			else
 			{
-				list.AddRange(GetPoses(-1));
+				foreach (PoseMapping pose in Poses)
+				{
+					if (pose.ContainsStage(stage))
+					{
+						list.Add(pose);
+					}
+				}
+				if (stage >= 0)
+				{
+					list.AddRange(GetPoses(-1));
+				}
 			}
 			return list;
 		}
 
-		private bool Filter(PoseMapping pose)
+		public List<PoseMapping> GetPortraitPoses()
 		{
-			string prefix = Config.PrefixFilter;
+			List<PoseMapping> list = new List<PoseMapping>();
+			CharacterEditorData editorData = CharacterDatabase.GetEditorData(_character);
+
+			if (editorData != null)
+			{
+				foreach (PoseMapping pose in Poses)
+				{
+					if (!FilterPortrait(pose, editorData) && pose.ContainsStage(0))
+					{
+						list.Add(pose);
+					}
+				}
+			}
+			else
+			{
+				foreach (PoseMapping pose in Poses)
+				{
+					if (pose.ContainsStage(0))
+					{
+						list.Add(pose);
+					}
+				}
+			}
+			return list;
+		}
+
+		private bool Filter(PoseMapping pose, CharacterEditorData editorData)
+		{
 			string key = pose.Key;
-			if (!string.IsNullOrEmpty(prefix) && key.StartsWith(prefix))
+			if (editorData.OnlyCustomPoses && !key.StartsWith("custom:"))
 			{
 				return true;
 			}
-
-			CharacterEditorData editorData = CharacterDatabase.GetEditorData(_character);
-			if (editorData != null)
+			foreach (string p in editorData.IgnoredPrefixes)
 			{
-				foreach (string p in editorData.IgnoredPrefixes)
+				if (key.StartsWith(p))
 				{
-					if (key.StartsWith(p))
-					{
-						return true;
-					}
+					return true;
+				}
+			}
+			return false;
+		}
+
+		private bool FilterPortrait(PoseMapping pose, CharacterEditorData editorData)
+		{
+			string key = pose.Key;
+			if (key.StartsWith("custom:"))
+			{
+				return true;
+			}			
+			foreach (string p in editorData.IgnoredPrefixes)
+			{
+				if (key.StartsWith(p))
+				{
+					return true;
 				}
 			}
 			return false;
@@ -233,10 +291,10 @@ namespace SPNATI_Character_Editor
 			{
 				return null;
 			}
-			if (!_initialized)
+			if (!initialized)
 			{
 				Initialize();
-				_initialized = true;
+				initialized = true;
 			}
 			int stage;
 			string id;

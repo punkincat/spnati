@@ -15,3 +15,14 @@
   color: #8F5B27;
   font-style: italic;
 }
+
+.dialogue .green[data-character="bobobo"] {
+  /*Makes things green!*/
+  color: #00E600;
+}
+
+.dialogue .yugi[data-character="bobobo"] {
+  /*Yugi Moto, the king of games, is speaking.*/
+  color: #8000FF;
+  text-shadow: 0 0 8px Black;
+}

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1661224326658</lastupdate>
+    <lastupdate>1693331637190</lastupdate>
     <enabled>false</enabled>
     <first>Y'shtola</first>
     <last>Rhul</last>
@@ -13,12 +13,15 @@
     <description>A miqo'te sorceress and a member of the Scions of the Seventh Dawn. She is an expert in the field of aetherology and well studied in the history of Eorzea and beyond. She assists the Warrior of Light in their struggle for peace.</description>
     <epilogue gender="male" markers="true" img="op-epiloguecard.PNG" hint="Play a game with a full table. Make sure one of your losses is during a hand after Y'shtola has lost her dress, but go on to win the whole thing.">Scion Fantasy</epilogue>
     <layers>8</layers>
+    <default-costume-name>Brave New Scion</default-costume-name>
     <alternates>
         <costume folder="opponents/reskins/yshtola_scion_vacationer/" img="0-coy.png" set="summer" label="Y'shtola">Scion Vacationer</costume>
-        <costume folder="opponents/reskins/yshtola_leporine_scion/" img="0-calm.png" set="easter" label="Y'shtola">Leporine Scion</costume>
-        <costume folder="opponents/reskins/yshtola_sweetheart_scion/" img="0-calm.png" set="valentines" label="Y'shtola">Sweetheart Scion</costume>
+        <costume folder="opponents/reskins/yshtola_leporine_scion/" img="0-content.png" set="easter" label="Y'shtola">Leporine Scion</costume>
+        <costume folder="opponents/reskins/yshtola_sweetheart_scion/" img="0-smug.png" set="valentines" label="Y'shtola">Sweetheart Scion</costume>
+        <costume folder="opponents/reskins/yshtola_forgiven_scion/" img="0-delighted.png" set="halloween" label="Y'shtola">Forgiven Scion</costume>
+        <costume folder="opponents/reskins/yshtola_scion_starlight/" img="0-thinking.png" set="xmas" label="Y'shtola">Scion Starlight</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>2126</lines>
+    <lines>2818</lines>
     <poses>241</poses>
 </opponent>

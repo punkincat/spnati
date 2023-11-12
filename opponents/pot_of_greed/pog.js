@@ -49,7 +49,7 @@ if (!pog) var pog = (function (root) {
         message: 'Initializing pog.js...',
         level: 'info'
     });
-    
+
     var SIX_STRAIGHT = 7.2;
     var STRAIGHT_PLUS_PAIR = 7.35;
     var THREE_PAIR = 7.5;
@@ -59,15 +59,15 @@ if (!pog) var pog = (function (root) {
     var TWO_THREE_OF_A_KINDS = 8.5;
     var FULLER_HOUSE = 8.8;
     var SEVEN_FLUSH = 9.5;
-    var STRAIGHT_FLUSH_PLUS_PAIR = 10;
-    var SIX_STRAIGHT_FLUSH = 11;
-    var FULLEST_HOUSE = 12;
-    var STRAIGHT_AND_PAIR_FLUSH = 13;
-    var ROYAL_FLUSH_PLUS_PAIR = 14;
-    var SIX_ROYAL_FLUSH = 15;
-    var ROYAL_STRAIGHT_AND_PAIR_FLUSH = 16;
-    var SEVEN_STRAIGHT_FLUSH = 17;
-    var SEVEN_ROYAL_FLUSH = 18;
+    var STRAIGHT_FLUSH_PLUS_PAIR = 11;
+    var SIX_STRAIGHT_FLUSH = 12;
+    var FULLEST_HOUSE = 13;
+    var STRAIGHT_AND_PAIR_FLUSH = 14;
+    var ROYAL_FLUSH_PLUS_PAIR = 15;
+    var SIX_ROYAL_FLUSH = 16;
+    var ROYAL_STRAIGHT_AND_PAIR_FLUSH = 17;
+    var SEVEN_STRAIGHT_FLUSH = 18;
+    var SEVEN_ROYAL_FLUSH = 19;
 
     function loadScript(scriptName) {
         console.log("[Pot of Greed] Loading module: " + scriptName);
@@ -144,7 +144,7 @@ if (!pog) var pog = (function (root) {
              * returns true.
              */
             var wrapper_args = arguments;
-            
+
             if (registeredHooks[func_id].instead[0]) {
                 try {
                     return registeredHooks[func_id].instead[0].apply(null, arguments);
@@ -176,7 +176,7 @@ if (!pog) var pog = (function (root) {
             }
         }
     }
-    
+
     root.startDealPhase = hookWrapper('startDealPhase');
     root.displayHand = hookWrapper('displayHand');
     root.clearHand = hookWrapper('clearHand');
@@ -189,24 +189,24 @@ if (!pog) var pog = (function (root) {
     root.Hand.prototype.toString = hookWrapper('Hand.prototype.toString');
     root.Hand.prototype.describe = hookWrapper('Hand.prototype.describe');
     root.restartGame = hookWrapper('restartGame');
-    
+
     function chooseCardAmt(player) {
         if (players[player].id === "pot_of_greed") {
             CARDS_PER_HAND = 7;
         }
     }
-    
+
     function resetCardAmt() {
         CARDS_PER_HAND = 5;
     }
-    
+
     registerHook('displayHand', 'pre', chooseCardAmt);
     registerHook('clearHand', 'post', resetCardAmt);
     registerHook('dealHand', 'pre', chooseCardAmt);
     registerHook('dealHand', 'post', resetCardAmt);
     registerHook('exchangeCards', 'pre', chooseCardAmt);
     registerHook('exchangeCards', 'post', resetCardAmt);
-    
+
     function addExtraCards() {
         for (var i = 1; i < players.length; i++) {
             if (players[i] && players[i].id === "pot_of_greed") {
@@ -224,7 +224,7 @@ if (!pog) var pog = (function (root) {
                                                                     "alt": "",
                                                                     "style": "visibility: hidden;"
                                                                 }));
-                
+
                 $cardCells[i] = [$("#player-" + i + "-card-1"),
                                  $("#player-" + i + "-card-2"),
                                  $("#player-" + i + "-card-3"),
@@ -232,13 +232,13 @@ if (!pog) var pog = (function (root) {
                                  $("#player-" + i + "-card-5"),
                                  $("#player-" + i + "-card-6"),
                                  $("#player-" + i + "-card-7")];
-                                 
+ 
                 players[i].hand.cards = Array(CARDS_PER_HAND + 2);
                 players[i].hand.tradeIns = Array(CARDS_PER_HAND + 2);
             }
         }
     }
-    
+
     function removeExtraCards() {
         for (var i = 1; i < $cardCells.length; i++) {
             if ($cardCells[i] && $cardCells[i].length > 5) {
@@ -247,14 +247,14 @@ if (!pog) var pog = (function (root) {
                                  $("#player-" + i + "-card-3"),
                                  $("#player-" + i + "-card-4"),
                                  $("#player-" + i + "-card-5")];
-                                 
+ 
                 $("#player-" + i + "-card-6").remove();
                 $("#player-" + i + "-card-7").remove();
             }
         }
     }
     registerHook('restartGame', 'post', removeExtraCards);
-    
+
     // exactly the existing Deck class with PoG support on rigFor
     // Note: please make this less copy-paste later, but I don't know how
     function pogDeck() {
@@ -293,24 +293,24 @@ if (!pog) var pog = (function (root) {
 
         this.rigFor = function(player) {
             var rigSuit = getRandomNumber(0, 4);
-            
+
             var handCards = CARDS_PER_HAND;
-            
+
             // give PoG a seven-royal-flush
             if (players[player] && players[player].id === "pot_of_greed") {
                 handCards += 2;
             }
-            
+
             for (var n = 0; n < handCards; n++) {
                 var i = cards.length - 1 - (player * CARDS_PER_HAND + n);
-                
+
                 // extra two per PoG
                 for (var k = 1; k < player; k++) {
                     if (players[k] && players[k].id === "pot_of_greed") {
                         i -= 2;
                     }
                 }
-                
+
                 for (var j = 0; j < cards.length; j++) {
                     if (cards[j].suit == rigSuit && cards[j].rank == 14 - n && i != j) {
                         var c = cards[i]; cards[i] = cards[j]; cards[j] = c;
@@ -319,7 +319,7 @@ if (!pog) var pog = (function (root) {
             }
         }
     }
-    
+
     // exactly the existing startDealPhase function with PoG support
     // Note: please make this less copy-paste later, but I don't know how
     function pogStartDealPhase () {
@@ -331,12 +331,12 @@ if (!pog) var pog = (function (root) {
             message: 'Starting round '+(currentRound+1)+'...',
             level: 'info'
         });
-            
+
         // add the extra PoG cards in round 1
         if (currentRound === 0) {
             addExtraCards();
         }
-        
+
         /* dealing cards */
         dealLock = getNumPlayersInStage(STATUS_ALIVE) * CARDS_PER_HAND;
         for (var i = 0; i < players.length; i++) {
@@ -344,7 +344,7 @@ if (!pog) var pog = (function (root) {
                 /* collect the player's hand */
                 chooseCardAmt(i);
                 clearHand(i);
-                
+
                 if (i !== 0) {
                     $gameOpponentAreas[i-1].removeClass('opponent-revealed-cards opponent-lost');
                 }
@@ -365,7 +365,7 @@ if (!pog) var pog = (function (root) {
                     if (players[i].id === "pot_of_greed") {
                         dealLock += 2;
                     }
-                    
+
                     /* deal out a new hand to this player */
                     dealHand(i, numPlayers, n++);
                 } else {
@@ -386,9 +386,9 @@ if (!pog) var pog = (function (root) {
         for (var i = 0; i < players.length; i++) {
             $gameLabels[i].removeClass("loser tied");
         }
-        
+
         var realDelay = ANIM_DELAY * CARDS_PER_HAND * numPlayers;
-        
+
         for (var i = 0; i < players.length; i++) {
             // PoG gets 2 extra
             if (players[i] && players[i].id === "pot_of_greed" && !players[i].out) {
@@ -399,7 +399,7 @@ if (!pog) var pog = (function (root) {
         timeoutID = window.setTimeout(checkDealLock, realDelay + ANIM_TIME);
     }
     registerHook('startDealPhase', 'instead', pogStartDealPhase);
-    
+
     function markAllOfRank(rank, cards, usedCards) {
         for (var i = 0; i < cards.length; i++) {
             if (cards[i].rank === rank) {
@@ -407,7 +407,7 @@ if (!pog) var pog = (function (root) {
             }
         }
     }
-    
+
     function markAllOfSuit(suit, cards, usedCards) {
         for (var i = 0; i < cards.length; i++) {
             if (cards[i].suit === suit) {
@@ -415,7 +415,7 @@ if (!pog) var pog = (function (root) {
             }
         }
     }
-    
+
     function markAllInStraight(topRank, len, cards, usedCards) {
         for (var i = 0; i < cards.length; i++) {
             if (cards[i].rank <= topRank && cards[i].rank > (topRank - len)) {
@@ -423,46 +423,46 @@ if (!pog) var pog = (function (root) {
             }
         }
     }
-    
+
     function hasSameCardsMarked(markCards1, markCards2, requiredNum) {
         var numSame = 0;
-        
+
         for (var i = 0; i < markCards1.length; i++) {
             if (markCards1[i] && markCards2[i]) {
                 numSame++;
             }
         }
-        
+
         return (numSame >= requiredNum);
     }
-    
+
     function hasAllCardsMarked(markCards1, markCards2) {
         for (var i = 0; i < markCards1.length; i++) {
             if (!markCards1[i] && !markCards2[i]) {
                 return false;
             }
         }
-        
+
         return true;
     }
-    
+
     // exactly the existing Hand.prototype.determine function with PoG support
     // Note: please make this less copy-paste later, but I don't know how
     function pogHandDetermine() {
         /* start by getting a shorthand variable and resetting */
-        
+
         // garbage and easily-broken workaround for no "this" due to hook function
         var hand;
-        
+
         if (i == null) {
             hand = players[currentTurn].hand;
         } else {
             hand = players[i].hand;
         }
-        
+
         // I have no idea why I need to check for this, but...
         if (hand == null) return;
-        
+
         /* look for each strength, in composition */
         var have_pair = [];
         var have_three_kind = [];
@@ -479,7 +479,7 @@ if (!pog) var pog = (function (root) {
         hand.suits = [0, 0, 0, 0];
         hand.strength = NONE;
         hand.value = [];
-        
+
         if (hand.cards.length > CARDS_PER_HAND) {
             pairedCards = [false, false, false, false, false, false, false];
             straightCards = [false, false, false, false, false, false, false];
@@ -495,7 +495,7 @@ if (!pog) var pog = (function (root) {
             hand.suits[card.suit]++;
         }, hand);
         hand.ranks[0] = hand.ranks[13];
-        
+
         /* look for four of a kind, three of a kind, and pairs */
         for (var i = hand.ranks.length-1; i > 0; i--) {
             if (hand.ranks[i] == 4) {
@@ -509,7 +509,7 @@ if (!pog) var pog = (function (root) {
                 markAllOfRank(i+1, hand.cards, pairedCards);
             }
         }
-        
+
         /* determine two/three/four of a kind and combinations thereof */
         if (have_four_kind && have_three_kind.length > 0) {
             hand.strength = FULLEST_HOUSE;
@@ -530,7 +530,7 @@ if (!pog) var pog = (function (root) {
         } else if (have_pair.length > 0) {
             hand.strength = have_pair.length == 2 ? TWO_PAIR : PAIR;
         }
-        
+
         /* look for straights and flushes */
         /* first, straights */
         var sequence = 0;
@@ -561,7 +561,7 @@ if (!pog) var pog = (function (root) {
                 }
             }
         }
-        
+
         /* second, flushes */
         for (var i = 0; i < hand.suits.length; i++) {
             if (hand.suits[i] == CARDS_PER_HAND + 2) {
@@ -585,10 +585,10 @@ if (!pog) var pog = (function (root) {
                 break;
             }
         }
-        
+
         /* determine all flushes, all straights, and high card. */
         have_straight_plus_pair = !have_six_straight && have_straight && (have_pair.length > 0 || have_three_kind.length > 0) && hasAllCardsMarked(straightCards, pairedCards);
-        
+
         if (have_seven_flush && have_seven_straight == 14) {
             hand.strength = SEVEN_ROYAL_FLUSH;
         } else if (have_seven_flush && have_straight == 14 && have_straight_plus_pair) {
@@ -626,7 +626,7 @@ if (!pog) var pog = (function (root) {
         } else if (hand.strength === NONE) {
             hand.strength = HIGH_CARD;
         }
-        
+
         switch (hand.strength) {
         case PAIR:
         case TWO_PAIR:
@@ -664,7 +664,7 @@ if (!pog) var pog = (function (root) {
             } else {
                 hand.value = [have_straight, have_straight-1, have_straight-2, have_straight-3, have_straight-4];
             }
-            
+
             if (hand.strength !== STRAIGHT && hand.strength !== STRAIGHT_FLUSH) {
                 if (have_three_kind.length > 0) {
                     hand.value.push(have_three_kind[0]);
@@ -710,7 +710,7 @@ if (!pog) var pog = (function (root) {
         case SEVEN_ROYAL_FLUSH:
             break;
         }
-                
+
         for (var i = hand.ranks.length-1; i > 0; i--) {
             if (hand.ranks[i] == 1) {
                 hand.value.push(i+1);
@@ -724,7 +724,7 @@ if (!pog) var pog = (function (root) {
         console.log("Player has " +pogHandStrengthToString(hand.strength, hand.cards.length)+" of value "+hand.value);
     }
     registerHook('Hand.prototype.determine', 'instead', pogHandDetermine);
-    
+
     // exactly the existing handStrengthToString function with PoG support
     function pogHandStrengthToString (number, numCards) {
         switch (number) {
@@ -752,7 +752,7 @@ if (!pog) var pog = (function (root) {
             case SIX_ROYAL_FLUSH:               return "Six-card royal flush";
             case ROYAL_STRAIGHT_AND_PAIR_FLUSH: return "Royal straight + pair flush";
             case SEVEN_ROYAL_FLUSH:             return "Seven-card royal flush";
-            
+
             case STRAIGHT:
                 if (numCards > 5) {
                     return "Five-card straight";
@@ -785,13 +785,13 @@ if (!pog) var pog = (function (root) {
                 }
         }
     }
-    
+
     function pogHandToString() {
         // broken but nothing uses it
         return pogHandStrengthToString(this.strength, this.cards.length);
     }
     registerHook('Hand.prototype.toString', 'instead', pogHandToString);
-    
+
     // exactly the existing handStrengthFromString function with PoG support
     function pogHandStrengthFromString (string) {
         if (!string) return NaN;
@@ -819,7 +819,7 @@ if (!pog) var pog = (function (root) {
         case "six-card royal flush":        return SIX_ROYAL_FLUSH;
         case "royal straight + pair flush": return ROYAL_STRAIGHT_AND_PAIR_FLUSH;
         case "seven-card royal flush":      return SEVEN_ROYAL_FLUSH;
-        
+
         case "straight":
         case "five-card straight":
             return STRAIGHT;
@@ -839,11 +839,11 @@ if (!pog) var pog = (function (root) {
         return NaN;
     }
     registerHook('handStrengthFromString', 'instead', pogHandStrengthFromString);
-    
+
     function pogDescribeHand(with_article) {
         // garbage and easily-broken workaround for no "this" due to hook function
         var hand = player.hand;
-        
+
         var use_article = false;
         var description;
         switch (hand.strength) {
@@ -907,7 +907,7 @@ if (!pog) var pog = (function (root) {
         } else return description;
     }
     registerHook('Hand.prototype.describe', 'instead', pogDescribeHand);
-    
+
     function pogDescribeHandFormal(hand) {
         var description = pogHandStrengthToString(hand.strength, hand.cards.length) + ', ';
         switch (hand.strength) {
@@ -966,11 +966,11 @@ if (!pog) var pog = (function (root) {
         }
         return description;
     }
-    
+
     function pogShowHand (player) {
         displayHand(player, true);
         resetCardAmt(); // couldn't do as hook since it would break exchangeCards
-        
+
         if (player > 0) {
             $gameOpponentAreas[player-1].attr('data-original-title', pogDescribeHandFormal(players[player].hand));
             if (EXPLAIN_ALL_HANDS) $gameOpponentAreas[player-1].tooltip('show');
@@ -991,9 +991,9 @@ if (!pog) var pog = (function (root) {
             WORST      : "worst",
             KEEPALL    : "keep-all"
         };
-        
+
         var numCards = CARDS_PER_HAND;
-        
+
         if (player.id === "pot_of_greed") {
             numCards += 2;
         }
@@ -1051,10 +1051,10 @@ if (!pog) var pog = (function (root) {
               console.log("No intelligence match found for " + player.id + ". Defaulting to no-swap.");
           }
         }
-        
+
         /* determine the current hand */
         player.hand.determine();
-        
+
         /* collect the ranks and suits of the cards */
         var hand = player.hand.cards;
 
@@ -1067,13 +1067,13 @@ if (!pog) var pog = (function (root) {
                 player.hand.tradeIns = hand.map(c => sortedRanks.indexOf(c.rank) > 1);
                 return;
             }
-            
+
             if (player.id === "pot_of_greed") {
                 player.hand.tradeIns = [false, false, false, false, false, false, false];
             } else {
                 player.hand.tradeIns = [false, false, false, false, false];
             }
-            
+
             for (var i = 0; i < hand.length; i++) {
                 if (hand[i].rank >= 12) {
                     player.hand.tradeIns[i] = true;
@@ -1099,7 +1099,8 @@ if (!pog) var pog = (function (root) {
             }
 
             /*choose number of cards to trade in*/
-            var toTrade = Math.floor((Math.random()) * (numCards + 1));
+            /*being always 0-5 cards is not an error - Pot of Greed is intentionally only allowed to trade up to 5 to prevent exhausting the deck*/
+            var toTrade = Math.floor((Math.random()) * 6);
 
             /*choose cards at random to get rid of*/
             for (var i = 0; i < hand.length; i++) {
@@ -1123,17 +1124,68 @@ if (!pog) var pog = (function (root) {
         } else {
             /* if the current hand is good enough, then take a pre-determined action */
             if (player.hand.strength >= STRAIGHT) {
-                /* give up nothing */
                 if (player.id === "pot_of_greed") {
+                    if (player.hand.strength == SIX_ROYAL_FLUSH || player.hand.strength == SIX_STRAIGHT_FLUSH || player.hand.strength == SIX_STRAIGHT) {
+                        /* Keep the straight - discard the remaining card */
+                        player.hand.tradeIns = hand.map(function(c) { c.rank != player.hand.value[0] && c.rank != player.hand.value[1]
+                                                                      && c.rank != player.hand.value[2] && c.rank != player.hand.value[3]
+                                                                      && c.rank != player.hand.value[4] && c.rank != player.hand.value[5]; });
+                        console.log("Hand is good, will trade in one card. "+player.hand.tradeIns);
+                        return;
+                    }
+
+                    if (player.hand.strength == ROYAL_FLUSH || player.hand.strength == STRAIGHT_FLUSH || player.hand.strength == STRAIGHT) {
+                        /* Keep the straight - discard the rest */
+                        player.hand.tradeIns = hand.map(function(c) { c.rank != player.hand.value[0] && c.rank != player.hand.value[1]
+                                                                      && c.rank != player.hand.value[2] && c.rank != player.hand.value[3]
+                                                                      && c.rank != player.hand.value[4] });
+                        console.log("Hand is good, will trade in two cards. "+player.hand.tradeIns);
+                        return;
+                    }
+
+                    if (player.hand.strength == FULLER_HOUSE || player.hand.strength == TWO_THREE_OF_A_KINDS || player.hand.strength == FULL_HOUSE) {
+                        /* Keep the good hand - discard the remaining card(s) */
+                        player.hand.tradeIns = hand.map(function(c) { c.rank != player.hand.value[0] && c.rank != player.hand.value[1]; });
+                        console.log("Hand is good, will trade in one or two cards. "+player.hand.tradeIns);
+                        return;
+                    }
+
+                    if (player.hand.strength == FOUR_OF_A_KIND) {
+                        /* Keep the four-of-a-kind (rank = value[0]), discard the rest */
+                        player.hand.tradeIns = hand.map(function(c) { return c.rank != player.hand.value[0]; });
+                        console.log("Hand is good, trading in three cards. "+player.hand.tradeIns);
+                        return;
+                    }
+
+                    if (player.hand.strength == SIX_FLUSH || player.hand.strength == FLUSH) {
+                        /* Keep the flush, discard the rest */
+                        player.hand.tradeIns = hand.map(function(c) { return player.hand.suits[c.suit] == 1 || player.hand.suits[c.suit] == 2; });
+                        console.log("Hand is good, trading in one or two cards. "+player.hand.tradeIns);
+                        return;
+                    }
+
+                    if (player.hand.strength == THREE_PAIR) {
+                        /* Discard the odd card (value[3]) */
+                        player.hand.tradeIns = hand.map(function(c) { return c.rank != player.hand.value[0] && c.rank != player.hand.value[1]
+                                                                             && c.rank != player.hand.value[2]; });
+                        console.log("Hand is good, will trade in one card. "+player.hand.tradeIns);
+                        return;
+                    }
+
+                    /* otherwise it's one of the seven-card hands - give up nothing */
                     player.hand.tradeIns = [false, false, false, false, false, false, false];
+
+                    console.log("Hand is really good, will trade in nothing. "+player.hand.tradeIns);
+                    return;
                 } else {
+                    /* give up nothing */
                     player.hand.tradeIns = [false, false, false, false, false];
+
+                    console.log("Hand is really good, will trade in nothing. "+player.hand.tradeIns);
+                    return;
                 }
-                
-                console.log("Hand is really good, will trade in nothing. "+player.hand.tradeIns);
-                return;
             }
-            
+
             /* if the current hand is good enough, then take a pre-determined action */
             if (player.hand.strength == THREE_OF_A_KIND) {
                 /* Keep the three cards (rank value[0]) - discard the rest */
@@ -1141,7 +1193,7 @@ if (!pog) var pog = (function (root) {
                 console.log("Hand is good, will trade in two cards. "+player.hand.tradeIns);
                 return;
             }
-            
+
             /* if the current hand is good enough, then take a pre-determined action */
             if (player.hand.strength == TWO_PAIR) {
                 /* Discard the odd card (value[2]) */
@@ -1212,18 +1264,18 @@ if (!pog) var pog = (function (root) {
                     return;
                 }
             }
-            
+
             /* end of function, otherwise just trade in everything */
             if (player.id === "pot_of_greed") {
                 player.hand.tradeIns = [true, true, true, true, true, true, true];
             } else {
                 player.hand.tradeIns = [true, true, true, true, true];
             }
-            
+
             console.log("Hand is horrid, trading in everything. "+player.hand.tradeIns);
             return;
         }
-    
+
     }
     registerHook('determineAIAction', 'instead', pogDetermineAIAction);
 

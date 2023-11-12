@@ -1,0 +1,25 @@
+.dialogue .example[data-character="leon"] {
+  /*This is an example style.*/
+  color: blue;
+}
+
+.dialogue .leon[data-character="leon"] {
+  /*Colored dialogue for Leon.*/
+  color: #284D9A;
+}
+
+.dialogue .rouge[data-character="leon"] {
+  /*Colored dialogue for Rouge.*/
+  color: #CB337E;
+}
+
+.dialogue .rougebig[data-character="leon"] {
+  /*Large colored dialogue for Rouge.*/
+  color: #CB337E;
+  font-size: 150%;
+}
+
+.dialogue .tao[data-character="leon"] {
+  /*Colored dialogue for Hu Tao*/
+  color: #804040;
+}

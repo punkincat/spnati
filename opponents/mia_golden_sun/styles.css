@@ -1,0 +1,29 @@
+.dialogue-bubble[data-character="mia_golden_sun"][data-marker-enable-custom-box] {
+	background: #006085;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 0.5em 0.5em;
+    top: 4%;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    min-height: 0;
+}
+
+.dialogue [data-character="mia_golden_sun"][data-marker-enable-custom-box] {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 115%;
+    line-height: 0;
+    font-style: italic;
+}
+
+.dialogue-bubble[data-character="mia_golden_sun"][data-marker-enable-custom-box]::before {
+    bottom: -200%;
+}
+
+.dialogue .dunban[data-character="mia_golden_sun"] {
+  /**/
+  color: #DD6D5B;
+}

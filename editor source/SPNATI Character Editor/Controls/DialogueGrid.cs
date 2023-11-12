@@ -1,9 +1,8 @@
-﻿using Desktop.Skinning;
+using Desktop.Skinning;
 using SPNATI_Character_Editor.Forms;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -291,7 +290,68 @@ namespace SPNATI_Character_Editor.Controls
 		/// <param name="retainValue"></param>
 		public void UpdateAvailableImagesForCase(HashSet<int> selectedStages, bool retainValue)
 		{
-			if (_selectedCase == null) { return; }
+			if (_character == null || _selectedCase == null) { return; }
+
+			HashSet<int> imageStages = new HashSet<int>(selectedStages, selectedStages.Comparer);
+
+			if (_selectedCase.Tag == "stripped")
+			{
+				if (_character.CurrentSkin != null)
+				{
+					foreach (int stage in selectedStages)
+					{
+						if (stage < _character.Layers)
+						{
+							if (_character.CurrentSkin.Wardrobe[_character.Layers - stage - 1].Type == "skip")
+							{
+								imageStages.Remove(stage);
+								int i = stage;
+								while (_character.CurrentSkin.Wardrobe[_character.Layers - i - 1].Type == "skip" && i < _character.Layers)
+								{
+									i++;
+									if (i == _character.Layers) { break; }
+								}								
+								if (!imageStages.Contains(i))
+								{
+									imageStages.Add(i);
+								}
+							}
+						}
+						else
+						{
+							imageStages.Remove(stage);
+						}
+					}
+				}
+				else
+				{
+					foreach (int stage in selectedStages)
+					{
+						if (stage < _character.Layers)
+						{
+							if (_character.Wardrobe[_character.Layers - stage - 1].Type == "skip")
+							{
+								imageStages.Remove(stage);
+								int i = stage;
+								while (_character.Wardrobe[_character.Layers - i - 1].Type == "skip" && i < _character.Layers)
+								{
+									i++;
+									if (i == _character.Layers) { break; }
+								}
+								if (!imageStages.Contains(i))
+								{
+									imageStages.Add(i);
+								}
+							}
+						}
+						else
+						{
+							imageStages.Remove(stage);
+						}
+					}
+				}
+			}
+
 			List<object> values = new List<object>();
 			if (retainValue)
 			{
@@ -305,52 +365,70 @@ namespace SPNATI_Character_Editor.Controls
 
 			bool hasStageImages = _selectedCase.Lines.Find(l => l.Images.Count > 0) != null;
 			int stageId = _selectedStage == null ? 0 : _selectedStage.Id;
-			SkinnedDataGridViewComboBoxColumn col = gridDialogue.Columns["ColImage"] as SkinnedDataGridViewComboBoxColumn;
-			col.Items.Clear();
-			HashSet<PoseMapping> images = new HashSet<PoseMapping>();
-			if (_character != null)
+			if (_selectedCase.Tag == "stripped" && stageId < _character.Layers)
 			{
-				if (_selectedStage == null)
+				int i = stageId;
+				if (_character.CurrentSkin != null)
 				{
-					images.AddRange(_character.PoseLibrary.GetPoses(0));
-					foreach (var image in images)
+					while (_character.CurrentSkin.Wardrobe[_character.Layers - i - 1].Type == "skip" && i < _character.Layers)
 					{
-						col.Items.Add(image);
+						i++;
+						if (i == _character.Layers) { break; }
 					}
 				}
 				else
 				{
-					if (hasStageImages)
+					while (_character.Wardrobe[_character.Layers - i - 1].Type == "skip" && i < _character.Layers)
 					{
-						foreach (int selectedStage in _selectedCase.Stages)
-						{
-							images.AddRange(_character.PoseLibrary.GetPoses(selectedStage));
-						}
+						i++;
+						if (i == _character.Layers) { break; }
 					}
-					else
+				}
+				stageId = i;
+			}
+			SkinnedDataGridViewComboBoxColumn col = gridDialogue.Columns["ColImage"] as SkinnedDataGridViewComboBoxColumn;
+			col.Items.Clear();
+			HashSet<PoseMapping> images = new HashSet<PoseMapping>();
+			if (_selectedStage == null)
+			{
+				images.AddRange(_character.PoseLibrary.GetPoses(0));
+				foreach (var image in images)
+				{
+					col.Items.Add(image);
+				}
+			}
+			else
+			{
+				if (hasStageImages)
+				{
+					foreach (int selectedStage in _selectedCase.Stages)
 					{
-						images.AddRange(_character.PoseLibrary.GetPoses(stageId));
+						images.AddRange(_character.PoseLibrary.GetPoses(selectedStage));
 					}
-					
-					foreach (PoseMapping image in images)
+				}
+				else
+				{
+					images.AddRange(_character.PoseLibrary.GetPoses(stageId));
+				}
+				
+				foreach (PoseMapping image in images)
+				{
+					bool isGeneric = image.IsGeneric;
+					bool allExist = true;
+					if (!isGeneric && !hasStageImages)
 					{
-						bool isGeneric = image.IsGeneric;
-						bool allExist = true;
-						if (!isGeneric && !hasStageImages)
+						foreach (int stage in imageStages)
 						{
-							foreach (int stage in selectedStages)
+							if (!image.ContainsStage(stage))
 							{
-								if (!image.ContainsStage(stage))
-								{
-									allExist = false;
-									break;
-								}
+								allExist = false;
+								break;
 							}
 						}
-						if (allExist)
-						{
-							col.Items.Add(image);
-						}
+					}
+					if (allExist)
+					{
+						col.Items.Add(image);
 					}
 				}
 			}
@@ -1215,6 +1293,7 @@ namespace SPNATI_Character_Editor.Controls
 							otherLine.OneShotId = 0;
 						}
 						otherLine.Weight = line.Weight;
+						otherLine.DialogueOperations = line.DialogueOperations;
 						AddLineToDialogueGrid(otherLine, row);
 					}
 				}

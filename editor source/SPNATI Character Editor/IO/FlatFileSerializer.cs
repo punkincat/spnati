@@ -1,4 +1,4 @@
-﻿using Desktop.CommonControls;
+using Desktop.CommonControls;
 using SPNATI_Character_Editor.DataStructures;
 using SPNATI_Character_Editor.IO;
 using System;
@@ -29,6 +29,7 @@ namespace SPNATI_Character_Editor
 			}
 			lines.Add("gender=" + character.Gender);
 			lines.Add("size=" + character.Size);
+			lines.Add("default costume=" + character.Metadata.DefaultCostumeName);
 			foreach (StageSpecificValue intelligence in character.Intelligence)
 			{
 				lines.Add("intelligence=" + intelligence.Value + (intelligence.Stage != 0 ? "," + intelligence.Stage : ""));
@@ -59,7 +60,7 @@ namespace SPNATI_Character_Editor
 			lines.Add("");
 			lines.Add("#required for meta.xml");
 			lines.Add("#select screen image");
-			lines.Add("pic=" + Path.GetFileNameWithoutExtension(metadata.Portrait));
+			lines.Add("pic=" + Path.GetFileNameWithoutExtension(metadata.Portrait.Image));
 			lines.Add("from=" + metadata.Source);
 			lines.Add("writer=" + metadata.Writer);
 			lines.Add("artist=" + metadata.Artist);
@@ -625,145 +626,9 @@ namespace SPNATI_Character_Editor
 		private static List<string> GetFilters(Case stageCase)
 		{
 			List<string> filters = new List<string>();
-			if (!string.IsNullOrEmpty(stageCase.Target))
-			{
-				filters.Add("target:" + stageCase.Target);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TargetStage))
-			{
-				filters.Add("targetStage:" + stageCase.TargetStage);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TargetStatus))
-			{
-				filters.Add("targetStatus:" + stageCase.TargetStatus);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TargetLayers))
-			{
-				filters.Add("targetLayers:" + stageCase.TargetLayers);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TargetStartingLayers))
-			{
-				filters.Add("targetStartingLayers:" + stageCase.TargetStartingLayers);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TargetTimeInStage))
-			{
-				filters.Add("targetTimeInStage:" + stageCase.TargetTimeInStage);
-			}
-			if (!string.IsNullOrEmpty(stageCase.ConsecutiveLosses))
-			{
-				filters.Add("consecutiveLosses:" + stageCase.ConsecutiveLosses);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TargetHand))
-			{
-				filters.Add("oppHand:" + stageCase.TargetHand);
-			}
-			if (!string.IsNullOrEmpty(stageCase.Filter))
-			{
-				filters.Add("filter:" + stageCase.Filter);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TargetSaidMarker))
-			{
-				filters.Add("targetSaidMarker:" + stageCase.TargetSaidMarker);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TargetNotSaidMarker))
-			{
-				filters.Add("targetNotSaidMarker:" + stageCase.TargetNotSaidMarker);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TargetSayingMarker))
-			{
-				filters.Add("targetSayingMarker:" + stageCase.TargetSayingMarker);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TargetSaying))
-			{
-				filters.Add("targetSaying:" + stageCase.TargetSaying.Replace(",", "&comma;"));
-			}
-			if (!string.IsNullOrEmpty(stageCase.TargetSaid))
-			{
-				filters.Add("targetSaid:" + stageCase.TargetSaid.Replace(",", "&comma;"));
-			}
-			if (!string.IsNullOrEmpty(stageCase.AlsoPlaying))
-			{
-				filters.Add("alsoPlaying:" + stageCase.AlsoPlaying);
-			}
-			if (!string.IsNullOrEmpty(stageCase.AlsoPlayingStage))
-			{
-				filters.Add("alsoPlayingStage:" + stageCase.AlsoPlayingStage);
-			}
-			if (!string.IsNullOrEmpty(stageCase.AlsoPlayingTimeInStage))
-			{
-				filters.Add("alsoPlayingTimeInStage:" + stageCase.AlsoPlayingTimeInStage);
-			}
-			if (!string.IsNullOrEmpty(stageCase.AlsoPlayingHand))
-			{
-				filters.Add("alsoPlayingHand:" + stageCase.AlsoPlayingHand);
-			}
-			if (!string.IsNullOrEmpty(stageCase.AlsoPlayingSaidMarker))
-			{
-				filters.Add("alsoPlayingSaidMarker:" + stageCase.AlsoPlayingSaidMarker);
-			}
-			if (!string.IsNullOrEmpty(stageCase.AlsoPlayingNotSaidMarker))
-			{
-				filters.Add("alsoPlayingNotSaidMarker:" + stageCase.AlsoPlayingNotSaidMarker);
-			}
-			if (!string.IsNullOrEmpty(stageCase.AlsoPlayingSayingMarker))
-			{
-				filters.Add("alsoPlayingSayingMarker:" + stageCase.AlsoPlayingSayingMarker);
-			}
-			if (!string.IsNullOrEmpty(stageCase.AlsoPlayingSaying))
-			{
-				filters.Add("alsoPlayingSaying:" + stageCase.AlsoPlayingSaying.Replace(",", "&comma;"));
-			}
-			if (!string.IsNullOrEmpty(stageCase.AlsoPlayingSaid))
-			{
-				filters.Add("alsoPlayingSaid:" + stageCase.AlsoPlayingSaid.Replace(",", "&comma;"));
-			}
-			if (!string.IsNullOrEmpty(stageCase.HasHand))
-			{
-				filters.Add("hasHand:" + stageCase.HasHand);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TimeInStage))
-			{
-				filters.Add("timeInStage:" + stageCase.TimeInStage);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TotalMales))
-			{
-				filters.Add("totalMales:" + stageCase.TotalMales);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TotalFemales))
-			{
-				filters.Add("totalFemales:" + stageCase.TotalFemales);
-			}
 			if (!string.IsNullOrEmpty(stageCase.TotalRounds))
 			{
 				filters.Add("totalRounds:" + stageCase.TotalRounds);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TotalPlaying))
-			{
-				filters.Add("totalAlive:" + stageCase.TotalPlaying);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TotalExposed))
-			{
-				filters.Add("totalExposed:" + stageCase.TotalExposed);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TotalNaked))
-			{
-				filters.Add("totalNaked:" + stageCase.TotalNaked);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TotalMasturbating))
-			{
-				filters.Add("totalMasturbating:" + stageCase.TotalMasturbating);
-			}
-			if (!string.IsNullOrEmpty(stageCase.TotalFinished))
-			{
-				filters.Add("totalFinished:" + stageCase.TotalFinished);
-			}
-			if (!string.IsNullOrEmpty(stageCase.SaidMarker))
-			{
-				filters.Add("saidMarker:" + stageCase.SaidMarker);
-			}
-			if (!string.IsNullOrEmpty(stageCase.NotSaidMarker))
-			{
-				filters.Add("notSaidMarker:" + stageCase.NotSaidMarker);
 			}
 			if (!string.IsNullOrEmpty(stageCase.AddCharacterTags))
 			{
@@ -904,7 +769,10 @@ namespace SPNATI_Character_Editor
 						character.Tags.Add(tag);
 						break;
 					case "pic":
-						character.Metadata.Portrait = value;
+						character.Metadata.Portrait.Image = value;
+						break;
+					case "default costume":
+						character.Metadata.DefaultCostumeName = value;
 						break;
 					case "from":
 						character.Metadata.Source = value;
@@ -1327,121 +1195,13 @@ namespace SPNATI_Character_Editor
 				TriggerDefinition trigger = TriggerDatabase.GetTrigger(lineCase.Tag);
 				string key = kvp[0].ToLower();
 				string value = kvp[1];
-				//Targets
-				if (trigger.HasTarget)
-				{
-					switch (key)
-					{
-						case "target":
-							lineCase.Target = value;
-							break;
-						case "opphand":
-							lineCase.TargetHand = value;
-							break;
-						case "filter":
-							lineCase.Filter = value;
-							break;
-						case "targetstage":
-							lineCase.TargetStage = value;
-							break;
-						case "targetstatus":
-							lineCase.TargetStatus = value;
-							break;
-						case "targetlayers":
-							lineCase.TargetLayers = value;
-							break;
-						case "targetstartinglayers":
-							lineCase.TargetStartingLayers = value;
-							break;
-						case "targettimeinstage":
-							lineCase.TargetTimeInStage = value;
-							break;
-						case "targetsaidmarker":
-							lineCase.TargetSaidMarker = value;
-							break;
-						case "targetnotsaidmarker":
-							lineCase.TargetNotSaidMarker = value;
-							break;
-						case "targetsayingmarker":
-							lineCase.TargetSayingMarker = value;
-							break;
-						case "targetsaying":
-							lineCase.TargetSaying = value.Replace("&comma;", ",");
-							break;
-						case "targetsaid":
-							lineCase.TargetSaid = value.Replace("&comma;", ",");
-							break;
-					}
-				}
+				//Targets (NOW EMPTY)
 
 				//Also playing and misc
 				switch (key)
 				{
-					case "alsoplaying":
-						lineCase.AlsoPlaying = value;
-						break;
-					case "alsoplayinghand":
-						lineCase.AlsoPlayingHand = value;
-						break;
-					case "alsoplayingstage":
-						lineCase.AlsoPlayingStage = value;
-						break;
-					case "alsoplayingtimeinstage":
-						lineCase.AlsoPlayingTimeInStage = value;
-						break;
-					case "alsoplayingsaidmarker":
-						lineCase.AlsoPlayingSaidMarker = value;
-						break;
-					case "alsoplayingsayingmarker":
-						lineCase.AlsoPlayingSayingMarker = value;
-						break;
-					case "alsoplayingnotsaidmarker":
-						lineCase.AlsoPlayingNotSaidMarker = value;
-						break;
-					case "alsoplayingsaying":
-						lineCase.AlsoPlayingSaying = value.Replace("&comma;", ",");
-						break;
-					case "alsoplayingsaid":
-						lineCase.AlsoPlayingSaid = value.Replace("&comma;", ",");
-						break;
-					case "hashand":
-						lineCase.HasHand = value;
-						break;
-					case "totalfemales":
-						lineCase.TotalFemales = value;
-						break;
-					case "totalmales":
-						lineCase.TotalMales = value;
-						break;
 					case "totalrounds":
 						lineCase.TotalRounds = value;
-						break;
-					case "totalalive":
-						lineCase.TotalPlaying = value;
-						break;
-					case "totalexposed":
-						lineCase.TotalExposed = value;
-						break;
-					case "totalnaked":
-						lineCase.TotalNaked = value;
-						break;
-					case "totalmasturbating":
-						lineCase.TotalMasturbating = value;
-						break;
-					case "totalfinished":
-						lineCase.TotalFinished = value;
-						break;
-					case "consecutivelosses":
-						lineCase.ConsecutiveLosses = value;
-						break;
-					case "timeinstage":
-						lineCase.TimeInStage = value;
-						break;
-					case "saidmarker":
-						lineCase.SaidMarker = value;
-						break;
-					case "notsaidmarker":
-						lineCase.NotSaidMarker = value;
 						break;
 					case "marker":
 						line.Marker = value;

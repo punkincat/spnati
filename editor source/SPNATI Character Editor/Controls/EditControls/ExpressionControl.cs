@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using System;
 using System.Text.RegularExpressions;
@@ -126,11 +126,6 @@ namespace SPNATI_Character_Editor
 			}
 			cboValue.Text = _expression.Value;
 
-			if (Bindings.Contains("AlsoPlaying"))
-			{
-				FillInCharacter();
-			}
-
 			UpdateAutoComplete(true);
 		}
 
@@ -254,7 +249,7 @@ namespace SPNATI_Character_Editor
 					_subcontrol = Activator.CreateInstance(bestMatch) as SubVariableControl;
 				}
 
-				if (_expression.Operator == "@")
+				if (_expression.Operator == "@" || _expression.Operator == "!@")
 				{
 					_subcontrol = null; //just kidding; leave intervals as a raw variable test
 				}
@@ -292,33 +287,9 @@ namespace SPNATI_Character_Editor
 			}
 			else
 			{
-				if (property == "AlsoPlaying")
-				{
-					FillInCharacter();
-				}
 				if (property == "Target" || property == "AlsoPlaying")
 				{
 					UpdateAutoComplete(true);
-				}
-			}
-		}
-
-		private void FillInCharacter()
-		{
-			if (!cboExpression.Text.StartsWith("~_."))
-			{
-				return;
-			}
-			Case data = Data as Case;
-			if (data != null)
-			{
-				string id = data.AlsoPlaying;
-				if (!string.IsNullOrEmpty(id))
-				{
-					string key = CharacterDatabase.GetId(id);
-					string variable = cboExpression.Text;
-					variable = $"~{key}.{variable.Substring(3)}";
-					cboExpression.Text = variable;
 				}
 			}
 		}
@@ -462,7 +433,7 @@ namespace SPNATI_Character_Editor
 					string targetKey = data.GetTarget();
 					if (!string.IsNullOrEmpty(targetKey))
 					{
-						Character target = CharacterDatabase.Get(data.Target);
+						Character target = CharacterDatabase.Get(targetKey);
 						if (target != null)
 						{
 							foreach (AlternateSkin alt in target.Metadata.AlternateSkins)
@@ -635,17 +606,6 @@ namespace SPNATI_Character_Editor
 			else
 			{
 				targetType = expr;
-			}
-			if (targetType == "_")
-			{
-				//default to AlsoPlaying
-				Case data = Data as Case;
-				Character character = CharacterDatabase.Get(data.AlsoPlaying);
-				if (character != null)
-				{
-					string id = CharacterDatabase.GetId(character);
-					targetType = id;
-				}
 			}
 
 			variable = expr;

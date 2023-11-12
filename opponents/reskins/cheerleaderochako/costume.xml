@@ -6,8 +6,10 @@
         <tag>alternative_skin</tag>
         <tag remove="true">bodysuit</tag>
         <tag remove="true">helmet</tag>
+        <tag from="0" to="2">thigh_highs</tag>
         <tag>valentines_skin</tag>
     </tags>
+    <layers>7</layers>
     <folder>opponents/reskins/cheerleaderochako/</folder>
     <folder stage="5">opponents/uravity/</folder>
     <wardrobe>
@@ -17,7 +19,7 @@
         <clothing name="top" generic="shirt" position="upper" type="major" />
         <clothing name="stockings" generic="socks" position="legs" type="minor" plural="true" />
         <clothing name="shoes" generic="shoes" position="feet" type="extra" plural="true" />
-        <clothing name="pom-poms" position="hands" type="extra" plural="true" />
+        <clothing name="pom-poms" position="held" type="extra" plural="true" />
     </wardrobe>
 
 </costume>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>gloria_valentine</id>
+    <label>Gloria</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>bottomless_first</tag>
+        <tag remove="true">brunette</tag>
+        <tag>chef</tag>
+        <tag>exotic_hair</tag>
+        <tag>pink_hair</tag>
+        <tag remove="true">pubic_hair_peek</tag>
+        <tag remove="true">sweater</tag>
+        <tag from="0" to="0">thigh_highs</tag>
+        <tag>valentines_skin</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/gloria_valentine/</folder>
+    <wardrobe>
+        <clothing name="bra" generic="bra" position="upper" type="important" />
+        <clothing name="dress" generic="dress" position="both" type="major" />
+        <clothing name="apron" generic="apron" position="upper" type="minor" />
+        <clothing name="knickers" generic="underwear" position="lower" type="major" plural="true" />
+        <clothing name="hat" generic="hat" position="head" type="minor" />
+        <clothing name="shoes and socks" generic="shoes" position="feet" type="minor" plural="true" />
+    </wardrobe>
+
+    <poses>
+        <pose id="8-GloriaRosaGameEnd">
+            <sprite id="EndRosaDefaultDefault" marker="gloriacostume==0" z="-5" src="gloria//extra/8-EndRosaDefaultDefault.png" x="0" y="0" />
+            <sprite id="gloria_default" marker="gloriacostume==default" z="2" src="gloria//extra/gloria_default.png" x="150" y="0" />
+            <sprite id="gloria_beachside" marker="gloriacostume==gloria_beachside" z="2" src="gloria/extra/gloria_costume1.png" x="150" y="0" />
+            <sprite id="gloria_punk" marker="gloriacostume==gloria_punk" z="2" src="gloria/extra/gloria_default.png" x="150" y="0" />
+            <sprite id="gloria_christmas" marker="gloriacostume==gloria_christmas" z="2" src="gloria/extra/gloria_costume3.png" x="150" y="0" />
+            <sprite id="gloria_valentines" marker="gloriacostume==gloria_valentine" z="2" src="gloria/extra/gloria_costume4.png" x="150" y="0" />
+            <sprite id="rosa_default" marker="rosacostume==default" z="1" src="gloria//extra/rosa_default.png" x="-135" y="0" />
+            <sprite id="rosa_bunny" marker="rosacostume==rosa_bunny_buns" z="1" src="gloria//extra/rosa_default.png" x="-135" y="0" />
+            <sprite id="rosa_office" marker="rosacostume==rosa_office" z="1" src="gloria//extra/rosa_default.png" x="-135" y="0" />
+            <sprite id="rosa_princess" marker="rosacostume==rosa_princess" z="1" src="gloria//extra/rosa_costume1.png" x="-135" y="0" />
+            <sprite id="rosa_special_holiday_delivery" marker="rosacostume==rosa_special_holiday_delivery" z="1" src="gloria//extra/rosa_costume2.png" x="-135" y="0" />
+            <sprite id="rosa_scientist" marker="rosacostume==rosa_scientist" z="1" src="gloria//extra/rosa_costume2.png" x="-135" y="0" />
+            <sprite id="rosa_summer" marker="rosacostume==rosa_summer" z="1" src="gloria/extra/rosa_costume3.png" x="-135" y="0" />
+            <sprite id="GloriaArm" z="5" src="gloria//extra/GloriaArm.png" x="-138" y="378" />
+            <sprite id="RosaArm" z="5" src="gloria//extra/RosaArm.png" x="8" y="567" />
+            <sprite id="RosaArmTanned" marker="rosacostume==rosa_summer" z="6" src="gloria/extra/RosaArmTanned.png" x="8" y="567" />
+        </pose>
+    </poses>
+</costume>

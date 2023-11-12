@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>polly</owner>
+    <height>5'8''</height>
+    <age>22?</age>
+    <pronunciation />
+    <othernotes />
     <noteworthy>
         <case name="Polly's spirit is apparently freed" id="38" priority="MustTarget" min="3" max="3">
             <description>Polly starts to fade out right before revealing her chest, telling everyone she's leaving this plane of existence.</description>
@@ -224,6 +228,10 @@
         <response id="453" opponent="ms.fortune" opponentId="24" />
         <response id="464" opponent="syrenne" opponentId="17" />
         <response id="466" opponent="aaravi" opponentId="7" />
+        <response id="473" opponent="sannytess" opponentId="5" />
+        <response id="474" opponent="sannytess" opponentId="6" />
+        <response id="475" opponent="nagatoro" opponentId="408" />
+        <response id="476" opponent="nagatoro" opponentId="15" />
     </responses>
     <notes>
         <note id="423">In Monster Prom, there's an event where Polly consumes some "Very Weird Drugs" that allow her to break the 4th wall and realize that she's in a videogame.</note>
@@ -466,8 +474,11 @@
         <label id="470" label="" folder="PollyBossMode" sort="0" />
         <label id="471" label="" folder="PollyBossMode" sort="0" />
         <label id="472" label="" folder="PollyBossMode" sort="0" />
+        <label id="480" label="" folder="Summer Polly" sort="0" />
     </labels>
-    <nextId>472</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>480</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="AnySexPosition" />
@@ -495,6 +506,8 @@
         <marker scope="Public" name="HauntingPartyIdea">Polly gets bored of the game and decides to haunt a party nearby instead.</marker>
         <marker scope="Public" name="HimboAnalysis" />
         <marker scope="Public" name="Joke">Polly teases a bad joke instead of removing her bra</marker>
+        <marker scope="Public" name="KumatoraMagypsies" />
+        <marker scope="Public" name="KumatoraMushrooms" />
         <marker scope="Public" name="MagnesiumOxideJoke" />
         <marker scope="Public" name="MeiaBirthday" />
         <marker scope="Public" name="MeiaBirthdayStriptease" />
@@ -503,6 +516,8 @@
         <marker scope="Public" name="MeiaSpecial" />
         <marker scope="Public" name="MeiaStrippers" />
         <marker scope="Public" name="MetPolly" />
+        <marker scope="Public" name="NagatoroGhost" />
+        <marker scope="Public" name="NagatoroShoes" />
         <marker scope="Public" name="nami_negative2" />
         <marker scope="Public" name="Not_Taking_Nudes" />
         <marker scope="Public" name="NotIntoButt">Polly explains her hypothesis on how the butt is the strongest force in society</marker>
@@ -518,6 +533,7 @@
         <marker scope="Public" name="Polly_A" />
         <marker scope="Public" name="Polly_A_rash" />
         <marker scope="Public" name="Polly_Aaravi_Blackmail" />
+        <marker scope="Public" name="Polly_Aaravi_Crushes" />
         <marker scope="Public" name="Polly_Aaravi_GameStartA" />
         <marker scope="Public" name="Polly_Aaravi_GameStartB" />
         <marker scope="Public" name="Polly_Aaravi_Guts" />
@@ -559,6 +575,7 @@
         <marker scope="Public" name="Polly_Adrien_Taunt" />
         <marker scope="Public" name="Polly_Adrien_WholePackage" />
         <marker scope="Public" name="Polly_Adrien_WinkWink" />
+        <marker scope="Public" name="Polly_AG_Uniform" />
         <marker scope="Public" name="Polly_Aimee_Firearms" />
         <marker scope="Public" name="Polly_Aimee_Ghosts" />
         <marker scope="Public" name="Polly_Airhorns" />
@@ -606,6 +623,8 @@
         <marker scope="Public" name="Polly_Aoba_Drugs" />
         <marker scope="Public" name="Polly_Aoba_Nudity" />
         <marker scope="Public" name="Polly_Aoba_OldEnough" />
+        <marker scope="Public" name="Polly_AquaKH_Greeting" />
+        <marker scope="Public" name="Polly_AquaKH_Lose" />
         <marker scope="Public" name="Polly_Arash_Armor" />
         <marker scope="Public" name="Polly_Arash_BowAndArrow" />
         <marker scope="Public" name="Polly_Arash_Clairvoyance" />
@@ -796,9 +815,11 @@
         <marker scope="Public" name="Polly_Hilbert_Research" />
         <marker scope="Public" name="Polly_Hilbert_Tepig" />
         <marker scope="Public" name="Polly_Hilbert_WhiteStone" />
+        <marker scope="Public" name="Polly_Hilda_Awake" />
         <marker scope="Public" name="Polly_Hilda_Byleth" />
         <marker scope="Public" name="Polly_Hilda_Dead" />
         <marker scope="Public" name="Polly_Hilda_NoMoreAct" />
+        <marker scope="Public" name="Polly_Hilda_Party" />
         <marker scope="Public" name="Polly_Hilda_SeriousPeople" />
         <marker scope="Public" name="Polly_Ignatz_Archer" />
         <marker scope="Public" name="Polly_Ignatz_Encounter1" />
@@ -851,6 +872,9 @@
         <marker scope="Public" name="Polly_Kaz_RichKid" />
         <marker scope="Public" name="Polly_Kaz_WellDressed" />
         <marker scope="Public" name="Polly_Kazuma_Type" />
+        <marker scope="Public" name="Polly_Kumatora_FavFood" />
+        <marker scope="Public" name="Polly_Kumatora_Instrument" />
+        <marker scope="Public" name="Polly_Kumatora_ParentalGuidance" />
         <marker scope="Public" name="Polly_Kumatora_Princess" />
         <marker scope="Public" name="Polly_Ladybug_Drugs" />
         <marker scope="Public" name="Polly_Ladybug_IllegalDealing" />
@@ -985,12 +1009,21 @@
         <marker scope="Public" name="Polly_Rin_Why" />
         <marker scope="Public" name="Polly_Ringo_Ghost" />
         <marker scope="Public" name="Polly_RoyalOrgies" />
+        <marker scope="Public" name="Polly_Ryuji_Bleach" />
+        <marker scope="Public" name="Polly_Ryuji_Book" />
+        <marker scope="Public" name="Polly_Ryuji_Criminal" />
+        <marker scope="Public" name="Polly_Ryuji_ForReal" />
+        <marker scope="Public" name="Polly_Ryuji_MonkeyBusiness" />
+        <marker scope="Public" name="Polly_Ryuji_Record" />
+        <marker scope="Public" name="Polly_Ryuji_SawItComing" />
         <marker scope="Public" name="Polly_Sakura_Anal" />
         <marker scope="Public" name="Polly_Sakura_Kids" />
         <marker scope="Public" name="Polly_Sakura_Love" />
         <marker scope="Public" name="Polly_Sakura_Many" />
         <marker scope="Public" name="Polly_Sakura_MasturbateQuestion" />
         <marker scope="Public" name="Polly_Sakura_UndeadSexEd" />
+        <marker scope="Public" name="Polly_SannyTess_Cock" />
+        <marker scope="Public" name="Polly_SannyTess_Cock1" />
         <marker scope="Public" name="Polly_Sayori_Book" />
         <marker scope="Public" name="Polly_Sayori_Drugs" />
         <marker scope="Public" name="Polly_Sayori_SensitiveBits" />
@@ -1001,6 +1034,12 @@
         <marker scope="Public" name="Polly_SCM_Agreement" />
         <marker scope="Public" name="Polly_SCM_Air" />
         <marker scope="Public" name="Polly_SCM_HumpTheAIr" />
+        <marker scope="Public" name="Polly_SCM_Kill" />
+        <marker scope="Public" name="Polly_SCM_LookAtMeGo" />
+        <marker scope="Public" name="Polly_SCM_LoseFaster" />
+        <marker scope="Public" name="Polly_SCM_MightKill" />
+        <marker scope="Public" name="Polly_SCM_Plushie" />
+        <marker scope="Public" name="Polly_SCM_SuckMyDick" />
         <marker scope="Public" name="Polly_Scolding_Chara" />
         <marker scope="Public" name="Polly_Senko_Experience" />
         <marker scope="Public" name="Polly_Senko_Fluffy" />
@@ -1017,6 +1056,11 @@
         <marker scope="Public" name="Polly_Sly_Money" />
         <marker scope="Public" name="Polly_Sly_Spotlight" />
         <marker scope="Public" name="Polly_Sly_StealWin" />
+        <marker scope="Public" name="Polly_Sofia_Decipher" />
+        <marker scope="Public" name="Polly_Sofia_Decode" />
+        <marker scope="Public" name="Polly_Sofia_Glad" />
+        <marker scope="Public" name="Polly_Sofia_Riddles" />
+        <marker scope="Public" name="Polly_Sofia_SharkMindset" />
         <marker scope="Public" name="Polly_Spooky_Boobsize" />
         <marker scope="Public" name="Polly_Spooky_BritneyBitch" />
         <marker scope="Public" name="Polly_Spooky_CrashingIn" />
@@ -1025,6 +1069,13 @@
         <marker scope="Public" name="Polly_Stella_Brownies1" />
         <marker scope="Public" name="Polly_Stella_Brownies2" />
         <marker scope="Public" name="Polly_Stella_NegativeSocks" />
+        <marker scope="Public" name="Polly_Steve_Baseball" />
+        <marker scope="Public" name="Polly_Steve_Beating" />
+        <marker scope="Public" name="Polly_Steve_FanFavorite" />
+        <marker scope="Public" name="Polly_Steve_GetRealForAMoment" />
+        <marker scope="Public" name="Polly_Steve_KillGhost" />
+        <marker scope="Public" name="Polly_Steve_ScoopsAhoy" />
+        <marker scope="Public" name="Polly_Steve_Scott" />
         <marker scope="Public" name="Polly_Streaming_Drugs1" />
         <marker scope="Public" name="Polly_Streaming_Drugs2" />
         <marker scope="Public" name="Polly_Streaming_Drugs3" />
@@ -1200,11 +1251,16 @@
         <marker scope="Public" name="Set_Possession" />
         <marker scope="Public" name="StartingJoi">Polly will give the player character jerk off instructions as they masturbate.</marker>
         <marker scope="Public" name="SteppingOnFortune" />
+        <marker scope="Public" name="Summer_Polly" />
         <marker scope="Public" name="SuperCrownMiranda" />
         <marker scope="Public" name="SuperDuper">Polly announces that she's super duper drunk over the course of Game Start -&gt; Swapping Hands -&gt; Hand Any.</marker>
+        <marker scope="Public" name="TELLMEWHY1" />
         <marker scope="Public" name="ThreeGreatestLoves">A regular Polly joke about her threeve greatest loves.</marker>
         <marker scope="Public" name="UnfinishedBusiness">Polly pranks the other characters by fading out before showing off her chest, only to come back after and revealing it was all a prank.</marker>
         <marker scope="Public" name="Up_For_All_Parties" />
+        <marker scope="Public" name="YaeGhosts" />
+        <marker scope="Public" name="YaeOutfit" />
+        <marker scope="Public" name="YaeSpotlight" />
         <marker scope="Public" name="Yuri_Recommendation_Question" />
         <marker scope="Public" name="Zoe20rounds" />
         <marker scope="Public" name="ZoeFootball" />

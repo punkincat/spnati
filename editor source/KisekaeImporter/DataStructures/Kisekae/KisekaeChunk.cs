@@ -38,9 +38,9 @@ namespace KisekaeImporter.DataStructures.Kisekae
 				string id = "";
 				if (sub.Length > 1)
 				{
-					//Current assumption is that a subcode ID is either two alphas or one alpha+2 digits
 					if (char.IsDigit(sub[1]))
 					{
+						// slotted part: either 'u' + digit or other alpha + 2 digits
 						id = sub.Substring(0, 1);
 						if (sub.Length >= 3)
 						{
@@ -53,8 +53,25 @@ namespace KisekaeImporter.DataStructures.Kisekae
 							codeData = sub.Substring(2);
 						}
 					}
+					else if (sub[0] == 'x')
+					{
+						// extended slot: 'x' + alpha + digits + '.'
+						int periodIdx = sub.IndexOf('.');
+						id = sub.Substring(1, 1);
+						if (periodIdx >= 0)
+						{
+							prefix = sub.Substring(0, periodIdx);
+							codeData = sub.Substring(periodIdx + 1);
+						}
+						else
+						{
+							prefix = sub;
+							codeData = "";
+						}
+					}
 					else
 					{
+						// single subcode: two alphas
 						prefix = sub.Substring(0, 2);
 						id = prefix;
 						codeData = sub.Substring(2);

@@ -1,22 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1661988931205</lastupdate>
+    <lastupdate>1692329041371</lastupdate>
     <enabled>false</enabled>
     <first>Hayase</first>
     <last>Nagatoro</last>
     <label>Nagatoro</label>
-    <pic>0-peace.png</pic>
+    <pic>0-mean.png</pic>
     <gender>female</gender>
     <from>Ijiranaide, Nagatoro-san</from>
     <writer>Lokkit</writer>
     <artist>Lokkit</artist>
     <description>An energetic girl with a penchant for bullying her senpai.</description>
+    <epilogue gender="male" img="epilogue/thumb2.png" hint="Win a game against Nagatoro.">Let's do it, Senpai! ♡</epilogue>
     <layers>5</layers>
+    <default-costume-name />
     <alternates>
-        <costume folder="opponents/reskins/nagatoro_nekotoro/" img="0-pout.png" status="unlisted" label="Nagatoro">Nekotoro</costume>
-        <costume folder="opponents/reskins/nagatoro_nekotoro/" status="offline" label="Nagatoro">nagatoro_nekotoro</costume>
+        <costume folder="opponents/reskins/nagatoro_nekotoro/" img="0-annoyed.png" status="online" label="Nagatoro">Nekotoro</costume>
+        <costume folder="opponents/reskins/nagatoro_demoness/" img="0-pathetic.png" set="halloween" status="online" label="Nagatoro">Demoness Nagatoro</costume>
+        <costume folder="opponents/reskins/nagatoro_beach_day/" img="0-happy.png" set="summer" status="online" label="Nagatoro" layers="4">Beach Day</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>1000</lines>
-    <poses>365</poses>
+    <lines>3510</lines>
+    <poses>462</poses>
 </opponent>

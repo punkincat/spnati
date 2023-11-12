@@ -71,9 +71,21 @@ namespace KisekaeImporter
 				//must be part of an array, or not part of the component at all
 				if (id.Length > 2 && char.IsDigit(id[2]) || id.Length > 1 && char.IsDigit(id[1]))
 				{
-					string prefix = id.Substring(0, 1);
-					int index = int.Parse(id.Substring(1, id.Length > 2 ? 2 : 1));
+					string prefix = "";
+					int index = 0;
 					Type subcodeType;
+
+					if (id[0] == 'x' && char.IsLetter(id[1]))
+					{
+						prefix = id.Substring(1, 1);
+						index = int.Parse(id.Substring(2));
+					}
+					else
+					{
+						prefix = id.Substring(0, 1);
+						index = int.Parse(id.Substring(1, id.Length > 2 ? 2 : 1));
+					}
+
 					if (_arrayMap[GetType()].TryGetValue(prefix, out subcodeType))
 					{
 						KisekaeSubCode subcode = Activator.CreateInstance(subcodeType) as KisekaeSubCode;
@@ -91,8 +103,15 @@ namespace KisekaeImporter
 		{
 			KisekaeSubCode code;
 			string prefix = id;
-			if (index >= 0)
-				prefix += index.ToString("00");
+			if (index >= 99)
+			{
+				prefix = "x" + id + index.ToString();
+			}
+			else if (index >= 0)
+			{
+				prefix = id + index.ToString("00");
+			}
+
 			_subcodes.TryGetValue(prefix, out code);
 			return code;
 		}
@@ -141,8 +160,14 @@ namespace KisekaeImporter
 		public void ReplaceSubCode(KisekaeSubCode code, bool applyEmpties, bool poseOnly)
 		{
 			string prefix = code.Id;
-			if (code.Index >= 0)
-				prefix += code.Index.ToString("00");
+			if (code.Index >= 99)
+			{
+				prefix = "x" + code.Id + code.Index.ToString();
+			}
+			else if (code.Index >= 0)
+			{
+				prefix = code.Id + code.Index.ToString("00");
+			}
 
 			KisekaeSubCode existingCode = GetSubCode(prefix);
 			if (existingCode == null || !code.IsEmpty || applyEmpties)
@@ -161,7 +186,11 @@ namespace KisekaeImporter
 		public bool HasSubCode(string id, int index)
 		{
 			string prefix = id;
-			if (index >= 0)
+			if (index >= 99)
+			{
+				prefix = "x" + id + index.ToString();
+			}
+			else if (index >= 0)
 			{
 				prefix = id + index.ToString("00");
 			}

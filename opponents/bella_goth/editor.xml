@@ -1,18 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>bella_goth</owner>
+    <height>5"10</height>
+    <age>Adult (29 days from becoming Elder)</age>
+    <pronunciation>bell-uh g-aa-th</pronunciation>
+    <othernotes>Bella Goth is a Sim. Sims are complex creatures, capable of desires, fears, and physical and mental needs. Sims can have a unique appearance with different hair and eye colors, skin colors, body sizes, and more. A Sim's personality is equally as complex, with Sims having their own aspirations or traits, allowing for countless variations between Sims.&lt;br&gt;&lt;br&gt;It is unclear how intelligent Sims are; although they have the ability to use tools and create works of art and technology, they lack direction and often require a guiding hand, that of the player, to manage some of the simplest of tasks. Sims tend to be social creatures, and can hallucinate if left alone for too long, or if they become too depressed from having their desires neglected.</othernotes>
     <noteworthy>
         <case name="The Sims" id="4" priority="Noteworthy" min="0" max="0">
             <description>(April Fools character) Bella Goth is a sim from The Sims franchise. She speaks entirely in simlish. Other characters presumably do not speak simlish.</description>
         </case>
         <case name="Ish knee oobatay?" id="6" priority="Prompt" min="0" max="8">
-            <description>(April fools character) Cando vana wasbe, oobatary basnee? Bashnee patoo.</description>
+            <description>(April Fools character) Bella is asking... something, in Simlish. Just make something up in response!</description>
         </case>
     </noteworthy>
     <responses>
         <response id="2" opponent="yuno_uno" opponentId="167" />
         <response id="3" opponent="yuno_uno" opponentId="175" />
         <response id="11" opponent="petra" opponentId="169" />
+        <response id="19" opponent="chie" opponentId="30" />
+        <response id="20" opponent="kyouko_toshinou" opponentId="91" />
     </responses>
     <labels>
         <label id="1" label="" folder="Target Tags" sort="0" />
@@ -30,17 +36,29 @@
         <label id="16" label="" folder="Targets" sort="0" />
         <label id="17" label="" folder="Targets" sort="0" />
         <label id="18" label="" folder="Targets" sort="0" />
+        <label id="19" label="" folder="Prompts" sort="0" />
+        <label id="20" label="" folder="Targets" sort="0" />
+        <label id="21" label="" folder="Targets" sort="0" />
+        <label id="22" label="" folder="Targets" sort="0" />
+        <label id="23" label="" folder="Targets" sort="0" />
+        <label id="24" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>18</nextId>
+    <nextId>24</nextId>
     <markers>
         <marker scope="Public" name="bellagoth_yuno_stiffyResp" />
         <marker scope="Public" name="bubblePos" />
+        <marker scope="Public" name="chie_steak" />
         <marker scope="Public" name="ish_knee_oobatay" />
+        <marker scope="Public" name="kirigiri" />
         <marker scope="Public" name="last_friday_night" />
         <marker scope="Public" name="petra_speechExplainedResp" />
         <marker scope="Public" name="target_ag" />
+        <marker scope="Public" name="target_criticaldarling" />
+        <marker scope="Public" name="target_criticaldarlingc" />
         <marker scope="Public" name="target_heris" />
         <marker scope="Public" name="target_jim" />
+        <marker scope="Public" name="target_kirigiri" />
+        <marker scope="Public" name="target_kyouko" />
         <marker scope="Public" name="target_mariS" />
         <marker scope="Public" name="target_slycooper" />
         <marker scope="Public" name="target_trixie" />

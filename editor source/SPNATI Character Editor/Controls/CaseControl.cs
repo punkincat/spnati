@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using Desktop.Skinning;
 using SPNATI_Character_Editor.Forms;
@@ -119,6 +119,12 @@ namespace SPNATI_Character_Editor.Controls
 			if (_character == null) { return; }
 			CreateStageCheckboxes();
 			PopulateStageCheckboxes();
+		}
+
+		public void UpdateAvailableImages()
+		{
+			HashSet<int> stages = GetSelectedStages();
+			gridDialogue.UpdateAvailableImagesForCase(stages, true);
 		}
 
 		public void UpdateMacros()
@@ -298,10 +304,6 @@ namespace SPNATI_Character_Editor.Controls
 				foreach (string tag in TriggerDatabase.GetTags())
 				{
 					TriggerDefinition t = TriggerDatabase.GetTrigger(tag);
-					if (currentTrigger.HasTarget && currentTrigger.HasTarget != t.HasTarget)
-					{
-						continue;
-					}
 					if (tag == _selectedCase.Tag)
 						selection = t;
 					cboCaseTags.Items.Add(t);
@@ -437,6 +439,8 @@ namespace SPNATI_Character_Editor.Controls
 			//Opponent
 			table.AddSpeedButton("Opponent", "Opponent", (data) => { return AddFilter("opp", data); });
 			table.AddSpeedButton("Opponent", "Opponent Tag", (data) => { return AddFilter("opp", data, "FilterTag"); });
+			table.AddSpeedButton("Opponent", "Opponent Not Tag", (data) => { return AddFilter("opp", data, "FilterNotTag"); });
+			table.AddSpeedButton("Opponent", "Opponent Tags (Advanced)", (data) => { return AddFilter("opp", data, "FilterTagAdv"); });
 			table.AddSpeedButton("Opponent", "Opponent Stage", (data) => { return AddFilter("opp", data, "Stage"); });
 			table.AddSpeedButton("Opponent", "Opponent Said Marker", (data) => { return AddFilter("opp", data, "SaidMarker"); });
 			table.AddSpeedButton("Opponent", "Opponent Not Said Marker", (data) => { return AddFilter("opp", data, "NotSaidMarker"); });
@@ -504,6 +508,8 @@ namespace SPNATI_Character_Editor.Controls
 				//Target
 				table.AddSpeedButton("Target", "Target", (data) => { return AddFilter("target", data); });
 				table.AddSpeedButton("Target", "Target Tag", (data) => { return AddFilter("target", data, "FilterTag"); });
+				table.AddSpeedButton("Target", "Target Not Tag", (data) => { return AddFilter("target", data, "FilterNotTag"); });
+				table.AddSpeedButton("Target", "Target Tags (Advanced)", (data) => { return AddFilter("target", data, "FilterTagAdv"); });
 				table.AddSpeedButton("Target", "Target Stage", (data) => { return AddFilter("target", data, "Stage"); });
 				table.AddSpeedButton("Target", "Target Said Marker", (data) => { return AddFilter("target", data, "SaidMarker"); });
 				table.AddSpeedButton("Target", "Target Not Said Marker", (data) => { return AddFilter("target", data, "NotSaidMarker"); });
@@ -724,7 +730,7 @@ namespace SPNATI_Character_Editor.Controls
 			SaveNotes();
 		}
 
-		private void SaveNotes()
+		public void SaveNotes()
 		{
 			if (_selectedCase == null)
 			{
@@ -795,6 +801,50 @@ namespace SPNATI_Character_Editor.Controls
 			Config.SaveMacros("Case");
 		}
 
+		private void RepopulateCase()
+		{
+			_populatingCase = true;
+			Case stageCase = _selectedCase;
+
+			PopulateStageCheckboxes();
+
+			TriggerDefinition caseTrigger = TriggerDatabase.GetTrigger(stageCase.Tag);
+
+			#region Case-wide settings
+
+			//Help text
+			lblHelpText.Text = caseTrigger.HelpText;
+
+			//Available variables
+			List<string> vars = new List<string>();
+			foreach (Variable globalVar in VariableDatabase.GlobalVariables)
+			{
+				vars.Add($"~{globalVar.Name}~");
+			}
+			foreach (string variable in caseTrigger.AvailableVariables)
+			{
+				vars.Add($"~{variable}~");
+			}
+			toolTip1.SetToolTip(lblAvailableVars, string.Format("Variables: {0}", string.Join(" ", vars)));
+
+			#endregion
+
+			if (caseTrigger.HasTarget)
+			{
+				tableConditions.RecordFilter = null;
+			}
+			else
+			{
+				tableConditions.RecordFilter = FilterTargets;
+			}
+
+			PopulateConditionTable(_selectedCase);
+
+			PopulateTagsTab();
+
+			_populatingCase = false;
+		}
+
 		private void cboCaseTags_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			TriggerDefinition tag = cboCaseTags.SelectedItem as TriggerDefinition;
@@ -802,6 +852,25 @@ namespace SPNATI_Character_Editor.Controls
 			{
 				lblHelpText.Text = tag.HelpText;
 			}
+			_selectedCase.Tag = tag.Tag;
+			tableConditions.Data = null;
+			List<TargetCondition> conditionList = new List<TargetCondition>(_selectedCase.Conditions);
+			foreach (TargetCondition condition in conditionList)
+			{
+				if (!tag.HasTarget && condition.Role == "target")
+				{
+					_selectedCase.Conditions.Remove(condition);
+					_selectedCase.NotifyPropertyChanged(nameof(condition));
+				}
+			}
+			List<ExpressionTest> expressionList = new List<ExpressionTest>(_selectedCase.Expressions);
+			foreach (ExpressionTest expression in expressionList)
+			if (!tag.AvailableVariables.Contains("clothing") && expression.Expression.StartsWith("~clothing.") || !tag.HasTarget && expression.Expression.StartsWith("~target."))
+			{
+				_selectedCase.Expressions.Remove(expression);
+				_selectedCase.NotifyPropertyChanged(nameof(expression));
+			}
+			RepopulateCase();
 		}
 
 		public void AddSpeedButtons(PropertyTable table)
@@ -821,7 +890,7 @@ namespace SPNATI_Character_Editor.Controls
 		private void SetColorButton(string colorCode)
 		{
 			ColorCode code = Definitions.Instance.Get<ColorCode>(colorCode);
-			if (code == null)
+			if (code == null || colorCode == "0")
 			{
 				cmdColorCode.BackColor = SkinManager.Instance.CurrentSkin.Background.Normal;
 				cmdColorCode.Tag = null;

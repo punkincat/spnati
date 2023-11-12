@@ -1,0 +1,31 @@
+.dialogue .jura[data-character="jura"] {
+  /*Jura's speech.*/
+  color: #C82031;
+}
+
+.dialogue .meia[data-character="jura"] {
+  /*Meia's speech.*/
+  color: #87CDE5;
+}
+
+.dialogue .cheryl[data-character="jura"] {
+  /*Cheryl's speech.*/
+  color: #876A48;
+}
+
+.dialogue .loud[data-character="jura"] {
+  /*The bold text Nagatoro uses.*/
+  font-size: 110%;
+  font-weight: 700;
+}
+
+.dialogue .barnette[data-character="jura"] {
+  /*Barnette's speech.*/
+  color: #65D06E;
+}
+
+.dialogue-bubble[data-character="jura"] hr {
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}

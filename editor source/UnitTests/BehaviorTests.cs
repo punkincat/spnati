@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SPNATI_Character_Editor;
 using System;
 using System.Collections.Generic;
@@ -96,7 +96,7 @@ namespace UnitTests
 			Behaviour behavior = _character.Behavior;
 			CreateCase(behavior, 0, "a", "a1", "a2");
 			Case conditioned = CreateCase(behavior, 0, "a", "a1", "a2");
-			conditioned.Filter = "x";
+			conditioned.LegacyFilter = "x";
 			behavior.PrepareForEdit(_character);
 			Assert.AreEqual(1, behavior.GetWorkingCases().Count());
 			Case first = behavior.GetWorkingCases().First();
@@ -157,7 +157,7 @@ namespace UnitTests
 			behavior.PrepareForEdit(_character);
 			CreateWorkingCase(behavior, "a", new int[] { 0, 1, 2 }, "a1");
 			Case c = CreateWorkingCase(behavior, "b", new int[] { 0, 1, 2 }, "c");
-			c.Filter = "filter";
+			c.LegacyFilter = "filter";
 			HashSet<string> dest = new HashSet<string>();
 			dest.Add("b");
 			behavior.BulkReplace("a", dest);

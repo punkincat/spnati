@@ -474,7 +474,7 @@ namespace SPNATI_Character_Editor
 		}
 
 		private static void LoadFonts()
-        {
+		{
 			Shell.Instance.Fonts = new PrivateFontCollection();
 			int fontLength = Properties.Resources.OpenSans_VariableFont.Length;
 			byte[] fontdata = Properties.Resources.OpenSans_VariableFont;

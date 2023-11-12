@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1658716535173</lastupdate>
+    <lastupdate>1691941324166</lastupdate>
     <enabled>false</enabled>
     <first>Gloria</first>
     <last />
@@ -11,13 +11,19 @@
     <writer>MyMainAccIsANord</writer>
     <artist>MyMainAccIsANord (poses, model tweaks) , Halo (model) , RinkahBestGirl (poses) , Mike (strip pose contribution) , AriaSakata (summer outfit base)</artist>
     <description>Gloria is the female player character in Pokémon Sword and Shield. A sassy young lass from the county town of Postwick in the Galar region. Loves camping and curry.</description>
+    <epilogue status="unlisted" gender="male" img="epilogue/gloria_epilogue_preview.png" alsoPlaying="rosa" hint="Win the game against Gloria and Rosa (hardcore epilogue)">Curry &amp; Donuts (M)</epilogue>
+    <epilogue status="unlisted" gender="female" img="epilogue/gloria_epilogue_preview_alt.png" alsoPlaying="rosa" hint="Win the game against Gloria and Rosa (hardcore epilogue)">Curry &amp; Donuts (F)</epilogue>
+    <epilogue gender="female" img="epilogue/going_down_f.png" hint="Finish a game against Gloria as a female.">Going Down with Gloria</epilogue>
     <layers>6</layers>
+    <default-costume-name />
     <alternates>
-        <costume folder="opponents/reskins/gloria_beachside/" img="0-z_portrait.png" set="summer" status="online" label="Gloria">Beachside</costume>
         <costume folder="opponents/reskins/gloria_punk/" img="0-z_portrait.png" status="online" label="Gloria">Punk Style</costume>
+        <costume folder="opponents/reskins/gloria_valentine/" img="0-z_portrait.png" set="valentines" label="Gloria">Crème de la Alcremie</costume>
+        <costume folder="opponents/reskins/gloria_beachside/" img="0-z_portrait.png" set="summer" status="online" label="Gloria">Beachside</costume>
+        <costume folder="opponents/reskins/gloria_christmas/" img="0-z_portrait.png" set="xmas" label="Gloria">Vixen</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>1130</lines>
+    <lines>1301</lines>
     <poses>211</poses>
     <z-index>1</z-index>
 </opponent>

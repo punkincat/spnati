@@ -238,6 +238,25 @@ namespace SPNATI_Character_Editor
 						size += file.Length;
 					}
 				}
+
+				// also, subfolders may contain custom pose assets
+				foreach (DirectoryInfo d in directory.EnumerateDirectories())
+				{
+					foreach (FileInfo file in d.EnumerateFiles()
+						.Where(f => f.Extension == ".png" || f.Extension == ".gif"))
+					{
+						if (customPoseAssets.Contains(d.Name + "/" + file.Name))
+						{
+							size += file.Length;
+						}
+						// also cross-stage custom poses
+						else if (char.IsNumber(file.Name[0]) && customPoseAssets.Contains(d.Name + "/#" + file.Name.Substring(1)))
+						{
+							size += file.Length;
+						}
+					}
+				}
+
 				_fileSize = (float)Math.Round(size / 1048576f, 2);
 			}
 			return _fileSize;

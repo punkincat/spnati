@@ -1,0 +1,1531 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>mia_golden_sun_halloween</id>
+    <label>Mia</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag remove="true">cape</tag>
+        <tag from="0" to="4">fake_horns</tag>
+        <tag from="0" to="3">fake_tail</tag>
+        <tag>halloween_skin</tag>
+        <tag from="0" to="1">high_heels</tag>
+        <tag>no_bra</tag>
+        <tag>scantily-clad</tag>
+        <tag remove="true">swimwear</tag>
+        <tag from="0" to="2">thigh_highs</tag>
+        <tag from="4" to="5">thong</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/mia_golden_sun_halloween/</folder>
+    <folder stage="6">opponents/mia_golden_sun/</folder>
+    <wardrobe>
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="horns" generic="hair decoration" position="head" type="extra" />
+        <clothing name="dress" generic="dress" position="both" type="major" />
+        <clothing name="thigh-highs" generic="socks" position="legs" type="minor" plural="true" />
+        <clothing name="boots" generic="shoes" position="feet" type="extra" plural="true" />
+        <clothing name="gloves" generic="gloves" position="hands" type="extra" plural="true" />
+    </wardrobe>
+
+    <poses>
+        <pose id="__muststrip_fizz_goes_away">
+            <sprite id="sad" src="reskins/mia_golden_sun_halloween/#-sad.png" x="0" y="0" />
+            <sprite id="fizz" src="mia_golden_sun/djinn/fizz.png" x="-300" y="150" scalex="-0.4" scaley="0.4" alpha="100" />
+            <directive type="animation" id="fizz" ease="linear" interpolation="spline">
+                <keyframe time="0" x="-300" y="150" />
+                <keyframe time="0.5" x="-300" y="200" />
+                <keyframe time="1" x="-300" y="150" />
+                <keyframe time="1.5" x="-300" y="200" />
+                <keyframe time="2" x="-300" y="150" />
+                <keyframe time="2.5" x="-300" y="200" />
+            </directive>
+            <directive type="animation" id="fizz" delay="2.5" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="-300" y="200" alpha="100" />
+                <keyframe time="0.5" x="-300" y="150" />
+                <keyframe time="3.5" x="-300" y="-500" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="__muststrip_fizz_leave_chatty">
+            <sprite id="sad" src="reskins/mia_golden_sun_halloween/#-conversational.png" />
+            <sprite id="fizz" src="mia_golden_sun/djinn/fizz.png" x="-300" y="150" scalex="-0.4" scaley="0.4" alpha="100" />
+            <directive type="animation" id="fizz" ease="linear" interpolation="spline">
+                <keyframe time="0" x="-300" y="150" />
+                <keyframe time="0.5" x="-300" y="200" />
+                <keyframe time="1" x="-300" y="150" />
+                <keyframe time="1.5" x="-300" y="200" />
+                <keyframe time="2" x="-300" y="150" />
+                <keyframe time="2.5" x="-300" y="200" />
+            </directive>
+            <directive type="animation" id="fizz" delay="2.5" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="-300" y="200" alpha="100" />
+                <keyframe time="0.5" x="-300" y="150" />
+                <keyframe time="3.5" x="-300" y="-500" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="0-__dunban_ply">
+            <sprite id="zz_mia_examine_arm" z="10" src="mia_golden_sun/kibble/5-zz_mia_examine_arm.png" x="82" y="48" />
+            <sprite id="zz_mia_examine_arm(copy)" z="11" src="mia_golden_sun/kibble/5-zz_mia_examine_arm_2b.png" x="82" y="48" alpha="0" />
+            <sprite id="zz_psynergy_1" z="1" src="reskins/mia_golden_sun_halloween/kibble/0-zz_dunban_examine.png" x="-175" />
+            <sprite id="zz_dunban_examine_overlay" z="12" src="reskins/mia_golden_sun_halloween/kibble/0-zz_dunban_examine_overlay.png" x="-132" y="7" scalex="0.94" alpha="100" />
+            <sprite id="zz_psynergy_2" delay="3" z="1" src="reskins/mia_golden_sun_halloween/0-zz_psynergy_2.png" x="-175" alpha="0" />
+            <sprite id="mia_psynergy_ring_front" delay="3" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back" delay="3" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_2" delay="4" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_2" delay="4" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_3" delay="5" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_3" delay="5" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="fairy" delay="3" z="-3" src="mia_golden_sun/djinn/fairy_magic.png" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-12" src="mia_golden_sun/kibble/prop_towel.png" x="-20" y="920" scalex="0.9" scaley="0.9" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="268" y="8" scalex="0.4" scaley="0.4" />
+            <directive type="animation" id="zz_mia_examine_arm" ease="linear" interpolation="none">
+                <keyframe time="0" src="mia_golden_sun/kibble/5-zz_mia_examine_arm.png" />
+                <keyframe time="4.25" src="mia_golden_sun/kibble/5-zz_mia_examine_arm_2.png" />
+            </directive>
+            <directive type="animation" id="zz_mia_examine_arm(copy)" ease="linear" interpolation="linear">
+                <keyframe time="0" x="82" y="48" alpha="0" />
+                <keyframe time="4.25" alpha="0" />
+                <keyframe time="6" alpha="100" />
+                <keyframe time="19" alpha="100" />
+                <keyframe time="19.75" alpha="0" />
+            </directive>
+            <directive type="animation" id="zz_psynergy_1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/kibble/0-zz_dunban_examine.png" />
+                <keyframe time="3" src="reskins/mia_golden_sun_halloween/0-zz_psynergy_1.png" />
+            </directive>
+            <directive type="animation" id="zz_dunban_examine_overlay" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/kibble/0-zz_dunban_examine_overlay.png" alpha="100" />
+                <keyframe time="3" alpha="0" />
+            </directive>
+            <directive type="animation" id="zz_psynergy_2" delay="3" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="70" />
+                <keyframe time="3" alpha="100" />
+                <keyframe time="7" alpha="100" />
+                <keyframe time="11" alpha="100" />
+                <keyframe time="16" alpha="100" />
+                <keyframe time="17" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front" delay="3" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back" delay="3" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_2" delay="4" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_2" delay="4" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_3" delay="5" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_3" delay="5" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="3" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+                <keyframe time="2" x="400" y="-400" alpha="0" />
+                <keyframe time="3" x="300" />
+                <keyframe time="4" x="200" alpha="20" />
+                <keyframe time="5" x="100" />
+                <keyframe time="6" x="0" />
+                <keyframe time="7" x="-100" />
+                <keyframe time="8" x="-200" />
+                <keyframe time="9" x="-300" alpha="20" />
+                <keyframe time="10" x="-400" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="5" loop="true" ease="smooth" interpolation="linear" clamp="mirror" iterations="15">
+                <keyframe time="0" y="-400" />
+                <keyframe time="1" y="-320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="268" scalex="0.4" scaley="0.4" />
+                <keyframe time="1" x="320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="8" />
+                <keyframe time="1" y="88" />
+            </directive>
+        </pose>
+        <pose id="0-stripping">
+            <sprite id="z_stripping" src="reskins/mia_golden_sun_halloween/0-z_stripping.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="250" y="200" scalex="0" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" x="250" y="200" scalex="0" />
+                <keyframe time="0.1" scalex="0.4" />
+                <keyframe time="0.5" y="100" />
+                <keyframe time="1" y="200" />
+                <keyframe time="1.5" y="300" />
+                <keyframe time="1.9" scalex="0.4" />
+                <keyframe time="2" x="-250" y="200" scalex="0" />
+                <keyframe time="2.1" scalex="-0.4" />
+                <keyframe time="2.5" y="100" />
+                <keyframe time="3" y="200" />
+                <keyframe time="3.5" y="300" />
+                <keyframe time="3.9" scalex="-0.4" />
+                <keyframe time="4" x="250" y="200" scalex="0" />
+            </directive>
+        </pose>
+        <pose id="0-stripping_negative">
+            <sprite id="z_stripping" src="reskins/mia_golden_sun_halloween/0-z_stripping_n.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="250" y="200" scalex="0" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" x="250" y="200" scalex="0" />
+                <keyframe time="0.1" scalex="0.4" />
+                <keyframe time="0.5" y="100" />
+                <keyframe time="1" y="200" />
+                <keyframe time="1.5" y="300" />
+                <keyframe time="1.9" scalex="0.4" />
+                <keyframe time="2" x="-250" y="200" scalex="0" />
+                <keyframe time="2.1" scalex="-0.4" />
+                <keyframe time="2.5" y="100" />
+                <keyframe time="3" y="200" />
+                <keyframe time="3.5" y="300" />
+                <keyframe time="3.9" scalex="-0.4" />
+                <keyframe time="4" x="250" y="200" scalex="0" />
+            </directive>
+        </pose>
+        <pose id="1-__dunban_ply">
+            <sprite id="zz_mia_examine_arm" z="10" src="mia_golden_sun/kibble/5-zz_mia_examine_arm.png" x="82" y="48" />
+            <sprite id="zz_mia_examine_arm(copy)" z="11" src="mia_golden_sun/kibble/5-zz_mia_examine_arm_2b.png" x="82" y="48" alpha="0" />
+            <sprite id="zz_psynergy_1" z="1" src="reskins/mia_golden_sun_halloween/kibble/1-zz_dunban_examine.png" x="-175" />
+            <sprite id="zz_dunban_examine_overlay" z="12" src="reskins/mia_golden_sun_halloween/kibble/1-zz_dunban_examine_overlay.png" x="-132" y="7" scalex="0.94" alpha="100" />
+            <sprite id="zz_psynergy_2" delay="3" z="1" src="reskins/mia_golden_sun_halloween/1-zz_psynergy_2.png" x="-175" alpha="0" />
+            <sprite id="mia_psynergy_ring_front" delay="3" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back" delay="3" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_2" delay="4" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_2" delay="4" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_3" delay="5" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_3" delay="5" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="fairy" delay="3" z="-3" src="mia_golden_sun/djinn/fairy_magic.png" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-12" src="mia_golden_sun/kibble/prop_towel.png" x="-20" y="920" scalex="0.9" scaley="0.9" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="268" y="8" scalex="0.4" scaley="0.4" />
+            <directive type="animation" id="zz_mia_examine_arm" ease="linear" interpolation="none">
+                <keyframe time="0" src="mia_golden_sun/kibble/5-zz_mia_examine_arm.png" />
+                <keyframe time="4.25" src="mia_golden_sun/kibble/5-zz_mia_examine_arm_2.png" />
+            </directive>
+            <directive type="animation" id="zz_mia_examine_arm(copy)" ease="linear" interpolation="linear">
+                <keyframe time="0" x="82" y="48" alpha="0" />
+                <keyframe time="4.25" alpha="0" />
+                <keyframe time="6" alpha="100" />
+                <keyframe time="19" alpha="100" />
+                <keyframe time="19.75" alpha="0" />
+            </directive>
+            <directive type="animation" id="zz_psynergy_1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/kibble/1-zz_dunban_examine.png" />
+                <keyframe time="3" src="reskins/mia_golden_sun_halloween/1-zz_psynergy_1.png" />
+            </directive>
+            <directive type="animation" id="zz_dunban_examine_overlay" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/kibble/1-zz_dunban_examine_overlay.png" alpha="100" />
+                <keyframe time="3" alpha="0" />
+            </directive>
+            <directive type="animation" id="zz_psynergy_2" delay="3" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="70" />
+                <keyframe time="3" alpha="100" />
+                <keyframe time="7" alpha="100" />
+                <keyframe time="11" alpha="100" />
+                <keyframe time="16" alpha="100" />
+                <keyframe time="17" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front" delay="3" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back" delay="3" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_2" delay="4" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_2" delay="4" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_3" delay="5" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_3" delay="5" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="3" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+                <keyframe time="2" x="400" y="-400" alpha="0" />
+                <keyframe time="3" x="300" />
+                <keyframe time="4" x="200" alpha="20" />
+                <keyframe time="5" x="100" />
+                <keyframe time="6" x="0" />
+                <keyframe time="7" x="-100" />
+                <keyframe time="8" x="-200" />
+                <keyframe time="9" x="-300" alpha="20" />
+                <keyframe time="10" x="-400" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="5" loop="true" ease="smooth" interpolation="linear" clamp="mirror" iterations="15">
+                <keyframe time="0" y="-400" />
+                <keyframe time="1" y="-320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="268" scalex="0.4" scaley="0.4" />
+                <keyframe time="1" x="320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="8" />
+                <keyframe time="1" y="88" />
+            </directive>
+        </pose>
+        <pose id="1-stripping">
+            <sprite id="z_stripping" src="reskins/mia_golden_sun_halloween/1-z_stripping.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="250" y="200" scalex="0" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" x="250" y="200" scalex="0" />
+                <keyframe time="0.1" scalex="0.4" />
+                <keyframe time="0.5" y="100" />
+                <keyframe time="1" y="200" />
+                <keyframe time="1.5" y="300" />
+                <keyframe time="1.9" scalex="0.4" />
+                <keyframe time="2" x="-250" y="200" scalex="0" />
+                <keyframe time="2.1" scalex="-0.4" />
+                <keyframe time="2.5" y="100" />
+                <keyframe time="3" y="200" />
+                <keyframe time="3.5" y="300" />
+                <keyframe time="3.9" scalex="-0.4" />
+                <keyframe time="4" x="250" y="200" scalex="0" />
+            </directive>
+        </pose>
+        <pose id="2-__dunban_ply">
+            <sprite id="zz_mia_examine_arm" z="10" src="mia_golden_sun/kibble/5-zz_mia_examine_arm.png" x="82" y="48" />
+            <sprite id="zz_mia_examine_arm(copy)" z="11" src="mia_golden_sun/kibble/5-zz_mia_examine_arm_2b.png" x="82" y="48" alpha="0" />
+            <sprite id="zz_psynergy_1" z="1" src="reskins/mia_golden_sun_halloween/kibble/2-zz_dunban_examine.png" x="-175" />
+            <sprite id="zz_dunban_examine_overlay" z="12" src="reskins/mia_golden_sun_halloween/kibble/1-zz_dunban_examine_overlay.png" x="-132" y="7" scalex="0.94" alpha="100" />
+            <sprite id="zz_psynergy_2" delay="3" z="1" src="reskins/mia_golden_sun_halloween/2-zz_psynergy_2.png" x="-175" alpha="0" />
+            <sprite id="mia_psynergy_ring_front" delay="3" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back" delay="3" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_2" delay="4" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_2" delay="4" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_3" delay="5" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_3" delay="5" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="fairy" delay="3" z="-3" src="mia_golden_sun/djinn/fairy_magic.png" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-12" src="mia_golden_sun/kibble/prop_towel.png" x="-20" y="920" scalex="0.9" scaley="0.9" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="268" y="8" scalex="0.4" scaley="0.4" />
+            <directive type="animation" id="zz_mia_examine_arm" ease="linear" interpolation="none">
+                <keyframe time="0" src="mia_golden_sun/kibble/5-zz_mia_examine_arm.png" />
+                <keyframe time="4.25" src="mia_golden_sun/kibble/5-zz_mia_examine_arm_2.png" />
+            </directive>
+            <directive type="animation" id="zz_mia_examine_arm(copy)" ease="linear" interpolation="linear">
+                <keyframe time="0" x="82" y="48" alpha="0" />
+                <keyframe time="4.25" alpha="0" />
+                <keyframe time="6" alpha="100" />
+                <keyframe time="19" alpha="100" />
+                <keyframe time="19.75" alpha="0" />
+            </directive>
+            <directive type="animation" id="zz_psynergy_1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/kibble/2-zz_dunban_examine.png" />
+                <keyframe time="3" src="reskins/mia_golden_sun_halloween/2-zz_psynergy_1.png" />
+            </directive>
+            <directive type="animation" id="zz_dunban_examine_overlay" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/kibble/1-zz_dunban_examine_overlay.png" alpha="100" />
+                <keyframe time="3" alpha="0" />
+            </directive>
+            <directive type="animation" id="zz_psynergy_2" delay="3" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="70" />
+                <keyframe time="3" alpha="100" />
+                <keyframe time="7" alpha="100" />
+                <keyframe time="11" alpha="100" />
+                <keyframe time="16" alpha="100" />
+                <keyframe time="17" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front" delay="3" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back" delay="3" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_2" delay="4" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_2" delay="4" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_3" delay="5" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_3" delay="5" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="3" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+                <keyframe time="2" x="400" y="-400" alpha="0" />
+                <keyframe time="3" x="300" />
+                <keyframe time="4" x="200" alpha="20" />
+                <keyframe time="5" x="100" />
+                <keyframe time="6" x="0" />
+                <keyframe time="7" x="-100" />
+                <keyframe time="8" x="-200" />
+                <keyframe time="9" x="-300" alpha="20" />
+                <keyframe time="10" x="-400" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="5" loop="true" ease="smooth" interpolation="linear" clamp="mirror" iterations="15">
+                <keyframe time="0" y="-400" />
+                <keyframe time="1" y="-320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="268" scalex="0.4" scaley="0.4" />
+                <keyframe time="1" x="320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="8" />
+                <keyframe time="1" y="88" />
+            </directive>
+        </pose>
+        <pose id="2-stripping">
+            <sprite id="z_stripping" src="reskins/mia_golden_sun_halloween/2-z_stripping.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="250" y="200" scalex="0" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" x="250" y="200" scalex="0" />
+                <keyframe time="0.1" scalex="0.4" />
+                <keyframe time="0.5" y="100" />
+                <keyframe time="1" y="200" />
+                <keyframe time="1.5" y="300" />
+                <keyframe time="1.9" scalex="0.4" />
+                <keyframe time="2" x="-250" y="200" scalex="0" />
+                <keyframe time="2.1" scalex="-0.4" />
+                <keyframe time="2.5" y="100" />
+                <keyframe time="3" y="200" />
+                <keyframe time="3.5" y="300" />
+                <keyframe time="3.9" scalex="-0.4" />
+                <keyframe time="4" x="250" y="200" scalex="0" />
+            </directive>
+        </pose>
+        <pose id="3-__dunban_ply">
+            <sprite id="zz_mia_examine_arm" z="10" src="mia_golden_sun/kibble/5-zz_mia_examine_arm.png" x="82" y="48" />
+            <sprite id="zz_mia_examine_arm(copy)" z="11" src="mia_golden_sun/kibble/5-zz_mia_examine_arm_2b.png" x="82" y="48" alpha="0" />
+            <sprite id="zz_psynergy_1" z="1" src="reskins/mia_golden_sun_halloween/kibble/3-zz_dunban_examine.png" x="-175" />
+            <sprite id="zz_dunban_examine_overlay" z="12" src="reskins/mia_golden_sun_halloween/kibble/1-zz_dunban_examine_overlay.png" x="-132" y="7" scalex="0.94" alpha="100" />
+            <sprite id="zz_psynergy_2" delay="3" z="1" src="reskins/mia_golden_sun_halloween/3-zz_psynergy_2.png" x="-175" alpha="0" />
+            <sprite id="mia_psynergy_ring_front" delay="3" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back" delay="3" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_2" delay="4" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_2" delay="4" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_3" delay="5" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_3" delay="5" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="fairy" delay="3" z="-3" src="mia_golden_sun/djinn/fairy_magic.png" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-12" src="mia_golden_sun/kibble/prop_towel.png" x="-20" y="920" scalex="0.9" scaley="0.9" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="268" y="8" scalex="0.4" scaley="0.4" />
+            <directive type="animation" id="zz_mia_examine_arm" ease="linear" interpolation="none">
+                <keyframe time="0" src="mia_golden_sun/kibble/5-zz_mia_examine_arm.png" />
+                <keyframe time="4.25" src="mia_golden_sun/kibble/5-zz_mia_examine_arm_2.png" />
+            </directive>
+            <directive type="animation" id="zz_mia_examine_arm(copy)" ease="linear" interpolation="linear">
+                <keyframe time="0" x="82" y="48" alpha="0" />
+                <keyframe time="4.25" alpha="0" />
+                <keyframe time="6" alpha="100" />
+                <keyframe time="19" alpha="100" />
+                <keyframe time="19.75" alpha="0" />
+            </directive>
+            <directive type="animation" id="zz_psynergy_1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/kibble/3-zz_dunban_examine.png" />
+                <keyframe time="3" src="reskins/mia_golden_sun_halloween/3-zz_psynergy_1.png" />
+            </directive>
+            <directive type="animation" id="zz_dunban_examine_overlay" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/kibble/1-zz_dunban_examine_overlay.png" alpha="100" />
+                <keyframe time="3" alpha="0" />
+            </directive>
+            <directive type="animation" id="zz_psynergy_2" delay="3" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="70" />
+                <keyframe time="3" alpha="100" />
+                <keyframe time="7" alpha="100" />
+                <keyframe time="11" alpha="100" />
+                <keyframe time="16" alpha="100" />
+                <keyframe time="17" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front" delay="3" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back" delay="3" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_2" delay="4" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_2" delay="4" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_3" delay="5" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_3" delay="5" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="3" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+                <keyframe time="2" x="400" y="-400" alpha="0" />
+                <keyframe time="3" x="300" />
+                <keyframe time="4" x="200" alpha="20" />
+                <keyframe time="5" x="100" />
+                <keyframe time="6" x="0" />
+                <keyframe time="7" x="-100" />
+                <keyframe time="8" x="-200" />
+                <keyframe time="9" x="-300" alpha="20" />
+                <keyframe time="10" x="-400" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="5" loop="true" ease="smooth" interpolation="linear" clamp="mirror" iterations="15">
+                <keyframe time="0" y="-400" />
+                <keyframe time="1" y="-320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="268" scalex="0.4" scaley="0.4" />
+                <keyframe time="1" x="320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="8" />
+                <keyframe time="1" y="88" />
+            </directive>
+        </pose>
+        <pose id="3-__stripped_fizz">
+            <sprite id="z_stripped_fizz" src="reskins/mia_golden_sun_halloween/3-pray.png" x="0" y="0" scalex="1" scaley="1" pivoty="90%" />
+            <sprite id="fizz" delay="0.15" z="-3" src="mia_golden_sun/djinn/fizz.png" x="-43" y="312" scalex="0.4" scaley="0.4" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <directive type="animation" id="z_stripped_fizz" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" scalex="1" scaley="1" />
+                <keyframe time="0.05" x="0" y="0" scalex="1" scaley="1" />
+                <keyframe time="0.15" x="0" y="-20" scalex="0.9" scaley="1.1" />
+                <keyframe time="0.25" y="0" scalex="1" scaley="1" />
+                <keyframe time="1" x="0" y="0" />
+            </directive>
+            <directive type="animation" id="z_stripped_fizz" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/3-pray.png" />
+                <keyframe time="0.05" src="reskins/mia_golden_sun_halloween/3-pray.png" />
+                <keyframe time="1" src="reskins/mia_golden_sun_halloween/3-z_stripped_fizz.png" />
+            </directive>
+            <directive type="animation" id="fizz" delay="0.15" ease="ease-in-out-cubic" interpolation="spline">
+                <keyframe time="0" x="-43" y="312" />
+                <keyframe time="1.35" x="-144" y="407" />
+                <keyframe time="2.35" x="-238" y="322" />
+                <keyframe time="2.85" x="-258" y="188" />
+                <keyframe time="3.35" x="-174" y="122" />
+                <keyframe time="3.85" x="-170" y="157" />
+            </directive>
+            <directive type="animation" id="fizz" delay="4" ease="linear" interpolation="spline">
+                <keyframe time="0" x="-170" />
+                <keyframe time="0.5" x="-170" />
+            </directive>
+            <directive type="animation" id="fizz" delay="4" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="157" />
+                <keyframe time="0.6500001" y="200" />
+            </directive>
+            <directive type="animation" id="fizz" delay="0.15" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="0.4" scaley="0.4" />
+                <keyframe time="4.35" scalex="0.4" scaley="0.4" />
+                <keyframe time="4.6" scalex="-0.4" />
+            </directive>
+        </pose>
+        <pose id="3-stripping">
+            <sprite id="z_stripping" src="reskins/mia_golden_sun_halloween/3-z_stripping.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="250" y="200" scalex="0" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" x="250" y="200" scalex="0" />
+                <keyframe time="0.1" scalex="0.4" />
+                <keyframe time="0.5" y="100" />
+                <keyframe time="1" y="200" />
+                <keyframe time="1.5" y="300" />
+                <keyframe time="1.9" scalex="0.4" />
+                <keyframe time="2" x="-250" y="200" scalex="0" />
+                <keyframe time="2.1" scalex="-0.4" />
+                <keyframe time="2.5" y="100" />
+                <keyframe time="3" y="200" />
+                <keyframe time="3.5" y="300" />
+                <keyframe time="3.9" scalex="-0.4" />
+                <keyframe time="4" x="250" y="200" scalex="0" />
+            </directive>
+        </pose>
+        <pose id="4-__dunban_ply">
+            <sprite id="zz_mia_examine_arm" z="10" src="mia_golden_sun/kibble/5-zz_mia_examine_arm.png" x="82" y="48" />
+            <sprite id="zz_mia_examine_arm(copy)" z="11" src="mia_golden_sun/kibble/5-zz_mia_examine_arm_2b.png" x="82" y="48" alpha="0" />
+            <sprite id="zz_psynergy_1" z="1" src="reskins/mia_golden_sun_halloween/kibble/4-zz_dunban_examine.png" x="-175" />
+            <sprite id="zz_dunban_examine_overlay" z="12" src="reskins/mia_golden_sun_halloween/kibble/1-zz_dunban_examine_overlay.png" x="-132" y="7" scalex="0.94" alpha="100" />
+            <sprite id="zz_psynergy_2" delay="3" z="1" src="reskins/mia_golden_sun_halloween/4-zz_psynergy_2.png" x="-175" alpha="0" />
+            <sprite id="mia_psynergy_ring_front" delay="3" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back" delay="3" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_2" delay="4" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_2" delay="4" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_3" delay="5" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_3" delay="5" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="fairy" delay="3" z="-3" src="mia_golden_sun/djinn/fairy_magic.png" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-12" src="mia_golden_sun/kibble/prop_towel.png" x="-20" y="920" scalex="0.9" scaley="0.9" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="268" y="8" scalex="0.4" scaley="0.4" />
+            <directive type="animation" id="zz_mia_examine_arm" ease="linear" interpolation="none">
+                <keyframe time="0" src="mia_golden_sun/kibble/5-zz_mia_examine_arm.png" />
+                <keyframe time="4.25" src="mia_golden_sun/kibble/5-zz_mia_examine_arm_2.png" />
+            </directive>
+            <directive type="animation" id="zz_mia_examine_arm(copy)" ease="linear" interpolation="linear">
+                <keyframe time="0" x="82" y="48" alpha="0" />
+                <keyframe time="4.25" alpha="0" />
+                <keyframe time="6" alpha="100" />
+                <keyframe time="19" alpha="100" />
+                <keyframe time="19.75" alpha="0" />
+            </directive>
+            <directive type="animation" id="zz_psynergy_1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/kibble/4-zz_dunban_examine.png" />
+                <keyframe time="3" src="reskins/mia_golden_sun_halloween/4-zz_psynergy_1.png" />
+            </directive>
+            <directive type="animation" id="zz_dunban_examine_overlay" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/kibble/1-zz_dunban_examine_overlay.png" alpha="100" />
+                <keyframe time="3" alpha="0" />
+            </directive>
+            <directive type="animation" id="zz_psynergy_2" delay="3" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="70" />
+                <keyframe time="3" alpha="100" />
+                <keyframe time="7" alpha="100" />
+                <keyframe time="11" alpha="100" />
+                <keyframe time="16" alpha="100" />
+                <keyframe time="17" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front" delay="3" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back" delay="3" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_2" delay="4" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_2" delay="4" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_3" delay="5" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_3" delay="5" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="3" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+                <keyframe time="2" x="400" y="-400" alpha="0" />
+                <keyframe time="3" x="300" />
+                <keyframe time="4" x="200" alpha="20" />
+                <keyframe time="5" x="100" />
+                <keyframe time="6" x="0" />
+                <keyframe time="7" x="-100" />
+                <keyframe time="8" x="-200" />
+                <keyframe time="9" x="-300" alpha="20" />
+                <keyframe time="10" x="-400" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="5" loop="true" ease="smooth" interpolation="linear" clamp="mirror" iterations="15">
+                <keyframe time="0" y="-400" />
+                <keyframe time="1" y="-320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="268" scalex="0.4" scaley="0.4" />
+                <keyframe time="1" x="320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="8" />
+                <keyframe time="1" y="88" />
+            </directive>
+        </pose>
+        <pose id="4-stripping">
+            <sprite id="z_stripping" src="reskins/mia_golden_sun_halloween/4-z_stripping.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="250" y="200" scalex="0" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" x="250" y="200" scalex="0" />
+                <keyframe time="0.1" scalex="0.4" />
+                <keyframe time="0.5" y="100" />
+                <keyframe time="1" y="200" />
+                <keyframe time="1.5" y="300" />
+                <keyframe time="1.9" scalex="0.4" />
+                <keyframe time="2" x="-250" y="200" scalex="0" />
+                <keyframe time="2.1" scalex="-0.4" />
+                <keyframe time="2.5" y="100" />
+                <keyframe time="3" y="200" />
+                <keyframe time="3.5" y="300" />
+                <keyframe time="3.9" scalex="-0.4" />
+                <keyframe time="4" x="250" y="200" scalex="0" />
+            </directive>
+        </pose>
+        <pose id="5-__dunban_ply">
+            <sprite id="zz_mia_examine_arm" z="10" src="mia_golden_sun/kibble/5-zz_mia_examine_arm.png" x="82" y="48" />
+            <sprite id="zz_mia_examine_arm(copy)" z="11" src="mia_golden_sun/kibble/5-zz_mia_examine_arm_2b.png" x="82" y="48" alpha="0" />
+            <sprite id="zz_psynergy_1" z="1" src="reskins/mia_golden_sun_halloween/kibble/5-zz_dunban_examine.png" x="-175" />
+            <sprite id="zz_dunban_examine_overlay" z="12" src="reskins/mia_golden_sun_halloween/kibble/1-zz_dunban_examine_overlay.png" x="-132" y="7" scalex="0.94" alpha="100" />
+            <sprite id="zz_psynergy_2" delay="3" z="1" src="reskins/mia_golden_sun_halloween/5-zz_psynergy_2.png" x="-175" alpha="0" />
+            <sprite id="mia_psynergy_ring_front" delay="3" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back" delay="3" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_2" delay="4" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_2" delay="4" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_3" delay="5" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_3" delay="5" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="-175" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="fairy" delay="3" z="-3" src="mia_golden_sun/djinn/fairy_magic.png" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-12" src="mia_golden_sun/kibble/prop_towel.png" x="-20" y="920" scalex="0.9" scaley="0.9" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="268" y="8" scalex="0.4" scaley="0.4" />
+            <directive type="animation" id="zz_mia_examine_arm" ease="linear" interpolation="none">
+                <keyframe time="0" src="mia_golden_sun/kibble/5-zz_mia_examine_arm.png" />
+                <keyframe time="4.25" src="mia_golden_sun/kibble/5-zz_mia_examine_arm_2.png" />
+            </directive>
+            <directive type="animation" id="zz_mia_examine_arm(copy)" ease="linear" interpolation="linear">
+                <keyframe time="0" x="82" y="48" alpha="0" />
+                <keyframe time="4.25" alpha="0" />
+                <keyframe time="6" alpha="100" />
+                <keyframe time="19" alpha="100" />
+                <keyframe time="19.75" alpha="0" />
+            </directive>
+            <directive type="animation" id="zz_psynergy_1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/kibble/5-zz_dunban_examine.png" />
+                <keyframe time="3" src="reskins/mia_golden_sun_halloween/5-zz_psynergy_1.png" />
+            </directive>
+            <directive type="animation" id="zz_dunban_examine_overlay" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/kibble/1-zz_dunban_examine_overlay.png" alpha="100" />
+                <keyframe time="3" alpha="0" />
+            </directive>
+            <directive type="animation" id="zz_psynergy_2" delay="3" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="70" />
+                <keyframe time="3" alpha="100" />
+                <keyframe time="7" alpha="100" />
+                <keyframe time="11" alpha="100" />
+                <keyframe time="16" alpha="100" />
+                <keyframe time="17" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front" delay="3" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back" delay="3" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_2" delay="4" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_2" delay="4" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_3" delay="5" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_3" delay="5" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="3" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+                <keyframe time="2" x="400" y="-400" alpha="0" />
+                <keyframe time="3" x="300" />
+                <keyframe time="4" x="200" alpha="20" />
+                <keyframe time="5" x="100" />
+                <keyframe time="6" x="0" />
+                <keyframe time="7" x="-100" />
+                <keyframe time="8" x="-200" />
+                <keyframe time="9" x="-300" alpha="20" />
+                <keyframe time="10" x="-400" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="5" loop="true" ease="smooth" interpolation="linear" clamp="mirror" iterations="15">
+                <keyframe time="0" y="-400" />
+                <keyframe time="1" y="-320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="268" scalex="0.4" scaley="0.4" />
+                <keyframe time="1" x="320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="8" />
+                <keyframe time="1" y="88" />
+            </directive>
+        </pose>
+        <pose id="5-stripping">
+            <sprite id="z_stripping" src="reskins/mia_golden_sun_halloween/5-z_stripping.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="250" y="200" scalex="0" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" x="250" y="200" scalex="0" />
+                <keyframe time="0.1" scalex="0.4" />
+                <keyframe time="0.5" y="100" />
+                <keyframe time="1" y="200" />
+                <keyframe time="1.5" y="300" />
+                <keyframe time="1.9" scalex="0.4" />
+                <keyframe time="2" x="-250" y="200" scalex="0" />
+                <keyframe time="2.1" scalex="-0.4" />
+                <keyframe time="2.5" y="100" />
+                <keyframe time="3" y="200" />
+                <keyframe time="3.5" y="300" />
+                <keyframe time="3.9" scalex="-0.4" />
+                <keyframe time="4" x="250" y="200" scalex="0" />
+            </directive>
+        </pose>
+        <pose id="angry">
+            <sprite id="angry" src="reskins/mia_golden_sun_halloween/#-angry.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="310" y="280" scalex="0.4" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="310" />
+                <keyframe time="0.12" x="312" />
+                <keyframe time="0.25" x="310" />
+                <keyframe time="0.38" x="312" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="280" />
+                <keyframe time="1" y="330" />
+            </directive>
+        </pose>
+        <pose id="angry_to_sad">
+            <sprite id="0-angry" src="reskins/mia_golden_sun_halloween/#-angry.png" x="0" y="0" scalex="1" scaley="1" />
+            <directive type="animation" id="0-angry" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" scalex="1" scaley="1" />
+                <keyframe time="1.88" scalex="1" scaley="1" />
+                <keyframe time="2" scalex="0.95" scaley="1.05" />
+                <keyframe time="2.12" scalex="1" scaley="1" />
+                <keyframe time="3.88" scalex="1" scaley="1" />
+                <keyframe time="4" scalex="0.95" scaley="1.05" />
+                <keyframe time="4.12" scalex="1" scaley="1" />
+            </directive>
+            <directive type="animation" id="0-angry" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mia_golden_sun_halloween/#-angry.png" />
+                <keyframe time="2" src="reskins/mia_golden_sun_halloween/#-sheepish.png" />
+                <keyframe time="4" src="reskins/mia_golden_sun_halloween/#-sad.png" />
+            </directive>
+        </pose>
+        <pose id="blushing">
+            <sprite id="blushing" src="reskins/mia_golden_sun_halloween/#-blushing.png" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="4" y="122" scalex="0.4" scaley="0.4" rotation="0" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline">
+                <keyframe time="0" x="4" />
+                <keyframe time="2" x="-228" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="122" />
+                <keyframe time="2" y="198" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="smooth" interpolation="linear" clamp="mirror">
+                <keyframe time="0" rotation="0" />
+                <keyframe time="2" rotation="-5" />
+            </directive>
+        </pose>
+        <pose id="calm">
+            <sprite id="calm" src="reskins/mia_golden_sun_halloween/#-calm.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="3" src="mia_golden_sun/djinn/fizz.png" x="222" y="139" scalex="0.4" scaley="0.4" rotation="6" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" x="222" y="139" />
+                <keyframe time="2" x="222" y="229" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="smooth" interpolation="linear" clamp="mirror">
+                <keyframe time="0" rotation="6" />
+                <keyframe time="2" rotation="-6" />
+            </directive>
+        </pose>
+        <pose id="calm_ah">
+            <sprite id="calm" src="reskins/mia_golden_sun_halloween/#-calm.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="mouth_ah" marker="mouthdisable==0" z="2" src="mia_golden_sun/kibble/mouth_ah.png" x="-1" y="315" />
+            <sprite id="fizz" marker="djinnToggle==1" z="3" src="mia_golden_sun/djinn/fizz.png" x="222" y="139" scalex="0.4" scaley="0.4" rotation="6" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" x="222" y="139" />
+                <keyframe time="2" x="222" y="229" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="smooth" interpolation="linear" clamp="mirror">
+                <keyframe time="0" rotation="6" />
+                <keyframe time="2" rotation="-6" />
+            </directive>
+        </pose>
+        <pose id="calm_oh">
+            <sprite id="calm" src="reskins/mia_golden_sun_halloween/#-calm.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="mouth_oh" marker="mouthdisable==0" z="2" src="mia_golden_sun/kibble/mouth_oh.png" x="-1" y="315" />
+            <sprite id="fizz" marker="djinnToggle==1" z="3" src="mia_golden_sun/djinn/fizz.png" x="222" y="139" scalex="0.4" scaley="0.4" rotation="6" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" x="222" y="139" />
+                <keyframe time="2" x="222" y="229" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="smooth" interpolation="linear" clamp="mirror">
+                <keyframe time="0" rotation="6" />
+                <keyframe time="2" rotation="-6" />
+            </directive>
+        </pose>
+        <pose id="conversational">
+            <sprite id="conversational" src="reskins/mia_golden_sun_halloween/#-conversational.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="3" src="mia_golden_sun/djinn/fizz.png" x="159" y="139" scalex="0.4" scaley="0.4" rotation="6" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" x="159" y="139" />
+                <keyframe time="2" x="159" y="229" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="smooth" interpolation="linear" clamp="mirror">
+                <keyframe time="0" rotation="6" />
+                <keyframe time="2" rotation="-6" />
+            </directive>
+        </pose>
+        <pose id="embarrassed">
+            <sprite id="embarrassed" src="reskins/mia_golden_sun_halloween/#-embarrassed.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="-35" y="120" scalex="-0.4" scaley="0.4" rotation="0" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline">
+                <keyframe time="0" x="-35" />
+                <keyframe time="2" x="87" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="120" />
+                <keyframe time="2" y="150" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="-0.4" scaley="0.4" rotation="0" />
+                <keyframe time="2" rotation="20" />
+            </directive>
+        </pose>
+        <pose id="excited">
+            <sprite id="excited" src="reskins/mia_golden_sun_halloween/#-excited.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz1" marker="djinnToggle==1" z="3" src="mia_golden_sun/djinn/fizz.png" x="-182" y="183" scalex="0.4" scaley="0.4" rotation="-6" />
+            <directive type="animation" id="fizz1" marker="djinnToggle==1" loop="true" ease="smooth" interpolation="linear" clamp="mirror">
+                <keyframe time="0" y="183" rotation="-6" />
+                <keyframe time="1.75" y="72" rotation="12" />
+            </directive>
+        </pose>
+        <pose id="happy">
+            <sprite id="happy" src="reskins/mia_golden_sun_halloween/#-happy.png" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="250" y="200" scalex="0" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" x="250" y="200" scalex="0" />
+                <keyframe time="0.1" scalex="0.4" />
+                <keyframe time="0.5" y="100" />
+                <keyframe time="1" y="200" />
+                <keyframe time="1.5" y="300" />
+                <keyframe time="1.9" scalex="0.4" />
+                <keyframe time="2" x="-250" y="200" scalex="0" />
+                <keyframe time="2.1" scalex="-0.4" />
+                <keyframe time="2.5" y="100" />
+                <keyframe time="3" y="200" />
+                <keyframe time="3.5" y="300" />
+                <keyframe time="3.9" scalex="-0.4" />
+                <keyframe time="4" x="250" y="200" scalex="0" />
+            </directive>
+        </pose>
+        <pose id="horny">
+            <sprite id="horny" src="reskins/mia_golden_sun_halloween/#-horny.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="-17" y="120" scalex="-0.4" scaley="0.4" rotation="0" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline">
+                <keyframe time="0" x="-17" />
+                <keyframe time="0.5" x="-17" />
+                <keyframe time="2.12" x="87" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="120" />
+                <keyframe time="0.5" y="120" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" delay="0.5" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="120" />
+                <keyframe time="1.62" y="150" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="none">
+                <keyframe time="0" src="mia_golden_sun/djinn/fizz.png" />
+                <keyframe time="0.5" src="mia_golden_sun/djinn/fizz.png" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="-0.4" scaley="0.4" rotation="0" />
+                <keyframe time="0.5" scalex="-0.4" scaley="0.4" rotation="0" />
+                <keyframe time="2.12" rotation="20" />
+            </directive>
+        </pose>
+        <pose id="lust">
+            <sprite id="lust" src="reskins/mia_golden_sun_halloween/#-lust.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="-20" y="235" scalex="0.4" scaley="0.4" rotation="0" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline">
+                <keyframe time="0" x="-20" />
+                <keyframe time="2" x="-159" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="235" />
+                <keyframe time="2" y="260" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="0.4" scaley="0.4" rotation="0" />
+                <keyframe time="2" rotation="-15" />
+            </directive>
+        </pose>
+        <pose id="miffed">
+            <sprite id="miffed" src="reskins/mia_golden_sun_halloween/#-miffed.png" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="-190" y="280" scalex="0.4" scaley="0.4" rotation="3" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="280" />
+                <keyframe time="1" y="330" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="smooth" interpolation="linear" clamp="mirror">
+                <keyframe time="0" rotation="3" />
+                <keyframe time="1" rotation="-3" />
+            </directive>
+        </pose>
+        <pose id="praise">
+            <sprite id="praise" src="reskins/mia_golden_sun_halloween/#-praise.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="250" y="200" scalex="0" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" x="250" y="200" scalex="0" />
+                <keyframe time="0.1" scalex="0.4" />
+                <keyframe time="0.5" y="100" />
+                <keyframe time="1" y="200" />
+                <keyframe time="1.5" y="300" />
+                <keyframe time="1.9" scalex="0.4" />
+                <keyframe time="2" x="-250" y="200" scalex="0" />
+                <keyframe time="2.1" scalex="-0.4" />
+                <keyframe time="2.5" y="100" />
+                <keyframe time="3" y="200" />
+                <keyframe time="3.5" y="300" />
+                <keyframe time="3.9" scalex="-0.4" />
+                <keyframe time="4" x="250" y="200" scalex="0" />
+            </directive>
+        </pose>
+        <pose id="pray">
+            <sprite id="pray" src="reskins/mia_golden_sun_halloween/#-pray.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="210" y="10" scalex="0.4" scaley="0.4" rotation="6" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline">
+                <keyframe time="0" x="210" />
+                <keyframe time="0.75" x="263" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="10" />
+                <keyframe time="0.75" y="154" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" delay="0.75" loop="true" ease="smooth" interpolation="linear" clamp="mirror">
+                <keyframe time="0" y="154" />
+                <keyframe time="1" y="88" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="0.4" scaley="0.4" rotation="6" />
+                <keyframe time="0.75" rotation="6" />
+                <keyframe time="1.25" rotation="-3" />
+            </directive>
+        </pose>
+        <pose id="psynergy">
+            <sprite id="zz_psynergy_1" z="1" src="reskins/mia_golden_sun_halloween/#-zz_psynergy_1.png" />
+            <sprite id="zz_psynergy_2" z="1" src="reskins/mia_golden_sun_halloween/#-zz_psynergy_2.png" alpha="0" />
+            <sprite id="mia_psynergy_ring_front" z="6" src="kibble/mia_psynergy_ring_front.png" x="0" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back" z="-6" src="kibble/mia_psynergy_ring_back.png" x="0" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_2" delay="1" z="6" src="kibble/mia_psynergy_ring_front.png" x="0" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_2" delay="1" z="-6" src="kibble/mia_psynergy_ring_back.png" x="0" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_3" delay="2" z="6" src="kibble/mia_psynergy_ring_front.png" x="0" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_3" delay="2" z="-6" src="kibble/mia_psynergy_ring_back.png" x="0" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-12" src="kibble/prop_towel.png" x="-20" y="920" scalex="0.9" scaley="0.9" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="268" y="8" scalex="0.4" scaley="0.4" />
+            <directive type="animation" id="zz_psynergy_2" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="70" />
+                <keyframe time="3" alpha="100" />
+                <keyframe time="7" alpha="100" />
+                <keyframe time="11" alpha="100" />
+                <keyframe time="16" alpha="100" />
+                <keyframe time="17" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_2" delay="1" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_2" delay="1" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_3" delay="2" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_3" delay="2" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline">
+                <keyframe time="0" x="268" />
+                <keyframe time="1" x="320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="8" />
+                <keyframe time="1" y="88" />
+            </directive>
+        </pose>
+        <pose id="psynergy_Ply">
+            <sprite id="zz_psynergy_1" z="1" src="reskins/mia_golden_sun_halloween/#-zz_psynergy_1.png" />
+            <sprite id="zz_psynergy_2" z="1" src="reskins/mia_golden_sun_halloween/#-zz_psynergy_2.png" alpha="0" />
+            <sprite id="mia_psynergy_ring_front" z="6" src="mia_golden_sun/kibble/mia_psynergy_ring_front.png" x="0" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back" z="-6" src="mia_golden_sun/kibble/mia_psynergy_ring_back.png" x="0" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_2" delay="1" z="6" src="kibble/mia_psynergy_ring_front.png" x="0" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_2" delay="1" z="-6" src="kibble/mia_psynergy_ring_back.png" x="0" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_front_3" delay="2" z="6" src="kibble/mia_psynergy_ring_front.png" x="0" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="mia_psynergy_ring_back_3" delay="2" z="-6" src="kibble/mia_psynergy_ring_back.png" x="0" y="1200" scalex="1" scaley="1" alpha="0" />
+            <sprite id="fairy" z="-3" src="djinn/fairy_magic.png" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-12" src="kibble/prop_towel.png" x="-20" y="920" scalex="0.9" scaley="0.9" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="268" y="8" scalex="0.4" scaley="0.4" />
+            <directive type="animation" id="zz_psynergy_2" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="1" alpha="70" />
+                <keyframe time="3" alpha="100" />
+                <keyframe time="7" alpha="100" />
+                <keyframe time="11" alpha="100" />
+                <keyframe time="16" alpha="100" />
+                <keyframe time="17" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_2" delay="1" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_2" delay="1" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_front_3" delay="2" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mia_psynergy_ring_back_3" delay="2" loop="true" ease="smooth" interpolation="linear" iterations="3">
+                <keyframe time="0" y="1200" scalex="1" scaley="1" alpha="0" />
+                <keyframe time="0.5" y="1000" alpha="100" />
+                <keyframe time="0.75" scalex="1" scaley="1" />
+                <keyframe time="3.5" y="0" scalex="0.5" scaley="0.6" alpha="100" />
+                <keyframe time="3.75" alpha="0" />
+                <keyframe time="4" y="-200" scalex="0.5" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="433" y="-448" scalex="0.3" scaley="0.3" alpha="0" rotation="-22" />
+                <keyframe time="2" x="400" y="-400" alpha="0" />
+                <keyframe time="3" x="300" />
+                <keyframe time="4" x="200" alpha="100" />
+                <keyframe time="5" x="100" />
+                <keyframe time="6" x="0" />
+                <keyframe time="7" x="-100" />
+                <keyframe time="8" x="-200" />
+                <keyframe time="9" x="-300" alpha="100" />
+                <keyframe time="10" x="-400" alpha="0" />
+            </directive>
+            <directive type="animation" id="fairy" delay="2" loop="true" ease="smooth" interpolation="linear" clamp="mirror" iterations="15">
+                <keyframe time="0" y="-400" />
+                <keyframe time="1" y="-320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="268" scalex="0.4" scaley="0.4" />
+                <keyframe time="1" x="320" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="8" />
+                <keyframe time="1" y="88" />
+            </directive>
+        </pose>
+        <pose id="sad">
+            <sprite id="sad" src="reskins/mia_golden_sun_halloween/#-sad.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="3" src="mia_golden_sun/djinn/fizz.png" x="115" y="166" scalex="0.4" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" x="115" y="166" />
+                <keyframe time="3" x="130" y="256" />
+            </directive>
+        </pose>
+        <pose id="sheepish">
+            <sprite id="sheepish" src="reskins/mia_golden_sun_halloween/#-sheepish.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="-16" y="325" scalex="-0.4" scaley="0.4" rotation="0" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline">
+                <keyframe time="0" x="-16" />
+                <keyframe time="0.5" x="-21" />
+                <keyframe time="3" x="217" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="325" />
+                <keyframe time="0.5" y="280" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" delay="0.5" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="280" />
+                <keyframe time="2.5" y="302" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="none">
+                <keyframe time="0" src="mia_golden_sun/djinn/fizz.png" />
+                <keyframe time="0.5" src="mia_golden_sun/djinn/fizz.png" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="-0.4" scaley="0.4" rotation="0" />
+                <keyframe time="0.5" scalex="-0.4" scaley="0.4" rotation="0" />
+                <keyframe time="3" rotation="20" />
+            </directive>
+        </pose>
+        <pose id="shy">
+            <sprite id="shy" src="reskins/mia_golden_sun_halloween/#-shy.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="-17" y="120" scalex="-0.4" scaley="0.4" rotation="0" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline">
+                <keyframe time="0" x="-17" />
+                <keyframe time="0.5" x="-17" />
+                <keyframe time="2.12" x="87" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="120" />
+                <keyframe time="0.5" y="120" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" delay="0.5" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="120" />
+                <keyframe time="1.62" y="150" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="none">
+                <keyframe time="0" src="mia_golden_sun/djinn/fizz.png" />
+                <keyframe time="0.5" src="mia_golden_sun/djinn/fizz.png" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="-0.4" scaley="0.4" rotation="0" />
+                <keyframe time="0.5" scalex="-0.4" scaley="0.4" rotation="0" />
+                <keyframe time="2.12" rotation="20" />
+            </directive>
+        </pose>
+        <pose id="shy_interest">
+            <sprite id="shy_interest" src="reskins/mia_golden_sun_halloween/#-shy_interest.png" x="0" y="0" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="-17" y="120" scalex="-0.4" scaley="0.4" rotation="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline">
+                <keyframe time="0" x="-17" />
+                <keyframe time="0.5" x="-17" />
+                <keyframe time="2.12" x="87" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="120" />
+                <keyframe time="0.5" y="120" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" delay="0.5" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="120" />
+                <keyframe time="1.62" y="150" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="none">
+                <keyframe time="0" src="mia_golden_sun/djinn/fizz.png" />
+                <keyframe time="0.5" src="mia_golden_sun/djinn/fizz.png" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="-0.4" scaley="0.4" rotation="0" />
+                <keyframe time="0.5" scalex="-0.4" scaley="0.4" rotation="0" />
+                <keyframe time="2.12" rotation="20" />
+            </directive>
+        </pose>
+        <pose id="smug">
+            <sprite id="smug" src="reskins/mia_golden_sun_halloween/#-smug.png" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="204" y="241" scalex="0.4" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="204" scalex="0.4" scaley="0.4" />
+                <keyframe time="2.25" x="-219" scalex="0.4" />
+                <keyframe time="3" scalex="-0.4" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" y="241" />
+                <keyframe time="2.25" y="202" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" delay="2.25" loop="true" ease="smooth" interpolation="linear" clamp="mirror">
+                <keyframe time="0" y="202" />
+                <keyframe time="1.25" y="150" />
+            </directive>
+        </pose>
+        <pose id="surprised">
+            <sprite id="surprised" src="reskins/mia_golden_sun_halloween/#-surprised.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="-209" y="209" scalex="0.4" scaley="0.4" rotation="-6" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" x="-209" y="209" />
+                <keyframe time="2" x="-209" y="245" />
+            </directive>
+        </pose>
+        <pose id="talking">
+            <sprite id="talking" src="reskins/mia_golden_sun_halloween/#-talking.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="250" y="200" scalex="0" scaley="0.4" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" x="250" y="200" scalex="0" />
+                <keyframe time="0.1" scalex="0.4" />
+                <keyframe time="0.5" y="100" />
+                <keyframe time="1" y="200" />
+                <keyframe time="1.5" y="300" />
+                <keyframe time="1.9" scalex="0.4" />
+                <keyframe time="2" x="-250" y="200" scalex="0" />
+                <keyframe time="2.1" scalex="-0.4" />
+                <keyframe time="2.5" y="100" />
+                <keyframe time="3" y="200" />
+                <keyframe time="3.5" y="300" />
+                <keyframe time="3.9" scalex="-0.4" />
+                <keyframe time="4" x="250" y="200" scalex="0" />
+            </directive>
+        </pose>
+        <pose id="thinking">
+            <sprite id="thinking" src="reskins/mia_golden_sun_halloween/#-thinking.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" src="mia_golden_sun/djinn/fizz.png" x="214" y="220" scalex="0.4" scaley="0.4" rotation="0" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" x="214" y="220" />
+                <keyframe time="1.5" x="214" y="250" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="linear">
+                <keyframe time="0" scalex="0.4" scaley="0.4" rotation="0" />
+                <keyframe time="4" rotation="39" />
+            </directive>
+        </pose>
+        <pose id="weary">
+            <sprite id="weary" src="reskins/mia_golden_sun_halloween/#-weary.png" x="0" y="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="-209" y="209" scalex="0.4" scaley="0.4" rotation="6" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" x="-209" y="209" />
+                <keyframe time="2.5" x="-209" y="266" />
+            </directive>
+            <directive type="animation" id="fizz" marker="djinnToggle==1" ease="smooth" interpolation="spline" clamp="mirror">
+                <keyframe time="0" rotation="6" />
+                <keyframe time="2.5" rotation="-27" />
+            </directive>
+        </pose>
+        <pose id="z__blank">
+            <sprite id="calm" src="reskins/mia_golden_sun_halloween/#-calm.png" x="0" y="2000" alpha="0" />
+            <sprite id="prop_towel" marker="towel_enable==1" z="-1" src="kibble/prop_towel.png" x="-20" y="960" scalex="0.9" scaley="0.7" />
+            <sprite id="fizz" marker="djinnToggle==1" z="-3" src="mia_golden_sun/djinn/fizz.png" x="-26" y="209" scalex="0.4" scaley="0.4" rotation="-6" />
+            <directive type="animation" id="fizz" marker="djinnToggle==1" loop="true" ease="linear" interpolation="spline" clamp="mirror">
+                <keyframe time="0" x="-26" y="209" />
+                <keyframe time="2" x="-23" y="245" />
+            </directive>
+        </pose>
+    </poses>
+</costume>

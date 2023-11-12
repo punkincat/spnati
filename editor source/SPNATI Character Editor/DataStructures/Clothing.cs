@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Xml.Serialization;
 using System.ComponentModel;
 using System.Globalization;
@@ -55,7 +55,7 @@ namespace SPNATI_Character_Editor
 
 		public Clothing()
 		{
-			Position = "upper";
+			Position = "";
 			Type = "major";
 			GenericName = "item";
 			Name = "new item";
@@ -97,7 +97,14 @@ namespace SPNATI_Character_Editor
 
 		public override string ToString()
 		{
-			return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Name);
+			if (!string.IsNullOrEmpty(Name))
+			{
+				return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Name);
+			}
+			else
+			{
+				return "SKIP";
+			}
 		}
 	}
 
@@ -129,5 +136,9 @@ namespace SPNATI_Character_Editor
 		/// Cannot change layer types
 		/// </summary>
 		LayerTypes = 2,
+		/// <summary>
+		/// Cannot skip layers
+		/// </summary>
+		NoSkip = 4,
 	}
 }

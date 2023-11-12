@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Globalization;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Desktop.CommonControls.PropertyControls;
 using Desktop.DataStructures;
 using SPNATI_Character_Editor.Controls;
@@ -677,26 +678,101 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 		}
 
+		private bool MarkerTest(string value1, MarkerOperator op, string value2)
+		{
+			switch (op)
+			{
+				case MarkerOperator.Equals:
+					if (value1 == value2)
+					{
+						return true;
+					}
+					break;
+				case MarkerOperator.LessThan:
+					if (int.TryParse(value1, out int val1) && int.TryParse(value2, out int val2))
+						if (val1 < val2)
+						{
+							return true;
+						}
+					break;
+				case MarkerOperator.LessThanOrEqual:
+					if (int.TryParse(value1, out int val3) && int.TryParse(value2, out int val4))
+						if (val3 <= val4)
+						{
+							return true;
+						}
+					break;
+				case MarkerOperator.GreaterThan:
+					if (int.TryParse(value1, out int val5) && int.TryParse(value2, out int val6))
+						if (val5 > val6)
+						{
+							return true;
+						}
+					break;
+				case MarkerOperator.GreaterThanOrEqual:
+					if (int.TryParse(value1, out int val7) && int.TryParse(value2, out int val8))
+						if (val7 >= val8)
+						{
+							return true;
+						}
+					break;
+				default: //NotEqual
+					if (value1 != value2)
+					{
+						return true;
+					}
+					break;
+			}
+			return false;
+		}
+
 		public bool HiddenByMarker(List<string> markers)
 		{
+			bool markerFound = false;
 			if (markers != null && !string.IsNullOrEmpty(MarkerName))
 			{
-				switch (MarkerOp)
+				foreach (string marker in markers)
 				{
-					case MarkerOperator.NotEqual:
-					case MarkerOperator.LessThan:
-					case MarkerOperator.GreaterThan:
-						if (markers.Contains(MarkerName) && MarkerValue != "0" || !markers.Contains(MarkerName) && MarkerValue == "0")
+					if(!string.IsNullOrEmpty(marker))
+					{
+						string name = "";
+						string op = "";
+						string value = "";
+						string pattern = @"^([-\w\.]+)(\s*(\=\=|\=)?\s*([-\w]+|~[-\w]+~))?$";
+						Regex regex = new Regex(pattern);
+						Match match = regex.Match(marker);
+
+						if (match.Success)
 						{
-							return true;
+							name = match.Groups[1].Value;
+							op = match.Groups[3].Value;
+							value = match.Groups[4].Value;
+
+							if (string.IsNullOrEmpty(op) || string.IsNullOrEmpty(value))
+							{
+								value = "1";
+							}
+
 						}
-						break;
-					default:
-						if (markers.Contains(MarkerName) && MarkerValue == "0" || !markers.Contains(MarkerName) && MarkerValue != "0")
+						else
 						{
-							return true;
+							name = marker;
+							value = "1";
 						}
-						break;
+
+						if (name == MarkerName)
+						{
+							markerFound = true;
+							return !MarkerTest(value, MarkerOp, MarkerValue);
+						}
+					}
+				}
+			}
+			if(!string.IsNullOrEmpty(MarkerName))
+			{
+				if (!markerFound)
+				{
+					return !MarkerTest("0", MarkerOp, MarkerValue);
 				}
 			}
 			return false;

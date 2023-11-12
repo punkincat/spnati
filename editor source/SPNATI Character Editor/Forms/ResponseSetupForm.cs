@@ -58,12 +58,6 @@ namespace SPNATI_Character_Editor.Forms
 			{
 				chkOneTime.Visible = false; //if the line can only happen once, there's no point in marking the response as one time
 			}
-
-			if (!string.IsNullOrEmpty(_response.NotSaidMarker))
-			{
-				//if we're already looking at a marker not being said, we can't make this one time
-				chkOneTime.Visible = false;
-			}
 		}
 
 		private void chkOneTime_CheckedChanged(object sender, System.EventArgs e)
@@ -96,7 +90,9 @@ namespace SPNATI_Character_Editor.Forms
 
 			if (!string.IsNullOrEmpty(txtMarker.Text))
 			{
-				_response.NotSaidMarker = txtMarker.Text;
+				TargetCondition condition = new TargetCondition();
+				condition.NotSaidMarker = txtMarker.Text;
+				_response.Conditions.Add(condition);
 				//make a dialogue line that sets the marker
 				DialogueLine line = new DialogueLine("", "Wow, that's pretty nifty.");
 				line.Marker = txtMarker.Text;

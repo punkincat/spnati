@@ -10,17 +10,25 @@
             <description>Sanako invites everyone to introduce themselves.</description>
         </case>
     </noteworthy>
+    <responses>
+        <response id="7" opponent="kumatora" opponentId="191" />
+        <response id="8" opponent="kumatora" opponentId="208" />
+    </responses>
     <labels>
         <label id="2" label="sandals" folder="" sort="0" />
         <label id="3" label="sandals" folder="" sort="0" />
         <label id="4" label="sandals" folder="" sort="0" />
         <label id="5" label="necklace" folder="" sort="0" />
         <label id="6" label="sandals" folder="" sort="0" />
+        <label id="7" label="" folder="Kumatora to left" sort="0" />
+        <label id="8" label="" folder="Kumatora to left" sort="0" />
+        <label id="9" label="shy" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
+        <prefix>x-</prefix>
     </prefixes>
-    <nextId>6</nextId>
+    <nextId>9</nextId>
     <markers>
         <marker scope="Public" name="sanako_age_uncertainty">If Nagisa is not playing, Sanako can almost introduce herself as her real age.</marker>
         <marker scope="Public" name="sanako_bad_start">Sanako is off to a bad start.</marker>
@@ -35,6 +43,8 @@
         <marker scope="Public" name="sanako_joey_nice_to_meet_you">Nice to meet you, Joetta.</marker>
         <marker scope="Public" name="sanako_joey_shirt_removal" />
         <marker scope="Public" name="sanako_keeping_glasses">Sanako isn't taking off her glasses because it would break her disguise. But you can take off yours.</marker>
+        <marker scope="Public" name="sanako_kumatora_eternal" />
+        <marker scope="Public" name="sanako_kumatora_husband" />
         <marker scope="Public" name="sanako_kyu_drama_club">Sanako asks if Kyu is from the drama club.</marker>
         <marker scope="Private" name="sanako_name_request">Sanako asks permission to refer to an opponent by her name.</marker>
         <marker scope="Public" name="sanako_natsuki_club">Sanako reacts to Natsuki claiming to be in the same club as the player.</marker>

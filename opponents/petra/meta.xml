@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1660795419029</lastupdate>
+    <lastupdate>1696391734002</lastupdate>
     <enabled>false</enabled>
     <first>Petra</first>
     <last>Macneary</last>
@@ -11,13 +11,16 @@
     <writer>MyMainAccIsANord</writer>
     <artist>MyMainAccIsANord (Model, Posing), HorseKiller (Academy Uniform)</artist>
     <description>Petra is a student of the Officers Academy, hailing from Brigid, a vassal state of the Adrestian Empire - making her a member of the Black Eagles house. She is the granddaughter of the king of Brigid, and although her colloquial speech is not perfect, she gives her all in everything she does.</description>
+    <epilogue gender="male" img="epilogue/petra_epilogue_summer_thumbnail.png" hint="Outlast Petra and finish the game.">Summer with Petra</epilogue>
     <layers>6</layers>
+    <default-costume-name>Academy Uniform</default-costume-name>
     <alternates>
         <costume folder="opponents/reskins/petra_halloween/" img="0-select.png" set="halloween" label="Petra">Vampire Queen</costume>
         <costume folder="opponents/reskins/petra_war_outfit/" img="0-select.png" status="online" label="Petra">War Outfit</costume>
+        <costume folder="opponents/reskins/petra_summer/" img="0-select.png" set="summer" status="online" label="Petra" layers="4">Brigid Beach</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>1584</lines>
+    <lines>1751</lines>
     <poses>188</poses>
     <z-index>-3</z-index>
 </opponent>

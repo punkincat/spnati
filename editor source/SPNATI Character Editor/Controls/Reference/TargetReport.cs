@@ -53,9 +53,6 @@ namespace SPNATI_Character_Editor.Controls.Reference
 			{
 				foreach (Case workingCase in source.Behavior.GetWorkingCases())
 				{
-					AddCharacter(workingCase.Target, workingCase);
-					AddCharacter(workingCase.AlsoPlaying, workingCase);
-					AddCharacterById(workingCase.Filter, workingCase);
 					foreach (TargetCondition condition in workingCase.Conditions)
 					{
 						AddCharacterById(condition.FilterTag, workingCase);

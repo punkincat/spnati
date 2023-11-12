@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>bowsette_caliente</id>
+    <label>Bowsette</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag remove="true">blonde</tag>
+        <tag remove="true">blue_eyes</tag>
+        <tag>exotic_eyes</tag>
+        <tag remove="true">fair-skinned</tag>
+        <tag>olive-skinned</tag>
+        <tag>red_eyes</tag>
+        <tag>red_hair</tag>
+    </tags>
+    <layers>7</layers>
+    <folder>opponents/reskins/bowsette_caliente/</folder>
+    <wardrobe>
+        <clothing name="bands" generic="jewelry" position="arms" type="extra" plural="true" />
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="top" generic="bra" position="upper" type="major" />
+        <clothing name="stockings" generic="socks" position="legs" type="minor" plural="true" />
+        <clothing name="shoes" generic="shoes" position="feet" type="extra" plural="true" />
+        <clothing name="earrings" generic="jewelry" position="head" type="extra" plural="true" />
+        <clothing name="skirt" generic="skirt" position="lower" type="major" />
+    </wardrobe>
+
+    <poses>
+        <pose id="0-treasure_scope">
+            <sprite id="flirty" z="1" src="reskins/bowsette_caliente/0-angry.png" x="0" y="0" alpha="100" />
+            <sprite id="Rouge_TreasureScope_XRay" src="reskins/bowsette_caliente/resources/0-treasureScope.png" x="0" y="0" alpha="100" />
+            <sprite id="Rouge_TreasureScope_Lens" z="100" src="reskins/bowsette_caliente/resources/Rouge_TreasureScope_Lens.png" x="250" y="319" alpha="0" />
+            <directive type="animation" id="flirty" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="2" alpha="100" />
+                <keyframe time="2.5" alpha="0" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_XRay" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="3" alpha="100" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_Lens" ease="ease-out" interpolation="linear">
+                <keyframe time="0" x="250" alpha="0" />
+                <keyframe time="1" x="250" alpha="0" />
+                <keyframe time="2" x="40" alpha="100" />
+                <keyframe time="3" x="40" />
+            </directive>
+            <directive type="animation" id="Rouge_TreasureScope_Lens" ease="smooth" interpolation="linear">
+                <keyframe time="0" y="319" />
+                <keyframe time="3" y="319" />
+            </directive>
+        </pose>
+        <pose id="0-surprised">
+            <sprite id="resigned" src="reskins/bowsette_caliente/0-resigned.png" x="0" y="0" />
+            <sprite id="flustered" delay="0.88" src="reskins/bowsette_caliente/0-flustered.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="resigned" delay="0.94" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.06" alpha="0" />
+            </directive>
+            <directive type="animation" id="flustered" delay="0.88" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.12" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="1-surprised">
+            <sprite id="resigned" src="reskins/bowsette_caliente/1-resigned.png" x="0" y="0" />
+            <sprite id="flustered" delay="0.88" src="reskins/bowsette_caliente/1-flustered.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="resigned" delay="0.94" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.06" alpha="0" />
+            </directive>
+            <directive type="animation" id="flustered" delay="0.88" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.12" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="2-surprised">
+            <sprite id="resigned" src="reskins/bowsette_caliente/2-resigned.png" x="0" y="0" />
+            <sprite id="flustered" delay="0.88" src="reskins/bowsette_caliente/2-flustered.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="resigned" delay="0.94" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.06" alpha="0" />
+            </directive>
+            <directive type="animation" id="flustered" delay="0.88" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.12" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="3-surprised">
+            <sprite id="resigned" src="reskins/bowsette_caliente/3-resigned.png" x="0" y="0" />
+            <sprite id="flustered" delay="0.88" src="reskins/bowsette_caliente/3-flustered.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="resigned" delay="0.94" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.06" alpha="0" />
+            </directive>
+            <directive type="animation" id="flustered" delay="0.88" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.12" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="4-surprised">
+            <sprite id="resigned" src="reskins/bowsette_caliente/4-resigned.png" x="0" y="0" />
+            <sprite id="flustered" delay="0.88" src="reskins/bowsette_caliente/4-flustered.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="resigned" delay="0.94" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.06" alpha="0" />
+            </directive>
+            <directive type="animation" id="flustered" delay="0.88" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.12" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="5-surprised">
+            <sprite id="resigned" src="reskins/bowsette_caliente/5-resigned.png" x="0" y="0" />
+            <sprite id="flustered" delay="0.88" src="reskins/bowsette_caliente/5-flustered.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="resigned" delay="0.94" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.06" alpha="0" />
+            </directive>
+            <directive type="animation" id="flustered" delay="0.88" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.12" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="6-surprised">
+            <sprite id="resigned" src="reskins/bowsette_caliente/6-resigned.png" x="0" y="0" />
+            <sprite id="flustered" delay="0.88" src="reskins/bowsette_caliente/6-flustered.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="resigned" delay="0.94" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.06" alpha="0" />
+            </directive>
+            <directive type="animation" id="flustered" delay="0.88" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.12" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="7-surprised">
+            <sprite id="resigned" src="reskins/bowsette_caliente/7-resigned.png" x="0" y="0" />
+            <sprite id="flustered" delay="0.88" src="reskins/bowsette_caliente/7-flustered.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="resigned" delay="0.94" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.06" alpha="0" />
+            </directive>
+            <directive type="animation" id="flustered" delay="0.88" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.12" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="8-surprised">
+            <sprite id="resigned" src="reskins/bowsette_caliente/8-resigned.png" x="0" y="0" />
+            <sprite id="flustered" delay="0.88" src="reskins/bowsette_caliente/8-flustered.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="resigned" delay="0.94" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.06" alpha="0" />
+            </directive>
+            <directive type="animation" id="flustered" delay="0.88" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.12" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="9-surprised">
+            <sprite id="resigned" src="reskins/bowsette_caliente/9-resigned.png" x="0" y="0" />
+            <sprite id="flustered" delay="0.88" src="reskins/bowsette_caliente/9-flustered.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="resigned" delay="0.94" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.06" alpha="0" />
+            </directive>
+            <directive type="animation" id="flustered" delay="0.88" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.12" alpha="100" />
+            </directive>
+        </pose>
+    </poses>
+</costume>

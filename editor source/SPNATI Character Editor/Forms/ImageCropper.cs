@@ -12,7 +12,7 @@ namespace SPNATI_Character_Editor.Forms
 	public partial class ImageCropper : SkinnedForm
 	{
 		private Image _previewImage;
-		private ImageImporter _importer = new ImageImporter(false);
+		private ImageImporter _importer;
 		private const int DefaultImageHeight = 1500;
 		private RectangleF _cropBounds = new Rectangle(0, 0, 10, 10);
 		private DragState _dragState = DragState.None;
@@ -28,6 +28,14 @@ namespace SPNATI_Character_Editor.Forms
 			_centerPen = new Pen(Color.DarkGray, 1);
 			_centerPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Custom;
 			_centerPen.DashPattern = new float[] { 10, 10 };
+			if (Config.ConfigPath == "CEFolder")
+			{
+				_importer = new ImageImporter(false, Config.ConfigDirectory);
+			}
+			else
+			{
+				_importer = new ImageImporter(false);
+			}
 		}
 
 		public Image CroppedImage { get; private set; }

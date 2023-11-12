@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using SPNATI_Character_Editor.Controls;
 using SPNATI_Character_Editor.Forms;
 using System;
@@ -12,8 +12,6 @@ namespace SPNATI_Character_Editor.Activities
 	[Tutorial("https://www.youtube.com/watch?v=LtoaFoN-RaQ&list=PL171KBpYNIxNEgFoI-eZSKC38HLP_YNJ8")]
 	public partial class DialogueEditor : Activity
 	{
-		private const string FavoriteConditionsSetting = "FavoritedConditions";
-
 		private Character _character;
 		private CharacterEditorData _editorData;
 		private Stage _selectedStage;
@@ -101,6 +99,16 @@ namespace SPNATI_Character_Editor.Activities
 				caseControl.UpdateStages();
 				treeDialogue.RegenerateTree();
 			}
+			if (_character != null && _selectedCase != null && _selectedStage != null)
+			{
+				PoseMapping image = caseControl.GetImage(0);
+				if (image != null)
+				{
+					DisplayImage(image, caseControl.PreviewStage);
+				}
+				DialogueLine line = caseControl.GetLine(0);
+				DisplayText(line);
+			}
 		}
 
 		protected override void OnParametersUpdated(params object[] parameters)
@@ -151,7 +159,8 @@ namespace SPNATI_Character_Editor.Activities
 			SubscribeWorkspace(WorkspaceMessages.Find, OnFind);
 			SubscribeWorkspace(WorkspaceMessages.Replace, OnReplace);
 			SubscribeWorkspace(WorkspaceMessages.WardrobeUpdated, OnWardrobeChanged);
-			SubscribeWorkspace(WorkspaceMessages.SkinChanged, OnSkinChanged);
+			SubscribeWorkspace(WorkspaceMessages.SkinChanged, OnSkinChanged);			
+			SubscribeWorkspace(WorkspaceMessages.SaveCaseNotes, OnSaveCaseNotes);
 			SubscribeDesktop(DesktopMessages.SettingsUpdated, OnSettingsUpdated);
 			SubscribeDesktop(DesktopMessages.MacrosUpdated, OnMacrosUpdated);
 		}
@@ -192,6 +201,11 @@ namespace SPNATI_Character_Editor.Activities
 		private void OnWardrobeChanged()
 		{
 			_pendingWardrobeChange = true;
+		}
+
+		private void OnSaveCaseNotes()
+		{
+			caseControl.SaveNotes();
 		}
 
 		private void OnSkinChanged()
@@ -295,12 +309,32 @@ namespace SPNATI_Character_Editor.Activities
 		/// <param name="image">Image to display</param>
 		private void DisplayImage(PoseMapping image, int stage)
 		{
+			int imageStage = stage;
 			if (_selectedCase != null)
 			{
 				List<string> markers = _selectedCase.GetMarkers();
 				Workspace.SendMessage(WorkspaceMessages.UpdateMarkers, markers);
+				if (_selectedCase.Tag == "stripped" && stage < _character.Layers)
+				{
+					if (_character.CurrentSkin != null)
+					{
+						while (_character.CurrentSkin.Wardrobe[_character.Layers - imageStage - 1].Type == "skip" && imageStage < _character.Layers)
+						{
+							imageStage++;
+							if (imageStage == _character.Layers) { break; }
+						}
+					}
+					else
+					{
+						while (_character.Wardrobe[_character.Layers - imageStage - 1].Type == "skip" && imageStage < _character.Layers)
+						{
+							imageStage++;
+							if (imageStage == _character.Layers) { break; }
+						}
+					}
+				}
 			}
-			Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_character, image, stage));
+			Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_character, image, imageStage));
 		}
 
 		private void cmdCallOut_Click(object sender, EventArgs e)
@@ -335,7 +369,15 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				last = "";
 			}
-			Character responder = RecordLookup.DoLookup(typeof(Character), last, false, CharacterDatabase.FilterHuman, true, null) as Character;
+			Character responder;
+			if (!string.IsNullOrEmpty(Config.DefaultResponder))
+			{
+				responder = CharacterDatabase.GetById(Config.DefaultResponder);
+			}
+			else
+			{
+				responder = RecordLookup.DoLookup(typeof(Character), last, false, CharacterDatabase.FilterHuman, true, null) as Character;
+			}
 			if (responder != null)
 			{
 				if (!responder.IsFullyLoaded)
@@ -367,13 +409,6 @@ namespace SPNATI_Character_Editor.Activities
 					{
 						MessageBox.Show("Couldn't create a response based on this case's conditions.", "Make Response", MessageBoxButtons.OK, MessageBoxIcon.Error);
 						return;
-					}
-
-					DataConversions.ConvertCase5_2(response);
-
-					foreach (Case alt in response.AlternativeConditions)
-					{
-						DataConversions.ConvertCase5_2(alt);
 					}
 
 					//see if there's a response already matching the conditions of this response and just reuse that if possible
@@ -567,6 +602,12 @@ namespace SPNATI_Character_Editor.Activities
 					}
 				}
 			}
+		}
+
+		private void cmdRefreshImages_Click(object sender, EventArgs e)
+		{
+			_character.PoseLibrary.initialized = false;
+			caseControl.UpdateAvailableImages();
 		}
 	}
 }

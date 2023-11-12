@@ -6,9 +6,6 @@
     <pronunciation />
     <othernotes />
     <noteworthy>
-        <case name="Ultron/Jocasta" id="86" priority="FYI" min="1" max="1">
-            <description>Wasp mentions her most recent encounter with Ultron and his attempt to create Jocasta</description>
-        </case>
         <case name="Shrinking" id="108" priority="MustTarget" min="0" max="7">
             <description>Wasp shrinks during a male player's masturbation to avoid a potential cum blast in  the face. </description>
         </case>
@@ -676,7 +673,6 @@
         <response id="904" opponent="lucina" opponentId="675" />
         <response id="905" opponent="lucina" opponentId="668" />
         <response id="906" opponent="lucina" opponentId="669" />
-        <response id="907" opponent="adora" opponentId="130" />
         <response id="0" opponent="aoba" opponentId="182" />
         <response id="908" opponent="aoba" opponentId="184" />
         <response id="909" opponent="kora" opponentId="38" />
@@ -1312,10 +1308,15 @@
         <response id="1443" opponent="supernova" opponentId="126" />
         <response id="1444" opponent="gloria" opponentId="119" />
         <response id="0" opponent="turandot" opponentId="6" />
+        <response id="1449" opponent="kekko_kamen" opponentId="21" />
     </responses>
-    <nextId>1444</nextId>
+    <onlyCustomPoses>false</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>1449</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="9s1" />
+        <marker scope="Public" name="aaravibackstory" />
         <marker scope="Public" name="adora1" />
         <marker scope="Public" name="amalgamreference" />
         <marker scope="Public" name="americachavezmeme" />
@@ -1412,6 +1413,9 @@
         <marker scope="Public" name="fate7" />
         <marker scope="Public" name="fate8" />
         <marker scope="Public" name="fate9" />
+        <marker scope="Public" name="fateflirt" />
+        <marker scope="Public" name="fateflirting" />
+        <marker scope="Public" name="fatehairflirt" />
         <marker scope="Public" name="faye1" />
         <marker scope="Public" name="faye2" />
         <marker scope="Public" name="faye3" />
@@ -1571,6 +1575,7 @@
         <marker scope="Public" name="kazuma6" />
         <marker scope="Public" name="kazuma7" />
         <marker scope="Public" name="kazuma8" />
+        <marker scope="Public" name="kekkokamenstart" />
         <marker scope="Public" name="komi1" />
         <marker scope="Public" name="komi2" />
         <marker scope="Public" name="kora1" />
@@ -2142,6 +2147,7 @@
         <marker scope="Public" name="supernovawhere" />
         <marker scope="Public" name="susielegion" />
         <marker scope="Public" name="susielegs" />
+        <marker scope="Public" name="swimsuitstart" />
         <marker scope="Public" name="swordsmangloves" />
         <marker scope="Public" name="syrennemusic" />
         <marker scope="Public" name="takatoshilove" />

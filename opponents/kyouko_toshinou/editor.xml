@@ -1,0 +1,772 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+    <owner>kyouko_toshinou</owner>
+    <height>5'4"</height>
+    <age>20</age>
+    <pronunciation>KYOH-koh TOH-shi-noh</pronunciation>
+    <othernotes>FYI: If you want to target her outfit, be wary of future costumes. Especially her underwear—it won't always have a tomato pattern, nor can I guarantee it'll always be on the same layer. I'm using a bunch of markers so you can target them instead of her stage and/or costume.&lt;br&gt;&lt;br&gt;Personality:&lt;br&gt;- Energetic. Excitable and has an active imagination.&lt;br&gt;- Pushy. Often assumes others think similiarly to herself, and overly aggressive when trying to make friends.&lt;br&gt;- Confident. Talks big about herself or her own skills to try to get a reaction.&lt;br&gt;- Selfish. Will think about others, but only after she's served herself.&lt;br&gt;- Strange. Enjoys anything unusual and takes great pleasure in subverting others' expectations.&lt;br&gt;- Lazy. Willing to give up at a moment's notice unless it's something she really cares about.&lt;br&gt;- Horny. She's here to see others naked, and getting naked herself is a means to that end.&lt;br&gt;- Observant. Usually won't tell you, but she notices more than she lets on.&lt;br&gt;- Reliable. Sometimes, when she isn't joking.&lt;br&gt;- Easygoing. Despite her energy, she isn't truly fazed by much. One of the few things that does bother her is realizing that someone truly dislikes her.&lt;br&gt;- Enjoys teasing and confusing others to get a rise out of them. Uses a lot of bait-and-switch humor.&lt;br&gt;&lt;br&gt;Useful info:&lt;br&gt;- Naturally assumes the boke/funny guy role of a manzai duo.&lt;br&gt;- Jokes often involve misleading the others or outright lying to them.&lt;br&gt;- Runs a doujin circle at Comuket dedicated to "Witch Girl Mirakurun," her favorite anime/manga, under the pen name Ramuko Nishikyogoku.&lt;br&gt;- Skilled at arts and crafts, both normal things like modelling clay and weird things like cutting designs into apple skins.&lt;br&gt;- Big eater. Easy to please with food and will eat almost anything.&lt;br&gt;- Her favorite food is rum raisin, a flavor of ice cream.&lt;br&gt;- The Amusement Club consists of herself and her friends Yui, Akari, and Chinatsu.&lt;br&gt;- Had a stolen clubroom in middle school, but not since then.&lt;br&gt;&lt;br&gt;I made a bunch of markers for lines I didn't feel were worth a situation but could be targeted anyway if you so choose. Most of these are prefixed with D, Q, or S.</othernotes>
+    <noteworthy>
+        <case name="The ribbon stays" id="83" priority="FYI" min="3" max="3">
+            <description>Kyouko says she isn't going to remove her ribbon. If she's in her default outfit, she's lying, but this is otherwise true.</description>
+        </case>
+        <case name="The ribbon doesn't stay" id="91" priority="Noteworthy" min="6" max="6">
+            <description>Kyouko lied earlier about taking off her ribbon. An observant character may have gotten suspicious because of how often she brought it up. (this only happens in her default outfit)</description>
+        </case>
+        <case name="Bad hand trick" id="144" priority="FYI" min="4" max="5">
+            <description>Once a game, Kyouko may act like her hand is terrible to get the others' hopes up. If responding the next phase (when hands are revealed), use a condition to check that the marker equals 1.</description>
+        </case>
+        <case name="Sexy Poses" id="108" priority="FYI" min="3" max="3">
+            <description>Kyouko sometimes pulls "sexy" poses throughout the game to distract the others. Well, sexy for her, maybe.</description>
+        </case>
+        <case name="The tomato's birthday" id="142" priority="FYI" min="0" max="0">
+            <description>Kyouko's birthday is March 28</description>
+        </case>
+    </noteworthy>
+    <reviewed>true</reviewed>
+    <responses>
+        <response id="7" opponent="natsuki" opponentId="91" />
+        <response id="17" opponent="mari" opponentId="2266" />
+        <response id="29" opponent="caitlin" opponentId="68" />
+        <response id="72" opponent="nami_szs" opponentId="5" />
+        <response id="73" opponent="sannytess" opponentId="1" />
+        <response id="74" opponent="sannytess" opponentId="5" />
+        <response id="75" opponent="sannytess" opponentId="6" />
+        <response id="79" opponent="kyoko_kirigiri" opponentId="25" />
+        <response id="145" opponent="sly_cooper" opponentId="3" />
+        <response id="152" opponent="wikipe-tan" opponentId="576" />
+        <response id="153" opponent="amalia" opponentId="1" />
+        <response id="154" opponent="yuno_uno" opponentId="753" />
+        <response id="155" opponent="nagatoro" opponentId="1431" />
+        <response id="167" opponent="mari_setogaya" opponentId="1936" />
+        <response id="168" opponent="nagatoro" opponentId="1443" />
+        <response id="170" opponent="nagatoro" opponentId="1442" />
+        <response id="181" opponent="nagatoro" opponentId="1487" />
+        <response id="184" opponent="mari_setogaya" opponentId="1958" />
+        <response id="190" opponent="jura" opponentId="222" />
+        <response id="205" opponent="aqua_kh" opponentId="51" />
+        <response id="206" opponent="aqua_kh" opponentId="283" />
+        <response id="328" opponent="kyoko_kirigiri" opponentId="797" />
+        <response id="330" opponent="kyoko_kirigiri" opponentId="796" />
+        <response id="332" opponent="nagatoro" opponentId="1724" />
+        <response id="426" opponent="elphaba" opponentId="71" />
+        <response id="472" opponent="tea_gardner" opponentId="134" />
+    </responses>
+    <notes>
+        <note id="5">The marker is available so other characters can see which uniform she's wearing just in case they absolutely need to know for whatever reason. FYI, it's always unset when she loses the red dress.
+
+That said, do not use this specifically for an interaction. There's a reason I didn't make a situation for it.</note>
+        <note id="45">Switching back to her right hand here was intentional.
+
+Also, this is global because an opponent masturbating line somehow snuck in between this line and the one that was supposed to precede it.</note>
+        <note id="49">I refuse to elaborate on why the scope is lying.</note>
+        <note id="57">kinda wish 2D and 3D art had separate tags cuz this is kinda hard when I can't assume the target draws a lot</note>
+        <note id="63">Kyouko will try to fix her hair literally the next case after "Finished (Self)" plays. This and the game ending should be the only things that interrupt that in order to prevent inconsistency.</note>
+        <note id="83">Kyoko says she keeps her ribbon on (and sets the same marker) in a few other cases, but this one is the most reliable.
+Yes, there are two markers for this. Feel free to target whichever you like.</note>
+        <note id="158">In case it doesn't come through, she's trying to mislead him</note>
+        <note id="95">You could target this if you wanted your character to immediately notice the pattern on her panties. As far as making that future-proof, though, here be dragons.</note>
+        <note id="179">These stripping/stripped lines are pretty much placeholders so the dialogue ties into what Kyouko just said. Feel free to ignore them with Nagatoro and continue the conversation instead.</note>
+        <note id="180">Placeholder to give Nagatoro time to respond. I just wrote this so her sequence makes sense with context from the Must Strip case</note>
+        <note id="317">These *should* always get out-prioritized, but I'm not perfect so who knows?</note>
+        <note id="341">I'll come back for the other line later. I decided I could at least respond to one since I know where I could go from here.</note>
+        <note id="403">Yes, these are mixed in with the usual opponent masturbating lines.</note>
+        <note id="404">Yes, these are mixed in with the usual opponent masturbating lines.</note>
+        <note id="453">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
+        <note id="454">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
+        <note id="455">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
+        <note id="456">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
+        <note id="457">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
+        <note id="458">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
+        <note id="482">Literally don't have any better pose for this yet</note>
+    </notes>
+    <labels>
+        <label id="2" label="Imitating Yuno" color="5" folder="Target: Yuno Uno" sort="0" />
+        <label id="3" label="Play once + markers" folder="" sort="0" />
+        <label id="4" label="Play once + markers" folder="" sort="0" />
+        <label id="5" label="Long sleeves for non-summer" folder="" sort="0" />
+        <label id="6" label="Dress - reset sleeve length" folder="Costume: Nanamori Classic" sort="23" />
+        <label id="11" label="Two consecutive small removals" folder="" sort="0" />
+        <label id="13" label="Comuket is soon" folder="" sort="0" />
+        <label id="15" label="The ribbon" folder="" sort="0" />
+        <label id="16" label="Kyouko's birthday" folder="" sort="0" />
+        <label id="7" label="4: The pattern" folder="Target: Natsuki" sort="5" />
+        <label id="9" label="Cute panties" folder="Target: Natsuki" sort="3" />
+        <label id="8" label="Matching panties" folder="Target: Natsuki" sort="2" />
+        <label id="10" label="Great taste" folder="Target: Natsuki" sort="4" />
+        <label id="24" label="Removing minor, naked" folder="Minor/Accessory late" sort="2" />
+        <label id="25" label="Removing minor, naked" folder="Minor/Accessory late" sort="0" />
+        <label id="26" label="Removed minor, naked" folder="Minor/Accessory late" sort="5" />
+        <label id="27" label="Removed minor, naked" folder="Minor/Accessory late" sort="6" />
+        <label id="28" label="No other NPCs exposed" folder="" sort="0" />
+        <label id="30" label="First out" folder="" sort="0" />
+        <label id="36" label="Two pairs" folder="Multiple pairs of underwear" sort="0" />
+        <label id="37" label="" folder="Multiple pairs of underwear" sort="0" />
+        <label id="38" label="Four pairs" folder="Multiple pairs of underwear" sort="2" />
+        <label id="39" label="Three pairs" folder="Multiple pairs of underwear" sort="3" />
+        <label id="40" label="Five pairs" folder="Multiple pairs of underwear" sort="4" />
+        <label id="41" label="" folder="Multiple pairs of underwear" sort="0" />
+        <label id="42" label="Six pairs" folder="Multiple pairs of underwear" sort="5" />
+        <label id="43" label="Seven pairs" folder="Multiple pairs of underwear" sort="6" />
+        <label id="44" label="Eight pairs" folder="Multiple pairs of underwear" sort="7" />
+        <label id="31" label="opponent's name" folder="" sort="0" />
+        <label id="46" label="First out, no one else masturbating" folder="" sort="0" />
+        <label id="45" label="" color="6" folder="" sort="0" />
+        <label id="47" label="" color="6" folder="" sort="0" />
+        <label id="48" label="Streeetch!" folder="" sort="0" />
+        <label id="49" label="Treasure scope" folder="" sort="0" />
+        <label id="50" label="Fix her hair" folder="" sort="0" />
+        <label id="51" label="Fix her hair (player knows)" folder="" sort="0" />
+        <label id="52" label="" color="0" folder="Tags" sort="6" />
+        <label id="53" label="" color="0" folder="Tags" sort="6" />
+        <label id="29" label="" folder="Responses" sort="2" />
+        <label id="54" label="Kyouko wins" folder="Game state" sort="3" />
+        <label id="55" label="" folder="Game state" sort="5" />
+        <label id="56" label="Someone else wins" folder="Game state" sort="2" />
+        <label id="57" label="" color="0" folder="Tags" sort="2" />
+        <label id="58" label="" color="0" folder="Tags" sort="3" />
+        <label id="59" label="" color="0" folder="Tags" sort="4" />
+        <label id="60" label="" color="0" folder="Tags" sort="0" />
+        <label id="61" label="" folder="Game state" sort="0" />
+        <label id="62" label="" folder="Tags" sort="5" />
+        <label id="63" label="Opponent finishes immediately after her" folder="" sort="0" />
+        <label id="64" label="Don't ignore the results to fix hair" folder="" sort="0" />
+        <label id="35" label="Close second" folder="Placement" sort="0" />
+        <label id="67" label="" folder="Put the jacket back on" sort="2" />
+        <label id="66" label="" folder="Put the jacket back on" sort="0" />
+        <label id="65" label="Give ~player~ the ribbon *and* say the line, god dammit" folder="" sort="0" />
+        <label id="70" label="Reset long sleeves" folder="" sort="0" />
+        <label id="71" label="All players 1HP" folder="" sort="0" />
+        <label id="76" label="Triple Kyo(u)ko - Kyoko majority" folder="" sort="0" />
+        <label id="77" label="Triple Kyo(u)ko - Kyouko majority" folder="" sort="0" />
+        <label id="78" label="Kirigiri calls her Ms. Toshinou" folder="" sort="0" />
+        <label id="81" label="Socks and shoes" folder="Costume: Nanamori Classic" sort="16" />
+        <label id="82" label="Jacket" folder="Costume: Nanamori Classic" sort="22" />
+        <label id="83" label="Dress" folder="Costume: Nanamori Classic" sort="17" />
+        <label id="84" label="Ribbon!?" folder="Costume: Nanamori Classic" sort="21" />
+        <label id="85" label="Panties" folder="Costume: Nanamori Classic" sort="20" />
+        <label id="86" label="Bra" folder="Costume: Nanamori Classic" sort="19" />
+        <label id="87" label="Tank top" folder="Costume: Nanamori Classic" sort="18" />
+        <label id="88" label="Dress (already mentioned ribbon)" folder="Costume: Nanamori Classic" sort="14" />
+        <label id="89" label="Shoes (first loss)" folder="Nanamori Classic" sort="0" />
+        <label id="90" label="Shoes" folder="Costume: Nanamori Classic" sort="4" />
+        <label id="91" label="Ribbon!?" folder="Costume: Nanamori Classic" sort="10" />
+        <label id="92" label="Panties" folder="Costume: Nanamori Classic" sort="9" />
+        <label id="93" label="Bra" folder="Costume: Nanamori Classic" sort="8" />
+        <label id="94" label="Tank top" folder="Costume: Nanamori Classic" sort="7" />
+        <label id="95" label="Dress" folder="Costume: Nanamori Classic" sort="6" />
+        <label id="96" label="Jacket" folder="Costume: Nanamori Classic" sort="5" />
+        <label id="97" label="Boobies?" folder="" sort="0" />
+        <label id="98" label="Boobies!" folder="" sort="0" />
+        <label id="99" label="Comuket Recs" folder="" sort="0" />
+        <label id="100" label="Yui" folder="Exposition" sort="0" />
+        <label id="101" label="7 High" folder="" sort="0" />
+        <label id="102" label="Risky swap" folder="" sort="0" />
+        <label id="103" label="Marked one-offs" folder="" sort="0" />
+        <label id="104" label="7 High" folder="Game state" sort="4" />
+        <label id="105" label="" folder="Natsuki's underwear" sort="0" />
+        <label id="106" label="5: Goofy undies are sexy" folder="Target: Natsuki" sort="5" />
+        <label id="107" label="" folder="Sexy poses" sort="0" />
+        <label id="108" label="" folder="Sexy poses" sort="2" />
+        <label id="109" label="" folder="Sexy poses" sort="3" />
+        <label id="110" label="" folder="Sexy poses" sort="4" />
+        <label id="111" label="" folder="Sexy poses" sort="5" />
+        <label id="112" label="Sexy pose" folder="" sort="0" />
+        <label id="115" label="Shoes" folder="Specific items" sort="14" />
+        <label id="116" label="Shoes" folder="Specific items" sort="0" />
+        <label id="117" label="Shoes" folder="Specific items" sort="0" />
+        <label id="118" label="Shoes" folder="Specific items" sort="0" />
+        <label id="119" label="Socks" folder="Specific items" sort="0" />
+        <label id="120" label="Socks (K will remove with shoes)" folder="Specific items" sort="5" />
+        <label id="121" label="Glasses" folder="Specific items" sort="0" />
+        <label id="122" label="Amusement Club" folder="Exposition" sort="0" />
+        <label id="123" label="Removing minor, indecent" folder="Minor/Accessory late" sort="3" />
+        <label id="124" label="Removed minor, indecent" folder="Minor/Accessory late" sort="8" />
+        <label id="125" label="Removing accessory, indecent" folder="Minor/Accessory late" sort="4" />
+        <label id="126" label="Removed accessory, indecent" folder="Minor/Accessory late" sort="9" />
+        <label id="127" label="Removed accessory, indecent (hypocrite)" folder="Minor/Accessory late" sort="7" />
+        <label id="128" label="Water" folder="Backgrounds" sort="2" />
+        <label id="129" label="" folder="Losing streak" sort="0" />
+        <label id="130" label="" folder="Losing streak" sort="2" />
+        <label id="131" label="" folder="Losing streak" sort="3" />
+        <label id="132" label="" folder="Losing streak" sort="0" />
+        <label id="133" label="" folder="Losing streak" sort="4" />
+        <label id="134" label="" folder="Losing streak" sort="0" />
+        <label id="135" label="School (uniform)" folder="Backgrounds" sort="2" />
+        <label id="136" label="Dark" folder="Backgrounds" sort="3" />
+        <label id="137" label="The Inventory" folder="Backgrounds" sort="4" />
+        <label id="138" label="Cheap room?" folder="" sort="0" />
+        <label id="140" label="Complete the bad hand trick" folder="" sort="0" />
+        <label id="141" label="" folder="Exposition" sort="0" />
+        <label id="142" label="Kyouko's birthday" folder="" sort="0" />
+        <label id="143" label="" folder="Exposition" sort="0" />
+        <label id="148" label="" folder="Player exposed" sort="2" />
+        <label id="149" label="" folder="Player exposed" sort="2" />
+        <label id="150" label="" folder="Player exposed" sort="3" />
+        <label id="151" label="" folder="Player exposed" sort="4" />
+        <label id="156" label="Ribbon - Kirigiri low layers" folder="Costume: Nanamori Classic" sort="12" />
+        <label id="157" label="Ribbon - Total lie" folder="Costume: Nanamori Classic" sort="6" />
+        <label id="114" label="Stripping extra last" folder="Target: Nagatoro" sort="14" />
+        <label id="160" label="" folder="Bad hand fake-out" sort="0" />
+        <label id="161" label="" folder="Bad hand fake-out" sort="2" />
+        <label id="162" label="" folder="7 high" sort="0" />
+        <label id="163" label="" folder="7 high" sort="2" />
+        <label id="155" label="Draw me?" color="5" folder="Target: Nagatoro" sort="3" />
+        <label id="154" label="Planning something?" folder="Target: Yuno Uno" sort="4" />
+        <label id="158" label="Playing dumb of course" folder="Target: Yuno Uno" sort="3" />
+        <label id="159" label="Tomato panties" color="5" folder="Target: Nagatoro" sort="2" />
+        <label id="164" label="Give the ribbon" folder="Ribbon collectible" sort="0" />
+        <label id="165" label="Am I giving the ribbon?" folder="Ribbon collectible" sort="0" />
+        <label id="166" label="Triple Kyou(u)ko Kyou" folder="" sort="0" />
+        <label id="167" label="What does she do?" color="5" folder="Target: Mari Setogaya" sort="0" />
+        <label id="168" label="Not a pervert" color="5" folder="Target: Nagatoro" sort="2" />
+        <label id="169" label="Tank top - Pervy player (and Hayacchi)" color="5" folder="Target: Nagatoro" sort="11" />
+        <label id="170" label="What to do with a cute, cool, and sexy drawing?" folder="Target: Nagatoro" sort="8" />
+        <label id="171" label="Author's birthday" folder="" sort="0" />
+        <label id="172" label="Nicknames - Super Sexy" folder="" sort="0" />
+        <label id="173" label="Nicknames" folder="Target: Okino" sort="0" />
+        <label id="174" label="Nicknames" folder="Responses" sort="0" />
+        <label id="175" label="Ribbon - Good catch" folder="Costume: Nanamori Classic" sort="2" />
+        <label id="176" label="Tomato allergy" folder="" sort="0" />
+        <label id="177" label="Bra - Tomato allergy" folder="Nanamori Classic" sort="0" />
+        <label id="178" label="Tomato allergy" color="5" folder="Target: Nagatoro" sort="4" />
+        <label id="179" label="Bra - Tomato allergy" folder="Nanamori Classic" sort="0" />
+        <label id="180" label="Bra - Tomato allergy" folder="Nanamori Classic" sort="0" />
+        <label id="182" label="No art supplies?" folder="Target: Nagatoro" sort="9" />
+        <label id="183" label="Jacket (explanation overridden)" folder="Costume: Nanamori Classic" sort="15" />
+        <label id="181" label="Lewd sketches?" color="5" folder="Target: Nagatoro" sort="5" />
+        <label id="185" label="A mangaka like her" folder="Target: Okino" sort="2" />
+        <label id="184" label="Stop having fun!" color="5" folder="Target: Mari Setogaya" sort="5" />
+        <label id="186" label="The true meaning of Amusement" color="5" folder="Target: Mari Setogaya" sort="13" />
+        <label id="189" label="How lewd!" color="5" folder="Target: Mari (OMORI)" sort="0" />
+        <label id="190" label="Management skills" color="5" folder="Target: Jura" sort="0" />
+        <label id="191" label="Super sexy stick figures..." color="5" folder="Target: Nagatoro" sort="15" />
+        <label id="193" label="Comuket is soon" folder="" sort="0" />
+        <label id="192" label="Drawing manga" color="5" folder="Target: Nagatoro" sort="6" />
+        <label id="195" label="Drawing Manga (Comuket soon)" color="5" folder="Target: Nagatoro" sort="0" />
+        <label id="196" label="Setogaya: The members" folder="" sort="0" />
+        <label id="197" label="Lewd stuff." color="5" folder="Target: Mari Setogaya" sort="6" />
+        <label id="198" label="How lewd!" color="5" folder="Target: Mari (OMORI)" sort="2" />
+        <label id="199" label="Setogaya" folder="" sort="0" />
+        <label id="187" label="1: Same name, same nothing else" color="5" folder="Target: Kyoko Kirigiri" sort="2" />
+        <label id="200" label="0: No one left behind" color="5" folder="Target: Bobobo" sort="2" />
+        <label id="201" label="0: Get along" color="5" folder="Target: Nagatoro" sort="7" />
+        <label id="202" label="3: Brother" color="5" folder="Target: Mari (OMORI)" sort="2" />
+        <label id="17" label="2: Whispering" color="5" folder="Target: Mari (OMORI)" sort="3" />
+        <label id="203" label="5: Full berry" folder="Target: Natsuki" sort="4" />
+        <label id="79" label="Gloves stay on" folder="Target: Kyoko Kirigiri" sort="4" />
+        <label id="80" label="Gloves stay on (T's ribbon, too)" folder="Target: Kyoko Kirigiri" sort="3" />
+        <label id="145" label="0: Straight to it" folder="Target: Sly Cooper" sort="0" />
+        <label id="72" label="0: Bye" folder="Target: Nami (SZS)" sort="0" />
+        <label id="74" label="2: PENIS" folder="Target: Sanny &amp; Tess" sort="0" />
+        <label id="18" label="2: She understands (Informality)" color="5" folder="Target: Mari (OMORI)" sort="5" />
+        <label id="75" label="2: Very nice" folder="Target: Sanny &amp; Tess" sort="2" />
+        <label id="204" label="Ribbon - Aqua (KH)" folder="Nanamori Classic" sort="0" />
+        <label id="205" label="4: Sexy socks" folder="Target: Aqua (KH)" sort="5" />
+        <label id="206" label="Same as always" color="5" folder="Target: Aqua (KH)" sort="0" />
+        <label id="207" label="Same as always" folder="" sort="0" />
+        <label id="208" label="Lewd stuff?" color="5" folder="Target: Mari Setogaya" sort="2" />
+        <label id="209" label="The members" color="5" folder="Target: Mari Setogaya" sort="7" />
+        <label id="210" label="The members" color="5" folder="Target: Mari Setogaya" sort="3" />
+        <label id="211" label="Activities" color="5" folder="Target: Mari Setogaya" sort="4" />
+        <label id="212" label="Activities" color="5" folder="Target: Mari Setogaya" sort="8" />
+        <label id="73" label="Gimmick" folder="" sort="0" />
+        <label id="153" label="The vines" folder="" sort="0" />
+        <label id="213" label="Keyblade" color="5" folder="" sort="0" />
+        <label id="214" label="Here 4 sum bewb" folder="Target: Cheryl" sort="0" />
+        <label id="215" label="Same as always" color="5" folder="Target: Aqua (KH)" sort="2" />
+        <label id="216" label="1: World hopper" color="5" folder="Target: Aqua (KH)" sort="2" />
+        <label id="217" label="" folder="Tags" sort="9" />
+        <label id="218" label="" folder="Tags" sort="0" />
+        <label id="219" label="" folder="Tags" sort="5" />
+        <label id="220" label="Ribbon" folder="Specific items" sort="4" />
+        <label id="221" label="Ribbon (took hers off)" folder="Specific items" sort="5" />
+        <label id="222" label="Has tricked player before" folder="Kyouko's ribbon" sort="0" />
+        <label id="224" label="Wearing her ribbon" folder="" sort="0" />
+        <label id="225" label="Wearing her ribbon" folder="" sort="0" />
+        <label id="226" label="Wearing her ribbon (first time)" folder="" sort="0" />
+        <label id="227" label="Wearing her ribbon (repeat)" folder="" sort="0" />
+        <label id="228" label="" folder="Nanamori Classic" sort="0" />
+        <label id="229" label="" folder="Costume: Nanamori Classic" sort="27" />
+        <label id="230" label="Hasn't tricked player yet" folder="Kyouko's ribbon" sort="2" />
+        <label id="231" label="Hasn't tricked player, or isn't going to remove" folder="Kyouko's ribbon" sort="3" />
+        <label id="232" label="Removing after naked" folder="Kyouko's ribbon" sort="4" />
+        <label id="233" label="First removal" folder="Kyouko's ribbon" sort="5" />
+        <label id="234" label="Only item" folder="Kyouko's ribbon" sort="6" />
+        <label id="235" label="Wearing only ribbon" folder="" sort="0" />
+        <label id="236" label="Played a few games" folder="Kyouko's ribbon" sort="7" />
+        <label id="237" label="To ogle, hm?" color="5" folder="Target: Nagatoro" sort="16" />
+        <label id="239" label="Wearing only ribbon" folder="Player exposed" sort="0" />
+        <label id="240" label="0: No one" color="5" folder="Target: Bobobo" sort="3" />
+        <label id="241" label="1: Lanes between?" color="5" folder="Target: Aqua (KH)" sort="3" />
+        <label id="242" label="Something different" color="5" folder="Target: Aqua (KH)" sort="3" />
+        <label id="243" label="Show us" color="5" folder="Target: Bobobo" sort="0" />
+        <label id="244" label="Nakey swimmy time" folder="" sort="0" />
+        <label id="245" label="Nakey swimmy time" folder="" sort="0" />
+        <label id="246" label="No tomatoes" color="5" folder="Target: Nagatoro" sort="4" />
+        <label id="247" label="OH GOD THE TOMATOES" folder="" sort="0" />
+        <label id="248" label="Stripping's fun" color="5" folder="Target: Nagatoro" sort="14" />
+        <label id="250" label="3: Friend groups" color="5" folder="Target: Mari (OMORI)" sort="4" />
+        <label id="251" label="My specialty" color="5" folder="Target: Mari (OMORI)" sort="3" />
+        <label id="252" label="Akari" color="5" folder="Target: Mari Setogaya" sort="14" />
+        <label id="253" label="Club origins" color="5" folder="Target: Mari Setogaya" sort="15" />
+        <label id="254" label="Sleepovers" color="5" folder="Target: Mari Setogaya" sort="16" />
+        <label id="255" label="Pretty happy (Mari early stages)" color="5" folder="Target: Mari Setogaya" sort="9" />
+        <label id="256" label="Pretty happy (Mari mid stages)" color="5" folder="Target: Mari Setogaya" sort="10" />
+        <label id="257" label="Pretty happy (Mari late stages)" color="5" folder="Target: Mari Setogaya" sort="11" />
+        <label id="258" label="Handful?" folder="Target: Nagatoro" sort="11" />
+        <label id="259" label="Worst strip ever" folder="" sort="0" />
+        <label id="260" label="Shoes" folder="Specific items" sort="0" />
+        <label id="261" label="Shoes (socks separate)" folder="Specific items" sort="6" />
+        <label id="262" label="Shoes" folder="Specific items" sort="0" />
+        <label id="263" label="Shoes (separate thigh-highs)" folder="Specific items" sort="0" />
+        <label id="264" label="Shoes" folder="Specific items" sort="9" />
+        <label id="265" label="Shoes (indecent)" folder="Specific items" sort="0" />
+        <label id="266" label="Shoes (socks separate)" folder="Specific items" sort="7" />
+        <label id="267" label="Shoes (socks separate)" folder="Specific items" sort="15" />
+        <label id="268" label="Shoes" folder="Specific items" sort="0" />
+        <label id="269" label="Shoes (still decent)" folder="Specific items" sort="10" />
+        <label id="270" label="Shoes" folder="Specific items" sort="11" />
+        <label id="271" label="Hair decoration" folder="Specific items" sort="16" />
+        <label id="272" label="Hair decoration (cursed hair)" folder="Specific items" sort="13" />
+        <label id="273" label="" folder="Specific items" sort="0" />
+        <label id="274" label="Thigh-highs (not exposed)" folder="Specific items" sort="0" />
+        <label id="275" label="Thigh-highs (exposed but not naked)" folder="Specific items" sort="2" />
+        <label id="276" label="Thigh-highs (naked)" folder="Specific items" sort="3" />
+        <label id="277" label="Exposed" folder="Minor/Accessory late" sort="7" />
+        <label id="278" label="Indecent" folder="Minor/Accessory late" sort="9" />
+        <label id="279" label="Naked" folder="Minor/Accessory late" sort="8" />
+        <label id="280" label="Nanamori Classic" folder="Rares" sort="0" />
+        <label id="281" label="" folder="Rares" sort="0" />
+        <label id="282" label="Sexy tomato" folder="Rares" sort="2" />
+        <label id="283" label="Reset" folder="AI Level" sort="0" />
+        <label id="284" label="Nanamori Classic: Bad (early)" folder="AI Level" sort="2" />
+        <label id="285" label="Nanamori Classic: Good" folder="AI Level" sort="3" />
+        <label id="286" label="Sexy tomato: Good" folder="AI Level" sort="4" />
+        <label id="287" label="Sexy tomato: Bad" folder="AI Level" sort="5" />
+        <label id="288" label="Slippers" folder="Costume: Sexy Tomato" sort="2" />
+        <label id="289" label="Panties" folder="Costume: Sexy Tomato" sort="3" />
+        <label id="290" label="Hood" folder="Costume: Sexy Tomato" sort="4" />
+        <label id="291" label="Hood" folder="Costume: Sexy Tomato" sort="16" />
+        <label id="292" label="If she didn't take her ribbon off" folder="" sort="0" />
+        <label id="293" label="Socks" folder="Sexy Tomato" sort="0" />
+        <label id="294" label="Top" folder="Costume: Sexy Tomato" sort="5" />
+        <label id="295" label="Bottom" folder="Costume: Sexy Tomato" sort="6" />
+        <label id="296" label="Tank top" folder="Costume: Sexy Tomato" sort="7" />
+        <label id="297" label="Slippers" folder="Costume: Sexy Tomato" sort="17" />
+        <label id="298" label="Socks" folder="Costume: Sexy Tomato" sort="18" />
+        <label id="299" label="Top" folder="Costume: Sexy Tomato" sort="19" />
+        <label id="300" label="Bottom" folder="Costume: Sexy Tomato" sort="20" />
+        <label id="301" label="Panties" folder="Costume: Sexy Tomato" sort="21" />
+        <label id="302" label="Tank top" folder="Costume: Sexy Tomato" sort="22" />
+        <label id="303" label="Hood (played ribbon trick)" folder="Costume: Sexy Tomato" sort="15" />
+        <label id="304" label="Reset &quot;ribbon trick this game&quot; marker" folder="" sort="0" />
+        <label id="305" label="Played ribbon trick this game" folder="" sort="0" />
+        <label id="306" label="Did not play ribbon trick this game" folder="" sort="0" />
+        <label id="307" label="Played ribbon trick this game" folder="" sort="0" />
+        <label id="308" label="Played ribbon trick this game" folder="" sort="0" />
+        <label id="309" label="Did not play ribbon trick this game" folder="" sort="0" />
+        <label id="310" label="Played ribbon trick this game" folder="" sort="0" />
+        <label id="311" label="Panties (someone else was bottomless)" folder="Costume: Sexy Tomato" sort="12" />
+        <label id="312" label="Panties (someone else is bottomless)" folder="Costume: Sexy Tomato" sort="11" />
+        <label id="313" label="Tank top (no one naked)" folder="Costume: Sexy Tomato" sort="14" />
+        <label id="314" label="Tank top (first boobs)" folder="Costume: Sexy Tomato" sort="13" />
+        <label id="315" label="Sleepovers" color="5" folder="Target: Mari Setogaya" sort="10" />
+        <label id="316" label="Socks" folder="Costume: Sexy Tomato" sort="8" />
+        <label id="317" label="Fallback" folder="" sort="0" />
+        <label id="318" label="" folder="Costume: Sexy Tomato" sort="6" />
+        <label id="319" label="" folder="Costume: Nanamori Classic" sort="4" />
+        <label id="320" label="" folder="Costume: Nanamori Classic" sort="5" />
+        <label id="321" label="" folder="Costume: Nanamori Classic" sort="0" />
+        <label id="322" label="Costume: Nanamori Classic" folder="" sort="0" />
+        <label id="323" label="" folder="Costume: Sexy Tomato" sort="4" />
+        <label id="324" label="" folder="Costume: Sexy Tomato" sort="5" />
+        <label id="325" label="" folder="Costume: Sexy Tomato" sort="3" />
+        <label id="326" label="Sexy Tomato" folder="" sort="0" />
+        <label id="327" label="Sexy Tomato" folder="" sort="0" />
+        <label id="328" label="Some similarity?" color="5" folder="Target: Kyoko Kirigiri" sort="5" />
+        <label id="329" label="Ecdysiasts unite" color="5" folder="Target: Kyoko Kirigiri" sort="6" />
+        <label id="331" label="" folder="Target: Aqua (KH)" sort="4" />
+        <label id="332" label="0: What kind?" color="5" folder="Target: Nagatoro" sort="8" />
+        <label id="330" label="How much tomato wear DOES she have?" folder="Target: Kyoko Kirigiri" sort="0" />
+        <label id="333" label="4: The pattern" folder="Target: Natsuki" sort="7" />
+        <label id="337" label="Underwear's crying out" folder="" sort="0" />
+        <label id="338" label="Underwear cried out (was removed under clothes)" folder="Unusual Ordering" sort="3" />
+        <label id="339" label="Underwear cried out" folder="" sort="0" />
+        <label id="340" label="" folder="Target: Yuno Uno" sort="2" />
+        <label id="341" label="Lazing ain't easy" folder="Target: Jura" sort="2" />
+        <label id="343" label="Handful?" folder="" sort="0" />
+        <label id="344" label="Slow the strip" color="5" folder="Target: Nagatoro" sort="15" />
+        <label id="345" label="0: How cool and mysterious" color="5" folder="Target: Nagatoro" sort="9" />
+        <label id="346" label="2" folder="Target: Nagatoro" sort="0" />
+        <label id="347" label="" folder="Tags" sort="7" />
+        <label id="348" label="Competitive hand" folder="Game state" sort="6" />
+        <label id="349" label="Fallback" folder="" sort="0" />
+        <label id="350" label="Fallback" folder="" sort="0" />
+        <label id="351" label="Early game" folder="Basics" sort="14" />
+        <label id="352" label="Decent" folder="Basics" sort="15" />
+        <label id="353" label="Not naked" folder="Basics" sort="19" />
+        <label id="354" label="Any stage" folder="Basics" sort="17" />
+        <label id="355" label="Indecent" folder="Basics" sort="16" />
+        <label id="356" label="Naked, target still has accessory" folder="" sort="0" />
+        <label id="357" label="Exposed" folder="Basics" sort="18" />
+        <label id="416" label="Removed bra under clothing" folder="Unusual Ordering" sort="4" />
+        <label id="417" label="Removing underwear under clothes" folder="Unusual Ordering" sort="0" />
+        <label id="360" label="Fallback" folder="" sort="0" />
+        <label id="361" label="Fallback" folder="" sort="0" />
+        <label id="362" label="Queen high or worse" folder="" sort="0" />
+        <label id="363" label="" folder="Basics" sort="13" />
+        <label id="364" label="" folder="Basics" sort="9" />
+        <label id="365" label="" folder="Basics" sort="12" />
+        <label id="366" label="" folder="Basics" sort="10" />
+        <label id="367" label="" folder="Basics" sort="11" />
+        <label id="12" label="" folder="Basics" sort="5" />
+        <label id="139" label="" folder="Basics" sort="6" />
+        <label id="368" label="" folder="Basics" sort="7" />
+        <label id="369" label="" folder="Basics" sort="3" />
+        <label id="370" label="" folder="Basics" sort="0" />
+        <label id="371" label="" folder="Basics" sort="2" />
+        <label id="372" label="" folder="Basics" sort="8" />
+        <label id="374" label="" folder="Basics" sort="4" />
+        <label id="375" label="Removing hat, indecent" folder="Minor/Accessory late" sort="6" />
+        <label id="376" label="Removing hat, naked" folder="Minor/Accessory late" sort="3" />
+        <label id="377" label="" color="5" folder="Target: Miko" sort="0" />
+        <label id="378" label="" folder="Target: Reimu" sort="0" />
+        <label id="379" label="Love and Justice" color="5" folder="Target: Queenie" sort="0" />
+        <label id="380" label="" folder="Target: Hatsune Miku" sort="0" />
+        <label id="381" label="Kyouko knows a couple" folder="Target: Magical Sempai" sort="0" />
+        <label id="382" label="0: Give us a trick" folder="Target: Magical Sempai" sort="0" />
+        <label id="384" label="" folder="Nanamori Classic" sort="0" />
+        <label id="385" label="The three keys to happiness" color="5" folder="Target: Miko" sort="2" />
+        <label id="386" label="" folder="Kyouko's birthday" sort="0" />
+        <label id="387" label="Kyouko's birthday (knows player)" folder="" sort="0" />
+        <label id="388" label="Kyouko's birthday (Sexy Tomato)" folder="" sort="0" />
+        <label id="389" label="Kyouko's birthday" folder="" sort="0" />
+        <label id="390" label="Kyouko's birthday (Birthday Backyard)" folder="" sort="0" />
+        <label id="391" label="Kyouko's birthday (player naked)" folder="" sort="0" />
+        <label id="392" label="Kyouko's birthday (player naked)" folder="" sort="0" />
+        <label id="393" label="Kyouko's birthday (only one in a costume)" folder="" sort="0" />
+        <label id="394" label="Ribbon (birthday)" folder="Costume: Nanamori Classic" sort="16" />
+        <label id="395" label="Tank top (birthday)" folder="Costume: Sexy Tomato" sort="9" />
+        <label id="396" label="Tank top (birthday)" folder="Costume: Sexy Tomato" sort="7" />
+        <label id="397" label="Birthday" folder="Costume: Sexy Tomato" sort="0" />
+        <label id="398" label="Birthday (first naked)" folder="Costume: Sexy Tomato" sort="2" />
+        <label id="399" label="Birthday" folder="Costume: Nanamori Classic" sort="2" />
+        <label id="400" label="Birthday (first naked)" folder="Costume: Nanamori Classic" sort="3" />
+        <label id="401" label="Birthday (all naked)" folder="" sort="0" />
+        <label id="402" label="get it cuz she's a tomato and tomatoes go squish" folder="" sort="0" />
+        <label id="405" label="April Fools'" folder="" sort="0" />
+        <label id="406" label="" folder="Tags" sort="0" />
+        <label id="407" label="" folder="Tags" sort="0" />
+        <label id="408" label="" folder="filter" sort="0" />
+        <label id="409" label="Weapon" folder="Specific items" sort="12" />
+        <label id="410" label="But who?" color="5" folder="Target: Queenie" sort="2" />
+        <label id="411" label="Nanamori Classic: Bad (endgame)" folder="AI Level" sort="6" />
+        <label id="412" label="Get a reaction!" folder="Target: Nagatoro" sort="19" />
+        <label id="413" label="" folder="Target: Mari Setogaya" sort="17" />
+        <label id="414" label="Tomatoes all day, every day" color="5" folder="Target: Tea Gardner" sort="0" />
+        <label id="418" label="Removed underwear under skirt" folder="Unusual Ordering" sort="5" />
+        <label id="419" label="Removing bra under clothing" folder="Unusual Ordering" sort="2" />
+        <label id="420" label="Classic Uniforms" folder="Target: Yuna" sort="0" />
+        <label id="421" label="&quot;Slightly&quot; unusual" folder="Target: Tea Gardner" sort="2" />
+        <label id="422" label="" folder="Target: Tea Gardner" sort="0" />
+        <label id="423" label="The Kyo(u)kos" folder="" sort="0" />
+        <label id="424" label="Fun time" color="5" folder="" sort="0" />
+        <label id="425" label="On point" folder="Target: Yuna" sort="2" />
+        <label id="426" label="I cannot contain the silliness" folder="Target: Elphaba" sort="0" />
+        <label id="427" label="" folder="Tags over small items" sort="0" />
+        <label id="428" label="" folder="Tags over small items" sort="2" />
+        <label id="429" label="" folder="Tags on underwear/" sort="0" />
+        <label id="430" label="" folder="Tags" sort="15" />
+        <label id="431" label="" folder="Tags" sort="14" />
+        <label id="432" label="" folder="Tags" sort="2" />
+        <label id="433" label="" folder="Tags over small items" sort="0" />
+        <label id="434" label="" folder="Tags" sort="0" />
+        <label id="435" label="" folder="Tags" sort="4" />
+        <label id="436" label="" folder="Tags" sort="13" />
+        <label id="437" label="" color="5" folder="Target: Queenie" sort="0" />
+        <label id="438" label="" folder="Target: Téa Gardner" sort="0" />
+        <label id="439" label="" folder="Target:" sort="0" />
+        <label id="440" label="" folder="Target: Yuna" sort="3" />
+        <label id="441" label="Bra" folder="Sponsors: Spaceman" sort="10" />
+        <label id="442" label="" folder="Sponsors: Spaceman" sort="12" />
+        <label id="443" label="" folder="Sponsors: Spaceman" sort="14" />
+        <label id="444" label="" folder="Sponsors: Spaceman" sort="16" />
+        <label id="445" label="" folder="Tags" sort="0" />
+        <label id="446" label="" folder="Backgrounds" sort="0" />
+        <label id="447" label="" folder="Backgrounds" sort="0" />
+        <label id="448" label="" folder="Backgrounds" sort="0" />
+        <label id="449" label="" folder="Sponsors: Spaceman" sort="18" />
+        <label id="450" label="" folder="Stripping gimmicks" sort="0" />
+        <label id="451" label="" folder="Tags over small items" sort="0" />
+        <label id="452" label="" folder="Tags over small items" sort="0" />
+        <label id="454" label="All blonde girls" folder="Sponsors: Spaceman" sort="20" />
+        <label id="455" label="Invited 3+ cute blonde girls (player attracted)" folder="Sponsors: Spaceman" sort="24" />
+        <label id="453" label="Invited 2 cute blonde girls" folder="" sort="0" />
+        <label id="456" label="All blonde girls (player's type?)" folder="Spaceman's sponsor" sort="0" />
+        <label id="457" label="Invited 3+ cute blonde girls (player not attracted)" folder="Sponsors: Spaceman" sort="28" />
+        <label id="458" label="Invited 3+ cute blonde girls (player compatible)" folder="Spaceman's sponsor" sort="0" />
+        <label id="459" label="" folder="Sponsors: Spaceman" sort="6" />
+        <label id="460" label="" folder="Sponsors: Spaceman" sort="4" />
+        <label id="461" label="" folder="Sponsors: Spaceman" sort="8" />
+        <label id="462" label="" folder="Sponsors: Spaceman" sort="22" />
+        <label id="463" label="" folder="Sponsors: Spaceman" sort="26" />
+        <label id="464" label="" folder="Sponsors: Spaceman" sort="2" />
+        <label id="465" label="" folder="Sponsors: Spaceman" sort="32" />
+        <label id="466" label="" folder="Sponsors: Spaceman" sort="30" />
+        <label id="467" label="Socks - playing w/ onesie and normal pajamas" folder="Sponsors: Spaceman" sort="34" />
+        <label id="468" label="Socks - single AI w/o onesie" folder="Sponsors: Spaceman" sort="36" />
+        <label id="469" label="" folder="Sponsors: Spaceman" sort="18" />
+        <label id="470" label="" folder="Sponsors: Spaceman" sort="19" />
+        <label id="471" label="" folder="Sponsors: Nicole" sort="0" />
+        <label id="472" label="" folder="Target: Tea Gardner" sort="0" />
+        <label id="473" label="" color="5" folder="Target: Miko" sort="0" />
+        <label id="474" label="" color="5" folder="Target: Miko" sort="0" />
+        <label id="475" label="Topless before major lower" folder="Unusual Ordering" sort="0" />
+        <label id="476" label="Topless before major lower (wearing underwear)" folder="Unusual Ordering" sort="0" />
+        <label id="477" label="Topless before major lower (disapponted before)" folder="Unusual Ordering" sort="0" />
+        <label id="478" label="Topless before major lower (wearing underwear)" folder="Unusual Ordering" sort="0" />
+        <label id="479" label="Topless before major lower (no bra)" folder="Unusual Ordering" sort="0" />
+        <label id="480" label="" folder="Target: Chihiro" sort="0" />
+        <label id="481" label="" folder="Target: Chihiro" sort="0" />
+        <label id="482" label="" folder="Target: Chihiro" sort="0" />
+        <label id="483" label="" folder="Target: Chihiro" sort="0" />
+        <label id="484" label="" folder="Target: Chihiro" sort="0" />
+    </labels>
+    <onlyCustomPoses>true</onlyCustomPoses>
+    <hidePrefixlessImages>false</hidePrefixlessImages>
+    <nextId>484</nextId>
+    <markers>
+        <marker scope="Private" name="B_">Background-related markers</marker>
+        <marker scope="Public" name="B_DarkTricks">Dark backgrounds</marker>
+        <marker scope="Public" name="B_Inventory_Booth">Inventory background</marker>
+        <marker scope="Public" name="B_Inventory_PokerVibes">Inventory background</marker>
+        <marker scope="Public" name="B_School_OldUniform">School related backgrounds</marker>
+        <marker scope="Private" name="D_">Random "sometimes" dialogue</marker>
+        <marker scope="Public" name="D_AmbiguousLoser" />
+        <marker scope="Public" name="D_BadHandTrick">Kyouko will bluff on a good hand once per game.</marker>
+        <marker scope="Public" name="D_Birthday">Her birthday is March 28</marker>
+        <marker scope="Public" name="D_Birthday_NoCostumes">She's the only one wearing a costume to her party?</marker>
+        <marker scope="Public" name="D_BlowingHands" />
+        <marker scope="Public" name="D_Boobies">Boobies? Boobies.</marker>
+        <marker scope="Public" name="D_BraBeforeClothing" />
+        <marker scope="Public" name="D_CardHint" />
+        <marker scope="Public" name="D_CardsOnBreak">Where are the good cards? How are they?</marker>
+        <marker scope="Public" name="D_ChestBeforeMajorLower" />
+        <marker scope="Public" name="D_DiscardedCards">How do the discarded cards feel?</marker>
+        <marker scope="Public" name="D_EatCards" />
+        <marker scope="Public" name="D_FixHair">Return of the sidetails.</marker>
+        <marker scope="Public" name="D_GameOfChance" />
+        <marker scope="Public" name="D_GuessIllDie">Hide the pain</marker>
+        <marker scope="Public" name="D_HandLessGood" />
+        <marker scope="Public" name="D_HardToNotLose" />
+        <marker scope="Public" name="D_InventoryTime">On her birthday, Kyouko remembers that time just doesn't pass (like in her series; yes, that's canon)</marker>
+        <marker scope="Public" name="D_Items">Throwing items into a game of poker</marker>
+        <marker scope="Public" name="D_LightningRounds" />
+        <marker scope="Public" name="D_LittleCardClub" />
+        <marker scope="Public" name="D_NonFutaReveal" />
+        <marker scope="Public" name="D_NoPanDisappointment" />
+        <marker scope="Public" name="D_PostgameBoobs">...Boobs.</marker>
+        <marker scope="Public" name="D_PostgameHelp">Her "help" might be junk poker advice. Or something else.</marker>
+        <marker scope="Public" name="D_RemovingRibbon">Someone else is removing their hair ribbon.</marker>
+        <marker scope="Public" name="D_RibbonTrade">Someone else is removing their hair ribbon after Kyouko has taken hers off.</marker>
+        <marker scope="Public" name="D_SexyPose">Her idea of "sexy" is weird.</marker>
+        <marker scope="Public" name="D_SwitchHandsA">She tries switching hands... for exactly one phase.</marker>
+        <marker scope="Public" name="D_SwitchHandsB">Switches back to her right hand (or rather, both) immediately after trying to switch hands.</marker>
+        <marker scope="Public" name="D_ToplessSquad">Triple Topless</marker>
+        <marker scope="Public" name="D_UnderwearBeforeSkirt" />
+        <marker scope="Public" name="D_UnderwearCriesOut">Are you gonna show it the world?</marker>
+        <marker scope="Public" name="D_WhatIfJunk">Predicting a low-scoring hand.</marker>
+        <marker scope="Public" name="E_AmusementClub">The club's been out a room for a while now.</marker>
+        <marker scope="Public" name="E_ArtMajor" />
+        <marker scope="Public" name="E_ArtPractice" />
+        <marker scope="Public" name="E_ArtSupplies" />
+        <marker scope="Public" name="E_ClassSleeper" />
+        <marker scope="Public" name="E_CouncilJoins" />
+        <marker scope="Public" name="E_MoreClubs" />
+        <marker scope="Public" name="E_No1MirakurunCircle" />
+        <marker scope="Public" name="E_RarerMeetings" />
+        <marker scope="Public" name="E_StrangerVoid" />
+        <marker scope="Public" name="E_StudioArtsMajor" />
+        <marker scope="Public" name="E_WorkTime" />
+        <marker scope="Private" name="F_">Tag filters</marker>
+        <marker scope="Public" name="F_Artist" />
+        <marker scope="Public" name="F_Artist_CompareStyles">Assuming they draw like she does.</marker>
+        <marker scope="Public" name="F_Artist_CreationDestination">What they do with their creations.</marker>
+        <marker scope="Public" name="F_Camera_SexyPhoto">Kyouko pulls a "sexy" pose if someone brings a camera.</marker>
+        <marker scope="Public" name="F_Chef_MakeSomething">Hungry on main</marker>
+        <marker scope="Public" name="F_EatKyouko">They're gonna eat... her?</marker>
+        <marker scope="Public" name="F_Exhibitionist_TooExcited">Even she's not that excited.</marker>
+        <marker scope="Public" name="F_Formal_TakeOff" />
+        <marker scope="Public" name="F_MaidUniform" />
+        <marker scope="Public" name="F_NoBra" />
+        <marker scope="Public" name="F_NoBra*" />
+        <marker scope="Public" name="F_PubePeek" />
+        <marker scope="Public" name="F_QuoteSilent">"Say the line, Bart!" "..." "Hooray!"</marker>
+        <marker scope="Public" name="F_SchoolUniform_Why">Lots of horny students at the Inventory</marker>
+        <marker scope="Public" name="F_SmashBros">The Smash characters at the table make her want to play it herself.</marker>
+        <marker scope="Public" name="F_Swimsuit_NoSuit" />
+        <marker scope="Private" name="Q_">Question prompts</marker>
+        <marker scope="Public" name="Q_HighTension">"High Tension" rules to... make the game more intense?</marker>
+        <marker scope="Public" name="Q_OtherStripGames">Extremely unusual but apparently not non-existent if xkcd is to be believed</marker>
+        <marker scope="Public" name="Q_PlayCards">Never mind that everyone just got done playing a card game.</marker>
+        <marker scope="Public" name="Q_SkinnyDipping">The water's right there. You might as well.</marker>
+        <marker scope="Private" name="S_">Self strip related</marker>
+        <marker scope="Public" name="S_AnimalPajamas">Self Stripping 1 (Sexy Tomato)</marker>
+        <marker scope="Public" name="S_BirthdayUniform">Self Must Strip - First to get "in uniform" on her birthday</marker>
+        <marker scope="Public" name="S_FullTomato">Self Stripped - Both her bra and panties—tomato themed—are visible. (Nanamori Classic)</marker>
+        <marker scope="Public" name="S_GodivaHair">Early in first topless stage - the barely visible nipples</marker>
+        <marker scope="Public" name="S_NoRibbonOrSidetails">First hand on stage 7 - Kyouko took away her ribbon and sidetails at the same time, making a pretty jarring change of appearance. (Nanamori Classic)</marker>
+        <marker scope="Public" name="S_RibbonOff">Self Stripping 6 - Taking the ribbon off (Nanamori Classic)</marker>
+        <marker scope="Public" name="S_RibbonStays">Self Stripping - Kyouko plans to keep her ribbon.</marker>
+        <marker scope="Public" name="S_TomatoesRevealed">Self Stripped - The tomato pattern on her underwear is visible. (Nanamori Classic)</marker>
+        <marker scope="Public" name="S_Uniform">Self Stripping 2 - Explain the uniform (Nanamori Classic)</marker>
+        <marker scope="Public" name="SlyCooper_PantsOffA">Sly Cooper Stripping 0</marker>
+        <marker scope="Private" name="T_">Character targets</marker>
+        <marker scope="Public" name="T_Amalia_Cheating">Amalia First hand stage 5</marker>
+        <marker scope="Public" name="T_AquaKH_KeybladeSummon">Aqua Stage 2 Hand=Any</marker>
+        <marker scope="Public" name="T_AquaKH_OStrip1Keyblade">Aqua Stripped 1</marker>
+        <marker scope="Public" name="T_AquaKH_OStrip1LanesBetween">Aqua Stripping 1</marker>
+        <marker scope="Public" name="T_AquaKH_OStrip1WorldHopper">Aqua Must Strip 1</marker>
+        <marker scope="Public" name="T_AquaKH_Strip1MangaBranching">Self Stripping 1</marker>
+        <marker scope="Public" name="T_AquaKH_Strip1NewStuff">Self Stripped 2</marker>
+        <marker scope="Public" name="T_AquaKH_Strip1NothingNew">Self Must Strip 1</marker>
+        <marker scope="Public" name="T_AquaKH_TStrip4Sexy">Aqua Stripped 5</marker>
+        <marker scope="Public" name="T_Bobobo_OStrip0LittleGuy">Bobobo Stripped 1</marker>
+        <marker scope="Public" name="T_Bobobo_OStrip0LiveDamnYou">Bobobo Stripping 0</marker>
+        <marker scope="Public" name="T_Bobobo_TStrip0ShowUs">Bobobo Must Strip 0</marker>
+        <marker scope="Public" name="T_Caitlin_Beans">Caitlin Must Strip 3 (Losing)</marker>
+        <marker scope="Public" name="T_Cheryl_Strip0HereFor">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_Chihiro_TStrip4Laptop">Chihiro Stripped 5</marker>
+        <marker scope="Public" name="T_Chihiro_TStrip4RunAway">Chihiro Stripping 4</marker>
+        <marker scope="Public" name="T_Chihiro_TStrip5Cute">Chihiro Stripped 6</marker>
+        <marker scope="Public" name="T_Chihiro_TStrip5Return">Chihiro Must Strip 5</marker>
+        <marker scope="Public" name="T_Chihiro_TStrip5Strong">Chihiro Stripping 5</marker>
+        <marker scope="Public" name="T_Elphaba_Strip0Silliness">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_Jura_Strip1Laze">Self Must Strip 1</marker>
+        <marker scope="Public" name="T_Jura_Strip1NotEasy">Self Stripping 1</marker>
+        <marker scope="Public" name="T_Kirigiri_AsMuchFun">Kirigiri Stripped 2</marker>
+        <marker scope="Public" name="T_Kirigiri_GlovesOn">Kyoko Kirigiri Stripped 4</marker>
+        <marker scope="Public" name="T_Kirigiri_IfSheLoses">Self Stripped 7</marker>
+        <marker scope="Public" name="T_Kirigiri_SameName">Kirigiri Stripped 1</marker>
+        <marker scope="Public" name="T_Kirigiri_Strip0TomatoSecret">Self Must Strip 0 (Sexy Tomato)</marker>
+        <marker scope="Public" name="T_Kirigiri_TheKyouko">"The Kyouko has arrived!"</marker>
+        <marker scope="Public" name="T_Kirigiri_TogetherPoker">Kirigiri Stripping 1</marker>
+        <marker scope="Public" name="T_Kirigiri_TomatoClothing">Responses to Kirigiri asking how much tomato wear she has</marker>
+        <marker scope="Public" name="T_MagicalSempai_TStrip1MagicTricks">Sempai Must Strip 1</marker>
+        <marker scope="Public" name="T_Mari_NoPantiesA">Mari Stripping 2 (Informality)</marker>
+        <marker scope="Public" name="T_Mari_NoPantiesB">Mari Stripped 3 (Informality)</marker>
+        <marker scope="Public" name="T_Mari_Strip0Personal">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_Mari_Strip0Specialty">Self Stripped 1</marker>
+        <marker scope="Public" name="T_Mari_Strip0WhoAmI">Self Stripping 0</marker>
+        <marker scope="Public" name="T_Mari_TStrip0Excited">Mari Must Strip 0</marker>
+        <marker scope="Public" name="T_Mari_TStrip3Brother">Mari Must Strip 3</marker>
+        <marker scope="Public" name="T_Mari_TStrip3FriendsSisters">Mari Stripping 3</marker>
+        <marker scope="Public" name="T_Miko_Strip0Necessities">Self Stripping 0</marker>
+        <marker scope="Public" name="T_Miko_Strip0Refined">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_Nagatoro_SkillIssue">Rosalina says "hi"</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip0DrawingPlans">Self Stripping 0</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip0PoseIdeas">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip1SketchIdea">Self Must Strip 1</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip1Supplies">Self Stripping 1</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip1Teasing" />
+        <marker scope="Public" name="T_Nagatoro_Strip2Handful">Self Stripping 2</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip2Manga">Self Must Strip 2</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip3Admire">Self Stripped 4</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip3Panties">Self Must Strip 3</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip3PlayerPerv">Self Stripping 3</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip4Allergy">Self Must Strip 4</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip4DoNotWant">Self Stripped 5</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip4OhNo">Self Stripping 4</marker>
+        <marker scope="Public" name="T_Nagatoro_Strip4StrippingFun">Self Stripped 5</marker>
+        <marker scope="Public" name="T_Nagatoro_TStrip0GetAlong">Nagatoro Must Strip 0</marker>
+        <marker scope="Public" name="T_Nagatoro_TStrip0IceCreamMetaphor">Nagatoro Stripping 0</marker>
+        <marker scope="Public" name="T_Nagatoro_TStrip0Mysterious">Nagatoro Stripped 1</marker>
+        <marker scope="Public" name="T_Nagatoro_TStrip1Teasing">Nagatoro Must Strip 1</marker>
+        <marker scope="Public" name="T_NamiSZS_Goodbye">Nami Hito Stripped 1</marker>
+        <marker scope="Public" name="T_Natsuki_GreatTaste">Natsuki Stage 5 - Kyouko sees fun underwear</marker>
+        <marker scope="Public" name="T_Natsuki_HidingPanties">Natsuki Stage 5 - Kyouko sees fun underwear</marker>
+        <marker scope="Public" name="T_Natsuki_MatchingPanties">Natsuki Stage 5 - Kyouko sees fun underwear</marker>
+        <marker scope="Public" name="T_Natsuki_PantyPattern">Natsuki Stripped 5</marker>
+        <marker scope="Public" name="T_Okino_DoubleKyoko">Self Must Strip 0 / Kirigiri Must Strip 0</marker>
+        <marker scope="Public" name="T_Okino_Strip0Mangaka">Self Stripping 0</marker>
+        <marker scope="Public" name="T_Queenie_Strip0Villains">Queenie Stripping 0</marker>
+        <marker scope="Public" name="T_Queenie_TStrip0LoveJustice">Queenie Must Strip 0</marker>
+        <marker scope="Public" name="T_Reimu_Strip0Attack">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_SannyTess_AyanoFuta" />
+        <marker scope="Public" name="T_SannyTess_CockA">Sanny/Tess Stripping 2</marker>
+        <marker scope="Public" name="T_SannyTess_CockB">Sanny/Tess Stripped 3</marker>
+        <marker scope="Public" name="T_SannyTess_Gimmick">Sanny/Tess Must Strip 2</marker>
+        <marker scope="Public" name="T_Setogaya_Strip0Activities">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_Setogaya_Strip1Activities">Self Stripping 1</marker>
+        <marker scope="Public" name="T_Setogaya_Strip1Akari">Self Stripped 2</marker>
+        <marker scope="Public" name="T_Setogaya_Strip1ClubStuff">Self Must Strip 1</marker>
+        <marker scope="Public" name="T_Setogaya_Strip1Favorite">Self Stripped 2</marker>
+        <marker scope="Public" name="T_Setogaya_Strip1MemberIntros">Self Stripping 1</marker>
+        <marker scope="Public" name="T_Setogaya_Strip1Members">Self Must Strip 1</marker>
+        <marker scope="Public" name="T_Setogaya_Strip1Origin">Self Stripped 2</marker>
+        <marker scope="Public" name="T_Setogaya_Strip1RealActivities">Self Stripped 1</marker>
+        <marker scope="Public" name="T_Setogaya_Strip1Sleepovers">Self Stripped 2</marker>
+        <marker scope="Public" name="T_Setogaya_Strip1SleepoversTomato">Self Stripped 2</marker>
+        <marker scope="Public" name="T_Setogaya_Strip1Witch">Self Stripping 0</marker>
+        <marker scope="Public" name="T_Setogaya_Strip2LewdIdea">Self Stripping 2</marker>
+        <marker scope="Public" name="T_Setogaya_Strip2LewdStuff">Self Must Strip 2</marker>
+        <marker scope="Public" name="T_Setogaya_Strip2Stripping">Self Stripped 3</marker>
+        <marker scope="Public" name="T_Tea_FunPrez">Game start</marker>
+        <marker scope="Public" name="T_Tea_Strip3Normal">Self Stripping 3</marker>
+        <marker scope="Public" name="T_Tea_Strip3Tomato">Self Must strip 3</marker>
+        <marker scope="Public" name="T_Tea_TStrip0CardGame">Tea Must Strip 0</marker>
+        <marker scope="Public" name="T_TripleKyokoKyou_Confusing">Kyoko Kirigiri and Kyou Fujibayashi selected, player named Kyouko or Kyoko</marker>
+        <marker scope="Public" name="T_Wikipe-tan_Air" />
+        <marker scope="Public" name="T_Yuna_Strip0Unifrom">Self Must strip 0</marker>
+        <marker scope="Public" name="T_Yuna_Strip1YuriSenses">Self Must strip 1</marker>
+        <marker scope="Public" name="T_Yuna_TStrip0GhostGirls" />
+        <marker scope="Public" name="T_YunoUno_Gif">GIF or GIF?</marker>
+        <marker scope="Public" name="T_YunoUno_Imitate">Copies Yuno's "ghost" trick.</marker>
+        <marker scope="Public" name="T_YunoUno_Strip0Planning">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_YunoUno_Strip1PlayingDumb">Self Must Strip 1</marker>
+        <marker scope="Private" name="Z_">Intenal state. Vast majority of this will only be relevant to Kyouko herself.</marker>
+        <marker scope="Public" name="Z_ComuketSoon">Set when Comuket is less than two weeks away. (That is, the first couple weeks of August and last couple weeks of December; the real-life Comiket is held around the end of those time frames)</marker>
+        <marker scope="Private" name="Z_DontFixHair">Prevent Kyouko from fixing her hair on the Game Over case.</marker>
+        <marker scope="Private" name="Z_Finished">Sets up the global case where Kyouko fixes her hair.</marker>
+        <marker scope="Private" name="Z_GamesPlayed">Count the games Kyouko's played (to completion) with you</marker>
+        <marker scope="Private" name="Z_JacketOnly">Game over: Kyouko puts her jacket back on.</marker>
+        <marker scope="Public" name="Z_JustDidSexyPose" />
+        <marker scope="Public" name="Z_PlayerHasSeenRibbonTrick">Kyouko has taken her ribbon off in her default outfit at some point.</marker>
+        <marker scope="Public" name="Z_PlayerWearingRibbon">The player wore the Kyouko's Ribbon collectible to the game</marker>
+        <marker scope="Private" name="Z_PlayerWornRibbon">The player has worn the Kyouko's Ribbon collectible in the past.</marker>
+        <marker scope="Public" name="Z_RemovedCollectibleRibbon">The player brought Kyouko's ribbon but took it off.</marker>
+        <marker scope="Private" name="Z_RibbonReassuranceSexyTomato">Kyouko assures the player she won't take off her ribbon last time (Sexy Tomato)</marker>
+        <marker scope="Private" name="Z_RibbonTrickLastGame">Kyouko tricked the others by taking her ribbon off last game.</marker>
+        <marker scope="Private" name="Z_SeenNotBadHand">Kyouko has only gotten bad hands until this is set.</marker>
+        <marker scope="Private" name="Z_SmallStripLastHand">People keep taking off small stuff, meanwhile Kyouko's the only one who's down to her underwear.</marker>
+        <marker scope="Private" name="Z_UnderwearCount">Count how many pairs of underwear someone's wearing.</marker>
+        <marker scope="Public" name="Z_WinterUniform">If set, Kyouko is wearing her long-sleeved uniform. There's a reason I didn't make a situation for this.</marker>
+    </markers>
+    <recipes>
+        <recipe key="352366df-ef02-4874-a2eb-0fdc4c210fbd">
+            <cases>
+                <id>33</id>
+            </cases>
+        </recipe>
+        <recipe key="93fb1799-f582-4f08-a53c-49d5e56f6278">
+            <cases>
+                <id>35</id>
+            </cases>
+        </recipe>
+        <recipe key="9834f3a8-b3ef-4db0-898f-2b7670e2ebf8">
+            <cases>
+                <id>36</id>
+            </cases>
+        </recipe>
+        <recipe key="dba5778a-dbed-4079-9052-d204275d6f93">
+            <cases>
+                <id>61</id>
+            </cases>
+        </recipe>
+        <recipe key="53b0858d-ff7e-4d5d-bcac-ce7af1c4fde9">
+            <cases>
+                <id>148</id>
+            </cases>
+        </recipe>
+    </recipes>
+</metadata>

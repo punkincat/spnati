@@ -1,6 +1,7 @@
-﻿using Desktop;
+using Desktop;
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace SPNATI_Character_Editor.Activities
 {
@@ -11,6 +12,7 @@ namespace SPNATI_Character_Editor.Activities
 		private bool _linkDataChanged = false;
 		private Costume _costume;
 		private bool _populatingImages;
+		private bool _exportOnQuit;
 
 		public SkinEditor()
 		{
@@ -21,7 +23,7 @@ namespace SPNATI_Character_Editor.Activities
 			cboStatus.Items.Add("offline");
 			cboStatus.Items.Add("unlisted");
 			cboGender.Items.AddRange(new string[] { "female", "male" });
-			cboEvent.Items.AddRange(new string[] { "", "none", "valentines", "april_fools", "easter", "summer", "oktoberfest", "halloween", "xmas" });
+			cboEvent.Items.AddRange(new string[] { "", "none", "valentines", "april_fools", "easter", "summer", "halloween", "xmas", "sleepover" });
 		}
 
 		public override string Caption
@@ -112,10 +114,40 @@ namespace SPNATI_Character_Editor.Activities
 		private void PopulatePortraitDropdown()
 		{
 			_populatingImages = true;
-			List<PoseMapping> poses = _costume.Character.PoseLibrary.GetPoses(0);
+			List<PoseMapping> poses = _costume.Character.PoseLibrary.GetPortraitPoses();
 			cboDefaultPic.DisplayMember = "DisplayName";
 			cboDefaultPic.DataSource = poses;
 			_populatingImages = false;
+		}
+
+		private bool PromptToSave()
+		{
+			if (_costume == null || !_costume.IsDirty)
+				return true;
+			DialogResult result = MessageBox.Show(string.Format("Do you wish to save {0} first?", _costume.Link.Name), "Save changes", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+			if (result == DialogResult.Yes)
+			{
+				_exportOnQuit = true;
+				return true;
+			}
+			else if (result == DialogResult.No)
+			{
+				return true;
+			}
+			return false;
+		}
+
+		public override bool CanQuit(CloseArgs args)
+		{
+			return PromptToSave();
+		}
+
+		public override void Quit()
+		{
+			if (_exportOnQuit)
+			{
+				OnSaveWorkspace(false);
+			}
 		}
 
 		public override void Save()
@@ -140,8 +172,19 @@ namespace SPNATI_Character_Editor.Activities
 
 				string label = _costume.Labels.Count > 0 ? _costume.Labels[0].Value : null;
 
+				int countUnskipped = 0;
+				foreach (Clothing c in _costume.Wardrobe)
+				{
+					if (c != null && c.Type != "skip")
+					{
+						countUnskipped++;
+					}
+				}
+
 				if (txtName.Text != _costume.Link.Name || status != _costume.Link.Status || set != _costume.Link.Set || _costume.Link.IsDirty
-					|| gender != _costume.Link.Gender || label != _costume.Link.Label)
+					|| gender != _costume.Link.Gender || label != _costume.Link.Label 
+					|| _costume.Link.LayersNonSkip == 0 && countUnskipped != _costume.Layers
+					|| _costume.Link.LayersNonSkip != 0 && countUnskipped != _costume.Link.LayersNonSkip)
 				{
 					_linkDataChanged = true;
 				}
@@ -153,6 +196,14 @@ namespace SPNATI_Character_Editor.Activities
 					_costume.Link.Status = status;
 					_costume.Link.Set = set;
 					_costume.Link.Label = label;
+					if (countUnskipped != _costume.Layers)
+					{
+						_costume.Link.LayersNonSkip = countUnskipped;
+					}
+					else
+					{
+						_costume.Link.LayersNonSkip = 0;
+					}
 
 					if (gender != _costume.Character.Gender)
 					{
@@ -194,5 +245,5 @@ namespace SPNATI_Character_Editor.Activities
 			}
 			Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_costume, image, 0));
 		}
-    }
+	}
 }

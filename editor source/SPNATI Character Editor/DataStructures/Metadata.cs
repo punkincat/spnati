@@ -1,4 +1,4 @@
-﻿using Desktop.DataStructures;
+using Desktop.DataStructures;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Xml.Serialization;
@@ -46,11 +46,7 @@ namespace SPNATI_Character_Editor
 		}
 
 		[XmlElement("pic")]
-		public string Portrait
-		{
-			get { return Get<string>(); }
-			set { Set(value); }
-		}
+		public SelectPortrait Portrait { get; set; }
 
 		[XmlElement("gender")]
 		public string Gender
@@ -120,6 +116,13 @@ namespace SPNATI_Character_Editor
 			set { Set(value); }
 		}
 
+		[XmlElement("default-costume-name")]
+		public string DefaultCostumeName
+		{
+			get { return Get<string>(); }
+			set { Set(value); }
+		}
+
 		[XmlArray("tags")]
 		[XmlArrayItem("tag")]
 		public List<CharacterTag> Tags { get; set; }
@@ -186,6 +189,7 @@ namespace SPNATI_Character_Editor
 		{
 			Scale = 100.0f;
 			AlternateSkins = new List<AlternateSkin>();
+			Portrait = new SelectPortrait();
 		}
 
 		public Metadata(Character c) : this()
@@ -210,6 +214,7 @@ namespace SPNATI_Character_Editor
 				Gender = c.Gender;
 			}
 			Layers = c.Layers;
+			DefaultCostumeName = c.Metadata.DefaultCostumeName;
 			Endings = c.Endings.ConvertAll(e => new EpilogueMeta
 			{
 				Status = e.Status,
@@ -232,6 +237,13 @@ namespace SPNATI_Character_Editor
 			c.GetUniqueLineAndPoseCount(out lines, out poses);
 			Lines = lines;
 			Poses = poses;
+			if (c.Metadata.AlternateSkins != null)
+			{
+				foreach (AlternateSkin skin in c.Metadata.AlternateSkins)
+					foreach (SkinLink link in skin.Skins)
+						if (link.LayersNonSkip == c.Layers)
+							link.LayersNonSkip = 0;
+			}
 		}
 
 		public void OnBeforeSerialize()
@@ -243,6 +255,29 @@ namespace SPNATI_Character_Editor
 		{
 			//Encoding these doesn't need to be done in OnBeforeSerialize because the serializer does it automatically
 			Description = XMLHelper.DecodeEntityReferences(Description);
+		}
+	}
+
+	public class SelectPortrait
+	{
+		[DefaultValue(0)]
+		[XmlAttribute("x")]
+		public int X;
+
+		[DefaultValue(0)]
+		[XmlAttribute("y")]
+		public int Y;
+
+		[DefaultValue(100.0f)]
+		[XmlAttribute("scale")]
+		public float Scale;
+
+		[XmlText]
+		public string Image;
+
+		public SelectPortrait()
+		{
+			Scale = 100.0f;
 		}
 	}
 

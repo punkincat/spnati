@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<collectibles>
+    <collectible id="felix_collar" status="online" img="opponents/felix/collectables/collar.png" thumbnail="opponents/felix/collectables/collar.png">
+        <title>Ferri-chan's Collar</title>
+        <subtitle>A duplicate of Felix's collar. It jingles when you walk!</subtitle>
+        <text>The cute collar that Felix wears. If you wear it, he might compliment it!</text>
+        <unlock>Win a game against Felix.</unlock>
+        <wearable>true</wearable>
+        <clothing name="collar" generic="collar" position="neck" type="extra" img="opponents/felix/collectables/collar.png" />
+    </collectible>
+    <collectible id="felix_setogaya_polaroid" status="online" img="opponents/felix/collectables/polaroid_smaller.png" thumbnail="opponents/felix/collectables/polaroid_smaller.png">
+        <title>A gift from Felix and Mari S.</title>
+        <subtitle>Something you can remember your time with them by.</subtitle>
+        <text>"I've had lots of fun with you! You should play with Mari and I again!"</text>
+        <unlock>Make Felix and Mari both lose. You must be male. Winner does not matter.</unlock>
+    </collectible>
+    <collectible id="felix_bows" status="online" img="opponents/felix/collectables/bows.png" thumbnail="opponents/felix/collectables/bows.png">
+        <title>Ferri-chan's Bows</title>
+        <subtitle>Two white bows with blue and yellow ribbons. They feel soft in your hair.</subtitle>
+        <text>Bows that are strikingly similar to the ribbons that Felix wears. Unlocks a softer, kinder side of Felix behind that playful mask.</text>
+        <unlock>Play three games in total with Felix. Winning or losing does not matter.</unlock>
+        <counter>3</counter>
+        <wearable>true</wearable>
+        <clothing name="bows" generic="ribbon" position="head" type="extra" img="opponents/felix/collectables/bows.png" plural="true" />
+    </collectible>
+</collectibles>

@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -190,6 +190,13 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				int stage = _selectedCase.MinStage;
 				Workspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_character, image, stage));
+			}
+			string text = gridLines.GetCurrentLine().Text;
+			if (!string.IsNullOrEmpty(text))
+			{
+				DialogueLine line = new DialogueLine();
+				line.Text = text;
+				Workspace.SendMessage(WorkspaceMessages.PreviewLine, line);
 			}
 		}
 

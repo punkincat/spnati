@@ -1,2 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<collectibles />
+<collectibles>
+    <collectible id="potion_hoarder" status="online" img="opponents/kora/16698557918592732479500335284198.png" thumbnail="opponents/kora/166985579185927324795003352841982.png">
+        <title>Big HP Potion</title>
+        <subtitle>"Who wouldn't want a thousand potions everywhere!?"</subtitle>
+        <text>"Here's a Potion, the absolute bestest of healing items! You better appreciate, 'cuz, like, a ton of people totally don't! Like, there was this one time where someone totally flipped out because I 'wasn't healing enough'! Now, I'm totally not gonna name names-- it was Nia, by the way-- but whoever it was totally had the wrong idea and should definitely give me an apology!"</text>
+        <unlock>What's the fastest way to get to a girl's heart? Just listen to some of her long stories!</unlock>
+        <counter>10</counter>
+    </collectible>
+    <collectible id="cute_and_fierce" status="online" img="opponents/kora/lightninboltzzzz.png" thumbnail="opponents/kora/lightninboltzzzz.png">
+        <title>Lightning Bolts</title>
+        <subtitle>Electrifying headwear!</subtitle>
+        <text>"You've always gotta wear clothes that show off just who you are! My cute bolts here are proof of that!"</text>
+        <unlock>Finish a game with Kora.</unlock>
+        <wearable>true</wearable>
+        <clothing name="lightning bolts" generic="hair decoration" position="head" type="extra" img="opponents/kora/lightninboltzzzz.png" plural="true" />
+    </collectible>
+</collectibles>

@@ -10,7 +10,22 @@
             <description>Once a winner has been decided, Aaravi asks if anyone has any side quests to give out.</description>
         </case>
         <case name="Fighter Backstory" id="89" priority="Prompt" min="0" max="9">
-            <description>When playing against a "fighter" opponent, Aaravi might suggest that they share their respective tragic backstories.</description>
+            <description>When playing against a "fighter" opponent, Aaravi might suggest that they share their respective tragic backstories. Please note that using the "Reply" button's auto-generated case will not respond to this correctly! You need to set it up as a "Must Strip (Self)"!</description>
+        </case>
+        <case name="Hexplanation" id="215" priority="FYI" min="0" max="7">
+            <description>Aaravi makes mention of the curse spirit who usually lives in her organs, Hex, and explains why they're not present.</description>
+        </case>
+        <case name="Level Up" id="111" priority="FYI" min="0" max="7">
+            <description>After surviving thirty rounds without having to forfeit, Aaravi can level up, increasing her difficulty.</description>
+        </case>
+        <case name="If You Can't Beat 'Em..." id="363" priority="FYI" min="6" max="7">
+            <description>Down to her last few layers, Aaravi states that she's going to deliberately get herself as horny as possible before the forfeit so she'll have the fastest possible masturbation time. She sees this as a way of still achieving a limited victory.</description>
+        </case>
+        <case name="Blueballed" id="367" priority="FYI" min="6" max="7">
+            <description>Having preemptively started getting horny for the forfeit, Aaravi has won the game, and will not be masturbating.</description>
+        </case>
+        <case name="Back Scars" id="119" priority="Noteworthy" min="7" max="7">
+            <description>Once naked, Aaravi shows off the scars on her back (and also her butt).</description>
         </case>
     </noteworthy>
     <reviewed>true</reviewed>
@@ -30,6 +45,63 @@
         <response id="0" opponent="charlie" opponentId="72" />
         <response id="0" opponent="ms.fortune" opponentId="24" />
         <response id="0" opponent="mercy" opponentId="144" />
+        <response id="0" opponent="sucrose" opponentId="145" />
+        <response id="0" opponent="sucrose" opponentId="758" />
+        <response id="0" opponent="sucrose" opponentId="133" />
+        <response id="0" opponent="sucrose" opponentId="197" />
+        <response id="0" opponent="stocking" opponentId="49" />
+        <response id="0" opponent="lux" opponentId="55" />
+        <response id="0" opponent="lux" opponentId="59" />
+        <response id="0" opponent="lux" opponentId="301" />
+        <response id="0" opponent="lux" opponentId="17" />
+        <response id="0" opponent="lux" opponentId="16" />
+        <response id="0" opponent="lux" opponentId="15" />
+        <response id="0" opponent="lux" opponentId="10" />
+        <response id="0" opponent="hu_tao" opponentId="82" />
+        <response id="0" opponent="nami" opponentId="51" />
+        <response id="0" opponent="nami" opponentId="10" />
+        <response id="0" opponent="nami" opponentId="623" />
+        <response id="0" opponent="nami" opponentId="11" />
+        <response id="0" opponent="nami" opponentId="9" />
+        <response id="0" opponent="nami" opponentId="53" />
+        <response id="0" opponent="nami" opponentId="15" />
+        <response id="0" opponent="nami" opponentId="624" />
+        <response id="0" opponent="nami" opponentId="12" />
+        <response id="0" opponent="nami" opponentId="13" />
+        <response id="0" opponent="samus_aran" opponentId="1" />
+        <response id="0" opponent="marinette" opponentId="438" />
+        <response id="0" opponent="adrien" opponentId="489" />
+        <response id="0" opponent="saki_zls" opponentId="2" />
+        <response id="0" opponent="saki_zls" opponentId="1" />
+        <response id="0" opponent="sakura" opponentId="2" />
+        <response id="0" opponent="saki_zls" opponentId="3" />
+        <response id="0" opponent="sakura" opponentId="3" />
+        <response id="0" opponent="aqua_grunt" opponentId="156" />
+        <response id="0" opponent="aqua_grunt" opponentId="102" />
+        <response id="0" opponent="nico_robin" opponentId="304" />
+        <response id="0" opponent="nico_robin" opponentId="306" />
+        <response id="0" opponent="nico_robin" opponentId="305" />
+        <response id="0" opponent="cheryl" opponentId="222" />
+        <response id="0" opponent="mari_setogaya" opponentId="17" />
+        <response id="0" opponent="mari_setogaya" opponentId="16" />
+        <response id="0" opponent="mari_setogaya" opponentId="1256" />
+        <response id="0" opponent="mari_setogaya" opponentId="1254" />
+        <response id="0" opponent="mari_setogaya" opponentId="1250" />
+        <response id="0" opponent="mari_setogaya" opponentId="408" />
+        <response id="0" opponent="mari_setogaya" opponentId="150" />
+        <response id="0" opponent="mari_setogaya" opponentId="180" />
+        <response id="0" opponent="mari_setogaya" opponentId="34" />
+        <response id="0" opponent="binah" opponentId="1" />
+        <response id="0" opponent="bobobo" opponentId="93" />
+        <response id="0" opponent="bobobo" opponentId="236" />
+        <response id="0" opponent="bobobo" opponentId="43" />
+        <response id="0" opponent="bobobo" opponentId="237" />
+        <response id="0" opponent="bobobo" opponentId="1" />
+        <response id="0" opponent="aqua_kh" opponentId="67" />
+        <response id="0" opponent="aqua_kh" opponentId="69" />
+        <response id="0" opponent="aqua_kh" opponentId="51" />
+        <response id="0" opponent="fischl" opponentId="5" />
+        <response id="0" opponent="aloy" opponentId="2" />
     </responses>
     <notes>
         <note id="17">This is based specifically on the fact that Aaravi has a lawyer outfit with the same design as Franzisca's.</note>
@@ -56,8 +128,29 @@
         <note id="122">To be clear, Aaravi is a dumbass and doesn't realise what Dorothy is really suggesting. She'll get there eventually</note>
         <note id="123">It feels like a shame to basically ignore such a great pickup line from Dorothy, but I feel like missing the obvious flirting because she fixates on a completely trivial point and then floundering comedically is more in-character for Aaravi</note>
         <note id="124">Feel free to have Dorothy call her out on anti-synthetic prejudice, and/or demonstrate exactly how good she is at her job. Aaravi has a masochistic streak and a thing for being tied up, if you intend to go that route</note>
-        <note id="189">Feel free to have Darkness realise Aaravi's talking about her boobs or completely miss the point, as you prefer. Aaravi has a complex about the size of her own assets, so she's both intimidated and infuriated by Darkness's being so on display, even through her bodysuit</note>
+        <note id="251">Aaravi's trying to see what does and does not work to provoke interest from Darkness</note>
         <note id="191">I, the writer, know that all of the Galarian curries are just called "x curry". Aaravi does not. This will infuriate her</note>
+        <note id="208">Might be worth adding a collectible for this, along with a specific, player-controllable circumstance that will trigger it for certain. If player personality tags get added, they're a good option for this</note>
+        <note id="217">For my own notes and anyone else reading this: the phrase "I might be looking for supports, but I'm not &lt;i&gt;that&lt;/i&gt; desperate" is probably going to come up later down this chain</note>
+        <note id="218">Let me know if you want markers on these - I didn't put them on because these are responses to Lux, but if Lux would want to respond to any of these criticisms, just let me know and I can throw some markers on here</note>
+        <note id="220">Not sure if you already have a direction planned for this, but the idea of a "bad end" in a porn game - losing combat and becoming a sexual object for the victor - is very much up Aaravi's alley, though she would vehemently deny such a thing</note>
+        <note id="221">Aaravi has body image issues, both about her lack of height and chest, and some of her monster features, like her eyes, hair, and ears. Accordingly, she has a hard time coming up with a feature she likes about herself</note>
+        <note id="229">This target *should* be able to work on either ZLS girl, provided there is no ZLS girl at the table who does not have the undead tag. I'd have liked to futureproof it, but as it turns out, checking that there's nobody from a franchise *without* a particular tag is hard. The extra tabs with explicit targeting are mostly for the sake of having it show up as a target and not a filter</note>
+        <note id="230">Is this reaction specifically written to be as annoying to Sakura as possible, by suggesting that Saki was exactly as good at pretending to be not a zombie as she was? It might be. Aaravi works on comedy logic</note>
+        <note id="247">If you need any inspiration here, Windwheel Asters from the overworld and Hurricane Seeds from boss fights are Sucrose's in-game ascension materials, so they're good picks for this. Any material from another nation (especially Inazuma) would work too</note>
+        <note id="248">Please note: Aaravi's dialogue does not reflect the views of her writer. Itadaki Seiki is *good* hentai</note>
+        <note id="250">Aaravi does not have the self awareness to appreciate that this isn't a topic Arueshalae wants to discuss</note>
+        <note id="252">She's lying. She still has fears, they're just conceptual now, and largely based around social situations</note>
+        <note id="418">Appreciate it! Had a response that worked for both this time, but that's a really effective way of having markers that work for both seperate and combined responses! I didn't think of doing it that way before!</note>
+        <note id="428">Added differentiating markers on this case and the previous one, can use either "said" for basic check or "said=a/b" for specific check</note>
+        <note id="439">Realised that this needed a contingency case for the player already being naked</note>
+        <note id="440">The variations on this one got a little out of hand. Whoops! You can use the value markers (NagatoroAboutPlayer3 = 1, 2, etc.) on them to tailor responses to specific line variations, or use operations (eg. NagatoroAboutPlayer3 &gt;= 2 for 1 &amp;2) to target subsets</note>
+        <note id="444">Like in all things, Aaravi is way too intense about fighting games. I, the writer, never touch them, so I hope I googled enough moveset type jargon to make it sound believable that she knows what she's talking about</note>
+        <note id="458">Noticed that Felix's stage 0 and 1 generics were used to exposit about Crusch and Felix's magic skills, so these targets are intended to head in that direction too - providing the same context to a player, but with Felix explaining to Aaravi rather than directly to the player</note>
+        <note id="463">I considered having Aaravi specifically say it's like an isekai, but while there's in-game evidence for isekai existing as a genre in Teyvat, and for Fischl being exposed to it, there's no sign of the actual word being used, and I didn't want to derail this conversation line by making Aaravi define isekai. "Flowers for Princess Fischl" is a light novel, though, so she absolutely knows what those are</note>
+        <note id="497">Aaravi's best friend happens to be a catgirl, which is lucky for everyone involved, because without that distraction I would have had to figure out more fighting game jargon</note>
+        <note id="504">In this instance, Aaravi isn't trying to insinuate anything. She just has a gift for poor timing</note>
+        <note id="526">All these cases responding to Polly's crush prompt have the general marker "PollyCrush" as well as a specific marker</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Final Duel" sort="5" />
@@ -69,7 +162,7 @@
         <label id="10" label="Supports" folder="OPPONENT ROLES TO FILL OUT" sort="2" />
         <label id="11" label="Must Strip" folder="Target Rival" sort="0" />
         <label id="12" label="Must Strip" folder="Target Monster" sort="0" />
-        <label id="13" label="Villains" folder="OPPONENT ROLES TO FILL OUT" sort="3" />
+        <label id="13" label="Must Strip" folder="Target Villain" sort="3" />
         <label id="15" label="" folder="LINES TO FIX BEFORE FINISHED" sort="0" />
         <label id="16" label="" folder="REVISE THIS LINE BEFORE TESTING" sort="0" />
         <label id="19" label="" folder="ADD MORE LINES" sort="0" />
@@ -178,14 +271,14 @@
         <label id="148" label="Decent, Minor-" folder="Target Human" sort="0" />
         <label id="149" label="Decent, Major+" folder="Target Human" sort="0" />
         <label id="150" label="" folder="Target Rival" sort="0" />
-        <label id="151" label="" folder="Target Human" sort="0" />
-        <label id="152" label="" folder="Target Human" sort="0" />
-        <label id="153" label="" folder="Target Human" sort="0" />
-        <label id="154" label="" folder="Target Human" sort="0" />
-        <label id="155" label="" folder="Target Human" sort="0" />
-        <label id="156" label="" folder="Target Human" sort="0" />
-        <label id="157" label="" folder="Target Human" sort="0" />
-        <label id="158" label="" folder="Target Human" sort="0" />
+        <label id="151" label="Women" folder="Target Human" sort="0" />
+        <label id="152" label="Women" folder="Target Human" sort="0" />
+        <label id="153" label="Men" folder="Target Human" sort="0" />
+        <label id="154" label="Women" folder="Target Human" sort="0" />
+        <label id="155" label="Men" folder="Target Human" sort="0" />
+        <label id="156" label="Major+" folder="Target Human" sort="0" />
+        <label id="157" label="Men" folder="Target Human" sort="0" />
+        <label id="158" label="Men" folder="Target Human" sort="0" />
         <label id="159" label="" folder="Target Human" sort="0" />
         <label id="160" label="" folder="Target Human" sort="0" />
         <label id="161" label="" folder="Target Human" sort="0" />
@@ -195,8 +288,8 @@
         <label id="165" label="" folder="Target Human" sort="0" />
         <label id="166" label="" folder="Target Human" sort="0" />
         <label id="167" label="" folder="Target Human" sort="0" />
-        <label id="168" label="" folder="Target Human" sort="0" />
-        <label id="169" label="" folder="Target Human" sort="0" />
+        <label id="168" label="Women" folder="Target Human" sort="0" />
+        <label id="169" label="Men" folder="Target Human" sort="0" />
         <label id="170" label="" folder="Target Human" sort="0" />
         <label id="171" label="Secrets &amp; Collectibles" folder="Target Human" sort="0" />
         <label id="172" label="" folder="Target Human" sort="0" />
@@ -204,39 +297,329 @@
         <label id="174" label="" folder="Target Human" sort="0" />
         <label id="175" label="" folder="Target Human" sort="0" />
         <label id="176" label="" folder="Target Human" sort="0" />
-        <label id="177" label="" folder="Target Human" sort="0" />
-        <label id="178" label="" folder="Target Human" sort="0" />
-        <label id="179" label="" folder="Target Human" sort="0" />
-        <label id="180" label="" folder="Target Human" sort="0" />
-        <label id="181" label="" folder="Target Human" sort="0" />
-        <label id="182" label="" folder="Target Human" sort="0" />
-        <label id="183" label="" folder="Target Human" sort="0" />
-        <label id="184" label="" folder="Target Human" sort="0" />
+        <label id="177" label="Early Stages" folder="Target Human" sort="0" />
+        <label id="178" label="Late Stages" folder="Target Human" sort="0" />
+        <label id="179" label="Self Mast" folder="Target Human" sort="0" />
+        <label id="180" label="Either" folder="Target Human" sort="0" />
+        <label id="181" label="Either" folder="Target Human" sort="0" />
+        <label id="182" label="Early" folder="Target Human" sort="0" />
+        <label id="183" label="Late" folder="Target Human" sort="0" />
+        <label id="184" label="Mast" folder="Target Human" sort="0" />
         <label id="185" label="Must Strip, Decent, 1+ lost" folder="Target Human" sort="0" />
         <label id="186" label="5+ in a row" folder="Repeated Losses" sort="0" />
         <label id="187" label="Must Strip, Full Indecent" folder="Target Human" sort="0" />
         <label id="188" label="Major (Scars, Not Shown Butt)" folder="Target Rival" sort="0" />
         <label id="192" label="Fully Indecent, Minor-" folder="Target Human" sort="0" />
+        <label id="193" label="" folder="Target Monster" sort="0" />
+        <label id="194" label="Men (Chubby)" folder="Target Human" sort="0" />
+        <label id="195" label="Men (Skinny)" folder="Target Human" sort="0" />
+        <label id="196" label="Men (Athletic)" folder="Target Human" sort="0" />
+        <label id="197" label="Crotch Out" folder="Target Human" sort="0" />
+        <label id="198" label="SetupDecent" folder="Player Fantasy" sort="0" />
+        <label id="199" label="SetupSemiNude" folder="Player Fantasy" sort="0" />
+        <label id="200" label="SetupForfeit" folder="Player Fantasy" sort="0" />
+        <label id="201" label="SetupNaked" folder="Player Fantasy" sort="0" />
+        <label id="202" label="Setup 2" folder="Player Fantasy" sort="0" />
+        <label id="203" label="Setup 3" folder="Player Fantasy" sort="0" />
+        <label id="204" label="Setup 4" folder="Player Fantasy" sort="0" />
+        <label id="205" label="FantasyMain (M1)" folder="Player Fantasy" sort="0" />
+        <label id="206" label="FantasyMain (F1)" folder="Player Fantasy" sort="0" />
+        <label id="207" label="FantasyMain (Both)" folder="Player Fantasy" sort="0" />
+        <label id="208" label="FantasyPrimer" folder="" sort="0" />
+        <label id="209" label="FantasyMain (F2)" folder="Player Fantasy" sort="0" />
+        <label id="210" label="FantasyMain (M2)" folder="Player Fantasy" sort="0" />
+        <label id="211" label="FantasyMain (M3)" folder="Player Fantasy" sort="0" />
+        <label id="212" label="FantasyMain (M4)" folder="Player Fantasy" sort="0" />
+        <label id="213" label="FantasyMain (M5)" folder="Player Fantasy" sort="0" />
+        <label id="214" label="FantasyMain (M1)" folder="Player Fantasy" sort="0" />
+        <label id="216" label="Self Heavy" folder="Target Human" sort="0" />
+        <label id="222" label="Bad Flirt (Male)" folder="Target Human" sort="0" />
+        <label id="223" label="Male Only" folder="Target Human" sort="0" />
+        <label id="224" label="Bad Flirt Setup" folder="Target Human" sort="0" />
+        <label id="225" label="Bad Flirt (Female)" folder="Target Human" sort="0" />
+        <label id="226" label="PotG" folder="Target Human" sort="0" />
+        <label id="227" label="PotG Change" folder="Target Human" sort="0" />
+        <label id="228" label="Prize" folder="Target Human" sort="0" />
+        <label id="231" label="SakiHeadSecond" folder="" sort="0" />
+        <label id="232" label="SakiHeadFirst" folder="" sort="0" />
+        <label id="233" label="SakiMakeupSecond" folder="" sort="0" />
+        <label id="234" label="SakiMakeupFirst" folder="" sort="0" />
+        <label id="235" label="SakuraMakeupSecond" folder="" sort="0" />
+        <label id="230" label="SakuraMakeupSecond" folder="" sort="0" />
+        <label id="236" label="SakiHeadSecond" folder="" sort="0" />
+        <label id="237" label="SakiMakeupSecond" folder="" sort="0" />
+        <label id="238" label="SakiMakeupFirst" folder="" sort="0" />
+        <label id="239" label="SakiHeadFirst" folder="" sort="0" />
+        <label id="240" label="SakuraMakeupFirst" folder="" sort="0" />
+        <label id="241" label="SakuraMakeupFirst" folder="" sort="0" />
+        <label id="242" label="SakuraHeadSecond" folder="" sort="0" />
+        <label id="243" label="SakuraHeadFirst" folder="" sort="0" />
+        <label id="244" label="SakuraHeadSecond" folder="" sort="0" />
+        <label id="245" label="SakuraHeadFirst" folder="" sort="0" />
+        <label id="246" label="SakuraHeadSecond" folder="" sort="0" />
+        <label id="521" label="" color="1" folder="" sort="0" />
+        <label id="529" label="" color="1" folder="" sort="0" />
+        <label id="528" label="" color="1" folder="" sort="0" />
+        <label id="472" label="" color="1" folder="" sort="0" />
+        <label id="509" label="" color="1" folder="" sort="0" />
+        <label id="262" label="" color="1" folder="" sort="0" />
+        <label id="498" label="" color="1" folder="" sort="0" />
+        <label id="513" label="" color="1" folder="" sort="0" />
+        <label id="515" label="" color="1" folder="" sort="0" />
+        <label id="273" label="" color="1" folder="" sort="0" />
+        <label id="274" label="" color="1" folder="" sort="0" />
+        <label id="275" label="" color="1" folder="" sort="0" />
+        <label id="277" label="" folder="Leon" sort="0" />
+        <label id="278" label="" folder="Leon" sort="0" />
+        <label id="279" label="" folder="Leon" sort="0" />
+        <label id="280" label="" folder="Leon" sort="0" />
+        <label id="281" label="" folder="Leon" sort="0" />
+        <label id="282" label="" folder="Leon" sort="0" />
+        <label id="283" label="" folder="Leon" sort="0" />
+        <label id="284" label="" folder="Leon" sort="0" />
+        <label id="276" label="" folder="Leon" sort="0" />
+        <label id="285" label="Must Strip" folder="Target Villain" sort="0" />
+        <label id="286" label="Must Masturbate" folder="Target Villain" sort="0" />
+        <label id="287" label="Must Masturbate" folder="Target Villain" sort="0" />
+        <label id="288" label="" folder="Target Villain" sort="0" />
+        <label id="449" label="" color="1" folder="" sort="0" />
+        <label id="299" label="" color="1" folder="" sort="0" />
+        <label id="300" label="" color="1" folder="" sort="0" />
+        <label id="301" label="" color="1" folder="" sort="0" />
+        <label id="302" label="" color="1" folder="" sort="0" />
+        <label id="303" label="" color="1" folder="" sort="0" />
+        <label id="304" label="" color="1" folder="" sort="0" />
+        <label id="305" label="" color="1" folder="" sort="0" />
+        <label id="306" label="" color="1" folder="" sort="0" />
+        <label id="307" label="" color="1" folder="" sort="0" />
+        <label id="308" label="" color="1" folder="" sort="0" />
+        <label id="499" label="" color="1" folder="" sort="0" />
+        <label id="311" label="Poker Level Up" folder="" sort="0" />
+        <label id="312" label="Beach" folder="Backgrounds" sort="0" />
+        <label id="313" label="Poolside" folder="Backgrounds" sort="0" />
+        <label id="314" label="Inventory" folder="Backgrounds" sort="0" />
+        <label id="315" label="Roof" folder="Backgrounds" sort="0" />
+        <label id="316" label="Modern Library" folder="Backgrounds" sort="0" />
+        <label id="317" label="Mansion" folder="Backgrounds" sort="0" />
+        <label id="318" label="Library" folder="Backgrounds" sort="0" />
+        <label id="319" label="Lake" folder="Backgrounds" sort="0" />
+        <label id="320" label="Hot Spring" folder="Backgrounds" sort="0" />
+        <label id="321" label="Classroom" folder="Backgrounds" sort="0" />
+        <label id="322" label="Alley" folder="Backgrounds" sort="0" />
+        <label id="323" label="Lodge (w/ Christmas skins)" folder="Backgrounds" sort="0" />
+        <label id="324" label="Tiki Bar (w/ Summer skins)" folder="Backgrounds" sort="0" />
+        <label id="325" label="Tiki Bar (no Summer skins)" folder="Backgrounds" sort="0" />
+        <label id="326" label="Poolside (no Summer skins)" folder="Backgrounds" sort="0" />
+        <label id="327" label="Lodge (no Christmas skins)" folder="Backgrounds" sort="0" />
+        <label id="328" label="Purple Room" folder="Backgrounds" sort="0" />
+        <label id="329" label="Bedroom" folder="Backgrounds" sort="0" />
+        <label id="330" label="Locker Room" folder="Backgrounds" sort="0" />
+        <label id="331" label="Office" folder="Backgrounds" sort="0" />
+        <label id="332" label="Haunted Forest (no Halloween skins)" folder="Backgrounds" sort="0" />
+        <label id="333" label="Hearts Room" folder="Backgrounds" sort="0" />
+        <label id="334" label="Classic" folder="Backgrounds" sort="0" />
+        <label id="335" label="Armory" folder="Backgrounds" sort="0" />
+        <label id="336" label="Paris Rooftop" folder="Backgrounds" sort="0" />
+        <label id="337" label="" folder="Backgrounds" sort="0" />
+        <label id="338" label="Showers" folder="Backgrounds" sort="0" />
+        <label id="339" label="Garden" folder="Backgrounds" sort="0" />
+        <label id="340" label="Throne Room" folder="Backgrounds" sort="0" />
+        <label id="341" label="Birthday Power" folder="Backgrounds" sort="0" />
+        <label id="342" label="Feminine Bedroom" folder="Backgrounds" sort="0" />
+        <label id="343" label="Aaravi's Birthday" folder="" sort="0" />
+        <label id="344" label="Two Grunts" folder="" sort="0" />
+        <label id="345" label="One Grunt" folder="" sort="0" />
+        <label id="347" label="Armory" folder="Backgrounds" sort="0" />
+        <label id="348" label="Mari Transformation" color="0" folder="" sort="0" />
+        <label id="349" label="Mari Transformation" color="0" folder="" sort="0" />
+        <label id="350" label="Mari Chubby Form" color="0" folder="" sort="0" />
+        <label id="351" label="Mari Cat Form" color="0" folder="" sort="0" />
+        <label id="352" label="Mari Detransformation" color="0" folder="" sort="0" />
+        <label id="353" label="Backyard Birthday" folder="Backgrounds" sort="0" />
+        <label id="354" label="Haunted Forest (w/ Halloween skins)" folder="Backgrounds" sort="0" />
+        <label id="355" label="Paris Rooftop (w/ Valentines skins)" folder="Backgrounds" sort="0" />
+        <label id="356" label="Paris Rooftop (no Valentines skins)" folder="Backgrounds" sort="0" />
+        <label id="357" label="Dominants" folder="OPPONENT ROLES TO FILL OUT" sort="0" />
+        <label id="416" label="" color="1" folder="" sort="0" />
+        <label id="359" label="" folder="Target Dominant" sort="0" />
+        <label id="360" label="" folder="Target Dominant" sort="0" />
+        <label id="361" label="" folder="Target Dominant" sort="0" />
+        <label id="362" label="" folder="Target Dominant" sort="0" />
+        <label id="363" label="Might Lose" folder="Pre-Mast Horny" sort="0" />
+        <label id="364" label="With Fighter" folder="Pre-Mast Horny" sort="0" />
+        <label id="365" label="With Dominant" folder="Pre-Mast Horny" sort="0" />
+        <label id="366" label="Fantasies" folder="Pre-Mast Horny" sort="0" />
+        <label id="367" label="Blueballed" folder="Pre-Mast Horny" sort="0" />
+        <label id="369" label="Fantasies Start" folder="Pre-Mast Horny" sort="0" />
+        <label id="370" label="Prep Failed" folder="" sort="0" />
+        <label id="371" label="Prep Success" folder="" sort="0" />
+        <label id="373" label="" folder="Target Dominant" sort="0" />
+        <label id="374" label="" folder="Target Dominant" sort="0" />
+        <label id="375" label="" folder="Pre-Mast Horny" sort="0" />
+        <label id="376" label="Timer Manipulation" folder="Pre-Mast Horny" sort="0" />
+        <label id="377" label="Timer Manipulation" folder="Pre-Mast Horny" sort="0" />
+        <label id="523" label="" color="1" folder="" sort="0" />
+        <label id="391" label="" folder="Other Filters" sort="0" />
+        <label id="392" label="" folder="Other Filters" sort="0" />
+        <label id="393" label="" folder="Other Filters" sort="0" />
+        <label id="394" label="" folder="Other Filters" sort="0" />
+        <label id="395" label="" folder="Other Filters" sort="0" />
+        <label id="396" label="" folder="Other Filters" sort="0" />
+        <label id="397" label="" folder="Other Filters" sort="0" />
+        <label id="398" label="" folder="Other Filters" sort="0" />
+        <label id="399" label="" folder="Other Filters" sort="0" />
+        <label id="400" label="" folder="Other Filters" sort="0" />
+        <label id="401" label="" folder="Other Filters" sort="0" />
+        <label id="402" label="" folder="Other Filters" sort="0" />
+        <label id="403" label="" folder="Other Filters" sort="0" />
+        <label id="404" label="" folder="Other Filters" sort="0" />
+        <label id="405" label="" folder="Other Filters" sort="0" />
+        <label id="406" label="" folder="Other Filters" sort="0" />
+        <label id="407" label="" folder="Other Filters" sort="0" />
+        <label id="419" label="" color="1" folder="" sort="0" />
+        <label id="502" label="Parents" folder="Player Names" sort="0" />
+        <label id="501" label="Dominant" folder="Player Names" sort="0" />
+        <label id="500" label="" color="1" folder="" sort="0" />
+        <label id="497" label="" color="1" folder="" sort="0" />
+        <label id="524" label="" color="1" folder="" sort="0" />
+        <label id="495" label="" color="1" folder="" sort="0" />
+        <label id="496" label="" color="1" folder="" sort="0" />
+        <label id="452" label="Socks Before Shoes" folder="Target Human" sort="0" />
+        <label id="453" label="" folder="Losing Dynamic Intelligence" sort="0" />
+        <label id="454" label="" folder="Losing Dynamic Intelligence" sort="0" />
+        <label id="493" label="" color="1" folder="" sort="0" />
+        <label id="494" label="" color="1" folder="" sort="0" />
+        <label id="492" label="" color="1" folder="" sort="0" />
+        <label id="459" label="" color="1" folder="" sort="0" />
+        <label id="458" label="" color="1" folder="" sort="0" />
+        <label id="518" label="" color="1" folder="" sort="0" />
+        <label id="510" label="" color="1" folder="" sort="0" />
+        <label id="463" label="" color="1" folder="" sort="0" />
+        <label id="464" label="" color="1" folder="" sort="0" />
+        <label id="512" label="" color="1" folder="" sort="0" />
+        <label id="517" label="" color="1" folder="" sort="0" />
+        <label id="514" label="" color="1" folder="" sort="0" />
+        <label id="516" label="" color="1" folder="" sort="0" />
+        <label id="474" label="" color="1" folder="" sort="0" />
+        <label id="475" label="" color="1" folder="" sort="0" />
+        <label id="484" label="" color="1" folder="" sort="0" />
+        <label id="483" label="" color="1" folder="" sort="0" />
+        <label id="482" label="" color="1" folder="" sort="0" />
+        <label id="485" label="" color="1" folder="" sort="0" />
+        <label id="486" label="" color="1" folder="" sort="0" />
+        <label id="487" label="" color="1" folder="" sort="0" />
+        <label id="488" label="" color="1" folder="" sort="0" />
+        <label id="489" label="" color="1" folder="" sort="0" />
+        <label id="490" label="" color="1" folder="" sort="0" />
+        <label id="491" label="" color="1" folder="" sort="0" />
+        <label id="503" label="" color="1" folder="" sort="0" />
+        <label id="504" label="" color="1" folder="" sort="0" />
+        <label id="505" label="" color="1" folder="" sort="0" />
+        <label id="506" label="" color="1" folder="" sort="0" />
+        <label id="507" label="" color="1" folder="" sort="0" />
+        <label id="508" label="" color="1" folder="" sort="0" />
+        <label id="511" label="" color="1" folder="" sort="0" />
+        <label id="519" label="" color="1" folder="" sort="0" />
+        <label id="520" label="" color="1" folder="" sort="0" />
+        <label id="522" label="" color="1" folder="" sort="0" />
+        <label id="525" label="" color="1" folder="" sort="0" />
+        <label id="527" label="" color="1" folder="" sort="0" />
+        <label id="530" label="" color="1" folder="" sort="0" />
+        <label id="531" label="" color="1" folder="" sort="0" />
+        <label id="532" label="" color="1" folder="" sort="0" />
+        <label id="533" label="" color="1" folder="" sort="0" />
+        <label id="534" label="" color="1" folder="" sort="0" />
+        <label id="535" label="" color="1" folder="" sort="0" />
+        <label id="536" label="" color="1" folder="" sort="0" />
+        <label id="537" label="" color="1" folder="" sort="0" />
+        <label id="538" label="" color="1" folder="" sort="0" />
+        <label id="539" label="" color="1" folder="" sort="0" />
+        <label id="540" label="" color="1" folder="" sort="0" />
+        <label id="541" label="" color="1" folder="" sort="0" />
+        <label id="542" label="" color="1" folder="" sort="0" />
+        <label id="543" label="" color="1" folder="" sort="0" />
+        <label id="544" label="" color="1" folder="" sort="0" />
+        <label id="545" label="" color="1" folder="" sort="0" />
+        <label id="546" label="" color="1" folder="" sort="0" />
+        <label id="547" label="" color="1" folder="" sort="0" />
+        <label id="548" label="" color="1" folder="" sort="0" />
     </labels>
-    <nextId>192</nextId>
+    <nextId>548</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="AaraviBirthday" />
+        <marker scope="Public" name="AdventureVsHorror" />
+        <marker scope="Public" name="AloyReality" />
+        <marker scope="Public" name="AloyRobots" />
+        <marker scope="Public" name="AloyWorldHistory" />
+        <marker scope="Public" name="AmyNeverJustASchoolgirl" />
+        <marker scope="Public" name="AmyNeverJustASchoolgirl2" />
+        <marker scope="Public" name="AmyRealityIsAnIllusion" />
+        <marker scope="Public" name="AmySystemSpecs" />
+        <marker scope="Public" name="AmySystemSpecs2" />
+        <marker scope="Public" name="AquaAttentionButt" />
+        <marker scope="Public" name="AquaAttentionButtA" />
+        <marker scope="Public" name="AquaAttentionButtB" />
+        <marker scope="Public" name="AquaAttentionButtC" />
+        <marker scope="Public" name="AquaKHExhibition" />
+        <marker scope="Public" name="AquaKHHydromancer" />
+        <marker scope="Public" name="AquaKHHydromancer2" />
+        <marker scope="Public" name="AquaKHKeyblade" />
+        <marker scope="Public" name="AquaKHKeybladeSharp" />
+        <marker scope="Public" name="AquaKHLore" />
+        <marker scope="Public" name="AquaKHLore2" />
+        <marker scope="Public" name="AquaKHUnqualified" />
+        <marker scope="Public" name="AquaKHUnqualified2" />
+        <marker scope="Public" name="AquaKHVideoGameLogic" />
+        <marker scope="Public" name="AquaPartyCrasher" />
+        <marker scope="Public" name="AquaPartyCrasher2" />
+        <marker scope="Public" name="AquaPlayerAttention" />
+        <marker scope="Public" name="AquaPlayerAttention2" />
+        <marker scope="Public" name="AquaPlayerCompete" />
+        <marker scope="Public" name="AquaShirtOffHydrodynamic" />
+        <marker scope="Public" name="AquaTeamGoal" />
+        <marker scope="Public" name="AquaTeamGoal2Balance" />
+        <marker scope="Public" name="AquaTeamGoal2Humans" />
+        <marker scope="Public" name="AquaTeamGoal3Balance" />
+        <marker scope="Public" name="AquaTeamGoal3Humans" />
         <marker scope="Public" name="ArueBestiary" />
         <marker scope="Public" name="ArueBestiary2" />
         <marker scope="Public" name="ArueBestiary3" />
+        <marker scope="Public" name="ArueBestiary4" />
+        <marker scope="Public" name="ArueCrest" />
+        <marker scope="Public" name="ArueCrest2" />
+        <marker scope="Public" name="ArueCrest3" />
+        <marker scope="Public" name="ArueLonely" />
+        <marker scope="Public" name="ArueLonely2" />
+        <marker scope="Public" name="ArueParties" />
+        <marker scope="Public" name="ArueParties2" />
+        <marker scope="Public" name="ArueParties3" />
         <marker scope="Public" name="AruePathfinders" />
+        <marker scope="Public" name="AruePathfinders2" />
+        <marker scope="Public" name="AruePathfinders3" />
+        <marker scope="Public" name="ArueVictory" />
+        <marker scope="Public" name="ArueVictory2" />
+        <marker scope="Public" name="ArueVictory3" />
         <marker scope="Public" name="ArueWeapons" />
         <marker scope="Public" name="ArueWeapons2" />
         <marker scope="Public" name="ArueWeapons3" />
         <marker scope="Public" name="AyanoOffputting" />
         <marker scope="Public" name="BackScars" />
         <marker scope="Public" name="BackstoryPrompt" />
+        <marker scope="Public" name="BadFlirtSetup" />
         <marker scope="Public" name="BarbaraChurchesAreSecretlyEvil" />
         <marker scope="Public" name="BarbaraSalil" />
         <marker scope="Public" name="BarbaraWhatClass" />
         <marker scope="Public" name="BeatrixSupportWhy" />
+        <marker scope="Public" name="BinahIntro" />
+        <marker scope="Public" name="BinahWeirdVibes" />
+        <marker scope="Public" name="BinahWeirdVibes2" />
+        <marker scope="Public" name="Blueballed" />
+        <marker scope="Public" name="BoboboHairWh" />
+        <marker scope="Public" name="BoboboHairWhisperer" />
         <marker scope="Public" name="BoboboSecretTechnique" />
+        <marker scope="Public" name="BoboboSecretTechnique2" />
+        <marker scope="Public" name="BoboboSecretTechnique3" />
         <marker scope="Public" name="BottomFirst" />
         <marker scope="Public" name="BowserFangirl" />
         <marker scope="Public" name="ButtPose" />
@@ -254,13 +637,75 @@
         <marker scope="Public" name="CharaRealThreat3B" />
         <marker scope="Public" name="CharlieHellRoyalty" />
         <marker scope="Public" name="CharlieStrangeDemon" />
+        <marker scope="Public" name="Cher" />
+        <marker scope="Public" name="CherylBadHabits" />
+        <marker scope="Public" name="CherylBadHabits2" />
+        <marker scope="Public" name="CherylBadHabits3" />
+        <marker scope="Public" name="CherylCurses" />
+        <marker scope="Public" name="CherylCurses2" />
+        <marker scope="Public" name="CherylCurses3" />
+        <marker scope="Public" name="CherylExploration" />
+        <marker scope="Public" name="CherylExploration2" />
+        <marker scope="Public" name="CherylExploration3" />
+        <marker scope="Public" name="CherylExploration4" />
+        <marker scope="Public" name="CherylExploration5" />
+        <marker scope="Public" name="CherylFantasies" />
+        <marker scope="Public" name="CherylFantasies2" />
+        <marker scope="Public" name="CherylFantasies3" />
+        <marker scope="Public" name="CherylFantasies3a" />
+        <marker scope="Public" name="CherylFantasies3b" />
+        <marker scope="Public" name="CherylFantasyReality" />
+        <marker scope="Public" name="CherylFantasyReality2" />
+        <marker scope="Public" name="CherylFantasyReality3" />
+        <marker scope="Public" name="CherylFirstImpressions" />
+        <marker scope="Public" name="CherylFirstImpressions2" />
+        <marker scope="Public" name="CherylFirstImpressions3" />
+        <marker scope="Public" name="CherylFreckles" />
+        <marker scope="Public" name="CherylFreckles2" />
+        <marker scope="Public" name="CherylGrindin" />
+        <marker scope="Public" name="CherylGrinding" />
+        <marker scope="Public" name="CherylGrinding2" />
+        <marker scope="Public" name="CherylGrinding3" />
+        <marker scope="Public" name="CherylJournaling" />
+        <marker scope="Public" name="CherylJournaling2" />
+        <marker scope="Public" name="CherylLingerie" />
+        <marker scope="Public" name="CherylLingerie2" />
+        <marker scope="Public" name="CherylLingerie3A" />
+        <marker scope="Public" name="CherylLingerie3B" />
+        <marker scope="Public" name="CherylMonsters" />
+        <marker scope="Public" name="CherylMonsters2" />
+        <marker scope="Public" name="CherylMonsters3" />
+        <marker scope="Public" name="CherylNakedConfidence" />
+        <marker scope="Public" name="CherylNakedConfidence2" />
+        <marker scope="Public" name="CherylProtective" />
+        <marker scope="Public" name="CherylProtective2" />
+        <marker scope="Public" name="CherylProtective3" />
+        <marker scope="Public" name="CherylTypesA" />
+        <marker scope="Public" name="CherylTypesA2" />
+        <marker scope="Public" name="CherylTypesA3" />
+        <marker scope="Public" name="CherylTypesB" />
+        <marker scope="Public" name="CherylTypesB2" />
+        <marker scope="Public" name="CherylTypesB3" />
         <marker scope="Public" name="CynthiaArchaeology" />
         <marker scope="Public" name="CynthiaNotARealBoss" />
         <marker scope="Public" name="CynthiaNotARealBoss2" />
         <marker scope="Public" name="CynthiaTooCompetitive" />
+        <marker scope="Public" name="DarknessDanger" />
+        <marker scope="Public" name="DarknessDanger2" />
         <marker scope="Public" name="DarknessJigglePhysics" />
+        <marker scope="Public" name="DarknessJigglePhysics2" />
+        <marker scope="Public" name="DarknessJigglePhysics3" />
+        <marker scope="Public" name="DarknessPentUp" />
+        <marker scope="Public" name="DarknessPentUp2" />
+        <marker scope="Public" name="DarknessPervert" />
+        <marker scope="Public" name="DarknessPervert2" />
+        <marker scope="Public" name="DarknessSadist" />
+        <marker scope="Public" name="DarknessSadist2" />
         <marker scope="Public" name="DarknessSupport" />
+        <marker scope="Public" name="DarknessSupport2" />
+        <marker scope="Public" name="DarknessSupport3" />
         <marker scope="Public" name="DorothyActingSlotty" />
+        <marker scope="Public" name="DorothyActingSlotty2" />
         <marker scope="Public" name="DorothyGreenEyedMonster" />
         <marker scope="Public" name="DorothyGreenEyedMonster2" />
         <marker scope="Public" name="DorothyGreenEyedMonster3" />
@@ -271,14 +716,31 @@
         <marker scope="Public" name="DorothyReplayability2" />
         <marker scope="Public" name="DorothyReplayability3" />
         <marker scope="Public" name="DorothyRoles" />
+        <marker scope="Public" name="DorothyRoles2" />
         <marker scope="Public" name="DorothySexWork" />
         <marker scope="Public" name="DorothySexWork2" />
         <marker scope="Public" name="DorothySexWork3" />
+        <marker scope="Public" name="DorothySmutGames" />
         <marker scope="Public" name="Duel_Begin" />
         <marker scope="Public" name="Duel_Begun" />
+        <marker scope="Public" name="DunbanBackstory" />
         <marker scope="Public" name="ElesaNoChallenge" />
+        <marker scope="Public" name="ErufudaAccursedRoommates" />
+        <marker scope="Public" name="ErufudaCasualGamer" />
+        <marker scope="Public" name="ErufudaDressedToKill" />
+        <marker scope="Public" name="ErufudaFoodTr" />
+        <marker scope="Public" name="ErufudaFoodTruck" />
         <marker scope="Public" name="ErufudaMonsterSlaying" />
+        <marker scope="Public" name="ErufudaPlanewalking" />
+        <marker scope="Public" name="ErufudaTraining" />
+        <marker scope="Public" name="ErufudaWeaponFocus" />
+        <marker scope="Public" name="ExtraInches" />
+        <marker scope="Public" name="FantasyPrimer" />
         <marker scope="Public" name="FateSquishyMage" />
+        <marker scope="Public" name="FelixCrusch" />
+        <marker scope="Public" name="FelixDynamicErection" />
+        <marker scope="Public" name="FelixMagicalSpecialty" />
+        <marker scope="Public" name="FelixTightsOutline" />
         <marker scope="Public" name="FinaHealingMethod" />
         <marker scope="Public" name="FinaHealingMethod2" />
         <marker scope="Public" name="FinaHighEfficiency" />
@@ -288,6 +750,19 @@
         <marker scope="Public" name="FinaPartyHealer" />
         <marker scope="Public" name="FinaPartyHealer2" />
         <marker scope="Public" name="FinaPartyHealer3" />
+        <marker scope="Public" name="FischlEye" />
+        <marker scope="Public" name="FischlFairytales" />
+        <marker scope="Public" name="FischlImmernachtreich" />
+        <marker scope="Public" name="FischlIsekai" />
+        <marker scope="Public" name="ForfeitLeonBite" />
+        <marker scope="Public" name="ForfeitLeonExperimentation" />
+        <marker scope="Public" name="ForfeitLeonFoundations" />
+        <marker scope="Public" name="ForfeitLeonHoldMoan" />
+        <marker scope="Public" name="ForfeitLeonMultiplayer" />
+        <marker scope="Public" name="ForfeitLeonNipples" />
+        <marker scope="Public" name="ForfeitLeonPosition" />
+        <marker scope="Public" name="ForfeitLeonProtection" />
+        <marker scope="Public" name="ForfeitLeonRoadLessTaken" />
         <marker scope="Public" name="FortuneHeadLoss" />
         <marker scope="Public" name="FortuneInnsmouth" />
         <marker scope="Public" name="FortuneInnsmouth2A" />
@@ -295,8 +770,11 @@
         <marker scope="Public" name="FortuneScars" />
         <marker scope="Public" name="FortuneScars2" />
         <marker scope="Public" name="FranziskaCompete" />
+        <marker scope="Public" name="GetHorny" />
         <marker scope="Public" name="GloriaChampion" />
         <marker scope="Public" name="GloriaCurry" />
+        <marker scope="Public" name="GruntDismissive1" />
+        <marker scope="Public" name="GruntDismissive2" />
         <marker scope="Public" name="GuzmaNotTheRealBoss" />
         <marker scope="Public" name="HerisBracers" />
         <marker scope="Public" name="HerisBracers2" />
@@ -326,6 +804,7 @@
         <marker scope="Public" name="HildaMetagaming" />
         <marker scope="Public" name="HildaMetagaming2" />
         <marker scope="Public" name="HildaMetagaming3" />
+        <marker scope="Public" name="HornyStart" />
         <marker scope="Public" name="HuTaoAdeptus" />
         <marker scope="Public" name="HuTaoAdeptus2" />
         <marker scope="Public" name="HuTaoAdeptus3" />
@@ -345,12 +824,15 @@
         <marker scope="Public" name="HuTaoGear" />
         <marker scope="Public" name="HuTaoGear2" />
         <marker scope="Public" name="HuTaoGear3" />
+        <marker scope="Public" name="HuTaoGhostShoe" />
+        <marker scope="Public" name="HuTaoGhostShoe2" />
         <marker scope="Public" name="HuTaoLiveFastDieYoung" />
         <marker scope="Public" name="HuTaoLiveFastDieYoung2" />
         <marker scope="Public" name="HuTaoLiveFastDieYoung3" />
         <marker scope="Public" name="HuTaoMonsterFunerals" />
         <marker scope="Public" name="HuTaoMonsterFunerals2" />
         <marker scope="Public" name="HuTaoMonsterFunerals3" />
+        <marker scope="Public" name="HuTaoPoemAccept" />
         <marker scope="Public" name="HuTaoStrangeBedfellows" />
         <marker scope="Public" name="HuTaoStrangeBedfellows2" />
         <marker scope="Public" name="HuTaoStrangeBedfellows2L" />
@@ -363,10 +845,30 @@
         <marker scope="Public" name="JasonGenreSavvy" />
         <marker scope="Public" name="JessieReward" />
         <marker scope="Public" name="JessieTopFilms" />
+        <marker scope="Public" name="Jin" />
+        <marker scope="Public" name="JinAssMan" />
+        <marker scope="Public" name="JinBackstory" />
+        <marker scope="Public" name="JinBandages" />
+        <marker scope="Public" name="JinBootyRating" />
+        <marker scope="Public" name="JinCrazyPlacesA" />
+        <marker scope="Public" name="JinCrazyPlacesB" />
+        <marker scope="Public" name="JinFighterRespect" />
+        <marker scope="Public" name="JinForesight" />
+        <marker scope="Public" name="JinPhilosophy" />
+        <marker scope="Public" name="JinRoommatesBanter" />
+        <marker scope="Public" name="JinSelectResponse" />
+        <marker scope="Public" name="JinSideEffect" />
+        <marker scope="Public" name="JinTrion" />
         <marker scope="Public" name="JuraMistakenNobility" />
         <marker scope="Public" name="JuraNoob" />
         <marker scope="Public" name="JuriAStreetFight" />
         <marker scope="Public" name="KonosubaDerogatory" />
+        <marker scope="Public" name="KoraAlmostHuman" />
+        <marker scope="Public" name="KoraAlmostHuman2" />
+        <marker scope="Public" name="KoraAlmostHuman3" />
+        <marker scope="Public" name="KoraWeaponType" />
+        <marker scope="Public" name="KoraWeaponType2" />
+        <marker scope="Public" name="KoraWeaponType3" />
         <marker scope="Public" name="KumatoraNoFun" />
         <marker scope="Public" name="KumatoraSkillset" />
         <marker scope="Public" name="KumatoraTragicBackstory" />
@@ -400,6 +902,23 @@
         <marker scope="Public" name="LeonEagerAndWilling2" />
         <marker scope="Public" name="LeonEagerAndWilling3" />
         <marker scope="Public" name="LeonForfeit" />
+        <marker scope="Public" name="LeonForfeitBlindfold" />
+        <marker scope="Public" name="LeonForfeitBlindfold2" />
+        <marker scope="Public" name="LeonForfeitBodyWorship" />
+        <marker scope="Public" name="LeonForfeitBruises" />
+        <marker scope="Public" name="LeonForfeitCum" />
+        <marker scope="Public" name="LeonForfeitFacefuck" />
+        <marker scope="Public" name="LeonForfeitFinished" />
+        <marker scope="Public" name="LeonForfeitFirstPick" />
+        <marker scope="Public" name="LeonForfeitHandcuffs" />
+        <marker scope="Public" name="LeonForfeitInhumanLimits" />
+        <marker scope="Public" name="LeonForfeitMorning" />
+        <marker scope="Public" name="LeonForfeitMultitask" />
+        <marker scope="Public" name="LeonForfeitSafeword" />
+        <marker scope="Public" name="LeonForfeitSafeword2" />
+        <marker scope="Public" name="LeonForfeitUndress" />
+        <marker scope="Public" name="LeonForfeitWallPin" />
+        <marker scope="Public" name="LeonForfeitWallPin2" />
         <marker scope="Public" name="LeonFreshStart" />
         <marker scope="Public" name="LeonFreshStart2" />
         <marker scope="Public" name="LeonFreshStart3" />
@@ -426,20 +945,71 @@
         <marker scope="Public" name="LeonWinOrLose2" />
         <marker scope="Public" name="LeonWinOrLose3" />
         <marker scope="Public" name="LuxLFG" />
+        <marker scope="Public" name="LuxLFG2" />
+        <marker scope="Public" name="LuxLFG3" />
+        <marker scope="Public" name="LuxMastInvite" />
+        <marker scope="Public" name="LuxNamedSpells" />
+        <marker scope="Public" name="LuxPunTrigger" />
+        <marker scope="Public" name="LuxPunTriggerEarly" />
+        <marker scope="Public" name="LuxPunTriggerLate" />
         <marker scope="Public" name="MagmaPartyCrasher" />
+        <marker scope="Public" name="Mari" />
         <marker scope="Public" name="MariOrigins" />
         <marker scope="Public" name="MariOrigins2" />
         <marker scope="Public" name="MariOrigins3" />
         <marker scope="Public" name="MariSArmor" />
         <marker scope="Public" name="MariSArmor2" />
+        <marker scope="Public" name="MariSArmor3A" />
+        <marker scope="Public" name="MariSArmor3B" />
+        <marker scope="Public" name="MariSBestiary" />
+        <marker scope="Public" name="MariSBestiary2" />
+        <marker scope="Public" name="MariSBestiary3" />
+        <marker scope="Public" name="MariSCatReact" />
         <marker scope="Public" name="MariSchoolgirlTrope" />
         <marker scope="Public" name="MariSchoolgirlTrope2" />
+        <marker scope="Public" name="MariSChubbyReact" />
+        <marker scope="Public" name="MariSCulturalExchange" />
+        <marker scope="Public" name="MariSDetransform" />
+        <marker scope="Public" name="MariSDowntime" />
+        <marker scope="Public" name="MariSDowntimeA" />
+        <marker scope="Public" name="MariSDowntimeA2" />
+        <marker scope="Public" name="MariSDowntimeA3" />
+        <marker scope="Public" name="MariSDowntimeB" />
+        <marker scope="Public" name="MariSDowntimeB2" />
+        <marker scope="Public" name="MariSDowntimeB3" />
         <marker scope="Public" name="MariSelectReactionResponse" />
+        <marker scope="Public" name="MariSEssence" />
+        <marker scope="Public" name="MariSEssence2" />
+        <marker scope="Public" name="MariSEssence3" />
+        <marker scope="Public" name="MariSExposure" />
+        <marker scope="Public" name="MariSExposure2A" />
+        <marker scope="Public" name="MariSExposure2B" />
+        <marker scope="Public" name="MariSExposure3A" />
+        <marker scope="Public" name="MariSExposure3B" />
+        <marker scope="Public" name="MariSFemalePresentingNipples" />
+        <marker scope="Public" name="MariSHavingFun" />
+        <marker scope="Public" name="MariSMonsters" />
+        <marker scope="Public" name="MariSMonsters2" />
+        <marker scope="Public" name="MariSMonsters3A" />
+        <marker scope="Public" name="MariSMonsters3B" />
         <marker scope="Public" name="MariSoulsucker" />
         <marker scope="Public" name="MariSoulsucker2" />
         <marker scope="Public" name="MariSoulsucker3" />
+        <marker scope="Public" name="MariSPokerFace" />
+        <marker scope="Public" name="MariSPosition" />
+        <marker scope="Public" name="MariSPosition." />
+        <marker scope="Public" name="MariSPreTransform" />
         <marker scope="Public" name="MariSRelax" />
         <marker scope="Public" name="MariSRelax2" />
+        <marker scope="Public" name="MariSRelax3" />
+        <marker scope="Public" name="MariSSexActs" />
+        <marker scope="Public" name="MariSStripTalking" />
+        <marker scope="Public" name="MariSStudy" />
+        <marker scope="Public" name="MariSTransforming" />
+        <marker scope="Public" name="MariSWeirdDrinks" />
+        <marker scope="Public" name="MaryCommonerNPC" />
+        <marker scope="Public" name="MaryLore" />
+        <marker scope="Public" name="MaryNoStealth" />
         <marker scope="Public" name="MeiaCommanderDisdain" />
         <marker scope="Public" name="MeiaCommanderDisdain2" />
         <marker scope="Public" name="MeiaCommanderDisdain3" />
@@ -479,7 +1049,26 @@
         <marker scope="Public" name="MonikaUniform2" />
         <marker scope="Public" name="MonikaWrongGame" />
         <marker scope="Public" name="MonikaWrongGame2" />
+        <marker scope="Public" name="NagatoroAboutPlayer" />
+        <marker scope="Public" name="NagatoroAboutPlayer2" />
+        <marker scope="Public" name="NagatoroAboutPlayer3" />
+        <marker scope="Public" name="NagatoroCompetition" />
+        <marker scope="Public" name="NagatoroCompetition2" />
+        <marker scope="Public" name="NagatoroCompetition3" />
+        <marker scope="Public" name="NagatoroCulturalMonsters" />
+        <marker scope="Public" name="NagatoroEmbarrassment" />
+        <marker scope="Public" name="NagatoroHobbies" />
+        <marker scope="Public" name="NagatoroHobbies2" />
+        <marker scope="Public" name="NagatoroHobbies3" />
+        <marker scope="Public" name="NagatoroSwimsuitDefault" />
+        <marker scope="Public" name="NagatoroUnderestimate" />
+        <marker scope="Public" name="NagatoroUnderestimate2" />
+        <marker scope="Public" name="NagatoroUnderestimate3" />
         <marker scope="Public" name="NamiAdventure" />
+        <marker scope="Public" name="NamiAdventure2A" />
+        <marker scope="Public" name="NamiAdventure2B" />
+        <marker scope="Public" name="NamiAdventure3A" />
+        <marker scope="Public" name="NamiAdventure3B" />
         <marker scope="Public" name="NamiAllowedEntrance" />
         <marker scope="Public" name="NamiAllowedEntrance2" />
         <marker scope="Public" name="NamiAllowedEntrance3" />
@@ -489,14 +1078,30 @@
         <marker scope="Public" name="NamiBikini" />
         <marker scope="Public" name="NamiBikini2" />
         <marker scope="Public" name="NamiBikini3" />
+        <marker scope="Public" name="NamiBodyPositivity" />
+        <marker scope="Public" name="NamiBodyPositivity2" />
         <marker scope="Public" name="NamiClass" />
         <marker scope="Public" name="NamiClass2" />
         <marker scope="Public" name="NamiClass3" />
+        <marker scope="Public" name="NamiCloud" />
+        <marker scope="Public" name="NamiDangerousLocations" />
+        <marker scope="Public" name="NamiDreams" />
+        <marker scope="Public" name="NamiFears" />
+        <marker scope="Public" name="NamiFears2" />
+        <marker scope="Public" name="NamiFears3" />
+        <marker scope="Public" name="NamiHowSexGood" />
+        <marker scope="Public" name="NamiPoster" />
+        <marker scope="Public" name="NamiPoster2" />
         <marker scope="Public" name="NamiSeduction" />
+        <marker scope="Public" name="NamiSeduction2A" />
+        <marker scope="Public" name="NamiSeduction2B" />
+        <marker scope="Public" name="NamiSeduction3A" />
+        <marker scope="Public" name="NamiSeduction3B" />
         <marker scope="Public" name="NamiStronger" />
         <marker scope="Public" name="NamiStronger2" />
         <marker scope="Public" name="NamiStronger3" />
         <marker scope="Public" name="NatsukiRivalry" />
+        <marker scope="Public" name="nickname" />
         <marker scope="Public" name="NoelleRoommate" />
         <marker scope="Public" name="PetraBlackEagleMercenary" />
         <marker scope="Public" name="PetraClassAssess" />
@@ -525,12 +1130,36 @@
         <marker scope="Public" name="PitYouKnowTheRulesAndSoDoI" />
         <marker scope="Public" name="PitYouKnowTheRulesAndSoDoI2A" />
         <marker scope="Public" name="PitYouKnowTheRulesAndSoDoI2B" />
+        <marker scope="Public" name="PlayerFantasy" />
+        <marker scope="Public" name="PlayerFantasy2" />
+        <marker scope="Public" name="PlayerFantasy3" />
+        <marker scope="Public" name="PlayerFantasy4" />
+        <marker scope="Public" name="PlayerFantasy5" />
+        <marker scope="Public" name="PlayerFantasy5F1" />
+        <marker scope="Public" name="PlayerFantasy5F2" />
+        <marker scope="Public" name="PlayerFantasy5M1" />
+        <marker scope="Public" name="PlayerFantasy5M2" />
+        <marker scope="Public" name="PlayerFantasy5M3" />
+        <marker scope="Public" name="PlayerFantasy5M4" />
+        <marker scope="Public" name="PlayerFantasy5M5" />
+        <marker scope="Public" name="PlayerFantasyM1" />
+        <marker scope="Public" name="PlayerFantasyM2" />
+        <marker scope="Public" name="PlayerFantasyMain" />
+        <marker scope="Public" name="PlayerFantasyOver" />
         <marker scope="Public" name="PokerLevelUp" />
         <marker scope="Public" name="PollyBlackmail" />
+        <marker scope="Public" name="PollyCrush" />
+        <marker scope="Public" name="PollyCrushFighter" />
+        <marker scope="Public" name="PollyCrushNone" />
+        <marker scope="Public" name="PollyCrushPlayer" />
+        <marker scope="Public" name="PollyCrushZ" />
+        <marker scope="Public" name="PollyCrushZoe" />
         <marker scope="Public" name="PollyDisappearance" />
+        <marker scope="Public" name="PollyExperience" />
         <marker scope="Public" name="PollyGameStartA" />
         <marker scope="Public" name="PollyGameStartB" />
         <marker scope="Public" name="PollyGuts" />
+        <marker scope="Public" name="PollyHex" />
         <marker scope="Public" name="PollyMonsterInYou" />
         <marker scope="Public" name="PollyOtherStudents" />
         <marker scope="Public" name="PollyPartyFoul" />
@@ -542,7 +1171,15 @@
         <marker scope="Public" name="PollySpecialtyArea" />
         <marker scope="Public" name="PollyTherapy" />
         <marker scope="Public" name="PollyWherePlayerHex" />
+        <marker scope="Public" name="PollyWhyHere" />
+        <marker scope="Public" name="PollyWilkinson" />
         <marker scope="Public" name="Prepare2Die">"Prepare to die!" - Aaravi's catchphrase. If you hear it, it's already too late.</marker>
+        <marker scope="Public" name="QueenieCards" />
+        <marker scope="Public" name="QueenieCards2" />
+        <marker scope="Public" name="QueenieEmotionalPower" />
+        <marker scope="Public" name="QueenieMercenaries" />
+        <marker scope="Public" name="QueenieTrueNature" />
+        <marker scope="Public" name="QueenieTrueNature2" />
         <marker scope="Public" name="QuestLog" />
         <marker scope="Public" name="RevyAngerManagement" />
         <marker scope="Public" name="RevyGunsVsCrossbows" />
@@ -553,9 +1190,42 @@
         <marker scope="Public" name="RingoPuyo" />
         <marker scope="Public" name="RingoPuyo2" />
         <marker scope="Public" name="RingoPuyo3" />
+        <marker scope="Public" name="RobinBigGameHunting" />
+        <marker scope="Public" name="RobinBigGameHunting2" />
+        <marker scope="Public" name="RobinBigGameHunting3" />
+        <marker scope="Public" name="RobinDevilPower" />
+        <marker scope="Public" name="RobinFlowerDemonstration" />
+        <marker scope="Public" name="RobinFructoEtymology" />
+        <marker scope="Public" name="RobinFructoEtymology2" />
+        <marker scope="Public" name="RobinFructoEtymology3" />
+        <marker scope="Public" name="RobinHistoricalSignificance" />
+        <marker scope="Public" name="RobinHistoricalSignificance2" />
+        <marker scope="Public" name="RobinHistoricalSignificance3" />
+        <marker scope="Public" name="RobinMonsterRealm" />
+        <marker scope="Public" name="RobinTeamRole" />
+        <marker scope="Public" name="RobinTeamRole2" />
+        <marker scope="Public" name="RobinTeamRole3" />
         <marker scope="Public" name="RosaAvenueOffer" />
         <marker scope="Public" name="RosaAvenueOffer2" />
         <marker scope="Public" name="RosaAvenueOffer3" />
+        <marker scope="Public" name="SakiBandages" />
+        <marker scope="Public" name="SakiBandages2" />
+        <marker scope="Public" name="SakiBandagesAlternate" />
+        <marker scope="Public" name="SakiBandagesAlternate2" />
+        <marker scope="Public" name="SakiBikes" />
+        <marker scope="Public" name="SakiNonHuman" />
+        <marker scope="Public" name="SakiNonHuman2" />
+        <marker scope="Public" name="SakiNonHumanAlternate" />
+        <marker scope="Public" name="SakiNonHumanAlternate2" />
+        <marker scope="Public" name="SakuraHead" />
+        <marker scope="Public" name="SakuraHead2" />
+        <marker scope="Public" name="SakuraHeadAlternate" />
+        <marker scope="Public" name="SakuraHeadAlternate2" />
+        <marker scope="Public" name="SakuraIdols" />
+        <marker scope="Public" name="SakuraMakeup" />
+        <marker scope="Public" name="SakuraMakeup2" />
+        <marker scope="Public" name="SakuraMakeupAlternate" />
+        <marker scope="Public" name="SakuraMakeupAlternate2" />
         <marker scope="Public" name="SamusFangirl" />
         <marker scope="Public" name="SamusFangirl2" />
         <marker scope="Public" name="SamusFangirl3" />
@@ -577,22 +1247,66 @@
         <marker scope="Public" name="SexyPotG" />
         <marker scope="Public" name="SidequestPrompt" />
         <marker scope="Public" name="SidequestSorting" />
+        <marker scope="Public" name="SnTAreAJoke" />
+        <marker scope="Public" name="SnTMonsterFuta" />
+        <marker scope="Public" name="SnTReveal" />
+        <marker scope="Public" name="SnTWin" />
+        <marker scope="Public" name="Solar" />
+        <marker scope="Public" name="SolarBombegranate" />
+        <marker scope="Public" name="SolarClassification" />
+        <marker scope="Public" name="SolarCloaks" />
+        <marker scope="Public" name="SolarHunters" />
+        <marker scope="Public" name="SolarSlayer" />
+        <marker scope="Public" name="SolarZombies" />
         <marker scope="Public" name="SpookyGhostMurder" />
+        <marker scope="Public" name="StartedEarly" />
         <marker scope="Public" name="StockingPurity" />
         <marker scope="Public" name="StockingPurity2" />
         <marker scope="Public" name="StockingStripes" />
         <marker scope="Public" name="SucroseBeASupport" />
         <marker scope="Public" name="SucroseBeASupport2" />
+        <marker scope="Public" name="SucroseBeASupport3" />
+        <marker scope="Public" name="SucroseBottledSpirits" />
+        <marker scope="Public" name="SucroseBottledSpirits2" />
         <marker scope="Public" name="SucroseCatSupport" />
+        <marker scope="Public" name="SucroseCatSupport2" />
+        <marker scope="Public" name="SucroseCollab" />
+        <marker scope="Public" name="SucroseCollab2" />
+        <marker scope="Public" name="SucroseCollab3" />
         <marker scope="Public" name="SucroseConfidence" />
+        <marker scope="Public" name="SucroseConfidence2" />
+        <marker scope="Public" name="SucroseConfidence3" />
+        <marker scope="Public" name="SucroseElements" />
+        <marker scope="Public" name="SucroseElements2" />
+        <marker scope="Public" name="SucroseElements3" />
+        <marker scope="Public" name="SucroseFetchQuest" />
+        <marker scope="Public" name="SucroseFetchQuest2" />
+        <marker scope="Public" name="SucroseFetchQuest3" />
+        <marker scope="Public" name="SucroseFieldWork" />
+        <marker scope="Public" name="SucroseLifeSupport" />
+        <marker scope="Public" name="SucroseLifeSupport2" />
+        <marker scope="Public" name="SucroseLifeSupport3" />
+        <marker scope="Public" name="SucrosePlants" />
+        <marker scope="Public" name="SucrosePotions" />
         <marker scope="Public" name="SucroseTheories" />
+        <marker scope="Public" name="SucroseTheories2" />
+        <marker scope="Public" name="SucroseTheories3" />
         <marker scope="Public" name="TherapyTits" />
         <marker scope="Public" name="TomokoMustBeACurse" />
         <marker scope="Public" name="TrainerNPC" />
+        <marker scope="Public" name="TrixieBDSMDungeon" />
+        <marker scope="Public" name="TrixieCommon" />
+        <marker scope="Public" name="TrixieCommon2" />
+        <marker scope="Public" name="TrixieDungeonImpossible" />
+        <marker scope="Public" name="TrixieElves" />
         <marker scope="Public" name="TrixieGoblinPest" />
+        <marker scope="Public" name="TrixieOrigins" />
+        <marker scope="Public" name="TrixieOrigins2" />
         <marker scope="Public" name="TrixieStarterZone" />
         <marker scope="Public" name="TrixieStarterZone2" />
         <marker scope="Public" name="TrixieStarterZone3" />
+        <marker scope="Public" name="TrixieStarterZone4" />
+        <marker scope="Public" name="TrixieViolence" />
         <marker scope="Public" name="TurandotBoldness" />
         <marker scope="Public" name="TurandotBoldness2" />
         <marker scope="Public" name="TurandotBoldness3" />
@@ -602,10 +1316,20 @@
         <marker scope="Public" name="UnimportantUnderwear" />
         <marker scope="Public" name="VolleyballSpinoff" />
         <marker scope="Public" name="WaterLevel" />
+        <marker scope="Public" name="XPBuff" />
         <marker scope="Public" name="YshtolaAdventureBuddies" />
+        <marker scope="Public" name="YshtolaAdventureBuddies2" />
+        <marker scope="Public" name="YshtolaAdventureBuddies3" />
+        <marker scope="Public" name="YshtolaMagic" />
+        <marker scope="Public" name="YshtolaScions" />
         <marker scope="Public" name="YunoChallengerApproaches" />
         <marker scope="Public" name="YunoTwoProtag" />
         <marker scope="Public" name="YunoTwoProtagonists" />
+        <marker scope="Public" name="YunyunBondRewards" />
+        <marker scope="Public" name="YunyunClassDerision" />
+        <marker scope="Public" name="YunyunFreeFriend" />
+        <marker scope="Public" name="YunyunKonosubaWorldLore" />
+        <marker scope="Public" name="YunyunSharingIsCaring" />
         <marker scope="Public" name="YuriEpicPoetry" />
         <marker scope="Public" name="YuriMonsterVariety" />
         <marker scope="Public" name="YuriMonsterVariety2" />
@@ -617,6 +1341,7 @@
         <marker scope="Public" name="YuriPoetryRegret2" />
         <marker scope="Public" name="YuriPoetryRegret3" />
         <marker scope="Public" name="YuriPoetryRegret4" />
+        <marker scope="Public" name="ZLSMonstropolisTour" />
         <marker scope="Public" name="ZoeCosplay" />
         <marker scope="Public" name="ZoeGameStartA" />
         <marker scope="Public" name="ZoeGameStartB" />

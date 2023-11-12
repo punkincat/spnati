@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -17,6 +17,41 @@ namespace SPNATI_Character_Editor
 			{
 				foreach (Background bkg in _list.Backgrounds)
 				{
+					if(bkg.Id == "da invuntry")
+					{
+						continue;
+					}
+					
+					nameTag.AddValue(bkg.Id);
+					foreach (XmlElement el in bkg.Elements)
+					{
+						string name = el.Name;
+						if (!IsExcluded(name))
+						{
+							BackgroundTag tag = Definitions.Instance.Get<BackgroundTag>(name);
+							if (tag == null)
+							{
+								tag = new BackgroundTag(name);
+								Definitions.Instance.Add(tag);
+
+								if (Definitions.Instance.Get<BackgroundTagValue>(name) == null)
+								{
+									BackgroundTagValue tagValue = new BackgroundTagValue(name);
+									Definitions.Instance.Add(tagValue);
+								}
+							}
+							tag.AddValue(el.InnerText);
+						}
+					}
+				}
+
+				foreach (Background bkg in _list.Backgrounds)
+				{
+					if (bkg.Id != "da invuntry")
+					{
+						continue;
+					}
+
 					nameTag.AddValue(bkg.Id);
 					foreach (XmlElement el in bkg.Elements)
 					{

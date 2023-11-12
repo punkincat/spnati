@@ -1,0 +1,73 @@
+﻿<h3>Wardrobe</h3>
+<ul>
+    <li>Adds a "held" position for hand-held items.</li>
+</ul>
+
+<h3>Costumes</h3>
+<ul>
+    <li>Now prompts to save costumes when closing.</li>
+</ul>
+
+<h3>Dialogue</h3>
+<ul>
+    <li>Adds the image/dialogue preview sub-window to the Respond screen.</li>
+    <li>Allows case types to be freely changed. Note: If changing from a case with a target to a case without one, any Target conditions will be removed.</li>
+    <li>Adds the !@ operator, meaning "value is not within this range".</li>
+    <li>The "Refresh Images" button now works instantly, instead of needing to switch to a new case first.</li>
+</ul>
+
+<h3>Situations</h3>
+<ul>
+    <li>Adds the image/dialogue preview sub-window to the Situations tab.</li>
+</ul>
+
+<h3>Banter Wizard</h3>
+<ul>
+    <li>Stores lines targeting a character in a banter.xml file, which can be generated, loaded and updated with new lines (partial updates are possible).</li>
+    <li>Automatically marks new or modified lines targeting a character.</li>
+    <li>Adds a Jump To Line button that opens the selected line in the Dialogue tab.</li>
+    <li>Allows filtering opponents by status (online, offline, etc).</li>
+    <li>Adds the ability to color-code lines within the Banter Wizard.</li>
+    <li>Allows filtering lines by newness or by assigned color.</li>
+    <li>Allows previewing the targeting characters' alt costumes.</li>
+    <li>If no good matches are found, the "may be reacting to" list is left empty rather than using the best guess, which was frequently wildly inaccurate.</li>
+    <li>Improves detection of "may be reacting to" lines for the Hand cases.</li>
+</ul>
+
+<h3>Validator</h3>
+<ul>
+    <li>Flags cases with non-player targets in Must Strip (Player).</li>
+    <li>Flags use of less-than or greater-than on clothing type.</li>
+    <li>Flags checks on other characters' private markers.</li>
+    <li>Flagging for extraneous ifMales should now actually work.</li>
+</ul>
+
+<h3>Settings</h3>
+<ul>
+    <li>Allows selecting a default responder for the Respond button, instead of having to select one every time.</li>
+    <li>Adds the option to save the config file, backups, etc. in the CE's folder instead of in %APPDATA%.</li>
+</ul>
+
+<h3>Miscellaneous</h3>
+<ul>
+    <li>Adds support for KKL v107a3.</li>
+    <li>The loading screen now displays each costume folder loaded, instead of just "Loading reskins..."</li>
+    <li>Improves the way total filtered lines are counted.</li>
+    <li>Cleans up legacy code. Be sure to report any problems with the Respond feature that may occur.</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+<ul>
+    <li>Disables responding to the "Opponent Selected" case, which is inherently impossible.</li>
+    <li>Creates an images folder automatically instead of showing an error.</li>
+    <li>Fixes a crash when clicking the "Update Sorting" button immediately after changing a case's folder name.</li>
+    <li>Fixes a crash when attempting to delete an epilogue.</li>
+    <li>Fixes a crash when attempting to search custom card decks.</li>
+    <li>Fixes several different possible crashes when editing the AI table.</li>
+    <li>Allows characters' own private markers to be selected in a "Not Said Marker" condition.</li>
+    <li>The Respond button no longer copies marker conditions that check another character's private marker.</li>
+    <li>Setting a case's color to "None" actually sets it to the default color, instead of black.</li>
+    <li>Fixes "Human" sometimes showing up in the "Most Targeted Opponents" Dashboard widget.</li>
+    <li>Fixes the "Lines (Spoken to)" chart not counting incoming direct targets correctly.</li>
+    <li>Fixes an issue where the spellcheck would sometimes flag words even if they were already in the user dictionary.</li>
+</ul>

@@ -4,11 +4,13 @@
     <label>Chara</label>
     <tags>
         <tag>alternative_skin</tag>
+        <tag>fake_horns</tag>
         <tag>fake_tail</tag>
         <tag>halloween_skin</tag>
         <tag from="0" to="1">high_heels</tag>
         <tag remove="true">sweater</tag>
     </tags>
+    <layers>8</layers>
     <folder>opponents/reskins/chara_dreemurr_halloween/</folder>
     <wardrobe>
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
@@ -18,7 +20,7 @@
         <clothing name="stockings" generic="leggings" position="feet" type="minor" plural="true" />
         <clothing name="gloves" generic="gloves" position="hands" type="minor" plural="true" />
         <clothing name="heels" generic="shoes" position="feet" type="extra" plural="true" />
-        <clothing name="pitchfork" generic="weapon" position="other" type="extra" />
+        <clothing name="pitchfork" generic="weapon" position="held" type="extra" />
     </wardrobe>
 
     <poses>

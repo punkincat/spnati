@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -115,6 +115,11 @@ namespace SPNATI_Character_Editor.Controls
 				Case workingCase = caseCtl.GetCase();
 				int stage = workingCase.Stages[0];
 				Shell.Instance.ActiveWorkspace.SendMessage(WorkspaceMessages.UpdatePreviewImage, new UpdateImageArgs(_character, image, stage));
+			}
+			DialogueLine line = caseCtl.GetLine(index);
+			if (line != null)
+			{
+				Shell.Instance.ActiveWorkspace.SendMessage(WorkspaceMessages.PreviewLine, line);
 			}
 		}
 	}

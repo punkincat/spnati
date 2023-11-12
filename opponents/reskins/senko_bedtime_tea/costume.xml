@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>senko_bedtime_tea</id>
+    <label>Senko</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>bottomless_first</tag>
+        <tag remove="true">shimapan</tag>
+        <tag>sleepwear</tag>
+    </tags>
+    <folder>opponents/reskins/senko_bedtime_tea/</folder>
+    <folder stage="7">opponents/senko/</folder>
+    <wardrobe>
+        <clothing name="kimono" generic="jacket" position="upper" type="major" />
+        <clothing name="sash" generic="belt" position="lower" type="major" />
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="socks" generic="socks" position="feet" type="extra" plural="true" />
+        <clothing name="sandals" generic="shoes" position="feet" type="extra" plural="true" />
+        <clothing name="scrunchie" position="arms" type="extra" />
+        <clothing name="sleeping mask" generic="mask" position="head" type="extra" />
+    </wardrobe>
+
+</costume>

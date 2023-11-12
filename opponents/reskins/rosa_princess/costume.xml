@@ -14,8 +14,11 @@
         <tag remove="true">pubic_hair</tag>
         <tag>royalty</tag>
         <tag>shaved</tag>
+        <tag remove="true">shimapan</tag>
         <tag from="0" to="4">thigh_highs</tag>
+        <tag>valentines_skin</tag>
     </tags>
+    <layers>7</layers>
     <folder>opponents/reskins/rosa_princess/</folder>
     <wardrobe>
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
@@ -24,7 +27,7 @@
         <clothing name="dress" generic="dress" position="upper" type="major" />
         <clothing name="gloves" generic="shorts" position="hands" type="minor" plural="true" />
         <clothing name="glass slippers" generic="shoes" position="feet" type="minor" plural="true" />
-        <clothing name="tiara" generic="jewelry" position="head" type="extra" plural="true" />
+        <clothing name="tiara" generic="jewelry" position="head" type="extra" />
     </wardrobe>
 
     <poses>
@@ -173,5 +176,23 @@
                 <keyframe time="3" y="395" />
             </directive>
         </pose>
+        <pose id="8-gloria_cunnilingus_1">
+            <sprite id="Layer1_gloria_special_1" z="2" src="reskins/rosa_princess/Extra/Layer1_gloria_special_1.png" x="0" y="0" />
+            <sprite id="Layer2_gloria_special_1" z="1" src="reskins/rosa_princess/Extra/Layer2_gloria_special_1.png" x="0" y="0" />
+            <sprite id="Layer3_gloria_special_1" src="reskins/rosa_princess/Extra/Layer3_gloria_special_1.png" x="0" y="0" />
+        </pose>
+        <pose id="8-gloria_cunnilingus_2">
+            <sprite id="Layer1_gloria_special_1" z="2" src="reskins/rosa_princess/Extra/Layer1_gloria_special_2.png" x="0" y="0" />
+            <sprite id="Layer2_gloria_special_1" z="1" src="reskins/rosa_princess/Extra/Layer2_gloria_special_2.png" x="0" y="0" />
+            <sprite id="Layer3_gloria_special_1" src="reskins/rosa_princess/Extra/Layer3_gloria_special_2.png" x="0" y="0" />
+            <sprite id="Layer4_gloria_special_2" z="2" src="reskins/rosa_princess/Extra/Layer4_gloria_special_2.png" x="0" y="24" />
+        </pose>
+        <pose id="8-gloria_cunnilingus_3">
+            <sprite id="Layer1_gloria_special_1" z="2" src="reskins/rosa_princess/Extra/Layer1_gloria_special_3.png" x="0" y="0" />
+            <sprite id="Layer2_gloria_special_1" z="1" src="reskins/rosa_princess/Extra/Layer2_gloria_special_3.png" x="0" y="0" />
+            <sprite id="Layer3_gloria_special_1" src="reskins/rosa_princess/Extra/Layer3_gloria_special_3.png" x="0" y="0" />
+            <sprite id="Layer4_gloria_special_2" z="2" src="reskins/rosa_princess/Extra/Layer4_gloria_special_3.png" x="0" y="0" />
+        </pose>
     </poses>
+
 </costume>

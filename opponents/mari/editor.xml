@@ -118,6 +118,18 @@
         <response id="2063" opponent="eichi" opponentId="121" />
         <response id="2064" opponent="eichi" opponentId="35" />
         <response id="2070" opponent="eichi" opponentId="123" />
+        <response id="2320" opponent="eichi" opponentId="532" />
+        <response id="2322" opponent="eichi" opponentId="534" />
+        <response id="2328" opponent="kyouko_toshinou" opponentId="18" />
+        <response id="2343" opponent="nagatoro" opponentId="1601" />
+        <response id="2344" opponent="nagatoro" opponentId="1596" />
+        <response id="2355" opponent="sannytess" opponentId="5" />
+        <response id="2357" opponent="sannytess" opponentId="6" />
+        <response id="2361" opponent="kyouko_toshinou" opponentId="202" />
+        <response id="2370" opponent="ringo_ando" opponentId="513" />
+        <response id="2371" opponent="mitama" opponentId="849" />
+        <response id="2372" opponent="mitama" opponentId="851" />
+        <response id="2376" opponent="mia_golden_sun" opponentId="114" />
     </responses>
     <notes>
         <note id="495">I am absolutely shilling my own fanfic here: https://archiveofourown.org/chapters/71735256</note>
@@ -237,6 +249,13 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <note id="2056">For Kaz's next strip stage, I might have Mari ask why Kaz is still a bachelor, but I'll wait until we get through this strip stage first before committing.</note>
         <note id="2062">Ideas for later; I'm not going to commit to these for now until we actually get to those strip stages, just to leave our options open -- S2: "You've been so obedient so far, Darkness... You really must like being under my thumb. And I do enjoy having a pretty little plaything like you, hehe." / S3: "Why don't you show me something different this time, Darkness? I want you to show me &lt;i&gt;everything&lt;/i&gt; you have to offer, hehe."</note>
         <note id="2063">Mari is dead in her source material. Her appearance in SPNATI is an AU where she only *nearly* died instead.</note>
+        <note id="2152">Mari's a classically-trained pianist. Or at least, she's studying to become one. (Now, I myself am decidedly not classically trained, or even a musician for that matter. Still, I'll do my best to keep up.)</note>
+        <note id="2219">The actual calculation here takes advantage of the diff variable: ~human.diff~ equals the layer difference between Mari and the human player, and we know Mari's current layer count since she's at stage 0.</note>
+        <note id="2238">The lines here and in the 2B case all have separate values for each line, so you can respond to them either together or separately as you see fit.</note>
+        <note id="2330">I'm targeting this towards Mitama's stage 2 because (based on Mitama's notes) this'll probably get into deeper character stuff that wouldn't quite fit for early interactions.</note>
+        <note id="2333">If necessary: Mari's emotions range from "relaxed, if eager" for stages 0-3, to "competitive and turned on" in stages 4-5, and full-on horny for stages 6-9.</note>
+        <note id="2365">Priority for this case is lowered so that lines directly targeted towards whoever's stripping will take precedence.</note>
+        <note id="2374">I guess you should disregard my previous note, because I have completely forgotten how I was originally going to continue this conversation.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Generic" sort="0" />
@@ -1603,7 +1622,7 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <label id="1389" label="Starter - Player" folder="Sayori" sort="0" />
         <label id="1390" label="Starter - Hair" folder="Sayori" sort="0" />
         <label id="1391" label="Starter - Hair (Variant B)" folder="Sayori" sort="0" />
-        <label id="1392" label="Intro - What Are You?" folder="Kora" sort="0" />
+        <label id="1392" label="S0 - What Are You? 1" folder="Kora" sort="0" />
         <label id="1393" label="Butt (Bet Active)" folder="Yuno" sort="0" />
         <label id="1394" label="Butt" folder="Yuno" sort="0" />
         <label id="1395" label="S3 - Underneath" color="3" folder="Heris" sort="0" />
@@ -1636,8 +1655,8 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <label id="1422" label="Starter - Free Time" folder="Mari Setogaya" sort="0" />
         <label id="1423" label="S2 - (Variant A)" folder="Mari Setogaya" sort="0" />
         <label id="1424" label="Intro - Naming" folder="Aqua Grunt" sort="0" />
-        <label id="1426" label="S0 =&gt; S1 - Boyfriend" folder="Ringo" sort="0" />
-        <label id="1425" label="S0 - Phone Call" folder="Ringo" sort="0" />
+        <label id="1426" label="S0 - Phone Call 2" folder="Ringo" sort="0" />
+        <label id="1425" label="S0 - Phone Call 1" folder="Ringo" sort="0" />
         <label id="1427" label="S0 - Schoolwork 1" folder="Aqua Grunt" sort="0" />
         <label id="1428" label="S0 =&gt; S1 - Naming 2 (Is That It?)" folder="Aqua Grunt" sort="0" />
         <label id="1429" label="Males" folder="Dirty Talk" sort="0" />
@@ -2228,9 +2247,9 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <label id="2021" label="Early-Game Major Strip" folder="" sort="0" />
         <label id="2022" label="First Time (or Rouge Present)" folder="Treasure Scope" sort="0" />
         <label id="2023" label="Second+ Time (If Rouge Not Present)" folder="Treasure Scope" sort="0" />
-        <label id="2024" label="S0 - Something About the Player" folder="Nagatoro" sort="0" />
-        <label id="2025" label="S1 - Taking Him/Her For Myself" folder="Nagatoro" sort="0" />
-        <label id="2026" label="S1 - Not a Virgin (Male Player Has Seen Epilogue)" folder="Nagatoro" sort="0" />
+        <label id="2024" label="S0 - Something About the Player" color="3" folder="Nagatoro" sort="0" />
+        <label id="2025" label="S1 - Taking Him/Her For Myself" color="3" folder="Nagatoro" sort="0" />
+        <label id="2026" label="S1 - Not a Virgin (Male Player Has Seen Epilogue)" color="3" folder="Nagatoro" sort="0" />
         <label id="2027" label="S2 - What Next? 1" folder="Gloria" sort="0" />
         <label id="2028" label="S1 - Pressure 1" folder="Gloria" sort="0" />
         <label id="2029" label="S2 - What Next? 2" folder="Gloria" sort="0" />
@@ -2250,12 +2269,12 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <label id="2043" label="General Dirty Talk" folder="Pre-Heavy Forfeit" sort="0" />
         <label id="2044" label="No Other OMORI Characters" folder="Pre-Heavy Forfeit" sort="0" />
         <label id="2045" label="S0 - Careful! 1" folder="Megumin" sort="0" />
-        <label id="2046" label="Player's Just Gross 1A" folder="Nagatoro" sort="0" />
-        <label id="2047" label="Player's Just Gross 1B" folder="Nagatoro" sort="0" />
-        <label id="2048" label="For Myself (Player Strip) 1" folder="Nagatoro" sort="0" />
-        <label id="2049" label="Player Not A Virgin Denial (Player Strip) 1" folder="Nagatoro" sort="0" />
-        <label id="2050" label="S0 - Something About the Player 2" folder="Nagatoro" sort="0" />
-        <label id="2051" label="S5 - Flirting with Player 1" folder="Nagatoro" sort="0" />
+        <label id="2046" label="Player's Just Gross 1A" color="3" folder="Nagatoro" sort="0" />
+        <label id="2047" label="Player's Just Gross 1B" color="3" folder="Nagatoro" sort="0" />
+        <label id="2048" label="For Myself (Player Strip) 1" color="3" folder="Nagatoro" sort="0" />
+        <label id="2049" label="Player Not A Virgin Denial (Player Strip) 1" color="3" folder="Nagatoro" sort="0" />
+        <label id="2050" label="S0 - Something About the Player 2" color="3" folder="Nagatoro" sort="0" />
+        <label id="2051" label="S5 - Flirting with Player 1" color="3" folder="Nagatoro" sort="0" />
         <label id="2052" label="S5 - Flirting with Player 1B" folder="Nagatoro" sort="0" />
         <label id="2053" label="S1 - Look 3" folder="Kaz" sort="0" />
         <label id="2054" label="S1 - Personality Read 3" folder="Kaz" sort="0" />
@@ -2354,8 +2373,238 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <label id="2148" label="" folder="Pre-Heavy Forfeit" sort="0" />
         <label id="2149" label="Collectible-Specific" folder="Pre-Heavy Forfeit" sort="0" />
         <label id="2150" label="Collectible-Specific (Male)" folder="Pre-Heavy Forfeit" sort="0" />
+        <label id="2151" label="S0 - Music 2" folder="Eichi" sort="0" />
+        <label id="2152" label="S1 - Music 3" folder="Eichi" sort="0" />
+        <label id="2153" label="S5A - Trying to Lose 2" folder="Eichi" sort="0" />
+        <label id="2154" label="S5B - Performance 2A" folder="Eichi" sort="0" />
+        <label id="2155" label="S5C - Performance 2B" folder="Eichi" sort="0" />
+        <label id="2156" label="Bluffing?" folder="" sort="0" />
+        <label id="2157" label="Dropped Cards" folder="" sort="0" />
+        <label id="2158" label="Bluffing Failed" folder="" sort="0" />
+        <label id="2159" label="Reset Bluff State" folder="" sort="0" />
+        <label id="2160" label="Reset Bluff State" folder="" sort="0" />
+        <label id="2161" label="Reset Bluff State" folder="" sort="0" />
+        <label id="2162" label="Bluff Success" folder="" sort="0" />
+        <label id="2163" label="Repetition (First Play)" folder="Generic" sort="0" />
+        <label id="2164" label="Repetition (Second+ Plays)" folder="Generic" sort="0" />
+        <label id="2165" label="S0 - Who Are You? 1" folder="Sakura" sort="0" />
+        <label id="2166" label="S2 - Makeup 2" folder="Sakura" sort="0" />
+        <label id="2167" label="S3 - Head 2" folder="Sakura" sort="0" />
+        <label id="2168" label="S4 - Head 3" folder="Sakura" sort="0" />
+        <label id="2169" label="S3 - I Should Stop Worrying" folder="Sakura" sort="0" />
+        <label id="2170" label="S3 - Makeup 3" folder="Sakura" sort="0" />
+        <label id="2171" label="Difficulty Override Reset" folder="Difficulty Setup" sort="0" />
+        <label id="2172" label="Difficulty Override Reset" folder="Difficulty Setup" sort="0" />
+        <label id="2173" label="S3 - Distracted" folder="Sakura" sort="0" />
+        <label id="2174" label="First Out" folder="Forfeit Control Logic" sort="0" />
+        <label id="2175" label="Force Heavy On" folder="Forfeit Control Logic" sort="0" />
+        <label id="2176" label="Force Heavy Off" folder="Forfeit Control Logic" sort="0" />
+        <label id="2177" label="Track Target Data" folder="Memory Setup" sort="0" />
+        <label id="2178" label="Increment Target Plays Today" folder="Memory Setup" sort="0" />
+        <label id="2179" label="Reset Target Plays Today" folder="Memory Setup" sort="0" />
+        <label id="2180" label="Initialize Days Since Last Game" folder="Memory Setup" sort="0" />
+        <label id="2181" label="Calculate Days Since Last Game" folder="Memory Setup" sort="0" />
+        <label id="2182" label="Set Seen Counter Flag" folder="Memory Setup" sort="0" />
+        <label id="2183" label="Store Prev Play Data" folder="Memory Setup" sort="0" />
+        <label id="2184" label="Store Slot 1 Data" folder="Memory Setup" sort="0" />
+        <label id="2185" label="Store Slot 3 Data" folder="Memory Setup" sort="0" />
+        <label id="2186" label="Store Slot 2 Data" folder="Memory Setup" sort="0" />
+        <label id="2187" label="Store Slot 4 Data" folder="Memory Setup" sort="0" />
+        <label id="2188" label="Days Since Last Target Game Wrapping Logic" folder="Memory Setup" sort="0" />
+        <label id="2189" label="Days Since Last Target Game Wrapping Logic - Leap Year Offset" folder="Memory Setup" sort="0" />
+        <label id="2190" label="Immediate Rematch" folder="Memory Lines" sort="0" />
+        <label id="2191" label="Last Played Stage Tracking" folder="Memory Setup" sort="0" />
+        <label id="2192" label="Initialize Games Since Last Play" folder="Memory Setup" sort="0" />
+        <label id="2193" label="Calculate Games Since Last Play" folder="Memory Setup" sort="0" />
+        <label id="2194" label="Track Target Losses" folder="Memory Setup" sort="0" />
+        <label id="2195" label="Track Target Wins" folder="Memory Setup" sort="0" />
+        <label id="2196" label="Immediate Rematch (Target Won Last Game)" folder="Memory Lines" sort="0" />
+        <label id="2197" label="Seeing Something New" folder="Memory Lines" sort="0" />
+        <label id="2198" label="Between 5 - 14 Days Since Last Game" folder="Memory Lines" sort="0" />
+        <label id="2199" label="Between 14 - 30 Days Since Last Game" folder="Memory Lines" sort="0" />
+        <label id="2200" label="" folder="Memory Lines" sort="0" />
+        <label id="2201" label="Between 1 - 5 Days Since Last Game" folder="Memory Lines" sort="0" />
+        <label id="2202" label="5+ Total Plays With Opponent" folder="Memory Lines" sort="0" />
+        <label id="2203" label="5+ Total Plays (Player Exposed)" folder="Memory Lines" sort="0" />
+        <label id="2204" label="Tells Intro (Player Bad Hand)" folder="Player Tells" sort="0" />
+        <label id="2205" label="Tells Continued (Player Bad Hand)" folder="Player Tells" sort="0" />
+        <label id="2206" label="Tells Intro (Player Good Hand)" folder="Player Tells" sort="0" />
+        <label id="2207" label="Tells Continued (Player Good Hand)" folder="Player Tells" sort="0" />
+        <label id="2208" label="Track Time Spent Together" folder="Memory Setup" sort="0" />
+        <label id="2209" label="Tells Continued (Player Good Hand)" folder="Memory Lines" sort="0" />
+        <label id="2210" label="Unlock Panties" folder="Collectibles" sort="0" />
+        <label id="2211" label="Player Win Tracking" folder="Memory Setup" sort="0" />
+        <label id="2212" label="LastGameStatus Tracking" folder="Memory Setup" sort="0" />
+        <label id="2213" label="Completed Game Count Tracking" folder="Memory Setup" sort="0" />
+        <label id="2214" label="Completed Game Count Tracking" folder="Memory Setup" sort="0" />
+        <label id="2215" label="Completed Game Count Tracking" folder="Memory Setup" sort="0" />
+        <label id="2216" label="LastGameStatus Tracking" folder="Memory Setup" sort="0" />
+        <label id="2217" label="Mari Win Count Tracking" folder="Memory Setup" sort="0" />
+        <label id="2218" label="" folder="Player Tells" sort="0" />
+        <label id="2219" label="Initialization" folder="Human Starting Layer Count Calculation" sort="0" />
+        <label id="2220" label="Calculation" folder="Human Starting Layer Count Calculation" sort="0" />
+        <label id="2221" label="Setup - Track Remaining Human Layers" folder="" sort="0" />
+        <label id="2222" label="Init Human Remaining Layers" folder="Human Starting Layer Count Calculation" sort="0" />
+        <label id="2223" label="Setup - Track Remaining Human Layers" folder="" sort="0" />
+        <label id="2224" label="" folder="Player Tells" sort="0" />
+        <label id="2225" label="Tells Continued 2 (Player Good Hand)" folder="Player Tells" sort="0" />
+        <label id="2226" label="Tells Continued 2 (Player Bad Hand)" folder="Player Tells" sort="0" />
+        <label id="2227" label="Tells Continued 2A" folder="Player Tells" sort="0" />
+        <label id="2228" label="Post-Encore" folder="Generic" sort="0" />
+        <label id="2229" label="Post-Encore" folder="Generic" sort="0" />
+        <label id="2230" label="Post-Encore" folder="Generic" sort="0" />
+        <label id="2231" label="Post-Encore (Human Alive)" folder="Generic" sort="0" />
+        <label id="2232" label="Post-Encore (Human Not Alive)" folder="Generic" sort="0" />
+        <label id="2233" label="Post-Encore" folder="Generic" sort="0" />
+        <label id="2234" label="Post-Encore" folder="Generic" sort="0" />
+        <label id="2235" label="Last Naked" folder="Generic" sort="0" />
+        <label id="2236" label="Last Naked" folder="" sort="0" />
+        <label id="2237" label="Last Naked (Post-Encore)" folder="Generic" sort="0" />
+        <label id="2238" label="S1 - Strip For Me! 2A" folder="Darkness" sort="0" />
+        <label id="2239" label="S1 - Strip For Me! 2B" folder="Darkness" sort="0" />
+        <label id="2240" label="S0 - A Living 1" folder="Darkness" sort="0" />
+        <label id="2241" label="S0 - Outfit 1" folder="Darkness" sort="0" />
+        <label id="2242" label="S0 - Sinister 1" folder="Darkness" sort="0" />
+        <label id="2243" label="S0 - Sinister 1B" folder="Darkness" sort="0" />
+        <label id="2244" label="S0 - Deception 1 (Interest &gt;= 5)" folder="Darkness" sort="0" />
+        <label id="2245" label="Success (Bad Hand)" folder="Player Tells" sort="0" />
+        <label id="2246" label="Reset State" folder="Player Tells" sort="0" />
+        <label id="2247" label="Failure" folder="Player Tells" sort="0" />
+        <label id="2248" label="Failure" folder="Player Tells" sort="0" />
+        <label id="2249" label="Failure" folder="Player Tells" sort="0" />
+        <label id="2250" label="Success (Good Hand)" folder="Player Tells" sort="0" />
+        <label id="2251" label="Success (Bad Hand)" folder="Player Tells" sort="0" />
+        <label id="2252" label="Success (Bad Hand)" folder="Player Tells" sort="0" />
+        <label id="2253" label="Success (Good Hand)" folder="Player Tells" sort="0" />
+        <label id="2254" label="Success (Good Hand)" folder="Player Tells" sort="0" />
+        <label id="2255" label="S5 - Flirting with Player 2" color="3" folder="Nagatoro" sort="0" />
+        <label id="2256" label="Player's Just Gross 2A" color="3" folder="Nagatoro" sort="0" />
+        <label id="2257" label="Player's Just Gross 2B" color="3" folder="Nagatoro" sort="0" />
+        <label id="2258" label="For Myself (Player Strip) 2" color="3" folder="Nagatoro" sort="0" />
+        <label id="2259" label="Player Not A Virgin Denial (Player Strip) 2" color="3" folder="Nagatoro" sort="0" />
+        <label id="2260" label="S1 - Something About the Player 3" color="3" folder="Nagatoro" sort="0" />
+        <label id="2261" label="S0 - Hero 1" color="3" folder="Nagatoro" sort="0" />
+        <label id="2262" label="What Do You See In Her? (Player Strip) 1" color="3" folder="Nagatoro" sort="0" />
+        <label id="2263" label="" folder="Nagatoro" sort="0" />
+        <label id="2264" label="How Far Have You Two Gone? (Player Strip) 1" color="3" folder="Nagatoro" sort="0" />
+        <label id="2265" label="Compatible Player" folder="Informality" sort="0" />
+        <label id="2266" label="" folder="Informality" sort="0" />
+        <label id="2267" label="" folder="Informality" sort="0" />
+        <label id="2268" label="" folder="Informality" sort="0" />
+        <label id="2269" label="" folder="Informality" sort="0" />
+        <label id="2270" label="" folder="Informality" sort="0" />
+        <label id="2271" label="" folder="Informality" sort="0" />
+        <label id="2272" label="" folder="Informality" sort="0" />
+        <label id="2273" label="" folder="Informality" sort="0" />
+        <label id="2274" label="" folder="Informality" sort="0" />
+        <label id="2275" label="" folder="Informality" sort="0" />
+        <label id="2276" label="" folder="Informality" sort="0" />
+        <label id="2277" label="" folder="Informality" sort="0" />
+        <label id="2278" label="" folder="Informality" sort="0" />
+        <label id="2279" label="" folder="Informality" sort="0" />
+        <label id="2280" label="Panties Comment (Informality)" folder="" sort="0" />
+        <label id="2281" label="Panties Comment (Not Informality)" folder="" sort="0" />
+        <label id="2282" label="Removing Underwear From Beneath Skirt" folder="" sort="0" />
+        <label id="2283" label="Removed Underwear From Beneath Skirt" folder="" sort="0" />
+        <label id="2284" label="S6A - Trying to Lose 3" folder="Eichi" sort="0" />
+        <label id="2285" label="S6B - Performance 3A" folder="Eichi" sort="0" />
+        <label id="2286" label="S6C - Performance 3B" folder="Eichi" sort="0" />
+        <label id="2287" label="S2 - Strip For Me! 3A" folder="Darkness" sort="0" />
+        <label id="2288" label="S2 - Strip For Me! 3B" folder="Darkness" sort="0" />
+        <label id="2289" label="S0 - Deception 2" folder="Darkness" sort="0" />
+        <label id="2290" label="S0 - Living 2" folder="Darkness" sort="0" />
+        <label id="2291" label="S0 - Sinister 2" folder="Darkness" sort="0" />
+        <label id="2292" label="S0 - Outfit 2" folder="Darkness" sort="0" />
+        <label id="2293" label="Females" folder="Dirty Talk" sort="0" />
+        <label id="2294" label="Dirty Talk (Females)" folder="Pre-Heavy Forfeit" sort="0" />
+        <label id="2295" label="S5 - Arm 3 (TODO: Replace if Necessary)" folder="Dunban" sort="0" />
+        <label id="2296" label="S0 - What Are You? 1" folder="Dunban" sort="0" />
+        <label id="2297" label="S2 - Type 1" folder="Dunban" sort="0" />
+        <label id="2298" label="Collectible Unlock" folder="" sort="0" />
+        <label id="2299" label="Unlock Panties" folder="Collectibles" sort="0" />
+        <label id="2300" label="Hospitality" folder="Collectibles" sort="0" />
+        <label id="2301" label="Informality" folder="Collectibles" sort="0" />
+        <label id="2302" label="Memorability" folder="Collectibles" sort="0" />
+        <label id="2303" label="Professionality" folder="Collectibles" sort="0" />
+        <label id="2304" label="Vitality" folder="Collectibles" sort="0" />
+        <label id="2305" label="Whimsicality" folder="Collectibles" sort="0" />
+        <label id="2306" label="Default Outfit" folder="Collectibles" sort="0" />
+        <label id="2307" label="Default Outfit" folder="Collectibles" sort="0" />
+        <label id="2308" label="Track Costume First Play" folder="State Setup" sort="0" />
+        <label id="2309" label="Pre-Unlock Comments" folder="Photos Collectible" sort="0" />
+        <label id="2310" label="Initial Post-Unlock Comment" folder="Photos Collectible" sort="0" />
+        <label id="2311" label="Secondary Post-Unlock Comments 2" folder="Photos Collectible" sort="0" />
+        <label id="2312" label="Secondary Post-Unlock Comments" folder="Photos Collectible" sort="0" />
+        <label id="2313" label="Chatter - General" folder="Informality" sort="0" />
+        <label id="2314" label="Chatter - Something Different" folder="Informality" sort="0" />
+        <label id="2315" label="Chatter - Topless Skirt" folder="Informality" sort="0" />
+        <label id="2316" label="Chatter - Leggings" folder="Informality" sort="0" />
+        <label id="2317" label="Chatter - Upskirt / Nopan" folder="Informality" sort="0" />
+        <label id="2318" label="S0 - What Are You? 2" folder="Dunban" sort="0" />
+        <label id="2319" label="S0 - What Are You? 2B" folder="Dunban" sort="0" />
+        <label id="2320" label="S0 - Straight Laced 1B" folder="Eichi" sort="0" />
+        <label id="2321" label="S0 - Straight Laced 1A" folder="Eichi" sort="0" />
+        <label id="2322" label="S1 - Intention 1" folder="Eichi" sort="0" />
+        <label id="2323" label="S4 - Working with an Audience 1" folder="Eichi" sort="0" />
+        <label id="2324" label="S4-6 - Spotlight 1" folder="Eichi" sort="0" />
+        <label id="2325" label="S0-3 - Just Watching 1A" folder="Eichi" sort="0" />
+        <label id="2326" label="S4-6 - Just Watching 1B" folder="Eichi" sort="0" />
+        <label id="2327" label="S0 - Starting Off... 1" folder="Kyouko Toshino" sort="0" />
+        <label id="2328" label="S3 (Informality) - Insert Title Here" folder="Kyouko Toshino" sort="0" />
+        <label id="2329" label="" folder="Informality" sort="0" />
+        <label id="2330" label="S2 - Drive 1" folder="Mitama" sort="0" />
+        <label id="2331" label="S3 (Default Costume) - Something Interesting 1" folder="Mitama" sort="0" />
+        <label id="2332" label="S3 - Purity 1" folder="Mitama" sort="0" />
+        <label id="2333" label="S2 (Default Costume) - Mind Reading 1" folder="Caitlin" sort="0" />
+        <label id="2334" label="S0 - Calm and Collected 1" folder="Caitlin" sort="0" />
+        <label id="2335" label="S5 (Default Costume) - Panties" folder="Caitlin" sort="0" />
+        <label id="2336" label="S5 (Default Costume) - No Bra" folder="Caitlin" sort="0" />
+        <label id="2337" label="How Far Have You Two Gone? (Player Strip) 2A" color="3" folder="Nagatoro" sort="0" />
+        <label id="2338" label="How Far Have You Two Gone? (Player Strip) 2B" color="3" folder="Nagatoro" sort="0" />
+        <label id="2339" label="What Do You See In Her? (Player Strip) 2A" color="3" folder="Nagatoro" sort="0" />
+        <label id="2340" label="What Do You See In Her? (Player Strip) 2B" color="3" folder="Nagatoro" sort="0" />
+        <label id="2341" label="S0 - Hero 2" color="3" folder="Nagatoro" sort="0" />
+        <label id="2342" label="S0 - Starting Off... 2" folder="Kyouko Toshino" sort="0" />
+        <label id="2343" label="S1 - Interests 1A" folder="Nagatoro" sort="0" />
+        <label id="2344" label="S1 - Hero 3" color="3" folder="Nagatoro" sort="0" />
+        <label id="2345" label="S1 - Interests 1B" folder="Nagatoro" sort="0" />
+        <label id="2346" label="S1 - Interests 1C" folder="Nagatoro" sort="0" />
+        <label id="2347" label="S2A - Underdressed 1" folder="Nagatoro" sort="0" />
+        <label id="2348" label="S2B - Join Us Instead? 1" folder="Nagatoro" sort="0" />
+        <label id="2349" label="S1 - Take It Slow 1" folder="Kora" sort="0" />
+        <label id="2350" label="S0 - What Are You? 2" folder="Kora" sort="0" />
+        <label id="2351" label="S0 - Older Sister 1" folder="Aqua (KH)" sort="0" />
+        <label id="2352" label="" folder="Roll" sort="0" />
+        <label id="2353" label="" folder="Roll" sort="0" />
+        <label id="2354" label="S1 - Starting Off... 3" folder="Kyouko Toshino" sort="0" />
+        <label id="2355" label="S2 - Futa Reveal 2" folder="Sanny &amp; Tess" sort="0" />
+        <label id="2356" label="S2 - Futa Reveal 2B" folder="Sanny &amp; Tess" sort="0" />
+        <label id="2357" label="S3 - Futa Reveal 3B" folder="Sanny &amp; Tess" sort="0" />
+        <label id="2358" label="S3 - Futa Reveal 3A" folder="Sanny &amp; Tess" sort="0" />
+        <label id="2359" label="S0 - Mega Man 1" folder="Roll Caskett" sort="0" />
+        <label id="2360" label="S1 - Starting Off... 3" folder="Kyouko Toshino" sort="0" />
+        <label id="2361" label="S3 - Sunny 1" folder="Kyouko Toshino" sort="0" />
+        <label id="2362" label="S0 - Older Sister 2" folder="Aqua (KH)" sort="0" />
+        <label id="2363" label="S0 - Why So Rude? 1A (SMode Active, 1 Male)" folder="Maria" sort="0" />
+        <label id="2364" label="" folder="Maria" sort="0" />
+        <label id="2365" label="On First Male Strip" folder="Maria" sort="0" />
+        <label id="2366" label="S0 - Why So Rude? 1B (SMode Active, Multiple Males)" folder="Maria" sort="0" />
+        <label id="2367" label="S0 - Eyes 1 (SMode Not Active)" folder="Maria" sort="0" />
+        <label id="2368" label="Lost with Good Hand" folder="" sort="0" />
+        <label id="2369" label="Lost with Good Hand (One Opponent Left)" folder="" sort="0" />
+        <label id="2370" label="S1 - Phone Call 3" folder="Ringo" sort="0" />
+        <label id="2371" label="S1 - Bunnysuit 1 (Whimsicality)" folder="Mitama" sort="0" />
+        <label id="2372" label="S2 - Burdens 1" folder="Mitama" sort="0" />
+        <label id="2373" label="S3 - Purity 2" folder="Mitama" sort="0" />
+        <label id="2374" label="S2 - Drive 2" folder="Mitama" sort="0" />
+        <label id="2375" label="S3 (Default Costume) - Something Interesting 2" folder="Mitama" sort="0" />
+        <label id="2376" label="S3 - Fizz Reveal" folder="Mia (Golden Sun)" sort="0" />
+        <label id="2377" label="S0 - Image 1" folder="Mia (Golden Sun)" sort="0" />
+        <label id="2378" label="S0 - Atmosphere 1" folder="Yumeko" sort="0" />
+        <label id="2379" label="S0 - Outfit 1A (Fallback)" folder="Lysithea" sort="0" />
+        <label id="2380" label="S0 - Outfit 1B (Self Costume = Default / Informality + Early Self Stages)" folder="Lysithea" sort="0" />
     </labels>
-    <nextId>2150</nextId>
+    <nextId>2380</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="__human_nickname" />
@@ -2484,6 +2733,8 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Anatoly_Sunny2" />
         <marker scope="Public" name="Aoba_JobDescription1" />
         <marker scope="Public" name="Aoba_Unwind1" />
+        <marker scope="Public" name="Aqua_OlderSister1" />
+        <marker scope="Public" name="Aqua_OlderSister2" />
         <marker scope="Public" name="AquaGrunt_FreeTime1" />
         <marker scope="Public" name="AquaGrunt_Lust1" />
         <marker scope="Public" name="AquaGrunt_Lust1A" />
@@ -2647,6 +2898,9 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Blake_LightenUp3B" />
         <marker scope="Public" name="ButtPose" />
         <marker scope="Public" name="ButtShown" />
+        <marker scope="Public" name="Caitlin_CalmAndCollected1" />
+        <marker scope="Public" name="Caitlin_DefaultMindReading1" />
+        <marker scope="Public" name="Caitlin_Panties" />
         <marker scope="Public" name="Calc_CurIsLeapYear" />
         <marker scope="Public" name="Calc_CurYearMod100" />
         <marker scope="Public" name="Calc_CurYearMod4" />
@@ -2665,15 +2919,38 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="CharacterWinCount" />
         <marker scope="Public" name="Charlie_KindAndSweet1" />
         <marker scope="Public" name="close_loss">Mari lost the game, despite being close to winning.</marker>
+        <marker scope="Public" name="CompletedGamesTotal" />
+        <marker scope="Public" name="Costume_FinishedDefault" />
+        <marker scope="Public" name="Costume_FinishedHospitality" />
+        <marker scope="Public" name="Costume_FinishedInformality" />
+        <marker scope="Public" name="Costume_FinishedMemorability" />
+        <marker scope="Public" name="Costume_FinishedProfessionality" />
+        <marker scope="Public" name="Costume_FinishedVitality" />
+        <marker scope="Public" name="Costume_FinishedWhimsicality" />
+        <marker scope="Public" name="Costume_FirstTime" />
         <marker scope="Public" name="CriticalDarling_Keytar" />
         <marker scope="Public" name="CriticalDarling_Keytar2" />
         <marker scope="Public" name="css_enable-custom-box" />
         <marker scope="Public" name="Cynthia_Downtime1" />
         <marker scope="Public" name="Cynthia_Downtime2" />
+        <marker scope="Public" name="Darkness_Deception1" />
+        <marker scope="Public" name="Darkness_Deception2" />
         <marker scope="Public" name="Darkness_Defensive1" />
         <marker scope="Public" name="Darkness_Defensive2" />
         <marker scope="Public" name="Darkness_Defensive3" />
+        <marker scope="Public" name="Darkness_Living1" />
+        <marker scope="Public" name="Darkness_Living2" />
+        <marker scope="Public" name="darkness_mari_defensive3" />
+        <marker scope="Public" name="Darkness_Outfit1" />
+        <marker scope="Public" name="Darkness_Outfit2" />
+        <marker scope="Public" name="Darkness_Sinister1" />
+        <marker scope="Public" name="Darkness_Sinister2" />
         <marker scope="Public" name="Darkness_StripForMe1" />
+        <marker scope="Public" name="Darkness_StripForMe2" />
+        <marker scope="Public" name="Darkness_StripForMe2A" />
+        <marker scope="Public" name="Darkness_StripForMe2B" />
+        <marker scope="Public" name="Darkness_StripForMe3A" />
+        <marker scope="Public" name="Darkness_StripForMe3B" />
         <marker scope="Public" name="Date_CurrentDayOfYear" />
         <marker scope="Public" name="Date_CurrentWeekdayZero" />
         <marker scope="Public" name="Date_DaysSinceLastPlay" />
@@ -2699,6 +2976,7 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Dawn_Sightseeing1">Mari asks Dawn about sightseeing: Variant A sets this marker to 1, and just has Mari ask what sights Dawn likes around her hometown/city. Variants B and C set this marker to 2 and 3, respectively, and have Mari actually ask Dawn out on a sightseeing date.</marker>
         <marker scope="Public" name="Dawn_Stories1">Mari asks Dawn if she can tell any interesting stories about the player, since they seem to know each other.</marker>
         <marker scope="Public" name="Dawn_WhyAreYouHere1">Mari asks Dawn why she chose strip poker as a way to hang out with people. Variants B and C set this marker to 2 and 3, respectively, and have Mari ask if she's particularly interested in anyone at the table.</marker>
+        <marker scope="Public" name="DifficultyOverride" />
         <marker scope="Public" name="DirtyTalk_AraAra" />
         <marker scope="Public" name="DirtyTalk_OppChestL" />
         <marker scope="Public" name="DirtyTalk_OppChestM" />
@@ -2732,16 +3010,38 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Dorothy_EatingOut1" />
         <marker scope="Public" name="Dorothy_EatingOut2" />
         <marker scope="Public" name="Dorothy_WhatBringsYouHere1" />
+        <marker scope="Public" name="DroppedCards" />
+        <marker scope="Public" name="Dunban_Arm3" />
+        <marker scope="Public" name="Dunban_WhatAreYou1" />
+        <marker scope="Public" name="Dunban_WhatAreYou2" />
+        <marker scope="Public" name="Dunban_WhatAreYou2A" />
+        <marker scope="Public" name="Dunban_WhatAreYou2B" />
         <marker scope="Public" name="Eichi_AfterlifeChatter" />
+        <marker scope="Public" name="Eichi_Audience1" />
+        <marker scope="Public" name="Eichi_Intention1" />
+        <marker scope="Public" name="Eichi_Interest1A" />
+        <marker scope="Public" name="Eichi_Interest1B" />
+        <marker scope="Public" name="Eichi_JustWatching1" />
+        <marker scope="Public" name="Eichi_JustWatching1A" />
+        <marker scope="Public" name="Eichi_JustWatching1B" />
         <marker scope="Public" name="Eichi_KinkTalk1" />
         <marker scope="Public" name="Eichi_KinkTalk2" />
         <marker scope="Public" name="Eichi_KinkTalk3" />
         <marker scope="Public" name="Eichi_Music1" />
+        <marker scope="Public" name="Eichi_Music2" />
+        <marker scope="Public" name="Eichi_Music3" />
         <marker scope="Public" name="Eichi_Performance1A" />
         <marker scope="Public" name="Eichi_Performance1B" />
+        <marker scope="Public" name="Eichi_Performance2A" />
+        <marker scope="Public" name="Eichi_Performance2B" />
+        <marker scope="Public" name="Eichi_Performance3A" />
+        <marker scope="Public" name="Eichi_Performance3B" />
         <marker scope="Public" name="Eichi_PerformerChatter" />
+        <marker scope="Public" name="Eichi_Spotlight1" />
         <marker scope="Public" name="Eichi_TabOfferChatter" />
         <marker scope="Public" name="Eichi_TryingToLose1" />
+        <marker scope="Public" name="Eichi_TryingToLose2" />
+        <marker scope="Public" name="Eichi_TryingToLose3" />
         <marker scope="Public" name="Emi_Competitive1" />
         <marker scope="Public" name="Emi_Energy1" />
         <marker scope="Public" name="Emi_KneeInjuries1" />
@@ -2869,14 +3169,24 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Generic_AccessoryInLead" />
         <marker scope="Public" name="Generic_AccessorySpeedUp" />
         <marker scope="Public" name="Generic_BeltBeforePants" />
+        <marker scope="Public" name="Generic_BluffFailed" />
+        <marker scope="Public" name="Generic_Bluffing" />
+        <marker scope="Public" name="Generic_BluffSuccess" />
         <marker scope="Public" name="Generic_CleanFloors" />
+        <marker scope="Public" name="Generic_EarlyChestReveal1" />
+        <marker scope="Public" name="Generic_EarlyChestReveal2" />
+        <marker scope="Public" name="Generic_EarlyCrotchReveal1" />
+        <marker scope="Public" name="Generic_EarlyCrotchReveal2" />
         <marker scope="Public" name="Generic_EarlyMajorRemoved" />
         <marker scope="Public" name="Generic_EarlyRoundMajorRemoved" />
         <marker scope="Public" name="Generic_FinallyIndecent" />
+        <marker scope="Public" name="Generic_FivePlusPlays" />
         <marker scope="Public" name="Generic_FridayNights" />
         <marker scope="Public" name="Generic_GameWinnerWonTwice" />
         <marker scope="Public" name="Generic_GlassesRemoved" />
         <marker scope="Public" name="Generic_HatInside" />
+        <marker scope="Public" name="Generic_LastNakedA" />
+        <marker scope="Public" name="Generic_LastNakedB" />
         <marker scope="Public" name="Generic_LastSeenComment" />
         <marker scope="Public" name="Generic_MariLostAfterPrevLoss" />
         <marker scope="Public" name="Generic_MariLostAfterPrevWin" />
@@ -2884,6 +3194,7 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Generic_MariWinsA" />
         <marker scope="Public" name="Generic_MariWinsB" />
         <marker scope="Public" name="Generic_MariWinsC" />
+        <marker scope="Public" name="Generic_Memento1" />
         <marker scope="Public" name="Generic_Mondays" />
         <marker scope="Public" name="Generic_MultiplePreviousPlays" />
         <marker scope="Public" name="Generic_NoPrevPlayComment" />
@@ -2905,15 +3216,39 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Generic_RemovingSchoolUniformRibbon1" />
         <marker scope="Public" name="Generic_RemovingTie1" />
         <marker scope="Public" name="Generic_RemovingWeapon" />
+        <marker scope="Public" name="Generic_Repetition" />
         <marker scope="Public" name="Generic_SlowStart1" />
         <marker scope="Public" name="Generic_SlowStartChatter" />
         <marker scope="Public" name="Generic_SuperheroRemovingCostume" />
         <marker scope="Public" name="Generic_SwimsuitNoWater" />
         <marker scope="Public" name="Generic_SwimsuitWater" />
+        <marker scope="Public" name="Generic_TargetedHiAgain" />
+        <marker scope="Public" name="Generic_TargetedItsBeenAFewDays" />
+        <marker scope="Public" name="Generic_TargetedItsBeenAWhile" />
+        <marker scope="Public" name="Generic_TargetedSeeingSomethingNew" />
+        <marker scope="Public" name="Generic_TargetRematchComment" />
         <marker scope="Public" name="Generic_TargetWonPrev" />
+        <marker scope="Public" name="Generic_TellsBadHand" />
+        <marker scope="Public" name="Generic_TellsContinued" />
+        <marker scope="Public" name="Generic_TellsContinued2" />
+        <marker scope="Public" name="Generic_TellsGoodHand" />
+        <marker scope="Public" name="Generic_TellsIntro" />
+        <marker scope="Public" name="Generic_TellsIntroLocal" />
+        <marker scope="Public" name="Generic_UnderwearBeforeSkirt1" />
+        <marker scope="Public" name="Generic_UnderwearBeforeSkirt2" />
+        <marker scope="Public" name="Generic_VeryEarlyReveal1" />
         <marker scope="Public" name="Generic_VeryLargeLead" />
         <marker scope="Public" name="Generic_WeekendComment" />
         <marker scope="Public" name="Generic_WeekendMeetupComment" />
+        <marker scope="Public" name="GenericPostStrip_PostEncore1" />
+        <marker scope="Public" name="GenericPostStrip_PostEncore2" />
+        <marker scope="Public" name="GenericPostStrip_PostEncore4" />
+        <marker scope="Public" name="GenericPostStrip_PostEncore5" />
+        <marker scope="Public" name="GenericPostStrip_PostEncore5A" />
+        <marker scope="Public" name="GenericPostStrip_PostEncore5B" />
+        <marker scope="Public" name="GenericPostStrip_PostEncore6" />
+        <marker scope="Public" name="GenericPostStrip_PostEncore7" />
+        <marker scope="Public" name="GenericStrip_PostEncore1" />
         <marker scope="Public" name="Gloomy_Lost" />
         <marker scope="Public" name="Gloomy_Stripping" />
         <marker scope="Public" name="Gloria_CurryChatter" />
@@ -3022,6 +3357,9 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Hilda_SchoolClasses3A" />
         <marker scope="Public" name="Hilda_SchoolClasses3B" />
         <marker scope="Public" name="Human_MultipleUnderwear" />
+        <marker scope="Public" name="HumanRemainingLayers" />
+        <marker scope="Public" name="HumanStartingLayers" />
+        <marker scope="Public" name="HumanStartingLayersCalculated" />
         <marker scope="Public" name="IgnatzDelayedLoss1">Set when Ignatz loses during his glasses sequence, if he didn't lose immediately after starting the sequence.</marker>
         <marker scope="Public" name="IgnatzGlasses1">Set when Ignatz loses his glasses (during After Strip / Removed Minor).</marker>
         <marker scope="Public" name="IgnatzGlasses2">Set during Mari's first comment about Ignatz losing his glasses (Hand phase, both line variants)</marker>
@@ -3034,6 +3372,15 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="IgnatzTargetLoss1">Set during Ignatz's glasses sequence on the first Opponent Lost phase, if Ignatz lost.</marker>
         <marker scope="Public" name="IgnatzWait1">Mari asks if the game shouldn't stop while Ignatz finds his glasses.</marker>
         <marker scope="Public" name="Indifferent_Stripping" />
+        <marker scope="Public" name="Informality_Leggings" />
+        <marker scope="Public" name="Informality_Necklace1" />
+        <marker scope="Public" name="Informality_Nopan" />
+        <marker scope="Public" name="Informality_Nopan1" />
+        <marker scope="Public" name="Informality_SomethingDifferent" />
+        <marker scope="Public" name="Informality_ToplessSkirt" />
+        <marker scope="Public" name="Informality_Upskirt" />
+        <marker scope="Public" name="Informality_Upskirt1" />
+        <marker scope="Public" name="Informality_Upskirt2" />
         <marker scope="Public" name="InHeavyMasturbation" />
         <marker scope="Public" name="Innocent_Lost" />
         <marker scope="Public" name="Innocent_Stripped" />
@@ -3071,7 +3418,10 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Komi_OpenRelationship1" />
         <marker scope="Public" name="Komi_Piano1A" />
         <marker scope="Public" name="Komi_Piano1B" />
+        <marker scope="Public" name="Kora_TakeItSlow1" />
         <marker scope="Public" name="Kora_WhatAreYou1" />
+        <marker scope="Public" name="Kora_WhatAreYou1=1" />
+        <marker scope="Public" name="Kora_WhatAreYou2" />
         <marker scope="Public" name="Kumatora_Animals1" />
         <marker scope="Public" name="Kumatora_Animals2" />
         <marker scope="Public" name="Kumatora_Delinquent1" />
@@ -3145,6 +3495,11 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Kyou_Tsundere3" />
         <marker scope="Public" name="Kyou_Twin1" />
         <marker scope="Public" name="Kyou_Twin2" />
+        <marker scope="Public" name="Kyouko_Sunny1" />
+        <marker scope="Public" name="KyoukoT_InformalityS3" />
+        <marker scope="Public" name="KyoukoT_StartingOff1" />
+        <marker scope="Public" name="KyoukoT_StartingOff2" />
+        <marker scope="Public" name="KyoukoT_StartingOff3" />
         <marker scope="Public" name="Larachel_Hypocritical1" />
         <marker scope="Public" name="Larachel_Loud1" />
         <marker scope="Public" name="Larachel_Staff1" />
@@ -3162,9 +3517,17 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Leon_Studies1" />
         <marker scope="Public" name="Leon_Studies2" />
         <marker scope="Public" name="Leon_Studies3" />
+        <marker scope="Public" name="Lysithea_Outfit1" />
+        <marker scope="Public" name="Lysithea_Outfit1A" />
+        <marker scope="Public" name="Lysithea_Outfit1B" />
         <marker scope="Public" name="Mahiru_Camera1" />
         <marker scope="Public" name="Mahiru_Camera2A" />
         <marker scope="Public" name="Mahiru_Camera2B" />
+        <marker scope="Public" name="Maria_Eyes1" />
+        <marker scope="Public" name="Maria_SModeStart" />
+        <marker scope="Public" name="Maria_WhySoRude1" />
+        <marker scope="Public" name="Maria_WhySoRude1A" />
+        <marker scope="Public" name="Maria_WhySoRude1B" />
         <marker scope="Public" name="Marinette_SuitStrip3" />
         <marker scope="Public" name="MariS_CapturedMyHeart1" />
         <marker scope="Public" name="MariS_CapturedMyHeart2A" />
@@ -3299,6 +3662,8 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Meia_Details1" />
         <marker scope="Public" name="MentionedPanties" />
         <marker scope="Public" name="MetNoire" />
+        <marker scope="Public" name="MiaGS_FizzReveal3" />
+        <marker scope="Public" name="MiaGS_Image1" />
         <marker scope="Public" name="might_win">Mari has had a good chance of winning the game at least once (1 opponent left with no layers on, Mari is not naked, and she has a Good or Okay hand). These lines can repeat, and this marker will count up every time she says them.</marker>
         <marker scope="Public" name="Mikan_Attention1" />
         <marker scope="Public" name="Mikan_Attention2" />
@@ -3353,6 +3718,14 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Misaka_Sisters2" />
         <marker scope="Public" name="Misaka_Sisters2=1" />
         <marker scope="Public" name="Misty_Build3" />
+        <marker scope="Public" name="Mitama_Bunnysuit1" />
+        <marker scope="Public" name="Mitama_Burdens1" />
+        <marker scope="Public" name="Mitama_DefaultInteresting1" />
+        <marker scope="Public" name="Mitama_DefaultInteresting2" />
+        <marker scope="Public" name="Mitama_Drive1" />
+        <marker scope="Public" name="Mitama_Drive2" />
+        <marker scope="Public" name="Mitama_Purity1" />
+        <marker scope="Public" name="Mitama_Purity2" />
         <marker scope="Public" name="Moe_Stripped" />
         <marker scope="Public" name="Monika_PianoPractice1" />
         <marker scope="Public" name="Monika_Player1" />
@@ -3375,15 +3748,35 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Nagatoro_FlirtingWithPlayer1" />
         <marker scope="Public" name="Nagatoro_FlirtingWithPlayer1A" />
         <marker scope="Public" name="Nagatoro_FlirtingWithPlayer1B" />
+        <marker scope="Public" name="Nagatoro_FlirtingWithPlayer2" />
         <marker scope="Public" name="Nagatoro_ForMyself" />
         <marker scope="Public" name="Nagatoro_ForMyselfPlayerStrip1" />
+        <marker scope="Public" name="Nagatoro_ForMyselfPlayerStrip2" />
+        <marker scope="Public" name="Nagatoro_Hero1" />
+        <marker scope="Public" name="Nagatoro_Hero2" />
+        <marker scope="Public" name="Nagatoro_Hero3" />
+        <marker scope="Public" name="Nagatoro_HowFar1" />
+        <marker scope="Public" name="Nagatoro_HowFar2A" />
+        <marker scope="Public" name="Nagatoro_HowFar2B" />
+        <marker scope="Public" name="Nagatoro_Interests1" />
+        <marker scope="Public" name="Nagatoro_Interests1A" />
+        <marker scope="Public" name="Nagatoro_Interests1B" />
+        <marker scope="Public" name="Nagatoro_JoinUs1" />
         <marker scope="Public" name="Nagatoro_MaleNotAVirgin" />
         <marker scope="Public" name="Nagatoro_NotAVirginDenial" />
+        <marker scope="Public" name="Nagatoro_NotAVirginDenial2" />
         <marker scope="Public" name="Nagatoro_PlayerJustGross1" />
         <marker scope="Public" name="Nagatoro_PlayerJustGross1A" />
         <marker scope="Public" name="Nagatoro_PlayerJustGross1B" />
+        <marker scope="Public" name="Nagatoro_PlayerJustGross2A" />
         <marker scope="Public" name="Nagatoro_SomethingAboutPlayer" />
         <marker scope="Public" name="Nagatoro_SomethingAboutPlayer2" />
+        <marker scope="Public" name="Nagatoro_SomethingAboutPlayer3" />
+        <marker scope="Public" name="Nagatoro_Underdressed1" />
+        <marker scope="Public" name="Nagatoro_WhatDoYouSeeInHer1" />
+        <marker scope="Public" name="Nagatoro_WhatDoYouSeeInHer2" />
+        <marker scope="Public" name="Nagatoro_WhatDoYouSeeInHer2A" />
+        <marker scope="Public" name="Nagatoro_WhatDoYouSeeInHer2B" />
         <marker scope="Public" name="Nagisa_R_OpeningUpA1" />
         <marker scope="Public" name="Nagisa_R_OpeningUpB1" />
         <marker scope="Public" name="Nagisa_R_SchoolDay1" />
@@ -3404,6 +3797,7 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Natsuki_Visit1" />
         <marker scope="Public" name="Neptune_Goddess1" />
         <marker scope="Private" name="nickname" />
+        <marker scope="Public" name="nickname*=Magma" />
         <marker scope="Public" name="Nodoka_Student1" />
         <marker scope="Public" name="Nodoka_Student1A" />
         <marker scope="Public" name="Nodoka_Student1B" />
@@ -3543,6 +3937,8 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Petra_Observant1" />
         <marker scope="Public" name="Petra_Piano1" />
         <marker scope="Public" name="Petra_Tattoo1" />
+        <marker scope="Public" name="PhotosComment1" />
+        <marker scope="Public" name="PhotosComment1_Local" />
         <marker scope="Public" name="PlayerRevealedUnlockedPanties" />
         <marker scope="Public" name="PlayerStartedDecent" />
         <marker scope="Public" name="PlayerStartedExposed" />
@@ -3556,6 +3952,7 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Polly_Impressions1" />
         <marker scope="Public" name="PreHeavyForfeit" />
         <marker scope="Public" name="PreHeavyForfeit_DirtyTalkA" />
+        <marker scope="Public" name="PreHeavyForfeit_DirtyTalkF" />
         <marker scope="Public" name="PreHeavyForfeit_DirtyTalkM" />
         <marker scope="Public" name="PreHeavyForfeit_DirtyTalkNoOMORI" />
         <marker scope="Public" name="PreHeavyForfeit_DirtyTalkP" />
@@ -3810,6 +4207,8 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="RinBasil_YouDidIt" />
         <marker scope="Public" name="Ringo_PhoneCall1" />
         <marker scope="Public" name="Ringo_PhoneCall2" />
+        <marker scope="Public" name="Ringo_PhoneCall3" />
+        <marker scope="Public" name="Roll_MegaMan1" />
         <marker scope="Public" name="Rosa_Avenue1" />
         <marker scope="Public" name="Rosa_Avenue1=1" />
         <marker scope="Public" name="Rosa_Avenue2" />
@@ -3831,6 +4230,19 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="SakiY_SelfCare2" />
         <marker scope="Public" name="SakiZLS_Idol1" />
         <marker scope="Public" name="SakiZLS_School" />
+        <marker scope="Public" name="Sakura_Distract" />
+        <marker scope="Public" name="Sakura_DistractedSwap" />
+        <marker scope="Public" name="Sakura_Head2" />
+        <marker scope="Public" name="Sakura_Head3" />
+        <marker scope="Public" name="Sakura_Makeup2" />
+        <marker scope="Public" name="Sakura_Makeup3" />
+        <marker scope="Public" name="Sakura_StopWorrying" />
+        <marker scope="Public" name="Sakura_WhoAreYou1" />
+        <marker scope="Public" name="SannyTess_FutaReveal2" />
+        <marker scope="Public" name="SannyTess_FutaReveal2A" />
+        <marker scope="Public" name="SannyTess_FutaReveal2B" />
+        <marker scope="Public" name="SannyTess_FutaReveal3A" />
+        <marker scope="Public" name="SannyTess_FutaReveal3B" />
         <marker scope="Public" name="Sayori_Hair1" />
         <marker scope="Public" name="Sayori_Hair2_A1" />
         <marker scope="Public" name="Sayori_Hair2_A2" />
@@ -3870,6 +4282,22 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Shy_Lost" />
         <marker scope="Public" name="Shy_Lost1" />
         <marker scope="Public" name="Shy_Lost2" />
+        <marker scope="Public" name="SlotFour_DaysSinceLastGame" />
+        <marker scope="Public" name="SlotFour_LastPlayedTime" />
+        <marker scope="Public" name="SlotFour_PlaysToday" />
+        <marker scope="Public" name="SlotFour_PlaysTotal" />
+        <marker scope="Public" name="SlotOne_DaysSinceLastGame" />
+        <marker scope="Public" name="SlotOne_LastPlayedTime" />
+        <marker scope="Public" name="SlotOne_PlaysToday" />
+        <marker scope="Public" name="SlotOne_PlaysTotal" />
+        <marker scope="Public" name="SlotThree_DaysSinceLastGame" />
+        <marker scope="Public" name="SlotThree_LastPlayedTime" />
+        <marker scope="Public" name="SlotThree_PlaysToday" />
+        <marker scope="Public" name="SlotThree_PlaysTotal" />
+        <marker scope="Public" name="SlotTwo_DaysSinceLastGame" />
+        <marker scope="Public" name="SlotTwo_LastPlayedTime" />
+        <marker scope="Public" name="SlotTwo_PlaysToday" />
+        <marker scope="Public" name="SlotTwo_PlaysTotal" />
         <marker scope="Public" name="SpecialName_Corgi" />
         <marker scope="Public" name="SpecialName_Corgi1" />
         <marker scope="Public" name="SpecialName_Corgi2" />
@@ -3906,10 +4334,34 @@ At least at time of writing (Nov. 2021), Mari is listed at the very bottom of th
         <marker scope="Public" name="Supernova_Time2" />
         <marker scope="Public" name="Supernova_Time2=1" />
         <marker scope="Public" name="Supernova_Time3" />
+        <marker scope="Public" name="Target_DaysSinceLastGame" />
+        <marker scope="Public" name="Target_DaysSinceLastGameWrapped" />
+        <marker scope="Public" name="Target_FamiliarComment" />
+        <marker scope="Public" name="Target_GamesSinceLastPlay" />
+        <marker scope="Public" name="Target_LastPlayedGameCtr" />
+        <marker scope="Public" name="Target_LastPlayedOutcome" />
+        <marker scope="Public" name="Target_LastPlayedStage" />
+        <marker scope="Public" name="Target_LastPlayedStatus" />
+        <marker scope="Public" name="Target_LastPlayedTime" />
         <marker scope="Public" name="Target_MultipleUnderwear" />
         <marker scope="Public" name="Target_MultipleUnderwear*" />
+        <marker scope="Public" name="Target_PlaysToday" />
+        <marker scope="Public" name="Target_PlaysTotal" />
+        <marker scope="Public" name="Target_PrevPlayedGameCtr" />
+        <marker scope="Public" name="Target_PrevPlayedOutcome" />
+        <marker scope="Public" name="Target_PrevPlayedStage" />
+        <marker scope="Public" name="Target_PrevPlayedStatus" />
+        <marker scope="Public" name="Target_PrevPlayedTime" />
+        <marker scope="Public" name="Target_PrevPlayedTime*==~self.marker.Date_CurrentDayOfYear~" />
+        <marker scope="Public" name="Target_TickedSeenCounter" />
         <marker scope="Public" name="TargetInitiallyDecent" />
         <marker scope="Public" name="TargetInitiallyExposed" />
+        <marker scope="Public" name="TargetLastPlayedAt" />
+        <marker scope="Public" name="TargetLastPlayedTime" />
+        <marker scope="Public" name="TargetLastPlayedTime*==~month.number~0~day.number~" />
+        <marker scope="Public" name="TargetPlays" />
+        <marker scope="Public" name="Tell_Failure" />
+        <marker scope="Public" name="Tell_Success" />
         <marker scope="Public" name="Tomoko_Forfeit" />
         <marker scope="Public" name="Tomoko_JugglingTime1" />
         <marker scope="Public" name="Toph_Teaching1" />

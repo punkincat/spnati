@@ -1,2 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<collectibles />
+<collectibles>
+    <collectible id="yunyun_skirt" img="opponents/yunyun/collectibles/c_skirt_image.png" thumbnail="opponents/yunyun/collectibles/c_skirt.png">
+        <title>Yunyun's Skirt</title>
+        <subtitle>Guaranteed to attract many friends! Probably.</subtitle>
+        <text>The skirt that Yunyun wears in her casual outfit. Someone told her those revealing clothes would help her with making friends, but it seems they're much more effective at drawing attention to her body...</text>
+        <unlock>Win a game against Yunyun.</unlock>
+        <hide-details>true</hide-details>
+        <wearable>true</wearable>
+        <clothing name="skirt" generic="skirt" position="lower" type="major" img="opponents/yunyun/collectibles/c_skirt.png" />
+    </collectible>
+    <collectible id="friendship_band" img="opponents/yunyun/collectibles/c_friendshipband_image.png" thumbnail="opponents/yunyun/collectibles/Friendshipband.png">
+        <title>Friendship Band</title>
+        <subtitle>Crafted with love from someone in dire need of more friends.</subtitle>
+        <text>Yunyun gave you this handmade friendship band as a gift. She would probably be happy to see you wearing it.</text>
+        <unlock>Win a game against Yunyun in her Summer of Friends costume or win a game against Yunyun without showing her your chest or crotch.</unlock>
+        <hide-details>true</hide-details>
+        <wearable>true</wearable>
+        <clothing name="friendship band" generic="armbands" position="arms" type="extra" img="opponents/yunyun/collectibles/Friendshipband.png" />
+    </collectible>
+</collectibles>

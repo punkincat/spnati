@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>roll_caskett_hydrodynamic_mechanic</id>
+    <label>Roll</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag remove="true">bodysuit</tag>
+        <tag from="0" to="1">choker</tag>
+        <tag remove="true">no_bra</tag>
+        <tag>scantily-clad</tag>
+        <tag>summer_skin</tag>
+        <tag from="0" to="5">swimwear</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/roll_caskett_hydrodynamic_mechanic/</folder>
+    <folder stage="6">opponents/roll_caskett/</folder>
+    <wardrobe>
+        <clothing name="bottom" generic="swimsuit" position="lower" type="major" plural="true" />
+        <clothing name="top" generic="swimsuit" position="upper" type="important" plural="true" />
+        <clothing name="visor" generic="hat" position="head" type="extra" />
+        <clothing name="sandals" generic="shoes" position="feet" type="minor" plural="true" />
+        <clothing name="choker" generic="jewelry" position="neck" type="extra" />
+        <clothing name="vest" generic="vest" position="upper" type="major" />
+    </wardrobe>
+
+</costume>

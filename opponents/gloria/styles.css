@@ -1,9 +1,28 @@
 .dialogue .gloria[data-character="gloria"] {
-  /*This is an example style.*/
+  /*Gloria is speaking*/
   color: Green;
 }
 
 .dialogue .rosa[data-character="gloria"] {
-  /**/
+  /*Rosa is speaking*/
   color: #0080FF;
+}
+
+.dialogue .epi[data-character="gloria"] {
+  /*Epilogue style*/
+  padding: 0rem;
+  margin: 0;
+  font-size: 110%;
+  border-radius: 1.0rem;
+}
+
+.dialogue-bubble[data-character="gloria"][data-dialogue-styles~="no-bubble"]::before {
+    content: none;
+}
+
+.dialogue-bubble[data-character="gloria"][data-dialogue-styles~="no-bubble"] {
+    background: none;
+    color: white;
+    text-shadow: -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000, 0 0 3px #000, 0 0 2px #000;
+    border: none;
 }
