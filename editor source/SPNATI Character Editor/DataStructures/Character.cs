@@ -210,6 +210,11 @@ namespace SPNATI_Character_Editor
 		[XmlArray("poses")]
 		[XmlArrayItem("pose")]
 		public List<Pose> Poses { get; set; }
+		
+		[XmlNewLine]
+		[XmlArray("pose-sets")]
+		[XmlArrayItem("set")]
+		public List<PoseSet> PoseSets { get; set; }
 
 		[XmlNewLine(XmlNewLinePosition.Both)]
 		[XmlElement("behaviour")]
@@ -336,6 +341,7 @@ namespace SPNATI_Character_Editor
 			Nicknames = new ObservableCollection<Nickname>();
 			Behavior = new Behaviour();
 			Poses = new List<Pose>();
+			PoseSets = new List<PoseSet>();
 			Wardrobe = new List<Clothing>();
 			Collectibles = new CollectibleData();
 			PoseLibrary = new PoseMap(this);
@@ -362,6 +368,7 @@ namespace SPNATI_Character_Editor
 			StartingLines = new List<DialogueLine>();
 			Endings = new List<Epilogue>();
 			Poses = new List<Pose>();
+			PoseSets = new List<PoseSet>();
 			Version = "";
 			Nicknames = new ObservableCollection<Nickname>();
 			Collectibles = new CollectibleData();
@@ -910,9 +917,9 @@ namespace SPNATI_Character_Editor
 							{
 								usedStages.Add(stage);
 								string imgToAdd = img.Image.Replace("#", stage.ToString());
-								if (imgToAdd.Contains("custom:") && !imgToAdd.Contains(stage.ToString()))
+								if ((imgToAdd.Contains("custom:") || (imgToAdd.Contains("set:"))) && !imgToAdd.Contains(stage.ToString()))
 								{
-									// it's a cross-stage custom pose
+									// it's a cross-stage custom pose/pose set
 									imgToAdd += " CROSS " + stage;
 								}
 
@@ -933,7 +940,7 @@ namespace SPNATI_Character_Editor
 								}
 							}
 						}
-						else if (line.Image.Contains("custom:"))
+						else if (line.Image.Contains("custom:") || line.Image.Contains("set:"))
 						{
 							foreach (int stage in theCase.Stages)
 							{
@@ -943,7 +950,7 @@ namespace SPNATI_Character_Editor
 
 									if (!imgToAdd.Contains(stage.ToString()))
 									{
-										// it's a cross-stage custom pose
+										// it's a cross-stage custom pose/pose set
 										imgToAdd += " CROSS " + stage;
 									}
 
@@ -1255,6 +1262,13 @@ namespace SPNATI_Character_Editor
 			get { return Poses; }
 			set { Poses = value; }
 		}
+		
+		public List<PoseSet> CustomPoseSets
+		{
+			get { return PoseSets; }
+			set { PoseSets = value; }
+		}
+
 
 		/// <summary>
 		/// Enumerates through all tags belonging to a certain group

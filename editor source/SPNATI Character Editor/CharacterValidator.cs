@@ -339,6 +339,15 @@ namespace SPNATI_Character_Editor
 										warnings.Add(new ValidationError(ValidationFilterLevel.MissingImages, string.Format("Pose {1} does not exist. {0}", caseLabel, img), context));
 									}
 								}
+								else if (img.StartsWith("set:"))
+								{
+									string id = img.Substring(4);
+									PoseSet set = character.PoseSets.Find(p => p.Id == id);
+									if (set == null)
+									{
+										warnings.Add(new ValidationError(ValidationFilterLevel.MissingImages, string.Format("Pose set {1} does not exist. {0}", caseLabel, img), context));
+									}
+								}
 								else
 								{
 									if (!File.Exists(Path.Combine(Config.GetRootDirectory(character), img)))
@@ -397,6 +406,11 @@ namespace SPNATI_Character_Editor
 			foreach (Epilogue ending in character.Endings)
 			{
 				ValidateEpilogue(ending, warnings, unusedImages);
+			}
+
+			foreach (PoseSet poseSet in character.PoseSets)
+			{
+				ValidatePoseSet(character, poseSet, warnings, unusedImages);
 			}
 
 			foreach (Pose pose in character.Poses)
@@ -1419,6 +1433,54 @@ namespace SPNATI_Character_Editor
 			}
 		}
 
+		private static void ValidatePoseSet(Character character, PoseSet poseSet, List<ValidationError> warnings, HashSet<string> unusedImages)
+		{
+			unusedImages.Remove("set:" + poseSet.Id);
+			foreach (PoseSetEntry entry in poseSet.Entries)
+			{
+				if (!entry.Img.StartsWith("custom:"))
+				{
+					string path = GetRelativeImagePath(character, entry.Img);
+					if (string.IsNullOrEmpty(path))
+					{
+						unusedImages.Remove("0" + path.Substring(1));
+					}
+					if (!string.IsNullOrEmpty(path))
+					{
+						List<int> selectedStages = new List<int>();
+						if (int.TryParse(entry.Stage, out int x))
+						{
+							selectedStages.Add(x);
+						}
+						else
+						{
+							string[] strings = entry.Stage.Split('-');
+							if (strings.Length != 2)
+							{
+								continue;
+							}
+							if (int.TryParse(strings[0], out int y) && int.TryParse(strings[1], out int z))
+							{
+								for (int i = y; i <= z; i++)
+								{
+									selectedStages.Add(i);
+								}
+							}
+							else
+							{
+								continue;
+							}
+						}
+
+						foreach (int i in selectedStages)
+						{
+						unusedImages.Remove(i + path.Substring(1));
+						}
+					}
+				}
+			}
+		}
+
 		/// <summary>
 		/// Validates a collectible
 		/// </summary>
@@ -1639,11 +1701,22 @@ namespace SPNATI_Character_Editor
 				missingImages.Remove("custom:" + pose.Id);
 			}
 
+			foreach (PoseSet poseSet in skin.PoseSets)
+			{
+				ValidatePoseSet(character, poseSet, warnings, unusedImages);
+				missingImages.Remove("set:" + poseSet.Id);
+			}
+
 			// custom poses from the base skin can never be missing in an alt skin
 			// because alt skins inherit all poses from the base skin
 			foreach (Pose pose in character.Poses)
 			{
 				missingImages.Remove("custom:" + pose.Id);
+			}
+
+			foreach (PoseSet poseSet in character.PoseSets)
+			{
+				missingImages.Remove("set:" + poseSet.Id);
 			}
 
 			if (missingImages.Count > 0)
