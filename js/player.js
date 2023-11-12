@@ -76,7 +76,6 @@ function Player (id) {
     this.tags = this.baseTags = [];
     this.xml = null;
     this.persistentMarkers = {};
-    this.exposed = { upper: false, lower: false };
 }
 
 /*******************************************************************
@@ -85,22 +84,23 @@ function Player (id) {
  *******************************************************************/
 Player.prototype.initClothingStatus = function () {
     this.startingLayers = this.countLayers();
-    this.exposed = { upper: true, lower: true };
-    for (var position in this.exposed) {
-        if (this.clothing.some(function(c) {
-            return (c.type == IMPORTANT_ARTICLE || c.type == MAJOR_ARTICLE)
-                && (c.position == position || c.position == FULL_ARTICLE);
-        })) {
-            this.exposed[position] = false;
-        };
-    }
     this.numStripped = { extra: 0, minor: 0, major: 0, important: 0 };
-    this.mostlyClothed = this.decent = !(this.exposed.upper || this.exposed.lower)
-        && this.clothing.some(function(c) {
-            return c.type == MAJOR_ARTICLE
-                && [UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE].indexOf(c.position) >= 0;
-        });
+    this.mostlyClothed = this.isDecent();
 }
+
+/********************************************************************
+ * Gets the currently worn wardrobe, possible before (stageDelta ==
+ * -1) or after (stageDelta == 1) stripping removedClothing.
+ ********************************************************************/
+Player.prototype.getClothing = function(stageDelta, removedClothing) {
+    removedClothing ||= this.removedClothing;
+    return this.clothing.filter(c =>
+        c.type != 'skip'
+            && (!c.removed || (stageDelta == -1 && c == removedClothing))
+            && (stageDelta != 1 || c != removedClothing)
+            && (c.fromStage === undefined
+                || (stageDelta == 1 && c.fromStage == this.stage + 1 && !c.fromDeal)));
+};
 
 /*******************************************************************
  * (Re)Initialize the player properties that change during a game
@@ -164,16 +164,7 @@ Player.prototype.resetState = function () {
         /* find and create all of their clothing */
         var clothingArr = [];
         $wardrobe.children('clothing').each(function () {
-            var generic = $(this).attr('generic');
-            var name = $(this).attr('name') || $(this).attr('lowercase');
-            var type = $(this).attr('type');
-            var position = $(this).attr('position');
-            var plural = $(this).attr('plural');
-            plural = (plural == 'null' ? null : plural == 'true');
-
-            var newClothing = new Clothing(name, generic, type, position, plural);
-
-            clothingArr.push(newClothing);
+            clothingArr.push(new Clothing($(this)));
         });
 
         this.clothing = clothingArr;
@@ -343,7 +334,7 @@ Player.prototype.hasTags = function(tagAdv) {
 }
 
 Player.prototype.countLayers = function() {
-    return this.clothing.countTrue(c => c.type != "skip");
+    return this.clothing.countTrue(c => !c.removed && c.type != "skip");
 };
 
 Player.prototype.checkStatus = function(status) {
@@ -356,19 +347,19 @@ Player.prototype.checkStatus = function(status) {
     case STATUS_MOSTLY_CLOTHED:
         return this.mostlyClothed;
     case STATUS_DECENT:
-        return this.decent;
+        return this.isDecent();
     case STATUS_EXPOSED_TOP:
-        return this.exposed.upper;
+        return !this.isCovered(UPPER_ARTICLE);
     case STATUS_EXPOSED_BOTTOM:
-        return this.exposed.lower;
+        return !this.isCovered(LOWER_ARTICLE);
     case STATUS_EXPOSED:
-        return this.exposed.upper || this.exposed.lower;
+        return !this.isCovered(UPPER_ARTICLE) || !this.isCovered(LOWER_ARTICLE);
     case STATUS_EXPOSED_TOP_ONLY:
-        return this.exposed.upper && !this.exposed.lower;
+        return !this.isCovered(UPPER_ARTICLE) && this.isCovered(LOWER_ARTICLE);
     case STATUS_EXPOSED_BOTTOM_ONLY:
-        return !this.exposed.upper && this.exposed.lower;
+        return this.isCovered(UPPER_ARTICLE) && !this.isCovered(LOWER_ARTICLE);
     case STATUS_NAKED:
-        return this.exposed.upper && this.exposed.lower;
+        return !this.isCovered(UPPER_ARTICLE) && !this.isCovered(LOWER_ARTICLE);
     case STATUS_ALIVE:
         return !this.out;
     case STATUS_LOST_ALL:

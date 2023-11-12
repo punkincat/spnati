@@ -37,12 +37,36 @@ var STATUS_FINISHED = "finished";
 /************************************************************
  * Stores information on an article of clothing.
  ************************************************************/
-function Clothing (name, generic, type, position, plural) {
+function Clothing (name, generic, type, position, plural, fromStage, fromDeal, strippingLayer) {
+    if (name instanceof jQuery) {
+        const $xml = name;
+        generic = $xml.attr('generic');
+        name = $xml.attr('name') || $xml.attr('lowercase');
+        type = $xml.attr('type');
+        position = $xml.attr('position');
+        plural = $xml.attr('plural');
+        plural = (plural == 'null' ? null : plural == 'true');
+        fromStage = Number.parseInt($xml.attr('fromStage'), 10) || undefined; // fromStage=0 is the default anyway
+        fromDeal = $xml.attr('fromDeal') === 'true';
+        if ($xml.children('stripping').length) {
+            this.strippingItem = new Clothing($xml.children('stripping').first());
+        } else if ($xml.attr('strippingLayer') !== undefined) {
+            strippingLayer = Number.parseInt($xml.attr('strippingLayer'), 10);
+            if (isNaN(strippingLayer) || strippingLayer > clothingArr.length || strippingLayer < 0) {
+                console.error('Invalid stripping layer');
+                strippingLayer = undefined;
+            }
+        }
+    }
     this.name = name;
     this.generic = generic || name;
     this.type = type;
     this.position = position;
     this.plural = (plural === undefined ? false : plural);
+    this.fromStage = fromStage;
+    this.fromDeal = fromDeal;
+    this.strippingLayer = strippingLayer;
+    this.removed = false;
 }
 
 /*************************************************************
@@ -51,22 +75,23 @@ function Clothing (name, generic, type, position, plural) {
  * player is "decent".
  *************************************************************/
 Player.prototype.isDecent = function() {
-    return !(this.exposed.upper || this.exposed.lower)
-        && this.clothing.some(function(c) {
-            return (c.position == UPPER_ARTICLE || c.position == FULL_ARTICLE) && c.type == MAJOR_ARTICLE;
-        }) && this.clothing.some(function(c) {
-            return (c.position == LOWER_ARTICLE || c.position == FULL_ARTICLE) && c.type == MAJOR_ARTICLE;
-        });
+    return this.getClothing().some(function(c) {
+        return (c.position == UPPER_ARTICLE || c.position == FULL_ARTICLE) && c.type == MAJOR_ARTICLE;
+    }) && this.getClothing().some(function(c) {
+        return (c.position == LOWER_ARTICLE || c.position == FULL_ARTICLE) && c.type == MAJOR_ARTICLE;
+    });
 };
 
 /*************************************************************
  * Check if the player chest and/or crotch is covered (not exposed).
+ * If except is defined, that article is ignored (because it's being stripped)
  *************************************************************/
-Player.prototype.isCovered = function(position) {
+Player.prototype.isCovered = function(position, stageDelta, removedClothing) {
     if (position == FULL_ARTICLE || position === undefined) {
-        return [UPPER_ARTICLE, LOWER_ARTICLE].every(Player.prototype.isCovered, this);
+        return this.isCovered(UPPER_ARTICLE, stageDelta, removedClothing)
+            && this.isCovered(LOWER_ARTICLE, stageDelta, removedClothing);
     }
-    return this.clothing.some(function(c) {
+    return this.getClothing(stageDelta, removedClothing).some(function(c) {
         return (c.type == IMPORTANT_ARTICLE || c.type == MAJOR_ARTICLE)
             && (c.position == position || c.position == FULL_ARTICLE);
     });
@@ -78,28 +103,23 @@ Player.prototype.isCovered = function(position) {
  * covered by others. 
  **************************************************************/
 Player.prototype.findClothing = function(types, positions, names) {
-    var covered = { upper: false, lower: false };
-    var matches = [];
-    for (var i = this.clothing.length - 1; i >= 0; i--) {
-        var article = this.clothing[i];
-        if ((types == undefined || types.indexOf(article.type) >= 0)
-            && (positions == undefined || positions.indexOf(article.position) >= 0)
-                && (names == undefined || names.indexOf(article.name) >= 0
-                    || names.indexOf(article.generic) >= 0)) {
-            if (!(article.position == FULL_ARTICLE && covered.upper && covered.lower)
-                && !covered[article.position]) {
-                matches.push(article);
-            }
-        }
-        if ([MINOR_ARTICLE, MAJOR_ARTICLE, IMPORTANT_ARTICLE].indexOf(article.type) >= 0) {
-            for (var position in covered) {
-                if (article.position == position || article.position == FULL_ARTICLE) {
-                    covered[position] = true;
-                }
-            }
-        }
-    }
-    return matches;
+    return this.getClothing().filter((c, i, clothing) =>
+        (types === undefined || types.includes(c.type))
+            && (positions === undefined || positions.includes(c.position))
+            && (names === undefined || names.includes(c.name)
+                || names.includes(c.generic))
+        // Check if the article can be seen
+            && !clothing.some((c2, j) =>
+                /* "both" covers both "upper" and "lower" */
+                (c2.position == c.position
+                 || c2.position == FULL_ARTICLE && [UPPER_ARTICLE, LOWER_ARTICLE].includes(c.position))
+                /* "extra" (or other future types never covers anything) */
+                    && [MINOR_ARTICLE, MAJOR_ARTICLE, IMPORTANT_ARTICLE].includes(c2.type)
+                /* "important" is assumed to actually be beneath all major articles */
+                    && (j > i || (c.type == IMPORTANT_ARTICLE && c2.type == MAJOR_ARTICLE))
+                    && !(c.type == MAJOR_ARTICLE && c2.type == IMPORTANT_ARTICLE)
+            )
+    );
 };
 
 /**
@@ -219,55 +239,31 @@ function getRevealedPosition (player, clothing) {
     var type = clothing.type;
     var pos = clothing.position;
 
-    /* Reveals only happen for important and major articles... */
-    if (type == IMPORTANT_ARTICLE || type == MAJOR_ARTICLE) {
-        var hasLower = player.clothing.some(function(c) {
-            return ([LOWER_ARTICLE, FULL_ARTICLE].indexOf(c.position) >= 0) && (c !== clothing) && ([IMPORTANT_ARTICLE, MAJOR_ARTICLE].indexOf(c.type) >= 0);
-        });
-
-        var hasUpper = player.clothing.some(function(c) {
-            return ([UPPER_ARTICLE, FULL_ARTICLE].indexOf(c.position) >= 0) && (c !== clothing) && ([IMPORTANT_ARTICLE, MAJOR_ARTICLE].indexOf(c.type) >= 0);
-        });
-
-        if (pos == FULL_ARTICLE) {
-            if (!hasLower && !hasUpper) {
-                /* Article exposes both at once.
-                 * We can actually return early in this case:
-                 * we'd do the same thing for both major and important articles anyways.
-                 */
-                return FULL_ARTICLE;
-            } else if (!hasLower && hasUpper) {
-                /* Article only exposes crotch. */
-                pos = LOWER_ARTICLE;
-            } else if (hasLower && !hasUpper) {
-                /* Article only exposes chest. */
-                pos = UPPER_ARTICLE;
-            } else {
-                /* Article doesn't actually reveal anything.
-                 * For major items, we can just return null early.
-                 * For important items, we'd end up returning FULL_ARTICLE anyways, no matter what.
-                 */
-                return (type == IMPORTANT_ARTICLE) ? FULL_ARTICLE : null;
-            }
-        }
-
-        /* pos cannot be FULL_ARTICLE at this point. */
-
-        if (
-            (type == MAJOR_ARTICLE) && (
-                ([UPPER_ARTICLE, LOWER_ARTICLE].indexOf(pos) < 0) ||
-                ((pos == UPPER_ARTICLE) && hasUpper) ||
-                ((pos == LOWER_ARTICLE) && hasLower)
-            )
-        ) {
-            /* There is another article left covering this part of the body. */
-            return null;
-        }
-
-        return pos;
-    } else {
+    /* Reveals only happen for important and major articles in the upper, lower or both positions.
+     * This is just a short-circuit; the rest of the function will give the correct result without it. */
+    if (![IMPORTANT_ARTICLE,  MAJOR_ARTICLE].includes(type)
+        || ![UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE].includes(pos)) {
         return null;
     }
+    if (clothing.reveal !== undefined && !clothing.removed) {
+        return clothing.reveal == "none" ? null : clothing.reveal;
+    }
+
+    const [hasLower, hasUpper] = [LOWER_ARTICLE, UPPER_ARTICLE].map(pos => player.isCovered(pos, -1));
+    const [willHaveLower, willHaveUpper] = [LOWER_ARTICLE, UPPER_ARTICLE].map(pos => player.isCovered(pos, 1, clothing));
+
+    if (hasUpper && hasLower && !willHaveUpper && !willHaveLower) {
+            /* Article exposes both at once. */
+        return FULL_ARTICLE;
+    } else if (hasUpper && !willHaveUpper) {
+        /* Article only exposes chest. */
+        return UPPER_ARTICLE;
+    } else if (hasLower && !willHaveLower) {
+        /* Article only exposes crotch. */
+        return LOWER_ARTICLE;
+    }
+    /* Article doesn't actually reveal anything. */
+    return null;
 }
 
  /************************************************************
@@ -323,7 +319,7 @@ function getClothingTrigger (player, clothing, removed) {
             }
         }
     } else {
-        if (type == MAJOR_ARTICLE) {
+        if (type == MAJOR_ARTICLE || type == IMPORTANT_ARTICLE) {
             if (gender == eGender.MALE) {
                 return removed ? [MALE_REMOVED_MAJOR] : [MALE_REMOVING_MAJOR];
             } else if (gender == eGender.FEMALE) {
@@ -385,12 +381,12 @@ function determineStrippingSituation (player) {
 function playerMustStrip (player) {
     /* count the clothing the player has remaining */
     /* assume the player only has IMPORTANT_ARTICLES */
-    var clothing = players[player].clothing;
+    var clothing = players[player].getClothing();
 
     saveTranscriptMessage("<b>"+players[recentLoser].label.escapeHTML()+"</b> has lost the hand"
-                          + (clothing.length > 0 ? '.' : ', and is out of clothes.'));
+                          + (players[player].countLayers() > 0 ? '.' : ', and is out of clothes.'));
 
-    if (clothing.length) {
+    if (players[player].countLayers() > 0) {
         /* the player has clothes and will strip */
         if (player == HUMAN_PLAYER) {
             var trigger;
@@ -457,9 +453,14 @@ function prepareToStripPlayer (player) {
             humanPlayer.gender == eGender.MALE ? MALE_HUMAN_MUST_STRIP : FEMALE_HUMAN_MUST_STRIP
         );
     } else {
-        var toBeRemovedClothing = players[player].clothing[players[player].clothing.length - 1];
+        let toBeRemovedClothing = players[player].clothing.at(-1 - players[player].stage);
+        if (toBeRemovedClothing.strippingItem !== undefined) {
+            toBeRemovedClothing = toBeRemovedClothing.strippingItem;
+        } else if (toBeRemovedClothing.strippingLayer !== undefined) {
+            toBeRemovedClothing = players[player].clothing[toBeRemovedClothing.strippingLayer];
+        }
         players[player].removedClothing = toBeRemovedClothing;
-        var dialogueTrigger = getClothingTrigger(players[player], toBeRemovedClothing, false);
+        const dialogueTrigger = getClothingTrigger(players[player], toBeRemovedClothing, false);
         dialogueTrigger.push(OPPONENT_STRIPPING);
 
         updateAllBehaviours(player, PLAYER_STRIPPING, [dialogueTrigger]);
@@ -482,9 +483,7 @@ function StripClothingSelectionIcon (clothing) {
 }
 
 StripClothingSelectionIcon.prototype.canSelect = function () {
-    return humanPlayer.clothing.some(function (clothing) {
-        return clothing.id == this.clothing.id;
-    }.bind(this));
+    return !this.clothing.removed;
 }
 
 StripClothingSelectionIcon.prototype.update = function () {
@@ -593,45 +592,25 @@ function closeStrippingModal () {
     
     /* grab the removed article of clothing */
     var removedClothing = selector.clothing;
-    var origClothingType = removedClothing.type;
-    var clothingIdx = humanPlayer.clothing.indexOf(removedClothing);
 
-    if (clothingIdx == -1) {
+    if (!humanPlayer.getClothing().includes(removedClothing)) {
         console.log("Error: could not find clothing to remove");
         showStrippingModal();
         return;
     }
 
-    humanPlayer.clothing.splice(clothingIdx, 1);
     humanPlayer.timeInStage = -1;
     humanPlayer.ticksInStage = 0;
     humanPlayer.removedClothing = removedClothing;
     humanPlayer.numStripped[removedClothing.type]++;
-
-    /* figure out if it should be important */
-    if ([UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE].indexOf(removedClothing.position) >= 0
-        && ([IMPORTANT_ARTICLE, MAJOR_ARTICLE].indexOf(removedClothing.type) >= 0)) {
-        for (position in humanPlayer.exposed) {
-            if (!humanPlayer.isCovered(position)) {
-                humanPlayer.exposed[position] = true;
-            } else if ((removedClothing.type == IMPORTANT_ARTICLE && removedClothing.position == position)) {
-                removedClothing.type = MAJOR_ARTICLE;
-            }
-        }
-        // For the future; there are no human clothes with position = both, especially no important ones.
-        if (removedClothing.position == FULL_ARTICLE && removedClothing.type == IMPORTANT_ARTICLE && humanPlayer.isCovered()) {
-            removedClothing.type = MAJOR_ARTICLE;
-        }
-    }
     if ([IMPORTANT_ARTICLE, MAJOR_ARTICLE, MINOR_ARTICLE].indexOf(removedClothing.type) >= 0) {
         humanPlayer.mostlyClothed = false;
     }
-    humanPlayer.decent = humanPlayer.isDecent();
-    
+
     /* determine its dialogue trigger */
     var dialogueTrigger = getClothingTrigger(humanPlayer, removedClothing, true);
+    humanPlayer.removedClothing.removed = true;
     console.log(removedClothing);
-    removedClothing.type = origClothingType;
     /* display the remaining clothing */
     displayHumanPlayerClothing();
     
@@ -663,23 +642,15 @@ function stripAIPlayer (player) {
     console.log("Opponent "+player+" is being stripped.");
 
     /* grab the removed article of clothing and determine its dialogue trigger */
-    var removedClothing = players[player].clothing.pop();
-    players[player].removedClothing = removedClothing;
+    let layer = players[player].clothing.length - players[player].stage - 1;
+    const removedClothing = players[player].removedClothing = players[player].clothing[layer];
     players[player].numStripped[removedClothing.type]++;
-    if ([IMPORTANT_ARTICLE, MAJOR_ARTICLE, MINOR_ARTICLE].indexOf(removedClothing.type) >= 0) {
+    if ([IMPORTANT_ARTICLE, MAJOR_ARTICLE, MINOR_ARTICLE].includes(removedClothing.type)) {
         players[player].mostlyClothed = false;
     }
-    if ([IMPORTANT_ARTICLE, MAJOR_ARTICLE].indexOf(removedClothing.type) >= 0) {
-        for (position in players[player].exposed) {
-            if ((removedClothing.type == IMPORTANT_ARTICLE && position == removedClothing.position)
-                || !players[player].isCovered(position)) {
-                players[player].exposed[position] = true;
-            }
-        }
-        players[player].decent = false;
-    }
-    var dialogueTrigger = getClothingTrigger(players[player], removedClothing, true);
+    const dialogueTrigger = getClothingTrigger(players[player], removedClothing, true);
 
+    players[player].removedClothing.removed = true;
     players[player].stage++;
     players[player].timeInStage = -1;
     players[player].ticksInStage = 0;
@@ -689,16 +660,20 @@ function stripAIPlayer (player) {
     dialogueTrigger.push(OPPONENT_STRIPPED);
     updateAllBehaviours(player, PLAYER_STRIPPED, [dialogueTrigger]);
 
-    if (players[player].clothing.at(-1)?.type == "skip") {
-        while (players[player].clothing.at(-1)?.type == "skip") {
-            players[player].clothing.pop();
+    layer--;
+    if (layer >= 0 && players[player].clothing[layer].type == "skip") {
+        while (layer >= 0 && players[player].clothing[layer--].type == "skip") {
             players[player].stage++;
             players[player].stageChangeUpdate();
         }
         updateGameVisual(player);
     }
 
-   
+    for (const c of players[player].clothing) {
+        if (c.fromStage == players[player].stage) {
+            c.fromStage = undefined;
+        }
+    }
 }
 
 /************************************************************
