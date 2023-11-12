@@ -513,6 +513,7 @@ function parseEpilogue(player, rawEpilogue) {
     var title = $epilogue.children("title").html().trim();
     var status = $epilogue.attr("status") || 'online';
     var gender = $epilogue.attr("gender") || 'any';
+    var description = $epilogue.attr("description") || '';
     var allowSceneSkip = $epilogue.attr("allowSceneSkip") == 'true';
 
     var markers = [];
@@ -550,6 +551,7 @@ function parseEpilogue(player, rawEpilogue) {
         scenes: [],
         markers: markers,
         allowSceneSkip: allowSceneSkip,
+        description: description,
     };
     var scenes = epilogue.scenes;
 
@@ -849,14 +851,32 @@ function addEpilogueEntry(epilogue) {
     }
 
     var epilogueTitle = nameStr + ": " + offlineIndicator + epilogue.title;
+    var epilogueDescription = "" + epilogue.description;
     var idName = 'epilogue-option-' + num;
     var clickAction = "selectEpilogue(" + num + ")";
     var unlocked = save.hasEnding(player.id, epilogue.title) ? " unlocked" : "";
 
-    var htmlStr = '<li id="' + idName + '" class="epilogue-entry' + unlocked + '"><button onclick="' + clickAction + '">' + epilogueTitle + '</button></li>';
+    var entryElem = createElementWithClass('li', 'epilogue-entry ' + unlocked);
+    entryElem.id = idName;
 
-    $epilogueList.append(htmlStr);
-    epilogueSelections.push($('#' + idName));
+    var btnElem = document.createElement("button");
+    btnElem.addEventListener("click", function (ev) {
+        selectEpilogue(num);
+    });
+    btnElem.innerText = epilogueTitle;
+    
+    entryElem.appendChild(btnElem);
+    
+    if (epilogueDescription) {
+        var descElem = createElementWithClass("span", "epilogue-description");
+        descElem.innerText = epilogueDescription;
+    
+        entryElem.appendChild(document.createElement("br"));
+        entryElem.appendChild(descElem);
+    }
+
+    $epilogueList.append(entryElem);
+    epilogueSelections.push($(entryElem));
 }
 
 /************************************************************

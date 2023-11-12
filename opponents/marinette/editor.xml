@@ -409,6 +409,16 @@
         <response id="1378" opponent="meia" opponentId="483" />
         <response id="1383" opponent="hilda" opponentId="435" />
         <response id="1384" opponent="hilda" opponentId="436" />
+        <response id="1388" opponent="toph" opponentId="408" />
+        <response id="1389" opponent="toph" opponentId="830" />
+        <response id="1391" opponent="toph" opponentId="833" />
+        <response id="1392" opponent="queenie" opponentId="279" />
+        <response id="1393" opponent="queenie" opponentId="36" />
+        <response id="1401" opponent="hilda" opponentId="471" />
+        <response id="1402" opponent="hilda" opponentId="472" />
+        <response id="1403" opponent="lysithea" opponentId="28" />
+        <response id="1404" opponent="lysithea" opponentId="77" />
+        <response id="1409" opponent="hilda" opponentId="945" />
     </responses>
     <notes>
         <note id="32">Placeholder lines for emoting </note>
@@ -1315,12 +1325,25 @@
         <label id="1380" label="Marinette Forfeit - Nadia" folder="Dual Forfeit" sort="0" />
         <label id="1381" label="Marinette Forfeit - Hilda" folder="Dual Forfeit" sort="0" />
         <label id="1382" label="Adrien Forfeit - Hilda" folder="Dual Forfeit" sort="0" />
+        <label id="1385" label="Akuma" folder="Lore" sort="0" />
+        <label id="1386" label="" folder="New Marinette Targets" sort="0" />
+        <label id="1387" label="" folder="New Marinette Targets" sort="0" />
+        <label id="1394" label="" folder="New Marinette Targets" sort="0" />
+        <label id="1395" label="" folder="New Marinette Targets" sort="0" />
+        <label id="1396" label="" folder="New Marinette Targets" sort="0" />
+        <label id="1397" label="" folder="New Marinette Targets" sort="0" />
+        <label id="1398" label="" folder="New Marinette Targets" sort="0" />
+        <label id="1399" label="" folder="New Marinette Targets" sort="0" />
+        <label id="1400" label="" folder="New Marinette Targets" sort="0" />
+        <label id="1410" label="" folder="New Marinette Targets" sort="0" />
+        <label id="1411" label="" folder="New Marinette Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>t-</prefix>
     </prefixes>
-    <nextId>1384</nextId>
+    <nextId>1411</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="+" />
         <marker scope="Public" name="4wayReturns" />
         <marker scope="Public" name="adr_mari_dual" />
@@ -1341,6 +1364,8 @@
         <marker scope="Public" name="adrimari_dualforfeit_hildaJ" />
         <marker scope="Public" name="adrimari_dualforfeit_hildaK" />
         <marker scope="Public" name="adrimari_dualforfeit_hildaL" />
+        <marker scope="Public" name="adrimari_dualforfeitClose" />
+        <marker scope="Public" name="adrimari_dualforfeitFinishing" />
         <marker scope="Public" name="adrmari_dualforfeit" />
         <marker scope="Public" name="ahri01" />
         <marker scope="Public" name="ahri02" />
@@ -1348,6 +1373,7 @@
         <marker scope="Public" name="ahri11" />
         <marker scope="Public" name="ahri12" />
         <marker scope="Public" name="ahri13" />
+        <marker scope="Public" name="akuma_vibes" />
         <marker scope="Public" name="both_with_komi-san" />
         <marker scope="Public" name="cagdrien73" />
         <marker scope="Public" name="caulifla02" />
@@ -1440,8 +1466,11 @@
         <marker scope="Public" name="hilda23" />
         <marker scope="Public" name="hilda31" />
         <marker scope="Public" name="hilda32" />
+        <marker scope="Public" name="hilda33" />
         <marker scope="Public" name="hilda41" />
         <marker scope="Public" name="hilda42" />
+        <marker scope="Public" name="hilda43" />
+        <marker scope="Public" name="hilda44" />
         <marker scope="Public" name="hildaAdrien01" />
         <marker scope="Public" name="hildaAdrien02" />
         <marker scope="Public" name="hildaAdrien12" />
@@ -1499,6 +1528,12 @@
         <marker scope="Public" name="ladybug_queenie_greet" />
         <marker scope="Public" name="lb_akuma" />
         <marker scope="Public" name="lb_heroics" />
+        <marker scope="Public" name="lysi_burdens1" />
+        <marker scope="Public" name="lysi_guardian1" />
+        <marker scope="Public" name="lysi_pastry1" />
+        <marker scope="Public" name="lysi_responsibility1" />
+        <marker scope="Public" name="lysi01" />
+        <marker scope="Public" name="lysi11" />
         <marker scope="Public" name="m_f_a" />
         <marker scope="Public" name="mari_adr_dual" />
         <marker scope="Public" name="mari_bc" />
@@ -1530,6 +1565,7 @@
         <marker scope="Public" name="mari42" />
         <marker scope="Public" name="mari43" />
         <marker scope="Public" name="mari51" />
+        <marker scope="Public" name="mari52" />
         <marker scope="Public" name="maridrien_couple" />
         <marker scope="Public" name="marinette_chatter" />
         <marker scope="Public" name="marinette_fashion">Marinette asks the assembled party about their fashion tastes.</marker>
@@ -1589,6 +1625,8 @@
         <marker scope="Public" name="post_adrienJ" />
         <marker scope="Public" name="post_adrienK" />
         <marker scope="Public" name="post_adrienL" />
+        <marker scope="Public" name="queenie01" />
+        <marker scope="Public" name="queenie13" />
         <marker scope="Public" name="rarity33" />
         <marker scope="Public" name="rarity43" />
         <marker scope="Public" name="rarity52" />
@@ -1611,6 +1649,10 @@
         <marker scope="Public" name="tikki">Marinette's kwami, Tikki, is present in the line speaking. </marker>
         <marker scope="Public" name="toph01" />
         <marker scope="Public" name="toph02" />
+        <marker scope="Public" name="toph03" />
+        <marker scope="Public" name="toph21" />
+        <marker scope="Public" name="toph22" />
+        <marker scope="Public" name="toph31" />
         <marker scope="Public" name="Voyeur" />
         <marker scope="Public" name="zoe_villain" />
     </markers>

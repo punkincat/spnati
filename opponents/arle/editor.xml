@@ -18,6 +18,9 @@
         <case name="prompt adapt" id="243" priority="Prompt" min="0" max="6">
             <description>Arle wonders how anyone would fare adapting to having to live in a different unknown place.</description>
         </case>
+        <case name="Carbuncle" id="317" priority="Noteworthy" min="8" max="8">
+            <description>Carbuncle shows up after Arle finishes herself. He is the yellow creature.</description>
+        </case>
     </noteworthy>
     <responses>
         <response id="1" opponent="roll_caskett" opponentId="37" />
@@ -97,26 +100,40 @@
         <response id="300" opponent="mari_setogaya" opponentId="2385" />
         <response id="301" opponent="mari_setogaya" opponentId="2386" />
         <response id="302" opponent="mari_setogaya" opponentId="2387" />
+        <response id="304" opponent="kyoko_kirigiri" opponentId="1501" />
+        <response id="305" opponent="kyoko_kirigiri" opponentId="1500" />
+        <response id="306" opponent="queenie" opponentId="316" />
+        <response id="310" opponent="cagliostro" opponentId="434" />
+        <response id="355" opponent="hilbert" opponentId="9" />
+        <response id="356" opponent="hilbert" opponentId="8" />
+        <response id="357" opponent="hilbert" opponentId="11" />
+        <response id="358" opponent="hilbert" opponentId="337" />
+        <response id="359" opponent="hilbert" opponentId="297" />
+        <response id="367" opponent="sweetheart" opponentId="21" />
+        <response id="368" opponent="sweetheart" opponentId="23" />
+        <response id="370" opponent="sweetheart" opponentId="22" />
+        <response id="371" opponent="sweetheart" opponentId="87" />
+        <response id="372" opponent="sweetheart" opponentId="20" />
     </responses>
     <labels>
         <label id="2" label="" color="1" folder="Targets" sort="0" />
         <label id="1" label="" color="0" folder="Targets" sort="0" />
-        <label id="3" label="" color="0" folder="Targets" sort="0" />
-        <label id="4" label="" color="0" folder="Targets" sort="0" />
-        <label id="5" label="" color="0" folder="Targets" sort="0" />
+        <label id="3" label="" folder="Targets" sort="0" />
+        <label id="4" label="" folder="Targets" sort="0" />
+        <label id="5" label="" folder="Targets" sort="0" />
         <label id="6" label="" color="1" folder="Targets" sort="0" />
         <label id="7" label="" color="1" folder="Targets" sort="0" />
         <label id="8" label="" color="1" folder="Targets" sort="0" />
         <label id="9" label="" color="1" folder="Targets" sort="0" />
-        <label id="10" label="" color="0" folder="Targets" sort="0" />
+        <label id="10" label="" folder="Targets" sort="0" />
         <label id="11" label="" folder="Targets" sort="0" />
-        <label id="12" label="" color="0" folder="Targets" sort="0" />
+        <label id="12" label="" folder="Targets" sort="0" />
         <label id="13" label="" folder="Targets" sort="0" />
-        <label id="16" label="" color="0" folder="Targets" sort="0" />
-        <label id="14" label="" folder="Targets" sort="0" />
+        <label id="16" label="" folder="Targets" sort="0" />
+        <label id="14" label="" folder="Double targets" sort="0" />
         <label id="15" label="" folder="Targets" sort="0" />
         <label id="17" label="" folder="Targets" sort="0" />
-        <label id="18" label="" folder="Targets" sort="0" />
+        <label id="18" label="" folder="Double targets" sort="0" />
         <label id="19" label="" folder="Targets" sort="0" />
         <label id="22" label="" folder="Targets" sort="0" />
         <label id="21" label="" folder="Targets" sort="0" />
@@ -124,7 +141,7 @@
         <label id="25" label="" color="1" folder="Targets" sort="0" />
         <label id="26" label="" color="0" folder="Targets" sort="0" />
         <label id="27" label="" color="1" folder="Targets" sort="0" />
-        <label id="28" label="" color="0" folder="Targets" sort="0" />
+        <label id="28" label="" folder="Targets" sort="0" />
         <label id="29" label="" folder="Targets" sort="0" />
         <label id="23" label="" folder="Targets" sort="0" />
         <label id="30" label="" folder="Targets" sort="0" />
@@ -160,20 +177,20 @@
         <label id="62" label="" color="1" folder="Targets" sort="0" />
         <label id="63" label="" color="1" folder="Targets" sort="0" />
         <label id="65" label="" folder="Targets" sort="0" />
-        <label id="66" label="" color="0" folder="Targets" sort="0" />
+        <label id="66" label="" folder="Targets" sort="0" />
         <label id="59" label="" folder="Targets" sort="0" />
         <label id="67" label="" folder="Targets" sort="0" />
-        <label id="64" label="" color="0" folder="Targets" sort="0" />
-        <label id="68" label="" color="1" folder="Targets" sort="0" />
+        <label id="64" label="" folder="Targets" sort="0" />
+        <label id="68" label="" folder="Targets" sort="0" />
         <label id="69" label="" folder="Targets" sort="0" />
         <label id="70" label="" color="1" folder="Targets" sort="0" />
         <label id="71" label="" color="1" folder="Targets" sort="0" />
-        <label id="72" label="" color="0" folder="Targets" sort="0" />
+        <label id="72" label="" folder="Targets" sort="0" />
         <label id="73" label="" color="1" folder="Double targets" sort="0" />
         <label id="74" label="" color="1" folder="Targets" sort="0" />
         <label id="75" label="" color="1" folder="Double targets" sort="0" />
         <label id="76" label="" color="1" folder="Targets" sort="0" />
-        <label id="77" label="" color="0" folder="Targets" sort="0" />
+        <label id="77" label="" folder="Targets" sort="0" />
         <label id="78" label="" color="1" folder="Targets" sort="0" />
         <label id="79" label="" folder="Targets" sort="0" />
         <label id="80" label="" color="1" folder="Targets" sort="0" />
@@ -195,7 +212,7 @@
         <label id="97" label="" color="0" folder="Targets" sort="0" />
         <label id="98" label="" color="0" folder="Targets" sort="0" />
         <label id="99" label="" color="1" folder="Targets" sort="0" />
-        <label id="100" label="" color="0" folder="Targets" sort="0" />
+        <label id="100" label="" folder="Targets" sort="0" />
         <label id="101" label="" folder="Targets" sort="0" />
         <label id="103" label="" folder="Targets" sort="0" />
         <label id="104" label="" folder="Targets" sort="0" />
@@ -246,10 +263,10 @@
         <label id="149" label="" folder="Filtered" sort="0" />
         <label id="150" label="" folder="Filtered" sort="0" />
         <label id="151" label="" color="1" folder="Targets" sort="0" />
-        <label id="152" label="" color="1" folder="Targets" sort="0" />
-        <label id="153" label="" color="1" folder="Targets" sort="0" />
+        <label id="152" label="" folder="Targets" sort="0" />
+        <label id="153" label="" folder="Targets" sort="0" />
         <label id="154" label="" folder="Targets" sort="0" />
-        <label id="155" label="" color="1" folder="Targets" sort="0" />
+        <label id="155" label="" folder="Targets" sort="0" />
         <label id="156" label="" folder="Filtered" sort="0" />
         <label id="157" label="" folder="Filtered" sort="0" />
         <label id="158" label="" folder="Filtered" sort="0" />
@@ -259,7 +276,7 @@
         <label id="162" label="" color="0" folder="Targets" sort="0" />
         <label id="163" label="" color="0" folder="Targets" sort="0" />
         <label id="164" label="" color="1" folder="Targets" sort="0" />
-        <label id="165" label="" color="0" folder="Targets" sort="0" />
+        <label id="165" label="" folder="Targets" sort="0" />
         <label id="166" label="" folder="Targets" sort="0" />
         <label id="167" label="" folder="Filtered" sort="0" />
         <label id="168" label="" folder="Filtered" sort="0" />
@@ -273,7 +290,7 @@
         <label id="176" label="" color="1" folder="Targets" sort="0" />
         <label id="177" label="" folder="Targets" sort="0" />
         <label id="178" label="" color="1" folder="Targets" sort="0" />
-        <label id="179" label="" color="0" folder="Targets" sort="0" />
+        <label id="179" label="" folder="Targets" sort="0" />
         <label id="180" label="" folder="Filtered" sort="0" />
         <label id="181" label="" folder="Filtered" sort="0" />
         <label id="182" label="" folder="Filtered" sort="0" />
@@ -311,8 +328,8 @@
         <label id="214" label="" folder="Targets" sort="0" />
         <label id="215" label="" color="1" folder="Targets" sort="0" />
         <label id="216" label="" color="1" folder="Targets" sort="0" />
-        <label id="217" label="" color="0" folder="Targets" sort="0" />
-        <label id="218" label="" color="0" folder="Targets" sort="0" />
+        <label id="217" label="" folder="Targets" sort="0" />
+        <label id="218" label="" folder="Targets" sort="0" />
         <label id="219" label="" folder="Targets" sort="0" />
         <label id="220" label="" folder="Targets" sort="0" />
         <label id="221" label="" color="1" folder="Targets" sort="0" />
@@ -359,8 +376,8 @@
         <label id="258" label="" folder="Targets" sort="0" />
         <label id="265" label="" folder="Targets" sort="0" />
         <label id="267" label="" folder="Targets" sort="0" />
-        <label id="268" label="" color="1" folder="Targets" sort="0" />
-        <label id="269" label="" color="1" folder="Targets" sort="0" />
+        <label id="268" label="" folder="Targets" sort="0" />
+        <label id="269" label="" folder="Targets" sort="0" />
         <label id="270" label="" folder="Targets" sort="0" />
         <label id="271" label="" color="1" folder="Targets" sort="0" />
         <label id="273" label="" color="1" folder="Targets" sort="0" />
@@ -379,7 +396,7 @@
         <label id="285" label="" color="0" folder="Targets" sort="0" />
         <label id="286" label="" folder="Targets" sort="0" />
         <label id="287" label="" color="0" folder="Targets" sort="0" />
-        <label id="288" label="" color="2" folder="" sort="0" />
+        <label id="288" label="" color="2" folder="Targets" sort="0" />
         <label id="289" label="" color="2" folder="Targets" sort="0" />
         <label id="290" label="" color="0" folder="Targets" sort="0" />
         <label id="291" label="" color="1" folder="Targets" sort="0" />
@@ -394,16 +411,83 @@
         <label id="299" label="" folder="Targets" sort="0" />
         <label id="300" label="" folder="Targets" sort="0" />
         <label id="301" label="" color="1" folder="Targets" sort="0" />
-        <label id="302" label="" color="1" folder="" sort="0" />
+        <label id="302" label="" color="1" folder="Targets" sort="0" />
+        <label id="303" label="" folder="Targets" sort="0" />
+        <label id="305" label="" folder="Targets" sort="0" />
+        <label id="304" label="" folder="Targets" sort="0" />
+        <label id="306" label="" folder="Targets" sort="0" />
+        <label id="307" label="" folder="Targets" sort="0" />
+        <label id="308" label="" folder="Targets" sort="0" />
+        <label id="311" label="" color="1" folder="Targets" sort="0" />
+        <label id="312" label="" color="1" folder="Targets" sort="0" />
+        <label id="313" label="" color="1" folder="Targets" sort="0" />
+        <label id="314" label="" color="1" folder="Targets" sort="0" />
+        <label id="315" label="" folder="Targets" sort="0" />
+        <label id="316" label="" folder="Targets" sort="0" />
+        <label id="318" label="" folder="Targets" sort="0" />
+        <label id="319" label="" folder="Targets" sort="0" />
+        <label id="320" label="" folder="Targets" sort="0" />
+        <label id="321" label="" folder="Targets" sort="0" />
+        <label id="310" label="" folder="Targets" sort="0" />
+        <label id="322" label="" folder="Targets" sort="0" />
+        <label id="323" label="" folder="Targets" sort="0" />
+        <label id="324" label="" folder="Targets" sort="0" />
+        <label id="325" label="" folder="Filtered" sort="0" />
+        <label id="326" label="" folder="Filtered" sort="0" />
+        <label id="327" label="" folder="Filtered" sort="0" />
+        <label id="328" label="" folder="Filtered" sort="0" />
+        <label id="329" label="" folder="Filtered" sort="0" />
+        <label id="330" label="" folder="Filtered" sort="0" />
+        <label id="331" label="" folder="Filtered" sort="0" />
+        <label id="332" label="" folder="Filtered" sort="0" />
+        <label id="333" label="" folder="Filtered" sort="0" />
+        <label id="334" label="" folder="Filtered" sort="0" />
+        <label id="335" label="" folder="Filtered" sort="0" />
+        <label id="336" label="" folder="Filtered" sort="0" />
+        <label id="337" label="" folder="Filtered" sort="0" />
+        <label id="338" label="" folder="Filtered" sort="0" />
+        <label id="339" label="" folder="Filtered" sort="0" />
+        <label id="340" label="" folder="Filtered" sort="0" />
+        <label id="341" label="" folder="Filtered" sort="0" />
+        <label id="342" label="" folder="Filtered" sort="0" />
+        <label id="343" label="" folder="Filtered" sort="0" />
+        <label id="344" label="" folder="Filtered" sort="0" />
+        <label id="345" label="" folder="Filtered" sort="0" />
+        <label id="346" label="" folder="Filtered" sort="0" />
+        <label id="347" label="" folder="Filtered" sort="0" />
+        <label id="348" label="" folder="Filtered" sort="0" />
+        <label id="349" label="" folder="Filtered" sort="0" />
+        <label id="350" label="" folder="Filtered" sort="0" />
+        <label id="351" label="" folder="Filtered" sort="0" />
+        <label id="352" label="" folder="Filtered" sort="0" />
+        <label id="353" label="" folder="Filtered" sort="0" />
+        <label id="354" label="" folder="Filtered" sort="0" />
+        <label id="355" label="" folder="Targets" sort="0" />
+        <label id="356" label="" color="1" folder="Targets" sort="0" />
+        <label id="358" label="" folder="Targets" sort="0" />
+        <label id="359" label="" folder="Targets" sort="0" />
+        <label id="360" label="" folder="Targets" sort="0" />
+        <label id="361" label="" folder="Targets" sort="0" />
+        <label id="362" label="" folder="Targets" sort="0" />
+        <label id="357" label="" folder="Targets" sort="0" />
+        <label id="363" label="" folder="Targets" sort="0" />
+        <label id="364" label="" folder="Targets" sort="0" />
+        <label id="365" label="" folder="Targets" sort="0" />
+        <label id="366" label="" color="1" folder="Targets" sort="0" />
+        <label id="367" label="" color="1" folder="Targets" sort="0" />
+        <label id="368" label="" color="1" folder="Targets" sort="0" />
+        <label id="370" label="" folder="Targets" sort="0" />
+        <label id="371" label="" folder="Targets" sort="0" />
+        <label id="372" label="" folder="Targets" sort="0" />
+        <label id="373" label="" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>aa</prefix>
     </prefixes>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>302</nextId>
+    <nextId>373</nextId>
     <markers>
         <marker scope="Public" name="" />
+        <marker scope="Public" name="~strongstarter~" />
         <marker scope="Public" name="1st_dong" />
         <marker scope="Public" name="1stbra" />
         <marker scope="Public" name="9s_littleguy" />
@@ -419,10 +503,18 @@
         <marker scope="Public" name="aqua_training2" />
         <marker scope="Public" name="aqua_travelworlds" />
         <marker scope="Public" name="aqua_traverselanes" />
+        <marker scope="Public" name="Arle_Different_World_Resp" />
+        <marker scope="Public" name="arle_longlife" />
+        <marker scope="Public" name="Arle_Pet_Resp" />
         <marker scope="Public" name="arle_satanprincipal" />
+        <marker scope="Public" name="cag_equivex" />
+        <marker scope="Public" name="cag_handalchemy" />
         <marker scope="Public" name="cagli_alchemy" />
         <marker scope="Public" name="cagli_alchemy2" />
         <marker scope="Public" name="cagli_howlong" />
+        <marker scope="Public" name="carb_enter" />
+        <marker scope="Public" name="carb_finish" />
+        <marker scope="Public" name="carb_intro" />
         <marker scope="Public" name="caulifla_komdragon" />
         <marker scope="Public" name="cheryl_journal" />
         <marker scope="Public" name="dawn_study" />
@@ -454,8 +546,16 @@
         <marker scope="Public" name="elphaba_wtichclanb" />
         <marker scope="Public" name="feetrest" />
         <marker scope="Public" name="hatsu_1ststrip" />
+        <marker scope="Public" name="hilbert_boutme" />
+        <marker scope="Public" name="hilbert_crotchreveal" />
+        <marker scope="Public" name="hilbert_hips" />
+        <marker scope="Public" name="hilbert_scarreveal" />
+        <marker scope="Public" name="hilbert_scarstory" />
+        <marker scope="Public" name="hilbert_skeletonT" />
+        <marker scope="Public" name="hilbert_truthideals" />
         <marker scope="Public" name="human_doubleunderwear" />
         <marker scope="Public" name="human_tripleunderwear" />
+        <marker scope="Public" name="jenna_pantstrip" />
         <marker scope="Public" name="jura_closecombat" />
         <marker scope="Public" name="jura_nuisansepuyo" />
         <marker scope="Public" name="jura_nuisansepuyo2" />
@@ -475,6 +575,7 @@
         <marker scope="Public" name="kuma_zoo" />
         <marker scope="Public" name="kyoko_pale" />
         <marker scope="Public" name="kyoko_paleskin2" />
+        <marker scope="Public" name="kyoko_twingost" />
         <marker scope="Public" name="magicsempai_boobs" />
         <marker scope="Public" name="magicsempai_postskirt" />
         <marker scope="Public" name="magicsempai_skirtcards" />
@@ -532,6 +633,7 @@
         <marker scope="Public" name="nagisa_satanprincipal" />
         <marker scope="Public" name="nagisa_satanprincipal2" />
         <marker scope="Public" name="nagisa_satanprincipal3" />
+        <marker scope="Public" name="nami_adventuregroup" />
         <marker scope="Public" name="nat_steve_respectcreep" />
         <marker scope="Public" name="nat_strippoker" />
         <marker scope="Public" name="natsuki_alreadynaked" />
@@ -550,23 +652,28 @@
         <marker scope="Public" name="primplore4" />
         <marker scope="Public" name="primplore5" />
         <marker scope="Public" name="prompt_mermaid" />
+        <marker scope="Public" name="queenie_squishpuyo" />
         <marker scope="Public" name="revy_" />
         <marker scope="Public" name="revy_differentstress" />
         <marker scope="Public" name="revy_differentstress2a" />
         <marker scope="Public" name="revy_differentstress2b" />
         <marker scope="Public" name="revy_puyobattle" />
         <marker scope="Public" name="revy_puyobattle2" />
+        <marker scope="Public" name="ringo_1stroundloss" />
         <marker scope="Public" name="ringo_1ststrip" />
         <marker scope="Public" name="ringo_enjoyrelax" />
         <marker scope="Public" name="ringo_howhere" />
         <marker scope="Public" name="ringo_howhere2" />
         <marker scope="Public" name="ringo_naga_puyovpuyo" />
+        <marker scope="Public" name="ringo_postchestreveal" />
         <marker scope="Public" name="ringo_presentation" />
         <marker scope="Public" name="ringo_puyohairpin" />
         <marker scope="Public" name="ringo_thingwithtee" />
         <marker scope="Public" name="ringo_thingwithtee2" />
         <marker scope="Public" name="ringo_wayback" />
         <marker scope="Public" name="ringo_wayback2" />
+        <marker scope="Public" name="ringo_whatthinkabout" />
+        <marker scope="Public" name="ringo_whatthinkonstrip" />
         <marker scope="Public" name="roll_datacarb" />
         <marker scope="Public" name="roll_megaguy" />
         <marker scope="Public" name="roll_moonship" />
@@ -584,8 +691,16 @@
         <marker scope="Public" name="steve_gfcash" />
         <marker scope="Public" name="suz_doublestrip" />
         <marker scope="Public" name="suzuya_conspiring" />
+        <marker scope="Public" name="sweetheard_AandA2" />
+        <marker scope="Public" name="sweetheart_AandA" />
         <marker scope="Public" name="sweetheart_donutgirl" />
+        <marker scope="Public" name="sweetheart_imbeciles" />
+        <marker scope="Public" name="sweetheart_imbeciles2" />
         <marker scope="Public" name="sweetheart_pillow" />
+        <marker scope="Public" name="toph_badgermole" />
+        <marker scope="Public" name="toph_badgermole2" />
+        <marker scope="Public" name="toph_spiritworld" />
+        <marker scope="Public" name="toph_spiritworld2" />
         <marker scope="Public" name="tripleunderwear" />
         <marker scope="Public" name="yuelia_1ststrip" />
         <marker scope="Public" name="yuelia_gamestart" />

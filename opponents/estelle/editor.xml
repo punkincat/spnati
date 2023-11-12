@@ -5,9 +5,6 @@
         <case name="Lovely chair" id="3" priority="Noteworthy" min="7" max="7">
             <description>Someone prepared an exquisite chair for Estelle to make her masturbation as comfortable as possible. She's the only one who gets a special treatment like that.</description>
         </case>
-        <case name="Messy hair" id="5" priority="Noteworthy" min="2" max="2">
-            <description>Estelle's hair gets messed up when she strips her overdress. She stays like that for 5 turns or until she enters her "lost pantyhose" stage. Other characters can unfluence the duration. It ends with a hair brushing pose and the said marker "messyend".</description>
-        </case>
         <case name="Estelle's Book" id="6" priority="Noteworthy" min="9" max="9">
             <description>After Estelle finished, she will read a book about SPNatI trivia. She quotes a fact every round. All facts have an unique marker.</description>
         </case>
@@ -19,6 +16,9 @@
         </case>
         <case name="A Princess's Greeting" id="65" priority="FYI" min="0" max="0">
             <description>Estelle politely greets each and every person who joins the table. If you like, you can reply using the marker EstelleGreeting.</description>
+        </case>
+        <case name="Messy hair" id="734" priority="FYI" min="2" max="2">
+            <description>Estelle's hair gets messed up when she strips her overdress. She stays like that for 5 turns or until she enters her "lost pantyhose" stage. Other characters can unfluence the duration. It ends with a hair brushing pose and the said marker "messyend".</description>
         </case>
     </noteworthy>
     <reviewed>true</reviewed>
@@ -261,6 +261,37 @@
         <response id="725" opponent="magma_grunt" opponentId="785" />
         <response id="730" opponent="ringo_ando" opponentId="230" />
         <response id="732" opponent="ringo_ando" opponentId="88" />
+        <response id="735" opponent="nagisa" opponentId="1188" />
+        <response id="736" opponent="nagisa" opponentId="1194" />
+        <response id="737" opponent="nagisa" opponentId="1208" />
+        <response id="738" opponent="nagisa" opponentId="1189" />
+        <response id="739" opponent="nagisa" opponentId="1195" />
+        <response id="740" opponent="nagisa" opponentId="1209" />
+        <response id="741" opponent="nagisa" opponentId="1190" />
+        <response id="742" opponent="nagisa" opponentId="1196" />
+        <response id="744" opponent="nagisa" opponentId="1210" />
+        <response id="745" opponent="nagisa" opponentId="1191" />
+        <response id="746" opponent="nagisa" opponentId="1197" />
+        <response id="747" opponent="nagisa" opponentId="1211" />
+        <response id="748" opponent="nagisa" opponentId="1192" />
+        <response id="749" opponent="nagisa" opponentId="1198" />
+        <response id="750" opponent="nagisa" opponentId="1213" />
+        <response id="751" opponent="nagisa" opponentId="1219" />
+        <response id="752" opponent="nagisa" opponentId="1234" />
+        <response id="753" opponent="nagisa" opponentId="1235" />
+        <response id="754" opponent="nagisa" opponentId="1214" />
+        <response id="755" opponent="nagisa" opponentId="1220" />
+        <response id="756" opponent="nagisa" opponentId="1230" />
+        <response id="757" opponent="nagisa" opponentId="1215" />
+        <response id="758" opponent="nagisa" opponentId="1221" />
+        <response id="759" opponent="nagisa" opponentId="1231" />
+        <response id="760" opponent="nagisa" opponentId="1216" />
+        <response id="761" opponent="nagisa" opponentId="1222" />
+        <response id="762" opponent="nagisa" opponentId="1232" />
+        <response id="763" opponent="nagisa" opponentId="1217" />
+        <response id="764" opponent="nagisa" opponentId="1218" />
+        <response id="765" opponent="nagisa" opponentId="1224" />
+        <response id="766" opponent="nagisa" opponentId="1233" />
     </responses>
     <notes>
         <note id="45">Disabled, but not deleted yet, because I think the extra copies of these lines can be replaced by hidden lines that just handle her messy hair, but I want to test first.</note>
@@ -328,6 +359,16 @@ Also, yes, I'm going to keep making alternate versions of these cases every sing
         <note id="722">I pulled this book and everything about it out of my ass, although Dahngrest is a real place in Tales of Vesperia. Alt version of this case for when it doesn't play in game start.</note>
         <note id="728">Not sure if there will be additional lines for the Team Wiki outfit but if not this should key off of the fallback case Magma Grunt currently resorts to in that outfit.</note>
         <note id="733">This line is disabled pending the upload of 2-noelle0.png.</note>
+        <note id="748">Hopefully this wording is sufficiently flexible that it'll make sense even if Estelle's already lost, since Nagisa could still lose alongside Estelle.</note>
+        <note id="781">Canonically, Estelle is 18. However, since Rita is also in the game and must be at least 18, Estelle now comes from an AU where everyone is three years older than in canon but nothing else is changed. (Too much changes at the end of the game for it to be feasible to have them come from after it's over.)</note>
+        <note id="773">Battling with the fact that Nagisa is straight, so she's unlikely to have a female partner as a first choice, so I tried to leave it open here.
+</note>
+        <note id="780">Maybe some innocent, accidentally-gay comments from Estelle will help?
+</note>
+        <note id="807">Estelle also being 100% innocent here XD
+</note>
+        <note id="736">She's read books at the Inventory or something, I guess. I usually just go ahead and say Estelle's read about something if I think it's helpful for an interaction.
+</note>
     </notes>
     <labels>
         <label id="37" label="" color="6" folder="Targeted Trivia" sort="0" />
@@ -932,8 +973,86 @@ Also, yes, I'm going to keep making alternate versions of these cases every sing
         <label id="730" label="" color="1" folder="" sort="0" />
         <label id="731" label="" color="1" folder="" sort="0" />
         <label id="732" label="" color="6" folder="" sort="0" />
+        <label id="735" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="736" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="737" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="738" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="739" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="740" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="741" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="742" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="743" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="744" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="745" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="746" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="747" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="748" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="749" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="750" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="751" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="752" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="753" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="754" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="755" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="756" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="757" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="758" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="759" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="760" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="761" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="762" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="763" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="764" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="765" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="766" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="767" label="" folder="Nagisa (Left)" sort="0" />
+        <label id="768" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="769" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="770" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="771" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="772" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="773" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="774" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="775" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="776" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="777" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="778" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="779" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="780" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="781" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="782" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="783" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="784" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="785" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="786" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="787" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="788" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="789" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="790" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="791" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="792" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="793" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="794" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="795" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="796" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="797" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="798" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="799" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="800" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="801" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="802" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="803" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="804" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="805" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="806" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="807" label="" folder="Nagisa (Right)" sort="0" />
+        <label id="808" label="" folder="Nagisa (Right)" sort="0" />
     </labels>
-    <nextId>733</nextId>
+    <prefixes>
+        <prefix>collectible</prefix>
+        <prefix>MessyHair</prefix>
+    </prefixes>
+    <nextId>808</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="__magma_grunt_nickname" />
@@ -1330,6 +1449,16 @@ Also, yes, I'm going to keep making alternate versions of these cases every sing
         <marker scope="Public" name="EstelleNagisaButt" />
         <marker scope="Public" name="EstelleNagisaCareer" />
         <marker scope="Public" name="EstelleNagisaClub" />
+        <marker scope="Public" name="EstelleNagisaContinue1" />
+        <marker scope="Public" name="EstelleNagisaContinue2" />
+        <marker scope="Public" name="EstelleNagisaContinue3" />
+        <marker scope="Public" name="EstelleNagisaContinue4" />
+        <marker scope="Public" name="EstelleNagisaContinue5" />
+        <marker scope="Public" name="EstelleNagisaEnd1" />
+        <marker scope="Public" name="EstelleNagisaEnd2" />
+        <marker scope="Public" name="EstelleNagisaEnd3" />
+        <marker scope="Public" name="EstelleNagisaEnd4" />
+        <marker scope="Public" name="EstelleNagisaEnd5" />
         <marker scope="Public" name="EstelleNagisaFinished2" />
         <marker scope="Public" name="EstelleNagisaFood" />
         <marker scope="Public" name="EstelleNagisaInterruptions" />
@@ -1339,9 +1468,23 @@ Also, yes, I'm going to keep making alternate versions of these cases every sing
         <marker scope="Public" name="EstelleNagisaPlay1" />
         <marker scope="Public" name="EstelleNagisaPlay2" />
         <marker scope="Public" name="EstelleNagisaPresents" />
+        <marker scope="Public" name="EstelleNagisaReply1" />
+        <marker scope="Public" name="EstelleNagisaReply2" />
+        <marker scope="Public" name="EstelleNagisaReplyAfter1" />
+        <marker scope="Public" name="EstelleNagisaReplyContinue1" />
+        <marker scope="Public" name="EstelleNagisaReplyContinue2" />
+        <marker scope="Public" name="EstelleNagisaReplyEnd1" />
+        <marker scope="Public" name="EstelleNagisaReplyEnd2" />
+        <marker scope="Public" name="EstelleNagisaRitaReplyEnd2" />
         <marker scope="Public" name="EstelleNagisaSeeHouse" />
         <marker scope="Public" name="EstelleNagisaSleepover" />
         <marker scope="Public" name="EstelleNagisaStarfish" />
+        <marker scope="Public" name="EstelleNagisaStart1" />
+        <marker scope="Public" name="EstelleNagisaStart2" />
+        <marker scope="Public" name="EstelleNagisaStart3" />
+        <marker scope="Public" name="EstelleNagisaStart4" />
+        <marker scope="Public" name="EstelleNagisaStart5" />
+        <marker scope="Public" name="EstelleNagisaStart6" />
         <marker scope="Public" name="EstelleNagisaTowels" />
         <marker scope="Public" name="EstelleNamiBook" />
         <marker scope="Public" name="EstelleNamiBookRobin" />
@@ -1696,6 +1839,33 @@ Also, yes, I'm going to keep making alternate versions of these cases every sing
         <marker scope="Public" name="messy_perona">Special messy-hair tracker for Perona. Estelle brushes her hair immediately when playing with Perona.</marker>
         <marker scope="Public" name="messy_saki">Special messy-hair tracker for Saki. Estelle brushes her hair immediately when playing with Saki.</marker>
         <marker scope="Public" name="messyend">Triggers Estelle brushing her hair so it's no longer messy. Automatically triggers in stage 4 or later.</marker>
+        <marker scope="Public" name="NagisaEstelleContinue1" />
+        <marker scope="Public" name="NagisaEstelleContinue2" />
+        <marker scope="Public" name="NagisaEstelleContinue3" />
+        <marker scope="Public" name="NagisaEstelleEnd1Known" />
+        <marker scope="Public" name="NagisaEstelleEnd1Unknown" />
+        <marker scope="Public" name="NagisaEstelleEnd2" />
+        <marker scope="Public" name="NagisaEstelleEnd3" />
+        <marker scope="Public" name="NagisaEstelleInspiration" />
+        <marker scope="Public" name="NagisaEstelleMaidService" />
+        <marker scope="Public" name="NagisaEstelleReply1" />
+        <marker scope="Public" name="NagisaEstelleReply2" />
+        <marker scope="Public" name="NagisaEstelleReply3" />
+        <marker scope="Public" name="NagisaEstelleReply4" />
+        <marker scope="Public" name="NagisaEstelleReply5" />
+        <marker scope="Public" name="NagisaEstelleReplyContinue1" />
+        <marker scope="Public" name="NagisaEstelleReplyContinue2" />
+        <marker scope="Public" name="NagisaEstelleReplyContinue3" />
+        <marker scope="Public" name="NagisaEstelleReplyContinue4" />
+        <marker scope="Public" name="NagisaEstelleReplyContinue5" />
+        <marker scope="Public" name="NagisaEstelleReplyEnd1" />
+        <marker scope="Public" name="NagisaEstelleReplyEnd2" />
+        <marker scope="Public" name="NagisaEstelleReplyEnd3" />
+        <marker scope="Public" name="NagisaEstelleReplyEnd4" />
+        <marker scope="Public" name="NagisaEstelleRudeForfeit" />
+        <marker scope="Public" name="NagisaEstelleStart1" />
+        <marker scope="Public" name="NagisaEstelleStart2" />
+        <marker scope="Public" name="NagisaEstelleStart3" />
         <marker scope="Public" name="natsukiDress" />
         <marker scope="Public" name="natsukiDressAfter" />
         <marker scope="Public" name="necklace" />

@@ -242,6 +242,7 @@ namespace SPNATI_Character_Editor
 			new KeyValuePair<string, string>("lost_all", "Lost all layers"),
 			new KeyValuePair<string, string>("alive", "Still in the game"),
 			new KeyValuePair<string, string>("masturbating", "Masturbating"),
+			new KeyValuePair<string, string>("heavy_masturbating", "Masturbating (heavy)"),
 			new KeyValuePair<string, string>("finished", "Finished masturbating")
 		};
 
@@ -259,6 +260,7 @@ namespace SPNATI_Character_Editor
 			new KeyValuePair<string, string>("lost_all", "Lost all layers"),
 			new KeyValuePair<string, string>("alive", "Still in the game"),
 			new KeyValuePair<string, string>("masturbating", "Forfeiting"),
+			new KeyValuePair<string, string>("heavy_masturbating", "Forfeiting (heavy)"),
 			new KeyValuePair<string, string>("finished", "Finished forfeit")
 		};
 
@@ -400,6 +402,40 @@ namespace SPNATI_Character_Editor
 				ConsecutiveLosses == other.ConsecutiveLosses &&
 				Pose == other.Pose &&
 				(Variable ?? "") == (other.Variable ?? "");
+		}
+
+		public string RemoveIfNullOrEqual(string c1, string c2)
+		{
+			return string.IsNullOrEmpty(c1) || string.Equals(c1, c2) ? null : c1;
+		}
+
+		public void RemoveIntersection(TargetCondition other)
+		{
+			if (other == null) { return; }
+			if (other.Character != Character || other.Role != Role || other.Stage != Stage) { return; }
+
+			FilterTag = RemoveIfNullOrEqual(FilterTag, other.FilterTag);
+			FilterNotTag = RemoveIfNullOrEqual(FilterNotTag, other.FilterNotTag);
+			FilterTagAdv = RemoveIfNullOrEqual(FilterTagAdv, other.FilterTagAdv);
+			Count = RemoveIfNullOrEqual((Count ?? ""), (other.Count ?? ""));
+			Status = RemoveIfNullOrEqual(Status, other.Status);
+			Gender = RemoveIfNullOrEqual(Gender, other.Gender);
+;			Hand = RemoveIfNullOrEqual(Hand, other.Hand);
+			Role = RemoveIfNullOrEqual(Role, other.Role);
+			// do not remove the Character field so as not to break conditions such as SaidMarker
+			//Character = RemoveIfNullOrEqual(Character, other.Character);
+			Stage = RemoveIfNullOrEqual(Stage, other.Stage);
+			TimeInStage = RemoveIfNullOrEqual(TimeInStage, other.TimeInStage);
+			Layers = RemoveIfNullOrEqual(Layers, other.Layers);
+			StartingLayers = RemoveIfNullOrEqual(StartingLayers, other.StartingLayers);
+			SaidMarker = RemoveIfNullOrEqual(SaidMarker, other.SaidMarker);
+			NotSaidMarker = RemoveIfNullOrEqual(NotSaidMarker, other.NotSaidMarker);
+			SayingMarker = RemoveIfNullOrEqual(SayingMarker, other.SayingMarker);
+			Saying = RemoveIfNullOrEqual(Saying, other.Saying);
+			Said = RemoveIfNullOrEqual(Said, other.Said);
+			ConsecutiveLosses = RemoveIfNullOrEqual(ConsecutiveLosses, other.ConsecutiveLosses);
+			Pose = RemoveIfNullOrEqual(Pose, other.Pose);
+			Variable = RemoveIfNullOrEqual((Variable ?? ""), (other.Variable ?? ""));
 		}
 
 		public override int GetHashCode()
@@ -885,6 +921,15 @@ namespace SPNATI_Character_Editor
 			get
 			{
 				return !HasAdvancedConditions && string.IsNullOrEmpty(Count) && string.IsNullOrEmpty(Character) && string.IsNullOrEmpty(Variable);
+			}
+		}
+
+		[JsonIgnore]
+		public bool IsAlmostEmpty
+		{
+			get
+			{
+				return !HasAdvancedConditions && string.IsNullOrEmpty(Count) && string.IsNullOrEmpty(Variable);
 			}
 		}
 

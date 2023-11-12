@@ -95,6 +95,9 @@
         <response id="388" opponent="queenie" opponentId="28" />
         <response id="391" opponent="felix" opponentId="528" />
         <response id="425" opponent="nami" opponentId="1359" />
+        <response id="432" opponent="arle" opponentId="152" />
+        <response id="433" opponent="arle" opponentId="155" />
+        <response id="434" opponent="arle" opponentId="153" />
     </responses>
     <notes>
         <note id="30">Sled on, Cagliosled.</note>
@@ -450,6 +453,25 @@
         <label id="426" label="" folder="Targets" sort="0" />
         <label id="427" label="" folder="Targets" sort="0" />
         <label id="428" label="" folder="Names" sort="0" />
+        <label id="429" label="" folder="Barbara" sort="0" />
+        <label id="430" label="" folder="Barbara" sort="0" />
+        <label id="431" label="" folder="Barbara" sort="0" />
+        <label id="435" label="" folder="Barbara" sort="0" />
+        <label id="436" label="" folder="Barbara" sort="0" />
+        <label id="437" label="" folder="Barbara" sort="0" />
+        <label id="438" label="" folder="Barbara" sort="0" />
+        <label id="439" label="" folder="Barbara" sort="0" />
+        <label id="440" label="" folder="Barbara" sort="0" />
+        <label id="441" label="" folder="Barbara" sort="0" />
+        <label id="442" label="" folder="Barbara" sort="0" />
+        <label id="443" label="" folder="Barbara" sort="0" />
+        <label id="444" label="" folder="Barbara" sort="0" />
+        <label id="445" label="" folder="Targets" sort="0" />
+        <label id="446" label="" folder="Targets" sort="0" />
+        <label id="447" label="" folder="Targets" sort="0" />
+        <label id="448" label="" folder="Targets" sort="0" />
+        <label id="449" label="" folder="Targets" sort="0" />
+        <label id="450" label="" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>magic</prefix>
@@ -459,11 +481,8 @@
         <prefix>collar</prefix>
         <prefix>Ouroboros</prefix>
     </prefixes>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>428</nextId>
+    <nextId>450</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="__barbara_nickname" />
         <marker scope="Public" name="__dwight_nickname" />
         <marker scope="Public" name="__lux_nickname" />
@@ -490,12 +509,20 @@
         <marker scope="Public" name="AGGloves1" />
         <marker scope="Public" name="AGSeaLevel" />
         <marker scope="Public" name="AGShoes3" />
+        <marker scope="Public" name="AquaBoots1" />
         <marker scope="Public" name="AquaCorset" />
         <marker scope="Public" name="AquaCorset1" />
+        <marker scope="Public" name="AquaKSBoots1" />
+        <marker scope="Public" name="AquaKSSleeves1" />
         <marker scope="Public" name="AquaShorts1" />
         <marker scope="Public" name="AquaSleeves1" />
-        <marker scope="Public" name="AquSleeves1" />
+        <marker scope="Public" name="ArleBracers2Reply" />
+        <marker scope="Public" name="ArleCloak1Reply" />
+        <marker scope="Public" name="ArleCloak2Reply" />
         <marker scope="Public" name="Ba" />
+        <marker scope="Public" name="Barbamimi1" />
+        <marker scope="Public" name="Barbamimi2" />
+        <marker scope="Public" name="Barbamimi3" />
         <marker scope="Public" name="BarbaraBra1" />
         <marker scope="Public" name="BarbaraBra2" />
         <marker scope="Public" name="BarbaraBra3" />
@@ -505,6 +532,19 @@
         <marker scope="Public" name="BarbaraDress1" />
         <marker scope="Public" name="BarbaraDress2" />
         <marker scope="Public" name="BarbaraDressr2" />
+        <marker scope="Public" name="BarbaraFF1" />
+        <marker scope="Public" name="BarbaraFF10" />
+        <marker scope="Public" name="BarbaraFF2" />
+        <marker scope="Public" name="BarbaraFF3" />
+        <marker scope="Public" name="BarbaraFF4" />
+        <marker scope="Public" name="BarbaraFF5" />
+        <marker scope="Public" name="BarbaraFF6" />
+        <marker scope="Public" name="BarbaraFF7" />
+        <marker scope="Public" name="BarbaraFF8" />
+        <marker scope="Public" name="BarbaraFF9" />
+        <marker scope="Public" name="BarbaraFFFinish" />
+        <marker scope="Public" name="BarbaraFFMust" />
+        <marker scope="Public" name="BarbaraFFStart" />
         <marker scope="Public" name="BarbaraHat1" />
         <marker scope="Public" name="BarbaraHat2" />
         <marker scope="Public" name="BarbaraHat3" />
@@ -550,6 +590,7 @@
         <marker scope="Public" name="EstelleRitaFF" />
         <marker scope="Public" name="FelixArmbands1" />
         <marker scope="Public" name="FelixArmbands2" />
+        <marker scope="Public" name="FelixBarbara" />
         <marker scope="Public" name="FelixCloak1Reply" />
         <marker scope="Public" name="FelixCloak2Reply" />
         <marker scope="Public" name="FelixDress3" />
@@ -728,6 +769,7 @@
         <marker scope="Public" name="MeiaCloak2Reply" />
         <marker scope="Public" name="MeiaCloak3Reply" />
         <marker scope="Public" name="MeiaFuta1" />
+        <marker scope="Public" name="MeiaFuta2" />
         <marker scope="Public" name="MeiaMen" />
         <marker scope="Public" name="MeiaRecruitment" />
         <marker scope="Public" name="MeiaShorts1" />
@@ -817,6 +859,9 @@
         <marker scope="Public" name="RitaRightShoe1" />
         <marker scope="Public" name="RosaCloak1Reply" />
         <marker scope="Public" name="SakiBandages2" />
+        <marker scope="Public" name="ShamikoCloak1Reply" />
+        <marker scope="Public" name="ShamikoShoes1" />
+        <marker scope="Public" name="ShamikoSkirt1" />
         <marker scope="Public" name="SlyBoots1" />
         <marker scope="Public" name="SlyBoots2" />
         <marker scope="Public" name="SlyBoots3" />
@@ -850,10 +895,14 @@
         <marker scope="Public" name="SucrosePanties1" />
         <marker scope="Public" name="SucrosePanties2" />
         <marker scope="Public" name="SucrosePanties3" />
+        <marker scope="Public" name="SweetheartBra1" />
+        <marker scope="Public" name="SweetheartDress1" />
+        <marker scope="Public" name="SweetheartFF" />
         <marker scope="Public" name="TakeOffYourClothes" />
         <marker scope="Public" name="ThereIsNoLine" />
         <marker scope="Public" name="TophBending" />
         <marker scope="Public" name="TophBracelets1" />
+        <marker scope="Public" name="TophBracelets2" />
         <marker scope="Public" name="TophPants1" />
         <marker scope="Public" name="TophShirt1" />
         <marker scope="Public" name="TurandotBizarre" />

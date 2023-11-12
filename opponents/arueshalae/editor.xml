@@ -22,8 +22,6 @@
     <notes>
         <note id="6">Fun fact: This is based on how Blind Guardian, the band that most of Arueshalae's songs are from, did a cover of a few Beach Boys songs, including Barbara Ann.</note>
     </notes>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
     <nextId>6</nextId>
     <markers>
         <marker scope="Public" name="" />
@@ -61,6 +59,7 @@
         <marker scope="Public" name="Arueshalae_joins_the_game" />
         <marker scope="Public" name="Arueshalae_joke" />
         <marker scope="Public" name="Barbara_resp0a" />
+        <marker scope="Public" name="Barbara_resp0b" />
         <marker scope="Public" name="Barbara0a" />
         <marker scope="Public" name="Barbara0b" />
         <marker scope="Public" name="Barbara0c" />
@@ -88,6 +87,7 @@
         <marker scope="Public" name="Cheryl_resp1b" />
         <marker scope="Public" name="Cheryl_resp1c" />
         <marker scope="Public" name="Cheryl_resp2a" />
+        <marker scope="Public" name="clerictarget" />
         <marker scope="Public" name="Darkness_paranoia" />
         <marker scope="Public" name="Darkness_resp0a" />
         <marker scope="Public" name="Darkness_resp0b" />
@@ -203,6 +203,16 @@
         <marker scope="Public" name="Lux0a" />
         <marker scope="Public" name="Lux0b" />
         <marker scope="Public" name="Lux0c" />
+        <marker scope="Public" name="Lysithea0a" />
+        <marker scope="Public" name="Lysithea1a" />
+        <marker scope="Public" name="Lysithia_gameresp" />
+        <marker scope="Public" name="Lysithia_magicresp" />
+        <marker scope="Public" name="Lysithia_magicresp2" />
+        <marker scope="Public" name="Lysithia_wingsresp" />
+        <marker scope="Public" name="Lysithia_wingsresp2" />
+        <marker scope="Public" name="Lysithia0b" />
+        <marker scope="Public" name="Lysithia1b" />
+        <marker scope="Public" name="Lysithiagameresp2" />
         <marker scope="Public" name="Marceline0a" />
         <marker scope="Public" name="Mari_resp0a" />
         <marker scope="Public" name="Mari_resp0b" />
@@ -211,6 +221,8 @@
         <marker scope="Public" name="Mari_resp3b" />
         <marker scope="Public" name="Mari_resp3balt" />
         <marker scope="Public" name="Mari_resp3balt2" />
+        <marker scope="Public" name="Mari_tattooquestion" />
+        <marker scope="Public" name="Mari_tattooquestionalt" />
         <marker scope="Public" name="Mari0a" />
         <marker scope="Public" name="Mari1b" />
         <marker scope="Public" name="Mari2c" />
@@ -232,6 +244,7 @@
         <marker scope="Public" name="MariS_resp4a" />
         <marker scope="Public" name="MariS_resp4b" />
         <marker scope="Public" name="MariS_resp4c" />
+        <marker scope="Public" name="MariS_resp5a" />
         <marker scope="Public" name="MariS0a" />
         <marker scope="Public" name="MariS0b" />
         <marker scope="Public" name="MariS0c" />
@@ -248,6 +261,21 @@
         <marker scope="Public" name="Meia_resp0b" />
         <marker scope="Public" name="Meia_resp1a" />
         <marker scope="Public" name="Meia_resp1b" />
+        <marker scope="Public" name="Nadeshiko_resp0a" />
+        <marker scope="Public" name="Nadeshiko_resp0b" />
+        <marker scope="Public" name="Nadeshiko_resp0c" />
+        <marker scope="Public" name="Nadeshiko_resp1a" />
+        <marker scope="Public" name="Nadeshiko_resp1b" />
+        <marker scope="Public" name="Nadeshiko_resp1c" />
+        <marker scope="Public" name="Nadeshiko_resp2a" />
+        <marker scope="Public" name="Nadeshiko_resp2b" />
+        <marker scope="Public" name="Nadeshiko_resp2c" />
+        <marker scope="Public" name="Nadeshiko_resp3a" />
+        <marker scope="Public" name="Nadeshiko_resp3b" />
+        <marker scope="Public" name="Nadeshiko_resp3c" />
+        <marker scope="Public" name="Nadeshiko_resp4a" />
+        <marker scope="Public" name="Nadeshiko_resp4b" />
+        <marker scope="Public" name="Nadeshiko_resp4c" />
         <marker scope="Public" name="Nagatoro_demon_0a" />
         <marker scope="Public" name="Nagatoro_demon_0b" />
         <marker scope="Public" name="Nagatoro_demon_0c" />
@@ -264,7 +292,11 @@
         <marker scope="Public" name="Nagatoro_resp2b" />
         <marker scope="Public" name="Nagatoro_resp2c" />
         <marker scope="Public" name="Nagatoro_resp3a" />
+        <marker scope="Public" name="Nagatoro_resp3b" />
+        <marker scope="Public" name="Nagatoro_resp3c" />
         <marker scope="Public" name="Nagatoro_resp4a" />
+        <marker scope="Public" name="Nagatoro_resp4b" />
+        <marker scope="Public" name="Nagatoro_resp4c" />
         <marker scope="Public" name="Nagatoro0a" />
         <marker scope="Public" name="Nagatoro0b" />
         <marker scope="Public" name="Nagatoro0c" />
@@ -303,6 +335,7 @@
         <marker scope="Public" name="Reimu_resp1a" />
         <marker scope="Public" name="Reimu_resp1b" />
         <marker scope="Public" name="Reimu_resp2a" />
+        <marker scope="Public" name="Reimu_resp2b" />
         <marker scope="Public" name="Reimu_resp2c" />
         <marker scope="Public" name="Reimu0a" />
         <marker scope="Public" name="Reimu0b" />
@@ -314,6 +347,8 @@
         <marker scope="Public" name="Reimu2b" />
         <marker scope="Public" name="Reimu2c" />
         <marker scope="Public" name="Reimu3a" />
+        <marker scope="Public" name="Reimu3b" />
+        <marker scope="Public" name="Reimu3c" />
         <marker scope="Public" name="Remilia0a" />
         <marker scope="Public" name="Revy_resp0a" />
         <marker scope="Public" name="Revy_resp0b" />
@@ -361,10 +396,61 @@
         <marker scope="Public" name="Sanny&amp;Tess2c" />
         <marker scope="Public" name="Shamiko_resp0a" />
         <marker scope="Public" name="Shamiko_resp0b" />
+        <marker scope="Public" name="Shamiko_resp0c" />
         <marker scope="Public" name="Shamiko0a" />
         <marker scope="Public" name="Shamiko0b" />
         <marker scope="Public" name="Shamiko0c" />
+        <marker scope="Public" name="Shamiko1a" />
+        <marker scope="Public" name="Shamiko1b" />
+        <marker scope="Public" name="Shamiko1c" />
+        <marker scope="Public" name="Shamiko2a" />
+        <marker scope="Public" name="Shamiko2b" />
+        <marker scope="Public" name="Solarflare_armorresp" />
+        <marker scope="Public" name="Solarflare_hornsresp" />
+        <marker scope="Public" name="Solarflare_nameresp" />
+        <marker scope="Public" name="Solarflare_reputationresp" />
+        <marker scope="Public" name="Solarflare_Wingsresp" />
+        <marker scope="Public" name="Steve0a" />
         <marker scope="Public" name="Susie0a" />
+        <marker scope="Public" name="Toph_allnaked" />
+        <marker scope="Public" name="Toph_Dragons" />
+        <marker scope="Public" name="Toph_resp0a" />
+        <marker scope="Public" name="Toph_resp0b" />
+        <marker scope="Public" name="Toph_resp0c" />
+        <marker scope="Public" name="Toph_resp1a" />
+        <marker scope="Public" name="Toph_resp1b" />
+        <marker scope="Public" name="Toph_resp1c" />
+        <marker scope="Public" name="Toph_resp2a" />
+        <marker scope="Public" name="Toph_resp2b" />
+        <marker scope="Public" name="Toph_resp2c" />
+        <marker scope="Public" name="Toph_resp3a" />
+        <marker scope="Public" name="Toph_resp3b" />
+        <marker scope="Public" name="Toph_resp3c" />
+        <marker scope="Public" name="Toph_resp4a" />
+        <marker scope="Public" name="Toph_resp4b" />
+        <marker scope="Public" name="Toph_resp4c" />
+        <marker scope="Public" name="Toph_resp5a" />
+        <marker scope="Public" name="Toph_resp5b" />
+        <marker scope="Public" name="Toph_resp5c" />
+        <marker scope="Public" name="Toph_Wars" />
+        <marker scope="Public" name="Toph0a" />
+        <marker scope="Public" name="Toph0b" />
+        <marker scope="Public" name="Toph0c" />
+        <marker scope="Public" name="Toph1a" />
+        <marker scope="Public" name="Toph1b" />
+        <marker scope="Public" name="Toph1c" />
+        <marker scope="Public" name="Toph2a" />
+        <marker scope="Public" name="Toph2b" />
+        <marker scope="Public" name="Toph2c" />
+        <marker scope="Public" name="Toph3a" />
+        <marker scope="Public" name="Toph3b" />
+        <marker scope="Public" name="Toph3c" />
+        <marker scope="Public" name="Toph4a" />
+        <marker scope="Public" name="Toph4b" />
+        <marker scope="Public" name="Toph4c" />
+        <marker scope="Public" name="Toph5a" />
+        <marker scope="Public" name="Toph5b" />
+        <marker scope="Public" name="Toph5c" />
         <marker scope="Public" name="Trifle0a" />
         <marker scope="Public" name="Trifle0b" />
         <marker scope="Public" name="Trixie_resp0a" />

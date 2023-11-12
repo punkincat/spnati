@@ -264,6 +264,13 @@
         <response id="806" opponent="jura" opponentId="377" />
         <response id="807" opponent="jura" opponentId="378" />
         <response id="808" opponent="jura" opponentId="379" />
+        <response id="814" opponent="lysithea" opponentId="3" />
+        <response id="817" opponent="lysithea" opponentId="43" />
+        <response id="818" opponent="lysithea" opponentId="41" />
+        <response id="819" opponent="lysithea" opponentId="42" />
+        <response id="824" opponent="bowsette" opponentId="122" />
+        <response id="830" opponent="nadeshiko" opponentId="9" />
+        <response id="831" opponent="nadeshiko" opponentId="92" />
     </responses>
     <notes>
         <note id="13">https://www.youtube.com/watch?v=5EbnoElOJx0 please dont actually respond to this really dumb joke</note>
@@ -294,6 +301,8 @@ Why? Do people think we are?"</note>
         <note id="742">the two responses here use different marker values</note>
         <note id="743">the two responses here use different marker values</note>
         <note id="771">Tomes appear in many fire emblem games as the magic equivalent of a 'weapon', but they don't appear in Three Houses of all games</note>
+        <note id="820">casual banter</note>
+        <note id="822">flirtatious banter</note>
     </notes>
     <labels>
         <label id="3" label="Academy Uniform Player Callout" folder="" sort="0" />
@@ -1014,13 +1023,36 @@ Why? Do people think we are?"</note>
         <label id="809" label="" folder="Post-Epilogue (Summer)" sort="0" />
         <label id="810" label="" folder="Post-Epilogue (Summer)" sort="0" />
         <label id="811" label="" folder="Also Playing" sort="0" />
+        <label id="812" label="" folder="Lysithea" sort="0" />
+        <label id="813" label="" folder="Lysithea" sort="0" />
+        <label id="814" label="" color="3" folder="Lysithea" sort="0" />
+        <label id="815" label="" color="3" folder="Lysithea" sort="0" />
+        <label id="816" label="" color="3" folder="Lysithea" sort="0" />
+        <label id="817" label="" color="1" folder="Lysithea" sort="0" />
+        <label id="818" label="" color="1" folder="Lysithea" sort="0" />
+        <label id="819" label="" color="1" folder="Lysithea" sort="0" />
+        <label id="820" label="" color="1" folder="Lysithea" sort="0" />
+        <label id="821" label="" color="1" folder="Lysithea" sort="0" />
+        <label id="822" label="" color="1" folder="Lysithea" sort="0" />
+        <label id="823" label="" folder="Toph" sort="0" />
+        <label id="226" label="" folder="Bowsette" sort="0" />
+        <label id="824" label="" folder="Bowsette" sort="0" />
+        <label id="825" label="" folder="Bowsette" sort="0" />
+        <label id="826" label="" folder="Bowsette" sort="0" />
+        <label id="827" label="" folder="Bowsette" sort="0" />
+        <label id="828" label="" folder="Bowsette" sort="0" />
+        <label id="829" label="" folder="Bowsette" sort="0" />
+        <label id="830" label="" folder="Prompt Responses" sort="0" />
+        <label id="831" label="" folder="Prompt Responses" sort="0" />
+        <label id="832" label="" color="1" folder="Targets" sort="0" />
+        <label id="833" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>sunglasses</prefix>
+        <prefix>animal-hide</prefix>
+        <prefix>feather</prefix>
     </prefixes>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>811</nextId>
+    <nextId>833</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="!" />
@@ -1131,6 +1163,9 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="mitama_falling_asleep" />
         <marker scope="Public" name="mitama_queen_idle_resp" />
         <marker scope="Public" name="monika_" />
+        <marker scope="Public" name="nadeshiko_cook" />
+        <marker scope="Public" name="nadeshiko_cookPrompt" />
+        <marker scope="Public" name="nadeshiko_partnerPrompt" />
         <marker scope="Public" name="nagatoro_butt_resp" />
         <marker scope="Public" name="nord_table_best_gift_ever1" />
         <marker scope="Public" name="nude_challenge" />
@@ -1242,7 +1277,14 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="petra_bobobo_strip5c" />
         <marker scope="Public" name="petra_bobobo_voiceofhair" />
         <marker scope="Public" name="petra_bobobo_voiceofhair_war" />
+        <marker scope="Public" name="petra_bowsette" />
+        <marker scope="Public" name="petra_bowsette_asset" />
+        <marker scope="Public" name="petra_bowsette_combat" />
         <marker scope="Public" name="petra_bowsette_dressdestroyed" />
+        <marker scope="Public" name="petra_bowsette_flying" />
+        <marker scope="Public" name="petra_bowsette_invitation" />
+        <marker scope="Public" name="petra_bowsette_language" />
+        <marker scope="Public" name="petra_bowsette_physical" />
         <marker scope="Public" name="Petra_brigid_wildlife_endResp" />
         <marker scope="Public" name="petra_brock_kaboom" />
         <marker scope="Public" name="petra_brock_magnetism_save" />
@@ -1391,6 +1433,7 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="petra_kaz_self0a" />
         <marker scope="Public" name="petra_kaz_strip0a" />
         <marker scope="Public" name="petra_kaz_strip0b" />
+        <marker scope="Public" name="petra_kirigiri_detective1" />
         <marker scope="Public" name="petra_kumatora_selfstrip0a" />
         <marker scope="Public" name="petra_kumatora_strip0a" />
         <marker scope="Public" name="petra_kumatora_strip1a" />
@@ -1473,6 +1516,18 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="petra_Lyralei_butt1" />
         <marker scope="Public" name="petra_Lyralei_butt2" />
         <marker scope="Public" name="petra_lyralei_strip5c" />
+        <marker scope="Public" name="petra_lysithea_aspirations1" />
+        <marker scope="Public" name="petra_lysithea_aspirations2" />
+        <marker scope="Public" name="petra_lysithea_beachI" />
+        <marker scope="Public" name="petra_lysithea_beachS" />
+        <marker scope="Public" name="petra_lysithea_charm1" />
+        <marker scope="Public" name="petra_lysithea_diplomacyI" />
+        <marker scope="Public" name="petra_lysithea_diplomacyS" />
+        <marker scope="Public" name="petra_lysithea_elegance1" />
+        <marker scope="Public" name="petra_lysithea_magic1" />
+        <marker scope="Public" name="petra_lysithea_motivation1" />
+        <marker scope="Public" name="petra_lysithea_trainingI" />
+        <marker scope="Public" name="petra_lysithea_trainingS" />
         <marker scope="Public" name="petra_mari_friends1_c_resp" />
         <marker scope="Public" name="petra_mari_friends1_resp" />
         <marker scope="Public" name="petra_mari_idioms1_resp" />
@@ -1641,6 +1696,7 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="petra_toph_braid" />
         <marker scope="Public" name="petra_toph_earthbending1" />
         <marker scope="Public" name="petra_toph_earthbending2" />
+        <marker scope="Public" name="petra_toph_earthbending3" />
         <marker scope="Public" name="petra_trixie_islandResp" />
         <marker scope="Public" name="petra_trixie_strip0a" />
         <marker scope="Public" name="petra_wasp_self0a" />

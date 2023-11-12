@@ -6,13 +6,10 @@
     <pronunciation>tojosatomʲimʲi no mʲiko</pronunciation>
     <othernotes>https://en.touhouwiki.net/wiki/Toyosatomimi_no_Miko</othernotes>
     <noteworthy>
-        <case name="Tojiko Appears" id="6" priority="Noteworthy" min="0" max="0">
-            <description>The Crown Prince's ghost consort has appeared out of hiding to take Miko's cape away.</description>
-        </case>
         <case name="Tojiko Tandem" id="7" priority="Noteworthy" min="8" max="8">
-            <description>The Crown Prince's ghost consort has appeared out of hiding to fuck her.</description>
+            <description>The Crown Prince has sex with her ghost consort.</description>
         </case>
-        <case name="Spellcard Attack" id="1" priority="Noteworthy" min="8" max="8">
+        <case name="Spellcard Attack" id="1" priority="FYI" min="8" max="8">
             <description>Miko has unleashed a powerful Special Attack, Human Sign "Tradition of Just Rewards," against Saki.</description>
         </case>
         <case name="True Desires (Prompt Marker)" id="12" priority="Prompt" min="0" max="8">
@@ -149,6 +146,19 @@
         <response id="120" opponent="arle" opponentId="240" />
         <response id="121" opponent="arle" opponentId="242" />
         <response id="122" opponent="arle" opponentId="241" />
+        <response id="123" opponent="arle" opponentId="269" />
+        <response id="124" opponent="arle" opponentId="268" />
+        <response id="126" opponent="aqua_konosuba" opponentId="774" />
+        <response id="127" opponent="aqua_konosuba" opponentId="775" />
+        <response id="128" opponent="aqua_konosuba" opponentId="776" />
+        <response id="129" opponent="aqua_konosuba" opponentId="780" />
+        <response id="131" opponent="queenie" opponentId="349" />
+        <response id="132" opponent="queenie" opponentId="350" />
+        <response id="133" opponent="aqua_konosuba" opponentId="803" />
+        <response id="134" opponent="aqua_konosuba" opponentId="805" />
+        <response id="135" opponent="nagatoro" opponentId="2312" />
+        <response id="136" opponent="arle" opponentId="312" />
+        <response id="137" opponent="shamiko" opponentId="30" />
     </responses>
     <notes>
         <note id="48">I'm great now</note>
@@ -156,12 +166,13 @@
         <note id="104">The joke here is Miko can't understand Gloria through her thick accent and assumes it's a problem with Gloria.</note>
         <note id="106">This is a good opportunity for Kaz to talk about Magistocrats</note>
         <note id="112">shes talkin about boobs</note>
+        <note id="125">Ignore miko's shitty old horny poses, I'm going to change all of that in the rework.</note>
+        <note id="130">Aqua and Miko shouldn't get along, since Aqua is in charge of leading people into the afterlife and Miko is immortal through the power of cheating death.</note>
     </notes>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>122</nextId>
+    <nextId>137</nextId>
     <markers>
         <marker scope="Public" name="9SBoots1" />
+        <marker scope="Public" name="9SBoots2" />
         <marker scope="Public" name="9SGloves1" />
         <marker scope="Public" name="9SGloves2" />
         <marker scope="Public" name="9SGloves3" />
@@ -174,6 +185,14 @@
         <marker scope="Public" name="AmyRoseBracelets3" />
         <marker scope="Public" name="AmyRoseShopping_resp" />
         <marker scope="Public" name="AmyRoseSweater1" />
+        <marker scope="Public" name="AquaKonosubaAdornments1_resp" />
+        <marker scope="Public" name="AquaKonosubaBoots1" />
+        <marker scope="Public" name="AquaKonosubaBoots2" />
+        <marker scope="Public" name="AquaKonosubaCape1_resp" />
+        <marker scope="Public" name="AquaKonosubaCape2_resp" />
+        <marker scope="Public" name="AquaKonosubaCape3_resp" />
+        <marker scope="Public" name="AquaKonosubaSword1_resp" />
+        <marker scope="Public" name="AquaKonosubaSword2_resp" />
         <marker scope="Public" name="ArashArmor1" />
         <marker scope="Public" name="ArashArmor2" />
         <marker scope="Public" name="ArashArmor3" />
@@ -188,8 +207,12 @@
         <marker scope="Public" name="ArashScarf3" />
         <marker scope="Public" name="ArleAdapt_resp" />
         <marker scope="Public" name="ArleCape2_resp" />
+        <marker scope="Public" name="ArleCape3_resp" />
         <marker scope="Public" name="ArleCapeAndArmor1" />
+        <marker scope="Public" name="ArleCapeAndArmor2" />
         <marker scope="Public" name="ArleDiffWorld_resp" />
+        <marker scope="Public" name="ArleGensokyoTravel_resp" />
+        <marker scope="Public" name="ArleGensokyoTravel2_resp" />
         <marker scope="Public" name="ArleMermaid_resp" />
         <marker scope="Public" name="ArlePet_resp" />
         <marker scope="Public" name="ArrangedMarriage">Miko wants to unite kingdoms through political marriages.</marker>
@@ -215,6 +238,7 @@
         <marker scope="Public" name="BarbaraHat3" />
         <marker scope="Public" name="BarbaraShoes1" />
         <marker scope="Public" name="BarbaraShoes2" />
+        <marker scope="Public" name="BarbaraShoes3" />
         <marker scope="Private" name="BendedKnee">Telling Palutena she won't worship her.</marker>
         <marker scope="Public" name="bernie_desires_resp">Response to Bernie's resposonse to Miko's desires prompt marker.</marker>
         <marker scope="Private" name="BiBye" />
@@ -485,8 +509,10 @@
         <marker scope="Public" name="KazCape2_resp" />
         <marker scope="Public" name="KazCape3_resp" />
         <marker scope="Public" name="KazHeadphones1_resp" />
+        <marker scope="Public" name="KazHeadphones2_resp" />
         <marker scope="Public" name="KazShirt1" />
         <marker scope="Public" name="KazShirt2" />
+        <marker scope="Public" name="KazShirt3" />
         <marker scope="Public" name="KazShoes1" />
         <marker scope="Public" name="KazShoes2" />
         <marker scope="Public" name="KazShoes3" />
@@ -542,6 +568,9 @@
         <marker scope="Public" name="KyokoKirigiriJacket1" />
         <marker scope="Public" name="KyokoKirigiriJacket2" />
         <marker scope="Public" name="KyokoKirigiriJacket3" />
+        <marker scope="Public" name="KyokoKirigiriTie1" />
+        <marker scope="Public" name="KyokoKirigiriTie2" />
+        <marker scope="Public" name="KyokoKirigiriTie3" />
         <marker scope="Public" name="KyoukoToshinouJacket1" />
         <marker scope="Public" name="KyoukoToshinouShoes1" />
         <marker scope="Public" name="KyoukoToshinouShoes2" />
@@ -580,6 +609,7 @@
         <marker scope="Public" name="LuxCape_resp" />
         <marker scope="Public" name="LuxCape1_resp" />
         <marker scope="Public" name="LuxCape2_resp" />
+        <marker scope="Public" name="LysitheaNecklace1" />
         <marker scope="Public" name="MagicalSempaiSocks1" />
         <marker scope="Public" name="MagmaGruntGloves1" />
         <marker scope="Public" name="MagmaGruntShirt3_resp" />
@@ -656,8 +686,10 @@
         <marker scope="Public" name="MissMargatroid">Alice Margatroid is another Touhou.</marker>
         <marker scope="Public" name="MitamaArmor1" />
         <marker scope="Public" name="MitamaArmor2" />
+        <marker scope="Public" name="MitamaArmor3" />
         <marker scope="Public" name="MitamaCapelet1" />
         <marker scope="Public" name="MitamaCapelet2" />
+        <marker scope="Public" name="MitamaSandals1" />
         <marker scope="Public" name="MonikaBelts1_resp" />
         <marker scope="Public" name="MonikaBelts2_resp" />
         <marker scope="Public" name="MonikaBlazer1" />
@@ -676,6 +708,10 @@
         <marker scope="Public" name="MyriamBelts2_resp" />
         <marker scope="Public" name="MyriamBelts3_resp" />
         <marker scope="Public" name="MyriamHand1_resp" />
+        <marker scope="Public" name="NagatoroCape1_resp" />
+        <marker scope="Public" name="NagatoroShirt1" />
+        <marker scope="Public" name="NagatoroShirt2" />
+        <marker scope="Public" name="NagatoroShirt3" />
         <marker scope="Public" name="NagatoroShoes1" />
         <marker scope="Public" name="NagatoroShoes2" />
         <marker scope="Public" name="NagatoroShoes3" />
@@ -716,8 +752,11 @@
         <marker scope="Public" name="NicoRobinCape1_resp" />
         <marker scope="Public" name="NicoRobinCape2_resp" />
         <marker scope="Public" name="NicoRobinCape3_resp" />
+        <marker scope="Public" name="NicoRobinShoes1" />
         <marker scope="Public" name="NicoRobinSkirt1" />
         <marker scope="Public" name="NicoRobinSkirt2" />
+        <marker scope="Public" name="NicoRobinSkirt3a" />
+        <marker scope="Public" name="NicoRobinSkirt3b" />
         <marker scope="Public" name="NicoRobinSunglasses1" />
         <marker scope="Public" name="NicoRobinSunglasses2" />
         <marker scope="Public" name="NicoRobinSunglasses3" />
@@ -791,6 +830,8 @@
         <marker scope="Public" name="PyrrhaTop2" />
         <marker scope="Public" name="PyrrhaTop3" />
         <marker scope="Public" name="q_miko_desires">Prompt Marker. Miko, able to read everyone's innermost desires with ease, asks her table-mates to share.</marker>
+        <marker scope="Public" name="QueenieCape1_resp" />
+        <marker scope="Public" name="QueenieCape2_resp" />
         <marker scope="Public" name="quirk_response01">Responses to Ochako</marker>
         <marker scope="Public" name="quirk_response3" />
         <marker scope="Public" name="Random01">One of several lines Miko can say when taking off her skirt. Miko claims the randomness of the cards interferes with her brilliant strategic mind.</marker>
@@ -890,6 +931,9 @@
         <marker scope="Public" name="SenkoSkirt1" />
         <marker scope="Public" name="SenkoSkirt2" />
         <marker scope="Public" name="SenkoSkirt3" />
+        <marker scope="Public" name="ShamikoNickname_resp" />
+        <marker scope="Public" name="ShamikoShoes1" />
+        <marker scope="Public" name="ShamikoShoes2" />
         <marker scope="Public" name="ShikiRen">Miko wants Rensouhou to pledge their loyalty too.</marker>
         <marker scope="Private" name="Shy_Mast_02" />
         <marker scope="Private" name="Shy_Mast_start" />
@@ -968,6 +1012,7 @@
         <marker scope="Public" name="TakatoshiCloning_resp" />
         <marker scope="Public" name="TakatoshiHeadphones1_resp" />
         <marker scope="Public" name="TakatoshiHeadphones2_resp" />
+        <marker scope="Public" name="TakatoshiHeadphones3_resp" />
         <marker scope="Public" name="TakatoshiJacket1" />
         <marker scope="Public" name="TakatoshiJacket2" />
         <marker scope="Public" name="TakatoshiJacket3" />
@@ -977,6 +1022,7 @@
         <marker scope="Public" name="TakatoshiPants2" />
         <marker scope="Public" name="TakatoshiPants3" />
         <marker scope="Public" name="TakatoshiShirt1" />
+        <marker scope="Public" name="TakatoshiShirt2" />
         <marker scope="Public" name="TakatoshiShoes1" />
         <marker scope="Public" name="TakatoshiShoes2" />
         <marker scope="Public" name="TakatoshiShoes3" />
@@ -1010,7 +1056,11 @@
         <marker scope="Public" name="WikipeShoes2" />
         <marker scope="Public" name="WikipeShoes3" />
         <marker scope="Public" name="WikipeStartMasturbation" />
+        <marker scope="Public" name="YaeCape1_resp" />
+        <marker scope="Public" name="YaeCape2_resp" />
         <marker scope="Public" name="YaeShoes1" />
+        <marker scope="Public" name="YaeShoes2" />
+        <marker scope="Public" name="YaeShoes3" />
         <marker scope="Private" name="YoukaiSatisfaction" />
         <marker scope="Public" name="Yuelia_Andy_resp">Yuelia Response</marker>
         <marker scope="Public" name="Yuelia_Cervantes_resp">Yuelia Response</marker>

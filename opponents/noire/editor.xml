@@ -34,6 +34,7 @@
             <description>[Cool Girl costume] In some games, Noire hesitates, takes off only her armband and decides to keep her thigh-highs on for the rest of the game.</description>
         </case>
     </noteworthy>
+    <reviewed>true</reviewed>
     <hidden>
         <id>2471</id>
         <id>2472</id>
@@ -78,6 +79,8 @@
         <response id="2827" opponent="meia" opponentId="1055" />
         <response id="2828" opponent="revy" opponentId="458" />
         <response id="2829" opponent="revy" opponentId="459" />
+        <response id="2857" opponent="yunyun" opponentId="129" />
+        <response id="2873" opponent="lysithea" opponentId="141" />
     </responses>
     <notes>
         <note id="882">Please split your marker into two or assign it a different value for each line, so that I can remove the "Saying Text" condition. By the way, there is a typo, if you haven't fixed it yet: "my fans also *calls*" -&gt; *call*</note>
@@ -127,6 +130,9 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <note id="2585">two values of the marker</note>
         <note id="2830">In Neptunia, the Technique stat determines chance to hit.</note>
         <note id="2833">Neptune, Noire, Blanc and Vert made a crossover appearance in Azur Lane. This stage's dialogue can be about Suzuyas from Azur Lane and Kancolle.</note>
+        <note id="2839">Noire doesn't say that she herself doesn't believe that Aqua is a goddess, only that other people may doubt it. Maybe Aqua would be more respected if she were known under a more divine name.</note>
+        <note id="2844">Noire is being a tsundere, but she'll say more positive things about Purple Heart in the next line(s).</note>
+        <note id="2873">The marker takes different values for different versions of the line. You can respond to all the versions at once using just a simple Said Marker condition (which defaults to marker != 0 if the value field is left blank) or write different responses for Said Marker == 1, == 2, == 3.</note>
     </notes>
     <labels>
         <label id="3" label="" folder="SpecialNames" sort="0" />
@@ -2232,7 +2238,7 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2123" label="" color="4" folder="HIlda" sort="0" />
         <label id="2124" label="Player Threw and Lost" color="6" folder="Hilda PokerNewbie Followups" sort="0" />
         <label id="2125" label="" color="6" folder="Hilda" sort="0" />
-        <label id="2126" label="" color="4" folder="Hilda" sort="0" />
+        <label id="2126" label="" color="3" folder="Hilda" sort="0" />
         <label id="2127" label="" folder="~Markers" sort="0" />
         <label id="2128" label="" folder="~Markers" sort="0" />
         <label id="2129" label="" folder="~Markers" sort="0" />
@@ -2710,11 +2716,11 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2625" label="" folder="Beginning" sort="0" />
         <label id="2626" label="" folder="Beginning" sort="0" />
         <label id="2627" label="" folder="Tags" sort="0" />
-        <label id="2628" label="" color="4" folder="AquaKS" sort="0" />
-        <label id="2629" label="" color="4" folder="AquaKS" sort="0" />
-        <label id="2630" label="" color="4" folder="AquaKS" sort="0" />
-        <label id="2631" label="" color="4" folder="AquaKS" sort="0" />
-        <label id="2632" label="" color="4" folder="AquaKS" sort="0" />
+        <label id="2628" label="" color="3" folder="AquaKS" sort="0" />
+        <label id="2629" label="" color="3" folder="AquaKS" sort="0" />
+        <label id="2630" label="" color="3" folder="AquaKS" sort="0" />
+        <label id="2631" label="" color="3" folder="AquaKS" sort="0" />
+        <label id="2632" label="" color="3" folder="AquaKS" sort="0" />
         <label id="2633" label="" folder="Throw" sort="0" />
         <label id="2634" label="" folder="Throw" sort="0" />
         <label id="2635" label="" folder="Throw" sort="0" />
@@ -2824,34 +2830,34 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2743" label="" folder="~ClothingNames" sort="0" />
         <label id="2744" label="generic" folder="~Male2Min" sort="0" />
         <label id="2745" label="" folder="~Clear Dress costume" sort="0" />
-        <label id="2746" label="" color="4" folder="Leon" sort="0" />
+        <label id="2746" label="" color="3" folder="Leon" sort="0" />
         <label id="2747" label="" color="3" folder="Leon" sort="0" />
-        <label id="2748" label="" color="4" folder="" sort="0" />
-        <label id="2749" label="" color="4" folder="Leon" sort="0" />
-        <label id="2750" label="" color="4" folder="Leon" sort="0" />
-        <label id="2751" label="" color="4" folder="Leon" sort="0" />
-        <label id="2752" label="" color="4" folder="Leon" sort="0" />
-        <label id="2753" label="" color="4" folder="Leon" sort="0" />
-        <label id="2754" label="" color="4" folder="Leon" sort="0" />
-        <label id="2755" label="" color="4" folder="Leon" sort="0" />
-        <label id="2756" label="" color="4" folder="Leon" sort="0" />
+        <label id="2748" label="" color="3" folder="" sort="0" />
+        <label id="2749" label="" color="3" folder="Leon" sort="0" />
+        <label id="2750" label="" color="3" folder="Leon" sort="0" />
+        <label id="2751" label="" color="3" folder="Leon" sort="0" />
+        <label id="2752" label="" color="3" folder="Leon" sort="0" />
+        <label id="2753" label="" color="3" folder="Leon" sort="0" />
+        <label id="2754" label="" color="3" folder="Leon" sort="0" />
+        <label id="2755" label="" color="3" folder="Leon" sort="0" />
+        <label id="2756" label="" color="3" folder="Leon" sort="0" />
         <label id="2757" label="" color="4" folder="" sort="0" />
-        <label id="2758" label="stage 2, swimwear, no water etc." color="4" folder="Hilda" sort="0" />
+        <label id="2758" label="stage 2, swimwear, no water etc." color="3" folder="Hilda" sort="0" />
         <label id="2759" label="" folder="~Markers" sort="0" />
         <label id="2760" label="" folder="Hilda" sort="0" />
         <label id="2761" label="" folder="Hilda" sort="0" />
         <label id="2762" label="" folder="Hilda" sort="0" />
         <label id="2763" label="" folder="Hilda" sort="0" />
-        <label id="2764" label="stage 2, swimwear, general" color="4" folder="Hilda" sort="0" />
-        <label id="2765" label="" color="4" folder="Hilda" sort="0" />
-        <label id="2766" label="" color="4" folder="Hilda" sort="0" />
-        <label id="2767" label="" color="4" folder="Hilda" sort="0" />
+        <label id="2764" label="stage 2, swimwear, general" color="3" folder="Hilda" sort="0" />
+        <label id="2765" label="" color="3" folder="Hilda" sort="0" />
+        <label id="2766" label="" color="3" folder="Hilda" sort="0" />
+        <label id="2767" label="" color="3" folder="Hilda" sort="0" />
         <label id="2768" label="" color="4" folder="Hilda PokerNewbie Followups" sort="0" />
         <label id="2769" label="Player Maybe Threw and Lost" color="6" folder="Hilda PokerNewbie Followups" sort="0" />
         <label id="2770" label="Player Maybe Threw and Lost" color="6" folder="Hilda PokerNewbie Followups" sort="0" />
         <label id="2771" label="Player Maybe Threw and Lost" color="6" folder="Hilda PokerNewbie Followups" sort="0" />
-        <label id="2772" label="" color="4" folder="Hilda PokerNewbie Followups" sort="0" />
-        <label id="2773" label="" color="4" folder="Hilda PokerNewbie Followups" sort="0" />
+        <label id="2772" label="" color="6" folder="Hilda PokerNewbie Followups" sort="0" />
+        <label id="2773" label="" color="6" folder="Hilda PokerNewbie Followups" sort="0" />
         <label id="2774" label="" color="4" folder="Hilda PokerNewbie Followups" sort="0" />
         <label id="2775" label="" color="4" folder="Hilda PokerNewbie Followups" sort="0" />
         <label id="2776" label="" color="3" folder="Hilda" sort="0" />
@@ -2912,15 +2918,52 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <label id="2831" label="" color="4" folder="Revy" sort="0" />
         <label id="2832" label="0" folder="Markers" sort="0" />
         <label id="2833" label="" color="4" folder="Suzuya" sort="0" />
+        <label id="2834" label="" color="3" folder="Nagisa" sort="0" />
+        <label id="2835" label="Nagisa and Kyou, school uniforms" color="3" folder="OpponentsPresent" sort="0" />
+        <label id="2836" label="" folder="Nagisa" sort="0" />
+        <label id="2837" label="" color="4" folder="Nagisa" sort="0" />
+        <label id="2838" label="" folder="~generic" sort="0" />
+        <label id="2839" label="" color="4" folder="" sort="0" />
+        <label id="2840" label="" color="4" folder="" sort="0" />
+        <label id="2841" label="" color="4" folder="" sort="0" />
+        <label id="2842" label="" color="4" folder="" sort="0" />
+        <label id="2843" label="" color="4" folder="AquaKS" sort="0" />
+        <label id="2844" label="" color="4" folder="AquaKS" sort="0" />
+        <label id="2845" label="" color="4" folder="AquaKS" sort="0" />
+        <label id="2846" label="" color="4" folder="AquaKS" sort="0" />
+        <label id="2847" label="" color="3" folder="" sort="0" />
+        <label id="2848" label="" color="3" folder="" sort="0" />
+        <label id="2849" label="" color="3" folder="" sort="0" />
+        <label id="2850" label="" color="3" folder="" sort="0" />
+        <label id="2851" label="" color="3" folder="" sort="0" />
+        <label id="2852" label="" color="3" folder="" sort="0" />
+        <label id="2853" label="" color="3" folder="" sort="0" />
+        <label id="2854" label="" color="3" folder="" sort="0" />
+        <label id="2855" label="" folder="AF" sort="0" />
+        <label id="2856" label="" folder="AF" sort="0" />
+        <label id="2857" label="" color="1" folder="Yunyun" sort="0" />
+        <label id="2858" label="" color="1" folder="Yunyun" sort="0" />
+        <label id="2859" label="" folder="Yunyun" sort="0" />
+        <label id="2860" label="" color="1" folder="Yunyun" sort="0" />
+        <label id="2861" label="" color="1" folder="Yunyun" sort="0" />
+        <label id="2862" label="" folder="Yunyun" sort="0" />
+        <label id="2863" label="" folder="Yunyun" sort="0" />
+        <label id="2864" label="" color="1" folder="Yunyun" sort="0" />
+        <label id="2865" label="" color="3" folder="Hilda" sort="0" />
+        <label id="2866" label="" color="4" folder="Hilda" sort="0" />
+        <label id="2867" label="" color="4" folder="Hilda" sort="0" />
+        <label id="2868" label="" color="4" folder="Hilda" sort="0" />
+        <label id="2869" label="" color="4" folder="Hilda" sort="0" />
+        <label id="2870" label="" color="4" folder="Hilda" sort="0" />
+        <label id="2871" label="" color="4" folder="Hilda PokerNewbie Followups" sort="0" />
+        <label id="2872" label="" color="4" folder="Hilda" sort="0" />
     </labels>
     <posePreviewMarkers>
         <posePreviewMarker>CDAltImg=0</posePreviewMarker>
     </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>2833</nextId>
+    <nextId>2875</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_costume1" />
         <marker scope="Public" name="adrien_costume2" />
         <marker scope="Public" name="adrien_fightingevil1" />
@@ -2950,11 +2993,19 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="aqua_kh_expl0" />
         <marker scope="Public" name="aqua_kh_lastation1" />
         <marker scope="Public" name="aqua_kh_notexpl0" />
+        <marker scope="Public" name="aqua_KS_blanc1" />
+        <marker scope="Public" name="aqua_KS_neptune1" />
+        <marker scope="Public" name="aqua_KS_uni1" />
+        <marker scope="Public" name="aqua_KS_vert1" />
         <marker scope="Public" name="aquaKS_idol0" />
         <marker scope="Public" name="aquaKS_idol1" />
+        <marker scope="Public" name="aquaKS_idol2" />
         <marker scope="Public" name="aquaKS_what0" />
         <marker scope="Public" name="aquaKS_what1" />
+        <marker scope="Public" name="aquaKS_what2" />
         <marker scope="Public" name="aquaKS0" />
+        <marker scope="Public" name="aquaKS01" />
+        <marker scope="Public" name="aquaKS01a" />
         <marker scope="Public" name="aquas_kh_ks" />
         <marker scope="Private" name="arc" />
         <marker scope="Private" name="arcChoice" />
@@ -3005,8 +3056,8 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="boboboDonPatch" />
         <marker scope="Public" name="boboboDonPatchGirl" />
         <marker scope="Public" name="BoxersPadded" />
-        <marker scope="Private" name="CDAltImg" />
-        <marker scope="Private" name="CDStripRoute" />
+        <marker scope="Public" name="CDAltImg" />
+        <marker scope="Public" name="CDStripRoute" />
         <marker scope="Public" name="CGAltImg" />
         <marker scope="Public" name="CGStripRoute" />
         <marker scope="Public" name="CollectibleBraceletsTakenOff" />
@@ -3085,7 +3136,12 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="heris0" />
         <marker scope="Public" name="hilda_needs_more_help1" />
         <marker scope="Public" name="hilda_not_a_throw1" />
+        <marker scope="Public" name="hilda_responsible1" />
         <marker scope="Public" name="hilda_summer_2" />
+        <marker scope="Public" name="hilda_summer_21" />
+        <marker scope="Public" name="hilda_summer_21b" />
+        <marker scope="Public" name="hilda_summer_21g" />
+        <marker scope="Public" name="hilda_summer_21g2" />
         <marker scope="Public" name="hilda_throw1" />
         <marker scope="Public" name="hilda_twinsies1" />
         <marker scope="Public" name="hilda_twinsies2" />
@@ -3103,7 +3159,10 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="hilda12" />
         <marker scope="Public" name="hilda12B" />
         <marker scope="Public" name="hilda2" />
+        <marker scope="Public" name="hilda21" />
+        <marker scope="Public" name="hilda21b" />
         <marker scope="Public" name="hilda3" />
+        <marker scope="Public" name="hilda31" />
         <marker scope="Public" name="HildaAbsenceNote" />
         <marker scope="Public" name="HildaPokerNewbiePlayerLoss" />
         <marker scope="Public" name="hutao_altar1" />
@@ -3290,6 +3349,9 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="leon71" />
         <marker scope="Public" name="leon72" />
         <marker scope="Public" name="LibraryStudyNaked" />
+        <marker scope="Public" name="lysithea_body1" />
+        <marker scope="Public" name="lysithea_divinity1" />
+        <marker scope="Public" name="lysithea_games1" />
         <marker scope="Public" name="magmagrunt0" />
         <marker scope="Public" name="magmagrunt01" />
         <marker scope="Public" name="magmagrunt02" />
@@ -3405,6 +3467,11 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="nagat_intro_collar" />
         <marker scope="Public" name="nagat_intro_demoness" />
         <marker scope="Public" name="nagatoro_keepaneye1" />
+        <marker scope="Public" name="nagisa_costume0_left" />
+        <marker scope="Public" name="nagisa_kyou_intro" />
+        <marker scope="Public" name="nagisa_practice0" />
+        <marker scope="Public" name="nagisa_restart_club" />
+        <marker scope="Public" name="nagisa0_left" />
         <marker scope="Public" name="nami_games1" />
         <marker scope="Public" name="nami_games2a" />
         <marker scope="Public" name="nami_games2b" />
@@ -3909,6 +3976,15 @@ Noire, as a tsundere, doesn't say directly whether she will throw.</note>
         <marker scope="Public" name="yshtola3" />
         <marker scope="Public" name="yshtola31" />
         <marker scope="Public" name="yshtola32" />
+        <marker scope="Public" name="yunyun_village0" />
+        <marker scope="Public" name="yunyun0" />
+        <marker scope="Public" name="yunyun0_friendship" />
+        <marker scope="Public" name="yunyun0_friendshipband" />
+        <marker scope="Public" name="yunyun0_ks" />
+        <marker scope="Public" name="yunyun0_summer" />
+        <marker scope="Public" name="yunyun0_trickorf" />
+        <marker scope="Public" name="yunyun0_wakey" />
+        <marker scope="Public" name="yunyun0_wakey_bedroom" />
         <marker scope="Public" name="YunyunGameStart" />
         <marker scope="Public" name="yuri_book" />
         <marker scope="Public" name="yuri_religion1" />

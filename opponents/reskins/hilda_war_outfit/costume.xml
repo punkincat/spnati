@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>hilda_war_outfit</id>
+    <label>Hilda</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag from="0" to="2">high_heels</tag>
+        <tag>jewelry</tag>
+        <tag>military</tag>
+        <tag>ponytail</tag>
+        <tag from="6" to="7">pubic_hair_peek</tag>
+        <tag remove="true">school_uniform</tag>
+        <tag remove="true">student</tag>
+        <tag from="0" to="2">thigh_highs</tag>
+        <tag from="6" to="7">thong</tag>
+        <tag remove="true">twintails</tag>
+    </tags>
+    <layers>8</layers>
+    <folder>opponents/reskins/hilda_war_outfit/</folder>
+    <wardrobe>
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="undershirt" generic="bra" position="upper" type="important" />
+        <clothing name="dress" generic="dress" position="both" type="major" />
+        <clothing name="corset" position="lower" type="extra" />
+        <clothing name="sleeves" generic="sleeves" position="arms" type="minor" plural="true" />
+        <clothing name="boots" generic="shoes" position="feet" type="minor" plural="true" />
+        <clothing name="gloves" generic="gloves" position="hands" type="minor" plural="true" />
+        <clothing name="belt" generic="belt" position="waist" type="extra" />
+    </wardrobe>
+
+</costume>

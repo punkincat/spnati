@@ -5,5 +5,21 @@
 
 .dialogue .jura[data-character="meia"] {
   /*Jura's speech.*/
-  color: #DCE049;
+  color: #C82031;
+}
+
+.dialogue .barnette[data-character="meia"] {
+  /*Barnette's speech.*/
+  color: #65D06E;
+}
+
+.dialogue .pyoro[data-character="meia"] {
+  /*Pyoro's speech.*/
+  font-family: Courier New;
+}
+
+.dialogue-bubble[data-character="meia"] hr {
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 }

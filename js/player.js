@@ -373,6 +373,8 @@ Player.prototype.checkStatus = function(status) {
         return this.countLayers() == 0;
     case STATUS_MASTURBATING:
         return this.out && !this.finished;
+    case STATUS_HEAVY_MASTURBATING:
+        return this.out && !this.finished && this.forfeit[0] === PLAYER_HEAVY_MASTURBATING;
     case STATUS_FINISHED:
         return this.finished;
     }
@@ -1182,6 +1184,7 @@ Opponent.prototype.getAllEpilogueStatus = function () {
             requiredCharacters: null,
             characterIsMissing: false,
             hint: undefined,
+            description: undefined,
         };
 
         summary.unlocked = save.hasEnding(this.id, $elem.text());
@@ -1211,6 +1214,7 @@ Opponent.prototype.getAllEpilogueStatus = function () {
         }
 
         summary.hint = $elem.attr('hint');
+        summary.description = $elem.attr('description');
         summary.extraConditions = $elem.attr('markers') == 'true';
         summary.score = (summary.wrongGender ? 4 : 0)
             + (summary.characterIsMissing ? 2 : 0)
@@ -1950,9 +1954,8 @@ Player.prototype.populateDebugCaseInfo = function () {
     );
 
     for (let test of chosenCase.tests) {
-        let expr = test.attr('expr');
-        let cmp = test.attr('cmp') || "==";
-        let value = test.attr('value') || "";
+        let cmp = test.cmp || "==";
+        let value = test.value || "";
         
         if (!isNaN(parseInt(value, 10))) {
             value = parseInt(value, 10).toString();
@@ -1961,7 +1964,7 @@ Player.prototype.populateDebugCaseInfo = function () {
         }
 
         listing.append(
-            createDebugSectionRow("Test", $("<span>", {"class": "debug-case-test", "text": expr + " " + cmp + " " + value}))
+            createDebugSectionRow("Test", $("<span>", {"class": "debug-case-test", "text": test.expr + " " + cmp + " " + value}))
         );
     }
 
@@ -2058,6 +2061,10 @@ Player.prototype.populateDebugStatusInfo = function () {
 
     if (this.out) {
         createDebugSectionRow("Out Order", this.outOrder).appendTo(listing);
+        
+        if (this.finishingTarget && this.finishingTarget !== this) {
+            createDebugSectionRow("Finish Redirect Target", this.finishingTarget.id + " (slot " + this.finishingTarget.slot + ")").appendTo(listing);
+        }
     }
 
     if (this.out && !this.finished) {

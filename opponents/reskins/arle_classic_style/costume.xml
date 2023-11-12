@@ -23,6 +23,10 @@
     </wardrobe>
 
     <poses>
+        <pose id="0-calmblusha">
+            <sprite id="calmbase" src="reskins/arle_classic_style/0-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        </pose>
         <pose id="0-calmglad">
             <sprite id="calmbase" src="reskins/arle_classic_style/0-calmbase.png" x="0" y="0" />
             <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
@@ -54,6 +58,10 @@
         <pose id="0-pointinghappy">
             <sprite id="pointingbase" src="reskins/arle_classic_style/0-pointingbase.png" x="0" y="0" />
             <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
+        </pose>
+        <pose id="1-calmblusha">
+            <sprite id="calmbase" src="reskins/arle_classic_style/1-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
         </pose>
         <pose id="1-calmglad">
             <sprite id="calmbase" src="reskins/arle_classic_style/1-calmbase.png" x="0" y="0" />
@@ -87,6 +95,10 @@
             <sprite id="pointingbase" src="reskins/arle_classic_style/1-pointingbase.png" x="0" y="0" />
             <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
+        <pose id="2-calmblusha">
+            <sprite id="calmbase" src="reskins/arle_classic_style/2-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        </pose>
         <pose id="2-calmglad">
             <sprite id="calmbase" src="reskins/arle_classic_style/2-calmbase.png" x="0" y="0" />
             <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
@@ -119,6 +131,13 @@
             <sprite id="pointingbase" src="reskins/arle_classic_style/2-pointingbase.png" x="0" y="0" />
             <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
+        <pose id="2-stripped">
+            <sprite id="stripped" src="reskins/arle_classic_style/2-stripped.png" x="0" y="0" />
+        </pose>
+        <pose id="3-calmblusha">
+            <sprite id="calmbase" src="reskins/arle_classic_style/3-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        </pose>
         <pose id="3-calmglad">
             <sprite id="calmbase" src="reskins/arle_classic_style/3-calmbase.png" x="0" y="0" />
             <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
@@ -150,6 +169,10 @@
         <pose id="3-pointinghappy">
             <sprite id="pointingbase" src="reskins/arle_classic_style/3-pointingbase.png" x="0" y="0" />
             <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
+        </pose>
+        <pose id="4-calmblusha">
+            <sprite id="calmbase" src="reskins/arle_classic_style/4-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
         </pose>
         <pose id="4-calmglad">
             <sprite id="calmbase" src="reskins/arle_classic_style/4-calmbase.png" x="0" y="0" />
@@ -187,6 +210,10 @@
             <sprite id="pointingbase" src="reskins/arle_classic_style/4-pointingbase.png" x="0" y="0" />
             <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
+        <pose id="5-calmblusha">
+            <sprite id="calmbase" src="reskins/arle_classic_style/5-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        </pose>
         <pose id="5-calmglad">
             <sprite id="calmbase" src="reskins/arle_classic_style/5-calmbase.png" x="0" y="0" />
             <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
@@ -219,6 +246,10 @@
             <sprite id="pointingbase" src="reskins/arle_classic_style/5-pointingbase.png" x="0" y="0" />
             <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
+        <pose id="6-calmblusha">
+            <sprite id="calmbase" src="reskins/arle_classic_style/6-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        </pose>
         <pose id="6-calmglad">
             <sprite id="calmbase" src="reskins/arle_classic_style/6-calmbase.png" x="0" y="0" />
             <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
@@ -250,6 +281,10 @@
         <pose id="6-pointinghappy">
             <sprite id="pointingbase" src="reskins/arle_classic_style/6-pointingbase.png" x="0" y="0" />
             <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
+        </pose>
+        <pose id="7-calmblusha">
+            <sprite id="calmbase" src="reskins/arle_classic_style/7-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="24" y="790" />
         </pose>
         <pose id="7-calmglad">
             <sprite id="calmbase" src="reskins/arle_classic_style/7-calmbase.png" x="0" y="0" />
@@ -493,6 +528,10 @@
             <sprite id="pointingbase" src="reskins/arle_classic_style/7-pointingbase.png" x="0" y="0" />
             <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="3" y="778" />
         </pose>
+        <pose id="8-calmblusha">
+            <sprite id="calmbase" src="reskins/arle_classic_style/8-calmbase.png" x="0" y="0" />
+            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        </pose>
         <pose id="8-calmglad">
             <sprite id="calmbase" src="reskins/arle_classic_style/8-calmbase.png" x="0" y="0" />
             <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmgladface.png" x="30" y="288" />
@@ -508,6 +547,19 @@
         <pose id="8-calmworried">
             <sprite id="calmbase" src="reskins/arle_classic_style/8-calmbase.png" x="0" y="0" />
             <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmworriedface.png" x="30" y="288" />
+        </pose>
+        <pose id="8-finishedcarb">
+            <sprite id="victory" z="1" src="reskins/arle_classic_style/8-victory.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="-26" y="314" scalex="0.4" scaley="0.4" rotation="-13" />
+            <sprite id="zzcarbbasse(copy)" src="arle/8-zzcarbhappy.png" x="-26" y="314" scalex="0.4" scaley="0.4" rotation="-13" />
+            <directive type="animation" id="zzcarbbasse" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="-26" y="314" scalex="0.4" scaley="0.4" rotation="-13" />
+                <keyframe time="1" x="-80" y="218" scalex="0.6" scaley="0.6" rotation="-25" />
+            </directive>
+            <directive type="animation" id="zzcarbbasse(copy)" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="-26" y="314" scalex="0.4" scaley="0.4" rotation="-13" />
+                <keyframe time="1" x="-80" y="218" scalex="0.6" scaley="0.6" rotation="-25" />
+            </directive>
         </pose>
         <pose id="8-pointingangry">
             <sprite id="pointingbase" src="reskins/arle_classic_style/8-pointingbase.png" x="0" y="0" />
@@ -525,44 +577,68 @@
             <sprite id="pointingbase" src="reskins/arle_classic_style/8-pointingbase.png" x="0" y="0" />
             <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfacehappy.png" x="-1" y="282" />
         </pose>
-        <pose id="2-stripped">
-            <sprite id="stripped" src="reskins/arle_classic_style/2-stripped.png" x="0" y="0" />
+        <pose id="8-zcarbfoursclosed">
+            <sprite id="zallfours" z="2" src="reskins/arle_classic_style/8-zallfours.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="151" y="811" scalex="0.7" scaley="0.7" />
+            <sprite id="zzcarbhappy" z="1" src="arle/8-zzcarbclosedeye.png" x="154" y="806" scalex="0.7" scaley="0.7" />
         </pose>
-        <pose id="0-calmblusha">
-            <sprite id="calmbase" src="reskins/arle_classic_style/0-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        <pose id="8-zcarbfourshappy">
+            <sprite id="zallfours" z="2" src="reskins/arle_classic_style/8-zallfours.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="151" y="811" scalex="0.7" scaley="0.7" />
+            <sprite id="zzcarbhappy" z="1" src="arle/8-zzcarbhappy.png" x="154" y="806" scalex="0.7" scaley="0.7" />
         </pose>
-        <pose id="1-calmblusha">
-            <sprite id="calmbase" src="reskins/arle_classic_style/1-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        <pose id="8-zcarbfourssurp">
+            <sprite id="zallfours" z="2" src="reskins/arle_classic_style/8-zallfours.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="151" y="811" scalex="0.7" scaley="0.7" />
+            <sprite id="zzcarbfourssurp" z="1" src="arle/8-zzcarbsurprised.png" x="154" y="806" scalex="0.7" scaley="0.7" />
         </pose>
-        <pose id="2-calmblusha">
-            <sprite id="calmbase" src="reskins/arle_classic_style/2-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        <pose id="8-zcarboopsclosed">
+            <sprite id="what" src="reskins/arle_classic_style/8-oops.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="177" y="1003" />
+            <sprite id="zzcarbhappy" src="arle/8-zzcarbclosedeye.png" x="173" y="1008" />
         </pose>
-        <pose id="3-calmblusha">
-            <sprite id="calmbase" src="reskins/arle_classic_style/3-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        <pose id="8-zcarboopshappy">
+            <sprite id="what" src="reskins/arle_classic_style/8-oops.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="177" y="1003" />
+            <sprite id="zzcarbhappy" src="arle/8-zzcarbhappy.png" x="173" y="1008" />
         </pose>
-        <pose id="4-calmblusha">
-            <sprite id="calmbase" src="reskins/arle_classic_style/4-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        <pose id="8-zcarboopssurp">
+            <sprite id="what" src="reskins/arle_classic_style/8-oops.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="177" y="1003" />
+            <sprite id="zzcarbhappy" src="arle/8-zzcarbsurprised.png" x="173" y="1008" />
         </pose>
-        <pose id="5-calmblusha">
-            <sprite id="calmbase" src="reskins/arle_classic_style/5-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        <pose id="8-zcarbwhatclosed">
+            <sprite id="what" src="reskins/arle_classic_style/8-what.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="177" y="1003" />
+            <sprite id="zzcarbhappy" src="arle/8-zzcarbclosedeye.png" x="173" y="1008" />
         </pose>
-        <pose id="6-calmblusha">
-            <sprite id="calmbase" src="reskins/arle_classic_style/6-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        <pose id="8-zcarbwhathappy">
+            <sprite id="what" src="reskins/arle_classic_style/8-what.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="177" y="1003" />
+            <sprite id="zzcarbhappy" src="arle/8-zzcarbhappy.png" x="175" y="1003" scalex="1" scaley="1" />
         </pose>
-        <pose id="8-calmblusha">
-            <sprite id="calmbase" src="reskins/arle_classic_style/8-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="30" y="288" />
+        <pose id="8-zcarbwhatsurp">
+            <sprite id="what" src="reskins/arle_classic_style/8-what.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="177" y="1003" />
+            <sprite id="zzcarbhappy" src="arle/8-zzcarbsurprised.png" x="173" y="1005" />
         </pose>
-        <pose id="7-calmblusha">
-            <sprite id="calmbase" src="reskins/arle_classic_style/7-calmbase.png" x="0" y="0" />
-            <sprite id="calmgladface" src="reskins/arle_classic_style/0-calmblusha.png" x="24" y="790" />
+        <pose id="8-finishedcarb">
+            <sprite id="victory" z="1" src="reskins/arle_classic_style/8-kneel.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="-26" y="675" scalex="0.4" scaley="0.4" rotation="-20" />
+            <sprite id="zzcarbbasse(copy)" src="arle/8-zzcarbhappy.png" x="-26" y="675" scalex="0.4" scaley="0.4" rotation="-20" />
+            <directive type="animation" id="zzcarbbasse" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="-26" y="675" scalex="0.4" scaley="0.4" rotation="-20" />
+                <keyframe time="1" x="-115" y="543" scalex="0.6" scaley="0.6" rotation="-43" />
+            </directive>
+            <directive type="animation" id="zzcarbbasse(copy)" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="-26" y="675" scalex="0.4" scaley="0.4" rotation="-20" />
+                <keyframe time="1" x="-115" y="543" scalex="0.6" scaley="0.6" rotation="-43" />
+            </directive>
+        </pose>
+        <pose id="8-zcarbvictory">
+            <sprite id="victory" z="1" src="reskins/arle_classic_style/8-victory.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="-264" y="939" scalex="-1" scaley="1" />
+            <sprite id="zzcarbhappy" z="2" src="arle/8-zzcarbhappy.png" x="-219" y="945" />
         </pose>
     </poses>
 </costume>

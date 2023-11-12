@@ -179,6 +179,8 @@
         <response id="679" opponent="meia" opponentId="626" />
         <response id="680" opponent="meia" opponentId="627" />
         <response id="681" opponent="jura" opponentId="390" />
+        <response id="682" opponent="nadeshiko" opponentId="92" />
+        <response id="689" opponent="felix" opponentId="734" />
     </responses>
     <notes>
         <note id="10">expay shaer = exp share</note>
@@ -229,6 +231,7 @@ Rosa's costume index
         <note id="648">this line plays when rosa is eating out gloria</note>
         <note id="667">There is an entire 'Curry dex' of these that I can pull from, lol https://www.serebii.net/swordshield/currydex.shtml</note>
         <note id="668">this line plays when rosa is eating out gloria</note>
+        <note id="690">"you seem like a woman who plans out her entire evening, down to the number of alcoholic drinks she will have to get slightly drunk. am I correct?"</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Situations" sort="9" />
@@ -772,7 +775,7 @@ Rosa's costume index
         <label id="559" label="" folder="Rosa" sort="26" />
         <label id="560" label="" folder="Flirting" sort="0" />
         <label id="561" label="" folder="Rosa" sort="0" />
-        <label id="562" label="" folder="Rosa" sort="27" />
+        <label id="562" label="" folder="Rosa" sort="0" />
         <label id="563" label="" folder="Rosa" sort="0" />
         <label id="564" label="" folder="Rosa" sort="16" />
         <label id="565" label="cunnilingus (valentines variant)" folder="Rosa" sort="17" />
@@ -892,8 +895,19 @@ Rosa's costume index
         <label id="679" label="" folder="Responses" sort="0" />
         <label id="680" label="" folder="Responses" sort="0" />
         <label id="681" label="" folder="Responses" sort="0" />
+        <label id="682" label="" folder="Nadeshiko" sort="0" />
+        <label id="683" label="" folder="Nadeshiko" sort="0" />
+        <label id="684" label="" folder="Nadeshiko" sort="0" />
+        <label id="685" label="" folder="Nadeshiko" sort="0" />
+        <label id="686" label="" folder="Nadeshiko" sort="0" />
+        <label id="687" label="" folder="Nadeshiko" sort="0" />
+        <label id="688" label="" folder="Nadeshiko" sort="0" />
+        <label id="689" label="" folder="Situations" sort="0" />
+        <label id="690" label="" folder="Targets" sort="0" />
+        <label id="691" label="" folder="Nadeshiko" sort="0" />
+        <label id="692" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>681</nextId>
+    <nextId>692</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="__human_nickname" />
@@ -908,6 +922,7 @@ Rosa's costume index
         <marker scope="Public" name="debug_mode_comment" />
         <marker scope="Public" name="dexit_means_dexit" />
         <marker scope="Public" name="expay_share" />
+        <marker scope="Public" name="felixCleanUpResp" />
         <marker scope="Public" name="foorball_jeer_singer" />
         <marker scope="Public" name="football_jeer_singer" />
         <marker scope="Public" name="gloria_9s_strip0a" />
@@ -1004,6 +1019,8 @@ Rosa's costume index
         <marker scope="Public" name="gloria_kirigiri_strip0b" />
         <marker scope="Public" name="gloria_kirigiri_strip0bAA" />
         <marker scope="Public" name="gloria_kirigiri_strip0bAC" />
+        <marker scope="Public" name="gloria_kirigiri_strip1a" />
+        <marker scope="Public" name="gloria_kirigiri_strip1b" />
         <marker scope="Public" name="gloria_kora_strip0a" />
         <marker scope="Public" name="gloria_kuma_parental_guidance" />
         <marker scope="Public" name="gloria_kumatora_food_curry" />
@@ -1081,6 +1098,9 @@ Rosa's costume index
         <marker scope="Public" name="gloria_monika_deleteblazer2" />
         <marker scope="Public" name="gloria_moon&amp;mom0" />
         <marker scope="Public" name="gloria_moon_strip0a" />
+        <marker scope="Public" name="gloria_nadeshiko_curry1" />
+        <marker scope="Public" name="gloria_nadeshiko_pokemon1" />
+        <marker scope="Public" name="gloria_nadeshiko_woods1" />
         <marker scope="Public" name="gloria_nagatoro_curry1" />
         <marker scope="Public" name="gloria_nagatoro_favMon1" />
         <marker scope="Public" name="gloria_nagatoro_first_chest_rev1" />
@@ -1211,6 +1231,10 @@ Rosa's costume index
         <marker scope="Public" name="miaGS_gloria_gayCont2" />
         <marker scope="Public" name="miaGS_gloria_gayCont3" />
         <marker scope="Public" name="microwave_meal" />
+        <marker scope="Public" name="nadeshiko_startFF" />
+        <marker scope="Public" name="nadeshikoCookResp" />
+        <marker scope="Public" name="NadeshikoGloriaExpertCamper" />
+        <marker scope="Public" name="NadeshikoGloriaExpertCamperResp" />
         <marker scope="Public" name="new_chippy" />
         <marker scope="Public" name="nickname" />
         <marker scope="Public" name="nobody_intae_women" />

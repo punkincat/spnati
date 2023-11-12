@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1690210166777</lastupdate>
+    <lastupdate>1699427024022</lastupdate>
     <enabled>false</enabled>
     <first>Yumeko</first>
     <last>Jabami</last>
@@ -12,7 +12,11 @@
     <artist>coolcat001100</artist>
     <description>A strange girl with a knack for games of chance, the first and last thoughts on Yumeko's mind are always about the luck of the draw. It's not like she suffers from a gambling addiction... because she enjoys having one.</description>
     <layers>6</layers>
-    <has_collectibles>false</has_collectibles>
-    <lines>1000</lines>
-    <poses>145</poses>
+    <default-costume-name>Hyakkaou uniform</default-costume-name>
+    <alternates>
+        <costume folder="opponents/reskins/yumeko_casual_gambler/" img="0-select.png" label="Yumeko">Casual Gambler</costume>
+    </alternates>
+    <has_collectibles>true</has_collectibles>
+    <lines>1476</lines>
+    <poses>170</poses>
 </opponent>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>yumeko_casual_gambler</id>
+    <label>Yumeko</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag from="2" to="5">lingerie</tag>
+        <tag remove="true">pantyhose</tag>
+        <tag from="2" to="5">pubic_hair_peek</tag>
+        <tag remove="true">school_uniform</tag>
+        <tag from="0" to="2">sweater</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/yumeko_casual_gambler/</folder>
+    <wardrobe>
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="socks" generic="socks" position="feet" type="minor" plural="true" />
+        <clothing name="bra" generic="bra" position="upper" type="important" />
+        <clothing name="shirt" generic="shirt" position="upper" type="major" />
+        <clothing name="pants" generic="pants" position="lower" type="major" plural="true" />
+        <clothing name="shoes" generic="shoes" position="feet" type="extra" plural="true" />
+    </wardrobe>
+
+</costume>

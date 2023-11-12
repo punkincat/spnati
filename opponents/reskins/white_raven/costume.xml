@@ -11,6 +11,7 @@
         <tag>purple_hair</tag>
         <tag remove="true">short_hair</tag>
     </tags>
+    <layers>5</layers>
     <folder>opponents/reskins/white_raven/</folder>
     <wardrobe>
         <clothing name="bra" generic="bra" position="upper" type="important" />
@@ -21,15 +22,406 @@
     </wardrobe>
 
     <poses>
-        <pose id="6-heavy">
-            <sprite id="heavy" src="reskins/white_raven/6-heavy.png" />
-            <sprite id="gem" src="raven/gem.png" x="0" y="373" scalex="0.1" scaley="0.1" alpha="20" />
-            <directive type="animation" id="gem" loop="true" ease="ease-in-sin" interpolation="linear">
-                <keyframe time="0" scalex="0.1" scaley="0.1" alpha="20" />
-                <keyframe time="0.4" scalex="0.35" scaley="0.35" alpha="65" />
-                <keyframe time="0.6" scalex="0.2" scaley="0.2" alpha="40" />
-                <keyframe time="1" scalex="0.3" scaley="0.3" alpha="55" />
-                <keyframe time="1.3" scalex="0.1" scaley="0.1" alpha="20" />
+        <pose id="3-strip">
+            <sprite id="strip-b" src="raven/3-strip-b.png" x="0" y="0" />
+            <sprite id="strip" src="raven/3-strip.png" x="0" y="0" alpha="100" />
+            <directive type="animation" id="strip" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="0.75" alpha="100" />
+                <keyframe time="2" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="5-starting">
+            <sprite id="calm" src="raven/5-calm.png" x="0" y="0" alpha="100" />
+            <sprite id="starting" delay="0.5" z="1" src="raven/5-starting.png" x="0" y="410" alpha="0" />
+            <sprite id="shadow" delay="0.75" src="raven/7-shadow.png" x="3" y="1340" />
+            <directive type="animation" id="calm" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="0.75" alpha="0" />
+            </directive>
+            <directive type="animation" id="starting" delay="0.5" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="410" />
+                <keyframe time="0.25" x="0" y="410" />
+                <keyframe time="1.75" x="0" y="410" />
+            </directive>
+            <directive type="animation" id="starting" delay="2.25" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" />
+                <keyframe time="1.75" x="0" />
+            </directive>
+            <directive type="animation" id="starting" delay="4" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" y="40" />
+                <keyframe time="2" x="0" y="80" />
+                <keyframe time="4" x="0" y="40" />
+            </directive>
+            <directive type="animation" id="starting" delay="2.25" ease="smooth" interpolation="spline">
+                <keyframe time="0" y="410" />
+            </directive>
+            <directive type="animation" id="starting" delay="0.5" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/5-starting.png" />
+                <keyframe time="0.25" src="raven/5-starting.png" />
+                <keyframe time="1.75" src="raven/5-starting.png" />
+            </directive>
+            <directive type="animation" id="starting" delay="2.25" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/5-starting.png" />
+            </directive>
+            <directive type="animation" id="starting" delay="0.5" ease="smooth" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="0.25" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="6-angry">
+            <sprite id="shadow" src="raven/shadow.png" x="0" y="1340" scalex="1" scaley="1" pivoty="49%" alpha="100" />
+            <sprite id="angry" src="raven/6-angry.png" x="0" y="-200" />
+            <directive type="animation" id="shadow" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" y="1340" />
+                <keyframe time="4" x="0" y="1340" />
+            </directive>
+            <directive type="animation" id="shadow" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/shadow.png" />
+                <keyframe time="4" src="raven/shadow.png" />
+            </directive>
+            <directive type="animation" id="shadow" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" scalex="1" scaley="1" alpha="100" />
+                <keyframe time="2" scalex="0.7" scaley="0.7" alpha="90" />
+                <keyframe time="4" scalex="1" scaley="1" alpha="100" />
+            </directive>
+            <directive type="animation" id="angry" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" />
+                <keyframe time="4" x="0" />
+            </directive>
+            <directive type="animation" id="angry" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="-200" />
+                <keyframe time="2" y="-225" />
+                <keyframe time="4" y="-200" />
+            </directive>
+            <directive type="animation" id="angry" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/6-angry.png" />
+                <keyframe time="4" src="raven/6-angry.png" />
+            </directive>
+        </pose>
+        <pose id="6-annoyed">
+            <sprite id="shadow" src="raven/shadow.png" x="0" y="1340" scalex="1" scaley="1" pivoty="49%" alpha="100" />
+            <sprite id="annoyed" src="raven/6-annoyed.png" x="0" y="-200" />
+            <directive type="animation" id="shadow" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" y="1340" />
+                <keyframe time="4" x="0" y="1340" />
+            </directive>
+            <directive type="animation" id="shadow" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/shadow.png" />
+                <keyframe time="4" src="raven/shadow.png" />
+            </directive>
+            <directive type="animation" id="shadow" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" scalex="1" scaley="1" alpha="100" />
+                <keyframe time="2" scalex="0.7" scaley="0.7" alpha="90" />
+                <keyframe time="4" scalex="1" scaley="1" alpha="100" />
+            </directive>
+            <directive type="animation" id="annoyed" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" />
+                <keyframe time="4" x="0" />
+            </directive>
+            <directive type="animation" id="annoyed" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="-200" />
+                <keyframe time="2" y="-225" />
+                <keyframe time="4" y="-200" />
+            </directive>
+            <directive type="animation" id="annoyed" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/6-annoyed.png" />
+                <keyframe time="4" src="raven/6-annoyed.png" />
+            </directive>
+        </pose>
+        <pose id="6-awkward">
+            <sprite id="shadow" src="raven/shadow.png" x="0" y="1340" scalex="1" scaley="1" pivoty="49%" alpha="100" />
+            <sprite id="awkward" src="raven/6-awkward.png" x="0" y="-200" />
+            <directive type="animation" id="shadow" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" y="1340" />
+                <keyframe time="4" x="0" y="1340" />
+            </directive>
+            <directive type="animation" id="shadow" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/shadow.png" />
+                <keyframe time="4" src="raven/shadow.png" />
+            </directive>
+            <directive type="animation" id="shadow" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" scalex="1" scaley="1" alpha="100" />
+                <keyframe time="2" scalex="0.7" scaley="0.7" alpha="90" />
+                <keyframe time="4" scalex="1" scaley="1" alpha="100" />
+            </directive>
+            <directive type="animation" id="awkward" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" />
+                <keyframe time="4" x="0" />
+            </directive>
+            <directive type="animation" id="awkward" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="-200" />
+                <keyframe time="2" y="-225" />
+                <keyframe time="4" y="-200" />
+            </directive>
+            <directive type="animation" id="awkward" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/6-awkward.png" />
+                <keyframe time="4" src="raven/6-awkward.png" />
+            </directive>
+        </pose>
+        <pose id="6-calm">
+            <sprite id="shadow" src="raven/shadow.png" x="0" y="1340" scalex="1" scaley="1" pivoty="49%" alpha="100" />
+            <sprite id="calm" src="raven/6-calm.png" x="0" y="-200" />
+            <directive type="animation" id="shadow" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" y="1340" />
+                <keyframe time="4" x="0" y="1340" />
+            </directive>
+            <directive type="animation" id="shadow" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/shadow.png" />
+                <keyframe time="4" src="raven/shadow.png" />
+            </directive>
+            <directive type="animation" id="shadow" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" scalex="1" scaley="1" alpha="100" />
+                <keyframe time="2" scalex="0.7" scaley="0.7" alpha="90" />
+                <keyframe time="4" scalex="1" scaley="1" alpha="100" />
+            </directive>
+            <directive type="animation" id="calm" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" />
+                <keyframe time="4" x="0" />
+            </directive>
+            <directive type="animation" id="calm" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="-200" />
+                <keyframe time="2" y="-225" />
+                <keyframe time="4" y="-200" />
+            </directive>
+            <directive type="animation" id="calm" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/6-calm.png" />
+                <keyframe time="4" src="raven/6-calm.png" />
+            </directive>
+        </pose>
+        <pose id="6-finishing">
+            <sprite id="shadow" src="raven/shadow.png" x="0" y="1340" scalex="1" scaley="1" pivoty="49%" alpha="100" />
+            <sprite id="thinking" src="raven/6-finishing.png" x="0" y="-200" />
+            <sprite id="blob" z="-1" src="raven/blob.png" x="-9" y="332" scalex="1" scaley="1" skewx="0" />
+            <sprite id="gem" src="raven/gem.png" x="-90" y="483" scalex="0.3" scaley="0.3" />
+            <directive type="animation" id="shadow" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" y="1340" />
+                <keyframe time="4" x="0" y="1340" />
+            </directive>
+            <directive type="animation" id="shadow" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/shadow.png" />
+                <keyframe time="4" src="raven/shadow.png" />
+            </directive>
+            <directive type="animation" id="shadow" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" scalex="1" scaley="1" alpha="100" />
+                <keyframe time="2" scalex="0.7" scaley="0.7" alpha="90" />
+                <keyframe time="4" scalex="1" scaley="1" alpha="100" />
+            </directive>
+            <directive type="animation" id="thinking" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" />
+                <keyframe time="4" x="0" />
+            </directive>
+            <directive type="animation" id="thinking" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="-200" />
+                <keyframe time="2" y="-225" />
+                <keyframe time="4" y="-200" />
+            </directive>
+            <directive type="animation" id="thinking" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/6-finishing.png" />
+                <keyframe time="4" src="raven/6-finishing.png" />
+            </directive>
+            <directive type="animation" id="blob" ease="linear" interpolation="spline">
+                <keyframe time="0" x="-9" scalex="1" scaley="1" />
+                <keyframe time="4" x="-9" scalex="1" scaley="1" />
+            </directive>
+            <directive type="animation" id="blob" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="332" skewx="0" />
+                <keyframe time="2" y="307" skewx="4" />
+                <keyframe time="4" y="332" skewx="0" />
+            </directive>
+            <directive type="animation" id="gem" ease="linear" interpolation="spline">
+                <keyframe time="0" x="-90" />
+                <keyframe time="4" x="-90" />
+            </directive>
+            <directive type="animation" id="gem" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="483" scalex="0.3" scaley="0.3" />
+                <keyframe time="2" y="458" scalex="0.2" scaley="0.2" />
+                <keyframe time="4" y="483" scalex="0.3" scaley="0.3" />
+            </directive>
+            <directive type="animation" id="gem" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/gem.png" />
+                <keyframe time="4" src="raven/gem.png" />
+            </directive>
+        </pose>
+        <pose id="6-happy">
+            <sprite id="shadow" src="raven/shadow.png" x="0" y="1340" scalex="1" scaley="1" pivoty="49%" alpha="100" />
+            <sprite id="happy" src="raven/6-happy.png" x="0" y="-200" />
+            <directive type="animation" id="shadow" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" y="1340" />
+                <keyframe time="4" x="0" y="1340" />
+            </directive>
+            <directive type="animation" id="shadow" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/shadow.png" />
+                <keyframe time="4" src="raven/shadow.png" />
+            </directive>
+            <directive type="animation" id="shadow" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" scalex="1" scaley="1" alpha="100" />
+                <keyframe time="2" scalex="0.7" scaley="0.7" alpha="90" />
+                <keyframe time="4" scalex="1" scaley="1" alpha="100" />
+            </directive>
+            <directive type="animation" id="happy" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" />
+                <keyframe time="4" x="0" />
+            </directive>
+            <directive type="animation" id="happy" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="-200" />
+                <keyframe time="2" y="-225" />
+                <keyframe time="4" y="-200" />
+            </directive>
+            <directive type="animation" id="happy" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/6-happy.png" />
+                <keyframe time="4" src="raven/6-happy.png" />
+            </directive>
+        </pose>
+        <pose id="6-horny">
+            <sprite id="shadow" src="raven/shadow.png" x="0" y="1340" scalex="1" scaley="1" pivoty="49%" alpha="100" />
+            <sprite id="horny" src="raven/6-horny.png" x="0" y="-200" />
+            <directive type="animation" id="shadow" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" y="1340" />
+                <keyframe time="4" x="0" y="1340" />
+            </directive>
+            <directive type="animation" id="shadow" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/shadow.png" />
+                <keyframe time="4" src="raven/shadow.png" />
+            </directive>
+            <directive type="animation" id="shadow" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" scalex="1" scaley="1" alpha="100" />
+                <keyframe time="2" scalex="0.7" scaley="0.7" alpha="90" />
+                <keyframe time="4" scalex="1" scaley="1" alpha="100" />
+            </directive>
+            <directive type="animation" id="horny" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" />
+                <keyframe time="4" x="0" />
+            </directive>
+            <directive type="animation" id="horny" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="-200" />
+                <keyframe time="2" y="-225" />
+                <keyframe time="4" y="-200" />
+            </directive>
+            <directive type="animation" id="horny" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/6-horny.png" />
+                <keyframe time="4" src="raven/6-horny.png" />
+            </directive>
+        </pose>
+        <pose id="6-interested">
+            <sprite id="shadow" src="raven/shadow.png" x="0" y="1340" scalex="1" scaley="1" pivoty="49%" alpha="100" />
+            <sprite id="interested" src="raven/6-interested.png" x="0" y="-200" />
+            <directive type="animation" id="shadow" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" y="1340" />
+                <keyframe time="4" x="0" y="1340" />
+            </directive>
+            <directive type="animation" id="shadow" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/shadow.png" />
+                <keyframe time="4" src="raven/shadow.png" />
+            </directive>
+            <directive type="animation" id="shadow" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" scalex="1" scaley="1" alpha="100" />
+                <keyframe time="2" scalex="0.7" scaley="0.7" alpha="90" />
+                <keyframe time="4" scalex="1" scaley="1" alpha="100" />
+            </directive>
+            <directive type="animation" id="interested" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" />
+                <keyframe time="4" x="0" />
+            </directive>
+            <directive type="animation" id="interested" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="-200" />
+                <keyframe time="2" y="-225" />
+                <keyframe time="4" y="-200" />
+            </directive>
+            <directive type="animation" id="interested" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/6-interested.png" />
+                <keyframe time="4" src="raven/6-interested.png" />
+            </directive>
+        </pose>
+        <pose id="6-sad">
+            <sprite id="shadow" src="raven/shadow.png" x="0" y="1340" scalex="1" scaley="1" pivoty="49%" alpha="100" />
+            <sprite id="sad" src="raven/6-sad.png" x="0" y="-200" />
+            <directive type="animation" id="shadow" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" y="1340" />
+                <keyframe time="4" x="0" y="1340" />
+            </directive>
+            <directive type="animation" id="shadow" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/shadow.png" />
+                <keyframe time="4" src="raven/shadow.png" />
+            </directive>
+            <directive type="animation" id="shadow" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" scalex="1" scaley="1" alpha="100" />
+                <keyframe time="2" scalex="0.7" scaley="0.7" alpha="90" />
+                <keyframe time="4" scalex="1" scaley="1" alpha="100" />
+            </directive>
+            <directive type="animation" id="sad" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" />
+                <keyframe time="4" x="0" />
+            </directive>
+            <directive type="animation" id="sad" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="-200" />
+                <keyframe time="2" y="-225" />
+                <keyframe time="4" y="-200" />
+            </directive>
+            <directive type="animation" id="sad" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/6-sad.png" />
+                <keyframe time="4" src="raven/6-sad.png" />
+            </directive>
+        </pose>
+        <pose id="6-shocked">
+            <sprite id="shadow" src="raven/shadow.png" x="0" y="1340" scalex="1" scaley="1" pivoty="49%" alpha="100" />
+            <sprite id="shocked" src="raven/6-shocked.png" x="0" y="-200" />
+            <directive type="animation" id="shadow" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" y="1340" />
+                <keyframe time="4" x="0" y="1340" />
+            </directive>
+            <directive type="animation" id="shadow" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/shadow.png" />
+                <keyframe time="4" src="raven/shadow.png" />
+            </directive>
+            <directive type="animation" id="shadow" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" scalex="1" scaley="1" alpha="100" />
+                <keyframe time="2" scalex="0.7" scaley="0.7" alpha="90" />
+                <keyframe time="4" scalex="1" scaley="1" alpha="100" />
+            </directive>
+            <directive type="animation" id="shocked" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" />
+                <keyframe time="4" x="0" />
+            </directive>
+            <directive type="animation" id="shocked" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="-200" />
+                <keyframe time="2" y="-225" />
+                <keyframe time="4" y="-200" />
+            </directive>
+            <directive type="animation" id="shocked" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/6-shocked.png" />
+                <keyframe time="4" src="raven/6-shocked.png" />
+            </directive>
+        </pose>
+        <pose id="6-thinking">
+            <sprite id="shadow" src="raven/shadow.png" x="0" y="1340" scalex="1" scaley="1" pivoty="49%" alpha="100" />
+            <sprite id="thinking" src="raven/6-thinking.png" x="0" y="-200" />
+            <directive type="animation" id="shadow" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" y="1340" />
+                <keyframe time="4" x="0" y="1340" />
+            </directive>
+            <directive type="animation" id="shadow" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/shadow.png" />
+                <keyframe time="4" src="raven/shadow.png" />
+            </directive>
+            <directive type="animation" id="shadow" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" scalex="1" scaley="1" alpha="100" />
+                <keyframe time="2" scalex="0.7" scaley="0.7" alpha="90" />
+                <keyframe time="4" scalex="1" scaley="1" alpha="100" />
+            </directive>
+            <directive type="animation" id="thinking" ease="linear" interpolation="spline">
+                <keyframe time="0" x="0" />
+                <keyframe time="4" x="0" />
+            </directive>
+            <directive type="animation" id="thinking" loop="true" ease="linear" interpolation="spline">
+                <keyframe time="0" y="-200" />
+                <keyframe time="2" y="-225" />
+                <keyframe time="4" y="-200" />
+            </directive>
+            <directive type="animation" id="thinking" ease="linear" interpolation="none">
+                <keyframe time="0" src="raven/6-thinking.png" />
+                <keyframe time="4" src="raven/6-thinking.png" />
             </directive>
         </pose>
     </poses>

@@ -75,6 +75,8 @@
     <function name="location" description="Displays 'indoors' or 'outdoors' depending on which background is in play." example="outdoors"/>
     <function name="time" description="Displays 'day' or 'night' depending on which background is in play." example="night"/>
     <function name="surface" description="Displays the type of floor in the current background (ex. floor vs sand)." example="floor" />
+    <function name="term" description="Displays a term referring to the current background in a more general way, useful in a sentence." example="bedroom" />
+    <function name="preposition" description="Displays a suitable preposition for being at the current background (on a roof, in a room, etc.)." example="in" />
 	<function name="if" description="Displays text conditionally based on whether the background has the given tag." useBackgroundTags="true" />	
   </variable>
   <variable name="target" description="Displays the target's name, same as ~name~." example="Florina">

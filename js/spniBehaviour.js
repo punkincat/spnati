@@ -1832,6 +1832,9 @@ function checkMarker(predicate, self, target, currentOnly) {
     return evalOperator(val, op, cmpVal);
 }
 
+function checkMarkers(predicate, self, target, currentOnly) {
+    return predicate.split('\|').some(subs => subs.split('&').every(expr => checkMarker(expr, self, target, currentOnly)));
+}
 
 function checkSaidText(predicate, player) {
     var match = predicate.match(/^(.+)##\s*((?:\>|\<|\=|\!)\=?)\s*(\d+)\s*$/);
@@ -2348,14 +2351,14 @@ Opponent.prototype.findBehaviour = function(triggers, opp, volatileOnly) {
         });
     }, this);
 
+    /* Evaluate pre-dialogue hidden cases if we're not doing a reaction pass. */
+    if (!volatileOnly) this.evaluateHiddenCases(triggers, opp, false);
+
     /* quick check to see if the trigger exists */
     if (cases.length <= 0) {
         console.log("Warning: couldn't find " + triggers + " dialogue for player " + this.slot + " at stage " + stageNum);
         return false;
     }
-
-    /* Evaluate pre-dialogue hidden cases if we're not doing a reaction pass. */
-    if (!volatileOnly) this.evaluateHiddenCases(triggers, opp, false);
 
     /* Find the best match, as well as potential volatile matches. */
     var bestMatch = [];
@@ -2384,7 +2387,13 @@ Opponent.prototype.findBehaviour = function(triggers, opp, volatileOnly) {
         return (!state.oneShotId || !this.oneShotStates[state.oneShotId])
             && state.checkUnwanteds(this, opp);
     }.bind(this));
-    
+
+    const weightedAdjustedMin = Math.min(...states.map(s => ((this.repeatLog[s.rawDialogue] || 0) + 0.5) / s.weight));
+    const statesLessPlayed = states.filter(s => (this.repeatLog[s.rawDialogue] || 0) / s.weight <= weightedAdjustedMin);
+    if (statesLessPlayed.length > 0) {
+        states = statesLessPlayed;
+    }
+
     var weightSum = states.reduce(function(sum, state) { return sum + state.weight; }, 0);
     if (weightSum > 0) {
         console.log("Current case priority for player "+this.slot+": "+bestMatchPriority);
@@ -2487,7 +2496,7 @@ Opponent.prototype.clearChosenState = function () {
  ************************************************************/
 Opponent.prototype.updateBehaviour = function(triggers, opp) {
     /* determine if the AI is dialogue locked */
-    if (this.out && this.forfeit[1] == CANNOT_SPEAK && triggers !== DEALING_CARDS) {
+    if (this.out && this.forfeit[1] == CANNOT_SPEAK && triggers !== DEALING_CARDS && triggers !== OPPONENT_FINISHING_MASTURBATING) {
         /* their is restricted to this only */
         triggers = [this.forfeit[0]];
     }
@@ -2776,15 +2785,6 @@ function addExtraNumberedBindings (bindings, variableMatches) {
             bindings[variable + (i + 2)] = match;
         });
     });
-}
-
-function shuffleArray (array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = getRandomNumber(0, i);
-        var tmp = array[i];
-        array[i] = array[j];
-        array[j] = tmp;
-    }
 }
 
 /*

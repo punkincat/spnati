@@ -218,13 +218,13 @@
         <response id="170" opponent="jura" opponentId="503" />
         <response id="171" opponent="jura" opponentId="504" />
         <response id="172" opponent="binah" opponentId="1" />
+        <response id="0" opponent="roll" opponentId="77" />
+        <response id="175" opponent="jura" opponentId="923" />
     </responses>
     <prefixes>
         <prefix>ex</prefix>
     </prefixes>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>173</nextId>
+    <nextId>175</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Ahri_s0_1" />
@@ -369,6 +369,7 @@
         <marker scope="Public" name="Cheryl_s6_3a" />
         <marker scope="Public" name="Cheryl_s6_3b" />
         <marker scope="Public" name="Cheryl_s7_1" />
+        <marker scope="Public" name="Cheryl_s7_2" />
         <marker scope="Public" name="Cheryl_s8_1" />
         <marker scope="Public" name="Communism" />
         <marker scope="Public" name="cynthia_resp0_1" />
@@ -507,6 +508,7 @@
         <marker scope="Public" name="jessie_resp0_2" />
         <marker scope="Public" name="Jessie_s0_1" />
         <marker scope="Public" name="Jessie_s0_2" />
+        <marker scope="Public" name="jura_resp_swiss" />
         <marker scope="Public" name="jura_resp0_1" />
         <marker scope="Public" name="jura_resp0_2" />
         <marker scope="Public" name="jura_resp0_3" />
@@ -634,6 +636,7 @@
         <marker scope="Public" name="miko_resp1_2" />
         <marker scope="Public" name="miko_resp1_3" />
         <marker scope="Public" name="miko_resp2_1" />
+        <marker scope="Public" name="miko_resp2_2" />
         <marker scope="Public" name="Miko_s0_1" />
         <marker scope="Public" name="Miko_s0_2" />
         <marker scope="Public" name="Miko_s0_3" />
@@ -644,6 +647,7 @@
         <marker scope="Public" name="Miko_s2_2" />
         <marker scope="Public" name="Miko_s2_3" />
         <marker scope="Public" name="Miko_s3_1" />
+        <marker scope="Public" name="Miko_s3_2" />
         <marker scope="Public" name="Mila" />
         <marker scope="Public" name="Monika_weird" />
         <marker scope="Public" name="MsFortune_s0_1" />
@@ -695,6 +699,7 @@
         <marker scope="Public" name="nami_resp1_3" />
         <marker scope="Public" name="nami_resp2_1" />
         <marker scope="Public" name="nami_resp2_2" />
+        <marker scope="Public" name="nami_resp2_3" />
         <marker scope="Public" name="Nami_s0_1" />
         <marker scope="Public" name="Nami_s0_2" />
         <marker scope="Public" name="Nami_s0_3" />
@@ -703,6 +708,7 @@
         <marker scope="Public" name="Nami_s1_3" />
         <marker scope="Public" name="Nami_s2_1" />
         <marker scope="Public" name="Nami_s2_2" />
+        <marker scope="Public" name="Nami_s2_3" />
         <marker scope="Public" name="NamPer_s0_2" />
         <marker scope="Public" name="NamPer_s0_3" />
         <marker scope="Public" name="nico_resp_touch" />
@@ -713,6 +719,7 @@
         <marker scope="Public" name="Noelle_s0_1" />
         <marker scope="Public" name="Panty_s0_1" />
         <marker scope="Public" name="Panty_s0_2L" />
+        <marker scope="Public" name="Panty_s0_3L" />
         <marker scope="Public" name="perona_resp0_1" />
         <marker scope="Public" name="perona_resp0_2" />
         <marker scope="Public" name="perona_resp0_3" />
@@ -829,10 +836,18 @@
         <marker scope="Public" name="senko_resp2_1" />
         <marker scope="Public" name="Senko_s0_1" />
         <marker scope="Public" name="Senko_s0_2" />
+        <marker scope="Public" name="Senko_s0_3" />
         <marker scope="Public" name="Senko_s1_1" />
         <marker scope="Public" name="Senko_s1_2" />
+        <marker scope="Public" name="Senko_s1_3" />
         <marker scope="Public" name="Senko_s2_1" />
         <marker scope="Public" name="Senko_s2_2" />
+        <marker scope="Public" name="sofia_resp0_1" />
+        <marker scope="Public" name="sofia_resp0_2" />
+        <marker scope="Public" name="sofia_resp0_3" />
+        <marker scope="Public" name="Sofia_s0_1" />
+        <marker scope="Public" name="Sofia_s0_2" />
+        <marker scope="Public" name="Sofia_s0_3" />
         <marker scope="Public" name="Steve_s0_1" />
         <marker scope="Public" name="Stocking_s0_1" />
         <marker scope="Public" name="Takatoshi_s0_1" />
@@ -848,6 +863,12 @@
         <marker scope="Public" name="Turandot_s0_3" />
         <marker scope="Public" name="TwistedFate_s0_1" />
         <marker scope="Public" name="TwistedFate_s0_2" />
+        <marker scope="Public" name="yae_resp0_1" />
+        <marker scope="Public" name="yae_resp0_2" />
+        <marker scope="Public" name="yae_resp0_3" />
+        <marker scope="Public" name="Yae_s0_1" />
+        <marker scope="Public" name="Yae_s0_2" />
+        <marker scope="Public" name="Yae_s0_3" />
         <marker scope="Public" name="YshBo_s2_2" />
         <marker scope="Public" name="YshBo_s2_3" />
         <marker scope="Public" name="yshtola_resp0_1" />

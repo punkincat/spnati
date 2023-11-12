@@ -468,7 +468,7 @@ function Pose(poseDef, display, onLoadCallback) {
     this.container = container;
     
     poseDef.sprites.forEach(function (def) {
-        if (def.marker && !checkMarker(def.marker, this.player)) {
+        if (def.marker && !checkMarkers(def.marker, this.player)) {
             return;
         }
         var sprite = new PoseSprite(def.id, def.src, this.onSpriteLoaded.bind(this), this, def);
@@ -485,7 +485,7 @@ function Pose(poseDef, display, onLoadCallback) {
     }
     
     poseDef.animations.forEach(function (def) {
-        if (def.marker && !checkMarker(def.marker, this.player)) {
+        if (def.marker && !checkMarkers(def.marker, this.player)) {
           return;
         }
         var target = this.sprites[def.id];
@@ -1774,7 +1774,7 @@ OpponentDetailsDisplay.prototype.clear = function () {
     this.displayContainer.hide();
 }
 
-OpponentDetailsDisplay.prototype.createEpilogueCard = function (title, gender, unlockHint) {
+OpponentDetailsDisplay.prototype.createEpilogueCard = function (title, gender, unlockHint, description) {
     // Add the opponent-epilogue-* classes for future extensibility and also
     // to minimize disruptions with caching
     var container = createElementWithClass('div', 'bordered opponent-subview-card opponent-epilogue-card');
@@ -1795,6 +1795,14 @@ OpponentDetailsDisplay.prototype.createEpilogueCard = function (title, gender, u
         var unlockHintValue = unlockHintElem.appendChild(createElementWithClass('div', 'opponent-subview-value opponent-epilogue-value'));
         $(unlockHintLabel).text("To Unlock");
         $(unlockHintValue).html(unlockHint);
+    }
+
+    if (description) {
+        var descriptionElem = container.appendChild(createElementWithClass('div', 'bordered left-cap opponent-subview-row opponent-epilogue-row opponent-epilogue-description'));
+        var descriptionLabel = descriptionElem.appendChild(createElementWithClass('div', 'left-cap opponent-subview-label opponent-epilogue-label'));
+        var descriptionValue = descriptionElem.appendChild(createElementWithClass('div', 'opponent-subview-value opponent-epilogue-value'));
+        $(descriptionLabel).text("Info");
+        $(descriptionValue).html(description);
     }
     
     return container;
@@ -1851,7 +1859,7 @@ OpponentDetailsDisplay.prototype.updateEpiloguesView = function () {
         }
         
         return this.createEpilogueCard(
-            (offlineIndicator + group[0].text()), genderText, group[0].attr('hint')
+            (offlineIndicator + group[0].text()), genderText, group[0].attr('hint'), group[0].attr('description')
         );
     }.bind(this));
     

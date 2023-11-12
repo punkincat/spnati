@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadata>
     <owner>jim</owner>
+    <height>5'11"</height>
+    <age />
+    <pronunciation />
+    <othernotes />
     <noteworthy>
         <case name="&quot;Conk&quot;" id="3" priority="Noteworthy" min="0" max="8">
             <description>Jim suddenly second-guesses his word choice. Thought it might be funny if other characters internally think exactly what he's worried about.</description>
@@ -117,6 +121,7 @@
         <marker scope="Public" name="Blake_resp0a" />
         <marker scope="Public" name="Blake_resp0b" />
         <marker scope="Public" name="Blake_resp4a" />
+        <marker scope="Public" name="blindtarget" />
         <marker scope="Public" name="Bobobo_resp0a" />
         <marker scope="Public" name="Brock_C-14andHEV" />
         <marker scope="Public" name="Brock_Dragon" />
@@ -284,12 +289,51 @@
         <marker scope="Public" name="Dorothy1b" />
         <marker scope="Public" name="Dorothy1c" />
         <marker scope="Public" name="Dorothy2a" />
+        <marker scope="Public" name="Dunban_resp0a" />
+        <marker scope="Public" name="Dunban_resp0b" />
+        <marker scope="Public" name="Dunban_resp0c" />
         <marker scope="Public" name="Dunban_resp1a" />
         <marker scope="Public" name="Dunban_resp1b" />
+        <marker scope="Public" name="Dunban_resp1c" />
         <marker scope="Public" name="Dunban_resp2a" />
         <marker scope="Public" name="Dunban_resp2b" />
+        <marker scope="Public" name="Dunban_resp2c" />
+        <marker scope="Public" name="Dunban_resp3a" />
+        <marker scope="Public" name="Dunban_resp3b" />
+        <marker scope="Public" name="Dunban_resp3c" />
+        <marker scope="Public" name="Dunban_resp4a" />
+        <marker scope="Public" name="Dunban_resp4b" />
+        <marker scope="Public" name="Dunban_resp4c" />
+        <marker scope="Public" name="Dunban_resp5a" />
+        <marker scope="Public" name="Dunban_resp5b" />
+        <marker scope="Public" name="Dunban_resp5c" />
+        <marker scope="Public" name="Dunban_resp6a" />
+        <marker scope="Public" name="Dunban_resp6b" />
+        <marker scope="Public" name="Dunban_resp6c" />
+        <marker scope="Public" name="Dunban_resp7a" />
+        <marker scope="Public" name="Dunban_resp7b" />
+        <marker scope="Public" name="Dunban_resp7c" />
         <marker scope="Public" name="Dunban0a" />
         <marker scope="Public" name="Dunban0b" />
+        <marker scope="Public" name="Dunban0c" />
+        <marker scope="Public" name="Dunban1a" />
+        <marker scope="Public" name="Dunban1b" />
+        <marker scope="Public" name="Dunban1c" />
+        <marker scope="Public" name="Dunban2a" />
+        <marker scope="Public" name="Dunban2b" />
+        <marker scope="Public" name="Dunban2c" />
+        <marker scope="Public" name="Dunban3a" />
+        <marker scope="Public" name="Dunban3b" />
+        <marker scope="Public" name="Dunban3c" />
+        <marker scope="Public" name="Dunban4a" />
+        <marker scope="Public" name="Dunban4b" />
+        <marker scope="Public" name="Dunban4c" />
+        <marker scope="Public" name="Dunban5a" />
+        <marker scope="Public" name="Dunban5b" />
+        <marker scope="Public" name="Dunban5c" />
+        <marker scope="Public" name="Dunban6a" />
+        <marker scope="Public" name="Dunban6b" />
+        <marker scope="Public" name="Dunban6c" />
         <marker scope="Public" name="Dwight_resp0a" />
         <marker scope="Public" name="Dwight_resp0b" />
         <marker scope="Public" name="Dwight_resp1a" />
@@ -576,11 +620,34 @@
         <marker scope="Public" name="Mari_resp5a" />
         <marker scope="Public" name="Mari_soldier1" />
         <marker scope="Public" name="Mari_types_1" />
+        <marker scope="Public" name="Maria_mastresp" />
         <marker scope="Public" name="Maria_resp1a" />
         <marker scope="Public" name="Maria_resp1b" />
+        <marker scope="Public" name="Maria_resp2a" />
+        <marker scope="Public" name="Maria_resp2b" />
+        <marker scope="Public" name="Maria_resp3a" />
+        <marker scope="Public" name="Maria_resp3b" />
+        <marker scope="Public" name="Maria_resp4a" />
+        <marker scope="Public" name="Maria_resp4b" />
+        <marker scope="Public" name="Maria_resp5a" />
+        <marker scope="Public" name="Maria_resp5b" />
+        <marker scope="Public" name="Maria_resp6a" />
+        <marker scope="Public" name="Maria_resp6b" />
+        <marker scope="Public" name="Maria_resp7a" />
+        <marker scope="Public" name="Maria_resp7b" />
+        <marker scope="Public" name="Maria_resp8a" />
+        <marker scope="Public" name="Maria_resp8b" />
+        <marker scope="Public" name="Maria_startresp" />
         <marker scope="Public" name="Maria0a" />
         <marker scope="Public" name="Maria0b" />
         <marker scope="Public" name="Maria0c" />
+        <marker scope="Public" name="Maria1c" />
+        <marker scope="Public" name="Maria2c" />
+        <marker scope="Public" name="Maria3c" />
+        <marker scope="Public" name="Maria4c" />
+        <marker scope="Public" name="Maria5c" />
+        <marker scope="Public" name="Maria6c" />
+        <marker scope="Public" name="Maria7c" />
         <marker scope="Public" name="MariS_resp0a" />
         <marker scope="Public" name="MariS_resp0b" />
         <marker scope="Public" name="MariS_resp0c" />
@@ -994,6 +1061,7 @@
         <marker scope="Public" name="Senko0a" />
         <marker scope="Public" name="Specimen." />
         <marker scope="Public" name="Specimen?" />
+        <marker scope="Public" name="Steve0a" />
         <marker scope="Public" name="Suck_it_Nova" />
         <marker scope="Public" name="Susie0a" />
         <marker scope="Public" name="Syrenne_resp0a" />
@@ -1003,6 +1071,7 @@
         <marker scope="Public" name="Takatoshi_resp0b" />
         <marker scope="Public" name="Takatoshi_resp1a" />
         <marker scope="Public" name="Takatoshi_resp1b" />
+        <marker scope="Public" name="tattootarget" />
         <marker scope="Public" name="TF_Captainresponse" />
         <marker scope="Public" name="TF_conmanresponse" />
         <marker scope="Public" name="TF_Luckresponse" />

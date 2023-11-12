@@ -2,6 +2,10 @@
     color: #086975;
 }
 
+.dark-mode .dialogue .mia[data-character="aqua_kh"] {
+    color: #78d8d3;
+}
+
 @font-face {
     font-family: 'KHBBS';
     src: url('epilogue/DFPW5_EUR.woff') format("woff");
@@ -49,6 +53,7 @@
     border: none;
     font-size: 105%;
     text-align: left;
+	color: black;
     opacity: 100%;
     border-radius: 1.05rem;
     min-height: 7rem;

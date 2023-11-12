@@ -1,2 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<collectibles />
+<collectibles>
+    <collectible id="mia_mercury_djinn" img="opponents/mia_golden_sun/djinn/fizz.png" thumbnail="opponents/mia_golden_sun/djinn/fizz.png">
+        <title>Cloud the Mercury Djinn</title>
+        <text>This little guy followed you around after the game with Mia. Every so often, it emits a fine mist that protects you from attacks. You may as well hang on to it, in case it's useful later.</text>
+        <unlock>Finish a game where Mia (Golden Sun) loses.</unlock>
+        <hide-details>true</hide-details>
+        <counter>1</counter>
+    </collectible>
+    <collectible id="mia_siren_picture" img="opponents/mia_golden_sun/mia_gs_collectible_siren.png" thumbnail="opponents/mia_golden_sun/mia_gs_collectible_siren_thumbnail.png">
+        <title>Mia and the Siren</title>
+        <text>Along with ghouls, gnomes, harpies, lizard men, and other varieties of monster, the sirens take up residence in Mercury Lighthouse. Many of them were sinister and acted as common enemies for Isaac and his party. However, after her quest to save the world, Mia came to befriend some of the less hostile residents of the lighthouse. The sirens in particular took a liking to her, helping Mia explore some new sides of herself...</text>
+        <unlock>Finish a game against Mia (Golden Sun) in her Halloween outfit, OR finish a game with Mia and 2 characters with the succubus tag.</unlock>
+        <counter>1</counter>
+    </collectible>
+</collectibles>

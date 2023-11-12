@@ -201,7 +201,7 @@ namespace SPNATI_Character_Editor.DataStructures
 			}
 		}
 
-		[RecordSelect(RecordType = typeof(ClothingTypeCategory), AllowCreate = false, DisplayName = "Type", Description = "The clothing type of the wearable form of this item", GroupOrder = 160)]
+		[RecordSelect(RecordType = typeof(ClothingTypeCategory), RecordFilter = "NoSkipFilter", AllowCreate = false, DisplayName = "Type", Description = "The clothing type of the wearable form of this item", GroupOrder = 160)]
 		[DefaultValue("")]
 		public string ClothingType
 		{
@@ -220,6 +220,13 @@ namespace SPNATI_Character_Editor.DataStructures
 				}
 			}
 		}
+
+		#pragma warning disable IDE0051
+		private bool NoSkipFilter(IRecord record)
+		{
+			return record.Key != "skip";
+		}
+		#pragma warning restore IDE0051
 
 		[Boolean(DisplayName = "Is Plural?", GroupOrder = 180, Description = "Whether the name of the wearable form of this item is plural")]
 		[DefaultValue(false)]

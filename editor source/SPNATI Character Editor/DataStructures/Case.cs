@@ -1408,13 +1408,26 @@ namespace SPNATI_Character_Editor
 				alternate.Tag = Tag;
 				alternate.Stages = Stages;
 				Case alternateResponse = alternate.CreateResponse(speaker, responder);
+				List<TargetCondition> conditionsToRemove = new List<TargetCondition>();
+				foreach (TargetCondition c1 in alternateResponse.Conditions)
+				{
+					foreach (TargetCondition c2 in response.Conditions)
+					{
+						c1.RemoveIntersection(c2);
+					}
+					if (c1.IsAlmostEmpty)
+					{
+						conditionsToRemove.Add(c1);
+					}
+				}
+				
+				foreach (TargetCondition c in conditionsToRemove)
+				{
+					alternateResponse.Conditions.Remove(c);
+				}
+
 				response.AlternativeConditions.Add(alternateResponse);
 			}
-
-			// This is inefficient and would be better served by fixing
-			// the helper functions (CopySelfIntoAlsoPlaying, etc)
-			// to not use oldstyle conditions - do this later
-			DataConversions.ConvertCase(response, responder);
 
 			return response;
 		}
@@ -2319,7 +2332,7 @@ namespace SPNATI_Character_Editor
 			{
 				tag = tag.Substring(5);
 			}
-			else if (tag != null && tag.StartsWith("opponent_") && tag != "opponent_selected")
+			else if (tag != null && tag.StartsWith("opponent_") && !tag.EndsWith("selected"))
 			{
 				tag = tag.Substring(9);
 			}
@@ -2373,6 +2386,15 @@ namespace SPNATI_Character_Editor
 				{
 					return "selected";
 				}
+				if (tag == "opponent_deselected")
+				{
+					return null;
+				}
+			}
+
+			if (tag == "opponent_deselected")
+			{
+				return tag;
 			}
 
 			if (tag == "good_hand" || tag == "okay_hand" || tag == "bad_hand")
@@ -2380,10 +2402,6 @@ namespace SPNATI_Character_Editor
 				return "hand";
 			}
 
-			if (tag == "opponent_deselected")
-			{
-				return null;
-			}
 			if (tag == "finishing_masturbating")
 			{
 				return null;

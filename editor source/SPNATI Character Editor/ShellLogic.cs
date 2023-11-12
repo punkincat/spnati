@@ -398,6 +398,7 @@ namespace SPNATI_Character_Editor
 			shell.AddToolbarItem("Save", Save, menu, Keys.Control | Keys.S);
 			shell.AddToolbarSeparator(menu);
 			shell.AddToolbarItem("Settings...", Setup, menu, Keys.None);
+			shell.AddToolbarItem("Toggle SFW Mode", ToggleSFWMode, menu, Keys.F12);
 			shell.AddToolbarSeparator(menu);
 			shell.AddToolbarItem("Exit", Exit, menu, Keys.Alt | Keys.F4);
 
@@ -630,20 +631,6 @@ namespace SPNATI_Character_Editor
 			}
 		}
 
-		private static void ExportCharacter()
-		{
-			Character current = GetActiveCharacter();
-			if (current == null)
-			{
-				MessageBox.Show("No character is currently being edited. You can only export from a character's workspace.");
-				return;
-			}
-			Save();
-			if (FlatFileSerializer.ExportFlatFile(current))
-			{
-				Shell.Instance.SetStatus("Generated edit-dialogue.txt");
-			}
-		}
 
 		private static void ViewTutorial()
 		{
@@ -687,6 +674,14 @@ namespace SPNATI_Character_Editor
 		{
 			GameConfig form = new GameConfig();
 			form.ShowDialog();
+		}
+
+		private static void ToggleSFWMode()
+		{
+			Config.SafeMode = !Config.SafeMode;
+			Config.Set(Settings.HideImages, Config.SafeMode);
+			Shell.Instance.PostOffice.SendMessage(DesktopMessages.ToggleImages);
+			Config.Save();
 		}
 
 		private static void ManageCaseMacros()

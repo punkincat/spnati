@@ -181,22 +181,27 @@ var statusIndicators = {
 
 const MAGNET_TAGS = [
     "fire_emblem",
+
     "pokemon",
+
     "ddlc",
     "my_little_pony",
+
     "danganronpa",
     "genshin_impact",
+    "konosuba",
     "persona",
     "rwby_franchise",
     "street_fighter",
+
     "ace_attorney",
     "dragon_ball",
     "katawa_shoujo",
-    "konosuba",
-    "little_witch_academia",
     "monster_prom",
     "one_piece",
     "touhou_project",
+    "yugioh",
+
     "battleborn",
     "clannad",
     "zombieland_saga",
@@ -204,8 +209,8 @@ const MAGNET_TAGS = [
     "jjba",
     "kid_icarus",
     "league_of_legends",
-    "legend_of_dark_witch",
     "legend_of_zelda",
+    "little_witch_academia",
     "marvel",
     "miraculous",
     "hyperdimension_neptunia",
@@ -215,7 +220,7 @@ const MAGNET_TAGS = [
     "teen_titans_franchise",
     "va-11_hall-a",
     "vandread",
-    "yugioh",
+    "xenoblade_chronicles",
 ];
 
 /**********************************************************************
@@ -1701,20 +1706,26 @@ function updateSelectionVisuals () {
 
     /* Update suggestions images. */
     updateDefaultFillView();
+	
+    let displayPreviews = (loaded >= 2);
 
-    if (loaded >= 2) {
+    if (displayPreviews && individualSelectTesting && filled < 4) {
+        // Check that we have enough testing characters (four times
+        // the number of remaining slots) and delay showing
+        // suggestions, or don't show them at all, otherwise.
+        const testingCharactersRemaining = loadedOpponents.countTrue(c => c.status === "testing")
+              - players.countTrue(p => p.status === "testing");
+        displayPreviews = (testingCharactersRemaining >= 4 * (4 - loaded));
+    }
+
+    if (displayPreviews) {
         var suggested_opponents = loadedOpponents.filter(function(opp) {
             if (individualSelectTesting && opp.status !== "testing") return false;
             return opp.selectionCard.isVisible(individualSelectTesting, true);
         });
 
         /* Shuffle the suggestions before stable sorting them, to add variety. */
-        for (var i = 0; i < suggested_opponents.length - 1; i++) {
-            swapIndex = getRandomNumber(i, suggested_opponents.length);
-            var t = suggested_opponents[i];
-            suggested_opponents[i] = suggested_opponents[swapIndex];
-            suggested_opponents[swapIndex] = t;
-        }
+        shuffleArray(suggested_opponents);
 
         /* Sort opponents, capping each selected character's contribution
          * to the inbound line count for each suggestion at 50 lines.

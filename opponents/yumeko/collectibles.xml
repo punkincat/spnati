@@ -1,9 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <collectibles>
-    <collectible id="new_collectible" status="online" img="opponents/yumeko/Housepet tag.png" thumbnail="opponents/yumeko/Housepet tag.png">
-        <title>Housepet Tag</title>
-        <subtitle>Are you a "Fido" or "Mittens"?</subtitle>
-        <text>The bad news is you're now Yumeko's brand-new housepet... but depending on your point of view, that could also be the good news.</text>
-        <unlock>Lose a game where Yumeko is the winner. Don't try to cheese it, either.</unlock>
+    <collectible id="housepet_tag" img="opponents/yumeko/Housepet_tag.png" thumbnail="opponents/yumeko/Housepet_tag.png">
+        <title>Housepet tag</title>
+        <text>The bad news is that you're now Yumeko's housepet... but depending on your point of view, that might also be the good news.</text>
+        <unlock>Lose a game where Yumeko Jabami is the winner. Don't try to cheese it, either.</unlock>
+    </collectible>
+    <collectible id="mysterious_invitation" img="opponents/yumeko/Invitation.png" thumbnail="opponents/yumeko/Invitation.png">
+        <title>Mysterious invitation</title>
+        <text>The letter simply reads, "If you want to try your luck with a more serious gamble..." before giving an address. You later learn it's the location of the Jabami estate.</text>
+        <unlock>Win a game against Yumeko Jabami.</unlock>
     </collectible>
 </collectibles>

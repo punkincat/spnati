@@ -452,6 +452,22 @@
         <response id="872" opponent="marinette" opponentId="1359" />
         <response id="873" opponent="marinette" opponentId="1363" />
         <response id="877" opponent="marinette" opponentId="1366" />
+        <response id="891" opponent="lysithea" opponentId="29" />
+        <response id="892" opponent="lysithea" opponentId="44" />
+        <response id="893" opponent="lysithea" opponentId="55" />
+        <response id="901" opponent="leon" opponentId="17" />
+        <response id="902" opponent="leon" opponentId="1344" />
+        <response id="903" opponent="leon" opponentId="1345" />
+        <response id="904" opponent="leon" opponentId="1346" />
+        <response id="905" opponent="leon" opponentId="1347" />
+        <response id="906" opponent="leon" opponentId="1349" />
+        <response id="907" opponent="leon" opponentId="1350" />
+        <response id="908" opponent="leon" opponentId="1351" />
+        <response id="909" opponent="leon" opponentId="1353" />
+        <response id="910" opponent="leon" opponentId="1355" />
+        <response id="911" opponent="leon" opponentId="1356" />
+        <response id="912" opponent="leon" opponentId="1352" />
+        <response id="913" opponent="leon" opponentId="1369" />
     </responses>
     <labels>
         <label id="2" label="" folder="ladybug self hands" sort="0" />
@@ -928,15 +944,19 @@
         <label id="887" label="Post" folder="Dual Forfeit - Marinette" sort="0" />
         <label id="888" label="Post" folder="Dual Forfeit - Marinette" sort="0" />
         <label id="889" label="Adrien should be in her space" folder="Marinette Dual Forfeit" sort="0" />
+        <label id="896" label="" folder="Hilda/Leon" sort="0" />
+        <label id="897" label="" folder="Hilda/Leon" sort="0" />
+        <label id="898" label="" folder="Hilda/Leon" sort="0" />
+        <label id="899" label="" folder="Hilda/Leon" sort="0" />
+        <label id="900" label="" folder="Marinette Dual Forfeit" sort="0" />
     </labels>
     <prefixes>
         <prefix>plagg</prefix>
     </prefixes>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>889</nextId>
+    <nextId>914</nextId>
     <markers>
         <marker scope="Public" name="" />
+        <marker scope="Public" name="adr_mari_dual" />
         <marker scope="Public" name="adri_win0">Adrien is not losing when stripping for indicated stage. </marker>
         <marker scope="Public" name="adri_win1" />
         <marker scope="Public" name="adri_win2" />
@@ -1028,6 +1048,8 @@
         <marker scope="Public" name="adrien63" />
         <marker scope="Public" name="adrienSkitty" />
         <marker scope="Public" name="adrimari_dualforfeit" />
+        <marker scope="Public" name="adrimari_dualforfeitClose" />
+        <marker scope="Public" name="adrimari_dualforfeitFinishing" />
         <marker scope="Public" name="akko_post" />
         <marker scope="Public" name="amy_post" />
         <marker scope="Public" name="Angela_Adrien_Finish" />
@@ -1076,6 +1098,7 @@
         <marker scope="Public" name="cn_perona" />
         <marker scope="Public" name="cynthia_post" />
         <marker scope="Public" name="dash_post" />
+        <marker scope="Public" name="dualforfeit_end" />
         <marker scope="Public" name="emi_post" />
         <marker scope="Public" name="fate01" />
         <marker scope="Public" name="flirt_back" />
@@ -1239,6 +1262,37 @@
         <marker scope="Public" name="lb_hand86" />
         <marker scope="Public" name="lb_hand87" />
         <marker scope="Public" name="lb_hand88" />
+        <marker scope="Public" name="leon_notes" />
+        <marker scope="Public" name="leon01" />
+        <marker scope="Public" name="leon02" />
+        <marker scope="Public" name="leon03" />
+        <marker scope="Public" name="leon11" />
+        <marker scope="Public" name="leon12" />
+        <marker scope="Public" name="leon21" />
+        <marker scope="Public" name="leon22" />
+        <marker scope="Public" name="leon23" />
+        <marker scope="Public" name="leon31" />
+        <marker scope="Public" name="leon32" />
+        <marker scope="Public" name="leon33" />
+        <marker scope="Public" name="leon51" />
+        <marker scope="Public" name="leon52" />
+        <marker scope="Public" name="leon53" />
+        <marker scope="Public" name="leondrien_ff" />
+        <marker scope="Public" name="leondrien_ff2" />
+        <marker scope="Public" name="leondrien_h1" />
+        <marker scope="Public" name="leondrien_h2" />
+        <marker scope="Public" name="leondrien_h3" />
+        <marker scope="Public" name="leondrien_h4" />
+        <marker scope="Public" name="leondrien_h5" />
+        <marker scope="Public" name="leondrien_m1" />
+        <marker scope="Public" name="leondrien_m2" />
+        <marker scope="Public" name="leondrien_m3" />
+        <marker scope="Public" name="leondrien_m4" />
+        <marker scope="Public" name="leondrien_m5" />
+        <marker scope="Public" name="leondrien_m6" />
+        <marker scope="Public" name="leondrien_m7" />
+        <marker scope="Public" name="leondrien_m8" />
+        <marker scope="Public" name="leondrien_m9" />
         <marker scope="Public" name="leonie_finished_hildadrien" />
         <marker scope="Public" name="leonie_flirt" />
         <marker scope="Public" name="leonie_hilda" />
@@ -1249,6 +1303,11 @@
         <marker scope="Public" name="lux_1st" />
         <marker scope="Public" name="lux_go" />
         <marker scope="Public" name="lyralei_picture_reply" />
+        <marker scope="Public" name="lysi_pressure1" />
+        <marker scope="Public" name="lysi_suit1" />
+        <marker scope="Public" name="lysi_whyme1" />
+        <marker scope="Public" name="lysi01" />
+        <marker scope="Public" name="lysi11" />
         <marker scope="Public" name="mari_facade" />
         <marker scope="Public" name="mari_komi32" />
         <marker scope="Public" name="mari01" />

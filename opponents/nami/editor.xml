@@ -39,6 +39,9 @@
         <case name="Positive Body Image" id="624" priority="Prompt" min="5" max="6">
             <description>Nami asks the table what's one thing they like about their own bodies.</description>
         </case>
+        <case name="Flashing" id="1079" priority="FYI" min="0" max="0">
+            <description>In NG+, if the player loses a hand before Nami, she will flash him by briefly pulling up her top. If you wanna react to this do it in the next Hand (Any). Keep in mind that Nami is being sneaky, so only characters who are very perceptive would notice her doing this.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -273,6 +276,8 @@
         <note id="1277">This stuff hasn't been adapted in the anime yet, so I'm gonna keep it vague</note>
         <note id="1391">This is Nami messing with Reimu to see if she looks</note>
         <note id="1400">Nami is a virgin before her epilogue, so this advice is not based on experience</note>
+        <note id="1448">The markers have separate values in case you wanna respond to the lines individually</note>
+        <note id="1466">This I'm thinking could be the set-up to Wikipe-tan telling Nami about rule 34 and porn of her</note>
     </notes>
     <labels>
         <label id="217" label="" folder="Perona" sort="0" />
@@ -1002,7 +1007,7 @@
         <label id="1182" label="" color="1" folder="" sort="0" />
         <label id="1093" label="" color="1" folder="" sort="0" />
         <label id="1094" label="" color="1" folder="" sort="0" />
-        <label id="1395" label="" color="1" folder="" sort="0" />
+        <label id="1471" label="" color="6" folder="" sort="0" />
         <label id="1179" label="" color="1" folder="" sort="0" />
         <label id="1177" label="" color="1" folder="" sort="0" />
         <label id="1068" label="" color="1" folder="" sort="0" />
@@ -1063,12 +1068,11 @@
         <label id="1148" label="" folder="Robin" sort="0" />
         <label id="1149" label="" folder="Robin" sort="0" />
         <label id="1150" label="" folder="Robin" sort="0" />
-        <label id="1262" label="" color="1" folder="" sort="0" />
-        <label id="1152" label="" color="1" folder="" sort="0" />
-        <label id="1207" label="" color="1" folder="" sort="0" />
-        <label id="1263" label="" color="1" folder="" sort="0" />
+        <label id="1468" label="" color="1" folder="" sort="0" />
+        <label id="1465" label="" color="1" folder="" sort="0" />
+        <label id="1466" label="" color="1" folder="" sort="0" />
+        <label id="1467" label="" color="1" folder="" sort="0" />
         <label id="1248" label="" color="1" folder="" sort="0" />
-        <label id="1396" label="" color="6" folder="" sort="0" />
         <label id="1249" label="" color="1" folder="" sort="0" />
         <label id="1166" label="" color="5" folder="" sort="0" />
         <label id="1167" label="" folder="Perona" sort="0" />
@@ -1103,7 +1107,6 @@
         <label id="1264" label="" color="1" folder="" sort="0" />
         <label id="1217" label="" color="1" folder="" sort="0" />
         <label id="1218" label="" color="1" folder="" sort="0" />
-        <label id="1410" label="" color="1" folder="" sort="0" />
         <label id="1220" label="" folder="New Game Plus" sort="0" />
         <label id="1221" label="" folder="New Game Plus" sort="0" />
         <label id="1222" label="" folder="New Game Plus" sort="0" />
@@ -1134,18 +1137,13 @@
         <label id="1337" label="" color="1" folder="" sort="0" />
         <label id="1253" label="" color="1" folder="" sort="0" />
         <label id="1254" label="" folder="Robin" sort="0" />
-        <label id="1384" label="" color="4" folder="" sort="0" />
-        <label id="1388" label="" color="4" folder="" sort="0" />
-        <label id="1385" label="" color="4" folder="" sort="0" />
-        <label id="1397" label="" color="6" folder="" sort="0" />
+        <label id="1482" label="" color="1" folder="" sort="0" />
+        <label id="1485" label="" color="6" folder="" sort="0" />
+        <label id="1476" label="" color="1" folder="" sort="0" />
         <label id="1268" label="" color="1" folder="" sort="0" />
-        <label id="1398" label="" color="6" folder="" sort="0" />
-        <label id="1399" label="" color="1" folder="" sort="0" />
+        <label id="1416" label="" color="1" folder="" sort="0" />
         <label id="1414" label="" color="6" folder="" sort="0" />
         <label id="1341" label="" color="1" folder="" sort="0" />
-        <label id="1408" label="" color="1" folder="" sort="0" />
-        <label id="1409" label="" color="6" folder="" sort="0" />
-        <label id="1407" label="" color="1" folder="" sort="0" />
         <label id="1288" label="" folder="Robin" sort="0" />
         <label id="1289" label="" folder="Robin" sort="0" />
         <label id="1290" label="" folder="Robin" sort="0" />
@@ -1179,7 +1177,7 @@
         <label id="1321" label="" folder="Robin" sort="0" />
         <label id="1322" label="" folder="Robin" sort="0" />
         <label id="1323" label="" folder="New Game Plus" sort="0" />
-        <label id="1403" label="" color="6" folder="" sort="0" />
+        <label id="1479" label="" color="6" folder="" sort="0" />
         <label id="1411" label="" color="1" folder="" sort="0" />
         <label id="1412" label="" color="1" folder="" sort="0" />
         <label id="1340" label="" color="1" folder="" sort="0" />
@@ -1188,31 +1186,44 @@
         <label id="1357" label="" color="1" folder="" sort="0" />
         <label id="1358" label="" color="1" folder="" sort="0" />
         <label id="1359" label="" color="1" folder="" sort="0" />
-        <label id="1387" label="" color="4" folder="" sort="0" />
-        <label id="1389" label="" color="4" folder="" sort="0" />
-        <label id="1365" label="" color="4" folder="" sort="0" />
-        <label id="1381" label="" color="4" folder="" sort="0" />
-        <label id="1379" label="" color="4" folder="" sort="0" />
-        <label id="1380" label="" color="4" folder="" sort="0" />
-        <label id="1382" label="" color="4" folder="" sort="0" />
-        <label id="1383" label="" color="4" folder="" sort="0" />
-        <label id="1393" label="" color="1" folder="" sort="0" />
-        <label id="1392" label="" color="1" folder="" sort="0" />
-        <label id="1374" label="" color="1" folder="" sort="0" />
-        <label id="1415" label="" color="1" folder="" sort="0" />
-        <label id="1378" label="" color="4" folder="" sort="0" />
-        <label id="1386" label="" color="4" folder="" sort="0" />
-        <label id="1390" label="" color="1" folder="" sort="0" />
-        <label id="1391" label="" color="1" folder="" sort="0" />
-        <label id="1394" label="" color="1" folder="" sort="0" />
-        <label id="1404" label="" color="1" folder="" sort="0" />
-        <label id="1405" label="" color="1" folder="" sort="0" />
-        <label id="1406" label="" color="1" folder="" sort="0" />
+        <label id="1483" label="" color="1" folder="" sort="0" />
+        <label id="1444" label="" color="4" folder="" sort="0" />
+        <label id="1481" label="" color="13" folder="" sort="0" />
+        <label id="1428" label="" color="1" folder="" sort="0" />
+        <label id="1427" label="" color="1" folder="" sort="0" />
+        <label id="1475" label="" color="6" folder="" sort="0" />
+        <label id="1484" label="" color="6" folder="" sort="0" />
+        <label id="1422" label="" color="1" folder="" sort="0" />
+        <label id="1420" label="" color="1" folder="" sort="0" />
+        <label id="1426" label="" color="1" folder="" sort="0" />
+        <label id="1477" label="" color="1" folder="" sort="0" />
+        <label id="1478" label="" color="1" folder="" sort="0" />
         <label id="1413" label="" color="1" folder="" sort="0" />
+        <label id="1421" label="" color="1" folder="" sort="0" />
+        <label id="1469" label="" color="1" folder="" sort="0" />
+        <label id="1470" label="" color="1" folder="" sort="0" />
+        <label id="1473" label="" color="1" folder="" sort="0" />
+        <label id="1474" label="" color="1" folder="" sort="0" />
+        <label id="1472" label="" color="1" folder="" sort="0" />
+        <label id="1480" label="" color="1" folder="" sort="0" />
+        <label id="1449" label="" color="5" folder="" sort="0" />
+        <label id="1450" label="" color="5" folder="" sort="0" />
+        <label id="1451" label="" color="5" folder="" sort="0" />
+        <label id="1452" label="" folder="Robin" sort="0" />
+        <label id="1453" label="" folder="New Game Plus" sort="0" />
+        <label id="1454" label="" folder="New Game Plus" sort="0" />
+        <label id="1455" label="" folder="New Game Plus" sort="0" />
+        <label id="1456" label="" folder="new Game Plus" sort="0" />
+        <label id="1457" label="" folder="new Game Plus" sort="0" />
+        <label id="1458" label="" color="1" folder="" sort="0" />
+        <label id="1459" label="" color="1" folder="" sort="0" />
+        <label id="1460" label="" color="1" folder="" sort="0" />
+        <label id="1461" label="" color="1" folder="" sort="0" />
+        <label id="1462" label="" color="1" folder="" sort="0" />
+        <label id="1463" label="" color="1" folder="" sort="0" />
+        <label id="1464" label="" color="1" folder="" sort="0" />
     </labels>
-    <onlyCustomPoses>false</onlyCustomPoses>
-    <hidePrefixlessImages>false</hidePrefixlessImages>
-    <nextId>1415</nextId>
+    <nextId>1485</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="3players">Nami talks about there only being 3 players in the game.</marker>
@@ -1290,11 +1301,14 @@
         <marker scope="Public" name="amyrose23" />
         <marker scope="Public" name="amyrose3s" />
         <marker scope="Public" name="anatoly0" />
+        <marker scope="Public" name="angry_opponent" />
         <marker scope="Public" name="aoba0" />
         <marker scope="Public" name="aoba01" />
         <marker scope="Public" name="aoba1" />
         <marker scope="Public" name="aoba12" />
         <marker scope="Public" name="aoba1s" />
+        <marker scope="Public" name="aqua_konosuba0" />
+        <marker scope="Public" name="aqua_konosuba01" />
         <marker scope="Public" name="aquagrunt0" />
         <marker scope="Public" name="aquagrunt01" />
         <marker scope="Public" name="aquagrunt1" />
@@ -1308,8 +1322,12 @@
         <marker scope="Public" name="aquakh_sharp" />
         <marker scope="Public" name="aquakh0" />
         <marker scope="Public" name="aquakh01" />
+        <marker scope="Public" name="aquakh1s" />
         <marker scope="Public" name="aquakh2" />
         <marker scope="Public" name="aquakh23" />
+        <marker scope="Public" name="aquakh3s" />
+        <marker scope="Public" name="arle_mermaid" />
+        <marker scope="Public" name="arle0" />
         <marker scope="Public" name="artist" />
         <marker scope="Public" name="arueshalae0" />
         <marker scope="Public" name="arueshalae01" />
@@ -1332,8 +1350,12 @@
         <marker scope="Public" name="asuna0" />
         <marker scope="Public" name="asuna01" />
         <marker scope="Public" name="asuna1" />
+        <marker scope="Public" name="asuna12" />
         <marker scope="Public" name="asuna1s" />
         <marker scope="Public" name="asuna2" />
+        <marker scope="Public" name="asuna23" />
+        <marker scope="Public" name="asuna2s" />
+        <marker scope="Public" name="asuna3s" />
         <marker scope="Public" name="ayano" />
         <marker scope="Public" name="ayano_bikini" />
         <marker scope="Public" name="ayano_buttresponse" />
@@ -1639,6 +1661,8 @@
         <marker scope="Public" name="enf_major2" />
         <marker scope="Public" name="enm_chest">A male opponent with the ENM tag has exposed their chest.</marker>
         <marker scope="Public" name="epilogue_finished">The epilogue has been watched, and NG+ can be activated.</marker>
+        <marker scope="Public" name="epilogue_gallery" />
+        <marker scope="Public" name="epilogue_ingame" />
         <marker scope="Public" name="erufuda" />
         <marker scope="Public" name="erufuda_food" />
         <marker scope="Public" name="erufuda_home" />
@@ -1757,6 +1781,8 @@
         <marker scope="Public" name="finished_mg1" />
         <marker scope="Public" name="finished_mg2" />
         <marker scope="Public" name="finished_robin_ng+" />
+        <marker scope="Public" name="finished_sexy1" />
+        <marker scope="Public" name="finished_sexy2" />
         <marker scope="Public" name="finishing_ng+" />
         <marker scope="Public" name="first_time" />
         <marker scope="Public" name="fischl0" />
@@ -2040,12 +2066,19 @@
         <marker scope="Public" name="jura1s_resp" />
         <marker scope="Public" name="jura2" />
         <marker scope="Public" name="jura23" />
+        <marker scope="Public" name="jura2s" />
         <marker scope="Public" name="jura3" />
         <marker scope="Public" name="jura34" />
+        <marker scope="Public" name="jura3s" />
         <marker scope="Public" name="jura4" />
         <marker scope="Public" name="jura45" />
+        <marker scope="Public" name="jura4s" />
         <marker scope="Public" name="jura5" />
         <marker scope="Public" name="jura56" />
+        <marker scope="Public" name="jura5s" />
+        <marker scope="Public" name="jura67" />
+        <marker scope="Public" name="jura6s" />
+        <marker scope="Public" name="jura7s" />
         <marker scope="Public" name="kaz0" />
         <marker scope="Public" name="kaz01" />
         <marker scope="Public" name="kaz1" />
@@ -2056,6 +2089,8 @@
         <marker scope="Public" name="kaz2s" />
         <marker scope="Public" name="kaz3s" />
         <marker scope="Public" name="kira0" />
+        <marker scope="Public" name="kirigiri0" />
+        <marker scope="Public" name="kirigiri01" />
         <marker scope="Public" name="kirigiri45_gloves" />
         <marker scope="Public" name="komi_dream" />
         <marker scope="Public" name="komi_finished1" />
@@ -2112,6 +2147,7 @@
         <marker scope="Public" name="kumatora23" />
         <marker scope="Public" name="kumatora23_friends" />
         <marker scope="Public" name="kumatora23_pendant" />
+        <marker scope="Public" name="kyoko_kirigiri0" />
         <marker scope="Public" name="kyou_bike" />
         <marker scope="Public" name="kyou_botan" />
         <marker scope="Public" name="kyou0" />
@@ -2240,7 +2276,11 @@
         <marker scope="Public" name="mari1" />
         <marker scope="Public" name="mari12" />
         <marker scope="Public" name="maria0" />
+        <marker scope="Public" name="maria01" />
+        <marker scope="Public" name="maria1s" />
         <marker scope="Public" name="maria2" />
+        <marker scope="Public" name="maria23" />
+        <marker scope="Public" name="maria3s" />
         <marker scope="Public" name="marinette_fashion" />
         <marker scope="Public" name="marinette_fashion2" />
         <marker scope="Public" name="marinette_tikki" />
@@ -2308,6 +2348,7 @@
         <marker scope="Public" name="meia_chest1" />
         <marker scope="Public" name="meia_chest2" />
         <marker scope="Public" name="meia_fighting" />
+        <marker scope="Public" name="meia_gymclothes" />
         <marker scope="Public" name="meia_initiative" />
         <marker scope="Public" name="meia_initiative2" />
         <marker scope="Public" name="meia_initiative3" />
@@ -2335,6 +2376,7 @@
         <marker scope="Public" name="meia2_babies" />
         <marker scope="Public" name="meia2_resp" />
         <marker scope="Public" name="meia23" />
+        <marker scope="Public" name="meia23_babies" />
         <marker scope="Public" name="meia23_resp" />
         <marker scope="Public" name="meia2s" />
         <marker scope="Public" name="meia2s_resp" />
@@ -2342,6 +2384,7 @@
         <marker scope="Public" name="meia3_resp" />
         <marker scope="Public" name="meia34_resp" />
         <marker scope="Public" name="meia3s" />
+        <marker scope="Public" name="meia3s_babies" />
         <marker scope="Public" name="meia4" />
         <marker scope="Public" name="meia45_anal" />
         <marker scope="Public" name="meia45_boner" />
@@ -2375,6 +2418,9 @@
         <marker scope="Public" name="mia2s" />
         <marker scope="Public" name="mia3" />
         <marker scope="Public" name="mia3s" />
+        <marker scope="Public" name="miags_fizz" />
+        <marker scope="Public" name="miags0" />
+        <marker scope="Public" name="miags01" />
         <marker scope="Public" name="mihawk" />
         <marker scope="Public" name="mihawk2" />
         <marker scope="Public" name="mihawk3" />
@@ -2411,6 +2457,7 @@
         <marker scope="Public" name="misty4s_resp" />
         <marker scope="Public" name="mitama_sleep" />
         <marker scope="Public" name="mitama0" />
+        <marker scope="Public" name="mitama01" />
         <marker scope="Public" name="mlp_girls">Nami wonders where the MLP girls come from.</marker>
         <marker scope="Public" name="mom_age" />
         <marker scope="Public" name="mom_food" />
@@ -2466,6 +2513,8 @@
         <marker scope="Public" name="mulan12" />
         <marker scope="Public" name="mulan1s" />
         <marker scope="Public" name="mulan2s" />
+        <marker scope="Public" name="nadeshiko0" />
+        <marker scope="Public" name="nadeshiko01" />
         <marker scope="Public" name="nagamimi_ad" />
         <marker scope="Public" name="nagamimi_dragon" />
         <marker scope="Public" name="nagamimi_flaws" />
@@ -2484,6 +2533,10 @@
         <marker scope="Public" name="nagisa1" />
         <marker scope="Public" name="nagisa9" />
         <marker scope="Public" name="nami_post_negative">Nami recovers from being affected by Perona's ghost.</marker>
+        <marker scope="Public" name="Nami_Pretty_1" />
+        <marker scope="Public" name="Nami_Rich_2a" />
+        <marker scope="Public" name="Nami_Rich_2b" />
+        <marker scope="Public" name="Nami_SeismicSense_2" />
         <marker scope="Public" name="nami_teacher">While playing with students, Nami wonders if she could be their teacher.</marker>
         <marker scope="Public" name="nami1s+" />
         <marker scope="Public" name="nanoko_virgin" />
@@ -2842,6 +2895,7 @@
         <marker scope="Public" name="reimu12" />
         <marker scope="Public" name="reimu1s" />
         <marker scope="Public" name="reimu2" />
+        <marker scope="Public" name="reimu23" />
         <marker scope="Public" name="reimu2s" />
         <marker scope="Public" name="resp_" />
         <marker scope="Public" name="resp_aaravi0" />
@@ -2895,6 +2949,9 @@
         <marker scope="Public" name="resp_amy2s" />
         <marker scope="Public" name="resp_amy34" />
         <marker scope="Public" name="resp_amy4s" />
+        <marker scope="Public" name="resp_aqua_konosuba0" />
+        <marker scope="Public" name="resp_aqua_konosuba7_shower" />
+        <marker scope="Public" name="resp_aqua_konosuba7_towel" />
         <marker scope="Public" name="resp_asuna0" />
         <marker scope="Public" name="resp_asuna01" />
         <marker scope="Public" name="resp_asuna1" />
@@ -2906,7 +2963,11 @@
         <marker scope="Public" name="resp_asuna23" />
         <marker scope="Public" name="resp_asuna2s" />
         <marker scope="Public" name="resp_asuna3" />
+        <marker scope="Public" name="resp_asuna34A" />
+        <marker scope="Public" name="resp_asuna34B" />
         <marker scope="Public" name="resp_asuna3s" />
+        <marker scope="Public" name="resp_asuna4" />
+        <marker scope="Public" name="resp_asuna4s_A" />
         <marker scope="Public" name="resp_barbara0" />
         <marker scope="Public" name="resp_barbara01" />
         <marker scope="Public" name="resp_barbara1" />
@@ -3097,11 +3158,14 @@
         <marker scope="Public" name="resp_jura4" />
         <marker scope="Public" name="resp_jura45" />
         <marker scope="Public" name="resp_jura45b" />
+        <marker scope="Public" name="resp_jura4s" />
         <marker scope="Public" name="resp_jura5" />
         <marker scope="Public" name="resp_jura56" />
         <marker scope="Public" name="resp_jura5s" />
         <marker scope="Public" name="resp_jura5s_b" />
         <marker scope="Public" name="resp_jura67" />
+        <marker scope="Public" name="resp_jura6s" />
+        <marker scope="Public" name="resp_jura7s" />
         <marker scope="Public" name="resp_kaz_cats" />
         <marker scope="Public" name="resp_kaz_drunk" />
         <marker scope="Public" name="resp_kaz_panda" />
@@ -3114,6 +3178,7 @@
         <marker scope="Public" name="resp_kaz2" />
         <marker scope="Public" name="resp_kaz23" />
         <marker scope="Public" name="resp_kaz2s" />
+        <marker scope="Public" name="resp_kaz3s" />
         <marker scope="Public" name="resp_komi5" />
         <marker scope="Public" name="resp_komi56" />
         <marker scope="Public" name="resp_komi6s" />
@@ -3155,6 +3220,7 @@
         <marker scope="Public" name="resp_marise34b" />
         <marker scope="Public" name="resp_marise3b" />
         <marker scope="Public" name="resp_marise4" />
+        <marker scope="Public" name="resp_marise45" />
         <marker scope="Public" name="resp_marise4s" />
         <marker scope="Public" name="resp_marise4s_b" />
         <marker scope="Public" name="resp_marise4s_chest" />
@@ -3164,9 +3230,12 @@
         <marker scope="Public" name="resp_mary0" />
         <marker scope="Public" name="resp_meia0_alt" />
         <marker scope="Public" name="resp_meia0_alt2" />
+        <marker scope="Public" name="resp_meia01_alt" />
         <marker scope="Public" name="resp_meia01_alt2" />
         <marker scope="Public" name="resp_meia1_alt" />
         <marker scope="Public" name="resp_meia12_alt" />
+        <marker scope="Public" name="resp_meia1s_alt" />
+        <marker scope="Public" name="resp_meia1s_alt2" />
         <marker scope="Public" name="resp_meia2_alt" />
         <marker scope="Public" name="resp_meia23_alt" />
         <marker scope="Public" name="resp_meia2s_alt" />
@@ -3190,6 +3259,11 @@
         <marker scope="Public" name="resp_meia67_finished" />
         <marker scope="Public" name="resp_meia6s" />
         <marker scope="Public" name="resp_meia7s" />
+        <marker scope="Public" name="resp_miags0" />
+        <marker scope="Public" name="resp_miags01" />
+        <marker scope="Public" name="resp_miags1" />
+        <marker scope="Public" name="resp_miags12_gravity" />
+        <marker scope="Public" name="resp_miags12_seasons" />
         <marker scope="Public" name="resp_miko0" />
         <marker scope="Public" name="resp_miko01" />
         <marker scope="Public" name="resp_miko1s" />
@@ -3211,6 +3285,8 @@
         <marker scope="Public" name="resp_nagatoro1s" />
         <marker scope="Public" name="resp_nagatoro2" />
         <marker scope="Public" name="resp_nagatoro23" />
+        <marker scope="Public" name="resp_nagatoro3s_a" />
+        <marker scope="Public" name="resp_nagatoro3s_b" />
         <marker scope="Public" name="resp_natsuki3" />
         <marker scope="Public" name="resp_natsuki34" />
         <marker scope="Public" name="resp_natsuki4" />
@@ -3253,6 +3329,8 @@
         <marker scope="Public" name="resp_reimu2s_giant" />
         <marker scope="Public" name="resp_reimu2s_mermaid" />
         <marker scope="Public" name="resp_reimu3" />
+        <marker scope="Public" name="resp_reimu34A" />
+        <marker scope="Public" name="resp_reimu34B" />
         <marker scope="Public" name="resp_reimu3s" />
         <marker scope="Public" name="resp_robin_advice_compliment" />
         <marker scope="Public" name="resp_robin_crew" />
@@ -3398,6 +3476,7 @@
         <marker scope="Public" name="resp_robin8_love" />
         <marker scope="Public" name="resp_robin8_love2" />
         <marker scope="Public" name="resp_robin8_towel" />
+        <marker scope="Public" name="resp_roll0" />
         <marker scope="Public" name="resp_rosa45" />
         <marker scope="Public" name="resp_rouge1" />
         <marker scope="Public" name="resp_rouge1_crews" />
@@ -3714,6 +3793,7 @@
         <marker scope="Public" name="robin6_weight" />
         <marker scope="Public" name="robin6s_easy" />
         <marker scope="Public" name="roll0" />
+        <marker scope="Public" name="roll01" />
         <marker scope="Public" name="rosa_butt" />
         <marker scope="Public" name="rosa0" />
         <marker scope="Public" name="rosa01_friendly" />
@@ -3815,6 +3895,8 @@
         <marker scope="Public" name="sexy_story2" />
         <marker scope="Public" name="sf_characters">Nami talks about her opponents being street fighters.</marker>
         <marker scope="Public" name="sh_penis" />
+        <marker scope="Public" name="shamiko_transformation" />
+        <marker scope="Public" name="shamiko0" />
         <marker scope="Public" name="shantae_chest1" />
         <marker scope="Public" name="shantae_chest2" />
         <marker scope="Public" name="shantae_crotch1" />
@@ -3870,6 +3952,8 @@
         <marker scope="Public" name="sly23" />
         <marker scope="Public" name="sly2s" />
         <marker scope="Public" name="sly3s" />
+        <marker scope="Public" name="sofia0" />
+        <marker scope="Public" name="sofia01" />
         <marker scope="Public" name="squirting">Nami talks about squirting.</marker>
         <marker scope="Public" name="start">(NG+) Nami starts reminiscing about her sexual adventures with the player while masturbating.</marker>
         <marker scope="Public" name="steal_accessory">Nami thinks about stealing the opponent's accessory and selling it.</marker>
@@ -3941,6 +4025,11 @@
         <marker scope="Public" name="tattoo">Nami talks about the meaning of her tattoo</marker>
         <marker scope="Public" name="tattoo2" />
         <marker scope="Public" name="tattoo2b" />
+        <marker scope="Public" name="tea0" />
+        <marker scope="Public" name="tea01" />
+        <marker scope="Public" name="test1" />
+        <marker scope="Public" name="test2" />
+        <marker scope="Public" name="test3" />
         <marker scope="Public" name="thief" />
         <marker scope="Public" name="thriller_bark1" />
         <marker scope="Public" name="thriller_bark2" />
@@ -3967,6 +4056,7 @@
         <marker scope="Public" name="toph1s_b" />
         <marker scope="Public" name="toph2" />
         <marker scope="Public" name="toph23" />
+        <marker scope="Public" name="toph2s" />
         <marker scope="Public" name="toph3s" />
         <marker scope="Public" name="trainer_mast2" />
         <marker scope="Public" name="trainer0" />
@@ -4033,6 +4123,7 @@
         <marker scope="Public" name="wasp23" />
         <marker scope="Public" name="wasp2s" />
         <marker scope="Public" name="wasp3s" />
+        <marker scope="Public" name="wealthy" />
         <marker scope="Public" name="wearing_logpose" />
         <marker scope="Public" name="wearing_logpose_ng+" />
         <marker scope="Public" name="wet_dream1" />
@@ -4067,6 +4158,8 @@
         <marker scope="Public" name="win_streak5" />
         <marker scope="Public" name="win_streak6" />
         <marker scope="Public" name="witch" />
+        <marker scope="Public" name="yae0" />
+        <marker scope="Public" name="yae01" />
         <marker scope="Public" name="yang0" />
         <marker scope="Public" name="yang01" />
         <marker scope="Public" name="yang1" />
@@ -4083,6 +4176,7 @@
         <marker scope="Public" name="yuelia1" />
         <marker scope="Public" name="yuelia12" />
         <marker scope="Public" name="yuelia1s" />
+        <marker scope="Public" name="yumeko0" />
         <marker scope="Public" name="yuna_intro" />
         <marker scope="Public" name="yuna0" />
         <marker scope="Public" name="yuna1" />
