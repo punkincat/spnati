@@ -11,6 +11,7 @@
 var SELECTED = "selected";
 var OPPONENT_SELECTED = "opponent_selected";
 var OPPONENT_DESELECTED = "opponent_deselected";
+var SETTINGS_CHANGED = "settings_changed";
 var GAME_START = "game_start";
 
 var DEALING_CARDS = "dealing_cards";
@@ -1573,6 +1574,10 @@ function expandDialogue (dialogue, self, target, bindings) {
                 if (!found_event) {
                     substitution = "false";
                 }
+                break;
+            case 'selected':
+                var variablePlayer = findVariablePlayer(fn, self, target, bindings);
+                substitution = !!variablePlayer;
                 break;
             case 'target':
             case 'self':
