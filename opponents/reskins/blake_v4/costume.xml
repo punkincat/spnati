@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>blake_v4</id>
+    <label>Blake</label>
+    <tags>
+        <tag>alternative_skin</tag>
+    </tags>
+    <layers>7</layers>
+    <folder>opponents/reskins/blake_v4/</folder>
+    <wardrobe>
+        <clothing name="panties" generic="underwear" position="lower" type="important" />
+        <clothing name="bra" generic="bra" position="upper" type="important" />
+        <clothing position="" type="skip" />
+        <clothing name="shirt" generic="shirt" position="upper" type="major" />
+        <clothing name="pants" generic="pants" position="lower" type="major" />
+        <clothing name="coat" generic="coat" position="upper" type="minor" />
+        <clothing name="boots" generic="shoes" position="lower" type="extra" />
+        <clothing name="belt" generic="belt" position="other" type="extra" />
+    </wardrobe>
+
+</costume>
