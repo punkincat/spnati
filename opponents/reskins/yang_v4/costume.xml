@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>yang_v4</id>
+    <label>Yang</label>
+    <tags>
+        <tag>alternative_skin</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/yang_v4/</folder>
+    <wardrobe>
+        <clothing name="thong" generic="underwear" position="lower" type="important" />
+        <clothing name="top" generic="top" position="upper" type="important" />
+        <clothing position="" type="skip" />
+        <clothing position="" type="skip" />
+        <clothing name="pants" generic="pants" position="lower" type="major" />
+        <clothing name="jacket" generic="jacket" position="upper" type="extra" />
+        <clothing name="socks" generic="socks" position="lower" type="extra" />
+        <clothing name="shoes" generic="shoes" position="other" type="extra" />
+    </wardrobe>
+
+</costume>
