@@ -60,6 +60,11 @@ namespace SPNATI_Character_Editor
 				}
 			}
 
+			if (string.IsNullOrEmpty(character.Metadata.Description))
+			{
+				warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, "Character has no description (on the Metadata tab)."));
+			}
+
 			//wardrobe
 			ValidateWardrobe(character, warnings);
 

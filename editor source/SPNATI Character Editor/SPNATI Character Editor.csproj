@@ -119,7 +119,7 @@
     </Compile>
     <Compile Include="Activities\PoseSetEditor.Designer.cs">
       <DependentUpon>PoseSetEditor.cs</DependentUpon>
-    </Compile>	
+    </Compile>
     <Compile Include="Activities\CharacterConfiguration.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -274,7 +274,7 @@
     </Compile>
     <Compile Include="Controls\PoseSetControl.Designer.cs">
       <DependentUpon>PoseSetControl.cs</DependentUpon>
-    </Compile>	
+    </Compile>
     <Compile Include="Controls\CaseControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -815,7 +815,7 @@
     <Compile Include="DataStructures\CharacterTagList.cs" />
     <Compile Include="DataStructures\ChecklistTask.cs" />
     <Compile Include="DataStructures\Choice.cs" />
-    <Compile Include="DataStructures\PoseSet.cs" />	
+    <Compile Include="DataStructures\PoseSet.cs" />
     <Compile Include="DataStructures\ClothingDatabase.cs" />
     <Compile Include="DataStructures\ClothingDefinitions.cs" />
     <Compile Include="DataStructures\Collectible.cs" />
@@ -1493,7 +1493,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Activities\PoseSetEditor.resx">
       <DependentUpon>PoseSetEditor.cs</DependentUpon>
-    </EmbeddedResource>	
+    </EmbeddedResource>
     <EmbeddedResource Include="Activities\CharacterConfiguration.resx">
       <DependentUpon>CharacterConfiguration.cs</DependentUpon>
     </EmbeddedResource>
@@ -1598,7 +1598,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\PoseSetControl.resx">
       <DependentUpon>PoseSetControl.cs</DependentUpon>
-    </EmbeddedResource>	
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\CaseControl.resx">
       <DependentUpon>CaseControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -2174,6 +2174,9 @@
     <None Include="Hunspellx86.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="VersionHistory\v6.9.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="VersionHistory\v6.8.3.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2647,8 +2650,8 @@
     <None Include="Icons\Sort.png" />
     <None Include="Icons\AddPause.png" />
     <None Include="Icons\SpeechBubble.png" />
-    <None Include="Icons\EllipsisFilled.png" />	
-	<None Include="Images\BaseCode.png" />
+    <None Include="Icons\EllipsisFilled.png" />
+    <None Include="Images\BaseCode.png" />
     <None Include="Images\LineupAll.png" />
     <None Include="Images\LineupClothing.png" />
     <None Include="Images\LineupPose.png" />

@@ -1,0 +1,89 @@
+﻿<h3>Dashboard</h3>
+<ul>
+    <li>Displays the current and max number of Character Settings that are usable for this character.</li>
+    <li>Increases the file size limit to 20MB for characters who have passed sponsorship.</li>
+</ul>
+
+<h3>Wardrobe</h3>
+<ul>
+    <li>Adds an Advanced Clothing Options dialog:</li>
+    <li>Allows for items not worn at the start of the game (i.e. Marinette's non-costume clothing)</li>
+    <li>Allows for other characters to react as if it was going to be the removal of a different item (i.e. Komi-san deciding not to remove her skirt yet)</li>
+    <li>Allows for other characters to react as if it was going to reveal nudity (i.e. Bobobo's multiple underwear)</li>
+    <li>Allows for other characters to react as if it was NOT going to reveal nudity, but then it does anyway (i.e. Jolyne forgetting she isn't wearing underwear)</li>
+</ul>
+
+<h3>Dialogue</h3>
+<ul>
+    <li>Adds a Nickname Operations tool to the advanced line settings.</li>
+    <li>Adds more color options for color-coding cases.</li>
+    <li>Prevents responding to the Opponent Deselected case as the target, which inherently makes no sense.</li>
+</ul>
+
+<h3>Pose Matrix</h3>
+<ul>
+    <li>Adds buttons to reorder and rename pose sheets.</li>
+</ul>
+
+<h3>Pose Maker</h3>
+<ul>
+    <li>Adds sprite clipping (cutting off the edges of the sprite).</li>
+    <li>Adds a toggle for turning off the box drawn around the currently highlighted sprite.</li>
+    <li>Allows use of @ and !@ operators in sprite conditions.</li>
+</ul>
+
+<h3>Pose Sets</h3>
+<ul>
+    <li>Adds the ability to assign Pose Sets.</li>
+</ul>
+
+<h3>Epilogues</h3>
+<ul>
+    <li>Adds an epilogue description field.</li>
+    <li>Adds sprite clipping (cutting off the edges of the sprite).</li>
+    <li>Adds a toggle for turning off the box drawn around the currently highlighted sprite.</li>
+    <li>Adds a toggle to show axes bisecting the scene.</li>
+    <li>Changes the default animation easing method to "Linear".</li>
+    <li>Allows adding a marker condition to an entire scene.</li>
+    <li>Directives and scenes can now be conditional on multiple markers.</li>
+    <li>Automatically renames an epilogue sprite if a sprite with the same name exists in the same scene.</li>
+</ul>
+
+<h3>Banter Wizard</h3>
+<ul>
+    <li>Displays the name of the item being stripped and the stage number in the case description, instead of just "opponent_stripping".</li>
+</ul>
+
+<h3>Validator</h3>
+<ul>
+    <li>Flags a lack of a description on the Metadata tab.</li>
+    <li>Flags markers with symbols other than letters, numbers, underscores, and plus signs.</li>
+    <li>Flags multiple Pose Maker sprites with the same ID.</li>
+</ul>
+
+<h3>Configuration</h3>
+<ul>
+    <li>Adds support for per-character settings, which are options a player selects on the select screen that set markers.</li>
+    <li>Adds a Pose Preview Markers box, to enter which marker values the in-editor pose preview should treat as set when viewing Pose Maker poses. This can be toggled via the Preview Markers checkbox at the top of the Dialogue tab.</li>
+</ul>
+
+<h3>Miscellaneous</h3>
+<ul>
+    <li>Adds F12 as a hotkey for the SFW mode, and allows toggling it from the File menu as well.</li>
+    <li>Allows processing of KKL codes larger than 32MB.</li>
+    <li>Some internal changes to the Respond function to produce better case conditions.</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+<ul>
+    <li>Fixes a major bug that sometimes modified the conditions of a line you were responding to.</li>
+    <li>Fixes crashes when attempting to open the Banter Wizard, Writing Aid, or Collectible Editor in SFW mode. (Collectible images are hidden when in SFW mode)</li>
+    <li>Fixes the bug causing costume dropdowns to not list costumes for specific characters.</li>
+    <li>Using the Configure Game feature no longer removes access to custom card decks.</li>
+    <li>The marker validation no longer erroneously flags some markers as never set.</li>
+    <li>Fixes an occasional crash when resizing the pose preview box.</li>
+    <li>Fixes some issues displaying ampersands in character names.</li>
+    <li>No longer automatically converts variable tests to lowercase, which broke case-sensitive tests.</li>
+    <li>Custom poses in costumes are no longer invisible in the image preview sidebar for stages that use the default folder.</li>
+    <li>collectibles.xml and tags.xml are correctly restored when reloading from backup.</li>
+</ul>
