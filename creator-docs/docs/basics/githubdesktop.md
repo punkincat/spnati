@@ -4,7 +4,7 @@ Whether you're a developer or a player, stay always up to date!
 
 ---
 
-Downloading the bundles for for Strip Poker Night at the Inventory is a great way to try out retired characters and to test your own characters in development. However, because the game receives tweaks and improvements daily, your offline version soon gets out of date, and re-downloading the bundles to replace your old files is upwards of a gigabyte.
+Downloading [the opponents bundles](https://spnati.net/bundles/download-bundles.html) for Strip Poker Night at the Inventory is a great way to try out retired characters and to test your own characters in development. However, because the game receives tweaks and improvements daily, your offline version soon gets out of date, and re-downloading the bundles to replace your old files is upwards of a gigabyte.
 
 The solution to this problem is to use GitHub Desktop, a program available for Windows and Mac. After the initial download, this will check for changed files and download *only the changes*.
 
