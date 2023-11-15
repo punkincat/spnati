@@ -320,6 +320,10 @@ var CANDY_LIST = [
     "beatrix/0-happy.png",
     "beatrix/0-interested.png",
     "beatrix/0-oops.png",
+    "lotte/0-curious.png",                // Has Recent Updates
+    "lotte/0-shocked.png",
+    "lotte/3-excited.png",
+    "lotte/5-stripalt.png",
 ];
 
 /* Storage for old candy images in case the characters qualify again */
