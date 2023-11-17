@@ -124,26 +124,14 @@ var CANDY_LIST = [
     "rouge/0-mischievous.png",
     "rouge/0-comms.png",
     "rouge/0-flirty.png",
-    "mia_golden_sun/0-calm.png",           // Highlighted New Character
-    "mia_golden_sun/0-smug.png",
-    "mia_golden_sun/0-pray.png",
-    "mia_golden_sun/4-praise.png",
-    "yumeko/0-delighted.png",              // Highlighted New Character
-    "yumeko/0-devilish.png",
-    "yumeko/3-horny.png",
-    "yumeko/3-scheming.png",
     "caitlin/0-Talking2.png",              // Highlighted New Character
     "caitlin/3-Embarrassed.png",
     "caitlin/3-stripped-.png",
     "caitlin/4-Smug.png",
-    "wasp/0-start.png",                    // Has Recent Updates
-    "wasp/0-flirt.png",
-    "wasp/0-excited.png",
-    "wasp/0-tease.png",
-    "erufuda/0-pleased.png",               // Has Recent Updates
-    "erufuda/1-smug.png",
-    "erufuda/1-sucking.png",
-    "erufuda/3-eating.png",
+    "lotte/0-curious.png",                 // Highlighted New Character
+    "lotte/0-shocked.png",
+    "lotte/3-excited.png",
+    "lotte/5-stripalt.png",
     "samus_aran/0-portrait.png",           // Has Recent Updates
     "samus_aran/1-introspective.png",
     "samus_aran/1-curious.png",
@@ -180,10 +168,6 @@ var CANDY_LIST = [
     "yunyun/3-Shy.png",
     "yunyun/4-Posing2.png",
     "yunyun/5-Facade.png",
-    "aella/0-portrait.png",                // Has Recent Updates
-    "aella/0-competitive.png",
-    "aella/1-enthused.png",
-    "aella/2-horny.png",
     "senko/0-interested.png",              // Has Recent Updates
     "senko/0-araara.png",
     "senko/2-hug.png",
@@ -220,10 +204,6 @@ var CANDY_LIST = [
     "aqua_kh/0-happy.png",
     "aqua_kh/2-keyblade_stance.png",
     "aqua_kh/2-turned_on.png",
-    "joey/0-cheer.png",                    // Has Recent Updates
-    "joey/2-approve.png",
-    "joey/3-wink.png",
-    "joey/4-hot.png",
     "kaz/0-showoff.png",                   // Has Recent Updates
     "kaz/0-aback.png",
     "kaz/1-toblerone.png",
@@ -244,10 +224,6 @@ var CANDY_LIST = [
     "dust/0-victory.png",
     "dust/1-pensive.png",
     "dust/2-laugh.png",
-    "dawn/0-elate.png",                    // Has Recent Updates
-    "dawn/1-happy.png",
-    "dawn/2-shock.png",
-    "dawn/3-smug.png",
     "perona/0-calm.png",                   // Has Recent Updates
     "perona/0-smiling.png",
     "perona/1-enticed.png",
@@ -256,10 +232,6 @@ var CANDY_LIST = [
     "estelle/1-determind.png",
     "estelle/2-lecture.png",
     "estelle/3-brush.png",
-    "polly/0-Neutral.png",                 // Has Recent Updates
-    "polly/0-Flirty.png",
-    "polly/0-Excited.png",
-    "polly/0-Partying.png",
     "sucrose/0-curious.png",               // Has Recent Updates
     "sucrose/0-aroused.png",
     "sucrose/0-shy.png",
@@ -320,10 +292,18 @@ var CANDY_LIST = [
     "beatrix/0-happy.png",
     "beatrix/0-interested.png",
     "beatrix/0-oops.png",
-    "lotte/0-curious.png",                // Has Recent Updates
-    "lotte/0-shocked.png",
-    "lotte/3-excited.png",
-    "lotte/5-stripalt.png",
+    "mia_golden_sun/0-calm.png",           // Has Recent Updates
+    "mia_golden_sun/0-smug.png",
+    "mia_golden_sun/0-pray.png",
+    "mia_golden_sun/4-praise.png",
+    "yumeko/0-delighted.png",              // Has Recent Updates
+    "yumeko/0-devilish.png",
+    "yumeko/3-horny.png",
+    "yumeko/3-scheming.png",
+    "cheryl/0-inquisitive.png",            // Has Recent Updates
+    "cheryl/2-happy.png",
+    "cheryl/3-inspired.png",
+    "cheryl/4-cheeky.png",
 ];
 
 /* Storage for old candy images in case the characters qualify again */
@@ -500,10 +480,6 @@ var CANDY_LIST = [
     "spooky/1-distracted.png",
     "spooky/2-annoyed.png",
     "spooky/2-horny.png",
-    "cheryl/0-inquisitive.png",
-    "cheryl/2-happy.png",
-    "cheryl/3-inspired.png",
-    "cheryl/4-cheeky.png",
     "aqua_grunt/0-team_aqua.png",
     "aqua_grunt/2-taunting.png",
     "aqua_grunt/4-tease.png",
@@ -536,6 +512,30 @@ var CANDY_LIST = [
     "dark_magician_girl/0-flirty.png",
     "dark_magician_girl/0-happy.png",
     "dark_magician_girl/0-interested.png",
+    "aella/0-portrait.png",
+    "aella/0-competitive.png",
+    "aella/1-enthused.png",
+    "aella/2-horny.png",
+    "joey/0-cheer.png",
+    "joey/2-approve.png",
+    "joey/3-wink.png",
+    "joey/4-hot.png",
+    "polly/0-Neutral.png",
+    "polly/0-Flirty.png",
+    "polly/0-Excited.png",
+    "polly/0-Partying.png",
+    "dawn/0-elate.png",
+    "dawn/1-happy.png",
+    "dawn/2-shock.png",
+    "dawn/3-smug.png",
+    "wasp/0-start.png",
+    "wasp/0-flirt.png",
+    "wasp/0-excited.png",
+    "wasp/0-tease.png",
+    "erufuda/0-pleased.png",
+    "erufuda/1-smug.png",
+    "erufuda/1-sucking.png",
+    "erufuda/3-eating.png",
 */
 
 /* maybe move this data to an external file if the hardcoded stuff changes often enough */
