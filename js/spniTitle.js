@@ -132,6 +132,10 @@ var CANDY_LIST = [
     "lotte/0-shocked.png",
     "lotte/3-excited.png",
     "lotte/5-stripalt.png",
+    "solar_flare/0-innocent.png",         // Highlighted New Character
+    "solar_flare/0-wink.png",
+    "solar_flare/3-stripping2.png",
+    "solar_flare/4-bashful.png",
     "samus_aran/0-portrait.png",           // Has Recent Updates
     "samus_aran/1-introspective.png",
     "samus_aran/1-curious.png",
