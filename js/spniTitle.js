@@ -1010,6 +1010,7 @@ function wearClothing () {
     save.selectedClothing().sort(function (a, b) {
         return typeIdx[a.type] - typeIdx[b.type];
     }).forEach(function (clothing) {
+        clothing.removed = false;
         if (clothing.position == UPPER_ARTICLE) {
             position[0].push(clothing);
         } else if (clothing.position == LOWER_ARTICLE) {

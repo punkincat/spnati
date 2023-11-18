@@ -605,11 +605,6 @@ function restartGame () {
     resetPlayers();
     currentRound = -1;
 
-    var ids = save.selectedClothingIDs();
-    for (var id of ids) {
-        PLAYER_CLOTHING_OPTIONS[id].removed = false;
-    }
-
     /* enable table opacity */
     tableOpacity = 1;
     $gameTable.css({opacity:1});
