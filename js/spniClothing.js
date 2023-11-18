@@ -37,7 +37,7 @@ var STATUS_FINISHED = "finished";
 /************************************************************
  * Stores information on an article of clothing.
  ************************************************************/
-function Clothing (name, generic, type, position, plural, fromStage, fromDeal, strippingLayer) {
+function Clothing (name, generic, type, position, plural, fromStage, fromDeal, reveal, strippingLayer) {
     if (name instanceof jQuery) {
         const $xml = name;
         generic = $xml.attr('generic');
@@ -48,6 +48,7 @@ function Clothing (name, generic, type, position, plural, fromStage, fromDeal, s
         plural = (plural == 'null' ? null : plural == 'true');
         fromStage = Number.parseInt($xml.attr('fromStage'), 10) || undefined; // fromStage=0 is the default anyway
         fromDeal = $xml.attr('fromDeal') === 'true';
+        reveal = $xml.attr('reveal');
         if ($xml.children('stripping').length) {
             this.strippingItem = new Clothing($xml.children('stripping').first());
         } else if ($xml.attr('strippingLayer') !== undefined) {
@@ -65,6 +66,7 @@ function Clothing (name, generic, type, position, plural, fromStage, fromDeal, s
     this.plural = (plural === undefined ? false : plural);
     this.fromStage = fromStage;
     this.fromDeal = fromDeal;
+    this.reveal = reveal;
     this.strippingLayer = strippingLayer;
     this.removed = false;
 }
