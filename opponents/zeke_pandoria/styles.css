@@ -1,0 +1,18 @@
+.dialogue .pandy[data-character="zeke_pandoria"] {
+  /*Pandoria is speaking.*/
+  color: #408080;
+}
+
+.dark-mode .dialogue .pandy[data-character="zeke_pandoria"] {
+  color: #D6B6F7;
+}
+
+.dialogue .pandy .i[data-character="zeke_pandoria"] {
+    font-style: italic;
+}
+
+.dialogue-bubble[data-character="zeke_pandoria"] hr {
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
