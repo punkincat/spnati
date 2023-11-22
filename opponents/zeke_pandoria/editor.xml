@@ -33,6 +33,28 @@
         <response id="114" opponent="gloria" opponentId="631" />
         <response id="157" opponent="meia" opponentId="1093" />
         <response id="165" opponent="kora" opponentId="38" />
+        <response id="186" opponent="sweetheart" opponentId="43" />
+        <response id="188" opponent="sucrose" opponentId="946" />
+        <response id="193" opponent="sucrose" opponentId="932" />
+        <response id="195" opponent="sucrose" opponentId="933" />
+        <response id="196" opponent="sucrose" opponentId="934" />
+        <response id="197" opponent="sucrose" opponentId="938" />
+        <response id="198" opponent="sucrose" opponentId="939" />
+        <response id="199" opponent="sucrose" opponentId="940" />
+        <response id="200" opponent="sucrose" opponentId="935" />
+        <response id="201" opponent="sucrose" opponentId="936" />
+        <response id="202" opponent="sucrose" opponentId="941" />
+        <response id="203" opponent="sucrose" opponentId="942" />
+        <response id="204" opponent="sucrose" opponentId="945" />
+        <response id="205" opponent="sucrose" opponentId="944" />
+        <response id="206" opponent="sucrose" opponentId="949" />
+        <response id="207" opponent="sucrose" opponentId="943" />
+        <response id="208" opponent="sucrose" opponentId="947" />
+        <response id="209" opponent="sucrose" opponentId="948" />
+        <response id="215" opponent="sucrose" opponentId="160" />
+        <response id="216" opponent="queenie" opponentId="43" />
+        <response id="218" opponent="mia_golden_sun" opponentId="596" />
+        <response id="219" opponent="mia_golden_sun" opponentId="114" />
     </responses>
     <notes>
         <note id="10">If you want to ask Pandoria / Pandy questions, you could draw attention to the fact that some of her body parts are lightbulbs, such as a lightbulb in her head.. and her tail. Her specific race is known as a "Blade".</note>
@@ -59,7 +81,7 @@
         <label id="20" label="" folder="Targets" sort="0" />
         <label id="21" label="Pandy is less prevalent" color="4" folder="" sort="0" />
         <label id="22" label="" folder="Pandoria-Dependant" sort="0" />
-        <label id="23" label="" folder="Targets" sort="0" />
+        <label id="23" label="" folder="Sucrose" sort="0" />
         <label id="25" label="" folder="Backgrounds" sort="0" />
         <label id="26" label="" folder="Writing Aid" sort="0" />
         <label id="28" label="" folder="Debug Lines" sort="0" />
@@ -224,12 +246,47 @@
         <label id="183" label="" folder="Extra/Minor" sort="0" />
         <label id="184" label="" folder="Exposition" sort="0" />
         <label id="185" label="" folder="Articles of Clothing" sort="0" />
+        <label id="186" label="" folder="Targets" sort="0" />
+        <label id="187" label="" folder="Sucrose" sort="0" />
+        <label id="188" label="" folder="Sucrose" sort="0" />
+        <label id="189" label="" folder="Sucrose" sort="0" />
+        <label id="190" label="" folder="Sucrose" sort="0" />
+        <label id="191" label="" folder="Sucrose" sort="0" />
+        <label id="192" label="" folder="Sucrose" sort="0" />
+        <label id="193" label="" folder="Sucrose" sort="0" />
+        <label id="194" label="" folder="Sucrose" sort="0" />
+        <label id="197" label="" folder="Sucrose" sort="0" />
+        <label id="200" label="" folder="Sucrose" sort="0" />
+        <label id="203" label="" folder="Sucrose" sort="0" />
+        <label id="205" label="" folder="Sucrose" sort="0" />
+        <label id="195" label="" folder="Sucrose" sort="0" />
+        <label id="198" label="" folder="Sucrose" sort="0" />
+        <label id="208" label="" folder="Sucrose" sort="0" />
+        <label id="201" label="" folder="Sucrose" sort="0" />
+        <label id="207" label="" folder="Sucrose" sort="0" />
+        <label id="204" label="" folder="Sucrose" sort="0" />
+        <label id="206" label="" folder="Sucrose" sort="0" />
+        <label id="196" label="" folder="Sucrose" sort="0" />
+        <label id="199" label="" folder="Sucrose" sort="0" />
+        <label id="202" label="" folder="Sucrose" sort="0" />
+        <label id="209" label="" folder="Sucrose" sort="0" />
+        <label id="210" label="" folder="Targets" sort="0" />
+        <label id="211" label="" folder="Targets" sort="0" />
+        <label id="212" label="" folder="Targets" sort="0" />
+        <label id="213" label="" folder="Targets" sort="0" />
+        <label id="214" label="" folder="Targets" sort="0" />
+        <label id="215" label="" folder="Sucrose" sort="0" />
+        <label id="216" label="" folder="Targets" sort="0" />
+        <label id="217" label="" folder="Targets" sort="0" />
+        <label id="218" label="" folder="Situations" sort="0" />
+        <label id="219" label="" folder="Situations" sort="0" />
+        <label id="220" label="" folder="Targets" sort="0" />
     </labels>
     <posePreviewMarkers>
         <posePreviewMarker>penis=s</posePreviewMarker>
     </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>185</nextId>
+    <nextId>220</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="allowsex">If set to 1, Zeke and Pandoria *can* (but are not guaranteed to) have sex for their forfeit.</marker>
@@ -256,6 +313,7 @@
         <marker scope="Public" name="opp_lost_jjba" />
         <marker scope="Public" name="pandoria_dialogue">Pandoria is the one speaking when this marker is being said. This marker doesn't always appear, but is used in cases where you might need to differentiate, e.g. if there are two versions of a single line, one where she speaks and one where she doesnt.</marker>
         <marker scope="Public" name="pandoriaToggle">if set to 1, Pandoria's dialogue is de-emphasised at certain moments.</marker>
+        <marker scope="Public" name="pandy_intro" />
         <marker scope="Public" name="pandy_jura_balls" />
         <marker scope="Public" name="pandy_strips_boots">Pandoria strips her boots while Zeke removes his boots.</marker>
         <marker scope="Public" name="pandy_strips_bottom">Pandoria strips her bottoms (underwear) while Zeke removes his own boxers.</marker>
@@ -266,6 +324,8 @@
         <marker scope="Public" name="pandy_strips_too">Pandoria is going to strip what she can at the same time that Zeke does, starting with her own gloves.</marker>
         <marker scope="Public" name="penis">h=hard, s=soft, 0=soft (default)</marker>
         <marker scope="Public" name="penis_rating">A silly line for penis reveals where Pandy gives them a rating (based on their size tag, ranking size and cuteness)</marker>
+        <marker scope="Public" name="queenie_intro" />
+        <marker scope="Public" name="queenie_stafflost" />
         <marker scope="Public" name="rosa_timegate_stripping2" />
         <marker scope="Public" name="self_cleanup" />
         <marker scope="Public" name="self_finished" />
@@ -273,6 +333,24 @@
         <marker scope="Public" name="shamiko_transform2" />
         <marker scope="Public" name="strip_poker_joke" />
         <marker scope="Public" name="sucrose_gamestart" />
+        <marker scope="Public" name="sucrose_greet" />
+        <marker scope="Public" name="sucrose_lingerie1Resp" />
+        <marker scope="Public" name="sucrose_zp_bulbsResp" />
+        <marker scope="Public" name="sucrose_zp_magicResp" />
+        <marker scope="Public" name="sucrose_zp_physiqueResp" />
+        <marker scope="Public" name="sucrose_zp_similarityResp" />
+        <marker scope="Public" name="sucrose01_resp" />
+        <marker scope="Public" name="sucrose02_resp" />
+        <marker scope="Public" name="sucrose11_resp" />
+        <marker scope="Public" name="sucrose12_resp" />
+        <marker scope="Public" name="sucrose13_resp" />
+        <marker scope="Public" name="sucrose21_resp" />
+        <marker scope="Public" name="sucrose22_resp" />
+        <marker scope="Public" name="sucrose23_resp" />
+        <marker scope="Public" name="sucrose31_resp" />
+        <marker scope="Public" name="sucrose41_resp" />
+        <marker scope="Public" name="sucrose42_resp" />
+        <marker scope="Public" name="sweetheart_donut_girl" />
         <marker scope="Public" name="target_beltStripped" />
         <marker scope="Public" name="tiki_bar_we_are_broke" />
         <marker scope="Public" name="wheres_turters" />
@@ -286,7 +364,12 @@
         <marker scope="Public" name="zeke_jura_strip1a" />
         <marker scope="Public" name="zeke_kyou_violenceResp" />
         <marker scope="Public" name="zeke_misaka_strip0a" />
+        <marker scope="Public" name="zeke_nadeshiko_fancy1" />
+        <marker scope="Public" name="zeke_nadeshiko_fancy2" />
+        <marker scope="Public" name="zeke_nadeshiko_hermit1" />
+        <marker scope="Public" name="zeke_nadeshiko_tantal1" />
         <marker scope="Public" name="zeke_petra_title1" />
+        <marker scope="Public" name="zeke_queenie_strip0a" />
         <marker scope="Public" name="zeke_wikipetan0a" />
         <marker scope="Public" name="zeke_wikipetan1" />
     </markers>
