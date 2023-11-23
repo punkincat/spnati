@@ -55,6 +55,12 @@
         <response id="216" opponent="queenie" opponentId="43" />
         <response id="218" opponent="mia_golden_sun" opponentId="596" />
         <response id="219" opponent="mia_golden_sun" opponentId="114" />
+        <response id="221" opponent="sucrose" opponentId="952" />
+        <response id="222" opponent="sucrose" opponentId="953" />
+        <response id="223" opponent="sucrose" opponentId="954" />
+        <response id="224" opponent="sucrose" opponentId="955" />
+        <response id="225" opponent="sucrose" opponentId="956" />
+        <response id="226" opponent="sucrose" opponentId="951" />
     </responses>
     <notes>
         <note id="10">If you want to ask Pandoria / Pandy questions, you could draw attention to the fact that some of her body parts are lightbulbs, such as a lightbulb in her head.. and her tail. Her specific race is known as a "Blade".</note>
@@ -63,6 +69,8 @@
         <note id="21">If there are no other girls and the human is a gay man, some of Pandy's dialogue is toned down or disabled - but not all of it, as her being here is a core part of their character slot</note>
         <note id="118">What we have here is a rare opportunity for a female character to directly demonstrate to Jura (and Meia) how to please a man! Please let me know what you think.</note>
         <note id="143">note; make a joke about the flamebringer and brighid </note>
+        <note id="249">note to self; make this set her nickname to both Sucrose and Sweetie in the future when that functionality is added to the CE</note>
+        <note id="225">note to self; this lets sucrose set her own marker zp_ff_enable</note>
     </notes>
     <labels>
         <label id="5" label="Pandoria Reminder" folder="" sort="0" />
@@ -281,12 +289,59 @@
         <label id="218" label="" folder="Situations" sort="0" />
         <label id="219" label="" folder="Situations" sort="0" />
         <label id="220" label="" folder="Targets" sort="0" />
+        <label id="221" label="" folder="Sucrose" sort="0" />
+        <label id="222" label="" folder="Sucrose" sort="0" />
+        <label id="223" label="" folder="Sucrose" sort="0" />
+        <label id="224" label="" folder="Sucrose" sort="0" />
+        <label id="225" label="" folder="Sucrose" sort="0" />
+        <label id="226" label="" folder="Sucrose" sort="0" />
+        <label id="227" label="" folder="Sucrose" sort="0" />
+        <label id="228" label="" folder="Sucrose" sort="0" />
+        <label id="229" label="" folder="Sucrose" sort="0" />
+        <label id="230" label="" folder="Sucrose" sort="0" />
+        <label id="231" label="" folder="Sucrose" sort="0" />
+        <label id="232" label="" folder="Sucrose" sort="0" />
+        <label id="233" label="" folder="Sucrose" sort="0" />
+        <label id="234" label="" folder="Sucrose" sort="0" />
+        <label id="235" label="" folder="Sucrose" sort="0" />
+        <label id="236" label="" folder="Sucrose" sort="0" />
+        <label id="237" label="" folder="Sucrose" sort="0" />
+        <label id="238" label="" folder="Sucrose" sort="0" />
+        <label id="239" label="" folder="Sucrose" sort="0" />
+        <label id="240" label="" folder="Sucrose" sort="0" />
+        <label id="241" label="" folder="Sucrose" sort="0" />
+        <label id="242" label="sucrose stage 5 (sucrose 4c both)" folder="Sucrose" sort="0" />
+        <label id="243" label="sucrose stage 5 (sucrose 4c pandy)" folder="Sucrose" sort="0" />
+        <label id="244" label="sucrose stage 5 (sucrose 4c zeke)" folder="Sucrose" sort="0" />
+        <label id="245" label="" folder="Sucrose" sort="0" />
+        <label id="246" label="" folder="Sucrose" sort="0" />
+        <label id="247" label="" folder="Sucrose" sort="0" />
+        <label id="248" label="" color="4" folder="Sucrose" sort="0" />
+        <label id="249" label="" folder="Sucrose" sort="0" />
+        <label id="250" label="sucrose stage 5 (sucrose 4c both)" folder="Sucrose" sort="0" />
+        <label id="251" label="" folder="Sucrose" sort="0" />
+        <label id="252" label="" folder="Sucrose" sort="0" />
+        <label id="253" label="" folder="Sucrose" sort="0" />
+        <label id="254" label="" folder="Sucrose" sort="0" />
+        <label id="255" label="" color="6" folder="Sucrose" sort="0" />
+        <label id="256" label="" folder="Sucrose" sort="0" />
+        <label id="257" label="" folder="Sucrose" sort="0" />
+        <label id="258" label="" folder="Sucrose" sort="0" />
+        <label id="259" label="" folder="Sucrose" sort="0" />
+        <label id="260" label="" folder="Sucrose" sort="0" />
+        <label id="261" label="" folder="Sucrose" sort="0" />
+        <label id="262" label="" folder="Sucrose" sort="0" />
+        <label id="263" label="" folder="Sucrose" sort="0" />
+        <label id="264" label="" folder="Sucrose" sort="0" />
+        <label id="265" label="" folder="Filtered" sort="0" />
+        <label id="266" label="" folder="Filtered" sort="0" />
+        <label id="267" label="" folder="Filtered" sort="0" />
     </labels>
     <posePreviewMarkers>
         <posePreviewMarker>penis=s</posePreviewMarker>
     </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>220</nextId>
+    <nextId>267</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="allowsex">If set to 1, Zeke and Pandoria *can* (but are not guaranteed to) have sex for their forfeit.</marker>
@@ -335,10 +390,20 @@
         <marker scope="Public" name="sucrose_gamestart" />
         <marker scope="Public" name="sucrose_greet" />
         <marker scope="Public" name="sucrose_lingerie1Resp" />
+        <marker scope="Public" name="sucrose_mustFF" />
+        <marker scope="Public" name="sucrose_whispering" />
         <marker scope="Public" name="sucrose_zp_bulbsResp" />
         <marker scope="Public" name="sucrose_zp_magicResp" />
         <marker scope="Public" name="sucrose_zp_physiqueResp" />
         <marker scope="Public" name="sucrose_zp_similarityResp" />
+        <marker scope="Public" name="sucrose_zpff1_Resp" />
+        <marker scope="Public" name="sucrose_zpff2_Resp" />
+        <marker scope="Public" name="sucrose_zpff3_Resp" />
+        <marker scope="Public" name="sucrose_zpff4_Resp" />
+        <marker scope="Public" name="sucrose_zpff5_Resp" />
+        <marker scope="Public" name="sucrose_zpff6_Resp" />
+        <marker scope="Public" name="sucrose_zpff7_Resp" />
+        <marker scope="Public" name="sucrose_zpff8_Resp" />
         <marker scope="Public" name="sucrose01_resp" />
         <marker scope="Public" name="sucrose02_resp" />
         <marker scope="Public" name="sucrose11_resp" />
@@ -350,6 +415,10 @@
         <marker scope="Public" name="sucrose31_resp" />
         <marker scope="Public" name="sucrose41_resp" />
         <marker scope="Public" name="sucrose42_resp" />
+        <marker scope="Public" name="sucrose43_resp" />
+        <marker scope="Public" name="sucrose51_resp" />
+        <marker scope="Public" name="sucrose52_resp" />
+        <marker scope="Public" name="sucrose53_resp" />
         <marker scope="Public" name="sweetheart_donut_girl" />
         <marker scope="Public" name="target_beltStripped" />
         <marker scope="Public" name="tiki_bar_we_are_broke" />
@@ -370,8 +439,32 @@
         <marker scope="Public" name="zeke_nadeshiko_tantal1" />
         <marker scope="Public" name="zeke_petra_title1" />
         <marker scope="Public" name="zeke_queenie_strip0a" />
+        <marker scope="Public" name="zeke_sucrose_4c_both" />
+        <marker scope="Public" name="zeke_sucrose_4c_pandy" />
+        <marker scope="Public" name="zeke_sucrose_4c_zeke" />
+        <marker scope="Public" name="zeke_sucrose_strip0a" />
+        <marker scope="Public" name="zeke_sucrose_strip0b" />
+        <marker scope="Public" name="zeke_sucrose_strip0c" />
+        <marker scope="Public" name="zeke_sucrose_strip1a" />
+        <marker scope="Public" name="zeke_sucrose_strip1b" />
+        <marker scope="Public" name="zeke_sucrose_strip1c" />
+        <marker scope="Public" name="zeke_sucrose_strip2a" />
+        <marker scope="Public" name="zeke_sucrose_strip2b" />
+        <marker scope="Public" name="zeke_sucrose_strip2c" />
+        <marker scope="Public" name="zeke_sucrose_strip3a" />
+        <marker scope="Public" name="zeke_sucrose_strip3b" />
+        <marker scope="Public" name="zeke_sucrose_strip3c" />
+        <marker scope="Public" name="zeke_sucrose_strip4a" />
+        <marker scope="Public" name="zeke_sucrose_strip4b" />
+        <marker scope="Public" name="zeke_sucrose_strip5a" />
+        <marker scope="Public" name="zeke_sucrose_strip5b" />
+        <marker scope="Public" name="zeke_sucrose_strip5c" />
+        <marker scope="Public" name="zeke_sucrose_strip6a" />
+        <marker scope="Public" name="zeke_sucrose_strip6b" />
+        <marker scope="Public" name="zeke_sucrose_strip6c" />
         <marker scope="Public" name="zeke_wikipetan0a" />
         <marker scope="Public" name="zeke_wikipetan1" />
+        <marker scope="Public" name="zekepandy_sucrose_dualFFEnable" />
     </markers>
     <pendingLines>
         <line>~Name~, take off that ridiculous eyepatch this instant! You're infringing on my copyright!</line>
