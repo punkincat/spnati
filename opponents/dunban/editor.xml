@@ -245,6 +245,7 @@
         <response id="776" opponent="lysithea" opponentId="240" />
         <response id="777" opponent="lysithea" opponentId="234" />
         <response id="779" opponent="lysithea" opponentId="237" />
+        <response id="789" opponent="nonon" opponentId="325" />
     </responses>
     <notes>
         <note id="10">Will be replaced if Sharla ever gets reworked lol</note>
@@ -1063,10 +1064,13 @@ c: say that he's been as high as the bionis' head?
         <label id="782" label="" folder="Targets" sort="0" />
         <label id="783" label="" folder="Targets" sort="0" />
         <label id="784" label="" folder="Targets" sort="0" />
-        <label id="785" label="" color="1" folder="Targets" sort="0" />
+        <label id="785" label="" color="3" folder="Targets" sort="0" />
         <label id="786" label="" folder="Targets" sort="0" />
+        <label id="787" label="" color="3" folder="Targets" sort="0" />
+        <label id="788" label="" color="3" folder="Targets" sort="0" />
+        <label id="789" label="" folder="Responses" sort="0" />
     </labels>
-    <nextId>786</nextId>
+    <nextId>789</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="20gOffer">Line that plays when Dunban offers a 20g bribe to whoever loses</marker>
@@ -1448,6 +1452,8 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_nicorobin_self1b" />
         <marker scope="Public" name="dunban_nicorobin_self1c" />
         <marker scope="Public" name="dunban_nonon_orchestra1" />
+        <marker scope="Public" name="dunban_nonon_orchestra2" />
+        <marker scope="Public" name="dunban_nonon_self0a" />
         <marker scope="Public" name="dunban_Nrobin_ability01" />
         <marker scope="Public" name="dunban_Nrobin_ability02" />
         <marker scope="Public" name="dunban_Nrobin_ability03" />
