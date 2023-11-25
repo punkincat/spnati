@@ -54,6 +54,7 @@
         <response id="492" opponent="elphaba" opponentId="181" />
         <response id="497" opponent="solar_flare" opponentId="72" />
         <response id="501" opponent="mari_setogaya" opponentId="2198" />
+        <response id="511" opponent="solar_flare" opponentId="38" />
     </responses>
     <notes>
         <note id="5">The marker is available so other characters can see which uniform she's wearing just in case they absolutely need to know for whatever reason. FYI, it's always unset when she loses the red dress.
@@ -79,10 +80,10 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <note id="454">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
         <note id="455">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
         <note id="456">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
-        <note id="457">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
         <note id="458">If I could include moe I would, but I'm not sure how to get the conditions to work out where any of blonde, small_breasts, or moe counts for this. I'm kinda just leaning on moe+!short+!small_breasts being rare</note>
         <note id="482">Literally don't have any better pose for this yet</note>
         <note id="507">iffy on whether to include finished in this, (in other words, todo: stage 9 lines)</note>
+        <note id="510">I'm not actually sure how comfortable Téa is at five-card draw, or if it's actually that easy for her to learn. I'm willing to reword this just a bit but having Téa refute Kyouko on this is just as good.</note>
     </notes>
     <labels>
         <label id="2" label="Imitating Yuno" color="5" folder="Target: Yuno Uno" sort="0" />
@@ -128,7 +129,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="55" label="" folder="Game state" sort="5" />
         <label id="56" label="Someone else wins" folder="Game state" sort="2" />
         <label id="57" label="" folder="Tags" sort="2" />
-        <label id="58" label="" color="0" folder="Tags" sort="3" />
+        <label id="58" label="" folder="Tags" sort="3" />
         <label id="59" label="" folder="Tags" sort="4" />
         <label id="60" label="" color="0" folder="Tags" sort="0" />
         <label id="61" label="" folder="Game state" sort="0" />
@@ -454,9 +455,9 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="395" label="Tank top (birthday)" folder="Costume: Sexy Tomato" sort="9" />
         <label id="396" label="Tank top (birthday)" folder="Costume: Sexy Tomato" sort="7" />
         <label id="397" label="Birthday" folder="Costume: Sexy Tomato" sort="0" />
-        <label id="398" label="Birthday (first naked)" folder="Costume: Sexy Tomato" sort="2" />
+        <label id="398" label="Birthday (first naked)" folder="Costume: Sexy Tomato" sort="0" />
         <label id="399" label="Birthday" folder="Costume: Club Uniform" sort="2" />
-        <label id="400" label="Birthday (first naked)" folder="Costume: Club Uniform" sort="3" />
+        <label id="400" label="Birthday (first naked)" folder="" sort="3" />
         <label id="401" label="Birthday (all naked)" folder="" sort="0" />
         <label id="402" label="get it cuz she's a tomato and tomatoes go squish" folder="" sort="0" />
         <label id="405" label="April Fools'" folder="" sort="0" />
@@ -558,8 +559,15 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="504" label="" folder="Target: Tea Gardner" sort="4" />
         <label id="505" label="" folder="Target: Yumeko" sort="0" />
         <label id="506" label="" folder="Target: Yumeko" sort="2" />
+        <label id="509" label="" folder="Target: Meia" sort="0" />
+        <label id="503" label="" folder="Target: Mari Setogaya" sort="0" />
+        <label id="501" label="" folder="Target: Mari Setogaya" sort="0" />
+        <label id="510" label="" folder="Target: Tea Gardner" sort="0" />
+        <label id="512" label="" folder="Target: Meia" sort="0" />
+        <label id="513" label="" folder="Target: Shamiko" sort="0" />
+        <label id="514" label="" folder="Target: Reimu" sort="0" />
     </labels>
-    <nextId>508</nextId>
+    <nextId>514</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Private" name="B_">Background-related markers</marker>
@@ -692,6 +700,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Mari_TStrip0Excited">Mari Must Strip 0</marker>
         <marker scope="Public" name="T_Mari_TStrip3Brother">Mari Must Strip 3</marker>
         <marker scope="Public" name="T_Mari_TStrip3FriendsSisters">Mari Stripping 3</marker>
+        <marker scope="Public" name="T_Meia_Aliens" />
         <marker scope="Public" name="T_Meia_Pajamas" />
         <marker scope="Public" name="T_Miko_Strip0Necessities">Self Stripping 0</marker>
         <marker scope="Public" name="T_Miko_Strip0Refined">Self Must Strip 0</marker>
@@ -728,7 +737,9 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Queenie_TStrip0LoveJustice">Queenie Must Strip 0</marker>
         <marker scope="Public" name="T_Reimu_" />
         <marker scope="Public" name="T_Reimu_Find" />
+        <marker scope="Public" name="T_Reimu_KeepTrying" />
         <marker scope="Public" name="T_Reimu_Strip0Attack">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_Robin_DrawingResponse" />
         <marker scope="Public" name="T_SannyTess_AyanoFuta" />
         <marker scope="Public" name="T_SannyTess_CockA">Sanny/Tess Stripping 2</marker>
         <marker scope="Public" name="T_SannyTess_CockB">Sanny/Tess Stripped 3</marker>
@@ -752,6 +763,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Setogaya_Strip2Stripping">Self Stripped 3</marker>
         <marker scope="Public" name="T_SolarFlare_TomatoPlant" />
         <marker scope="Public" name="T_SolarFlare_ZombieApocalypse" />
+        <marker scope="Public" name="T_Tea_DM2Poker" />
         <marker scope="Public" name="T_Tea_FunPrez">Game start</marker>
         <marker scope="Public" name="T_Tea_NotReal" />
         <marker scope="Public" name="T_Tea_Strip3Normal">Self Stripping 3</marker>
