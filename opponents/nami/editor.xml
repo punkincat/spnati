@@ -938,11 +938,8 @@
         <label id="928" label="" color="1" folder="" sort="0" />
         <label id="1401" label="" color="1" folder="" sort="0" />
         <label id="1400" label="" color="1" folder="" sort="0" />
-        <label id="1051" label="" color="6" folder="" sort="0" />
         <label id="1059" label="" color="6" folder="" sort="0" />
         <label id="1057" label="" color="6" folder="" sort="0" />
-        <label id="1052" label="" color="6" folder="" sort="0" />
-        <label id="1053" label="" color="6" folder="" sort="0" />
         <label id="1054" label="" color="6" folder="" sort="0" />
         <label id="1055" label="" color="6" folder="" sort="0" />
         <label id="1056" label="" color="6" folder="" sort="0" />
@@ -1223,9 +1220,13 @@
         <label id="1463" label="" color="1" folder="" sort="0" />
         <label id="1464" label="" color="1" folder="" sort="0" />
     </labels>
+    <posePreviewMarkers>
+        <posePreviewMarker>player_skin_a</posePreviewMarker>
+        <posePreviewMarker>player_skin_b</posePreviewMarker>
+        <posePreviewMarker>player_skin_c</posePreviewMarker>
+    </posePreviewMarkers>
     <nextId>1485</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="3players">Nami talks about there only being 3 players in the game.</marker>
         <marker scope="Public" name="aaravi_body2" />
         <marker scope="Public" name="aaravi_butt" />
@@ -2802,6 +2803,7 @@
         <marker scope="Public" name="player_large_ng+" />
         <marker scope="Public" name="player_medium" />
         <marker scope="Public" name="player_medium_ng+" />
+        <marker scope="Public" name="player_skin" />
         <marker scope="Public" name="player_skin_a" />
         <marker scope="Public" name="player_skin_b" />
         <marker scope="Public" name="player_skin_c" />
