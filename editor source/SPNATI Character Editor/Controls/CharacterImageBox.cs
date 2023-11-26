@@ -341,10 +341,10 @@ namespace SPNATI_Character_Editor.Controls
 						if (eligibleEntry.Img.StartsWith("custom:"))
 						{
 							Pose p = _character.Skin.CustomPoses.Find(customPose => customPose.Id == eligibleEntry.Img.Substring("custom:".Length));
-							//if (p == null)
-							//{
-							//	p = _character.Skin.CustomPoses[0];
-							//}
+							if (p == null)
+							{
+								p = _character.Skin.CustomPoses.Find(customPose => customPose.Id == eligibleEntry.Img.Substring("custom:".Length).Replace("#-", stage.ToString() + "-"));
+							}
 							Pose = new LivePose(_character, p, _currentStage);
 							if (AutoPlayback)
 							{
