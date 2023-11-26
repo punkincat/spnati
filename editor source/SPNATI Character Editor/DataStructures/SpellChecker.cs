@@ -33,6 +33,7 @@ namespace SPNATI_Character_Editor
 			_spellchecker = new Hunspell(Path.Combine(path, "Resources/en_US.aff"), Path.Combine(path, "Resources/en_US.dic"));
 			LoadDictionary(Path.Combine(path, "Resources/words.txt"), false);
 			LoadDictionary(GetUserDictionaryPath(), true);
+			LoadFolderNames();
 		}
 
 		private string GetUserDictionaryPath()
@@ -53,6 +54,14 @@ namespace SPNATI_Character_Editor
 						_ignoredWords.Add(word);
 					}
 				}
+			}
+		}
+
+		private void LoadFolderNames()
+		{
+			foreach (Opponent opponent in Listing.Instance.Characters)
+			{
+				_ignoredWords.Add(opponent.Name);
 			}
 		}
 
