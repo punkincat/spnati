@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
@@ -192,6 +192,12 @@ namespace SPNATI_Character_Editor
 					if (!isBoolean) { continue; }
 					yield return new VariableSubfunction(tag);
 				}
+				BackgroundTag day = new BackgroundTag("day");
+				day.Description = "Whether it is day.";
+				yield return new VariableSubfunction(day);
+				BackgroundTag night = new BackgroundTag("night");
+				night.Description = "Whether it is night.";
+				yield return new VariableSubfunction(night);
 			}
 		}
 
