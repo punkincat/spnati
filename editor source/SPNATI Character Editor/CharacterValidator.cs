@@ -430,7 +430,8 @@ namespace SPNATI_Character_Editor
 
 			if (!Listing.Instance.IsCharacterReleased(character.FolderName))
 			{
-				warnings.Add(new ValidationError(ValidationFilterLevel.Settings, "Characters that are not on the main roster are not allowed to have custom settings."));
+				if (character.Behavior.CharacterSettingsGroups.Count > 0)
+					warnings.Add(new ValidationError(ValidationFilterLevel.Settings, "Characters that are not on the main roster are not allowed to have custom settings."));
 			}
 			else
 			{
