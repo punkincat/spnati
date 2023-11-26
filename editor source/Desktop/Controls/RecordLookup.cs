@@ -487,6 +487,9 @@ namespace Desktop
 				return;
 			if (txtName.Text.Length == 0)
 				return;
+			if (MessageBox.Show($"Do you want to create a new {_recordType.Name.ToLower()} {txtName.Text}?",
+		$"Create a New {_recordType.Name}", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+				return;
 			Record = _provider.Create(txtName.Text);
 			IsNewRecord = true;
 

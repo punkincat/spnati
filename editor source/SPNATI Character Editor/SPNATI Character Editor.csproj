@@ -1024,10 +1024,10 @@
       <DependentUpon>ValidationControl.cs</DependentUpon>
     </Compile>
     <Compile Include="DataStructures\Behaviour.cs" />
-    <Compile Include="BulkReplaceTool.cs">
+    <Compile Include="Forms\BulkReplaceTool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BulkReplaceTool.Designer.cs">
+    <Compile Include="Forms\BulkReplaceTool.Designer.cs">
       <DependentUpon>BulkReplaceTool.cs</DependentUpon>
     </Compile>
     <Compile Include="DataStructures\Case.cs" />
@@ -1404,10 +1404,10 @@
     <Compile Include="GifWriter.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="GUIHelper.cs" />
-    <Compile Include="HelpForm.cs">
+    <Compile Include="Forms\HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HelpForm.Designer.cs">
+    <Compile Include="Forms\HelpForm.Designer.cs">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ImageCache.cs" />
@@ -1448,28 +1448,28 @@
     <Compile Include="TestRequirements.cs" />
     <Compile Include="WorkflowFilter.cs" />
     <Compile Include="WorkspaceMessages.cs" />
-    <Compile Include="NewCharacterPrompt.cs">
+    <Compile Include="Forms\NewCharacterPrompt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewCharacterPrompt.Designer.cs">
+    <Compile Include="Forms\NewCharacterPrompt.Designer.cs">
       <DependentUpon>NewCharacterPrompt.cs</DependentUpon>
     </Compile>
     <Compile Include="DataStructures\Metadata.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProgressForm.cs">
+    <Compile Include="Forms\ProgressForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProgressForm.Designer.cs">
+    <Compile Include="Forms\ProgressForm.Designer.cs">
       <DependentUpon>ProgressForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="IO\Serialization.cs" />
     <Compile Include="Providers\CharacterProvider.cs" />
-    <Compile Include="SettingsSetup.cs">
+    <Compile Include="Forms\SettingsSetup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SettingsSetup.Designer.cs">
+    <Compile Include="Forms\SettingsSetup.Designer.cs">
       <DependentUpon>SettingsSetup.cs</DependentUpon>
     </Compile>
     <Compile Include="DataStructures\Stage.cs" />
@@ -1587,7 +1587,7 @@
     <EmbeddedResource Include="Activities\WritingAid.resx">
       <DependentUpon>WritingAid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkReplaceTool.resx">
+    <EmbeddedResource Include="Forms\BulkReplaceTool.resx">
       <DependentUpon>BulkReplaceTool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Charts\StackedBarChart.resx">
@@ -2021,13 +2021,13 @@
     <EmbeddedResource Include="Forms\WhatsNew.resx">
       <DependentUpon>WhatsNew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HelpForm.resx">
+    <EmbeddedResource Include="Forms\HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewCharacterPrompt.resx">
+    <EmbeddedResource Include="Forms\NewCharacterPrompt.resx">
       <DependentUpon>NewCharacterPrompt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProgressForm.resx">
+    <EmbeddedResource Include="Forms\ProgressForm.resx">
       <DependentUpon>ProgressForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -2043,7 +2043,7 @@
     <EmbeddedResource Include="Forms\PropImporter.resx">
       <DependentUpon>PropImporter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SettingsSetup.resx">
+    <EmbeddedResource Include="Forms\SettingsSetup.resx">
       <DependentUpon>SettingsSetup.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
