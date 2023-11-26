@@ -7,7 +7,7 @@
     <last>Jansson</last>
     <label>Lotte</label>
     <gender>female</gender>
-    <size>small</size>
+    <size>medium</size>
     <timer>17</timer>
     <intelligence>average</intelligence>
 
@@ -880,7 +880,7 @@
         </trigger>
 
         <trigger id="stripping">
-            <case stage="5" priority="999">
+            <case stage="5" priority="999" addCharacterTags="lingerie,pubic_hair_peek,thigh_highs">
                 <condition role="other" character="akko" />
                 <state img="custom:#-Lingerie_Transform" marker="LotteLingerie">W-w-wait, A-Akko! Ahhhh! ...Oh... O-okay...</state>
             </case>
@@ -904,7 +904,7 @@
                 <condition role="other" character="croix" stage="8" />
                 <state img="#-loss.png">Also, Croix. I have to say, you masturbating was super hot.</state>
             </case>
-            <case stage="6" priority="150">
+            <case stage="6" priority="150" removeCharacterTags="lingerie,pubic_hair_peek,thigh_highs">
                 <condition role="self" saidMarker="LotteLingerie" />
                 <condition role="other" character="akko" />
                 <state img="custom:#-Lingerie_Transform_off">Waaaaaah! ...EEP! A-A-Akko!</state>
