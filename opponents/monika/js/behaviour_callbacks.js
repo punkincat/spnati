@@ -23,6 +23,24 @@
         }, 750);
     });
 	
+	monika.registerBehaviourCallback('delete_blazer_p', function () {
+        var slot = monika.utils.monika_slot();
+        var effect = new monika.effects.GlitchPoseChange(slot, '2-removed-blazer-p.png', 250, 400, 776 - 400);
+
+        setTimeout(function () {
+            effect.execute();
+        }, 750);
+    });
+
+    monika.registerBehaviourCallback('delete_blazer_n', function () {
+        var slot = monika.utils.monika_slot();
+        var effect = new monika.effects.GlitchPoseChange(slot, '2-removed-blazer-n.png', 250, 400, 776 - 400);
+
+        setTimeout(function () {
+            effect.execute();
+        }, 750);
+    });
+	
 	monika.registerBehaviourCallback('socks_back', function () {
 		var slot = monika.utils.monika_slot();
 		var effect = new monika.effects.GlitchPoseChange(slot, '10-happy.png', 130, 950, 1385 - 400);

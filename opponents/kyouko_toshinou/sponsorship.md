@@ -4,9 +4,9 @@ Doing all 7
 
 ## Remillia
 
-- [ ] Raise generic count to 1000 (Total - (Targets + Filters)) (955/1000)
-- [ ] Raise her total targeted lines to 300 (138/300)
-- [ ] Raise her total filter amount to 75 (72/75)
+- [ ] Raise generic count to 1000 (Total - (Targets + Filters)) (952/1000)
+- [ ] Raise her total targeted lines to 300 (159/300)
+- [X] Raise her total filter amount to 75
 
 - [ ] Add 10 more lines showing Kyouko's perverted/overactive imagination, in any case (3/10)
 - [ ] Add 15 generic masturbation lines (not heavy masturbation) which are flirty/sexy in context
@@ -18,7 +18,7 @@ Doing all 7
 
 ## L0kkit
 
-- [ ] Add at least 30 targeted lines (4/30)
+- [ ] Add at least 30 targeted lines (25/30)
 - [ ] Add at least 30 hand quality lines
 - (S) Show her candid side more
 
@@ -78,14 +78,12 @@ Doing all 7
 - [X] Change bio
 - [ ] Look into and maybe rework her stage 8 dialogue as a whole
 - [ ] Implement art update
-  - [ ] More dynamic hair movement?
-  - [ ] Mirror per pose
-  - [ ] More efficient winter wardrobe
+  - [X] Mirror per pose
+  - [X] More efficient winter wardrobe
   - [ ] Add skip layer to Sexy Tomato
 - [ ] 1 more positive pose, similar amount of energy to "playful"; the ones I have still feel overutilized
 - [ ] 1 or 2 poses that are neutral/negative and low energy (hopefully to help with exploring candid side)
-- [ ] Some alternate poses for stage 8 with upward/downward gaze
-- [ ] Twirl pose, probably also normal back pose
-- [ ] Dynamic arousal state, like Kirigiri maybe?
+- [X] Some alternate poses for stage 8 with upward/downward gaze
+- [X] Twirl pose, probably also normal back pose
 - [ ] Change the two? targets that say she doesn't have a sketchpad; have her produce it and draw on it instead
 - [ ] Casual alt (no one hard required but I always planned to anyway)

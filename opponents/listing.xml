@@ -11,7 +11,7 @@
 		<opponent addedDate="2018-07-09" release="133" score="13.419">natsuki</opponent>
 		<opponent addedDate="2022-08-14" release="260" score="13.206">nagatoro</opponent>
 		<opponent addedDate="2021-09-17" release="246" score="13.173">mari</opponent>
-		<opponent addedDate="2018-05-30" release="125" score="13.020">monika</opponent>
+		<opponent addedDate="2018-05-30" release="125" score="13.020" highlight="updated">monika</opponent> <!-- expires 2023-12-15 -->
 		<opponent addedDate="2018-04-28" release="117" score="12.937">jura</opponent>
 		<opponent addedDate="2020-03-06" release="190" score="12.439">komi-san</opponent>
 		<opponent addedDate="2021-10-29" release="223" score="12.245">hu_tao</opponent>
@@ -123,7 +123,6 @@
 		<opponent addedDate="2022-11-06" release="272" score="6.128">dwight</opponent>
 		<opponent addedDate="2019-05-13" release="158" score="6.120">larachel</opponent>
 		<opponent addedDate="2017-08-05" release="87" score="6.101">palutena</opponent>
-		<opponent addedDate="2018-11-21" release="150" score="6.093">sheena</opponent>
 		<opponent addedDate="2021-07-21" release="239" score="6.064">wasp</opponent>
 		<opponent addedDate="2018-07-09" release="128" score="6.062">juri</opponent>
 		<opponent addedDate="2019-10-16" release="172" score="6.033">starfire</opponent>
@@ -207,16 +206,21 @@
 		<opponent addedDate="2018-10-06" release="141" score="1.512">jotaro</opponent>
 		<opponent addedDate="2017-01-29" release="48" score="1.080">buffy</opponent>
 		<opponent addedDate="2022-09-21" release="288" highlight="new">caitlin</opponent> <!-- expires 2023-11-29 -->
+		<opponent addedDate="2018-10-15" release="138" highlight="updated">lotte</opponent> <!-- expires 2023-12-13 -->
+		<opponent addedDate="2023-02-10" release="289" highlight="new">solar_flare</opponent> <!-- expires 2023-12-16 -->
+		<opponent addedDate="2023-11-24" status="testing">yae_miko</opponent>
+		<opponent addedDate="2022-12-18" status="testing">kyouko_toshinou</opponent>
+		<opponent addedDate="2023-11-20" status="testing">zeke_pandoria</opponent>
+		<opponent addedDate="2018-11-21" release="150" status="testing">sheena</opponent> <!-- score="6.093" -->
+		<opponent addedDate="2023-01-29" status="testing">queenie</opponent>
 		<opponent addedDate="2023-11-12" status="testing">nonon</opponent>
 		<opponent addedDate="2022-10-29" status="testing">rin_kagamine</opponent>
 		<opponent addedDate="2023-10-23" status="testing">jenna</opponent>
 		<opponent addedDate="2023-06-02" status="testing">sweetheart</opponent>
-		<opponent addedDate="2023-02-10" status="testing">solar_flare</opponent>
 		<opponent addedDate="2023-09-23" status="testing">lysithea</opponent>
 		<opponent addedDate="2023-07-24" status="testing">nadeshiko</opponent>
 		<opponent addedDate="2022-04-29" status="testing">hilbert</opponent>
 		<opponent addedDate="2023-07-09" status="testing">shamiko</opponent>
-		<opponent addedDate="2018-10-15" release="138" status="testing">lotte</opponent>
 		<opponent addedDate="2023-04-04" status="testing">arle</opponent>
 		<opponent addedDate="2022-12-11" status="testing">kyoko_kirigiri</opponent>
 		<opponent addedDate="2017-06-30" release="92" status="offline">aimee</opponent>
@@ -325,7 +329,6 @@
 		<opponent addedDate="2018-06-02" status="incomplete">kimberly</opponent>
 		<opponent addedDate="2020-04-01" status="incomplete">kokichi</opponent>
 		<opponent addedDate="2017-01-15" release="44" status="incomplete">korra</opponent>
-		<opponent addedDate="2022-12-18" status="incomplete">kyouko_toshinou</opponent>
 		<opponent addedDate="2019-08-01" status="incomplete">leafy</opponent>
 		<opponent addedDate="2020-05-06" status="incomplete">leo</opponent>
 		<opponent addedDate="2020-02-29" status="incomplete">lucy</opponent>
@@ -351,7 +354,6 @@
 		<opponent addedDate="2017-08-18" status="incomplete">pearl</opponent>
 		<opponent addedDate="2019-02-28" status="incomplete">penny</opponent>
 		<opponent addedDate="2020-12-02" status="incomplete">penny_polendina</opponent>
-		<opponent addedDate="2023-01-29" status="incomplete">queenie</opponent>
 		<opponent addedDate="2019-02-01" release="176" status="incomplete">ribbon_girl</opponent>
 		<opponent addedDate="2022-03-14" status="incomplete">rita</opponent>
 		<opponent addedDate="2017-08-29" status="incomplete">riva</opponent>
@@ -449,6 +451,7 @@
 
 	<!-- Group Listings -->
 	<groups>
+		<group title="Bespectacled Gal Pals" opp1="lotte" opp2="heris" opp3="sucrose" opp4="futaba" background="library" />
 		<group title="Beauties of Undella Town" opp1="elesa" opp2="cynthia" opp3="caitlin" opp4="rosa" background="beach" />
 		<group title="Goths and Preps" opp1="yumeko" opp2="stocking" opp3="toph" opp4="hatsune_miku" background="library" />
 		<group title="Good Day Sunshine" opp1="mia_golden_sun" opp2="dunban" opp3="barbara" opp4="toph" background="beach" />

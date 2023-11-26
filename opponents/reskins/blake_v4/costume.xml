@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>blake_v4</id>
+    <label>Blake</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>animal_ears</tag>
+        <tag remove="true">butt_pose</tag>
+        <tag>catfolk</tag>
+        <tag from="4" to="7">lingerie</tag>
+        <tag remove="true">thong</tag>
+    </tags>
+    <layers>7</layers>
+    <folder>opponents/reskins/blake_v4/</folder>
+    <wardrobe>
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="bra" generic="bra" position="upper" type="important" />
+        <clothing position="" type="skip" />
+        <clothing name="shirt" generic="shirt" position="upper" type="major" />
+        <clothing name="pants" generic="pants" position="lower" type="major" plural="true" />
+        <clothing name="coat" generic="jacket" position="upper" type="minor" />
+        <clothing name="boots" generic="shoes" position="lower" type="extra" plural="true" />
+        <clothing name="belt" generic="belt" position="other" type="extra" />
+    </wardrobe>
+
+</costume>

@@ -11,6 +11,7 @@
 var SELECTED = "selected";
 var OPPONENT_SELECTED = "opponent_selected";
 var OPPONENT_DESELECTED = "opponent_deselected";
+var SETTINGS_CHANGED = "settings_changed";
 var GAME_START = "game_start";
 
 var DEALING_CARDS = "dealing_cards";
@@ -1277,7 +1278,7 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
                 return 0;
             } else if (split_fn[2] && split_fn[2] === 'wearing') {
                 if (targetCollectible && targetCollectible.clothing) {
-                    return humanPlayer.clothing.some(function (clothing) {
+                    return humanPlayer.getClothing().some(function (clothing) {
                         return clothing.id === targetCollectible.clothing.id;
                     });
                 }
@@ -1462,7 +1463,7 @@ function expandDialogue (dialogue, self, target, bindings) {
                 substitution = '';
                 if ([UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE].indexOf(clothing.position) >= 0) {
                     var revealedClothing
-                        = target.findClothing(undefined,
+                        = target.findClothing(clothing.type == IMPORTANT_ARTICLE ? [IMPORTANT_ARTICLE, EXTRA_ARTICLE] : undefined,
                                               clothing.position == FULL_ARTICLE
                                               ? [UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE]
                                               : [clothing.position, FULL_ARTICLE]);
@@ -1490,7 +1491,7 @@ function expandDialogue (dialogue, self, target, bindings) {
                         }
                     } else if (fn_parts[1] && fn_parts[1] === 'wearing') {
                         if (targetCollectible && targetCollectible.clothing) {
-                            substitution = humanPlayer.clothing.some(function (clothing) {
+                            substitution = humanPlayer.getClothing().some(function (clothing) {
                                 return clothing.id === targetCollectible.clothing.id;
                             });
                         } else {
@@ -1595,6 +1596,10 @@ function expandDialogue (dialogue, self, target, bindings) {
                 if (!found_event) {
                     substitution = "false";
                 }
+                break;
+            case 'selected':
+                var variablePlayer = findVariablePlayer(fn, self, target, bindings);
+                substitution = !!variablePlayer;
                 break;
             case 'target':
             case 'self':
@@ -2627,7 +2632,7 @@ Opponent.prototype.commitBehaviourUpdate = function () {
     this.applyState(this.chosenState, this.currentTarget);
     
     this.stateCommitted = true;
-    if (this.clothing.at(-1)?.type != "skip") {
+    if (this.countLayers() == 0 || this.clothing.at(-1 - this.stage).type != "skip") {
         updateGameVisual(this.slot);
     }
 }

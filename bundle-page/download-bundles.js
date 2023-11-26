@@ -35,6 +35,7 @@ var SPECIAL_CASE_NAMES = {
     "yshtola": "Y'shtola",
     "yuna_ffx": "Yuna (FFX)",
     "yuno_uno": "Yuno",
+    "zeke_pandoria": "Zeke and Pandoria",
 
     // disambiguation
     "alice": "Alice Liddell",

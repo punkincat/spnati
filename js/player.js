@@ -76,7 +76,6 @@ function Player (id) {
     this.tags = this.baseTags = [];
     this.xml = null;
     this.persistentMarkers = {};
-    this.exposed = { upper: false, lower: false };
 }
 
 /*******************************************************************
@@ -85,22 +84,23 @@ function Player (id) {
  *******************************************************************/
 Player.prototype.initClothingStatus = function () {
     this.startingLayers = this.countLayers();
-    this.exposed = { upper: true, lower: true };
-    for (var position in this.exposed) {
-        if (this.clothing.some(function(c) {
-            return (c.type == IMPORTANT_ARTICLE || c.type == MAJOR_ARTICLE)
-                && (c.position == position || c.position == FULL_ARTICLE);
-        })) {
-            this.exposed[position] = false;
-        };
-    }
     this.numStripped = { extra: 0, minor: 0, major: 0, important: 0 };
-    this.mostlyClothed = this.decent = !(this.exposed.upper || this.exposed.lower)
-        && this.clothing.some(function(c) {
-            return c.type == MAJOR_ARTICLE
-                && [UPPER_ARTICLE, LOWER_ARTICLE, FULL_ARTICLE].indexOf(c.position) >= 0;
-        });
+    this.mostlyClothed = this.isDecent();
 }
+
+/********************************************************************
+ * Gets the currently worn wardrobe, possible before (stageDelta ==
+ * -1) or after (stageDelta == 1) stripping removedClothing.
+ ********************************************************************/
+Player.prototype.getClothing = function(stageDelta, removedClothing) {
+    removedClothing ||= this.removedClothing;
+    return this.clothing.filter(c =>
+        c.type != 'skip'
+            && (!c.removed || (stageDelta == -1 && c == removedClothing))
+            && (stageDelta != 1 || c != removedClothing)
+            && (c.fromStage === undefined
+                || (stageDelta == 1 && c.fromStage == this.stage + 1 && !c.fromDeal)));
+};
 
 /*******************************************************************
  * (Re)Initialize the player properties that change during a game
@@ -158,6 +158,8 @@ Player.prototype.resetState = function () {
 
         /* Find and grab the wardrobe tag */
         $wardrobe = appearance.wardrobe;
+
+        this.settings.forEach((group) => group.reset());
 
         /* find and create all of their clothing */
         var clothingArr = [];
@@ -294,7 +296,7 @@ Player.prototype.hasTags = function(tagAdv) {
 }
 
 Player.prototype.countLayers = function() {
-    return this.clothing.countTrue(c => c.type != "skip");
+    return this.clothing.countTrue(c => !c.removed && c.type != "skip");
 };
 
 Player.prototype.checkStatus = function(status) {
@@ -307,19 +309,19 @@ Player.prototype.checkStatus = function(status) {
     case STATUS_MOSTLY_CLOTHED:
         return this.mostlyClothed;
     case STATUS_DECENT:
-        return this.decent;
+        return this.isDecent();
     case STATUS_EXPOSED_TOP:
-        return this.exposed.upper;
+        return !this.isCovered(UPPER_ARTICLE);
     case STATUS_EXPOSED_BOTTOM:
-        return this.exposed.lower;
+        return !this.isCovered(LOWER_ARTICLE);
     case STATUS_EXPOSED:
-        return this.exposed.upper || this.exposed.lower;
+        return !this.isCovered(UPPER_ARTICLE) || !this.isCovered(LOWER_ARTICLE);
     case STATUS_EXPOSED_TOP_ONLY:
-        return this.exposed.upper && !this.exposed.lower;
+        return !this.isCovered(UPPER_ARTICLE) && this.isCovered(LOWER_ARTICLE);
     case STATUS_EXPOSED_BOTTOM_ONLY:
-        return !this.exposed.upper && this.exposed.lower;
+        return this.isCovered(UPPER_ARTICLE) && !this.isCovered(LOWER_ARTICLE);
     case STATUS_NAKED:
-        return this.exposed.upper && this.exposed.lower;
+        return !this.isCovered(UPPER_ARTICLE) && !this.isCovered(LOWER_ARTICLE);
     case STATUS_ALIVE:
         return !this.out;
     case STATUS_LOST_ALL:
@@ -580,6 +582,7 @@ function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber,
     this.labelOverridden = this.intelligenceOverridden = false;
     this.pendingCollectiblePopups = [];
     this.repeatLog = {};
+    this.settings = [];
 
     this.loaded = false;
     this.loadProgress = undefined;
@@ -1346,6 +1349,10 @@ Opponent.prototype.loadBehaviour = function (slot, individual, selectInfo) {
             this.xml = $xml;
             this.intelligences = $xml.children('intelligence');
 
+            this.settings = $xml.find("behaviour>settings").map(function (index, elem) {
+                return CharacterSettingsGroup.parseXML(this, $(elem));
+            }.bind(this)).get();
+
             this.default_costume = {
                 id: null,
                 labels: $xml.children('label'),
@@ -1626,6 +1633,60 @@ Player.prototype.preloadStageImages = function (stage) {
     }, this));
 };
 
+/**
+ * 
+ * @param {Player} player
+ * @param {string} marker 
+ * @param {CharacterSetting[]} settings 
+ */
+function CharacterSettingsGroup (player, marker, settings) {
+    this.marker = marker;
+    this.player = player;
+    this.settings = settings; /* preserve order for dropdown display */
+    this.defaultSetting = settings.find((value) => value.isDefault) || null;
+}
+
+CharacterSettingsGroup.parseXML = function (player, $xml) {
+    var marker = $xml.attr("marker");
+    var settings = $xml.children("setting").map(function (index, elem) {
+        return CharacterSetting.parseXML(player, $(elem));
+    }).get();
+
+    return new CharacterSettingsGroup(player, marker, settings);
+}
+
+CharacterSettingsGroup.prototype.update = function () {
+    var markerVal = this.player.getMarker(this.marker);
+    var setTo = this.settings.find((setting) => (setting.value == markerVal) && setting.isAvailable()) || this.defaultSetting;
+    this.setSelected(setTo ? setTo.value : "");
+}
+
+CharacterSettingsGroup.prototype.reset = function () {
+    if (this.player.persistentMarkers[this.marker]) {
+        this.update();
+    } else {
+        this.setSelected(this.defaultSetting ? this.defaultSetting.value : "");
+    }
+}
+
+CharacterSettingsGroup.prototype.setSelected = function (value) {
+    this.player.setMarker(this.marker, null, value || "");
+}
+
+CharacterSettingsGroup.prototype.getSelected = function () {
+    var markerVal = this.player.getMarker(this.marker);
+    var setting = this.settings.find((setting) => (setting.value == markerVal) && setting.isAvailable());
+    if (setting && !setting.isAvailable()) {
+        setting = this.defaultSetting;
+    }
+
+    return setting || this.defaultSetting || null;
+}
+
+CharacterSettingsGroup.prototype.getAvailable = function () {
+    return this.settings.filter((setting) => setting.isAvailable());
+}
+
 Player.prototype.populateDebugMarkers = function () {
     /** @type {{[baseName: string]: {[oppId: string]: string | number}}} */
     var resolvedMarkers = {};
@@ -1802,6 +1863,38 @@ Player.prototype.populateDebugTags = function () {
             container.slideDown();
         }
     });
+}
+
+/**
+ * 
+ * @param {Player} player
+ * @param {string} value 
+ * @param {string} name
+ * @param {boolean} isDefault
+ * @param {VariableTest[]} tests 
+ */
+function CharacterSetting (player, value, name, isDefault, tests) {
+    this.player = player;
+    this.value = value;
+    this.name = name || value;
+    this.isDefault = isDefault;
+    this.tests = tests;
+}
+
+CharacterSetting.parseXML = function (player, $xml) {
+    var tests = $xml.children("test").map(function (index, elem) {
+        return VariableTest.parseXML($(elem));
+    }).get();
+
+    var isDefault = ($xml.attr("default") || "false") == "true";
+    var value = $xml.attr("value") || "";
+    var name = $xml.children("name").text();
+
+    return new CharacterSetting(player, value, name, isDefault, tests);
+}
+
+CharacterSetting.prototype.isAvailable = function () {
+    return this.tests.every((test) => test.evaluate(this.player, null, null));
 }
 
 /**

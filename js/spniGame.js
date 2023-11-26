@@ -232,7 +232,7 @@ function updateAllGameVisuals () {
  ************************************************************/
 function displayHumanPlayerClothing () {
     /* collect the images */
-    var clothingImages = humanPlayer.clothing.map(function(c) {
+    var clothingImages = humanPlayer.getClothing().map(function(c) {
         return { src: c.image,
                  alt: c.name.initCap() };
     });
