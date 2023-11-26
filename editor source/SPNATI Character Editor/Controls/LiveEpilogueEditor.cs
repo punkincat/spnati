@@ -621,6 +621,8 @@ namespace SPNATI_Character_Editor.Controls
 				string src = openFileDialog1.FileName;
 				LiveSprite sprite = _segment.AddSprite(_time);
 				sprite.AddValue<string>(0, "Src", src);
+				sprite.AddValue<float>(_time, "Alpha", "100");
+				sprite.AddValue<float>(_time, "Rotation", "0");
 
 				string id = Path.GetFileNameWithoutExtension(src);
 				int hyphen = id.IndexOf('-');
