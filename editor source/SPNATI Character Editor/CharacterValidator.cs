@@ -505,6 +505,28 @@ namespace SPNATI_Character_Editor
 					ValidateSaying(condition.Character, condition.Said, warnings, caseTag, context, "Said Text");
 				}
 
+				if (!string.IsNullOrEmpty(condition.FilterTagAdv))
+				{
+					string[] pieces = condition.FilterTagAdv.Split(new char[] {'|','&'}, StringSplitOptions.RemoveEmptyEntries);
+					foreach (string piece in pieces)
+					{
+						if (piece[0] == '!')
+						{
+							if (!TagDatabase.TagExists(piece.Substring(1)))
+							{
+								warnings.Add(new ValidationError(ValidationFilterLevel.Case, string.Format("Tag {0} does not exist.", piece.Substring(1)), context));
+							}
+						}
+						else
+						{
+							if (!TagDatabase.TagExists(piece))
+							{
+								warnings.Add(new ValidationError(ValidationFilterLevel.Case, string.Format("Tag {0} does not exist.", piece), context));
+							}
+						}
+					}
+				}
+
 				if (condition.Role == "target" && !trigger.HasTarget)
 				{
 					warnings.Add(new ValidationError(ValidationFilterLevel.TargetedDialogue, string.Format("\"target\" is not allowed for case \"{0}\".", caseTag), context));
