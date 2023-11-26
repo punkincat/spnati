@@ -15,6 +15,11 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			TrackedProperties.Add("Rotation");
 			TrackedProperties.Add("SkewX");
 			TrackedProperties.Add("SkewY");
+			TrackedProperties.Add("ClipLeft");
+			TrackedProperties.Add("ClipTop");
+			TrackedProperties.Add("ClipRight");
+			TrackedProperties.Add("ClipBottom");
+			TrackedProperties.Add("ClipRadius");
 		}
 
 		[FileSelect(DisplayName = "Source", GroupOrder = 10, Key = "src", Description = "Sprite source image")]
@@ -77,8 +82,43 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			set { Set(value); }
 		}
 
-		[Float(DisplayName = "Skew Y", GroupOrder = 65, Key = "skewx", Description = "Sprite shearing factor vertically", DecimalPlaces = 2, Minimum = -89, Maximum = 89, Increment = 1f)]
+		[Float(DisplayName = "Skew Y", GroupOrder = 65, Key = "skewy", Description = "Sprite shearing factor vertically", DecimalPlaces = 2, Minimum = -89, Maximum = 89, Increment = 1f)]
 		public float? SkewY
+		{
+			get { return Get<float?>(); }
+			set { Set(value); }
+		}
+
+		[Float(DisplayName = "Clip Left", GroupOrder = 70, Key = "clipleft", Description = "Position of the left side of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		public float? ClipLeft
+		{
+			get { return Get<float?>(); }
+			set { Set(value); }
+		}
+
+		[Float(DisplayName = "Clip Right", GroupOrder = 75, Key = "clipright", Description = "Position of the right side of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		public float? ClipRight
+		{
+			get { return Get<float?>(); }
+			set { Set(value); }
+		}
+
+		[Float(DisplayName = "Clip Top", GroupOrder = 80, Key = "cliptop", Description = "Position of the top side of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		public float? ClipTop
+		{
+			get { return Get<float?>(); }
+			set { Set(value); }
+		}
+
+		[Float(DisplayName = "Clip Bottom", GroupOrder = 85, Key = "clipbottom", Description = "Position of the bottom side of the clipping area", DecimalPlaces = 0, Minimum = 0, Maximum = 9000)]
+		public float? ClipBottom
+		{
+			get { return Get<float?>(); }
+			set { Set(value); }
+		}
+
+		[Float(DisplayName = "Clip Radius", GroupOrder = 90, Key = "clipradius", Description = "Radius value used to round the corners of the clipping area", DecimalPlaces = 0, Minimum =0 , Maximum = 9000)]
+		public float? ClipRadius
 		{
 			get { return Get<float?>(); }
 			set { Set(value); }

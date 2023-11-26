@@ -3,15 +3,23 @@ using Desktop.CommonControls;
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace SPNATI_Character_Editor
 {
 	public partial class TagAdvControl : PropertyEditControl
 	{
 
+		bool _more;
+
 		public TagAdvControl()
 		{
 			InitializeComponent();
+
+			_more = false;
+			txtTagAdv.Visible = false;
+			icoTagAdv.Visible = false;
 
 			recTag1A.RecordType = typeof(Tag);
 			recTag1B.RecordType = typeof(Tag);
@@ -46,18 +54,34 @@ namespace SPNATI_Character_Editor
 			recTag2B.RecordChanged += RecTag2B_RecordChanged;
 		}
 
-		private void ApplyValue(string value)
+		private void ApplyValue(string value, bool? more = null)
 		{
 			value = value ?? "";
-			string pattern = @"^([^\&\|]*)(\&?)([^\&\|]*)(\|?)([^\&\|]*)(\&?)([^\&\|]*)";
+			//string pattern = @"^([^\&\|]*)(\&?)([^\&\|]*)(\|?)([^\&\|]*)(\&?)([^\&\|]*)";
+			string pattern = @"^([^\&\|]*)(\&?)([^\&\|]*)(\&?)([^\|]*)(\|?)([^\&\|]*)(\&?)([^\&\|]*)([\&\|]?)";
 			Regex reg = new Regex(pattern);
 			Match regMatch = reg.Match(value);
-			if (regMatch.Success)
+			if (regMatch.Success && (more == false || (string.IsNullOrEmpty(regMatch.Groups[5].Value) && string.IsNullOrEmpty(regMatch.Groups[10].Value))))
 			{
+				if (more == false)
+				{
+					if (!string.IsNullOrEmpty(regMatch.Groups[5].Value) || !string.IsNullOrEmpty(regMatch.Groups[10].Value))
+					{
+						if (MessageBox.Show($"This logical expression is too long for the standard Tags (Advanced) editor. If you switch between editors, the expression will be truncated.\n Do you want to proceed?",
+		$"Switch to the standard Tags (Advanced) editor", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+						{
+							return;
+						}
+						else
+						{
+							_more = false;
+						}
+					}
+				}
 				string val1A = regMatch.Groups[1].Value;
 				string val1B = regMatch.Groups[3].Value;
-				string val2A = regMatch.Groups[5].Value;
-				string val2B = regMatch.Groups[7].Value;
+				string val2A = regMatch.Groups[7].Value;
+				string val2B = regMatch.Groups[9].Value;
 				if (!string.IsNullOrEmpty(val1A))
 				{
 					if (val1A.StartsWith("!"))
@@ -115,6 +139,12 @@ namespace SPNATI_Character_Editor
 					recTag2B.RecordKey = "";
 				}
 			}
+			else
+			{
+				ToggleVisibility(true);
+				_more = true;
+				txtTagAdv.Text = value;
+			}
 		}
 
 		protected override void OnClear()
@@ -127,6 +157,7 @@ namespace SPNATI_Character_Editor
 			recTag1B.RecordKey = "";
 			recTag2A.RecordKey = "";
 			recTag2B.RecordKey = "";
+			txtTagAdv.Text = "";
 			Save();
 		}
 
@@ -212,14 +243,12 @@ namespace SPNATI_Character_Editor
 				}
 			}
 
-
-
 			return value;
 		}
 
 		protected override void OnSave()
 		{
-			string value = BuildValue();
+			string value = _more? txtTagAdv.Text : BuildValue();
 			SetValue(value);
 		}
 
@@ -260,8 +289,61 @@ namespace SPNATI_Character_Editor
 		{
 			Save();
 		}
+		private void txtTagAdv_TextChanged(object sender, EventArgs e)
+		{
+			Save();
+		}
 
-  
+		private void ToggleVisibility(bool more)
+		{
+			icoTagAdv.Visible = more;
+			txtTagAdv.Visible = more;
+			recTag2B.Visible = !more;
+			recTag2A.Visible = !more;
+			recTag1B.Visible = !more;
+			recTag1A.Visible = !more;
+			skinnedLabel2.Visible = !more;
+			skinnedLabel1.Visible = !more;
+			chkNegate2B.Visible = !more;
+			skinnedLabelAND2A.Visible = !more;
+			chkNegate2A.Visible = !more;
+			skinnedLabelOR.Visible = !more;
+			skinnedLabelAND1A.Visible = !more;
+			chkNegate1B.Visible = !more;
+			chkNegate1A.Visible = !more;
+			if (more) 
+			{
+				icoTagAdv.Location = new System.Drawing.Point(25, 0);
+				txtTagAdv.Location = new System.Drawing.Point(50, 0);
+				txtTagAdv.Size = new System.Drawing.Size(300, 20);
+				btnMore.Text = "-";
+				toolTip1.SetToolTip(btnMore, "Standard condition");
+			}
+			else
+			{
+				btnMore.Text = "+";
+				toolTip1.SetToolTip(btnMore, "Longer condition");
+			}
+		}
+
+		private void btnMore_Click(object sender, EventArgs e)
+		{
+			if (_more)
+			{
+				ApplyValue(txtTagAdv.Text, false);
+				if (!_more)
+				{
+					ToggleVisibility(false);
+				}
+			}
+			else
+			{
+				_more = true;
+				txtTagAdv.Text = BuildValue();
+				ToggleVisibility(true);
+			}
+		}
+
 	}
 
 	public class TagAdvAttribute : EditControlAttribute

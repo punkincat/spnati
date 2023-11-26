@@ -227,7 +227,6 @@ namespace SPNATI_Character_Editor.Controls
 			}
 			gridDialogue.PasteLines(_lineClipboard);
 		}
-
 		private void gridDialogue_HighlightRow(object sender, int index)
 		{
 			HighlightRow?.Invoke(this, index);
@@ -261,6 +260,10 @@ namespace SPNATI_Character_Editor.Controls
 		public DialogueLine GetLine(int index)
 		{
 			return gridDialogue.GetLine(index);
+		}
+		public int GetHighlightedLineIndex()
+		{
+			return gridDialogue.GetHighlightedLineIndex();
 		}
 
 		public void ClearSelection()

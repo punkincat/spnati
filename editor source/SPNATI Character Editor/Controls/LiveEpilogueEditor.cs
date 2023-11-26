@@ -51,6 +51,7 @@ namespace SPNATI_Character_Editor.Controls
 
 			canvas.UndoManager = _history;
 			canvas.ObjectSelected += Canvas_ObjectSelected;
+			canvas.AddToolBarButton(Properties.Resources.Move, "Toggle axes", true, ToggleAxes);
 			canvas.AddToolBarButton(Properties.Resources.VideoCamera, "Toggle scene preview", true, ToggleCamera);
 			_playButton = canvas.AddToolBarButton(Properties.Resources.Play, "Play scene", true, TogglePlay);
 			canvas.CanvasClicked += Canvas_CanvasClicked;
@@ -107,9 +108,15 @@ namespace SPNATI_Character_Editor.Controls
 			return obj.FilterRecord(record.Key);
 		}
 
-		private void Canvas_CanvasClicked(object sender, System.EventArgs e)
+		private void Canvas_CanvasClicked(object sender, EventArgs e)
 		{
 			timeline.ResumePlayback();
+		}
+
+		private void ToggleAxes(ToolStripButton btn)
+		{
+			canvas._drawAxes = btn.Checked;
+			canvas.InvalidateCanvas();
 		}
 
 		private void ToggleCamera(ToolStripButton btn)
@@ -328,7 +335,7 @@ namespace SPNATI_Character_Editor.Controls
 			}
 		}
 
-		private void _labelData_LabelChanged(object sender, System.EventArgs e)
+		private void _labelData_LabelChanged(object sender, EventArgs e)
 		{
 			ILabel labelData = sender as ILabel;
 			if (labelData != null)
@@ -377,7 +384,7 @@ namespace SPNATI_Character_Editor.Controls
 			SetScene(scene);
 		}
 
-		private void lstSegments_SelectedIndexChanged(object sender, System.EventArgs e)
+		private void lstSegments_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			SetSegment(lstSegments.SelectedIndex);
 		}
@@ -605,7 +612,7 @@ namespace SPNATI_Character_Editor.Controls
 			}
 		}
 
-		private void addSpriteToolStripMenuItem_Click(object sender, System.EventArgs e)
+		private void addSpriteToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			if (_segment == null) { return; }
 			openFileDialog1.UseAbsolutePaths = true;
@@ -614,6 +621,8 @@ namespace SPNATI_Character_Editor.Controls
 				string src = openFileDialog1.FileName;
 				LiveSprite sprite = _segment.AddSprite(_time);
 				sprite.AddValue<string>(0, "Src", src);
+				sprite.AddValue<float>(_time, "Alpha", "100");
+				sprite.AddValue<float>(_time, "Rotation", "0");
 
 				string id = Path.GetFileNameWithoutExtension(src);
 				int hyphen = id.IndexOf('-');
@@ -626,21 +635,21 @@ namespace SPNATI_Character_Editor.Controls
 			}
 		}
 
-		private void addSpeechBubbleToolStripMenuItem_Click(object sender, System.EventArgs e)
+		private void addSpeechBubbleToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			if (_segment == null) { return; }
 			LiveBubble bubble = _segment.AddBubble(_time);
 			timeline.SelectObject(timeline.CreateWidget(bubble));
 		}
 
-		private void addEmitterToolStripMenuItem_Click(object sender, System.EventArgs e)
+		private void addEmitterToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			if (_segment == null) { return; }
 			LiveEmitter emitter = _segment.AddEmitter(_time);
 			timeline.SelectObject(timeline.CreateWidget(emitter));
 		}
 
-		private void tmrRealtime_Tick(object sender, System.EventArgs e)
+		private void tmrRealtime_Tick(object sender, EventArgs e)
 		{
 			DateTime now = DateTime.Now;
 			float elapsedSec = (float)(now - _lastTick).TotalSeconds;

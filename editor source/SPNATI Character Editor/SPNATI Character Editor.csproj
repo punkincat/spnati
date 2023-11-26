@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -108,17 +108,17 @@
     <Compile Include="Activities\BanterWizard.Designer.cs">
       <DependentUpon>BanterWizard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\CaseDataSlicer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Activities\CaseDataSlicer.Designer.cs">
-      <DependentUpon>CaseDataSlicer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Activities\CaseTemplateEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Activities\CaseTemplateEditor.Designer.cs">
       <DependentUpon>CaseTemplateEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\PoseSetEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Activities\PoseSetEditor.Designer.cs">
+      <DependentUpon>PoseSetEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\CharacterConfiguration.cs">
       <SubType>UserControl</SubType>
@@ -186,11 +186,11 @@
     <Compile Include="Activities\DictionaryEditor.Designer.cs">
       <DependentUpon>DictionaryEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\LineImporter.cs">
+    <Compile Include="Activities\ScratchPad.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Activities\LineImporter.Designer.cs">
-      <DependentUpon>LineImporter.cs</DependentUpon>
+    <Compile Include="Activities\ScratchPad.Designer.cs">
+      <DependentUpon>ScratchPad.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\PoseMatrixEditor.cs">
       <SubType>UserControl</SubType>
@@ -269,6 +269,12 @@
     <Compile Include="Charts\SkinnedChart.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\PoseSetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PoseSetControl.Designer.cs">
+      <DependentUpon>PoseSetControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CaseControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -277,6 +283,12 @@
     </Compile>
     <Compile Include="Controls\CharacterFolderDialog.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CharacterSettingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CharacterSettingControl.Designer.cs">
+      <DependentUpon>CharacterSettingControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\CodeReplaceBar.cs">
       <SubType>UserControl</SubType>
@@ -326,6 +338,12 @@
     </Compile>
     <Compile Include="Controls\Dashboards\TargetWidget.Designer.cs">
       <DependentUpon>TargetWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WardrobeAdvancedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WardrobeAdvancedForm.Designer.cs">
+      <DependentUpon>WardrobeAdvancedForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\DialogueAdvancedControl.cs">
       <SubType>UserControl</SubType>
@@ -670,24 +688,6 @@
     <Compile Include="Controls\ScratchPadImportControl.Designer.cs">
       <DependentUpon>ScratchPadImportControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\SlicerControls\IntervalSlicerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\SlicerControls\IntervalSlicerControl.Designer.cs">
-      <DependentUpon>IntervalSlicerControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\SlicerControls\OneShotSlicerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\SlicerControls\OneShotSlicerControl.Designer.cs">
-      <DependentUpon>OneShotSlicerControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\SlicerControls\StageSlicerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\SlicerControls\StageSlicerControl.Designer.cs">
-      <DependentUpon>StageSlicerControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\StageImageGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -802,9 +802,6 @@
     <Compile Include="Controls\VariableControls\ParameterField.Designer.cs">
       <DependentUpon>ParameterField.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataSlicers\IntervalSlicer.cs" />
-    <Compile Include="DataSlicers\OneShotSlicer.cs" />
-    <Compile Include="DataSlicers\StageSlicer.cs" />
     <Compile Include="DataStructures\BackgroundDatabase.cs" />
     <Compile Include="DataStructures\Banter.cs" />
     <Compile Include="DataStructures\BindableTag.cs" />
@@ -814,9 +811,11 @@
     <Compile Include="DataStructures\CaseLabel.cs" />
     <Compile Include="DataStructures\CaseNote.cs" />
     <Compile Include="DataStructures\CharacterHistory.cs" />
+    <Compile Include="DataStructures\CharacterSetting.cs" />
     <Compile Include="DataStructures\CharacterTagList.cs" />
     <Compile Include="DataStructures\ChecklistTask.cs" />
     <Compile Include="DataStructures\Choice.cs" />
+    <Compile Include="DataStructures\PoseSet.cs" />
     <Compile Include="DataStructures\ClothingDatabase.cs" />
     <Compile Include="DataStructures\ClothingDefinitions.cs" />
     <Compile Include="DataStructures\Collectible.cs" />
@@ -1025,10 +1024,10 @@
       <DependentUpon>ValidationControl.cs</DependentUpon>
     </Compile>
     <Compile Include="DataStructures\Behaviour.cs" />
-    <Compile Include="BulkReplaceTool.cs">
+    <Compile Include="Forms\BulkReplaceTool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BulkReplaceTool.Designer.cs">
+    <Compile Include="Forms\BulkReplaceTool.Designer.cs">
       <DependentUpon>BulkReplaceTool.cs</DependentUpon>
     </Compile>
     <Compile Include="DataStructures\Case.cs" />
@@ -1075,7 +1074,7 @@
     <Compile Include="DataStructures\VariableDatabase.cs" />
     <Compile Include="DesktopMessages.cs" />
     <Compile Include="DialogueDatabase.cs" />
-    <Compile Include="DialogueOperation.cs" />
+    <Compile Include="DataStructures\DialogueOperation.cs" />
     <Compile Include="EpilogueEditing\DataStructures\LiveSceneSegment.cs" />
     <Compile Include="EpilogueEditing\Interfaces\IFixedLength.cs" />
     <Compile Include="Forms\AddPoseForm.cs">
@@ -1175,8 +1174,8 @@
     <Compile Include="ImagePipeline\PipelineImporter.cs" />
     <Compile Include="ImagePipeline\PipelineNode.cs" />
     <Compile Include="ImagePipeline\ShaderFunctions.cs" />
-    <Compile Include="MarkerOperation.cs" />
-    <Compile Include="DialogueLine.cs" />
+    <Compile Include="DataStructures\MarkerOperation.cs" />
+    <Compile Include="DataStructures\DialogueLine.cs" />
     <Compile Include="EpilogueEditing\AnimationHelpers.cs" />
     <Compile Include="EpilogueEditing\DataStructures\LiveAnimatedObject.cs" />
     <Compile Include="EpilogueEditing\DataStructures\LiveBubble.cs" />
@@ -1348,12 +1347,6 @@
     <Compile Include="Forms\MacroManager.Designer.cs">
       <DependentUpon>MacroManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MarkerSetup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MarkerSetup.Designer.cs">
-      <DependentUpon>MarkerSetup.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\PoseExporter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1411,10 +1404,10 @@
     <Compile Include="GifWriter.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="GUIHelper.cs" />
-    <Compile Include="HelpForm.cs">
+    <Compile Include="Forms\HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HelpForm.Designer.cs">
+    <Compile Include="Forms\HelpForm.Designer.cs">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ImageCache.cs" />
@@ -1455,28 +1448,28 @@
     <Compile Include="TestRequirements.cs" />
     <Compile Include="WorkflowFilter.cs" />
     <Compile Include="WorkspaceMessages.cs" />
-    <Compile Include="NewCharacterPrompt.cs">
+    <Compile Include="Forms\NewCharacterPrompt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewCharacterPrompt.Designer.cs">
+    <Compile Include="Forms\NewCharacterPrompt.Designer.cs">
       <DependentUpon>NewCharacterPrompt.cs</DependentUpon>
     </Compile>
     <Compile Include="DataStructures\Metadata.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProgressForm.cs">
+    <Compile Include="Forms\ProgressForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProgressForm.Designer.cs">
+    <Compile Include="Forms\ProgressForm.Designer.cs">
       <DependentUpon>ProgressForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="IO\Serialization.cs" />
     <Compile Include="Providers\CharacterProvider.cs" />
-    <Compile Include="SettingsSetup.cs">
+    <Compile Include="Forms\SettingsSetup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SettingsSetup.Designer.cs">
+    <Compile Include="Forms\SettingsSetup.Designer.cs">
       <DependentUpon>SettingsSetup.cs</DependentUpon>
     </Compile>
     <Compile Include="DataStructures\Stage.cs" />
@@ -1495,11 +1488,11 @@
     <EmbeddedResource Include="Activities\BanterWizard.resx">
       <DependentUpon>BanterWizard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Activities\CaseDataSlicer.resx">
-      <DependentUpon>CaseDataSlicer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Activities\CaseTemplateEditor.resx">
       <DependentUpon>CaseTemplateEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activities\PoseSetEditor.resx">
+      <DependentUpon>PoseSetEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Activities\CharacterConfiguration.resx">
       <DependentUpon>CharacterConfiguration.cs</DependentUpon>
@@ -1534,8 +1527,8 @@
     <EmbeddedResource Include="Activities\DictionaryEditor.resx">
       <DependentUpon>DictionaryEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Activities\LineImporter.resx">
-      <DependentUpon>LineImporter.cs</DependentUpon>
+    <EmbeddedResource Include="Activities\ScratchPad.resx">
+      <DependentUpon>ScratchPad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Activities\MarkerEditor.resx">
       <DependentUpon>MarkerEditor.cs</DependentUpon>
@@ -1594,7 +1587,7 @@
     <EmbeddedResource Include="Activities\WritingAid.resx">
       <DependentUpon>WritingAid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkReplaceTool.resx">
+    <EmbeddedResource Include="Forms\BulkReplaceTool.resx">
       <DependentUpon>BulkReplaceTool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Charts\StackedBarChart.resx">
@@ -1602,6 +1595,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Charts\BarChart.resx">
       <DependentUpon>BarChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PoseSetControl.resx">
+      <DependentUpon>PoseSetControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CaseControl.resx">
       <DependentUpon>CaseControl.cs</DependentUpon>
@@ -1611,6 +1607,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CharacterFolderDialog.resx">
       <DependentUpon>CharacterFolderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CharacterSettingControl.resx">
+      <DependentUpon>CharacterSettingControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CodeReplaceBar.resx">
       <DependentUpon>CodeReplaceBar.cs</DependentUpon>
@@ -1635,6 +1634,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Dashboards\TargetWidget.resx">
       <DependentUpon>TargetWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WardrobeAdvancedForm.resx">
+      <DependentUpon>WardrobeAdvancedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\DialogueAdvancedControl.resx">
       <DependentUpon>DialogueAdvancedControl.cs</DependentUpon>
@@ -1839,15 +1841,6 @@
     <EmbeddedResource Include="Controls\ScratchPadImportControl.resx">
       <DependentUpon>ScratchPadImportControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\SlicerControls\IntervalSlicerControl.resx">
-      <DependentUpon>IntervalSlicerControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\SlicerControls\OneShotSlicerControl.resx">
-      <DependentUpon>OneShotSlicerControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\SlicerControls\StageSlicerControl.resx">
-      <DependentUpon>StageSlicerControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Controls\StageImageGrid.resx">
       <DependentUpon>StageImageGrid.cs</DependentUpon>
     </EmbeddedResource>
@@ -1995,9 +1988,6 @@
     <EmbeddedResource Include="Forms\MacroManager.resx">
       <DependentUpon>MacroManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MarkerSetup.resx">
-      <DependentUpon>MarkerSetup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PipelineEditor.resx">
       <DependentUpon>PipelineEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -2031,13 +2021,13 @@
     <EmbeddedResource Include="Forms\WhatsNew.resx">
       <DependentUpon>WhatsNew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HelpForm.resx">
+    <EmbeddedResource Include="Forms\HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewCharacterPrompt.resx">
+    <EmbeddedResource Include="Forms\NewCharacterPrompt.resx">
       <DependentUpon>NewCharacterPrompt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProgressForm.resx">
+    <EmbeddedResource Include="Forms\ProgressForm.resx">
       <DependentUpon>ProgressForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -2053,7 +2043,7 @@
     <EmbeddedResource Include="Forms\PropImporter.resx">
       <DependentUpon>PropImporter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SettingsSetup.resx">
+    <EmbeddedResource Include="Forms\SettingsSetup.resx">
       <DependentUpon>SettingsSetup.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -2184,22 +2174,7 @@
     <None Include="Hunspellx86.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="Resources\Images\BaseCode.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Images\LineupAll.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Images\LineupClothing.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Images\LineupPose.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Images\PoseCode.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Images\StageCode.png">
+    <Content Include="VersionHistory\v6.9.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="VersionHistory\v6.8.3.html">
@@ -2368,13 +2343,7 @@
     <Content Include="Help\images\nickname.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Help\images\slicer.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Help\images\text_formatting.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Help\line_slicer.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Help\data_analyzer.html">
@@ -2681,7 +2650,13 @@
     <None Include="Icons\Sort.png" />
     <None Include="Icons\AddPause.png" />
     <None Include="Icons\SpeechBubble.png" />
-    <Content Include="Icons\EllipsisFilled.png" />
+    <None Include="Icons\EllipsisFilled.png" />
+    <None Include="Images\BaseCode.png" />
+    <None Include="Images\LineupAll.png" />
+    <None Include="Images\LineupClothing.png" />
+    <None Include="Images\LineupPose.png" />
+    <None Include="Images\PoseCode.png" />
+    <None Include="Images\StageCode.png" />
     <Content Include="Resources\license.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

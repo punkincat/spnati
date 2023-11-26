@@ -537,7 +537,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			//});
 		}
 
-		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, LiveObject selectedObject, LiveObject selectedPreview, bool inPlayback)
+		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, LiveObject selectedObject, LiveObject selectedPreview, bool inPlayback, bool drawAxes = false)
 		{
 			Scene.Draw(g, sceneTransform, false);
 
@@ -551,7 +551,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 
 			//camera bounds
-			Camera.Draw(g, sceneTransform, markers, inPlayback);
+			Camera.Draw(g, sceneTransform, markers, inPlayback, drawAxes);
 
 			//textboxes
 			g.MultiplyTransform(Camera.WorldTransform);
@@ -666,7 +666,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			return null;
 		}
 
-		public override LiveObject GetObjectAtPoint(int x, int y, Matrix sceneTransform, bool ignoreMarkers, List<string> markers)
+		public override LiveObject GetObjectAtPoint(int x, int y, Matrix sceneTransform, List<string> markers)
 		{
 			LiveObject previewSource = Tracks.Find(t => t.LinkedPreview != null);
 			if (previewSource != null)
@@ -841,15 +841,41 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			throw new NotSupportedException();
 		}
 
+		public bool IdPreviouslyUsed(string id)
+		{
+			if (PreviousSegment == null)
+			{
+				return false;
+			}
+			else if(PreviousSegment.IdPreviouslyUsed(id))
+			{
+				return true;
+			}
+			else
+			{
+				return PreviousSegment.Tracks.Find(s => s.Id == id) != null;
+			}
+		}
+
 		public string GetUniqueId(string id)
 		{
 			int suffix = 0;
 			string prefix = id;
-			while (Tracks.Find(s => s.Id == id) != null)
+			bool first = true;
+			do
 			{
-				suffix++;
-				id = prefix + suffix;
-			}
+				if (!first)
+				{
+					suffix++;
+					id = prefix + suffix;
+				}
+				while (Tracks.Find(s => s.Id == id) != null)
+				{
+					suffix++;
+					id = prefix + suffix;
+				}
+				first = false;
+			} while (IdPreviouslyUsed(id));
 
 			return id;
 		}

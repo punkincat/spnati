@@ -21,6 +21,7 @@ namespace Desktop.CommonControls.PropertyControls
 			txtValue.Multiline = attrib.Multiline;
 			_validatorMethodName = attrib.Validator;
 			_formatterMethodName = attrib.Formatter;
+			txtValue.Height = attrib.RowHeight - 10;
 		}
 
 		public override void ApplyMacro(List<string> values)
@@ -98,7 +99,7 @@ namespace Desktop.CommonControls.PropertyControls
 			}
 		}
 
-		private void txtValue_TextChanged(object sender, System.EventArgs e)
+		private void txtValue_TextChanged(object sender, EventArgs e)
 		{
 			Save();
 		}

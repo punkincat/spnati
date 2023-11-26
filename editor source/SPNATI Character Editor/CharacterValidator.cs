@@ -9,7 +9,7 @@ namespace SPNATI_Character_Editor
 {
 	public static class CharacterValidator
 	{
-		static String[] falsePlurals = { "pants", "shorts", "panties", "boxers", "tights", "leggings", "spats", "glasses", "sunglasses", "shades" };
+		static string[] falsePlurals = { "pants", "shorts", "panties", "boxers", "tights", "leggings", "spats", "glasses", "sunglasses", "shades" };
 
 		/// <summary>
 		/// Validates the character's dialogue and returns a list of warnings (bad images, targets, etc.)
@@ -58,6 +58,11 @@ namespace SPNATI_Character_Editor
 				{
 					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, string.Format("Intelligence level starting at stage {0}, but character has no stage {0}", stage)));
 				}
+			}
+
+			if (string.IsNullOrEmpty(character.Metadata.Description))
+			{
+				warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, "Character has no description (on the Metadata tab)."));
 			}
 
 			//wardrobe
@@ -339,6 +344,15 @@ namespace SPNATI_Character_Editor
 										warnings.Add(new ValidationError(ValidationFilterLevel.MissingImages, string.Format("Pose {1} does not exist. {0}", caseLabel, img), context));
 									}
 								}
+								else if (img.StartsWith("set:"))
+								{
+									string id = img.Substring(4);
+									PoseSet set = character.PoseSets.Find(p => p.Id == id);
+									if (set == null)
+									{
+										warnings.Add(new ValidationError(ValidationFilterLevel.MissingImages, string.Format("Pose set {1} does not exist. {0}", caseLabel, img), context));
+									}
+								}
 								else
 								{
 									if (!File.Exists(Path.Combine(Config.GetRootDirectory(character), img)))
@@ -385,20 +399,77 @@ namespace SPNATI_Character_Editor
 				warnings.Add(new ValidationError(ValidationFilterLevel.Case, "Character has no After Finished lines. Even if the Finished lines purposefully handle this case, it is advised to separate the Finished and After Finished lines into separate cases."));
 			}
 
+			foreach (Marker marker in character.Markers.Value.Values)
+			{
+				if (Regex.IsMatch(marker.Name, @"[^\w+]"))
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Case, string.Format("Unless other characters already target marker {0}, it is advised to rename it using only letters, numbers, and underscores.", marker.Name)));
+				}
+			}
+
 			//endings
 			foreach (Epilogue ending in character.Endings)
 			{
 				ValidateEpilogue(ending, warnings, unusedImages);
 			}
 
+			foreach (PoseSet poseSet in character.PoseSets)
+			{
+				ValidatePoseSet(character, poseSet, warnings, unusedImages);
+			}
+
 			foreach (Pose pose in character.Poses)
 			{
-				ValidatePose(character, pose, unusedImages);
+				ValidatePose(character, pose, warnings, unusedImages);
 			}
 
 			foreach (Collectible collectible in character.Collectibles.Collectibles)
 			{
 				ValidateCollectible(character, collectible, warnings, unusedImages, usedCollectibles);
+			}
+
+			if (!Listing.Instance.IsCharacterReleased(character.FolderName))
+			{
+				warnings.Add(new ValidationError(ValidationFilterLevel.Settings, "Characters that are not on the main roster are not allowed to have custom settings."));
+			}
+			else
+			{
+				CharacterHistory history = CharacterHistory.Get(character, false);
+				LineWork current = history.Current;
+				int maxSettings = TestRequirements.Instance.GetAllowedSettings(current.TotalLines);
+				int currentSettings = 0;
+				foreach (CharacterSettingsGroup group in character.Behavior.CharacterSettingsGroups)
+				{
+					currentSettings += group.CharacterSettings.Count - 1;
+				}
+				if (currentSettings > maxSettings)
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Settings, "Character has more custom settings than allowed for this line count."));
+				}
+			}
+			
+			List<string> characterSettingMarkers = new List<string>();
+			foreach (CharacterSettingsGroup group in character.Behavior.CharacterSettingsGroups)
+			{
+				if (group.CharacterSettings.Count == 1)
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Settings, string.Format("Character settings group {0} has only one setting value.", group.ToString())));
+				}
+				if (string.IsNullOrEmpty(group.Marker))
+				{
+					warnings.Add(new ValidationError(ValidationFilterLevel.Settings, string.Format("Character settings group {0} sets no marker.", group.ToString())));
+				}
+				else
+				{
+					if (characterSettingMarkers.Contains(group.Marker))
+					{
+						warnings.Add(new ValidationError(ValidationFilterLevel.Settings, string.Format("Multiple settings groups set the same marker {0}.", group.Marker)));
+					}
+					else
+					{
+						characterSettingMarkers.Add(group.Marker);
+					}
+				}
 			}
 
 			if (unusedImages.Count > 0)
@@ -434,12 +505,34 @@ namespace SPNATI_Character_Editor
 					ValidateSaying(condition.Character, condition.Said, warnings, caseTag, context, "Said Text");
 				}
 
+				if (!string.IsNullOrEmpty(condition.FilterTagAdv))
+				{
+					string[] pieces = condition.FilterTagAdv.Split(new char[] {'|','&'}, StringSplitOptions.RemoveEmptyEntries);
+					foreach (string piece in pieces)
+					{
+						if (piece[0] == '!')
+						{
+							if (!TagDatabase.TagExists(piece.Substring(1)))
+							{
+								warnings.Add(new ValidationError(ValidationFilterLevel.Case, string.Format("Tag {0} does not exist.", piece.Substring(1)), context));
+							}
+						}
+						else
+						{
+							if (!TagDatabase.TagExists(piece))
+							{
+								warnings.Add(new ValidationError(ValidationFilterLevel.Case, string.Format("Tag {0} does not exist.", piece), context));
+							}
+						}
+					}
+				}
+
 				if (condition.Role == "target" && !trigger.HasTarget)
 				{
 					warnings.Add(new ValidationError(ValidationFilterLevel.TargetedDialogue, string.Format("\"target\" is not allowed for case \"{0}\".", caseTag), context));
 				}
 
-				if (!String.IsNullOrEmpty(condition.Character))
+				if (!string.IsNullOrEmpty(condition.Character))
 				{
 					Character target = CharacterDatabase.Get(condition.Character);
 
@@ -516,15 +609,15 @@ namespace SPNATI_Character_Editor
 					int.TryParse(stageCase.CustomPriority, out caseCustomPriority);
 					bool isPostDialogueCase = !string.IsNullOrEmpty(stageCase.Hidden) && (caseCustomPriority < 0);
 
-					if (!String.IsNullOrEmpty(condition.SayingMarker) && !isPostDialogueCase)
+					if (!string.IsNullOrEmpty(condition.SayingMarker) && !isPostDialogueCase)
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Case, string.Format("Trying to use a Saying Marker condition on Self, which will always fail. {0}", caseLabel), context));
 					}
-					if (!String.IsNullOrEmpty(condition.Saying) && !isPostDialogueCase)
+					if (!string.IsNullOrEmpty(condition.Saying) && !isPostDialogueCase)
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Case, string.Format("Trying to use a Saying Text condition on Self, which will always fail. {0}", caseLabel), context));
 					}
-					if (!String.IsNullOrEmpty(condition.Pose) && !isPostDialogueCase)
+					if (!string.IsNullOrEmpty(condition.Pose) && !isPostDialogueCase)
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Case, string.Format("Trying to use a Pose condition on Self, which will always fail. {0}", caseLabel), context));
 					}
@@ -633,7 +726,7 @@ namespace SPNATI_Character_Editor
 				{
 					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Wardrobe contains a layer of type skip, which is not allowed in default costumes. Remove the layer or replace it with a non-skipped clothing item."));
 				}
-				else if (String.IsNullOrEmpty(c.Name))
+				else if (string.IsNullOrEmpty(c.Name))
 				{
 					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"A clothing layer has no name. Choose a name for the layer."));
 				}
@@ -644,7 +737,7 @@ namespace SPNATI_Character_Editor
 					{
 						pluralGuess = c.Name;
 					}
-					foundGeneric = !String.IsNullOrEmpty(c.GenericName) || foundGeneric;
+					foundGeneric = !string.IsNullOrEmpty(c.GenericName) || foundGeneric;
 
 					if (c.Position == "upper" && c.Type == "major")
 						upper = c.Name;
@@ -661,7 +754,7 @@ namespace SPNATI_Character_Editor
 
 
 
-					if (String.IsNullOrEmpty(c.Position))
+					if (string.IsNullOrEmpty(c.Position))
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" has no position set. Choose a position for the layer."));
 					}
@@ -681,7 +774,7 @@ namespace SPNATI_Character_Editor
 						warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" should be set to plural. Even though it's only one item, it's still a grammatically plural noun (ex. \"Those are some nice {c.Name}\")."));
 					}
 
-					if (!String.IsNullOrEmpty(c.GenericName))
+					if (!string.IsNullOrEmpty(c.GenericName))
 					{
 						bool validCategory = false;
 						bool lowercaseCategory = false;
@@ -773,17 +866,17 @@ namespace SPNATI_Character_Editor
 						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip as its first layer, which is not allowed because it would cause problems in Stage-0 cases such as Selected. Make the first layer a non-skipped clothing item."));
 					}
 
-					if (!String.IsNullOrEmpty(c.Name))
+					if (!string.IsNullOrEmpty(c.Name))
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip with a non-empty name, which may interfere with functions determining character status. Remove names from layers of type skip."));
 					}
 
-					if (!String.IsNullOrEmpty(c.Position))
+					if (!string.IsNullOrEmpty(c.Position))
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip with a non-empty position field, which may interfere with functions determining character status. Remove all metadata from layers of type skip."));
 					}
 
-					if (!String.IsNullOrEmpty(c.GenericName))
+					if (!string.IsNullOrEmpty(c.GenericName))
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Alternate costume \"{skin.Name}\" has a layer of type skip with a non-empty generic name field, which may interfere with functions determining character status. Remove all metadata from layers of type skip."));
 					}
@@ -794,7 +887,7 @@ namespace SPNATI_Character_Editor
 					}
 
 				}
-				else if (String.IsNullOrEmpty(c.Name))
+				else if (string.IsNullOrEmpty(c.Name))
 				{
 					warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Alternate costume \"{skin.Name}\" has a non-skipped layer with no name. Choose a name for the layer."));
 				}
@@ -805,7 +898,7 @@ namespace SPNATI_Character_Editor
 					{
 						pluralGuess = c.Name;
 					}
-					foundGeneric = !String.IsNullOrEmpty(c.GenericName) || foundGeneric;
+					foundGeneric = !string.IsNullOrEmpty(c.GenericName) || foundGeneric;
 
 					if (c.Position == "upper" && c.Type == "major")
 						upper = c.Name;
@@ -820,7 +913,7 @@ namespace SPNATI_Character_Editor
 					if (c.Position == "other" && c.Type == "major")
 						otherMajor = c.Name;
 
-					if (String.IsNullOrEmpty(c.Position))
+					if (string.IsNullOrEmpty(c.Position))
 					{
 						warnings.Add(new ValidationError(ValidationFilterLevel.Metadata, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" has no position set. Choose a position for the layer."));
 					}
@@ -840,7 +933,7 @@ namespace SPNATI_Character_Editor
 						warnings.Add(new ValidationError(ValidationFilterLevel.Reskins, $"Clothing layer \"{c.Name}\" of alternate costume \"{skin.Name}\" should be set to plural. Even though it's only one item, it's still a grammatically plural noun (ex. \"Those are some nice {c.Name}\")."));
 					}
 
-					if (!String.IsNullOrEmpty(c.GenericName))
+					if (!string.IsNullOrEmpty(c.GenericName))
 					{
 						bool validCategory = false;
 						bool lowercaseCategory = false;
@@ -1038,16 +1131,21 @@ namespace SPNATI_Character_Editor
 				bool perTarget;
 
 				name = Marker.ExtractConditionPieces(name, out op, out value, out perTarget);
-				if (character.Markers.IsValueCreated && !character.Markers.Value.Contains(name))
+				/*if (character.Markers.IsValueCreated && !character.Markers.Value.Contains(name))
 				{
 					//Count could be 0 for characters who have no editor data, so unless we decide to duplicate MarkerData in CachedCharacter, just ignore it for unloaded characters
 					warnings.Add(new ValidationError(ValidationFilterLevel.Markers, string.Format("{1} has no dialogue that sets marker {2}, so this case will never trigger. {0}", caseLabel, character.Name, name), context));
 				}
 				else
+				{*/
+				if (character.IsFullyLoaded)
 				{
-					if (character.IsFullyLoaded)
+					if (character.Markers.IsValueCreated && !character.Markers.Value.Contains(name))
 					{
-						if (!string.IsNullOrEmpty(stageRange))
+						//Count could be 0 for characters who have no editor data, so unless we decide to duplicate MarkerData in CachedCharacter, just ignore it for unloaded characters
+						warnings.Add(new ValidationError(ValidationFilterLevel.Markers, string.Format("{1} has no dialogue that sets marker {2}, so this case will never trigger. {0}", caseLabel, character.Name, name), context));
+					}
+					else if (!string.IsNullOrEmpty(stageRange))
 						{
 							//verify that a marker can even be set prior to this point
 							bool setsAtAll = false;
@@ -1149,7 +1247,7 @@ namespace SPNATI_Character_Editor
 								if (!used)
 								{
 									// if value is set to a variable, it could be any value
-									foreach (String val in m.Values)
+									foreach (string val in m.Values)
 									{
 										if (val.Contains("~"))
 										{
@@ -1174,7 +1272,6 @@ namespace SPNATI_Character_Editor
 								warnings.Add(new ValidationError(ValidationFilterLevel.Markers, $"{character.Name} has no dialogue that sets marker {name} to {value}, so this case will never trigger. {caseLabel}", context));
 							}
 						}
-					}
 				}
 			}
 		}
@@ -1299,11 +1396,25 @@ namespace SPNATI_Character_Editor
 		/// <param name="pose"></param>
 		/// <param name="warnings"></param>
 		/// <param name="baseImages"></param>
-		private static void ValidatePose(Character character, Pose pose, HashSet<string> unusedImages)
+		private static void ValidatePose(Character character, Pose pose, List<ValidationError> warnings, HashSet<string> unusedImages, string skinFolder = null)
 		{
 			unusedImages.Remove("custom:" + pose.Id);
+			List<string> spriteIDs = new List<string>();
 			foreach (Sprite sprite in pose.Sprites)
 			{
+				if (spriteIDs.Contains(sprite.Id))
+				{
+					if (!string.IsNullOrEmpty(skinFolder))
+					{
+						warnings.Add(new ValidationError(ValidationFilterLevel.MissingImages, string.Format("Costume {2}: Pose custom:{0} contains multiple sprites with the same ID {1}", pose.Id, sprite.Id, skinFolder), null));
+					}
+					else
+					{
+						warnings.Add(new ValidationError(ValidationFilterLevel.MissingImages, string.Format("Pose custom:{0} contains multiple sprites with the same ID {1}", pose.Id, sprite.Id), null));
+					}
+					continue;
+				}
+				spriteIDs.Add(sprite.Id);
 				string path = GetRelativeImagePath(character, sprite.Src);
 				if (!string.IsNullOrEmpty(path))
 				{
@@ -1343,6 +1454,54 @@ namespace SPNATI_Character_Editor
 									unusedImages.Remove(i + path.Substring(1));
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+
+		private static void ValidatePoseSet(Character character, PoseSet poseSet, List<ValidationError> warnings, HashSet<string> unusedImages)
+		{
+			unusedImages.Remove("set:" + poseSet.Id);
+			foreach (PoseSetEntry entry in poseSet.Entries)
+			{
+				if (!entry.Img.StartsWith("custom:"))
+				{
+					string path = GetRelativeImagePath(character, entry.Img);
+					if (string.IsNullOrEmpty(path))
+					{
+						unusedImages.Remove("0" + path.Substring(1));
+					}
+					if (!string.IsNullOrEmpty(path))
+					{
+						List<int> selectedStages = new List<int>();
+						if (int.TryParse(entry.Stage, out int x))
+						{
+							selectedStages.Add(x);
+						}
+						else
+						{
+							string[] strings = entry.Stage.Split('-');
+							if (strings.Length != 2)
+							{
+								continue;
+							}
+							if (int.TryParse(strings[0], out int y) && int.TryParse(strings[1], out int z))
+							{
+								for (int i = y; i <= z; i++)
+								{
+									selectedStages.Add(i);
+								}
+							}
+							else
+							{
+								continue;
+							}
+						}
+
+						foreach (int i in selectedStages)
+						{
+						unusedImages.Remove(i + path.Substring(1));
 						}
 					}
 				}
@@ -1565,8 +1724,14 @@ namespace SPNATI_Character_Editor
 
 			foreach (Pose pose in skin.Poses)
 			{
-				ValidatePose(character, pose, unusedImages);
+				ValidatePose(character, pose, warnings, unusedImages, skin.Folder);
 				missingImages.Remove("custom:" + pose.Id);
+			}
+
+			foreach (PoseSet poseSet in skin.PoseSets)
+			{
+				ValidatePoseSet(character, poseSet, warnings, unusedImages);
+				missingImages.Remove("set:" + poseSet.Id);
 			}
 
 			// custom poses from the base skin can never be missing in an alt skin
@@ -1574,6 +1739,11 @@ namespace SPNATI_Character_Editor
 			foreach (Pose pose in character.Poses)
 			{
 				missingImages.Remove("custom:" + pose.Id);
+			}
+
+			foreach (PoseSet poseSet in character.PoseSets)
+			{
+				missingImages.Remove("set:" + poseSet.Id);
 			}
 
 			if (missingImages.Count > 0)
@@ -1675,5 +1845,6 @@ namespace SPNATI_Character_Editor
 		Epilogue = 1 << 9,
 		Reskins = 1 << 10,
 		Collectibles = 1 << 11,
+		Settings = 1 << 12,
 	}
 }

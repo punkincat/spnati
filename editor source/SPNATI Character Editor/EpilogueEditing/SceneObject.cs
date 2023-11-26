@@ -27,6 +27,11 @@ namespace SPNATI_Character_Editor.EpilogueEditing
 		public float SkewY = 0;
 		public float Zoom = 1;
 		public float Rotation = 0;
+		public float ClipLeft = 0;
+		public float ClipRight = 0;
+		public float ClipTop = 0;
+		public float ClipBottom = 0;
+		public float ClipRadius = 0;
 		private float _alpha = 100;
 		public float Alpha
 		{
@@ -233,6 +238,11 @@ namespace SPNATI_Character_Editor.EpilogueEditing
 			ScaleY = source.ScaleY;
 			SkewX = source.SkewX;
 			SkewY = source.SkewY;
+			ClipLeft = source.ClipLeft;
+			ClipTop = source.ClipTop;
+			ClipRight = source.ClipRight;
+			ClipBottom = source.ClipBottom;
+			ClipRadius = source.ClipRadius;
 			PivotX = source.PivotX;
 			PivotY = source.PivotY;
 			Rotation = source.Rotation;
@@ -348,6 +358,26 @@ namespace SPNATI_Character_Editor.EpilogueEditing
 			{
 				float.TryParse(frame.SkewY, NumberStyles.Float, CultureInfo.InvariantCulture, out SkewY);
 			}
+			if (!string.IsNullOrEmpty(frame.ClipLeft))
+			{
+				float.TryParse(frame.ClipLeft, NumberStyles.Float, CultureInfo.InvariantCulture, out ClipLeft);
+			}
+			if (!string.IsNullOrEmpty(frame.ClipTop))
+			{
+				float.TryParse(frame.ClipTop, NumberStyles.Float, CultureInfo.InvariantCulture, out ClipTop);
+			}
+			if (!string.IsNullOrEmpty(frame.ClipRight))
+			{
+				float.TryParse(frame.ClipRight, NumberStyles.Float, CultureInfo.InvariantCulture, out ClipRight);
+			}
+			if (!string.IsNullOrEmpty(frame.ClipBottom))
+			{
+				float.TryParse(frame.ClipBottom, NumberStyles.Float, CultureInfo.InvariantCulture, out ClipBottom);
+			}
+			if (!string.IsNullOrEmpty(frame.ClipRadius))
+			{
+				float.TryParse(frame.ClipRadius, NumberStyles.Float, CultureInfo.InvariantCulture, out ClipRadius);
+			}
 			if (!string.IsNullOrEmpty(frame.Rotation))
 			{
 				float.TryParse(frame.Rotation, NumberStyles.Float, CultureInfo.InvariantCulture, out Rotation);
@@ -440,6 +470,26 @@ namespace SPNATI_Character_Editor.EpilogueEditing
 			if ((last.LinkedFrame == null || !string.IsNullOrEmpty(last.LinkedFrame.SkewY)) && (frame.LinkedFrame == null || !string.IsNullOrEmpty(frame.LinkedFrame.SkewY)))
 			{
 				SkewY = Interpolate(last.SkewY, frame.SkewY, frame.Tween, time, lastLast.SkewY, nextNext.SkewY);
+			}
+			if ((last.LinkedFrame == null || !string.IsNullOrEmpty(last.LinkedFrame.ClipLeft)) && (frame.LinkedFrame == null || !string.IsNullOrEmpty(frame.LinkedFrame.ClipLeft)))
+			{
+				ClipLeft = Interpolate(last.ClipLeft, frame.ClipLeft, frame.Tween, time, lastLast.ClipLeft, nextNext.ClipLeft);
+			}
+			if ((last.LinkedFrame == null || !string.IsNullOrEmpty(last.LinkedFrame.ClipTop)) && (frame.LinkedFrame == null || !string.IsNullOrEmpty(frame.LinkedFrame.ClipTop)))
+			{
+				ClipTop = Interpolate(last.ClipTop, frame.ClipTop, frame.Tween, time, lastLast.ClipTop, nextNext.ClipTop);
+			}
+			if ((last.LinkedFrame == null || !string.IsNullOrEmpty(last.LinkedFrame.ClipRight)) && (frame.LinkedFrame == null || !string.IsNullOrEmpty(frame.LinkedFrame.ClipRight)))
+			{
+				ClipRight = Interpolate(last.ClipRight, frame.ClipRight, frame.Tween, time, lastLast.ClipRight, nextNext.ClipRight);
+			}
+			if ((last.LinkedFrame == null || !string.IsNullOrEmpty(last.LinkedFrame.ClipBottom)) && (frame.LinkedFrame == null || !string.IsNullOrEmpty(frame.LinkedFrame.ClipBottom)))
+			{
+				ClipBottom = Interpolate(last.ClipBottom, frame.ClipBottom, frame.Tween, time, lastLast.ClipBottom, nextNext.ClipBottom);
+			}
+			if ((last.LinkedFrame == null || !string.IsNullOrEmpty(last.LinkedFrame.ClipRadius)) && (frame.LinkedFrame == null || !string.IsNullOrEmpty(frame.LinkedFrame.ClipRadius)))
+			{
+				ClipRadius = Interpolate(last.ClipRadius, frame.ClipRadius, frame.Tween, time, lastLast.ClipRadius, nextNext.ClipRadius);
 			}
 			if ((last.LinkedFrame == null || !string.IsNullOrEmpty(last.LinkedFrame.Zoom)) && (frame.LinkedFrame == null || !string.IsNullOrEmpty(frame.LinkedFrame.Zoom)))
 			{

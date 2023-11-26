@@ -190,6 +190,11 @@ function PoseSprite(id, src, onload, pose, args) {
     this.scaley = args.scaley || 1;
     this.skewx = args.skewx || 0;
     this.skewy = args.skewy || 0;
+    this.clipleft = args.clipleft || 0;
+    this.clipright = args.clipright || 0;
+    this.cliptop = args.cliptop || 0;
+    this.clipbottom = args.clipbottom || 0;
+    this.clipradius = args.clipradius || 0;
     this.rotation = args.rotation || 0;
     this.alpha = args.alpha;
     this.pivotx = args.pivotx;
@@ -305,9 +310,19 @@ PoseSprite.prototype.draw = function() {
         });
     }
 
+    let clipPath = "none";
+    if (this.clipleft + this.clipright + this.cliptop + this.clipbottom + this.clipradius > 0) {
+
+        clipPath = "inset(" + this.cliptop + "px " + this.clipright + "px " + this.clipbottom + "px " + this.clipleft + "px";
+        if (this.clipradius > 0) {
+            clipPath += " round " + this.clipradius + "px";
+        }
+        clipPath += ")";
+    }
 
     $(this.pivot).css({
       "transform": "rotate(" + this.rotation + "deg) scale(" + this.scalex + ", " + this.scaley + ") skew(" + this.skewx + "deg, " + this.skewy + "deg)",
+      "clip-path": clipPath,
     });
 }
 
@@ -419,6 +434,11 @@ PoseAnimation.prototype.updateSprite = function (fromFrame, toFrame, t, idx) {
     this.interpolate("scaley", fromFrame, toFrame, t, idx);
     this.interpolate("skewx", fromFrame, toFrame, t, idx);
     this.interpolate("skewy", fromFrame, toFrame, t, idx);
+    this.interpolate("clipleft", fromFrame, toFrame, t, idx);
+    this.interpolate("clipright", fromFrame, toFrame, t, idx);
+    this.interpolate("cliptop", fromFrame, toFrame, t, idx);
+    this.interpolate("clipbottom", fromFrame, toFrame, t, idx);
+    this.interpolate("clipradius", fromFrame, toFrame, t, idx);
     this.interpolate("alpha", fromFrame, toFrame, t, idx);
     this.target.draw();
 }
@@ -579,6 +599,11 @@ function parseSpriteDefinition ($xml, player) {
     
     targetObj.skewx = parseFloat(targetObj.skewx, 10);
     targetObj.skewy = parseFloat(targetObj.skewy, 10);
+    targetObj.clipleft = parseFloat(targetObj.clipleft, 10);
+    targetObj.cliptop = parseFloat(targetObj.cliptop, 10);
+    targetObj.clipright = parseFloat(targetObj.clipright, 10);
+    targetObj.clipbottom = parseFloat(targetObj.clipbottom, 10);
+    targetObj.clipradius = parseFloat(targetObj.clipradius, 10);
     targetObj.x = parseFloat(targetObj.x, 10);
     targetObj.y = parseFloat(targetObj.y, 10);
     targetObj.delay = parseFloat(targetObj.delay) * 1000 || 0;

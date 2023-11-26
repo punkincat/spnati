@@ -159,7 +159,7 @@ namespace SPNATI_Character_Editor
 			string tag = selectedCase?.Tag;
 			string filterType = null;
 			string filterPosition = null;
-			bool removing = false;
+			bool removing;
 			bool removed = false;
 			bool lookForward = false;
 			bool filterStages = _filterStagesToTarget;

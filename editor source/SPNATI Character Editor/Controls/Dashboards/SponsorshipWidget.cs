@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SPNATI_Character_Editor.DataStructures;
+using System.Collections;
 using System.Text;
 using System.Windows.Forms;
 
@@ -28,7 +29,6 @@ namespace SPNATI_Character_Editor.Controls.Dashboards
 		{
 			CharacterHistory history = CharacterHistory.Get(_character, false);
 			TestRequirements requirements = TestRequirements.Instance;
-			StringBuilder sb = new StringBuilder();
 			float fileSize = history.GetTotalFileSize(true);
 			LineWork current = history.Current;
 			barLines.Maximum = requirements.Lines;
@@ -39,10 +39,35 @@ namespace SPNATI_Character_Editor.Controls.Dashboards
 			barTargets.Value = current.TargetedCount;
 			barUnique.Maximum = requirements.UniqueTargets;
 			barUnique.Value = current.Targets.Count;
-			barSize.Maximum = requirements.SizeLimit;
+
+			if (Listing.Instance.IsCharacterReleased(_character.FolderName))
+			{
+				barSize.Maximum = requirements.BiggerSizeLimit;
+			}
+			else
+			{
+				barSize.Maximum = requirements.SizeLimit;
+			}
+
 			barSize.Value = (decimal)fileSize;
 			barCollectibles.Maximum = TestRequirements.Instance.GetAllowedCollectibles(current.TotalLines);
 			barCollectibles.Value = _character.Collectibles.Count;
+			int maxSettings = TestRequirements.Instance.GetAllowedSettings(current.TotalLines);
+			if (maxSettings < 1 || !Listing.Instance.IsCharacterReleased(_character.FolderName))
+			{
+				barSettings.Visible = false;
+			}
+			else
+			{
+				int currentSettings = 0;
+				foreach (CharacterSettingsGroup group in _character.Behavior.CharacterSettingsGroups)
+				{
+					currentSettings += group.CharacterSettings.Count;
+				}
+				barSettings.Visible = true;
+				barSettings.Maximum = maxSettings;
+				barSettings.Value = currentSettings;
+			}
 			grpRequirements.Unshield();
 			yield break;
 		}

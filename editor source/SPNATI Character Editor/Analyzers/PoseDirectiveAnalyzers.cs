@@ -147,6 +147,26 @@ namespace SPNATI_Character_Editor.Analyzers
 	{
 		public override string PropertyName { get { return "SkewY"; } }
 	}
+	public class PoseClipLeftAnalyzer : PoseDirectivePropertyAnalyzer
+	{
+		public override string PropertyName { get { return "ClipLeft"; } }
+	}
+	public class PoseClipTopAnalyzer : PoseDirectivePropertyAnalyzer
+	{
+		public override string PropertyName { get { return "ClipTop"; } }
+	}
+	public class PoseClipRightAnalyzer : PoseDirectivePropertyAnalyzer
+	{
+		public override string PropertyName { get { return "ClipRight"; } }
+	}
+	public class PoseClipBottomAnalyzer : PoseDirectivePropertyAnalyzer
+	{
+		public override string PropertyName { get { return "ClipBottom"; } }
+	}
+	public class PoseClipRadiusAnalyzer : PoseDirectivePropertyAnalyzer
+	{
+		public override string PropertyName { get { return "ClipRadius"; } }
+	}
 
 	public class PoseParentingAnalyzer : BooleanAnalyzer
 	{

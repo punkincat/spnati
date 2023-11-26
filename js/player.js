@@ -164,7 +164,16 @@ Player.prototype.resetState = function () {
         /* find and create all of their clothing */
         var clothingArr = [];
         $wardrobe.children('clothing').each(function () {
-            clothingArr.push(new Clothing($(this)));
+            var generic = $(this).attr('generic');
+            var name = $(this).attr('name');
+            var type = $(this).attr('type');
+            var position = $(this).attr('position');
+            var plural = $(this).attr('plural');
+            plural = (plural == 'null' ? null : plural == 'true');
+
+            var newClothing = new Clothing(name, generic, type, position, plural);
+
+            clothingArr.push(newClothing);
         });
 
         this.clothing = clothingArr;
@@ -282,55 +291,8 @@ Player.prototype.hasTag = function(tag) {
     return tag && this.tags && this.tags.indexOf(canonicalizeTag(tag)) >= 0;
 };
 
-
 Player.prototype.hasTags = function(tagAdv) {
-    var match = tagAdv.match(/^([^\&\|]*)(\&?)([^\&\|]*)(\|?)([^\&\|]*)(\&?)([^\&\|]*)\s*/);
-
-    if (!match)
-    {
-        return false;
-    }
-
-    var firstPart;
-
-    if (match[1] && match[3])
-    {
-        firstPart = this.hasTag(match[1]) && this.hasTag(match[3]);
-    }
-    else if (match[1])
-    {
-        firstPart = this.hasTag(match[1]);
-    }
-    else if (match[3])
-    {
-        firstPart = this.hasTag(match[3]);
-    }
-    else
-    {
-        firstPart = false;
-    }
-
-    if (firstPart){
-        return true;
-    }
-
-    if (match[5] && match[7])
-    {
-        return this.hasTag(match[5]) && this.hasTag(match[7]);
-    }
-    else if (match[5])
-    {
-        return this.hasTag(match[5]);
-    }
-    else if (match[7])
-    {
-        return this.hasTag(match[7]);
-    }
-    else
-    {
-        return false;
-    }
-
+    return tagAdv.split('\|').some(subs => subs.split('&').every(expr => this.hasTag(expr)));
 }
 
 Player.prototype.countLayers = function() {
@@ -560,7 +522,6 @@ function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber,
     var picElem = $metaXml.children('pic');
 
     this.image = picElem.text();
-    this.height = $metaXml.children('height').text();
     this.source = $metaXml.children('from').text();
     this.artist = $metaXml.children('artist').text();
     this.writer = $metaXml.children('writer').text();

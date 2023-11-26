@@ -40,6 +40,13 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			set { Set(value); LabelChanged?.Invoke(this, EventArgs.Empty); }
 		}
 
+		[Text(DisplayName = "Marker", GroupOrder = 2, Description = "Conditional marker for the scene")]
+		public string Marker
+		{
+			get { return Get<string>(); }
+			set { Set(value); }
+		}
+
 		private Image _background;
 		[FileSelect(DisplayName = "Background", GroupOrder = 5, Description = "Scene background image")]
 		public string BackgroundImage
@@ -143,6 +150,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		{
 			Character = character;
 			Name = scene.Name ?? "New scene";
+			Marker = scene.SceneMarker;
 			if (!string.IsNullOrEmpty(scene.BackgroundColor))
 			{
 				try
@@ -347,7 +355,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			return null;
 		}
 
-		public override LiveObject GetObjectAtPoint(int x, int y, Matrix sceneTransform, bool ignoreMarkers, List<string> markers)
+		public override LiveObject GetObjectAtPoint(int x, int y, Matrix sceneTransform, List<string> markers)
 		{
 			return null;
 		}
@@ -361,7 +369,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			return false;
 		}
 
-		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, LiveObject selectedObject, LiveObject selectedPreview, bool inPlayback)
+		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, LiveObject selectedObject, LiveObject selectedPreview, bool inPlayback, bool drawAxes = false)
 		{
 			Draw(g, sceneTransform, true);
 		}

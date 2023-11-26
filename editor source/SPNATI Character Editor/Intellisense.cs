@@ -61,6 +61,13 @@ namespace SPNATI_Character_Editor
 							currentContext.Context = ContextType.Parameter;
 							sb.Clear();
 						}
+						else if (c == '.')
+						{
+							//start of a subfunction
+							currentContext.FunctionName = sb.ToString();
+							currentContext.Context = ContextType.SubfunctionName;
+							sb.Clear();
+						}
 						else if (c == '~')
 						{
 							//parameterless function. This variable is finished, so we don't need to remember anything from its context
@@ -72,6 +79,35 @@ namespace SPNATI_Character_Editor
 						else if (!char.IsLetterOrDigit(c) && c != '_')
 						{
 							//not a valid function name, which means this wasn't a valid variable at all
+							contexts.Pop();
+							currentContext = contexts.Peek();
+							currentContext.Builder.Append("~" + sb.ToString() + "~");
+							sb = currentContext.Builder;
+						}
+						else
+						{
+							sb.Append(c);
+						}
+						break;
+					case ContextType.SubfunctionName:
+						if (c == '(' && sb.Length > 0)
+						{
+							//start of a parameter
+							currentContext.SubfunctionName = sb.ToString();
+							currentContext.Context = ContextType.Parameter;
+							sb.Clear();
+						}
+						else if (c == '~')
+						{
+							//parameterless subfunction. This variable is finished, so we don't need to remember anything from its context
+							contexts.Pop();
+							currentContext = contexts.Peek();
+							currentContext.Builder.Append("~" + sb.ToString() + "~");
+							sb = currentContext.Builder;
+						}
+						else if (!char.IsLetterOrDigit(c) && c != '_')
+						{
+							//not a valid subfunction name, which means this wasn't a valid variable at all
 							contexts.Pop();
 							currentContext = contexts.Peek();
 							currentContext.Builder.Append("~" + sb.ToString() + "~");
@@ -148,6 +184,10 @@ namespace SPNATI_Character_Editor
 		/// </summary>
 		public string FunctionName;
 		/// <summary>
+		/// Variable subfunction being used in the function
+		/// </summary>
+		public string SubfunctionName;
+		/// <summary>
 		/// Index of the function's parameter
 		/// </summary>
 		public int ParameterIndex;
@@ -174,6 +214,10 @@ namespace SPNATI_Character_Editor
 			{
 				result += "." + FunctionName;
 			}
+			if (!string.IsNullOrEmpty(SubfunctionName))
+			{
+				result += "." + SubfunctionName;
+			}
 			if (Context == ContextType.Parameter)
 			{
 				result += $"({ParameterIndex})";
@@ -193,6 +237,9 @@ namespace SPNATI_Character_Editor
 					break;
 				case ContextType.FunctionName:
 					FunctionName = Builder.ToString();
+					break;
+				case ContextType.SubfunctionName:
+					SubfunctionName = Builder.ToString();
 					break;
 				case ContextType.FunctionEnd:
 					Context = ContextType.VariableName;
@@ -218,6 +265,10 @@ namespace SPNATI_Character_Editor
 		/// Reading a function name
 		/// </summary>
 		FunctionName,
+		/// <summary>
+		/// Reading a subfunction name
+		/// </summary>
+		SubfunctionName,
 		/// <summary>
 		/// Reading a parameter, which could include nested variables
 		/// </summary>

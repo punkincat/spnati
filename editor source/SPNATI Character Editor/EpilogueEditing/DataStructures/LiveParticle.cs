@@ -137,7 +137,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			throw new NotImplementedException();
 		}
 
-		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, bool inPlayback)
+		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, bool inPlayback, bool drawAxes = false)
 		{
 			if (Alpha > 0)
 			{

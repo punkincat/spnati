@@ -52,8 +52,17 @@ namespace SPNATI_Character_Editor
 		[XmlElement("sizelimit")]
 		public int SizeLimit;
 
+		[XmlElement("biggersizelimit")]
+		public int BiggerSizeLimit;
+
 		[XmlElement("collectibleLines")]
 		public int LinesPerCollectible;
+
+		[XmlElement("firstSettingLines")]
+		public int FirstSetting;
+
+		[XmlElement("settingLines")]
+		public int LinesPerSetting;
 
 		public int GetAllowedCollectibles(int lineCount)
 		{
@@ -62,6 +71,15 @@ namespace SPNATI_Character_Editor
 				return 1;
 			}
 			return (lineCount - 1) / LinesPerCollectible + 2;
+		}
+
+		public int GetAllowedSettings(int lineCount)
+		{
+			if (lineCount < FirstSetting)
+			{
+				return 0;
+			}
+			return (lineCount - FirstSetting) / LinesPerSetting + 2; 
 		}
 	}
 }

@@ -155,6 +155,17 @@ namespace SPNATI_Character_Editor.Services
 			{
 				Dictionary<string, int> visitedWords = new Dictionary<string, int>();
 				string text = line.Text;
+				int scriptIndex = text.IndexOf("<script>");
+				int removed = 0;
+				if (scriptIndex != -1)
+				{
+					int scriptEndIndex = text.IndexOf("</script>");
+					if (scriptEndIndex != -1)
+					{
+						text = text.Substring(0,scriptIndex) + " " + text.Substring(scriptEndIndex + 9);
+					}
+					removed = scriptEndIndex + 8 - scriptIndex;
+				}
 				//string[] words = text.Split(new string[] { " ", ",", ".", "?", "!", ";", ":", "=", "<i>", "</i>", "*", "\"", "(", ")", "[", "]", "~", "/", "|" }, StringSplitOptions.RemoveEmptyEntries);
 				MatchCollection col = regex.Matches(text);
 				string[] words = col.Cast<Match>().Select(m => m.Value).ToArray();
@@ -195,7 +206,7 @@ namespace SPNATI_Character_Editor.Services
 							Word = word,
 							Case = workingCase,
 							Line = line,
-							Index = start
+							Index = scriptIndex == -1 || start < scriptIndex ? start : start + removed
 						};
 						_misspellings.Enqueue(misspelling);
 					}

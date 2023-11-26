@@ -131,7 +131,7 @@ namespace SPNATI_Character_Editor
 				{
 					foreach (Keyframe keyf in d.Keyframes)
 					{
-						if (!String.IsNullOrEmpty(keyf.Src) && !keyf.Src.Contains(character.FolderName + "/"))
+						if (!string.IsNullOrEmpty(keyf.Src) && !keyf.Src.Contains(character.FolderName + "/"))
 						{
 							keyf.Src = character.FolderName + "/" + keyf.Src;
 						}
@@ -483,6 +483,15 @@ namespace SPNATI_Character_Editor
 
 			Banter banterData = ImportXml<Banter>(Path.Combine(folder, $"banter-{timestamp}.bak"));
 			recoveredCharacter.BanterData = banterData ?? character.BanterData;
+
+			CollectibleData collectibleData = ImportXml<CollectibleData>(Path.Combine(folder, $"collectibles-{timestamp}.bak"));
+			recoveredCharacter.Collectibles = collectibleData ?? character.Collectibles;
+
+			CharacterTagList characterTagList = ImportXml<CharacterTagList>(Path.Combine(folder, $"tags-{timestamp}.bak"));
+			if (characterTagList != null)
+			{
+				recoveredCharacter.Tags = characterTagList.Tags ?? character.Tags;
+			}
 
 			string markerFile = Path.Combine(folder, $"markers-{timestamp}.bak");
 			if (File.Exists(markerFile))

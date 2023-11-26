@@ -510,7 +510,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			}
 		}
 
-		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, bool inPlayback)
+		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, bool inPlayback, bool drawAxes = false)
 		{
 			if (HiddenByMarker(markers))
 			{

@@ -38,6 +38,10 @@ namespace SPNATI_Character_Editor
 		public bool CollectiblesUnlocked;
 		[XmlElement("epilogue_badges")]
 		public bool EpilogueBadges;
+		[XmlElement("custom-cards")]
+		public bool CustomCards;
+		[XmlElement("default-card-deck")]
+		public string DefaultCardDeck;
 		[XmlElement("alternate-costumes")]
 		public bool AlternateCostumes;
 		[XmlElement("alternate-costume-sets")]

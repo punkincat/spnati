@@ -1,7 +1,7 @@
 ﻿using Desktop.Skinning;
 using KisekaeImporter;
+using SPNATI_Character_Editor.Properties;
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace SPNATI_Character_Editor.Forms
@@ -17,13 +17,13 @@ namespace SPNATI_Character_Editor.Forms
 			switch (mode)
 			{
 				case ImportLineupMode.Pose:
-					picHelp.Image = new Bitmap("Resources/Images/LineupPose.png");
+					picHelp.Image = Resources.LineupPose;
 					break;
 				case ImportLineupMode.Wardrobe:
-					picHelp.Image = new Bitmap("Resources/Images/LineupClothing.png");
+					picHelp.Image = Resources.LineupClothing;
 					break;
 				default:
-					picHelp.Image = new Bitmap("Resources/Images/LineupAll.png");
+					picHelp.Image = Resources.LineupAll;
 					break;
 			}
 		}

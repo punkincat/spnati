@@ -8,7 +8,6 @@ using Desktop.CommonControls.PropertyControls;
 using SPNATI_Character_Editor.EpilogueEditing;
 using SPNATI_Character_Editor.Properties;
 using System.Globalization;
-using SPNATI_Character_Editor.Forms;
 using Desktop.Skinning;
 
 namespace SPNATI_Character_Editor.Controls
@@ -69,7 +68,7 @@ namespace SPNATI_Character_Editor.Controls
 		private SceneObject _overlay = null;
 		private List<SceneAnimation> _animations = new List<SceneAnimation>();
 
-		private Font _font = new Font(Shell.Instance.Fonts.Families[0], 11.3f);
+		private Font _font;
 		private StringFormat _textFormat = new StringFormat() { Alignment = StringAlignment.Center };
 		private Pen _borderPen;
 		private Pen _penOuterSelection;
@@ -90,6 +89,15 @@ namespace SPNATI_Character_Editor.Controls
 		public EpilogueCanvas()
 		{
 			InitializeComponent();
+
+			if (Shell.Instance != null)
+			{
+				_font = new Font(Shell.Instance.Fonts.Families[0], 11.3f);
+			}
+			else
+			{
+				_font = new Font("Trebuchet MS", 14);
+			}
 
 			_outsideBrush = new SolidBrush(Color.FromArgb(80, 0, 10, 30));
 
@@ -600,22 +608,22 @@ namespace SPNATI_Character_Editor.Controls
 				if (obj.AlignmentX == "right")
 				{
 					int width = (int)(position.Width + arrowWidth);
-					position.X = (position.X - width);
+					position.X -= width;
 				}
 				else if (obj.AlignmentX == "center")
 				{
 					int width = (int)(position.Width + arrowWidth);
-					position.X = (position.X - width * 0.5f);
+					position.X -= width * 0.5f;
 				}
 				if (obj.AlignmentY == "bottom")
 				{
 					int height = (int)(position.Height + arrowHeight);
-					position.Y = (position.Y - height);
+					position.Y -= height;
 				}
 				else if (obj.AlignmentY == "center")
 				{
 					int height = (int)(position.Height + arrowHeight);
-					position.Y = (position.Y - height * 0.5f);
+					position.Y -= height * 0.5f;
 				}
 				return position;
 			}
@@ -1842,6 +1850,7 @@ namespace SPNATI_Character_Editor.Controls
 		/// </summary>
 		private void BuildScene(bool previewMode)
 		{
+			_markers = CharacterDatabase.GetEditorData(_character).PosePreviewMarkers;
 			_selectedObject = null;
 			_selectedAnimation = null;
 			_animations.Clear();
@@ -2603,17 +2612,6 @@ namespace SPNATI_Character_Editor.Controls
 		{
 			_showOverlay = !_showOverlay;
 			canvas.Invalidate();
-		}
-
-		private void cmdMarkers_Click(object sender, EventArgs e)
-		{
-			MarkerSetup form = new MarkerSetup();
-			form.SetData(_character, _markers);
-			if (form.ShowDialog() == DialogResult.OK)
-			{
-				_markers = form.Markers;
-				BuildScene(false);
-			}
 		}
 
 		public void OnUpdateSkin(Skin skin)

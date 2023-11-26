@@ -264,13 +264,13 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 		/// <param name="y"></param>
 		/// <param name="objects"></param>
 		/// <returns></returns>
-		public override LiveObject GetObjectAtPoint(int x, int y, Matrix sceneTransform, bool ignoreMarkers, List<string> markers)
+		public override LiveObject GetObjectAtPoint(int x, int y, Matrix sceneTransform, List<string> markers)
 		{
 			//search in reverse order because objects are sorted by depth
 			for (int i = DrawingOrder.Count - 1; i >= 0; i--)
 			{
 				LiveObject obj = DrawingOrder[i];
-				if (!obj.IsVisible || obj.Hidden || obj.Alpha == 0 || obj.HiddenByMarker(ignoreMarkers ? null : markers)) { continue; }
+				if (!obj.IsVisible || obj.Hidden || obj.Alpha == 0 || obj.HiddenByMarker(markers)) { continue; }
 
 				//transform point to local space
 				PointF localPt = obj.ToLocalPt(x, y, sceneTransform);
@@ -463,7 +463,7 @@ namespace SPNATI_Character_Editor.EpilogueEditor
 			return false;
 		}
 
-		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, LiveObject selectedObject, LiveObject selectedPreview, bool inPlayback)
+		public override void Draw(Graphics g, Matrix sceneTransform, List<string> markers, LiveObject selectedObject, LiveObject selectedPreview, bool inPlayback, bool drawAxes = false)
 		{
 			foreach (LiveSprite sprite in DrawingOrder)
 			{

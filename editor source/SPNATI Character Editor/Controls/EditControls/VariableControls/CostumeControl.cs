@@ -21,7 +21,7 @@ namespace SPNATI_Character_Editor.Controls.EditControls.VariableControls
 				return true;
 			}
 			Costume costume = record as Costume;
-			return costume.Character == character || costume.Key == "default";
+			return costume.Character?.FolderName == character.FolderName || costume.Key == "default";
 		}
 
 		protected override void OnBoundData()

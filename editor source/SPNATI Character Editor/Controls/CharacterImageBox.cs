@@ -21,7 +21,6 @@ namespace SPNATI_Character_Editor.Controls
 		private const int TextBorder = 2;
 		private const int TextPadding = 10;
 		private const float TextBuffer = 0.1f; //90% height of textbox row
-		private const string FontName = "Open Sans";
 		private const int ArrowSize = 15;
 		
 		private float _time;
@@ -132,7 +131,14 @@ namespace SPNATI_Character_Editor.Controls
 			}
 
 			float size = BaseSize * (screenWidth / 1000f);
-			_textFont = new Font(Shell.Instance.Fonts.Families[0], size == 0 ? BaseSize : size);
+			if (Shell.Instance != null)
+			{
+				_textFont = new Font(Shell.Instance.Fonts.Families[0], size == 0 ? BaseSize : size);
+			}
+			else
+			{
+				_textFont = new Font("Trebuchet MS", size == 0 ? BaseSize : size);
+			}
 			_italicFont = new Font(_textFont, FontStyle.Italic);
 		}
 
@@ -214,56 +220,7 @@ namespace SPNATI_Character_Editor.Controls
 
 		public void RefreshImage()
 		{
-			Destroy();
-
-			UpdateSceneTransform();
-			tmrTick.Stop();
-			if (_currentPose != null)
-			{
-				PoseReference poseRef = _currentPose.GetPose(_currentStage);
-				if (poseRef != null)
-				{
-					if (poseRef.Pose == null)
-					{
-						string file = Path.Combine(_character.Skin.GetDirectory(), poseRef.FileName);
-						if (!File.Exists(file))
-						{
-							file = Path.Combine(_character.GetDirectory(), poseRef.FileName);
-						}
-						_reference = ImageCache.Get(file);
-						_imageReference = _reference?.Image;
-						if (ImageAnimator.CanAnimate(_imageReference))
-						{
-							_animating = true;
-							ImageAnimator.Animate(_imageReference, OnFrameChanged);
-						}
-					}
-					else
-					{
-						Pose p = _character.Skin.CustomPoses.Find(cp => cp.Id == poseRef.Pose.Id);
-						if (p == null)
-						{
-							p = poseRef.Pose;
-						}
-						Pose = new LivePose(_character, p, _currentStage);
-						if (AutoPlayback)
-						{
-							_time = 0;
-							_lastTick = DateTime.Now;
-							tmrTick.Enabled = true;
-						}
-					}
-				}
-				else
-				{
-					_imageReference = null;
-				}
-			}
-			else
-			{
-				_imageReference = null;
-			}
-			canvas.Invalidate();
+			SetImage(_currentPose, _currentStage, true);
 		}
 
 		public void SetImage(Image image, bool disposeImage = true)
@@ -280,9 +237,9 @@ namespace SPNATI_Character_Editor.Controls
 			canvas.Invalidate();
 		}
 
-		public void SetImage(PoseMapping pose, int stage)
+		public void SetImage(PoseMapping pose, int stage, bool refresh = false)
 		{
-			if (_currentPose == pose && _currentStage == stage && _imageReference != null)
+			if (_currentPose == pose && _currentStage == stage && _imageReference != null && !refresh)
 			{
 				return;
 			}
@@ -290,14 +247,17 @@ namespace SPNATI_Character_Editor.Controls
 
 			UpdateSceneTransform();
 			tmrTick.Stop();
-			_currentPose = pose;
-			_currentStage = stage;
+			if (!refresh)
+			{
+				_currentPose = pose;
+				_currentStage = stage;
+			}
 			if (pose != null)
 			{
 				PoseReference poseRef = pose.GetPose(stage);
 				if (poseRef != null)
 				{
-					if (poseRef.Pose == null)
+					if (poseRef.Pose == null && poseRef.PoseSet == null)
 					{
 						string file = Path.Combine(_character.Skin.GetDirectory(), poseRef.FileName);
 						if (!File.Exists(file))
@@ -312,9 +272,20 @@ namespace SPNATI_Character_Editor.Controls
 							ImageAnimator.Animate(_imageReference, OnFrameChanged);
 						}
 					}
-					else
+					else if (poseRef.PoseSet == null)
 					{
-						Pose p = _character.Skin.CustomPoses.Find(cp => cp.Id == poseRef.Pose.Id);
+						bool useDefault = false;
+						if (_character.Skin.GetDirectory() != _character.GetDirectory())
+						{
+							foreach (StageSpecificValue stageInfo in (_character.Skin as Costume).Folders)
+							{
+								if (stageInfo.Stage != 0 && stageInfo.Stage <= stage)
+								{
+									useDefault = true;
+								}
+							}
+						}
+						Pose p = useDefault? _character.CustomPoses.Find(cp => cp.Id == poseRef.Pose.Id) : _character.Skin.CustomPoses.Find(cp => cp.Id == poseRef.Pose.Id);
 						if (p == null)
 						{
 							p = poseRef.Pose;
@@ -325,6 +296,78 @@ namespace SPNATI_Character_Editor.Controls
 							_time = 0;
 							_lastTick = DateTime.Now;
 							tmrTick.Enabled = true;
+						}
+					}
+					else
+					{
+						PoseSet s = _character.Skin.CustomPoseSets.Find(cs => cs.Id == poseRef.PoseSet.Id);
+						if (s == null)
+						{
+							s = poseRef.PoseSet;
+						}
+						PoseSetEntry eligibleEntry = new PoseSetEntry();
+						foreach (PoseSetEntry entry in s.Entries)
+						{
+							List<int> selectedStages = new List<int>();
+							if (int.TryParse(entry.Stage, out int x))
+							{
+								selectedStages.Add(x);
+							}
+							else
+							{
+								string[] strings = entry.Stage.Split('-');
+								if (strings.Length != 2)
+								{
+									continue;
+								}
+								if (int.TryParse(strings[0], out int y) && int.TryParse(strings[1], out int z))
+								{
+									for (int i = y; i <= z; i++)
+									{
+										selectedStages.Add(i);
+									}
+								}
+								else
+								{
+									continue;
+								}
+							}
+							if (selectedStages.Contains(stage))
+							{
+								eligibleEntry = entry;
+								break;
+							}
+						}
+						if (eligibleEntry.Img.StartsWith("custom:"))
+						{
+							Pose p = _character.Skin.CustomPoses.Find(customPose => customPose.Id == eligibleEntry.Img.Substring("custom:".Length));
+							if (p == null)
+							{
+								p = _character.Skin.CustomPoses.Find(customPose => customPose.Id == eligibleEntry.Img.Substring("custom:".Length).Replace("#-", stage.ToString() + "-"));
+							}
+							Pose = new LivePose(_character, p, _currentStage);
+							if (AutoPlayback)
+							{
+								_time = 0;
+								_lastTick = DateTime.Now;
+								tmrTick.Enabled = true;
+							}
+						}
+						else
+						{
+							string file = Path.Combine(_character.Skin.GetDirectory(), eligibleEntry.Img).Replace("#-", stage.ToString()+"-");
+							//if (!File.Exists(file))
+							//{
+							//	file = Path.Combine(_character.GetDirectory(), poseRef.FileName);
+							//}
+							_reference = ImageCache.Get(file);
+							_imageReference = _reference?.Image;
+							if (ImageAnimator.CanAnimate(_imageReference))
+							{
+								_animating = true;
+								ImageAnimator.Animate(_imageReference, OnFrameChanged);
+							}
+
 						}
 					}
 				}

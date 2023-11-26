@@ -19,6 +19,7 @@ namespace SPNATI_Character_Editor.Activities
 		private FindReplace _findForm;
 		private bool _pendingWardrobeChange;
 		private bool _exportOnQuit;
+		private bool _useCaseMarkers;
 
 		private enum TreeFilterMode
 		{
@@ -82,6 +83,7 @@ namespace SPNATI_Character_Editor.Activities
 			treeDialogue.SetData(c);
 			_selectedStage = null;
 			_selectedCase = null;
+			_useCaseMarkers = true;
 
 			caseControl.Activate();
 			_character = c;
@@ -102,11 +104,11 @@ namespace SPNATI_Character_Editor.Activities
 			if (_character != null && _selectedCase != null && _selectedStage != null)
 			{
 				PoseMapping image = caseControl.GetImage(0);
+				DialogueLine line = caseControl.GetLine(0);
 				if (image != null)
 				{
-					DisplayImage(image, caseControl.PreviewStage);
+					DisplayImage(image, caseControl.PreviewStage, line);
 				}
-				DialogueLine line = caseControl.GetLine(0);
 				DisplayText(line);
 			}
 		}
@@ -159,7 +161,7 @@ namespace SPNATI_Character_Editor.Activities
 			SubscribeWorkspace(WorkspaceMessages.Find, OnFind);
 			SubscribeWorkspace(WorkspaceMessages.Replace, OnReplace);
 			SubscribeWorkspace(WorkspaceMessages.WardrobeUpdated, OnWardrobeChanged);
-			SubscribeWorkspace(WorkspaceMessages.SkinChanged, OnSkinChanged);			
+			SubscribeWorkspace<IWardrobe>(WorkspaceMessages.SkinChanged, SkinChanged);			
 			SubscribeWorkspace(WorkspaceMessages.SaveCaseNotes, OnSaveCaseNotes);
 			SubscribeDesktop(DesktopMessages.SettingsUpdated, OnSettingsUpdated);
 			SubscribeDesktop(DesktopMessages.MacrosUpdated, OnMacrosUpdated);
@@ -208,7 +210,7 @@ namespace SPNATI_Character_Editor.Activities
 			caseControl.SaveNotes();
 		}
 
-		private void OnSkinChanged()
+		private void SkinChanged(IWardrobe costume)
 		{
 			caseControl.Save();
 			caseControl.UpdateStages();
@@ -286,15 +288,19 @@ namespace SPNATI_Character_Editor.Activities
 		/// <param name="index"></param>
 		private void HighlightRow(object sender, int index)
 		{
+			DisplayRow(index);
+		}
+
+		private void DisplayRow(int index)
+		{
 			if (index == -1)
 				return;
 			PoseMapping image = caseControl.GetImage(index);
+			DialogueLine line = caseControl.GetLine(index);
 			if (image != null)
 			{
-				DisplayImage(image, caseControl.PreviewStage);
+				DisplayImage(image, caseControl.PreviewStage, line);
 			}
-
-			DialogueLine line = caseControl.GetLine(index);
 			DisplayText(line);
 		}
 
@@ -307,12 +313,30 @@ namespace SPNATI_Character_Editor.Activities
 		/// Displays an image in the preview box
 		/// </summary>
 		/// <param name="image">Image to display</param>
-		private void DisplayImage(PoseMapping image, int stage)
+		private void DisplayImage(PoseMapping image, int stage, DialogueLine line)
 		{
 			int imageStage = stage;
+			List<string> markers = new List<string>();
+			if (line != null && _useCaseMarkers)
+			{
+				if (!string.IsNullOrEmpty(line.Marker))
+				{
+					markers.Add(line.Marker);
+				}
+				foreach (MarkerOperation marker in line.Markers)
+				{
+					if (marker.Operator == "=")
+					{
+						markers.Add(marker.ToString());
+					}
+				}
+			}
 			if (_selectedCase != null)
 			{
-				List<string> markers = _selectedCase.GetMarkers();
+				if (_useCaseMarkers)
+				{
+					markers.AddRange(_selectedCase.GetMarkers());
+				}
 				Workspace.SendMessage(WorkspaceMessages.UpdateMarkers, markers);
 				if (_selectedCase.Tag == "stripped" && stage < _character.Layers)
 				{
@@ -444,10 +468,8 @@ namespace SPNATI_Character_Editor.Activities
 			caseControl.Save();
 		}
 
-		private void tree_SelectedCaseChanged(object sender, CaseSelectionEventArgs e)
+		private void UpdatePanel2()
 		{
-			_selectedStage = e.Stage;
-			_selectedCase = e.Case;
 			if (_selectedCase != null)
 			{
 				splitDialogue.Panel2.Visible = true;
@@ -461,6 +483,13 @@ namespace SPNATI_Character_Editor.Activities
 			}
 
 			caseControl.SetCase(_selectedStage, _selectedCase);
+		}
+
+		private void tree_SelectedCaseChanged(object sender, CaseSelectionEventArgs e)
+		{
+			_selectedStage = e.Stage;
+			_selectedCase = e.Case;
+			UpdatePanel2();
 		}
 
 		private void tree_CreatingCase(object sender, CaseCreationEventArgs e)
@@ -609,5 +638,19 @@ namespace SPNATI_Character_Editor.Activities
 			_character.PoseLibrary.initialized = false;
 			caseControl.UpdateAvailableImages();
 		}
+
+		private void chkCaseMarkers_CheckedChanged(object sender, EventArgs e)
+		{
+			_useCaseMarkers = chkCaseMarkers.Checked;
+			DisplayRow(caseControl.GetHighlightedLineIndex());
+		}
+
+		private void splitDialogue_Panel2_Resize(object sender, EventArgs e)
+		{
+			if (_selectedStage == null) 
+				return;
+			UpdatePanel2();
+		}
+
 	}
 }

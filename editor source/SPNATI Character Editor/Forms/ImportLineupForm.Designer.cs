@@ -115,7 +115,7 @@
             this.txtCode.BackColor = System.Drawing.Color.White;
             this.txtCode.ForeColor = System.Drawing.Color.Black;
             this.txtCode.Location = new System.Drawing.Point(12, 105);
-            this.txtCode.MaxLength = 65535;
+            this.txtCode.MaxLength = 1048575;
             this.txtCode.Multiline = true;
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(773, 225);

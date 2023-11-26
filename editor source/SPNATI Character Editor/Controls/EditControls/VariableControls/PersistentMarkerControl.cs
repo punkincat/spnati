@@ -37,7 +37,7 @@ namespace SPNATI_Character_Editor
 		protected override void OnBoundData()
 		{
 			base.OnBoundData();
-			cboOperator.Text = Expression.Operator;
+			cboOperator.Text = string.IsNullOrEmpty(Expression.Operator) ? "==" : Expression.Operator;
 			txtValue.Text = Expression.Value;
 			OnAddedToRow();
 		}

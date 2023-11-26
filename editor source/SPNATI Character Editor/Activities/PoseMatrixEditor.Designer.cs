@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid = new Desktop.Skinning.SkinnedDataGridView();
             this.gridMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cutCellToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +49,6 @@
             this.pasteRowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skinnedSplitContainer1 = new Desktop.Skinning.SkinnedSplitContainer();
             this.cmdEditPipeline = new Desktop.Skinning.SkinnedIcon();
-            this.searchBar = new SPNATI_Character_Editor.Controls.CodeReplaceBar();
             this.cmdFolder = new Desktop.Skinning.SkinnedButton();
             this.skinnedLabel1 = new Desktop.Skinning.SkinnedLabel();
             this.tsSheet = new System.Windows.Forms.ToolStrip();
@@ -71,6 +70,10 @@
             this.tsAddRow = new System.Windows.Forms.ToolStripButton();
             this.tsRemoveRow = new System.Windows.Forms.ToolStripButton();
             this.tsCheckCell = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsLeft = new System.Windows.Forms.ToolStripButton();
+            this.tsRight = new System.Windows.Forms.ToolStripButton();
+            this.tsRename = new System.Windows.Forms.ToolStripButton();
             this.sptMode = new System.Windows.Forms.SplitContainer();
             this.panelSingle = new System.Windows.Forms.Panel();
             this.cmdImportFull = new Desktop.Skinning.SkinnedIcon();
@@ -92,6 +95,7 @@
             this.cmdImportNew = new Desktop.Skinning.SkinnedButton();
             this.cmdImportSelected = new Desktop.Skinning.SkinnedButton();
             this.skinnedLabel2 = new Desktop.Skinning.SkinnedLabel();
+            this.searchBar = new SPNATI_Character_Editor.Controls.CodeReplaceBar();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.gridMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinnedSplitContainer1)).BeginInit();
@@ -123,26 +127,26 @@
             this.grid.BackgroundColor = System.Drawing.Color.White;
             this.grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid.ContextMenuStrip = this.gridMenu;
             this.grid.Data = null;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.grid.EnableHeadersVisualStyles = false;
             this.grid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -151,14 +155,14 @@
             this.grid.Margin = new System.Windows.Forms.Padding(0);
             this.grid.Name = "grid";
             this.grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.grid.ShowEditingIcon = false;
@@ -359,18 +363,6 @@
             this.cmdEditPipeline.UseVisualStyleBackColor = true;
             this.cmdEditPipeline.Click += new System.EventHandler(this.cmdEditPipeline_Click);
             // 
-            // searchBar
-            // 
-            this.searchBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchBar.Location = new System.Drawing.Point(0, 298);
-            this.searchBar.Margin = new System.Windows.Forms.Padding(0);
-            this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(783, 23);
-            this.searchBar.TabIndex = 39;
-            this.searchBar.Close += new System.EventHandler(this.searchBar_Close);
-            this.searchBar.Enter += new System.EventHandler(this.searchBar_Enter);
-            // 
             // cmdFolder
             // 
             this.cmdFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -421,7 +413,11 @@
             this.toolStripSeparator4,
             this.tsAddRow,
             this.tsRemoveRow,
-            this.tsCheckCell});
+            this.tsCheckCell,
+            this.toolStripSeparator5,
+            this.tsRename,
+            this.tsLeft,
+            this.tsRight});
             this.tsSheet.Location = new System.Drawing.Point(0, 0);
             this.tsSheet.Name = "tsSheet";
             this.tsSheet.Size = new System.Drawing.Size(783, 25);
@@ -596,6 +592,40 @@
             this.tsCheckCell.Text = "tsCheckCell";
             this.tsCheckCell.ToolTipText = "Mark selected cell(s) as checked";
             this.tsCheckCell.Click += new System.EventHandler(this.tsCheckCell_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsLeft
+            // 
+            this.tsLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsLeft.Image = global::SPNATI_Character_Editor.Properties.Resources.PreviousFrame;
+            this.tsLeft.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsLeft.Name = "tsLeft";
+            this.tsLeft.Size = new System.Drawing.Size(23, 22);
+            this.tsLeft.ToolTipText = "Swap with the previous pose sheet";
+            this.tsLeft.Click += new System.EventHandler(this.tsLeft_Click);
+            // 
+            // tsRight
+            // 
+            this.tsRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsRight.Image = global::SPNATI_Character_Editor.Properties.Resources.NextFrame;
+            this.tsRight.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsRight.Name = "tsRight";
+            this.tsRight.Size = new System.Drawing.Size(23, 22);
+            this.tsRight.Click += new System.EventHandler(this.tsRight_Click);
+            // 
+            // tsRename
+            // 
+            this.tsRename.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsRename.Image = global::SPNATI_Character_Editor.Properties.Resources.Edit;
+            this.tsRename.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsRename.Name = "tsRename";
+            this.tsRename.Size = new System.Drawing.Size(23, 22);
+            this.tsRename.ToolTipText = "Rename Pose Sheet";
+            this.tsRename.Click += new System.EventHandler(this.tsRename_Click);
             // 
             // sptMode
             // 
@@ -905,6 +935,18 @@
             this.skinnedLabel2.TabIndex = 29;
             this.skinnedLabel2.Text = "Import:";
             // 
+            // searchBar
+            // 
+            this.searchBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBar.Location = new System.Drawing.Point(0, 298);
+            this.searchBar.Margin = new System.Windows.Forms.Padding(0);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(783, 23);
+            this.searchBar.TabIndex = 39;
+            this.searchBar.Close += new System.EventHandler(this.searchBar_Close);
+            this.searchBar.Enter += new System.EventHandler(this.searchBar_Enter);
+            // 
             // PoseMatrixEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1004,5 +1046,9 @@
 		private Desktop.Skinning.SkinnedIcon cmdEditPipeline;
 		private Desktop.Skinning.SkinnedIcon cmdImportFull;
         private System.Windows.Forms.ToolStripButton tsCheckCell;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton tsLeft;
+        private System.Windows.Forms.ToolStripButton tsRight;
+        private System.Windows.Forms.ToolStripButton tsRename;
     }
 }

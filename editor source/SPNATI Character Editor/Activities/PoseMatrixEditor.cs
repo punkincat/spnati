@@ -9,6 +9,7 @@ using KisekaeImporter.ImageImport;
 using KisekaeImporter.SubCodes;
 using SPNATI_Character_Editor.DataStructures;
 using SPNATI_Character_Editor.Forms;
+using SPNATI_Character_Editor.Properties;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -133,7 +134,7 @@ namespace SPNATI_Character_Editor.Activities
 		private void _matrix_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
 		{
 			_skin.IsDirty = true;
-			if (!this.IsActive)
+			if (!IsActive)
 			{
 				_dirty = true;
 			}
@@ -195,7 +196,7 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				tabControl.SelectedIndex = 0;
 				//need to manually raise the event for the first tab
-				tabControl_SelectedIndexChanged(tabControl, new System.EventArgs());
+				tabControl_SelectedIndexChanged(tabControl, new EventArgs());
 			}
 		}
 
@@ -390,13 +391,13 @@ namespace SPNATI_Character_Editor.Activities
 				switch (status)
 				{
 					case FileStatus.Imported:
-						cell.Value = Properties.Resources.Checkmark;
+						cell.Value = Resources.Checkmark;
 						break;
 					case FileStatus.Missing:
-						cell.Value = Properties.Resources.FileMissing;
+						cell.Value = Resources.FileMissing;
 						break;
 					case FileStatus.OutOfDate:
-						cell.Value = Properties.Resources.FileOutdated;
+						cell.Value = Resources.FileOutdated;
 						break;
 				}
 			}
@@ -408,7 +409,7 @@ namespace SPNATI_Character_Editor.Activities
 					string mainPath = character.GetPosePath(_sheet.Name, _sheet.SubFolder, pose.GetFullKey(), _sheet.PipelineAsset || pose.Stage.PipelineAsset);
 					if (File.Exists(mainPath) && _matrix.GetStatus(pose) == FileStatus.Missing)
 					{
-						cell.Value = Properties.Resources.Missing;
+						cell.Value = Resources.Missing;
 					}
 					else
 					{
@@ -436,7 +437,7 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-		private void tabControl_SelectedIndexChanged(object sender, System.EventArgs e)
+		private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if (_sheet != null)
 			{
@@ -500,7 +501,7 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-		private void tabStrip_AddButtonClicked(object sender, System.EventArgs e)
+		private void tabStrip_AddButtonClicked(object sender, EventArgs e)
 		{
 			AddSheetForm form = new AddSheetForm("New Sheet");
 			form.SetMatrix(_matrix);
@@ -560,7 +561,7 @@ namespace SPNATI_Character_Editor.Activities
 			//selecting the whole sheet
 			skinnedSplitContainer1.Panel2Collapsed = false;
 			sptMode.Panel2Collapsed = false;
-			picHelp.Image = new Bitmap("Resources/Images/BaseCode.png");
+			picHelp.Image = Resources.BaseCode;
 			panelSingle.Visible = false;
 			panelStage.Visible = false;
 			panelPose.Visible = true;
@@ -611,7 +612,7 @@ namespace SPNATI_Character_Editor.Activities
 					panelPose.Visible = false;
 					panelStage.Visible = true;
 					sptMode.Panel2Collapsed = false;
-					picHelp.Image = new Bitmap("Resources/Images/StageCode.png");
+					picHelp.Image = Resources.StageCode;
 					table.Context = null;
 					table.RecordFilter = FilterStageRecords;
 					PoseStage stage = _sheet.Stages[rowIndex];
@@ -678,7 +679,7 @@ namespace SPNATI_Character_Editor.Activities
 				sptMode.Panel2Collapsed = string.IsNullOrEmpty(_sheet.Stages[_currentStage].Code);
 				if (!sptMode.Panel2Collapsed)
 				{
-					picHelp.Image = new Bitmap("Resources/Images/PoseCode.png");
+					picHelp.Image = Resources.PoseCode;
 				}
 
 				table.Context = null;
@@ -804,7 +805,7 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-		private void cmdImport_Click(object sender, System.EventArgs e)
+		private void cmdImport_Click(object sender, EventArgs e)
 		{
 			ReimportImage(false);
 		}
@@ -889,7 +890,7 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-		private void tabStrip_CloseButtonClicked(object sender, System.EventArgs e)
+		private void tabStrip_CloseButtonClicked(object sender, EventArgs e)
 		{
 			if (MessageBox.Show("Are you sure you want to remove this sheet?", "Remove Sheet", MessageBoxButtons.OKCancel) == DialogResult.OK)
 			{
@@ -918,7 +919,7 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-		private async void cmdLineup_Click(object sender, System.EventArgs e)
+		private async void cmdLineup_Click(object sender, EventArgs e)
 		{
 			if (_sheet == null)
 			{
@@ -1022,7 +1023,7 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-		private async void cmdLoadToKKL_Click(object sender, System.EventArgs e)
+		private async void cmdLoadToKKL_Click(object sender, EventArgs e)
 		{
 			if (_sheet == null || _currentStage < 0 || _currentStage >= _sheet.Stages.Count)
 			{
@@ -1045,7 +1046,7 @@ namespace SPNATI_Character_Editor.Activities
 			await loader.Import(md, _skin);
 		}
 
-		private void cmdImportLineup_Click(object sender, System.EventArgs e)
+		private void cmdImportLineup_Click(object sender, EventArgs e)
 		{
 			if (_sheet == null)
 			{
@@ -1118,12 +1119,12 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
-		private void cmdImportNew_Click(object sender, System.EventArgs e)
+		private void cmdImportNew_Click(object sender, EventArgs e)
 		{
 			ImportUnloadedPoses();
 		}
 
-		private void cmdImportAll_Click(object sender, System.EventArgs e)
+		private void cmdImportAll_Click(object sender, EventArgs e)
 		{
 			ImportAllPoses();
 		}
@@ -2057,6 +2058,51 @@ namespace SPNATI_Character_Editor.Activities
 		private void tsCheckCell_Click(object sender, EventArgs e)
 		{
 			CheckmarkSelectedCells();
+		}
+
+		private void tsLeft_Click(object sender, EventArgs e)
+		{
+			int index = tabControl.SelectedIndex;
+			if (index < 1)
+			{
+				return;
+			}
+			_matrix.Sheets.Move(index, index - 1);
+			tabControl.TabPages.Clear();
+			foreach (PoseSheet sheet in _matrix.Sheets)
+			{
+				AddTab(sheet);
+			}
+			tabControl.SelectTab(index - 1);
+		}
+
+		private void tsRight_Click(object sender, EventArgs e)
+		{
+			int index = tabControl.SelectedIndex;
+			if (index > tabControl.TabCount - 2)
+			{
+				return;
+			}
+			_matrix.Sheets.Move(index, index + 1);
+			tabControl.TabPages.Clear();
+			foreach (PoseSheet sheet in _matrix.Sheets)
+			{
+				AddTab(sheet);
+			}
+			tabControl.SelectTab(index + 1);
+		}
+
+		private void tsRename_Click(object sender, EventArgs e)
+		{
+			if (_sheet != null)
+			{
+				AddSheetForm form = new AddSheetForm(_sheet.Name, true);
+				if (form.ShowDialog() == DialogResult.OK)
+				{
+					if (_sheet.Name != form.SheetName)
+						_sheet.Name = form.SheetName;
+				}
+			}
 		}
 	}
 

@@ -108,7 +108,7 @@ namespace Desktop.Skinning
 		public Color LightGray = Color.LightGray;
 		[Color(DisplayName = "Orange")]
 		public Color Orange = Color.OrangeRed;
-		[Color(DisplayName = "Green")]
+		/*[Color(DisplayName = "Green")]
 		public Color Green = Color.Green;
 		[Color(DisplayName = "Blue")]
 		public Color Blue = Color.Blue;
@@ -117,7 +117,50 @@ namespace Desktop.Skinning
 		[Color(DisplayName = "Pink")]
 		public Color Pink = Color.Pink;
 		[Color(DisplayName = "Red")]
-		public Color Red = Color.Red;
+		public Color Red = Color.Red;*/
+		[Color(DisplayName = "Yellow")]
+		public Color Yellow = Color.FromArgb(219, 219, 109);
+		//public Color Orange = Color.DarkOrange;
+		[Color(DisplayName = "Green")]
+		public Color Green = Color.FromArgb(36, 255, 36);
+		//public Color Green = Color.Aquamarine;
+		[Color(DisplayName = "Blue")]
+		public Color Blue = Color.FromArgb(0, 109, 219);
+		//public Color Blue = Color.DeepSkyBlue;
+		[Color(DisplayName = "Blue (Cornflower)")]
+		public Color CornflowerBlue = Color.FromArgb(109, 192, 255);
+		//public Color CornflowerBlue = Color.CornflowerBlue;
+		[Color(DisplayName = "Blue (Light)")]
+		public Color LightBlue = Color.FromArgb(182, 209, 255);
+		//public Color LightBlue = Color.PowderBlue;
+		[Color(DisplayName = "Purple")]
+		public Color Purple = Color.FromArgb(182, 109, 255);
+		//public Color Purple = Color.Indigo;
+		[Color(DisplayName = "Pink")]
+		public Color Pink = Color.FromArgb(255, 109, 182);
+		//public Color Pink = Color.HotPink;
+		[Color(DisplayName = "Red")]
+		public Color Red = Color.FromArgb(146, 0, 0);
+		//public Color Red = Color.DarkRed;
+		[Color(DisplayName = "Teal")]
+		public Color Teal = Color.FromArgb(0, 83, 83);
+		//public Color Teal = Color.Teal;
+		[Color(DisplayName = "Turquoise")]
+		public Color Turquoise = Color.FromArgb(0, 146, 146);
+		//public Color Turquoise = Color.DarkTurquoise;
+		[Color(DisplayName = "Pink (Light)")]
+		public Color LightPink = Color.FromArgb(255, 182, 219);
+		//public Color LightPink = Color.LightPink;
+		[Color(DisplayName = "Violet")]
+		public Color Violet = Color.FromArgb(73, 0, 146);
+		//public Color Violet = Color.BlueViolet;
+		[Color(DisplayName = "Brown")]
+		public Color Brown = Color.FromArgb(146, 73, 0);
+		//public Color Brown = Color.SaddleBrown;
+		//[Color(DisplayName = "Orange")]
+		//public Color OrangeBrown = Color.FromArgb(219, 109, 0);
+		//public Color Salmon = Color.LightSalmon;
+
 		#endregion
 
 		#region Accordion Groupers

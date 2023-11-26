@@ -1,7 +1,6 @@
 using Desktop;
 using Desktop.CommonControls;
 using Desktop.CommonControls.PropertyControls;
-using Desktop.Reporting;
 using Newtonsoft.Json;
 using SPNATI_Character_Editor.IO;
 using System;
@@ -21,7 +20,7 @@ namespace SPNATI_Character_Editor
 	/// since storing PropertyChanged handlers starts to really add up when you have thousands of these.
 	/// </remarks>
 	[JsonObject(MemberSerialization = MemberSerialization.OptIn)]
-	public class Case : INotifyPropertyChanged, IPropertyChangedNotifier, IComparable<Case>, ISliceable
+	public class Case : INotifyPropertyChanged, IPropertyChangedNotifier, IComparable<Case>
 	{
 		private static long s_globalId;
 
@@ -1273,7 +1272,6 @@ namespace SPNATI_Character_Editor
 			else if (!caseIsTargetable && responseIsTargetable && !hasTarget && hasAlsoPlaying && !alsoPlayingIsResponder)
 			{
 				CopySelfIntoTarget(response, speaker);
-				CopyAlsoPlaying(response);
 			}
 			else if ((caseIsTargetable || !responseIsTargetable) && !hasTarget && !alsoPlayingIsResponder)
 			{
@@ -1286,7 +1284,6 @@ namespace SPNATI_Character_Editor
 			}
 			else if (caseIsTargetable && hasTarget && !targetingResponder && !hasAlsoPlaying)
 			{
-				CopyTarget(response);
 				CopySelfIntoAlsoPlaying(response, speaker);
 			}
 			else if (caseIsTargetable && hasTarget && !hasAlsoPlaying && targetingResponder)
@@ -1297,7 +1294,6 @@ namespace SPNATI_Character_Editor
 			else if (caseIsTargetable && hasTarget && !targetingResponder && alsoPlayingIsResponder)
 			{
 				CopyAlsoPlayingIntoSelf(response, responder);
-				CopyTarget(response);
 				CopySelfIntoAlsoPlaying(response, speaker);
 			}
 			else
@@ -1412,13 +1408,26 @@ namespace SPNATI_Character_Editor
 				alternate.Tag = Tag;
 				alternate.Stages = Stages;
 				Case alternateResponse = alternate.CreateResponse(speaker, responder);
+				List<TargetCondition> conditionsToRemove = new List<TargetCondition>();
+				foreach (TargetCondition c1 in alternateResponse.Conditions)
+				{
+					foreach (TargetCondition c2 in response.Conditions)
+					{
+						c1.RemoveIntersection(c2);
+					}
+					if (c1.IsAlmostEmpty)
+					{
+						conditionsToRemove.Add(c1);
+					}
+				}
+				
+				foreach (TargetCondition c in conditionsToRemove)
+				{
+					alternateResponse.Conditions.Remove(c);
+				}
+
 				response.AlternativeConditions.Add(alternateResponse);
 			}
-
-			// This is inefficient and would be better served by fixing
-			// the helper functions (CopySelfIntoAlsoPlaying, etc)
-			// to not use oldstyle conditions - do this later
-			DataConversions.ConvertCase(response, responder);
 
 			return response;
 		}
@@ -1448,21 +1457,6 @@ namespace SPNATI_Character_Editor
 			}
 
 			return false;
-		}
-
-		/// <summary>
-		/// Copies target properties into another case's target
-		/// </summary>
-		/// <param name="other"></param>
-		private void CopyTarget(Case other)
-		{
-			foreach (TargetCondition cond in Conditions)
-			{
-				if (cond.Role == "target")
-				{
-					other.Conditions.Add(cond);
-				}
-			}
 		}
 
 		/// <summary>
@@ -1569,7 +1563,7 @@ namespace SPNATI_Character_Editor
 
 				if (hasConds)
 				{
-					Conditions.Add(selfCond);
+					other.Conditions.Add(selfCond);
 				}
 
 				if (!string.IsNullOrEmpty(Conditions[i].FilterTag))
@@ -1586,21 +1580,6 @@ namespace SPNATI_Character_Editor
 					ExpressionTest copy = test.Copy();
 					copy.ChangeTarget("self");
 					other.Expressions.Add(copy);
-				}
-			}
-		}
-
-		/// <summary>
-		/// Copies AlsoPlaying properties into another case's AlsoPlaying
-		/// </summary>
-		/// <param name="other"></param>
-		private void CopyAlsoPlaying(Case other)
-		{
-			foreach (TargetCondition cond in Conditions)
-			{
-				if (cond.Role == "other")
-				{
-					other.Conditions.Add(cond);
 				}
 			}
 		}
@@ -1641,23 +1620,23 @@ namespace SPNATI_Character_Editor
 
 			foreach (TargetCondition tCond in Conditions)
 			{
-				if (String.IsNullOrEmpty(tCond.TimeInStage))
+				if (string.IsNullOrEmpty(tCond.TimeInStage))
 				{
 					cond.TimeInStage = tCond.TimeInStage;
 				}
-				if (String.IsNullOrEmpty(tCond.ConsecutiveLosses))
+				if (string.IsNullOrEmpty(tCond.ConsecutiveLosses))
 				{
 					cond.ConsecutiveLosses = tCond.ConsecutiveLosses;
 				}
-				if (String.IsNullOrEmpty(tCond.Hand))
+				if (string.IsNullOrEmpty(tCond.Hand))
 				{
 					cond.Hand = tCond.Hand;
 				}
-				if (String.IsNullOrEmpty(tCond.NotSaidMarker))
+				if (string.IsNullOrEmpty(tCond.NotSaidMarker))
 				{
 					cond.NotSaidMarker = tCond.NotSaidMarker;
 				}
-				if (String.IsNullOrEmpty(tCond.SaidMarker))
+				if (string.IsNullOrEmpty(tCond.SaidMarker))
 				{
 					cond.SaidMarker = tCond.SaidMarker;
 				}
@@ -1786,7 +1765,7 @@ namespace SPNATI_Character_Editor
 
 				if (hasConds)
 				{
-					Conditions.Add(selfCond);
+					other.Conditions.Add(selfCond);
 				}
 			}
 		}
@@ -1838,23 +1817,23 @@ namespace SPNATI_Character_Editor
 
 			foreach (TargetCondition tCond in Conditions)
 			{
-				if(String.IsNullOrEmpty(tCond.TimeInStage))
+				if(string.IsNullOrEmpty(tCond.TimeInStage))
 				{
 					cond.TimeInStage = tCond.TimeInStage;
 				}
-				if (String.IsNullOrEmpty(tCond.ConsecutiveLosses))
+				if (string.IsNullOrEmpty(tCond.ConsecutiveLosses))
 				{
 					cond.ConsecutiveLosses = tCond.ConsecutiveLosses;
 				}
-				if (String.IsNullOrEmpty(tCond.Hand))
+				if (string.IsNullOrEmpty(tCond.Hand))
 				{
 					cond.Hand = tCond.Hand;
 				}
-				if (String.IsNullOrEmpty(tCond.NotSaidMarker))
+				if (string.IsNullOrEmpty(tCond.NotSaidMarker))
 				{
 					cond.NotSaidMarker = tCond.NotSaidMarker;
 				}
-				if (String.IsNullOrEmpty(tCond.SaidMarker))
+				if (string.IsNullOrEmpty(tCond.SaidMarker))
 				{
 					cond.SaidMarker = tCond.SaidMarker;
 				}
@@ -2040,97 +2019,97 @@ namespace SPNATI_Character_Editor
 					{
 						if (Conditions[j].Role == "self" || Conditions[j].Character == Conditions[i].Character)
 						{
-							if (String.IsNullOrEmpty(Conditions[j].Status) || Conditions[j].Status == Conditions[i].Status)
+							if (string.IsNullOrEmpty(Conditions[j].Status) || Conditions[j].Status == Conditions[i].Status)
 							{
 								Conditions[j].Status = Conditions[i].Status;
 								Conditions[i].Status = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].Stage) || Conditions[j].Stage == Conditions[i].Stage)
+							if (string.IsNullOrEmpty(Conditions[j].Stage) || Conditions[j].Stage == Conditions[i].Stage)
 							{
 								Conditions[j].Stage = Conditions[i].Stage;
 								Conditions[i].Stage = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].TimeInStage) || Conditions[j].TimeInStage == Conditions[i].TimeInStage)
+							if (string.IsNullOrEmpty(Conditions[j].TimeInStage) || Conditions[j].TimeInStage == Conditions[i].TimeInStage)
 							{
 								Conditions[j].TimeInStage = Conditions[i].TimeInStage;
 								Conditions[i].TimeInStage = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].ConsecutiveLosses) || Conditions[j].ConsecutiveLosses == Conditions[i].ConsecutiveLosses)
+							if (string.IsNullOrEmpty(Conditions[j].ConsecutiveLosses) || Conditions[j].ConsecutiveLosses == Conditions[i].ConsecutiveLosses)
 							{
 								Conditions[j].ConsecutiveLosses = Conditions[i].ConsecutiveLosses;
 								Conditions[i].ConsecutiveLosses = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].SaidMarker) || Conditions[j].SaidMarker == Conditions[i].SaidMarker)
+							if (string.IsNullOrEmpty(Conditions[j].SaidMarker) || Conditions[j].SaidMarker == Conditions[i].SaidMarker)
 							{
 								Conditions[j].SaidMarker = Conditions[i].SaidMarker;
 								Conditions[i].SaidMarker = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].SayingMarker) || Conditions[j].SayingMarker == Conditions[i].SayingMarker)
+							if (string.IsNullOrEmpty(Conditions[j].SayingMarker) || Conditions[j].SayingMarker == Conditions[i].SayingMarker)
 							{
 								Conditions[j].SayingMarker = Conditions[i].SayingMarker;
 								Conditions[i].SayingMarker = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].NotSaidMarker) || Conditions[j].NotSaidMarker == Conditions[i].NotSaidMarker)
+							if (string.IsNullOrEmpty(Conditions[j].NotSaidMarker) || Conditions[j].NotSaidMarker == Conditions[i].NotSaidMarker)
 							{
 								Conditions[j].NotSaidMarker = Conditions[i].NotSaidMarker;
 								Conditions[i].NotSaidMarker = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].Saying) || Conditions[j].Saying == Conditions[i].Saying)
+							if (string.IsNullOrEmpty(Conditions[j].Saying) || Conditions[j].Saying == Conditions[i].Saying)
 							{
 								Conditions[j].Saying = Conditions[i].Saying;
 								Conditions[i].Saying = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].Hand) || Conditions[j].Hand == Conditions[i].Hand)
+							if (string.IsNullOrEmpty(Conditions[j].Hand) || Conditions[j].Hand == Conditions[i].Hand)
 							{
 								Conditions[j].Hand = Conditions[i].Hand;
 								Conditions[i].Hand = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].Layers) || Conditions[j].Layers == Conditions[i].Layers)
+							if (string.IsNullOrEmpty(Conditions[j].Layers) || Conditions[j].Layers == Conditions[i].Layers)
 							{
 								Conditions[j].Layers = Conditions[i].Layers;
 								Conditions[i].Layers = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].StartingLayers) || Conditions[j].StartingLayers == Conditions[i].StartingLayers)
+							if (string.IsNullOrEmpty(Conditions[j].StartingLayers) || Conditions[j].StartingLayers == Conditions[i].StartingLayers)
 							{
 								Conditions[j].StartingLayers = Conditions[i].StartingLayers;
 								Conditions[i].StartingLayers = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].Gender) || Conditions[j].Gender == Conditions[i].Gender)
+							if (string.IsNullOrEmpty(Conditions[j].Gender) || Conditions[j].Gender == Conditions[i].Gender)
 							{
 								Conditions[j].Gender = Conditions[i].Gender;
 								Conditions[i].Gender = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].FilterTag) || Conditions[j].FilterTag == Conditions[i].FilterTag)
+							if (string.IsNullOrEmpty(Conditions[j].FilterTag) || Conditions[j].FilterTag == Conditions[i].FilterTag)
 							{
 								Conditions[j].FilterTag = Conditions[i].FilterTag;
 								Conditions[i].FilterTag = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].FilterNotTag) || Conditions[j].FilterNotTag == Conditions[i].FilterNotTag)
+							if (string.IsNullOrEmpty(Conditions[j].FilterNotTag) || Conditions[j].FilterNotTag == Conditions[i].FilterNotTag)
 							{
 								Conditions[j].FilterNotTag = Conditions[i].FilterNotTag;
 								Conditions[i].FilterNotTag = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].FilterTagAdv) || Conditions[j].FilterTagAdv == Conditions[i].FilterTagAdv)
+							if (string.IsNullOrEmpty(Conditions[j].FilterTagAdv) || Conditions[j].FilterTagAdv == Conditions[i].FilterTagAdv)
 							{
 								Conditions[j].FilterTagAdv = Conditions[i].FilterTagAdv;
 								Conditions[i].FilterTagAdv = null;
 							}
 
-							if (String.IsNullOrEmpty(Conditions[j].Pose) || Conditions[j].Pose == Conditions[i].Pose)
+							if (string.IsNullOrEmpty(Conditions[j].Pose) || Conditions[j].Pose == Conditions[i].Pose)
 							{
 								Conditions[j].Pose = Conditions[i].Pose;
 								Conditions[i].Pose = null;
@@ -2353,7 +2332,7 @@ namespace SPNATI_Character_Editor
 			{
 				tag = tag.Substring(5);
 			}
-			else if (tag != null && tag.StartsWith("opponent_") && tag != "opponent_selected")
+			else if (tag != null && tag.StartsWith("opponent_") && !tag.EndsWith("selected"))
 			{
 				tag = tag.Substring(9);
 			}
@@ -2407,6 +2386,15 @@ namespace SPNATI_Character_Editor
 				{
 					return "selected";
 				}
+				if (tag == "opponent_deselected")
+				{
+					return null;
+				}
+			}
+
+			if (tag == "opponent_deselected")
+			{
+				return tag;
 			}
 
 			if (tag == "good_hand" || tag == "okay_hand" || tag == "bad_hand")
@@ -2414,10 +2402,6 @@ namespace SPNATI_Character_Editor
 				return "hand";
 			}
 
-			if (tag == "opponent_deselected")
-			{
-				return null;
-			}
 			if (tag == "finishing_masturbating")
 			{
 				return null;
@@ -2608,12 +2592,11 @@ namespace SPNATI_Character_Editor
 
 			foreach (TargetCondition cond in Conditions)
 			{
-				if (cond.Role == "self" && !string.IsNullOrEmpty(cond.SaidMarker) && (!cond.SaidMarker.Contains("!=") || cond.SaidMarker.EndsWith("!=0")) && !cond.SaidMarker.EndsWith("==0"))
+				if (cond.Role == "self" && !string.IsNullOrEmpty(cond.SaidMarker))
 				{
-					int splitIndex = cond.SaidMarker.IndexOfAny(new char[] { '=', '>', '<', '!' });
+					int splitIndex = cond.SaidMarker.IndexOfAny(new char[] { '>', '<', '!', '@' });
 					if (splitIndex > 0)
 					{
-						list.Add(cond.SaidMarker.Substring(0, splitIndex));
 					}
 					else
 					{
