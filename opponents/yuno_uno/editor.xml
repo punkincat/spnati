@@ -287,6 +287,13 @@
         <response id="1103" opponent="jura" opponentId="1019" />
         <response id="1104" opponent="jura" opponentId="1023" />
         <response id="1105" opponent="jura" opponentId="1020" />
+        <response id="1114" opponent="beatrix" opponentId="159" />
+        <response id="1118" opponent="meia" opponentId="1461" />
+        <response id="1119" opponent="meia" opponentId="1462" />
+        <response id="1125" opponent="aqua_konosuba" opponentId="1372" />
+        <response id="1126" opponent="zeke_pandoria" opponentId="2" />
+        <response id="1127" opponent="zeke_pandoria" opponentId="50" />
+        <response id="1128" opponent="zeke_pandoria" opponentId="34" />
     </responses>
     <notes>
         <note id="29">The Greek Visionary is a character like Ishizu or Shadi from Yu-gi-oh. Roll with it.</note>
@@ -334,6 +341,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <note id="1090">These first two lines have been written as vague comments so Lysithea not responding / having higher priority targets isn't as much of a big deal</note>
         <note id="1091">These first two lines have been written as vague comments so Lysithea not responding / having higher priority targets isn't as much of a big deal</note>
         <note id="1092">he's going somewhere with this; he's going to be praising lysithea for being disciplined</note>
+        <note id="1115">in the next case he'll probably question why she has a giant needle in the first place; you can give a funny half-answer if you want</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Friends" sort="2" />
@@ -1400,8 +1408,8 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="1076" label="" folder="Aqua Grunt" sort="0" />
         <label id="1077" label="" folder="Aqua Grunt" sort="0" />
         <label id="1078" label="" folder="Aqua Grunt" sort="0" />
-        <label id="1079" label="" color="1" folder="Aqua (Konosuba)" sort="0" />
-        <label id="1080" label="" color="1" folder="Responses" sort="0" />
+        <label id="1079" label="" color="3" folder="Aqua (Konosuba)" sort="0" />
+        <label id="1080" label="" folder="Responses" sort="0" />
         <label id="1081" label="" folder="Responses" sort="0" />
         <label id="1082" label="" folder="Responses" sort="0" />
         <label id="1083" label="" folder="Responses" sort="0" />
@@ -1434,11 +1442,26 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <label id="1111" label="" folder="Tag Filtered" sort="0" />
         <label id="1112" label="" folder="Target Tags" sort="0" />
         <label id="1113" label="" folder="Target Tags" sort="0" />
+        <label id="1114" label="" folder="Responses" sort="0" />
+        <label id="1115" label="" folder="Targets" sort="0" />
+        <label id="1116" label="" folder="Targets" sort="0" />
+        <label id="1117" label="" folder="Targets" sort="0" />
+        <label id="1118" label="" color="1" folder="Responses" sort="0" />
+        <label id="1119" label="" color="1" folder="Responses" sort="0" />
+        <label id="1120" label="bigsucc " folder="Logic" sort="0" />
+        <label id="1121" label="It is disabled" folder="The Big Succ" sort="0" />
+        <label id="1122" label="" folder="The Big Succ" sort="0" />
+        <label id="1123" label="" folder="The Big Succ" sort="0" />
+        <label id="1124" label="" color="1" folder="Aqua (Konosuba)" sort="0" />
+        <label id="1125" label="" folder="Aqua (Konosuba)" sort="0" />
+        <label id="1126" label="" folder="Targets" sort="0" />
+        <label id="1127" label="" folder="Targets" sort="0" />
+        <label id="1128" label="" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>yuno_collectible</prefix>
     </prefixes>
-    <nextId>1113</nextId>
+    <nextId>1128</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="10rounds_gaku_skill_level" />
@@ -1464,6 +1487,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="aquaKonosuba_did_aquass" />
         <marker scope="Public" name="AquaKS_erection_react_Followup" />
         <marker scope="Public" name="AquaKS_erection_reactAquass_Followup" />
+        <marker scope="Public" name="aquaKS_simpleNotInsultResp" />
         <marker scope="Public" name="ayumi_compression_glove_story" />
         <marker scope="Public" name="ayumi_on_a_break" />
         <marker scope="Public" name="ayumi_on_a_break2" />
@@ -1471,6 +1495,8 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="beatrix_buttReact" />
         <marker scope="Public" name="bernie_butt_reaction" />
         <marker scope="Public" name="bernie_butt_reaction2" />
+        <marker scope="Public" name="big_succ_decline" />
+        <marker scope="Public" name="big_succ_option" />
         <marker scope="Public" name="big_succ_start" />
         <marker scope="Public" name="bigsucc_after" />
         <marker scope="Public" name="bigsucc_finished" />
@@ -1606,6 +1632,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="Mari_postBigSucc_GameOver" />
         <marker scope="Public" name="mari_tournament_resp" />
         <marker scope="Public" name="mari_Yuno_Ayumi1" />
+        <marker scope="Public" name="mariS_valid_outfit" />
         <marker scope="Public" name="mariSG_wings_reveal" />
         <marker scope="Public" name="mast_female_ayumi_story1" />
         <marker scope="Public" name="mast_female_ayumi_story1b" />
@@ -1839,6 +1866,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_aquaks_Praise1" />
         <marker scope="Public" name="yuno_aquaks_Praise2" />
         <marker scope="Public" name="yuno_aquaks_shoot1" />
+        <marker scope="Public" name="yuno_aquaks_shoot2" />
         <marker scope="Public" name="yuno_aquaks_ultimate_pun_contResp" />
         <marker scope="Public" name="yuno_aquaks_ultimate_pun_endResp" />
         <marker scope="Public" name="yuno_aquaks_ultimate_pun_Resp" />
@@ -1859,8 +1887,11 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_barbara_strip1a" />
         <marker scope="Public" name="yuno_beatrix_arthritis1" />
         <marker scope="Public" name="yuno_beatrix_fightPits1" />
+        <marker scope="Public" name="yuno_beatrix_fightPits2" />
         <marker scope="Public" name="yuno_beatrix_legs1" />
+        <marker scope="Public" name="yuno_beatrix_legs2" />
         <marker scope="Public" name="yuno_beatrix_needles1" />
+        <marker scope="Public" name="yuno_beatrix_needles2" />
         <marker scope="Public" name="Yuno_Bending_1" />
         <marker scope="Public" name="yuno_binah_books1" />
         <marker scope="Public" name="yuno_binah_pillar_reactionA" />
@@ -1980,6 +2011,7 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_jason_strip1a" />
         <marker scope="Public" name="yuno_jenna_6Default_a" />
         <marker scope="Public" name="yuno_jenna_firechat1" />
+        <marker scope="Public" name="yuno_jenna_firechat2" />
         <marker scope="Public" name="yuno_joey_braTrick" />
         <marker scope="Public" name="yuno_joey_cards1Resp" />
         <marker scope="Public" name="yuno_joey_pie1" />
@@ -2111,9 +2143,11 @@ How would she have done against Ziro? Does she even have a soul to steal?</note>
         <marker scope="Public" name="yuno_meia_self3b" />
         <marker scope="Public" name="yuno_meia_self3c" />
         <marker scope="Public" name="yuno_meia_self4a" />
+        <marker scope="Public" name="yuno_meia_self4b" />
         <marker scope="Public" name="yuno_meia_selfHalloween0a" />
         <marker scope="Public" name="yuno_meia_selfHalloween0b" />
         <marker scope="Public" name="yuno_meia_selfSummer0a" />
+        <marker scope="Public" name="yuno_meia_selfSummer0b" />
         <marker scope="Public" name="yuno_meia_strip0a" />
         <marker scope="Public" name="yuno_meia_strip1a" />
         <marker scope="Public" name="yuno_meia_strip1b" />
