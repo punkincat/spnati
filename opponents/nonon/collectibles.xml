@@ -6,4 +6,15 @@
         <text>Nonon must have left this. I should return it to her.</text>
         <unlock>Complete a game against Nonon where she loses.</unlock>
     </collectible>
+    <collectible id="nonon_hat" status="unlisted" img="opponents/nonon/hat.png" thumbnail="opponents/nonon/hat_thumb.png">
+        <title>Nonon's Hat</title>
+        <subtitle>I'm sorry, what?</subtitle>
+        <text>Oh no, you beat me in a Strip Poker battle!
+ But I don't have any money! 
+
+Perhaps there's something else you want, hmmmm......?</text>
+        <unlock>Play against Nonon and win.</unlock>
+        <wearable>true</wearable>
+        <clothing name="hat" generic="hat" position="head" type="extra" img="opponents/nonon/hat_thumb.png" />
+    </collectible>
 </collectibles>
