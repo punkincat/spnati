@@ -17,7 +17,30 @@
 	margin-bottom: 0;
 }
 
-.dialogue .smaller[data-character="zeke_pandoria] {
+.dialogue .smaller[data-character="zeke_pandoria"] {
   /*Smaller text.*/
   font-size: 85%;
+}
+
+.dialogue .sucrose[data-character="zeke_pandoria"] {
+  /*Sucrose is speaking.*/
+  color: #1F3F7A;
+}
+
+.dark-mode .dialogue .sucrose[data-character="zeke_pandoria"] {
+  color: #8092CE;
+}
+
+.dialogue .zeke[data-character="zeke_pandoria"] {
+  /*Zeke is speaking, dual ff placeholder.*/
+  color: #000000;
+}
+
+.dark-mode .dialogue .zeke[data-character="zeke_pandoria"] {
+  color: #FFFFFF;
+}
+
+.dialogue .trail[data-character="zeke_pandoria"] {
+  /*Tiny text for when Sucrose goes on for too long*/
+  font-size: 65%;
 }
