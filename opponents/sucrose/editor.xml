@@ -187,11 +187,16 @@
         <response id="984" opponent="zeke_pandoria" opponentId="254" />
         <response id="985" opponent="zeke_pandoria" opponentId="253" />
         <response id="986" opponent="zeke_pandoria" opponentId="255" />
+        <response id="998" opponent="zeke_pandoria" opponentId="268" />
+        <response id="999" opponent="zeke_pandoria" opponentId="269" />
+        <response id="1013" opponent="zeke_pandoria" opponentId="303" />
+        <response id="1014" opponent="zeke_pandoria" opponentId="289" />
     </responses>
     <notes>
         <note id="798">Sucrose is sort of assuming that Rouge is mocking Fluttershy since this is far fucking funnier</note>
         <note id="987">I figure this is a good chance for her to divert that she's both a publisher and a priest</note>
         <note id="988">This is the case for just random chatter. It won't trigger unless Yae's had a few non-loss rounds in a row so it shouldn't be *too* disruptive to game flow. </note>
+        <note id="1006">in zeke/pandoria's mode, they will now go into the 'heavy' masturbating state for 10 rounds</note>
     </notes>
     <labels>
         <label id="1" label="Selector Reset" folder="" sort="0" />
@@ -862,8 +867,22 @@
         <label id="901" label="" folder="CagFF" sort="0" />
         <label id="902" label="" folder="CagFF" sort="0" />
         <label id="946" label="Zeke and Pandoria questions" folder="" sort="0" />
+        <label id="1001" label="" folder="ZP_FF" sort="0" />
+        <label id="1002" label="" folder="ZP_FF" sort="0" />
+        <label id="1003" label="All masturbation lines" folder="ZP_FF" sort="0" />
+        <label id="1004" label="" folder="ZP_FF" sort="0" />
+        <label id="1005" label="" folder="ZP_FF" sort="0" />
+        <label id="1006" label="PH" folder="ZP_FF" sort="0" />
+        <label id="1007" label="FinishING" folder="ZP_FF" sort="0" />
+        <label id="1008" label="FinishED" folder="ZP_FF" sort="0" />
+        <label id="1009" label="FinishED" folder="ZP_FF" sort="0" />
+        <label id="1010" label="" folder="ZP_FF" sort="0" />
+        <label id="1011" label="Sync up our timers and add tags" folder="ZP_FF" sort="0" />
+        <label id="1012" label="hidden case to make it trigger more reliably" folder="" sort="0" />
+        <label id="1013" label="" folder="ZP_FF" sort="0" />
+        <label id="1014" label="add the intercourse forfeit tag" folder="ZP_FF" sort="0" />
     </labels>
-    <nextId>988</nextId>
+    <nextId>1014</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="69-P" />
@@ -980,6 +999,7 @@
         <marker scope="Public" name="fina_toys" />
         <marker scope="Public" name="fina_traits" />
         <marker scope="Public" name="fina_travel" />
+        <marker scope="Public" name="finishing_for_ZP" />
         <marker scope="Public" name="first_penis" />
         <marker scope="Public" name="first_penisL">Sucrose's first penis seen in a prior game was Large.</marker>
         <marker scope="Public" name="first_penisM">Sucrose's first penis seen in a prior game was Medium.</marker>
@@ -1271,12 +1291,17 @@
         <marker scope="Public" name="sucrose" />
         <marker scope="Public" name="sucrose_defend" />
         <marker scope="Public" name="sucrose_dessertsThere'" />
+        <marker scope="Public" name="sucrose_dual_FF" />
+        <marker scope="Public" name="sucrose_dual_FF_heavyphases" />
+        <marker scope="Public" name="sucrose_dual_FF_ongoing" />
+        <marker scope="Public" name="sucrose_dual_FFstart" />
         <marker scope="Public" name="sucrose_ears" />
         <marker scope="Public" name="sucrose_ellipsism" />
         <marker scope="Public" name="sucrose_enoument" />
         <marker scope="Public" name="sucrose_euphemisms" />
         <marker scope="Public" name="sucrose_exulansis" />
         <marker scope="Public" name="sucrose_ff" />
+        <marker scope="Public" name="sucrose_ff_22" />
         <marker scope="Public" name="sucrose_fina" />
         <marker scope="Public" name="sucrose_flowers" />
         <marker scope="Public" name="sucrose_howdo" />
@@ -1397,14 +1422,23 @@
         <marker scope="Public" name="yuri_books" />
         <marker scope="Public" name="yuri_poultice" />
         <marker scope="Public" name="yuri01" />
+        <marker scope="Public" name="zf_ff" />
         <marker scope="Public" name="zp_01" />
         <marker scope="Public" name="zp_bulbs" />
         <marker scope="Public" name="zp_ff_enable" />
+        <marker scope="Public" name="zp_ff_start" />
         <marker scope="Public" name="zp_ffM" />
         <marker scope="Public" name="zp_ffS" />
         <marker scope="Public" name="zp_greet" />
         <marker scope="Public" name="zp_magic" />
         <marker scope="Public" name="zp_physique" />
+        <marker scope="Public" name="zp_SFF1" />
+        <marker scope="Public" name="zp_SFF2" />
+        <marker scope="Public" name="zp_SFF3" />
+        <marker scope="Public" name="zp_SFF4" />
+        <marker scope="Public" name="zp_SFF5" />
+        <marker scope="Public" name="zp_SFF6" />
+        <marker scope="Public" name="zp_SFF7" />
         <marker scope="Public" name="zp_similarity" />
         <marker scope="Public" name="zp_start" />
         <marker scope="Public" name="zp_whisper" />
