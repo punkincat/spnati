@@ -30,13 +30,13 @@
         <clothing name="top" generic="bra" position="upper" type="important" />
         <clothing name="hat" generic="hat" position="head" type="extra" />
         <clothing name="gloves" generic="gloves" position="arms" type="minor" plural="true" />
-        <clothing name="eyepatch" position="other" type="extra" />
+        <clothing name="eyepatch" generic="" position="other" type="extra" />
     </wardrobe>
 
     <poses>
         <pose id="0-embarrassed+">
             <sprite id="embarrassed" src="reskins/meia_cupid/0-embarrassed.png" x="0" y="0" />
-            <sprite id="smilemouth" src="reskins/meia_cupid/smilemouth.png" x="11" y="283" scalex="1" scaley="1" rotation="0" />
+            <sprite id="smilemouth" src="reskins/meia_cupid/smilemouth.png" x="11" y="281" scalex="1" scaley="1" rotation="0" />
         </pose>
         <pose id="0-hug">
             <sprite id="0-hug" src="reskins/meia_cupid/0-hug.png" x="-20" y="0" />
@@ -406,7 +406,7 @@
         </pose>
         <pose id="0-reassured">
             <sprite id="pleased" src="reskins/meia_cupid/0-pleased.png" x="0" y="0" />
-            <sprite id="reassured0" src="reskins/meia_cupid/reassured0.png" x="-3" y="200" />
+            <sprite id="reassured0" src="reskins/meia_cupid/reassured0.png" x="-2" y="149" />
         </pose>
         <pose id="0-stretching+">
             <sprite id="stretching" src="reskins/meia_cupid/0-stretching.png" x="0" y="0" />
@@ -784,7 +784,7 @@
         </pose>
         <pose id="1-reassured">
             <sprite id="pleased" src="reskins/meia_cupid/1-pleased.png" x="0" y="0" />
-            <sprite id="reassured0" src="reskins/meia_cupid/reassured12.png" x="-3" y="214" />
+            <sprite id="reassured0" src="reskins/meia_cupid/reassured12.png" x="-1" y="158" />
         </pose>
         <pose id="1-stretching+">
             <sprite id="stretching" src="reskins/meia_cupid/1-stretching.png" x="0" y="0" />
@@ -1152,7 +1152,7 @@
         </pose>
         <pose id="2-reassured">
             <sprite id="pleased" src="reskins/meia_cupid/2-pleased.png" x="0" y="0" />
-            <sprite id="reassured0" src="reskins/meia_cupid/reassured12.png" x="-3" y="214" />
+            <sprite id="reassured0" src="reskins/meia_cupid/reassured3456.png" x="2" y="206" pivotx="52%" pivoty="78%" />
         </pose>
         <pose id="2-stretching+">
             <sprite id="stretching" src="reskins/meia_cupid/2-stretching.png" x="0" y="0" />
@@ -1544,7 +1544,7 @@
         </pose>
         <pose id="3-reassured">
             <sprite id="pleased" src="reskins/meia_cupid/3-pleased.png" x="0" y="0" />
-            <sprite id="reassured0" src="reskins/meia_cupid/reassured3456.png" x="-8" y="214" />
+            <sprite id="reassured0" src="reskins/meia_cupid/reassured3456.png" x="2" y="206" />
         </pose>
         <pose id="3-stretching+">
             <sprite id="stretching" src="reskins/meia_cupid/3-stretching.png" x="0" y="0" />
@@ -1954,7 +1954,7 @@
         </pose>
         <pose id="4-reassured">
             <sprite id="pleased" src="reskins/meia_cupid/4-pleased.png" x="0" y="0" />
-            <sprite id="reassured0" src="reskins/meia_cupid/reassured3456.png" x="-8" y="214" />
+            <sprite id="reassured0" src="reskins/meia_cupid/reassured3456.png" x="2" y="206" />
         </pose>
         <pose id="4-stretching+">
             <sprite id="stretching" src="reskins/meia_cupid/4-stretching.png" x="0" y="0" />
@@ -2374,7 +2374,7 @@
         </pose>
         <pose id="5-reassured">
             <sprite id="pleased" src="reskins/meia_cupid/5-pleased.png" x="0" y="0" />
-            <sprite id="reassured0" src="reskins/meia_cupid/reassured3456.png" x="-8" y="214" />
+            <sprite id="reassured0" src="reskins/meia_cupid/reassured3456.png" x="-3" y="206" />
         </pose>
         <pose id="5-stretching+">
             <sprite id="stretching" src="reskins/meia_cupid/5-stretching.png" x="0" y="0" />
@@ -2405,4 +2405,5 @@
             <sprite id="sidemouthsilent" src="reskins/meia_cupid/sidemouthsilent.png" x="-52" y="290" scalex="-1" rotation="-4" />
         </pose>
     </poses>
+
 </costume>
