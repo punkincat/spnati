@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1691941324166</lastupdate>
+    <lastupdate>1701407589695</lastupdate>
     <enabled>false</enabled>
     <first>Gloria</first>
     <last />
@@ -13,9 +13,9 @@
     <description>Gloria is the female player character in Pokémon Sword and Shield. A sassy young lass from the county town of Postwick in the Galar region. Loves camping and curry.</description>
     <epilogue status="unlisted" gender="male" img="epilogue/gloria_epilogue_preview.png" alsoPlaying="rosa" hint="Win the game against Gloria and Rosa (hardcore epilogue)">Curry &amp; Donuts (M)</epilogue>
     <epilogue status="unlisted" gender="female" img="epilogue/gloria_epilogue_preview_alt.png" alsoPlaying="rosa" hint="Win the game against Gloria and Rosa (hardcore epilogue)">Curry &amp; Donuts (F)</epilogue>
-    <epilogue gender="female" img="epilogue/going_down_f.png" hint="Finish a game against Gloria as a female.">Going Down with Gloria</epilogue>
+    <epilogue gender="female" img="epilogue/going_down_f.png" hint="Finish a game against Gloria as a female." description="Gloria and you have lesbian sex.">Going Down with Gloria</epilogue>
+    <epilogue status="unlisted" gender="male">New Ending</epilogue>
     <layers>6</layers>
-    <default-costume-name />
     <alternates>
         <costume folder="opponents/reskins/gloria_punk/" img="0-z_portrait.png" status="online" label="Gloria">Punk Style</costume>
         <costume folder="opponents/reskins/gloria_valentine/" img="0-z_portrait.png" set="valentines" label="Gloria">Crème de la Alcremie</costume>
@@ -23,7 +23,7 @@
         <costume folder="opponents/reskins/gloria_christmas/" img="0-z_portrait.png" set="xmas" label="Gloria">Vixen</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>1301</lines>
+    <lines>1313</lines>
     <poses>211</poses>
     <z-index>1</z-index>
 </opponent>
