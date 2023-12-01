@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>spooky_festive</id>
+    <label>Spooky</label>
+    <tags>
+        <tag>alternative_skin</tag>
+    </tags>
+    <layers>4</layers>
+    <folder>opponents/reskins/spooky_festive/</folder>
+    <folder stage="1">opponents/spooky/</folder>
+    <wardrobe>
+        <clothing name="panties" generic="" position="lower" type="important" plural="true" />
+        <clothing name="bra" generic="bra" position="upper" type="important" />
+        <clothing name="dress" generic="dress" position="both" type="major" />
+        <clothing name="hat" generic="hat" position="head" type="extra" />
+    </wardrobe>
+
+
+</costume>
