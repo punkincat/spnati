@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1682297562940</lastupdate>
+    <lastupdate>1699024271573</lastupdate>
     <enabled>true</enabled>
     <first>Spooky</first>
     <last />
@@ -14,11 +14,13 @@
     <epilogue gender="male" img="epilogue/x_epilogue_1.png">One Night at Spooky's</epilogue>
     <epilogue gender="female" img="epilogue/x_epilogue_1.png">One Night at Spooky's</epilogue>
     <layers>4</layers>
+    <default-costume-name>Very Spooky</default-costume-name>
     <alternates>
         <costume folder="opponents/reskins/spooky_nurse/" img="0-welcome.png" label="Spooky">Nurse Spooky</costume>
         <costume folder="opponents/reskins/spooky_reaper/" img="0-welcome.png" label="Spooky">Reaper Spooky</costume>
+        <costume folder="opponents/reskins/spooky_festive/" img="0-welcome.png" set="xmas" label="Spooky">Festive Spooky</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>1897</lines>
+    <lines>1900</lines>
     <poses>110</poses>
 </opponent>
