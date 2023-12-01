@@ -271,6 +271,12 @@
         <response id="824" opponent="bowsette" opponentId="122" />
         <response id="830" opponent="nadeshiko" opponentId="9" />
         <response id="831" opponent="nadeshiko" opponentId="92" />
+        <response id="834" opponent="nadeshiko" opponentId="151" />
+        <response id="835" opponent="gloria" opponentId="119" />
+        <response id="836" opponent="gloria" opponentId="183" />
+        <response id="847" opponent="gloria" opponentId="696" />
+        <response id="848" opponent="gloria" opponentId="699" />
+        <response id="849" opponent="gloria" opponentId="704" />
     </responses>
     <notes>
         <note id="13">https://www.youtube.com/watch?v=5EbnoElOJx0 please dont actually respond to this really dumb joke</note>
@@ -926,8 +932,8 @@ Why? Do people think we are?"</note>
         <label id="711" label="" folder="Aqua (KH)" sort="4" />
         <label id="712" label="" folder="Inbound Responses" sort="21" />
         <label id="713" label="" folder="Inbound Responses" sort="22" />
-        <label id="714" label="" folder="Toph" sort="0" />
-        <label id="715" label="" folder="Toph" sort="2" />
+        <label id="714" label="" color="3" folder="Toph" sort="0" />
+        <label id="715" label="" color="3" folder="Toph" sort="2" />
         <label id="717" label="" folder="Targets" sort="76" />
         <label id="718" label="" folder="Targets" sort="78" />
         <label id="223" label="" folder="Targets" sort="77" />
@@ -1034,7 +1040,7 @@ Why? Do people think we are?"</note>
         <label id="820" label="" color="1" folder="Lysithea" sort="0" />
         <label id="821" label="" color="1" folder="Lysithea" sort="0" />
         <label id="822" label="" color="1" folder="Lysithea" sort="0" />
-        <label id="823" label="" folder="Toph" sort="0" />
+        <label id="823" label="" color="3" folder="Toph" sort="0" />
         <label id="226" label="" folder="Bowsette" sort="0" />
         <label id="824" label="" folder="Bowsette" sort="0" />
         <label id="825" label="" folder="Bowsette" sort="0" />
@@ -1046,16 +1052,31 @@ Why? Do people think we are?"</note>
         <label id="831" label="" folder="Prompt Responses" sort="0" />
         <label id="832" label="" color="1" folder="Targets" sort="0" />
         <label id="833" label="" color="1" folder="Targets" sort="0" />
+        <label id="834" label="" folder="Prompt Responses" sort="0" />
+        <label id="835" label="" folder="Targets" sort="0" />
+        <label id="836" label="" folder="Targets" sort="0" />
+        <label id="837" label="" folder="Targets" sort="0" />
+        <label id="838" label="" folder="Targets" sort="0" />
+        <label id="839" label="" folder="Targets" sort="0" />
+        <label id="840" label="" folder="Targets" sort="0" />
+        <label id="841" label="" folder="Targets" sort="0" />
+        <label id="842" label="" folder="Targets" sort="0" />
+        <label id="843" label="" folder="Targets" sort="0" />
+        <label id="844" label="" folder="Targets" sort="0" />
+        <label id="845" label="" folder="Targets" sort="0" />
+        <label id="846" label="" folder="Targets" sort="0" />
+        <label id="848" label="" folder="Responses" sort="0" />
+        <label id="847" label="" folder="Responses" sort="0" />
+        <label id="849" label="" folder="Responses" sort="0" />
     </labels>
     <prefixes>
         <prefix>sunglasses</prefix>
         <prefix>animal-hide</prefix>
         <prefix>feather</prefix>
     </prefixes>
-    <nextId>833</nextId>
+    <nextId>849</nextId>
     <markers>
         <marker scope="Public" name="" />
-        <marker scope="Public" name="!" />
         <marker scope="Public" name="3HBeachTripP2" />
         <marker scope="Public" name="af_comment1">Her very first line of dialogue after finishing (AF)</marker>
         <marker scope="Public" name="af_idle_12_rounds" />
@@ -1098,6 +1119,13 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="gamestart_respond_leonie_war" />
         <marker scope="Public" name="gamestart_shamir" />
         <marker scope="Public" name="gamewithfina" />
+        <marker scope="Public" name="gloria_6_butt_after" />
+        <marker scope="Public" name="gloria_petra_accents1" />
+        <marker scope="Public" name="gloria_petra_accents2" />
+        <marker scope="Public" name="gloria_petra_champion1" />
+        <marker scope="Public" name="gloria_petra_champion2" />
+        <marker scope="Public" name="gloria_petra_cheekybanter1" />
+        <marker scope="Public" name="gloria_petra_cheekybanter2" />
         <marker scope="Public" name="good_hand_butt_pose" />
         <marker scope="Public" name="halloween_event_idle">Says idle dialogue based on the halloween event, if she is in her costume, based on the current game day.</marker>
         <marker scope="Public" name="hand_any_armory" />
@@ -1166,6 +1194,7 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="nadeshiko_cook" />
         <marker scope="Public" name="nadeshiko_cookPrompt" />
         <marker scope="Public" name="nadeshiko_partnerPrompt" />
+        <marker scope="Public" name="nadeshiko_whereWeAre" />
         <marker scope="Public" name="nagatoro_butt_resp" />
         <marker scope="Public" name="nord_table_best_gift_ever1" />
         <marker scope="Public" name="nude_challenge" />
@@ -1319,6 +1348,7 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="petra_dmg_strength" />
         <marker scope="Public" name="petra_dmg_titles" />
         <marker scope="Public" name="petra_dorothea_idle_marrymoney" />
+        <marker scope="Public" name="Petra_Earthbending_2" />
         <marker scope="Public" name="petra_elphaba_curiousResp" />
         <marker scope="Public" name="petra_elphaba_strip0a" />
         <marker scope="Public" name="petra_elphaba_strip0b" />
@@ -1370,6 +1400,18 @@ Why? Do people think we are?"</note>
         <marker scope="Public" name="petra_fortune_strip2b" />
         <marker scope="Public" name="petra_fortune_strip2c" />
         <marker scope="Public" name="petra_fortune_threepuns" />
+        <marker scope="Public" name="petra_gloria_accents1" />
+        <marker scope="Public" name="petra_gloria_accents2" />
+        <marker scope="Public" name="petra_gloria_accents3" />
+        <marker scope="Public" name="petra_gloria_champion1" />
+        <marker scope="Public" name="petra_gloria_champion2" />
+        <marker scope="Public" name="petra_gloria_champion3" />
+        <marker scope="Public" name="petra_gloria_cheekybanter1" />
+        <marker scope="Public" name="petra_gloria_cheekybanter2" />
+        <marker scope="Public" name="petra_gloria_cheekybanter3" />
+        <marker scope="Public" name="petra_gloria_fodlan1" />
+        <marker scope="Public" name="petra_gloria_fodlan2" />
+        <marker scope="Public" name="petra_gloria_fodlan3" />
         <marker scope="Public" name="petra_gwen_mask_reveal" />
         <marker scope="Public" name="petra_heris_princessResp" />
         <marker scope="Public" name="petra_heris_princessResp2" />
