@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>joey_toymaking_clothes</id>
+    <label>Joey</label>
+    <tags>
+        <tag>alternative_skin</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/joey_toymaking_clothes/</folder>
+    <folder stage="7">opponents/joey/</folder>
+    <wardrobe>
+        <clothing name="bra" generic="bra" position="upper" type="important" />
+        <clothing name="panties" position="lower" type="important" plural="true" />
+        <clothing name="socks" generic="socks" position="legs" type="minor" plural="true" />
+        <clothing name="dress" generic="dress" position="both" type="major" />
+        <clothing name="boots" position="feet" type="extra" plural="true" />
+        <clothing name="gloves" generic="gloves" position="hands" type="extra" plural="true" />
+    </wardrobe>
+
+</costume>
