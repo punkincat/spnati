@@ -26,10 +26,10 @@
     <folder>opponents/reskins/meia_cupid/</folder>
     <folder stage="6">opponents/meia/</folder>
     <wardrobe>
-        <clothing name="bottoms" generic="underwear" position="lower" type="important" plural="true" />
-        <clothing name="top" generic="bra" position="upper" type="important" />
-        <clothing name="hat" generic="hat" position="head" type="extra" />
-        <clothing name="gloves" generic="gloves" position="arms" type="minor" plural="true" />
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="bra" generic="bra" position="upper" type="important" />
+        <clothing name="wings, vest, and skirt" generic="vest" position="both" type="major" plural="true" />
+        <clothing name="hat, gloves, stockings, and heels" generic="hat" position="head" type="minor" plural="true" />
         <clothing name="eyepatch" generic="" position="other" type="extra" />
     </wardrobe>
 
@@ -2382,8 +2382,8 @@
         </pose>
         <pose id="5-stripped">
             <sprite id="butt" src="reskins/meia_cupid/5-butt.png" x="0" y="0" rotation="0" />
-            <sprite id="shorts" z="1" src="reskins/meia_cupid/shorts.png" x="7" y="686" alpha="100" />
-            <sprite id="shortsback" parent="shorts" z="-1" src="reskins/meia_cupid/shortsback.png" x="5" y="786" />
+            <sprite id="shorts" z="1" src="reskins/meia_cupid/shorts.png" x="4" y="639" scalex="0.95" scaley="1.29" alpha="100" />
+            <sprite id="shortsback" parent="shorts" z="-1" src="reskins/meia_cupid/shortsback.png" x="4" y="639" />
             <directive type="animation" id="butt" ease="smooth" interpolation="spline">
                 <keyframe time="0" x="0" rotation="0" />
                 <keyframe time="0.25" x="1" rotation="-1" />
@@ -2391,18 +2391,70 @@
                 <keyframe time="1" x="0" rotation="0" />
             </directive>
             <directive type="animation" id="shorts" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="7" alpha="100" />
+                <keyframe time="0" x="4" alpha="100" />
                 <keyframe time="1" alpha="100" />
                 <keyframe time="2" alpha="0" />
             </directive>
             <directive type="animation" id="shorts" ease="ease-in-cubic" interpolation="linear">
-                <keyframe time="0" y="686" />
+                <keyframe time="0" y="639" />
                 <keyframe time="2" y="1121" />
             </directive>
         </pose>
         <pose id="5-ultrainstinctsilent">
             <sprite id="butt2" src="reskins/meia_cupid/5-ultrainstinct.png" x="0" y="0" />
             <sprite id="sidemouthsilent" src="reskins/meia_cupid/sidemouthsilent.png" x="-52" y="290" scalex="-1" rotation="-4" />
+        </pose>
+        <pose id="3-strip">
+            <sprite id="2-strip" src="reskins/meia_cupid/3-strip.png" x="0" y="0" alpha="100" />
+            <sprite id="strip2" src="reskins/meia_cupid/3-strip2.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="2-strip" ease="ease-in-out-cubic" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="2" alpha="0" />
+            </directive>
+            <directive type="animation" id="strip2" ease="ease-in-out-cubic" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="2" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="3-strip+">
+            <sprite id="2-strip" src="reskins/meia_cupid/3-strip+.png" x="0" y="0" alpha="100" />
+            <sprite id="strip2" src="reskins/meia_cupid/3-strip2+.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="2-strip" ease="ease-in-out-cubic" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="2" alpha="0" />
+            </directive>
+            <directive type="animation" id="strip2" ease="ease-in-out-cubic" interpolation="linear">
+                <keyframe time="0" alpha="0" />
+                <keyframe time="2" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="5-ultrainstinctsilentsmile">
+            <sprite id="butt2" src="reskins/meia_cupid/5-ultrainstinct.png" x="0" y="0" />
+            <sprite id="sidemouthsilent" src="reskins/meia_cupid/sidemouthsilentsmile.png" x="-52" y="290" scalex="-1" rotation="-4" />
+        </pose>
+        <pose id="5-butt2silentsmile">
+            <sprite id="butt2" src="reskins/meia_cupid/5-butt2.png" x="0" y="0" />
+            <sprite id="sidemouthsilent" src="reskins/meia_cupid/sidemouthsilentsmile.png" x="73" y="284" />
+        </pose>
+        <pose id="5-butt3silentsmile">
+            <sprite id="butt3" src="reskins/meia_cupid/5-butt3.png" x="0" y="0" />
+            <sprite id="sidemouthsilent" src="reskins/meia_cupid/sidemouthsilentsmile.png" x="54" y="293" scaley="1" rotation="8" />
+        </pose>
+        <pose id="5-butt4silentsmile">
+            <sprite id="butt2" src="reskins/meia_cupid/5-butt4.png" x="0" y="0" />
+            <sprite id="sidemouthsilent" src="reskins/meia_cupid/sidemouthsilentsmile.png" x="60" y="281" />
+        </pose>
+        <pose id="5-buttchecksilentsmile">
+            <sprite id="butt2" src="reskins/meia_cupid/5-buttcheck.png" x="0" y="0" />
+            <sprite id="sidemouthsilent" src="reskins/meia_cupid/sidemouthsilentsmile.png" x="82" y="279" rotation="-11" />
+        </pose>
+        <pose id="5-buttspread2silentsmile">
+            <sprite id="butt2" src="reskins/meia_cupid/5-buttspread2.png" x="0" y="0" />
+            <sprite id="sidemouthsilent" src="reskins/meia_cupid/sidemouthsilentsmile.png" x="83" y="284" />
+        </pose>
+        <pose id="5-buttspreadsilentsmile">
+            <sprite id="butt2" src="reskins/meia_cupid/5-buttspread.png" x="0" y="0" />
+            <sprite id="sidemouthsilent" src="reskins/meia_cupid/sidemouthsilentsmile.png" x="64" y="299" rotation="7" />
         </pose>
     </poses>
 
