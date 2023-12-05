@@ -13,9 +13,9 @@
     <wardrobe>
         <clothing name="skirt" generic="skirt" position="lower" type="major" />
         <clothing name="coat" generic="dress" position="upper" type="major" />
-        <clothing name="hat" generic="sleeves" position="arms" type="extra" plural="true" />
-        <clothing name="boots and socks" generic="socks" position="feet" type="minor" plural="true" />
-        <clothing name="gloves" generic="shoes" position="feet" type="extra" plural="true" />
+        <clothing name="hat" generic="hat" position="head" type="extra" />
+        <clothing name="boots and socks" generic="shoes" position="legs" type="minor" plural="true" />
+        <clothing name="gloves" generic="gloves" position="hands" type="extra" plural="true" />
     </wardrobe>
 
     <poses>
