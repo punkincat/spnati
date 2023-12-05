@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>aqua_konosuba_winter</id>
+    <label>Aqua</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>christmas_skin</tag>
+        <tag from="0" to="2">hat</tag>
+    </tags>
+    <layers>5</layers>
+    <folder>opponents/reskins/aqua_konosuba_winter/</folder>
+    <folder stage="4">opponents/aqua_konosuba/</folder>
+    <wardrobe>
+        <clothing name="skirt" generic="skirt" position="lower" type="major" />
+        <clothing name="coat" generic="dress" position="upper" type="major" />
+        <clothing name="hat" generic="sleeves" position="arms" type="extra" plural="true" />
+        <clothing name="boots and socks" generic="socks" position="feet" type="minor" plural="true" />
+        <clothing name="gloves" generic="shoes" position="feet" type="extra" plural="true" />
+    </wardrobe>
+
+    <poses>
+        <pose id="0-dumb_face">
+            <sprite id="calm" z="1" src="reskins/aqua_konosuba_winter/0-calm.png" x="0" y="0" />
+            <sprite id="dumbsmile_face" z="2" src="aqua_konosuba/pose_maker/dumbsmile_face.png" x="-37" y="240" alpha="100" cliptop="50" />
+        </pose>
+        <pose id="1-dumb_face">
+            <sprite id="calm" z="1" src="reskins/aqua_konosuba_winter/1-calm.png" x="0" y="0" />
+            <sprite id="dumbsmile_face" z="2" src="aqua_konosuba/pose_maker/dumbsmile_face.png" x="-37" y="240" alpha="100" cliptop="50" />
+        </pose>
+        <pose id="2-dumb_face">
+            <sprite id="calm" z="1" src="reskins/aqua_konosuba_winter/2-calm.png" x="0" y="0" />
+            <sprite id="dumbsmile_face" z="2" src="aqua_konosuba/pose_maker/dumbsmile_face.png" x="-37" y="240" alpha="100" cliptop="50" />
+        </pose>
+        <pose id="3-dumb_face">
+            <sprite id="calm" z="1" src="reskins/aqua_konosuba_winter/3-calm.png" x="0" y="0" />
+            <sprite id="dumbsmile_face" z="2" src="aqua_konosuba/pose_maker/dumbsmile_face.png" x="-37" y="240" alpha="100" cliptop="50" />
+        </pose>
+        <pose id="1-stunned">
+            <sprite id="fear" z="1" src="reskins/aqua_konosuba_winter/1-fear.png" x="0" y="0" />
+            <sprite id="stun_face" z="3" src="aqua_konosuba/pose_maker/stun_face.png" x="-1" y="237" clipright="9" cliptop="66" />
+        </pose>
+        <pose id="0-stunned">
+            <sprite id="fear" z="1" src="reskins/aqua_konosuba_winter/0-fear.png" x="0" y="0" />
+            <sprite id="stun_face" z="3" src="aqua_konosuba/pose_maker/stun_face.png" x="-1" y="237" clipright="9" cliptop="66" />
+        </pose>
+        <pose id="2-stunned">
+            <sprite id="fear" z="1" src="reskins/aqua_konosuba_winter/2-fear.png" x="0" y="0" />
+            <sprite id="stun_face" z="3" src="aqua_konosuba/pose_maker/stun_face.png" x="-1" y="237" clipright="9" cliptop="66" />
+        </pose>
+        <pose id="3-stunned">
+            <sprite id="fear" z="1" src="reskins/aqua_konosuba_winter/3-fear.png" x="0" y="0" />
+            <sprite id="stun_face" z="3" src="aqua_konosuba/pose_maker/stun_face.png" x="-1" y="237" clipright="9" cliptop="66" />
+        </pose>
+        <pose id="3-nature's beauty">
+            <sprite id="natures beauty" z="3" src="reskins/aqua_konosuba_winter/3-natures beauty.png" />
+            <sprite id="natures_beauty_water" z="1" src="aqua_konosuba/pose_maker/natures_beauty_water.png" x="-369" y="111" />
+            <sprite id="natures_beauty_water_2" z="1" src="aqua_konosuba/pose_maker/natures_beauty_water.png" x="392" y="-217" />
+        </pose>
+        <pose id="2-nature's beauty">
+            <sprite id="natures beauty" z="3" src="reskins/aqua_konosuba_winter/2-natures beauty.png" />
+            <sprite id="natures_beauty_water" z="1" src="aqua_konosuba/pose_maker/natures_beauty_water.png" x="-369" y="111" />
+            <sprite id="natures_beauty_water_2" z="1" src="aqua_konosuba/pose_maker/natures_beauty_water.png" x="392" y="-217" />
+        </pose>
+        <pose id="0-nature's beauty">
+            <sprite id="natures beauty" z="3" src="reskins/aqua_konosuba_winter/0-natures beauty.png" />
+            <sprite id="natures_beauty_water" z="1" src="aqua_konosuba/pose_maker/natures_beauty_water.png" x="-369" y="111" />
+            <sprite id="natures_beauty_water_2" z="1" src="aqua_konosuba/pose_maker/natures_beauty_water.png" x="392" y="-217" />
+        </pose>
+        <pose id="1-nature's beauty">
+            <sprite id="natures beauty" z="3" src="reskins/aqua_konosuba_winter/1-natures beauty.png" />
+            <sprite id="natures_beauty_water" z="1" src="aqua_konosuba/pose_maker/natures_beauty_water.png" x="-369" y="111" />
+            <sprite id="natures_beauty_water_2" z="1" src="aqua_konosuba/pose_maker/natures_beauty_water.png" x="392" y="-217" />
+        </pose>
+        <pose id="3-blessing">
+            <sprite id="z_blessing" z="-1" src="reskins/aqua_konosuba_winter/pose_maker/3-z_blessing.png" x="0" y="0" />
+            <sprite id="star" src="aqua_konosuba/pose_maker/star.png" x="-85" y="50" scalex="0.3" scaley="0.3" alpha="0" />
+            <sprite id="star2" delay="0.12" src="aqua_konosuba/pose_maker/star.png" x="-5" y="41" scalex="0.3" scaley="0.3" alpha="0" />
+            <sprite id="star3" delay="0.5" src="aqua_konosuba/pose_maker/star.png" x="87" y="104" scalex="0.3" scaley="0.3" alpha="0" />
+            <sprite id="star4" delay="0.38" src="aqua_konosuba/pose_maker/star.png" x="132" y="125" scalex="0.3" scaley="0.3" alpha="0" />
+            <sprite id="star5" delay="0.25" src="aqua_konosuba/pose_maker/star.png" x="-111" y="110" scalex="0.3" scaley="0.3" alpha="0" />
+            <directive type="animation" id="star" loop="true" ease="smooth" interpolation="linear">
+                <keyframe time="0" y="50" alpha="0" />
+                <keyframe time="0.12" alpha="20" />
+                <keyframe time="0.5" alpha="50" />
+                <keyframe time="0.88" alpha="20" />
+                <keyframe time="1" y="1000" alpha="0" />
+            </directive>
+            <directive type="animation" id="star2" delay="0.12" loop="true" ease="smooth" interpolation="linear">
+                <keyframe time="0" y="41" alpha="0" />
+                <keyframe time="0.12" alpha="20" />
+                <keyframe time="0.63" alpha="50" />
+                <keyframe time="1" alpha="20" />
+                <keyframe time="1.13" y="1000" alpha="0" />
+            </directive>
+            <directive type="animation" id="star3" delay="0.5" loop="true" ease="smooth" interpolation="linear">
+                <keyframe time="0" y="104" alpha="0" />
+                <keyframe time="0.12" alpha="20" />
+                <keyframe time="0.62" alpha="50" />
+                <keyframe time="1.12" alpha="20" />
+                <keyframe time="1.25" y="1000" alpha="0" />
+            </directive>
+            <directive type="animation" id="star4" delay="0.38" loop="true" ease="smooth" interpolation="linear">
+                <keyframe time="0" y="125" alpha="0" />
+                <keyframe time="0.12" alpha="20" />
+                <keyframe time="0.37" alpha="50" />
+                <keyframe time="0.74" alpha="20" />
+                <keyframe time="0.87" y="1000" alpha="0" />
+            </directive>
+            <directive type="animation" id="star5" delay="0.25" loop="true" ease="smooth" interpolation="linear">
+                <keyframe time="0" y="110" alpha="0" />
+                <keyframe time="0.12" alpha="20" />
+                <keyframe time="0.5" alpha="50" />
+                <keyframe time="0.88" alpha="20" />
+                <keyframe time="1" y="1000" alpha="0" />
+            </directive>
+        </pose>
+    </poses>
+
+</costume>
