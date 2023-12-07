@@ -246,6 +246,8 @@
         <response id="777" opponent="lysithea" opponentId="234" />
         <response id="779" opponent="lysithea" opponentId="237" />
         <response id="789" opponent="nonon" opponentId="325" />
+        <response id="792" opponent="nonon" opponentId="397" />
+        <response id="797" opponent="beatrix" opponentId="172" />
     </responses>
     <notes>
         <note id="10">Will be replaced if Sharla ever gets reworked lol</note>
@@ -1068,9 +1070,20 @@ c: say that he's been as high as the bionis' head?
         <label id="786" label="" folder="Targets" sort="0" />
         <label id="787" label="" color="3" folder="Targets" sort="0" />
         <label id="788" label="" color="3" folder="Targets" sort="0" />
-        <label id="789" label="" folder="Responses" sort="0" />
+        <label id="789" label="" color="3" folder="Responses" sort="0" />
+        <label id="790" label="" folder="Logic" sort="0" />
+        <label id="791" label="" folder="Targets" sort="0" />
+        <label id="792" label="" folder="Responses" sort="0" />
+        <label id="793" label="" folder="Responses" sort="0" />
+        <label id="794" label="" folder="Responses" sort="0" />
+        <label id="795" label="" folder="Responses" sort="0" />
+        <label id="796" label="" folder="Responses" sort="0" />
+        <label id="797" label="" folder="Responses" sort="0" />
     </labels>
-    <nextId>789</nextId>
+    <posePreviewMarkers>
+        <posePreviewMarker>aquaKH_socks==1</posePreviewMarker>
+    </posePreviewMarkers>
+    <nextId>797</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="20gOffer">Line that plays when Dunban offers a 20g bribe to whoever loses</marker>
@@ -1096,8 +1109,10 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="aquakh_doubleforfeit_dunbanFinish" />
         <marker scope="Public" name="aquakh_doubleforfeit_end" />
         <marker scope="Public" name="aquakh_doubleforfeit_start" />
+        <marker scope="Public" name="aquaKH_socks" />
         <marker scope="Public" name="beatrix_arm_machinaComment" />
         <marker scope="Public" name="beatrix_dunban_replaceArm1" />
+        <marker scope="Public" name="beatrix_dunban_replaceArm2" />
         <marker scope="Public" name="beatrix_perfectBody" />
         <marker scope="Private" name="binah_teatime_seen" />
         <marker scope="Public" name="bionis_view_1" />
@@ -1425,12 +1440,16 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_miku_strip0a" />
         <marker scope="Public" name="dunban_mitama_arrival_resp" />
         <marker scope="Public" name="dunban_mitama_desperate2Resp" />
+        <marker scope="Public" name="dunban_mitama_desperate3Resp" />
         <marker scope="Public" name="dunban_mitama_desperateResp" />
         <marker scope="Public" name="dunban_mitama_healing2Resp" />
+        <marker scope="Public" name="dunban_mitama_healing3Resp" />
         <marker scope="Public" name="dunban_mitama_healingResp" />
         <marker scope="Public" name="dunban_mitama_samurai2Resp" />
+        <marker scope="Public" name="dunban_mitama_samurai3Resp" />
         <marker scope="Public" name="dunban_mitama_samuraiResp" />
         <marker scope="Public" name="dunban_mitama_wisdom2Resp" />
+        <marker scope="Public" name="dunban_mitama_wisdom3Resp" />
         <marker scope="Public" name="dunban_mitama_wisdomResp" />
         <marker scope="Public" name="dunban_nadeshiko_outdoors1" />
         <marker scope="Public" name="dunban_nadeshiko_outdoors2" />
@@ -1453,7 +1472,9 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_nicorobin_self1c" />
         <marker scope="Public" name="dunban_nonon_orchestra1" />
         <marker scope="Public" name="dunban_nonon_orchestra2" />
+        <marker scope="Public" name="dunban_nonon_orchestra3" />
         <marker scope="Public" name="dunban_nonon_self0a" />
+        <marker scope="Public" name="dunban_nonon_self0b" />
         <marker scope="Public" name="dunban_Nrobin_ability01" />
         <marker scope="Public" name="dunban_Nrobin_ability02" />
         <marker scope="Public" name="dunban_Nrobin_ability03" />
