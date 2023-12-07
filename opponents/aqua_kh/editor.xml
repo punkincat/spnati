@@ -7,7 +7,7 @@
     <othernotes>Summary / Background info&lt;br&gt;- Keyblade wielder/master. The Keyblade is a magical weapon that only a chosen few may wield. Its appearance varies as it can be changed during gameplay, but Aqua's specific keyblade design is called Rainfell, the one Sora is seen with is the Kingdom Key, etc. &lt;br&gt;- The Keyblade is used to 'maintain world order' and fight forces of darkness.&lt;br&gt;- Forces of darkness (like, literal darkness. light vs darkness) include Heartless (peoples' hearts taken into a shadowy form), Nobodies (the empty husks left behind when your heart becomes a Heartless), Unversed (creatures born of negative emotions because of a guy called Vanitas), and Dream Eaters (Heartless can't invade a 'Sleeping' world so the negative emotions become Dream Eaters instead)&lt;br&gt;- The one Aqua fought against originally were the Unversed, but she now has experience fighting Heartless. Plenty of experience.&lt;br&gt;- Kingdom Hearts is a convoluted series because every single game that would SEEM like a spin-off is actually part of the integral canon and core story. Aqua's game, Birth By Sleep, is actually a prequel game set before KH1, but released between KH2 and KH3.&lt;br&gt;- Adept combatant whose gameplay style focuses on cartwheeling to avoid damage, and making the most out of offensive and defensive magic skills. She's very adaptable.&lt;br&gt;- She was raised in training for most of her known life so she is socially awkward/shy, but is overall more of a cool-headed and devoted individual.&lt;br&gt;- The reason for her coming to play SPNATI is that she wants to get experience with intimate encounters, because she's not completely unfamiliar with the concepts of physical intimacy and sex but she IS very inexperienced.&lt;br&gt;&lt;br&gt;Gameplay Notes&lt;br&gt;- She summons her keyblade when she enters stage 2, and unsummons it when she has to strip again. However, she does not treat this as her "item of clothing" to be stripped, and will take off a part of her outfit (her waist wraps in default)&lt;br&gt;- Her AI will get better when she has her keyblade out, but will be reduced when she has been in the same stage for 7+ rounds&lt;br&gt;</othernotes>
     <noteworthy>
         <case name="Aqua Leaves her Socks On" id="51" priority="Noteworthy" min="5" max="5">
-            <description>Aqua decides to take her spats off before her thigh-high socks, saying that she wanted to try and be sexy. She's very shy about it, though.</description>
+            <description>Default costume: Aqua decides to take her spats off before her thigh-high socks, saying that she wanted to try and be sexy. She's very shy about it, though.</description>
         </case>
         <case name="Aqua's Keyblade" id="67" priority="MustTarget" min="2" max="2">
             <description>Aqua summons her Keyblade for After Stripping in stage 2. She keeps it until she next loses the round. keyblade_reveal is the marker of note here. In her default costume, it is called Rainfell.</description>
@@ -259,6 +259,11 @@
         <response id="1031" opponent="dunban" opponentId="424" />
         <response id="1032" opponent="dunban" opponentId="337" />
         <response id="1033" opponent="dunban" opponentId="426" />
+        <response id="1034" opponent="aqua_konosuba" opponentId="434" />
+        <response id="1036" opponent="aqua_konosuba" opponentId="432" />
+        <response id="1037" opponent="aqua_konosuba" opponentId="433" />
+        <response id="1039" opponent="noire" opponentId="2841" />
+        <response id="1040" opponent="noire" opponentId="2842" />
     </responses>
     <notes>
         <note id="6">radiant garden is a world in kingdom hearts that is basically "the place where final fantasy characters and some kingdom hearts original characters come from", mainly home to JRPG humans.</note>
@@ -356,8 +361,8 @@
         <label id="69" label="" color="4" folder="Keyblade" sort="6" />
         <label id="70" label="creatures of darkness" color="4" folder="Keyblade" sort="7" />
         <label id="71" label="creatures of darkness" color="4" folder="Keyblade" sort="3" />
-        <label id="72" label="" folder="Opponents" sort="4" />
-        <label id="73" label="" folder="Opponents" sort="7" />
+        <label id="72" label="" folder="Aqua Konosuba" sort="4" />
+        <label id="73" label="" folder="Aqua Konosuba" sort="7" />
         <label id="74" label="" folder="Opponents" sort="11" />
         <label id="75" label="" folder="Backgrounds" sort="14" />
         <label id="76" label="" folder="Backgrounds" sort="15" />
@@ -1053,10 +1058,10 @@
         <label id="771" label="Wayfinder S4" folder="Multiple Self" sort="0" />
         <label id="772" label="Wayfinder S2" folder="Multiple Self" sort="0" />
         <label id="773" label="" folder="Multiple Self" sort="0" />
-        <label id="774" label="" folder="Opponents" sort="0" />
-        <label id="775" label="" folder="Opponents" sort="0" />
-        <label id="776" label="" folder="Responses" sort="0" />
-        <label id="777" label="" folder="Responses" sort="0" />
+        <label id="774" label="" folder="Aqua Konosuba" sort="0" />
+        <label id="775" label="" folder="Aqua Konosuba" sort="0" />
+        <label id="776" label="" folder="Aqua Konosuba" sort="0" />
+        <label id="777" label="" folder="Aqua Konosuba" sort="0" />
         <label id="778" label="" folder="Targets" sort="0" />
         <label id="779" label="" folder="Situations" sort="0" />
         <label id="780" label="" folder="Targets" sort="0" />
@@ -1311,10 +1316,36 @@
         <label id="1031" label="" folder="Targets" sort="0" />
         <label id="1032" label="" folder="Targets" sort="0" />
         <label id="1033" label="" folder="Targets" sort="0" />
+        <label id="1034" label="" folder="Responses" sort="0" />
+        <label id="1035" label="" folder="Responses" sort="0" />
+        <label id="1036" label="" folder="Aqua Konosuba" sort="0" />
+        <label id="1037" label="" folder="Aqua Konosuba" sort="0" />
+        <label id="1038" label="" folder="Human" sort="0" />
+        <label id="1039" label="aqua-noire 01a=2" folder="Aqua + Noire" sort="0" />
+        <label id="1040" label="aqua-noire 01a=1" folder="Aqua + Noire" sort="0" />
+        <label id="1041" label="" folder="Winter Outfit" sort="0" />
+        <label id="1042" label="" folder="Logic" sort="0" />
+        <label id="1043" label="" folder="Winter Outfit" sort="0" />
+        <label id="1044" label="" folder="Winter Outfit" sort="0" />
+        <label id="1045" label="" folder="Winter Outfit" sort="0" />
+        <label id="1046" label="" folder="Winter Outfit" sort="0" />
+        <label id="1047" label="" folder="Winter Outfit" sort="0" />
+        <label id="1048" label="" folder="Winter Outfit" sort="0" />
+        <label id="1049" label="" folder="Winter Outfit" sort="0" />
+        <label id="1050" label="" folder="Winter Outfit" sort="0" />
+        <label id="1051" label="" folder="Winter Outfit" sort="0" />
+        <label id="1052" label="" folder="Winter Outfit" sort="0" />
+        <label id="1053" label="" folder="Winter Outfit" sort="0" />
+        <label id="1054" label="" folder="Winter Outfit" sort="0" />
+        <label id="1055" label="" folder="Winter Outfit" sort="0" />
+        <label id="1056" label="" folder="Winter Outfit" sort="0" />
+        <label id="1057" label="" folder="Winter Outfit" sort="0" />
+        <label id="1058" label="" folder="Winter Outfit" sort="0" />
+        <label id="1059" label="" folder="Winter Outfit" sort="0" />
+        <label id="1060" label="" folder="Winter Outfit" sort="0" />
     </labels>
-    <nextId>1033</nextId>
+    <nextId>1060</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="__lucina_nickname" />
         <marker scope="Public" name="9s_nipples" />
         <marker scope="Public" name="aella_" />
@@ -1345,6 +1376,7 @@
         <marker scope="Public" name="aqua_aqua_self_sexyB" />
         <marker scope="Public" name="aqua_aquagrunt_self0a" />
         <marker scope="Public" name="aqua_aquaKonosuba_keybladeQuestionResp" />
+        <marker scope="Public" name="aqua_aquaKonosuba_YourDealcont_Resp" />
         <marker scope="Public" name="aqua_aquaKonosuba_YourDealResp" />
         <marker scope="Public" name="aqua_arle_controlledtravelResp" />
         <marker scope="Public" name="aqua_arle_gliderResp" />
@@ -1775,12 +1807,15 @@
         <marker scope="Public" name="aquakh_petra_relationships2" />
         <marker scope="Public" name="aquakh_petra_relationships3" />
         <marker scope="Public" name="aquaKH_steve_ScoopsAhoyTimeStage3Plus" />
+        <marker scope="Public" name="AquaKonosuba_NicknamesReply" />
+        <marker scope="Public" name="AquaKonosuba_NoCopyReply" />
         <marker scope="Public" name="aque_queenie_heart1" />
         <marker scope="Public" name="aque_queenie_heart2" />
         <marker scope="Public" name="birthday">Wishes the player (or another character?) a happy birthday on the birthday background</marker>
         <marker scope="Public" name="burning_up">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Public" name="butt_pose">Showing off her butt pose</marker>
         <marker scope="Public" name="cag_forfeitstart" />
+        <marker scope="Public" name="character_option_special_flirting" />
         <marker scope="Public" name="chestfemale_cold_background" />
         <marker scope="Public" name="chestmale_beach_topless_male" />
         <marker scope="Public" name="chestmale_beach_topless_male_selfNOTtopless" />
@@ -1812,6 +1847,7 @@
         <marker scope="Public" name="firstgame_encountered">Player has started (but not finished) their first game against Aqua</marker>
         <marker scope="Public" name="firstgame_finished">Player has finished their first game against Aqua</marker>
         <marker scope="Public" name="firstmast" />
+        <marker scope="Private" name="flirting_behaviour">1</marker>
         <marker scope="Public" name="followup_cunt">Followup to a line she can say while masturbating</marker>
         <marker scope="Public" name="followup_gspot">Followup to a line she can say while masturbating</marker>
         <marker scope="Public" name="followup_share_this_intimacyt" />
@@ -1882,6 +1918,7 @@
         <marker scope="Public" name="nagatoro_butt2_react" />
         <marker scope="Public" name="nagatoro_player_pet" />
         <marker scope="Public" name="nagatoro_player_stalker" />
+        <marker scope="Public" name="noire_aquaKS_01a" />
         <marker scope="Public" name="one_v_one" />
         <marker scope="Public" name="opp_criminal_lostAll" />
         <marker scope="Public" name="opp_cushion_self_finished" />
@@ -1950,6 +1987,7 @@
         <marker scope="Public" name="wants_to_recieve_oral">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Public" name="wants_to_switch">Forfeit specific line with potential follow-ups</marker>
         <marker scope="Public" name="wayfinder_bond" />
+        <marker scope="Public" name="wayfinder_unlocked" />
         <marker scope="Public" name="weapon_removed">Tracks how many times a given character has removed 'weapon' category weapons</marker>
         <marker scope="Public" name="wearing_wayfinder">The player is wearing the Wayfinder collectible this game. Makes her think about the player during her forfeit.</marker>
         <marker scope="Public" name="wide_opp_adjacent" />
