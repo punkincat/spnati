@@ -55,6 +55,7 @@
         <response id="497" opponent="solar_flare" opponentId="72" />
         <response id="501" opponent="mari_setogaya" opponentId="2198" />
         <response id="511" opponent="solar_flare" opponentId="38" />
+        <response id="517" opponent="tea_gardner" opponentId="385" />
     </responses>
     <notes>
         <note id="5">The marker is available so other characters can see which uniform she's wearing just in case they absolutely need to know for whatever reason. FYI, it's always unset when she loses the red dress.
@@ -566,8 +567,11 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="512" label="" folder="Target: Meia" sort="0" />
         <label id="513" label="" folder="Target: Shamiko" sort="0" />
         <label id="514" label="" folder="Target: Reimu" sort="0" />
+        <label id="515" label="" folder="Target: Yumeko" sort="0" />
+        <label id="516" label="" folder="Target: Yumeko" sort="0" />
+        <label id="517" label="" folder="Target: Téa Gardner" sort="0" />
     </labels>
-    <nextId>514</nextId>
+    <nextId>517</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Private" name="B_">Background-related markers</marker>
@@ -773,7 +777,9 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_TripleKyokoKyou_Confusing">Kyoko Kirigiri and Kyou Fujibayashi selected, player named Kyouko or Kyoko</marker>
         <marker scope="Public" name="T_Wikipe-tan_Air" />
         <marker scope="Public" name="T_Yumeko_" />
+        <marker scope="Public" name="T_Yumeko_AllWs" />
         <marker scope="Public" name="T_Yumeko_Gambler" />
+        <marker scope="Public" name="T_Yumeko_RandomFun" />
         <marker scope="Public" name="T_Yumeko_Winner" />
         <marker scope="Public" name="T_Yuna_Strip0Unifrom">Self Must strip 0</marker>
         <marker scope="Public" name="T_Yuna_Strip1YuriSenses">Self Must strip 1</marker>
@@ -828,4 +834,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
             </cases>
         </recipe>
     </recipes>
+    <pendingLines>
+        <line>Surely you're keeping your ~target.wearing~, right? Because ~target.wearing.ifPlural(they|it)~'ll never come off?</line>
+    </pendingLines>
 </metadata>

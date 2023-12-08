@@ -4,8 +4,8 @@ Doing all 7
 
 ## Remillia
 
-- [ ] Raise generic count to 1000 (Total - (Targets + Filters)) (952/1000)
-- [ ] Raise her total targeted lines to 300 (159/300)
+- [ ] Raise generic count to 1000 (Total - (Targets + Filters)) (951/1000)
+- [ ] Raise her total targeted lines to 300 (162/300)
 - [X] Raise her total filter amount to 75
 
 - [ ] Add 10 more lines showing Kyouko's perverted/overactive imagination, in any case (3/10)
@@ -18,7 +18,7 @@ Doing all 7
 
 ## L0kkit
 
-- [ ] Add at least 30 targeted lines (25/30)
+- [ ] Add at least 30 targeted lines (28/30)
 - [ ] Add at least 30 hand quality lines
 - (S) Show her candid side more
 
