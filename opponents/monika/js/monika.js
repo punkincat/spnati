@@ -79,6 +79,7 @@ if (!window.monika) window.monika = (function (root) {
     $('head').append('<link rel="stylesheet" type="text/css" href="opponents/monika/css/monika.css">');
 
     loadScript('opponents/monika/js/utils.js');
+    loadScript('opponents/monika/js/effects_opt_out.js');
     loadScript('opponents/monika/js/effects.js');
     loadScript('opponents/monika/js/extended_dialogue.js');
     loadScript('opponents/monika/js/behaviour_callbacks.js');
@@ -361,11 +362,11 @@ if (!window.monika) window.monika = (function (root) {
             var pl = players[i];
             if (pl.out) {
                 situationScore += 5;
-            } else if (pl.exposed.upper && pl.exposed.lower) {
+            } else if (pl.checkStatus(STATUS_NAKED)) {
                 situationScore += 3;
-            } else if (pl.exposed.upper || pl.exposed.lower) {
+            } else if (pl.checkStatus(STATUS_EXPOSED)) {
                 situationScore += 2;
-            } else if (pl.clothing.length !== pl.startingLayers) {
+            } else if (pl.countLayers() !== pl.startingLayers) {
                 situationScore += 1;
             }
         }
@@ -471,7 +472,7 @@ if (!window.monika) window.monika = (function (root) {
     function setupTransientGlitches(player) {
         if (!inGame || round_glitch_targets.indexOf(player) >= 0 || !exports.EFFECTS_ENABLED) return;
 
-        if (!players[player] || players[player].id === 'monika') return;
+        if (!players[player] || monika_effects_opt_out_list.includes(players[player].id)) return;
         if (Math.random() >= getCurrentGlitchChance()) return;
 
         var glitchType = getRandomNumber(0, 3);

@@ -54,7 +54,7 @@ exports.disable_progression = disable_progression;
 function pick_glitch_target (exclude_slots) {
     var valid_targets = [];
     players.forEach(function (pl) {
-        if (pl.id !== 'monika' && (!exclude_slots || exclude_slots.indexOf(pl.slot) < 0)) {
+        if (!monika_effects_opt_out_list.includes(pl.id) && (!exclude_slots || exclude_slots.indexOf(pl.slot) < 0)) {
             valid_targets.push(pl.slot);
         }
     });
