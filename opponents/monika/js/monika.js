@@ -78,7 +78,6 @@ if (!window.monika) window.monika = (function (root) {
     /* Load in other resources and scripts: */
     $('head').append('<link rel="stylesheet" type="text/css" href="opponents/monika/css/monika.css">');
 
-    loadScript('opponents/monika/js/effects_opt_out.js');
     loadScript('opponents/monika/js/utils.js');
     loadScript('opponents/monika/js/effects.js');
     loadScript('opponents/monika/js/extended_dialogue.js');
@@ -472,7 +471,8 @@ if (!window.monika) window.monika = (function (root) {
     function setupTransientGlitches(player) {
         if (!inGame || round_glitch_targets.indexOf(player) >= 0 || !exports.EFFECTS_ENABLED) return;
 
-        if (!players[player] || monika_effects_opt_out_list.includes(players[player].id)) return;
+        if (!players[player] || players[player].id === "monika"
+            || players[player].markers["monika_effects_opt_out"]) return;
         if (Math.random() >= getCurrentGlitchChance()) return;
 
         var glitchType = getRandomNumber(0, 3);
