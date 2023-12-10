@@ -26,11 +26,16 @@
         <response id="134" opponent="amalia" opponentId="1" />
         <response id="141" opponent="caulifla" opponentId="2" />
         <response id="142" opponent="caulifla" opponentId="4" />
+        <response id="143" opponent="yuno_uno" opponentId="12" />
+        <response id="144" opponent="yuno_uno" opponentId="16" />
+        <response id="145" opponent="yuno_uno" opponentId="167" />
+        <response id="146" opponent="dunban" opponentId="399" />
     </responses>
     <notes>
         <note id="48">Needs phone pose first, but I can't un-accept lines...</note>
         <note id="123">Are the lines regarding Surtr too much? I can change them or take them away if needed.</note>
         <note id="140">If you think some of these lines should be changed or removed, please let me know!</note>
+        <note id="147">The Male + Has_Companion tag exclusion makes sure this line doesn't trigger with Dust (since iirc his sword and fairy are female) or Zeke (who comes with Pandoria) present on the table</note>
     </notes>
     <labels>
         <label id="57" label="" folder="Placeholder, delete after writing lines for this stage" sort="0" />
@@ -99,7 +104,7 @@
     <prefixes>
         <prefix>collectible_</prefix>
     </prefixes>
-    <nextId>142</nextId>
+    <nextId>147</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Adventurer1" />
@@ -117,6 +122,9 @@
         <marker scope="Public" name="AquaDryBones" />
         <marker scope="Public" name="AquaGoddessOfWater" />
         <marker scope="Public" name="AquaGood" />
+        <marker scope="Public" name="AquaGrunt" />
+        <marker scope="Public" name="AquaGruntFlood" />
+        <marker scope="Public" name="AquaGruntOutfit" />
         <marker scope="Public" name="AquaLittleGirl" />
         <marker scope="Public" name="AquaPlays" />
         <marker scope="Public" name="AquaPray" />
@@ -216,6 +224,7 @@
         <marker scope="Public" name="CauliflaTransform" />
         <marker scope="Public" name="CauliflaTrueValue" />
         <marker scope="Public" name="ClassesTomorrow" />
+        <marker scope="Public" name="DunbanBionisView1" />
         <marker scope="Public" name="ElphabaAlone" />
         <marker scope="Public" name="ElphabaAttire" />
         <marker scope="Public" name="ElphabaBean" />
@@ -455,12 +464,15 @@
         <marker scope="Public" name="WPtanMario" />
         <marker scope="Public" name="WPtanMilitary" />
         <marker scope="Public" name="WPtanPeach" />
+        <marker scope="Public" name="YunoAwakening" />
         <marker scope="Public" name="YunoComeBack" />
+        <marker scope="Public" name="YunoEarworms" />
         <marker scope="Public" name="YunoEvilPrevails" />
         <marker scope="Public" name="YunoFall" />
         <marker scope="Public" name="YunoFriends" />
         <marker scope="Public" name="YunoFriendsForfeit" />
         <marker scope="Public" name="YunoGirlfriend" />
+        <marker scope="Public" name="YunoGlove" />
         <marker scope="Public" name="YunoHumilliate" />
         <marker scope="Public" name="YunoInsulting" />
         <marker scope="Public" name="YunoLoser" />
@@ -470,6 +482,7 @@
         <marker scope="Public" name="YunoSide" />
         <marker scope="Public" name="YunoSquirm" />
         <marker scope="Public" name="YunoStart" />
+        <marker scope="Public" name="ZekePandoriaRobotGirlfriend" />
     </markers>
     <recipes>
         <recipe key="65bff87f-6768-4cc7-8d96-bf1223df4282">
