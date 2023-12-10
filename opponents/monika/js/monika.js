@@ -78,8 +78,8 @@ if (!window.monika) window.monika = (function (root) {
     /* Load in other resources and scripts: */
     $('head').append('<link rel="stylesheet" type="text/css" href="opponents/monika/css/monika.css">');
 
-    loadScript('opponents/monika/js/utils.js');
     loadScript('opponents/monika/js/effects_opt_out.js');
+    loadScript('opponents/monika/js/utils.js');
     loadScript('opponents/monika/js/effects.js');
     loadScript('opponents/monika/js/extended_dialogue.js');
     loadScript('opponents/monika/js/behaviour_callbacks.js');
