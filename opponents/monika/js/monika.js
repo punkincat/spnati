@@ -366,7 +366,7 @@ if (!window.monika) window.monika = (function (root) {
                 situationScore += 3;
             } else if (pl.checkStatus(STATUS_EXPOSED)) {
                 situationScore += 2;
-            } else if (pl.countLayers() !== pl.startingLayers) {
+            } else if (pl.checkStatus(STATUS_LOST_SOME)) {
                 situationScore += 1;
             }
         }
