@@ -36,6 +36,9 @@
         <case name="Undead Prompt" id="1520" priority="Prompt" min="0" max="10">
             <description>Kyoko asks an opponent with the undead tag what death is like.</description>
         </case>
+        <case name="Chuunibyou Prompt" id="1612" priority="Prompt" min="0" max="10">
+            <description>Kyoko asks an opp with the chuunibyou tag to demonstrate their powers. (She’s deliberately setting them up for failure.)</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -145,6 +148,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <note id="1549">For Remillia's sponsorship: luwakCoffee is a play-once Hand line mentioning one of her friends (mentions Byakuya).</note>
         <note id="1567">You're fine to have Miko keep pressing her, I just didn't want to have Kyoko go "Fine, maybe I WILL be horny" or something like that on the last line of dialogue of this strip.</note>
         <note id="1576">Might be overwritten later by the actual target conversation, but this is noncommittal and funny to me.</note>
+        <note id="1612">For the purposes of Insiduani and Tweetsie's sponsorships, this is a prompt.&lt;br&gt;&lt;br&gt;Kyoko is deliberately setting the Chuunibyou character up for failure here.</note>
     </notes>
     <labels>
         <label id="499" label="Shelved" folder="" sort="0" />
@@ -1454,7 +1458,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <label id="1378" label="Téa IR 6-1D" folder="Duplicate dialogue" sort="66" />
         <label id="1379" label="Goth Lolita" folder="Remillia sponsor: Misc." sort="2" />
         <label id="1380" label="Confident goth Lolita" folder="Remillia sponsor: Misc." sort="3" />
-        <label id="1381" label="Male goth Lolita" folder="Remillia sponsor: Misc." sort="0" />
+        <label id="1381" label="Male goth Lolita" folder="Remillia sponsor: Misc." sort="3" />
         <label id="1382" label="Suzuya IL 0-1" folder="Inbound stage 0" sort="92" />
         <label id="1383" label="Suzuya IL 0-2A" color="2" folder="Inbound stage 0" sort="94" />
         <label id="1384" label="Suzuya IL 0-2B" color="3" folder="Inbound stage 0" sort="96" />
@@ -1657,28 +1661,32 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <label id="1586" label="Volleyball" folder="" sort="0" />
         <label id="1587" label="Volleyball" folder="" sort="0" />
         <label id="1588" label="Volleyball" folder="" sort="0" />
-        <label id="1589" label="" folder="Remillia sponsor: Misc." sort="0" />
-        <label id="1590" label="" folder="Remillia sponsor: Misc." sort="0" />
-        <label id="1591" label="" folder="Remillia sponsor: Sexuality" sort="0" />
-        <label id="1592" label="Remillia sponsor: Sexuality" folder="Must masturbate" sort="0" />
-        <label id="1594" label="Dunban IL 2-2" folder="Inbound stage 2" sort="0" />
-        <label id="1595" label="Dunban IL 2-1" folder="Inbound stage 2" sort="0" />
-        <label id="1596" label="Dunban IL 2-3" folder="Inbound stage 2" sort="0" />
-        <label id="1597" label="Dunban IL 4-1" folder="Inbound stage 4" sort="0" />
-        <label id="1598" label="Dunban IL 4-2" folder="Inbound stage 4" sort="0" />
-        <label id="1599" label="Dunban IR 4-3" folder="Duplicate dialogue" sort="0" />
-        <label id="1600" label="Dunban IR 2-1" folder="Duplicate dialogue" sort="0" />
-        <label id="1601" label="Dunban IR 2-2" folder="Duplicate dialogue" sort="0" />
-        <label id="1602" label="Dunban IR 2-3" folder="Duplicate dialogue" sort="0" />
-        <label id="1603" label="Dunban IR 4-1" folder="Duplicate dialogue" sort="0" />
-        <label id="1604" label="Dunban IR 4-2" folder="Duplicate dialogue" sort="0" />
-        <label id="1605" label="Dunban IR 4-3" folder="Duplicate dialogue" sort="0" />
-        <label id="1606" label="Dunban IR pre2-1" folder="Duplicate dialogue" sort="0" />
-        <label id="1607" label="Dunban IR pre2-2" folder="Duplicate dialogue" sort="0" />
-        <label id="1608" label="Dunban IR pre2-3" folder="Duplicate dialogue" sort="0" />
-        <label id="1609" label="Dunban IR pre4-1" folder="Duplicate dialogue" sort="0" />
-        <label id="1610" label="Dunban IR pre4-2" folder="Duplicate dialogue" sort="0" />
-        <label id="1611" label="Dunban IL 4-3" folder="Inbound stage 4" sort="0" />
+        <label id="1589" label="" folder="Remillia sponsor: Misc." sort="7" />
+        <label id="1590" label="" folder="Remillia sponsor: Misc." sort="6" />
+        <label id="1591" label="" folder="Remillia sponsor: Sexuality" sort="7" />
+        <label id="1592" label="Remillia sponsor: Sexuality" folder="Must masturbate" sort="15" />
+        <label id="1594" label="Dunban IL 2-2" folder="Inbound stage 2" sort="5" />
+        <label id="1595" label="Dunban IL 2-1" folder="Inbound stage 2" sort="3" />
+        <label id="1596" label="Dunban IL 2-3" folder="Inbound stage 2" sort="6" />
+        <label id="1597" label="Dunban IL 4-1" folder="Inbound stage 4" sort="2" />
+        <label id="1598" label="Dunban IL 4-2" folder="Inbound stage 4" sort="4" />
+        <label id="1599" label="Dunban IR 4-3" folder="Duplicate dialogue" sort="174" />
+        <label id="1600" label="Dunban IR 2-1" folder="Duplicate dialogue" sort="95" />
+        <label id="1601" label="Dunban IR 2-2" folder="Duplicate dialogue" sort="151" />
+        <label id="1602" label="Dunban IR 2-3" folder="Duplicate dialogue" sort="13" />
+        <label id="1603" label="Dunban IR 4-1" folder="Duplicate dialogue" sort="96" />
+        <label id="1604" label="Dunban IR 4-2" folder="Duplicate dialogue" sort="152" />
+        <label id="1605" label="Dunban IR 4-3" folder="Duplicate dialogue" sort="14" />
+        <label id="1606" label="Dunban IR pre2-1" folder="Duplicate dialogue" sort="73" />
+        <label id="1607" label="Dunban IR pre2-2" folder="Duplicate dialogue" sort="143" />
+        <label id="1608" label="Dunban IR pre2-3" folder="Duplicate dialogue" sort="188" />
+        <label id="1609" label="Dunban IR pre4-1" folder="Duplicate dialogue" sort="74" />
+        <label id="1610" label="Dunban IR pre4-2" folder="Duplicate dialogue" sort="144" />
+        <label id="1611" label="Dunban IL 4-3" folder="Inbound stage 4" sort="5" />
+        <label id="1612" label="Chuuni prompt" folder="Remillia sponsor: Misc." sort="10" />
+        <label id="1613" label="" folder="Remillia sponsor: Misc." sort="0" />
+        <label id="1614" label="" folder="Remillia sponsor: Misc." sort="2" />
+        <label id="1615" label="Shut-in" folder="Remillia sponsor: Misc." sort="8" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -1708,7 +1716,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
     <posePreviewMarkers>
         <posePreviewMarker>hair==1</posePreviewMarker>
     </posePreviewMarkers>
-    <nextId>1611</nextId>
+    <nextId>1615</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
@@ -1816,6 +1824,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="chihiro_outGeneric" />
         <marker scope="Public" name="chihiroOutsGeneric" />
         <marker scope="Public" name="chivulva" />
+        <marker scope="Public" name="chuuniPowersPrompt" />
         <marker scope="Public" name="chuuniVocab" />
         <marker scope="Public" name="clue" />
         <marker scope="Public" name="coffee">X times, she's mentioned coffee. She's a fan.</marker>
@@ -1832,6 +1841,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="corner" />
         <marker scope="Public" name="cornered" />
         <marker scope="Public" name="costume">Marker indicating her costume using strings. 0 = default; FF = Future Foundation costume; swimsuit = Danganronpa S swimsuit costume.</marker>
+        <marker scope="Public" name="creepyCompany" />
         <marker scope="Public" name="cute">"It really is quite cute." "What? I'm allowed to like cute things." (=3 if triggered by male opponent)</marker>
         <marker scope="Public" name="death_accusation" />
         <marker scope="Public" name="december" />
@@ -2004,6 +2014,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="haveToUntie">"Just a second. I have to untie this."</marker>
         <marker scope="Public" name="hayato">She stares into your soul and utters not one word but your name.</marker>
         <marker scope="Public" name="heavyNoise" />
+        <marker scope="Public" name="hidingCards" />
         <marker scope="Public" name="hilbert_scars" />
         <marker scope="Public" name="hilbert_scars2" />
         <marker scope="Public" name="hilbert_scars2a" />
@@ -2235,6 +2246,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="secondBiggestMistake" />
         <marker scope="Public" name="seekAWayOut" />
         <marker scope="Public" name="selfTrimComment" />
+        <marker scope="Public" name="sempai_socksWhy" />
         <marker scope="Public" name="sflare_elimination" />
         <marker scope="Public" name="sflare_start" />
         <marker scope="Public" name="shamiko_bibliophile" />
@@ -2243,6 +2255,8 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="shamiko_trainingTrauma1" />
         <marker scope="Public" name="sheSaidFuck" />
         <marker scope="Public" name="SHE-SAYS-FUCK" />
+        <marker scope="Public" name="shutInLookAtMe" />
+        <marker scope="Public" name="shutInLookAtYou" />
         <marker scope="Public" name="shyExtraFirst" />
         <marker scope="Public" name="simpleMinded" />
         <marker scope="Public" name="skimpyPacing" />
