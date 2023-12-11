@@ -39,6 +39,9 @@
         <case name="Chuunibyou Prompt" id="1612" priority="Prompt" min="0" max="10">
             <description>Kyoko asks an opp with the chuunibyou tag to demonstrate their powers. (She’s deliberately setting them up for failure.)</description>
         </case>
+        <case name="Greedy Prompt" id="1624" priority="Prompt" min="0" max="4">
+            <description>Kyoko asks an opponent with the greedy tag why they're not playing for cash.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -148,7 +151,11 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <note id="1549">For Remillia's sponsorship: luwakCoffee is a play-once Hand line mentioning one of her friends (mentions Byakuya).</note>
         <note id="1567">You're fine to have Miko keep pressing her, I just didn't want to have Kyoko go "Fine, maybe I WILL be horny" or something like that on the last line of dialogue of this strip.</note>
         <note id="1576">Might be overwritten later by the actual target conversation, but this is noncommittal and funny to me.</note>
-        <note id="1612">For the purposes of Insiduani and Tweetsie's sponsorships, this is a prompt.&lt;br&gt;&lt;br&gt;Kyoko is deliberately setting the Chuunibyou character up for failure here.</note>
+        <note id="1612">For the purposes of Insiduani and Tweetsie's sponsorships, this is a prompt.
+
+Kyoko is deliberately setting the Chuunibyou character up for failure here.</note>
+        <note id="1620">Written in commemoration of Kyoko's one-year annivesary on the Testing Roster; December 11, 2023.</note>
+        <note id="1624">This is a prompt!</note>
     </notes>
     <labels>
         <label id="499" label="Shelved" folder="" sort="0" />
@@ -334,7 +341,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <label id="206" label="Toy forfeit" folder="" sort="0" />
         <label id="207" label="Toy forfeit" folder="" sort="0" />
         <label id="208" label="Toy forfeit" folder="" sort="0" />
-        <label id="209" label="" folder="April Fool's" sort="10" />
+        <label id="209" label="" folder="Outbound hand" sort="10" />
         <label id="210" label="" folder="Extra/Minor" sort="10" />
         <label id="211" label="" folder="Major" sort="5" />
         <label id="212" label="" folder="Major" sort="7" />
@@ -1625,7 +1632,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <label id="1550" label="" folder="Remillia sponsor: General" sort="2" />
         <label id="1551" label="" folder="Outbound hand" sort="0" />
         <label id="1552" label="Nonon IL 0-1" folder="Inbound stage 0" sort="17" />
-        <label id="1553" label="Nonon IR 0-1" folder="Duplicate dialouge" sort="0" />
+        <label id="1553" label="Nonon IR 0-1" folder="Duplicate dialogue" sort="0" />
         <label id="1554" label="Nonon IR pre0-1" folder="Duplicate dialogue" sort="70" />
         <label id="1555" label="Bad hand tell" folder="" sort="0" />
         <label id="1556" label="No pair trick" folder="" sort="0" />
@@ -1687,6 +1694,16 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <label id="1613" label="" folder="Remillia sponsor: Misc." sort="0" />
         <label id="1614" label="" folder="Remillia sponsor: Misc." sort="2" />
         <label id="1615" label="Shut-in" folder="Remillia sponsor: Misc." sort="8" />
+        <label id="1616" label="" folder="Remillia sponsor: Misc." sort="12" />
+        <label id="1617" label="Yandere" folder="Remillia sponsor: Misc." sort="8" />
+        <label id="1618" label="Yandere" folder="Remillia sponsor: Misc." sort="13" />
+        <label id="1619" label="Yandere" folder="Remillia sponsor: Misc." sort="17" />
+        <label id="1620" label="Testing anniversary" color="6" folder="" sort="0" />
+        <label id="1621" label="Nonon IL 0-2" folder="Inbound stage 0" sort="0" />
+        <label id="1622" label="Nonon IR 0-2" folder="Duplicate dialogue" sort="0" />
+        <label id="1623" label="Nonon IR pre0-2" folder="Duplicate dialogue" sort="0" />
+        <label id="1624" label="Greedy" folder="Remillia sponsor: Misc." sort="0" />
+        <label id="1625" label="Greedy/Thief" folder="Remillia sponsor: Misc." sort="0" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -1716,7 +1733,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
     <posePreviewMarkers>
         <posePreviewMarker>hair==1</posePreviewMarker>
     </posePreviewMarkers>
-    <nextId>1615</nextId>
+    <nextId>1625</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="." />
@@ -1853,6 +1870,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="doIt">Line indicating she knows the human's forfeit timer is 1 (clears if human doesn't finish next screen)</marker>
         <marker scope="Public" name="dontExpletive" />
         <marker scope="Public" name="dontHesitate" />
+        <marker scope="Public" name="dontStealMeJacket" />
         <marker scope="Public" name="dorothy_nami_superAwkward" />
         <marker scope="Public" name="draws">Absolute ties.</marker>
         <marker scope="Public" name="dressCode" />
@@ -1997,6 +2015,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="glovesOnForfeit" />
         <marker scope="Public" name="goingThrough" />
         <marker scope="Public" name="gothLoli" />
+        <marker scope="Public" name="greedyPokerPrompt" />
         <marker scope="Private" name="hair">Controls position of her hair (whether standing or sitting.)</marker>
         <marker scope="Public" name="handBluffN0" />
         <marker scope="Public" name="handBluffN1" />
@@ -2090,6 +2109,7 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="maria_smodeDressStrip1Normal" />
         <marker scope="Public" name="maria_smodeDressStrip2" />
         <marker scope="Public" name="maria_smodeDressStrip2Normal" />
+        <marker scope="Public" name="matchTheNumbersDummy" />
         <marker scope="Public" name="meanHero">"They act cold, but I suspect they're nobler than they let on.""</marker>
         <marker scope="Public" name="meia_familyWhat" />
         <marker scope="Public" name="mentalPhysicalStrengthPrompt" />
@@ -2141,6 +2161,9 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="noDrama" />
         <marker scope="Public" name="nonon_dressMystery" />
         <marker scope="Public" name="nonon_dressSpeechless" />
+        <marker scope="Public" name="nonon_excuse" />
+        <marker scope="Public" name="nonon_excuse_A" />
+        <marker scope="Public" name="nonon_excuse_B" />
         <marker scope="Public" name="nonon_regular" />
         <marker scope="Public" name="noPairTrick" />
         <marker scope="Public" name="noSwap">Kyoko swaps no cards for the hand. Values 1-4 depend on line said.</marker>
@@ -2387,6 +2410,9 @@ TL;DR: Kyoko is feeling a lot of complicated feelings as a result of Miko saying
         <marker scope="Public" name="yae_compromised" />
         <marker scope="Public" name="yae_fuqYouSay">Choose yaer next words very carefully.</marker>
         <marker scope="Public" name="yagami_pseudonym">Changes ~kyoko_kirigiri.marker.V_customFirst~ to Yoko and ~kyoko_kirigiri.marker.V_customLast~ to Yadorigi with it. Detective Yadorigi is ready to hand Mr. Yagami an L.</marker>
+        <marker scope="Public" name="yandereWarning1" />
+        <marker scope="Public" name="yandereWarning2" />
+        <marker scope="Public" name="yandereWarning3" />
         <marker scope="Public" name="yuno_erect" />
         <marker scope="Public" name="yuno_erectForfeit" />
         <marker scope="Public" name="yuno_erectNormal" />
