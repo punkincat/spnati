@@ -144,6 +144,9 @@
         <response id="449" opponent="nonon" opponentId="40" />
         <response id="470" opponent="nonon" opponentId="402" />
         <response id="471" opponent="kyoko_kirigiri" opponentId="50" />
+        <response id="473" opponent="toph" opponentId="885" />
+        <response id="474" opponent="nonon" opponentId="494" />
+        <response id="475" opponent="nonon" opponentId="495" />
     </responses>
     <labels>
         <label id="2" label="" color="1" folder="Targets" sort="0" />
@@ -189,7 +192,7 @@
         <label id="42" label="" color="1" folder="Double targets" sort="0" />
         <label id="43" label="" color="1" folder="Double targets" sort="0" />
         <label id="44" label="" folder="Targets" sort="0" />
-        <label id="46" label="" color="0" folder="Targets" sort="0" />
+        <label id="46" label="" folder="Targets" sort="0" />
         <label id="47" label="" folder="Targets" sort="0" />
         <label id="48" label="" color="1" folder="Targets" sort="0" />
         <label id="49" label="" folder="Targets" sort="0" />
@@ -413,7 +416,7 @@
         <label id="273" label="" color="1" folder="Targets" sort="0" />
         <label id="272" label="" color="1" folder="Targets" sort="0" />
         <label id="274" label="" color="1" folder="Targets" sort="0" />
-        <label id="275" label="" color="0" folder="Targets" sort="0" />
+        <label id="275" label="" folder="Targets" sort="0" />
         <label id="276" label="" folder="Targets" sort="0" />
         <label id="277" label="" folder="Targets" sort="0" />
         <label id="278" label="" folder="Targets" sort="0" />
@@ -428,7 +431,7 @@
         <label id="287" label="" folder="Targets" sort="0" />
         <label id="288" label="" color="2" folder="Targets" sort="0" />
         <label id="289" label="" color="2" folder="Targets" sort="0" />
-        <label id="290" label="" color="0" folder="Targets" sort="0" />
+        <label id="290" label="" folder="Targets" sort="0" />
         <label id="291" label="" color="1" folder="Targets" sort="0" />
         <label id="292" label="" color="1" folder="Targets" sort="0" />
         <label id="293" label="" color="1" folder="Targets" sort="0" />
@@ -450,8 +453,8 @@
         <label id="308" label="" folder="Targets" sort="0" />
         <label id="311" label="" color="1" folder="Targets" sort="0" />
         <label id="312" label="" color="1" folder="Targets" sort="0" />
-        <label id="313" label="" color="1" folder="Targets" sort="0" />
-        <label id="314" label="" color="1" folder="Targets" sort="0" />
+        <label id="313" label="" folder="Targets" sort="0" />
+        <label id="314" label="" folder="Targets" sort="0" />
         <label id="315" label="" folder="Targets" sort="0" />
         <label id="316" label="" folder="Targets" sort="0" />
         <label id="318" label="" folder="Targets" sort="0" />
@@ -605,13 +608,16 @@
         <label id="467" label="" folder="Filtered" sort="0" />
         <label id="468" label="" folder="Filtered" sort="0" />
         <label id="469" label="" color="1" folder="Targets" sort="0" />
-        <label id="470" label="" color="1" folder="Targets" sort="0" />
+        <label id="470" label="" folder="Targets" sort="0" />
         <label id="472" label="" folder="Targets" sort="0" />
+        <label id="474" label="" color="1" folder="Targets" sort="0" />
+        <label id="475" label="" color="1" folder="Targets" sort="0" />
+        <label id="473" label="" color="1" folder="Targets" sort="0" />
     </labels>
     <prefixes>
         <prefix>aa</prefix>
     </prefixes>
-    <nextId>472</nextId>
+    <nextId>475</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="~strongstarter~" />
@@ -780,8 +786,10 @@
         <marker scope="Public" name="natsuki_teleported" />
         <marker scope="Public" name="nonon_hat" />
         <marker scope="Public" name="nonon_hat2" />
+        <marker scope="Public" name="nonon_hat3" />
         <marker scope="Public" name="nonon_nextslotdressthrow" />
         <marker scope="Public" name="nonon_puyo" />
+        <marker scope="Public" name="nonon_puyo2" />
         <marker scope="Public" name="nonon_puyoteleport" />
         <marker scope="Public" name="one-on-one" />
         <marker scope="Public" name="perona_cuteprompt" />
@@ -850,6 +858,7 @@
         <marker scope="Public" name="talldong" />
         <marker scope="Public" name="toph_badgermole" />
         <marker scope="Public" name="toph_badgermole2" />
+        <marker scope="Public" name="toph_badgermole3" />
         <marker scope="Public" name="toph_spiritworld" />
         <marker scope="Public" name="toph_spiritworld2" />
         <marker scope="Public" name="tripleunderwear" />
