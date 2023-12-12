@@ -104,6 +104,12 @@
         <case name="Sleep" id="952" priority="Noteworthy" min="8" max="8">
             <description>Jura and Barnette briefly fall asleep together post-forfeit.</description>
         </case>
+        <case name="Christmas Traditions" id="1362" priority="Prompt" min="1" max="1">
+            <description>In her Santa outfit, Jura asks the table what they (as Earthlings) do to celebrate the season.</description>
+        </case>
+        <case name="Santa-F" id="1364" priority="Prompt" min="2" max="2">
+            <description>Jura offhandedly refers to Santa as a woman.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <notes>
@@ -363,7 +369,7 @@
         <label id="633" label="" color="4" folder="" sort="0" />
         <label id="637" label="" color="4" folder="" sort="0" />
         <label id="638" label="" color="4" folder="" sort="0" />
-        <label id="1295" label="" color="4" folder="" sort="0" />
+        <label id="1354" label="" color="4" folder="" sort="0" />
         <label id="640" label="" color="6" folder="" sort="0" />
         <label id="641" label="" color="6" folder="" sort="0" />
         <label id="642" label="" color="6" folder="" sort="0" />
@@ -783,7 +789,7 @@
         <label id="1276" label="" color="4" folder="" sort="0" />
         <label id="1277" label="" color="4" folder="" sort="0" />
         <label id="1328" label="" color="4" folder="" sort="0" />
-        <label id="1296" label="" color="4" folder="" sort="0" />
+        <label id="1358" label="" color="1" folder="" sort="0" />
         <label id="1342" label="" color="4" folder="" sort="0" />
         <label id="1118" label="" color="4" folder="" sort="0" />
         <label id="1293" label="" color="4" folder="" sort="0" />
@@ -796,8 +802,8 @@
         <label id="1303" label="" color="2" folder="" sort="0" />
         <label id="1304" label="" color="2" folder="" sort="0" />
         <label id="1305" label="" color="2" folder="" sort="0" />
-        <label id="1322" label="" color="4" folder="" sort="0" />
-        <label id="1321" label="" color="4" folder="" sort="0" />
+        <label id="1356" label="" color="4" folder="" sort="0" />
+        <label id="1321" label="" color="7" folder="" sort="0" />
         <label id="1320" label="" color="4" folder="" sort="0" />
         <label id="1338" label="" color="4" folder="" sort="0" />
         <label id="1339" label="" color="4" folder="" sort="0" />
@@ -807,10 +813,10 @@
         <label id="1331" label="" color="4" folder="" sort="0" />
         <label id="1332" label="" color="4" folder="" sort="0" />
         <label id="1333" label="" color="4" folder="" sort="0" />
-        <label id="1334" label="" color="4" folder="" sort="0" />
-        <label id="1335" label="" color="4" folder="" sort="0" />
-        <label id="1336" label="" color="4" folder="" sort="0" />
-        <label id="1337" label="" color="4" folder="" sort="0" />
+        <label id="1334" label="" color="7" folder="" sort="0" />
+        <label id="1335" label="" color="7" folder="" sort="0" />
+        <label id="1336" label="" color="7" folder="" sort="0" />
+        <label id="1357" label="" color="1" folder="" sort="0" />
         <label id="1340" label="" color="4" folder="" sort="0" />
         <label id="1341" label="" color="4" folder="" sort="0" />
         <label id="1343" label="" color="4" folder="" sort="0" />
@@ -822,11 +828,23 @@
         <label id="1349" label="" color="4" folder="" sort="0" />
         <label id="1350" label="" color="4" folder="" sort="0" />
         <label id="1351" label="" color="4" folder="" sort="0" />
+        <label id="1352" label="" color="4" folder="" sort="0" />
+        <label id="1353" label="" color="4" folder="" sort="0" />
+        <label id="1359" label="" color="1" folder="" sort="0" />
+        <label id="1360" label="" color="1" folder="" sort="0" />
+        <label id="1361" label="" color="1" folder="" sort="0" />
+        <label id="1362" label="" color="1" folder="" sort="0" />
+        <label id="1363" label="" color="1" folder="" sort="0" />
+        <label id="1364" label="" color="1" folder="" sort="0" />
+        <label id="1365" label="" color="1" folder="" sort="0" />
+        <label id="1366" label="" color="1" folder="" sort="0" />
+        <label id="1367" label="" color="1" folder="" sort="0" />
+        <label id="1368" label="" color="1" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>jura</prefix>
     </prefixes>
-    <nextId>1351</nextId>
+    <nextId>1368</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="1v1">Jura acknowledges that the game has come down to her and one other player.</marker>
@@ -1089,6 +1107,7 @@
         <marker scope="Public" name="chihiro56" />
         <marker scope="Public" name="chihiro5s" />
         <marker scope="Public" name="chihiro6s" />
+        <marker scope="Public" name="christmas_traditions" />
         <marker scope="Public" name="colress_wormhole" />
         <marker scope="Public" name="colress0" />
         <marker scope="Public" name="colt_resp0" />
@@ -1524,6 +1543,7 @@
         <marker scope="Public" name="jura_resp34" />
         <marker scope="Public" name="jura_resp4" />
         <marker scope="Public" name="jura_resp45" />
+        <marker scope="Public" name="Jura_resp4a" />
         <marker scope="Public" name="jura_resp5" />
         <marker scope="Public" name="jura_resp56" />
         <marker scope="Public" name="jura_seduction" />
@@ -2324,6 +2344,7 @@
         <marker scope="Public" name="nonon2s_a" />
         <marker scope="Public" name="nonon2s_ab" />
         <marker scope="Public" name="nonon2s_b" />
+        <marker scope="Public" name="nonon3" />
         <marker scope="Public" name="nonon3s" />
         <marker scope="Public" name="ochako_cheerleader0" />
         <marker scope="Public" name="okino_gakuran0" />
@@ -2484,6 +2505,7 @@
         <marker scope="Public" name="sannytess_nb0" />
         <marker scope="Public" name="sannytess0" />
         <marker scope="Public" name="sans0" />
+        <marker scope="Public" name="santa_f" />
         <marker scope="Public" name="scm_hand0" />
         <marker scope="Public" name="scm0" />
         <marker scope="Public" name="seduction">Jura asks the table how to seduce men--or women if there's no men playing.</marker>
@@ -2660,6 +2682,7 @@
         <marker scope="Public" name="yumeko_cg0" />
         <marker scope="Public" name="yumeko_resp0" />
         <marker scope="Public" name="yumeko_resp01" />
+        <marker scope="Public" name="yumeko_resp1" />
         <marker scope="Public" name="yumeko_resp6" />
         <marker scope="Public" name="yumeko_resp67" />
         <marker scope="Public" name="yumeko_seduction" />
@@ -2674,6 +2697,7 @@
         <marker scope="Public" name="yumeko3s" />
         <marker scope="Public" name="yumeko4" />
         <marker scope="Public" name="yumeko45" />
+        <marker scope="Public" name="yumeko5s" />
         <marker scope="Public" name="yuna_ffx0" />
         <marker scope="Public" name="yuna_lr0" />
         <marker scope="Public" name="yuna0" />
