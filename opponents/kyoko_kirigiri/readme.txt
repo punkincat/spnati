@@ -1,10 +1,13 @@
 TIMELINE
 October 2021 - Kyoko’s original model is created.
 January 27, 2022 - The first message between the author and artist is sent, and the writing project begins.
-December 10, 2022 - At 1,052 lines, Kyoko is first submitted to the Testing Roster.
+December 10, 2022 - At 1,052 lines, Kyoko is first submitted to the Testing Roster. She goes live the following morning.
+May 19, 2023 - At 1,376 lines, Kyoko goes up for sponsorships. Between the five sponsorships she receives soon after, the sponsorship requirements laid out for her collectively require more than 200 lines.
+August 30, 2023 - Kyoko Kirigiri reaches 1,500 lines.
+December 11, 2023 - The 1-year anniversary of Kyoko’s inclusion on the Testing Roster arrives. At this point, she has virtually been live on Testing non-stop for the entire year, is the oldest character on the Testing Roster (except for Sheena’s same-folder rework), and has 1,602 lines. Her sponsorship requirements at this point are roughly 20% complete.
 
 SPECIAL THANKS
-Richar, for being a phenomenal artist, an absolute joy to work with, and honestly for making this whole project remotely possible
+PurpleKuroi, for being a phenomenal artist, an absolute joy to work with, and honestly for making this whole project remotely possible
 MyMainAccIsANord and FarawayVision, for helping me as I fumbled my way around the character editor
 MyMainAccIsANord again, for helping me through the home stretch of writing before Testing Roster submission when I had way too many lines written and way too few generic cases covered
 RubberCorgi, coolcat001100, and the rest of the SPNaTI Community Discord Server moderation team, for keeping my mischief in check
