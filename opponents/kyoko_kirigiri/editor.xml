@@ -714,7 +714,7 @@ Kyoko is deliberately setting the Chuunibyou character up for failure here.</not
         <label id="614" label="Toshinou Ou 3-1" folder="Outbound stage 3" sort="0" />
         <label id="615" label="Toshinou select, replay" folder="" sort="0" />
         <label id="616" label="Toshinou select, replay" folder="Duplicate dialogue" sort="2" />
-        <label id="617" label="Toshinou select" folder="" sort="0" />
+        <label id="617" label="Toshinou select A" folder="" sort="0" />
         <label id="618" label="Toshinou R GodivaHair" folder="Duplicate dialogue" sort="36" />
         <label id="619" label="Temporary until fixed" folder="" sort="0" />
         <label id="620" label="Nagatoro IR Pre0-1" folder="Duplicate dialogue" sort="9" />
@@ -1704,6 +1704,8 @@ Kyoko is deliberately setting the Chuunibyou character up for failure here.</not
         <label id="1623" label="Nonon IR pre0-2" folder="Duplicate dialogue" sort="0" />
         <label id="1624" label="Greedy" folder="Remillia sponsor: Misc." sort="0" />
         <label id="1625" label="Greedy/Thief" folder="Remillia sponsor: Misc." sort="0" />
+        <label id="1626" label="%AF" folder="" sort="0" />
+        <label id="1627" label="Toshinou select B" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>#-aside</prefix>
@@ -1733,10 +1735,8 @@ Kyoko is deliberately setting the Chuunibyou character up for failure here.</not
     <posePreviewMarkers>
         <posePreviewMarker>hair==1</posePreviewMarker>
     </posePreviewMarkers>
-    <nextId>1625</nextId>
+    <nextId>1627</nextId>
     <markers>
-        <marker scope="Public" name="" />
-        <marker scope="Public" name="." />
         <marker scope="Public" name="+careerMention" />
         <marker scope="Public" name="+quips" />
         <marker scope="Public" name="ae86_strip" />
@@ -2277,7 +2277,7 @@ Kyoko is deliberately setting the Chuunibyou character up for failure here.</not
         <marker scope="Public" name="shamiko_legDay2" />
         <marker scope="Public" name="shamiko_trainingTrauma1" />
         <marker scope="Public" name="sheSaidFuck" />
-        <marker scope="Public" name="SHE-SAYS-FUCK" />
+        <marker scope="Public" name="SHE_SAYS_FUCK" />
         <marker scope="Public" name="shutInLookAtMe" />
         <marker scope="Public" name="shutInLookAtYou" />
         <marker scope="Public" name="shyExtraFirst" />
@@ -2364,6 +2364,7 @@ Kyoko is deliberately setting the Chuunibyou character up for failure here.</not
         <marker scope="Public" name="toru_secretShlick" />
         <marker scope="Public" name="toshinou_anythingElse" />
         <marker scope="Public" name="toshinou_beneathNotice" />
+        <marker scope="Public" name="toshinou_duoIntro" />
         <marker scope="Public" name="toshinou_gameOverSkinnyDip" />
         <marker scope="Public" name="toshinou_gameOverSkinnyDipNakeySwimmy" />
         <marker scope="Public" name="toshinou_gameOverSkinnyDipWon" />
@@ -2372,6 +2373,7 @@ Kyoko is deliberately setting the Chuunibyou character up for failure here.</not
         <marker scope="Public" name="toshinou_helloAgain" />
         <marker scope="Public" name="toshinou_howManyTomatoes" />
         <marker scope="Public" name="toshinou_howManyTomatoes_mustStrip" />
+        <marker scope="Public" name="toshinou_kyouko" />
         <marker scope="Public" name="toshinou_moreAlike" />
         <marker scope="Public" name="toshinou_nakeySwimmy" />
         <marker scope="Public" name="toshinou_playedWith">She has played X games with Kyouko Toshinou. Activates on Game Start.</marker>
@@ -2402,7 +2404,6 @@ Kyoko is deliberately setting the Chuunibyou character up for failure here.</not
         <marker scope="Public" name="wellYouLost" />
         <marker scope="Public" name="whatKindaStrip" />
         <marker scope="Public" name="wheresWallysWeapons">I spy with my little eye, something that could make you die!</marker>
-        <marker scope="Public" name="wheresWallysWeapons=2" />
         <marker scope="Public" name="whydYouNameYourselfAnthrax">I wouldn't be caught dead with a name like that.</marker>
         <marker scope="Public" name="whySocks" />
         <marker scope="Public" name="willBeStaring" />
