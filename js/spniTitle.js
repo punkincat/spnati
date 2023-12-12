@@ -136,6 +136,10 @@ var CANDY_LIST = [
     "solar_flare/0-wink.png",
     "solar_flare/3-stripping2.png",
     "solar_flare/4-bashful.png",
+    "nadeshiko/0-bashful.png",         // Highlighted New Character
+    "nadeshiko/0-excited.png",
+    "nadeshiko/0-scared.png",
+    "nadeshiko/4-naughty.png",
     "samus_aran/0-portrait.png",           // Has Recent Updates
     "samus_aran/1-introspective.png",
     "samus_aran/1-curious.png",
