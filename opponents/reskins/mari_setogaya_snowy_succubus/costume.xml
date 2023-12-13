@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>mari_setogaya_snowy_succubus</id>
+    <label>Mari</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>choker</tag>
+        <tag>christmas_skin</tag>
+        <tag remove="true">school_uniform</tag>
+        <tag remove="true">shimapan</tag>
+        <tag from="0" to="3">sweater</tag>
+        <tag from="0" to="2">thigh_highs</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/mari_setogaya_snowy_succubus/</folder>
+    <wardrobe>
+        <clothing name="lower ribbon" generic="ribbon" position="lower" type="important" />
+        <clothing name="chest ribbon" generic="ribbon" position="upper" type="important" />
+        <clothing name="sweater" generic="sweater" position="both" type="major" />
+        <clothing name="hair ribbons" generic="ribbon" position="head" type="extra" plural="true" />
+        <clothing name="socks" generic="socks" position="feet" type="minor" plural="true" />
+        <clothing name="boots" generic="shoes" position="feet" type="extra" plural="true" />
+    </wardrobe>
+
+    <poses>
+        <pose id="4-Ctransform">
+            <sprite id="4-Ctransform" src="reskins/mari_setogaya_snowy_succubus/Transform1.png" x="0" y="0" />
+            <directive type="animation" id="4-Ctransform" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_snowy_succubus/Transform1.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_snowy_succubus/Transform2C.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_snowy_succubus/Transform3C.png" />
+            </directive>
+        </pose>
+        <pose id="4-Ntransform">
+            <sprite id="4-Ntransform" src="reskins/mari_setogaya_snowy_succubus/Transform1.png" x="0" y="0" />
+            <directive type="animation" id="4-Ntransform" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_snowy_succubus/Transform1.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_snowy_succubus/Transform2N.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_snowy_succubus/Transform3N.png" />
+            </directive>
+        </pose>
+        <pose id="8-Cfinished">
+            <sprite id="8-Cfinished" src="reskins/mari_setogaya_snowy_succubus/Detransform1C.png" x="0" y="0" />
+            <directive type="animation" id="8-Cfinished" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_snowy_succubus/Detransform1C.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_snowy_succubus/Detransform2C.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_snowy_succubus/Detransform3C.png" />
+                <keyframe time="1.2" src="reskins/mari_setogaya_snowy_succubus/Detransform4C.png" />
+            </directive>
+        </pose>
+        <pose id="8-Nfinished">
+            <sprite id="8-Nfinished" src="reskins/mari_setogaya_snowy_succubus/Detransform1N.png" x="0" y="0" />
+            <directive type="animation" id="8-Nfinished" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_snowy_succubus/Detransform1N.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_snowy_succubus/Detransform2N.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_snowy_succubus/Detransform3N.png" />
+                <keyframe time="1.2" src="reskins/mari_setogaya_snowy_succubus/Detransform4N.png" />
+            </directive>
+        </pose>
+    </poses>
+
+</costume>
