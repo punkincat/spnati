@@ -10,19 +10,28 @@
     <collectible id="cattus_pendant" img="opponents/mari_setogaya/cattus_pendant.png" thumbnail="opponents/mari_setogaya/cattus_pendant.png">
         <title>Cattus Pendant</title>
         <subtitle>For lovers of catgirls.</subtitle>
-        <text>This pendant will allow you to trigger Mari's catgirl transformation. If you bring it to the game, Mari will transform when she has to take off her bra. But make sure you're a male, and that you're not also wearing the Abundantia Pendant! Mari can only transform in one of the two!</text>
+        <text>This pendant will allow you to trigger Mari's catgirl transformation. If you bring it to the game, Mari will transform when she has to take off her bra. But make sure that you're not also wearing the Abundantia Pendant! Mari can only transform in one of the two!</text>
         <unlock>Win a game in which Mari Setogaya is playing with at least two opponents that are catgirls. This collectible will allow you to trigger Mari Setogaya's cat form!</unlock>
         <hide-details>true</hide-details>
         <wearable>true</wearable>
-        <clothing name="pendant" generic="" position="neck" type="extra" img="opponents/mari_setogaya/cattus_pendant.png" />
+        <clothing img="opponents/mari_setogaya/cattus_pendant.png" name="pendant" generic="" position="neck" type="extra" />
     </collectible>
     <collectible id="abundantia_pendant" img="opponents/mari_setogaya/abundantia_pendant.png" thumbnail="opponents/mari_setogaya/abundantia_pendant.png">
         <title>Abundantia Pendant</title>
         <subtitle>For lovers of chubby girls.</subtitle>
-        <text>This pendant will allow you to trigger Mari's chubby transformation. If you bring it to the game, Mari will transform when she has to take off her bra. But make sure you're a male, and that you're not also wearing the Cattus Pendant! Mari can only transform in one of the two!</text>
+        <text>This pendant will allow you to trigger Mari's chubby transformation. If you bring it to the game, Mari will transform when she has to take off her bra. But make sure that you're not also wearing the Cattus Pendant! Mari can only transform in one of the two!</text>
         <unlock>Win a game in which Mari Setogaya is playing with at least two opponents that are females with large breasts. This collectible will allow you to trigger Mari Setogaya's chubby form!</unlock>
         <hide-details>true</hide-details>
         <wearable>true</wearable>
-        <clothing name="pendant" generic="" position="neck" type="extra" img="opponents/mari_setogaya/abundantia_pendant.png" />
+        <clothing img="opponents/mari_setogaya/abundantia_pendant.png" name="pendant" generic="" position="neck" type="extra" />
+    </collectible>
+    <collectible id="mari_mistletoekiss" img="opponents/mari_setogaya/Mari_mistletoe_kiss.png" thumbnail="opponents/mari_setogaya/Mistletoe_Heart.png">
+        <title>Mari's mistletoe kiss</title>
+        <subtitle>A shared moment of lewdness and sweetness.</subtitle>
+        <text>Soon after the game was done, Mari walked up to you.
+
+"Heeey... Did you know the mistletoe on this choker can be removed? ...and, do you know what to do when you're under the mistletoe with a cute girl like me~?"</text>
+        <unlock>Win a game against Mari while she's in her "Festive Vampire" outfit or her "Snowy Succubus" outfit. Alternatively, win a game against Mari in the Holiday Lodge background without showing her your chest or crotch.</unlock>
+        <hide-details>true</hide-details>
     </collectible>
 </collectibles>
