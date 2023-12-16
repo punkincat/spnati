@@ -473,7 +473,14 @@ if (!window.monika) window.monika = (function (root) {
 
         if (!players[player] || players[player].id === "monika"
             || players[player].markers["monika_effects_opt_out"]) return;
-        if (Math.random() >= getCurrentGlitchChance()) return;
+
+        if (players[player].markers["monika_effects_opt_out"]) {
+            // Double the chance of glitches on opponents that have decided to opt out
+            // This never actually happens (because they opted out), but Monika is trying anyway out of spite
+            if (Math.random() >= getCurrentGlitchChance() * 2) return;
+        } else {
+            if (Math.random() >= getCurrentGlitchChance()) return;
+        }
 
         var glitchType = getRandomNumber(0, 3);
 
