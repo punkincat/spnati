@@ -41,7 +41,7 @@ function Clothing (name, generic, type, position, plural, fromStage, fromDeal, r
     if (name instanceof jQuery) {
         const $xml = name;
         generic = $xml.attr('generic');
-        name = $xml.attr('name') || $xml.attr('lowercase');
+        name = $xml.attr('name');
         type = $xml.attr('type');
         position = $xml.attr('position');
         plural = $xml.attr('plural');
