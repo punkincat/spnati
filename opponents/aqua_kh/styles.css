@@ -6,6 +6,14 @@
     color: #78d8d3;
 }
 
+.dialogue .konosuba[data-character="aqua_kh"] {
+    color: #086975;
+}
+
+.dark-mode .dialogue .konosuba[data-character="aqua_kh"] {
+    color: #78d8d3;
+}
+
 @font-face {
     font-family: 'KHBBS';
     src: url('epilogue/DFPW5_EUR.woff') format("woff");
