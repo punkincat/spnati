@@ -232,6 +232,21 @@
                 <keyframe time="2" alpha="100" />
             </directive>
         </pose>
+        <pose id="4-_aqua_aqua_butts">
+            <sprite id="aquaKS_butt_default" marker="aquaKS_stage==4" z="2" src="aqua_kh/kibble/4-aquaKS_butt_default.png" x="-165" y="0" />
+            <sprite id="aquaKS_butt_default(copy)" marker="aquaKS_stage&gt;=5" z="2" src="aqua_kh/kibble/5-aquaKS_butt_default.png" x="-165" y="0" />
+            <sprite id="aquaKH_butt_default" z="3" src="aqua_kh/kibble/4-aquaKH_butt_winter.png" x="141" y="0" />
+            <sprite id="aquaKS_hand" z="9" src="aqua_kh/kibble/4-aquaKS_hand.png" x="131" y="513" pivotx="13%" pivoty="56%" rotation="-11" />
+            <sprite id="aquaKS_leg" z="1" src="aqua_kh/kibble/4-aquaKS_leg.png" x="-13" y="730" />
+        </pose>
+        <pose id="2-__confetti">
+            <sprite id="fireworks_animation0" z="3" src="aqua_kh/kibble/confetti_animation.gif" x="285" y="-29" scalex="1.2" scaley="1.2" />
+            <sprite id="keyblade_magic" z="1" src="reskins/aqua_kh_winter/kibble/2-keyblade_magic.png" x="0" y="0" />
+        </pose>
+        <pose id="2-__fireworks">
+            <sprite id="fireworks_animation0" z="3" src="aqua_kh/kibble/fireworks_animation.gif" x="271" y="193" scalex="1.8" scaley="1.8" />
+            <sprite id="keyblade_magic" z="1" src="reskins/aqua_kh_winter/kibble/2-keyblade_magic.png" x="0" y="0" />
+        </pose>
     </poses>
 
 </costume>
