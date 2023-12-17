@@ -14,9 +14,9 @@
     <folder>opponents/reskins/aqua_kh_summer/</folder>
     <folder stage="6">opponents/aqua_kh/</folder>
     <wardrobe>
-        <clothing position="" type="skip" />
+        <clothing name="" generic="" position="" type="skip" />
         <clothing name="bikini bottom" generic="shorts" position="lower" type="major" />
-        <clothing name="bikini top" position="upper" type="major" />
+        <clothing name="bikini top" generic="" position="upper" type="major" />
         <clothing name="dress" generic="dress" position="both" type="major" />
         <clothing name="belts" generic="belt" position="waist" type="minor" plural="true" />
         <clothing name="shoes" generic="shoes" position="feet" type="extra" plural="true" />
@@ -208,5 +208,21 @@
             <sprite id="mia_arm_1" z="4" src="aqua_kh/kibble/mia_arm_bare.png" x="-39" y="473" scalex="-1" rotation="-7" />
             <sprite id="zz_mia_hug_aqua" z="1" src="reskins/aqua_kh_summer/3-zz_mia_hug_aqua.png" />
         </pose>
+        <pose id="4-_aqua_aqua_butts">
+            <sprite id="aquaKS_butt_default" marker="aquaKS_stage==4" z="2" src="aqua_kh/kibble/4-aquaKS_butt_default.png" x="-165" y="0" />
+            <sprite id="aquaKS_butt_default(copy)" marker="aquaKS_stage&gt;=5" z="2" src="aqua_kh/kibble/5-aquaKS_butt_default.png" x="-165" y="0" />
+            <sprite id="aquaKH_butt_default" z="3" src="aqua_kh/kibble/4-aquaKH_butt_summer.png" x="141" y="0" />
+            <sprite id="aquaKS_hand" z="9" src="aqua_kh/kibble/4-aquaKS_hand.png" x="131" y="513" pivotx="13%" pivoty="56%" rotation="-11" />
+            <sprite id="aquaKS_leg" z="1" src="aqua_kh/kibble/4-aquaKS_leg.png" x="-13" y="730" />
+        </pose>
+        <pose id="2-__confetti">
+            <sprite id="fireworks_animation0" z="3" src="aqua_kh/kibble/confetti_animation.gif" x="285" y="-29" scalex="1.2" scaley="1.2" />
+            <sprite id="keyblade_magic" z="1" src="reskins/aqua_kh_summer/kibble/2-keyblade_magic.png" x="0" y="0" />
+        </pose>
+        <pose id="2-__fireworks">
+            <sprite id="fireworks_animation0" z="3" src="aqua_kh/kibble/fireworks_animation.gif" x="271" y="193" scalex="1.8" scaley="1.8" />
+            <sprite id="keyblade_magic" z="1" src="reskins/aqua_kh_summer/kibble/2-keyblade_magic.png" x="0" y="0" />
+        </pose>
     </poses>
+
 </costume>
