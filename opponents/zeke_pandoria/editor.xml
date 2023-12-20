@@ -62,6 +62,14 @@
         <response id="225" opponent="sucrose" opponentId="956" />
         <response id="226" opponent="sucrose" opponentId="951" />
         <response id="281" opponent="sucrose" opponentId="1001" />
+        <response id="313" opponent="zoe" opponentId="394" />
+        <response id="316" opponent="meia" opponentId="1497" />
+        <response id="317" opponent="meia" opponentId="1498" />
+        <response id="330" opponent="arle" opponentId="243" />
+        <response id="331" opponent="arle" opponentId="317" />
+        <response id="334" opponent="caitlin" opponentId="66" />
+        <response id="335" opponent="caitlin" opponentId="68" />
+        <response id="346" opponent="mari_setogaya" opponentId="2665" />
     </responses>
     <notes>
         <note id="10">If you want to ask Pandoria / Pandy questions, you could draw attention to the fact that some of her body parts are lightbulbs, such as a lightbulb in her head.. and her tail. Her specific race is known as a "Blade".</note>
@@ -72,6 +80,9 @@
         <note id="143">note; make a joke about the flamebringer and brighid </note>
         <note id="249">note to self; make this set her nickname to both Sucrose and Sweetie in the future when that functionality is added to the CE</note>
         <note id="225">note to self; this lets sucrose set her own marker zp_ff_enable</note>
+        <note id="315">as a note, as a major gameplay feature of xenoblade 2, you make use of different blades on a regular basis (each character can have up to 3 equipped, some are story based like Mythra and some are side content like Kora). (zeke cannot use mythra/pyra, only rex can)</note>
+        <note id="319">dromarch is a beast shape Blade who is basically a big furry lion</note>
+        <note id="344">zeke and pandy have a very bad history with bandits, which they can explain in follow-up lines</note>
     </notes>
     <labels>
         <label id="5" label="Pandoria Reminder" folder="" sort="0" />
@@ -367,17 +378,70 @@
         <label id="308" label="" folder="Filtered" sort="0" />
         <label id="309" label="" folder="Sucrose Dual Forfeit" sort="0" />
         <label id="310" label="" folder="Sucrose Dual Forfeit" sort="0" />
+        <label id="278" label="" folder="Targets" sort="0" />
+        <label id="279" label="" folder="Targets" sort="0" />
+        <label id="274" label="" folder="Responses" sort="0" />
+        <label id="275" label="" folder="Responses" sort="0" />
+        <label id="311" label="" folder="Responses" sort="0" />
+        <label id="272" label="" folder="Responses" sort="0" />
+        <label id="273" label="" folder="Responses" sort="0" />
+        <label id="312" label="" folder="Responses" sort="0" />
+        <label id="313" label="" folder="Responses" sort="0" />
+        <label id="314" label="" folder="Responses" sort="0" />
+        <label id="315" label="" folder="Responses" sort="0" />
+        <label id="316" label="" folder="Responses" sort="0" />
+        <label id="317" label="" folder="Responses" sort="0" />
+        <label id="318" label="" folder="Sucrose Post-Dual" sort="0" />
+        <label id="319" label="" folder="Targets" sort="0" />
+        <label id="320" label="" folder="Sucrose Post-Dual" sort="0" />
+        <label id="321" label="" folder="Sucrose Post-Dual" sort="0" />
+        <label id="322" label="" folder="Sucrose Post-Dual" sort="0" />
+        <label id="323" label="" folder="Sucrose Post-Dual" sort="0" />
+        <label id="324" label="" folder="Sucrose Post-Dual" sort="0" />
+        <label id="325" label="" folder="Sucrose Post-Dual" sort="0" />
+        <label id="326" label="" folder="Sucrose Post-Dual" sort="0" />
+        <label id="327" label="" folder="Sucrose Post-Dual" sort="0" />
+        <label id="328" label="" folder="Sucrose Post-Dual" sort="0" />
+        <label id="329" label="" folder="Responses" sort="0" />
+        <label id="330" label="" folder="Responses" sort="0" />
+        <label id="331" label="" folder="Targets" sort="0" />
+        <label id="332" label="" folder="Targets" sort="0" />
+        <label id="333" label="" folder="Targets" sort="0" />
+        <label id="334" label="" folder="Targets" sort="0" />
+        <label id="335" label="" folder="Targets" sort="0" />
+        <label id="336" label="" folder="Responses" sort="0" />
+        <label id="337" label="" folder="Responses" sort="0" />
+        <label id="338" label="ZekePandoriaMorag - Morag present" folder="Responses" sort="0" />
+        <label id="339" label="ZekePandoriaMorag - Brighid present" folder="Responses" sort="0" />
+        <label id="340" label="" folder="Responses" sort="0" />
+        <label id="341" label="" folder="Targets" sort="0" />
+        <label id="342" label="" folder="Targets" sort="0" />
+        <label id="343" label="" folder="Filtered" sort="0" />
+        <label id="344" label="" color="1" folder="Mari S" sort="0" />
+        <label id="345" label="" color="1" folder="Mari S" sort="0" />
+        <label id="346" label="" color="1" folder="Mari S" sort="0" />
     </labels>
     <posePreviewMarkers>
         <posePreviewMarker>penis=s</posePreviewMarker>
     </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>310</nextId>
+    <nextId>346</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="allowsex">If set to 1, Zeke and Pandoria *can* (but are not guaranteed to) have sex for their forfeit.</marker>
         <marker scope="Public" name="allowsex_lockin" />
+        <marker scope="Public" name="arle_adaptquestion" />
+        <marker scope="Public" name="arle_carbuncle" />
+        <marker scope="Public" name="arle_carbuncle_pokemon" />
+        <marker scope="Public" name="arle_round0" />
         <marker scope="Public" name="badhand_eye_of_shining_justice" />
+        <marker scope="Public" name="beatrix_crystalShard1" />
+        <marker scope="Public" name="beatrix_crystalShard1b" />
+        <marker scope="Public" name="BowsetteRobotGirlfriendResp" />
+        <marker scope="Public" name="BowsetteRobotGirlfriendResp2" />
+        <marker scope="Public" name="caitlin_beans_on_toast" />
+        <marker scope="Public" name="caitlin_chairYEET" />
+        <marker scope="Public" name="caitlin_hair" />
         <marker scope="Public" name="dontUseRegularForfeitStateOperation" />
         <marker scope="Public" name="EyeOfShiningJustice">If active, Zeke is in EOSJ mode.</marker>
         <marker scope="Public" name="finishing_pandoria" />
@@ -392,6 +456,7 @@
         <marker scope="Public" name="hand_pandy_exposition1" />
         <marker scope="Public" name="heavy_ff_insertion_start" />
         <marker scope="Public" name="heavy_ff_intercrural_start" />
+        <marker scope="Public" name="how_wars_profit_nopon" />
         <marker scope="Public" name="kora_blade_power" />
         <marker scope="Public" name="kora_blade_power2" />
         <marker scope="Public" name="kora_gossip_aegisRex" />
@@ -401,6 +466,7 @@
         <marker scope="Public" name="pandoriaToggle">if set to 1, Pandoria's dialogue is de-emphasised at certain moments.</marker>
         <marker scope="Public" name="pandy_intro" />
         <marker scope="Public" name="pandy_jura_balls" />
+        <marker scope="Public" name="pandy_mariS_hatResp" />
         <marker scope="Public" name="pandy_strips_boots">Pandoria strips her boots while Zeke removes his boots.</marker>
         <marker scope="Public" name="pandy_strips_bottom">Pandoria strips her bottoms (underwear) while Zeke removes his own boxers.</marker>
         <marker scope="Public" name="pandy_strips_bra">Pandoria strips her bra when Zeke takes off his pants.</marker>
@@ -454,6 +520,16 @@
         <marker scope="Public" name="sucrose_zpff6_Resp" />
         <marker scope="Public" name="sucrose_zpff7_Resp" />
         <marker scope="Public" name="sucrose_zpff8_Resp" />
+        <marker scope="Public" name="sucrose_zps_post1" />
+        <marker scope="Public" name="sucrose_zps_post10" />
+        <marker scope="Public" name="sucrose_zps_post11" />
+        <marker scope="Public" name="sucrose_zps_post2" />
+        <marker scope="Public" name="sucrose_zps_post3" />
+        <marker scope="Public" name="sucrose_zps_post4" />
+        <marker scope="Public" name="sucrose_zps_post5" />
+        <marker scope="Public" name="sucrose_zps_post6" />
+        <marker scope="Public" name="sucrose_zps_post7" />
+        <marker scope="Public" name="sucrose_zps_post8" />
         <marker scope="Public" name="sucrose01_resp" />
         <marker scope="Public" name="sucrose02_resp" />
         <marker scope="Public" name="sucrose11_resp" />
@@ -487,7 +563,11 @@
         <marker scope="Public" name="zeke_jura_strip1a" />
         <marker scope="Public" name="zeke_jura_strip1b" />
         <marker scope="Public" name="zeke_kyou_violenceResp" />
+        <marker scope="Public" name="zeke_mariS_pirateResp" />
+        <marker scope="Public" name="zeke_mariS_relationshipResp" />
         <marker scope="Public" name="zeke_meia_self0a" />
+        <marker scope="Public" name="zeke_meia_self0b" />
+        <marker scope="Public" name="zeke_meia_self3a" />
         <marker scope="Public" name="zeke_misaka_strip0a" />
         <marker scope="Public" name="zeke_nadeshiko_fancy1" />
         <marker scope="Public" name="zeke_nadeshiko_fancy2" />
@@ -521,13 +601,26 @@
         <marker scope="Public" name="zeke_sucrose_strip6c" />
         <marker scope="Public" name="zeke_wikipetan0a" />
         <marker scope="Public" name="zeke_wikipetan1" />
+        <marker scope="Public" name="zeke_yaemiko_publishing1" />
         <marker scope="Public" name="zekepandoria_jura_self0a" />
         <marker scope="Public" name="zekepandoria_revy_strip0a" />
+        <marker scope="Public" name="zekepandy_miko_selfGloves1" />
         <marker scope="Public" name="zekepandy_sucrose_dualFF_happening" />
         <marker scope="Public" name="zekepandy_sucrose_dualFF_must" />
         <marker scope="Public" name="zekepandy_sucrose_dualFF_start" />
         <marker scope="Public" name="zekepandy_sucrose_dualFFEnable" />
+        <marker scope="Public" name="zekepandy_yaemiko_jobPayResp" />
+        <marker scope="Public" name="zekepandy_yaemiko_jobPayRespB" />
+        <marker scope="Public" name="zekepandy_zoe_childResp" />
+        <marker scope="Public" name="zekepandy_zoe_differentBladesResp" />
+        <marker scope="Public" name="zekepandy_zoe_moragBrighidtResp" />
+        <marker scope="Public" name="zekepandy_zoe_moragPresentResp" />
+        <marker scope="Public" name="zekepandy_zoe_moragResp" />
+        <marker scope="Public" name="zoe_swapRoles" />
+        <marker scope="Public" name="Zoe_ZekePandoriaAbsResp" />
+        <marker scope="Public" name="zp_bowsette_robotGFresp" />
         <marker scope="Public" name="zp_sucrose_finish_trio" />
+        <marker scope="Public" name="zp_yaemiko_bookWriting1" />
         <marker scope="Public" name="zps_postfinish" />
     </markers>
     <pendingLines>
