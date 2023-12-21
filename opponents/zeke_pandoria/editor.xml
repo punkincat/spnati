@@ -70,6 +70,8 @@
         <response id="334" opponent="caitlin" opponentId="66" />
         <response id="335" opponent="caitlin" opponentId="68" />
         <response id="346" opponent="mari_setogaya" opponentId="2665" />
+        <response id="350" opponent="jura" opponentId="1370" />
+        <response id="362" opponent="spooky" opponentId="60" />
     </responses>
     <notes>
         <note id="10">If you want to ask Pandoria / Pandy questions, you could draw attention to the fact that some of her body parts are lightbulbs, such as a lightbulb in her head.. and her tail. Her specific race is known as a "Blade".</note>
@@ -194,8 +196,8 @@
         <label id="113" label="" folder="Targets" sort="0" />
         <label id="114" label="" folder="Targets" sort="0" />
         <label id="115" label="" folder="Targets" sort="0" />
-        <label id="116" label="" folder="Targets" sort="0" />
-        <label id="117" label="" folder="Targets" sort="0" />
+        <label id="116" label="" color="3" folder="Targets" sort="0" />
+        <label id="117" label="" color="3" folder="Targets" sort="0" />
         <label id="118" label="" folder="Targets" sort="0" />
         <label id="119" label="" folder="Default After Strip Lines" sort="0" />
         <label id="120" label="" folder="Default After Strip Lines" sort="0" />
@@ -378,18 +380,18 @@
         <label id="308" label="" folder="Filtered" sort="0" />
         <label id="309" label="" folder="Sucrose Dual Forfeit" sort="0" />
         <label id="310" label="" folder="Sucrose Dual Forfeit" sort="0" />
-        <label id="278" label="" folder="Targets" sort="0" />
-        <label id="279" label="" folder="Targets" sort="0" />
+        <label id="278" label="" color="3" folder="Targets" sort="0" />
+        <label id="279" label="" color="3" folder="Targets" sort="0" />
         <label id="274" label="" folder="Responses" sort="0" />
         <label id="275" label="" folder="Responses" sort="0" />
         <label id="311" label="" folder="Responses" sort="0" />
         <label id="272" label="" folder="Responses" sort="0" />
-        <label id="273" label="" folder="Responses" sort="0" />
+        <label id="273" label="" color="3" folder="Responses" sort="0" />
         <label id="312" label="" folder="Responses" sort="0" />
         <label id="313" label="" folder="Responses" sort="0" />
         <label id="314" label="" folder="Responses" sort="0" />
         <label id="315" label="" folder="Responses" sort="0" />
-        <label id="316" label="" folder="Responses" sort="0" />
+        <label id="316" label="" color="3" folder="Responses" sort="0" />
         <label id="317" label="" folder="Responses" sort="0" />
         <label id="318" label="" folder="Sucrose Post-Dual" sort="0" />
         <label id="319" label="" folder="Targets" sort="0" />
@@ -420,12 +422,34 @@
         <label id="344" label="" color="1" folder="Mari S" sort="0" />
         <label id="345" label="" color="1" folder="Mari S" sort="0" />
         <label id="346" label="" color="1" folder="Mari S" sort="0" />
+        <label id="347" label="" folder="Targets" sort="0" />
+        <label id="348" label="" folder="Targets" sort="0" />
+        <label id="349" label="" color="1" folder="Responses" sort="0" />
+        <label id="350" label="" color="1" folder="Responses" sort="0" />
+        <label id="276" label="" folder="Targets" sort="0" />
+        <label id="351" label="" folder="Targets" sort="0" />
+        <label id="352" label="" folder="Targets" sort="0" />
+        <label id="353" label="" folder="Targets" sort="0" />
+        <label id="354" label="" folder="Responses" sort="0" />
+        <label id="355" label="" folder="Responses" sort="0" />
+        <label id="356" label="" folder="Responses" sort="0" />
+        <label id="357" label="" folder="Responses" sort="0" />
+        <label id="358" label="" folder="Responses" sort="0" />
+        <label id="359" label="" folder="Responses" sort="0" />
+        <label id="360" label="" folder="Targets" sort="0" />
+        <label id="361" label="" folder="Targets" sort="0" />
+        <label id="362" label="" folder="Prompt Responses" sort="0" />
+        <label id="363" label="" folder="Prompt Responses" sort="0" />
+        <label id="364" label="" folder="Prompt Responses" sort="0" />
+        <label id="365" label="" folder="Targets" sort="0" />
+        <label id="366" label="" folder="Targets" sort="0" />
+        <label id="367" label="" folder="Filtered" sort="0" />
     </labels>
     <posePreviewMarkers>
         <posePreviewMarker>penis=s</posePreviewMarker>
     </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>346</nextId>
+    <nextId>367</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="allowsex">If set to 1, Zeke and Pandoria *can* (but are not guaranteed to) have sex for their forfeit.</marker>
@@ -483,6 +507,11 @@
         <marker scope="Public" name="self_finished" />
         <marker scope="Public" name="shamiko_transform1" />
         <marker scope="Public" name="shamiko_transform2" />
+        <marker scope="Public" name="spooky_goHomeWithMeResp" />
+        <marker scope="Public" name="spooky_NoCondomsResp" />
+        <marker scope="Public" name="spooky_SoulJobResp" />
+        <marker scope="Public" name="spooky_strip0" />
+        <marker scope="Public" name="spooky_strip0_festive" />
         <marker scope="Public" name="strip_poker_joke" />
         <marker scope="Public" name="sucrose_dual_FF_T1" />
         <marker scope="Public" name="sucrose_dual_FF_T2" />
@@ -554,14 +583,19 @@
         <marker scope="Public" name="wheres_turters2" />
         <marker scope="Public" name="zeke_beatrix_blade1" />
         <marker scope="Public" name="zeke_beatrix_blade2" />
+        <marker scope="Public" name="zeke_caitlin_powers1" />
         <marker scope="Public" name="zeke_chest_revealed_crystal" />
         <marker scope="Public" name="zeke_dunban_self0a" />
         <marker scope="Public" name="zeke_fischl_strip0a" />
+        <marker scope="Public" name="zeke_jura_self0b" />
         <marker scope="Public" name="zeke_jura_self1a" />
+        <marker scope="Public" name="zeke_jura_self1b" />
         <marker scope="Public" name="zeke_jura_strip0a" />
         <marker scope="Public" name="zeke_jura_strip0b" />
+        <marker scope="Public" name="zeke_jura_strip0c" />
         <marker scope="Public" name="zeke_jura_strip1a" />
         <marker scope="Public" name="zeke_jura_strip1b" />
+        <marker scope="Public" name="zeke_jura_strip1c" />
         <marker scope="Public" name="zeke_kyou_violenceResp" />
         <marker scope="Public" name="zeke_mariS_pirateResp" />
         <marker scope="Public" name="zeke_mariS_relationshipResp" />
@@ -604,6 +638,9 @@
         <marker scope="Public" name="zeke_yaemiko_publishing1" />
         <marker scope="Public" name="zekepandoria_jura_self0a" />
         <marker scope="Public" name="zekepandoria_revy_strip0a" />
+        <marker scope="Public" name="zekepandy_caitlin_strip0a" />
+        <marker scope="Public" name="zekepandy_caitlin_strip0b" />
+        <marker scope="Public" name="zekepandy_caitlin_strip0c" />
         <marker scope="Public" name="zekepandy_miko_selfGloves1" />
         <marker scope="Public" name="zekepandy_sucrose_dualFF_happening" />
         <marker scope="Public" name="zekepandy_sucrose_dualFF_must" />
@@ -616,9 +653,16 @@
         <marker scope="Public" name="zekepandy_zoe_moragBrighidtResp" />
         <marker scope="Public" name="zekepandy_zoe_moragPresentResp" />
         <marker scope="Public" name="zekepandy_zoe_moragResp" />
+        <marker scope="Public" name="zk_solarflare_photosynthesis" />
         <marker scope="Public" name="zoe_swapRoles" />
         <marker scope="Public" name="Zoe_ZekePandoriaAbsResp" />
         <marker scope="Public" name="zp_bowsette_robotGFresp" />
+        <marker scope="Public" name="zp_caitlin_single1" />
+        <marker scope="Public" name="zp_nonon_self0a" />
+        <marker scope="Public" name="zp_nonon_self1a" />
+        <marker scope="Public" name="zp_solarflare_electric" />
+        <marker scope="Public" name="zp_solarflare_robot" />
+        <marker scope="Public" name="zp_solarflare_zombies" />
         <marker scope="Public" name="zp_sucrose_finish_trio" />
         <marker scope="Public" name="zp_yaemiko_bookWriting1" />
         <marker scope="Public" name="zps_postfinish" />
