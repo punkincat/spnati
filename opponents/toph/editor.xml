@@ -156,6 +156,11 @@
         <response id="903" opponent="chara_dreemurr" opponentId="453" />
         <response id="904" opponent="chara_dreemurr" opponentId="992" />
         <response id="905" opponent="chara_dreemurr" opponentId="2663" />
+        <response id="926" opponent="zone-tan" opponentId="7" />
+        <response id="955" opponent="chell_wheatley" opponentId="82" />
+        <response id="956" opponent="chell_wheatley" opponentId="13" />
+        <response id="957" opponent="chell_wheatley" opponentId="22" />
+        <response id="958" opponent="chell_wheatley" opponentId="15" />
     </responses>
     <notes>
         <note id="272">For Repulsive_Trifle_551's sponsorship!</note>
@@ -1168,8 +1173,51 @@
         <label id="912" label="Taking Charge in Bed" color="2" folder="Targets" sort="0" />
         <label id="913" label="Seismic Sense (Adrien Still in Suit)" color="1" folder="Targets" sort="0" />
         <label id="914" label="Seismic Sense (Adrien Revealed)" color="1" folder="Targets" sort="0" />
+        <label id="915" label="Early Stages" folder="Christmas Outfit" sort="0" />
+        <label id="916" label="Normal" folder="Christmas Outfit" sort="0" />
+        <label id="917" label="The Meaning of the Costume" folder="Christmas Outfit" sort="0" />
+        <label id="918" label="Early Stages" folder="Christmas Outfit" sort="0" />
+        <label id="919" label="Early Stages" folder="Christmas Outfit" sort="0" />
+        <label id="920" label="Reindeer" folder="Christmas Outfit" sort="0" />
+        <label id="921" label="Normal" folder="Christmas Outfit" sort="0" />
+        <label id="922" label="Normal" folder="Christmas Outfit" sort="0" />
+        <label id="923" label="Hot Temperature" folder="Christmas Outfit" sort="0" />
+        <label id="924" label="Hot Temperature" folder="Christmas Outfit" sort="0" />
+        <label id="925" label="Standing Up After the Game" folder="Christmas Outfit" sort="0" />
+        <label id="926" label="2 Demon Form" color="2" folder="Targets" sort="0" />
+        <label id="927" label="Cold" folder="Christmas Outfit" sort="0" />
+        <label id="928" label="" folder="Christmas Outfit" sort="0" />
+        <label id="929" label="" folder="Christmas Outfit" sort="0" />
+        <label id="930" label="" folder="Christmas Outfit" sort="0" />
+        <label id="931" label="" folder="Christmas Outfit" sort="0" />
+        <label id="932" label="Normal" folder="Christmas Outfit" sort="0" />
+        <label id="933" label="" folder="Christmas Outfit" sort="0" />
+        <label id="934" label="" folder="Christmas Outfit" sort="0" />
+        <label id="935" label="" folder="Christmas Outfit" sort="0" />
+        <label id="936" label="" folder="Christmas Outfit" sort="0" />
+        <label id="937" label="" folder="Christmas Outfit" sort="0" />
+        <label id="938" label="" folder="Christmas Outfit" sort="0" />
+        <label id="939" label="First Line" folder="Christmas Outfit" sort="0" />
+        <label id="940" label="Early Stages" folder="Christmas Outfit" sort="0" />
+        <label id="941" label="" folder="Christmas Outfit" sort="0" />
+        <label id="942" label="" folder="Christmas Outfit" sort="0" />
+        <label id="943" label="" folder="Christmas Outfit" sort="0" />
+        <label id="944" label="" folder="Christmas Outfit" sort="0" />
+        <label id="945" label="" folder="Christmas Outfit" sort="0" />
+        <label id="946" label="" folder="Christmas Outfit" sort="0" />
+        <label id="947" label="" folder="Christmas Outfit" sort="0" />
+        <label id="948" label="" folder="Christmas Outfit" sort="0" />
+        <label id="949" label="" folder="Christmas Outfit" sort="0" />
+        <label id="950" label="" folder="Christmas Outfit" sort="0" />
+        <label id="951" label="Cold Background" folder="Christmas Outfit" sort="0" />
+        <label id="952" label="" folder="Christmas Outfit" sort="0" />
+        <label id="953" label="" folder="Christmas Outfit" sort="0" />
+        <label id="954" label="" folder="Christmas Outfit" sort="0" />
+        <label id="957" label="Ace of Fours" color="4" folder="Targets" sort="0" />
+        <label id="956" label="0-2 Robots" color="4" folder="Targets" sort="0" />
+        <label id="746" label="7 Dick Joke" color="11" folder="Targets" sort="0" />
     </labels>
-    <nextId>914</nextId>
+    <nextId>958</nextId>
     <markers>
         <marker scope="Public" name="9S_Cheat_Resp">9S Targets: 9S Stripped 0-1</marker>
         <marker scope="Public" name="9S_Material_1">9S Targets: 9S Strip 0-1</marker>
@@ -1366,6 +1414,10 @@
         <marker scope="Public" name="Caulifla_SeismicSense_1">Caulifla Targets: Toph Stripping 0-1</marker>
         <marker scope="Public" name="Chara_Pitchfork_Resp">Chara Targets: Any Hand</marker>
         <marker scope="Public" name="Chara_Refuse_Resp">Chara Targets: Any Hand</marker>
+        <marker scope="Public" name="Chell_Ace_of_Fours">Chell Targets: Any Hand</marker>
+        <marker scope="Public" name="Chell_Distraction_Resp">Chell Targets: Chell Strip 0-1</marker>
+        <marker scope="Public" name="Chell_Master_Pokerer">Chell Targets: Game Start</marker>
+        <marker scope="Public" name="Chell_Robots_Resp">Chell Targets: Any Hand</marker>
         <marker scope="Public" name="Chihiro_AlterEgo">Chihiro Targets: Chihiro Stripped 4-5</marker>
         <marker scope="Public" name="Chihiro_Return">Chihiro Targets: Chihiro Strip 5-6</marker>
         <marker scope="Public" name="Chihiro_Reveal">Chihiro Targets: Chihiro Stripped 5-6</marker>
@@ -1827,7 +1879,7 @@
         <marker scope="Public" name="Taunt_Rhyme">Must Strip: Generic Lines (For Storm's sponsorship)</marker>
         <marker scope="Public" name="Tick_Arm_Resp">Tick Targets: Tick Stripping 1-2</marker>
         <marker scope="Public" name="Tie">Tie</marker>
-        <marker scope="Public" name="Tomoko_Asshole_Resp">Tomoko Targets: Any Hand</marker>
+        <marker scope="Public" name="Tomoko_Asshole_Resp">Tomoko Targets: Stripping 7-8</marker>
         <marker scope="Public" name="Tomoko_DickJoke">Tomoko Targets: Any Hand</marker>
         <marker scope="Public" name="Toru_Sight_1">Toru Targets: Toru Strip 0-1</marker>
         <marker scope="Public" name="Trixie_Chest_1">Trixie Targets: Trixie Strip 0-1</marker>
@@ -1874,6 +1926,8 @@
         <marker scope="Public" name="Wiki_Spirit_3">Wikipe-tan Targets: Wikipe-tan Stripped 0-1</marker>
         <marker scope="Public" name="Wiki_Sports">Wikipe-tan Targets: Any Hand</marker>
         <marker scope="Public" name="Wiki_Start">Wikipe-tan Targets: Character Selected</marker>
+        <marker scope="Public" name="Wiki_Start_Reindeer_1">Wikipe-tan Targets: Character Selected (Toph in Reindeer Costume)</marker>
+        <marker scope="Public" name="Wiki_Start_Reindeer_2">Wikipe-tan Targets: Game Start (Toph in Reindeer Costume)</marker>
         <marker scope="Public" name="Wiki_Start2">Wikipe-tan Targets: Game Start</marker>
         <marker scope="Public" name="Wiki_StripPoker_1">Wikipe-tan Targets: Toph Strip 5-6</marker>
         <marker scope="Public" name="Wiki_StripPoker_2">Wikipe-tan Targets: Toph Stripping 5-6</marker>
@@ -1940,6 +1994,7 @@
         <marker scope="Public" name="Yuri_Legends_1">Yuri Targets: Yuri Strip 0-1</marker>
         <marker scope="Public" name="Zoe_Intro">Zoe Targets: Game Start</marker>
         <marker scope="Public" name="Zoe_Question_1">Zoe Targets: Zoe Strip 0-1</marker>
+        <marker scope="Public" name="Zone_Demon_Resp">Zone-tan Targets: Zone-tan Strip 2-3</marker>
     </markers>
     <pendingLines>
         <line>Well, I like hanging with Sokka, and the rest of Team Avatar as well--Katara, Aang, Zuko, all of them! But since I stared running the Academy, I barely get any chances to spend much time with them, except when there's a battle to be fought. (Resp. to NadeshikoFriends, for the Removing Accessory case, or the Any Hand case if it's moved to it)</line>
