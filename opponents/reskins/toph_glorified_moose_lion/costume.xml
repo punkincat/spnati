@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>toph_glorified_moose_lion</id>
+    <label>Toph</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>christmas_skin</tag>
+        <tag>long_hair</tag>
+        <tag remove="true">short_hair</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/toph_glorified_moose_lion/</folder>
+    <folder stage="8">opponents/toph/</folder>
+    <wardrobe>
+        <clothing name="tank top" generic="shirt" position="upper" type="important" />
+        <clothing name="shorts" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="onesie" generic="pants" position="lower" type="major" plural="true" />
+        <clothing name="top" generic="" position="upper" type="major" />
+        <clothing name="nose" generic="" position="head" type="extra" />
+        <clothing name="headband" generic="headband" position="head" type="extra" />
+    </wardrobe>
+
+    <poses>
+        <pose id="0-blind_taunt">
+            <sprite id="blind_taunt" src="reskins/toph_glorified_moose_lion/0-blind_taunt.png" x="-7" y="0" />
+            <sprite id="jumpsuit_blind_taunt" src="reskins/toph_glorified_moose_lion/Animation Files/jumpsuit_blind_taunt.png" x="-125" y="391" pivotx="12%" rotation="-38" />
+            <directive type="animation" id="jumpsuit_blind_taunt" ease="linear" interpolation="linear">
+                <keyframe time="0" x="-125" />
+                <keyframe time="5" x="-125" />
+            </directive>
+            <directive type="animation" id="jumpsuit_blind_taunt" loop="true" ease="linear" interpolation="linear">
+                <keyframe time="0" y="391" rotation="-38" />
+                <keyframe time="0.22" rotation="0" />
+                <keyframe time="0.45" rotation="-38" />
+                <keyframe time="0.68" rotation="0" />
+                <keyframe time="0.9" rotation="-38" />
+                <keyframe time="1.12" rotation="0" />
+                <keyframe time="1.35" rotation="-40" />
+                <keyframe time="4.94" rotation="-40" />
+                <keyframe time="5" y="391" rotation="-38" />
+            </directive>
+            <directive type="animation" id="jumpsuit_blind_taunt" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/toph_glorified_moose_lion/Animation Files/jumpsuit_blind_taunt.png" />
+                <keyframe time="5" src="reskins/toph_glorified_moose_lion/Animation Files/jumpsuit_blind_taunt.png" />
+            </directive>
+        </pose>
+        <pose id="0-z-stripping-">
+            <sprite id="z-stripping-1" src="reskins/toph_glorified_moose_lion/0-z-stripping-1.png" x="0" y="0" />
+            <directive type="animation" id="z-stripping-1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/toph_glorified_moose_lion/0-z-stripping-1.png" />
+                <keyframe time="1.5" src="reskins/toph_glorified_moose_lion/0-z-stripping-2.png" />
+            </directive>
+        </pose>
+        <pose id="0-z-stripping+">
+            <sprite id="z-stripping+1" src="reskins/toph_glorified_moose_lion/0-z-stripping+1.png" x="0" y="0" />
+            <directive type="animation" id="z-stripping+1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/toph_glorified_moose_lion/0-z-stripping+1.png" />
+                <keyframe time="1.5" src="reskins/toph_glorified_moose_lion/0-z-stripping+2.png" />
+            </directive>
+        </pose>
+        <pose id="1-aa-stripped-">
+            <sprite id="aa-stripped+1" src="reskins/toph_glorified_moose_lion/1-aa-stripped-1.png" x="0" y="0" />
+        </pose>
+        <pose id="1-aa-stripped+">
+            <sprite id="aa-stripped+1" src="reskins/toph_glorified_moose_lion/1-aa-stripped+1.png" x="0" y="0" />
+        </pose>
+        <pose id="1-z-stripping-">
+            <sprite id="z-stripping-1" src="reskins/toph_glorified_moose_lion/1-z-stripping-1.png" x="0" y="0" />
+            <directive type="animation" id="z-stripping-1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/toph_glorified_moose_lion/1-z-stripping-1.png" />
+                <keyframe time="1.5" src="reskins/toph_glorified_moose_lion/1-z-stripping-2.png" />
+            </directive>
+        </pose>
+        <pose id="1-z-stripping+">
+            <sprite id="z-stripping+1" src="reskins/toph_glorified_moose_lion/1-z-stripping+1.png" x="0" y="0" />
+            <directive type="animation" id="z-stripping+1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/toph_glorified_moose_lion/1-z-stripping+1.png" />
+                <keyframe time="1.5" src="reskins/toph_glorified_moose_lion/1-z-stripping+2.png" />
+            </directive>
+        </pose>
+        <pose id="2-aa-stripped-">
+            <sprite id="aa-stripped-1" src="reskins/toph_glorified_moose_lion/2-aa-stripped-1.png" x="0" y="0" />
+        </pose>
+        <pose id="2-aa-stripped+">
+            <sprite id="aa-stripped+1" src="reskins/toph_glorified_moose_lion/2-aa-stripped+1.png" x="0" y="0" />
+        </pose>
+        <pose id="3-z-stripping+">
+            <sprite id="z-stripping+1" src="reskins/toph_glorified_moose_lion/3-z-stripping+1.png" x="0" y="0" />
+        </pose>
+        <pose id="4-bracelet_bending">
+            <sprite id="bracelet_1" src="reskins/toph_glorified_moose_lion/4-bracelet_1.png" x="0" y="0" />
+            <sprite id="bracelet_star" delay="3.25" src="reskins/toph_glorified_moose_lion/Animation Files/bracelet_star.png" x="0" y="562" alpha="100" />
+            <sprite id="bracelet_penis" delay="5.5" src="reskins/toph_glorified_moose_lion/Animation Files/bracelet_penis.png" x="0" y="562" />
+            <sprite id="bracelet_spiral" delay="7.75" src="reskins/toph_glorified_moose_lion/Animation Files/bracelet_spiral.png" x="0" y="562" />
+            <directive type="animation" id="bracelet_1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/toph_glorified_moose_lion/4-bracelet_1.png" />
+                <keyframe time="0.75" src="reskins/toph_glorified_moose_lion/4-bracelet_2.png" />
+                <keyframe time="1.5" src="reskins/toph_glorified_moose_lion/4-bracelet_3.png" />
+                <keyframe time="3.25" src="reskins/toph_glorified_moose_lion/4-bracelet_4.png" />
+                <keyframe time="4.5" src="reskins/toph_glorified_moose_lion/4-bracelet_3.png" />
+                <keyframe time="5.5" src="reskins/toph_glorified_moose_lion/4-bracelet_4.png" />
+                <keyframe time="6.75" src="reskins/toph_glorified_moose_lion/4-bracelet_3.png" />
+                <keyframe time="7.75" src="reskins/toph_glorified_moose_lion/4-bracelet_4.png" />
+            </directive>
+            <directive type="animation" id="bracelet_star" delay="3.25" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="562" alpha="100" />
+                <keyframe time="0.6199999" y="547" />
+                <keyframe time="1.25" y="562" alpha="100" />
+            </directive>
+            <directive type="animation" id="bracelet_star" delay="3.25" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/toph_glorified_moose_lion/Animation Files/bracelet_star.png" />
+                <keyframe time="1.25" src="reskins/toph_glorified_moose_lion/Animation Files/blank.png" />
+            </directive>
+            <directive type="animation" id="bracelet_penis" delay="5.5" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="0" y="562" />
+                <keyframe time="0.6199999" y="547" />
+                <keyframe time="1.25" x="0" y="562" />
+            </directive>
+            <directive type="animation" id="bracelet_penis" delay="5.5" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/toph_glorified_moose_lion/Animation Files/bracelet_penis.png" />
+                <keyframe time="1.25" src="reskins/toph_glorified_moose_lion/Animation Files/blank.png" />
+            </directive>
+            <directive type="animation" id="bracelet_spiral" delay="7.75" loop="true" ease="smooth" interpolation="linear">
+                <keyframe time="0" y="562" />
+                <keyframe time="0.6300001" y="547" />
+                <keyframe time="1.25" y="562" />
+            </directive>
+        </pose>
+        <pose id="4-z-stripping-">
+            <sprite id="z-stripping-1" src="reskins/toph_glorified_moose_lion/4-z-stripping-1.png" x="0" y="0" />
+            <directive type="animation" id="z-stripping-1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/toph_glorified_moose_lion/4-z-stripping-1.png" />
+                <keyframe time="1" src="reskins/toph_glorified_moose_lion/4-z-stripping-2.png" />
+            </directive>
+        </pose>
+        <pose id="4-z-stripping+">
+            <sprite id="z-stripping+1" src="reskins/toph_glorified_moose_lion/4-z-stripping+1.png" x="0" y="0" />
+            <directive type="animation" id="z-stripping+1" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/toph_glorified_moose_lion/4-z-stripping+1.png" />
+                <keyframe time="1" src="reskins/toph_glorified_moose_lion/4-z-stripping+2.png" />
+            </directive>
+        </pose>
+        <pose id="5-z-stripping-">
+            <sprite id="z-stripping-1" src="reskins/toph_glorified_moose_lion/5-z-stripping-1.png" x="0" y="0" />
+        </pose>
+        <pose id="5-z-stripping+">
+            <sprite id="z-stripping+1" src="reskins/toph_glorified_moose_lion/5-z-stripping+1.png" x="0" y="0" />
+        </pose>
+        <pose id="3-z-stripping-">
+            <sprite id="z-stripping-1" src="reskins/toph_glorified_moose_lion/3-z-stripping-1.png" x="0" y="0" />
+        </pose>
+    </poses>
+
+</costume>
