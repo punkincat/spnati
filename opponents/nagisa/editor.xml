@@ -460,6 +460,12 @@
         <response id="1659" opponent="jura" opponentId="1133" />
         <response id="1668" opponent="yuelia" opponentId="6" />
         <response id="1687" opponent="meia" opponentId="1204" />
+        <response id="1774" opponent="jura" opponentId="1362" />
+        <response id="1775" opponent="jura" opponentId="1364" />
+        <response id="0" opponent="jura" opponentId="1" />
+        <response id="1776" opponent="jura" opponentId="20" />
+        <response id="1777" opponent="jura" opponentId="33" />
+        <response id="1778" opponent="jura" opponentId="952" />
     </responses>
     <notes>
         <note id="401">This is a special version of this line for Fluttershy to react to, but it uses the regular marker to allow for replied from anyone.
@@ -477,6 +483,18 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <note id="1238">Priority is so high to make sure it plays instead of nagisa_waitress_how_much_you_mean_to_me, which can play in a subsequent round.</note>
         <note id="1576">This line is intentionally not conditional on Sanako's marker, as Sanako should use this pose even if she's talking to someone else.</note>
         <note id="1732">This line is intentionally not conditional on Sanako's marker, as Sanako should use this pose even if she's talking to someone else.</note>
+        <note id="366">This line retains its naturally-higher priority to play over the similar line with one fewer condition.</note>
+        <note id="995">This line retains its naturally-higher priority to play over the similar line with one fewer condition.</note>
+        <note id="542">This line retains its naturally-higher priority to play over the similar line with one fewer condition.</note>
+        <note id="541">This line retains its naturally-higher priority to play over the similar line with one fewer condition.</note>
+        <note id="544">This line retains its naturally-higher priority to play over the similar line with one fewer condition.</note>
+        <note id="539">This line retains its naturally-higher priority to play over the similar line with one fewer condition.</note>
+        <note id="538">This line retains its naturally-higher priority to play over the similar line with one fewer condition.</note>
+        <note id="540">This line retains its naturally-higher priority to play over the similar line with one fewer condition.</note>
+        <note id="543">This line retains its naturally-higher priority to play over the similar line with one fewer condition.</note>
+        <note id="545">This line retains its naturally-higher priority to play over the similar line with one fewer condition.</note>
+        <note id="511">This line retains its naturally-higher priority to play over the similar line with one fewer condition.</note>
+        <note id="620">This line retains its naturally-higher priority to play over the similar line with one fewer condition.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Waitress" sort="30" />
@@ -932,7 +950,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="537" label="" folder="Mr Raynor to left" sort="19" />
         <label id="538" label="The Inventory" folder="Mr Raynor to left" sort="6" />
         <label id="539" label="Classroom" folder="Mr Raynor to left" sort="7" />
-        <label id="540" label="Purple Rom" folder="Mr Raynor to left" sort="8" />
+        <label id="540" label="Purple Room" folder="Mr Raynor to left" sort="8" />
         <label id="541" label="Bedroom" folder="Mr Raynor to left" sort="9" />
         <label id="542" label="Alley" folder="Mr Raynor to left" sort="10" />
         <label id="543" label="Romantic" folder="Mr Raynor to left" sort="11" />
@@ -1032,7 +1050,7 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="637" label="" folder="Meia to left" sort="3" />
         <label id="638" label="" folder="Meia to left" sort="2" />
         <label id="639" label="" folder="Meia to left" sort="3" />
-        <label id="640" label="" folder="Waitress" sort="18" />
+        <label id="640" label="" folder="Meia to left" sort="18" />
         <label id="641" label="" folder="Waitress" sort="19" />
         <label id="642" label="" folder="Waitress" sort="22" />
         <label id="643" label="" folder="Meia to left" sort="4" />
@@ -2182,13 +2200,16 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <label id="1771" label="" folder="Jura to right" sort="46" />
         <label id="1772" label="" folder="Jura to right" sort="47" />
         <label id="1773" label="" folder="Jura to right" sort="0" />
+        <label id="1776" label="" folder="Jura to left or right" sort="0" />
+        <label id="1777" label="" folder="Jura to left" sort="0" />
+        <label id="1778" label="" folder="Jura to left or right" sort="0" />
     </labels>
     <prefixes>
         <prefix>epilogue</prefix>
         <prefix>collectible</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>1773</nextId>
+    <nextId>1778</nextId>
     <markers>
         <marker scope="Public" name="nagisa_9s_are_you_lost" />
         <marker scope="Public" name="nagisa_9s_n9_91" />
@@ -3054,6 +3075,9 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_jim_yakuza" />
         <marker scope="Public" name="nagisa_jim_zip_stuck" />
         <marker scope="Public" name="nagisa_joey_jjoke13" />
+        <marker scope="Public" name="nagisa_jura_babies" />
+        <marker scope="Public" name="nagisa_jura_butt" />
+        <marker scope="Public" name="nagisa_jura_christmas_traditions" />
         <marker scope="Public" name="nagisa_jura_confident" />
         <marker scope="Public" name="nagisa_jura_cover_my_eyes" />
         <marker scope="Public" name="nagisa_jura_cover_up" />
@@ -3158,8 +3182,10 @@ Intentionally doesn't require Fluttershy's nagisa_great_to_hear marker from the 
         <marker scope="Public" name="nagisa_jura_nj_n7" />
         <marker scope="Public" name="nagisa_jura_nj_n8" />
         <marker scope="Public" name="nagisa_jura_nj_n9" />
+        <marker scope="Public" name="nagisa_jura_santa_f" />
         <marker scope="Public" name="nagisa_jura_seduction" />
         <marker scope="Public" name="nagisa_jura_seems_grown_up" />
+        <marker scope="Public" name="nagisa_jura_sleeping" />
         <marker scope="Public" name="nagisa_jura_so_brave" />
         <marker scope="Public" name="nagisa_jura_tubes" />
         <marker scope="Public" name="nagisa_jura_underdressed">Nagisa can tell that Jura is starting the game without a bra.</marker>

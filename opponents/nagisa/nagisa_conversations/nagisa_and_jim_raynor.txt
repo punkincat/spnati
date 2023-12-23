@@ -99,12 +99,14 @@ Nagisa [nagisa_jim_hello]*: H-Hello. My name is Nagisa Furukawa. It's nice to me
     OR [nagisa_jim_hello]: Hello. Maybe this is a bit late, but my name is Nagisa Furukawa. It's nice to meet you, Mr. Raynor.
 Jim Raynor [Nagisa_meeting]: Well, it's nice to meet you too, Miss Furukawa. Don't take this the wrong way, but you weren't exactly the type I figured I'd see at a place like this.
 
-RAYNOR STRIPPING GLOVES (accessory):
-Nagisa [nagisa_jim_age_here]*: I wasn't sure who I'd meet when I came here. I thought it might all be people my age, but at least no one from my school is here.
-    OR [nagisa_jim_age_here]*: I wasn't sure who I'd meet when I came here. I thought it might all be people my age, but at least only one other person from my school is here. -- if Kyou or Sanako playing
-    OR [nagisa_jim_age_here]*: I wasn't sure who I'd meet when I came here. I thought it might all be people my age, but at least not <i>everyone</i> here is from my school. -- if both Kyou and Sanako playing
+RAYNOR STRIPPING GLOVES (accessory): Sanako only chimes in if present
+Nagisa [nagisa_jim_age_here]: I wasn't sure who I'd meet when I came here. I thought it might all be people my age, but at least no one from my school is here.
+    OR [nagisa_jim_age_here] (if Kyou or Sanako playing): I wasn't sure who I'd meet when I came here. I thought it might all be people my age, but at least only one other person from my school is here.
+    OR [nagisa_jim_age_here] (if both Kyou and Sanako playing): I wasn't sure who I'd meet when I came here. I thought it might all be people my age, but at least not <i>everyone</i> here is from my school.
+Sanako [sanako_nagisa_jim_age_here] (if between Nagisa and Raynor): Sometimes it can be nice to have someone more mature around to make sure things don't get too rowdy. As long that person can be trusted.
 Jim Raynor [Nagisa_agefamiliarity]: Yeah... though, if any of them showed up, wouldn't that kinda put both of you in the same boat?
-    OR (if Kyou or Sanako is also there): True, but it might also be a bit more relaxing to have a familiar face here... 'long as this doesn't make things awkward when you get back.
+    OR [Nagisa_agefamiliarity] (if Kyou or Sanako playing): True, but it might also be a bit more relaxing to have a familiar face here... 'long as this doesn't make things awkward when you get back.
+Sanako [sanako_nagisa_jim_agefamiliarity] (if after Nagisa and Raynor): Mr. Raynor's right, Nagisa. I promise I won't breath a word of this when we see each other next.
 
 RAYNOR STRIPPED GLOVES (accessory):
 Nagisa [nagisa_jim_baseball]*: Do you play baseball. I mean... you don't know my dad, do you? Akio Furukawa?

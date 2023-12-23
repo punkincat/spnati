@@ -175,10 +175,12 @@ DUE TO POSITION DETECTION, CONVERSATIONS ABOVE AND BELOW THIS LINE WON'T PLAY IN
 
 If Petra to left and Nagisa to right:
 
-NAGISA MUST STRIP SHOES: -- please set these Petra lines so that they only play when Nagisa is on the right
+NAGISA MUST STRIP SHOES: -- please set these Petra lines so that they only play when Nagisa is on the right / also, Sanako only chimes in if present
 Petra [petra_nagisa_strip0a]: It does seem that you are first, Nagisa. Also, I wish for you to know that you are cute looking. Are you receiving that compliment often?
    OR [petra_nagisa_strip0a]: It appears that it is your turn, Nagisa. I wish for you to know that you are cute looking. Are you receiving that compliment often?
+Sanako [sanako_petra_nagisa_strip0a] (if between Petra and Nagisa): It doesn't matter how many times we tell her, Petra. She'll never listen.
 Nagisa [nagisa_petra_pn_n1]: M-Me? Um, sometimes my mom tells me I'm cute, Petra. But I think moms have to say that.
+Sanako [sanako_nagisa_petra_pn_n1] (if after Petra and Nagisa): Your mom and Petra are right, Nagisa. You’re a bundle of adorableness!
 
 NAGISA STRIPPING SHOES:
 Petra []*: ??
