@@ -4,17 +4,26 @@
     <label>Joey</label>
     <tags>
         <tag>alternative_skin</tag>
+        <tag remove="true">butt_pose</tag>
+        <tag>christmas_skin</tag>
+        <tag from="0" to="1">high_heels</tag>
+        <tag from="3" to="5">lingerie</tag>
+        <tag from="0" to="6">santa_hat</tag>
+        <tag remove="true">shimapan</tag>
+        <tag from="0" to="3">thigh_highs</tag>
+        <tag from="3" to="4">thong</tag>
     </tags>
     <layers>6</layers>
     <folder>opponents/reskins/joey_toymaking_clothes/</folder>
     <folder stage="7">opponents/joey/</folder>
     <wardrobe>
         <clothing name="bra" generic="bra" position="upper" type="important" />
-        <clothing name="panties" position="lower" type="important" plural="true" />
+        <clothing name="panties" generic="" position="lower" type="important" plural="true" />
         <clothing name="socks" generic="socks" position="legs" type="minor" plural="true" />
         <clothing name="dress" generic="dress" position="both" type="major" />
-        <clothing name="boots" position="feet" type="extra" plural="true" />
+        <clothing name="boots" generic="" position="feet" type="extra" plural="true" />
         <clothing name="gloves" generic="gloves" position="hands" type="extra" plural="true" />
     </wardrobe>
+
 
 </costume>
