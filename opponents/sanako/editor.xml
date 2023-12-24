@@ -4,15 +4,41 @@
     <height>5'2"</height>
     <age>36-39?</age>
     <pronunciation>Sa-na-ko</pronunciation>
-    <othernotes>Sanako Isogai (Sanae Furukawa) is Nagisa's Furukawa's mother.</othernotes>
+    <othernotes>Sanako Isogai (Sanae Furukawa) is Nagisa's Furukawa's mother&lt;br&gt;&lt;br&gt;If in a game with Nagisa, Sanae is there to watch over her daughter and make sure she is safe. The knowledge of the mother-daughter relationship will always be one way: Nagisa will never learn that her mother is playing. Because Sanako is not sexually interested in her own daughter, there is no chance of incest.&lt;br&gt;&lt;br&gt;If Nagisa is not present, Sanae is here to flirt away some of the stress of married life. But she has no intention of having intercourse. Despite probably being in her late thirties, Sanae has a youthful appearance that can easily pass for someone of Nagisa's age.</othernotes>
     <noteworthy>
         <case name="Introductions" id="1" priority="FYI" min="0" max="0">
             <description>Sanako invites everyone to introduce themselves.</description>
+        </case>
+        <case name="How you spend your time?" id="21" priority="Prompt" min="0" max="1">
+            <description>Is how you normally spend your daytime/nighttime on a Monday/Tuesday/etc?</description>
         </case>
     </noteworthy>
     <responses>
         <response id="7" opponent="kumatora" opponentId="191" />
         <response id="8" opponent="kumatora" opponentId="208" />
+        <response id="45" opponent="nagisa" opponentId="1583" />
+        <response id="46" opponent="nagisa" opponentId="1584" />
+        <response id="47" opponent="nagisa" opponentId="1585" />
+        <response id="48" opponent="nagisa" opponentId="1586" />
+        <response id="49" opponent="nagisa" opponentId="1589" />
+        <response id="50" opponent="nagisa" opponentId="1590" />
+        <response id="51" opponent="nagisa" opponentId="1587" />
+        <response id="52" opponent="nagisa" opponentId="1588" />
+        <response id="53" opponent="nagisa" opponentId="1591" />
+        <response id="56" opponent="nagisa" opponentId="1621" />
+        <response id="57" opponent="nagisa" opponentId="1622" />
+        <response id="58" opponent="nagisa" opponentId="1623" />
+        <response id="125" opponent="nagisa" opponentId="572" />
+        <response id="127" opponent="nagisa" opponentId="1453" />
+        <response id="128" opponent="nagisa" opponentId="1483" />
+        <response id="129" opponent="nagisa" opponentId="933" />
+        <response id="133" opponent="nagisa" opponentId="1167" />
+        <response id="134" opponent="petra" opponentId="242" />
+        <response id="136" opponent="nagisa" opponentId="1683" />
+        <response id="137" opponent="nagisa" opponentId="1691" />
+        <response id="140" opponent="nagisa" opponentId="1766" />
+        <response id="141" opponent="nagisa" opponentId="1605" />
+        <response id="142" opponent="nagisa" opponentId="1777" />
     </responses>
     <labels>
         <label id="2" label="sandals" folder="" sort="0" />
@@ -21,41 +47,332 @@
         <label id="5" label="necklace" folder="" sort="0" />
         <label id="6" label="sandals" folder="" sort="0" />
         <label id="7" label="" folder="Kumatora to left" sort="0" />
-        <label id="8" label="" folder="Kumatora to left" sort="0" />
+        <label id="8" label="" folder="Kumatora to left" sort="2" />
         <label id="9" label="shy" folder="" sort="0" />
+        <label id="10" label="bathhouse" folder="" sort="0" />
+        <label id="11" label="holiday lodge" folder="" sort="0" />
+        <label id="12" label="feet" folder="" sort="0" />
+        <label id="13" label="feet / sand" folder="" sort="0" />
+        <label id="14" label="sandals" folder="" sort="0" />
+        <label id="15" label="shoes / short" folder="" sort="0" />
+        <label id="16" label="shoes / tall" folder="" sort="0" />
+        <label id="17" label="shoes / short" folder="" sort="0" />
+        <label id="18" label="shoes / tall" folder="" sort="0" />
+        <label id="19" label="belt" folder="" sort="0" />
+        <label id="20" label="classroom" folder="" sort="0" />
+        <label id="22" label="glasses" folder="" sort="0" />
+        <label id="23" label="hat" folder="" sort="0" />
+        <label id="24" label="boots" folder="" sort="0" />
+        <label id="25" label="prompt marker" folder="" sort="0" />
+        <label id="26" label="garden" folder="" sort="0" />
+        <label id="27" label="glasses" folder="" sort="0" />
+        <label id="28" label="lost only accessories" folder="" sort="0" />
+        <label id="29" label="inventory" folder="" sort="0" />
+        <label id="30" label="" folder="Nagisa to left" sort="14" />
+        <label id="31" label="" folder="Nagisa to left" sort="16" />
+        <label id="32" label="" folder="Nagisa to left" sort="19" />
+        <label id="33" label="" folder="Nagisa to left" sort="0" />
+        <label id="34" label="" folder="Nagisa to left" sort="2" />
+        <label id="35" label="" folder="Nagisa to left" sort="5" />
+        <label id="36" label="" folder="Joey to left" sort="2" />
+        <label id="37" label="" folder="Nagisa to left" sort="9" />
+        <label id="38" label="" folder="Nagisa to right" sort="0" />
+        <label id="39" label="" folder="Nagisa to right" sort="6" />
+        <label id="40" label="" folder="Nagisa to right" sort="10" />
+        <label id="41" label="" folder="Joey to left" sort="0" />
+        <label id="42" label="prompt marker" folder="" sort="0" />
+        <label id="43" label="master" folder="" sort="0" />
+        <label id="44" label="belt" folder="" sort="0" />
+        <label id="45" label="conditional on previous case" folder="Nagisa to left" sort="13" />
+        <label id="46" label="" folder="Nagisa to left" sort="17" />
+        <label id="47" label="" folder="Nagisa to left" sort="20" />
+        <label id="48" label="" folder="Nagisa to left" sort="2" />
+        <label id="49" label="" folder="Nagisa to left" sort="6" />
+        <label id="50" label="" folder="Nagisa to left" sort="10" />
+        <label id="51" label="" folder="Nagisa to left" sort="3" />
+        <label id="52" label="" folder="Nagisa to left" sort="7" />
+        <label id="53" label="" folder="Nagisa to left" sort="11" />
+        <label id="54" label="" folder="Nagisa to right" sort="0" />
+        <label id="55" label="" folder="Nagisa to right" sort="0" />
+        <label id="56" label="" folder="Nagisa to left" sort="4" />
+        <label id="57" label="" folder="Nagisa to left" sort="8" />
+        <label id="58" label="" folder="Nagisa to left" sort="12" />
+        <label id="59" label="" folder="Nagisa to right" sort="2" />
+        <label id="60" label="" folder="Nagisa to right" sort="3" />
+        <label id="61" label="" folder="Nagisa to right" sort="7" />
+        <label id="62" label="" folder="Nagisa to right" sort="5" />
+        <label id="63" label="" folder="Nagisa to right" sort="11" />
+        <label id="64" label="" folder="Nagisa to right" sort="9" />
+        <label id="65" label="" folder="Nagisa to right" sort="4" />
+        <label id="66" label="" folder="Nagisa to right" sort="8" />
+        <label id="67" label="" folder="Nagisa to right" sort="12" />
+        <label id="68" label="" folder="Nagisa to left" sort="15" />
+        <label id="69" label="" folder="Nagisa to left" sort="18" />
+        <label id="70" label="" folder="Nagisa to left" sort="21" />
+        <label id="71" label="" folder="Nagisa to right" sort="0" />
+        <label id="72" label="" folder="Nagisa to left" sort="0" />
+        <label id="73" label="" folder="Nagisa to left" sort="0" />
+        <label id="74" label="" folder="Nagisa to left" sort="0" />
+        <label id="75" label="" folder="Nagisa to left" sort="0" />
+        <label id="76" label="" folder="Nagisa to left" sort="0" />
+        <label id="77" label="" folder="Nagisa to left" sort="0" />
+        <label id="78" label="" folder="Nagisa to left" sort="0" />
+        <label id="79" label="" folder="Nagisa to left" sort="0" />
+        <label id="80" label="" folder="Nagisa to left" sort="0" />
+        <label id="81" label="" folder="Nagisa to left" sort="0" />
+        <label id="82" label="" folder="Nagisa to left" sort="0" />
+        <label id="83" label="" folder="Nagisa to left" sort="0" />
+        <label id="84" label="" folder="Nagisa to left" sort="0" />
+        <label id="85" label="" folder="Nagisa to left" sort="0" />
+        <label id="86" label="" folder="Nagisa to left" sort="0" />
+        <label id="87" label="" folder="Nagisa to left" sort="0" />
+        <label id="88" label="" folder="Nagisa to left" sort="0" />
+        <label id="89" label="" folder="Nagisa to left" sort="0" />
+        <label id="90" label="" folder="Nagisa to left" sort="0" />
+        <label id="91" label="" folder="Nagisa to left" sort="0" />
+        <label id="92" label="" folder="Nagisa to right" sort="0" />
+        <label id="93" label="" folder="Nagisa to right" sort="0" />
+        <label id="94" label="" folder="Nagisa to right" sort="0" />
+        <label id="95" label="" folder="Nagisa to right" sort="0" />
+        <label id="96" label="" folder="Nagisa to right" sort="0" />
+        <label id="97" label="" folder="Nagisa to right" sort="0" />
+        <label id="98" label="" folder="Nagisa to right" sort="0" />
+        <label id="99" label="" folder="Nagisa to right" sort="0" />
+        <label id="100" label="" folder="Nagisa to right" sort="0" />
+        <label id="101" label="" folder="Nagisa to right" sort="0" />
+        <label id="102" label="" folder="Nagisa to right" sort="0" />
+        <label id="103" label="" folder="Nagisa to right" sort="0" />
+        <label id="104" label="" folder="Nagisa to right" sort="0" />
+        <label id="105" label="" folder="Nagisa to right" sort="0" />
+        <label id="106" label="" folder="Nagisa to right" sort="0" />
+        <label id="107" label="" folder="Nagisa to right" sort="0" />
+        <label id="108" label="" folder="Nagisa to right" sort="0" />
+        <label id="109" label="" folder="Nagisa to right" sort="0" />
+        <label id="110" label="" folder="Nagisa to right" sort="0" />
+        <label id="111" label="" folder="Nagisa to right" sort="0" />
+        <label id="112" label="" folder="Nagisa to right" sort="0" />
+        <label id="113" label="" folder="Nagisa to right" sort="0" />
+        <label id="114" label="" folder="Nagisa to right" sort="0" />
+        <label id="115" label="" folder="Nagisa to right" sort="0" />
+        <label id="116" label="" folder="Nagisa to right" sort="0" />
+        <label id="117" label="" folder="Nagisa to right" sort="0" />
+        <label id="118" label="" folder="Nagisa to right" sort="0" />
+        <label id="119" label="" folder="Nagisa to right" sort="0" />
+        <label id="120" label="" folder="Nayru to left" sort="0" />
+        <label id="121" label="" folder="Nagisa to right" sort="0" />
+        <label id="122" label="headphones" folder="" sort="0" />
+        <label id="123" label="headphones" folder="" sort="0" />
+        <label id="124" label="" folder="Shamiko to left" sort="0" />
+        <label id="125" label="" folder="Nagisa to left / Raynor to right" sort="0" />
+        <label id="126" label="" folder="Nagisa to left / Raynor to left" sort="0" />
+        <label id="127" label="" folder="Nagisa to left / Reimu to left" sort="0" />
+        <label id="128" label="" folder="Nagisa to left / Reimu to left" sort="0" />
+        <label id="129" label="" folder="Nagisa to left / Meia to left" sort="0" />
+        <label id="130" label="big butt and breasts" folder="" sort="0" />
+        <label id="131" label="big butt and breasts" folder="" sort="0" />
+        <label id="132" label="big butt and breasts" folder="" sort="0" />
+        <label id="133" label="" folder="Nagisa to left / Petra to left" sort="0" />
+        <label id="134" label="" folder="Nagisa to left / Petra to right" sort="0" />
+        <label id="135" label="" folder="Nagisa to left / Jura to left" sort="0" />
+        <label id="136" label="" folder="Nagisa to left / Jura to left or right" sort="0" />
+        <label id="137" label="" folder="Nagisa to left / Jura to left" sort="0" />
+        <label id="138" label="" folder="Nagisa to left / Jura to left" sort="0" />
+        <label id="139" label="" folder="Nagisa to left / Jura to right" sort="0" />
+        <label id="140" label="" folder="Nagisa to left / Jura to left or right" sort="0" />
+        <label id="141" label="" folder="Nagisa to left / Jura to left" sort="0" />
+        <label id="142" label="" folder="Nagisa to left / Jura to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>9</nextId>
+    <nextId>142</nextId>
     <markers>
         <marker scope="Public" name="sanako_age_uncertainty">If Nagisa is not playing, Sanako can almost introduce herself as her real age.</marker>
         <marker scope="Public" name="sanako_bad_start">Sanako is off to a bad start.</marker>
         <marker scope="Public" name="sanako_baked">Sanako has some baked goodies for everyone after the game.</marker>
         <marker scope="Public" name="sanako_baked_buns">Sanako's buns are almost hot and ready.</marker>
         <marker scope="Public" name="sanako_bootstraps">Sanako's plan involves bootstraps. But only once because it's very annoying if she says it more than once.</marker>
+        <marker scope="Public" name="sanako_card_peek" />
+        <marker scope="Public" name="sanako_compliments" />
+        <marker scope="Public" name="sanako_corrin_boys_name" />
         <marker scope="Private" name="sanako_drama_club_costumes">Sanako thinks a princess is just in costume.</marker>
+        <marker scope="Public" name="sanako_dva_bodysuit" />
+        <marker scope="Public" name="sanako_elaine_dress_as_a_pirate" />
+        <marker scope="Public" name="sanako_everyone_is_so_cute" />
         <marker scope="Private" name="sanako_explains_pairs">Sanako explains basic pairs gameplay.</marker>
         <marker scope="Private" name="sanako_hot">Sanako blames the heat for her skirt removal.</marker>
+        <marker scope="Public" name="sanako_how_you_spend_your_time" />
         <marker scope="Public" name="sanako_human_male_taking_the_lead">Sanako is happy to let the human male player "take the lead".</marker>
         <marker scope="Public" name="sanako_introductions">Sanako invites everybody to introduce themselves.</marker>
         <marker scope="Public" name="sanako_joey_nice_to_meet_you">Nice to meet you, Joetta.</marker>
         <marker scope="Public" name="sanako_joey_shirt_removal" />
         <marker scope="Public" name="sanako_keeping_glasses">Sanako isn't taking off her glasses because it would break her disguise. But you can take off yours.</marker>
+        <marker scope="Public" name="sanako_kizuna_cute_bra" />
         <marker scope="Public" name="sanako_kumatora_eternal" />
         <marker scope="Public" name="sanako_kumatora_husband" />
         <marker scope="Public" name="sanako_kyu_drama_club">Sanako asks if Kyu is from the drama club.</marker>
+        <marker scope="Public" name="sanako_kyu_fairy_wings" />
+        <marker scope="Public" name="sanako_marinette_change_spots" />
+        <marker scope="Public" name="sanako_marinette_ladybird_girl" />
+        <marker scope="Public" name="sanako_marinette_lucky_charms" />
+        <marker scope="Public" name="sanako_mei_glasses" />
+        <marker scope="Public" name="sanako_mei_polite" />
+        <marker scope="Public" name="sanako_mia_spirit_of_things" />
+        <marker scope="Public" name="sanako_mia_stern_office_ladies" />
+        <marker scope="Public" name="sanako_miko_prince" />
+        <marker scope="Public" name="sanako_most_experience" />
+        <marker scope="Public" name="sanako_nagisa_deslected" />
+        <marker scope="Public" name="sanako_nagisa_deslected_2" />
+        <marker scope="Public" name="sanako_nagisa_good_husband" />
+        <marker scope="Public" name="sanako_nagisa_jim_age_here" />
+        <marker scope="Public" name="sanako_nagisa_jim_agefamiliarity" />
+        <marker scope="Public" name="sanako_nagisa_jura_babies" />
+        <marker scope="Public" name="sanako_nagisa_jura_jn_j5" />
+        <marker scope="Public" name="sanako_nagisa_jura_jn_n18" />
+        <marker scope="Public" name="sanako_nagisa_jura_nj_j16" />
+        <marker scope="Public" name="sanako_nagisa_jura_nj_j8" />
+        <marker scope="Public" name="sanako_nagisa_jura_nj_j9" />
+        <marker scope="Public" name="sanako_nagisa_jura_nj_j9_right" />
+        <marker scope="Public" name="sanako_nagisa_losing_streak" />
+        <marker scope="Public" name="sanako_nagisa_meia_telling_tomoya" />
+        <marker scope="Public" name="sanako_nagisa_ns_n1" />
+        <marker scope="Public" name="sanako_nagisa_ns_n10" />
+        <marker scope="Public" name="sanako_nagisa_ns_n11" />
+        <marker scope="Public" name="sanako_nagisa_ns_n12" />
+        <marker scope="Public" name="sanako_nagisa_ns_n13" />
+        <marker scope="Public" name="sanako_nagisa_ns_n14" />
+        <marker scope="Public" name="sanako_nagisa_ns_n15" />
+        <marker scope="Public" name="sanako_nagisa_ns_n16" />
+        <marker scope="Public" name="sanako_nagisa_ns_n17" />
+        <marker scope="Public" name="sanako_nagisa_ns_n18" />
+        <marker scope="Public" name="sanako_nagisa_ns_n19" />
+        <marker scope="Public" name="sanako_nagisa_ns_n2" />
+        <marker scope="Public" name="sanako_nagisa_ns_n20" />
+        <marker scope="Public" name="sanako_nagisa_ns_n21" />
+        <marker scope="Public" name="sanako_nagisa_ns_n22" />
+        <marker scope="Public" name="sanako_nagisa_ns_n23" />
+        <marker scope="Public" name="sanako_nagisa_ns_n3" />
+        <marker scope="Public" name="sanako_nagisa_ns_n4" />
+        <marker scope="Public" name="sanako_nagisa_ns_n5" />
+        <marker scope="Public" name="sanako_nagisa_ns_n6" />
+        <marker scope="Public" name="sanako_nagisa_ns_n7" />
+        <marker scope="Public" name="sanako_nagisa_ns_n8" />
+        <marker scope="Public" name="sanako_nagisa_ns_n9" />
+        <marker scope="Public" name="sanako_nagisa_ns_n9_doubletake" />
+        <marker scope="Public" name="sanako_nagisa_ns_s1" />
+        <marker scope="Public" name="sanako_nagisa_ns_s10" />
+        <marker scope="Public" name="sanako_nagisa_ns_s11" />
+        <marker scope="Public" name="sanako_nagisa_ns_s12" />
+        <marker scope="Public" name="sanako_nagisa_ns_s13" />
+        <marker scope="Public" name="sanako_nagisa_ns_s14" />
+        <marker scope="Public" name="sanako_nagisa_ns_s15" />
+        <marker scope="Public" name="sanako_nagisa_ns_s16" />
+        <marker scope="Public" name="sanako_nagisa_ns_s17" />
+        <marker scope="Public" name="sanako_nagisa_ns_s2" />
+        <marker scope="Public" name="sanako_nagisa_ns_s3" />
+        <marker scope="Public" name="sanako_nagisa_ns_s4" />
+        <marker scope="Public" name="sanako_nagisa_ns_s5" />
+        <marker scope="Public" name="sanako_nagisa_ns_s6" />
+        <marker scope="Public" name="sanako_nagisa_ns_s7" />
+        <marker scope="Public" name="sanako_nagisa_ns_s8" />
+        <marker scope="Public" name="sanako_nagisa_ns_s9" />
+        <marker scope="Public" name="sanako_nagisa_petra_pn_n1" />
+        <marker scope="Public" name="sanako_nagisa_reimu_rn_n12" />
+        <marker scope="Public" name="sanako_nagisa_reimu_rn_r8" />
+        <marker scope="Public" name="sanako_nagisa_selected" />
+        <marker scope="Public" name="sanako_nagisa_sn_n1" />
+        <marker scope="Public" name="sanako_nagisa_sn_n10" />
+        <marker scope="Public" name="sanako_nagisa_sn_n11" />
+        <marker scope="Public" name="sanako_nagisa_sn_n12" />
+        <marker scope="Public" name="sanako_nagisa_sn_n13" />
+        <marker scope="Public" name="sanako_nagisa_sn_n14" />
+        <marker scope="Public" name="sanako_nagisa_sn_n15" />
+        <marker scope="Public" name="sanako_nagisa_sn_n16" />
+        <marker scope="Public" name="sanako_nagisa_sn_n17" />
+        <marker scope="Public" name="sanako_nagisa_sn_n18" />
+        <marker scope="Public" name="sanako_nagisa_sn_n19" />
+        <marker scope="Public" name="sanako_nagisa_sn_n2" />
+        <marker scope="Public" name="sanako_nagisa_sn_n20" />
+        <marker scope="Public" name="sanako_nagisa_sn_n21" />
+        <marker scope="Public" name="sanako_nagisa_sn_n22" />
+        <marker scope="Public" name="sanako_nagisa_sn_n23" />
+        <marker scope="Public" name="sanako_nagisa_sn_n3" />
+        <marker scope="Public" name="sanako_nagisa_sn_n4" />
+        <marker scope="Public" name="sanako_nagisa_sn_n5" />
+        <marker scope="Public" name="sanako_nagisa_sn_n6" />
+        <marker scope="Public" name="sanako_nagisa_sn_n7" />
+        <marker scope="Public" name="sanako_nagisa_sn_n8" />
+        <marker scope="Public" name="sanako_nagisa_sn_n9" />
+        <marker scope="Public" name="sanako_nagisa_sn_s1" />
+        <marker scope="Public" name="sanako_nagisa_sn_s10" />
+        <marker scope="Public" name="sanako_nagisa_sn_s11" />
+        <marker scope="Public" name="sanako_nagisa_sn_s12" />
+        <marker scope="Public" name="sanako_nagisa_sn_s13" />
+        <marker scope="Public" name="sanako_nagisa_sn_s14" />
+        <marker scope="Public" name="sanako_nagisa_sn_s15" />
+        <marker scope="Public" name="sanako_nagisa_sn_s16" />
+        <marker scope="Public" name="sanako_nagisa_sn_s17" />
+        <marker scope="Public" name="sanako_nagisa_sn_s2" />
+        <marker scope="Public" name="sanako_nagisa_sn_s3" />
+        <marker scope="Public" name="sanako_nagisa_sn_s4" />
+        <marker scope="Public" name="sanako_nagisa_sn_s5" />
+        <marker scope="Public" name="sanako_nagisa_sn_s6" />
+        <marker scope="Public" name="sanako_nagisa_sn_s7" />
+        <marker scope="Public" name="sanako_nagisa_sn_s8" />
+        <marker scope="Public" name="sanako_nagisa_sn_s9" />
         <marker scope="Private" name="sanako_name_request">Sanako asks permission to refer to an opponent by her name.</marker>
         <marker scope="Public" name="sanako_natsuki_club">Sanako reacts to Natsuki claiming to be in the same club as the player.</marker>
         <marker scope="Public" name="sanako_navi_orb_of_light">Sanako calls Navi an orb of light and suggests that she can grant wishes.</marker>
+        <marker scope="Public" name="sanako_nayru_ns_n6" />
         <marker scope="Public" name="sanako_nayru_so_graceful" />
+        <marker scope="Public" name="sanako_offlimits_thoughts" />
+        <marker scope="Public" name="sanako_petra_nagisa_strip0a" />
         <marker scope="Private" name="sanako_press_buttons">Sanako observes that we're pressing a sarcastic girl's buttons.</marker>
         <marker scope="Public" name="sanako_remilia_wings">Sanako mistakes Remilia's wings as being part of a costume.</marker>
         <marker scope="Public" name="sanako_rouge_scope" />
+        <marker scope="Public" name="sanako_shamiko_leftovers_recipe" />
+        <marker scope="Public" name="sanako_shantae_energetic" />
+        <marker scope="Public" name="sanako_shimakaze_clothes_on_fire" />
         <marker scope="Public" name="sanako_shimakaze_flying_robot">Sanako notices Shimakaze's flying robot.</marker>
+        <marker scope="Public" name="sanako_uniform_cute" />
+        <marker scope="Public" name="sanako_victory_skirt_lift" />
         <marker scope="Public" name="sanako_womanly_ways">Sanako shows off her "womanly ways". (i.e. her breasts)</marker>
+        <marker scope="Public" name="sanako_yang_scarf" />
         <marker scope="Public" name="sanako_younger_guy">If any males are playing, Sanako might remark that she sometimes enjoys going out with younger guys.</marker>
-        <marker scope="Public" name="sanako_zone-tan_strapless">Sanako mistakes Zone-tan's bare shoulders for a strapless bra.</marker>
+        <marker scope="Public" name="sanako_zizou_prince" />
+        <marker scope="Public" name="sanako_zonetan_strapless">Sanako mistakes Zone-tan's bare shoulders for a strapless bra.</marker>
     </markers>
+    <recipes>
+        <recipe key="b94a61c4-6c47-4a6a-87ce-68948f0ac1da">
+            <cases>
+                <id>15</id>
+            </cases>
+        </recipe>
+        <recipe key="2a8fbef6-1192-496e-a301-8a099764f31b">
+            <cases>
+                <id>17</id>
+            </cases>
+        </recipe>
+        <recipe key="d408a547-4643-48c6-8121-5c650855c6d3">
+            <cases>
+                <id>19</id>
+            </cases>
+        </recipe>
+        <recipe key="e047ca43-c50e-4706-bfaf-397e839c5ec6">
+            <cases>
+                <id>24</id>
+            </cases>
+        </recipe>
+        <recipe key="5ade406d-4de8-4d22-bdaa-174f188e59cc">
+            <cases>
+                <id>122</id>
+            </cases>
+        </recipe>
+        <recipe key="5ba06533-d4a2-4fa5-b906-49e0b3c6946b">
+            <cases>
+                <id>123</id>
+            </cases>
+        </recipe>
+    </recipes>
 </metadata>
