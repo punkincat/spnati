@@ -39,6 +39,8 @@
         <response id="140" opponent="nagisa" opponentId="1766" />
         <response id="141" opponent="nagisa" opponentId="1605" />
         <response id="142" opponent="nagisa" opponentId="1777" />
+        <response id="144" opponent="nonon" opponentId="119" />
+        <response id="145" opponent="nonon" opponentId="487" />
     </responses>
     <labels>
         <label id="2" label="sandals" folder="" sort="0" />
@@ -181,12 +183,15 @@
         <label id="140" label="" folder="Nagisa to left / Jura to left or right" sort="0" />
         <label id="141" label="" folder="Nagisa to left / Jura to left" sort="0" />
         <label id="142" label="" folder="Nagisa to left / Jura to left" sort="0" />
+        <label id="143" label="holiday lodge" folder="" sort="0" />
+        <label id="144" label="" folder="Nonon to left" sort="0" />
+        <label id="146" label="" folder="Nonon to right" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>142</nextId>
+    <nextId>146</nextId>
     <markers>
         <marker scope="Public" name="sanako_age_uncertainty">If Nagisa is not playing, Sanako can almost introduce herself as her real age.</marker>
         <marker scope="Public" name="sanako_bad_start">Sanako is off to a bad start.</marker>
@@ -326,6 +331,9 @@
         <marker scope="Public" name="sanako_navi_orb_of_light">Sanako calls Navi an orb of light and suggests that she can grant wishes.</marker>
         <marker scope="Public" name="sanako_nayru_ns_n6" />
         <marker scope="Public" name="sanako_nayru_so_graceful" />
+        <marker scope="Public" name="sanako_nonon_lady_jakuzure" />
+        <marker scope="Public" name="sanako_nonon_postcum_reply" />
+        <marker scope="Public" name="sanako_nonon_sn_n1" />
         <marker scope="Public" name="sanako_offlimits_thoughts" />
         <marker scope="Public" name="sanako_petra_nagisa_strip0a" />
         <marker scope="Private" name="sanako_press_buttons">Sanako observes that we're pressing a sarcastic girl's buttons.</marker>
