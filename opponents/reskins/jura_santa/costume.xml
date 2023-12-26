@@ -202,7 +202,6 @@
         </pose>
         <pose id="1-strippedb">
             <sprite id="strip" src="reskins/jura_santa/1-stripped.png" x="0" y="0" />
-            <sprite id="blooking-" src="reskins/jura_santa/bselected.png" x="315" y="0" />
         </pose>
         <pose id="1-talking">
             <sprite id="talking" src="reskins/jura_santa/1-talking.png" x="0" y="0" />
@@ -1219,6 +1218,86 @@
         <pose id="6-smug-">
             <sprite id="smug" src="reskins/jura_santa/6-smug.png" x="0" y="0" />
             <sprite id="annoyed" src="reskins/jura_santa/6-annoyed.png" x="-9" y="2" rotation="1" clipleft="203" clipright="150" cliptop="85" clipbottom="1133" clipradius="77" />
+        </pose>
+        <pose id="5-butt2camera">
+            <sprite id="stripped" src="reskins/jura_santa/5-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcamera.png" x="268" y="0" rotation="2" />
+        </pose>
+        <pose id="5-butt2camera+">
+            <sprite id="stripped" src="reskins/jura_santa/5-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcamera+.png" x="268" y="0" rotation="2" />
+        </pose>
+        <pose id="5-butt2cameraperfect">
+            <sprite id="stripped" src="reskins/jura_santa/5-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcameraperfect.png" x="268" y="0" rotation="2" />
+        </pose>
+        <pose id="5-cameratalkbutt2">
+            <sprite id="stripped" src="reskins/jura_santa/5-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcameratalk.png" x="305" y="0" rotation="2" />
+        </pose>
+        <pose id="5-butt2camerasilent">
+            <sprite id="stripped" src="reskins/jura_santa/5-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcamera.png" x="268" y="0" rotation="2" />
+            <sprite id="silentmouth" src="reskins/jura_santa/silentmouth.png" x="74" y="236" rotation="-4" />
+        </pose>
+        <pose id="5-butt2silent">
+            <sprite id="stripped" src="reskins/jura_santa/5-butt2.png" x="0" y="0" />
+            <sprite id="silentmouth" src="reskins/jura_santa/silentmouth.png" x="74" y="236" rotation="-4" />
+        </pose>
+        <pose id="5-butt2camera+silent">
+            <sprite id="stripped" src="reskins/jura_santa/5-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcamera+.png" x="268" y="0" rotation="2" />
+            <sprite id="silentmouth" src="reskins/jura_santa/silentmouth.png" x="74" y="236" rotation="-4" />
+        </pose>
+        <pose id="5-butt2cameraperfectsilent">
+            <sprite id="stripped" src="reskins/jura_santa/5-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcameraperfect.png" x="268" y="0" rotation="2" />
+            <sprite id="silentmouth" src="reskins/jura_santa/silentmouth.png" x="74" y="236" rotation="-4" />
+        </pose>
+        <pose id="5-cameratalkbutt2silent">
+            <sprite id="stripped" src="reskins/jura_santa/5-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcameratalk.png" x="305" y="0" rotation="2" />
+            <sprite id="silentmouth" src="reskins/jura_santa/silentmouth.png" x="74" y="236" rotation="-4" />
+        </pose>
+        <pose id="6-cameratalkbutt2silent">
+            <sprite id="stripped" src="reskins/jura_santa/6-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcameratalk.png" x="305" y="0" rotation="2" />
+            <sprite id="silentmouth" src="reskins/jura_santa/silentmouth.png" x="74" y="236" rotation="-4" />
+        </pose>
+        <pose id="6-cameratalkbutt2">
+            <sprite id="stripped" src="reskins/jura_santa/6-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcameratalk.png" x="305" y="0" rotation="2" />
+        </pose>
+        <pose id="6-butt2silent">
+            <sprite id="stripped" src="reskins/jura_santa/6-butt2.png" x="0" y="0" />
+            <sprite id="silentmouth" src="reskins/jura_santa/silentmouth.png" x="74" y="236" rotation="-4" />
+        </pose>
+        <pose id="6-butt2camerasilent">
+            <sprite id="stripped" src="reskins/jura_santa/6-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcamera.png" x="268" y="0" rotation="2" />
+            <sprite id="silentmouth" src="reskins/jura_santa/silentmouth.png" x="74" y="236" rotation="-4" />
+        </pose>
+        <pose id="6-butt2cameraperfectsilent">
+            <sprite id="stripped" src="reskins/jura_santa/6-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcameraperfect.png" x="268" y="0" rotation="2" />
+            <sprite id="silentmouth" src="reskins/jura_santa/silentmouth.png" x="74" y="236" rotation="-4" />
+        </pose>
+        <pose id="6-butt2cameraperfect">
+            <sprite id="stripped" src="reskins/jura_santa/6-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcameraperfect.png" x="268" y="0" rotation="2" />
+        </pose>
+        <pose id="6-butt2camera+silent">
+            <sprite id="stripped" src="reskins/jura_santa/6-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcamera+.png" x="268" y="0" rotation="2" />
+            <sprite id="silentmouth" src="reskins/jura_santa/silentmouth.png" x="74" y="236" rotation="-4" />
+        </pose>
+        <pose id="6-butt2camera+">
+            <sprite id="stripped" src="reskins/jura_santa/6-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcamera+.png" x="268" y="0" rotation="2" />
+        </pose>
+        <pose id="6-butt2camera">
+            <sprite id="stripped" src="reskins/jura_santa/6-butt2.png" x="0" y="0" />
+            <sprite id="bcamera+" z="-1" src="reskins/jura_santa/bcamera.png" x="268" y="0" rotation="2" />
         </pose>
     </poses>
 
