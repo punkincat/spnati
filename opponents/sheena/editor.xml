@@ -6,20 +6,17 @@
     <pronunciation />
     <othernotes />
     <noteworthy>
-        <case name="Secret technique" id="5" priority="Noteworthy" min="6" max="6">
-            <description>Sheena uses a ninja technique to let her pants dissappear.</description>
-        </case>
-        <case name="Summon Spirit" id="6" priority="Noteworthy" min="4" max="4">
-            <description>Sheena summons a spirit to give her some privacy while she strips. Who she summons is defined by markers.</description>
-        </case>
         <case name="Zelos' size" priority="FYI" min="0" max="6">
             <description>She somehow knows about the penis size of a perverted firend. But she won't tell why.</description>
             <trigger tag="good_hand" stage="0-6" saidMarker="zelossize" notSaidMarker="zelossize2">
                 <state img="ironic.png" marker="zelossize2">Oh, please don't ask how I know about that pervert's size. It's a long story...</state>
             </trigger>
         </case>
-        <case name="Summoning Event" id="8" priority="Noteworthy" min="4" max="4">
-            <description>Sheena summons a spirit while undressing. Which spirit she summons is defined by marker in her must strip phase. The default case won't play.</description>
+        <case name="Summoning Artes" id="63" priority="Noteworthy" min="4" max="4">
+            <description>Sheena summons a spirit to allow her some privacy while she strips. Check the exact marker for each spirit to target them individually.</description>
+        </case>
+        <case name="Sheena's Quickchange" id="64" priority="Noteworthy" min="6" max="6">
+            <description>Sheena's last layer disappears in a puff of smoke.</description>
         </case>
     </noteworthy>
     <reviewed>true</reviewed>
@@ -79,7 +76,7 @@
         <prefix>card0</prefix>
         <prefix>op</prefix>
     </prefixes>
-    <nextId>61</nextId>
+    <nextId>64</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrien_plagg" />
