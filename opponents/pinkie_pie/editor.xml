@@ -6,17 +6,22 @@
     <pronunciation />
     <othernotes />
     <noteworthy>
-        <case name="Balloon masturbation" id="1" min="6" max="6">
+        <case name="Balloon masturbation" id="1" priority="Noteworthy" min="6" max="6">
             <description>Pinkie takes out a balloon from her hair and will use it as an improvised dildo for her forfeit.</description>
         </case>
-        <case name="Balloon pop" id="2" min="8" max="8">
+        <case name="Balloon pop" id="2" priority="Noteworthy" min="8" max="8">
             <description>The balloon ends up poping as she climaxes, since the balloon technically pops while she has already finished, to respond you will need to target her during her first or second turn on her last stage (finished)</description>
+        </case>
+        <case name="Pinkamena" id="6" priority="Noteworthy" min="3" max="5">
+            <description>Pinkamena's darker side takes over.</description>
         </case>
     </noteworthy>
     <responses>
         <response id="8" opponent="fluttershy" opponentId="23" />
         <response id="9" opponent="fluttershy" opponentId="68" />
         <response id="10" opponent="fluttershy" opponentId="69" />
+        <response id="555" opponent="solar_flare" opponentId="80" />
+        <response id="557" opponent="yuelia" opponentId="6" />
     </responses>
     <labels>
         <label id="11" label="" folder="Targets" sort="0" />
@@ -86,7 +91,7 @@
         <label id="73" label="" folder="Targets" sort="0" />
         <label id="74" label="" folder="Targets" sort="0" />
         <label id="75" label="" folder="Targets" sort="0" />
-        <label id="76" label="" folder="pinka" sort="0" />
+        <label id="76" label="" folder="Pinka" sort="0" />
         <label id="77" label="" folder="Targets" sort="0" />
         <label id="78" label="" folder="Targets" sort="0" />
         <label id="79" label="" folder="Targets" sort="0" />
@@ -565,8 +570,15 @@
         <label id="548" label="" folder="PInka" sort="0" />
         <label id="549" label="" folder="PInka" sort="0" />
         <label id="550" label="" folder="PInka" sort="0" />
+        <label id="551" label="" folder="Pinka" sort="0" />
+        <label id="552" label="" folder="Pinka" sort="0" />
+        <label id="553" label="" folder="Targets" sort="0" />
+        <label id="554" label="" folder="Targets" sort="0" />
+        <label id="555" label="" folder="Targets" sort="0" />
+        <label id="556" label="" folder="Targets" sort="0" />
+        <label id="557" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>550</nextId>
+    <nextId>557</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="anything_but_that" />
@@ -593,6 +605,8 @@
         <marker scope="Public" name="gottacare_song2" />
         <marker scope="Public" name="gummy">Pinkie mentions her pet aligator Gummy.</marker>
         <marker scope="Public" name="heck" />
+        <marker scope="Public" name="humanwearingpanties" />
+        <marker scope="Public" name="Humanwearingpanties" />
         <marker scope="Public" name="kizuna_downloadmast" />
         <marker scope="Public" name="kizuna_mast10" />
         <marker scope="Public" name="kizuna_mast11" />
@@ -603,6 +617,7 @@
         <marker scope="Public" name="kizuna_mast4" />
         <marker scope="Public" name="kizuna_mast7" />
         <marker scope="Public" name="kizuna_mast8" />
+        <marker scope="Public" name="komi_everyonefriend" />
         <marker scope="Public" name="last_two" />
         <marker scope="Public" name="mahiru_actiontonight" />
         <marker scope="Public" name="mahiruactiontonight2" />
@@ -647,6 +662,7 @@
         <marker scope="Public" name="school_uniform" />
         <marker scope="Public" name="shy_show" />
         <marker scope="Public" name="shymast" />
+        <marker scope="Public" name="solar_shampoo" />
         <marker scope="Public" name="streaming_bake2" />
         <marker scope="Public" name="streaming_bake3" />
         <marker scope="Public" name="streaming_control2" />
