@@ -9,9 +9,6 @@
         <case name="Balloon masturbation" id="1" priority="Noteworthy" min="6" max="6">
             <description>Pinkie takes out a balloon from her hair and will use it as an improvised dildo for her forfeit.</description>
         </case>
-        <case name="Balloon pop" id="2" priority="Noteworthy" min="8" max="8">
-            <description>The balloon ends up poping as she climaxes, since the balloon technically pops while she has already finished, to respond you will need to target her during her first or second turn on her last stage (finished)</description>
-        </case>
         <case name="Pinkamena" id="6" priority="Noteworthy" min="3" max="5">
             <description>Pinkamena's darker side takes over.</description>
         </case>
@@ -22,6 +19,11 @@
         <response id="10" opponent="fluttershy" opponentId="69" />
         <response id="555" opponent="solar_flare" opponentId="80" />
         <response id="557" opponent="yuelia" opponentId="6" />
+        <response id="558" opponent="nonon" opponentId="178" />
+        <response id="560" opponent="kyoko_kirigiri" opponentId="289" />
+        <response id="561" opponent="kyoko_kirigiri" opponentId="1549" />
+        <response id="562" opponent="nonon" opponentId="226" />
+        <response id="570" opponent="nonon" opponentId="27" />
     </responses>
     <labels>
         <label id="11" label="" folder="Targets" sort="0" />
@@ -140,7 +142,7 @@
         <label id="121" label="" folder="Targets" sort="0" />
         <label id="122" label="" folder="Targets" sort="0" />
         <label id="123" label="" folder="Targets" sort="0" />
-        <label id="124" label="" folder="pinka" sort="0" />
+        <label id="124" label="" folder="Pinka" sort="0" />
         <label id="125" label="" folder="Pinka" sort="0" />
         <label id="126" label="" folder="Pinka" sort="0" />
         <label id="127" label="" folder="Pinka" sort="0" />
@@ -577,8 +579,18 @@
         <label id="555" label="" folder="Targets" sort="0" />
         <label id="556" label="" folder="Targets" sort="0" />
         <label id="557" label="" folder="Targets" sort="0" />
+        <label id="559" label="" folder="Targets" sort="0" />
+        <label id="558" label="" folder="Targets" sort="0" />
+        <label id="562" label="" folder="Targets" sort="0" />
+        <label id="563" label="" folder="Targets" sort="0" />
+        <label id="564" label="" folder="Targets" sort="0" />
+        <label id="565" label="" folder="Targets" sort="0" />
+        <label id="566" label="" folder="Targets" sort="0" />
+        <label id="567" label="" folder="Targets" sort="0" />
+        <label id="568" label="" folder="Targets" sort="0" />
+        <label id="569" label="" folder="Targets" sort="0" />
     </labels>
-    <nextId>557</nextId>
+    <nextId>570</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="anything_but_that" />
@@ -586,6 +598,7 @@
         <marker scope="Public" name="bla_bla1" />
         <marker scope="Public" name="bla_bla2" />
         <marker scope="Public" name="bodysuit" />
+        <marker scope="Public" name="bratwilight" />
         <marker scope="Public" name="cheer_up_song" />
         <marker scope="Public" name="cheese_sandwich" />
         <marker scope="Public" name="chimicherrychanga" />
@@ -618,6 +631,9 @@
         <marker scope="Public" name="kizuna_mast7" />
         <marker scope="Public" name="kizuna_mast8" />
         <marker scope="Public" name="komi_everyonefriend" />
+        <marker scope="Public" name="kyoko_bday" />
+        <marker scope="Public" name="kyoko_expensivetaste" />
+        <marker scope="Public" name="kyoko_travelsweet" />
         <marker scope="Public" name="last_two" />
         <marker scope="Public" name="mahiru_actiontonight" />
         <marker scope="Public" name="mahiruactiontonight2" />
@@ -635,6 +651,13 @@
         <marker scope="Public" name="monika-pinka-realization" />
         <marker scope="Public" name="muscian" />
         <marker scope="Public" name="musician" />
+        <marker scope="Public" name="nakedtease" />
+        <marker scope="Public" name="nakedtease2" />
+        <marker scope="Public" name="nakedtease3" />
+        <marker scope="Public" name="nonon_1mscheme" />
+        <marker scope="Public" name="nonon_1mshare" />
+        <marker scope="Public" name="nonon_introinterrupt" />
+        <marker scope="Public" name="nonon_sweets" />
         <marker scope="Public" name="pet_gummy" />
         <marker scope="Public" name="pinka_eliz_mast" />
         <marker scope="Public" name="pinka_end" />
