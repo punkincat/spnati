@@ -115,7 +115,7 @@
         <label id="93" label="" folder="Target_Stage0_B" sort="0" />
         <label id="142" label="" folder="Target_Stage0" sort="9" />
         <label id="95" label="" color="2" folder="" sort="0" />
-        <label id="460" label="" color="1" folder="" sort="0" />
+        <label id="96" label="" folder="Target_Stage0" sort="0" />
         <label id="100" label="" folder="Target_Stage0" sort="14" />
         <label id="98" label="" color="1" folder="Target_Stage4" sort="6" />
         <label id="99" label="" color="1" folder="Target_Stage5" sort="2" />
@@ -447,7 +447,7 @@
         <label id="475" label="Finishing" folder="Leon Dual" sort="16" />
         <label id="476" label="Finished" folder="Leon Dual" sort="26" />
         <label id="477" label="After" folder="Leon Dual - Leon Lost First" sort="20" />
-        <label id="461" label="" color="1" folder="" sort="0" />
+        <label id="566" label="" color="1" folder="Target_Stage0" sort="0" />
         <label id="478" label="Getting closer..." folder="" sort="0" />
         <label id="131" label="Lady Satsuki" folder="" sort="0" />
         <label id="126" label="Satsuki" folder="" sort="0" />
@@ -530,10 +530,19 @@
         <label id="557" label="Global Trigger" folder="Leon Dual" sort="0" />
         <label id="558" label="" color="3" folder="Target_Stage0" sort="0" />
         <label id="559" label="" color="3" folder="Target_Stage1" sort="0" />
+        <label id="560" label="" folder="Target_Stage0" sort="0" />
+        <label id="561" label="" color="5" folder="Reply_Flex0" sort="0" />
+        <label id="562" label="" color="5" folder="Target_Stage4" sort="0" />
+        <label id="563" label="" color="5" folder="Target_Stage0" sort="0" />
+        <label id="564" label="" color="5" folder="Target_Stage6" sort="0" />
+        <label id="565" label="" color="1" folder="Target_Stage0" sort="0" />
+        <label id="460" label="" folder="Target_Stage0" sort="0" />
+        <label id="461" label="" folder="Target_Stage0" sort="0" />
+        <label id="567" label="" color="5" folder="Reply_Stage0" sort="0" />
+        <label id="568" label="" color="5" folder="Target_Stage0" sort="0" />
     </labels>
-    <nextId>559</nextId>
+    <nextId>568</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="aqua_reply01" />
         <marker scope="Public" name="aqua_reply01b" />
         <marker scope="Public" name="aqua_reply02" />
@@ -748,6 +757,9 @@
         <marker scope="Public" name="mia01a" />
         <marker scope="Public" name="mia01b" />
         <marker scope="Public" name="musician" />
+        <marker scope="Public" name="myriam01" />
+        <marker scope="Public" name="myriam43" />
+        <marker scope="Public" name="myriam63" />
         <marker scope="Public" name="nadeshiko01" />
         <marker scope="Public" name="nadeshiko01a" />
         <marker scope="Public" name="nadeshiko01b" />
@@ -917,6 +929,7 @@
         <marker scope="Public" name="reply_meia31" />
         <marker scope="Public" name="reply_meia32" />
         <marker scope="Public" name="reply_meia33" />
+        <marker scope="Public" name="reply_myriam_flex01" />
         <marker scope="Public" name="reply_nadeshiko01" />
         <marker scope="Public" name="reply_nadeshiko11" />
         <marker scope="Public" name="reply_nadeshiko21" />
@@ -937,6 +950,7 @@
         <marker scope="Public" name="reply_revy01" />
         <marker scope="Public" name="reply_revy01a" />
         <marker scope="Public" name="reply_revy01b" />
+        <marker scope="Public" name="reply_sanako01" />
         <marker scope="Public" name="reply_sheena01" />
         <marker scope="Public" name="reply_sucrose01" />
         <marker scope="Public" name="reply_tao0" />
@@ -1009,6 +1023,8 @@
         <marker scope="Public" name="yumeko01b" />
         <marker scope="Public" name="yumeko02a" />
         <marker scope="Public" name="yumeko02b" />
+        <marker scope="Public" name="yumeko03a" />
+        <marker scope="Public" name="yumeko03b" />
     </markers>
     <recipes>
         <recipe key="dba5778a-dbed-4079-9052-d204275d6f93">
