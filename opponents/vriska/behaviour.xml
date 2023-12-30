@@ -1430,11 +1430,11 @@
             <case stage="4" hidden="1" removeCharacterTags="cape,exotic_hair,multicolored_hair,sweater">
                 <state img="Rolled.png">Tag removals from Outfit 3</state>
             </case>
-            <case stage="5" hidden="1" addCharacterTags="choker,fishnets,hat,high_heels,jewelry,scantily-clad,thigh-highs" removeCharacterTags="twintails">
+            <case stage="5" hidden="1" addCharacterTags="choker,fishnets,hat,high_heels,jewelry,scantily-clad,thigh_highs" removeCharacterTags="twintails">
                 <condition role="self" saidMarker="costume==0" />
                 <state img="#-ARoll.png">Tag changes for Outfit 5A</state>
             </case>
-            <case stage="5" hidden="1" addCharacterTags="exotic_hair,high_heels,multicolored_hair,scantily-clad,thigh-highs,twintails" removeCharacterTags="jewelry">
+            <case stage="5" hidden="1" addCharacterTags="exotic_hair,high_heels,multicolored_hair,scantily-clad,thigh_highs,twintails" removeCharacterTags="jewelry">
                 <condition role="self" saidMarker="costume==b" />
                 <state img="#-BRoll.png">Tag changes for Outfit 5B</state>
             </case>
@@ -1475,7 +1475,7 @@
                 <condition role="self" saidMarker="costume==b" />
                 <state img="#-BRoll.png">Tag changes for Outfit 8B</state>
             </case>
-            <case stage="8" hidden="1" removeCharacterTags="nipple_slip,pubic_hair_peek,swimwear">
+            <case stage="8" hidden="1" removeCharacterTags="nipple_slip,swimwear">
                 <state img="Rolled.png">Tag removals from Outfit 7</state>
             </case>
         </trigger>
