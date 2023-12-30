@@ -8,14 +8,16 @@
         <tag from="0" to="2">high_heels</tag>
         <tag from="0" to="3">jewelry</tag>
         <tag from="5" to="5">nipple_pasties</tag>
+        <tag from="5" to="5">nipple_slip</tag>
         <tag>scantily-clad</tag>
         <tag remove="true">shimapan</tag>
         <tag from="0" to="3">thigh_highs</tag>
     </tags>
+    <layers>6</layers>
     <folder>opponents/reskins/mavis_vampirella/</folder>
     <folder stage="6">opponents/mavis/</folder>
     <wardrobe>
-        <clothing name="pasties" position="upper" type="important" plural="true" />
+        <clothing name="pasties" generic="" position="upper" type="important" plural="true" />
         <clothing name="costume" generic="swimsuit" position="both" type="major" />
         <clothing name="earrings" generic="jewelry" position="other" type="extra" plural="true" />
         <clothing name="leggings" generic="socks" position="legs" type="minor" plural="true" />
@@ -28,4 +30,5 @@
             <sprite id="Behind" src="reskins/mavis_vampirella/0-Behind.png" x="0" y="0" />
         </pose>
     </poses>
+
 </costume>

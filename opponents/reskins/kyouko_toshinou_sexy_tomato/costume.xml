@@ -5,6 +5,7 @@
     <tags>
         <tag>alternative_skin</tag>
         <tag>bottomless_first</tag>
+        <tag remove="true">hair_covering_breasts</tag>
         <tag from="0" to="2">hood</tag>
         <tag>no_bra</tag>
         <tag from="0" to="4">onesie</tag>
@@ -18,8 +19,8 @@
         <clothing name="tank top" generic="shirt" position="upper" type="major" />
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
         <clothing name="onesie" generic="pants" position="lower" type="major" />
-        <clothing name="top" position="upper" type="major" />
-        <clothing name="hood" position="head" type="extra" />
+        <clothing name="top" generic="" position="upper" type="major" />
+        <clothing name="hood" generic="" position="head" type="extra" />
         <clothing name="socks" generic="socks" position="feet" type="minor" plural="true" />
         <clothing name="slippers" generic="shoes" position="feet" type="extra" plural="true" />
     </wardrobe>
@@ -135,4 +136,5 @@
             <sprite id="stripped-a" src="reskins/kyouko_toshinou_sexy_tomato/5-stripped-a.png" x="0" y="0" />
         </pose>
     </poses>
+
 </costume>

@@ -5,8 +5,11 @@
     <tags>
         <tag>alternative_skin</tag>
         <tag remove="true">lingerie</tag>
+        <tag from="4" to="4">nipple_slip</tag>
+        <tag remove="true">nipples_visible_through_clothing</tag>
         <tag from="4" to="5">thong</tag>
     </tags>
+    <layers>6</layers>
     <folder>opponents/reskins/weiss_v4/</folder>
     <folder stage="6">opponents/weiss/</folder>
     <wardrobe>
@@ -17,5 +20,6 @@
         <clothing name="shoes" generic="shoes" position="feet" type="minor" plural="true" />
         <clothing name="jewelry" generic="jewelry" position="other" type="extra" />
     </wardrobe>
+
 
 </costume>

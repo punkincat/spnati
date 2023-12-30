@@ -5,9 +5,11 @@
     <tags>
         <tag>alternative_skin</tag>
         <tag>bottomless_first</tag>
+        <tag remove="true">japanese_clothing</tag>
         <tag remove="true">shimapan</tag>
         <tag>sleepwear</tag>
     </tags>
+    <layers>7</layers>
     <folder>opponents/reskins/senko_bedtime_tea/</folder>
     <folder stage="7">opponents/senko/</folder>
     <wardrobe>
@@ -16,8 +18,9 @@
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
         <clothing name="socks" generic="socks" position="feet" type="extra" plural="true" />
         <clothing name="sandals" generic="shoes" position="feet" type="extra" plural="true" />
-        <clothing name="scrunchie" position="arms" type="extra" />
+        <clothing name="scrunchie" generic="" position="arms" type="extra" />
         <clothing name="sleeping mask" generic="mask" position="head" type="extra" />
     </wardrobe>
+
 
 </costume>

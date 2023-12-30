@@ -6,6 +6,7 @@
         <tag>alternative_skin</tag>
         <tag>bottomless_first</tag>
         <tag from="0" to="2">fake_tail</tag>
+        <tag from="0" to="2">fake_wings</tag>
         <tag>halloween_skin</tag>
         <tag from="0" to="2">has_pet</tag>
         <tag from="0" to="2">hood</tag>
@@ -16,7 +17,7 @@
     <folder>opponents/reskins/kumatora_ultimate_chimera/</folder>
     <folder stage="6">opponents/kumatora/</folder>
     <wardrobe>
-        <clothing position="" type="skip" plural="true" />
+        <clothing name="" generic="" position="" type="skip" plural="true" />
         <clothing name="bra" generic="bra" position="upper" type="important" />
         <clothing name="spats" generic="underwear" position="lower" type="important" plural="true" />
         <clothing name="socks" generic="socks" position="feet" type="minor" plural="true" />
@@ -24,5 +25,6 @@
         <clothing name="bracelets" generic="jewelry" position="hands" type="minor" plural="true" />
         <clothing name="boots" generic="shoes" position="feet" type="minor" plural="true" />
     </wardrobe>
+
 
 </costume>

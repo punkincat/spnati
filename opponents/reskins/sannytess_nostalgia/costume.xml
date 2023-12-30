@@ -8,8 +8,10 @@
         <tag remove="true">butt_pose</tag>
         <tag>fair-skinned</tag>
         <tag from="5" to="5">nipple_pasties</tag>
+        <tag from="5" to="5">nipple_slip</tag>
         <tag remove="true">pale-skinned</tag>
     </tags>
+    <layers>6</layers>
     <folder>opponents/reskins/sannytess_nostalgia/</folder>
     <wardrobe>
         <clothing name="pasties" generic="wrappings" position="upper" type="important" plural="true" />
@@ -142,4 +144,5 @@
             <sprite id="t-horni" src="reskins/sannytess_nostalgia/#-t-embarrassing.png" x="211" y="0" />
         </pose>
     </poses>
+
 </costume>

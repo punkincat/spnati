@@ -10,12 +10,14 @@
         <tag from="0" to="1">high_heels</tag>
         <tag>large_breasts</tag>
         <tag from="4" to="6">lingerie</tag>
+        <tag from="5" to="6">nipples_visible_through_clothing</tag>
         <tag remove="true">pantyhose</tag>
         <tag from="4" to="5">pubic_hair_peek</tag>
         <tag remove="true">small_breasts</tag>
         <tag remove="true">sweater</tag>
         <tag>valentines_skin</tag>
     </tags>
+    <layers>7</layers>
     <folder>opponents/reskins/dapper_date/</folder>
     <folder stage="8">opponents/haru/</folder>
     <wardrobe>
@@ -23,9 +25,10 @@
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
         <clothing name="shirt" generic="shirt" position="upper" type="major" />
         <clothing name="skirt" generic="skirt" position="lower" type="major" />
-        <clothing name="hat and gloves" position="upper" type="minor" plural="true" />
+        <clothing name="hat and gloves" generic="" position="upper" type="minor" plural="true" />
         <clothing name="shoes" generic="shoes" position="lower" type="minor" plural="true" />
         <clothing name="choker" generic="collar" position="other" type="extra" />
     </wardrobe>
+
 
 </costume>

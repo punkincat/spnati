@@ -24,9 +24,11 @@
   </group>
   <group label="Hair Style" multiselect="true">
     <tag display="Antenna / Ahoge" description="The character has antenna-like hair poking out">ahoge</tag>
+    <tag display="Braided" description="The character has at least one braid/plait in their hair">braided_hair</tag>
     <tag display="Drills" description="Anime-style drill hair">drill_hair</tag>
     <tag display="Messy" description="Hair is notably untidy or wild">messy_hair</tag>
     <tag display="Ponytail" description="Hair is up in a ponytail">ponytail</tag>
+    <tag display="Topknot" description="Hair is up in a topknot">topknot</tag>
     <tag display="Twintails" description="Hair is fashioned into two tails anywhere on the head">twintails</tag>
   </group>
   <group label="Eye Color">
@@ -139,18 +141,22 @@
     <tag display="Bodysuit" description="Wearing a full jumpsuit or bodysuit">bodysuit</tag>
     <tag display="Bunnysuit" description="Wearing a Playboy-esque bunnygirl suit">bunnysuit</tag>
     <tag display="Cape" description="Wearing a cape">cape</tag>
+    <tag display="Chest Wrappings" description="Wearing wrapped cloth or bandages to conceal the chest, such as a sarashi">chest_wrappings</tag>
     <tag display="Choker" description="Wearing a choker">choker</tag>
     <tag display="Crown" description="Wearing a crown, circlet, or diadem">crown</tag>
     <tag display="Eyepatch" description="Wearing an eyepatch">eyepatch</tag>
     <tag display="Fake Animal Ears" description="Wearing artificial animal ears">fake_animal_ears</tag>
     <tag display="Fake Horns" description="Wearing artificial horns or antlers">fake_horns</tag>
     <tag display="Fake Tail" description="Wearing an artificial tail">fake_tail</tag>
+    <tag display="Fake Wings" description="Wearing artificial wings">fake_wings</tag>
+    <tag display="Fishnet Legwear" description="Character is wearing fishnet legwear">fishnets</tag>
     <tag display="Glasses" description="Wearing glasses, but not sunglasses">glasses</tag>
     <tag display="Goggles" description="Wearing goggles">goggles</tag>
     <tag display="Hat" description="Wearing a hat">hat</tag>
     <tag display="Helmet" description="Wearing a helmet">helmet</tag>
     <tag display="High Heels" description="Wearing high-heeled shoes or boots">high_heels</tag>
     <tag display="Hood" description="Wearing a hood. The hood must be up.">hood</tag>
+    <tag display="Japanese Attire" description="Wearing a kimono, or similar traditional East Asian attire">japanese_clothing</tag>
     <tag display="Jewelry" description="Wearing jewelry, including rings, necklaces, bracelets, earrings, et al">jewelry</tag>
     <tag display="Leotard" description="Wearing a leotard">leotard</tag>
     <tag display="Lingerie" description="Wearing notably fancy lingerie, likely with frills, lace, garters, etc.">lingerie</tag>
@@ -186,6 +192,7 @@
     <tag display="Cheerful" description="Character is naturally happy and optimistic and just tries to have fun with the game">cheerful</tag>
     <tag display="Chuunibyou" description="Character is an example of the chuunibyou character archetype, with a penchant for heavy theatrics, and claiming they have magical powers that they likely don't actually have.">chuunibyou</tag>
     <tag display="Confident" description="Character has little issue with their own nudity, may be proud of their body, and is unlikely to get embarrassed">confident</tag>
+    <tag display="Cowardly" description="Character is very lacking in courage, and may constantly express fear throughout the game.">cowardly</tag>
     <tag display="Creepy" description="Character has a creepy or unnerving appearance or personality">creepy</tag>
     <tag display="Ditzy" description="Character is absent-minded, or otherwise unaware of normal social behavior">ditzy</tag>
     <tag display="Dominant" description="Character is sexually dominant">dominant</tag>
@@ -216,6 +223,7 @@
     <tag display="Silent" description="Character does not speak at all">silent</tag>
     <tag display="Slutty" description="Character is extremely sexually open, feels no shame, and will regularly make obscene advances/suggestions to other characters">slutty</tag>
     <tag display="Smart" description="Character is highly knowledgeable or intelligent">smart</tag>
+    <tag display="Split Personality" description="Character has multiple distinct personalities">split_personality</tag>
     <tag display="Submissive" description="Character is sexually submissive">submissive</tag>
     <tag display="Tomboy" description="Character is female but partakes in traditionally masculine pursuits and may dress as such.">tomboy</tag>
     <tag display="Tsundere" description="Character starts out rude or hostile but opens up over the course of the game">tsundere</tag>
@@ -236,6 +244,7 @@
     <tag display="Taken/Open" description="Currently in a serious romantic/sexual relationship. However, it can still be an open relationship">taken</tag>
   </group>
   <group label="Other Traits" multiselect="true">
+    <tag display="Ageless" description="Character has extreme longevity, and are in fact much older than they appear">ageless</tag>
     <tag display="Androgynous" description="Character could pass for either gender">androgynous</tag>
     <tag display="Hero" description="Character is a hero in their source material and fights for good">hero</tag>
     <tag display="Magical" description="Character is capable of using magic">magic</tag>
@@ -274,6 +283,7 @@
     <tag display="Mixed Heritage" description="Of mixed ethnicity or nationality">mixed_heritage</tag>
   </group>
     <group label="Occupations/Hobbies" multiselect="true">
+    <tag display="Actor / Actress" description="The character is an actor/actress, either professionally or as a hobby">actor</tag>
     <tag display="Adventurer" description="Goes on adventures around their world, likely in a traditional RPG/Fantasy sense">adventurer</tag>
     <tag display="Alchemist" description="The character is an alchemist, focusing on magical science">alchemist</tag>
     <tag display="Archaeologist" description="The character is an archaeologist">archaeologist</tag>
@@ -287,15 +297,18 @@
     <tag display="Clown" description="A clown as an occupation">clown</tag>
     <tag display="Coder / Hacker / Programmer" description="Works with computer software, whether professionally, or as a hobby">coder</tag>
     <tag display="Criminal" description="Regularly engages in criminal activity">criminal</tag>
+    <tag display="Dancer" description="The character is a professional dancer of any variety, or dances as a hobby">dancer</tag>
     <tag display="Delinquent" description="The character is young and involved in petty crime">delinquent</tag>
     <tag display="Detective" description="Works as a detective">detective</tag>
     <tag display="Fighter" description="Regularly takes part in combat">fighter</tag>
+    <tag display="Gambler" description="Character spends a lot of time gambling, to the point it's a large aspect of their character">gambler</tag>
     <tag display="Gamer" description="Plays video games as a career or hobby">gamer</tag>
     <tag display="Idol" paired="singer" description="Works as a Japanese-style idol">idol</tag>
     <tag display="Knight" description="The character has been officially named as a knight">knight</tag>
     <tag display="Lawyer" description="Works as an attorney">lawyer</tag>
     <tag display="Journalist" description="A news reporter, or perhaps might want to interview other characters">journalist</tag>
     <tag display="Magical Girl" description="A magical girl in the Mahou Shoujo genre">magical_girl</tag>
+    <tag display="Martial Artist" description="Character is versed in martial arts">martial_artist</tag>
     <tag display="Mech Pilot" description="Regularly pilots a mech of some sort">mech_pilot</tag>
     <tag display="Mechanic / Engineer" description="Partakes in the invention, construction or maintenance of vehicles or machinery">mechanic</tag>
     <tag display="Medic" description="Either a doctor or a combat medic">medic</tag>
@@ -332,7 +345,11 @@
     <tag display="Replaces Clothes Post-Forfeit" description="Character puts a major item of clothing back on after the forfeit to cover up">clothed_post-forfeit</tag>
     <tag display="Covers Self With Object" description="Character uses objects to cover their chest or crotch with, after the last layer of actual clothing covering them has already been removed">covers_with_object</tag>
     <tag display="Pubic Hair Slip" description="Character's pubic hair is visible prior to the crotch reveal due to skimpy or sheer clothing">pubic_hair_peek</tag>
-    <tag display="Visible Penis Bulge" gender="male" description="Character has a visible penis bulge while clothed. Tag for all applicable stages.">visible_bulge</tag>
+    <tag display="Nipple/Areola Slip" description="Character's nipples or areolae are partially or fully slipping from under clothing before the official chest reveal">nipple_slip</tag>
+    <tag display="Nipples Covered by Hair" description="Character's hair is arranged in such a way that it completely or largely obscures their nipples.">hair_covering_breasts</tag>
+    <tag display="Nipples Poke Through Clothes" description="Character's nipples are visible poking through tight clothing. Tag for all applicable stages.">covered_erect_nipples</tag>
+    <tag display="Nipples Visible Thru Translucent Clothing" description="Character's nipples or areolae are at least partly visible through transparent or translucent clothing before the official chest reveal">nipples_visible_through_clothing</tag>
+    <tag display="Penis Bulge" gender="male" description="Character has a visible penis bulge while clothed. Tag for all applicable stages.">visible_bulge</tag>
     <tag display="Grower" gender="male" description="The character's penis is so much bigger when erect as to warrant a change in size tag. Apply starting in the stage where both states of the character's penis have been seen.">grower</tag>
     <tag display="No Genitals" description="The character does not possess genitalia. Should only be applicable to April Fool's characters.">no_genitals</tag>
   </group>
@@ -351,13 +368,15 @@
     <tag display="Stands During Forfeit" description="Character is standing in a majority of their forfeit images">standing_forfeit</tag>
     <tag display="Kneels During Forfeit" description="Character is kneeling in a majority of their forfeit images">kneeling_forfeit</tag>
     <tag display="Flies/Floats During Forfeit" description="Character is flying or floating in the air in a majority of their forfeit images">flying_forfeit</tag>
+    <tag display="Semen on Body After Forfeit" gender="male" description="Character's semen remains on their body post-forfeit.">cum_on_body</tag>
     <tag display="Does Not Masturbate" description="Character does not masturbate or be masturbated during their forfeit. Should not be applicable to non-April Fool's characters.">joke_forfeit</tag>
   </group>
   <group label="Other Gimmicks" multiselect="true">
     <tag display="Breaks the Fourth Wall" description="Character often talks directly to the person playing the game, or is aware that they are in a game">breaks_fourth_wall</tag>
     <tag display="Blind" description="Character is completely blind, and doesn't have magically or technologically-replaced vision. Non-sight replacement senses such as echolocation are acceptable.">blind</tag>
     <tag display="Butt Pose" description="Character has at least one pose showing their rear">butt_pose</tag>
-    <tag display="Cheater" description="Character uses underhanded means to gain an advantage in the game">cheater</tag>
+    <tag display="Cheater (Cards)" description="Character uses underhanded card-related means to gain an advantage in the game">cheater</tag>
+    <tag display="Cheater (Clothes)" description="Character cheats via putting on clothes mid-game, or changing into an outfit with more coverage">cheats_with_clothes</tag>
     <tag display="Crossdressing" description="Character is dressed in a manner traditionally associated with the opposite sex">crossdresser</tag>
     <tag display="Drinks Alcohol" description="Character drinks alcohol over the course of the game">drunk</tag>
     <tag display="Flies" description="Character visibly flies, hovers, or floats during the game">flies</tag>

@@ -4,7 +4,9 @@
     <label>Sheena</label>
     <tags>
         <tag>alternative_skin</tag>
+        <tag remove="true">japanese_clothing</tag>
         <tag from="0" to="1">jewelry</tag>
+        <tag from="0" to="4">nipple_slip</tag>
         <tag remove="true">no_underwear</tag>
         <tag>scantily-clad</tag>
         <tag>summer_skin</tag>
@@ -17,7 +19,7 @@
     <wardrobe>
         <clothing name="swimsuit" generic="swimsuit" position="lower" type="major" />
         <clothing name="swimsuit top" generic="swimsuit" position="upper" type="major" />
-        <clothing name="anklet" position="legs" type="extra" />
+        <clothing name="anklet" generic="" position="legs" type="extra" />
         <clothing name="sunglasses" generic="glasses" position="head" type="extra" plural="true" />
         <clothing name="sandals" generic="shoes" position="feet" type="extra" plural="true" />
         <clothing name="bracelet" generic="jewelry" position="arms" type="extra" />
@@ -345,4 +347,5 @@
             </directive>
         </pose>
     </poses>
+
 </costume>

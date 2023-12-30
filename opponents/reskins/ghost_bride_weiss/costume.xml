@@ -15,6 +15,7 @@
         <tag>jewelry</tag>
         <tag remove="true">lingerie</tag>
         <tag>monster</tag>
+        <tag remove="true">nipples_visible_through_clothing</tag>
         <tag>non-human</tag>
         <tag remove="true">pale-skinned</tag>
         <tag>spirit</tag>
@@ -22,6 +23,7 @@
         <tag>undead</tag>
         <tag>unusual_skin</tag>
     </tags>
+    <layers>6</layers>
     <folder>opponents/reskins/ghost_bride_weiss/</folder>
     <wardrobe>
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
@@ -31,5 +33,6 @@
         <clothing name="shoes" generic="shoes" position="other" type="extra" plural="true" />
         <clothing name="jewelry" generic="jewelry" position="other" type="extra" />
     </wardrobe>
+
 
 </costume>

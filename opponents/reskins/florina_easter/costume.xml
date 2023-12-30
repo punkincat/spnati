@@ -9,11 +9,13 @@
         <tag from="0" to="2">choker</tag>
         <tag>easter_skin</tag>
         <tag from="0" to="4">fake_animal_ears</tag>
+        <tag remove="true">hair_covering_breasts</tag>
         <tag>no_bra</tag>
         <tag>no_underwear</tag>
         <tag from="0" to="7">pantyhose</tag>
         <tag remove="true">thigh_highs</tag>
     </tags>
+    <layers>8</layers>
     <folder>opponents/reskins/florina_easter/</folder>
     <wardrobe>
         <clothing name="tights" generic="leggings" position="lower" type="important" plural="true" />
@@ -132,4 +134,5 @@
             </directive>
         </pose>
     </poses>
+
 </costume>

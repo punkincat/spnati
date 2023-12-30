@@ -5,6 +5,7 @@
     <tags>
         <tag>alternative_skin</tag>
         <tag remove="true">cape</tag>
+        <tag from="6" to="9">hair_covering_breasts</tag>
         <tag>halloween_skin</tag>
         <tag remove="true">hat</tag>
         <tag from="0" to="2">hood</tag>
@@ -14,15 +15,17 @@
         <tag from="0" to="3">thigh_highs</tag>
         <tag from="6" to="6">thong</tag>
     </tags>
+    <layers>7</layers>
     <folder>opponents/reskins/sucrose_sweet_dreams/</folder>
     <wardrobe>
-        <clothing name="panties" position="lower" type="important" plural="true" />
-        <clothing name="shirt" position="both" type="major" />
-        <clothing name="sweatshirt" position="both" type="minor" />
-        <clothing name="socks" position="feet" type="minor" plural="true" />
-        <clothing name="hood" position="head" type="extra" />
-        <clothing name="slippers" position="feet" type="extra" plural="true" />
-        <clothing name="vials" position="legs" type="extra" plural="true" />
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="shirt" generic="shirt" position="both" type="major" />
+        <clothing name="sweatshirt" generic="shirt" position="both" type="minor" />
+        <clothing name="socks" generic="socks" position="feet" type="minor" plural="true" />
+        <clothing name="hood" generic="" position="head" type="extra" />
+        <clothing name="slippers" generic="" position="feet" type="extra" plural="true" />
+        <clothing name="vials" generic="" position="legs" type="extra" plural="true" />
     </wardrobe>
+
 
 </costume>

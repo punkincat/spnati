@@ -6,6 +6,7 @@
         <tag>alternative_skin</tag>
         <tag from="0" to="3">fake_horns</tag>
         <tag from="0" to="5">fake_tail</tag>
+        <tag from="0" to="4">fake_wings</tag>
         <tag remove="true">formal_attire</tag>
         <tag>halloween_skin</tag>
         <tag from="0" to="1">high_heels</tag>
@@ -14,16 +15,18 @@
         <tag from="0" to="2">thigh_highs</tag>
         <tag from="0" to="3">twintails</tag>
     </tags>
+    <layers>8</layers>
     <folder>opponents/reskins/aoba_little_devil/</folder>
     <wardrobe>
         <clothing name="panties" generic="underwear" position="lower" type="important" />
         <clothing name="dress" generic="dress" position="both" type="major" plural="true" />
-        <clothing name="tail" position="lower" type="extra" />
-        <clothing name="wings" position="upper" type="extra" plural="true" />
+        <clothing name="tail" generic="" position="lower" type="extra" />
+        <clothing name="wings" generic="" position="upper" type="extra" plural="true" />
         <clothing name="horns" generic="hair decoration" position="head" type="extra" plural="true" />
         <clothing name="stockings" generic="socks" position="feet" type="minor" plural="true" />
         <clothing name="shoes" generic="shoes" position="feet" type="extra" plural="true" />
         <clothing name="bow" generic="ribbon" position="waist" type="extra" />
     </wardrobe>
+
 
 </costume>

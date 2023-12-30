@@ -6,12 +6,14 @@
         <tag>alternative_skin</tag>
         <tag remove="true">choker</tag>
         <tag remove="true">messy_hair</tag>
+        <tag from="4" to="4">nipple_slip</tag>
         <tag remove="true">twintails</tag>
     </tags>
+    <layers>8</layers>
     <folder>opponents/reskins/critical_darling_formal/</folder>
     <wardrobe>
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
-        <clothing name="tights" position="lower" type="major" plural="true" />
+        <clothing name="tights" generic="shorts" position="lower" type="major" plural="true" />
         <clothing name="socks" generic="socks" position="legs" type="minor" plural="true" />
         <clothing name="skirt" generic="skirt" position="lower" type="minor" />
         <clothing name="shirt" generic="shirt" position="upper" type="major" />
@@ -19,5 +21,6 @@
         <clothing name="shoes" generic="shoes" position="feet" type="minor" plural="true" />
         <clothing name="tie" generic="tie" position="neck" type="extra" />
     </wardrobe>
+
 
 </costume>

@@ -13,6 +13,7 @@
         <tag>jewelry</tag>
         <tag remove="true">lingerie</tag>
         <tag from="3" to="4">nipple_pasties</tag>
+        <tag from="3" to="4">nipple_slip</tag>
         <tag>no_bra</tag>
         <tag>no_underwear</tag>
         <tag from="0" to="6">thigh_highs</tag>
@@ -22,8 +23,8 @@
     <folder>opponents/reskins/noire_cool_girl/</folder>
     <wardrobe>
         <clothing name="thigh-highs" generic="socks" position="legs" type="minor" plural="true" />
-        <clothing name="bandaid" position="lower" type="important" />
-        <clothing name="bandaids" position="upper" type="important" plural="true" />
+        <clothing name="bandaid" generic="" position="lower" type="important" />
+        <clothing name="bandaids" generic="" position="upper" type="important" plural="true" />
         <clothing name="skirt" generic="skirt" position="lower" type="major" />
         <clothing name="top" generic="vest" position="upper" type="major" />
         <clothing name="boots" generic="shoes" position="legs" type="extra" plural="true" />
@@ -1946,4 +1947,5 @@
             </directive>
         </pose>
     </poses>
+
 </costume>

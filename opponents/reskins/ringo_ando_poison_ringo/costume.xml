@@ -6,6 +6,7 @@
         <tag from="3" to="10">ahoge</tag>
         <tag>alternative_skin</tag>
         <tag from="0" to="3">cape</tag>
+        <tag from="5" to="5">chest_wrappings</tag>
         <tag>halloween_skin</tag>
         <tag from="0" to="2">hat</tag>
         <tag remove="true">jewelry</tag>
@@ -22,13 +23,13 @@
     <folder stage="8">opponents/ringo_ando/</folder>
     <wardrobe>
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
-        <clothing name="pantyhose" position="legs" type="extra" />
+        <clothing name="pantyhose" generic="leggings" position="legs" type="extra" />
         <clothing name="bandages" generic="bra" position="upper" type="important" plural="true" />
         <clothing name="robe" generic="robe" position="both" type="major" />
         <clothing name="cape" generic="cape" position="other" type="minor" />
         <clothing name="hat" generic="hat" position="head" type="minor" />
         <clothing name="boots" generic="shoes" position="feet" type="minor" plural="true" />
-        <clothing name="staff" position="held" type="extra" />
+        <clothing name="staff" generic="" position="held" type="extra" />
     </wardrobe>
 
     <poses>
@@ -145,4 +146,5 @@
             </directive>
         </pose>
     </poses>
+
 </costume>

@@ -12,17 +12,18 @@
         <tag>no_bra</tag>
         <tag>ponytail</tag>
         <tag>scantily-clad</tag>
-        <tag from="0" to="5">thigh_highs</tag>
         <tag from="0" to="3">thong</tag>
     </tags>
+    <layers>6</layers>
     <folder>opponents/reskins/pink_bunny/</folder>
     <wardrobe>
         <clothing name="stockings" generic="socks" position="legs" type="extra" plural="true" />
-        <clothing name="pasties" position="upper" type="important" plural="true" />
+        <clothing name="pasties" generic="" position="upper" type="important" plural="true" />
         <clothing name="thong" generic="underwear" position="lower" type="important" />
         <clothing name="shoes" generic="shoes" position="feet" type="extra" plural="true" />
         <clothing name="bunny suit" generic="leotard" position="both" type="major" />
         <clothing name="skirt" generic="skirt" position="lower" type="minor" />
     </wardrobe>
+
 
 </costume>

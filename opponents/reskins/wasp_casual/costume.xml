@@ -9,12 +9,14 @@
         <tag>jewelry</tag>
         <tag from="2" to="2">lingerie</tag>
         <tag from="6" to="6">lingerie</tag>
+        <tag from="2" to="2">nipples_visible_through_clothing</tag>
         <tag remove="true">no_bra</tag>
         <tag>pubic_hair</tag>
         <tag from="6" to="6">pubic_hair_peek</tag>
         <tag remove="true">shaved</tag>
         <tag remove="true">shimapan</tag>
     </tags>
+    <layers>7</layers>
     <folder>opponents/reskins/wasp_casual/</folder>
     <wardrobe>
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
@@ -25,5 +27,6 @@
         <clothing name="undershirt" generic="shirt" position="upper" type="major" />
         <clothing name="top" generic="shirt" position="upper" type="minor" />
     </wardrobe>
+
 
 </costume>

@@ -6,8 +6,10 @@
         <tag>alternative_skin</tag>
         <tag remove="true">armor</tag>
         <tag remove="true">cape</tag>
+        <tag from="4" to="5">chest_wrappings</tag>
         <tag>halloween_skin</tag>
         <tag from="0" to="4">hat</tag>
+        <tag remove="true">japanese_clothing</tag>
         <tag from="4" to="6">thong</tag>
         <tag>witch</tag>
     </tags>
@@ -22,5 +24,6 @@
         <clothing name="belts" generic="belt" position="waist" type="extra" />
         <clothing name="boots" generic="shoes" position="feet" type="extra" />
     </wardrobe>
+
 
 </costume>

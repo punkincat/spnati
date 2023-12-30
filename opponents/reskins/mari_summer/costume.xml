@@ -6,10 +6,12 @@
         <tag>alternative_skin</tag>
         <tag>bottomless_first</tag>
         <tag remove="true">lingerie</tag>
+        <tag remove="true">nipples_visible_through_clothing</tag>
         <tag>scantily-clad</tag>
         <tag>summer_skin</tag>
         <tag from="0" to="6">swimwear</tag>
     </tags>
+    <layers>7</layers>
     <folder>opponents/reskins/mari_summer/</folder>
     <folder stage="7">opponents/mari/</folder>
     <wardrobe>
@@ -366,4 +368,5 @@
             <sprite id="S6_Strip_heris-arms" z="3" src="opponents/mari/promari/parts-h/S6_Strip_heris-arms.png" x="-31" y="0" />
         </pose>
     </poses>
+
 </costume>
