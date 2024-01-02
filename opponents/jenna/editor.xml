@@ -46,6 +46,12 @@
         <response id="94" opponent="nonon" opponentId="493" />
         <response id="95" opponent="cagliostro" opponentId="12" />
         <response id="96" opponent="mari_setogaya" opponentId="2697" />
+        <response id="117" opponent="cynthia" opponentId="2" />
+        <response id="118" opponent="komi-san" opponentId="1" />
+        <response id="119" opponent="fluttershy" opponentId="180" />
+        <response id="120" opponent="magma_grunt" opponentId="174" />
+        <response id="121" opponent="ringo_ando" opponentId="310" />
+        <response id="122" opponent="roll_caskett" opponentId="37" />
     </responses>
     <labels>
         <label id="11" label="" folder="Lore" sort="0" />
@@ -94,10 +100,11 @@
         <label id="75" label="" folder="Conditional" sort="0" />
     </labels>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>116</nextId>
+    <nextId>137</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Private" name="adv_poseposition" />
+        <marker scope="Public" name="asuna1" />
         <marker scope="Public" name="Djinn" />
         <marker scope="Public" name="Djinn1" />
         <marker scope="Public" name="jenna_toph_blind" />
@@ -275,6 +282,76 @@
         <recipe key="0d87dfba-c55a-4467-bdf2-bbc4cd32748d">
             <cases>
                 <id>116</id>
+            </cases>
+        </recipe>
+        <recipe key="8b999b38-6e40-4a01-905b-9addb74ee8c3">
+            <cases>
+                <id>123</id>
+            </cases>
+        </recipe>
+        <recipe key="841c009f-617e-47e1-b1dd-214ba5892e88">
+            <cases>
+                <id>124</id>
+            </cases>
+        </recipe>
+        <recipe key="70dd1e4f-4d07-4b44-947d-57b494522f40">
+            <cases>
+                <id>125</id>
+            </cases>
+        </recipe>
+        <recipe key="95241bd5-5ee1-4979-ae3c-aad1384050d9">
+            <cases>
+                <id>126</id>
+            </cases>
+        </recipe>
+        <recipe key="5fee06f1-d467-44e0-a256-1d46c2d934a5">
+            <cases>
+                <id>127</id>
+            </cases>
+        </recipe>
+        <recipe key="883211e4-99f8-4ac6-86be-4a4e40d5ac14">
+            <cases>
+                <id>128</id>
+            </cases>
+        </recipe>
+        <recipe key="2a8fbef6-1192-496e-a301-8a099764f31b">
+            <cases>
+                <id>129</id>
+            </cases>
+        </recipe>
+        <recipe key="082c4ea5-a24f-4d24-b4d8-e70d7c411312">
+            <cases>
+                <id>130</id>
+            </cases>
+        </recipe>
+        <recipe key="2b263231-8a5f-4000-be8c-d0f8482a8cc1">
+            <cases>
+                <id>131</id>
+            </cases>
+        </recipe>
+        <recipe key="cc28d236-6b17-48ce-a010-48a75ded118c">
+            <cases>
+                <id>132</id>
+            </cases>
+        </recipe>
+        <recipe key="9834f3a8-b3ef-4db0-898f-2b7670e2ebf8">
+            <cases>
+                <id>133</id>
+            </cases>
+        </recipe>
+        <recipe key="dda5ea56-aea2-4311-a713-63b5d16f0333">
+            <cases>
+                <id>134</id>
+            </cases>
+        </recipe>
+        <recipe key="94c4e2e4-62c6-4234-8331-efd8f8908dd9">
+            <cases>
+                <id>136</id>
+            </cases>
+        </recipe>
+        <recipe key="8338b475-6f72-461a-9cb7-4510428e1297">
+            <cases>
+                <id>137</id>
             </cases>
         </recipe>
     </recipes>
