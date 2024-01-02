@@ -1043,11 +1043,11 @@ State.prototype.applyCollectible = function (player) {
                     this.collectible.id
                 );
 
-        if (collectible.isUnlocked()) {
+                if (collectible.isUnlocked()) {
                     console.log("Collectible already unlocked; returning");
-            return;
-        }
-                
+                    return;
+                }
+
                 switch (this.collectible.op) {
                 default:
                 case 'unlock':
@@ -1063,11 +1063,11 @@ State.prototype.applyCollectible = function (player) {
                     collectible.setCounter(this.collectible.val);
                     break;
                 }
-                
+
                 if (collectible.isUnlocked() && !COLLECTIBLES_UNLOCKED) {
                     player.pendingCollectiblePopups.push(collectible);
                 }
-                
+
                 return true;
             }
         }.bind(this));
@@ -2661,11 +2661,15 @@ Opponent.prototype.applyState = function(state, opp) {
         }
     }
 }
+Player.prototype.applyState = function(state, opp) {
+    state.applyMarkers(this, opp);
+    state.applyCollectible(this);
+}
 
 /************************************************************
  * Applies markers and operations from all lines in a case
  ************************************************************/
-Opponent.prototype.applyHiddenStates = function (chosenCase, opp) {
+Player.prototype.applyHiddenStates = function (chosenCase, opp) {
     chosenCase.states.forEach(function (c) {
         this.applyState(c, opp);
         /* Yes, this may apply the case-level oneShot multiple times,
@@ -2718,6 +2722,10 @@ function updateAllBehaviours (target, target_tags, other_tags) {
         } else if (i == target && target_tags !== null) {
             players[i].evaluateHiddenCases(postProcessingTriggers[i], null, true);
         }
+    }
+
+    if (target !== HUMAN_PLAYER || target_tags !== null) {
+        evaluateGeneralCollectibleCases(target === HUMAN_PLAYER ? target_tags : other_tags, target === HUMAN_PLAYER ? null : target);
     }
 }
 

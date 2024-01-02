@@ -76,6 +76,7 @@ function Player (id) {
     this.tags = this.baseTags = [];
     this.xml = null;
     this.persistentMarkers = {};
+    this.pendingCollectiblePopups = [];
 }
 
 /*******************************************************************
@@ -571,7 +572,6 @@ function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber,
     this.poseSets = {};
     this.imageCache = {};
     this.labelOverridden = this.intelligenceOverridden = false;
-    this.pendingCollectiblePopups = [];
     this.repeatLog = {};
     this.settings = [];
 
