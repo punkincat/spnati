@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <collectibles>
-    <collectible id="nonon_baton" status="online" img="opponents/nonon/baton.png" thumbnail="opponents/nonon/baton.png">
+    <collectible id="nonon_baton" status="online" img="opponents/nonon/baton_collectible.png" thumbnail="opponents/nonon/baton.png">
         <title>Pink Baton</title>
-        <subtitle>Somebody left their baton.</subtitle>
-        <text>Nonon must have left this. I should return it to her.</text>
+        <subtitle>Nonon's baton.</subtitle>
+        <text>"What are you looking at, idiot? The game's already over, so you can stop gawking now. I mean it!"</text>
         <unlock>Complete a game against Nonon where she loses.</unlock>
     </collectible>
     <collectible id="nonon_hat" status="unlisted" img="opponents/nonon/hat.png" thumbnail="opponents/nonon/hat_thumb.png">
@@ -15,6 +15,6 @@
 Perhaps there's something else you want, hmmmm......?</text>
         <unlock>Play against Nonon and win.</unlock>
         <wearable>true</wearable>
-        <clothing name="hat" generic="hat" position="head" type="extra" img="opponents/nonon/hat_thumb.png" />
+        <clothing img="opponents/nonon/hat_thumb.png" name="hat" generic="hat" position="head" type="extra" />
     </collectible>
 </collectibles>
