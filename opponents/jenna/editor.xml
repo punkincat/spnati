@@ -52,6 +52,25 @@
         <response id="120" opponent="magma_grunt" opponentId="174" />
         <response id="121" opponent="ringo_ando" opponentId="310" />
         <response id="122" opponent="roll_caskett" opponentId="37" />
+        <response id="142" opponent="estelle" opponentId="44" />
+        <response id="143" opponent="estelle" opponentId="65" />
+        <response id="144" opponent="estelle" opponentId="734" />
+        <response id="145" opponent="estelle" opponentId="3" />
+        <response id="146" opponent="estelle" opponentId="42" />
+        <response id="147" opponent="yuri" opponentId="1" />
+        <response id="148" opponent="yuri" opponentId="55" />
+        <response id="149" opponent="tharja" opponentId="11" />
+        <response id="150" opponent="aqua_konosuba" opponentId="16" />
+        <response id="151" opponent="aqua_kh" opponentId="51" />
+        <response id="152" opponent="aqua_kh" opponentId="67" />
+        <response id="153" opponent="aqua_kh" opponentId="985" />
+        <response id="154" opponent="aqua_kh" opponentId="69" />
+        <response id="155" opponent="arle" opponentId="317" />
+        <response id="156" opponent="arle" opponentId="241" />
+        <response id="157" opponent="arle" opponentId="240" />
+        <response id="158" opponent="arle" opponentId="242" />
+        <response id="159" opponent="arueshalae" opponentId="1" />
+        <response id="160" opponent="arueshalae" opponentId="2" />
     </responses>
     <labels>
         <label id="11" label="" folder="Lore" sort="0" />
@@ -100,7 +119,7 @@
         <label id="75" label="" folder="Conditional" sort="0" />
     </labels>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>137</nextId>
+    <nextId>160</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Private" name="adv_poseposition" />
@@ -352,6 +371,21 @@
         <recipe key="8338b475-6f72-461a-9cb7-4510428e1297">
             <cases>
                 <id>137</id>
+            </cases>
+        </recipe>
+        <recipe key="9181b912-d7db-4c2a-8f23-c2ddea3aa7ee">
+            <cases>
+                <id>138</id>
+            </cases>
+        </recipe>
+        <recipe key="5eced77a-bd5e-4d35-8a1b-a979a1c73250">
+            <cases>
+                <id>139</id>
+            </cases>
+        </recipe>
+        <recipe key="ab63638e-fcc5-44e9-b020-a677785bb36f">
+            <cases>
+                <id>140</id>
             </cases>
         </recipe>
     </recipes>
