@@ -2,19 +2,16 @@
 <collectibles>
     <collectible id="nonon_baton" status="online" img="opponents/nonon/baton_collectible.png" thumbnail="opponents/nonon/baton.png">
         <title>Pink Baton</title>
-        <subtitle>Nonon's baton.</subtitle>
+        <subtitle>Aggressively pink.</subtitle>
         <text>"What are you looking at, idiot? The game's already over, so you can stop gawking now. I mean it!"</text>
         <unlock>Complete a game against Nonon where she loses.</unlock>
     </collectible>
-    <collectible id="nonon_hat" status="unlisted" img="opponents/nonon/hat.png" thumbnail="opponents/nonon/hat_thumb.png">
-        <title>Nonon's Hat</title>
-        <subtitle>I'm sorry, what?</subtitle>
-        <text>Oh no, you beat me in a Strip Poker battle!
- But I don't have any money! 
-
-Perhaps there's something else you want, hmmmm......?</text>
+    <collectible id="nonon_panties" status="online" img="opponents/nonon/panties_collectible.png" thumbnail="opponents/nonon/panties_thumb.png">
+        <title>Nonon's Panties</title>
+        <subtitle>Why do you have these?</subtitle>
+        <text>"Fine! But nobody better go swiping these..."</text>
         <unlock>Play against Nonon and win.</unlock>
         <wearable>true</wearable>
-        <clothing img="opponents/nonon/hat_thumb.png" name="hat" generic="hat" position="head" type="extra" />
+        <clothing img="opponents/nonon/panties_thumb.png" name="panties" generic="underwear" position="lower" type="important" plural="true" />
     </collectible>
 </collectibles>
