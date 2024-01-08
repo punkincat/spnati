@@ -68,7 +68,8 @@ function Player (id) {
     this.last = '';
     this.labels = undefined;
     this.folders = undefined;
-    this.size = eSize.MEDIUM;
+    this.penis = null;
+    this.breasts = null;
     this.intelligence = eIntelligence.AVERAGE;
     this.gender = eGender.MALE;
     this.stamina = 20;
@@ -147,7 +148,8 @@ Player.prototype.resetState = function () {
          * for the character.
          */
         this.gender = appearance.gender;
-        this.size = appearance.size;
+        this.penis = appearance.penis;
+        this.breasts = appearance.breasts;
 
         this.stamina = Number(this.xml.children('timer').text());
 
@@ -187,11 +189,27 @@ Player.prototype.singleBehaviourUpdate = function() { }
  * Convert a tags list to canonical form:
  * - Canonicalize each input tag
  * - Resolve tag implications
+ * - Add automatic tags for character/costume ID, genital size, and futanari status
  * This function also filters out duplicated tags.
  **********************************************************************/
 Player.prototype.expandTagsList = function(input_tags) {
     let tmp = input_tags.map(canonicalizeTag);
     let output_tags = [];
+
+    tmp.push(this.id);
+
+    if (this.alt_costume && this.alt_costume.id) {
+        tmp.push(this.alt_costume.id);
+    }
+
+    /* Automatically add futanari tag if necessary. */
+    if (this.gender === "female" && this.penis) {
+        tmp.push("futanari");
+    }
+
+    /* Add size tags. */
+    if (this.penis) tmp.push(this.penis + "_penis");
+    if (this.breasts) tmp.push(this.breasts + "_breasts");
 
     while (tmp.length > 0) {
         let tag = tmp.shift();
@@ -212,17 +230,38 @@ Player.prototype.expandTagsList = function(input_tags) {
         output_tags.push("curvy");
     }
 
+    /* Ensure tags are consistent with size and gender metadata. */
+    output_tags = output_tags.filter((tag) => {
+        if (tag === "large_penis" || tag === "medium_penis" || tag === "small_penis") {
+            return tag === (this.penis + "_penis");
+        } else if (tag === "huge_penis") {
+            /* huge_penis requires large_penis */
+            return this.penis === "large";
+        } else if (tag === "circumcised" || tag === "uncircumcised") {
+            /* Penis appearance tags require the presence of a penis */
+            return this.penis;
+        } else if (tag === "large_breasts" || tag === "medium_breasts" || tag === "small_breasts") {
+            return tag === (this.breasts + "_breasts");
+        } else if (tag === "huge_breasts") {
+            /* huge_breasts requires large_breasts */
+            return this.breasts === "large";
+        } else if (tag === "flat_chest") {
+            /* flat_chest requires small_breasts */
+            return this.breasts === "small";
+        } else if (tag === "futanari" || tag === "futanari_sans_balls" || tag === "futanari_full_package" || tag === "futanari_newhalf") {
+            return (this.gender === "female") && this.penis;
+        } else {
+            return true;
+        }
+    });
+
     return output_tags;
 }
 
 /* Compute the Player's tags list from their baseTags list. */
 Player.prototype.updateTags = function () {
-    var tags = [this.id];
+    var tags = [];
     var stage = this.stage || 0;
-
-    if (this.alt_costume && this.alt_costume.id) {
-        tags.push(this.alt_costume.id);
-    }
 
     this.baseTags.forEach(function (tag_desc) {
         if (typeof(tag_desc) === 'string') {
@@ -892,6 +931,48 @@ Opponent.prototype.setIntelligence = function (intelligence) {
     }
 }
 
+/* Just in case a character tries to do something like clear all of their size metadata...
+ * 
+ * This also ensures that legacy characters using gender-changing ops under the assumption of a single size field
+ * get the semantics they expect, by switching size values around as necessary.
+ * 
+ * Finally, this does a tag update to ensure those are consistent (e.g. in case a character becomes a futa mid-game).
+ */
+Opponent.prototype.validateSizeMetadata = function () {
+    if (this.gender === eGender.MALE && !this.penis) {
+        if (this.breasts) {
+            this.penis = this.breasts;
+            this.breasts = null;
+        } else {
+            this.penis = eSize.MEDIUM;
+        }
+    } else if (this.gender === eGender.FEMALE && !this.breasts) {
+        if (this.penis) {
+            this.breasts = this.penis;
+            this.penis = null;
+        } else {
+            this.breasts = eSize.MEDIUM;
+        }
+    }
+
+    this.updateTags();
+}
+
+Opponent.prototype.setPenisSize = function (value) {
+    this.penis = value;
+    this.validateSizeMetadata();
+} 
+
+Opponent.prototype.setBreastSize = function (value) {
+    this.breasts = value;
+    this.validateSizeMetadata();
+}
+
+Opponent.prototype.setGender = function (value) {
+    this.gender = value;
+    this.validateSizeMetadata();
+}
+
 Opponent.prototype.updateFolder = function () {
     if (this.folders) this.folder = this.getByStage(this.folders);
     if (!this.folder) {
@@ -1008,6 +1089,7 @@ Opponent.prototype.loadAlternateCostume = function () {
             level: 'info'
         });
 
+        var legacySize = $xml.children('size').text() || eSize.MEDIUM;
         this.alt_costume = {
             id: $xml.children('id').text(),
             labels: $xml.children('label'),
@@ -1016,8 +1098,9 @@ Opponent.prototype.loadAlternateCostume = function () {
             folders: $xml.children('folder'),
             wardrobe: $xml.children('wardrobe'),
             gender: $xml.children('gender').text() || this.selectGender,
-            size: $xml.children('size').text() || this.default_costume.size,
             layers: parseInt($xml.children('layers').text(), 10) || this.selectLayers,
+            penis: $xml.children('penis').text() || (this.metaGender === eGender.MALE ? legacySize : null),
+            breasts: $xml.children('breasts').text() || (this.metaGender === eGender.FEMALE ? legacySize : null)
         };
 
         var poses = $xml.children('poses');
@@ -1343,6 +1426,9 @@ Opponent.prototype.loadBehaviour = function (slot, individual, selectInfo) {
             this.settings = $xml.find("behaviour>settings").map(function (index, elem) {
                 return CharacterSettingsGroup.parseXML(this, $(elem));
             }.bind(this)).get();
+            
+            var legacySize = $xml.children('size').text() || eSize.MEDIUM;
+            var gender = $xml.children('gender').text();
 
             this.default_costume = {
                 id: null,
@@ -1350,8 +1436,9 @@ Opponent.prototype.loadBehaviour = function (slot, individual, selectInfo) {
                 tags: this.originalTags,
                 folders: this.folder,
                 wardrobe: $xml.children('wardrobe'),
-                gender: $xml.children('gender').text(),
-                size: $xml.children('size').text(),
+                gender: gender,
+                penis: $xml.children('penis').text() || (gender === eGender.MALE ? legacySize : null),
+                breasts: $xml.children('breasts').text() || (gender === eGender.FEMALE ? legacySize : null),
             };
 
             var poses = $xml.children('poses');

@@ -277,7 +277,6 @@ function getClothingTrigger (player, clothing, removed) {
     var revealPos = getRevealedPosition(player, clothing);
     var type = clothing.type;
     var gender = player.gender;
-    var size = player.size;
 
     if (revealPos == UPPER_ARTICLE) {
         if (gender == eGender.MALE) {
@@ -288,9 +287,9 @@ function getClothingTrigger (player, clothing, removed) {
             }
         } else if (gender == eGender.FEMALE) {
             if (removed) {
-                if (size == eSize.LARGE) {
+                if (player.breasts == eSize.LARGE) {
                     return [FEMALE_LARGE_CHEST_IS_VISIBLE, FEMALE_CHEST_IS_VISIBLE, OPPONENT_CHEST_IS_VISIBLE];
-                } else if (size == eSize.SMALL) {
+                } else if (player.breasts == eSize.SMALL) {
                     return [FEMALE_SMALL_CHEST_IS_VISIBLE, FEMALE_CHEST_IS_VISIBLE, OPPONENT_CHEST_IS_VISIBLE];
                 } else {
                     return [FEMALE_MEDIUM_CHEST_IS_VISIBLE, FEMALE_CHEST_IS_VISIBLE, OPPONENT_CHEST_IS_VISIBLE];
@@ -303,9 +302,9 @@ function getClothingTrigger (player, clothing, removed) {
         /* Treat full-article reveals as being crotch reveals for the purposes of case triggering. */
         if (gender == eGender.MALE) {
             if (removed) {
-                if (size == eSize.LARGE) {
+                if (player.penis == eSize.LARGE) {
                     return [MALE_LARGE_CROTCH_IS_VISIBLE, MALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
-                } else if (size == eSize.SMALL) {
+                } else if (player.penis == eSize.SMALL) {
                     return [MALE_SMALL_CROTCH_IS_VISIBLE, MALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
                 } else {
                     return [MALE_MEDIUM_CROTCH_IS_VISIBLE, MALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
@@ -315,9 +314,21 @@ function getClothingTrigger (player, clothing, removed) {
             }
         } else if (gender == eGender.FEMALE) {
             if (removed) {
-                return [FEMALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
+                if (player.penis === eSize.LARGE) {
+                    return [FUTA_LARGE_CROTCH_IS_VISIBLE, FUTA_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
+                } else if (player.penis === eSize.SMALL) {
+                    return [FUTA_SMALL_CROTCH_IS_VISIBLE, FUTA_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
+                } else if (player.penis === eSize.MEDIUM) {
+                    return [FUTA_MEDIUM_CROTCH_IS_VISIBLE, FUTA_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
+                } else {
+                    return [FEMALE_CROTCH_IS_VISIBLE, OPPONENT_CROTCH_IS_VISIBLE];
+                }
             } else {
-                return [FEMALE_CROTCH_WILL_BE_VISIBLE, OPPONENT_CROTCH_WILL_BE_VISIBLE];
+                if (player.penis) {
+                    return [FUTA_CROTCH_WILL_BE_VISIBLE, OPPONENT_CROTCH_WILL_BE_VISIBLE];
+                } else {
+                    return [FEMALE_CROTCH_WILL_BE_VISIBLE, OPPONENT_CROTCH_WILL_BE_VISIBLE];
+                }
             }
         }
     } else {
@@ -435,7 +446,7 @@ function playerMustStrip (player) {
         updateAllBehaviours(
             player,
             trigger,
-            [[(players[player].gender == eGender.MALE ? MALE_MUST_MASTURBATE : FEMALE_MUST_MASTURBATE), OPPONENT_LOST]]
+            [[players[player].getForfeitTrigger("must_masturbate"), OPPONENT_LOST]]
         );
         
         players[player].preloadStageImages(players[player].stage + 2);
@@ -685,11 +696,11 @@ function stripAIPlayer (player) {
 function determineForfeitSituation (player) {
     /* check to see how many players are out */
     for (var i = 0; i < players.length; i++) {
-            if (players[i] && players[i].out) {
-                if (players[i].out) {
-            return PLAYER_MUST_MASTURBATE;
-                }
+        if (players[i] && players[i].out) {
+            if (players[i].out) {
+                return PLAYER_MUST_MASTURBATE;
             }
+        }
     }
     return PLAYER_MUST_MASTURBATE_FIRST;
 }
