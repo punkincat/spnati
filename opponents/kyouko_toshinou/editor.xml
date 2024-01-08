@@ -56,6 +56,7 @@
         <response id="501" opponent="mari_setogaya" opponentId="2198" />
         <response id="511" opponent="solar_flare" opponentId="38" />
         <response id="517" opponent="tea_gardner" opponentId="385" />
+        <response id="525" opponent="sanako" opponentId="148" />
     </responses>
     <notes>
         <note id="5">The marker is available so other characters can see which uniform she's wearing just in case they absolutely need to know for whatever reason. FYI, it's always unset when she loses the red dress.
@@ -85,6 +86,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <note id="482">Literally don't have any better pose for this yet</note>
         <note id="507">iffy on whether to include finished in this, (in other words, todo: stage 9 lines)</note>
         <note id="510">I'm not actually sure how comfortable Téa is at five-card draw, or if it's actually that easy for her to learn. I'm willing to reword this just a bit but having Téa refute Kyouko on this is just as good.</note>
+        <note id="522">(sorry)</note>
     </notes>
     <labels>
         <label id="2" label="Imitating Yuno" color="5" folder="Target: Yuno Uno" sort="0" />
@@ -92,7 +94,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="4" label="Play once + markers" folder="" sort="0" />
         <label id="5" label="Long sleeves for non-summer" folder="" sort="0" />
         <label id="6" label="Dress - reset sleeve length" folder="Costume: Club Uniform" sort="23" />
-        <label id="11" label="Two consecutive small removals" folder="" sort="0" />
+        <label id="11" label="" folder="Everyone clothed and game moving slow" sort="0" />
         <label id="13" label="Comuket is soon" folder="" sort="0" />
         <label id="15" label="The ribbon" folder="" sort="0" />
         <label id="16" label="Kyouko's birthday" folder="" sort="0" />
@@ -556,7 +558,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="498" label="" folder="Target: Solar Flare" sort="2" />
         <label id="499" label="" folder="Target: Reimu" sort="2" />
         <label id="500" label="" folder="Target: Nadeshiko" sort="0" />
-        <label id="502" label="" folder="Target: Mari Setogaya" sort="18" />
+        <label id="502" label="" folder="Target: Mari Setogaya" sort="0" />
         <label id="504" label="" folder="Target: Tea Gardner" sort="4" />
         <label id="505" label="" folder="Target: Yumeko" sort="0" />
         <label id="506" label="" folder="Target: Yumeko" sort="2" />
@@ -570,10 +572,25 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="515" label="" folder="Target: Yumeko" sort="0" />
         <label id="516" label="" folder="Target: Yumeko" sort="0" />
         <label id="517" label="" folder="Target: Téa Gardner" sort="0" />
+        <label id="518" label="" folder="Target: Mari Setogaya" sort="0" />
+        <label id="519" label="" folder="Target: Mari Setogaya" sort="0" />
+        <label id="520" label="" folder="Target: Shamiko" sort="0" />
+        <label id="521" label="" folder="Target: Nagatoro" sort="0" />
+        <label id="522" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="523" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="524" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="525" label="Left" folder="Target: Sanako" sort="0" />
+        <label id="526" label="" folder="Target: Tea Gardner" sort="0" />
+        <label id="527" label="" folder="Target: Yumeko" sort="0" />
+        <label id="528" label="" folder="Target: Yumeko" sort="0" />
+        <label id="529" label="" folder="Everyone clothed and game moving slow" sort="0" />
+        <label id="530" label="" folder="Everyone clothed and game moving slow" sort="0" />
+        <label id="531" label="" folder="Everyone clothed and game moving slow" sort="0" />
+        <label id="532" label="" folder="Everyone clothed and game moving slow" sort="0" />
+        <label id="533" label="" folder="Everyone clothed and game moving slow" sort="0" />
     </labels>
-    <nextId>517</nextId>
+    <nextId>533</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Private" name="B_">Background-related markers</marker>
         <marker scope="Public" name="B_DarkTricks">Dark backgrounds</marker>
         <marker scope="Public" name="B_Inventory_Booth">Inventory background</marker>
@@ -708,9 +725,13 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Meia_Pajamas" />
         <marker scope="Public" name="T_Miko_Strip0Necessities">Self Stripping 0</marker>
         <marker scope="Public" name="T_Miko_Strip0Refined">Self Must Strip 0</marker>
+        <marker scope="Public" name="T_Nadeshiko_ClothesA" />
+        <marker scope="Public" name="T_Nadeshiko_ClothesB" />
+        <marker scope="Public" name="T_Nadeshiko_ClothesC" />
         <marker scope="Public" name="T_Nadeshiko_Layers" />
         <marker scope="Public" name="T_Nadeshiko_Ramen" />
         <marker scope="Public" name="T_Nadeshiko_RibbonTrick" />
+        <marker scope="Public" name="T_Nadeshiko_Uniform" />
         <marker scope="Public" name="T_Nagatoro_SkillIssue">Rosalina says "hi"</marker>
         <marker scope="Public" name="T_Nagatoro_Strip0DrawingPlans">Self Stripping 0</marker>
         <marker scope="Public" name="T_Nagatoro_Strip0PoseIdeas">Self Must Strip 0</marker>
@@ -740,10 +761,12 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Queenie_Strip0Villains">Queenie Stripping 0</marker>
         <marker scope="Public" name="T_Queenie_TStrip0LoveJustice">Queenie Must Strip 0</marker>
         <marker scope="Public" name="T_Reimu_" />
+        <marker scope="Public" name="T_Reimu_BothCute" />
         <marker scope="Public" name="T_Reimu_Find" />
         <marker scope="Public" name="T_Reimu_KeepTrying" />
         <marker scope="Public" name="T_Reimu_Strip0Attack">Self Must Strip 0</marker>
         <marker scope="Public" name="T_Robin_DrawingResponse" />
+        <marker scope="Public" name="T_SanakoL_ForbiddenTreats" />
         <marker scope="Public" name="T_SannyTess_AyanoFuta" />
         <marker scope="Public" name="T_SannyTess_CockA">Sanny/Tess Stripping 2</marker>
         <marker scope="Public" name="T_SannyTess_CockB">Sanny/Tess Stripped 3</marker>
@@ -765,11 +788,17 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Setogaya_Strip2LewdIdea">Self Stripping 2</marker>
         <marker scope="Public" name="T_Setogaya_Strip2LewdStuff">Self Must Strip 2</marker>
         <marker scope="Public" name="T_Setogaya_Strip2Stripping">Self Stripped 3</marker>
+        <marker scope="Public" name="T_Setogaya_TogetherA" />
+        <marker scope="Public" name="T_Setogaya_TogetherB" />
+        <marker scope="Public" name="T_Shamiko_Demon" />
         <marker scope="Public" name="T_SolarFlare_TomatoPlant" />
         <marker scope="Public" name="T_SolarFlare_ZombieApocalypse" />
+        <marker scope="Public" name="T_Tea_Complicated" />
         <marker scope="Public" name="T_Tea_DM2Poker" />
         <marker scope="Public" name="T_Tea_FunPrez">Game start</marker>
         <marker scope="Public" name="T_Tea_NotReal" />
+        <marker scope="Public" name="T_Tea_RedFace" />
+        <marker scope="Public" name="T_Tea_Strategic" />
         <marker scope="Public" name="T_Tea_Strip3Normal">Self Stripping 3</marker>
         <marker scope="Public" name="T_Tea_Strip3Tomato">Self Must strip 3</marker>
         <marker scope="Public" name="T_Tea_TStrip0CardGame">Tea Must Strip 0</marker>
@@ -780,6 +809,8 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Yumeko_AllWs" />
         <marker scope="Public" name="T_Yumeko_Gambler" />
         <marker scope="Public" name="T_Yumeko_RandomFun" />
+        <marker scope="Public" name="T_Yumeko_SilverPlatter" />
+        <marker scope="Public" name="T_Yumeko_Uncertain" />
         <marker scope="Public" name="T_Yumeko_Winner" />
         <marker scope="Public" name="T_Yuna_Strip0Unifrom">Self Must strip 0</marker>
         <marker scope="Public" name="T_Yuna_Strip1YuriSenses">Self Must strip 1</marker>
