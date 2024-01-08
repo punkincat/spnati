@@ -47,6 +47,15 @@
             <sprite id="RosaArm" z="5" src="gloria//extra/RosaArm.png" x="8" y="567" />
             <sprite id="RosaArmTanned" marker="rosacostume==rosa_summer" z="6" src="gloria/extra/RosaArmTanned.png" x="8" y="567" />
         </pose>
+        <pose id="8-GloriaNadeshikoGameEnd">
+            <sprite id="GameEndNadeshiko_default" marker="nadeshikocostume==default" z="3" src="gloria/extra/GameEndNadeshiko_default.png" x="-204" y="0" />
+            <sprite id="GameEndGloria_Arm" z="6" src="gloria/extra/GameEndGloria_Arm.png" x="-194" y="314" />
+            <sprite id="GameEndGloria_default" marker="gloriacostume==default" z="1" src="gloria/extra/GameEndGloria_default.png" x="34" y="0" />
+            <sprite id="GameEndGloria_beachside" marker="gloriacostume==gloria_beachside" z="1" src="gloria/extra/GameEndGloria_beachside.png" x="34" y="0" />
+            <sprite id="GameEndGloria_punk" marker="gloriacostume==gloria_punk" z="1" src="gloria/extra/GameEndGloria_punk.png" x="34" y="0" />
+            <sprite id="GameEndGloria_christmas" marker="gloriacostume==gloria_christmas" z="1" src="gloria/extra/GameEndGloria_vixen.png" x="34" y="0" />
+            <sprite id="GameEndGloria_valentine" marker="gloriacostume==gloria_valentine" z="1" src="gloria/extra/GameEndGloria_valentine.png" x="34" y="0" />
+        </pose>
     </poses>
 
 </costume>
