@@ -5,7 +5,7 @@ Doing all 7
 ## Remillia
 
 - [ ] Raise generic count to 1000 (Total - (Targets + Filters)) (951/1000)
-- [ ] Raise her total targeted lines to 300 (162/300)
+- [ ] Raise her total targeted lines to 300 (173/300)
 - [X] Raise her total filter amount to 75
 
 - [ ] Add 10 more lines showing Kyouko's perverted/overactive imagination, in any case (3/10)
@@ -18,7 +18,7 @@ Doing all 7
 
 ## L0kkit
 
-- [ ] Add at least 30 targeted lines (28/30)
+- [X] Add at least 30 targeted lines (30/30)
 - [ ] Add at least 30 hand quality lines
 - (S) Show her candid side more
 
@@ -26,6 +26,7 @@ Doing all 7
 
 - [ ] 10 more generic lines in interval [5, 7] (~3 each suggested)
 - [ ] 4 more unique targets, 5 lines each
+  - [ ] Sanako (1)
 - (S) Target Pokemon chars
 - (S) Bring up friends
 
@@ -49,7 +50,7 @@ Doing all 7
 
 ## Tweetsie
 
-- [ ] 25 targets to any characters
+- [ ] 25 targets to any characters (8 / 25)
 - [ ] 25 generics exploring her sexuality more (preferably in interval [4, 7])
 
 ## Karbol
@@ -62,7 +63,7 @@ Doing all 7
 
 - [ ] 6 lines total in opponent masturbating cases
 - [ ] 6 lines total in opponent heavy cases
-- [ ] 18 more lines total across any masturbation cases
+- [ ] 18 more lines total across any masturbation cases (1/18)
 - [X] 10 lines that fill in the 6-year gap.
   - This can be stuff like how Kyouko has been adjusting to college, discussion of her college major (whether saying “Yeah I’m in Industrial Anthro History” outright or just discussing some of the stupid stuff she’s learned in her major), some unspecified third thing, how her doujin artist career has evolved, or anything else.
   - You’re free to think of this as being 3 lines each for her at age 20 and 19 respectively and a line each for 18, 17, 16, and 15.
