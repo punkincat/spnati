@@ -42,8 +42,8 @@ Player.prototype.getForfeitTrigger = function (triggerType) {
             case "finished_masturbating": return MALE_FINISHED_MASTURBATING;
             default: return null;
         }
-    } else if (this.gender === "female") {
-        if (this.penis) {
+    } else if (this.gender === eGender.FEMALE) {
+        if (!this.penis) {
             switch (triggerType) {
                 case "must_masturbate": return FEMALE_MUST_MASTURBATE;
                 case "start_masturbating": return FEMALE_START_MASTURBATING;
@@ -263,9 +263,9 @@ function tickForfeitTimers () {
     if (masturbatingPlayers.length > 0
         && ((gamePhase == eGamePhase.DEAL && humanPlayer.out) || gamePhase == eGamePhase.EXCHANGE || gamePhase == eGamePhase.END_LOOP)) {
         var playerToShow = masturbatingPlayers[getRandomNumber(0, masturbatingPlayers.length)];
-        var others_tags = [[players[player].getForfeitTrigger("masturbating"), OPPONENT_MASTURBATING]];
+        var others_tags = [[players[playerToShow].getForfeitTrigger("masturbating"), OPPONENT_MASTURBATING]];
         if (players[playerToShow].forfeit[0] == PLAYER_HEAVY_MASTURBATING) {
-            others_tags.unshift([players[player].getForfeitTrigger("heavy_masturbating"), OPPONENT_HEAVY_MASTURBATING]);
+            others_tags.unshift([players[playerToShow].getForfeitTrigger("heavy_masturbating"), OPPONENT_HEAVY_MASTURBATING]);
         }
         
         updateAllBehaviours(
