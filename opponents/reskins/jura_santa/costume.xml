@@ -1311,6 +1311,10 @@
             <sprite id="stripped" src="reskins/jura_santa/6-buttspread.png" x="0" y="0" />
             <sprite id="silentmouth" src="reskins/jura_santa/silentmouth.png" x="84" y="237" rotation="-4" />
         </pose>
+        <pose id="0-strip-b">
+            <sprite id="talking" src="reskins/jura_santa/0-strip-.png" x="0" y="0" />
+            <sprite id="btalking" z="1" src="reskins/jura_santa/blooking-.png" x="315" y="0" />
+        </pose>
     </poses>
 
 </costume>
