@@ -263,7 +263,7 @@ function tickForfeitTimers () {
     if (masturbatingPlayers.length > 0
         && ((gamePhase == eGamePhase.DEAL && humanPlayer.out) || gamePhase == eGamePhase.EXCHANGE || gamePhase == eGamePhase.END_LOOP)) {
         var playerToShow = masturbatingPlayers[getRandomNumber(0, masturbatingPlayers.length)];
-        var others_tags = [[players[playerToShow].getForfeitTrigger("masturbating"), OPPONENT_MASTURBATING]];
+        var others_tags = [[players[player].getForfeitTrigger("masturbating"), OPPONENT_MASTURBATING]];
         if (players[playerToShow].forfeit[0] == PLAYER_HEAVY_MASTURBATING) {
             others_tags.unshift([players[player].getForfeitTrigger("heavy_masturbating"), OPPONENT_HEAVY_MASTURBATING]);
         }
