@@ -52,7 +52,7 @@ function compileBaseErrorReport(userDesc, bugType) {
         'circumstances': circumstances,
         'player': {
             'gender': humanPlayer.gender,
-            'size': humanPlayer.size,
+            'size': (humanPlayer.gender === "male" ? humanPlayer.penis : humanPlayer.breasts),
         },
         'jsErrors': jsErrors,
     };
