@@ -88,6 +88,12 @@
     <tag display="Circumcised" description="Character has no foreskin">circumcised</tag>
     <tag display="Uncircumcised" description="Character's foreskin is intact">uncircumcised</tag>
   </group>
+  <group label="Futanaris">
+    <tag display="Futanari" description="Character is a futanari of any kind">futanari</tag>
+    <tag display="Futanari (Without Balls)" paired="futanari" description="Character is a futanari with a penis and vagina, but no balls">futanari_sans_balls</tag>
+    <tag display="Futanari (Full Package)" paired="futanari" description="Character is a futanari with a penis, vagina, and balls">futanari_full_package</tag>
+    <tag display="Futanari (Newhalf)" paired="futanari" description="Character is a &quot;futanari&quot; with a penis and balls, but no vagina">futanari_newhalf</tag>
+  </group>
   <group label="Non-Human Species" multiselect="true">
     <tag display="Alien" description="Character is visibly extraterrestrial or freely mentions it">alien</tag>
     <tag display="Angel" paired="supernatural" description="Character is an angel">angel</tag>
