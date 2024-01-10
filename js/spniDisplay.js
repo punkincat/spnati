@@ -1340,7 +1340,7 @@ MainSelectScreenDisplay.prototype.createCharacterSettingsDropdown = function (se
     selector.append(
         available.map((setting) => $("<option>", {
             val: setting.value,
-            text: setting.name,
+            text: expandDialogue(setting.name, settingsGroup.player, null),
             selected: setting.value == selected.value
         }).data("setting", setting))
     );

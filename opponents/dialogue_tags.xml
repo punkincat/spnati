@@ -13,7 +13,11 @@
     <defaultImage>calm</defaultImage>
     <defaultText>This is what the character says after another character has been (individually) deselected</defaultText>
   </trigger>
-  <trigger tag="game_start" start="0" end="0" label="Game start" oncePerStage="true" description="When the game starts" group="0" order="3" color="1">
+  <trigger tag="settings_changed" optional="true" start="0" end="0" label="Settings Changed" description="When custom settings are changed" group="0" order="3" color="1">
+    <defaultImage>calm</defaultImage>
+    <defaultText>This is what the character says after their custom settings have been changed.</defaultText>
+  </trigger>
+  <trigger tag="game_start" start="0" end="0" label="Game Start" oncePerStage="true" description="When the game starts" group="0" order="4" color="1">
     <defaultImage>happy</defaultImage>
     <defaultText>This is what the character says when the game starts</defaultText>
   </trigger>
@@ -24,7 +28,7 @@
     <defaultImage>sad</defaultImage>
     <defaultText>What the character says just after they take their clothes off. Note that this is the start of a new stage.</defaultText>
   </trigger>
-  <trigger tag="dealing_cards" optional="true" start="0" end="10" label="Dealing cards (not for general use)" description="When the cards are dealt for a new round (only use this in specific circumstances)" group="1" order="0" color="1">
+  <trigger tag="dealing_cards" optional="true" start="0" end="10" label="Dealing Cards (not for general use)" description="When the cards are dealt for a new round (only use this in specific circumstances)" group="1" order="0" color="1">
     <defaultImage>calm</defaultImage>
     <defaultText>This can be used in special situations, for example so that a character doesn't show up in two places after "visiting" another.</defaultText>
   </trigger>
@@ -131,7 +135,7 @@
     <defaultImage>finished</defaultImage>
     <defaultText>What the character says after they've finished masturbating.</defaultText>
   </trigger>
-  <trigger tag="after_masturbating" optional="true" start="10" end="10" label="After finished (Self)" description="Character is idle after masturbating" group="10" order="7" color="2">
+  <trigger tag="after_masturbating" optional="true" start="10" end="10" label="After Finished (Self)" description="Character is idle after masturbating" group="10" order="7" color="2">
     <vars />
     <defaultImage>finished</defaultImage>
     <defaultText>What the character says after masturbating during the exchange phase.</defaultText>
@@ -212,7 +216,7 @@
     <defaultText>What they say to a female character who has lost a round</defaultText>
     <generic>opponent_lost</generic>
   </trigger>
-  <trigger tag="tie" start="0" end="10" label="Absolute tie" hasTarget="false" optional="true" description="Two (or more) players are tied for the worst hand" group="3" order="4" color="4">
+  <trigger tag="tie" start="0" end="10" label="Absolute Tie" hasTarget="false" optional="true" description="Two (or more) players are tied for the worst hand" group="3" order="4" color="4">
     <defaultImage>shocked</defaultImage>
     <defaultText>A tie! That doesn't happen every day!</defaultText>
   </trigger>
