@@ -72,6 +72,20 @@
         <response id="346" opponent="mari_setogaya" opponentId="2665" />
         <response id="350" opponent="jura" opponentId="1370" />
         <response id="362" opponent="spooky" opponentId="60" />
+        <response id="368" opponent="sanako" opponentId="1" />
+        <response id="369" opponent="sanako" opponentId="21" />
+        <response id="371" opponent="pinkie_pie" opponentId="1" />
+        <response id="372" opponent="pinkie_pie" opponentId="6" />
+        <response id="387" opponent="jura" opponentId="1373" />
+        <response id="388" opponent="jura" opponentId="1417" />
+        <response id="389" opponent="jura" opponentId="1418" />
+        <response id="390" opponent="meia" opponentId="1552" />
+        <response id="391" opponent="meia" opponentId="1551" />
+        <response id="397" opponent="sweetheart" opponentId="65" />
+        <response id="402" opponent="vriska" opponentId="29" />
+        <response id="404" opponent="nonon" opponentId="597" />
+        <response id="405" opponent="leon" opponentId="1425" />
+        <response id="406" opponent="nonon" opponentId="469" />
     </responses>
     <notes>
         <note id="10">If you want to ask Pandoria / Pandy questions, you could draw attention to the fact that some of her body parts are lightbulbs, such as a lightbulb in her head.. and her tail. Her specific race is known as a "Blade".</note>
@@ -85,6 +99,7 @@
         <note id="315">as a note, as a major gameplay feature of xenoblade 2, you make use of different blades on a regular basis (each character can have up to 3 equipped, some are story based like Mythra and some are side content like Kora). (zeke cannot use mythra/pyra, only rex can)</note>
         <note id="319">dromarch is a beast shape Blade who is basically a big furry lion</note>
         <note id="344">zeke and pandy have a very bad history with bandits, which they can explain in follow-up lines</note>
+        <note id="387">the purple lightning dreamsmasher and the big bang edge are both different names for the same weapon; as far as I can tell zeke just randomly calls it one or the other. or, more specifically, big bang edge is the gameplay name for the default weapon configuration of the PLD? you can have jura point out the discrepancy or ignore it entirely lmao</note>
     </notes>
     <labels>
         <label id="5" label="Pandoria Reminder" folder="" sort="0" />
@@ -392,7 +407,7 @@
         <label id="314" label="" folder="Responses" sort="0" />
         <label id="315" label="" folder="Responses" sort="0" />
         <label id="316" label="" color="3" folder="Responses" sort="0" />
-        <label id="317" label="" folder="Responses" sort="0" />
+        <label id="317" label="" color="3" folder="Responses" sort="0" />
         <label id="318" label="" folder="Sucrose Post-Dual" sort="0" />
         <label id="319" label="" folder="Targets" sort="0" />
         <label id="320" label="" folder="Sucrose Post-Dual" sort="0" />
@@ -424,8 +439,8 @@
         <label id="346" label="" color="1" folder="Mari S" sort="0" />
         <label id="347" label="" folder="Targets" sort="0" />
         <label id="348" label="" folder="Targets" sort="0" />
-        <label id="349" label="" color="1" folder="Responses" sort="0" />
-        <label id="350" label="" color="1" folder="Responses" sort="0" />
+        <label id="349" label="" folder="Responses" sort="0" />
+        <label id="350" label="" folder="Responses" sort="0" />
         <label id="276" label="" folder="Targets" sort="0" />
         <label id="351" label="" folder="Targets" sort="0" />
         <label id="352" label="" folder="Targets" sort="0" />
@@ -444,14 +459,53 @@
         <label id="365" label="" folder="Targets" sort="0" />
         <label id="366" label="" folder="Targets" sort="0" />
         <label id="367" label="" folder="Filtered" sort="0" />
+        <label id="368" label="" folder="Prompt Responses" sort="0" />
+        <label id="369" label="" folder="Prompt Responses" sort="0" />
+        <label id="370" label="" folder="Responses" sort="0" />
+        <label id="372" label="" folder="Targets" sort="0" />
+        <label id="371" label="" folder="Targets" sort="0" />
+        <label id="373" label="" folder="Targets" sort="0" />
+        <label id="374" label="" folder="Targets" sort="0" />
+        <label id="375" label="" folder="Targets" sort="0" />
+        <label id="376" label="" folder="Targets" sort="0" />
+        <label id="377" label="" folder="Targets" sort="0" />
+        <label id="378" label="" folder="Targets" sort="0" />
+        <label id="379" label="" folder="Targets" sort="0" />
+        <label id="380" label="" folder="Targets" sort="0" />
+        <label id="381" label="" folder="Targets" sort="0" />
+        <label id="382" label="" folder="Responses" sort="0" />
+        <label id="383" label="" folder="Responses" sort="0" />
+        <label id="384" label="" folder="Responses" sort="0" />
+        <label id="385" label="" folder="Responses" sort="0" />
+        <label id="386" label="" folder="Responses" sort="0" />
+        <label id="387" label="" color="1" folder="Responses" sort="0" />
+        <label id="388" label="" folder="Responses" sort="0" />
+        <label id="389" label="" folder="Responses" sort="0" />
+        <label id="390" label="" color="3" folder="Responses" sort="0" />
+        <label id="391" label="" folder="Responses" sort="0" />
+        <label id="392" label="" color="1" folder="Targets" sort="0" />
+        <label id="393" label="" color="1" folder="Targets" sort="0" />
+        <label id="394" label="" color="1" folder="Targets" sort="0" />
+        <label id="395" label="" color="1" folder="Targets" sort="0" />
+        <label id="396" label="" color="1" folder="Targets" sort="0" />
+        <label id="397" label="" folder="Targets" sort="0" />
+        <label id="398" label="" folder="Filtered" sort="0" />
+        <label id="399" label="" folder="Filtered" sort="0" />
+        <label id="400" label="" folder="Filtered" sort="0" />
+        <label id="401" label="" folder="Filtered" sort="0" />
+        <label id="402" label="" folder="Targets" sort="0" />
+        <label id="403" label="" folder="Filtered" sort="0" />
+        <label id="404" label="" folder="Situations" sort="0" />
+        <label id="405" label="" folder="Targets" sort="0" />
+        <label id="406" label="" folder="Targets" sort="0" />
+        <label id="268" label="" folder="Targets" sort="0" />
     </labels>
     <posePreviewMarkers>
-        <posePreviewMarker>penis=s</posePreviewMarker>
+        <posePreviewMarker>penis=h</posePreviewMarker>
     </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>367</nextId>
+    <nextId>406</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="allowsex">If set to 1, Zeke and Pandoria *can* (but are not guaranteed to) have sex for their forfeit.</marker>
         <marker scope="Public" name="allowsex_lockin" />
         <marker scope="Public" name="arle_adaptquestion" />
@@ -485,11 +539,16 @@
         <marker scope="Public" name="kora_blade_power2" />
         <marker scope="Public" name="kora_gossip_aegisRex" />
         <marker scope="Public" name="kora_stripped4_butt" />
+        <marker scope="Public" name="nonon_leon_startDualReact" />
+        <marker scope="Public" name="nonon_panties_reveal_situation" />
         <marker scope="Public" name="opp_lost_jjba" />
         <marker scope="Public" name="pandoria_dialogue">Pandoria is the one speaking when this marker is being said. This marker doesn't always appear, but is used in cases where you might need to differentiate, e.g. if there are two versions of a single line, one where she speaks and one where she doesnt.</marker>
         <marker scope="Public" name="pandoriaToggle">if set to 1, Pandoria's dialogue is de-emphasised at certain moments.</marker>
         <marker scope="Public" name="pandy_intro" />
         <marker scope="Public" name="pandy_jura_balls" />
+        <marker scope="Public" name="pandy_jura_self0c" />
+        <marker scope="Public" name="pandy_jura_self1c" />
+        <marker scope="Public" name="pandy_jura_strip2" />
         <marker scope="Public" name="pandy_mariS_hatResp" />
         <marker scope="Public" name="pandy_strips_boots">Pandoria strips her boots while Zeke removes his boots.</marker>
         <marker scope="Public" name="pandy_strips_bottom">Pandoria strips her bottoms (underwear) while Zeke removes his own boxers.</marker>
@@ -503,6 +562,9 @@
         <marker scope="Public" name="queenie_intro" />
         <marker scope="Public" name="queenie_stafflost" />
         <marker scope="Public" name="rosa_timegate_stripping2" />
+        <marker scope="Public" name="sanako_introResp" />
+        <marker scope="Public" name="sanako_spendTimeRespP" />
+        <marker scope="Public" name="sanako_spendTimeRespZ" />
         <marker scope="Public" name="self_cleanup" />
         <marker scope="Public" name="self_finished" />
         <marker scope="Public" name="shamiko_transform1" />
@@ -575,6 +637,7 @@
         <marker scope="Public" name="sucrose52_resp" />
         <marker scope="Public" name="sucrose53_resp" />
         <marker scope="Public" name="sweetheart_donut_girl" />
+        <marker scope="Public" name="sweetheart_pillow" />
         <marker scope="Public" name="szp_trio_finish" />
         <marker scope="Public" name="szp_trio_finished" />
         <marker scope="Public" name="target_beltStripped" />
@@ -588,8 +651,11 @@
         <marker scope="Public" name="zeke_dunban_self0a" />
         <marker scope="Public" name="zeke_fischl_strip0a" />
         <marker scope="Public" name="zeke_jura_self0b" />
+        <marker scope="Public" name="zeke_jura_self0c" />
         <marker scope="Public" name="zeke_jura_self1a" />
         <marker scope="Public" name="zeke_jura_self1b" />
+        <marker scope="Public" name="zeke_jura_self1c" />
+        <marker scope="Public" name="zeke_jura_self2a" />
         <marker scope="Public" name="zeke_jura_strip0a" />
         <marker scope="Public" name="zeke_jura_strip0b" />
         <marker scope="Public" name="zeke_jura_strip0c" />
@@ -601,7 +667,13 @@
         <marker scope="Public" name="zeke_mariS_relationshipResp" />
         <marker scope="Public" name="zeke_meia_self0a" />
         <marker scope="Public" name="zeke_meia_self0b" />
+        <marker scope="Public" name="zeke_meia_self0c_A" />
+        <marker scope="Public" name="zeke_meia_self0c_B" />
         <marker scope="Public" name="zeke_meia_self3a" />
+        <marker scope="Public" name="zeke_meia_self3b" />
+        <marker scope="Public" name="zeke_meia_strip0a" />
+        <marker scope="Public" name="zeke_meia_strip1a" />
+        <marker scope="Public" name="zeke_meia_strip2a" />
         <marker scope="Public" name="zeke_misaka_strip0a" />
         <marker scope="Public" name="zeke_nadeshiko_fancy1" />
         <marker scope="Public" name="zeke_nadeshiko_fancy2" />
@@ -636,16 +708,23 @@
         <marker scope="Public" name="zeke_wikipetan0a" />
         <marker scope="Public" name="zeke_wikipetan1" />
         <marker scope="Public" name="zeke_yaemiko_publishing1" />
+        <marker scope="Public" name="zeke_yaemiko_publishing2" />
+        <marker scope="Public" name="zeke_yaemiko_publishing3" />
         <marker scope="Public" name="zekepandoria_jura_self0a" />
         <marker scope="Public" name="zekepandoria_revy_strip0a" />
         <marker scope="Public" name="zekepandy_caitlin_strip0a" />
         <marker scope="Public" name="zekepandy_caitlin_strip0b" />
         <marker scope="Public" name="zekepandy_caitlin_strip0c" />
         <marker scope="Public" name="zekepandy_miko_selfGloves1" />
+        <marker scope="Public" name="zekepandy_miko_selfGloves2" />
         <marker scope="Public" name="zekepandy_sucrose_dualFF_happening" />
         <marker scope="Public" name="zekepandy_sucrose_dualFF_must" />
         <marker scope="Public" name="zekepandy_sucrose_dualFF_start" />
         <marker scope="Public" name="zekepandy_sucrose_dualFFEnable" />
+        <marker scope="Public" name="zekepandy_yaemiko_jobPay2AdventureResp" />
+        <marker scope="Public" name="zekepandy_yaemiko_jobPay2BlinkResp" />
+        <marker scope="Public" name="zekepandy_yaemiko_jobPay3adventureResp" />
+        <marker scope="Public" name="zekepandy_yaemiko_jobPay3BlinkResp" />
         <marker scope="Public" name="zekepandy_yaemiko_jobPayResp" />
         <marker scope="Public" name="zekepandy_yaemiko_jobPayRespB" />
         <marker scope="Public" name="zekepandy_zoe_childResp" />
@@ -665,6 +744,12 @@
         <marker scope="Public" name="zp_solarflare_zombies" />
         <marker scope="Public" name="zp_sucrose_finish_trio" />
         <marker scope="Public" name="zp_yaemiko_bookWriting1" />
+        <marker scope="Public" name="zp_yaemiko_bookWriting2bio" />
+        <marker scope="Public" name="zp_yaemiko_bookWriting2hero" />
+        <marker scope="Public" name="zp_yaemiko_bookWriting2toomuch" />
+        <marker scope="Public" name="zp_yaemiko_bookWriting3bio" />
+        <marker scope="Public" name="zp_yaemiko_bookWriting3hero" />
+        <marker scope="Public" name="zp_yaemiko_bookWriting3toomuch" />
         <marker scope="Public" name="zps_postfinish" />
     </markers>
     <pendingLines>
