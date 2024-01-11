@@ -107,10 +107,13 @@
         <response id="101" opponent="aoba" opponentId="118" />
         <response id="103" opponent="miko" opponentId="12" />
         <response id="111" opponent="shamiko" opponentId="30" />
+        <response id="148" opponent="pyrrha" opponentId="53" />
+        <response id="149" opponent="kumatora" opponentId="299" />
     </responses>
     <notes>
         <note id="115">I wrote these lines at 12:20 am
-hope they aren't lame</note>
+; hope they aren't lame</note>
+        <note id="141">Ei being the Raiden Shogun, the Electro Archon, the Narukamo Ogosho, the God of Thunder and Eternity.</note>
     </notes>
     <labels>
         <label id="92" label="Necklace unlock" folder="" sort="0" />
@@ -118,28 +121,29 @@ hope they aren't lame</note>
         <label id="104" label="" color="4" folder="" sort="0" />
         <label id="105" label="" color="4" folder="" sort="0" />
         <label id="106" label="" color="4" folder="" sort="0" />
-        <label id="107" label="" color="4" folder="" sort="0" />
-        <label id="108" label="" color="4" folder="" sort="0" />
-        <label id="109" label="" color="4" folder="" sort="0" />
+        <label id="134" label="" color="4" folder="" sort="0" />
         <label id="110" label="" color="4" folder="" sort="0" />
-        <label id="114" label="" color="4" folder="" sort="0" />
-        <label id="116" label="" color="4" folder="" sort="0" />
+        <label id="147" label="" color="4" folder="" sort="0" />
         <label id="117" label="" color="4" folder="" sort="0" />
-        <label id="118" label="" color="4" folder="" sort="0" />
         <label id="119" label="" color="4" folder="" sort="0" />
-        <label id="120" label="" color="4" folder="" sort="0" />
-        <label id="121" label="" color="4" folder="" sort="0" />
+        <label id="155" label="" color="4" folder="" sort="0" />
         <label id="122" label="" color="4" folder="" sort="0" />
         <label id="123" label="" color="4" folder="" sort="0" />
-        <label id="124" label="" color="4" folder="" sort="0" />
-        <label id="125" label="" color="4" folder="" sort="0" />
-        <label id="126" label="" color="4" folder="" sort="0" />
+        <label id="141" label="" color="4" folder="" sort="0" />
+        <label id="132" label="" color="4" folder="" sort="0" />
+        <label id="154" label="" color="4" folder="" sort="0" />
         <label id="127" label="" color="4" folder="" sort="0" />
+        <label id="133" label="" color="4" folder="" sort="0" />
+        <label id="140" label="" color="4" folder="" sort="0" />
+        <label id="142" label="" color="4" folder="" sort="0" />
+        <label id="146" label="" color="4" folder="" sort="0" />
+        <label id="153" label="" color="4" folder="" sort="0" />
+        <label id="163" label="" color="4" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
     </prefixes>
-    <nextId>127</nextId>
+    <nextId>163</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="9s_manufactured" />
@@ -159,7 +163,15 @@ hope they aren't lame</note>
         <marker scope="Public" name="arueshalae_darkToLight" />
         <marker scope="Public" name="arueshalae_darkToLight2" />
         <marker scope="Public" name="cagliostro_bodyCount" />
+        <marker scope="Public" name="caitlin_resp_booksA" />
+        <marker scope="Public" name="caitlin_resp_earringsA" />
+        <marker scope="Public" name="caitlin_resp_earsA" />
+        <marker scope="Public" name="caitlin_resp_inazumaA" />
+        <marker scope="Public" name="caitlin_resp_mountainsA" />
         <marker scope="Public" name="caitlin_sleeping" />
+        <marker scope="Public" name="caitlin_sleeping2" />
+        <marker scope="Public" name="caitlin_sleeping2_D" />
+        <marker scope="Public" name="caitlin_sleeping2_R" />
         <marker scope="Public" name="hu_tao_hi" />
         <marker scope="Public" name="hu_tao_liyuePoetry" />
         <marker scope="Public" name="hu_tao_resp_01" />
@@ -174,33 +186,47 @@ hope they aren't lame</note>
         <marker scope="Public" name="jim_warStories" />
         <marker scope="Public" name="jim_warStories2" />
         <marker scope="Public" name="jura_questionsAboutMen" />
+        <marker scope="Public" name="jura_questionsAboutMen2" />
         <marker scope="Public" name="jura_resp_0" />
+        <marker scope="Public" name="jura_resp_01" />
         <marker scope="Public" name="komi_commDisorder" />
         <marker scope="Public" name="kumatora_adventures" />
         <marker scope="Public" name="mari_piano" />
         <marker scope="Public" name="meia_overlySerious" />
+        <marker scope="Public" name="meia_overlySerious2" />
         <marker scope="Public" name="meia_resp_0" />
+        <marker scope="Public" name="meia_resp_01" />
         <marker scope="Public" name="meia_resp_earth_sightseeing" />
         <marker scope="Public" name="meia_resp_men_info" />
+        <marker scope="Public" name="meia_resp_men_info2" />
+        <marker scope="Public" name="meia_resp_sightseeing2" />
         <marker scope="Public" name="mia_golden_sun_hydroVision" />
         <marker scope="Public" name="miko_mindToSword" />
+        <marker scope="Public" name="miko_mindToSword2" />
+        <marker scope="Public" name="miko_resp_earrings1" />
         <marker scope="Public" name="miko_resp_heartsDesires" />
         <marker scope="Public" name="miko_resp_sandals1" />
         <marker scope="Public" name="miko_resp_sandals2" />
         <marker scope="Public" name="miko_resp_sandals3" />
         <marker scope="Public" name="mitama_jobInterview" />
         <marker scope="Public" name="mitama_jobInterview2" />
+        <marker scope="Public" name="mitama_jobInterview3" />
         <marker scope="Public" name="monika_otherworldly" />
         <marker scope="Public" name="monika_otherworldly2" />
         <marker scope="Public" name="monika_otherworldly3" />
         <marker scope="Public" name="nagisa_leyLineDisorder" />
         <marker scope="Public" name="nickname" />
         <marker scope="Public" name="nonon_music" />
+        <marker scope="Public" name="nonon_music2" />
         <marker scope="Public" name="nonon_resp_" />
         <marker scope="Public" name="nonon_resp_01" />
+        <marker scope="Public" name="nonon_resp_02" />
+        <marker scope="Public" name="nonon_resp_02a" />
         <marker scope="Public" name="petra_2ndLangBooks" />
         <marker scope="Public" name="reimu_resp_shrineDesc" />
+        <marker scope="Public" name="reimu_resp_shrineDesc2" />
         <marker scope="Public" name="reimu_sake" />
+        <marker scope="Public" name="reimu_sake2" />
         <marker scope="Public" name="revy_resp_0" />
         <marker scope="Public" name="revy_resp_1" />
         <marker scope="Public" name="revy_violentStories" />
@@ -268,10 +294,25 @@ hope they aren't lame</note>
         <marker scope="Public" name="yae_miko_yandere2" />
         <marker scope="Public" name="yumeko_enjoyDrama" />
         <marker scope="Public" name="yumeko_enjoyDrama2" />
+        <marker scope="Public" name="yumeko_enjoyDrama3" />
         <marker scope="Public" name="yuri_bookPreferences" />
+        <marker scope="Public" name="zeke_pandoria_favLocation" />
         <marker scope="Public" name="zeke_pandoria_jobPay" />
+        <marker scope="Public" name="zeke_pandoria_jobPay2" />
+        <marker scope="Public" name="zeke_pandoria_jobPay3" />
+        <marker scope="Public" name="zeke_pandoria_resp_bookWriting1" />
+        <marker scope="Public" name="zeke_pandoria_resp_bookWriting2" />
+        <marker scope="Public" name="zeke_pandoria_resp_bookWriting3" />
+        <marker scope="Public" name="zeke_pandoria_resp_publishing1" />
+        <marker scope="Public" name="zeke_pandoria_resp_publishing2" />
+        <marker scope="Public" name="zeke_pandoria_resp_publishing3" />
     </markers>
     <pendingLines>
         <line>Keep telling yourself that.  It might be true one day.</line>
+        <line>I've heard parents describe looking after their young children as an "adventure" before.  Perhaps this is similar.</line>
+        <line>Planning and drafting are a time-consuming process; reviewing manuscripts takes up too much time to consider it.</line>
+        <line>...Perhaps an autobiography?  My life is certainly one worth reading about.</line>
+        <line>Very well indeed.  We had tea only yesterday. (about Ei)</line>
+        <line>Most certainly.  We took a stroll through her palace grounds yesterday; the weather was quite lovely.</line>
     </pendingLines>
 </metadata>
