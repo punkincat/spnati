@@ -18,6 +18,9 @@
         <case name="Panty Thief" id="597" priority="FYI" min="0" max="8">
             <description>Nonon wants an explaination for why Player has her panties.</description>
         </case>
+        <case name="Mission Complete" id="638" priority="FYI" min="0" max="0">
+            <description>Nonon was sent to the inventory on a mission. Everything checked out so she decided to take a little break.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -27,6 +30,8 @@
     <notes>
         <note id="186">serious,-aggressive,-dumb,-creepy,-greedy,-insane,-slutty</note>
         <note id="574">She does not get what's going on.</note>
+        <note id="609">Can change this if needed, this is just the general direction I was headed in.</note>
+        <note id="614">Nonon will call Aqua KH "Miss Aqua".</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Intro" sort="4" />
@@ -99,8 +104,8 @@
         <label id="72" label="confident female" folder="Tags" sort="2" />
         <label id="73" label="athlete" folder="Tags" sort="2" />
         <label id="74" label="athlete" folder="Tags" sort="0" />
-        <label id="76" label="" color="5" folder="" sort="0" />
-        <label id="77" label="" folder="Target_Stage0" sort="0" />
+        <label id="76" label="" folder="Target_Stage0" sort="3" />
+        <label id="77" label="" folder="Target_Stage0" sort="2" />
         <label id="78" label="" color="3" folder="" sort="0" />
         <label id="75" label="" color="4" folder="" sort="0" />
         <label id="233" label="" folder="Reply_Stage1" sort="6" />
@@ -118,7 +123,7 @@
         <label id="93" label="" folder="Target_Stage0_B" sort="0" />
         <label id="142" label="" folder="Target_Stage0" sort="9" />
         <label id="95" label="" color="2" folder="" sort="0" />
-        <label id="96" label="" folder="Target_Stage0" sort="0" />
+        <label id="96" label="" folder="Target_Stage0" sort="7" />
         <label id="100" label="" folder="Target_Stage0" sort="14" />
         <label id="98" label="" color="1" folder="Target_Stage4" sort="6" />
         <label id="99" label="" color="1" folder="Target_Stage5" sort="2" />
@@ -148,7 +153,7 @@
         <label id="143" label="" folder="Target_Stage0" sort="16" />
         <label id="144" label="" folder="Target_Stage0_B" sort="2" />
         <label id="145" label="" folder="Target_Stage0_B" sort="3" />
-        <label id="146" label="" folder="Target_Stage1" sort="0" />
+        <label id="146" label="" folder="Target_Stage1" sort="3" />
         <label id="147" label="" folder="Target_Stage1" sort="0" />
         <label id="148" label="Fallback" folder="" sort="0" />
         <label id="149" label="Player" folder="" sort="0" />
@@ -243,13 +248,13 @@
         <label id="281" label="" color="6" folder="Target_Stage0" sort="15" />
         <label id="242" label="" color="6" folder="" sort="0" />
         <label id="243" label="" folder="Backgrounds" sort="0" />
-        <label id="245" label="Minor/Extra Late (Female)" folder="Unconventional Order" sort="0" />
-        <label id="246" label="Minor/Extra Late (Female)" folder="Unconventional Order" sort="2" />
-        <label id="247" label="Minor/Extra Late (Female)" folder="Unconventional Order" sort="3" />
-        <label id="248" label="Minor/Extra Late (Female)" folder="Unconventional Order" sort="0" />
-        <label id="249" label="Minor/Extra Late (Male)" folder="Unconventional Order" sort="4" />
-        <label id="250" label="Minor/Extra Late (Male)" folder="Unconventional Order" sort="5" />
-        <label id="251" label="Minor/Extra Late (Male)" folder="Unconventional Order" sort="6" />
+        <label id="245" label="Minor/Extra Late (Female)" folder="Unconventional Order" sort="2" />
+        <label id="246" label="Minor/Extra Late (Female)" folder="Unconventional Order" sort="4" />
+        <label id="247" label="Minor/Extra Late (Female)" folder="Unconventional Order" sort="6" />
+        <label id="248" label="Minor/Extra Late (Female)" folder="Unconventional Order" sort="8" />
+        <label id="249" label="Minor/Extra Late (Male)" folder="Unconventional Order" sort="10" />
+        <label id="250" label="Minor/Extra Late (Male)" folder="Unconventional Order" sort="12" />
+        <label id="251" label="Minor/Extra Late (Male)" folder="Unconventional Order" sort="16" />
         <label id="252" label="" folder="Reply_Stage0" sort="8" />
         <label id="253" label="" folder="Reply_Stage0" sort="12" />
         <label id="254" label="" folder="Reply_Stage0" sort="14" />
@@ -403,13 +408,13 @@
         <label id="404" label="" folder="Target_Stage0" sort="17" />
         <label id="405" label="" folder="Target_Stage0" sort="18" />
         <label id="406" label="" color="1" folder="Target_Stage0" sort="19" />
-        <label id="407" label="" folder="BG_Beach" sort="0" />
+        <label id="407" label="" folder="BG_Beach" sort="4" />
         <label id="408" label="" folder="BG_Beach" sort="5" />
         <label id="409" label="" folder="BG_Beach" sort="3" />
         <label id="410" label="" folder="BG_Beach" sort="4" />
         <label id="411" label="" folder="BG_Beach" sort="2" />
         <label id="412" label="" folder="BG_Hotspring" sort="0" />
-        <label id="413" label="" folder="BG_Hotspring" sort="0" />
+        <label id="413" label="" folder="BG_Hotspring" sort="2" />
         <label id="414" label="" folder="BG_Hotspring" sort="0" />
         <label id="415" label="" folder="BG_Hotspring" sort="4" />
         <label id="416" label="Reset intelligence." folder="BG_Hotspring" sort="5" />
@@ -450,7 +455,7 @@
         <label id="475" label="Finishing" folder="Leon Dual" sort="16" />
         <label id="476" label="Finished" folder="Leon Dual" sort="26" />
         <label id="477" label="After" folder="Leon Dual - Leon Lost First" sort="20" />
-        <label id="566" label="" color="1" folder="Target_Stage0" sort="0" />
+        <label id="566" label="" color="1" folder="Target_Stage0" sort="77" />
         <label id="478" label="Getting closer..." folder="" sort="0" />
         <label id="131" label="Lady Satsuki" folder="" sort="0" />
         <label id="126" label="Satsuki" folder="" sort="0" />
@@ -487,9 +492,9 @@
         <label id="511" label="" folder="Target_Stage0" sort="42" />
         <label id="82" label="" folder="Target_Stage0" sort="3" />
         <label id="512" label="" folder="Reply_Stage0" sort="11" />
-        <label id="514" label="" color="6" folder="Reply_Stage0" sort="12" />
-        <label id="515" label="" color="6" folder="Target_Stage0" sort="24" />
-        <label id="516" label="" color="6" folder="Target_Stage0" sort="25" />
+        <label id="514" label="" folder="Reply_Stage0" sort="12" />
+        <label id="515" label="" folder="Target_Stage0" sort="24" />
+        <label id="516" label="" folder="Target_Stage0" sort="25" />
         <label id="517" label="" folder="Target_Stage0" sort="22" />
         <label id="518" label="" folder="Reply_Stage0" sort="13" />
         <label id="519" label="" folder="Reply_Stage0B" sort="14" />
@@ -531,54 +536,94 @@
         <label id="555" label="" color="1" folder="Reply_Stage0B" sort="4" />
         <label id="556" label="Signal" folder="Leon Dual" sort="4" />
         <label id="557" label="Global Trigger" folder="Leon Dual" sort="0" />
-        <label id="558" label="" color="3" folder="Target_Stage0" sort="0" />
-        <label id="559" label="" color="3" folder="Target_Stage1" sort="0" />
+        <label id="558" label="" color="3" folder="Target_Stage0" sort="57" />
+        <label id="559" label="" color="3" folder="Target_Stage1" sort="17" />
         <label id="560" label="" folder="Target_Stage0" sort="0" />
-        <label id="561" label="" color="5" folder="Reply_Flex0" sort="0" />
-        <label id="562" label="" color="5" folder="Target_Stage4" sort="0" />
-        <label id="563" label="" color="5" folder="Target_Stage0" sort="0" />
-        <label id="564" label="" color="5" folder="Target_Stage6" sort="0" />
-        <label id="565" label="" color="1" folder="Target_Stage0" sort="0" />
-        <label id="460" label="" folder="Target_Stage0" sort="0" />
-        <label id="461" label="" folder="Target_Stage0" sort="0" />
-        <label id="567" label="" folder="Reply_Stage0" sort="0" />
-        <label id="568" label="" folder="Target_Stage0" sort="0" />
-        <label id="569" label="" folder="BG_FemBed" sort="0" />
+        <label id="561" label="" color="5" folder="Reply_Flex0" sort="2" />
+        <label id="562" label="" color="5" folder="Target_Stage4" sort="8" />
+        <label id="563" label="" color="5" folder="Target_Stage0" sort="79" />
+        <label id="564" label="" color="5" folder="Target_Stage6" sort="5" />
+        <label id="565" label="" color="1" folder="Target_Stage0" sort="76" />
+        <label id="460" label="" folder="Target_Stage0" sort="48" />
+        <label id="461" label="" folder="Target_Stage0" sort="49" />
+        <label id="567" label="" folder="Reply_Stage0" sort="16" />
+        <label id="568" label="" folder="Target_Stage0" sort="26" />
+        <label id="569" label="" folder="BG_FemBed" sort="2" />
         <label id="570" label="" folder="BG_FemBed" sort="0" />
-        <label id="571" label="" folder="BG_FemBed" sort="0" />
+        <label id="571" label="" folder="BG_FemBed" sort="3" />
         <label id="572" label="" folder="BG_FemBed" sort="0" />
-        <label id="573" label="" folder="Reply_Stage0" sort="0" />
-        <label id="574" label="" folder="Target_Stage0" sort="0" />
-        <label id="575" label="" folder="Target_Stage0" sort="0" />
+        <label id="573" label="" folder="Reply_Stage0" sort="28" />
+        <label id="574" label="" folder="Target_Stage0" sort="58" />
+        <label id="575" label="" folder="Target_Stage0" sort="78" />
         <label id="576" label="" folder="Reply_Stage0" sort="0" />
-        <label id="577" label="" color="11" folder="Target_Stage0" sort="0" />
-        <label id="578" label="" folder="Target_Stage1" sort="0" />
+        <label id="577" label="" color="11" folder="Target_Stage0" sort="27" />
+        <label id="578" label="" folder="Target_Stage1" sort="2" />
         <label id="579" label="" folder="Reply_Stage0" sort="0" />
-        <label id="580" label="" color="2" folder="Target_Stage0" sort="0" />
-        <label id="581" label="" color="10" folder="Target_Stage0" sort="0" />
+        <label id="580" label="" color="2" folder="Target_Stage0" sort="28" />
+        <label id="581" label="" color="10" folder="Target_Stage0" sort="29" />
         <label id="582" label="" color="1" folder="Target_Stage0" sort="0" />
         <label id="583" label="leon pillow talk" folder="" sort="0" />
         <label id="584" label="leon pillow talk" folder="" sort="0" />
         <label id="585" label="" folder="Target_Stage1B" sort="0" />
-        <label id="586" label="" folder="Target_Stage1" sort="0" />
-        <label id="587" label="" folder="Target_Stage1B" sort="0" />
-        <label id="588" label="" folder="Target_Stage1" sort="0" />
+        <label id="586" label="" folder="Target_Stage1" sort="18" />
+        <label id="587" label="" folder="Target_Stage1B" sort="2" />
+        <label id="588" label="" folder="Target_Stage1" sort="20" />
         <label id="589" label="" folder="Target_Stage2" sort="0" />
-        <label id="590" label="" color="12" folder="Target_Stage0" sort="0" />
+        <label id="590" label="" color="12" folder="Target_Stage0" sort="30" />
         <label id="591" label="" folder="Target_Stage0" sort="0" />
-        <label id="592" label="" color="5" folder="Reply_Stage0" sort="0" />
+        <label id="592" label="" color="5" folder="Reply_Stage0" sort="32" />
         <label id="593" label="" color="5" folder="Target_Stage1" sort="0" />
-        <label id="594" label="" color="1" folder="Reply_Stage0" sort="0" />
+        <label id="594" label="" color="1" folder="Reply_Stage0" sort="17" />
         <label id="595" label="" color="1" folder="Reply_Stage0" sort="0" />
         <label id="596" label="" color="1" folder="Target_Stage0" sort="0" />
         <label id="598" label="" color="1" folder="Target_Stage1" sort="0" />
-        <label id="599" label="" color="1" folder="Reply_Stage0" sort="0" />
-        <label id="600" label="" color="1" folder="Target_Stage1" sort="0" />
+        <label id="599" label="" color="1" folder="Reply_Stage0" sort="18" />
+        <label id="600" label="" color="1" folder="Target_Stage1" sort="19" />
         <label id="601" label="" color="5" folder="" sort="0" />
+        <label id="603" label="Minor/Extra Late (Female)" folder="Unconventional Order" sort="18" />
+        <label id="604" label="" color="12" folder="Target_Stage6" sort="0" />
+        <label id="605" label="" color="1" folder="Target_Stage0" sort="31" />
+        <label id="606" label="" color="1" folder="Target_Stage0" sort="0" />
+        <label id="607" label="" color="1" folder="!Sponsorships&gt;Nmasp" sort="6" />
+        <label id="608" label="" color="6" folder="!Sponsorships&gt;Nmasp" sort="20" />
+        <label id="609" label="" color="6" folder="!Sponsorships&gt;Nmasp" sort="24" />
+        <label id="610" label="" color="5" folder="!Sponsorships&gt;Nmasp" sort="22" />
+        <label id="611" label="" color="5" folder="Nmasp's Sponsorship" sort="14" />
+        <label id="612" label="" color="5" folder="Nmasp's Sponsorship" sort="18" />
+        <label id="613" label="" color="1" folder="Nmasp's Sponsorship" sort="24" />
+        <label id="614" label="" color="4" folder="Target_Stage0" sort="32" />
+        <label id="615" label="" color="11" folder="!Sponsorships&gt;Nmasp" sort="26" />
+        <label id="616" label="" color="5" folder="Target_Stage0" sort="0" />
+        <label id="617" label="" color="5" folder="Target_Stage0" sort="0" />
+        <label id="618" label="" color="6" folder="Nmasp's Sponsorship" sort="2" />
+        <label id="619" label="" color="1" folder="Nmasp's Sponsorship" sort="4" />
+        <label id="620" label="" color="10" folder="!Sponsorships&gt;Nmasp" sort="10" />
+        <label id="621" label="" color="5" folder="Nmasp's Sponsorship" sort="0" />
+        <label id="622" label="" color="5" folder="!Sponsorships&gt;Nmasp" sort="8" />
+        <label id="624" label="" color="5" folder="Target_Stage0" sort="60" />
+        <label id="625" label="" color="5" folder="Target_Stage0_B" sort="4" />
+        <label id="626" label="" color="5" folder="Target_Stage0_B" sort="2" />
+        <label id="627" label="" color="6" folder="Target_Stage0" sort="82" />
+        <label id="628" label="" color="6" folder="Reply_Stage0" sort="33" />
+        <label id="629" label="" color="3" folder="!Sponsorships&gt;Nmasp" sort="12" />
+        <label id="630" label="" color="3" folder="!Sponsorships&gt;Nmasp" sort="2" />
+        <label id="631" label="" color="5" folder="!Sponsorships&gt;Nmasp" sort="4" />
+        <label id="632" label="" color="5" folder="!Sponsorships&gt;Nmasp" sort="14" />
+        <label id="633" label="" color="5" folder="!Sponsorships&gt;Nmasp" sort="18" />
+        <label id="634" label="" color="5" folder="!Sponsorships&gt;Nmasp" sort="16" />
+        <label id="635" label="" color="3" folder="!Sponsorships&gt;Nmasp" sort="28" />
+        <label id="636" label="" color="3" folder="!Sponsorships&gt;Nmasp" sort="30" />
+        <label id="637" label="" color="5" folder="!Sponsorships&gt;Nmasp" sort="32" />
+        <label id="639" label="Minor/Extra Late (Male)" folder="!Sponsorships&gt;Nicole" sort="14" />
     </labels>
-    <nextId>602</nextId>
+    <nextId>639</nextId>
     <markers>
-        <marker scope="Public" name="" />
+        <marker scope="Public" name="adrien01" />
+        <marker scope="Public" name="adrien01a" />
+        <marker scope="Public" name="adrien01b" />
+        <marker scope="Public" name="aqua_kh01" />
+        <marker scope="Public" name="aqua_kh01a" />
+        <marker scope="Public" name="aqua_kh01b" />
         <marker scope="Public" name="aqua_reply01" />
         <marker scope="Public" name="aqua_reply01b" />
         <marker scope="Public" name="aqua_reply02" />
@@ -642,6 +687,9 @@
         <marker scope="Public" name="first_ff" />
         <marker scope="Public" name="first_opp_out" />
         <marker scope="Public" name="first_out" />
+        <marker scope="Public" name="fluttershy01" />
+        <marker scope="Public" name="fluttershy01a" />
+        <marker scope="Public" name="fluttershy01b" />
         <marker scope="Public" name="get_dressed" />
         <marker scope="Public" name="goku_uniform" />
         <marker scope="Public" name="heavy01" />
@@ -683,6 +731,9 @@
         <marker scope="Public" name="jura13" />
         <marker scope="Public" name="jura21" />
         <marker scope="Public" name="kirai" />
+        <marker scope="Public" name="kumatora01" />
+        <marker scope="Public" name="kumatora01a" />
+        <marker scope="Public" name="kumatora02" />
         <marker scope="Public" name="kyoko01" />
         <marker scope="Public" name="kyoko02" />
         <marker scope="Public" name="kyoko03" />
@@ -794,10 +845,21 @@
         <marker scope="Public" name="meia12" />
         <marker scope="Public" name="meia13" />
         <marker scope="Public" name="meia21" />
+        <marker scope="Public" name="mf01" />
+        <marker scope="Public" name="mf23" />
         <marker scope="Public" name="mia01" />
         <marker scope="Public" name="mia01a" />
         <marker scope="Public" name="mia01b" />
+        <marker scope="Public" name="mikan" />
+        <marker scope="Public" name="mikan01" />
+        <marker scope="Public" name="mikan01a" />
+        <marker scope="Public" name="mikan01b" />
         <marker scope="Public" name="miko01" />
+        <marker scope="Public" name="monika01" />
+        <marker scope="Public" name="monika23" />
+        <marker scope="Public" name="moskii01" />
+        <marker scope="Public" name="moskii01a" />
+        <marker scope="Public" name="moskii01b" />
         <marker scope="Public" name="musician" />
         <marker scope="Public" name="myriam01" />
         <marker scope="Public" name="myriam43" />
@@ -851,6 +913,10 @@
         <marker scope="Public" name="neptune01" />
         <marker scope="Public" name="neptune01a" />
         <marker scope="Public" name="neptune01b" />
+        <marker scope="Public" name="neptune02" />
+        <marker scope="Public" name="neptune02a" />
+        <marker scope="Public" name="neptune02a_alt" />
+        <marker scope="Public" name="neptune02b" />
         <marker scope="Public" name="no_star_ex" />
         <marker scope="Public" name="no_stars_ex" />
         <marker scope="Public" name="nonon_dual_heavy" />
@@ -862,6 +928,7 @@
         <marker scope="Public" name="nonon_panties_revealed" />
         <marker scope="Public" name="nonon_pen" />
         <marker scope="Public" name="nonon_won" />
+        <marker scope="Public" name="panzeke_sex" />
         <marker scope="Public" name="panzeke01" />
         <marker scope="Public" name="panzeke02" />
         <marker scope="Public" name="panzeke11" />
@@ -1015,6 +1082,11 @@
         <marker scope="Public" name="revy01" />
         <marker scope="Public" name="rin01" />
         <marker scope="Public" name="robin01" />
+        <marker scope="Public" name="roll01" />
+        <marker scope="Public" name="roll01a" />
+        <marker scope="Public" name="rouge01" />
+        <marker scope="Public" name="rouge01a" />
+        <marker scope="Public" name="rouge01b" />
         <marker scope="Public" name="ryuko" />
         <marker scope="Public" name="ryuko01" />
         <marker scope="Public" name="ryuko01a" />
@@ -1064,6 +1136,11 @@
         <marker scope="Public" name="trixie01a" />
         <marker scope="Public" name="trixie01b" />
         <marker scope="Public" name="tucked_in" />
+        <marker scope="Public" name="twilight01" />
+        <marker scope="Public" name="twilight02" />
+        <marker scope="Public" name="twilight03" />
+        <marker scope="Public" name="twilight11" />
+        <marker scope="Public" name="twilight12" />
         <marker scope="Public" name="uniform2" />
         <marker scope="Public" name="warming_up" />
         <marker scope="Public" name="winning0" />
@@ -1078,10 +1155,12 @@
         <marker scope="Public" name="yae01" />
         <marker scope="Public" name="yae02" />
         <marker scope="Public" name="yaemiko_reply01" />
+        <marker scope="Public" name="yaemiko_reply02" />
         <marker scope="Public" name="yaemiko01" />
         <marker scope="Public" name="yaemiko02" />
         <marker scope="Public" name="yaemiko02a" />
         <marker scope="Public" name="yaemiko02b" />
+        <marker scope="Public" name="yaemiko03a" />
         <marker scope="Public" name="yumeko01" />
         <marker scope="Public" name="yumeko01a" />
         <marker scope="Public" name="yumeko01b" />
@@ -1089,6 +1168,14 @@
         <marker scope="Public" name="yumeko02b" />
         <marker scope="Public" name="yumeko03a" />
         <marker scope="Public" name="yumeko03b" />
+        <marker scope="Public" name="yuno01" />
+        <marker scope="Public" name="yuno01a" />
+        <marker scope="Public" name="yuno01b" />
+        <marker scope="Public" name="yuri01" />
+        <marker scope="Public" name="yuri01a" />
+        <marker scope="Public" name="yuri01b" />
+        <marker scope="Public" name="yuri02" />
+        <marker scope="Public" name="yuri61" />
     </markers>
     <recipes>
         <recipe key="dba5778a-dbed-4079-9052-d204275d6f93">
