@@ -254,6 +254,9 @@ function evaluateGeneralCollectibleCases (triggers, target) {
             humanPlayer.applyHiddenStates(c, target);
         }
     });
+    cases.forEach(function (c) {
+        c.cleanupMutableState();
+    });
 
     if (humanPlayer.pendingCollectiblePopups.length) {
         $('#collectible-button-0').show();
