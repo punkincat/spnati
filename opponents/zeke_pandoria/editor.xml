@@ -86,6 +86,11 @@
         <response id="404" opponent="nonon" opponentId="597" />
         <response id="405" opponent="leon" opponentId="1425" />
         <response id="406" opponent="nonon" opponentId="469" />
+        <response id="407" opponent="meia" opponentId="1596" />
+        <response id="408" opponent="meia" opponentId="1597" />
+        <response id="411" opponent="meia" opponentId="1593" />
+        <response id="412" opponent="jura" opponentId="1469" />
+        <response id="413" opponent="jura" opponentId="1470" />
     </responses>
     <notes>
         <note id="10">If you want to ask Pandoria / Pandy questions, you could draw attention to the fact that some of her body parts are lightbulbs, such as a lightbulb in her head.. and her tail. Her specific race is known as a "Blade".</note>
@@ -100,6 +105,8 @@
         <note id="319">dromarch is a beast shape Blade who is basically a big furry lion</note>
         <note id="344">zeke and pandy have a very bad history with bandits, which they can explain in follow-up lines</note>
         <note id="387">the purple lightning dreamsmasher and the big bang edge are both different names for the same weapon; as far as I can tell zeke just randomly calls it one or the other. or, more specifically, big bang edge is the gameplay name for the default weapon configuration of the PLD? you can have jura point out the discrepancy or ignore it entirely lmao</note>
+        <note id="408">they say the marker zeke_meia_self4a in both lines in case you only want to write one response. equally, they have different markers in case you want to do a branch based on who said what line.</note>
+        <note id="412">I imagine in the next case zeke can/will explain that it's pard of pandoria's core that is lodged in his chest</note>
     </notes>
     <labels>
         <label id="5" label="Pandoria Reminder" folder="" sort="0" />
@@ -478,15 +485,15 @@
         <label id="384" label="" folder="Responses" sort="0" />
         <label id="385" label="" folder="Responses" sort="0" />
         <label id="386" label="" folder="Responses" sort="0" />
-        <label id="387" label="" color="1" folder="Responses" sort="0" />
-        <label id="388" label="" folder="Responses" sort="0" />
-        <label id="389" label="" folder="Responses" sort="0" />
+        <label id="387" label="" color="3" folder="Responses" sort="0" />
+        <label id="388" label="" color="3" folder="Responses" sort="0" />
+        <label id="389" label="" color="3" folder="Responses" sort="0" />
         <label id="390" label="" color="3" folder="Responses" sort="0" />
-        <label id="391" label="" folder="Responses" sort="0" />
-        <label id="392" label="" color="1" folder="Targets" sort="0" />
-        <label id="393" label="" color="1" folder="Targets" sort="0" />
-        <label id="394" label="" color="1" folder="Targets" sort="0" />
-        <label id="395" label="" color="1" folder="Targets" sort="0" />
+        <label id="391" label="" color="3" folder="Responses" sort="0" />
+        <label id="392" label="" color="3" folder="Targets" sort="0" />
+        <label id="393" label="" color="3" folder="Targets" sort="0" />
+        <label id="394" label="" color="3" folder="Targets" sort="0" />
+        <label id="395" label="" color="3" folder="Targets" sort="0" />
         <label id="396" label="" color="1" folder="Targets" sort="0" />
         <label id="397" label="" folder="Targets" sort="0" />
         <label id="398" label="" folder="Filtered" sort="0" />
@@ -499,13 +506,21 @@
         <label id="405" label="" folder="Targets" sort="0" />
         <label id="406" label="" folder="Targets" sort="0" />
         <label id="268" label="" folder="Targets" sort="0" />
+        <label id="407" label="" color="1" folder="Targets" sort="0" />
+        <label id="408" label="" folder="Responses" sort="0" />
+        <label id="409" label="" color="1" folder="Targets" sort="0" />
+        <label id="410" label="" color="1" folder="Targets" sort="0" />
+        <label id="411" label="" color="3" folder="Responses" sort="0" />
+        <label id="412" label="" color="1" folder="Responses" sort="0" />
+        <label id="413" label="" color="1" folder="Responses" sort="0" />
     </labels>
     <posePreviewMarkers>
         <posePreviewMarker>penis=h</posePreviewMarker>
     </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>406</nextId>
+    <nextId>413</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="allowsex">If set to 1, Zeke and Pandoria *can* (but are not guaranteed to) have sex for their forfeit.</marker>
         <marker scope="Public" name="allowsex_lockin" />
         <marker scope="Public" name="arle_adaptquestion" />
@@ -543,6 +558,7 @@
         <marker scope="Public" name="nonon_panties_reveal_situation" />
         <marker scope="Public" name="opp_lost_jjba" />
         <marker scope="Public" name="pandoria_dialogue">Pandoria is the one speaking when this marker is being said. This marker doesn't always appear, but is used in cases where you might need to differentiate, e.g. if there are two versions of a single line, one where she speaks and one where she doesnt.</marker>
+        <marker scope="Public" name="pandoria_meia_self4a" />
         <marker scope="Public" name="pandoriaToggle">if set to 1, Pandoria's dialogue is de-emphasised at certain moments.</marker>
         <marker scope="Public" name="pandy_intro" />
         <marker scope="Public" name="pandy_jura_balls" />
@@ -550,6 +566,7 @@
         <marker scope="Public" name="pandy_jura_self1c" />
         <marker scope="Public" name="pandy_jura_strip2" />
         <marker scope="Public" name="pandy_mariS_hatResp" />
+        <marker scope="Public" name="pandy_meia_strip2b" />
         <marker scope="Public" name="pandy_strips_boots">Pandoria strips her boots while Zeke removes his boots.</marker>
         <marker scope="Public" name="pandy_strips_bottom">Pandoria strips her bottoms (underwear) while Zeke removes his own boxers.</marker>
         <marker scope="Public" name="pandy_strips_bra">Pandoria strips her bra when Zeke takes off his pants.</marker>
@@ -656,6 +673,8 @@
         <marker scope="Public" name="zeke_jura_self1b" />
         <marker scope="Public" name="zeke_jura_self1c" />
         <marker scope="Public" name="zeke_jura_self2a" />
+        <marker scope="Public" name="zeke_jura_self2b" />
+        <marker scope="Public" name="zeke_jura_self5a" />
         <marker scope="Public" name="zeke_jura_strip0a" />
         <marker scope="Public" name="zeke_jura_strip0b" />
         <marker scope="Public" name="zeke_jura_strip0c" />
@@ -671,8 +690,12 @@
         <marker scope="Public" name="zeke_meia_self0c_B" />
         <marker scope="Public" name="zeke_meia_self3a" />
         <marker scope="Public" name="zeke_meia_self3b" />
+        <marker scope="Public" name="zeke_meia_self3c" />
+        <marker scope="Public" name="zeke_meia_self4a" />
         <marker scope="Public" name="zeke_meia_strip0a" />
+        <marker scope="Public" name="zeke_meia_strip0b" />
         <marker scope="Public" name="zeke_meia_strip1a" />
+        <marker scope="Public" name="zeke_meia_strip1b" />
         <marker scope="Public" name="zeke_meia_strip2a" />
         <marker scope="Public" name="zeke_misaka_strip0a" />
         <marker scope="Public" name="zeke_nadeshiko_fancy1" />
