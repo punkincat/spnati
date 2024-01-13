@@ -71,16 +71,16 @@ Sanako [sanako_nonon_sn_n1]: Nonon is just bursting to tell us something. She's 
 Nonon [reply_sanako01]: While it is true that I'm adorable, ~sanako~, I don't know what makes you think I have anything to say to you <i>slackers</i>.
 
 NONON STRIPPING BOOTS:
-Sanako [sanako_nonon_sn_n2]: Yup, slackers: that's us. Well, even if you don't have anything to tell us, then surely you have something to <i>show</i> us, Nonon.
+Sanako [sanako_nonon_sn_n2]: Yup, slackers: that's us. Well, even if you don't have anything to tell us, then surely you have something to <i>show</i> us.
 Nonon [reply_sanako02]: Maybe I will... <i>later</i>. For now you'll have to make do with just my bare legs.
 
 NONON STRIPPED BOOTS:
 Sanako [sanako_nonon_sn_n3]: How bold. You're such a modern woman, Nonon. You let your legs do the talking for you.
-Nonon []*: ??
+Nonon [reply_sanako03]: Don't worry. I do a lot of talking with my mouth too.
 
 
 NONON MUST STRIP CUFFS:
-Sanako []*: ?? -- idea: just keep flattering Nonon a lot because she's a precious gremlin
+Sanako [sanako_nonon_sn_n4]: You were right, Nonon. You're quite the chatterbox. But I think it's cute when someone can't stop talking about something they love.
 Nonon []*: ??
 
 NONON STRIPPING CUFFS:
@@ -93,7 +93,7 @@ Nonon []*: ??
 
 
 NONON MUST STRIP DRESS:
-Sanako []*: ??
+Sanako []*: ?? -- idea: just keep flattering Nonon a lot because she's a precious gremlin
 Nonon []*: ??
 
 NONON STRIPPING DRESS:
@@ -150,9 +150,9 @@ Sanako [sanako_nonon_ns_s3]: Ah, actually... um... that's right. I'm the big sho
 Nagisa (if after Nonon and Sanako) [naigsa_sanako_nonon_ns_s3]: Whoa, that's so cool, Sanako. You're amazing.
 
 
-SANAKO MUST STRIP SHIRT:
-Nonon []*: ??
-Sanako []*: ??
+SANAKO MUST STRIP SHIRT: (conditional on previous case)
+Nonon [target_sanako11]: So, why do they call you "Big Mama" anyway, ~sanako~? Do you have a special abiltiy or something?
+Sanako [sanako_nonon_ns_s4]: Oh, good question, Nonon. Um, it's... it's because I have a big chest. It... it makes the boys say, "whoa mama!" It's definitely not because I'm an actually mama or anything like that.
 
 SANAKO STRIPPING SHIRT:
 Nonon []*: ??
