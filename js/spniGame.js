@@ -331,6 +331,7 @@ function advanceTurn () {
         updateAllVolatileBehaviours();
         
         commitAllBehaviourUpdates();
+        evaluateGeneralCollectibleCases(SWAP_CARDS, null);
 
         /* human player's turn */
         if (humanPlayer.out) {
@@ -488,6 +489,7 @@ function completeExchangePhase () {
     }
     /* exchange the player's chosen cards */
     exchangeCards(HUMAN_PLAYER);
+    evaluateGeneralCollectibleCases(ANY_HAND, null);
 
     $gameLabels[HUMAN_PLAYER].removeClass("current");
     allowProgression(eGamePhase.REVEAL);

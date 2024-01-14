@@ -150,6 +150,7 @@ function tickForfeitTimers () {
                 }
                 $gamePlayerCountdown.html('');
                 $gameClothingLabel.html("<b>You're 'Finished'</b>");
+                evaluateGeneralCollectibleCases(PLAYER_FINISHING_MASTURBATING, null);
 
             } else {
                 /* let the player speak again */
