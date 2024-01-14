@@ -88,11 +88,11 @@
     <tag display="Circumcised" description="Character has no foreskin">circumcised</tag>
     <tag display="Uncircumcised" description="Character's foreskin is intact">uncircumcised</tag>
   </group>
-  <group label="Futanaris">
+  <group label="Futanari">
     <tag display="Futanari" description="Character is a futanari of any kind">futanari</tag>
-    <tag display="Futanari (Without Balls)" paired="futanari" description="Character is a futanari with a penis and vagina, but no balls">futanari_sans_balls</tag>
-    <tag display="Futanari (Full Package)" paired="futanari" description="Character is a futanari with a penis, vagina, and balls">futanari_full_package</tag>
-    <tag display="Futanari (Newhalf)" paired="futanari" description="Character is a &quot;futanari&quot; with a penis and balls, but no vagina">futanari_newhalf</tag>
+    <tag display="Futanari (Without Balls)" paired="futanari" description="Character is a futanari with a penis and vagina, but no testicles">futanari_sans_testicles</tag>
+    <tag display="Futanari (Full Package)" paired="futanari" description="Character is a futanari with a penis, vagina, and testicles">futanari_full_package</tag>
+    <tag display="Futanari (Newhalf)" paired="futanari" description="Character is a &quot;futanari&quot; with a penis and testicles, but no vagina">futanari_newhalf</tag>
   </group>
   <group label="Non-Human Species" multiselect="true">
     <tag display="Alien" description="Character is visibly extraterrestrial or freely mentions it">alien</tag>
@@ -117,6 +117,7 @@
   </group>
   <group label="Non-Human Features" multiselect="true">
     <tag display="Animal Ears" description="Character has visible animal ears">animal_ears</tag>
+    <tag display="Extra Arms" description="Character has more than two arms">extra_arms</tag>
     <tag display="Horned" description="Character has visible horns or antlers">horned</tag>
     <tag display="Pointy Ears" description="Character has pointy ears">pointy_ears</tag>
     <tag display="Tail" description="Character has a visible tail">tail</tag>
@@ -603,6 +604,7 @@
     <tag display="MOERO! Cardmatch UNO" paired="web_animation" description="From the anime parody MOERO! Cardmatch UNO">moero_cardmatch_uno</tag>
     <tag display="Monkey Island" paired="video_game" description="From the Monkey Island series of video games">monkey_island</tag>
     <tag display="Monster Girl Quest" paired="video_game,hentai" description="From the H-game series Monster Girl Quest">monster_girl_quest</tag>
+    <tag display="Monster Musume no Iru Nichijou" paired="manga" description="From the manga Monster Musume no Iru Nichijou, and/or its anime adaptation">monster_musume_no_iru_nichijou</tag>
     <tag display="Monster Prom" paired="video_game,visual_novel" description="From the game Monster Prom">monster_prom</tag>
     <tag display="Mortal Kombat" paired="video_game" description="From the Mortal Kombat series of video games">mortal_kombat</tag>
     <tag display="Mother/Earthbound" paired="video_game,nintendo" description="From the Mother (aka Earthbound) series of games.">mother_franchise</tag>
