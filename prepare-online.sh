@@ -1,7 +1,10 @@
 #!/bin/bash -e
 
-mkdir -p .public/opponents .public/img
-cp -r css fonts js player index.html version-info.xml backgrounds.xml events.xml cards.xml .public
+mkdir -p .public/opponents .public/img .public/js
+cp -r css fonts player index.html version-info.xml backgrounds.xml events.xml cards.xml .public
+
+npm ci
+./node_modules/.bin/babel js --out-dir .public/js --copy-files --source-maps inline --ignore "js/fileIndex.js","js/bootstrap*","js/jquery*","js/pako*.js","js/js.cookie.js","js/ResizeObserver.js","js/sentry*.js"
 
 # Copy non-recursively to exclude the backgrounds folder.
 cp img/* .public/img
@@ -32,7 +35,7 @@ python3 deploy-scripts/copy_alternate_costumes.py .public/ ./ all
 # Combine roster metadata, tags lists, collectible definitions, and costume
 # definitions for all deployed opponents to speed up loading for the online version.
 METADATA_INDEX_PATH=$(python3 deploy-scripts/compile_xml_index.py --production .public opponents/metadata.index 'opponents/general_collectibles.xml' 'opponents/*/collectibles.xml' 'opponents/*/meta.xml' 'opponents/*/tags.xml' 'opponents/reskins/*/costume.xml')
-sed "s/__METADATA_XML_INDEX/${METADATA_INDEX_PATH}/g" js/fileIndex.js > .public/js/fileIndex.js
+sed "s/__METADATA_XML_INDEX/${METADATA_INDEX_PATH}/g" js/fileIndex.js | ./node_modules/.bin/babel -f "js/fileIndex.js" --source-maps inline --out-file .public/js/fileIndex.js
 
 # Rename JS and core game CSS for cache-busting purposes.
 python3 deploy-scripts/cache_bust.py .public/
