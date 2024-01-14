@@ -1,16 +1,17 @@
 <collectibles>
     <!-- Add generic collectibles here. Same format as per-opponent Collectibles. -->
     <!-- Also add cases to unlock the collectibles, but with trigger attribues instead of elements -->
-    <collectible id="c1">
-	<title>Full House</title>
-	<unlock>Start the game with a full table</unlock>
+
+    <collectible id="wheel" img="img/collectibles/bikewheel.svg">
+	<title>Wheel</title>
+	<subtitle>You got a wheel, so you get this wheel</subtitle>
+	<unlock>Get a wheel (5–A straight), also called a bicycle.</unlock>
+	<text>Either you took some rather big risks, or you got lucky and where dealt one right away.</text>
+	<hide-details>true</hide-details>
     </collectible>
 
-    <case trigger="opponent_selected">
-	<state marker="+selections"/>
-    </case>
-    <case trigger="game_start">
-	<condition count="5"/>
-	<state collectible="c1"/>
+    <case trigger="hand">
+	<test expr="~human.hand.score~" value="405"/>
+	<state collectible="wheel"/>
     </case>
 </collectibles>
