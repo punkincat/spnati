@@ -118,8 +118,8 @@ var CANDY_LIST = [
     "felix/5-butt-2.png",
     "rosa/0-portrait.png",                 // High Roster Position
     "rosa/0-horny.png",
-    "rosa/2-embarrassed.png",
     "rosa/1-thinking.png",
+    "rosa/4-stripped",
     "rouge/0-calm.png",                    // High Roster Position
     "rouge/0-mischievous.png",
     "rouge/0-comms.png",
@@ -140,6 +140,14 @@ var CANDY_LIST = [
     "nadeshiko/0-excited.png",
     "nadeshiko/0-scared.png",
     "nadeshiko/4-naughty.png",
+    "queenie/0-greeting.png",         // Highlighted New Character
+    "queenie/0-ecstatic.png",
+    "queenie/1-happy.png",
+    "queenie/1-confident_talk.png",
+    "arle/0-backconfident.png",         // Highlighted New Character
+    "arle/0-yeah.png",
+    "reskins/arle_classic_style/2-smirk.png",
+    "reskins/arle_classic_style/0-casting.png",
     "samus_aran/0-portrait.png",           // Has Recent Updates
     "samus_aran/1-introspective.png",
     "samus_aran/1-curious.png",
