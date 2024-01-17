@@ -18,7 +18,7 @@
         <clothing name="undershirt" generic="shirt" position="upper" type="major" />
         <clothing name="skirt" generic="skirt" position="lower" type="major" />
         <clothing name="vest" generic="vest" position="upper" type="minor" />
-        <clothing name="boots and sleeves" position="both" type="extra" plural="true" />
+        <clothing name="boots and sleeves" generic="" position="both" type="extra" plural="true" />
         <clothing name="shoulder and breastplate" generic="armor" position="upper" type="extra" />
     </wardrobe>
 
@@ -561,6 +561,19 @@
                 <keyframe time="1" x="-80" y="218" scalex="0.6" scaley="0.6" rotation="-25" />
             </directive>
         </pose>
+        <pose id="8-finishedcarb">
+            <sprite id="victory" z="1" src="reskins/arle_classic_style/8-kneel.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="-26" y="675" scalex="0.4" scaley="0.4" rotation="-20" />
+            <sprite id="zzcarbbasse(copy)" src="arle/8-zzcarbhappy.png" x="-26" y="675" scalex="0.4" scaley="0.4" rotation="-20" />
+            <directive type="animation" id="zzcarbbasse" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="-26" y="675" scalex="0.4" scaley="0.4" rotation="-20" />
+                <keyframe time="1" x="-115" y="543" scalex="0.6" scaley="0.6" rotation="-43" />
+            </directive>
+            <directive type="animation" id="zzcarbbasse(copy)" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="-26" y="675" scalex="0.4" scaley="0.4" rotation="-20" />
+                <keyframe time="1" x="-115" y="543" scalex="0.6" scaley="0.6" rotation="-43" />
+            </directive>
+        </pose>
         <pose id="8-pointingangry">
             <sprite id="pointingbase" src="reskins/arle_classic_style/8-pointingbase.png" x="0" y="0" />
             <sprite id="pointingfaceangry" src="reskins/arle_classic_style/0-pointingfaceangry.png" x="0" y="282" />
@@ -607,6 +620,11 @@
             <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="177" y="1003" />
             <sprite id="zzcarbhappy" src="arle/8-zzcarbsurprised.png" x="173" y="1008" />
         </pose>
+        <pose id="8-zcarbvictory">
+            <sprite id="victory" z="1" src="reskins/arle_classic_style/8-victory.png" x="0" y="0" />
+            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="-264" y="939" scalex="-1" scaley="1" />
+            <sprite id="zzcarbhappy" z="2" src="arle/8-zzcarbhappy.png" x="-219" y="945" />
+        </pose>
         <pose id="8-zcarbwhatclosed">
             <sprite id="what" src="reskins/arle_classic_style/8-what.png" x="0" y="0" />
             <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="177" y="1003" />
@@ -622,23 +640,87 @@
             <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="177" y="1003" />
             <sprite id="zzcarbhappy" src="arle/8-zzcarbsurprised.png" x="173" y="1005" />
         </pose>
-        <pose id="8-finishedcarb">
-            <sprite id="victory" z="1" src="reskins/arle_classic_style/8-kneel.png" x="0" y="0" />
-            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="-26" y="675" scalex="0.4" scaley="0.4" rotation="-20" />
-            <sprite id="zzcarbbasse(copy)" src="arle/8-zzcarbhappy.png" x="-26" y="675" scalex="0.4" scaley="0.4" rotation="-20" />
-            <directive type="animation" id="zzcarbbasse" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="-26" y="675" scalex="0.4" scaley="0.4" rotation="-20" />
-                <keyframe time="1" x="-115" y="543" scalex="0.6" scaley="0.6" rotation="-43" />
-            </directive>
-            <directive type="animation" id="zzcarbbasse(copy)" ease="smooth" interpolation="linear">
-                <keyframe time="0" x="-26" y="675" scalex="0.4" scaley="0.4" rotation="-20" />
-                <keyframe time="1" x="-115" y="543" scalex="0.6" scaley="0.6" rotation="-43" />
+        <pose id="0-diacute">
+            <sprite id="aadiacuteaura" src="reskins/arle_classic_style/0-aadiacuteaura.png" x="0" y="0" alpha="0" />
+            <sprite id="casting" src="reskins/arle_classic_style/0-casting.png" x="0" y="0" alpha="100" />
+            <directive type="animation" id="aadiacuteaura" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="1" alpha="0" />
             </directive>
         </pose>
-        <pose id="8-zcarbvictory">
-            <sprite id="victory" z="1" src="reskins/arle_classic_style/8-victory.png" x="0" y="0" />
-            <sprite id="zzcarbbasse" src="arle/8-zzcarbbasse.png" x="-264" y="939" scalex="-1" scaley="1" />
-            <sprite id="zzcarbhappy" z="2" src="arle/8-zzcarbhappy.png" x="-219" y="945" />
+        <pose id="1-diacute">
+            <sprite id="aadiacuteaura" src="reskins/arle_classic_style/1-aadiacuteaura.png" x="0" y="0" alpha="0" />
+            <sprite id="casting" src="reskins/arle_classic_style/1-casting.png" x="0" y="0" scalex="1" alpha="100" />
+            <directive type="animation" id="aadiacuteaura" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="1" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="2-diacute">
+            <sprite id="aadiacuteaura" src="reskins/arle_classic_style/2-aadiacuteaura.png" x="0" y="0" alpha="0" />
+            <sprite id="casting" src="reskins/arle_classic_style/2-casting.png" x="0" y="0" scalex="1" alpha="100" />
+            <directive type="animation" id="aadiacuteaura" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="1" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="3-diacute">
+            <sprite id="aadiacuteaura" src="reskins/arle_classic_style/3-aadiacuteaura.png" x="0" y="0" alpha="0" />
+            <sprite id="casting" src="reskins/arle_classic_style/3-casting.png" x="0" y="0" scalex="1" alpha="100" />
+            <directive type="animation" id="aadiacuteaura" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="1" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="4-diacute">
+            <sprite id="aadiacuteaura" src="reskins/arle_classic_style/4-aadiacuteaura.png" x="0" y="0" alpha="0" />
+            <sprite id="casting" src="reskins/arle_classic_style/4-casting.png" x="0" y="0" scalex="1" alpha="100" />
+            <directive type="animation" id="aadiacuteaura" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="1" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="5-diacute">
+            <sprite id="aadiacuteaura" src="reskins/arle_classic_style/5-aadiacuteaura.png" x="0" y="0" alpha="0" />
+            <sprite id="casting" src="reskins/arle_classic_style/5-casting.png" x="0" y="0" scalex="1" alpha="100" />
+            <directive type="animation" id="aadiacuteaura" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="1" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="6-diacute">
+            <sprite id="aadiacuteaura" src="reskins/arle_classic_style/6-aadiacuteaura.png" x="0" y="0" alpha="0" />
+            <sprite id="casting" src="reskins/arle_classic_style/6-casting.png" x="0" y="0" scalex="1" alpha="100" />
+            <directive type="animation" id="aadiacuteaura" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="1" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="7-diacute">
+            <sprite id="aadiacuteaura" src="reskins/arle_classic_style/7-aadiacuteaura.png" x="0" y="0" alpha="0" />
+            <sprite id="casting" src="reskins/arle_classic_style/7-casting.png" x="0" y="0" scalex="1" alpha="100" />
+            <directive type="animation" id="aadiacuteaura" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="1" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="8-diacute">
+            <sprite id="aadiacuteaura" src="reskins/arle_classic_style/6-aadiacuteaura.png" x="0" y="0" alpha="0" />
+            <sprite id="casting" src="reskins/arle_classic_style/8-casting.png" x="0" y="0" scalex="1" alpha="100" />
+            <directive type="animation" id="aadiacuteaura" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="1" alpha="0" />
+            </directive>
         </pose>
     </poses>
+
 </costume>
