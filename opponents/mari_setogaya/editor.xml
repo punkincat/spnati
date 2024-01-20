@@ -476,6 +476,8 @@
         <response id="2671" opponent="nonon" opponentId="119" />
         <response id="2672" opponent="zeke_pandoria" opponentId="3" />
         <response id="2706" opponent="nonon" opponentId="517" />
+        <response id="2727" opponent="kyouko_toshinou" opponentId="518" />
+        <response id="2728" opponent="kyouko_toshinou" opponentId="519" />
     </responses>
     <notes>
         <note id="412">Yes, Mari is implying that Kazuma is lying just to see her pose naked for him. You are free to have Kazuma defend his case, so to speak.</note>
@@ -497,6 +499,8 @@
         <note id="2183">Mari is trying to taunt Aaravi into proving she can win the game while also ending up naked. Feel free to have Aaravi fall for or not fall for the taunt, I'm prepared to write for either!</note>
         <note id="2365">Obviously Mia wouldn't know, but to clarify, Mari is joking and does not actually plan to eat Fizz (she wouldn't even be able to anyway. You could have Mia react differently if Mari said the Self_Odd_drinks marker where she indicates that she could only eat bodily fluids)</note>
         <note id="2693">Just to clarify where this dialogue is going, Mari is going to ask Sheena if her large breasts get in the way of her work. If you have any problems with that do let me know!</note>
+        <note id="2743">Mari is misunderstanding and getting the idea that Yae Miko writes novels herself, this is intentional from my part.</note>
+        <note id="2749">It might be worthwhile for Beatrix to react differently depending on if Mari has revealed her wings or not.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Nform" sort="7" />
@@ -1675,7 +1679,7 @@
         <label id="1202" label="" color="5" folder="NTargets" sort="63" />
         <label id="1203" label="" folder="CTargets" sort="56" />
         <label id="1204" label="" color="5" folder="CTargets" sort="60" />
-        <label id="1205" label="" color="0" folder="Replies" sort="201" />
+        <label id="1205" label="" folder="Replies" sort="201" />
         <label id="1206" label="" color="0" folder="Targets" sort="134" />
         <label id="1207" label="" color="0" folder="Targets" sort="247" />
         <label id="1208" label="" color="0" folder="Targets" sort="302" />
@@ -3066,9 +3070,9 @@
         <label id="2611" label="" color="1" folder="Replies" sort="400" />
         <label id="2612" label="" color="1" folder="Replies" sort="401" />
         <label id="2613" label="" color="3" folder="Replies" sort="562" />
-        <label id="2614" label="" color="1" folder="Replies" sort="402" />
-        <label id="2615" label="" color="1" folder="Replies" sort="267" />
-        <label id="2616" label="" color="1" folder="Replies" sort="268" />
+        <label id="2614" label="" folder="Replies" sort="402" />
+        <label id="2615" label="" folder="Replies" sort="267" />
+        <label id="2616" label="" folder="Replies" sort="268" />
         <label id="2617" label="" folder="Snowy Succubus" sort="2" />
         <label id="2618" label="" folder="Snowy Succubus" sort="8" />
         <label id="2619" label="" folder="Snowy Succubus" sort="6" />
@@ -3110,18 +3114,18 @@
         <label id="2655" label="" color="3" folder="Targets" sort="810" />
         <label id="2656" label="" color="3" folder="Targets" sort="811" />
         <label id="2658" label="" folder="Snowy Succubus" sort="0" />
-        <label id="2659" label="" color="5" folder="" sort="0" />
-        <label id="2660" label="" color="5" folder="Targets" sort="0" />
-        <label id="2661" label="" color="1" folder="Targets" sort="0" />
-        <label id="2662" label="" color="1" folder="Targets" sort="0" />
-        <label id="2663" label="" color="1" folder="Targets" sort="0" />
-        <label id="2664" label="" color="1" folder="Targets" sort="0" />
-        <label id="2665" label="" color="1" folder="Targets" sort="0" />
+        <label id="2752" label="" color="1" folder="Targets" sort="0" />
+        <label id="2660" label="" folder="Targets" sort="0" />
+        <label id="2661" label="" folder="Targets" sort="0" />
+        <label id="2662" label="" folder="Targets" sort="0" />
+        <label id="2663" label="" folder="Targets" sort="0" />
+        <label id="2664" label="" folder="Targets" sort="0" />
+        <label id="2665" label="" folder="Targets" sort="0" />
         <label id="2666" label="" folder="Targets" sort="0" />
         <label id="2667" label="" folder="Targets" sort="0" />
         <label id="2668" label="" folder="Targets" sort="0" />
         <label id="2669" label="" folder="PromptResponses" sort="0" />
-        <label id="2670" label="" color="5" folder="PromptResponses" sort="0" />
+        <label id="2670" label="" folder="PromptResponses" sort="0" />
         <label id="2671" label="" folder="PromptResponses" sort="0" />
         <label id="2672" label="" color="5" folder="" sort="0" />
         <label id="2673" label="" color="3" folder="" sort="0" />
@@ -3149,17 +3153,62 @@
         <label id="2695" label="" color="1" folder="Targets" sort="0" />
         <label id="2696" label="" color="1" folder="Targets" sort="0" />
         <label id="2697" label="" color="1" folder="Targets" sort="0" />
-        <label id="2698" label="" color="3" folder="Targets" sort="0" />
-        <label id="2699" label="" color="3" folder="Targets" sort="0" />
-        <label id="2700" label="" color="3" folder="Targets" sort="0" />
+        <label id="2698" label="" folder="Targets" sort="0" />
+        <label id="2699" label="" folder="Targets" sort="0" />
+        <label id="2700" label="" folder="Targets" sort="0" />
         <label id="2701" label="" folder="Cform" sort="0" />
         <label id="2702" label="" color="1" folder="Targets" sort="0" />
-        <label id="2703" label="" color="1" folder="Targets" sort="0" />
-        <label id="2704" label="" color="1" folder="Targets" sort="0" />
-        <label id="2705" label="" color="1" folder="Targets" sort="0" />
-        <label id="2706" label="" color="1" folder="Replies" sort="0" />
+        <label id="2703" label="" folder="Targets" sort="0" />
+        <label id="2704" label="" folder="Targets" sort="0" />
+        <label id="2705" label="" folder="Targets" sort="0" />
+        <label id="2706" label="" folder="Replies" sort="0" />
+        <label id="2707" label="" folder="Nform" sort="0" />
+        <label id="2708" label="" folder="Cform" sort="0" />
+        <label id="2709" label="" folder="Nform" sort="0" />
+        <label id="2710" label="" folder="Cform" sort="0" />
+        <label id="2711" label="" folder="Nform" sort="0" />
+        <label id="2712" label="" folder="Cform" sort="0" />
+        <label id="2713" label="" folder="Nform" sort="0" />
+        <label id="2714" label="" folder="Cform" sort="0" />
+        <label id="2715" label="" folder="Nform" sort="0" />
+        <label id="2716" label="" folder="Nform" sort="0" />
+        <label id="2717" label="" folder="Cform" sort="0" />
+        <label id="2718" label="" folder="Nform" sort="0" />
+        <label id="2719" label="" folder="Cform" sort="0" />
+        <label id="2720" label="" folder="Nform" sort="0" />
+        <label id="2721" label="" folder="Cform" sort="0" />
+        <label id="2722" label="" folder="Nform" sort="0" />
+        <label id="2723" label="" folder="Cform" sort="0" />
+        <label id="2724" label="" folder="Nform" sort="0" />
+        <label id="2725" label="" folder="Cform" sort="0" />
+        <label id="2726" label="" color="3" folder="Replies" sort="0" />
+        <label id="2727" label="" color="3" folder="Replies" sort="0" />
+        <label id="2728" label="" color="3" folder="Replies" sort="0" />
+        <label id="2729" label="" color="1" folder="Replies" sort="0" />
+        <label id="2730" label="" color="1" folder="Replies" sort="0" />
+        <label id="2731" label="" color="1" folder="Replies" sort="0" />
+        <label id="2732" label="" color="1" folder="Targets" sort="0" />
+        <label id="2733" label="" color="1" folder="Targets" sort="0" />
+        <label id="2734" label="" color="1" folder="Targets" sort="0" />
+        <label id="2735" label="" color="1" folder="Targets" sort="0" />
+        <label id="2736" label="" color="1" folder="Targets" sort="0" />
+        <label id="2737" label="" color="1" folder="Targets" sort="0" />
+        <label id="2738" label="" color="1" folder="Replies" sort="0" />
+        <label id="2739" label="" color="1" folder="Targets" sort="0" />
+        <label id="2740" label="" color="1" folder="Targets" sort="0" />
+        <label id="2741" label="" color="1" folder="Targets" sort="0" />
+        <label id="2742" label="" color="1" folder="Targets" sort="0" />
+        <label id="2743" label="" color="1" folder="Targets" sort="0" />
+        <label id="2744" label="" color="1" folder="Targets" sort="0" />
+        <label id="2745" label="" color="1" folder="Targets" sort="0" />
+        <label id="2746" label="" color="1" folder="Targets" sort="0" />
+        <label id="2747" label="" color="1" folder="Targets" sort="0" />
+        <label id="2748" label="" color="1" folder="Targets" sort="0" />
+        <label id="2749" label="" color="1" folder="Targets" sort="0" />
+        <label id="2750" label="" color="1" folder="Targets" sort="0" />
+        <label id="2751" label="" color="1" folder="Replies" sort="0" />
     </labels>
-    <nextId>2706</nextId>
+    <nextId>2752</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="Aaravi_CulturalExchange_replyA" />
@@ -3409,11 +3458,18 @@
         <marker scope="Public" name="Basil_pervyPhotos_question" />
         <marker scope="Public" name="Basil_shoes1" />
         <marker scope="Public" name="Beatrix_bloodSyringe" />
+        <marker scope="Public" name="Beatrix_bloodSyringe2" />
+        <marker scope="Public" name="Beatrix_doors_cont" />
         <marker scope="Public" name="Beatrix_doorsQuestion" />
+        <marker scope="Public" name="Beatrix_Ears_reply" />
         <marker scope="Public" name="Beatrix_game_start" />
         <marker scope="Public" name="Beatrix_roboTouch" />
+        <marker scope="Public" name="Beatrix_roboTouch2" />
+        <marker scope="Public" name="Beatrix_Varimorph_question" />
+        <marker scope="Public" name="Beatrix_virginity_cont" />
         <marker scope="Public" name="Beatrix_virginityQuestion" />
         <marker scope="Public" name="Beatrix_wingsFlight" />
+        <marker scope="Public" name="Beatrix_wingsFlight_cont" />
         <marker scope="Public" name="BeatrixButt_react" />
         <marker scope="Public" name="BellaG_reply1" />
         <marker scope="Public" name="BellaG_reply2" />
@@ -3902,6 +3958,8 @@
         <marker scope="Public" name="Kyouko_SelfStripExcited_reply" />
         <marker scope="Public" name="Kyouko_SelfStripExcited_reply2" />
         <marker scope="Public" name="Kyouko_SelfStripExcited_reply2B" />
+        <marker scope="Public" name="Kyouko_SelfStripExcited_reply3" />
+        <marker scope="Public" name="Kyouko_SelfStripExcited_reply3B" />
         <marker scope="Public" name="Kyouko_SelfStripExcited_replyB" />
         <marker scope="Public" name="Ladybug_detransform_react" />
         <marker scope="Public" name="Ladybug_SkintightBodysuits_cont" />
@@ -4012,6 +4070,7 @@
         <marker scope="Public" name="Male_player_early_crotch" />
         <marker scope="Public" name="Mari_date_collectible" />
         <marker scope="Public" name="Mari_mistletoe_collectible" />
+        <marker scope="Public" name="Mari_Second_Date_ON" />
         <marker scope="Public" name="Mari_wings_reveal" />
         <marker scope="Public" name="Marinette_HowManyGuys_reply" />
         <marker scope="Public" name="Marinette_HowManyGuys_reply2" />
@@ -4080,6 +4139,10 @@
         <marker scope="Public" name="Monika_susVibes_cont" />
         <marker scope="Public" name="Monika_susVibes_question" />
         <marker scope="Public" name="Moon_note_react" />
+        <marker scope="Public" name="Moskii_fluidsReply" />
+        <marker scope="Public" name="Moskii_fluidsReplyB" />
+        <marker scope="Public" name="Moskii_mosquitoBites_question" />
+        <marker scope="Public" name="Moskii_multiarmJerkoff_question" />
         <marker scope="Public" name="MsF" />
         <marker scope="Public" name="MsFortune_Head" />
         <marker scope="Public" name="MsFortune_why_u_called_that" />
@@ -4326,12 +4389,16 @@
         <marker scope="Public" name="Nonon_ladyJakuzure_reply" />
         <marker scope="Public" name="Nonon_MommySatsuki" />
         <marker scope="Public" name="Nonon_MommySatsuki2" />
+        <marker scope="Public" name="Nonon_MommySatsuki3" />
         <marker scope="Public" name="Nonon_NoBites_reply" />
+        <marker scope="Public" name="Nonon_NoBites_reply2" />
         <marker scope="Public" name="Nonon_noStars_cont" />
+        <marker scope="Public" name="Nonon_noStars_end" />
         <marker scope="Public" name="Nonon_noStars_question" />
         <marker scope="Public" name="Nonon_postcumThreat_reply" />
         <marker scope="Public" name="Nonon_skeleConductor" />
         <marker scope="Public" name="Nonon_skeleConductor2" />
+        <marker scope="Public" name="Nonon_skeleConductor3" />
         <marker scope="Public" name="NPerona_ghosts_reply" />
         <marker scope="Public" name="NPerona_howRu_floating" />
         <marker scope="Public" name="NPerona_howRu_floating_cont" />
@@ -4465,6 +4532,7 @@
         <marker scope="Public" name="OMari_WhatIsItLikeBF_contB" />
         <marker scope="Public" name="OMari_WhatIsItLikeBF_endA" />
         <marker scope="Public" name="OMari_WhatIsItLikeBF_endB" />
+        <marker scope="Public" name="Pandoria_hat_cont" />
         <marker scope="Public" name="Pandoria_hat_question" />
         <marker scope="Public" name="Pandoria_tailjob_react" />
         <marker scope="Public" name="Perona_ghosts_reply" />
@@ -4631,6 +4699,7 @@
         <marker scope="Public" name="Self_mansionNoCurtainsComment" />
         <marker scope="Public" name="Self_moon_butt" />
         <marker scope="Public" name="Self_never2naked" />
+        <marker scope="Public" name="Self_no_swap" />
         <marker scope="Public" name="Self_Odd_drinks" />
         <marker scope="Public" name="Self_over_dressed" />
         <marker scope="Public" name="Self_ParisExcitement" />
@@ -4794,6 +4863,11 @@
         <marker scope="Public" name="Wikipe_tan_succubiQuestion" />
         <marker scope="Public" name="WikipeTan_reply1" />
         <marker scope="Public" name="WikipeTan_reply1_cont" />
+        <marker scope="Public" name="YaeMiko_cuteFluffyEars" />
+        <marker scope="Public" name="YaeMiko_funActivities" />
+        <marker scope="Public" name="YaeMiko_royalty" />
+        <marker scope="Public" name="YaeMiko_shrineCare" />
+        <marker scope="Public" name="YaeMiko_vampireNovel" />
         <marker scope="Public" name="Yshtola_catEars_cont" />
         <marker scope="Public" name="Yshtola_catEars_question" />
         <marker scope="Public" name="Yshtola_imagineInYourShoes_cont" />
@@ -4816,6 +4890,7 @@
         <marker scope="Public" name="Yshtola_weird_name_end" />
         <marker scope="Public" name="Yumeko_madScare_reply" />
         <marker scope="Public" name="Yumeko_madScare_reply2" />
+        <marker scope="Public" name="Yumeko_madScare_reply3" />
         <marker scope="Public" name="Yumeko_pokerPro_cont" />
         <marker scope="Public" name="Yumeko_pokerPro_end" />
         <marker scope="Public" name="Yumeko_pokerPro_question" />
@@ -4876,9 +4951,12 @@
         <marker scope="Public" name="Yuno_succubusSecret_reply2" />
         <marker scope="Public" name="Yuno_succubusSecret_reply3" />
         <marker scope="Public" name="Zeke_cummedOnPandoria_react" />
+        <marker scope="Public" name="Zeke_pirate_cont" />
         <marker scope="Public" name="Zeke_pirate_question" />
         <marker scope="Public" name="ZekePandoria_chestsReact" />
         <marker scope="Public" name="ZekePandoria_relationship" />
+        <marker scope="Public" name="ZekePandoria_relationship_cont" />
+        <marker scope="Public" name="ZekePandoria_relationship_contB" />
         <marker scope="Public" name="ZekeSucrose_trioCum_react" />
         <marker scope="Public" name="Zoe_eyes_question" />
         <marker scope="Public" name="Zoe_game_start" />
