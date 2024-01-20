@@ -196,7 +196,7 @@ Player.prototype.expandTagsList = function(input_tags) {
     let tmp = input_tags.map(canonicalizeTag);
     let output_tags = [];
 
-    tmp.push(this.id);
+    //tmp.push(this.id);
 
     if (this.alt_costume && this.alt_costume.id) {
         tmp.push(this.alt_costume.id);
@@ -231,29 +231,29 @@ Player.prototype.expandTagsList = function(input_tags) {
     }
 
     /* Ensure tags are consistent with size and gender metadata. */
-    output_tags = output_tags.filter((tag) => {
-        if (tag === "large_penis" || tag === "medium_penis" || tag === "small_penis") {
-            return tag === (this.penis + "_penis");
-        } else if (tag === "huge_penis") {
-            /* huge_penis requires large_penis */
-            return this.penis === "large";
-        } else if (tag === "circumcised" || tag === "uncircumcised") {
-            /* Penis appearance tags require the presence of a penis */
-            return this.penis;
-        } else if (tag === "large_breasts" || tag === "medium_breasts" || tag === "small_breasts") {
-            return tag === (this.breasts + "_breasts");
-        } else if (tag === "huge_breasts") {
-            /* huge_breasts requires large_breasts */
-            return this.breasts === "large";
-        } else if (tag === "flat_chest") {
-            /* flat_chest requires small_breasts */
-            return this.breasts === "small";
-        } else if (tag === "futanari" || tag === "futanari_sans_balls" || tag === "futanari_full_package" || tag === "futanari_newhalf") {
-            return (this.gender === "female") && this.penis;
-        } else {
-            return true;
-        }
-    });
+    // output_tags = output_tags.filter((tag) => {
+        // if (tag === "large_penis" || tag === "medium_penis" || tag === "small_penis") {
+            // return tag === (this.penis + "_penis");
+        // } else if (tag === "huge_penis") {
+            // /* huge_penis requires large_penis */
+            // return this.penis === "large";
+        // } else if (tag === "circumcised" || tag === "uncircumcised") {
+            // /* Penis appearance tags require the presence of a penis */
+            // return this.penis;
+        // } else if (tag === "large_breasts" || tag === "medium_breasts" || tag === "small_breasts") {
+            // return tag === (this.breasts + "_breasts");
+        // } else if (tag === "huge_breasts") {
+            // /* huge_breasts requires large_breasts */
+            // return this.breasts === "large";
+        // } else if (tag === "flat_chest") {
+            // /* flat_chest requires small_breasts */
+            // return this.breasts === "small";
+        // } else if (tag === "futanari" || tag === "futanari_sans_balls" || tag === "futanari_full_package" || tag === "futanari_newhalf") {
+            // return (this.gender === "female") && this.penis;
+        // } else {
+            // return true;
+        // }
+    // });
 
     return output_tags;
 }
