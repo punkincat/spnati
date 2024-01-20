@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls.PropertyControls;
 using Desktop.DataStructures;
 using SPNATI_Character_Editor.Categories;
@@ -116,27 +116,98 @@ namespace SPNATI_Character_Editor.DataStructures
 			set { Set(value); }
 		}
 
-		[Boolean(DisplayName = "Wearable", GroupOrder = 130, Description = "If checked, the item will be wearable by the player when unlocked")]
-		[DefaultValue(false)]
-		[XmlElement("wearable")]
-		public bool Wearable
+		[DefaultValue("")]
+		[ComboBox(DisplayName = "Extra", Description = "Is it a simple collectible, or does it unlock a costume for the character or a wearable item for the player", GroupOrder = 129, Options = new string[] {
+			"wearable",
+			"unlocks a costume",
+		})]
+		public string Extra
 		{
-			get { return clothing != null; }
-			set
+			get 
 			{
-				if (value)
+				if (Wearable) 
 				{
+					return "wearable";
+				}
+				else if (costumeUnlock)
+				{
+					return "unlocks a costume";
+				}
+				else
+				{
+					return "";
+				}
+			}
+			set 
+			{ 
+				if (value == "wearable")
+				{
+					Wearable = true;
 					if (clothing == null)
 					{
 						clothing = new Clothing();
 					}
+					costumeUnlock = false;
+					costumeFolder = "";
+				}
+				else if (value == "unlocks a costume")
+				{
+					Wearable = false;
+					clothing = null;
+					costumeUnlock = true;
 				}
 				else
 				{
+					Wearable = false;
 					clothing = null;
+					costumeUnlock = false;
+					costumeFolder = "";
 				}
+
+				Set(value); }
+		}
+
+		[RecordSelect(RecordType = typeof(Costume), AllowCreate = false, DisplayName = "Costume", Description = "The costume that this collectible unlocks", GroupOrder = 150, RecordFilter = "FilterCostume")]
+		[DefaultValue("")]
+		public Costume costumeToUnlock
+		{
+			get
+			{
+				return Get<Costume>();
+			}
+			set
+			{
+				if (value != null)
+				{
+					costumeFolder = value.Folder;
+				}
+				Set(value);
 			}
 		}
+
+		#pragma warning disable IDE0051
+		private bool FilterCostume(IRecord record)
+		{
+			if (Character == null)
+			{
+				return false;
+			}
+			Costume costume = record as Costume;
+			return costume.Character == Character;
+		}
+		#pragma warning restore IDE0051
+
+		[XmlElement("costume")]
+		[DefaultValue(false)]
+		public bool costumeUnlock;
+
+		[XmlElement("costume-folder")]
+		[DefaultValue("")]
+		public string costumeFolder;
+
+		[XmlElement("wearable")]
+		[DefaultValue(false)]
+		public bool Wearable;
 
 		[XmlElement("clothing")]
 		public Clothing clothing;

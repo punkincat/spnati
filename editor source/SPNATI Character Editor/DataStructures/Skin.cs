@@ -2,6 +2,7 @@ using Desktop;
 using SPNATI_Character_Editor.IO;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Xml;
@@ -485,6 +486,10 @@ namespace SPNATI_Character_Editor
 		[XmlAttribute("layers")]
 		[DefaultValue(0)]
 		public int LayersNonSkip;
+
+		[XmlAttribute("collectible")]
+		[DefaultValue("")]
+		public string Collectible;
 
 		[XmlIgnore]
 		public Costume Costume { get; set; }

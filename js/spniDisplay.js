@@ -1445,8 +1445,9 @@ MainSelectScreenDisplay.prototype.update = function (player) {
         );
 
         this.altCostumeSelector.hide();
-        if (player.alternate_costumes.length > 0) {
-            fillCostumeSelector(this.altCostumeSelector, player.default_costume_name, player.alternate_costumes, player.selected_costume)
+        let unlocked_costumes = player.listUnlockedCostumes();
+        if (unlocked_costumes.length > 0) {
+            fillCostumeSelector(this.altCostumeSelector, player.default_costume_name, unlocked_costumes, player.selected_costume)
                 .show();
         }
     }
@@ -2103,8 +2104,9 @@ OpponentDetailsDisplay.prototype.update = function (opponent) {
         this.collectiblesField.removeClass('has-collectibles');
     }
 
-    if (opponent.alternate_costumes.length > 0) {
-        fillCostumeSelector(this.costumeSelector, opponent.default_costume_name, opponent.alternate_costumes, opponent.selected_costume)
+    let unlocked_costumes = opponent.listUnlockedCostumes();
+    if (unlocked_costumes.length > 0) {
+        fillCostumeSelector(this.costumeSelector, opponent.default_costume_name, unlocked_costumes, opponent.selected_costume)
             .show().prop('disabled', false);
     } else {
         this.costumeSelector.hide();

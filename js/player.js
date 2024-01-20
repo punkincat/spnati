@@ -687,6 +687,7 @@ function Opponent (id, metaFiles, status, rosterScore, addedDate, releaseNumber,
                 'label': $(elem).attr('label') || this.selectLabel,
                 'set': set,
                 'status': status,
+                'unlocked_by': $(elem).attr('collectible') || '',
                 'layers': parseInt($(elem).attr('layers'), 10) || this.selectLayers,
             };
 
@@ -1118,6 +1119,23 @@ Opponent.prototype.fetchCollectibles = function () {
         console.error("Error loading collectibles for "+this.id);
         throw err;
     }.bind(this));
+}
+
+Opponent.prototype.listUnlockedCostumes = function () {
+    let unlocked_costumes = [];
+    let thisOpponent = this; 
+    this.alternate_costumes.map(function(costume) {
+        if (costume.unlocked_by == '')
+        {
+            unlocked_costumes.push(costume);
+        }
+        else if (thisOpponent.collectibles.some(
+            function (collectible) { if(collectible.id === costume.unlocked_by) {return collectible.isUnlocked();} else return false;}))
+            {
+                unlocked_costumes.push(costume);
+            }      
+    });
+    return unlocked_costumes;
 }
 
 /**

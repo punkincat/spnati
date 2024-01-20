@@ -737,8 +737,10 @@ function updateGroupSelectScreen (ignore_bg) {
             }
             */
             $groupCostumeSelectors[i].hide();
-            if (opponent.alternate_costumes.length > 0) {
-                fillCostumeSelector($groupCostumeSelectors[i], opponent.default_costume_name, opponent.alternate_costumes,
+
+            let unlocked_costumes = opponent.listUnlockedCostumes();
+            if (unlocked_costumes.length > 0) {
+                fillCostumeSelector($groupCostumeSelectors[i], opponent.default_costume_name, unlocked_costumes,
                                     opponent.selected_costume).show();
             } else {
                 $groupCostumeSelectors[i].empty();
@@ -1224,7 +1226,8 @@ function clickedRandomGroupButton () {
         if (costume) {
             var costumeFolder = (costume.toLowerCase() == "default") ? '' : "opponents/reskins/" + costume + "/";
             
-            fillCostumeSelector($groupCostumeSelectors[i], chosenGroup.opponents[i].default_costume_name, chosenGroup.opponents[i].alternate_costumes, costumeFolder);
+          let unlocked_costumes = chosenGroup.opponents[i].listUnlockedCostumes();
+            fillCostumeSelector($groupCostumeSelectors[i], chosenGroup.opponents[i].default_costume_name, unlocked_costumes, costumeFolder);
         } else {
             $groupCostumeSelectors[i].empty();
         }

@@ -1,4 +1,4 @@
-﻿using Desktop;
+using Desktop;
 using Desktop.CommonControls;
 using Desktop.Skinning;
 using SPNATI_Character_Editor.Controls;
@@ -187,15 +187,51 @@ namespace SPNATI_Character_Editor.Activities
 			ListViewItem item = lstCollectibles.SelectedItems[0];
 			_selectedItem = item;
 			Collectible collectible = item.Tag as Collectible;
+			collectible.Character = _character;
 			table.Data = collectible;
 			UpdatePreview();
 			ToggleClothingVisibility();
+			ToggleCostumeVisibility();
 		}
 
 		public override void Save()
 		{
 			table.Save();
-		}
+
+			foreach (AlternateSkin alt in _character.Metadata.AlternateSkins)
+			{
+				foreach (SkinLink link in alt.Skins)
+				{
+					if (link.Collectible != null)
+					{
+						Collectible c = _character.Collectibles.Get(link.Collectible);
+						if (c != null)
+						{
+							if (!string.IsNullOrEmpty(c.costumeFolder))
+							{
+								if (c.costumeFolder == link.Folder)
+									continue;
+							}
+						}
+						link.Collectible = null;
+						link.IsDirty = true;
+					}
+				}
+			}
+
+			foreach (Collectible c in _character.Collectibles.Collectibles)
+			{
+				if (!string.IsNullOrEmpty(c.costumeFolder))
+				{
+					Costume skin = CharacterDatabase.GetSkin(c.costumeFolder);
+					if (skin.Link.Collectible != c.Id)
+					{
+						skin.Link.Collectible = c.Id;
+						skin.IsDirty = true;
+					}
+				}
+			}
+        }
 
 		private void table_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
 		{
@@ -217,9 +253,11 @@ namespace SPNATI_Character_Editor.Activities
 			{
 				UpdatePreview();
 			}
-			else if (e.PropertyName == "Wearable")
+
+			else if (e.PropertyName == "Extra")
 			{
 				ToggleClothingVisibility();
+				ToggleCostumeVisibility();
 			}
 		}
 
@@ -239,6 +277,23 @@ namespace SPNATI_Character_Editor.Activities
 			}
 		}
 
+		private void ToggleCostumeVisibility()
+		{
+			Collectible collectible = _selectedItem.Tag as Collectible;
+
+			Control[] rows = table.Controls.Find("PropertyTableRow", true);
+			String[] names = { "Costume" };
+
+			foreach (PropertyTableRow c in rows)
+			{
+				if (names.Contains(c.Record.Key))
+				{
+					c.Visible = collectible.costumeUnlock;
+				}
+			}
+		}
+
+ 
 		private void UpdatePreview()
 		{
 			if (Config.SafeMode)
