@@ -91,6 +91,7 @@
         <response id="411" opponent="meia" opponentId="1593" />
         <response id="412" opponent="jura" opponentId="1469" />
         <response id="413" opponent="jura" opponentId="1470" />
+        <response id="432" opponent="jura" opponentId="1474" />
     </responses>
     <notes>
         <note id="10">If you want to ask Pandoria / Pandy questions, you could draw attention to the fact that some of her body parts are lightbulbs, such as a lightbulb in her head.. and her tail. Her specific race is known as a "Blade".</note>
@@ -106,7 +107,10 @@
         <note id="344">zeke and pandy have a very bad history with bandits, which they can explain in follow-up lines</note>
         <note id="387">the purple lightning dreamsmasher and the big bang edge are both different names for the same weapon; as far as I can tell zeke just randomly calls it one or the other. or, more specifically, big bang edge is the gameplay name for the default weapon configuration of the PLD? you can have jura point out the discrepancy or ignore it entirely lmao</note>
         <note id="408">they say the marker zeke_meia_self4a in both lines in case you only want to write one response. equally, they have different markers in case you want to do a branch based on who said what line.</note>
-        <note id="412">I imagine in the next case zeke can/will explain that it's pard of pandoria's core that is lodged in his chest</note>
+        <note id="412">I imagine in the next case zeke can/will explain that it's part of pandoria's core that is lodged in his chest</note>
+        <note id="172">this case locks in the intercouse forfeit so that it is continued for the rest of their forfeit</note>
+        <note id="430">just a funny easter egg of sorts, don't take it too seriously :P</note>
+        <note id="431">just a funny easter egg of sorts, don't take it too seriously :P</note>
     </notes>
     <labels>
         <label id="5" label="Pandoria Reminder" folder="" sort="0" />
@@ -133,7 +137,7 @@
         <label id="29" label="" folder="Targets" sort="0" />
         <label id="30" label="" folder="Debug Lines" sort="0" />
         <label id="31" label="" folder="Targets" sort="0" />
-        <label id="32" label="Sex (Unfinished)" color="12" folder="Sex" sort="0" />
+        <label id="32" label="Sex (Condition; opposing tandem)" color="5" folder="Sex" sort="0" />
         <label id="33" label="Tailjob" folder="" sort="0" />
         <label id="35" label="" folder="Pandoria-Dependant" sort="0" />
         <label id="2" label="" folder="Default Strip Lines" sort="0" />
@@ -276,7 +280,7 @@
         <label id="169" label="" folder="Filtered" sort="0" />
         <label id="170" label="" folder="Filtered" sort="0" />
         <label id="171" label="" folder="Filtered" sort="0" />
-        <label id="172" label="Start Heavy Stage (Insertion)" folder="Sex" sort="0" />
+        <label id="172" label="Start Heavy Stage (Insertion)" color="5" folder="Sex" sort="0" />
         <label id="173" label="" folder="Filtered" sort="0" />
         <label id="174" label="(self chest visible)" folder="" sort="0" />
         <label id="175" label="" folder="Backgrounds" sort="0" />
@@ -512,13 +516,33 @@
         <label id="410" label="" color="1" folder="Targets" sort="0" />
         <label id="411" label="" color="3" folder="Responses" sort="0" />
         <label id="412" label="" color="1" folder="Responses" sort="0" />
-        <label id="413" label="" color="1" folder="Responses" sort="0" />
+        <label id="413" label="" color="3" folder="Responses" sort="0" />
+        <label id="414" label="" color="3" folder="Responses" sort="0" />
+        <label id="415" label="Heavy (Intercourse)" color="5" folder="Sex" sort="0" />
+        <label id="416" label="" color="5" folder="Sex" sort="0" />
+        <label id="417" label="" color="5" folder="Sex" sort="0" />
+        <label id="418" label="Heavy (Intercourse, last tick)" color="5" folder="Sex" sort="0" />
+        <label id="419" label="" folder="Hidden Logic" sort="0" />
+        <label id="420" label="" folder="Hidden Logic" sort="0" />
+        <label id="421" label="Sex (Conditions)" color="5" folder="Sex" sort="0" />
+        <label id="422" label="butt pose (zeke)" folder="Self Butt Poses" sort="0" />
+        <label id="423" label="butt pose (pandy)" folder="Self Butt Poses" sort="0" />
+        <label id="424" label="butt pose (zeke &amp; pandy)" folder="Self Butt Poses" sort="0" />
+        <label id="425" label="butt pose (zeke &amp; pandy) (6+ rounds)" folder="Self Butt Poses" sort="0" />
+        <label id="426" label="butt pose (zeke &amp; pandy)" folder="Self Butt Poses" sort="0" />
+        <label id="427" label="butt pose (zeke)" folder="Self Butt Poses" sort="0" />
+        <label id="428" label="butt pose (pandy)" folder="Self Butt Poses" sort="0" />
+        <label id="429" label="" folder="Filtered" sort="0" />
+        <label id="430" label="" folder="Targets" sort="0" />
+        <label id="431" label="" folder="Targets" sort="0" />
+        <label id="432" label="" color="1" folder="Responses" sort="0" />
+        <label id="433" label="" color="1" folder="Responses" sort="0" />
     </labels>
     <posePreviewMarkers>
-        <posePreviewMarker>penis=h</posePreviewMarker>
+        <posePreviewMarker>penis=s</posePreviewMarker>
     </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>413</nextId>
+    <nextId>433</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="allowsex">If set to 1, Zeke and Pandoria *can* (but are not guaranteed to) have sex for their forfeit.</marker>
@@ -574,6 +598,8 @@
         <marker scope="Public" name="pandy_strips_dress">Pandoria strips off her dress when Zeke takes off his coat.</marker>
         <marker scope="Public" name="pandy_strips_ribbon">Pandoria strips her ribbon when Zeke removes his pauldrons.</marker>
         <marker scope="Public" name="pandy_strips_too">Pandoria is going to strip what she can at the same time that Zeke does, starting with her own gloves.</marker>
+        <marker scope="Public" name="penetrative_sex" />
+        <marker scope="Public" name="penetrative_sex_finishing" />
         <marker scope="Public" name="penis">h=hard, s=soft, 0=soft (default)</marker>
         <marker scope="Public" name="penis_rating">A silly line for penis reveals where Pandy gives them a rating (based on their size tag, ranking size and cuteness)</marker>
         <marker scope="Public" name="queenie_intro" />
@@ -584,6 +610,7 @@
         <marker scope="Public" name="sanako_spendTimeRespZ" />
         <marker scope="Public" name="self_cleanup" />
         <marker scope="Public" name="self_finished" />
+        <marker scope="Public" name="self_finished_creampie" />
         <marker scope="Public" name="shamiko_transform1" />
         <marker scope="Public" name="shamiko_transform2" />
         <marker scope="Public" name="spooky_goHomeWithMeResp" />
@@ -674,7 +701,10 @@
         <marker scope="Public" name="zeke_jura_self1c" />
         <marker scope="Public" name="zeke_jura_self2a" />
         <marker scope="Public" name="zeke_jura_self2b" />
+        <marker scope="Public" name="zeke_jura_self2c" />
+        <marker scope="Public" name="zeke_jura_self4a" />
         <marker scope="Public" name="zeke_jura_self5a" />
+        <marker scope="Public" name="zeke_jura_self5b" />
         <marker scope="Public" name="zeke_jura_strip0a" />
         <marker scope="Public" name="zeke_jura_strip0b" />
         <marker scope="Public" name="zeke_jura_strip0c" />
