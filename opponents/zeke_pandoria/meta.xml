@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1705149472125</lastupdate>
+    <lastupdate>1705894725499</lastupdate>
     <enabled>false</enabled>
     <first>Zeke</first>
     <last>von Genbu</last>
@@ -13,9 +13,12 @@
     <description>Zeke is a flamboyant swordsman with a flair for the dramatic, and an unlucky streak a mile long. Accompanied by his Blade, companion, and all-around handler Pandoria.</description>
     <layers>6</layers>
     <default-costume-name>Thunderbolt Zeke</default-costume-name>
+    <alternates>
+        <costume folder="opponents/reskins/zeke_pandoria_beach/" img="0-select.png" set="summer" status="unlisted" label="Zeke">Surfinator / Beach Date</costume>
+    </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>936</lines>
-    <poses>221</poses>
+    <lines>970</lines>
+    <poses>235</poses>
     <z-index>-5</z-index>
     <font-size>small</font-size>
 </opponent>
