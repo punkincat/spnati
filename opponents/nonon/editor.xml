@@ -21,6 +21,9 @@
         <case name="Mission Complete" id="638" priority="FYI" min="0" max="0">
             <description>Nonon was sent to the inventory on a mission. Everything checked out so she decided to take a little break.</description>
         </case>
+        <case name="Flashbang" id="744" priority="Noteworthy" min="0" max="2">
+            <description>Nonon flashes her panties for a compatible target masturbating while she's still mostly clothed.</description>
+        </case>
     </noteworthy>
     <reviewed>true</reviewed>
     <responses>
@@ -125,8 +128,8 @@
         <label id="95" label="" color="2" folder="" sort="0" />
         <label id="96" label="" folder="Target_Stage0" sort="7" />
         <label id="100" label="" folder="Target_Stage0" sort="14" />
-        <label id="98" label="" color="1" folder="Target_Stage4" sort="6" />
-        <label id="99" label="" color="1" folder="Target_Stage5" sort="2" />
+        <label id="98" label="" folder="Target_Stage4" sort="6" />
+        <label id="99" label="" folder="Target_Stage5" sort="2" />
         <label id="97" label="" folder="Target_Stage4" sort="3" />
         <label id="101" label="fallback" folder="" sort="0" />
         <label id="102" label="fallback" folder="" sort="0" />
@@ -474,7 +477,7 @@
         <label id="493" label="" folder="Target_Stage0" sort="41" />
         <label id="494" label="" folder="Target_Stage0" sort="53" />
         <label id="495" label="" folder="Reply_Stage0" sort="23" />
-        <label id="496" label="" color="1" folder="Target_Stage0" sort="54" />
+        <label id="496" label="" folder="Target_Stage0" sort="54" />
         <label id="497" label="" color="6" folder="Target_Stage0" sort="55" />
         <label id="498" label="" color="6" folder="Target_Stage1" sort="9" />
         <label id="499" label="" color="2" folder="" sort="0" />
@@ -522,11 +525,11 @@
         <label id="541" label="Set Timer" folder="Leon Dual - Leon Lost First" sort="10" />
         <label id="542" label="" folder="Target_Stage0" sort="28" />
         <label id="543" label="" folder="Target_Stage0" sort="0" />
-        <label id="544" label="" color="12" folder="Target_Stage0" sort="47" />
-        <label id="545" label="" color="12" folder="Target_Stage0" sort="48" />
-        <label id="546" label="" color="12" folder="Target_Stage0" sort="49" />
-        <label id="547" label="" color="12" folder="Reply_Stage0" sort="23" />
-        <label id="548" label="" color="12" folder="Reply_Stage0B" sort="2" />
+        <label id="544" label="" folder="Target_Stage0" sort="47" />
+        <label id="545" label="" folder="Target_Stage0" sort="48" />
+        <label id="546" label="" folder="Target_Stage0" sort="49" />
+        <label id="547" label="" folder="Reply_Stage0" sort="23" />
+        <label id="548" label="" folder="Reply_Stage0B" sort="2" />
         <label id="549" label="" color="1" folder="Target_Stage0" sort="45" />
         <label id="550" label="" color="1" folder="Reply_Stage0" sort="24" />
         <label id="551" label="" color="1" folder="Reply_Stage0B" sort="0" />
@@ -656,15 +659,73 @@
         <label id="678" label="" folder="!Sponsorships&gt;Arndress&gt;Futa" sort="9" />
         <label id="679" label="" folder="!Sponsorships&gt;Arndress&gt;Futa" sort="10" />
         <label id="680" label="" folder="!Sponsorships&gt;Arndress&gt;Futa" sort="0" />
-        <label id="681" label="" color="3" folder="Target_Stage0" sort="0" />
-        <label id="682" label="" color="3" folder="Target_Stage0" sort="0" />
-        <label id="683" label="" color="3" folder="Reply_Stage0" sort="0" />
-        <label id="684" label="" color="3" folder="Reply_Stage1" sort="0" />
-        <label id="685" label="" folder="Reply_Stage1" sort="0" />
-        <label id="686" label="" color="12" folder="Target_Stage1" sort="0" />
+        <label id="681" label="" color="3" folder="Target_Stage0" sort="60" />
+        <label id="682" label="" color="3" folder="Target_Stage0" sort="61" />
+        <label id="683" label="" color="3" folder="Reply_Stage0" sort="19" />
+        <label id="684" label="" color="3" folder="Reply_Stage1" sort="8" />
+        <label id="685" label="" folder="Reply_Stage1" sort="9" />
+        <label id="686" label="" color="12" folder="Target_Stage1" sort="20" />
+        <label id="687" label="" folder="Target_Stage2" sort="3" />
+        <label id="688" label="" folder="Target_Stage2" sort="6" />
+        <label id="689" label="" folder="Target_Stage2" sort="9" />
+        <label id="690" label="" folder="Target_Stage2" sort="0" />
+        <label id="691" label="" folder="Ryuko" sort="0" />
+        <label id="692" label="" folder="Ryuko" sort="0" />
+        <label id="693" label="" folder="Ryuko" sort="3" />
+        <label id="694" label="" folder="Ryuko" sort="4" />
+        <label id="695" label="" folder="Ryuko" sort="5" />
+        <label id="696" label="" folder="Reply_Stage0B" sort="5" />
+        <label id="697" label="" folder="Reply_Stage0" sort="37" />
+        <label id="698" label="" folder="Target_Stage0" sort="0" />
+        <label id="699" label="" color="1" folder="Target_Stage1" sort="14" />
+        <label id="700" label="" folder="Reply_Stage0" sort="20" />
+        <label id="701" label="" folder="Target_Stage0" sort="33" />
+        <label id="702" label="" folder="Reply_Stage0" sort="32" />
+        <label id="703" label="" folder="Reply_Stage0" sort="38" />
+        <label id="704" label="" folder="Reply_Stage1" sort="10" />
+        <label id="705" label="" folder="Reply_Stage1" sort="15" />
+        <label id="706" label="" folder="Reply_Stage1" sort="19" />
+        <label id="707" label="" folder="Reply_Stage2" sort="6" />
+        <label id="708" label="" folder="Reply_Stage2" sort="11" />
+        <label id="709" label="" folder="Reply_Stage2" sort="0" />
+        <label id="710" label="" folder="Reply_Stage2" sort="14" />
+        <label id="711" label="" folder="Reply_Stage2" sort="0" />
+        <label id="712" label="" folder="Reply_Stage3" sort="5" />
+        <label id="713" label="" folder="Reply_Stage3" sort="10" />
+        <label id="714" label="" folder="Reply_Stage3" sort="0" />
+        <label id="715" label="" folder="Reply_Stage3" sort="14" />
+        <label id="716" label="" folder="Reply_Stage4" sort="4" />
+        <label id="717" label="" folder="Reply_Stage4" sort="7" />
+        <label id="718" label="" folder="Reply_Stage4" sort="9" />
+        <label id="719" label="" folder="Reply_Stage5" sort="2" />
+        <label id="720" label="" folder="Reply_Stage5" sort="0" />
+        <label id="721" label="" folder="Reply_Stage5" sort="4" />
+        <label id="722" label="" folder="Reply_Stage5" sort="0" />
+        <label id="723" label="" folder="Reply_Stage5" sort="6" />
+        <label id="724" label="" folder="Reply_Stage5" sort="0" />
+        <label id="725" label="" folder="Reply_FF" sort="3" />
+        <label id="726" label="" folder="Reply_FF" sort="5" />
+        <label id="727" label="" folder="Target_Stage0" sort="63" />
+        <label id="728" label="" folder="Target_Stage0" sort="85" />
+        <label id="729" label="" folder="Target_Stage1" sort="15" />
+        <label id="730" label="" folder="Target_Stage1" sort="23" />
+        <label id="731" label="" folder="Target_Stage1" sort="25" />
+        <label id="732" label="" folder="Target_Stage2" sort="4" />
+        <label id="733" label="" folder="Target_Stage2" sort="7" />
+        <label id="734" label="" folder="Target_Stage2" sort="8" />
+        <label id="735" label="" folder="Target_Stage3" sort="2" />
+        <label id="736" label="" folder="Target_Stage3" sort="4" />
+        <label id="737" label="" folder="Target_Stage3" sort="6" />
+        <label id="738" label="" folder="Target_Stage4" sort="3" />
+        <label id="739" label="" folder="Target_Stage4" sort="5" />
+        <label id="740" label="" folder="Target_Stage4" sort="9" />
+        <label id="741" label="" folder="Target_Stage5" sort="3" />
+        <label id="742" label="" folder="Target_Stage5" sort="5" />
+        <label id="743" label="" folder="Target_Stage5" sort="7" />
     </labels>
-    <nextId>686</nextId>
+    <nextId>744</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="adrien01" />
         <marker scope="Public" name="adrien012a" />
         <marker scope="Public" name="adrien012b" />
@@ -678,6 +739,8 @@
         <marker scope="Public" name="aqua_reply01" />
         <marker scope="Public" name="aqua_reply01b" />
         <marker scope="Public" name="aqua_reply02" />
+        <marker scope="Public" name="aqua_reply02b" />
+        <marker scope="Public" name="aqua_reply03" />
         <marker scope="Public" name="aqua01" />
         <marker scope="Public" name="aqua01a" />
         <marker scope="Public" name="aqua01b" />
@@ -692,6 +755,24 @@
         <marker scope="Public" name="arle02" />
         <marker scope="Public" name="arle03" />
         <marker scope="Public" name="arle11" />
+        <marker scope="Public" name="arue01" />
+        <marker scope="Public" name="arue02" />
+        <marker scope="Public" name="arue03" />
+        <marker scope="Public" name="arue11" />
+        <marker scope="Public" name="arue12" />
+        <marker scope="Public" name="arue13" />
+        <marker scope="Public" name="arue21" />
+        <marker scope="Public" name="arue22" />
+        <marker scope="Public" name="arue23" />
+        <marker scope="Public" name="arue31" />
+        <marker scope="Public" name="arue32" />
+        <marker scope="Public" name="arue33" />
+        <marker scope="Public" name="arue41" />
+        <marker scope="Public" name="arue42" />
+        <marker scope="Public" name="arue43" />
+        <marker scope="Public" name="arue51" />
+        <marker scope="Public" name="arue52" />
+        <marker scope="Public" name="arue53" />
         <marker scope="Public" name="butt" />
         <marker scope="Public" name="butt2" />
         <marker scope="Public" name="butt3" />
@@ -738,6 +819,7 @@
         <marker scope="Public" name="first_ff" />
         <marker scope="Public" name="first_opp_out" />
         <marker scope="Public" name="first_out" />
+        <marker scope="Public" name="flashed" />
         <marker scope="Public" name="fluttershy01" />
         <marker scope="Public" name="fluttershy01a" />
         <marker scope="Public" name="fluttershy01b" />
@@ -1002,6 +1084,27 @@
         <marker scope="Public" name="reply_arle02" />
         <marker scope="Public" name="reply_arle11" />
         <marker scope="Public" name="reply_arle33" />
+        <marker scope="Public" name="reply_arue01" />
+        <marker scope="Public" name="reply_arue02" />
+        <marker scope="Public" name="reply_arue03" />
+        <marker scope="Public" name="reply_arue11" />
+        <marker scope="Public" name="reply_arue12" />
+        <marker scope="Public" name="reply_arue13" />
+        <marker scope="Public" name="reply_arue21" />
+        <marker scope="Public" name="reply_arue22" />
+        <marker scope="Public" name="reply_arue23" />
+        <marker scope="Public" name="reply_arue31" />
+        <marker scope="Public" name="reply_arue32" />
+        <marker scope="Public" name="reply_arue33" />
+        <marker scope="Public" name="reply_arue41" />
+        <marker scope="Public" name="reply_arue42" />
+        <marker scope="Public" name="reply_arue43" />
+        <marker scope="Public" name="reply_arue51" />
+        <marker scope="Public" name="reply_arue52" />
+        <marker scope="Public" name="reply_arue53" />
+        <marker scope="Public" name="reply_arue61" />
+        <marker scope="Public" name="reply_arueFFmust" />
+        <marker scope="Public" name="reply_arueFFstart" />
         <marker scope="Public" name="reply_cherly01" />
         <marker scope="Public" name="reply_cheryl01" />
         <marker scope="Public" name="reply_cheryl02" />
@@ -1125,6 +1228,8 @@
         <marker scope="Public" name="reply_revy01" />
         <marker scope="Public" name="reply_revy01a" />
         <marker scope="Public" name="reply_revy01b" />
+        <marker scope="Public" name="reply_ryuko61a" />
+        <marker scope="Public" name="reply_ryuko61b" />
         <marker scope="Public" name="reply_sanako01" />
         <marker scope="Public" name="reply_sanako02" />
         <marker scope="Public" name="reply_sanako03" />
@@ -1141,10 +1246,23 @@
         <marker scope="Public" name="rouge01" />
         <marker scope="Public" name="rouge01a" />
         <marker scope="Public" name="rouge01b" />
+        <marker scope="Public" name="rukyo" />
+        <marker scope="Public" name="rukyo71a" />
+        <marker scope="Public" name="rukyo71b" />
         <marker scope="Public" name="ryuko" />
+        <marker scope="Public" name="ryuko_reply61a" />
+        <marker scope="Public" name="ryuko_reply61b" />
+        <marker scope="Public" name="ryuko_reply62a" />
+        <marker scope="Public" name="ryuko_start0a" />
+        <marker scope="Public" name="ryuko_start0b" />
         <marker scope="Public" name="ryuko01" />
         <marker scope="Public" name="ryuko01a" />
         <marker scope="Public" name="ryuko01b" />
+        <marker scope="Public" name="ryuko21" />
+        <marker scope="Public" name="ryuko22" />
+        <marker scope="Public" name="ryuko23" />
+        <marker scope="Public" name="ryuko71a" />
+        <marker scope="Public" name="ryuko71b" />
         <marker scope="Public" name="sacrifice" />
         <marker scope="Public" name="sanako02" />
         <marker scope="Public" name="sanako03" />
@@ -1154,6 +1272,7 @@
         <marker scope="Public" name="shamiko01" />
         <marker scope="Public" name="shamiko02" />
         <marker scope="Public" name="shamiko03" />
+        <marker scope="Public" name="shamiko11" />
         <marker scope="Public" name="shamiko42" />
         <marker scope="Public" name="shamiko43" />
         <marker scope="Public" name="shamiko51" />
