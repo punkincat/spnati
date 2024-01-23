@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>maria_sadistic_venus</id>
+    <label>Maria</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag from="0" to="0">high_heels</tag>
+        <tag from="2" to="4">lingerie</tag>
+        <tag remove="true">no_bra</tag>
+        <tag>ponytail</tag>
+        <tag from="2" to="4">pubic_hair_peek</tag>
+        <tag>valentines_skin</tag>
+    </tags>
+    <layers>5</layers>
+    <folder>opponents/reskins/maria_sadistic_venus/</folder>
+    <wardrobe>
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="bra" generic="bra" position="upper" type="important" />
+        <clothing name="blouse" generic="shirt" position="upper" type="major" />
+        <clothing name="skirt" generic="skirt" position="lower" type="major" />
+        <clothing name="shoes" generic="shoes" position="feet" type="minor" plural="true" />
+    </wardrobe>
+
+
+</costume>
