@@ -611,6 +611,9 @@ function restartGame () {
     $gamePlayerCardArea.show();
     $gamePlayerClothingArea.css('display', '');  /* Reset to default so as not to interfere with 
                                                     switching between classic and minimal UI. */
+    $autoAdvanceFasterButton.hide();
+    $autoAdvanceSlowerButton.hide();
+
     inGame = false;
     autoAdvancePaused = false;
 

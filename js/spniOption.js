@@ -440,8 +440,6 @@ function showOptionsModal () {
     setActiveOption('options-explain-hands', EXPLAIN_ALL_HANDS);
     setActiveOption('options-ai-turn-time', GAME_DELAY);
     setActiveOption('options-deal-speed', ANIM_TIME);
-    setActiveOption('options-auto-forfeit', FORFEIT_DELAY);
-    setActiveOption('options-auto-ending', ENDING_DELAY);
     setActiveOption('options-minimal-ui', MINIMAL_UI);
     setActiveOption('options-player-finishing-effect', PLAYER_FINISHING_EFFECT);
     $("#options-ui-font-weight").val(UI_FONT_WEIGHT);
@@ -541,14 +539,6 @@ $('ul#options-ai-turn-time').on('click', 'a', function() {
 $('ul#options-deal-speed').on('click', 'a', function() {
     ANIM_TIME = Number($(this).attr('data-value'));
     ANIM_DELAY = 0.16 * ANIM_TIME;
-});
-
-$('ul#options-auto-forfeit').on('click', 'a', function() {
-    FORFEIT_DELAY = Number($(this).attr('data-value')) || null;
-});
-
-$('ul#options-auto-ending').on('click', 'a', function() {
-    ENDING_DELAY = Number($(this).attr('data-value')) || null;
 });
 
 $('ul#options-minimal-ui').on('click', 'a', function() {

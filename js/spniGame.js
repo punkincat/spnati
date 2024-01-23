@@ -45,6 +45,8 @@ $gameClothingCells = [$(".player-0-clothing-1"),
                       $(".player-0-clothing-7"),
                       $(".player-0-clothing-8")];
 $mainButton = $("#main-game-button");
+$autoAdvanceFasterButton = $("#auto-advance-faster-button");
+$autoAdvanceSlowerButton = $("#auto-advance-slower-button");
 $cardButtons = [$("#player-0-card-1"),
                 $("#player-0-card-2"),
                 $("#player-0-card-3"),
@@ -83,8 +85,6 @@ gameDisplays = [
 
 /* pseudo constants */
 var GAME_DELAY = 800;
-var FORFEIT_DELAY = null;
-var ENDING_DELAY = null;
 var GAME_OVER_DELAY = 1000;
 var SHOW_ENDING_DELAY = 5000; //5 seconds
 var CARD_SUGGEST = false;
@@ -93,6 +93,7 @@ var EXPLAIN_ALL_HANDS = true;
 var AUTO_FADE = true;
 var MINIMAL_UI = true;
 var DEBUG = false;
+const AUTO_ADVANCE_DELAYS = [undefined, 10000, 7000, 4000];
 
 /* game state
  * 
@@ -127,7 +128,8 @@ var recentLoser = -1;
 var recentWinner = -1;
 var gameOver = false;
 var actualMainButtonState = false;
-var autoAdvancePaused = false;  // Flag that prevents auto advance if a modal is opened when not waiting for auto advance
+var autoAdvanceSpeed = 0;
+var autoAdvancePaused = false;  // Flag that prevents auto advance if a modal is opened when *not* waiting for auto advance
 var endWaitDisplay = 0;
 var showDebug = false;
 var chosenDebug = -1;
@@ -390,6 +392,8 @@ function startDealPhase () {
                 if (HUMAN_PLAYER == i) {
                     $gamePlayerCardArea.hide();
                     $gamePlayerClothingArea.hide();
+                    $autoAdvanceFasterButton.show();
+                    $autoAdvanceSlowerButton.show();
                 }
                 else {
                     $gameOpponentAreas[i-1].hide();
@@ -663,6 +667,8 @@ function endRound () {
                 $gameOpponentAreas[i-1].hide();
             }
         }
+        $autoAdvanceFasterButton.show();
+        $autoAdvanceSlowerButton.show();
         endWaitDisplay = -1;
         handleGameOver();
     } else {
@@ -688,6 +694,8 @@ function handleGameOver() {
         updateAllBehaviours(winner.slot, GAME_OVER_VICTORY, GAME_OVER_DEFEAT);
 
         allowProgression(eGamePhase.GAME_OVER);
+        $autoAdvanceFasterButton.hide();
+        $autoAdvanceSlowerButton.hide();
         //window.setTimeout(doEpilogueModal, SHOW_ENDING_DELAY); //start the endings
     } else {
         // endWaitDisplay starts at -1 so we get four phases before
@@ -764,13 +772,9 @@ function allowProgression (nextPhase) {
         if (autoAdvancePaused) {
             // Closing the modal that the flag to be set should call allowProgression() again.
             return;
-        } else if (FORFEIT_DELAY && humanPlayer.out && !humanPlayer.finished && (humanPlayer.timer > 1 || gamePhase == eGamePhase.STRIP)) {
-            timeoutID = autoForfeitTimeoutID = setTimeout(advanceGame, FORFEIT_DELAY);
-            $mainButton.attr('disabled', true);
-            return;
-        } else if (ENDING_DELAY && (humanPlayer.finished || (!humanPlayer.out && gameOver))) {
-            /* Human is finished or human is the winner */
-            timeoutID = autoForfeitTimeoutID = setTimeout(advanceGame, ENDING_DELAY);
+        } else if ((humanPlayer.out && (humanPlayer.timer > 1 || gamePhase == eGamePhase.STRIP))
+                   || humanPlayer.finished || (!humanPlayer.out && gameOver)) {
+            timeoutID = autoForfeitTimeoutID = setTimeout(advanceGame, AUTO_ADVANCE_DELAYS[autoAdvanceSpeed]);
             $mainButton.attr('disabled', true);
             return;
         }
@@ -825,6 +829,33 @@ function resumeAutoAdvance () {
     autoAdvancePaused = false;
     if (!actualMainButtonState) {
         allowProgression();
+    }
+}
+
+function changeAutoAdvance (change) {
+    autoAdvanceSpeed += change;
+    if (autoAdvanceSpeed < 0) autoAdvanceSpeed = 0; // Safety check; shouldn't happen. Same below.
+    if (autoAdvanceSpeed >= AUTO_ADVANCE_DELAYS.length) autoAdvanceSpeed = AUTO_ADVANCE_DELAYS.length - 1;
+
+    $autoAdvanceSlowerButton.attr('disabled', autoAdvanceSpeed == 0);
+    $autoAdvanceFasterButton.attr('disabled', autoAdvanceSpeed == AUTO_ADVANCE_DELAYS.length - 1);
+    
+    if (autoAdvanceSpeed == 0 && autoForfeitTimeoutID) {
+        clearTimeout(autoForfeitTimeoutID);
+        timeoutID = autoForfeitTimeoutID = undefined;
+    }
+    if (autoAdvanceSpeed > 0) {
+        $autoAdvanceFasterButton.children('span.glyphicon').removeClass('glyphicon-play').addClass('glyphicon-forward');
+    } else {
+        $autoAdvanceFasterButton.children('span.glyphicon').removeClass('glyphicon-forward').addClass('glyphicon-play');
+    }
+    if (autoAdvanceSpeed > 1) {
+        $autoAdvanceSlowerButton.children('span.glyphicon').removeClass('glyphicon-pause').addClass('glyphicon-play');
+    } else {
+        $autoAdvanceSlowerButton.children('span.glyphicon').removeClass('glyphicon-play').addClass('glyphicon-pause');
+    }
+    if (!autoForfeitTimeoutID && !actualMainButtonState) {
+        allowProgression();  // Start Auto-advance if not already and we're not waiting for something.
     }
 }
 

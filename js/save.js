@@ -301,12 +301,6 @@ Save.prototype.loadOptions = function(){
         ANIM_TIME = options.dealAnimation;
         ANIM_DELAY = 0.16 * ANIM_TIME;
     }
-    if ('autoForfeit' in options
-        && (typeof options.autoForfeit == 'number' || options.autoForfeit === null))
-        FORFEIT_DELAY = options.autoForfeit;
-    if ('autoEnding' in options
-        && (typeof options.autoEnding == 'number' || options.autoEnding === null))
-        ENDING_DELAY = options.autoEnding;
     if ('minimalUI' in options && typeof options.minimalUI == 'boolean') setUIMode(options.minimalUI);
     if ('uiFontWeight' in options && typeof options.uiFontWeight == 'number') UI_FONT_WEIGHT = options.uiFontWeight;
     if ('uiFontWidth' in options && typeof options.uiFontWidth == 'number') UI_FONT_WIDTH = options.uiFontWidth;
@@ -391,8 +385,6 @@ Save.prototype.saveOptions = function() {
         explainHands: EXPLAIN_ALL_HANDS,
         gameDelay: GAME_DELAY,
         dealAnimation: ANIM_TIME,
-        autoForfeit: FORFEIT_DELAY,
-        autoEnding: ENDING_DELAY,
         minimalUI: MINIMAL_UI,
         uiFontWeight: UI_FONT_WEIGHT,
         uiFontWidth: UI_FONT_WIDTH,
