@@ -2,10 +2,11 @@ If Sanako to left and Meia to right:
 
 SANAKO MUST STRIP SHOES AND SOCKS:
 Sanako [sanako_meia_sm_s1]: You naughty ~player.ifMale(boys and |)~girls want to get me out of my uniform already, don't you? Well you'll just have to wait.
-Meia []*: ??
+Meia [sanako0left]: That's fine.  Even if we didn't strip at all, there's a lot to learn from the Earth of this time.
+  OR [sanako0left]: It would've been worth visiting this planet, in this time, with or without uniforms.
 
 SANAKO STRIPPING SHOES AND SOCKS:
-Sanako []*: ??
+Sanako [sanako_meia_sm_s2]: I wouldn't mind teaching you some things with my clothes still on, Meia. But I don't think everyone else would appreciate it.
 Meia []*: ??
 
 SANAKO STRIPPED SHOES AND SOCKS:
@@ -68,10 +69,11 @@ Meia []*: ??
 
 MEIA MUST STRIP HEADPIECE:
 Sanako [sanako_meia_sm_m1]: Who else thinks it's time that that Meia sharing a bit more with the class?
-Meia []*: ??
+Meia [sanako_resp0]: ...This is more than I <i>ever</i> talk, Sanako.  What do you want?
+  OR [sanako_resp0]: If you want to know something, Sanako, just ask.
 
 MEIA STRIPPING HEADPIECE:
-Sanako []*: ??
+Sanako [sanako_meia_sm_m2]: I just know that sometimes the quiet ones don't get enough attention. If there's something we can do to make this more fun for you, let us know!
 Meia []*: ??
 
 MEIA STRIPPED HEADPIECE:
@@ -142,8 +144,9 @@ Meia [sanako0]: Most girls our age don't seem as mature as you, even when they'r
 Sanako [sanako_meia_ms_s1]: Who, me? I try not to let my emotions get the better of me, so I'm glad to hear that it's working. Just please don't say anything cruel, okay?
 
 SANAKO STRIPPING SHOES AND SOCKS:
-Meia []:* ??
-Sanako []*: ??
+Meia [sanako01]: They say that's what makes a good leader.  Maybe your classmates feel like they can count on you.
+  OR [sanako01]: It's a skill to not lose control.  Girls look up to you for it.
+Sanako [sanako_meia_ms_s2]: I've heard it helps a girl become a good mom too. That and warm hugs.
 
 SANAKO STRIPPED SHOES AND SOCKS:
 Meia []*: ??
@@ -206,9 +209,10 @@ Sanako []*: ??
 
 ---
 
-MEIA MUST STRIP HEADPIECE:
-Meia []*: ?? -- Meia to lead here
-Sanako []*: ??
+MEIA MUST STRIP HEADPIECE: -- recommendation: make this conditional block on Meia's default outfit, as the Valentine's outfit is very fancy
+Meia [sanako_resp0right]: I'm going to keep things simple when it's my turn.
+  OR [sanako_resp0right]: You can see a lot of me already, and I don't really care to get creative with this kind of thing.
+Sanako [sanako_meia_ms_m1]: It might be mundane for you, but it's exciting for the rest of us. It's not every day we get to see a young lady sparkle in a bodysuit like that.
 
 MEIA STRIPPING HEADPIECE:
 Meia []*: ??
@@ -233,7 +237,8 @@ Sanako []*: ??
 
 
 MEIA MUST STRIP BODYSUIT:
-Meia []*: ??
+Meia [sanako_resp2right]: ...Pyoro, have you finished your scan of the background radiation?<hr>{pyoro}This place really is what it seems.<br>...Do you wanna scan the other players?
+  OR [sanako_resp2right]: {pyoro}I'm back, Meia!  Half-life analysis confirms this Earth is the predicted age.<br>...I could try it on your tablemates, too.{!reset}<hr>What do you mean?
 Sanako []*: ??
 
 MEIA STRIPPING BODYSUIT:
@@ -246,7 +251,8 @@ Sanako []*: ??
 
 
 MEIA MUST STRIP BRA:
-Meia []*: ??
+Meia [sanako_resp3right]: ...My mother knew I was like this.  I just wonder if she thought I'd outgrow it, or if I'd really end up a criminal, stripping for strangers.
+  OR [sanako_resp3right]: I was a troublemaker growing up.  Mom always said troublemakers end up in seedy places like this.  I wonder if she ever thought I'd go this far with it.
 Sanako []*: ??
 
 MEIA STRIPPING BRA:
