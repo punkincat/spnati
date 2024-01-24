@@ -19,7 +19,10 @@
             <description>Highlighting this case as this is a man and a woman getting naked at the same time instead of one or the other.</description>
         </case>
         <case name="Zeke/Pandoria Thigh-sex" id="50" priority="Noteworthy" min="7" max="7">
-            <description>Zeke and Pandoria's default 'heavy masturbating' poses have them performing intercrural sex, or 'thigh sex'. Each marker is tagged with a different letter to designate which comment they are making when they start this.</description>
+            <description>Zeke and Pandoria's default 'heavy masturbating' poses have them performing intercrural sex, or 'thigh sex'. Check for the marker condition. Each marker is tagged with a different letter to designate which comment they are making when they start this.</description>
+        </case>
+        <case name="Zeke/Pandoria Sex" id="172" priority="Noteworthy" min="7" max="7">
+            <description>Zeke and Pandy may have penetrative sex for the last part of their masturbation (but it is not guaranteed, check the conditions).</description>
         </case>
     </noteworthy>
     <reviewed>true</reviewed>
@@ -92,6 +95,10 @@
         <response id="412" opponent="jura" opponentId="1469" />
         <response id="413" opponent="jura" opponentId="1470" />
         <response id="432" opponent="jura" opponentId="1474" />
+        <response id="436" opponent="dunban" opponentId="802" />
+        <response id="437" opponent="dunban" opponentId="805" />
+        <response id="438" opponent="critical_darling" opponentId="18" />
+        <response id="439" opponent="dunban" opponentId="2" />
     </responses>
     <notes>
         <note id="10">If you want to ask Pandoria / Pandy questions, you could draw attention to the fact that some of her body parts are lightbulbs, such as a lightbulb in her head.. and her tail. Her specific race is known as a "Blade".</note>
@@ -445,9 +452,9 @@
         <label id="341" label="" folder="Targets" sort="0" />
         <label id="342" label="" folder="Targets" sort="0" />
         <label id="343" label="" folder="Filtered" sort="0" />
-        <label id="344" label="" color="1" folder="Mari S" sort="0" />
-        <label id="345" label="" color="1" folder="Mari S" sort="0" />
-        <label id="346" label="" color="1" folder="Mari S" sort="0" />
+        <label id="344" label="" folder="Mari S" sort="0" />
+        <label id="345" label="" folder="Mari S" sort="0" />
+        <label id="346" label="" folder="Mari S" sort="0" />
         <label id="347" label="" folder="Targets" sort="0" />
         <label id="348" label="" folder="Targets" sort="0" />
         <label id="349" label="" folder="Responses" sort="0" />
@@ -498,7 +505,7 @@
         <label id="393" label="" color="3" folder="Targets" sort="0" />
         <label id="394" label="" color="3" folder="Targets" sort="0" />
         <label id="395" label="" color="3" folder="Targets" sort="0" />
-        <label id="396" label="" color="1" folder="Targets" sort="0" />
+        <label id="396" label="" color="3" folder="Targets" sort="0" />
         <label id="397" label="" folder="Targets" sort="0" />
         <label id="398" label="" folder="Filtered" sort="0" />
         <label id="399" label="" folder="Filtered" sort="0" />
@@ -537,12 +544,23 @@
         <label id="431" label="" folder="Targets" sort="0" />
         <label id="432" label="" color="1" folder="Responses" sort="0" />
         <label id="433" label="" color="1" folder="Responses" sort="0" />
+        <label id="434" label="" folder="Mari S" sort="0" />
+        <label id="435" label="" color="1" folder="Targets" sort="0" />
+        <label id="436" label="" folder="Dunban" sort="0" />
+        <label id="437" label="" folder="Responses" sort="0" />
+        <label id="438" label="" folder="Targets" sort="0" />
+        <label id="439" label="" folder="Targets" sort="0" />
+        <label id="440" label="" folder="Targets" sort="0" />
+        <label id="441" label="" folder="Targets" sort="0" />
+        <label id="442" label="" folder="Filtered" sort="0" />
+        <label id="443" label="" folder="Filtered" sort="0" />
+        <label id="444" label="" folder="Filtered" sort="0" />
     </labels>
     <posePreviewMarkers>
         <posePreviewMarker>penis=s</posePreviewMarker>
     </posePreviewMarkers>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>433</nextId>
+    <nextId>444</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="allowsex">If set to 1, Zeke and Pandoria *can* (but are not guaranteed to) have sex for their forfeit.</marker>
@@ -559,7 +577,9 @@
         <marker scope="Public" name="caitlin_beans_on_toast" />
         <marker scope="Public" name="caitlin_chairYEET" />
         <marker scope="Public" name="caitlin_hair" />
+        <marker scope="Public" name="cd_butt_pose" />
         <marker scope="Public" name="dontUseRegularForfeitStateOperation" />
+        <marker scope="Public" name="dunban_arm_reveal" />
         <marker scope="Public" name="EyeOfShiningJustice">If active, Zeke is in EOSJ mode.</marker>
         <marker scope="Public" name="finishing_pandoria" />
         <marker scope="Public" name="finishing_zeke" />
@@ -589,6 +609,9 @@
         <marker scope="Public" name="pandy_jura_self0c" />
         <marker scope="Public" name="pandy_jura_self1c" />
         <marker scope="Public" name="pandy_jura_strip2" />
+        <marker scope="Public" name="pandy_jura_strip2b" />
+        <marker scope="Public" name="pandy_mariS_hatCont" />
+        <marker scope="Public" name="pandy_mariS_hatEnd" />
         <marker scope="Public" name="pandy_mariS_hatResp" />
         <marker scope="Public" name="pandy_meia_strip2b" />
         <marker scope="Public" name="pandy_strips_boots">Pandoria strips her boots while Zeke removes his boots.</marker>
@@ -611,6 +634,7 @@
         <marker scope="Public" name="self_cleanup" />
         <marker scope="Public" name="self_finished" />
         <marker scope="Public" name="self_finished_creampie" />
+        <marker scope="Public" name="self_nude_dunban_resp" />
         <marker scope="Public" name="shamiko_transform1" />
         <marker scope="Public" name="shamiko_transform2" />
         <marker scope="Public" name="spooky_goHomeWithMeResp" />
@@ -693,6 +717,8 @@
         <marker scope="Public" name="zeke_caitlin_powers1" />
         <marker scope="Public" name="zeke_chest_revealed_crystal" />
         <marker scope="Public" name="zeke_dunban_self0a" />
+        <marker scope="Public" name="zeke_dunban_self1a" />
+        <marker scope="Public" name="zeke_dunban_self1a_b" />
         <marker scope="Public" name="zeke_fischl_strip0a" />
         <marker scope="Public" name="zeke_jura_self0b" />
         <marker scope="Public" name="zeke_jura_self0c" />
