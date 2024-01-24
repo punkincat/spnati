@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <opponent>
-    <lastupdate>1703790119509</lastupdate>
+    <lastupdate>1706041009182</lastupdate>
     <enabled>true</enabled>
     <first>Sheena</first>
     <last>Fujibayashi</last>
@@ -13,11 +13,13 @@
     <description>An assassin who was sent to kill the Chosen of Sylvarant, but failed her mission and eventually joined her party. She's able to summon Spirits.</description>
     <epilogue gender="male" img="bg.png">Invitation to the hot springs</epilogue>
     <layers>6</layers>
+    <default-costume-name>Elemental Summoner</default-costume-name>
     <alternates>
-        <costume folder="opponents/reskins/swimsuit_sheena/" img="0-interested.png" set="summer" label="Sheena">Queen of the Beach</costume>
-        <costume folder="opponents/reskins/sheena_chosen_beauty/" img="0-excited.png" set="easter" label="Sheena">Chosen Beauty</costume>
+        <costume folder="opponents/reskins/swimsuit_sheena/" img="0-interested.png" set="summer" label="Sheena">Seaside Summoner</costume>
+        <costume folder="opponents/reskins/sheena_chosen_beauty/" img="0-excited.png" set="easter" label="Sheena">Lucky Summoner</costume>
+        <costume folder="opponents/reskins/sheena_sugary_summoner/" img="0-flirtatous.png" set="valentines" label="Sheena">Sugary Summoner</costume>
     </alternates>
     <has_collectibles>true</has_collectibles>
-    <lines>1590</lines>
+    <lines>1687</lines>
     <poses>213</poses>
 </opponent>
