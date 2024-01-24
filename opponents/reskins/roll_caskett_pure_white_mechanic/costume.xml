@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>roll_caskett_pure_white_mechanic</id>
+    <label>Roll</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag remove="true">bodysuit</tag>
+        <tag>bottomless_first</tag>
+        <tag from="2" to="4">leotard</tag>
+        <tag>no_underwear</tag>
+        <tag from="0" to="5">thigh_highs</tag>
+        <tag>valentines_skin</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/roll_caskett_pure_white_mechanic/</folder>
+    <folder stage="6">opponents/roll_caskett/</folder>
+    <wardrobe>
+        <clothing name="socks" generic="socks" position="feet" type="minor" plural="true" />
+        <clothing name="leotard" generic="leotard" position="upper" type="important" />
+        <clothing name="hat" generic="hat" position="head" type="extra" />
+        <clothing name="shorts" generic="shorts" position="lower" type="major" plural="true" />
+        <clothing name="jacket" generic="jacket" position="upper" type="major" />
+        <clothing name="shoes" generic="shoes" position="feet" type="minor" plural="true" />
+    </wardrobe>
+
+
+</costume>
