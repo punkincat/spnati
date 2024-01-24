@@ -248,6 +248,9 @@
         <response id="789" opponent="nonon" opponentId="325" />
         <response id="792" opponent="nonon" opponentId="397" />
         <response id="797" opponent="beatrix" opponentId="172" />
+        <response id="803" opponent="zeke_pandoria" opponentId="50" />
+        <response id="804" opponent="zeke_pandoria" opponentId="172" />
+        <response id="805" opponent="zeke_pandoria" opponentId="34" />
     </responses>
     <notes>
         <note id="10">Will be replaced if Sharla ever gets reworked lol</note>
@@ -1079,13 +1082,19 @@ c: say that he's been as high as the bionis' head?
         <label id="795" label="" folder="Responses" sort="0" />
         <label id="796" label="" folder="Responses" sort="0" />
         <label id="797" label="" folder="Responses" sort="0" />
+        <label id="798" label="" folder="Targets" sort="0" />
+        <label id="799" label="" folder="Targets" sort="0" />
+        <label id="800" label="" folder="Targets" sort="0" />
+        <label id="801" label="" folder="Responses" sort="0" />
+        <label id="802" label="" folder="Targets" sort="0" />
+        <label id="803" label="" folder="Targets" sort="0" />
+        <label id="804" label="" folder="Targets" sort="0" />
     </labels>
     <posePreviewMarkers>
         <posePreviewMarker>aquaKH_socks==1</posePreviewMarker>
     </posePreviewMarkers>
-    <nextId>797</nextId>
+    <nextId>805</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="20gOffer">Line that plays when Dunban offers a 20g bribe to whoever loses</marker>
         <marker scope="Public" name="20gStage">Line related to game logic of 20gOffer</marker>
         <marker scope="Public" name="aaravi_backstoryPromptRespSelf" />
@@ -1128,6 +1137,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="ddlc_poet_1" />
         <marker scope="Public" name="ddlc_poet_2" />
         <marker scope="Public" name="ddlc_poet_3" />
+        <marker scope="Public" name="dubnan_dmg_self0c" />
         <marker scope="Public" name="dunban_9s_recon1" />
         <marker scope="Public" name="dunban_9s_robot1" />
         <marker scope="Public" name="dunban_AG_water3" />
@@ -1451,6 +1461,8 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_mitama_wisdom2Resp" />
         <marker scope="Public" name="dunban_mitama_wisdom3Resp" />
         <marker scope="Public" name="dunban_mitama_wisdomResp" />
+        <marker scope="Public" name="dunban_moskii_strip0a" />
+        <marker scope="Public" name="dunban_moskii_strip1a" />
         <marker scope="Public" name="dunban_nadeshiko_outdoors1" />
         <marker scope="Public" name="dunban_nadeshiko_outdoors2" />
         <marker scope="Public" name="dunban_nadia_headroll" />
@@ -1575,10 +1587,11 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="dunban_yumeko_strip5c" />
         <marker scope="Public" name="dunban_yuno_stripAyumi01" />
         <marker scope="Public" name="dunban_zeke_strip0a" />
+        <marker scope="Public" name="dunban_zeke_strip1a" />
         <marker scope="Public" name="dunban_zoe_selected" />
         <marker scope="Public" name="dunbanff_aqua_finishing" />
         <marker scope="Public" name="dwight_start_ff" />
-        <marker scope="Public" name="filtered_kind&amp;lonely" />
+        <marker scope="Public" name="filtered_kindandlonely" />
         <marker scope="Private" name="finished" />
         <marker scope="Public" name="finished_no_photos" />
         <marker scope="Public" name="forfeit_left_handed" />
@@ -1630,6 +1643,7 @@ c: say that he's been as high as the bionis' head?
         <marker scope="Public" name="treasureScope2" />
         <marker scope="Public" name="worst_possible_hand" />
         <marker scope="Public" name="yumeko_dunban_satisfaction" />
+        <marker scope="Public" name="zeke_pandy_nude" />
     </markers>
     <recipes>
         <recipe key="1ac2b058-5e06-4321-9ea7-d6bc3098748e">
