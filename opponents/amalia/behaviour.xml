@@ -28,10 +28,10 @@
 
 
     <wardrobe>
-        <clothing name="plants" position="lower" type="important" plural="true" />
-        <clothing name="flowers" position="upper" type="important" plural="true" />
+        <clothing name="plants" position="lower" type="minor" plural="true" fromStage="5" fromDeal="true" />
+        <clothing name="flowers" position="upper" type="minor" plural="true" fromStage="5" fromDeal="true" />
         <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
-        <clothing name="top" generic="shirt" position="upper" type="important" />
+        <clothing name="top" generic="shirt" position="upper" type="major" />
         <clothing name="leggings" generic="wrappings" position="legs" type="minor" plural="true" />
         <clothing name="skirt" generic="skirt" position="lower" type="major" />
         <clothing name="bag" generic="bag" position="other" type="extra" />
