@@ -107,7 +107,7 @@
         <label id="72" label="confident female" folder="Tags" sort="2" />
         <label id="73" label="athlete" folder="Tags" sort="2" />
         <label id="74" label="athlete" folder="Tags" sort="0" />
-        <label id="76" label="" folder="Target_Stage0" sort="3" />
+        <label id="76" label="" folder="Target_Stage0" sort="0" />
         <label id="77" label="" folder="Target_Stage0" sort="2" />
         <label id="78" label="" color="3" folder="" sort="0" />
         <label id="75" label="" color="4" folder="" sort="0" />
@@ -664,7 +664,7 @@
         <label id="683" label="" color="3" folder="Reply_Stage0" sort="19" />
         <label id="684" label="" color="3" folder="Reply_Stage1" sort="8" />
         <label id="685" label="" folder="Reply_Stage1" sort="9" />
-        <label id="686" label="" color="12" folder="Target_Stage1" sort="20" />
+        <label id="686" label="" folder="Target_Stage1" sort="20" />
         <label id="687" label="" folder="Target_Stage2" sort="3" />
         <label id="688" label="" folder="Target_Stage2" sort="6" />
         <label id="689" label="" folder="Target_Stage2" sort="9" />
@@ -728,8 +728,14 @@
         <label id="748" label="" folder="Target_Stage0" sort="0" />
         <label id="749" label="" color="1" folder="Target_Stage0" sort="0" />
         <label id="750" label="" color="1" folder="Reply_Stage0" sort="0" />
+        <label id="751" label="" color="12" folder="Reply_Stage1" sort="0" />
+        <label id="752" label="" color="12" folder="Target_Stage1" sort="0" />
+        <label id="753" label="" color="12" folder="Reply_Stage1" sort="0" />
+        <label id="754" label="" color="12" folder="Target_Stage2" sort="0" />
+        <label id="755" label="" color="12" folder="Target_Stage3" sort="0" />
+        <label id="438" label="" folder="Reply_Stage2" sort="0" />
     </labels>
-    <nextId>750</nextId>
+    <nextId>755</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="adrien01" />
@@ -844,6 +850,8 @@
         <marker scope="Public" name="hutao01" />
         <marker scope="Public" name="insult_athlete" />
         <marker scope="Public" name="interrupted" />
+        <marker scope="Public" name="interrupted_after_strip" />
+        <marker scope="Public" name="interrupted_strip" />
         <marker scope="Public" name="intro" />
         <marker scope="Public" name="intro_interrupted" />
         <marker scope="Public" name="intro_interrupted_lost" />
@@ -938,6 +946,7 @@
         <marker scope="Public" name="leonFF04" />
         <marker scope="Public" name="leonFF05" />
         <marker scope="Public" name="likes" />
+        <marker scope="Public" name="loaing32" />
         <marker scope="Public" name="losing0" />
         <marker scope="Public" name="losing11" />
         <marker scope="Public" name="losing12" />
@@ -1244,6 +1253,9 @@
         <marker scope="Public" name="reply_sanako02" />
         <marker scope="Public" name="reply_sanako03" />
         <marker scope="Public" name="reply_sanako11" />
+        <marker scope="Public" name="reply_sanako12" />
+        <marker scope="Public" name="reply_sanako12a" />
+        <marker scope="Public" name="reply_sanako12b" />
         <marker scope="Public" name="reply_sheena01" />
         <marker scope="Public" name="reply_sucrose01" />
         <marker scope="Public" name="reply_tao0" />
@@ -1277,6 +1289,8 @@
         <marker scope="Public" name="sanako02" />
         <marker scope="Public" name="sanako03" />
         <marker scope="Public" name="sanako12" />
+        <marker scope="Public" name="sanako13" />
+        <marker scope="Public" name="sanako21" />
         <marker scope="Public" name="satsuki_fantasy01" />
         <marker scope="Public" name="servant" />
         <marker scope="Public" name="shamiko01" />
@@ -1309,6 +1323,7 @@
         <marker scope="Public" name="tao01" />
         <marker scope="Public" name="target_sanako11" />
         <marker scope="Public" name="target_sanako12" />
+        <marker scope="Public" name="target_sanako21" />
         <marker scope="Public" name="tea_party" />
         <marker scope="Public" name="toph01" />
         <marker scope="Public" name="toph01a" />
