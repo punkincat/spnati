@@ -4,7 +4,7 @@ mkdir -p .public/opponents .public/img .public/js
 cp -r css fonts player index.html version-info.xml backgrounds.xml events.xml cards.xml .public
 
 npm ci
-./node_modules/.bin/babel js --out-dir .public/js --copy-files --source-maps inline --ignore "js/fileIndex.js","js/core-js.3.35.0.js","js/core-js.3.35.0.min.js","js/core-js.3.35.0.min.js.map","js/fetch.js","js/unorm.js","js/bootstrap*","js/jquery*","js/pako*.js","js/js.cookie.js","js/ResizeObserver.js","js/sentry*.js"
+./node_modules/.bin/babel js --out-dir .public/js --copy-files --source-maps inline --ignore "js/fileIndex.js","js/core-js.3.35.0.js","js/core-js.3.35.0.min.js","js/core-js.3.35.0.min.js.map","js/fetch.js","js/unorm.js","js/bootstrap.js","js/bootstrap.min.js","js/jquery-3.4.1.js","js/jquery-3.4.1.min.js","js/pako.js","js/pako.min.js","js/js.cookie.js","js/ResizeObserver.js","js/sentry-5.15.4.bundle.min.js"
 
 # Copy non-recursively to exclude the backgrounds folder.
 cp img/* .public/img
