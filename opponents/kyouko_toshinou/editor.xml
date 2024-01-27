@@ -57,6 +57,9 @@
         <response id="511" opponent="solar_flare" opponentId="38" />
         <response id="517" opponent="tea_gardner" opponentId="385" />
         <response id="525" opponent="sanako" opponentId="148" />
+        <response id="538" opponent="kyoko_kirigiri" opponentId="579" />
+        <response id="540" opponent="kyoko_kirigiri" opponentId="1549" />
+        <response id="541" opponent="kyoko_kirigiri" opponentId="564" />
     </responses>
     <notes>
         <note id="5">The marker is available so other characters can see which uniform she's wearing just in case they absolutely need to know for whatever reason. FYI, it's always unset when she loses the red dress.
@@ -65,7 +68,6 @@ That said, do not use this specifically for an interaction. There's a reason I d
         <note id="45">Switching back to her right hand here was intentional.
 
 Also, this is global because an opponent masturbating line somehow snuck in between this line and the one that was supposed to precede it.</note>
-        <note id="49">I refuse to elaborate on why the scope is lying.</note>
         <note id="57">kinda wish 2D and 3D art had separate tags cuz this is kinda hard when I can't assume the target draws a lot</note>
         <note id="63">Kyouko will try to fix her hair literally the next case after "Finished (Self)" plays. This and the game ending should be the only things that interrupt that in order to prevent inconsistency.</note>
         <note id="83">Kyoko says she keeps her ribbon on (and sets the same marker) in a few other cases, but this one is the most reliable.
@@ -467,7 +469,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="406" label="" folder="Tags" sort="0" />
         <label id="407" label="" folder="Tags" sort="0" />
         <label id="408" label="" folder="filter" sort="0" />
-        <label id="409" label="Weapon" folder="Specific items" sort="12" />
+        <label id="409" label="" folder="Specific items" sort="12" />
         <label id="410" label="But who?" color="5" folder="Target: Queenie" sort="2" />
         <label id="411" label="Club Uniform: Bad (endgame)" folder="AI Level" sort="6" />
         <label id="412" label="Get a reaction!" folder="Target: Nagatoro" sort="19" />
@@ -588,9 +590,35 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <label id="531" label="" folder="Everyone clothed and game moving slow" sort="0" />
         <label id="532" label="" folder="Everyone clothed and game moving slow" sort="0" />
         <label id="533" label="" folder="Everyone clothed and game moving slow" sort="0" />
+        <label id="534" label="" folder="Kyoko Kirigiri Friendship" sort="0" />
+        <label id="536" label="" folder="Kyoko Kirigiri Friendship" sort="0" />
+        <label id="535" label="" folder="Kyoko Kirigiri Friendship" sort="0" />
+        <label id="537" label="" folder="Kyoko Kirigiri Friendship" sort="0" />
+        <label id="538" label="" folder="Kyoko Kirigiri Friendship" sort="0" />
+        <label id="539" label="" folder="Kyoko Kirigiri Friendship" sort="0" />
+        <label id="540" label="" folder="Kyoko Kirigiri Friendship" sort="0" />
+        <label id="542" label="" folder="Kyoko Kirigiri Friendship" sort="0" />
+        <label id="543" label="" folder="Specific items" sort="0" />
+        <label id="544" label="" folder="Specific items" sort="0" />
+        <label id="545" label="" folder="Sponsors: Remillia" sort="0" />
+        <label id="546" label="" folder="Sponsors: Nicole" sort="0" />
+        <label id="547" label="" folder="Sponsors: Nicole" sort="0" />
+        <label id="548" label="" folder="Sponsors: Nicole" sort="0" />
+        <label id="549" label="" folder="Sponsors: Nicole" sort="0" />
+        <label id="550" label="" folder="Sponsors: Nicole" sort="0" />
+        <label id="551" label="" folder="Sponsors: Nicole" sort="0" />
+        <label id="552" label="" folder="Sponsors: Remillia" sort="0" />
+        <label id="553" label="" folder="Target: Téa Gardner" sort="0" />
+        <label id="554" label="" folder="Target: Yumeko" sort="0" />
+        <label id="555" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="556" label="" folder="Target: Nadeshiko" sort="0" />
+        <label id="557" label="" folder="Target: Shamiko" sort="0" />
+        <label id="558" label="" folder="Kyoko Kirigiri Friendship" sort="0" />
+        <label id="559" label="" folder="Sponsors: Nicole" sort="0" />
     </labels>
-    <nextId>533</nextId>
+    <nextId>559</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Private" name="B_">Background-related markers</marker>
         <marker scope="Public" name="B_DarkTricks">Dark backgrounds</marker>
         <marker scope="Public" name="B_Inventory_Booth">Inventory background</marker>
@@ -705,10 +733,17 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Jura_Strip1Laze">Self Must Strip 1</marker>
         <marker scope="Public" name="T_Jura_Strip1NotEasy">Self Stripping 1</marker>
         <marker scope="Public" name="T_Kirigiri_AsMuchFun">Kirigiri Stripped 2</marker>
+        <marker scope="Public" name="T_Kirigiri_CleanUp" />
+        <marker scope="Public" name="T_Kirigiri_CleanUpFollowUp" />
+        <marker scope="Public" name="T_Kirigiri_CoffeeHandLine" />
+        <marker scope="Public" name="T_Kirigiri_Friendship" />
         <marker scope="Public" name="T_Kirigiri_GlovesOn">Kyoko Kirigiri Stripped 4</marker>
         <marker scope="Public" name="T_Kirigiri_IfSheLoses">Self Stripped 7</marker>
+        <marker scope="Public" name="T_Kirigiri_LuwakCoffee" />
+        <marker scope="Public" name="T_Kirigiri_MasturThinking" />
         <marker scope="Public" name="T_Kirigiri_SameName">Kirigiri Stripped 1</marker>
         <marker scope="Public" name="T_Kirigiri_Strip0TomatoSecret">Self Must Strip 0 (Sexy Tomato)</marker>
+        <marker scope="Public" name="T_Kirigiri_ThankDealer" />
         <marker scope="Public" name="T_Kirigiri_TheKyouko">"The Kyouko has arrived!"</marker>
         <marker scope="Public" name="T_Kirigiri_TogetherPoker">Kirigiri Stripping 1</marker>
         <marker scope="Public" name="T_Kirigiri_TomatoClothing">Responses to Kirigiri asking how much tomato wear she has</marker>
@@ -731,6 +766,7 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Nadeshiko_Layers" />
         <marker scope="Public" name="T_Nadeshiko_Ramen" />
         <marker scope="Public" name="T_Nadeshiko_RibbonTrick" />
+        <marker scope="Public" name="T_Nadeshiko_SuperCamper" />
         <marker scope="Public" name="T_Nadeshiko_Uniform" />
         <marker scope="Public" name="T_Nagatoro_SkillIssue">Rosalina says "hi"</marker>
         <marker scope="Public" name="T_Nagatoro_Strip0DrawingPlans">Self Stripping 0</marker>
@@ -760,12 +796,12 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Okino_Strip0Mangaka">Self Stripping 0</marker>
         <marker scope="Public" name="T_Queenie_Strip0Villains">Queenie Stripping 0</marker>
         <marker scope="Public" name="T_Queenie_TStrip0LoveJustice">Queenie Must Strip 0</marker>
-        <marker scope="Public" name="T_Reimu_" />
         <marker scope="Public" name="T_Reimu_BothCute" />
         <marker scope="Public" name="T_Reimu_Find" />
         <marker scope="Public" name="T_Reimu_KeepTrying" />
         <marker scope="Public" name="T_Reimu_Strip0Attack">Self Must Strip 0</marker>
         <marker scope="Public" name="T_Robin_DrawingResponse" />
+        <marker scope="Public" name="T_SanakoL_Attention" />
         <marker scope="Public" name="T_SanakoL_ForbiddenTreats" />
         <marker scope="Public" name="T_SannyTess_AyanoFuta" />
         <marker scope="Public" name="T_SannyTess_CockA">Sanny/Tess Stripping 2</marker>
@@ -790,11 +826,14 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Setogaya_Strip2Stripping">Self Stripped 3</marker>
         <marker scope="Public" name="T_Setogaya_TogetherA" />
         <marker scope="Public" name="T_Setogaya_TogetherB" />
+        <marker scope="Public" name="T_Shamiko_BadGuy" />
         <marker scope="Public" name="T_Shamiko_Demon" />
         <marker scope="Public" name="T_SolarFlare_TomatoPlant" />
         <marker scope="Public" name="T_SolarFlare_ZombieApocalypse" />
+        <marker scope="Public" name="T_Tea_ClubActivities" />
         <marker scope="Public" name="T_Tea_Complicated" />
         <marker scope="Public" name="T_Tea_DM2Poker" />
+        <marker scope="Public" name="T_Tea_FaveCard" />
         <marker scope="Public" name="T_Tea_FunPrez">Game start</marker>
         <marker scope="Public" name="T_Tea_NotReal" />
         <marker scope="Public" name="T_Tea_RedFace" />
@@ -805,7 +844,6 @@ Yes, there are two markers for this. Feel free to target whichever you like.</no
         <marker scope="Public" name="T_Toph_SpoilerAlert" />
         <marker scope="Public" name="T_TripleKyokoKyou_Confusing">Kyoko Kirigiri and Kyou Fujibayashi selected, player named Kyouko or Kyoko</marker>
         <marker scope="Public" name="T_Wikipe-tan_Air" />
-        <marker scope="Public" name="T_Yumeko_" />
         <marker scope="Public" name="T_Yumeko_AllWs" />
         <marker scope="Public" name="T_Yumeko_Gambler" />
         <marker scope="Public" name="T_Yumeko_RandomFun" />
