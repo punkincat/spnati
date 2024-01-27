@@ -1356,8 +1356,10 @@ function expandPlayerVariable(split_fn, args, player, self, target, bindings) {
         var n = Math.min(Math.max((parseInt(args, 10) || 1), 1), 10);
         var name = expandNicknames(self, player);
         var ret = name;
-        for (var i = 0; i < n; i++) {
-            ret = name[0] + "-" + ret;
+        if (name[0].toLowerCase() != name[0].toUpperCase()) {
+            for (var i = 0; i < n; i++) {
+                ret = name[0] + "-" + ret;
+            }
         }
         return ret;
     case 'ifmale':
