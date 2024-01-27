@@ -114,6 +114,8 @@
         <note id="115">I wrote these lines at 12:20 am
 ; hope they aren't lame</note>
         <note id="141">Ei being the Raiden Shogun, the Electro Archon, the Narukamo Ogosho, the God of Thunder and Eternity.</note>
+        <note id="166">This is in reply to a line nmasp posted in a DM. It may not have found its way into Hu Tao's dialogue yet.</note>
+        <note id="170">At one point, Yae Miko smugly tells the Traveler (the player character) that they can see her fox form "in [their] dreams".</note>
     </notes>
     <labels>
         <label id="92" label="Necklace unlock" folder="" sort="0" />
@@ -121,33 +123,34 @@
         <label id="104" label="" color="4" folder="" sort="0" />
         <label id="105" label="" color="4" folder="" sort="0" />
         <label id="106" label="" color="4" folder="" sort="0" />
-        <label id="134" label="" color="4" folder="" sort="0" />
-        <label id="110" label="" color="4" folder="" sort="0" />
+        <label id="171" label="" color="4" folder="" sort="0" />
+        <label id="173" label="" color="4" folder="" sort="0" />
         <label id="147" label="" color="4" folder="" sort="0" />
-        <label id="117" label="" color="4" folder="" sort="0" />
         <label id="119" label="" color="4" folder="" sort="0" />
-        <label id="155" label="" color="4" folder="" sort="0" />
+        <label id="174" label="" color="4" folder="" sort="0" />
         <label id="122" label="" color="4" folder="" sort="0" />
         <label id="123" label="" color="4" folder="" sort="0" />
         <label id="141" label="" color="4" folder="" sort="0" />
         <label id="132" label="" color="4" folder="" sort="0" />
-        <label id="154" label="" color="4" folder="" sort="0" />
         <label id="127" label="" color="4" folder="" sort="0" />
-        <label id="133" label="" color="4" folder="" sort="0" />
-        <label id="140" label="" color="4" folder="" sort="0" />
-        <label id="142" label="" color="4" folder="" sort="0" />
+        <label id="169" label="" color="4" folder="" sort="0" />
+        <label id="167" label="" color="4" folder="" sort="0" />
         <label id="146" label="" color="4" folder="" sort="0" />
-        <label id="153" label="" color="4" folder="" sort="0" />
         <label id="163" label="" color="4" folder="" sort="0" />
+        <label id="164" label="" color="4" folder="" sort="0" />
+        <label id="165" label="" color="4" folder="" sort="0" />
+        <label id="168" label="" color="4" folder="" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
     </prefixes>
-    <nextId>163</nextId>
+    <nextId>175</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="9s_manufactured" />
         <marker scope="Public" name="adrien_catOutfit" />
+        <marker scope="Public" name="adrien_catOutfit2" />
+        <marker scope="Public" name="adrien_catOutfit3" />
         <marker scope="Public" name="adrien_resp_01" />
         <marker scope="Public" name="adrien_resp_03" />
         <marker scope="Public" name="adrien_resp_11" />
@@ -158,6 +161,9 @@
         <marker scope="Public" name="adrien_resp_23" />
         <marker scope="Public" name="adrien_resp_31" />
         <marker scope="Public" name="adrien_resp_32" />
+        <marker scope="Public" name="adrien_resp_33" />
+        <marker scope="Public" name="adrien_resp_41" />
+        <marker scope="Public" name="adrien_resp_51" />
         <marker scope="Public" name="adrien_resp01" />
         <marker scope="Public" name="adrien_resp02" />
         <marker scope="Public" name="arueshalae_darkToLight" />
@@ -174,6 +180,7 @@
         <marker scope="Public" name="caitlin_sleeping2_R" />
         <marker scope="Public" name="hu_tao_hi" />
         <marker scope="Public" name="hu_tao_liyuePoetry" />
+        <marker scope="Public" name="hu_tao_liyuePoetry2" />
         <marker scope="Public" name="hu_tao_resp_01" />
         <marker scope="Public" name="hu_tao_resp_02" />
         <marker scope="Public" name="hu_tao_resp_03" />
@@ -181,21 +188,36 @@
         <marker scope="Public" name="hu_tao_resp_12" />
         <marker scope="Public" name="hu_tao_resp_13" />
         <marker scope="Public" name="hu_tao_resp_21" />
+        <marker scope="Public" name="hu_tao_resp_22" />
+        <marker scope="Public" name="hu_tao_resp_23" />
         <marker scope="Public" name="hu_tao_resp_53" />
         <marker scope="Public" name="hu_tao_resp_hi" />
         <marker scope="Public" name="jim_warStories" />
         <marker scope="Public" name="jim_warStories2" />
+        <marker scope="Public" name="jim_warStories3" />
         <marker scope="Public" name="jura_questionsAboutMen" />
         <marker scope="Public" name="jura_questionsAboutMen2" />
+        <marker scope="Public" name="jura_questionsAboutMen3" />
         <marker scope="Public" name="jura_resp_0" />
         <marker scope="Public" name="jura_resp_01" />
+        <marker scope="Public" name="jura_resp_1" />
+        <marker scope="Public" name="jura_resp_1s" />
         <marker scope="Public" name="komi_commDisorder" />
         <marker scope="Public" name="kumatora_adventures" />
         <marker scope="Public" name="mari_piano" />
+        <marker scope="Public" name="mari_setogaya_funActivities" />
+        <marker scope="Public" name="mari_setogaya_resp_cuteFluffyEars" />
+        <marker scope="Public" name="mari_setogaya_resp_funActivities" />
+        <marker scope="Public" name="mari_setogaya_resp_royalty" />
+        <marker scope="Public" name="mari_setogaya_resp_shrineCare" />
+        <marker scope="Public" name="mari_setogaya_resp_vampireNovel" />
         <marker scope="Public" name="meia_overlySerious" />
         <marker scope="Public" name="meia_overlySerious2" />
+        <marker scope="Public" name="meia_overlySerious3" />
         <marker scope="Public" name="meia_resp_0" />
         <marker scope="Public" name="meia_resp_01" />
+        <marker scope="Public" name="meia_resp_1s" />
+        <marker scope="Public" name="meia_resp_2" />
         <marker scope="Public" name="meia_resp_earth_sightseeing" />
         <marker scope="Public" name="meia_resp_men_info" />
         <marker scope="Public" name="meia_resp_men_info2" />
@@ -211,6 +233,8 @@
         <marker scope="Public" name="mitama_jobInterview" />
         <marker scope="Public" name="mitama_jobInterview2" />
         <marker scope="Public" name="mitama_jobInterview3" />
+        <marker scope="Public" name="mitama_readingPrefs" />
+        <marker scope="Public" name="mitama_resp_meeting" />
         <marker scope="Public" name="monika_otherworldly" />
         <marker scope="Public" name="monika_otherworldly2" />
         <marker scope="Public" name="monika_otherworldly3" />
@@ -218,10 +242,12 @@
         <marker scope="Public" name="nickname" />
         <marker scope="Public" name="nonon_music" />
         <marker scope="Public" name="nonon_music2" />
+        <marker scope="Public" name="nonon_music3" />
         <marker scope="Public" name="nonon_resp_" />
         <marker scope="Public" name="nonon_resp_01" />
         <marker scope="Public" name="nonon_resp_02" />
         <marker scope="Public" name="nonon_resp_02a" />
+        <marker scope="Public" name="nonon_resp_03a" />
         <marker scope="Public" name="petra_2ndLangBooks" />
         <marker scope="Public" name="reimu_resp_shrineDesc" />
         <marker scope="Public" name="reimu_resp_shrineDesc2" />
@@ -234,6 +260,7 @@
         <marker scope="Public" name="sakura_smellComplexion" />
         <marker scope="Public" name="sakura_smellComplexion2" />
         <marker scope="Public" name="shamiko_horns" />
+        <marker scope="Public" name="shamiko_horns2" />
         <marker scope="Public" name="sofia_irony" />
         <marker scope="Public" name="sucrose_resp_01" />
         <marker scope="Public" name="sucrose_resp_02" />
@@ -295,6 +322,10 @@
         <marker scope="Public" name="yumeko_enjoyDrama" />
         <marker scope="Public" name="yumeko_enjoyDrama2" />
         <marker scope="Public" name="yumeko_enjoyDrama3" />
+        <marker scope="Public" name="yumeko_resp_0a" />
+        <marker scope="Public" name="yumeko_resp_0b" />
+        <marker scope="Public" name="yumeko_startOfGamble" />
+        <marker scope="Public" name="yumeko_startOfGamble2" />
         <marker scope="Public" name="yuri_bookPreferences" />
         <marker scope="Public" name="zeke_pandoria_favLocation" />
         <marker scope="Public" name="zeke_pandoria_jobPay" />
