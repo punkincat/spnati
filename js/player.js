@@ -912,12 +912,8 @@ Opponent.prototype.setLabel = function(label) {
 
 Opponent.prototype.updateIntelligence = function () {
     if (!this.intelligenceOverridden) {
-        if (this.intelligences && this.intelligences.length) {
-            this.intelligence = this.getByStage(this.intelligences);
-        }
-        if (!this.intelligence) {
-            this.intelligence = eIntelligence.AVERAGE;
-        }
+        this.intelligence = this.getByStage(this.intelligences || [])
+            || eIntelligence.AVERAGE;
     }
 }
 
