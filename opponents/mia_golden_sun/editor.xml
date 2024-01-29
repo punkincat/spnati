@@ -140,6 +140,8 @@
         <response id="645" opponent="revy" opponentId="551" />
         <response id="646" opponent="jura" opponentId="1065" />
         <response id="647" opponent="jura" opponentId="1253" />
+        <response id="651" opponent="beatrix" opponentId="156" />
+        <response id="654" opponent="nonon" opponentId="92" />
     </responses>
     <notes>
         <note id="22">this can go in whatever direction you want; I just find it funny that the two of them are pious and water-themed</note>
@@ -818,12 +820,51 @@
         <label id="648" label="" color="1" folder="Targets" sort="0" />
         <label id="649" label="" color="1" folder="Targets" sort="0" />
         <label id="650" label="" folder="Responses" sort="0" />
+        <label id="651" label="" folder="Responses" sort="0" />
+        <label id="652" label="" folder="Targets" sort="0" />
+        <label id="653" label="" folder="Targets" sort="0" />
+        <label id="654" label="" color="1" folder="Responses" sort="0" />
+        <label id="655" label="" folder="Human" sort="0" />
+        <label id="656" label="" folder="Jenna" sort="0" />
+        <label id="657" label="" folder="Jenna" sort="0" />
+        <label id="658" label="" folder="Jenna" sort="0" />
+        <label id="659" label="" folder="Jenna" sort="0" />
+        <label id="660" label="" folder="Jenna" sort="0" />
+        <label id="661" label="" folder="Jenna" sort="0" />
+        <label id="662" label="" folder="Jenna" sort="0" />
+        <label id="663" label="" folder="Jenna" sort="0" />
+        <label id="664" label="" folder="Jenna" sort="0" />
+        <label id="665" label="" folder="Jenna" sort="0" />
+        <label id="666" label="" folder="Jenna" sort="0" />
+        <label id="667" label="" folder="Jenna" sort="0" />
+        <label id="668" label="" folder="Jenna" sort="0" />
+        <label id="669" label="" folder="Jenna" sort="0" />
+        <label id="670" label="" folder="Jenna" sort="0" />
+        <label id="671" label="" folder="Jenna" sort="0" />
+        <label id="672" label="" folder="Jenna" sort="0" />
+        <label id="673" label="" folder="Jenna" sort="0" />
+        <label id="674" label="" folder="Jenna" sort="0" />
+        <label id="675" label="" folder="Jenna" sort="0" />
+        <label id="676" label="" folder="Jenna" sort="0" />
+        <label id="677" label="" folder="Jenna" sort="0" />
+        <label id="678" label="" folder="Jenna" sort="0" />
+        <label id="679" label="" folder="Jenna" sort="0" />
+        <label id="680" label="" folder="Jenna" sort="0" />
+        <label id="681" label="" folder="Jenna" sort="0" />
+        <label id="682" label="" folder="Jenna" sort="0" />
+        <label id="683" label="" folder="Jenna" sort="0" />
+        <label id="684" label="" folder="Jenna" sort="0" />
+        <label id="685" label="" folder="Jenna" sort="0" />
+        <label id="686" label="" folder="Jenna" sort="0" />
+        <label id="687" label="" folder="Jenna" sort="0" />
+        <label id="688" label="" folder="Jenna" sort="0" />
+        <label id="689" label="" folder="Jenna" sort="0" />
     </labels>
     <prefixes>
         <prefix>zz_</prefix>
     </prefixes>
     <onlyCustomPoses>true</onlyCustomPoses>
-    <nextId>650</nextId>
+    <nextId>689</nextId>
     <markers>
         <marker scope="Public" name="a_djinni_was_in_my_cape">Fizz djinni situational marker</marker>
         <marker scope="Public" name="angara_is_isolated" />
@@ -913,6 +954,9 @@
         <marker scope="Public" name="mia_aquaKS_psynergyQuestion" />
         <marker scope="Public" name="mia_aquaSquared1" />
         <marker scope="Public" name="Mia_BarbaraDailyPrayer_Resp">Interaction with Barbara</marker>
+        <marker scope="Public" name="mia_beatrix_bedside1" />
+        <marker scope="Public" name="mia_beatrix_healing1" />
+        <marker scope="Public" name="mia_beatrix_needle1" />
         <marker scope="Public" name="mia_bowsette_0a" />
         <marker scope="Public" name="mia_bowsette_0b" />
         <marker scope="Public" name="mia_bowsette_0c" />
@@ -946,7 +990,34 @@
         <marker scope="Public" name="Mia_healer_cont" />
         <marker scope="Public" name="mia_is_a_healer" />
         <marker scope="Public" name="mia_is_bicurious" />
+        <marker scope="Public" name="mia_jenna_self0a" />
+        <marker scope="Public" name="mia_jenna_self0b" />
+        <marker scope="Public" name="mia_jenna_self0c" />
+        <marker scope="Public" name="mia_jenna_self1a" />
+        <marker scope="Public" name="mia_jenna_self1b" />
+        <marker scope="Public" name="mia_jenna_self1c" />
+        <marker scope="Public" name="mia_jenna_self2a" />
+        <marker scope="Public" name="mia_jenna_self2b" />
+        <marker scope="Public" name="mia_jenna_self2c" />
+        <marker scope="Public" name="mia_jenna_self3a" />
+        <marker scope="Public" name="mia_jenna_self3b" />
+        <marker scope="Public" name="mia_jenna_self3b_wet" />
+        <marker scope="Public" name="mia_jenna_self3c" />
         <marker scope="Public" name="mia_jenna_strip0a" />
+        <marker scope="Public" name="mia_jenna_strip0b" />
+        <marker scope="Public" name="mia_jenna_strip0c" />
+        <marker scope="Public" name="mia_jenna_strip1a" />
+        <marker scope="Public" name="mia_jenna_strip1b" />
+        <marker scope="Public" name="mia_jenna_strip1c" />
+        <marker scope="Public" name="mia_jenna_strip2a" />
+        <marker scope="Public" name="mia_jenna_strip2b" />
+        <marker scope="Public" name="mia_jenna_strip2c" />
+        <marker scope="Public" name="mia_jenna_strip3a" />
+        <marker scope="Public" name="mia_jenna_strip3b" />
+        <marker scope="Public" name="mia_jenna_strip3c" />
+        <marker scope="Public" name="mia_jenna_strip4a" />
+        <marker scope="Public" name="mia_jenna_strip4b" />
+        <marker scope="Public" name="mia_jenna_strip4c" />
         <marker scope="Public" name="mia_joey_question1" />
         <marker scope="Public" name="mia_jura_babiesPrompt">Response to Jura babies prompt</marker>
         <marker scope="Public" name="mia_jura_gs0a" />
@@ -1005,6 +1076,7 @@
         <marker scope="Public" name="mia_nicorobin_arch1" />
         <marker scope="Public" name="mia_nicorobin_injuries1" />
         <marker scope="Public" name="mia_nicorobin_self0a" />
+        <marker scope="Public" name="mia_nonon_self0a" />
         <marker scope="Public" name="mia_perona_self0a" />
         <marker scope="Public" name="mia_perona_self3a" />
         <marker scope="Public" name="mia_queenie_mustmast" />
