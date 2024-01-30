@@ -71,6 +71,7 @@
   <variable name="day" description="Displays the current day of the month (e.g. 31st)" global="true" example="22nd">
     <function name="number" description="Day of the month as a number (1-31)" example="22" />
   </variable>
+  <variable name="timestamp" description="Displays the current timestamp (time in seconds since Jan 1, 1970, UTC)." global="true" example="1701234567" />
   <variable name="background" description="Displays the name of the background the player is using." global="true" example="Beach">
     <function name="location" description="Displays 'indoors' or 'outdoors' depending on which background is in play." example="outdoors"/>
     <function name="time" description="Displays 'day' or 'night' depending on which background is in play." example="night"/>

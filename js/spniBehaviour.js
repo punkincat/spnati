@@ -1614,6 +1614,9 @@ function expandDialogue (dialogue, self, target, bindings) {
             case 'year':
                 substitution = new Date().getFullYear();
                 break;
+            case 'timestamp':
+                substitution = Math.round(Date.now()/1000);
+                break;
             case 'blank':
                 return '';
             case 'rng':
