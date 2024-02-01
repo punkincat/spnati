@@ -71,6 +71,15 @@
         <response id="196" opponent="moskii" opponentId="1" />
         <response id="198" opponent="may" opponentId="5" />
         <response id="204" opponent="kyouko_toshinou" opponentId="135" />
+        <response id="212" opponent="mari_setogaya" opponentId="1256" />
+        <response id="213" opponent="senko" opponentId="168" />
+        <response id="214" opponent="senko" opponentId="15" />
+        <response id="215" opponent="senko" opponentId="194" />
+        <response id="216" opponent="senko" opponentId="137" />
+        <response id="223" opponent="jura" opponentId="1487" />
+        <response id="224" opponent="jura" opponentId="1486" />
+        <response id="225" opponent="jura" opponentId="1426" />
+        <response id="226" opponent="jura" opponentId="1447" />
     </responses>
     <notes>
         <note id="159">This is a lie.</note>
@@ -283,28 +292,45 @@
         <label id="206" label="" folder="Mom to left" sort="0" />
         <label id="207" label="" folder="Mom to left" sort="0" />
         <label id="208" label="" folder="Mom to left" sort="0" />
+        <label id="209" label="" folder="Mom to left" sort="0" />
+        <label id="210" label="" folder="Mom to left" sort="0" />
+        <label id="212" label="" folder="Mari Setogaya to left" sort="0" />
+        <label id="213" label="" folder="Senko to left" sort="0" />
+        <label id="214" label="" folder="Senko to left" sort="0" />
+        <label id="215" label="" folder="Senko to left" sort="0" />
+        <label id="216" label="" folder="Senko to left" sort="0" />
+        <label id="217" label="" folder="Senko to left" sort="0" />
+        <label id="218" label="" folder="Senko to left" sort="0" />
+        <label id="219" label="" folder="Senko to left" sort="0" />
+        <label id="220" label="saying &quot;daughter&quot; with Nagisa present" folder="Kali to left" sort="0" />
+        <label id="221" label="saying &quot;daughter&quot; with Nagisa absent" folder="Kali to left" sort="0" />
+        <label id="222" label="saying &quot;husband&quot;" folder="Kali to left" sort="0" />
+        <label id="223" label="" folder="Jura to left" sort="0" />
+        <label id="224" label="" folder="Jura to left" sort="0" />
+        <label id="225" label="" folder="Jura to left" sort="0" />
+        <label id="226" label="" folder="Jura to left" sort="0" />
     </labels>
     <prefixes>
         <prefix>collectible_</prefix>
         <prefix>x-</prefix>
     </prefixes>
-    <nextId>208</nextId>
+    <nextId>226</nextId>
     <markers>
-        <marker scope="Public" name="" />
         <marker scope="Public" name="sanako_age_uncertainty">If Nagisa is not playing, Sanako can almost introduce herself as her real age.</marker>
         <marker scope="Public" name="sanako_bad_start">Sanako is off to a bad start.</marker>
         <marker scope="Public" name="sanako_baked">Sanako has some baked goodies for everyone after the game.</marker>
         <marker scope="Public" name="sanako_baked_buns">Sanako's buns are almost hot and ready.</marker>
+        <marker scope="Public" name="sanako_bengal_monitor" />
         <marker scope="Public" name="sanako_bootstraps">Sanako's plan involves bootstraps. But only once because it's very annoying if she says it more than once.</marker>
         <marker scope="Public" name="sanako_card_peek" />
         <marker scope="Public" name="sanako_compliments" />
         <marker scope="Public" name="sanako_corrin_boys_name" />
-        <marker scope="Private" name="sanako_drama_club_costumes">Sanako thinks a princess is just in costume.</marker>
+        <marker scope="Public" name="sanako_drama_club_costumes">Sanako thinks a princess is just in costume.</marker>
         <marker scope="Public" name="sanako_dva_bodysuit" />
         <marker scope="Public" name="sanako_elaine_dress_as_a_pirate" />
         <marker scope="Public" name="sanako_everyone_is_so_cute" />
-        <marker scope="Private" name="sanako_explains_pairs">Sanako explains basic pairs gameplay.</marker>
-        <marker scope="Private" name="sanako_hot">Sanako blames the heat for her skirt removal.</marker>
+        <marker scope="Public" name="sanako_explains_pairs">Sanako explains basic pairs gameplay.</marker>
+        <marker scope="Public" name="sanako_hot">Sanako blames the heat for her skirt removal.</marker>
         <marker scope="Public" name="sanako_how_you_spend_your_time" />
         <marker scope="Public" name="sanako_human_male_taking_the_lead">Sanako is happy to let the human male player "take the lead".</marker>
         <marker scope="Public" name="sanako_introductions">Sanako invites everybody to introduce themselves.</marker>
@@ -318,8 +344,18 @@
         <marker scope="Public" name="sanako_joey_shirt_removal" />
         <marker scope="Public" name="sanako_jura_js_j1" />
         <marker scope="Public" name="sanako_jura_js_j2" />
+        <marker scope="Public" name="sanako_jura_js_j3" />
+        <marker scope="Public" name="sanako_jura_js_j4" />
         <marker scope="Public" name="sanako_jura_js_s1" />
         <marker scope="Public" name="sanako_jura_js_s2" />
+        <marker scope="Public" name="sanako_jura_js_s3" />
+        <marker scope="Public" name="sanako_jura_js_s4" />
+        <marker scope="Public" name="sanako_kali_daughter_1" />
+        <marker scope="Public" name="sanako_kali_daughter_2" />
+        <marker scope="Public" name="sanako_kali_daughter_a" />
+        <marker scope="Public" name="sanako_kali_daughter_b" />
+        <marker scope="Public" name="sanako_kali_husband_1" />
+        <marker scope="Public" name="sanako_kali_husband_2" />
         <marker scope="Public" name="sanako_keep_my_secret" />
         <marker scope="Public" name="sanako_keeping_glasses">Sanako isn't taking off her glasses because it would break her disguise. But you can take off yours.</marker>
         <marker scope="Public" name="sanako_kizuna_cute_bra" />
@@ -357,7 +393,9 @@
         <marker scope="Public" name="sanako_mia_spirit_of_things" />
         <marker scope="Public" name="sanako_mia_stern_office_ladies" />
         <marker scope="Public" name="sanako_miko_prince" />
+        <marker scope="Public" name="sanako_mom_game_start" />
         <marker scope="Public" name="sanako_mom_milkshake_boys_yard" />
+        <marker scope="Public" name="sanako_mom_ms_m11" />
         <marker scope="Public" name="sanako_mom_ms_m14" />
         <marker scope="Public" name="sanako_mom_ms_m15" />
         <marker scope="Public" name="sanako_mom_parent_dadbod" />
@@ -468,7 +506,7 @@
         <marker scope="Public" name="sanako_nagisa_sn_s7" />
         <marker scope="Public" name="sanako_nagisa_sn_s8" />
         <marker scope="Public" name="sanako_nagisa_sn_s9" />
-        <marker scope="Private" name="sanako_name_request">Sanako asks permission to refer to an opponent by her name.</marker>
+        <marker scope="Public" name="sanako_name_request">Sanako asks permission to refer to an opponent by her name.</marker>
         <marker scope="Public" name="sanako_natsuki_club">Sanako reacts to Natsuki claiming to be in the same club as the player.</marker>
         <marker scope="Public" name="sanako_navi_orb_of_light">Sanako calls Navi an orb of light and suggests that she can grant wishes.</marker>
         <marker scope="Public" name="sanako_nayru_ns_n6" />
@@ -491,8 +529,16 @@
         <marker scope="Private" name="sanako_press_buttons">Sanako observes that we're pressing a sarcastic girl's buttons.</marker>
         <marker scope="Public" name="sanako_remilia_wings">Sanako mistakes Remilia's wings as being part of a costume.</marker>
         <marker scope="Public" name="sanako_rouge_scope" />
+        <marker scope="Public" name="sanako_senko_age" />
+        <marker scope="Public" name="sanako_senko_backgrond" />
+        <marker scope="Public" name="sanako_senko_modern_amenities" />
+        <marker scope="Public" name="sanako_senko_pamper" />
+        <marker scope="Public" name="sanako_senko_pampering" />
+        <marker scope="Public" name="sanako_senko_punishment" />
+        <marker scope="Public" name="sanako_senko_shrines" />
+        <marker scope="Public" name="sanako_setogaya_favoritewaytohavesex" />
         <marker scope="Public" name="sanako_setogaya_sm_m1" />
-        <marker scope="Public" name="sanako_setogaya_sm_s1]" />
+        <marker scope="Public" name="sanako_setogaya_sm_s1" />
         <marker scope="Public" name="sanako_shamiko_leftovers_recipe" />
         <marker scope="Public" name="sanako_shantae_energetic" />
         <marker scope="Public" name="sanako_shimakaze_clothes_on_fire" />
