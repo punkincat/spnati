@@ -646,9 +646,10 @@
             <sprite id="btalking" z="1" src="reskins/jura_santa/blooking+.png" x="299" y="0" />
         </pose>
         <pose id="5-nagatoro">
-            <sprite id="nagatoro" src="reskins/jura_santa/5-nagatoro.png" x="0" y="0" />
+            <sprite id="nagatoro" src="reskins/jura_santa/5-sexyb.png" x="0" y="0" />
             <sprite id="jura_block" src="reskins/jura_santa/jura_block.png" x="-33" y="0" />
             <sprite id="jura_block_shadow" z="-1" src="reskins/jura_santa/jura_block_shadow.png" x="-79" y="0" />
+            <sprite id="nagatoroface" src="reskins/jura_santa/nagatoroface.png" x="2" y="156" />
         </pose>
         <pose id="5-nagatorolift">
             <sprite id="nagatorolift" src="reskins/jura_santa/5-nagatorolift.png" x="0" y="0" alpha="100" />
@@ -858,9 +859,10 @@
             <sprite id="btalking" z="1" src="reskins/jura_santa/blooking+.png" x="299" y="0" />
         </pose>
         <pose id="6-nagatoro">
-            <sprite id="nagatoro" src="reskins/jura_santa/6-nagatoro.png" x="0" y="0" />
+            <sprite id="nagatoro" src="reskins/jura_santa/6-sexyb.png" x="0" y="0" />
             <sprite id="jura_block" src="reskins/jura_santa/jura_block.png" x="-33" y="0" />
             <sprite id="jura_block_shadow" z="-1" src="reskins/jura_santa/jura_block_shadow.png" x="-79" y="0" />
+            <sprite id="nagatoroface" src="reskins/jura_santa/nagatoroface.png" x="2" y="156" />
         </pose>
         <pose id="6-nagatorolift">
             <sprite id="nagatorolift" src="reskins/jura_santa/6-nagatorolift.png" x="0" y="0" alpha="100" />
@@ -992,10 +994,11 @@
             <sprite id="bstand" z="-2" src="reskins/jura_santa/bstand.png" x="278" y="0" />
         </pose>
         <pose id="7-nagatoro">
-            <sprite id="nagatoro" src="reskins/jura_santa/7-nagatoro.png" x="0" y="0" />
+            <sprite id="nagatoro" src="reskins/jura_santa/7-sexyb.png" x="0" y="0" />
             <sprite id="jura_block" src="reskins/jura_santa/jura_block.png" x="-104" y="0" />
             <sprite id="jura_block_shadow" z="-1" src="reskins/jura_santa/jura_block_shadow.png" x="-159" y="0" />
             <sprite id="bsit" z="-1" src="reskins/jura_santa/bsit.png" x="-315" y="-15" />
+            <sprite id="nagatoroface2" src="reskins/jura_santa/nagatoroface2.png" x="0" y="685" />
         </pose>
         <pose id="7-nagatorolift">
             <sprite id="nagatorolift" src="reskins/jura_santa/7-nagatorolift.png" x="0" y="0" alpha="100" />
@@ -1061,25 +1064,25 @@
             <sprite id="toblerone1" src="reskins/jura_santa/toblerone.png" x="-2" y="140" rotation="2" />
             <sprite id="bstand" z="-1" src="reskins/jura_santa/bstand.png" x="278" y="0" />
             <directive type="animation" id="hug" ease="linear" interpolation="linear">
-                <keyframe time="0" x="0" />
+                <keyframe time="0" x="0" y="0" />
                 <keyframe time="0.1" x="-10" />
                 <keyframe time="0.3" x="10" />
                 <keyframe time="0.4" x="0" />
             </directive>
             <directive type="animation" id="toblerone" ease="linear" interpolation="linear">
-                <keyframe time="0" x="24" rotation="-305" />
+                <keyframe time="0" x="24" y="364" rotation="-305" />
                 <keyframe time="0.1" rotation="-302" />
                 <keyframe time="0.3" rotation="-307" />
                 <keyframe time="0.4" rotation="-305" />
             </directive>
             <directive type="animation" id="012hugarms" ease="linear" interpolation="linear">
-                <keyframe time="0" x="8" />
+                <keyframe time="0" x="8" y="331" scalex="0.91" />
                 <keyframe time="0.1" x="2" />
                 <keyframe time="0.3" x="12" />
                 <keyframe time="0.4" x="8" />
             </directive>
             <directive type="animation" id="toblerone1" ease="linear" interpolation="linear">
-                <keyframe time="0" x="-2" />
+                <keyframe time="0" x="-2" y="140" rotation="2" />
                 <keyframe time="0.1" x="-12" />
                 <keyframe time="0.3" x="8" />
                 <keyframe time="0.4" x="-2" />
@@ -1098,10 +1101,11 @@
             <sprite id="meiasmilemouth" src="reskins/jura_santa/meiasmilemouth.png" x="-272" y="230" scalex="1" scaley="1.1" rotation="8" />
         </pose>
         <pose id="8-nagatoro">
-            <sprite id="nagatoro" src="reskins/jura_santa/8-nagatoro.png" x="0" y="0" />
+            <sprite id="nagatoro" src="reskins/jura_santa/8-sexyb.png" x="0" y="0" />
             <sprite id="jura_block" src="reskins/jura_santa/jura_block.png" x="-104" y="0" />
             <sprite id="jura_block_shadow" z="-1" src="reskins/jura_santa/jura_block_shadow.png" x="-159" y="0" />
             <sprite id="bsit" z="-1" src="reskins/jura_santa/bsit.png" x="-315" y="-15" />
+            <sprite id="nagatoroface2" src="reskins/jura_santa/nagatoroface2.png" x="0" y="666" />
         </pose>
         <pose id="8-nagatorolift">
             <sprite id="nagatorolift" src="reskins/jura_santa/8-nagatorolift.png" x="0" y="0" alpha="100" />
