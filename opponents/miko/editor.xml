@@ -170,9 +170,13 @@
         <response id="149" opponent="aqua_konosuba" opponentId="1519" />
         <response id="150" opponent="mitama" opponentId="2693" />
         <response id="151" opponent="mitama" opponentId="2694" />
+        <response id="152" opponent="nonon" opponentId="577" />
+        <response id="154" opponent="yae_miko" opponentId="141" />
+        <response id="156" opponent="mitama" opponentId="2695" />
+        <response id="157" opponent="mitama" opponentId="2696" />
+        <response id="158" opponent="aqua_konosuba" opponentId="1541" />
     </responses>
     <notes>
-        <note id="48">I'm great now</note>
         <note id="75">Note: She absolutely does.</note>
         <note id="104">The joke here is Miko can't understand Gloria through her thick accent and assumes it's a problem with Gloria.</note>
         <note id="106">This is a good opportunity for Kaz to talk about Magistocrats</note>
@@ -180,8 +184,11 @@
         <note id="125">Ignore miko's shitty old horny poses, I'm going to change all of that in the rework.</note>
         <note id="130">Aqua and Miko shouldn't get along, since Aqua is in charge of leading people into the afterlife and Miko is immortal through the power of cheating death.</note>
         <note id="146">This is a good chance for Shamiko to talk about Momo</note>
+        <note id="153">she's askinging about Yae getting the Electrussy</note>
+        <note id="154">Pretend she's smiling or something this'll use the stripping+ line in the rework.</note>
+        <note id="155">Pretend she's smiling or something this'll use the stripping+ line in the rework.</note>
     </notes>
-    <nextId>151</nextId>
+    <nextId>158</nextId>
     <markers>
         <marker scope="Public" name="9SBoots1" />
         <marker scope="Public" name="9SBoots2" />
@@ -207,8 +214,10 @@
         <marker scope="Public" name="AquaKonosubaCape2_resp" />
         <marker scope="Public" name="AquaKonosubaCape3_resp" />
         <marker scope="Public" name="AquaKonosubaHeadphones1_resp" />
+        <marker scope="Public" name="AquaKonosubaHeadphones2_resp" />
         <marker scope="Public" name="AquaKonosubaSocks1" />
         <marker scope="Public" name="AquaKonosubaSocks2" />
+        <marker scope="Public" name="AquaKonosubaSocks3" />
         <marker scope="Public" name="AquaKonosubaSword1_resp" />
         <marker scope="Public" name="AquaKonosubaSword2_resp" />
         <marker scope="Public" name="AquaKonosubaSword3_resp" />
@@ -716,15 +725,20 @@
         <marker scope="Public" name="MitamaArmor2" />
         <marker scope="Public" name="MitamaArmor3" />
         <marker scope="Public" name="MitamaCape1_resp" />
+        <marker scope="Public" name="MitamaCape2_resp" />
         <marker scope="Public" name="MitamaCapelet1" />
         <marker scope="Public" name="MitamaCapelet2" />
+        <marker scope="Public" name="MitamaDress1" />
         <marker scope="Public" name="MitamaSandals1" />
         <marker scope="Public" name="MitamaSandals2" />
         <marker scope="Public" name="MitamaSandals3" />
         <marker scope="Public" name="MitamaSword1_resp" />
+        <marker scope="Public" name="MitamaSword2_resp" />
         <marker scope="Public" name="MonikaBelts1_resp" />
         <marker scope="Public" name="MonikaBelts2_resp" />
+        <marker scope="Public" name="MonikaBelts3_resp" />
         <marker scope="Public" name="MonikaBlazer1" />
+        <marker scope="Public" name="MonikaBlazer2" />
         <marker scope="Public" name="MonikaCape_resp" />
         <marker scope="Public" name="MonikaCape2_resp" />
         <marker scope="Public" name="MonikaCape3_resp" />
@@ -799,6 +813,8 @@
         <marker scope="Public" name="No_humans">Miko is only interested in leading the humans of Gensokyo, not the Youkai.</marker>
         <marker scope="Public" name="NoelleArmor1" />
         <marker scope="Public" name="NoelleArmor2" />
+        <marker scope="Public" name="NononBoots1" />
+        <marker scope="Public" name="NononCape1_resp" />
         <marker scope="Public" name="Ochako_response" />
         <marker scope="Public" name="OkinoRibbon1" />
         <marker scope="Public" name="PennyEating_resp" />
@@ -968,6 +984,7 @@
         <marker scope="Public" name="ShamikoShoes2" />
         <marker scope="Public" name="ShamikoShoes3" />
         <marker scope="Public" name="ShamikoTights1" />
+        <marker scope="Public" name="ShamikoTights2" />
         <marker scope="Public" name="ShikiRen">Miko wants Rensouhou to pledge their loyalty too.</marker>
         <marker scope="Private" name="Shy_Mast_02" />
         <marker scope="Private" name="Shy_Mast_start" />
@@ -1103,11 +1120,16 @@
         <marker scope="Public" name="WikipeStartMasturbation" />
         <marker scope="Public" name="YaeCape1_resp" />
         <marker scope="Public" name="YaeCape2_resp" />
+        <marker scope="Public" name="YaeCape3_resp" />
         <marker scope="Public" name="YaeMikoCape1_resp" />
+        <marker scope="Public" name="YaeMikoCape2a_resp" />
+        <marker scope="Public" name="YaeMikoCape2b_resp" />
         <marker scope="Public" name="YaeMikoEarrings1" />
+        <marker scope="Public" name="YaeMikoEarrings2" />
         <marker scope="Public" name="YaeMikoSandals1" />
         <marker scope="Public" name="YaeMikoSandals2" />
         <marker scope="Public" name="YaeMikoSandals3" />
+        <marker scope="Public" name="YaeShirt1" />
         <marker scope="Public" name="YaeShoes1" />
         <marker scope="Public" name="YaeShoes2" />
         <marker scope="Public" name="YaeShoes3" />
@@ -1183,6 +1205,7 @@
         <marker scope="Public" name="YuriSocks3" />
         <marker scope="Public" name="ZekePandyGloves1" />
         <marker scope="Public" name="ZekePandyGloves2" />
+        <marker scope="Public" name="ZekePandyGloves3" />
         <marker scope="Public" name="ZoePalutenaShip_resp" />
         <marker scope="Public" name="ZoeShoes1" />
         <marker scope="Public" name="ZoeShoes2" />
