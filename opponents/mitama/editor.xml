@@ -74,6 +74,7 @@ Karsa also added in the interview:
 
 "369 is still young, he can still play, and he can still play for a long time. If he can understand the reason behind it, maybe he can play better and better in the future."</note>
         <note id="1708">I have a lot of hair in my legs, but my father barely has any. Isn't it crazy?</note>
+        <note id="2739">I wrote different lines depending on the specific phrasing Yuri employs, but they are pretty similar in terms of content and thus share the same marker.</note>
     </notes>
     <labels>
         <label id="1" label="" folder="Background" sort="3" />
@@ -2761,34 +2762,93 @@ Karsa also added in the interview:
         <label id="2696" label="" folder="Opponent Stripping Targets" sort="81" />
         <label id="2697" label="" folder="Responses" sort="257" />
         <label id="2698" label="" folder="Responses" sort="194" />
-        <label id="2699" label="" folder="Responses" sort="0" />
-        <label id="2700" label="" folder="Responses" sort="0" />
-        <label id="2701" label="Haiku 509-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="2702" label="Haiku 509-Diviner" folder="Haiku Counter" sort="0" />
-        <label id="2703" label="Haiku 509-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="2704" label="Haiku 510-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="2705" label="Haiku 510-Diviner" folder="Haiku Counter" sort="0" />
-        <label id="2706" label="Haiku 510-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="2707" label="Haiku 511-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="2708" label="Haiku 511-Diviner" folder="Haiku Counter" sort="0" />
-        <label id="2709" label="Haiku 511-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="2710" label="" folder="Opponent Stripping Targets" sort="0" />
-        <label id="2711" label="" folder="Opponent Stripped Targets" sort="0" />
-        <label id="2712" label="Haiku 512-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="2713" label="Haiku 512-Diviner" folder="Haiku Counter" sort="0" />
-        <label id="2714" label="Haiku 512-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="2715" label="Haiku 513-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="2716" label="Haiku 513-Diviner" folder="Haiku Counter" sort="0" />
-        <label id="2717" label="Haiku 513-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="2718" label="Haiku 514-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="2719" label="Haiku 514-Diviner" folder="Haiku Counter" sort="0" />
-        <label id="2720" label="Haiku 514-Nohr Princess" folder="Haiku Counter" sort="0" />
-        <label id="2721" label="Haiku 515-Priestess" folder="Haiku Counter" sort="0" />
-        <label id="2722" label="Haiku 515-Diviner" folder="Haiku Counter" sort="0" />
-        <label id="2723" label="Haiku 515-Nohr Princess" folder="Haiku Counter" sort="0" />
+        <label id="2699" label="" folder="Responses" sort="261" />
+        <label id="2700" label="" folder="Responses" sort="262" />
+        <label id="2701" label="Haiku 509-Priestess" folder="Haiku Counter" sort="1525" />
+        <label id="2702" label="Haiku 509-Diviner" folder="Haiku Counter" sort="1526" />
+        <label id="2703" label="Haiku 509-Nohr Princess" folder="Haiku Counter" sort="1527" />
+        <label id="2704" label="Haiku 510-Priestess" folder="Haiku Counter" sort="1528" />
+        <label id="2705" label="Haiku 510-Diviner" folder="Haiku Counter" sort="1529" />
+        <label id="2706" label="Haiku 510-Nohr Princess" folder="Haiku Counter" sort="1530" />
+        <label id="2707" label="Haiku 511-Priestess" folder="Haiku Counter" sort="1531" />
+        <label id="2708" label="Haiku 511-Diviner" folder="Haiku Counter" sort="1532" />
+        <label id="2709" label="Haiku 511-Nohr Princess" folder="Haiku Counter" sort="1533" />
+        <label id="2710" label="" folder="Opponent Stripping Targets" sort="90" />
+        <label id="2711" label="" folder="Opponent Stripped Targets" sort="56" />
+        <label id="2712" label="Haiku 512-Priestess" folder="Haiku Counter" sort="1534" />
+        <label id="2713" label="Haiku 512-Diviner" folder="Haiku Counter" sort="1535" />
+        <label id="2714" label="Haiku 512-Nohr Princess" folder="Haiku Counter" sort="1536" />
+        <label id="2715" label="Haiku 513-Priestess" folder="Haiku Counter" sort="1537" />
+        <label id="2716" label="Haiku 513-Diviner" folder="Haiku Counter" sort="1538" />
+        <label id="2717" label="Haiku 513-Nohr Princess" folder="Haiku Counter" sort="1539" />
+        <label id="2718" label="Haiku 514-Priestess" folder="Haiku Counter" sort="1540" />
+        <label id="2719" label="Haiku 514-Diviner" folder="Haiku Counter" sort="1541" />
+        <label id="2720" label="Haiku 514-Nohr Princess" folder="Haiku Counter" sort="1542" />
+        <label id="2721" label="Haiku 515-Priestess" folder="Haiku Counter" sort="1543" />
+        <label id="2722" label="Haiku 515-Diviner" folder="Haiku Counter" sort="1544" />
+        <label id="2723" label="Haiku 515-Nohr Princess" folder="Haiku Counter" sort="1545" />
+        <label id="2724" label="" folder="Responses" sort="264" />
+        <label id="2725" label="" folder="Opponent Stripped Targets" sort="40" />
+        <label id="2726" label="Haiku 516-Priestess" folder="Haiku Counter" sort="1546" />
+        <label id="2727" label="Haiku 516-Diviner" folder="Haiku Counter" sort="1547" />
+        <label id="2728" label="Haiku 516-Nohr Princess" folder="Haiku Counter" sort="1548" />
+        <label id="2729" label="" folder="Opponent Lost Targets" sort="122" />
+        <label id="2730" label="" folder="Opponent Lost Targets" sort="123" />
+        <label id="2731" label="" folder="Hand=Any banter" sort="163" />
+        <label id="2732" label="Haiku 517-Priestess" folder="Haiku Counter" sort="1549" />
+        <label id="2733" label="Haiku 517-Diviner" folder="Haiku Counter" sort="1550" />
+        <label id="2734" label="Haiku 517-Nohr Princess" folder="Haiku Counter" sort="1551" />
+        <label id="2735" label="" folder="Responses" sort="117" />
+        <label id="2736" label="" folder="Opponent Stripping Targets" sort="65" />
+        <label id="2737" label="" folder="Opponent Stripping Targets" sort="93" />
+        <label id="2738" label="" folder="Responses" sort="116" />
+        <label id="2739" label="" folder="Opponent Stripping Targets" sort="3" />
+        <label id="2740" label="" folder="Opponent Stripping Targets" sort="62" />
+        <label id="2741" label="" folder="Opponent Stripping Targets" sort="63" />
+        <label id="2742" label="" folder="Opponent Stripping Targets" sort="64" />
+        <label id="2743" label="" folder="Opponent Stripping Targets" sort="4" />
+        <label id="2744" label="" folder="Hand=Any banter" sort="164" />
+        <label id="2745" label="" folder="Hand=Any banter" sort="165" />
+        <label id="2746" label="Haiku 518-Priestess" folder="Haiku Counter" sort="1552" />
+        <label id="2747" label="Haiku 518-Diviner" folder="Haiku Counter" sort="1553" />
+        <label id="2748" label="Haiku 518-Nohr Princess" folder="Haiku Counter" sort="1554" />
+        <label id="2749" label="" folder="Hand=Any banter" sort="19" />
+        <label id="2750" label="" folder="Hand=Any banter" sort="20" />
+        <label id="2751" label="" folder="Hand=Any banter" sort="166" />
+        <label id="2752" label="" folder="Hand=Any banter" sort="21" />
+        <label id="2753" label="Haiku 519-Priestess" folder="Haiku Counter" sort="1555" />
+        <label id="2754" label="Haiku 519-Diviner" folder="Haiku Counter" sort="1556" />
+        <label id="2755" label="Haiku 519-Nohr Princess" folder="Haiku Counter" sort="1557" />
+        <label id="2756" label="" folder="Opponent Lost Targets" sort="12" />
+        <label id="2757" label="" folder="Opponent Stripping Targets" sort="7" />
+        <label id="2758" label="" folder="Opponent Stripping Targets" sort="5" />
+        <label id="2759" label="" folder="Opponent Stripping Targets" sort="6" />
+        <label id="2760" label="" folder="Opponent Stripping Targets" sort="8" />
+        <label id="2761" label="Haiku 520-Priestess" folder="Haiku Counter" sort="1558" />
+        <label id="2762" label="Haiku 520-Diviner" folder="Haiku Counter" sort="1559" />
+        <label id="2763" label="Haiku 520-Nohr Princess" folder="Haiku Counter" sort="1560" />
+        <label id="2764" label="" folder="Opponent Stripped Targets" sort="59" />
+        <label id="2765" label="" folder="Opponent Stripped Targets" sort="60" />
+        <label id="2766" label="" folder="Responses" sort="265" />
+        <label id="2767" label="" folder="Responses" sort="197" />
+        <label id="2768" label="" folder="Responses" sort="199" />
+        <label id="2769" label="" folder="Responses" sort="200" />
+        <label id="2770" label="" folder="Responses" sort="201" />
+        <label id="2771" label="" folder="Responses" sort="202" />
+        <label id="2772" label="" folder="Responses" sort="203" />
+        <label id="2773" label="" folder="Responses" sort="204" />
+        <label id="2774" label="Haiku 521-Priestess" folder="Haiku Counter" sort="1561" />
+        <label id="2775" label="Haiku 521-Diviner" folder="Haiku Counter" sort="1562" />
+        <label id="2776" label="Haiku 521-Nohr Princess" folder="Haiku Counter" sort="1563" />
+        <label id="2777" label="" folder="Responses" sort="272" />
+        <label id="2778" label="" folder="Responses" sort="0" />
+        <label id="2779" label="Haiku 522-Priestess" folder="Haiku Counter" sort="0" />
+        <label id="2780" label="Haiku 522-Diviner" folder="Haiku Counter" sort="0" />
+        <label id="2781" label="Haiku 522-Nohr Princess" folder="Haiku Counter" sort="0" />
     </labels>
-    <nextId>2723</nextId>
+    <nextId>2781</nextId>
     <markers>
+        <marker scope="Public" name="" />
         <marker scope="Public" name="4mitama_hand1_1" />
         <marker scope="Public" name="4mitama_hand1_2" />
         <marker scope="Public" name="4mitama_hand1_3" />
@@ -3071,7 +3131,9 @@ Karsa also added in the interview:
         <marker scope="Public" name="fluttershy_reason" />
         <marker scope="Public" name="fluttershy_reason1" />
         <marker scope="Public" name="fluttershy_reason2" />
+        <marker scope="Public" name="galatea_bedroom" />
         <marker scope="Public" name="galatea_critics" />
+        <marker scope="Public" name="galatea_turing_test" />
         <marker scope="Public" name="glasses_last" />
         <marker scope="Public" name="haiku_1" />
         <marker scope="Public" name="haiku_1_Counter" />
@@ -4786,10 +4848,31 @@ Karsa also added in the interview:
         <marker scope="Public" name="haiku_515_Counter" />
         <marker scope="Public" name="haiku_515_DCounter" />
         <marker scope="Public" name="haiku_515_NCounter" />
+        <marker scope="Public" name="haiku_516_Counter" />
+        <marker scope="Public" name="haiku_516_DCounter" />
+        <marker scope="Public" name="haiku_516_NCounter" />
+        <marker scope="Public" name="haiku_517_Counter" />
+        <marker scope="Public" name="haiku_517_DCounter" />
+        <marker scope="Public" name="haiku_517_NCounter" />
+        <marker scope="Public" name="haiku_518_Counter" />
+        <marker scope="Public" name="haiku_518_DCounter" />
+        <marker scope="Public" name="haiku_518_NCounter" />
+        <marker scope="Public" name="haiku_519_Counter" />
+        <marker scope="Public" name="haiku_519_DCounter" />
+        <marker scope="Public" name="haiku_519_NCounter" />
         <marker scope="Public" name="haiku_52" />
         <marker scope="Public" name="haiku_52_Counter" />
         <marker scope="Public" name="haiku_52_DCounter" />
         <marker scope="Public" name="haiku_52_NCounter" />
+        <marker scope="Public" name="haiku_520_Counter" />
+        <marker scope="Public" name="haiku_520_DCounter" />
+        <marker scope="Public" name="haiku_520_NCounter" />
+        <marker scope="Public" name="haiku_521_Counter" />
+        <marker scope="Public" name="haiku_521_DCounter" />
+        <marker scope="Public" name="haiku_521_NCounter" />
+        <marker scope="Public" name="haiku_522_Counter" />
+        <marker scope="Public" name="haiku_522_DCounter" />
+        <marker scope="Public" name="haiku_522_NCounter" />
         <marker scope="Public" name="haiku_53" />
         <marker scope="Public" name="haiku_53_Counter" />
         <marker scope="Public" name="haiku_53_DCounter" />
@@ -5000,10 +5083,17 @@ Karsa also added in the interview:
         <marker scope="Public" name="heris_sleep" />
         <marker scope="Public" name="heris_transport" />
         <marker scope="Public" name="hilbert_truth_ideals" />
+        <marker scope="Public" name="hilda_academy" />
+        <marker scope="Public" name="Hilda_reveal_high" />
+        <marker scope="Public" name="Hilda_reveal_pair" />
+        <marker scope="Public" name="Hilda_reveal_royalflush" />
+        <marker scope="Public" name="Hilda_round_one" />
         <marker scope="Public" name="Hoshido_succession" />
         <marker scope="Public" name="ignatz_assassin" />
         <marker scope="Public" name="ignatz_hobbies" />
         <marker scope="Public" name="inspiration_strike" />
+        <marker scope="Public" name="jenna_psynergy" />
+        <marker scope="Public" name="jenna_travels" />
         <marker scope="Public" name="jill_smoking_indoors" />
         <marker scope="Public" name="jill_smoking_outdoors" />
         <marker scope="Public" name="judgment" />
@@ -5097,6 +5187,8 @@ Karsa also added in the interview:
         <marker scope="Public" name="kyoko_ultimate" />
         <marker scope="Public" name="kyoko_ultpoet" />
         <marker scope="Public" name="kyoko_whatdo" />
+        <marker scope="Public" name="laevatein_firestrip" />
+        <marker scope="Public" name="laevatein_firestripped" />
         <marker scope="Public" name="larachel_muststrip_0" />
         <marker scope="Public" name="Lucina_travel" />
         <marker scope="Public" name="Lucina_YoungerHelp" />
@@ -5183,6 +5275,8 @@ Karsa also added in the interview:
         <marker scope="Public" name="meia_revyfight">Also haiku 404.</marker>
         <marker scope="Public" name="meia_stripping_0" />
         <marker scope="Public" name="meia_stripping_1" />
+        <marker scope="Public" name="meia_stripping_1a" />
+        <marker scope="Public" name="meia_stripping_1b" />
         <marker scope="Public" name="mentionsNina" />
         <marker scope="Public" name="mentionsSoleil" />
         <marker scope="Public" name="mia_gs_journey" />
@@ -5236,11 +5330,15 @@ Karsa also added in the interview:
         <marker scope="Public" name="mitama_woke" />
         <marker scope="Public" name="mitama01_resp" />
         <marker scope="Public" name="mitama1_resp" />
+        <marker scope="Public" name="mitama67alt_resp" />
         <marker scope="Public" name="MitamaArmor2_resp" />
         <marker scope="Public" name="MitamaSandals2_resp" />
         <marker scope="Public" name="Monika_deeprealms_resp" />
+        <marker scope="Public" name="monika_deeprealms2_resp" />
         <marker scope="Public" name="Monika_fateDestiny_resp" />
+        <marker scope="Public" name="monika_fateDestiny2_resp" />
         <marker scope="Public" name="monika_firstHaiku_resp" />
+        <marker scope="Public" name="monika_firstHaiku2_resp" />
         <marker scope="Public" name="monika_haircolor" />
         <marker scope="Public" name="monika_litclub" />
         <marker scope="Public" name="monika_litclub2" />
@@ -5253,15 +5351,20 @@ Karsa also added in the interview:
         <marker scope="Public" name="monika_morethanpoems2" />
         <marker scope="Public" name="monika_morethanpoems3" />
         <marker scope="Public" name="Monika_napPref_resp" />
+        <marker scope="Public" name="monika_napPref2_resp" />
         <marker scope="Public" name="Monika_novels_resp" />
+        <marker scope="Public" name="monika_novels2_resp" />
         <marker scope="Public" name="Monika_sexStories_resp" />
+        <marker scope="Public" name="monika_sexStories2_resp" />
         <marker scope="Public" name="Monika_shrineLife_resp" />
+        <marker scope="Public" name="monika_shrineLife2_resp" />
         <marker scope="Public" name="monika_tipresp_1" />
         <marker scope="Public" name="monika_tipresp_2" />
         <marker scope="Public" name="monika_tipresp_3" />
         <marker scope="Public" name="monika_weirdpoems" />
         <marker scope="Public" name="monika_weirdpoems2" />
         <marker scope="Public" name="monika_weirdpoems3" />
+        <marker scope="Public" name="moskii_bloodtype" />
         <marker scope="Public" name="mounted_healers" />
         <marker scope="Public" name="mrclean_selected" />
         <marker scope="Public" name="mrclean_shredded" />
@@ -5313,6 +5416,7 @@ Karsa also added in the interview:
         <marker scope="Public" name="Nohr_succession" />
         <marker scope="Public" name="nohrshido">Basic exposition about Nohr and Hoshido, the two kingdoms Fire Emblem Fates revolves around.</marker>
         <marker scope="Public" name="Noire_de_natura_deorum" />
+        <marker scope="Public" name="nonshinto_cleric" />
         <marker scope="Public" name="PA15_job" />
         <marker scope="Public" name="panty_paradise_default" />
         <marker scope="Public" name="panty_paradise_summer" />
@@ -5339,8 +5443,8 @@ Karsa also added in the interview:
         <marker scope="Public" name="reimu_extermination_3" />
         <marker scope="Public" name="reimu_extermination3" />
         <marker scope="Public" name="Reimu_gloves1_resp" />
-        <marker scope="Public" name="reimu_gloves2_" />
         <marker scope="Public" name="reimu_gloves2_resp" />
+        <marker scope="Public" name="reimu_gloves3_resp" />
         <marker scope="Public" name="Reimu_lineage" />
         <marker scope="Public" name="reimu_lineage2" />
         <marker scope="Public" name="reimu_marriage" />
@@ -5439,7 +5543,9 @@ Karsa also added in the interview:
         <marker scope="Public" name="sgwen_personas" />
         <marker scope="Public" name="shaggy_scared" />
         <marker scope="Public" name="shamiko_demon" />
+        <marker scope="Public" name="shamiko_demon_3" />
         <marker scope="Public" name="Shamiko_demon2" />
+        <marker scope="Public" name="Shamiko_momo_resp" />
         <marker scope="Public" name="Shamiko_poemhelp_resp" />
         <marker scope="Public" name="Shamiko_question_resp" />
         <marker scope="Public" name="shamiko_transformation" />
@@ -5522,11 +5628,13 @@ Karsa also added in the interview:
         <marker scope="Public" name="wikipe_haiku" />
         <marker scope="Public" name="wikipe_passion" />
         <marker scope="Public" name="writing_tools" />
-        <marker scope="Public" name="yaemiko" />
         <marker scope="Public" name="yaemiko_jobInterview_resp" />
         <marker scope="Public" name="yaemiko_jobInterview2_resp" />
         <marker scope="Public" name="yaemiko_jobInterview3_resp" />
         <marker scope="Public" name="yaemiko_meeting" />
+        <marker scope="Public" name="yaemiko_meeting_2a" />
+        <marker scope="Public" name="yaemiko_meeting_2b" />
+        <marker scope="Public" name="yaemiko_readingPrefs_resp" />
         <marker scope="Public" name="yshtola_mageprompt_resp" />
         <marker scope="Public" name="yuelia_start_indoors" />
         <marker scope="Public" name="yuelia_start_outdoors" />
@@ -5534,9 +5642,14 @@ Karsa also added in the interview:
         <marker scope="Public" name="yuno_earworm" />
         <marker scope="Public" name="yuri_bookrec" />
         <marker scope="Public" name="yuri_horror" />
+        <marker scope="Public" name="yuri_horror_2" />
         <marker scope="Public" name="yuri_inspiration" />
+        <marker scope="Public" name="yuri_inspiration_2" />
+        <marker scope="Public" name="yuri_journal_resp" />
         <marker scope="Public" name="yuri_supremacy" />
+        <marker scope="Public" name="yuri_supremacy2" />
         <marker scope="Public" name="yuri_writing" />
+        <marker scope="Public" name="yuri_writing_2" />
         <marker scope="Public" name="yusuke_attraction" />
         <marker scope="Public" name="yusuke_origin" />
         <marker scope="Public" name="yusuke_singing" />
