@@ -110,11 +110,15 @@
         <response id="91" opponent="queenie" opponentId="351" />
         <response id="92" opponent="nami" opponentId="1467" />
         <response id="93" opponent="lysithea" opponentId="13" />
+        <response id="97" opponent="jura" opponentId="921" />
+        <response id="98" opponent="jura" opponentId="1510" />
+        <response id="99" opponent="meia" opponentId="1096" />
+        <response id="100" opponent="meia" opponentId="1638" />
     </responses>
     <prefixes>
         <prefix>ex</prefix>
     </prefixes>
-    <nextId>96</nextId>
+    <nextId>100</nextId>
     <markers>
         <marker scope="Public" name="" />
         <marker scope="Public" name="9S_s0_1" />
@@ -175,6 +179,8 @@
         <marker scope="Public" name="jura_resp0_1" />
         <marker scope="Public" name="jura_resp0_2" />
         <marker scope="Public" name="jura_resp0_3" />
+        <marker scope="Public" name="jura_resp0_s1" />
+        <marker scope="Public" name="jura_resp0_v1" />
         <marker scope="Public" name="jura_resp1_1" />
         <marker scope="Public" name="jura_resp1_2" />
         <marker scope="Public" name="kaz_resp0_1" />
@@ -233,9 +239,14 @@
         <marker scope="Public" name="leon_resp3_2" />
         <marker scope="Public" name="leon_resp3_3" />
         <marker scope="Public" name="leon_resp4_1" />
+        <marker scope="Public" name="leon_resp4_2" />
+        <marker scope="Public" name="leon_resp4_3" />
         <marker scope="Public" name="leon_resp5_1" />
+        <marker scope="Public" name="leon_resp5_2" />
         <marker scope="Public" name="leon_resp5_3" />
         <marker scope="Public" name="leon_respF_poly" />
+        <marker scope="Public" name="Leon_s0_1" />
+        <marker scope="Public" name="Leon_s1_1" />
         <marker scope="Public" name="lysithea_respK_1" />
         <marker scope="Public" name="lysithea_respM_1" />
         <marker scope="Public" name="lysithea_respW_1" />
@@ -277,6 +288,8 @@
         <marker scope="Public" name="meia_resp0_1" />
         <marker scope="Public" name="meia_resp0_2" />
         <marker scope="Public" name="meia_resp0_3" />
+        <marker scope="Public" name="meia_resp0_s1" />
+        <marker scope="Public" name="meia_resp0_v1" />
         <marker scope="Public" name="meia_resp1_1" />
         <marker scope="Public" name="meia_resp1_2" />
         <marker scope="Public" name="Meia_s0_3" />
@@ -313,6 +326,8 @@
         <marker scope="Public" name="roll_resp1_3" />
         <marker scope="Public" name="roll_resp2_1" />
         <marker scope="Public" name="roll_resp2_2" />
+        <marker scope="Public" name="roll_resp3_1" />
+        <marker scope="Public" name="roll_resp3_2" />
         <marker scope="Public" name="Samus_s0_1" />
         <marker scope="Public" name="Samus_s0_2" />
         <marker scope="Public" name="Samus_s0_3" />
@@ -341,6 +356,9 @@
         <marker scope="Public" name="sheena_resp3_1" />
         <marker scope="Public" name="sheena_resp3_2" />
         <marker scope="Public" name="sheena_resp3_3" />
+        <marker scope="Public" name="sheena_resp4_1" />
+        <marker scope="Public" name="sheena_resp4_2" />
+        <marker scope="Public" name="sheena_resp4_3" />
         <marker scope="Public" name="Sheena_s0_1" />
         <marker scope="Public" name="Sheena_s0_2" />
         <marker scope="Public" name="Sheena_s0_3" />
@@ -350,6 +368,12 @@
         <marker scope="Public" name="Sheena_s2_1" />
         <marker scope="Public" name="Sheena_s2_2" />
         <marker scope="Public" name="Sheena_s2_3" />
+        <marker scope="Public" name="Sheena_s3_1" />
+        <marker scope="Public" name="Sheena_s3_2" />
+        <marker scope="Public" name="Sheena_s3_3" />
+        <marker scope="Public" name="Sheena_s4_1" />
+        <marker scope="Public" name="Sheena_s4_2" />
+        <marker scope="Public" name="Sheena_s4_3" />
         <marker scope="Public" name="sofia_resp0_1" />
         <marker scope="Public" name="sofia_resp0_2" />
         <marker scope="Public" name="sofia_resp0_3" />
@@ -359,6 +383,9 @@
         <marker scope="Public" name="sofia_resp2_1" />
         <marker scope="Public" name="sofia_resp2_2" />
         <marker scope="Public" name="sofia_resp2_3" />
+        <marker scope="Public" name="sofia_resp3_1" />
+        <marker scope="Public" name="sofia_resp3_2" />
+        <marker scope="Public" name="sofia_resp3_3" />
         <marker scope="Public" name="Sofia_s0_1" />
         <marker scope="Public" name="Sofia_s0_2" />
         <marker scope="Public" name="Sofia_s0_3" />
@@ -368,6 +395,9 @@
         <marker scope="Public" name="Sofia_s2_1" />
         <marker scope="Public" name="Sofia_s2_2" />
         <marker scope="Public" name="Sofia_s2_3" />
+        <marker scope="Public" name="Sofia_s3_1" />
+        <marker scope="Public" name="Sofia_s3_2" />
+        <marker scope="Public" name="Sofia_s3_3" />
         <marker scope="Public" name="suzuya_resp0_1" />
         <marker scope="Public" name="Tea_s0_1" />
         <marker scope="Public" name="WhereHat" />
@@ -381,6 +411,9 @@
         <marker scope="Public" name="yae_resp2_1" />
         <marker scope="Public" name="yae_resp2_2" />
         <marker scope="Public" name="yae_resp2_3" />
+        <marker scope="Public" name="yae_resp3_1" />
+        <marker scope="Public" name="yae_resp3_2" />
+        <marker scope="Public" name="yae_resp3_3" />
         <marker scope="Public" name="Yae_s0_1" />
         <marker scope="Public" name="Yae_s0_2" />
         <marker scope="Public" name="Yae_s0_3" />
@@ -390,6 +423,9 @@
         <marker scope="Public" name="Yae_s2_1" />
         <marker scope="Public" name="Yae_s2_2" />
         <marker scope="Public" name="Yae_s2_3" />
+        <marker scope="Public" name="Yae_s3_1" />
+        <marker scope="Public" name="Yae_s3_2" />
+        <marker scope="Public" name="Yae_s3_3" />
         <marker scope="Public" name="yshtola_resp0_1" />
         <marker scope="Public" name="yshtola_resp0_2" />
         <marker scope="Public" name="yshtola_resp0_3" />
