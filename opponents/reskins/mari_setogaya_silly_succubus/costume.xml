@@ -1,0 +1,540 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<costume>
+    <id>mari_setogaya_silly_succubus</id>
+    <label>Mari</label>
+    <label stage="2">Gubble Bum</label>
+    <tags>
+        <tag>alternative_skin</tag>
+        <tag>april_fools_skin</tag>
+        <tag from="2" to="8">cheats_with_clothes</tag>
+        <tag from="0" to="1">cleric</tag>
+        <tag from="1" to="1">clothing_destruction</tag>
+        <tag from="2" to="8">clown</tag>
+        <tag from="1" to="1">crotch_pasty</tag>
+        <tag from="2" to="8">ditzy</tag>
+        <tag from="2" to="8">dumb</tag>
+        <tag from="2" to="8">hat</tag>
+        <tag from="0" to="1">hood</tag>
+        <tag>intercourse_forfeit</tag>
+        <tag>kneeling_forfeit</tag>
+        <tag from="1" to="1">lingerie</tag>
+        <tag from="0" to="1">long_hair</tag>
+        <tag from="2" to="8">medium_hair</tag>
+        <tag remove="true">school_uniform</tag>
+        <tag remove="true">shimapan</tag>
+        <tag from="1" to="8">slutty</tag>
+        <tag remove="true">student</tag>
+        <tag>tandem</tag>
+        <tag>tandem_mf</tag>
+        <tag from="2" to="8">twintails</tag>
+    </tags>
+    <layers>6</layers>
+    <folder>opponents/reskins/mari_setogaya_silly_succubus/</folder>
+    <wardrobe>
+        <clothing name="panties" generic="underwear" position="lower" type="important" plural="true" />
+        <clothing name="bra" generic="bra" position="upper" type="important" />
+        <clothing name="shirt" generic="shirt" position="upper" type="major" />
+        <clothing name="skirt" generic="skirt" position="lower" type="major" />
+        <clothing name="nun's attire" generic="" position="other" type="extra" />
+        <clothing name="dress" generic="dress" position="both" type="major" />
+    </wardrobe>
+
+    <poses>
+        <pose id="1-AFkaboom">
+            <sprite id="calm" src="reskins/mari_setogaya_silly_succubus/1-calm.png" x="0" y="0" alpha="100" />
+            <sprite id="scared" delay="0.5" src="reskins/mari_setogaya_silly_succubus/1-scared.png" x="0" y="0" alpha="0" />
+            <sprite id="Evil_Carboard_Mari" src="reskins/mari_setogaya_silly_succubus/Evil_Carboard_Mari.png" x="-586" y="-5000" rotation="14" />
+            <sprite id="explosion_gif_no_loop" delay="1" src="reskins/mari_setogaya_silly_succubus/explosion_gif_no_loop.gif" x="10" y="645" scalex="22" scaley="22" alpha="100" />
+            <sprite id="strip" delay="1.25" z="-1" src="reskins/mari_setogaya_silly_succubus/1-strip.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="calm" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="0.56" alpha="0" />
+            </directive>
+            <directive type="animation" id="scared" delay="0.5" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.06" alpha="100" />
+                <keyframe time="0.75" alpha="100" />
+                <keyframe time="0.88" alpha="0" />
+            </directive>
+            <directive type="animation" id="Evil_Carboard_Mari" ease="linear" interpolation="linear">
+                <keyframe time="0" x="-586" y="-5000" rotation="14" />
+                <keyframe time="0.38" y="-5000" />
+                <keyframe time="0.5" x="-491" y="-256" />
+                <keyframe time="0.56" x="-468" />
+                <keyframe time="2.12" y="-256" rotation="14" />
+                <keyframe time="3" y="-5000" rotation="500" />
+            </directive>
+            <directive type="animation" id="explosion_gif_no_loop" delay="1" ease="linear" interpolation="linear">
+                <keyframe time="0" x="10" y="645" scalex="22" scaley="22" alpha="100" />
+                <keyframe time="1" alpha="100" />
+                <keyframe time="1.12" alpha="0" />
+            </directive>
+            <directive type="animation" id="strip" delay="1.25" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="0.13" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="1-AFunholy_result">
+            <sprite id="greeting" src="reskins/mari_setogaya_silly_succubus/1-greeting.png" x="23" y="0" />
+            <sprite id="holy_light" src="reskins/mari_setogaya_silly_succubus/holy_light.png" x="0" y="-82" alpha="100" />
+            <sprite id="white_cloud" src="reskins/mari_setogaya_silly_succubus/white_cloud.png" x="12" y="-298" />
+            <directive type="animation" id="holy_light" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="-82" alpha="100" />
+                <keyframe time="1" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="2-AFstrip">
+            <sprite id="strip" src="reskins/mari_setogaya_silly_succubus/2-strip.png" x="0" y="0" alpha="100" rotation="0" />
+            <sprite id="AF_skirt" z="1" src="reskins/mari_setogaya_silly_succubus/AF_skirt.png" x="-10" y="644" alpha="100" rotation="0" />
+            <sprite id="AF_skirt_walking" src="reskins/mari_setogaya_silly_succubus/AF_skirt_walking.png" x="-255" y="541" alpha="0" />
+            <sprite id="after" src="reskins/mari_setogaya_silly_succubus/3-after.png" x="0" y="0" alpha="0" />
+            <directive type="animation" id="strip" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" rotation="0" />
+                <keyframe time="0.12" rotation="-1" />
+                <keyframe time="0.38" rotation="2" />
+                <keyframe time="0.62" rotation="-1" />
+                <keyframe time="0.88" rotation="2" />
+                <keyframe time="1.12" rotation="0" />
+                <keyframe time="4" alpha="100" />
+                <keyframe time="4.06" alpha="0" />
+            </directive>
+            <directive type="animation" id="AF_skirt" ease="linear" interpolation="linear">
+                <keyframe time="0" x="-10" y="644" alpha="100" rotation="0" />
+                <keyframe time="0.12" rotation="-1" />
+                <keyframe time="0.38" rotation="2" />
+                <keyframe time="0.62" rotation="-1" />
+                <keyframe time="0.88" rotation="2" />
+                <keyframe time="1.12" x="-10" y="644" rotation="0" />
+                <keyframe time="1.88" x="-10" y="644" />
+                <keyframe time="2.12" y="1205" />
+                <keyframe time="3" x="-10" y="1205" rotation="0" />
+                <keyframe time="3.5" x="-151" y="569" alpha="100" rotation="367" />
+                <keyframe time="3.62" alpha="0" />
+            </directive>
+            <directive type="animation" id="AF_skirt_walking" ease="linear" interpolation="linear">
+                <keyframe time="0" x="-255" y="541" alpha="0" />
+                <keyframe time="3.5" alpha="0" />
+                <keyframe time="3.62" x="-255" y="541" alpha="100" />
+                <keyframe time="4" x="-255" y="717" />
+                <keyframe time="6.88" alpha="100" />
+                <keyframe time="7" x="-2000" alpha="0" />
+            </directive>
+            <directive type="animation" id="AF_skirt_walking" delay="4" ease="linear" interpolation="linear">
+                <keyframe time="0" rotation="0" />
+                <keyframe time="0.25" rotation="-50" />
+                <keyframe time="0.5" rotation="0" />
+                <keyframe time="0.75" rotation="-50" />
+                <keyframe time="1" rotation="0" />
+                <keyframe time="1.25" rotation="-50" />
+                <keyframe time="1.5" rotation="0" />
+                <keyframe time="1.75" rotation="-50" />
+                <keyframe time="2" rotation="0" />
+                <keyframe time="2.25" rotation="-50" />
+                <keyframe time="2.5" rotation="0" />
+                <keyframe time="2.75" rotation="-50" />
+                <keyframe time="3" rotation="0" />
+            </directive>
+            <directive type="animation" id="after" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="0" />
+                <keyframe time="4" alpha="0" />
+                <keyframe time="4.06" alpha="100" />
+            </directive>
+        </pose>
+        <pose id="2-AFgubbleBum">
+            <sprite id="greeting" src="reskins/mari_setogaya_silly_succubus/2-greeting.png" x="0" y="0" />
+            <sprite id="after" src="reskins/mari_setogaya_silly_succubus/2-after.png" x="0" y="0" alpha="100" />
+            <directive type="animation" id="after" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="0" alpha="100" />
+                <keyframe time="0.5" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="3-AFstrip">
+            <sprite id="strip" src="reskins/mari_setogaya_silly_succubus/3-strip.png" x="0" y="0" />
+            <sprite id="puff_cloud" z="1" src="reskins/mari_setogaya_silly_succubus/puff_cloud.png" x="3" y="388" scalex="0.1" scaley="0.1" alpha="0" rotation="-10" />
+            <sprite id="after" delay="0.38" z="-2" src="reskins/mari_setogaya_silly_succubus/4-after.png" x="2" y="0" alpha="0" />
+            <sprite id="puff_cloud1" src="reskins/mari_setogaya_silly_succubus/puff_cloud.png" x="56" y="335" scalex="0.1" scaley="0.1" alpha="0" rotation="12" />
+            <sprite id="puff_cloud2" src="reskins/mari_setogaya_silly_succubus/puff_cloud.png" x="-19" y="442" scalex="0.1" scaley="0.1" alpha="0" rotation="-2" />
+            <sprite id="puff_cloud3" src="reskins/mari_setogaya_silly_succubus/puff_cloud.png" x="14" y="370" scalex="0.1" scaley="0.1" alpha="0" rotation="4" />
+            <sprite id="mari_wings_back_clown" delay="0.44" z="-5" src="reskins/mari_setogaya_silly_succubus/mari_wings_back_clown.png" x="10" y="310" scalex="-0.1" rotation="1" />
+            <directive type="animation" id="strip" delay="0.38" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.06" alpha="0" />
+            </directive>
+            <directive type="animation" id="puff_cloud" ease="linear" interpolation="linear">
+                <keyframe time="0" x="3" y="388" scalex="0.1" scaley="0.1" alpha="0" rotation="-10" />
+                <keyframe time="0.06" alpha="100" />
+                <keyframe time="0.38" x="3" y="388" scalex="1" scaley="1" />
+                <keyframe time="0.62" scalex="0.8" scaley="0.8" />
+                <keyframe time="0.88" scalex="1" scaley="1" />
+                <keyframe time="1.12" scalex="0.8" scaley="0.8" />
+                <keyframe time="1.38" scalex="1" scaley="1" />
+                <keyframe time="1.44" alpha="100" />
+                <keyframe time="1.62" x="-190" y="189" scalex="0.8" scaley="0.8" alpha="0" />
+            </directive>
+            <directive type="animation" id="after" delay="0.38" ease="linear" interpolation="linear">
+                <keyframe time="0" x="2" y="0" alpha="0" />
+                <keyframe time="0.06" alpha="100" />
+            </directive>
+            <directive type="animation" id="puff_cloud1" ease="linear" interpolation="linear">
+                <keyframe time="0" x="56" y="335" scalex="0.1" scaley="0.1" alpha="0" rotation="12" />
+                <keyframe time="0.06" alpha="100" />
+                <keyframe time="0.38" scalex="0.8" scaley="0.8" />
+                <keyframe time="0.62" scalex="0.6" scaley="0.6" />
+                <keyframe time="0.88" scalex="0.8" scaley="0.8" />
+                <keyframe time="1.12" scalex="0.6" scaley="0.6" />
+                <keyframe time="1.38" scalex="0.8" scaley="0.8" />
+                <keyframe time="1.44" alpha="100" />
+                <keyframe time="1.62" x="228" y="232" scalex="0.6" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="puff_cloud2" ease="linear" interpolation="linear">
+                <keyframe time="0" x="-19" y="442" scalex="0.1" scaley="0.1" alpha="0" rotation="-2" />
+                <keyframe time="0.06" alpha="100" />
+                <keyframe time="0.38" scalex="0.7" scaley="0.7" />
+                <keyframe time="0.62" scalex="0.5" scaley="0.5" />
+                <keyframe time="0.88" scalex="0.7" scaley="0.7" />
+                <keyframe time="1.12" scalex="0.5" scaley="0.5" />
+                <keyframe time="1.38" scalex="0.7" scaley="0.7" />
+                <keyframe time="1.44" alpha="100" />
+                <keyframe time="1.62" x="-153" y="594" scalex="0.5" scaley="0.5" alpha="0" />
+            </directive>
+            <directive type="animation" id="puff_cloud3" ease="linear" interpolation="linear">
+                <keyframe time="0" x="14" y="370" scalex="0.1" scaley="0.1" alpha="0" rotation="4" />
+                <keyframe time="0.06" alpha="100" />
+                <keyframe time="0.38" scalex="0.8" scaley="0.8" />
+                <keyframe time="0.62" scalex="0.6" scaley="0.6" />
+                <keyframe time="0.88" scalex="0.8" scaley="0.8" />
+                <keyframe time="1.12" scalex="0.6" scaley="0.6" />
+                <keyframe time="1.38" scalex="0.8" scaley="0.8" />
+                <keyframe time="1.44" alpha="100" />
+                <keyframe time="1.62" x="193" y="563" scalex="0.6" scaley="0.6" alpha="0" />
+            </directive>
+            <directive type="animation" id="mari_wings_back_clown" delay="0.44" ease="linear" interpolation="linear">
+                <keyframe time="0" x="10" y="310" scalex="-0.1" rotation="1" />
+                <keyframe time="0.56" x="10" y="310" scalex="1" />
+            </directive>
+        </pose>
+        <pose id="4-Ctransform">
+            <sprite id="4-Ctransform" src="reskins/mari_setogaya_silly_succubus/Transform1.png" x="0" y="0" />
+            <directive type="animation" id="4-Ctransform" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_silly_succubus/Transform1.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_silly_succubus/Transform2C.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_silly_succubus/Transform3C.png" />
+            </directive>
+        </pose>
+        <pose id="4-Ntransform">
+            <sprite id="4-Ntransform" src="reskins/mari_setogaya_silly_succubus/Transform1.png" x="0" y="0" />
+            <directive type="animation" id="4-Ntransform" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_silly_succubus/Transform1.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_silly_succubus/Transform2N.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_silly_succubus/Transform3N.png" />
+            </directive>
+        </pose>
+        <pose id="5-AFstrip">
+            <sprite id="AF_pantsu" src="reskins/mari_setogaya_silly_succubus/AF_pantsu.png" x="0" y="0" />
+            <sprite id="Bummy" z="3" src="reskins/mari_setogaya_silly_succubus/Bummy.png" x="17" y="-1900" scalex="1" scaley="1" />
+            <sprite id="AF_pantsu2" delay="2.5" src="reskins/mari_setogaya_silly_succubus/AF_pantsu2.png" x="0" y="0" />
+            <sprite id="AF_noPan" delay="4.62" src="reskins/mari_setogaya_silly_succubus/AF_noPan.png" x="0" y="0" />
+            <sprite id="AF_pantsu3" delay="6.75" src="reskins/mari_setogaya_silly_succubus/AF_pantsu3.png" x="0" y="0" />
+            <directive type="animation" id="AF_pantsu" delay="2.5" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.05999994" alpha="0" />
+            </directive>
+            <directive type="animation" id="Bummy" ease="linear" interpolation="linear">
+                <keyframe time="0" x="17" y="-1900" scalex="1" scaley="1" />
+                <keyframe time="1" y="954" scalex="1" scaley="1" />
+                <keyframe time="1.12" y="985" scalex="1" scaley="0.8" />
+                <keyframe time="1.25" y="954" scaley="1" />
+                <keyframe time="2" y="954" scalex="1" scaley="1" />
+                <keyframe time="2.38" y="545" />
+                <keyframe time="2.88" y="532" />
+                <keyframe time="3.5" y="954" scaley="1" />
+                <keyframe time="3.62" y="985" scaley="0.8" />
+                <keyframe time="3.75" y="954" scaley="1" />
+                <keyframe time="4.12" y="954" scaley="1" />
+                <keyframe time="4.5" y="545" />
+                <keyframe time="5" y="532" />
+                <keyframe time="5.62" y="954" scaley="1" />
+                <keyframe time="5.75" y="985" scaley="0.8" />
+                <keyframe time="5.88" y="954" scaley="1" />
+                <keyframe time="6.25" y="954" scaley="1" />
+                <keyframe time="6.62" y="545" />
+                <keyframe time="7.12" y="532" />
+                <keyframe time="7.75" y="954" scaley="1" />
+                <keyframe time="7.88" y="985" scaley="0.8" />
+                <keyframe time="8" y="954" scaley="1" />
+            </directive>
+            <directive type="animation" id="AF_pantsu2" delay="4.62" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.07000017" alpha="0" />
+            </directive>
+            <directive type="animation" id="AF_noPan" delay="6.75" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.1300001" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="5-AFstripped">
+            <sprite id="after" z="-2" src="reskins/mari_setogaya_silly_succubus/5-after.png" x="0" y="0" />
+            <sprite id="red_balloon" z="-1" src="reskins/mari_setogaya_silly_succubus/AF_balloon_bra.png" x="3" y="100" scalex="0.8" scaley="0.8" />
+            <directive type="animation" id="red_balloon" ease="smooth" interpolation="linear">
+                <keyframe time="0" x="3" y="100" />
+                <keyframe time="0.62" x="217" y="283" />
+                <keyframe time="0.88" x="334" y="238" />
+                <keyframe time="1.38" x="447" y="-126" />
+                <keyframe time="1.88" x="622" y="-574" />
+                <keyframe time="2.38" x="797" y="-1022" />
+                <keyframe time="2.88" x="885" y="-1470" />
+                <keyframe time="3.38" x="973" y="-1918" />
+            </directive>
+            <directive type="animation" id="red_balloon" delay="3.31" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.07000017" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="6-AFDoubleMari">
+            <sprite id="lecturing" z="-1" src="reskins/mari_setogaya_silly_succubus/6-lecturing.png" x="-100" y="0" />
+            <sprite id="Harrival2" z="-2" src="reskins/mari_setogaya_silly_succubus/6-Harrival2.png" x="300" y="0" />
+            <sprite id="Bummy_dongMode" z="-1" src="reskins/mari_setogaya_silly_succubus/Bummy_dongMode.png" x="-402" y="-1900" />
+            <directive type="animation" id="Bummy_dongMode" ease="linear" interpolation="linear">
+                <keyframe time="0" x="-402" y="-1900" />
+                <keyframe time="1" y="882" />
+                <keyframe time="1.12" y="927" />
+                <keyframe time="1.25" y="882" />
+            </directive>
+            <directive type="animation" id="Bummy_dongMode" delay="1" ease="linear" interpolation="linear">
+                <keyframe time="0" scaley="1" />
+                <keyframe time="0.12" scaley="0.8" />
+                <keyframe time="0.25" scaley="1" />
+            </directive>
+        </pose>
+        <pose id="8-AFholyDeparture">
+            <sprite id="happy" z="-1" src="reskins/mari_setogaya_silly_succubus/8-happy.png" x="-100" y="0" />
+            <sprite id="Hbye" z="-2" src="reskins/mari_setogaya_silly_succubus/8-Hbye.png" x="397" y="0" alpha="100" />
+            <sprite id="holy_light" z="-2" src="reskins/mari_setogaya_silly_succubus/holy_light.png" x="372" y="-88" scalex="1.8" alpha="0" />
+            <sprite id="white_cloud" z="-1" src="reskins/mari_setogaya_silly_succubus/white_cloud.png" x="409" y="-289" scalex="1.4" scaley="1.4" />
+            <sprite id="Bummy_dongMode" z="-1" src="reskins/mari_setogaya_silly_succubus/Bummy_dongMode.png" x="-346" y="883" />
+            <directive type="animation" id="Hbye" ease="linear" interpolation="linear">
+                <keyframe time="0" x="397" y="0" alpha="100" />
+                <keyframe time="1" alpha="100" />
+                <keyframe time="1.12" alpha="0" />
+            </directive>
+            <directive type="animation" id="holy_light" ease="linear" interpolation="linear">
+                <keyframe time="0" x="372" y="-88" scalex="1.8" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="1.5" alpha="100" />
+                <keyframe time="2" alpha="0" />
+            </directive>
+            <directive type="animation" id="white_cloud" delay="2.5" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.5" alpha="0" />
+            </directive>
+            <directive type="animation" id="Bummy_dongMode" ease="linear" interpolation="linear">
+                <keyframe time="0" x="-346" y="883" />
+                <keyframe time="3" y="883" />
+                <keyframe time="3.5" y="1002" />
+                <keyframe time="4" y="1002" />
+                <keyframe time="4.5" y="-1950" />
+            </directive>
+            <directive type="animation" id="Bummy_dongMode" delay="3" ease="linear" interpolation="linear">
+                <keyframe time="0" scaley="1" />
+                <keyframe time="0.5" scaley="0.5" />
+                <keyframe time="1" scaley="0.5" />
+                <keyframe time="1.12" scaley="1" />
+                <keyframe time="1.5" scaley="1" />
+            </directive>
+        </pose>
+        <pose id="6-AFstripped">
+            <sprite id="AF_pantsu3" src="reskins/mari_setogaya_silly_succubus/AF_pantsu3.png" x="0" y="0" />
+            <sprite id="Bummy" z="3" src="reskins/mari_setogaya_silly_succubus/Bummy.png" x="17" y="954" />
+            <sprite id="AF_pantsu4" delay="1.5" src="reskins/mari_setogaya_silly_succubus/AF_pantsu4.png" x="0" y="0" />
+            <sprite id="AF_noPan2" delay="3.5" src="reskins/mari_setogaya_silly_succubus/AF_noPan2.png" x="0" y="0" />
+            <sprite id="AF_noPan" delay="5.5" src="reskins/mari_setogaya_silly_succubus/AF_noPan.png" x="0" y="0" />
+            <directive type="animation" id="AF_pantsu3" delay="1.5" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.12" alpha="0" />
+            </directive>
+            <directive type="animation" id="Bummy" ease="linear" interpolation="linear">
+                <keyframe time="0" x="17" y="954" />
+                <keyframe time="1" y="954" />
+                <keyframe time="1.38" y="545" />
+                <keyframe time="1.88" y="532" />
+                <keyframe time="2.5" y="954" />
+                <keyframe time="2.62" y="985" />
+                <keyframe time="2.75" y="954" />
+                <keyframe time="3.12" y="954" />
+                <keyframe time="3.5" y="545" />
+                <keyframe time="4" y="532" />
+                <keyframe time="4.62" y="954" />
+                <keyframe time="4.75" y="985" />
+                <keyframe time="4.88" y="954" />
+                <keyframe time="7" y="954" />
+                <keyframe time="7.5" y="1053" />
+                <keyframe time="8" y="1053" />
+                <keyframe time="8.5" y="-1900" />
+            </directive>
+            <directive type="animation" id="Bummy" delay="2.5" ease="linear" interpolation="linear">
+                <keyframe time="0" scaley="1" />
+            </directive>
+            <directive type="animation" id="Bummy" delay="2.62" ease="linear" interpolation="linear">
+                <keyframe time="0" scaley="0.8" />
+                <keyframe time="0.1300001" scaley="1" />
+                <keyframe time="2" scaley="1" />
+                <keyframe time="2.13" scaley="0.8" />
+                <keyframe time="2.26" scaley="1" />
+                <keyframe time="4.38" scaley="1" />
+                <keyframe time="4.88" scaley="0.5" />
+                <keyframe time="5.38" scaley="0.5" />
+                <keyframe time="5.5" scaley="1" />
+                <keyframe time="5.88" scaley="1" />
+            </directive>
+            <directive type="animation" id="AF_pantsu4" delay="3.62" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.1300001" alpha="0" />
+            </directive>
+            <directive type="animation" id="AF_noPan2" delay="5.5" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.25" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="8-AFafter">
+            <sprite id="after" z="-1" src="reskins/mari_setogaya_silly_succubus/8-after.png" x="-280" y="25" />
+            <sprite id="Hafter" z="-2" src="reskins/mari_setogaya_silly_succubus/8-Hafter.png" x="305" y="-69" />
+            <sprite id="Bummy_dongMode" z="-3" src="reskins/mari_setogaya_silly_succubus/Bummy_dongMode.png" x="49" y="795" />
+        </pose>
+        <pose id="7-AFHeavyA-A">
+            <sprite id="heavyA" z="-1" src="reskins/mari_setogaya_silly_succubus/7-heavyA.png" x="-210" y="0" />
+            <sprite id="HheavyA" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HheavyA.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFHeavyA-B">
+            <sprite id="heavyA" z="-1" src="reskins/mari_setogaya_silly_succubus/7-heavyA.png" x="-210" y="0" />
+            <sprite id="HheavyB" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HheavyB.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFHeavyB-A">
+            <sprite id="heavyB" z="-1" src="reskins/mari_setogaya_silly_succubus/7-heavyB.png" x="-210" y="0" />
+            <sprite id="HheavyA" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HheavyA.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFHeavyB-B">
+            <sprite id="heavyB" z="-1" src="reskins/mari_setogaya_silly_succubus/7-heavyB.png" x="-210" y="0" />
+            <sprite id="HheavyB" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HheavyB.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastA-A">
+            <sprite id="mastA" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastA.png" x="-210" y="0" />
+            <sprite id="HmastA" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastA.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastA-B">
+            <sprite id="mastA" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastA.png" x="-210" y="0" />
+            <sprite id="HmastB" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastB.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastA-C">
+            <sprite id="mastA" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastA.png" x="-210" y="0" />
+            <sprite id="HmastC" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastC.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastA-D">
+            <sprite id="mastA" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastA.png" x="-210" y="0" />
+            <sprite id="HmastD" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastD.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastB-B">
+            <sprite id="mastB" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastB.png" x="-210" y="0" />
+            <sprite id="HmastB" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastB.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastB-D">
+            <sprite id="mastB" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastB.png" x="-210" y="0" />
+            <sprite id="HmastD" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastD.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastB-E">
+            <sprite id="mastB" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastB.png" x="-210" y="0" />
+            <sprite id="HmastE" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastE.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastC-A">
+            <sprite id="mastC" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastC.png" x="-210" y="0" />
+            <sprite id="HmastA" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastA.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastC-C">
+            <sprite id="mastC" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastC.png" x="-210" y="0" />
+            <sprite id="HmastC" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastC.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastC-D">
+            <sprite id="mastC" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastC.png" x="-210" y="0" />
+            <sprite id="HmastD" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastD.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastD-A">
+            <sprite id="mastD" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastD.png" x="-210" y="0" />
+            <sprite id="HmastA" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastA.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastD-B">
+            <sprite id="mastD" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastD.png" x="-210" y="0" />
+            <sprite id="HmastB" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastB.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastD-C">
+            <sprite id="mastD" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastD.png" x="-210" y="0" />
+            <sprite id="HmastC" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastC.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastD-D">
+            <sprite id="mastD" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastD.png" x="-210" y="0" />
+            <sprite id="HmastD" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastD.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFMastD-E">
+            <sprite id="mastD" z="-1" src="reskins/mari_setogaya_silly_succubus/7-mastD.png" x="-210" y="0" />
+            <sprite id="HmastE" z="-2" src="reskins/mari_setogaya_silly_succubus/7-HmastE.png" x="250" y="0" />
+        </pose>
+        <pose id="7-AFStarting">
+            <sprite id="starting" z="-1" src="reskins/mari_setogaya_silly_succubus/6-starting.png" x="-255" y="30" scalex="1" scaley="1" />
+            <sprite id="Hstarting" z="-2" src="reskins/mari_setogaya_silly_succubus/6-Hstarting.png" x="270" y="-27" />
+        </pose>
+        <pose id="8-Cfinished">
+            <sprite id="8-Cfinished" src="reskins/mari_setogaya_silly_succubus/Detransform1C.png" x="0" y="0" />
+            <directive type="animation" id="8-Cfinished" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_silly_succubus/Detransform1C.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_silly_succubus/Detransform2C.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_silly_succubus/Detransform3C.png" />
+                <keyframe time="1.2" src="reskins/mari_setogaya_silly_succubus/Detransform4C.png" />
+            </directive>
+        </pose>
+        <pose id="8-Nfinished">
+            <sprite id="8-Nfinished" src="reskins/mari_setogaya_silly_succubus/Detransform1N.png" x="0" y="0" />
+            <directive type="animation" id="8-Nfinished" ease="linear" interpolation="none">
+                <keyframe time="0" src="reskins/mari_setogaya_silly_succubus/Detransform1N.png" />
+                <keyframe time="0.4" src="reskins/mari_setogaya_silly_succubus/Detransform2N.png" />
+                <keyframe time="0.8" src="reskins/mari_setogaya_silly_succubus/Detransform3N.png" />
+                <keyframe time="1.2" src="reskins/mari_setogaya_silly_succubus/Detransform4N.png" />
+            </directive>
+        </pose>
+        <pose id="7-AFfinishing">
+            <sprite id="finishing" z="-1" src="reskins/mari_setogaya_silly_succubus/7-finishing.png" x="-210" y="0" />
+            <sprite id="Hfinishing" z="-2" src="reskins/mari_setogaya_silly_succubus/7-Hfinishing.png" x="250" y="0" />
+        </pose>
+        <pose id="6-AFholyArrival">
+            <sprite id="surprised" z="-1" src="reskins/mari_setogaya_silly_succubus/6-surprised.png" x="-100" y="0" />
+            <sprite id="Harrival" z="-2" src="reskins/mari_setogaya_silly_succubus/6-Harrival.png" x="276" y="0" alpha="0" />
+            <sprite id="holy_light" z="-2" src="reskins/mari_setogaya_silly_succubus/holy_light.png" x="242" y="-88" scalex="1.8" alpha="0" />
+            <sprite id="white_cloud" z="-2" src="reskins/mari_setogaya_silly_succubus/white_cloud.png" x="250" y="-267" scalex="1.4" scaley="1.5" />
+            <directive type="animation" id="Harrival" ease="linear" interpolation="linear">
+                <keyframe time="0" x="276" y="0" alpha="0" />
+                <keyframe time="1" alpha="0" />
+                <keyframe time="1.12" alpha="100" />
+            </directive>
+            <directive type="animation" id="holy_light" ease="linear" interpolation="linear">
+                <keyframe time="0" x="242" y="-88" scalex="1.8" alpha="0" />
+                <keyframe time="0.5" alpha="100" />
+                <keyframe time="1.5" alpha="100" />
+                <keyframe time="2" alpha="0" />
+            </directive>
+            <directive type="animation" id="white_cloud" delay="2.5" ease="linear" interpolation="linear">
+                <keyframe time="0" alpha="100" />
+                <keyframe time="0.5" alpha="0" />
+            </directive>
+        </pose>
+        <pose id="0-AFholy_light">
+            <sprite id="calm" src="reskins/mari_setogaya_silly_succubus/0-calm.png" x="0" y="0" />
+            <sprite id="holy_light" src="reskins/mari_setogaya_silly_succubus/holy_light.png" x="0" y="-82" alpha="0" />
+            <sprite id="white_cloud" src="reskins/mari_setogaya_silly_succubus/white_cloud.png" x="12" y="-298" />
+            <directive type="animation" id="holy_light" ease="linear" interpolation="linear">
+                <keyframe time="0" x="0" y="-82" alpha="0" />
+                <keyframe time="0.12" alpha="18" />
+                <keyframe time="1" x="0" y="-82" alpha="18" />
+                <keyframe time="1.62" alpha="100" />
+            </directive>
+        </pose>
+    </poses>
+
+</costume>
