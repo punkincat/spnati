@@ -85,10 +85,10 @@ Nonon [reply_sanako11]: S-something I <i>love</i>? What's that supposed to mean?
 
 NONON STRIPPING CUFFS:
 Sanako [sanako_nonon_sn_n5]: I just mean that you have a healthy sense of self-esteem. So many young women these days are down on themselves, but not you!
-Nonon []*: ??
+Nonon [reply_sanako12]: You have a point. But what about you, Miss ~sanako~? Are you the kind of woman who can hold her head up high?
 
 NONON STRIPPED CUFFS:
-Sanako []*: ??
+Sanako [sanako_nonon_sn_n6]: Me? It might surprise you that even someone like me can turn a few heads. I'm sure you're used to that kind of attention, but for me it's special in a different way.
 Nonon []*: ??
 
 
@@ -151,21 +151,21 @@ Nagisa (if after Nonon and Sanako) [naigsa_sanako_nonon_ns_s3]: Whoa, that's so 
 
 
 SANAKO MUST STRIP SHIRT: (conditional on previous case)
-Nonon [target_sanako11]: Why do they call you "Big Mama" anyway, ~sanako~? Do you have some kind of special ability or something?
-Sanako [sanako_nonon_ns_s4]: Oh, good question, Nonon. Um, it's... it's because I have a big chest. It... it makes the boys say, "whoa mama!" It's definitely not because I'm an actually mama or anything like that.
+Nonon [target_sanako11]: Why do they call you "Big Mama" anyway, ~sanako~? Do you have some kind of special ability or something? -- Please set this line to only play when Sanako is to her right
+Sanako [sanako_nonon_ns_s4]: Oh, good question, Nonon. Um, it's... it's because I have a big chest. It... it makes the boys say, "whoa mama!" It's definitely not because I'm an actual mama or anything like that.
 
 SANAKO STRIPPING SHIRT:
 Nonon [sanako12]: So you're best known for your giant boobs?
 Sanako [sanako_nonon_ns_s5]: I'd prefer to be known for my big heart and my yummy pastries. But it is true that I have a nice bust. Would you like to see?
 
 SANAKO STRIPPED SHIRT:
-Nonon []*: ??
-Sanako []*: ??
+Nonon [sanako13]: Well... Y-you certainly live up to your name...
+Sanako [sanako_nonon_ns_s6]: I'm happy to be able to meet your expectations.
 
 
-SANAKO MUST STRIP SKIRT:
-Nonon []*: ??
-Sanako []*: ??
+SANAKO MUST STRIP SKIRT: (conditional on Big Mama case)
+Nonon [sanako21]: You know, Miss ~sanako~, it's not often I meet another girl my age who carries herself with such poise. Could it be that you are also a leader? -- Please set this line to only play when Sanako is to her right
+Sanako [sanako_nonon_ns_s7]: You could say that. I'm my own boss, and even though my group is fairly small, not a day goes by without them telling me how much they love me.
 
 SANAKO STRIPPING SKIRT:
 Nonon []*: ??
@@ -177,7 +177,7 @@ Sanako []*: ??
 
 
 SANAKO MUST STRIP BRA:
-Nonon []*: ??
+Nonon [ -marker dupiclicated- ]: What brings you to this little tea party, anyway, Miss ~sanako~? Are you really just here to flaunt your body? -- Please set this line to only play when Sanako is to her right
 Sanako []*: ??
 
 SANAKO STRIPPING BRA:
@@ -204,7 +204,7 @@ Sanako []*: ??
 ---
 
 NONON MUST STRIP BOOTS:
-Nonon []*: ?? -- For lines in this conversation stream, your character should say something that you think Sanako will have an opinion about. Sanako will reply, and conversation will ensue. Avoid the temptation to mention Sanako specifically here, as when it's your character's turn, it's her time in the spotlight
+Nonon []*: ?? -- For lines in this conversation stream, Nonon should say something that you think Sanako will have an opinion about. Sanako will reply, and conversation will ensue. Avoid the temptation to mention Sanako specifically here, as when it's Nonon's turn, it's her time in the spotlight
 Sanako []*: ??
 
 NONON STRIPPING BOOTS:
