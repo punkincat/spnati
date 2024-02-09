@@ -335,11 +335,11 @@
             <path>reskins/rosa_summer/0-bun_touching.png</path>
             <path>reskins/rosa_summer/0-portrait.png</path>
             <path>reskins/rosa_summer/2-stripped.png</path>
-            <path>reskins/rosa_summer/2-thinking.png</path>			
+            <path>reskins/rosa_summer/2-thinking.png</path>
             <path>reskins/hilda_sundrenched_nobility/0-conversational</path>
             <path>reskins/hilda_sundrenched_nobility/0-relaxed.png</path>
             <path>reskins/hilda_sundrenched_nobility/2-smug.png</path>
-            <path>reskins/hilda_sundrenched_nobility/3-flirty.png</path>	
+            <path>reskins/hilda_sundrenched_nobility/3-flirty.png</path>
             <path>reskins/fluttershy_summer-shy/0-kind2.png</path>
             <path>reskins/fluttershy_summer-shy/0-flirty.png</path>
             <path>reskins/fluttershy_summer-shy/0-amused.png</path>
@@ -381,7 +381,7 @@
             <path>reskins/cagliostro_alchemist_waters_edge/0-Excited.png</path>
             <path>reskins/cagliostro_alchemist_waters_edge/3-Smug.png</path>
             <path>reskins/cagliostro_alchemist_waters_edge/3-Grin.png</path>
-			-->
+            -->
         </candy>
 
         <!--
@@ -439,10 +439,13 @@
         <background>paris rooftop</background>
 
         <!-- Put all costumes into the same group, but place new costumes higher -->
+        <!-- Except there are no 2024 costumes yet - 2023's listed for reference -->
+        <!--
         <character highlight="valentines" partition="1" sort="2">mari_setogaya</character>
         <character highlight="valentines" partition="1" sort="2">gloria</character>
         <character highlight="valentines" partition="1" sort="2">cagliostro</character>
         <character highlight="valentines" partition="1" sort="2">anatoly</character>
+        -->
 
         <costumes highlight="valentines" partition="1" sort="1">valentines</costumes>
 
@@ -560,10 +563,12 @@
             <path>reskins/bunny_catria/0-ironic.png</path>
             <path>reskins/bunny_catria/0-heart.png</path>
             <path>reskins/bunny_catria/0-behind.png</path>
+            <!--
             <path>reskins/cagliostro_bunny_alchemist/0-Cutesy.png</path>
             <path>reskins/cagliostro_bunny_alchemist/0-Happy.png</path>
             <path>reskins/cagliostro_bunny_alchemist/0-Horny.png</path>
             <path>reskins/cagliostro_bunny_alchemist/0-Smug.png</path>
+            -->
             <path>reskins/florina_easter/0-interested.png</path>
             <path>reskins/florina_easter/0-horny.png</path>
             <path>reskins/florina_easter/0-calm.png</path>
@@ -753,11 +758,10 @@
 
         <!-- Put AF costumes and AF characters into the same group, but place AF-only characters before costumes -->
         <!-- Also, put this year's new characters/costumes first -->
-        <character highlight="april_fools" partition="1" sort="4">giygas</character>
-        <character highlight="april_fools" partition="1" sort="4">kekko_kamen</character>
-        <character highlight="april_fools" partition="1" sort="4">toru_hagakure</character>
-        <character highlight="april_fools" partition="1" sort="3">bobobo</character>
-        <character highlight="april_fools" partition="1" sort="3">sannytess</character>
+        <!--
+        <character highlight="april_fools" partition="1" sort="4">cats</character> //placeholder for 2024 characters
+        -->
+        <character highlight="april_fools" partition="1" sort="3">mari_setogaya</character>
         <tag highlight="april_fools" partition="1" sort="2">april_fools</tag>
         <costumes highlight="april_fools" partition="1" sort="1">april_fools</costumes>
 
@@ -866,5 +870,5 @@
             <min-characters>40</min-characters>
         </announcement>
     </event>
-   
+
 </events>
